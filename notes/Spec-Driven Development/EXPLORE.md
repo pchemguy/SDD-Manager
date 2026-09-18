@@ -769,3 +769,16 @@ So: retain revision 1, later make a very small revision 2 adding the companion-p
 >  
 >  Generate "Implementation and Recovery Protocol Prompt". Make sure it is operational for an agent (e.g., clear step-by-step instructions or required action bullets where appropriate)
 
+Created the operational companion prompt. It provides agent-executable procedures for:
+
+* Initial and feature campaign selection.
+* `STARTED → PREPARED → COMPLETED → COMMITTED → CLEANED` task transactions.
+* Per-task manifests and centralized backups.
+* Safe scope expansion.
+* Required testing and documentation updates.
+* One commit per completed task in Git repositories.
+* Deterministic interrupted-run recovery.
+* Feature integration into the main SPEC/PLAN trees.
+* Explicit stop and escalation conditions.
+
+Revision 1 of the strategy prompt remains unchanged.

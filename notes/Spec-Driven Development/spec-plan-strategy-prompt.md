@@ -1,4 +1,4 @@
-## SPEC and PLAN strategy
+## SPEC and PLAN Strategy
 
 Use the following strategy when creating, restructuring, or maintaining the project's development specification and implementation plan.
 
