@@ -1,8 +1,8 @@
-# SPEC and PLAN strategy
+## SPEC and PLAN strategy
 
 Use the following strategy when creating, restructuring, or maintaining the project's development specification and implementation plan.
 
-## 1. Governing model
+### 1. Governing model
 
 Maintain SPEC and PLAN as authoritative, recursively decomposable descriptions of the complete current project.
 
@@ -24,7 +24,7 @@ docs/dev/
 
 `SPEC.md` and `PLAN.md` are compact entry points, not merely tables of contents. Each must orient a human or coding agent without requiring an initial traversal of the entire tree.
 
-## 2. Recursive architectural decomposition
+### 2. Recursive architectural decomposition
 
 Treat every document as a node in a hierarchy. A parent node shall define:
 
@@ -49,7 +49,7 @@ spec/frontends/gui.md
 
 Do not use ordinal or opaque names such as `spec-3.md`, `phase-2.md`, or requirement-code files.
 
-## 3. SPEC tree
+### 3. SPEC tree
 
 `SPEC.md` shall provide, at the appropriate high level:
 
@@ -78,7 +78,7 @@ spec/
 
 The exact tree must follow the actual project architecture; do not impose this example mechanically.
 
-## 4. PLAN tree
+### 4. PLAN tree
 
 `PLAN.md` shall define:
 
@@ -114,7 +114,7 @@ After every task:
 
 Require broader integration or full-suite verification at appropriate phase boundaries and at final completion. The PLAN is an executable implementation blueprint, not a diary: preserve the tasks needed to construct the current system, but remove abandoned approaches and obsolete migration history.
 
-## 5. Shared development documents
+### 5. Shared development documents
 
 Some project information is canonical input to both SPEC and PLAN and should live beside their roots rather than be owned artificially by either tree.
 
@@ -140,7 +140,7 @@ docs/dev/
 
 In that case, `layout.md` becomes the compact root that defines the scope and relationships of its children. Other genuinely shared documents, such as a project-wide glossary, may be introduced on the same principle, but do not create miscellaneous shared files without a clear canonical responsibility.
 
-## 6. Dependencies and incremental revisions
+### 6. Dependencies and incremental revisions
 
 Model inter-component dependencies as a directed acyclic graph. Use the convention `A → B` to mean that **B depends on A**.
 
@@ -159,7 +159,7 @@ When changing an established contract, acyclicity alone does not keep every inte
 
 Every intermediate task shall leave the repository internally consistent and testable.
 
-## 7. Incremental project evolution
+### 7. Incremental project evolution
 
 For a new feature or architectural revision:
 
@@ -175,7 +175,7 @@ Changes should normally become progressively smaller toward the roots: detailed 
 
 Temporary feature specifications and plans may be used as working documents during design. A feature is not fully integrated until their settled content has been incorporated into the authoritative SPEC, PLAN, and shared-document trees and the temporary documents are no longer required to understand the current project.
 
-## 8. Illustrative Tetris model
+### 8. Illustrative Tetris model
 
 Use this only as an example of the method, not as a prescribed architecture.
 
@@ -224,7 +224,7 @@ For example, `headless-gameplay-mvp.md` might order these tasks:
 
 Later, `playable-cli.md` can add a thin CLI using the stable application API without creating a CLI-to-GUI dependency. If GUI and CLI begin calling each other or duplicating game rules, the architecture and corresponding SPEC/PLAN nodes must be corrected rather than documenting the coupling as if it were acceptable.
 
-## 9. Required working behavior
+### 9. Required working behavior
 
 Before changing code, consult the root SPEC, root PLAN, relevant child nodes, and any shared documents governing the affected files. If the current documentation lacks a sound boundary or contract, resolve that design deficiency before expanding the implementation.
 
