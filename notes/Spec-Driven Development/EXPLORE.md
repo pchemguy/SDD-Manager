@@ -830,3 +830,18 @@ Updated. The protocol now requires agents to:
 > I can use the two created prompts as the key SDD Protocol Prompt components, I just need you generate [SDD PREAMBLE]to support the dev pattern I just described.
 
 
+Created the SDD preamble. It is designed to sit directly after:
+
+```markdown
+# Specification-Driven Development Protocol
+```
+
+and before the two existing protocol sections. It governs:
+
+* Exploration and discovery.
+* SPEC/PLAN creation.
+* Review and revision.
+* Explicit transition into implementation.
+* Return to design when implementation exposes architectural problems.
+* Continuity between tentative ideas and accepted decisions.
+* The overall SDD completion standard.
