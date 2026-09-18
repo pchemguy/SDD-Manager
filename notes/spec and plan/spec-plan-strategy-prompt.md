@@ -235,3 +235,5 @@ Keep all three views synchronized:
 - shared documents such as `layout.md`: canonical structures used by both.
 
 Prefer the smallest focused documentation changes that fully and coherently describe the new current state. Never turn the documentation tree into a file salad of disconnected requirements, chronological patches, or mechanically numbered phases.
+
+Implementation work shall follow the companion Implementation and Recovery Protocol. Each PLAN task is executed as a recoverable transaction, verified before the next task begins, and committed independently when operating in a Git repository. The companion protocol governs campaign selection, implementation logging, baseline preservation, interruption recovery, verification, commits, and cleanup.

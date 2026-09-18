@@ -445,21 +445,16 @@ However, adjacent `.orig` files plus only `START`/`COMPLETE` records are not qui
 The protocol should distinguish:
 
 1. **Authoritative project state**
-
-   * Main SPEC, PLAN, layout, and source tree.
-   * Always describe the complete current project.
-
+    * Main SPEC, PLAN, layout, and source tree.
+    * Always describe the complete current project.
 2. **Active change definition**
-
-   * Temporary `docs/dev/FEATURE-SPEC.md`.
-   * Temporary `docs/dev/FEATURE-PLAN.md`.
-   * Describes the intended delta, not a replacement baseline.
-
+    * Temporary `docs/dev/FEATURE-SPEC.md`.
+    * Temporary `docs/dev/FEATURE-PLAN.md`.
+    * Describes the intended delta, not a replacement baseline.
 3. **Execution state**
-
-   * Root implementation log.
-   * Backups and a task manifest.
-   * Records which task is currently being executed and how to recover it.
+    * Root implementation log.
+    * Backups and a task manifest.
+    * Records which task is currently being executed and how to recover it.
 
 Feature documents must be read together with the main documents:
 
@@ -696,4 +691,81 @@ The proposed approach has the correct foundation, but I would revise it around f
 * distinct `VERIFIED`, Git-committed, and cleaned states.
 
 That produces an actual recoverable task transaction rather than a convention that works mainly for interrupted edits to existing files.
+
+---
+---
+
+## 📗 Implementation Prompt Cont
+
+> [!NOTE] Prompt
+>  
+>  This is fine. Should this make a second prompt or be integrated with previous one?
+
+It should be a second, companion prompt—not fully integrated into the SPEC/PLAN Strategy Prompt.
+
+The two prompts govern different layers:
+
+* **SPEC/PLAN Strategy Prompt**: persistent project-documentation and architectural policy. Use it during design, planning, implementation, and documentation maintenance.
+* **Implementation Protocol Prompt**: operational execution policy. Activate it when an agent will modify the codebase, resume interrupted work, or recover an incomplete task.
+
+The implementation protocol contains substantial transaction machinery—logs, manifests, backups, Git commits, recovery states—which would obscure the architectural purpose of the first prompt if merged wholesale.
+
+I recommend this structure:
+
+```text
+SPEC and PLAN Strategy Prompt
+Implementation and Recovery Protocol Prompt
+```
+
+Revision 2 of the strategy prompt should receive only a small integration section:
+
+> Implementation work shall follow the companion Implementation and Recovery Protocol. Each PLAN task is executed as a recoverable transaction, verified before the next task begins, and committed independently when operating in a Git repository. The companion protocol governs campaign selection, implementation logging, baseline preservation, interruption recovery, verification, commits, and cleanup.
+
+The second prompt should reference the first:
+
+> This protocol operationalizes tasks defined under the SPEC and PLAN Strategy. It does not redefine architecture, specification ownership, plan decomposition, or task scope. Those matters remain governed by the strategy prompt.
+
+The division of responsibility would be:
+
+| Concern                               |     Strategy prompt |           Implementation protocol |
+| ------------------------------------- | ------------------: | --------------------------------: |
+| Complete-from-scratch SPEC/PLAN model |           Canonical |                    Reference only |
+| Architectural decomposition           |           Canonical |                    Reference only |
+| Named phases and bounded tasks        |           Canonical |                           Consume |
+| Unit/integration testing expectations |        General rule |         Exact execution procedure |
+| Initial vs feature implementation     |       Brief concept |                 Operational modes |
+| Feature document lifecycle            |  Architectural rule | Campaign selection and completion |
+| Implementation journal                |          No details |                         Canonical |
+| Backups and manifest                  |          No details |                         Canonical |
+| Interrupted-run recovery              |      Reference only |                         Canonical |
+| Git inspection and commits            | General requirement |                    Exact ordering |
+| Cleanup and anomalous leftovers       |          No details |                         Canonical |
+
+The implementation protocol should support two campaign modes under one common transaction mechanism:
+
+* `initial`: executes the main `docs/dev/PLAN.md`.
+* `feature`: executes `docs/dev/FEATURE-PLAN.md` against the baseline defined by the main SPEC/PLAN.
+
+There is no need for separate initial-implementation and feature-implementation prompts. Their document inputs and final integration steps differ, but task preparation, backup, verification, commit, and recovery behavior are the same.
+
+This gives a clean layered arrangement:
+
+```text
+SPEC/PLAN strategy
+        ↓ defines tasks and architecture
+Implementation/recovery protocol
+        ↓ executes each task transactionally
+Repository, tests, log, backups, and Git
+```
+
+So: retain revision 1, later make a very small revision 2 adding the companion-protocol link, and create the operational protocol as a separate prompt.
+
+---
+---
+
+## 📗 Implementation and Recovery Protocol Prompt
+
+> [!NOTE] Prompt
+>  
+>  Generate "Implementation and Recovery Protocol Prompt". Make sure it is operational for an agent (e.g., clear step-by-step instructions or required action bullets where appropriate)
 
