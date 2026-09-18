@@ -782,3 +782,51 @@ Created the operational companion prompt. It provides agent-executable procedure
 * Explicit stop and escalation conditions.
 
 Revision 1 of the strategy prompt remains unchanged.
+
+---
+---
+
+## 📗 Implementation and Recovery Protocol Prompt Refinement
+
+> [!NOTE] Prompt
+>  
+>  I want to add instructions to also read AGENTS.md, docs/dev/PROJECT.md and any relevant referenced files. Both files (and references) may declare project-wide requirements, which must be followed during implementation, such as required coding style, tooling, and so on.
+
+Updated. The protocol now requires agents to:
+
+* Read the root and applicable nested `AGENTS.md` files.
+* Read `docs/dev/PROJECT.md` when present.
+* Follow all relevant referenced files.
+* Apply project-specific style, tooling, dependency, testing, and completion requirements.
+* Repeat instruction discovery when task scope expands.
+* Stop for unresolved missing, contradictory, or conflicting instructions.
+
+---
+---
+
+## 📗 SDD Preamble
+
+> [!NOTE] Prompt
+>  
+> Now, I may also use
+> 
+> ```
+> # Specification-Driven Development Protocol
+> 
+> [SDD PREAMBLE]
+> 
+> ## SPEC and PLAN Strategy
+> 
+> ...
+> 
+> 
+> ## Implementation and Recovery Protocol
+> 
+> ...
+> ```
+> 
+> as a system or context setting prompt for a hybrid conversation. A common pattern I often use when following this approach, I start conversation by defining the problem/need/objective/etc and performing AI-assisted interactive multiturn exploration/discovery of the scope, possible approaches, architectures, uncovering unknown-unknowns, briefly familiarizing myself with useful patterns/techniques/etc useful for problem implementation, but unfamiliar to me, and so on. When the context contains sufficient info and decision to develop SPEC and PLAN, I ask the agent/LLM create those. After any desired revisions, the context would contain info sufficient to proceeding to implementation, so I request one.
+> 
+> I can use the two created prompts as the key SDD Protocol Prompt components, I just need you generate [SDD PREAMBLE]to support the dev pattern I just described.
+
+

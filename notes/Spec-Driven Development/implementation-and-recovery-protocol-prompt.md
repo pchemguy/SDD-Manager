@@ -57,6 +57,7 @@ Read and execute the main documentation tree, beginning with:
 docs/dev/SPEC.md
 docs/dev/PLAN.md
 docs/dev/layout.md              # when present
+docs/dev/PROJECT.md             # when present
 ```
 
 Also read the focused child documents governing the selected task.
@@ -86,7 +87,24 @@ The first valid line of a new campaign log shall be a record such as:
 
 Use the log only for the current campaign. A new campaign may replace the previous completed campaign log after confirming that no task or recovery data remains active. Git history preserves earlier campaign logs in Git repositories.
 
-### 3. Task states
+### 3. Project instruction sources
+
+Before planning or modifying a task, locate and read all applicable project instruction sources:
+
+- the repository-root `AGENTS.md`, when present;
+- any more deeply nested `AGENTS.md` files whose directory scopes contain anticipated task targets;
+- `docs/dev/PROJECT.md`, when present;
+- every relevant file referenced by those documents.
+
+Follow references far enough to obtain all requirements applicable to the task, including coding style, supported language and dependency versions, architectural and import restrictions, required tools and commands, generated-file policies, testing conventions, and completion checks. Resolve relative references from the directory containing the referring document unless that document defines another rule.
+
+Treat applicable instructions from these sources as mandatory throughout preparation, implementation, verification, recovery, and Git operations. Incorporate their required commands and checks into the task's declared verification. Do not substitute familiar tooling or generic conventions for project-specific requirements.
+
+`AGENTS.md` instructions may be hierarchical and directory-scoped. Determine which instructions apply to every anticipated target. When task scope expands into another directory, discover and read any newly applicable `AGENTS.md` files and referenced instructions before preparing or modifying the added path.
+
+If an applicable instruction source is missing, unreadable, internally contradictory, or conflicts with another governing document and no explicit precedence rule resolves the conflict, stop and ask the user. Do not guess which requirement to ignore.
+
+### 4. Task states
 
 A task progresses through these states:
 
@@ -104,7 +122,7 @@ STARTED → PREPARED → COMPLETED → COMMITTED → CLEANED
 
 An incomplete task may instead reach `REVERTED`, meaning its entire recorded scope has been restored to the prepared baseline and its recovery directory has been removed.
 
-### 4. Start every session with recovery inspection
+### 5. Start every session with recovery inspection
 
 Before selecting or implementing a new task:
 
@@ -112,19 +130,20 @@ Before selecting or implementing a new task:
 2. Determine whether the directory is a Git repository.
 3. Inspect `IMPLEMENTATION_LOG.jsonl`, `.implementation-state/`, and, when applicable, Git status and recent task commits.
 4. Identify the latest campaign and latest task state.
-5. Apply the recovery procedure in section 10 before modifying any project file.
-6. Confirm that no earlier task remains active.
+5. Read the project instruction sources applicable to the current or recovered task scope.
+6. Apply the recovery procedure in section 11 before modifying any project file.
+7. Confirm that no earlier task remains active.
 
 Recovery takes precedence over new implementation. Never continue with the next PLAN task merely because the partially completed files appear plausible.
 
 If the final JSONL line is clearly truncated by an interrupted append, treat the preceding valid lines as authoritative only when the recovery directory makes the state unambiguous. Preserve the evidence and ask the user if interpretation is uncertain. Corruption before the final line is always an escalation condition.
 
-### 5. Preflight for a new task
+### 6. Preflight for a new task
 
 After recovery is complete:
 
 1. Read the active PLAN or FEATURE-PLAN and identify the next incomplete task in its declared order.
-2. Read every SPEC, PLAN, layout, and feature section governing that task.
+2. Read every SPEC, PLAN, layout, and feature section governing that task, together with the applicable project instruction sources defined in section 3.
 3. Inspect the relevant code and tests without modifying them.
 4. Define one concise task scope and the complete anticipated file-operation set.
 5. Classify every target operation as `modify`, `create`, `delete`, or `rename`.
@@ -145,11 +164,11 @@ In a Git repository:
 
 Do not use repository-wide reset, checkout, clean, or equivalent destructive recovery commands. All preparation, restoration, staging, and committing shall be limited to declared task paths.
 
-### 6. Declare and prepare the task
+### 7. Declare and prepare the task
 
 Perform the following steps in order.
 
-#### 6.1 Append `STARTED`
+#### 7.1 Append `STARTED`
 
 Before modifying any project target, append one `started` record containing:
 
@@ -167,7 +186,7 @@ Example:
 {"event":"started","at":"2026-09-18T07:42:15Z","task":"20260918T074215Z-cli-input-handling","plan":"docs/dev/FEATURE-PLAN.md#cli-input","scope":"Add validated CLI key bindings","files":[{"path":"src/tetris/cli.py","operation":"modify"},{"path":"tests/test_cli.py","operation":"modify"},{"path":"docs/dev/spec/frontends/cli.md","operation":"modify"}],"baseline_fingerprint":"sha256:…","git_head":"abc1234","verification":["pytest tests/test_cli.py","pytest tests/test_application_api.py"]}
 ```
 
-#### 6.2 Create the manifest and backups
+#### 7.2 Create the manifest and backups
 
 Create `.implementation-state/<task-id>/manifest.json`. For every operation, record enough information to restore the exact baseline:
 
@@ -196,7 +215,7 @@ Operation requirements:
 
 Back up symlinks as symlinks rather than silently dereferencing them. Preserve executable bits and other metadata required for correct restoration.
 
-#### 6.3 Append `PREPARED`
+#### 7.3 Append `PREPARED`
 
 Only after the complete manifest and every required backup have been verified, append a `prepared` record containing the task identifier, manifest location, manifest version, and manifest hash.
 
@@ -206,20 +225,21 @@ Only after the complete manifest and every required backup have been verified, a
 
 Do not modify any declared project target before this record exists.
 
-#### 6.4 Expanding scope after preparation
+#### 7.4 Expanding scope after preparation
 
 If implementation reveals that another path must change:
 
 1. Do not modify the new path.
-2. Append a `scope-extension-started` record identifying the additional operation.
-3. Capture and verify its baseline exactly as for the original paths.
-4. Update and re-hash the manifest with a new version.
-5. Append another `prepared` record for the new manifest version.
-6. Only then modify the additional path.
+2. Discover and read any project instructions newly applicable to the expanded scope.
+3. Append a `scope-extension-started` record identifying the additional operation.
+4. Capture and verify its baseline exactly as for the original paths.
+5. Update and re-hash the manifest with a new version.
+6. Append another `prepared` record for the new manifest version.
+7. Only then modify the additional path.
 
 If a path was already modified before being declared and backed up, stop and ask the user. Do not fabricate a baseline from the modified file.
 
-### 7. Implement the task
+### 8. Implement the task
 
 After `PREPARED`:
 
@@ -237,11 +257,11 @@ If the implementation exposes an architectural contradiction, missing decision, 
 
 Do not begin a second PLAN task to make the current one pass. Necessary fixes within the current task's declared behavior belong to the current transaction; unrelated work belongs to a later task.
 
-### 8. Verify and complete the task
+### 9. Verify and complete the task
 
 Do not record completion until all required work is finished.
 
-#### 8.1 Inspect the resulting scope
+#### 9.1 Inspect the resulting scope
 
 - Compare changed paths with the latest manifest.
 - Confirm that every change belongs to the declared task.
@@ -249,7 +269,7 @@ Do not record completion until all required work is finished.
 - Review the resulting diff, including tests and documentation.
 - Confirm that the implementation, SPEC, PLAN, layout, and active feature documents are mutually consistent.
 
-#### 8.2 Run verification
+#### 9.2 Run verification
 
 Run, in this order:
 
@@ -263,7 +283,7 @@ Fix every failure caused by the task and repeat the affected verification until 
 
 If a required check cannot be executed, the task is not complete. Report the blocker. During a controlled stop, restore the incomplete task and append `reverted` unless the user explicitly directs that the prepared state be retained for a known continuation.
 
-#### 8.3 Append `COMPLETED`
+#### 9.3 Append `COMPLETED`
 
 After all required checks pass, append a `completed` record containing:
 
@@ -279,9 +299,9 @@ After all required checks pass, append a `completed` record containing:
 
 The `completed` record must be appended before Git staging or backup removal.
 
-### 9. Commit and clean up
+### 10. Commit and clean up
 
-#### 9.1 Git repository
+#### 10.1 Git repository
 
 After `COMPLETED`:
 
@@ -304,7 +324,7 @@ Do not amend, squash, rebase, push, or otherwise rewrite or publish commits unle
 
 If staging or committing fails, preserve the recovery directory and treat the task as completed but not committed. Do not begin another task.
 
-#### 9.2 Non-Git project
+#### 10.2 Non-Git project
 
 After `COMPLETED`:
 
@@ -314,7 +334,7 @@ After `COMPLETED`:
 
 The completion record is the durable terminal evidence when Git is unavailable.
 
-### 10. Recovery procedure
+### 11. Recovery procedure
 
 Apply the following rules at the beginning of every run.
 
@@ -381,7 +401,7 @@ Likewise, stop and ask the user when:
 - the log, Git history, and recovery directory disagree;
 - restoration would overwrite work whose origin is uncertain.
 
-### 11. Phase and campaign completion
+### 12. Phase and campaign completion
 
 When a task completes a named PLAN phase, run the phase-level verification required by that subplan before setting `phase_complete` to `true`.
 
@@ -404,7 +424,7 @@ When completing a feature campaign, the final task shall also:
 
 The main documentation must describe the resulting project from scratch. The completed feature must not require the deleted feature documents or implementation log for comprehension.
 
-### 12. Journal rules
+### 13. Journal rules
 
 `IMPLEMENTATION_LOG.jsonl` shall contain one valid JSON object per physical line.
 
@@ -427,7 +447,7 @@ completed
 reverted
 ```
 
-### 13. Non-negotiable safety rules
+### 14. Non-negotiable safety rules
 
 - Recover or resolve the current task before starting another.
 - Never modify a target before its baseline is prepared.
