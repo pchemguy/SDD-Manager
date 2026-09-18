@@ -428,7 +428,272 @@ Created the reusable strategy prompt. It covers:
 
 > [!NOTE] Prompt
 >  
+> Let's say the "SPEC and PLAN Strategy Prompt" is accepted as revision 1. Naturally, it covers SPEC/PLAN strategy, but also actual implementation, well, some. Basically, it may already act as a context setting prompt for spec-driven development. But I want extend the implementation part or have an additional prompt.
+> 
+> There are two aspects: implementation from scratch and incremental/revision/feature implementation of existing code base. While SPEC/PLAN, architecture, etc shall reflect "project from scratch", in practice, project is implemented from scratch at the beginning, and most of the time the code base will be evolved together with dev docs to reflect actual project state, while agent would evolve the code base. In either initial or incremental change run, I need a robust protocol for resuming interrupted implementation runs. The prompt should accommodate setups where an agent is running against a git repo, so agent would need to be instructed to commit after each implemented and fully completed (docs, tests, fixes) task. Commits are important, but are only available for a git repo and do not directly enable resumability.  I am thinking of keeping implementation log at project root. I need a concise log record convention. I am thinking of appending a record before implementation task changes any other file, identifying task scope and files to be changed. Before changing any target file, the agent must create its backup copy next to the target (like cli.py.orig or cli.py.bak). Only after the full task is complete and completion record is added to implementation log, backup copies are removed. When agent run is interrupted and resumed, agent will need to check implementation log. If there is pre-task log record, but not completion, the partially implemented task can be deterministically reverted. If there is a completion record, the agent must check that all backup copies have been removed for the last implemented task. Any leftovers can be removed. Any leftovers beyond the last task scope can elevated concern to the user.
+> 
+> I guess temporary FEATURE-SPEC.md and FEATURE-PLAN.md may be placed in docs/dev and can be pointed to. The implementation log actually only keeps entries for main SPEC/PLAN during from scratch implementation and current FEATURE log afterwards. If feature files are present, agent will run against those. Otherwise will use project files.
+> 
+> Assess proposed protocol. propose improvements. Then we will discuss its integration.
 
-Let's say the "SPEC and PLAN Strategy Prompt" is accepted as revision 1. Naturally, it covers SPEC/PLAN strategy, but also actual implementation, well, some. Basically, it may already act as a context setting prompt for spec-driven development. But I want extend the implementation part or have an additional prompt.
+The core idea is sound: treat each implementation task as a recoverable transaction with an explicit start record, a preserved baseline, verification, and—when available—a Git commit.
 
-There are two aspects: implementation from scratch and incremental/revision/feature implementation of existing code base. While SPEC/PLAN, architecture, etc shall reflect "project from scratch", in practice, project is implemented from scratch at the beginning, and most of the time the code base will be evolved together with dev docs to reflect actual project state, while agent would evolve the code base. In either initial or incremental change run, I need a robust protocol for resuming interrupted implementation runs. The prompt should accommodate setups where an agent is running against a git repo, so agent would need to be instructed to commit after each implemented and fully completed (docs, tests, fixes) task. 
+However, adjacent `.orig` files plus only `START`/`COMPLETE` records are not quite enough for deterministic recovery. Several interruption windows and file operations remain ambiguous.
+
+### 1. Separate three concerns
+
+The protocol should distinguish:
+
+1. **Authoritative project state**
+
+   * Main SPEC, PLAN, layout, and source tree.
+   * Always describe the complete current project.
+
+2. **Active change definition**
+
+   * Temporary `docs/dev/FEATURE-SPEC.md`.
+   * Temporary `docs/dev/FEATURE-PLAN.md`.
+   * Describes the intended delta, not a replacement baseline.
+
+3. **Execution state**
+
+   * Root implementation log.
+   * Backups and a task manifest.
+   * Records which task is currently being executed and how to recover it.
+
+Feature documents must be read together with the main documents:
+
+> The main SPEC/PLAN define the current baseline. FEATURE-SPEC/PLAN define the intended change and temporarily take precedence only where they explicitly revise that baseline.
+
+Merely detecting that a feature file exists is risky because abandoned or already-integrated feature files may remain. The implementation log should explicitly declare the active mode and document set.
+
+### 2. Use a transaction directory, not adjacent backups
+
+Files such as `cli.py.orig` have practical problems:
+
+* They can be discovered by test runners, linters, packagers, or source scanners.
+* Their names can collide with existing files or older backups.
+* They do not naturally represent newly created, deleted, or renamed files.
+* They become difficult to distinguish across interrupted tasks.
+* `git add -A` can accidentally stage them.
+
+A centralized operational directory is safer:
+
+```text
+IMPLEMENTATION_LOG.jsonl
+.implementation-state/
+└── <task-id>/
+    ├── manifest.json
+    └── backup/
+        └── <original relative paths>
+```
+
+The backup tree preserves repository-relative paths:
+
+```text
+.implementation-state/20260918-cli-input/backup/src/tetris/cli.py
+```
+
+The operational directory should remain untracked. In a Git repository, it can be excluded locally through `.git/info/exclude`, avoiding a project-level `.gitignore` change solely for execution machinery.
+
+If adjacent backups are retained, the prompt must prohibit broad staging commands and require exact backup names in the task record. Centralized backups are still much less error-prone.
+
+### 3. Introduce a prepared state
+
+A single pre-task record creates an unsafe window:
+
+1. `START` is written.
+2. Some backups are created.
+3. Some target files are modified.
+4. Interruption occurs before all backups exist.
+
+Instead, use these states:
+
+```text
+STARTED → PREPARED → VERIFIED → COMMITTED → CLEANED
+```
+
+Not every state necessarily needs a verbose log record, but the distinction matters.
+
+#### `STARTED`
+
+Record before changing any target:
+
+* unique task identifier;
+* active PLAN or FEATURE-PLAN task;
+* concise scope;
+* complete anticipated file-operation manifest;
+* Git baseline commit, when applicable;
+* active documentation set.
+
+#### `PREPARED`
+
+Write only after every baseline has been captured.
+
+No target file may be modified before `PREPARED`.
+
+The manifest must describe operations, not merely paths:
+
+```text
+modify
+create
+delete
+rename
+```
+
+For an existing file, preserve its original bytes and relevant metadata. For a newly created file, record that it did not exist. For a rename, record both paths.
+
+#### `VERIFIED`
+
+Write after:
+
+* code and documentation changes are complete;
+* targeted unit tests pass;
+* affected dependent and integration tests pass;
+* the resulting SPEC, PLAN, layout, and implementation are mutually consistent.
+
+Include the exact verification commands and results.
+
+#### `COMMITTED`
+
+Relevant only in a Git repository. The task commit must contain the implementation changes, documentation updates, tests, fixes, and its `VERIFIED` record.
+
+The commit message should include the task identifier. The log entry cannot reliably contain the hash of the commit that contains that same entry, so resumability should correlate them by task identifier.
+
+#### `CLEANED`
+
+Backups may be removed after the verified task has been safely committed, or immediately after `VERIFIED` outside Git.
+
+A separate committed `CLEANED` record would create pointless cleanup commits. Therefore `CLEANED` can be inferred operationally:
+
+* the task is verified;
+* in Git, a matching task commit exists;
+* no backup directory remains.
+
+### 4. Recommended ordering
+
+For a Git repository:
+
+1. Inspect repository status and current HEAD.
+2. Refuse to silently absorb pre-existing changes in task target files.
+3. Append `STARTED`.
+4. Create the complete manifest and all backups.
+5. Append `PREPARED`.
+6. Modify only declared files.
+7. Update code, tests, main/feature documentation, and layout as required.
+8. Run required tests and fix all failures.
+9. Append `VERIFIED`, including verification commands.
+10. Stage only declared task files and the implementation log.
+11. Commit with the task identifier.
+12. Remove the task backup directory.
+13. Confirm that the tracked working tree is clean for the task scope.
+
+For a non-Git project, omit steps 10–11 and remove backups after `VERIFIED`.
+
+Git is therefore the durable completed-task boundary; the journal and backups provide recovery of the current uncommitted task.
+
+### 5. Deterministic resume rules
+
+On every implementation run, inspect the log and operational state before modifying project files.
+
+| Last durable state                                            | Resume action                                                                                         |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| No active task                                                | Start the next PLAN task                                                                              |
+| `STARTED`, no `PREPARED`                                      | Confirm no target was modified; discard incomplete preparation and restart                            |
+| `PREPARED`, no `VERIFIED`                                     | Restore the complete recorded baseline, remove files recorded as newly created, then restart the task |
+| `VERIFIED`, no matching Git commit                            | Recheck the declared diff and verification; commit it, or revert if inconsistent                      |
+| Matching committed task, backups remain                       | Remove only that task’s recorded backup directory                                                     |
+| Backups not associated with the current or last verified task | Stop and ask the user                                                                                 |
+| Files changed outside the declared task manifest              | Stop and ask the user                                                                                 |
+
+Restoration should be all-or-nothing for the task. Continuing from arbitrary partially edited files undermines determinism and makes the log largely ceremonial.
+
+The prompt should prohibit broad destructive commands such as repository-wide reset or checkout. Recovery must operate only on the files declared by the active task.
+
+### 6. Record the baseline precisely
+
+For each file operation, the manifest should record at least:
+
+* repository-relative path;
+* intended operation;
+* whether the path existed initially;
+* backup location, if applicable;
+* baseline content hash;
+* relevant file type or mode when necessary.
+
+Example:
+
+```json
+{
+  "path": "src/tetris/cli.py",
+  "operation": "modify",
+  "existed": true,
+  "sha256": "…",
+  "backup": "backup/src/tetris/cli.py"
+}
+```
+
+This lets the resuming agent verify that a backup actually represents the declared baseline.
+
+A task identifier is useful operationally and is not the same mistake as `STREAM-001`. It identifies one execution transaction rather than pretending to define architectural scope. A timestamp plus semantic slug is sufficient:
+
+```text
+20260918T074215Z-cli-input-handling
+```
+
+### 7. Log format
+
+JSON Lines is a better fit than a Markdown table:
+
+* append-only;
+* one crash-tolerant record per line;
+* concise;
+* mechanically parseable;
+* paths, commands, and arrays do not require awkward Markdown escaping.
+
+Example:
+
+```jsonl
+{"event":"started","task":"20260918T074215Z-cli-input-handling","plan":"docs/dev/FEATURE-PLAN.md#cli-input","scope":"Add validated CLI key bindings","files":[{"path":"src/tetris/cli.py","operation":"modify"},{"path":"tests/test_cli.py","operation":"modify"},{"path":"docs/dev/spec/frontends/cli.md","operation":"modify"}],"git_head":"abc1234"}
+{"event":"prepared","task":"20260918T074215Z-cli-input-handling","manifest":".implementation-state/20260918T074215Z-cli-input-handling/manifest.json"}
+{"event":"verified","task":"20260918T074215Z-cli-input-handling","tests":["pytest tests/test_cli.py","pytest tests/test_application_api.py"],"result":"passed"}
+```
+
+The detailed per-file hashes belong in `manifest.json`; duplicating them in the append-only log would make it noisy.
+
+### 8. Log lifecycle
+
+The log should represent the current implementation campaign, not permanent project history.
+
+A reasonable lifecycle is:
+
+* Initial implementation: records tasks from the main PLAN.
+* Feature work: reset or replace the inactive log when beginning the feature, and point it explicitly to `FEATURE-SPEC.md` and `FEATURE-PLAN.md`.
+* Feature completion: integrate the feature documents into the main SPEC/PLAN/layout, verify the full result, commit the integration, and remove the temporary feature files.
+* The completed feature’s task history remains available in Git history when Git exists.
+
+Outside Git, retaining the last completed campaign log may be preferable to deleting the only completion evidence.
+
+Do not select feature mode merely because `FEATURE-SPEC.md` exists. The log header should declare something equivalent to:
+
+```json
+{"event":"campaign","mode":"feature","spec":"docs/dev/FEATURE-SPEC.md","plan":"docs/dev/FEATURE-PLAN.md","baseline_spec":"docs/dev/SPEC.md","baseline_plan":"docs/dev/PLAN.md"}
+```
+
+### 9. Important limitation
+
+Backups do not safely coexist with concurrent editing of the same files. The protocol must establish exclusive ownership of the declared task paths while the task is active.
+
+If the user or another agent may have edited an active target after `PREPARED`, blindly restoring the backup could destroy their work. Unless concurrency is explicitly coordinated, unexpected changes or multiple active task states must be escalated rather than automatically repaired.
+
+### Overall assessment
+
+The proposed approach has the correct foundation, but I would revise it around four stronger guarantees:
+
+* centralized, per-task backups rather than adjacent `.orig` files;
+* an explicit `PREPARED` boundary before any target modification;
+* operation-aware manifests covering modify/create/delete/rename;
+* distinct `VERIFIED`, Git-committed, and cleaned states.
+
+That produces an actual recoverable task transaction rather than a convention that works mainly for interrupted edits to existing files.
+
