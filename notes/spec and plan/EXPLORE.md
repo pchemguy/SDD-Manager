@@ -410,3 +410,25 @@ So the core rule is: **SPEC and PLAN are recursively decomposed models of the sy
 > 
 > I want to have this prompt being comprehensive, yet concise, balancing level of details with size.
 
+Created the reusable strategy prompt. It covers:
+
+* Recursive, architecture-aligned SPEC and PLAN trees.
+* Named functionality phases and bounded implementation tasks.
+* Per-task and phase-level testing requirements.
+* Shared canonical documents such as `layout.md`.
+* Recursive decomposition of shared documents.
+* Acyclic component dependencies and expand–migrate–contract revisions.
+* Integration of temporary feature documents into the authoritative trees.
+* A neutral Tetris example showing architecture, documentation layout, phases, and tasks.
+
+---
+---
+
+## 📗 Implementation Prompt
+
+> [!NOTE] Prompt
+>  
+
+Let's say the "SPEC and PLAN Strategy Prompt" is accepted as revision 1. Naturally, it covers SPEC/PLAN strategy, but also actual implementation, well, some. Basically, it may already act as a context setting prompt for spec-driven development. But I want extend the implementation part or have an additional prompt.
+
+There are two aspects: implementation from scratch and incremental/revision/feature implementation of existing code base. While SPEC/PLAN, architecture, etc shall reflect "project from scratch", in practice, project is implemented from scratch at the beginning, and most of the time the code base will be evolved together with dev docs to reflect actual project state, while agent would evolve the code base. In either initial or incremental change run, I need a robust protocol for resuming interrupted implementation runs. The prompt should accommodate setups where an agent is running against a git repo, so agent would need to be instructed to commit after each implemented and fully completed (docs, tests, fixes) task. 
