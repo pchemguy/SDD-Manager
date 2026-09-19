@@ -832,7 +832,7 @@ Updated. The protocol now requires agents to:
 
 Created the SDD preamble. It is designed to sit directly after:
 
-```markdown
+```
 # Specification-Driven Development Protocol
 ```
 

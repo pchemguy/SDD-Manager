@@ -1,6 +1,6 @@
 # Specification-Driven Development Protocol
 
-## PREAMBLE
+## 📘 PREAMBLE
 
 ### Purpose and interaction model
 
@@ -150,7 +150,7 @@ At every earlier stage, report the actual state accurately: explored, specified,
 
 ---
 
-## SPEC and PLAN Strategy
+## 📘 SPEC and PLAN Strategy
 
 Use the following strategy when creating, restructuring, or maintaining the project's development specification and implementation plan.
 
@@ -266,31 +266,132 @@ After every task:
 
 Require broader integration or full-suite verification at appropriate phase boundaries and at final completion. The PLAN is an executable implementation blueprint, not a diary: preserve the tasks needed to construct the current system, but remove abandoned approaches and obsolete migration history.
 
-### 5. Shared development documents
+### 5. LAYOUT tree and shared development documents
 
-Some project information is canonical input to both SPEC and PLAN and should live beside their roots rather than be owned artificially by either tree.
+Some project information is canonical input to both SPEC and PLAN and should live beside their roots rather than be owned artificially by either tree. The principal shared structure is the LAYOUT tree, rooted at `docs/dev/layout.md`.
 
-`docs/dev/layout.md` shall be the canonical description of the physical project organization when that organization is substantial enough to need explicit design. It should define:
+The three trees answer different questions:
 
-- directories, source files, test locations, and generated artifacts;
+```text
+SPEC      What components, behavior, and contracts constitute the final system?
+PLAN      In what testable functionality slices and dependency order is it built?
+LAYOUT    Where do implementation, tests, documentation, and artifacts physically live?
+```
+
+Keep these views aligned, but do not force them into identical trees. SPEC normally decomposes behavioral and architectural responsibility. PLAN decomposes construction order. LAYOUT decomposes physical ownership. A source file may participate in several PLAN phases, and one physical package may implement several related SPEC contracts; the LAYOUT tree should describe that final ownership without shadowing either tree or duplicating its normative content.
+
+#### 5.1 LAYOUT authority and root responsibilities
+
+`docs/dev/layout.md` is the canonical description of physical project organization when that organization is substantial enough to require explicit design. It should define, at the appropriate level:
+
+- the repository's major directories and important root-level files;
 - the responsibility and ownership boundary of each important location;
-- the mapping between architectural components, implementation modules, and tests;
-- allowed dependency directions or import boundaries where physical layout enforces them.
+- the correspondence among SPEC areas, implementation locations, tests, and PLAN phases;
+- allowed dependency directions, import boundaries, and other constraints enforced through physical organization;
+- the treatment of generated, build, installation, and runtime artifacts;
+- global physical invariants and rules for evolving the layout.
 
-SPEC nodes may refer to layout locations, and PLAN tasks may identify files to create or change, but neither should duplicate the detailed layout definition.
+SPEC nodes may identify the implementation locations that realize their contracts, and PLAN tasks may identify files to create or modify, but neither should duplicate the detailed physical-ownership definition from the LAYOUT tree.
 
-If the physical organization becomes elaborate, decompose `layout.md` using the same recursive rules:
+Keep `layout.md` as a compact architectural entry point rather than a large file inventory or a link-only table of contents. Whether or not it has children, it should provide:
+
+1. Purpose and authority.
+2. A concise repository overview or tree.
+3. The LAYOUT decomposition and the precise scope of each child.
+4. Cross-tree relationships and routing information.
+5. Global physical invariants.
+6. Change and refactoring rules for the complete LAYOUT tree.
+
+#### 5.2 When and how to decompose LAYOUT
+
+`layout.md` may remain a single file while it is focused, navigable, and economical for an agent to load. Split it when distinct physical ownership domains have substantial independent detail or when ordinary work repeatedly requires loading large amounts of unrelated layout material.
+
+Decompose by physical ownership domain, not by current heading size alone. A common structure for a repository organized around documentation, production source, and tests is:
 
 ```text
 docs/dev/
+├── SPEC.md
+├── spec/
+├── PLAN.md
+├── plan/
 ├── layout.md
 └── layout/
-    ├── engine.md
-    ├── frontends.md
-    └── tests.md
+    ├── repository.md
+    ├── docs.md
+    ├── src.md
+    ├── tests.md
+    └── packaging-runtime.md
 ```
 
-In that case, `layout.md` becomes the compact root that defines the scope and relationships of its children. Other genuinely shared documents, such as a project-wide glossary, may be introduced on the same principle, but do not create miscellaneous shared files without a clear canonical responsibility.
+This structure is illustrative. Use the project's actual physical domains and directory names; for example, use `app.md`, `packages.md`, or `services.md` instead of `src.md` when those names better match the repository.
+
+Typical ownership is:
+
+| LAYOUT node | Canonical responsibility |
+|---|---|
+| `layout.md` | Authority, top-level physical map, child scope map, cross-tree relationships, global invariants, and change rules |
+| `layout/repository.md` | Repository-root files and genuinely repository-wide physical conventions |
+| `layout/docs.md` | Documentation directories, SPEC/PLAN/LAYOUT organization, and documentation ownership relationships |
+| `layout/src.md` | Production implementation tree, module and package ownership, and dependency or import rules |
+| `layout/tests.md` | Test directories, helpers, fixtures, unit/integration organization, and implementation-to-test mapping |
+| `layout/packaging-runtime.md` | Generated and runtime artifacts, build outputs, distribution contents, and installed behavior |
+
+Keep documentation, production source, and tests in separate children when each has meaningful independent structure. Combining them into a generic repository child weakens ownership boundaries and forces agents to load unrelated context. `repository.md` should remain limited to root-level files and repository-wide conventions; it must not become a catch-all for everything outside the production tree.
+
+Do not create a separate child for every small section. Closely related subjects should remain together when they describe one physical boundary. For example, packaging, installed behavior, generated files, and runtime artifacts may form one cohesive source-to-build-to-runtime domain. If that node later becomes too broad, decompose it recursively:
+
+```text
+layout/
+├── packaging-runtime.md
+└── packaging-runtime/
+    ├── packaging.md
+    └── artifacts.md
+```
+
+The parent remains the overview and defines the scopes and relationships of its children. Apply the same recursive rule to any LAYOUT node.
+
+A good decomposition normally lets an agent load `layout.md` plus one focused child for an ordinary task. Avoid both a monolith that obscures relevant ownership and a file salad that requires loading several tiny children to understand one routine change.
+
+#### 5.3 Cross-tree mapping
+
+`layout.md` should contain a concise routing map across the development-document trees. Its purpose is to tell a human or agent which focused documents and physical areas govern a change, not to restate their contents.
+
+A generic mapping may use this form:
+
+| Architectural area | SPEC owner | Physical implementation owner | Test owner | Principal PLAN phase or phases |
+|---|---|---|---|---|
+| `<area>` | `spec/<node>.md` | source module or package | unit and integration locations | `plan/<phase>.md` |
+
+Keep this table at the level needed for navigation. Behavioral guarantees remain canonical in SPEC, implementation order remains canonical in PLAN, and detailed file ownership remains canonical in LAYOUT.
+
+#### 5.4 LAYOUT refactoring rules
+
+When splitting or reorganizing an existing LAYOUT document:
+
+1. Inventory all existing normative content and assign every item one canonical destination.
+2. Move ownership constraints, module descriptions, dependency rules, tables, artifact policies, packaging rules, and change rules without dropping or weakening them.
+3. Rewrite only the parent/child boundary prose, navigation, cross-references, and statements made obsolete by the new structure.
+4. Remove normative duplication after confirming that the canonical destination contains the complete requirement.
+5. Update links from SPEC, PLAN, project instructions, and other shared documents.
+6. Verify that `layout.md` still provides enough orientation to select the relevant child without reading the entire tree.
+7. Verify that common implementation tasks require only the root and a small focused subset of children.
+
+Do not split LAYOUT according to PLAN phases: phases describe construction order, while LAYOUT describes final ownership. Do not mechanically mirror the SPEC tree either: SPEC contracts and physical files frequently have many-to-many relationships. Refactor LAYOUT boundaries when physical ownership changes, not merely because another tree was reorganized.
+
+#### 5.5 Other shared development documents
+
+Other information genuinely shared by SPEC and PLAN may live beside their roots, such as `PROJECT.md`, a project-wide glossary, or a focused conventions document. Introduce such a document only when it has a clear canonical responsibility that does not belong naturally to SPEC, PLAN, or LAYOUT.
+
+Shared documents follow the same rules:
+
+- define their authority and scope explicitly;
+- keep each normative fact in one canonical location;
+- reference rather than duplicate requirements;
+- decompose recursively when a coherent node becomes too broad;
+- keep the root sufficient for routing to relevant children;
+- refactor boundaries when the underlying project responsibilities change.
+
+Do not create miscellaneous shared files as overflow containers. A shared document must improve ownership clarity and context locality rather than merely reduce the size of another file.
 
 ### 6. Dependencies and incremental revisions
 
@@ -392,7 +493,7 @@ Implementation work shall follow the companion Implementation and Recovery Proto
 
 ---
 
-## Implementation and Recovery Protocol
+## 📘 Implementation and Recovery Protocol
 
 Use this protocol whenever implementing a project from scratch, applying a feature or revision to an existing codebase, or resuming an interrupted implementation run.
 
