@@ -1576,3 +1576,7 @@ I suggest the immediate deliverable be a **one-page `SPEC.md` for the Hello Worl
 > 
 > Proceed to a compact normative specification `SPEC.md` for the Hello World reference skill.
 
+Created the compact normative specification.
+
+It formalizes the vendor-neutral compatibility contract, exact runtime/support layout, progressive-disclosure behavior, script interfaces, artifact contract, fixtures/tests, and three acceptance scenarios.
+
