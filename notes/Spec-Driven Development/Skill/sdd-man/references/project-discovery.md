@@ -184,6 +184,8 @@ When they exist:
 7. locate matching `Task: <task-id>` commits when Git is available;
 8. identify checkpoint and steering state.
 
+After classification, route every nonterminal task and every unexplained recovery directory through `recovery.md` before selecting new work. Status inspection itself remains read-only; only an explicitly authorized implementation or recovery workflow may restore, complete, or clean a transaction.
+
 Treat a clearly truncated final JSONL append as potentially recoverable only when preceding records and recovery data make state unambiguous. Corruption before the final record is an escalation condition.
 
 Do not delete stale-looking recovery data during inspection. First establish whether it belongs to an active, completed, or unknown task.

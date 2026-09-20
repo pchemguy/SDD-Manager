@@ -2299,3 +2299,48 @@ Verification passed:
 Progress: **2/5 phases, 5/12 milestones, and 13/24 tasks complete.**
 
 The skill is paused at the Phase 2 checkpoint. Next is **Phase 3 — Transactional implementation and recovery**.
+
+---
+---
+
+## 📗 Implement Phase 3
+
+> [!NOTE] Prompt
+>  
+>  Proceed to Phase 3.
+
+Phase 3 is complete and installed.
+
+### Implemented tasks
+
+* **Task 3.1 — Transactional implementation:** Added bounded campaign execution, one-task transactions, baseline manifests, verified backups, scope extension, ordered verification, Git/non-Git closure, roadmap updates, capability summaries, and HIL stopping boundaries.
+* **Task 3.2 — Recovery:** Added mandatory startup recovery, exact all-or-nothing restoration, interrupted completion reconciliation, journal corruption handling, and evidence-preserving escalation.
+* **Task 3.3 — Routing integration:** Connected implementation and recovery with project discovery, lifecycle control, roadmap selection, and verification routing while preserving read-only status inspection.
+
+### Milestones delivered
+
+* **Recoverable task execution:** Initial and change campaigns can execute task, milestone, or phase ranges as independent recoverable transactions.
+* **Recovery and evidence preservation:** Interrupted states have deterministic outcomes—proceed, restart, restore, complete forward, clean, or preserve and ask.
+
+### Phase capability
+
+`sdd-man` can now safely execute and recover bounded implementation work in Git and non-Git projects while preserving unrelated changes. Every completion boundary requires an implemented-feature summary and stops after the authorized range for human steering.
+
+Validation covered:
+
+* Clean Git and non-Git campaigns
+* Unrelated dirty Git paths
+* `STARTED` and `PREPARED` interruptions
+* Completed-but-uncommitted work
+* Committed work with leftover recovery state
+* Modify/create/delete/rename restoration
+* Missing or corrupt recovery evidence
+* Journal/Git conflicts
+* Unavailable required verification
+* Exact-path Git commits and task trailers
+* Structural skill validation
+
+No scripts were added.
+
+Progress: **3/5 phases, 7/12 milestones, 16/24 tasks complete**. The next boundary is **Phase 4 — Human steering and completion communication**.
+

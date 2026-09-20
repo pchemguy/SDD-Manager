@@ -22,7 +22,7 @@ Choose one primary mode:
 | Create or materially revise authoritative development documents | Document authoring or review | [document-system.md](references/document-system.md) |
 | Generate, validate, or interpret project progress | Roadmap | [roadmap.md](references/roadmap.md) |
 | Design testing or resolve checks affected by a change | Verification | [verification.md](references/verification.md) |
-| Implement, continue, or resume a bounded range | Implementation or recovery | Reserved for implementation-phase references |
+| Implement, continue, or resume a bounded range | Implementation or recovery | [implementation.md](references/implementation.md) and [recovery.md](references/recovery.md) |
 | Review or revise work at a completed boundary | Checkpoint steering | Reserved for `references/checkpoint-steering.md` |
 | Report task, milestone, phase, or campaign completion | Reporting | Reserved for `references/reporting.md` |
 
@@ -68,7 +68,7 @@ Do not present:
 
 Load only the active workflow references. Do not preload every resource.
 
-Available Phase 1 and Phase 2 resources:
+Available Phase 1 through Phase 3 resources:
 
 - [lifecycle.md](references/lifecycle.md): modes, transitions, authority, continuity, checkpoints, and truthful status.
 - [exploration.md](references/exploration.md): decisions, alternatives, questions, prototypes, and specification readiness.
@@ -76,10 +76,12 @@ Available Phase 1 and Phase 2 resources:
 - [document-system.md](references/document-system.md): SPEC, PLAN, LAYOUT, recursive ownership, dependencies, change overlays, review, and normalization.
 - [roadmap.md](references/roadmap.md): PLAN-derived progress, bounded work selection, durable checklist semantics, and reconciliation.
 - [verification.md](references/verification.md): verification strategy, component-to-check routing, affected-check selection, and failure handling.
+- [implementation.md](references/implementation.md): campaigns, bounded ranges, one-task transactions, preparation, verification, durable completion, and HIL stopping boundaries.
+- [recovery.md](references/recovery.md): mandatory startup recovery, exact restoration, interrupted completion, cleanup, and evidence-preserving escalation.
 
 ## Phased implementation guard
 
-The installed skill currently implements Phases 1 and 2. Transactional implementation, recovery execution, checkpoint normalization, and completion reporting references are reserved for later phases.
+The installed skill currently implements Phases 1 through 3. Focused checkpoint normalization and the complete completion-reporting workflow are reserved for later phases. Phase 3 nevertheless requires an implemented-feature summary whenever it closes a task, milestone, phase, or campaign.
 
 If a request requires a missing later-phase workflow:
 

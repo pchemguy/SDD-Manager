@@ -65,7 +65,9 @@ Use implementation only when the user explicitly asks to implement, continue, re
 
 Inspect startup and recovery state before choosing work. Resolve the requested task, milestone, or phase boundary. Execute one recoverable task transaction at a time. Stop after the requested range.
 
-Read `project-discovery.md`, `implementation.md`, `recovery.md`, `verification.md`, `roadmap.md`, and `reporting.md`.
+Read `project-discovery.md`, `implementation.md`, `recovery.md`, `verification.md`, and `roadmap.md`; also read `reporting.md` when installed.
+
+When `reporting.md` is not yet installed during phased skill construction, follow the completion-record and feature-summary rules in `implementation.md`; do not omit reporting altogether.
 
 ### Recovery
 
@@ -74,6 +76,8 @@ Use recovery when an implementation run may have been interrupted or when journa
 Resolve recovery before new implementation. Preserve evidence and escalate ambiguous state.
 
 Read `project-discovery.md`, `recovery.md`, and the applicable parts of `implementation.md`.
+
+Recovery is a startup gate, not merely an error handler. Run it before selecting new work on every implementation invocation.
 
 ### Checkpoint steering
 
@@ -224,7 +228,7 @@ Load the minimum applicable set:
 | Create or revise development documents | `document-system.md` |
 | Generate or reconcile roadmap | `roadmap.md` |
 | Design or select verification | `verification.md` |
-| Implement or continue | `project-discovery.md`, `implementation.md`, `recovery.md`, `verification.md`, `roadmap.md`, `reporting.md` |
+| Implement or continue | `project-discovery.md`, `implementation.md`, `recovery.md`, `verification.md`, `roadmap.md`; `reporting.md` when installed |
 | Recover interrupted work | `project-discovery.md`, `recovery.md`, `implementation.md` |
 | Review or revise at checkpoint | `checkpoint-steering.md` plus affected workflow references |
 | Report completion or progress | `reporting.md`, with `roadmap.md` for structured progress |
