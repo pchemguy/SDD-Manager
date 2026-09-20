@@ -1580,3 +1580,39 @@ Created the compact normative specification.
 
 It formalizes the vendor-neutral compatibility contract, exact runtime/support layout, progressive-disclosure behavior, script interfaces, artifact contract, fixtures/tests, and three acceptance scenarios.
 
+---
+---
+
+## 📗 Next Step
+
+> [!NOTE] Prompt
+> 
+> OK. Next step?
+
+The next step is to create a compact **implementation plan** from `SPEC.md`, before writing the skill files.
+
+I’d make `PLAN.md` task-oriented and ordered so each step produces a verifiable increment:
+
+1. Create the repository tree and baseline `README.md`.
+2. Implement `SKILL.md` with only portable frontmatter and orchestration.
+3. Add the four reference resources and ensure each rule has an observable effect.
+4. Add `assets/welcome-template.md`.
+5. Implement `scripts/render.py`.
+6. Implement `scripts/validate.py`.
+7. Add `examples/` fixtures.
+8. Add automated tests for rendering, branching, validation, determinism, and exit codes.
+9. Run the three acceptance scenarios from the spec.
+10. Perform a final portability review to confirm there are no vendor-specific dependencies or conventions.
+
+The plan should also define, per task, the files touched, verification command(s), and completion condition.
+
+So the immediate next artifact should be a **compact normative `PLAN.md` derived directly from `SPEC.md`**.
+
+---
+---
+
+## 📗 SPEC
+
+> [!NOTE] Prompt
+> 
+> Proceed to deriving a compact **implementation plan** from `SPEC.md`. Make `PLAN.md` task-oriented and ordered so each step produces a verifiable increment. The plan should define, per task, the files touched, verification command(s), and completion condition.
