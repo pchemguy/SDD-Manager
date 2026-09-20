@@ -2187,5 +2187,5 @@ The governing rule should be:
 
 > [!NOTE] Prompt
 >  
->  It is time to consolidate specification of the skill as a modular complex, including all discussed features and capabilities.
+>  It is time to consolidate specification of the skill as a modular complex, including all discussed features and capabilities. Keep in mind that use of scripts is option, not a req. Scripts MAY only used when there is a clear deterministic well-defined step.
 
