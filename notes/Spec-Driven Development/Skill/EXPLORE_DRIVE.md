@@ -595,3 +595,96 @@ The most consequential additions to your original list are therefore:
 * cross-tree traceability and canonical ownership;
 * truthful status reporting;
 * design-discovery feedback from implementation.
+
+---
+---
+
+## 📗 Problem Refinement
+
+> [!NOTE] Prompt
+>  
+
+Good. Now, I have been thinking about several things. The first one was suggested by the following turn occurred after partial implementation:
+
+```
+> [!NOTE] Prompt
+> 
+> How may phases/milestones are/can be defined for the rest of the process?
+
+There are **3 remaining top-level phases**, containing **25 implementation tasks**. The current phase structure is already coherent and does not need further top-level splitting.
+
+| Remaining phase     |  Tasks | Suggested milestones |
+| ------------------- | -----: | -------------------: |
+| Archive streams     |     11 |                    5 |
+| Index persistence   |      7 |                    4 |
+| Package integration |      7 |                    3 |
+| **Total**           | **25** |               **12** |
+
+#### Recommended milestone structure
+
+##### Phase 2: Archive streams
+
+1. **Archive test foundation**
+    * Shared generated archive fixtures and failure cases.
+2. **ZIP support**
+    * ZIP streaming backend.
+    * Registry/public API integration.
+    * ZIP stream and index verification.
+3. **TAR support**
+    * Seekable TAR handling.
+    * Non-seekable streaming TAR completion.
+    * Registry/public API integration.
+    * TAR, TGZ, TBZ, and related filter verification.
+4. **7z support**
+    * Bounded queue protocol.
+    * `py7zr` extraction destination.
+    * Inspection and public error translation.
+    * Registry/public API integration.
+5. **Archive lifecycle certification**
+    * Cross-format cleanup, early close, failure, ownership, integrity, and thread-lifecycle tests.
+    * Full archive-phase verification.
+
+##### Phase 3: Index persistence
+
+6. **Persistence validation foundation**
+    * Finalize offset validation shared by both formats.
+7. **SQLite persistence**
+    * Atomic writing.
+    * Strict reading and validation.
+    * Existing-destination protection.
+8. **Raw `uint64` persistence**
+    * Headerless little-endian writing.
+    * Strict reading, alignment checks, and validation.
+    * Atomic publication.
+9. **Persistence API integration**
+    * Public exports.
+    * SQLite/raw equivalence.
+    * Persistence of indexes produced from every supported source format.
+    * Full persistence-phase verification.
+
+##### Phase 4: Package integration
+
+10. **Distribution surface**
+     * Final exports.
+     * `py7zr` dependency constraints.
+     * Build metadata.
+     * User README and examples.
+11. **Operational hardening**
+     * Large-input and backpressure verification.
+     * Cross-platform filesystem and cleanup behavior.
+12. **Release acceptance**
+     * Wheel and source-distribution builds.
+     * Clean installed-package workflows.
+     * Plain, ZIP, TAR, 7z, SQLite, and raw end-to-end tests.
+     * Documentation reconciliation and complete SPEC acceptance review.
+
+So the useful hierarchy is:
+
+* **3 phases** — major architectural capabilities.
+* **12 milestones** — meaningful stopping/review points.
+* **25 task transactions** — the individually backed-up, tested, logged units required by the implementation protocol.
+
+The next natural stopping point would be **Milestone 2: ZIP support**, rather than waiting for the entire archive phase.
+```
+
+Recommended milestone structure is essentially a roadmap which must be exactly aligned with implementation plan. Further, this items of this road map can be transformed into checked list. The coding agent will have to check a completed task before or after adding a completion record to the journal. At start, coding agent will use it as a second (or first) source of project status, confirming 
