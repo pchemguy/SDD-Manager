@@ -599,92 +599,1173 @@ The most consequential additions to your original list are therefore:
 ---
 ---
 
-## 📗 Problem Refinement
+## 📗 Roadmap
 
 > [!NOTE] Prompt
 >  
-
-Good. Now, I have been thinking about several things. The first one was suggested by the following turn occurred after partial implementation:
-
-```
+> Good. Now, I have been thinking about several things. The first one was suggested by the following turn occurred after partial implementation:
+> 
+> ```
 > [!NOTE] Prompt
 > 
 > How may phases/milestones are/can be defined for the rest of the process?
+> 
+> There are **3 remaining top-level phases**, containing **25 implementation tasks**. The current phase structure is already coherent and does not need further top-level splitting.
+> 
+> | Remaining phase     |  Tasks | Suggested milestones |
+> | ------------------- | -----: | -------------------: |
+> | Archive streams     |     11 |                    5 |
+> | Index persistence   |      7 |                    4 |
+> | Package integration |      7 |                    3 |
+> | **Total**           | **25** |               **12** |
+> 
+> #### Recommended milestone structure
+> 
+> ##### Phase 2: Archive streams
+> 
+> 1. **Archive test foundation**
+>     * Shared generated archive fixtures and failure cases.
+> 2. **ZIP support**
+>     * ZIP streaming backend.
+>     * Registry/public API integration.
+>     * ZIP stream and index verification.
+> 3. **TAR support**
+>     * Seekable TAR handling.
+>     * Non-seekable streaming TAR completion.
+>     * Registry/public API integration.
+>     * TAR, TGZ, TBZ, and related filter verification.
+> 4. **7z support**
+>     * Bounded queue protocol.
+>     * `py7zr` extraction destination.
+>     * Inspection and public error translation.
+>     * Registry/public API integration.
+> 5. **Archive lifecycle certification**
+>     * Cross-format cleanup, early close, failure, ownership, integrity, and thread-lifecycle tests.
+>     * Full archive-phase verification.
+> 
+> ##### Phase 3: Index persistence
+> 
+> 6. **Persistence validation foundation**
+>     * Finalize offset validation shared by both formats.
+> 7. **SQLite persistence**
+>     * Atomic writing.
+>     * Strict reading and validation.
+>     * Existing-destination protection.
+> 8. **Raw `uint64` persistence**
+>     * Headerless little-endian writing.
+>     * Strict reading, alignment checks, and validation.
+>     * Atomic publication.
+> 9. **Persistence API integration**
+>     * Public exports.
+>     * SQLite/raw equivalence.
+>     * Persistence of indexes produced from every supported source format.
+>     * Full persistence-phase verification.
+> 
+> ##### Phase 4: Package integration
+> 
+> 10. **Distribution surface**
+>      * Final exports.
+>      * `py7zr` dependency constraints.
+>      * Build metadata.
+>      * User README and examples.
+> 11. **Operational hardening**
+>      * Large-input and backpressure verification.
+>      * Cross-platform filesystem and cleanup behavior.
+> 12. **Release acceptance**
+>      * Wheel and source-distribution builds.
+>      * Clean installed-package workflows.
+>      * Plain, ZIP, TAR, 7z, SQLite, and raw end-to-end tests.
+>      * Documentation reconciliation and complete SPEC acceptance review.
+> 
+> So the useful hierarchy is:
+> 
+> * **3 phases** — major architectural capabilities.
+> * **12 milestones** — meaningful stopping/review points.
+> * **25 task transactions** — the individually backed-up, tested, logged units required by the implementation protocol.
+> 
+> The next natural stopping point would be **Milestone 2: ZIP support**, rather than waiting for the entire archive phase.
+> ```
+> 
+> "Recommended milestone structure" is essentially a roadmap which must be exactly aligned with implementation plan. Further, this items of this road map can be transformed into checked list. The coding agent will have to check a completed task before or after adding a completion record to the journal. At start, coding agent will use it as a second (or first) source of project status, confirming from the PLAN and journal. This roadmap can be created after PLAN is created as a separate workflow or subworkflow referenced from the planning workflow. The roadmap would greatly facilitate progress inspection by human and enable HIL implementation where agent is instructed to implement, e.g., the next phase, the next N phases or M tasks.
+> 
 
-There are **3 remaining top-level phases**, containing **25 implementation tasks**. The current phase structure is already coherent and does not need further top-level splitting.
+Yes. The roadmap should become a first-class SDD artifact—but specifically a derived execution-control view, not another source of requirements.
 
-| Remaining phase     |  Tasks | Suggested milestones |
-| ------------------- | -----: | -------------------: |
-| Archive streams     |     11 |                    5 |
-| Index persistence   |      7 |                    4 |
-| Package integration |      7 |                    3 |
-| **Total**           | **25** |               **12** |
+The important distinction is:
 
-#### Recommended milestone structure
+| Artifact                   | Authority                                                                     |
+| -------------------------- | ----------------------------------------------------------------------------- |
+| **SPEC**                   | Required final system                                                         |
+| **PLAN**                   | Canonical phases, milestones, tasks, ordering, dependencies, and verification |
+| **ROADMAP**                | Human-readable projection of PLAN structure and durable completion status     |
+| **Implementation journal** | Transaction-level execution and recovery state                                |
+| **Git history**            | Durable task commits when Git is available                                    |
 
-##### Phase 2: Archive streams
+### Recommended artifact
 
-1. **Archive test foundation**
-    * Shared generated archive fixtures and failure cases.
-2. **ZIP support**
-    * ZIP streaming backend.
-    * Registry/public API integration.
-    * ZIP stream and index verification.
-3. **TAR support**
-    * Seekable TAR handling.
-    * Non-seekable streaming TAR completion.
-    * Registry/public API integration.
-    * TAR, TGZ, TBZ, and related filter verification.
-4. **7z support**
-    * Bounded queue protocol.
-    * `py7zr` extraction destination.
-    * Inspection and public error translation.
-    * Registry/public API integration.
-5. **Archive lifecycle certification**
-    * Cross-format cleanup, early close, failure, ownership, integrity, and thread-lifecycle tests.
-    * Full archive-phase verification.
+Use:
 
-##### Phase 3: Index persistence
-
-6. **Persistence validation foundation**
-    * Finalize offset validation shared by both formats.
-7. **SQLite persistence**
-    * Atomic writing.
-    * Strict reading and validation.
-    * Existing-destination protection.
-8. **Raw `uint64` persistence**
-    * Headerless little-endian writing.
-    * Strict reading, alignment checks, and validation.
-    * Atomic publication.
-9. **Persistence API integration**
-    * Public exports.
-    * SQLite/raw equivalence.
-    * Persistence of indexes produced from every supported source format.
-    * Full persistence-phase verification.
-
-##### Phase 4: Package integration
-
-10. **Distribution surface**
-     * Final exports.
-     * `py7zr` dependency constraints.
-     * Build metadata.
-     * User README and examples.
-11. **Operational hardening**
-     * Large-input and backpressure verification.
-     * Cross-platform filesystem and cleanup behavior.
-12. **Release acceptance**
-     * Wheel and source-distribution builds.
-     * Clean installed-package workflows.
-     * Plain, ZIP, TAR, 7z, SQLite, and raw end-to-end tests.
-     * Documentation reconciliation and complete SPEC acceptance review.
-
-So the useful hierarchy is:
-
-* **3 phases** — major architectural capabilities.
-* **12 milestones** — meaningful stopping/review points.
-* **25 task transactions** — the individually backed-up, tested, logged units required by the implementation protocol.
-
-The next natural stopping point would be **Milestone 2: ZIP support**, rather than waiting for the entire archive phase.
+```text
+docs/dev/ROADMAP.md
 ```
 
-Recommended milestone structure is essentially a roadmap which must be exactly aligned with implementation plan. Further, this items of this road map can be transformed into checked list. The coding agent will have to check a completed task before or after adding a completion record to the journal. At start, coding agent will use it as a second (or first) source of project status, confirming 
+alongside:
+
+```text
+docs/dev/
+├── SPEC.md
+├── spec/
+├── PLAN.md
+├── plan/
+├── ROADMAP.md
+├── layout.md
+└── layout/
+```
+
+`ROADMAP.md` should be compact enough to inspect in one pass. Unlike PLAN, it should not repeat detailed implementation instructions, file lists, test commands, or architectural rationale.
+
+### PLAN must own milestones
+
+The roadmap should not invent milestone boundaries after planning. Otherwise milestones become planning decisions stored only in a derived status document.
+
+The revised hierarchy should be:
+
+```text
+PLAN
+└── phases
+    └── milestones
+        └── task transactions
+```
+
+Each level has a different purpose:
+
+* **Phase**: major independently meaningful project capability.
+* **Milestone**: coherent review, handoff, or stopping point within a phase.
+* **Task**: smallest recoverable implementation transaction.
+
+The PLAN should canonically define:
+
+* phase order;
+* milestone order within each phase;
+* task order within each milestone;
+* milestone exit verification;
+* phase exit verification.
+
+The roadmap then mirrors that hierarchy exactly.
+
+### Roadmap derivation workflow
+
+After PLAN generation or material restructuring, run a dedicated **roadmap derivation** subworkflow:
+
+1. Read the complete PLAN tree.
+2. Identify every phase, milestone, and task.
+3. Preserve their canonical order.
+4. Verify that every PLAN task appears exactly once in the roadmap.
+5. Verify that the roadmap introduces no task, dependency, or verification requirement absent from PLAN.
+6. Link each roadmap item to its canonical PLAN section.
+7. Add summary counts for phases, milestones, and tasks.
+8. Initialize completion state from verified project evidence.
+9. Validate the roadmap against the PLAN before reporting it complete.
+
+For a newly planned greenfield project, every item normally begins unchecked.
+
+For an existing project, checkmarks must be reconstructed from durable evidence rather than inferred from the apparent code state.
+
+### Suggested roadmap form
+
+```
+## Project Roadmap
+
+### Authority
+
+This roadmap is a derived implementation-progress view.
+
+- `PLAN.md` and its child documents define canonical implementation scope,
+  ordering, dependencies, and verification.
+- This roadmap mirrors every phase, milestone, and task exactly once.
+- A checked task indicates durable completion under the implementation and
+  recovery protocol.
+- The implementation journal governs active and interrupted task state.
+
+### Progress
+
+| Phase | Milestones | Tasks | Completed |
+|---|---:|---:|---:|
+| Archive streams | 5 | 11 | 3 |
+| Index persistence | 4 | 7 | 0 |
+| Package integration | 3 | 7 | 0 |
+| **Total** | **12** | **25** | **3** |
+
+### Archive streams
+
+- [ ] **Archive test foundation**
+  - [x] [Generate shared archive fixtures](plan/archive-streams.md#generate-shared-archive-fixtures)
+  - [x] [Add malformed-archive fixtures](plan/archive-streams.md#add-malformed-archive-fixtures)
+
+- [ ] **ZIP support**
+  - [x] [Implement ZIP streaming backend](plan/archive-streams.md#implement-zip-streaming-backend)
+  - [ ] [Integrate ZIP with the source registry](plan/archive-streams.md#integrate-zip-with-the-source-registry)
+  - [ ] [Verify ZIP indexing](plan/archive-streams.md#verify-zip-indexing)
+```
+
+The precise formatting can be settled later. The essential property is exact, mechanically checkable correspondence with PLAN.
+
+### Checkbox semantics
+
+Use only binary durable states in the persisted roadmap:
+
+* `[ ]` — not durably complete;
+* `[x]` — durably complete.
+
+Do not use the roadmap checkbox to represent:
+
+* currently active;
+* prepared;
+* verified but not committed;
+* blocked;
+* partially implemented;
+* reverted.
+
+Those states belong to the journal and recovery data. Adding transient states to the roadmap would make it another transaction ledger and increase reconciliation complexity.
+
+A milestone is checked only when:
+
+* all its tasks are durably complete; and
+* its milestone-level verification has passed.
+
+A phase is checked only when:
+
+* all its milestones are durably complete; and
+* its phase-level verification has passed.
+
+The complete roadmap is checked only when campaign acceptance has passed.
+
+### When a task checkbox changes
+
+The roadmap should be part of every implementation task’s declared transaction scope. The safe sequence is:
+
+1. Implement the declared task.
+2. Update tests and authoritative documents.
+3. Run task verification.
+4. If applicable, run milestone or phase exit verification.
+5. Mark the task checked in `ROADMAP.md`.
+6. Mark its milestone or phase checked if its exit conditions are satisfied.
+7. Update roadmap counts.
+8. Append the journal `completed` record.
+9. Commit the task, journal record, roadmap, code, tests, and documentation together when Git is available.
+10. Remove recovery state after durable completion.
+
+This ordering has useful recovery behavior:
+
+* If interrupted before the `completed` record, the transaction is incomplete and recovery restores the earlier unchecked roadmap.
+* If interrupted after `completed` but before the commit, recovery sees a completed transaction and performs completed-task reconciliation.
+* The task commit contains the implementation and the corresponding progress transition together.
+* In a non-Git project, the completion record plus the resulting roadmap state form the durable completion evidence.
+
+The roadmap should therefore be included in the anticipated file set during task preflight.
+
+### Startup and resumption precedence
+
+The roadmap can be read first for fast human or agent orientation, but it must not be trusted first for execution decisions.
+
+The safe startup order is:
+
+1. Inspect journal and recovery data.
+2. Inspect Git state and matching task commits when applicable.
+3. Resolve or recover any active transaction.
+4. Read the roadmap for summarized progress.
+5. Compare roadmap checkmarks with journal and commit evidence.
+6. Compare the next unchecked roadmap task with PLAN ordering.
+7. Begin work only after all three agree.
+
+Conceptually:
+
+```text
+journal + recovery + Git
+        determine transactional truth
+                    ↓
+ROADMAP
+        summarizes durable progress
+                    ↓
+PLAN
+        confirms canonical next work
+```
+
+PLAN and roadmap play complementary roles:
+
+* PLAN says what should be implemented and in what order.
+* Roadmap says which planned boundaries have been durably crossed.
+* Journal says what happened to the current or latest task.
+
+### Reconciliation rules
+
+At startup, validate at least these invariants:
+
+* Every roadmap task maps to exactly one PLAN task.
+* Every PLAN task maps to exactly one roadmap task.
+* Relative ordering is identical.
+* A checked task has a corresponding durable completion record.
+* In Git, a checked task also has its required task commit.
+* An unchecked task is not treated as complete merely because code resembling it exists.
+* A checked milestone has no unchecked child task.
+* A checked phase has no unchecked child milestone.
+* Summary counts equal checkbox state.
+* The next incomplete task agrees with PLAN ordering.
+
+If the roadmap disagrees with the journal or Git:
+
+* do not silently modify checkmarks;
+* determine whether this is an interrupted completed-task transition, stale roadmap state, missing commit, or corrupted history;
+* repair it through the appropriate recovery or reconciliation transaction;
+* escalate when ownership or origin is uncertain.
+
+A roadmap mismatch is therefore a project-state inconsistency, not merely a formatting error.
+
+### Human-in-the-loop execution boundaries
+
+This gives `sdd-man` a clean set of bounded implementation requests:
+
+* implement the next task;
+* implement the next `N` tasks;
+* complete the current milestone;
+* implement the next milestone;
+* complete the current phase;
+* implement the next phase;
+* implement through a named milestone;
+* implement through a named phase;
+* report progress without implementing;
+* resume the active campaign;
+* stop after the MVP milestone.
+
+The selection semantics should be precise.
+
+#### “Next N tasks”
+
+Execute the next `N` incomplete tasks in canonical PLAN order. Each task remains an independent transaction with its own:
+
+* preparation;
+* backup manifest;
+* verification;
+* journal completion;
+* commit where available;
+* cleanup.
+
+`N` tasks do not become one large transaction.
+
+#### “Next milestone”
+
+Execute all remaining tasks through the end of the next incomplete milestone, including milestone verification.
+
+If the current milestone is partially complete, “next milestone” should normally mean complete that current milestone, not skip to the following one.
+
+#### “Next phase”
+
+Execute all remaining tasks through the end of the current incomplete phase, including milestone and phase verification.
+
+Again, if work is already partway through a phase, the boundary means completion of that phase rather than completion of an additional full phase.
+
+#### “Next N milestones/phases”
+
+Count incomplete boundaries from current durable progress. Execute tasks sequentially until the requested number of boundaries has been completed.
+
+#### Named boundary
+
+For example:
+
+> Implement through Archive lifecycle certification.
+
+Resolve the named boundary in PLAN and ROADMAP, verify it is unambiguous, and execute all incomplete prerequisite tasks through that boundary.
+
+### Stop semantics
+
+After reaching the user-selected boundary, the agent should stop only at a clean task boundary:
+
+* no active task;
+* all requested tasks verified;
+* matching commits present where applicable;
+* recovery data cleaned;
+* roadmap updated;
+* requested milestone or phase exit verification completed;
+* concise progress report provided.
+
+If execution is blocked inside a task, the controlled-stop rules still apply. The agent should restore the incomplete task unless the user explicitly authorizes retaining its prepared state.
+
+### Progress reporting
+
+The roadmap enables concise reports such as:
+
+> Phase 2 is 6/11 tasks complete. ZIP support is complete. TAR support is the active milestone, with 1/3 tasks complete. The next task is non-seekable streaming TAR support.
+
+A status report should reconcile:
+
+```text
+PLAN structure
++ ROADMAP checkmarks
++ journal state
++ Git durability
+= reported project status
+```
+
+It should not derive progress only from checkbox counts.
+
+### Required additions to the preliminary skill model
+
+This adds three capabilities to the earlier scope.
+
+#### Roadmap generation and maintenance
+
+A subworkflow of planning and project evolution:
+
+* derive `ROADMAP.md` from PLAN;
+* update it when PLAN structure changes;
+* validate exact structural correspondence;
+* maintain completion rollups.
+
+#### Bounded implementation orchestration
+
+A subworkflow of implementation:
+
+* resolve human-selected task, milestone, or phase boundaries;
+* execute constituent tasks as separate transactions;
+* stop at the requested durable boundary.
+
+#### Progress inspection and reconciliation
+
+A subworkflow of project inspection:
+
+* compare PLAN, roadmap, journal, recovery state, and Git;
+* calculate durable progress;
+* identify the next task and next useful stopping point;
+* detect and resolve status drift.
+
+### Likely deterministic helper
+
+This is a strong candidate for a skill script, perhaps:
+
+```text
+scripts/roadmap.py
+```
+
+Possible operations:
+
+```console
+python scripts/roadmap.py generate --project <root>
+python scripts/roadmap.py validate --project <root>
+python scripts/roadmap.py status --project <root>
+python scripts/roadmap.py next --project <root>
+```
+
+Later it could also validate a proposed completion transition:
+
+```console
+python scripts/roadmap.py complete \
+    --project <root> \
+    --task <semantic-task-reference>
+```
+
+I would initially keep actual checkbox mutation under the transactional implementation workflow, with the script validating or performing the deterministic edit. The agent should still decide phase and milestone structure during planning; the script should never invent those architectural groupings.
+
+So the core principle should be:
+
+> **PLAN defines the route, ROADMAP exposes the route and durable progress to humans, and the journal makes each movement along that route recoverable.**
+
+---
+---
+
+## 📗 Tests Registry
+
+> [!NOTE] Prompt
+>  
+> When agent creates tests, it creates those for specific targets. When later specific tests are executed, the AI needs to pinpoint appropriate tests. This can be done, of course by analyzing imports. But does it make sense to define some kind of JSON registry mapping to map specific components to corresponding tests. I guess this can also be constructed from scratch deterministically more or less, but agent could add records immediately after creation of test modules and cases. Or how should this be handled? 
+
+Yes, a registry makes sense—especially for a large, componentized project—but it should map components to verification targets, not attempt to map every source function to individual test cases.
+
+I would call it a **verification map**, because the same mechanism should eventually cover integration tests, type checks, builds, packaging checks, and other component-specific verification.
+
+### Recommended artifact
+
+```text
+docs/dev/verification-map.json
+```
+
+Its responsibility would be:
+
+> Map the implemented project’s architectural components and physical source areas to stable, executable verification targets.
+
+It would complement, rather than replace, PLAN verification requirements.
+
+| Source           | Responsibility                                                 |
+| ---------------- | -------------------------------------------------------------- |
+| SPEC             | Defines required behavior and acceptance conditions            |
+| PLAN             | Defines verification required by tasks, milestones, and phases |
+| LAYOUT           | Defines component and physical ownership                       |
+| Verification map | Resolves implemented components and paths to runnable checks   |
+| Test suite       | Executable verification truth                                  |
+| Journal          | Records the exact checks actually executed                     |
+
+### Why import analysis is insufficient
+
+Imports are useful evidence, but they cannot reliably discover:
+
+* black-box CLI tests;
+* protocol or interface conformance tests;
+* tests using dynamic imports;
+* integration tests spanning several components;
+* persistence compatibility tests;
+* tests driven through public APIs rather than direct imports;
+* packaging and installed-distribution tests;
+* dependency injection and plugin tests;
+* subprocess tests;
+* tests whose fixtures construct a component indirectly;
+* tests covering external formats or behavioral contracts.
+
+Import analysis should therefore assist registry construction and validation, but not be the sole mechanism.
+
+### Appropriate granularity
+
+The registry should normally map:
+
+```text
+component
+→ source paths
+→ unit-test targets
+→ integration-test targets
+→ other verification targets
+```
+
+It should not normally map:
+
+```text
+individual function
+→ individual test case
+```
+
+Case-level selectors are too fragile:
+
+* test names change;
+* parameterized node IDs change;
+* tests often cover multiple behaviors;
+* implementation functions may be refactored without changing the contract;
+* maintaining the registry becomes more expensive than locating the tests.
+
+Individual test selectors should be recorded only when they are intentionally stable and useful—for example, isolating an expensive acceptance scenario.
+
+### Suggested normalized structure
+
+A normalized structure avoids duplicating commands across components:
+
+```json
+{
+  "schema_version": 1,
+  "components": {
+    "archive.zip": {
+      "paths": [
+        "src/archive_line_index/archive/zip.py"
+      ],
+      "verification_targets": [
+        "archive.zip.unit",
+        "archive.zip.integration"
+      ]
+    },
+    "index.builder": {
+      "paths": [
+        "src/archive_line_index/index.py"
+      ],
+      "verification_targets": [
+        "index.builder.unit",
+        "archive.zip.integration"
+      ]
+    }
+  },
+  "verification_targets": {
+    "archive.zip.unit": {
+      "kind": "unit",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/archive/test_zip.py"
+      ]
+    },
+    "index.builder.unit": {
+      "kind": "unit",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_index.py"
+      ]
+    },
+    "archive.zip.integration": {
+      "kind": "integration",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/integration/test_zip_index.py"
+      ]
+    }
+  }
+}
+```
+
+Using argument arrays instead of shell command strings avoids quoting and cross-platform shell ambiguities.
+
+A test target may cover multiple components without duplicating its command.
+
+### Dependencies and affected tests
+
+There are two possible designs.
+
+#### Option 1: Include component dependencies
+
+```json
+{
+  "components": {
+    "archive.zip": {
+      "paths": ["src/archive_line_index/archive/zip.py"],
+      "dependents": ["source.registry", "index.builder"],
+      "verification_targets": ["archive.zip.unit"]
+    }
+  }
+}
+```
+
+This is convenient, but duplicates architectural dependency information that may already belong in SPEC, LAYOUT, or another structured component map.
+
+#### Option 2: Keep dependencies separately
+
+Preferably, component dependencies remain canonically defined elsewhere, while the verification map only assigns checks to components.
+
+Test selection then combines:
+
+```text
+changed paths
+→ owning components
+→ architectural dependents
+→ verification targets for affected components
+```
+
+This avoids making the verification map another architecture registry. If `sdd-man` eventually introduces a machine-readable component map, the verification map should reference its stable semantic component names.
+
+### Test selection algorithm
+
+For an implementation task, the agent should select verification in this order:
+
+1. Map changed production paths to their owning components.
+2. Select those components’ direct unit-test targets.
+3. Identify affected dependent components.
+4. Select dependent-component tests.
+5. Select integration targets crossing affected component boundaries.
+6. Add checks explicitly required by the active PLAN task.
+7. Add project-instruction checks required by `AGENTS.md`, `PROJECT.md`, or equivalent sources.
+8. Add milestone, phase, or campaign checks when completing such a boundary.
+9. Deduplicate commands.
+10. Execute them from narrowest to broadest.
+
+Conceptually:
+
+```text
+changed paths
+      ↓
+owning components
+      ↓
+direct tests + dependent tests + integration tests
+      ↓
+PLAN and project-required checks
+      ↓
+ordered verification set
+```
+
+The map provides a minimum candidate set, not permission to ignore other relevant tests.
+
+### Incremental maintenance
+
+Your proposal to register tests when they are created is the right model.
+
+When a task:
+
+* creates a production component;
+* creates a test module;
+* moves source or test files;
+* changes component responsibility;
+* introduces a new integration boundary;
+* adds a new verification command;
+* deletes or consolidates tests;
+
+the same task should update `verification-map.json`.
+
+The verification map becomes part of the task’s declared transaction scope, just like the roadmap.
+
+A task creating a new test module would therefore normally modify:
+
+```text
+production target
+test module
+verification-map.json
+possibly PLAN/SPEC/LAYOUT
+ROADMAP.md
+IMPLEMENTATION_LOG.jsonl
+```
+
+The registry update should happen before the task is recorded complete.
+
+### Greenfield behavior
+
+The verification map should represent the implemented current project, not speculative files that do not yet exist.
+
+For a greenfield project:
+
+1. PLAN defines the tests that future tasks must create.
+2. The initial repository/testing task creates the verification map.
+3. Each implementation task adds entries when the corresponding source and test targets become real.
+4. Completion validation confirms that every changed production component has appropriate registered verification.
+
+This keeps the map executable at every committed task boundary.
+
+Avoid filling it with planned paths whose files will not exist until much later unless the schema explicitly supports planned entries. PLAN already carries that future intent.
+
+### Brownfield bootstrap
+
+For an existing project without a verification map:
+
+1. Discover test configuration and test roots.
+2. Collect tests using the project’s test runner.
+3. Analyze naming, imports, fixtures, markers, coverage configuration, and directory correspondence.
+4. Propose component ownership and verification-target mappings.
+5. Validate that every registered command collects or executes at least one check.
+6. Review ambiguous integration or black-box mappings.
+7. Commit the verified map as a bounded documentation/tooling task.
+
+This construction can be largely deterministic, but the agent should not pretend that imports prove behavioral coverage.
+
+### Registry validation
+
+A deterministic helper should validate:
+
+* valid JSON and supported schema version;
+* unique component and verification-target names;
+* valid repository-relative paths;
+* no duplicate path ownership unless explicitly allowed;
+* every referenced verification target exists;
+* every command is a nonempty argument array;
+* registered test paths exist;
+* test commands successfully collect at least one test;
+* no deleted or renamed test remains referenced;
+* every production path covered by the project’s mapping policy has an owner;
+* no unexpected orphan verification targets exist.
+
+For pytest, validation could use collection without running tests:
+
+```console
+python -m pytest --collect-only tests/archive/test_zip.py
+```
+
+Equivalent adapters can be used for other runners.
+
+### Generated index versus maintained registry
+
+There are really two useful artifacts:
+
+#### Maintained verification map
+
+```text
+docs/dev/verification-map.json
+```
+
+Contains stable semantic relationships intentionally maintained with the project.
+
+#### Generated test index
+
+A disposable derived index can contain:
+
+* collected test node IDs;
+* imported modules;
+* markers;
+* parameterizations;
+* collection counts;
+* perhaps coverage-derived relationships.
+
+It should be regenerated when needed and normally should not be committed. Individual collected test cases change too frequently to be good canonical project metadata.
+
+Thus:
+
+```text
+maintained map = semantic test ownership
+generated index = current test-runner details
+```
+
+### Recording verification in the journal
+
+For reproducibility, a completed task record should include:
+
+* exact commands executed;
+* successful results;
+* verification-map schema version;
+* preferably the map’s content hash or Git blob state;
+* whether selection included direct, dependent, integration, milestone, or phase checks.
+
+For example:
+
+```json
+{
+  "event": "completed",
+  "task": "20260920T104200Z-zip-registry-integration",
+  "verification_map_version": 1,
+  "verification_map_sha256": "...",
+  "verification": [
+    {
+      "target": "archive.zip.unit",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/archive/test_zip.py"
+      ],
+      "result": "passed"
+    },
+    {
+      "target": "archive.zip.integration",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/integration/test_zip_index.py"
+      ],
+      "result": "passed"
+    }
+  ]
+}
+```
+
+The journal records what actually ran; the verification map determines what should ordinarily be selected.
+
+### Conflict handling
+
+If the map, PLAN, and repository disagree:
+
+* PLAN-required verification cannot be omitted because the map lacks it.
+* A registered command that no longer collects tests is a map defect.
+* A new test module omitted from the map must be classified before completion.
+* A production component with no mapped direct test requires either:
+
+  * a mapping;
+  * an explicit explanation that it is verified indirectly;
+  * or a documented exemption.
+* The task cannot be declared complete while required verification routing is inconsistent.
+
+### Recommended scope rule
+
+I would not require a verification map for every tiny project. It becomes worthwhile when one or more of these are true:
+
+* source-to-test correspondence is not obvious;
+* several test levels exist;
+* components have multiple dependents;
+* the test suite is expensive enough that targeted selection matters;
+* integration tests span multiple packages;
+* repeated agents must rediscover the same commands;
+* project status and resumption need deterministic test selection.
+
+For small projects with a handful of source and test files, LAYOUT plus PLAN may remain sufficient.
+
+### Addition to `sdd-man`
+
+This introduces three related subworkflows:
+
+#### Verification-map creation
+
+* derive components from SPEC and LAYOUT;
+* discover existing tests;
+* define reusable verification targets;
+* validate every mapping.
+
+#### Verification-map maintenance
+
+* update the map transactionally whenever source or test ownership changes;
+* validate collection before task completion;
+* remove obsolete mappings.
+
+#### Impact-based verification selection
+
+* resolve changed paths to components;
+* expand through dependents;
+* select direct and integration checks;
+* merge PLAN and project-required checks;
+* run from narrowest to broadest;
+* record the resolved commands in the journal.
+
+A likely skill helper would be:
+
+```text
+scripts/verification_map.py
+```
+
+with operations such as:
+
+```console
+python scripts/verification_map.py validate --project <root>
+python scripts/verification_map.py affected --project <root> --path <path>
+python scripts/verification_map.py select --project <root> --path <path>
+python scripts/verification_map.py collect-check --project <root>
+```
+
+The core principle should be:
+
+> Maintain stable component-to-verification ownership explicitly; derive volatile test-case details from the test runner when needed.
+
+---
+---
+
+## 📗 Intermediate Reports
+
+> [!NOTE] Prompt
+>  
+>  I also want to explicitly require that each task/milestone/phase completion report must provide a summary of implemented features.
+
+Agreed. This should be a mandatory **completion-reporting contract**, separate from the journal’s machine-readable state.
+
+Every reported completion must explain what capability now exists—not merely which files changed or which tests passed.
+
+### Reporting levels
+
+#### Task completion report
+
+Summarize the incremental features or enabling capabilities delivered by that task.
+
+Required content:
+
+* task name;
+* implemented features;
+* verification result;
+* resulting roadmap progress;
+* next task or reached stopping boundary.
+
+Example:
+
+> **Task complete: Implement ZIP streaming backend**
+>
+> Implemented features:
+>
+> * Opens the single supported member as a sequential binary stream.
+> * Rejects empty and multi-member ZIP archives.
+> * Preserves caller ownership of externally supplied streams.
+> * Cleans up archive resources on normal close and extraction failure.
+>
+> Verification: 24 ZIP backend unit tests passed.
+>
+> Progress: 4/11 Archive streams tasks complete. Next: integrate ZIP with the source registry.
+
+A task that only establishes infrastructure must still describe its delivered capability:
+
+> Implemented features:
+>
+> * Added reusable generated fixtures for valid, empty, multi-member, truncated, and corrupted archives.
+> * Established shared assertions for stream ownership and cleanup behavior.
+
+Do not falsely present enabling infrastructure as an end-user feature.
+
+#### Milestone completion report
+
+Provide an integrated summary of the capability delivered by all tasks in the milestone. Do not merely concatenate task reports.
+
+Required content:
+
+* milestone name;
+* integrated feature summary;
+* supported behavior and important guarantees;
+* milestone-level verification;
+* roadmap progress;
+* next milestone or stopping point.
+
+Example:
+
+> **Milestone complete: ZIP support**
+>
+> Implemented features:
+>
+> * ZIP archives containing one text member can now be opened as sequential binary streams.
+> * ZIP sources are available through the public source registry and indexing API.
+> * Empty, multi-member, malformed, encrypted, and corrupted archives produce public package errors.
+> * Early close, ownership, integrity, and cleanup behavior are verified.
+>
+> Verification: ZIP unit and integration suites passed, including stream-to-index workflows.
+>
+> Progress: 2/5 Archive streams milestones complete. Next: TAR support.
+
+#### Phase completion report
+
+Summarize the major project capability now available as a result of the whole phase.
+
+Required content:
+
+* phase name;
+* complete implemented capability;
+* supported public workflows;
+* cross-component guarantees;
+* phase acceptance results;
+* cumulative roadmap status;
+* remaining phases or campaign completion status.
+
+Example:
+
+> **Phase complete: Archive streams**
+>
+> Implemented features:
+>
+> * Sequential decompressed binary streams are available for ZIP, TAR-family, and 7z archives.
+> * All archive formats integrate with the same public source and indexing interfaces.
+> * Single-member validation, public error translation, bounded buffering, early close, ownership, and cleanup semantics are consistent across formats.
+> * Index generation is verified for plain, ZIP, TAR, compressed TAR, and 7z sources.
+>
+> Phase acceptance: all archive backend, lifecycle, cross-format, and indexing tests passed.
+>
+> Progress: 2/4 phases and 18/36 tasks complete. Next phase: Index persistence.
+
+### Aggregation rule
+
+Each reporting level answers a different question:
+
+| Level     | Question answered                                            |
+| --------- | ------------------------------------------------------------ |
+| Task      | What incremental capability was just added?                  |
+| Milestone | What coherent usable capability now works?                   |
+| Phase     | What major project capability is now complete?               |
+| Campaign  | What complete system or feature revision has been delivered? |
+
+Higher-level reports must synthesize outcomes rather than repeat lower-level reports verbatim.
+
+### Journal representation
+
+The journal should retain a concise durable feature summary so a later agent can reconstruct completion reports after interruption.
+
+A task `completed` record could contain:
+
+```json
+{
+  "event": "completed",
+  "task": "20260920T104200Z-zip-stream",
+  "summary": "Implemented validated sequential streaming for single-member ZIP archives.",
+  "features": [
+    "Sequential binary streaming of one ZIP member",
+    "Empty and multi-member rejection",
+    "Deterministic resource cleanup",
+    "Caller-owned stream preservation"
+  ],
+  "verification": [
+    {
+      "command": ["python", "-m", "pytest", "tests/archive/test_zip.py"],
+      "result": "passed"
+    }
+  ],
+  "phase_complete": false,
+  "campaign_complete": false
+}
+```
+
+When a task closes a milestone or phase, the same record can include completed boundaries:
+
+```json
+{
+  "boundaries": [
+    {
+      "kind": "milestone",
+      "name": "ZIP support",
+      "summary": "Completed public ZIP streaming and indexing support with lifecycle and failure verification."
+    }
+  ]
+}
+```
+
+For phase completion:
+
+```json
+{
+  "boundaries": [
+    {
+      "kind": "milestone",
+      "name": "Archive lifecycle certification",
+      "summary": "Certified cross-format ownership, cleanup, integrity, and early-close behavior."
+    },
+    {
+      "kind": "phase",
+      "name": "Archive streams",
+      "summary": "Completed integrated ZIP, TAR-family, and 7z sequential stream support."
+    }
+  ]
+}
+```
+
+Keep these summaries concise. The journal remains an execution record rather than a release-notes document.
+
+### Reporting sequence
+
+The task closure sequence should become:
+
+1. Complete implementation and documentation.
+2. Run task verification.
+3. Run milestone or phase verification when reaching a boundary.
+4. Update the roadmap.
+5. Prepare the implemented-feature summary.
+6. Append the `completed` journal record, including the concise summary.
+7. Create and verify the durable task commit when applicable.
+8. Clean recovery state.
+9. Report task completion to the user.
+10. Also report milestone and phase completion when those boundaries were crossed.
+
+Only report completion after the durable closure steps succeed. Before then, the correct status is “verified but not yet durably completed” or another accurate intermediate state.
+
+### Multi-task runs
+
+For instructions such as “implement the next phase”:
+
+* provide a concise task completion report after each task;
+* provide an aggregate milestone report at each milestone boundary;
+* provide an aggregate phase report at the phase boundary;
+* finish with a self-contained summary of the entire requested run.
+
+The final response must remain understandable without relying on earlier progress messages. It should summarize:
+
+* all features delivered during the run;
+* milestones and phases completed;
+* verification performed;
+* current roadmap position;
+* exact next task or next phase.
+
+### Non-feature tasks
+
+Every task must report its actual outcome, even when it does not add runtime behavior.
+
+Use accurate categories such as:
+
+* implemented feature;
+* enabling infrastructure;
+* test capability;
+* documentation or contract clarification;
+* defect correction;
+* migration step;
+* removal of obsolete compatibility behavior;
+* operational hardening.
+
+For example:
+
+> Implemented capabilities:
+>
+> * Added deterministic component-to-test resolution through the verification map.
+> * Added validation that every registered pytest target collects at least one test.
+>
+> No runtime API behavior changed.
+
+### Addition to `sdd-man`
+
+This should become a dedicated **completion reporting and handoff protocol** applied by:
+
+* task completion;
+* milestone completion;
+* phase completion;
+* campaign completion;
+* bounded HIL implementation runs;
+* implementation status reporting after resumption.
+
+Its central rule should be:
+
+> **Every completion report shall state the verified capability delivered at that boundary. File changes, commits, and passing tests are supporting evidence, not the feature summary itself.**
