@@ -45,10 +45,10 @@ Use execution evidence to determine status and PLAN to determine structure.
 Keep ROADMAP compact enough to inspect in one pass. Include:
 
 1. an authority statement;
-2. a progress summary table;
-3. phases in PLAN order;
-4. milestones nested within each phase;
-5. tasks nested within each milestone;
+2. a progress summary table with completed and total phase, milestone, and task counts;
+3. phase checkboxes in PLAN order;
+4. milestone checkboxes nested within each phase;
+5. task checkboxes nested within each milestone;
 6. links from every item to its canonical PLAN heading;
 7. binary durable checkboxes.
 
@@ -110,30 +110,31 @@ Those states belong to journal, recovery, and Git evidence.
 
 ### Task checkmark
 
-Check a task only when:
+Write a task's prospective `[x]` transition only during finalization, after:
 
 - its complete planned scope is implemented;
 - required documents and verification routing are aligned;
-- required verification passes;
-- a `completed` record exists;
-- the matching task commit exists when Git is required;
-- the task recovery state is clean or is being removed as the final closure step.
+- required verification passes.
+
+The checkmark becomes durable only when a matching `completed` record exists, the exact task commit exists in Git projects, and recovery cleanup succeeds. Until then, journal and recovery state override the working ROADMAP; do not report the prospective checkmark as completion.
 
 ### Milestone checkmark
 
-Check a milestone only when:
+Write a milestone's prospective `[x]` transition only when:
 
-- every current child task is durably complete;
+- every current child task is being closed durably in the same finalization or is already durable;
 - milestone verification passes;
-- the completion record identifies the milestone boundary.
+
+It becomes durable only when the closing completion record identifies the milestone boundary and every child task is durably complete.
 
 ### Phase checkmark
 
-Check a phase only when:
+Write a phase's prospective `[x]` transition only when:
 
-- every current child milestone is complete;
+- every current child milestone is being closed durably in the same finalization or is already durable;
 - phase verification and acceptance pass;
-- the completion record identifies the phase boundary.
+
+It becomes durable only when the closing completion record identifies the phase boundary and every child milestone is durably complete.
 
 ### Campaign completion
 
@@ -219,9 +220,9 @@ After implementation and verification:
 
 1. confirm the changed scope belongs to the task;
 2. run task and applicable boundary verification;
-3. check the completed task;
-4. check its milestone when all children and milestone checks pass;
-5. check its phase when all milestones and phase checks pass;
+3. write the task's prospective checkmark as part of the transaction being finalized;
+4. write its milestone's prospective checkmark when all children and milestone checks pass;
+5. write its phase's prospective checkmark when all milestones and phase checks pass;
 6. recalculate progress counts;
 7. prepare the capability summary;
 8. append the `completed` journal record;
@@ -231,6 +232,8 @@ After implementation and verification:
 If interrupted before the completion record, normal recovery must restore the prior roadmap state with the rest of the task baseline.
 
 If interrupted after completion but before commit, completed-task reconciliation must verify and commit the roadmap transition with the task.
+
+At startup or status inspection, never count a prospective checkmark from a nonterminal transaction as durable progress.
 
 ## PLAN revision and normalization
 

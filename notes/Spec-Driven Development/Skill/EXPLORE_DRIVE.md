@@ -2393,7 +2393,7 @@ Progress: **4/5 phases, 9/12 milestones, 19/24 tasks complete**. The next bounda
 
 > [!NOTE] Prompt
 >  
->  Complete Task 5.1.
+>  Proceed to Task 5.1.
 
 Task 5.1 is complete and published.
 
@@ -2420,6 +2420,47 @@ Commit: `3d7cbc4`
 Published state: `b9c0b98`
 
 Progress: **4/5 phases, 9/12 milestones, 20/24 tasks**. Task 5.2 remains next; no later task is being claimed as complete.
+
+---
+---
+
+## 📗 Implement Task 5.2
+
+> [!NOTE] Prompt
+>  
+>  Proceed to Task 5.2.
+
+Task 5.2 is complete and published.
+
+Task capability:
+
+* All **27/27 SPEC sections** now have explicit implementation owners.
+* All **12/12 acceptance scenarios** have a planned forward-test or deterministic-inspection method.
+* `SKILL.md` now routes every workflow to all mandatory companion references.
+* PLAN and ROADMAP templates now reflect canonical ownership:
+    * PLAN includes prerequisites and milestone verification.
+    * Current progress no longer belongs in PLAN.
+    * ROADMAP tracks phase, milestone, and task completion explicitly.
+* ROADMAP transaction semantics now distinguish prospective finalization edits from durable completion.
+* Recovery reconciliation now includes verification-map evidence.
+
+Runtime behavior of user projects did not change; this task strengthened skill routing, document contracts, and recovery consistency.
+
+Milestone **Static conformance** is complete: the package topology, portability, SPEC coverage, terminology, canonical ownership, and acceptance-test inventory have been audited.
+
+Verification passed:
+
+* Structural skill validation
+* Frontmatter and direct-reference routing
+* Markdown-link resolution
+* Traceability: 27/27 sections
+* Acceptance methods: 12/12 scenarios
+* Clean repository state after publication
+
+Commit: `c62af5e`
+
+Progress: **4/5 phases, 10/12 milestones, 21/24 tasks**.
+Next boundary: **Task 5.3 — Forward-test exploration and document authoring**.
 
 
 

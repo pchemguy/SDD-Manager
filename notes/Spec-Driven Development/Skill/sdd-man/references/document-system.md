@@ -385,6 +385,7 @@ Before reporting document work complete, confirm:
 - LAYOUT describes final physical ownership;
 - dependency direction is acyclic;
 - ROADMAP can be derived exactly from PLAN;
+- current progress remains in ROADMAP, journal, recovery, and Git evidence rather than a PLAN status section;
 - verification intent is sufficient to build the current verification map as implementation proceeds;
 - superseded and chronological residue is removed;
 - no implementation has begun without separate authorization.

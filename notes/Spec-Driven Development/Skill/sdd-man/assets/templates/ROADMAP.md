@@ -11,16 +11,16 @@ This roadmap is a derived implementation-progress view.
 
 ## Progress
 
-| Phase | Milestones | Tasks | Completed tasks |
-|---|---:|---:|---:|
-| `<phase>` | `<count>` | `<count>` | `<count>` |
-| **Total** | **`<count>`** | **`<count>`** | **`<count>`** |
+| Level | Completed | Total |
+|---|---:|---:|
+| Phases | `<count>` | `<count>` |
+| Milestones | `<count>` | `<count>` |
+| Tasks | `<count>` | `<count>` |
 
-## Phase: `<semantic phase name>`
-
-- [ ] **Milestone: `<semantic milestone name>`**
-  - [ ] [Task: `<semantic task name>`](PLAN.md#task-semantic-task-name)
-  - [ ] [Task: `<semantic task name>`](PLAN.md#task-semantic-task-name-1)
+- [ ] **[Phase: `<semantic phase name>`](PLAN.md#phase-semantic-phase-name)**
+  - [ ] **[Milestone: `<semantic milestone name>`](PLAN.md#milestone-semantic-milestone-name)**
+    - [ ] [Task: `<semantic task name>`](PLAN.md#task-semantic-task-name)
+    - [ ] [Task: `<semantic task name>`](PLAN.md#task-semantic-task-name-1)
 
 <!-- Repeat phases, milestones, and tasks in exact PLAN order. Replace links with canonical PLAN or child-plan anchors. -->
 
@@ -29,6 +29,7 @@ This roadmap is a derived implementation-progress view.
 - `[ ]` means not durably complete.
 - `[x]` means durably complete.
 - Active, prepared, blocked, partial, and reverted states belong to the implementation journal and recovery state, not alternate checkbox syntax.
+- A checkmark written during transaction finalization is prospective until its completion record, required Git commit, and recovery cleanup are durable.
 
 ## Reconciliation
 

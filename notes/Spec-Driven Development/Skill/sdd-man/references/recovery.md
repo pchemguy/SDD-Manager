@@ -36,7 +36,7 @@ Perform read-only inspection first:
 3. Identify the latest campaign and every task without a proven terminal state.
 4. Inventory recovery directories without deleting or rewriting them.
 5. Read each candidate manifest and verify its task identifier and recorded hash against the journal.
-6. Compare declared paths, backups, current filesystem state, ROADMAP state, and Git state when available.
+6. Compare declared paths, backups, current filesystem state, ROADMAP state, verification-map state, and Git state when available.
 7. Search Git history for the exact `Task: <task-id>` trailer when a completed task may have been committed.
 8. Classify the state using the decision table.
 
@@ -227,7 +227,7 @@ Stop automatic recovery when any of these hold:
 - undeclared paths were modified;
 - pre-existing dirty state cannot be reconstructed;
 - a task path may contain later human changes;
-- journal, ROADMAP, manifest, filesystem, and Git evidence conflict materially;
+- journal, ROADMAP, verification map, manifest, filesystem, and Git evidence conflict materially;
 - a required verification command is unavailable and completion depends on it;
 - a destructive action would rely on an unresolved variable, wildcard, symlink target, or broad directory.
 - exact restoration requires unsupported junction, reparse-point, ACL, extended-attribute, symlink, or other host filesystem semantics.

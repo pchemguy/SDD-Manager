@@ -52,6 +52,10 @@ State the smallest complete implementation increment.
 
 Identify exact governing SPEC sections.
 
+**Prerequisites**
+
+Identify prerequisite tasks, contracts, tools, or environment assumptions. State `None` when the task has no prerequisite.
+
 **Affected paths or components**
 
 ```text
@@ -77,11 +81,15 @@ Identify exact governing SPEC sections.
 
 State the objective condition proving the task is complete.
 
-### 6.5 Phase verification
+### 6.5 Milestone verification
+
+Define the integrated checks and reviewable capability required to close this milestone.
+
+### 6.6 Phase verification
 
 Define phase-level integration and acceptance checks.
 
-### 6.6 Phase completion condition
+### 6.7 Phase completion condition
 
 State the complete capability and evidence required to close the phase.
 
@@ -98,7 +106,3 @@ Map system-level SPEC acceptance conditions to final verification evidence.
 ## 9. Completion criteria
 
 Define project-wide documentary, implementation, test, recovery-state, and distribution conditions.
-
-## 10. Current status
-
-State the accurate implementation status without turning the PLAN into a chronological diary.
