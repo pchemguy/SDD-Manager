@@ -1,0 +1,14 @@
+interface:
+  display_name: SDD Manager
+  short_description: Specification-driven development workflows
+  default_prompt: Use $sdd-man to guide this project through specification, planning,
+    implementation, recovery, and human review.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
