@@ -1,5 +1,7 @@
 ---
-url: https://chatgpt.com/c/6aaf8008-6ad4-83ed-9a2b-1fba0febe2e8
+urls:
+  - https://chatgpt.com/c/6aaf8008-6ad4-83ed-9a2b-1fba0febe2e8
+  - https://chatgpt.com/c/6aafc3df-f66c-83eb-9138-2ba24d59d895
 ---
 
 ## 📗 Problem Statement
