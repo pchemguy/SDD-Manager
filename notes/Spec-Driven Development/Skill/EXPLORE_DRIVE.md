@@ -1779,3 +1779,403 @@ Its central rule should be:
 >  
 >  An important separate workflow involves HIL steering at an intermediate checkpoint after agents completes requested range of tasks. The idea is that it might be necessary to revise certain implemented features before proceeding to next task. Say, an agent implements the backends phase and reports 7z implemented support for encrypted archives. Now, this capability may have been selected as a reasonable resolution of ambiguity or maybe a part of the SPEC. But say I do not want support encrypted archives. Subsequent phases that depend on interface will not be affected by whether this capability is implemented or not. So, I would want to perform focused steering and, instead of proceeding to the next task, request a focused revision to the implemented code, indicating in present case that encryption is not supported, associated code and tests should be removed to simplify code, spec/plan/layout sections, if relevant needs to be aligned. After such focused steering is complete, the project state should not be substantively different compared to alternative when such capability has never been implemented in the first place (except for journal, perhaps).
 
+Yes. This should be a distinct **checkpoint steering and normalization workflow**.
+
+It begins only after the requested task range reaches a clean durable boundary, and it prevents automatic progression while the user reviews the delivered capability.
+
+### Core model
+
+```text
+implement requested range
+        ↓
+durable checkpoint
+        ↓
+report implemented features
+        ↓
+await HIL decision
+   ┌────┼───────────┐
+accept  revise      redesign
+   ↓       ↓            ↓
+resume  normalize   return to exploration/SPEC
+```
+
+At the checkpoint, the user may:
+
+* accept the implementation and authorize further work;
+* request a focused revision;
+* revise future PLAN tasks;
+* reopen a broader architectural decision;
+* stop the campaign.
+
+The agent must not automatically continue beyond the requested range.
+
+### Normalization objective
+
+Your stated objective is exactly right:
+
+> After focused checkpoint steering, the authoritative project state should be substantively equivalent to the state that would have existed had the rejected capability never been implemented.
+
+“Substantively equivalent” should mean:
+
+* SPEC describes only the accepted final behavior;
+* PLAN describes how to build that final behavior directly from scratch;
+* ROADMAP mirrors the revised PLAN;
+* source contains no obsolete implementation branches;
+* public interfaces expose no obsolete capability;
+* tests assert only the final contract;
+* verification mappings reference only current tests;
+* layout and dependency documentation describe only current ownership;
+* packaging contains no dependency needed solely by the rejected capability;
+* generated examples and user documentation contain no obsolete behavior;
+* no compatibility shim or dead code remains unless explicitly required.
+
+Historical evidence may remain in:
+
+* the append-only implementation journal;
+* Git history;
+* task commits.
+
+Those are execution history, not authoritative descriptions of the current system.
+
+### Checkpoint state
+
+When the requested range is complete, record or otherwise establish a checkpoint containing:
+
+* completed task, milestone, or phase boundary;
+* implemented-feature summary;
+* verification results;
+* roadmap position;
+* confirmation that no task transaction remains active;
+* confirmation that recovery state is clean;
+* status `awaiting-steering`.
+
+A journal event could be:
+
+```json
+{
+  "event": "checkpoint",
+  "at": "2026-09-20T12:00:00Z",
+  "after": {
+    "kind": "phase",
+    "name": "Archive streams"
+  },
+  "summary": "Completed plain, ZIP, TAR-family, and 7z stream support.",
+  "awaiting_steering": true
+}
+```
+
+This prevents a resumed agent from interpreting “the next PLAN task is available” as authorization to proceed.
+
+The checkpoint is released only by an explicit user instruction such as:
+
+* “Proceed to the next phase.”
+* “Implement the next milestone.”
+* “Revise 7z encryption support first.”
+* “Stop here.”
+
+### Focused steering classification
+
+When the user requests a revision, first classify its impact.
+
+#### Contract-neutral simplification
+
+The rejected capability does not affect interfaces required by later work.
+
+Example:
+
+* remove encrypted-7z support;
+* retain the same stream-opening interface;
+* encrypted archives now fail through the existing unsupported-input contract.
+
+This can normally be handled as one focused revision transaction.
+
+#### Contract revision
+
+The change modifies a public interface, persistent format, error contract, or dependency used by later components.
+
+This requires:
+
+* affected-dependent analysis;
+* revision of future PLAN tasks;
+* possibly expand–migrate–contract sequencing;
+* broader verification.
+
+#### Architectural revision
+
+The steering changes component boundaries, dependency direction, or physical ownership.
+
+Return to specification and planning before implementing the revision.
+
+#### Defect correction
+
+The implementation does not conform to the already accepted SPEC.
+
+Treat it as corrective implementation rather than a change in intended behavior, while still using the same transaction and normalization rules.
+
+### Focused steering workflow
+
+For the encrypted-archive example:
+
+1. Confirm the preceding implementation range is durably complete and clean.
+2. Suspend forward PLAN execution.
+3. Record the steering request.
+4. Inspect the implemented capability and its complete impact surface.
+5. Determine whether any completed or future component depends on it.
+6. Define the intended final contract:
+
+   * encrypted archives are unsupported;
+   * the backend rejects them through the chosen public error;
+   * no password or decryption interface exists.
+7. Identify every artifact that must change.
+8. Execute the revision as one or more recoverable transactions.
+9. Remove the rejected implementation and obsolete dependencies.
+10. Remove positive tests for encrypted-archive support.
+11. Add or retain a negative test proving the final unsupported-input contract.
+12. Normalize SPEC, PLAN, LAYOUT, ROADMAP, verification map, and documentation.
+13. Run direct, dependent, integration, milestone, and phase verification as applicable.
+14. report the normalized result;
+15. return to `awaiting-steering` rather than automatically proceeding.
+
+The final point is important: completing the requested revision does not imply authorization to start the next original PLAN task.
+
+### Positive tests versus final-contract tests
+
+“Remove associated tests” should mean removing tests that assert the rejected capability works.
+
+For example, remove:
+
+```text
+test_encrypted_7z_with_password_opens_successfully
+test_encrypted_7z_password_callback
+```
+
+But the final contract will usually still need a negative test:
+
+```text
+test_encrypted_7z_is_rejected_as_unsupported
+```
+
+That test is not residue from the rejected feature. It proves the accepted non-support contract.
+
+If the project’s generic unsupported-archive tests already cover this behavior adequately, no special encryption test is necessary.
+
+### Impact inspection
+
+Before treating steering as focused, inspect at least:
+
+* public API signatures;
+* backend interfaces;
+* configuration fields;
+* error types;
+* optional dependencies;
+* command-line options;
+* stored metadata;
+* examples and README content;
+* SPEC requirements and non-goals;
+* PLAN tasks and milestone criteria;
+* LAYOUT ownership;
+* roadmap entries;
+* verification-map targets;
+* direct tests;
+* dependent-component tests;
+* integration and acceptance tests;
+* already completed downstream components;
+* future planned components.
+
+Import analysis alone is insufficient. Search semantic names, public options, fixture data, dependency declarations, error paths, and documentation.
+
+### PLAN normalization
+
+The authoritative PLAN must not become:
+
+```text
+1. Add encrypted archive support.
+2. Remove encrypted archive support.
+```
+
+After steering, it should describe the direct final construction:
+
+```text
+Implement 7z streaming for unencrypted single-member archives.
+Reject encrypted archives through the public unsupported-input error.
+```
+
+If encryption was only a clause within an existing task, rewrite that task to the final scope.
+
+If encryption had its own task, remove that task entirely and repair:
+
+* milestone task lists;
+* task ordering;
+* verification requirements;
+* counts;
+* roadmap correspondence.
+
+The journal retains evidence that the earlier implementation and later steering occurred.
+
+### SPEC normalization
+
+If lack of encryption support affects user expectations or error behavior, record it as an explicit non-goal or boundary condition:
+
+```text
+Password-protected and encrypted archives are unsupported.
+The backend SHALL reject them without prompting for credentials or attempting decryption.
+```
+
+Do not preserve historical language such as:
+
+```text
+Encrypted archive support was initially implemented and later removed.
+```
+
+That belongs only in execution history if it needs to remain anywhere.
+
+### ROADMAP behavior
+
+During focused revision:
+
+* do not mark the next normal PLAN task active;
+* treat the affected milestone or phase as under steering;
+* do not claim that the revised intended state is complete until normalization verification passes.
+
+For a one-transaction revision, the existing roadmap may remain at its last durable state while the journal identifies active steering. The completion transaction then atomically installs the normalized PLAN and ROADMAP.
+
+After completion:
+
+* removed PLAN tasks disappear from the roadmap;
+* rewritten tasks reflect final scope;
+* unaffected completed tasks remain checked;
+* affected tasks remain checked only if the normalized implementation satisfies their revised completion conditions;
+* phase and milestone counts are recalculated;
+* milestone and phase checkmarks are confirmed through the required boundary verification.
+
+A roadmap entry such as “remove encrypted support” should not remain in the final roadmap, because the roadmap mirrors the from-scratch PLAN rather than implementation history.
+
+### Temporary steering documents
+
+For a small, precise, contract-neutral revision, the user instruction plus a recorded steering transaction may be sufficient.
+
+For a broader revision, use temporary change documents. I recommend eventually generalizing:
+
+```text
+FEATURE-SPEC.md
+FEATURE-PLAN.md
+```
+
+to conceptually broader active-change documents such as:
+
+```text
+CHANGE-SPEC.md
+CHANGE-PLAN.md
+```
+
+with a declared change kind:
+
+```text
+feature
+checkpoint-revision
+defect-correction
+architectural-revision
+```
+
+This avoids inventing separate document mechanisms for additive features and subtractive steering.
+
+At completion, integrate the settled result into the main document trees and remove the temporary change documents.
+
+### Journal behavior
+
+Never rewrite or delete earlier completion records. Add steering records.
+
+For example:
+
+```json
+{
+  "event": "steering-started",
+  "at": "2026-09-20T12:15:00Z",
+  "after_checkpoint": "Archive streams",
+  "scope": "Remove encrypted 7z archive support",
+  "reason": "User selected a smaller supported-input contract",
+  "impact": "No downstream interface dependency identified"
+}
+```
+
+The revision task then uses the normal transaction events:
+
+```text
+started
+prepared
+completed
+committed
+cleaned
+```
+
+Finally:
+
+```json
+{
+  "event": "steering-completed",
+  "at": "2026-09-20T12:42:00Z",
+  "summary": "Normalized 7z support to unencrypted archives only.",
+  "awaiting_steering": true
+}
+```
+
+The last field keeps the project paused until the user authorizes further implementation.
+
+### Steering completion report
+
+The report should clearly distinguish removed behavior from delivered final behavior:
+
+> **Checkpoint revision complete: Remove encrypted 7z support**
+>
+> Final implemented behavior:
+>
+> * 7z streaming supports unencrypted single-member archives.
+> * Encrypted archives are rejected through the public unsupported-input error.
+> * Password and decryption handling has been removed.
+> * Encryption-only fixtures, success tests, configuration, and dependencies have been removed.
+> * SPEC, PLAN, ROADMAP, LAYOUT, and verification mappings now describe the reduced contract directly.
+>
+> Verification:
+>
+> * 7z backend tests passed.
+> * Encrypted-input rejection passed.
+> * Archive registry and indexing integration tests passed.
+> * Archive-stream phase acceptance passed.
+>
+> The project is paused at the Archive streams checkpoint. No Index persistence task has started.
+
+### Limitation: externally released behavior
+
+The “as if never implemented” rule is safe when the capability existed only in an unreleased development checkpoint.
+
+If it has already been:
+
+* published;
+* used by external consumers;
+* included in a released format;
+* documented as a supported public contract;
+* depended upon by deployed systems;
+
+then removing it is a compatibility change. Migration, deprecation, versioning, or release-history requirements may remain necessary. The workflow must detect that case rather than erase externally meaningful history.
+
+### Addition to `sdd-man`
+
+Add a top-level route:
+
+#### Checkpoint steering
+
+With subworkflows for:
+
+* checkpoint establishment;
+* HIL acceptance or revision;
+* steering-impact analysis;
+* focused corrective transaction;
+* broader change-overlay creation;
+* current-state normalization;
+* roadmap reconciliation;
+* post-steering verification;
+* paused handoff and explicit continuation.
+
+The governing rule should be:
+
+> **At a human-in-the-loop checkpoint, suspend forward implementation. Apply accepted steering as recoverable revision work, then normalize every authoritative artifact to the resulting project state. Preserve history only in execution records, and do not resume the original PLAN until the user explicitly authorizes continuation.**
