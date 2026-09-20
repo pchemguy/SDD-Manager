@@ -2183,9 +2183,57 @@ The governing rule should be:
 ---
 ---
 
-## 📗 Consolidation
+## 📗 SPEC
 
 > [!NOTE] Prompt
 >  
 >  It is time to consolidate specification of the skill as a modular complex, including all discussed features and capabilities. Keep in mind that use of scripts is option, not a req. Scripts MAY only used when there is a clear deterministic well-defined step.
+
+Created the consolidated normative specification. It covers:
+
+* lifecycle modes and authorization gates;
+* SPEC, PLAN, LAYOUT, ROADMAP, and verification-map contracts;
+* greenfield and change campaigns;
+* bounded task/milestone/phase execution;
+* recoverable task transactions and journaling;
+* Git and non-Git operation;
+* startup state discovery and resumption;
+* testing, verification selection, and failure handling;
+* HIL checkpoints and focused steering;
+* current-state normalization after revisions;
+* capability-oriented completion reporting;
+* modular skill structure and acceptance scenarios;
+* optional scripts, permitted only for clearly defined deterministic operations.
+
+---
+---
+
+## 📗 PLAN
+
+> [!NOTE] Prompt
+>  
+>  Proceed to creation of a detailed implementation plan.
+
+Created the detailed implementation plan. It defines:
+
+* 5 dependency-ordered phases;
+* 12 milestones;
+* 24 bounded implementation tasks;
+* exact resource responsibilities and SPEC traceability;
+* per-task paths, work, verification, and completion conditions;
+* milestone and phase verification;
+* independent forward-testing scenarios;
+* final validation and installation;
+* a script-free baseline, with automation requiring a later evidence-backed SPEC/PLAN revision.
+
+Implementation has not begun.
+
+---
+---
+
+## 📗 Implement Phase 1
+
+> [!NOTE] Prompt
+>  
+>  Proceed to Phase 1 implementation
 
