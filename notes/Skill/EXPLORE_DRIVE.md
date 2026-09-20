@@ -1545,7 +1545,6 @@ That now combines the useful complexity of the initial design with the stricter 
 [1]: https://github.com/agentskills/agentskills/blob/main/docs/specification.mdx "agentskills/docs/specification.mdx at main · agentskills/agentskills · GitHub"
 [2]: https://ai.google.dev/gemini-api/docs/custom-agents "Building managed agents  |  Gemini API  |  Google AI for Developers"
 
-
 ---
 ---
 
@@ -1567,3 +1566,13 @@ I would define four things in one short spec:
 After that, implementation becomes mechanical: create the tree, write `SKILL.md` and references, implement `render.py`/`validate.py`, add fixtures/tests, then verify the canonical scenarios.
 
 I suggest the immediate deliverable be a **one-page `SPEC.md` for the Hello World reference skill**. Once that is stable, we can derive the actual skill files directly from it.
+
+---
+---
+
+## 📗 SPEC
+
+> [!NOTE] Prompt
+> 
+> Proceed to a compact normative specification `SPEC.md` for the Hello World reference skill.
+
