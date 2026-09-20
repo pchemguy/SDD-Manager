@@ -156,6 +156,10 @@ Create a manifest that records the exact baseline for every declared path:
 - preparation timestamp and task identifier;
 - Git baseline information when applicable.
 
+Normalize manifest paths with `/` separators. Reject absolute paths, empty or `.` targets, `..` traversal, and path aliases or case collisions that the host filesystem cannot distinguish safely.
+
+Before mutation, detect metadata the ordinary manifest cannot restore portably, including Windows junctions or other reparse points, ACLs, extended attributes, or symlinks that the current host cannot recreate. Use an explicit project-defined preservation mechanism or stop; do not promise exact restoration while silently dropping required metadata.
+
 Back up existing content before mutation. Preserve the directory shape under the task recovery directory. Verify each backup against the recorded hash, symlink target, type, and mode.
 
 For a `create`, record that the target was absent. For a `delete`, back up the target. For a `rename`, record and protect both endpoints, including whether the destination already existed.
@@ -222,12 +226,15 @@ After all required task checks pass:
 
 1. Update the matching ROADMAP task checkbox and any mechanically implied milestone or phase summaries.
 2. Reconcile the verification map and governing documents affected by the task.
-3. Append a `completed` record.
-4. Follow `reporting.md` for the durable capability summary, boundaries, verification evidence, roadmap coordinates, and human-facing task report.
+3. In a non-Git project, capture a durable final-state inventory for every declared path and rename endpoint: normalized path, existence, type, regular-file content hash or symlink target, and relevant restorable mode. Store this inventory, or sufficient canonical data to recompute and compare it, in the `completed` record rather than only in temporary recovery data.
+4. Append a `completed` record.
+5. Follow `reporting.md` for the durable capability summary, boundaries, verification evidence, roadmap coordinates, and human-facing task report.
 
 ## Durable Git completion
 
-When the project is Git-backed and the governing workflow requires task commits:
+In a Git-backed project, durable task completion requires one exact task commit. If applicable project instructions prohibit commits, treat that as an authority conflict and stop before implementation rather than silently degrading to non-Git closure.
+
+For Git completion:
 
 1. Stage only the task's declared project paths, required ROADMAP or verification-map updates, and `IMPLEMENTATION_LOG.jsonl`.
 2. Never stage `.implementation-state/`.
@@ -245,7 +252,7 @@ Do not amend, rebase, squash, push, publish, or change branches unless the user 
 
 For a non-Git project:
 
-1. Reconfirm that all declared outputs exist in their intended final state.
+1. Reconfirm every declared output against the final-state inventory recorded by `completed`.
 2. Confirm all required checks passed and the `completed` record is durable.
 3. Confirm ROADMAP and verification-map changes are written.
 4. Remove the task recovery directory.
@@ -294,6 +301,7 @@ Never append `completed` before verification passes. Never append `reverted` unt
 - Never operate on the filesystem root, home directory, workspace root, or unresolved broad path as a task target.
 - Never overwrite a backup or manifest whose ownership is uncertain.
 - Never follow symlinks while backing up or restoring unless the manifest explicitly requires the resolved target as a separate path.
+- Never treat a junction, reparse point, ACL, extended attribute, or unsupported symlink as exactly recoverable without an explicit preservation mechanism.
 - Never delete unknown recovery data.
 - Never restore unrelated user changes.
 - Never continue after missing backups, mismatched hashes, multiple active tasks, corrupt journal history, or uncertain ownership.

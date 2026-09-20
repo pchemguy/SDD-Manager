@@ -23,6 +23,7 @@
   "verification_targets": {
     "example.core.unit": {
       "kind": "unit",
+      "cwd": ".",
       "command": [
         "python",
         "-m",
@@ -32,6 +33,7 @@
     },
     "example.adapter.unit": {
       "kind": "unit",
+      "cwd": ".",
       "command": [
         "python",
         "-m",
@@ -41,6 +43,7 @@
     },
     "example.workflow.integration": {
       "kind": "integration",
+      "cwd": ".",
       "command": [
         "python",
         "-m",

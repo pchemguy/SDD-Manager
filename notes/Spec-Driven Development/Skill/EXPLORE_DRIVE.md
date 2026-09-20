@@ -2386,4 +2386,40 @@ No scripts were added.
 
 Progress: **4/5 phases, 9/12 milestones, 19/24 tasks complete**. The next boundary is **Phase 5 — Integrated conformance and release**.
 
+---
+---
+
+## 📗 Implement Task 5.1
+
+> [!NOTE] Prompt
+>  
+>  Complete Task 5.1.
+
+Task 5.1 is complete and published.
+
+Implemented capability:
+
+* Audited the exact 18-file package topology and all 10 directly routed workflow references.
+* Confirmed all links and assets resolve and parse.
+* Confirmed the baseline contains no scripts.
+* Confirmed runtime behavior does not depend on `agents/openai.yaml`, Git availability, a particular language, shell, or test runner.
+* Added portable manifest-path validation and filesystem-metadata safety checks.
+* Added durable non-Git final-state inventories.
+* Added repository-relative verification working-directory support.
+
+Verification passed:
+
+* Structural skill validation
+* JSON, YAML, and SVG parsing
+* Exact topology and direct-reference checks
+* Markdown-link resolution
+* Clean diff validation
+* Post-publication validation
+
+Commit: `3d7cbc4`
+Published state: `b9c0b98`
+
+Progress: **4/5 phases, 9/12 milestones, 20/24 tasks**. Task 5.2 remains next; no later task is being claimed as complete.
+
+
 

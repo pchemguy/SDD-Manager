@@ -111,6 +111,8 @@ Use valid JSON with:
 - normalized target definitions;
 - command argument arrays.
 
+Execute a target from the governed project root by default. A target may define a normalized repository-relative `cwd` for a monorepo or nested package and a mapping of non-secret deterministic environment overrides when the command requires them. Do not store credentials, inherited secret values, absolute machine-specific directories, or shell setup fragments.
+
 Prefer:
 
 ```text
@@ -210,6 +212,8 @@ Check mechanically decidable properties:
 - nonempty path and target lists under the project's policy;
 - every referenced target exists;
 - every command is a nonempty array of nonempty strings;
+- every optional `cwd` is a normalized repository-relative directory without traversal and exists in current state;
+- every optional environment key and value is a nonempty string and contains no recorded secret;
 - referenced current paths exist;
 - renamed or deleted paths are absent;
 - path ownership overlaps are explicitly allowed;
@@ -223,11 +227,11 @@ Do not make semantic sufficiency mechanically decidable when it is not. Review w
 
 Before execution:
 
-1. resolve commands from the map, PLAN, and project instructions;
+1. resolve commands, working directories, and permitted non-secret environment overrides from the map, PLAN, and project instructions;
 2. record the intended verification in task preflight;
 3. confirm required environments and dependencies are available;
 4. identify expensive or destructive checks;
-5. preserve exact argument arrays.
+5. preserve exact argument arrays and execute without shell reinterpretation.
 
 Execute from narrowest to broadest:
 

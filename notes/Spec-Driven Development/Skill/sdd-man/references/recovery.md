@@ -98,6 +98,8 @@ Before restoration:
 3. Confirm every current task-owned path maps to one declared operation.
 4. Confirm no unrelated path is included.
 5. Confirm rename endpoints are both represented.
+6. Confirm path normalization has no absolute path, traversal, host-equivalent alias, or case collision.
+7. Confirm the host can restore every recorded path type and required metadata; otherwise preserve evidence and escalate.
 
 If validation fails, stop. Do not perform a best-effort partial restore.
 
@@ -166,7 +168,7 @@ If a task commit exists but the journal has no valid `completed` event, stop. Do
 For a non-Git completed task with recovery data remaining:
 
 1. Validate the manifest and completed journal record.
-2. Confirm all declared outputs are in the recorded final state.
+2. Recompute and compare every declared output with the completed record's durable final-state inventory.
 3. Re-run required checks when safe and available.
 4. Confirm ROADMAP and verification-map state agree.
 5. Remove the matching recovery directory only after final state is verified.
@@ -228,6 +230,7 @@ Stop automatic recovery when any of these hold:
 - journal, ROADMAP, manifest, filesystem, and Git evidence conflict materially;
 - a required verification command is unavailable and completion depends on it;
 - a destructive action would rely on an unresolved variable, wildcard, symlink target, or broad directory.
+- exact restoration requires unsupported junction, reparse-point, ACL, extended-attribute, symlink, or other host filesystem semantics.
 
 Report the exact evidence, safe options, and smallest decision needed from the user.
 
