@@ -178,7 +178,7 @@ Thus, temporary feature documents are change-working documents, never required i
 
 A specification chapter can use a consistent lightweight structure:
 
-```markdown
+```
 # Binary index
 
 ## Responsibility
@@ -202,7 +202,7 @@ A specification chapter can use a consistent lightweight structure:
 
 A plan chapter can mirror it:
 
-```markdown
+```
 # Binary index implementation plan
 
 ## Objective
