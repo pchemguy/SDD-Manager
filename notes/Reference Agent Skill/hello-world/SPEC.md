@@ -94,8 +94,8 @@ The workflow SHALL:
 2. read `references/workflow.md`;
 3. read `references/output-contract.md`;
 4. read exactly the audience-specific profile required by the request:
-    - `references/contributor-profile.md`, or
-    - `references/user-profile.md`;
+   - `references/contributor-profile.md`, or
+   - `references/user-profile.md`;
 5. use `assets/welcome-template.md`;
 6. invoke `scripts/render.py`;
 7. invoke `scripts/validate.py`;
