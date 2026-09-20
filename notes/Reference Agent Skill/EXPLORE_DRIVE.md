@@ -1611,8 +1611,29 @@ So the immediate next artifact should be a **compact normative `PLAN.md` derived
 ---
 ---
 
-## 📗 SPEC
+## 📗 PLAN
 
 > [!NOTE] Prompt
 > 
 > Proceed to deriving a compact **implementation plan** from `SPEC.md`. Make `PLAN.md` task-oriented and ordered so each step produces a verifiable increment. The plan should define, per task, the files touched, verification command(s), and completion condition.
+
+Derived the compact, task-oriented implementation plan from `SPEC.md`.
+
+It defines 12 ordered tasks. Each task includes:
+
+* exact scope,
+* paths touched,
+* verification command(s),
+* an explicit completion condition.
+
+The sequence builds from repository skeleton → `SKILL.md` → references/assets → renderer → fixtures → validator → negative validation → tests → README → final portability/conformance verification.
+
+---
+---
+
+## 📗 Implementation
+
+> [!NOTE] Prompt
+> 
+> Proceed to full implementation. After each task is complete just before switching to the next one, provide a confirmation AND create a full repo archive `<name>-Task_##.zip`.
+
