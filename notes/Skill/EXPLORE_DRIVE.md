@@ -1038,3 +1038,532 @@ That gives us a much cleaner target: **a reference Agent Skill that happens to r
 [5]: https://codelabs.developers.google.com/gemini-cli/how-to-create-agent-skills-for-gemini-cli "Google Codelabs"
 [6]: https://github.com/rlespinasse/agent-skills/blob/main/docs/reference-skill-spec.md "agent-skills/docs/reference-skill-spec.md at main - rlespinasse/agent-skills - GitHub"
 [7]: https://developers.openai.com/api/docs/guides/tools-skills "OpenAI API"
+
+Let's integrate your revised proposal with initial one. Broad compatibility is an essential requirement, so we MUST follow best practices to include skill features, but not use vendor-specific patterns or patterns with limited compatibility.
+
+---
+---
+
+## 📗 Portable Agent Skill Reference Template - Problem Definition
+
+> [!NOTE] Prompt
+>  
+>  Let's integrate your revised proposal with initial one. Broad compatibility is an essential requirement, so we MUST follow best practices to include skill features, but not use vendor-specific patterns or patterns with limited compatibility.
+
+Yes. I would merge the two proposals around a stricter rule:
+
+> **The template should demonstrate the portable Agent Skills model itself, not the extensions of any particular host. Every included feature should either be part of the common specification/convention or be ordinary repository material that remains useful everywhere.**
+
+The current Agent Skills specification gives us a solid interoperability baseline: a skill directory with `SKILL.md`, plus conventional `scripts/`, `references/`, and `assets/`; `SKILL.md` contains required `name` and `description` frontmatter, and progressive disclosure is explicitly metadata → activated instructions → on-demand resources. It also recommends direct, one-level references from `SKILL.md` rather than deeply chained resource discovery. ([GitHub][1])
+
+Google's current Gemini tooling also recognizes `.agents/skills/<skill-name>/SKILL.md`, so this is no longer merely a Codex-specific convention. ([Google AI for Developers][2])
+
+### Integrated design principles
+
+I would make the template satisfy these requirements simultaneously:
+
+1. **Portable skill core only.** No `agents/openai.yaml`, Gemini-only metadata, Claude-only metadata, host-specific tool declarations, or experimental frontmatter fields.
+2. **Demonstrate every important portable mechanism.** Discovery metadata, compact orchestration in `SKILL.md`, conditional progressive disclosure, Markdown references, executable scripts, static assets, artifact production, deterministic validation, and realistic branch behavior.
+3. **Every component has an observable purpose.** No files added merely to make the directory tree look complex.
+4. **Progressive disclosure must be testable.** Different invocations should require different references; an irrelevant reference should not need to be loaded.
+5. **Keep resource topology shallow.** All resources should be directly reachable from `SKILL.md`; avoid `SKILL.md → A.md → B.md` chains. This follows the current specification's recommendation and makes weaker/local harnesses less likely to fail. ([GitHub][1])
+6. **Scripts must be maximally portable.** Python, standard library only, deterministic, no network, explicit CLI, conventional exit codes.
+7. **Runtime skill vs development material must be clearly separated conceptually**, even if both live in the repository.
+
+### Recommended task: Project Welcome Pack
+
+I still think the strongest model task is a small **Project Welcome Pack generator**.
+
+Input:
+
+```text
+Project: Example Calculator
+Description: Small Python CLI for arithmetic expressions
+Audience: contributor
+Tone: friendly
+```
+
+Output:
+
+```text
+out/
+├── WELCOME.md
+└── welcome.json
+```
+
+This remains recognizably a “Hello World” task, but it naturally requires:
+
+* instructions,
+* profile-specific knowledge,
+* a template,
+* deterministic generation,
+* validation,
+* branching,
+* inspectable outputs.
+
+It avoids inventing fake complexity.
+
+### Portable runtime structure
+
+I would now make this the canonical skill:
+
+```text
+hello-world/
+├── SKILL.md
+│
+├── references/
+│   ├── workflow.md
+│   ├── output-contract.md
+│   ├── contributor-profile.md
+│   └── user-profile.md
+│
+├── scripts/
+│   ├── render.py
+│   └── validate.py
+│
+└── assets/
+    └── welcome-template.md
+```
+
+This structure is directly aligned with the standard conventions. ([GitHub][1])
+
+Notice what is deliberately absent:
+
+```text
+agents/openai.yaml
+GEMINI.md
+CLAUDE.md
+allowed-tools
+vendor metadata
+nested reference trees
+host-specific commands
+```
+
+Those are all inappropriate for a **cross-host reference template**.
+
+### `SKILL.md` should be an orchestrator, not a manual
+
+The main file should contain only:
+
+* discovery metadata;
+* applicability;
+* input requirements/defaults;
+* high-level workflow;
+* conditional routing;
+* exact resource/script paths;
+* validation/completion conditions;
+* concise failure handling.
+
+For example, conceptually:
+
+```text
+1. Normalize the requested project information.
+2. Read references/workflow.md.
+3. Read references/output-contract.md.
+4. If audience=contributor, read references/contributor-profile.md.
+   If audience=user, read references/user-profile.md.
+5. Use assets/welcome-template.md.
+6. Run scripts/render.py.
+7. Run scripts/validate.py.
+8. Do not report success unless validation passes.
+```
+
+This demonstrates the intended progressive-disclosure model properly:
+
+```text
+discovery
+name + description
+      ↓
+activation
+SKILL.md
+      ↓
+task-dependent resources
+workflow.md
+output-contract.md
+contributor-profile.md OR user-profile.md
+template
+scripts
+```
+
+The Agent Skills spec explicitly describes this three-stage loading model. ([GitHub][1])
+
+### Why four reference files are justified
+
+Each should test a different kind of declarative resource.
+
+`workflow.md` demonstrates **procedural reference material**. It contains transformation rules too detailed for the main orchestration file.
+
+`output-contract.md` demonstrates **normative contract material**. It defines required files, sections, JSON fields, field types, invariants, naming rules, etc.
+
+`contributor-profile.md` and `user-profile.md` demonstrate **conditional domain/reference loading**.
+
+This gives us two distinct progressive-disclosure dimensions:
+
+```text
+always needed:
+    workflow.md
+    output-contract.md
+
+conditionally needed:
+    contributor-profile.md
+        OR
+    user-profile.md
+```
+
+That is better than introducing deeper filesystem nesting just to show “multiple levels.”
+
+### The Markdown modules need observable consequences
+
+For example, `contributor-profile.md` could require:
+
+```text
+The final Markdown section must be "First tiny change".
+
+That section must contain exactly one concrete starter task.
+```
+
+`user-profile.md` might instead require:
+
+```text
+The final Markdown section must be "Where to get help".
+
+Do not include repository-contribution instructions.
+```
+
+Then the generated output proves which reference was used.
+
+Likewise, `output-contract.md` might define:
+
+```text
+welcome.json must contain:
+- schema_version
+- project
+- audience
+- sections
+- generated_by
+
+schema_version must equal 1.
+```
+
+These rules can then be verified mechanically.
+
+That is important: **a reference file should not merely be readable; it should affect a testable outcome.**
+
+### The two scripts have distinct roles
+
+#### `render.py`
+
+This is the deterministic producer:
+
+```text
+normalized input
++ selected profile
++ template
+→ WELCOME.md
++ welcome.json
+```
+
+Example invocation:
+
+```console
+python scripts/render.py \
+    --input examples/contributor.json \
+    --output out
+```
+
+It should:
+
+* use only the standard library;
+* use stable ordering;
+* avoid timestamps unless explicitly controlled;
+* produce deterministic bytes for identical input;
+* fail cleanly on malformed input;
+* return nonzero on error.
+
+#### `validate.py`
+
+This is an independent validation oracle:
+
+```text
+output directory
+→ success or actionable errors
+```
+
+Example:
+
+```console
+python scripts/validate.py out
+```
+
+Success:
+
+```text
+OK: WELCOME.md
+OK: welcome.json
+OK: audience=contributor
+OK: required sections present
+```
+
+Failure:
+
+```text
+ERROR: WELCOME.md: missing required section "First tiny change"
+```
+
+This producer/validator separation is one of the strongest features of the model because it demonstrates a general best practice for reliable agent workflows:
+
+```text
+generate → validate → repair if needed → validate again
+```
+
+### The asset also needs a real reason to exist
+
+`assets/welcome-template.md` should be a genuine static template rather than instructions disguised as an asset.
+
+For example:
+
+```markdown
+## Hello, {{ project }}!
+
+{{ introduction }}
+
+### What it does
+
+{{ description }}
+
+{{ profile_sections }}
+```
+
+This demonstrates the distinction between:
+
+* **references**: material the agent reads for knowledge/instructions;
+* **assets**: material consumed or instantiated by the workflow.
+
+That distinction is part of the standard skill organization. ([GitHub][1])
+
+### Development and evaluation material
+
+For the **template repository**, rather than the runtime skill itself, I would additionally include:
+
+```text
+hello-world/
+├── SKILL.md
+├── references/
+├── scripts/
+├── assets/
+│
+├── examples/
+│   ├── contributor.json
+│   ├── user.json
+│   └── invalid.json
+│
+└── tests/
+    ├── test_render.py
+    └── test_validate.py
+```
+
+Here the distinction is explicit:
+
+```text
+SKILL.md
+references/
+scripts/
+assets/
+    = portable skill runtime
+
+examples/
+tests/
+    = development and verification support
+```
+
+The open format allows additional files/directories, but `examples/` and `tests/` have no required runtime semantics. ([GitHub][1])
+
+I would **not initially include `evals/`** in the canonical version.
+
+There are emerging conventions around `evals/`, but they are not as universal as the four core skill components. If our stated requirement is:
+
+> do not use patterns with limited compatibility,
+
+then the cleanest template should demonstrate evaluation using ordinary fixtures and ordinary tests first.
+
+We can later add an optional `evals/` example as an extension if we explicitly label it non-core.
+
+### Proposed complete repository
+
+So the integrated version I recommend is:
+
+```text
+hello-world/
+├── SKILL.md
+│
+├── references/
+│   ├── workflow.md
+│   ├── output-contract.md
+│   ├── contributor-profile.md
+│   └── user-profile.md
+│
+├── scripts/
+│   ├── render.py
+│   └── validate.py
+│
+├── assets/
+│   └── welcome-template.md
+│
+├── examples/
+│   ├── contributor.json
+│   ├── user.json
+│   └── invalid.json
+│
+├── tests/
+│   ├── test_render.py
+│   └── test_validate.py
+│
+└── README.md
+```
+
+That is probably the sweet spot.
+
+### What the three scenarios should prove
+
+The template needs at least three canonical acceptance scenarios.
+
+#### Contributor scenario
+
+Input requests `audience=contributor`.
+
+Expected resource path:
+
+```text
+SKILL.md
+├── workflow.md
+├── output-contract.md
+├── contributor-profile.md
+└── welcome-template.md
+```
+
+`user-profile.md` is unnecessary.
+
+Expected output includes:
+
+```text
+First tiny change
+```
+
+and validates successfully.
+
+#### User scenario
+
+Input requests `audience=user`.
+
+Expected path:
+
+```text
+SKILL.md
+├── workflow.md
+├── output-contract.md
+├── user-profile.md
+└── welcome-template.md
+```
+
+`contributor-profile.md` is unnecessary.
+
+Output differs meaningfully and still validates successfully.
+
+#### Negative scenario
+
+Use malformed input or deliberately corrupt generated output.
+
+Expected result:
+
+```text
+validate.py returns nonzero
+and emits a precise diagnostic
+```
+
+This proves failure behavior rather than only happy-path behavior.
+
+### Compatibility contract
+
+I would explicitly state this in the eventual specification:
+
+> The skill SHALL rely only on the portable Agent Skills structure and ordinary filesystem/script execution semantics. It SHALL NOT require vendor-specific metadata, vendor-specific instruction files, experimental frontmatter, proprietary tool names, host-specific path conventions, network services, or nonstandard runtime dependencies.
+
+Then distinguish **package portability** from **installation location**.
+
+The package itself is:
+
+```text
+hello-world/
+```
+
+A compatible host may install it wherever that host discovers skills.
+
+For example, Gemini currently recognizes `.agents/skills/<skill-name>/SKILL.md`. ([Google AI for Developers][2])
+
+But that `.agents/skills` location should **not appear inside the skill package itself**. Installation is a host concern.
+
+That distinction is important for a local agent too:
+
+```text
+portable package
+    hello-world/
+
+host adapter
+    discovers/imports/registers hello-world/
+```
+
+### Terminology I would standardize on
+
+For this project, I suggest using:
+
+| Term                       | Meaning                                                 |
+| -------------------------- | ------------------------------------------------------- |
+| **skill package**          | complete portable skill directory                       |
+| **skill entry point**      | `SKILL.md`                                              |
+| **discovery metadata**     | `name` + `description` frontmatter                      |
+| **activation**             | host decides the skill applies                          |
+| **orchestration layer**    | workflow/routing instructions in `SKILL.md`             |
+| **progressive disclosure** | metadata → `SKILL.md` → task-specific resources         |
+| **reference resource**     | Markdown knowledge/instructions under `references/`     |
+| **executable helper**      | deterministic program under `scripts/`                  |
+| **asset**                  | static material consumed by the workflow                |
+| **artifact**               | generated result                                        |
+| **validation oracle**      | deterministic checker of artifact correctness           |
+| **fixture**                | stable example input/output used for verification       |
+| **branch scenario**        | invocation selecting a different workflow/resource path |
+| **negative scenario**      | case expected to fail validation                        |
+| **portable core**          | `SKILL.md` + standard resources                         |
+| **host adapter**           | external host-specific installation/discovery logic     |
+| **conformance surface**    | the portable skill features intentionally demonstrated  |
+
+And I would describe the project itself as:
+
+> **A minimal-complete, vendor-neutral reference Agent Skill that demonstrates discovery, activation, progressive disclosure, conditional reference loading, static assets, deterministic script execution, artifact generation, and independent validation through a small, fully testable Project Welcome Pack workflow.**
+
+That now combines the useful complexity of the initial design with the stricter compatibility rules from the revised one, without carrying over the vendor-specific or marginal patterns.
+
+[1]: https://github.com/agentskills/agentskills/blob/main/docs/specification.mdx "agentskills/docs/specification.mdx at main · agentskills/agentskills · GitHub"
+[2]: https://ai.google.dev/gemini-api/docs/custom-agents "Building managed agents  |  Gemini API  |  Google AI for Developers"
+
+
+---
+---
+
+## 📗 Next Step
+
+> [!NOTE] Prompt
+> 
+>  Sounds good. What is the next step?
+
+The next step is to turn this design into a **compact normative specification before creating any files**.
+
+I would define four things in one short spec:
+
+1. **Purpose and compatibility contract** — vendor-neutral Agent Skills package; no host-specific metadata, proprietary tools, experimental fields, network requirements, or third-party Python dependencies.
+2. **Exact repository layout and responsibility of every file** — including which files are runtime skill components versus development/test support.
+3. **Behavioral contract** — inputs, branching rules, generated artifacts, deterministic script interfaces, validation behavior, failure semantics.
+4. **Acceptance scenarios** — contributor path, user path, and negative validation path, with explicit observable outcomes proving progressive disclosure and correct use of references/scripts/assets.
+
+After that, implementation becomes mechanical: create the tree, write `SKILL.md` and references, implement `render.py`/`validate.py`, add fixtures/tests, then verify the canonical scenarios.
+
+I suggest the immediate deliverable be a **one-page `SPEC.md` for the Hello World reference skill**. Once that is stable, we can derive the actual skill files directly from it.
