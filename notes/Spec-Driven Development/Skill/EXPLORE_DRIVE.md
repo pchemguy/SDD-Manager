@@ -2344,3 +2344,46 @@ No scripts were added.
 
 Progress: **3/5 phases, 7/12 milestones, 16/24 tasks complete**. The next boundary is **Phase 4 — Human steering and completion communication**.
 
+---
+---
+
+## 📗 Implement Phase 4
+
+> [!NOTE] Prompt
+>  
+>  Proceed to Phase 4.
+
+Phase 4 is complete and installed.
+
+### Implemented tasks
+
+* **Task 4.1 — Checkpoint steering:** Added clean HIL checkpoints, explicit continuation gates, impact classification, focused recoverable revisions, authoritative-document normalization, and released-behavior safeguards.
+* **Task 4.2 — Capability-oriented reporting:** Added task, milestone, phase, campaign, steering, recovery, and blocked-status reporting with truthful aggregation and mandatory capability summaries.
+* **Task 4.3 — Workflow integration:** Connected implementation, roadmap selection, checkpoint events, steering transactions, normalization, and reporting without duplicating their detailed rules.
+
+### Milestones delivered
+
+* **Checkpoint steering and normalization:** Rejected or revised capabilities can be removed through new transactions while SPEC, PLAN, LAYOUT, ROADMAP, verification routing, tests, dependencies, and documentation converge on the direct final design. Journal and Git history remain append-only.
+* **Capability-oriented reporting:** Every completion boundary reports what capability now exists, important exclusions, verification, durable progress, and the next authorization boundary. Runtime-neutral work is explicitly identified.
+
+### Phase capability
+
+`sdd-man` can now pause at meaningful boundaries, accept focused human steering, normalize the project as though an unreleased rejected capability had never been intended, and remain paused until explicitly instructed to continue.
+
+Validation covered:
+
+* Encrypted-7z capability removal
+* Preservation of interface-neutral future phases
+* Removal of obsolete positive tests and retention of rejection tests
+* PLAN and ROADMAP normalization without add-then-remove history
+* Acceptance without implicit continuation
+* Future-PLAN-only revision
+* Architectural and released-behavior escalation
+* Task, milestone, phase, campaign, steering, and non-completion reports
+* Structural validation and reference routing
+
+No scripts were added.
+
+Progress: **4/5 phases, 9/12 milestones, 19/24 tasks complete**. The next boundary is **Phase 5 — Integrated conformance and release**.
+
+

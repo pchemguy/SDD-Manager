@@ -65,9 +65,7 @@ Use implementation only when the user explicitly asks to implement, continue, re
 
 Inspect startup and recovery state before choosing work. Resolve the requested task, milestone, or phase boundary. Execute one recoverable task transaction at a time. Stop after the requested range.
 
-Read `project-discovery.md`, `implementation.md`, `recovery.md`, `verification.md`, and `roadmap.md`; also read `reporting.md` when installed.
-
-When `reporting.md` is not yet installed during phased skill construction, follow the completion-record and feature-summary rules in `implementation.md`; do not omit reporting altogether.
+Read `project-discovery.md`, `implementation.md`, `recovery.md`, `verification.md`, `roadmap.md`, and `reporting.md`.
 
 ### Recovery
 
@@ -86,6 +84,12 @@ Use checkpoint steering after a requested implementation range reaches a clean d
 Pause forward implementation. Accept, revise, redesign, or stop according to the user's instruction. Normalize accepted revisions into current-state artifacts and return to a paused checkpoint.
 
 Read `checkpoint-steering.md`, plus the document, implementation, verification, roadmap, and reporting references required by the revision.
+
+### Reporting
+
+Use reporting for completion, checkpoint, steering, recovery, blocked-work, and read-only status communication.
+
+Lead with verified capability and use evidence-supported state language. Read `reporting.md`; also read `roadmap.md` for progress counts and `project-discovery.md` when sources must be reconciled.
 
 ## Transition gates
 
@@ -174,15 +178,7 @@ Do not promote a brainstormed alternative, illustrative example, or tentative pr
 
 ## Checkpoint behavior
 
-After completing the user-requested range:
-
-1. Confirm every included task is durably complete.
-2. Run required milestone or phase verification.
-3. Confirm recovery state is clean.
-4. Update the roadmap when present.
-5. Report implemented capabilities and exact progress.
-6. Identify the next planned boundary.
-7. Enter `awaiting-steering`.
+After completing the user-requested range, establish the clean boundary through `checkpoint-steering.md` and report it through `reporting.md`.
 
 While awaiting steering, do not start the next task. Accept only an explicit instruction to continue, revise, redesign, inspect, or stop.
 
@@ -228,7 +224,7 @@ Load the minimum applicable set:
 | Create or revise development documents | `document-system.md` |
 | Generate or reconcile roadmap | `roadmap.md` |
 | Design or select verification | `verification.md` |
-| Implement or continue | `project-discovery.md`, `implementation.md`, `recovery.md`, `verification.md`, `roadmap.md`; `reporting.md` when installed |
+| Implement or continue | `project-discovery.md`, `implementation.md`, `recovery.md`, `verification.md`, `roadmap.md`, `reporting.md` |
 | Recover interrupted work | `project-discovery.md`, `recovery.md`, `implementation.md` |
 | Review or revise at checkpoint | `checkpoint-steering.md` plus affected workflow references |
 | Report completion or progress | `reporting.md`, with `roadmap.md` for structured progress |

@@ -223,15 +223,7 @@ After all required task checks pass:
 1. Update the matching ROADMAP task checkbox and any mechanically implied milestone or phase summaries.
 2. Reconcile the verification map and governing documents affected by the task.
 3. Append a `completed` record.
-4. Include a concise feature summary, explicit non-features or boundaries, changed paths, verification evidence, roadmap coordinates, and manifest hash.
-
-Every task completion record and human-facing report must summarize implemented capabilities. Do not report only filenames, check counts, or “task complete.”
-
-A representative completion record is:
-
-```json
-{"event":"completed","task_id":"3.1-...","completed_at":"2026-09-20T12:30:00Z","features":["Recoverable one-task transaction preparation"],"boundaries":["No checkpoint normalization"],"verification":[{"command":"pytest tests/test_transaction.py","result":"passed"}],"manifest_sha256":"..."}
-```
+4. Follow `reporting.md` for the durable capability summary, boundaries, verification evidence, roadmap coordinates, and human-facing task report.
 
 ## Durable Git completion
 
@@ -268,28 +260,20 @@ At the end of a requested milestone or phase:
 1. Confirm all constituent tasks are durably complete.
 2. Run boundary-level verification defined by the PLAN and verification strategy.
 3. Reconcile ROADMAP rollups with task evidence.
-4. Append the applicable boundary event when the journal schema supports it.
-5. Produce a completion report that summarizes implemented features, explicit boundaries, verification, durable state, and exact progress counts.
+4. Prepare the applicable boundary summary for the completion and checkpoint journal records.
+5. Produce the appropriate synthesized completion report through `reporting.md`.
 
 At change-campaign completion, also run final affected-scope acceptance checks; integrate settled requirements into the main SPEC; express the final from-scratch construction in the main PLAN; update LAYOUT, ROADMAP, and the verification map; remove superseded baseline material; remove temporary feature documents; and record durable campaign completion. Preserve append-only journal and Git history even after the current-state documents are normalized.
 
 ## Stop for human steering
 
-After the requested range is durably complete:
-
-1. Enter `awaiting-steering`.
-2. Report the completed task, milestone, or phase and its implemented feature summary.
-3. State verification and recovery cleanliness.
-4. Identify the next canonical boundary without starting it.
-5. Wait for explicit continue, revise, redesign, inspect, or stop direction.
-
-Do not treat a request for status as authorization to continue. Focused checkpoint revision and document normalization are governed by `checkpoint-steering.md` when available.
+After the requested range is durably complete, establish the checkpoint through `checkpoint-steering.md` and report the boundary through `reporting.md`. Do not treat status, review, or acceptance alone as authorization to continue.
 
 ## Journal records
 
 Use append-only JSONL. Every record should identify the protocol version, campaign, task when applicable, UTC timestamp, and event-specific evidence.
 
-Support at least these events in Phase 3:
+Support at least these events:
 
 - `campaign`;
 - `started`;
@@ -298,9 +282,12 @@ Support at least these events in Phase 3:
 - `scope-extension-prepared`;
 - `completed`;
 - `committed` when used by the project protocol;
-- `reverted`.
+- `reverted`;
+- `checkpoint`;
+- `steering-started`;
+- `steering-completed`.
 
-Never append `completed` before verification passes. Never append `reverted` until baseline restoration is verified. Later phases may add checkpoint and steering events without changing these transaction semantics.
+Never append `completed` before verification passes. Never append `reverted` until baseline restoration is verified. Checkpoint and steering events do not replace the ordinary transaction events required for revision tasks.
 
 ## Safety rules
 

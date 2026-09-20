@@ -23,8 +23,8 @@ Choose one primary mode:
 | Generate, validate, or interpret project progress | Roadmap | [roadmap.md](references/roadmap.md) |
 | Design testing or resolve checks affected by a change | Verification | [verification.md](references/verification.md) |
 | Implement, continue, or resume a bounded range | Implementation or recovery | [implementation.md](references/implementation.md) and [recovery.md](references/recovery.md) |
-| Review or revise work at a completed boundary | Checkpoint steering | Reserved for `references/checkpoint-steering.md` |
-| Report task, milestone, phase, or campaign completion | Reporting | Reserved for `references/reporting.md` |
+| Review or revise work at a completed boundary | Checkpoint steering | [checkpoint-steering.md](references/checkpoint-steering.md) |
+| Report task, milestone, phase, campaign, steering, or blocked status | Reporting | [reporting.md](references/reporting.md) |
 
 Answer narrow questions within the current mode. Do not force a lifecycle transition merely because a later workflow could eventually be useful.
 
@@ -68,7 +68,7 @@ Do not present:
 
 Load only the active workflow references. Do not preload every resource.
 
-Available Phase 1 through Phase 3 resources:
+Available Phase 1 through Phase 4 resources:
 
 - [lifecycle.md](references/lifecycle.md): modes, transitions, authority, continuity, checkpoints, and truthful status.
 - [exploration.md](references/exploration.md): decisions, alternatives, questions, prototypes, and specification readiness.
@@ -78,17 +78,14 @@ Available Phase 1 through Phase 3 resources:
 - [verification.md](references/verification.md): verification strategy, component-to-check routing, affected-check selection, and failure handling.
 - [implementation.md](references/implementation.md): campaigns, bounded ranges, one-task transactions, preparation, verification, durable completion, and HIL stopping boundaries.
 - [recovery.md](references/recovery.md): mandatory startup recovery, exact restoration, interrupted completion, cleanup, and evidence-preserving escalation.
+- [checkpoint-steering.md](references/checkpoint-steering.md): clean HIL boundaries, revision classification, impact analysis, focused revision, normalization, and released-behavior limits.
+- [reporting.md](references/reporting.md): capability summaries, aggregation, truthful non-completion language, journal summaries, and self-contained progress reports.
 
 ## Phased implementation guard
 
-The installed skill currently implements Phases 1 through 3. Focused checkpoint normalization and the complete completion-reporting workflow are reserved for later phases. Phase 3 nevertheless requires an implemented-feature summary whenever it closes a task, milestone, phase, or campaign.
+The installed skill currently implements Phases 1 through 4. Integrated conformance, independent forward-testing, final refinement, and release certification remain reserved for Phase 5; do not describe the skill as fully release-certified before that phase completes.
 
-If a request requires a missing later-phase workflow:
-
-1. do not improvise the missing protocol;
-2. state which workflow is not yet implemented;
-3. provide read-only analysis only when it can be done safely from the existing Phase 1 references;
-4. require completion of the applicable skill phase before using `sdd-man` to mutate a project through that workflow.
+The Phase 1–4 project workflows are available for use. If asked to certify, finalize, or release the skill itself, follow the Phase 5 plan rather than inferring conformance from structural validation or the focused scenario checks completed so far.
 
 ## Universal stop conditions
 

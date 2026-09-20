@@ -143,6 +143,8 @@ Treat the roadmap as fully complete only after campaign integration, final accep
 
 ROADMAP may be read first for rapid orientation, but do not select or begin work until it is reconciled with execution evidence.
 
+When the latest durable state is `awaiting-steering`, reconciliation may identify the next boundary but must not select it for execution until an explicit continuation request releases the checkpoint.
+
 Use this order:
 
 1. Inspect the journal and recovery directories.
@@ -245,6 +247,8 @@ Do not preserve a roadmap item such as “remove rejected capability” after ch
 
 For a multi-task steering revision, use the active change plan and journal to represent temporary work. Normalize the main ROADMAP only when the settled final PLAN is integrated.
 
+After normalization, recalculate totals from the current PLAN-derived hierarchy. Historical tasks removed from the final PLAN remain in journal and Git history but do not remain as ROADMAP items or inflate current denominators.
+
 ## Status reporting
 
 Calculate reported progress from reconciled evidence:
@@ -265,6 +269,8 @@ Report:
 - next canonical task;
 - next useful HIL stopping point;
 - any disagreement preventing trustworthy counts.
+
+Use `reporting.md` to express those counts and states at the appropriate task, milestone, phase, campaign, checkpoint, or blocked-work level.
 
 Do not report a percentage when the denominator is unknown or PLAN and ROADMAP are inconsistent.
 
