@@ -19,7 +19,9 @@ Choose one primary mode:
 |---|---|---|
 | Clarify a problem, compare approaches, or develop decisions | Exploration | [exploration.md](references/exploration.md) |
 | Inspect an existing project, authorities, Git state, or SDD status | Status inspection | [project-discovery.md](references/project-discovery.md) |
-| Create or materially revise authoritative development documents | Document authoring or review | Reserved for `references/document-system.md` |
+| Create or materially revise authoritative development documents | Document authoring or review | [document-system.md](references/document-system.md) |
+| Generate, validate, or interpret project progress | Roadmap | [roadmap.md](references/roadmap.md) |
+| Design testing or resolve checks affected by a change | Verification | [verification.md](references/verification.md) |
 | Implement, continue, or resume a bounded range | Implementation or recovery | Reserved for implementation-phase references |
 | Review or revise work at a completed boundary | Checkpoint steering | Reserved for `references/checkpoint-steering.md` |
 | Report task, milestone, phase, or campaign completion | Reporting | Reserved for `references/reporting.md` |
@@ -66,15 +68,18 @@ Do not present:
 
 Load only the active workflow references. Do not preload every resource.
 
-Current Phase 1 resources:
+Available Phase 1 and Phase 2 resources:
 
 - [lifecycle.md](references/lifecycle.md): modes, transitions, authority, continuity, checkpoints, and truthful status.
 - [exploration.md](references/exploration.md): decisions, alternatives, questions, prototypes, and specification readiness.
 - [project-discovery.md](references/project-discovery.md): project roots, instructions, documents, Git, tools, journal state, and status classification.
+- [document-system.md](references/document-system.md): SPEC, PLAN, LAYOUT, recursive ownership, dependencies, change overlays, review, and normalization.
+- [roadmap.md](references/roadmap.md): PLAN-derived progress, bounded work selection, durable checklist semantics, and reconciliation.
+- [verification.md](references/verification.md): verification strategy, component-to-check routing, affected-check selection, and failure handling.
 
 ## Phased implementation guard
 
-The installed skill currently implements Phase 1 only. Document authoring, roadmap generation, verification mapping, transactional implementation, recovery execution, checkpoint normalization, and completion reporting references are reserved for later phases.
+The installed skill currently implements Phases 1 and 2. Transactional implementation, recovery execution, checkpoint normalization, and completion reporting references are reserved for later phases.
 
 If a request requires a missing later-phase workflow:
 
