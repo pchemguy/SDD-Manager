@@ -1769,3 +1769,13 @@ This should become a dedicated **completion reporting and handoff protocol** app
 Its central rule should be:
 
 > **Every completion report shall state the verified capability delivered at that boundary. File changes, commits, and passing tests are supporting evidence, not the feature summary itself.**
+
+---
+---
+
+## 📗 HIL Steering
+
+> [!NOTE] Prompt
+>  
+>  An important separate workflow involves HIL steering at an intermediate checkpoint after agents completes requested range of tasks. The idea is that it might be necessary to revise certain implemented features before proceeding to next task. Say, an agent implements the backends phase and reports 7z implemented support for encrypted archives. Now, this capability may have been selected as a reasonable resolution of ambiguity or maybe a part of the SPEC. But say I do not want support encrypted archives. Subsequent phases that depend on interface will not be affected by whether this capability is implemented or not. So, I would want to perform focused steering and, instead of proceeding to the next task, request a focused revision to the implemented code, indicating in present case that encryption is not supported, associated code and tests should be removed to simplify code, spec/plan/layout sections, if relevant needs to be aligned. After such focused steering is complete, the project state should not be substantively different compared to alternative when such capability has never been implemented in the first place (except for journal, perhaps).
+
