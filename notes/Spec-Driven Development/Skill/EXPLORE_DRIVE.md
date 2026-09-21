@@ -2495,3 +2495,43 @@ Commit: `d1442ee`
 Progress: **4/5 phases, 10/12 milestones, 22/24 tasks**.
 Next boundary: **Task 5.4 — Forward-test implementation, recovery, and steering**.
 
+---
+---
+
+## 📗 Implement Task 5.4
+
+> [!NOTE] Prompt
+>  
+>  Proceed to Task 5.4.
+
+Task 5.4 is complete and saved. No skill changes were necessary; this was an evidence-only forward-testing task.
+
+Validated capabilities:
+
+* Bounded next-task and next-milestone execution
+* Strict stopping before unauthorized later work
+* Git and non-Git task transactions
+* Existing-code change campaigns with temporary overlays
+* Direct, dependent, integration, and boundary-test selection
+* Prepared-interruption and completed-task recovery
+* Evidence-preserving refusal on inconsistent state
+* Human checkpoint steering and rejected-capability removal
+* SPEC/PLAN/LAYOUT/ROADMAP normalization
+* Task, milestone, phase, and campaign capability summaries
+
+Fresh scenarios included:
+
+* A two-task milestone completed with 15 passing tests; the subsequent CLI task remained untouched.
+* A two-task change campaign completed with 10 passing tests; its temporary feature documents were normalized and retired.
+* A stale steering recovery directory was correctly classified as `committed-not-cleaned`, verified, and safely removed. The project remained at its checkpoint with the next phase unstarted.
+
+Milestone summary: independent forward-testing now covers both document workflows from Task 5.3 and implementation, recovery, verification, and steering workflows from Task 5.4.
+
+Progress:
+
+* Phases: **4/5**
+* Milestones: **11/12**
+* Tasks: **23/24**
+* Next: **Task 5.5 — Apply validated refinements and finalize the skill**
+
+The skill remains valid and available under **Sidebar → Plugins → Skills**.
