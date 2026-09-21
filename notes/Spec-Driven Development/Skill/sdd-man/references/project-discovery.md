@@ -126,13 +126,13 @@ Determine whether the project root is inside a Git worktree. If it is:
 
 Classify existing changes by relationship to the contemplated scope:
 
-| Change | Treatment |
-|---|---|
-| Target path changed by an active valid task | Resolve through recovery |
-| Target path changed with no established ownership | Stop and ask before mutation |
-| Unrelated dirty path | Preserve; do not modify, stage, restore, or commit |
-| Disposable ignored tool output | Exclude from source and clean only when authorized and safe |
-| Unexpected generated or backup-like file | Investigate; do not delete automatically |
+| Change                                            | Treatment                                                   |
+| ------------------------------------------------- | ----------------------------------------------------------- |
+| Target path changed by an active valid task       | Resolve through recovery                                    |
+| Target path changed with no established ownership | Stop and ask before mutation                                |
+| Unrelated dirty path                              | Preserve; do not modify, stage, restore, or commit          |
+| Disposable ignored tool output                    | Exclude from source and clean only when authorized and safe |
+| Unexpected generated or backup-like file          | Investigate; do not delete automatically                    |
 
 If Git is absent, do not downgrade recovery or verification. Use filesystem, journal, manifest, and backup evidence.
 

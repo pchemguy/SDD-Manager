@@ -48,9 +48,9 @@ Describe system-level successful behavior, lifecycle, error semantics, and bound
 
 ## 8. Specification map
 
-| Area | Canonical specification | Responsibility |
-|---|---|---|
-| `<area>` | `spec/<node>.md` | `<owned behavior or contract>` |
+| Area     | Canonical specification | Responsibility                 |
+| -------- | ----------------------- | ------------------------------ |
+| `<area>` | `spec/<node>.md`        | `<owned behavior or contract>` |
 
 <!-- Omit the table when the complete specification remains in this file. -->
 

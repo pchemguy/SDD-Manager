@@ -27,7 +27,7 @@ Execute exactly one PLAN task transaction at a time. A task transaction is the s
 
 ```text
 STARTED → PREPARED → COMPLETED → COMMITTED → CLEANED
-                    ↘ REVERTED
+                   ↘ REVERTED
 ```
 
 `COMMITTED` applies only when Git-backed completion is required. In a non-Git project, successful verification followed by cleanup makes `COMPLETED` durable.
@@ -62,14 +62,14 @@ Before each task, discover all project instructions applicable to its declared p
 
 Use journal events and recovery evidence to distinguish:
 
-| State | Minimum evidence | Permitted next action |
-|---|---|---|
-| `STARTED` | valid `started` event | finish preparation or recover |
-| `PREPARED` | valid manifest, verified backups, matching `prepared` event | mutate declared paths |
-| `COMPLETED` | successful required checks and `completed` event | create/verify task commit or close non-Git task |
-| `COMMITTED` | exact matching task commit | remove recovery data |
-| `CLEANED` | no active recovery directory | select next authorized task |
-| `REVERTED` | baseline restored and `reverted` event | restart with a new task identifier |
+| State       | Minimum evidence                                            | Permitted next action                           |
+| ----------- | ----------------------------------------------------------- | ----------------------------------------------- |
+| `STARTED`   | valid `started` event                                       | finish preparation or recover                   |
+| `PREPARED`  | valid manifest, verified backups, matching `prepared` event | mutate declared paths                           |
+| `COMPLETED` | successful required checks and `completed` event            | create/verify task commit or close non-Git task |
+| `COMMITTED` | exact matching task commit                                  | remove recovery data                            |
+| `CLEANED`   | no active recovery directory                                | select next authorized task                     |
+| `REVERTED`  | baseline restored and `reverted` event                      | restart with a new task identifier              |
 
 The journal is append-only. Never edit an earlier valid record to make current state appear cleaner.
 

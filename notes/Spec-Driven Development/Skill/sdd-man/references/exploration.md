@@ -31,15 +31,15 @@ Do not force a complete design before enough information exists. Do not prolong 
 
 Keep these categories distinct:
 
-| Category | Meaning | Treatment |
-|---|---|---|
-| Fact | Evidence supplied or verified | Preserve with source or context when material |
-| User decision | Explicitly accepted direction | Treat as governing until revised |
-| Working assumption | Temporary premise used to continue analysis | Label and confirm when it affects design |
-| Open question | Unresolved issue with potential consequences | Resolve or explicitly defer before affected authoring |
-| Alternative | Plausible option not selected | Compare without treating it as a requirement |
-| Discarded alternative | Rejected option | Do not carry into normative documents unless its exclusion is itself a requirement |
-| Delegated detail | Choice safely left to implementation | Record the boundary of discretion, not an invented solution |
+| Category              | Meaning                                      | Treatment                                                                          |
+| --------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Fact                  | Evidence supplied or verified                | Preserve with source or context when material                                      |
+| User decision         | Explicitly accepted direction                | Treat as governing until revised                                                   |
+| Working assumption    | Temporary premise used to continue analysis  | Label and confirm when it affects design                                           |
+| Open question         | Unresolved issue with potential consequences | Resolve or explicitly defer before affected authoring                              |
+| Alternative           | Plausible option not selected                | Compare without treating it as a requirement                                       |
+| Discarded alternative | Rejected option                              | Do not carry into normative documents unless its exclusion is itself a requirement |
+| Delegated detail      | Choice safely left to implementation         | Record the boundary of discretion, not an invented solution                        |
 
 Do not infer acceptance merely because the user did not object to an illustrative example.
 

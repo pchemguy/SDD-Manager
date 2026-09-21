@@ -44,18 +44,18 @@ Do not run mutating project tools, auto-formatters, dependency installers, clean
 
 ## Decision table
 
-| Evidence | Classification | Default action |
-|---|---|---|
-| No nonterminal journal task; no unexplained recovery data | clean | Permit bounded task selection |
-| `started`, no `prepared`, no project mutation | started-not-prepared | Remove incomplete recovery preparation, append `reverted`, restart with a new ID |
-| `prepared`, no `completed` | prepared-incomplete | Restore the full declared baseline, verify, append `reverted`, restart with a new ID |
-| `completed`, no matching Git commit | completed-uncommitted | Validate scope and checks, then commit exactly that task or restore and restart |
-| `completed`, exact matching Git commit, recovery remains | committed-not-cleaned | Validate commit and remove matching recovery data |
-| `completed` in non-Git, recovery remains | completed-not-cleaned | Reverify final state and remove recovery data |
-| Matching commit exists but journal lacks `completed` | inconsistent | Preserve evidence and ask; do not synthesize completion silently |
-| Recovery directory without attributable journal state | unknown ownership | Preserve and escalate |
-| Missing/corrupt manifest or required backup | unrecoverable automatically | Preserve and escalate |
-| More than one apparently active task | ambiguous | Preserve and escalate |
+| Evidence                                                  | Classification              | Default action                                                                       |
+| --------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------ |
+| No nonterminal journal task; no unexplained recovery data | clean                       | Permit bounded task selection                                                        |
+| `started`, no `prepared`, no project mutation             | started-not-prepared        | Remove incomplete recovery preparation, append `reverted`, restart with a new ID     |
+| `prepared`, no `completed`                                | prepared-incomplete         | Restore the full declared baseline, verify, append `reverted`, restart with a new ID |
+| `completed`, no matching Git commit                       | completed-uncommitted       | Validate scope and checks, then commit exactly that task or restore and restart      |
+| `completed`, exact matching Git commit, recovery remains  | committed-not-cleaned       | Validate commit and remove matching recovery data                                    |
+| `completed` in non-Git, recovery remains                  | completed-not-cleaned       | Reverify final state and remove recovery data                                        |
+| Matching commit exists but journal lacks `completed`      | inconsistent                | Preserve evidence and ask; do not synthesize completion silently                     |
+| Recovery directory without attributable journal state     | unknown ownership           | Preserve and escalate                                                                |
+| Missing/corrupt manifest or required backup               | unrecoverable automatically | Preserve and escalate                                                                |
+| More than one apparently active task                      | ambiguous                   | Preserve and escalate                                                                |
 
 Roadmap state is corroborating evidence, not a substitute for the transaction record.
 

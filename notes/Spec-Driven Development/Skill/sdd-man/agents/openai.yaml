@@ -1,8 +1,8 @@
 interface:
   display_name: SDD Manager
   short_description: Specification-driven development workflows
-  default_prompt: Use $sdd-man to guide this project through specification, planning,
-    implementation, recovery, and human review.
+  default_prompt: Use $sdd-man to guide this project from exploration through specification,
+    planning, bounded implementation, recovery, and checkpoint steering.
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:

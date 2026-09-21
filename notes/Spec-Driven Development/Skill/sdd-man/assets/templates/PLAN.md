@@ -20,9 +20,9 @@ Use `A → B` to mean that B depends on A. Identify prerequisites, parallelizabl
 
 ## 5. Phase overview
 
-| Order | Phase | Milestones | Tasks | Delivered capability |
-|---:|---|---:|---:|---|
-| 1 | `<semantic phase name>` | `<count>` | `<count>` | `<reviewable capability>` |
+| Order | Phase                   | Milestones |     Tasks | Delivered capability      |
+| ----: | ----------------------- | ---------: | --------: | ------------------------- |
+|     1 | `<semantic phase name>` |  `<count>` | `<count>` | `<reviewable capability>` |
 
 ## 6. Phase: `<semantic phase name>`
 

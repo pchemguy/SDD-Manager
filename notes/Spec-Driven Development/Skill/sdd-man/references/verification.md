@@ -22,14 +22,14 @@ Use this reference to design project verification, maintain `docs/dev/verificati
 
 Keep these responsibilities distinct:
 
-| Source | Canonical responsibility |
-|---|---|
-| SPEC | Required behavior, invariants, boundaries, errors, and acceptance |
-| PLAN | Checks required by tasks, milestones, phases, and campaign completion |
-| LAYOUT | Physical ownership of source, tests, fixtures, and helpers |
-| Verification map | Current component and path routing to reusable executable checks |
-| Test suite and tools | Executable verification truth |
-| Journal | Exact checks and successful outcomes executed for a task |
+| Source               | Canonical responsibility                                              |
+| -------------------- | --------------------------------------------------------------------- |
+| SPEC                 | Required behavior, invariants, boundaries, errors, and acceptance     |
+| PLAN                 | Checks required by tasks, milestones, phases, and campaign completion |
+| LAYOUT               | Physical ownership of source, tests, fixtures, and helpers            |
+| Verification map     | Current component and path routing to reusable executable checks      |
+| Test suite and tools | Executable verification truth                                         |
+| Journal              | Exact checks and successful outcomes executed for a task              |
 
 Do not treat a registry entry as proof that behavior is covered. Do not omit a PLAN- or instruction-required check because the registry lacks it.
 
@@ -285,13 +285,13 @@ Never:
 
 Before fixing a reported bug, classify it:
 
-| Classification | Required response |
-|---|---|
-| Implementation violates adequate SPEC | Correct implementation and tests within a bounded task |
-| SPEC is missing or ambiguous | Return to document review before choosing behavior |
-| User wants different intended behavior | Create a change or checkpoint-revision workflow |
-| Defect reveals architectural boundary failure | Return to exploration or architectural revision |
-| Failure is external or environmental | Preserve project state and report the blocker |
+| Classification                                | Required response                                      |
+| --------------------------------------------- | ------------------------------------------------------ |
+| Implementation violates adequate SPEC         | Correct implementation and tests within a bounded task |
+| SPEC is missing or ambiguous                  | Return to document review before choosing behavior     |
+| User wants different intended behavior        | Create a change or checkpoint-revision workflow        |
+| Defect reveals architectural boundary failure | Return to exploration or architectural revision        |
+| Failure is external or environmental          | Preserve project state and report the blocker          |
 
 Do not label an intended-behavior change as a bug merely to bypass specification revision.
 

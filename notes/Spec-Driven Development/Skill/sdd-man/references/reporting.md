@@ -31,15 +31,15 @@ Base claims on reconciled SPEC, PLAN, ROADMAP, journal, recovery, filesystem, ve
 
 Use precise states:
 
-| Evidence | Report language |
-|---|---|
-| Required implementation and verification are durable | completed |
-| Checks passed but a required Git commit is absent | verified but not durably completed |
-| Transaction is prepared or partially changed | prepared or partially implemented |
-| Exact baseline was restored | reverted; no implementation completion claimed |
-| A required check failed or is unavailable | blocked or incomplete |
-| Evidence conflicts | status uncertain; preserve evidence and identify conflict |
-| Requested range completed and clean | awaiting steering |
+| Evidence                                             | Report language                                           |
+| ---------------------------------------------------- | --------------------------------------------------------- |
+| Required implementation and verification are durable | completed                                                 |
+| Checks passed but a required Git commit is absent    | verified but not durably completed                        |
+| Transaction is prepared or partially changed         | prepared or partially implemented                         |
+| Exact baseline was restored                          | reverted; no implementation completion claimed            |
+| A required check failed or is unavailable            | blocked or incomplete                                     |
+| Evidence conflicts                                   | status uncertain; preserve evidence and identify conflict |
+| Requested range completed and clean                  | awaiting steering                                         |
 
 Do not say “complete,” “implemented,” “fixed,” or “supported” when required verification is missing. Distinguish observed evidence from inference.
 

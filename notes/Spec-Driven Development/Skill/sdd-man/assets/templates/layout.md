@@ -18,12 +18,12 @@ Describe only important top-level locations and root-wide conventions.
 
 ## 3. Physical ownership domains
 
-| Domain | Canonical location | Responsibility | Detailed layout node |
-|---|---|---|---|
-| Documentation | `<path>` | `<ownership>` | `layout/docs.md` or this file |
-| Production source | `<path>` | `<ownership>` | `layout/src.md` or this file |
-| Tests | `<path>` | `<ownership>` | `layout/tests.md` or this file |
-| Packaging and runtime | `<path>` | `<ownership>` | `layout/packaging-runtime.md` or this file |
+| Domain                | Canonical location | Responsibility | Detailed layout node                       |
+| --------------------- | ------------------ | -------------- | ------------------------------------------ |
+| Documentation         | `<path>`           | `<ownership>`  | `layout/docs.md` or this file              |
+| Production source     | `<path>`           | `<ownership>`  | `layout/src.md` or this file               |
+| Tests                 | `<path>`           | `<ownership>`  | `layout/tests.md` or this file             |
+| Packaging and runtime | `<path>`           | `<ownership>`  | `layout/packaging-runtime.md` or this file |
 
 Create only children justified by substantial independent physical structure.
 
@@ -56,9 +56,9 @@ Define:
 
 ## 9. Cross-tree routing
 
-| Architectural area | SPEC owner | Implementation owner | Test owner | Principal PLAN phase |
-|---|---|---|---|---|
-| `<area>` | `spec/<node>.md` | `<source path>` | `<test path>` | `plan/<phase>.md` |
+| Architectural area | SPEC owner       | Implementation owner | Test owner    | Principal PLAN phase |
+| ------------------ | ---------------- | -------------------- | ------------- | -------------------- |
+| `<area>`           | `spec/<node>.md` | `<source path>`      | `<test path>` | `plan/<phase>.md`    |
 
 Keep this table navigational; link to canonical behavior, task, and ownership detail.
 

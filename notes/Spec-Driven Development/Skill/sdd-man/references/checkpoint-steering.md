@@ -62,12 +62,12 @@ For an explicit continuation request, append or update checkpoint release eviden
 
 Classify the requested change before mutation:
 
-| Classification | Meaning | Normal route |
-|---|---|---|
-| Contract-neutral simplification | Internal capability or complexity is removed or changed without altering required observable behavior | Focused revision when impact remains bounded |
-| Contract revision | Supported behavior, public interface, configuration, errors, dependency promise, or persistent representation changes | Change overlay or focused document-and-code revision |
-| Architectural revision | Component boundaries, dependency direction, major data flow, or system structure changes | Return to exploration/design before implementation |
-| Defect correction | Implementation violates an already adequate current SPEC | Focused corrective transaction; SPEC changes only if clarification is needed |
+| Classification                  | Meaning                                                                                                               | Normal route                                                                 |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Contract-neutral simplification | Internal capability or complexity is removed or changed without altering required observable behavior                 | Focused revision when impact remains bounded                                 |
+| Contract revision               | Supported behavior, public interface, configuration, errors, dependency promise, or persistent representation changes | Change overlay or focused document-and-code revision                         |
+| Architectural revision          | Component boundaries, dependency direction, major data flow, or system structure changes                              | Return to exploration/design before implementation                           |
+| Defect correction               | Implementation violates an already adequate current SPEC                                                              | Focused corrective transaction; SPEC changes only if clarification is needed |
 
 Do not call a revision contract-neutral merely because later PLAN phases can still compile. Consider all observable and maintained contracts.
 
@@ -77,20 +77,20 @@ When classification is ambiguous and the choice changes documents, compatibility
 
 Inspect the complete affected surface before confirming that steering is focused:
 
-| Surface | Questions |
-|---|---|
-| Public interfaces | Are functions, commands, options, schemas, formats, or documented behaviors added, removed, or changed? |
-| Configuration | Do defaults, flags, environment settings, feature gates, or validation rules change? |
-| Errors | Do supported failures, exception types, messages, exit codes, or rejection timing change? |
-| Dependencies | Can a capability-specific dependency, version constraint, adapter, or build step be removed? |
-| Persistent formats | Is stored data, wire data, migration behavior, or backward readability affected? |
-| Architecture | Do component responsibilities, dependency direction, lifecycle, concurrency, or ownership change? |
-| Tests and fixtures | Which positive, negative, dependent, integration, acceptance, and compatibility cases change? |
-| Documentation | Which SPEC, PLAN, LAYOUT, user docs, examples, and operational instructions describe the old capability? |
-| Verification routing | Which verification-map components and targets become obsolete, change coverage, or gain rejection tests? |
-| Completed dependents | Does any already completed component rely on the behavior or interface being revised? |
-| Future work | Which unimplemented tasks, milestones, prerequisites, estimates, or acceptance checks assume it? |
-| Distribution and release | Has the behavior been packaged, published, deployed, persisted, or consumed externally? |
+| Surface                  | Questions                                                                                                |
+| ------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Public interfaces        | Are functions, commands, options, schemas, formats, or documented behaviors added, removed, or changed?  |
+| Configuration            | Do defaults, flags, environment settings, feature gates, or validation rules change?                     |
+| Errors                   | Do supported failures, exception types, messages, exit codes, or rejection timing change?                |
+| Dependencies             | Can a capability-specific dependency, version constraint, adapter, or build step be removed?             |
+| Persistent formats       | Is stored data, wire data, migration behavior, or backward readability affected?                         |
+| Architecture             | Do component responsibilities, dependency direction, lifecycle, concurrency, or ownership change?        |
+| Tests and fixtures       | Which positive, negative, dependent, integration, acceptance, and compatibility cases change?            |
+| Documentation            | Which SPEC, PLAN, LAYOUT, user docs, examples, and operational instructions describe the old capability? |
+| Verification routing     | Which verification-map components and targets become obsolete, change coverage, or gain rejection tests? |
+| Completed dependents     | Does any already completed component rely on the behavior or interface being revised?                    |
+| Future work              | Which unimplemented tasks, milestones, prerequisites, estimates, or acceptance checks assume it?         |
+| Distribution and release | Has the behavior been packaged, published, deployed, persisted, or consumed externally?                  |
 
 Use code and import analysis as evidence, not as the sole dependency model. Inspect declared contracts and runtime integration points as well.
 

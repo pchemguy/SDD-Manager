@@ -15,16 +15,16 @@ Read [lifecycle.md](references/lifecycle.md) for every invocation that may chang
 
 Choose one primary mode:
 
-| Request | Mode | Required reference |
-|---|---|---|
-| Clarify a problem, compare approaches, or develop decisions | Exploration | [lifecycle.md](references/lifecycle.md), [exploration.md](references/exploration.md) |
-| Inspect an existing project, authorities, Git state, or SDD status | Status inspection | [lifecycle.md](references/lifecycle.md), [project-discovery.md](references/project-discovery.md), plus [recovery.md](references/recovery.md) and [reporting.md](references/reporting.md) when execution state exists |
-| Create or materially revise authoritative development documents | Document authoring or review | [lifecycle.md](references/lifecycle.md), [document-system.md](references/document-system.md), plus [roadmap.md](references/roadmap.md) and [verification.md](references/verification.md) where applicable |
-| Generate, validate, or interpret project progress | Roadmap | [lifecycle.md](references/lifecycle.md), [roadmap.md](references/roadmap.md) |
-| Design testing or resolve checks affected by a change | Verification | [lifecycle.md](references/lifecycle.md), [verification.md](references/verification.md) |
-| Implement, continue, or resume a bounded range | Implementation or recovery | [lifecycle.md](references/lifecycle.md), [project-discovery.md](references/project-discovery.md), [implementation.md](references/implementation.md), [recovery.md](references/recovery.md), [verification.md](references/verification.md), [roadmap.md](references/roadmap.md), and [reporting.md](references/reporting.md) |
-| Review or revise work at a completed boundary | Checkpoint steering | [lifecycle.md](references/lifecycle.md), [checkpoint-steering.md](references/checkpoint-steering.md), [document-system.md](references/document-system.md), [implementation.md](references/implementation.md), [verification.md](references/verification.md), and [reporting.md](references/reporting.md), plus [roadmap.md](references/roadmap.md) when progress structure changes |
-| Report task, milestone, phase, campaign, steering, or blocked status | Reporting | [lifecycle.md](references/lifecycle.md), [reporting.md](references/reporting.md), plus [project-discovery.md](references/project-discovery.md) and [roadmap.md](references/roadmap.md) when evidence must be reconciled |
+| Request                                                              | Mode                         | Required reference                                                                                                                                                                                                                                                                                                                                                                 |
+| -------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Clarify a problem, compare approaches, or develop decisions          | Exploration                  | [lifecycle.md](references/lifecycle.md), [exploration.md](references/exploration.md)                                                                                                                                                                                                                                                                                               |
+| Inspect an existing project, authorities, Git state, or SDD status   | Status inspection            | [lifecycle.md](references/lifecycle.md), [project-discovery.md](references/project-discovery.md), plus [recovery.md](references/recovery.md) and [reporting.md](references/reporting.md) when execution state exists                                                                                                                                                               |
+| Create or materially revise authoritative development documents      | Document authoring or review | [lifecycle.md](references/lifecycle.md), [document-system.md](references/document-system.md), plus [roadmap.md](references/roadmap.md) and [verification.md](references/verification.md) where applicable                                                                                                                                                                          |
+| Generate, validate, or interpret project progress                    | Roadmap                      | [lifecycle.md](references/lifecycle.md), [roadmap.md](references/roadmap.md)                                                                                                                                                                                                                                                                                                       |
+| Design testing or resolve checks affected by a change                | Verification                 | [lifecycle.md](references/lifecycle.md), [verification.md](references/verification.md)                                                                                                                                                                                                                                                                                             |
+| Implement, continue, or resume a bounded range                       | Implementation or recovery   | [lifecycle.md](references/lifecycle.md), [project-discovery.md](references/project-discovery.md), [implementation.md](references/implementation.md), [recovery.md](references/recovery.md), [verification.md](references/verification.md), [roadmap.md](references/roadmap.md), and [reporting.md](references/reporting.md)                                                        |
+| Review or revise work at a completed boundary                        | Checkpoint steering          | [lifecycle.md](references/lifecycle.md), [checkpoint-steering.md](references/checkpoint-steering.md), [document-system.md](references/document-system.md), [implementation.md](references/implementation.md), [verification.md](references/verification.md), and [reporting.md](references/reporting.md), plus [roadmap.md](references/roadmap.md) when progress structure changes |
+| Report task, milestone, phase, campaign, steering, or blocked status | Reporting                    | [lifecycle.md](references/lifecycle.md), [reporting.md](references/reporting.md), plus [project-discovery.md](references/project-discovery.md) and [roadmap.md](references/roadmap.md) when evidence must be reconciled                                                                                                                                                            |
 
 Answer narrow questions within the current mode. Do not force a lifecycle transition merely because a later workflow could eventually be useful.
 
@@ -68,7 +68,7 @@ Do not present:
 
 Load only the active workflow references. Do not preload every resource.
 
-Available Phase 1 through Phase 4 resources:
+Available workflow resources:
 
 - [lifecycle.md](references/lifecycle.md): modes, transitions, authority, continuity, checkpoints, and truthful status.
 - [exploration.md](references/exploration.md): decisions, alternatives, questions, prototypes, and specification readiness.
@@ -80,12 +80,6 @@ Available Phase 1 through Phase 4 resources:
 - [recovery.md](references/recovery.md): mandatory startup recovery, exact restoration, interrupted completion, cleanup, and evidence-preserving escalation.
 - [checkpoint-steering.md](references/checkpoint-steering.md): clean HIL boundaries, revision classification, impact analysis, focused revision, normalization, and released-behavior limits.
 - [reporting.md](references/reporting.md): capability summaries, aggregation, truthful non-completion language, journal summaries, and self-contained progress reports.
-
-## Phased implementation guard
-
-The installed skill currently implements Phases 1 through 4. Integrated conformance, independent forward-testing, final refinement, and release certification remain reserved for Phase 5; do not describe the skill as fully release-certified before that phase completes.
-
-The Phase 1–4 project workflows are available for use. If asked to certify, finalize, or release the skill itself, follow the Phase 5 plan rather than inferring conformance from structural validation or the focused scenario checks completed so far.
 
 ## Universal stop conditions
 

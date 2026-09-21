@@ -2231,7 +2231,12 @@ Implementation has not begun.
 ---
 ---
 
-## 📗 Implement Phase 1
+## 📗 Implementation
+
+---
+---
+
+### 📗 Implement Phase 1
 
 > [!NOTE] Prompt
 >  
@@ -2263,7 +2268,7 @@ The skill is paused at the Phase 1 checkpoint. Next is **Phase 2 — Authoritati
 ---
 ---
 
-## 📗 Implement Phase 2
+### 📗 Implement Phase 2
 
 > [!NOTE] Prompt
 >  
@@ -2303,7 +2308,7 @@ The skill is paused at the Phase 2 checkpoint. Next is **Phase 3 — Transaction
 ---
 ---
 
-## 📗 Implement Phase 3
+### 📗 Implement Phase 3
 
 > [!NOTE] Prompt
 >  
@@ -2311,18 +2316,18 @@ The skill is paused at the Phase 2 checkpoint. Next is **Phase 3 — Transaction
 
 Phase 3 is complete and installed.
 
-### Implemented tasks
+#### Implemented tasks
 
 * **Task 3.1 — Transactional implementation:** Added bounded campaign execution, one-task transactions, baseline manifests, verified backups, scope extension, ordered verification, Git/non-Git closure, roadmap updates, capability summaries, and HIL stopping boundaries.
 * **Task 3.2 — Recovery:** Added mandatory startup recovery, exact all-or-nothing restoration, interrupted completion reconciliation, journal corruption handling, and evidence-preserving escalation.
 * **Task 3.3 — Routing integration:** Connected implementation and recovery with project discovery, lifecycle control, roadmap selection, and verification routing while preserving read-only status inspection.
 
-### Milestones delivered
+#### Milestones delivered
 
 * **Recoverable task execution:** Initial and change campaigns can execute task, milestone, or phase ranges as independent recoverable transactions.
 * **Recovery and evidence preservation:** Interrupted states have deterministic outcomes—proceed, restart, restore, complete forward, clean, or preserve and ask.
 
-### Phase capability
+#### Phase capability
 
 `sdd-man` can now safely execute and recover bounded implementation work in Git and non-Git projects while preserving unrelated changes. Every completion boundary requires an implemented-feature summary and stops after the authorized range for human steering.
 
@@ -2347,7 +2352,7 @@ Progress: **3/5 phases, 7/12 milestones, 16/24 tasks complete**. The next bounda
 ---
 ---
 
-## 📗 Implement Phase 4
+### 📗 Implement Phase 4
 
 > [!NOTE] Prompt
 >  
@@ -2355,18 +2360,18 @@ Progress: **3/5 phases, 7/12 milestones, 16/24 tasks complete**. The next bounda
 
 Phase 4 is complete and installed.
 
-### Implemented tasks
+#### Implemented tasks
 
 * **Task 4.1 — Checkpoint steering:** Added clean HIL checkpoints, explicit continuation gates, impact classification, focused recoverable revisions, authoritative-document normalization, and released-behavior safeguards.
 * **Task 4.2 — Capability-oriented reporting:** Added task, milestone, phase, campaign, steering, recovery, and blocked-status reporting with truthful aggregation and mandatory capability summaries.
 * **Task 4.3 — Workflow integration:** Connected implementation, roadmap selection, checkpoint events, steering transactions, normalization, and reporting without duplicating their detailed rules.
 
-### Milestones delivered
+#### Milestones delivered
 
 * **Checkpoint steering and normalization:** Rejected or revised capabilities can be removed through new transactions while SPEC, PLAN, LAYOUT, ROADMAP, verification routing, tests, dependencies, and documentation converge on the direct final design. Journal and Git history remain append-only.
 * **Capability-oriented reporting:** Every completion boundary reports what capability now exists, important exclusions, verification, durable progress, and the next authorization boundary. Runtime-neutral work is explicitly identified.
 
-### Phase capability
+#### Phase capability
 
 `sdd-man` can now pause at meaningful boundaries, accept focused human steering, normalize the project as though an unreleased rejected capability had never been intended, and remain paused until explicitly instructed to continue.
 
@@ -2389,7 +2394,7 @@ Progress: **4/5 phases, 9/12 milestones, 19/24 tasks complete**. The next bounda
 ---
 ---
 
-## 📗 Implement Task 5.1
+### 📗 Implement Task 5.1
 
 > [!NOTE] Prompt
 >  
@@ -2424,7 +2429,7 @@ Progress: **4/5 phases, 9/12 milestones, 20/24 tasks**. Task 5.2 remains next; n
 ---
 ---
 
-## 📗 Implement Task 5.2
+### 📗 Implement Task 5.2
 
 > [!NOTE] Prompt
 >  
@@ -2465,7 +2470,7 @@ Next boundary: **Task 5.3 — Forward-test exploration and document authoring**.
 ---
 ---
 
-## 📗 Implement Task 5.3
+### 📗 Implement Task 5.3
 
 > [!NOTE] Prompt
 >  
@@ -2498,7 +2503,7 @@ Next boundary: **Task 5.4 — Forward-test implementation, recovery, and steerin
 ---
 ---
 
-## 📗 Implement Task 5.4
+### 📗 Implement Task 5.4
 
 > [!NOTE] Prompt
 >  
@@ -2535,3 +2540,725 @@ Progress:
 * Next: **Task 5.5 — Apply validated refinements and finalize the skill**
 
 The skill remains valid and available under **Sidebar → Plugins → Skills**.
+
+---
+---
+
+### 📗 Implement Task 5.5
+
+> [!NOTE] Prompt
+>  
+>  Proceed to Task 5.5.
+
+Task 5.5 and the complete `sdd-man` campaign are finished.
+
+Task 5.5:
+
+* Removed the obsolete Phase 1–4/pre-release guard.
+* Regenerated and reconciled final interface metadata.
+* Confirmed the installed skill uses the final routing and invocation prompt.
+* Runtime workflow semantics did not change.
+* No script was added because no deterministic helper was justified.
+
+Final-refinement milestone:
+
+* Package contains exactly 18 required files:
+    * 10 focused workflow references
+    * 5 document templates
+    * 1 icon
+    * `SKILL.md`
+    * interface metadata
+* All resources are reachable and used.
+* Runtime links, anchors, JSON, YAML, metadata, and icon validation pass.
+* No temporary artifacts, stale placeholders, or unjustified resources remain.
+
+Phase 5:
+
+* Static conformance and SPEC traceability passed.
+* Independent exploration, document-generation, implementation, recovery, verification, bounded-execution, change-campaign, and checkpoint-steering scenarios passed.
+* Git and non-Git operation were both exercised.
+* Ambiguous evidence was preserved safely.
+* Human checkpoints prevented unauthorized continuation.
+* Completion reports consistently summarized delivered capabilities.
+
+Campaign result:
+
+* **Phases:** 5/5
+* **Milestones:** 12/12
+* **Tasks:** 24/24
+* **Status:** campaign complete
+* **Unresolved material findings:** none
+
+The completed skill now supports the full lifecycle from exploration through authoritative SPEC/PLAN/LAYOUT/ROADMAP generation, transactional implementation, verification routing, interruption recovery, progress journaling, checkpoint reporting, and focused human steering.
+
+It is installed and available under **Sidebar → Plugins → Skills**.
+
+---
+---
+
+## 📗 README Outline
+
+> [!NOTE] Prompt
+>  
+>  Propose outline for a comprehensive accompanying README.md
+
+The README should be an external companion document—stored with the skill’s source/distribution materials, but not bundled inside the installable skill package. It should explain the system to humans without duplicating the normative operational references.
+
+## Proposed `README.md` outline
+
+### 1. SDD Manager
+
+* One-paragraph description.
+* Intended audience: developers, technical leads, and users supervising coding agents.
+* Core promise: move from exploration to verified implementation while preserving authority, recovery evidence, and human control.
+* Current status: complete and validated.
+
+### 2. Why SDD Manager Exists
+
+Describe the problems it addresses:
+
+* Requirements drifting during implementation.
+* SPEC, PLAN, code, tests, and progress reports disagreeing.
+* Agents continuing beyond the requested boundary.
+* Interrupted implementation leaving ambiguous state.
+* Test selection depending on rediscovery or import analysis alone.
+* Feature revisions leaving obsolete code, tests, or documentation behind.
+* Progress reports listing files rather than explaining delivered capability.
+
+### 3. Core Principles
+
+Briefly introduce:
+
+* Specification before implementation.
+* Explicit lifecycle transitions.
+* Complete-current-state documentation.
+* PLAN as the canonical work hierarchy.
+* One recoverable transaction per task.
+* Evidence-based progress.
+* Human-in-the-loop stopping boundaries.
+* Capability-oriented completion reports.
+* Scripts only for deterministic, well-defined operations.
+
+### 4. Capabilities at a Glance
+
+A compact table:
+
+| Capability             | Outcome                                                       |
+| ---------------------- | ------------------------------------------------------------- |
+| Exploration            | Develop requirements without premature mutation               |
+| Document generation    | Produce SPEC, PLAN, LAYOUT, ROADMAP, and verification mapping |
+| Project discovery      | Reconstruct authority and execution state                     |
+| Bounded implementation | Execute a task, N tasks, milestone, phase, or campaign        |
+| Recovery               | Restore or reconcile interrupted transactions                 |
+| Verification           | Select direct, dependent, integration, and boundary checks    |
+| Progress tracking      | Maintain PLAN-aligned roadmap checklists                      |
+| Checkpoint steering    | Revise completed work before proceeding                       |
+| Reporting              | Summarize delivered features at every boundary                |
+
+### 5. What It Does Not Do
+
+Clarify important boundaries:
+
+* It does not invent product requirements without user acceptance.
+* It does not treat document creation as implementation authorization.
+* It does not require Git.
+* It does not assume a language, build system, test runner, or repository layout.
+* It does not replace project-specific instructions.
+* It does not automatically resolve ambiguous ownership or conflicting evidence.
+* It does not require bundled automation scripts.
+* It does not continue past a completed range without explicit direction.
+
+### 6. Lifecycle Overview
+
+Present the normal lifecycle:
+
+```text
+Exploration
+    ↓ explicit authorization
+Specification and planning
+    ↓ review and acceptance
+Bounded implementation
+    ↓ verified completion
+Human checkpoint
+    ├── continue
+    ├── revise completed work
+    ├── revise future work
+    ├── redesign
+    └── stop
+```
+
+Also explain that users may enter at a later stage when adequate artifacts already exist.
+
+### 7. Quick Start
+
+#### 7.1 Starting a new project
+
+Example prompts:
+
+```text
+Use $sdd-man to explore the design of ...
+```
+
+```text
+Use $sdd-man to create the SPEC, PLAN, LAYOUT, and ROADMAP from the accepted design.
+```
+
+```text
+Use $sdd-man to implement the next milestone.
+```
+
+#### 7.2 Continuing an existing project
+
+```text
+Use $sdd-man to inspect the current project state and report the next safe boundary.
+```
+
+```text
+Use $sdd-man to resume the interrupted implementation.
+```
+
+#### 7.3 Revising completed behavior
+
+```text
+Use $sdd-man to remove encrypted-archive support at the current checkpoint and normalize the project documentation.
+```
+
+### 8. Workflow Guide
+
+#### 8.1 Exploration
+
+* Appropriate inputs.
+* Decision, assumption, proposal, and open-question tracking.
+* Why exploration does not create authoritative files automatically.
+* Transition into specification.
+
+#### 8.2 Specification and planning
+
+* Creating or revising the authoritative document complex.
+* Compact versus recursively decomposed documentation.
+* Requirements-to-task traceability.
+* Review and correction before implementation.
+
+#### 8.3 Status inspection
+
+* Project-root discovery.
+* Applicable instruction discovery.
+* Git versus non-Git detection.
+* Main documents and active change overlays.
+* Journal, recovery, roadmap, filesystem, and history reconciliation.
+* Read-only inspection semantics.
+
+#### 8.4 Bounded implementation
+
+Supported boundaries:
+
+* Named task.
+* Next task.
+* Next `N` tasks.
+* Current or next milestone.
+* Current or next phase.
+* Named boundary.
+* MVP boundary.
+* Complete campaign.
+
+Explain that every PLAN task remains a separate recoverable transaction.
+
+#### 8.5 Recovery and resumption
+
+Cover the principal states:
+
+* Started but not prepared.
+* Prepared but incomplete.
+* Completed but not committed.
+* Committed but not cleaned.
+* Completed non-Git transaction.
+* Inconsistent or unattributable evidence.
+
+Emphasize restoration, evidence preservation, and refusal on ambiguity.
+
+#### 8.6 Verification and failed tests
+
+* Component-to-check mapping.
+* Direct tests.
+* Dependent-component tests.
+* Shared integration targets.
+* PLAN-required and boundary-level checks.
+* Task-caused versus unrelated failures.
+* Why unrelated failures are not silently absorbed.
+
+#### 8.7 Human checkpoint steering
+
+* Accept and continue.
+* Focused correction.
+* Contract revision.
+* Future-work revision.
+* Architectural redesign.
+* Campaign termination.
+
+Explain that steering suspends ordinary forward task selection.
+
+### 9. Authoritative Project Documents
+
+#### 9.1 `SPEC.md`
+
+* Required observable system.
+* Constraints, errors, compatibility, and acceptance.
+* Complete current state rather than change history.
+
+#### 9.2 `PLAN.md`
+
+* From-scratch implementation blueprint.
+* Phase → milestone → task hierarchy.
+* Dependencies, paths, verification, and completion conditions.
+
+#### 9.3 `layout.md`
+
+* Physical ownership.
+* Repository structure.
+* Component boundaries.
+* Dependency direction.
+
+#### 9.4 `ROADMAP.md`
+
+* Exact projection of PLAN structure and order.
+* Human-readable checklist.
+* Durable completion semantics.
+* Progress counts.
+
+#### 9.5 `verification-map.json`
+
+* Components and owned paths.
+* Direct and dependent relationships.
+* Registered verification targets.
+* Shared-target deduplication.
+* Current implemented topology only.
+
+#### 9.6 Change overlays
+
+* `FEATURE-SPEC.md`
+* `FEATURE-PLAN.md`
+* Baseline-plus-delta interpretation.
+* Normalization and retirement after campaign completion.
+
+### 10. Authority and Precedence
+
+Provide a concise authority table:
+
+1. Current explicit user instruction.
+2. Applicable project instructions.
+3. Main SPEC plus any valid active change specification.
+4. Main PLAN plus any valid active change plan.
+5. LAYOUT.
+6. ROADMAP and verification map.
+7. Journal and recovery state.
+8. Durable project history.
+
+Explain when contradictions require stopping for clarification.
+
+### 11. Roadmap and Progress Model
+
+#### 11.1 Hierarchy
+
+* Phases: major architectural capabilities.
+* Milestones: useful review and stopping boundaries.
+* Tasks: recoverable implementation transactions.
+
+#### 11.2 Checklist semantics
+
+* `[ ]` means not durably complete.
+* `[x]` requires matching execution evidence.
+* Active or partial state belongs in the journal, not invented checkbox syntax.
+
+#### 11.3 Selecting requested ranges
+
+Include examples such as:
+
+* “Implement the next task.”
+* “Implement the next three tasks.”
+* “Complete the current milestone.”
+* “Implement through the MVP.”
+* “Complete Phase 2.”
+
+#### 11.4 Reconciliation
+
+Explain how ROADMAP, PLAN, journal, recovery state, filesystem, and project history confirm one another.
+
+### 12. Task Transaction Model
+
+Show the state machine:
+
+```text
+STARTED → PREPARED → COMPLETED → COMMITTED → CLEANED
+                    ↘ REVERTED
+```
+
+Describe:
+
+* Declared path scope.
+* Create, modify, delete, and rename operations.
+* Baseline capture.
+* Recovery manifest and backups.
+* Verification.
+* Exact durable completion.
+* Recovery-state cleanup.
+* Prohibition on overlapping task transactions.
+
+### 13. Journaling Protocol
+
+#### 13.1 Purpose
+
+* Recovery evidence.
+* Execution history.
+* Capability reconstruction.
+* Checkpoint and steering state.
+
+#### 13.2 Principal events
+
+* `campaign`
+* `started`
+* `prepared`
+* `scope-extension-started`
+* `scope-extension-prepared`
+* `completed`
+* `reverted`
+* `checkpoint`
+* `steering-started`
+* `steering-completed`
+
+#### 13.3 What belongs in the journal
+
+* Task identity and scope.
+* Baseline and recovery evidence.
+* Commands and outcomes.
+* Delivered capability summary.
+* Progress coordinates.
+* Checkpoint boundary.
+
+#### 13.4 What does not belong there
+
+* Secrets.
+* Large file contents.
+* Architectural requirements.
+* Editable retrospective narration.
+
+### 14. Git and Non-Git Projects
+
+A comparison table covering:
+
+| Concern                 | Git project                      | Non-Git project                     |
+| ----------------------- | -------------------------------- | ----------------------------------- |
+| Baseline                | History plus recovery manifest   | Recovery manifest and exact backups |
+| Durable task completion | Exact task commit                | Verified final-state inventory      |
+| Checkpoint              | Optional narrow metadata commit  | Durable journal/checkpoint record   |
+| Recovery                | Commit/diff plus backup evidence | Hash and backup evidence            |
+| Unrelated changes       | Preserve and exclude             | Preserve through scoped ownership   |
+
+### 15. Testing Strategy
+
+#### 15.1 Test targeting
+
+* Why import analysis is insufficient.
+* Explicit verification mapping.
+* Affected behavior and architectural dependencies.
+
+#### 15.2 Narrow-to-broad execution
+
+1. Direct component tests.
+2. Dependent tests.
+3. Shared integration targets.
+4. Quality and build checks.
+5. Milestone or phase acceptance.
+
+#### 15.3 Verification-map maintenance
+
+* Add mappings when tests and components are created.
+* Update mappings when ownership changes.
+* Remove obsolete mappings during normalization.
+* Keep speculative future paths out.
+
+#### 15.4 Failure handling
+
+* Failures introduced by the task.
+* Pre-existing failures.
+* Unrelated failures.
+* Unavailable required checks.
+* Scope extension.
+
+### 16. Checkpoints and Human Steering
+
+#### 16.1 Checkpoint invariant
+
+A checkpoint is a decision boundary, not permission to continue.
+
+#### 16.2 Completion requirements
+
+* Requested tasks are durable.
+* Boundary checks pass.
+* Recovery state is clean.
+* Progress sources agree.
+* Delivered capability is summarized.
+* Exact next boundary is identified.
+
+#### 16.3 Focused capability removal
+
+Use the encrypted-archive example to explain:
+
+* Remove implementation success paths.
+* Remove obsolete positive tests.
+* Retain explicit rejection coverage.
+* Remove obsolete options and dependencies.
+* Normalize SPEC, PLAN, LAYOUT, ROADMAP, verification mapping, and user documentation.
+* Preserve journal and historical evidence.
+* Leave interface-neutral future work unchanged.
+
+### 17. Completion Reporting
+
+#### 17.1 Task reports
+
+* Incremental capability.
+* Boundaries.
+* Verification.
+* Durability.
+* Progress.
+* Next boundary.
+
+#### 17.2 Milestone reports
+
+* Integrated useful capability.
+* Guarantees and exclusions.
+* Milestone verification.
+* Current roadmap position.
+
+#### 17.3 Phase reports
+
+* Major system capability.
+* Cross-component behavior.
+* Phase acceptance.
+* Cumulative progress.
+
+#### 17.4 Campaign reports
+
+* Complete delivered system.
+* Final exclusions and compatibility.
+* Packaging or installation evidence.
+* Document normalization.
+* Final totals and handoff status.
+
+#### 17.5 Non-runtime tasks
+
+Explain how to report documentation, verification, infrastructure, migration, removal, or hardening work without pretending runtime functionality changed.
+
+### 18. Example End-to-End Journeys
+
+#### 18.1 Greenfield project
+
+Exploration → documents → MVP milestone → checkpoint → continuation.
+
+#### 18.2 Existing-code feature
+
+Discovery → change overlay → bounded change campaign → normalization.
+
+#### 18.3 Interrupted implementation
+
+Startup inspection → recovery classification → restoration or completion → clean restart.
+
+#### 18.4 Checkpoint revision
+
+Completed phase → user rejects one capability → focused revision → normalized checkpoint.
+
+Each journey should show prompts, expected artifacts, stopping conditions, and reports rather than full implementation transcripts.
+
+### 19. Prompt Cookbook
+
+Organize reusable examples by intent:
+
+* Explore an idea.
+* Consolidate accepted decisions.
+* Generate authoritative documents.
+* Review documents.
+* Inspect current status.
+* Implement the next task.
+* Implement the next milestone.
+* Resume after interruption.
+* Diagnose failed verification.
+* Revise completed behavior.
+* Report current progress.
+* Reconcile inconsistent evidence.
+
+### 20. Package Architecture
+
+Document the human-facing structure:
+
+```text
+SKILL.md
+references/
+assets/
+  templates/
+agents/
+```
+
+Explain:
+
+* `SKILL.md` routes workflows.
+* References contain focused procedural contracts.
+* Templates seed project artifacts.
+* Interface metadata controls presentation and invocation.
+* No bundled scripts exist in the current baseline.
+
+Avoid internal installation identifiers or development-history detail.
+
+### 21. Portability and Host Assumptions
+
+* Works with Git and non-Git projects.
+* Language- and test-runner-neutral.
+* Uses available host filesystem and command tools.
+* Does not require network access.
+* Does not require undeclared third-party packages.
+* Honors project-local instructions and tools.
+* Platform-specific project requirements remain project responsibilities.
+
+### 22. Safety Guarantees
+
+Summarize:
+
+* No mutation during exploration or status inspection.
+* No implementation without explicit authorization.
+* No work beyond the requested range.
+* No silent ownership assumptions.
+* No broad destructive recovery.
+* No overwriting unrelated changes.
+* No fabricated completion from passing tests alone.
+* No speculative checkmarks.
+* No automatic resolution of contradictory evidence.
+
+### 23. Troubleshooting
+
+Organize by symptom:
+
+* The agent created documents during exploration.
+* PLAN and ROADMAP disagree.
+* A task is checked but has no durable completion evidence.
+* Recovery data remains after completion.
+* A required test cannot run.
+* Unrelated files are dirty.
+* Only one change-overlay document exists.
+* The agent wants to continue after a checkpoint.
+* A rejected capability remains in documentation.
+* The skill does not appear in the interface.
+
+For each: likely classification, safe next action, and what not to do.
+
+### 24. Validation and Acceptance Evidence
+
+Summarize the completed validation program:
+
+* Structural and portability audit.
+* Full SPEC traceability audit.
+* Exploration and document-authoring forward tests.
+* Git and non-Git implementation tests.
+* Recovery-state tests.
+* Verification-selection tests.
+* Inconsistent-evidence refusal.
+* Bounded milestone execution.
+* Existing-code change campaign.
+* Focused steering and normalization.
+* Final installed-package validation.
+
+State the final totals: 5 phases, 12 milestones, and 24 tasks completed.
+
+### 25. Maintenance and Evolution
+
+* Treat real usage failures as evidence.
+* Classify findings as skill defect, scenario ambiguity, or unsupported expectation.
+* Change only substantiated behavior.
+* Re-run affected scenarios after material changes.
+* Keep `SKILL.md` concise.
+* Maintain one canonical owner for each rule.
+* Add scripts only for demonstrably deterministic operations.
+* Regenerate interface metadata after routing changes.
+* Revalidate the installed form after updates.
+
+### 26. Terminology
+
+Define:
+
+* Authority
+* Campaign
+* Change overlay
+* Phase
+* Milestone
+* Task transaction
+* Prepared baseline
+* Durable completion
+* Checkpoint
+* Awaiting steering
+* Normalization
+* Verification target
+* Recovery state
+
+### 27. FAQ
+
+Suggested questions:
+
+* Must a project already have a SPEC and PLAN?
+* Can the skill work without Git?
+* Does it generate tests automatically?
+* Why maintain both PLAN and ROADMAP?
+* Why use a verification map?
+* Can several tasks be implemented in one request?
+* Why is each task a separate transaction?
+* What happens when existing changes overlap the task?
+* Can a completed feature be removed?
+* When are scripts appropriate?
+* Does acceptance authorize the next phase?
+* What evidence makes a task complete?
+
+### 28. Availability
+
+* Explain how to invoke `$sdd-man`.
+* State where the installed skill can be found in the product interface.
+* Note that interface refresh may be needed after an update.
+* Avoid duplicating internal installation mechanics.
+
+### 29. License and Attribution
+
+Include only if applicable:
+
+* License.
+* Maintainer or project owner.
+* Source materials or acknowledgments.
+* Contribution or issue-reporting location.
+
+The strongest organizational choice is to divide the README into four large reader paths: **Overview**, **Using SDD Manager**, **Operational Model**, and **Maintenance and Validation**. That keeps it comprehensive while allowing ordinary users to stop after Quick Start and Workflow Guide.
+
+---
+---
+
+## 📗 README
+
+> [!NOTE] Prompt
+>  
+> Generate README. The opening should frame this project as implementation of the specification-driven development. Also mention somewhere well-known existing SDD solutions, such as GitHub SpecKit and superpowers.
+> 
+> Motivation behind this project serves multiple purposes (in addition to points in "2. Why SDD Manager Exists")
+> 
+> - development of a tool tailored to developer's workflows
+> - learning-by-doing experiment (advanced dev workflow with a SOTA AI agent)
+> - the need for integrating exploration, explicit resumption and recovery, ability to steer/revise in the middle of implementation workflow, maintaining integral SPEC/PLAN instead of accumulating migration files    
+> 
+> I have not been following either SpecKit or superpowers recently.
+
+Created.
+
+It contains:
+
+* Opening framing `sdd-man` as an implementation of specification-driven development.
+* Expanded project motivation, including the learning-by-doing experiment.
+* Current, neutral positioning relative to [GitHub Spec Kit](https://github.com/github/spec-kit) and [Superpowers](https://github.com/obra/superpowers).
+* Full lifecycle, document-authority, roadmap, transaction, verification, recovery, and steering models.
+* Git and non-Git workflows.
+* Prompt cookbook and end-to-end examples.
+* Troubleshooting, validation history, maintenance principles, terminology, and FAQ.
+* Explicit explanation that this is external companion documentation rather than part of the installable skill package.
+
+The document is approximately 7,300 words, and its table of contents and internal links have been validated.

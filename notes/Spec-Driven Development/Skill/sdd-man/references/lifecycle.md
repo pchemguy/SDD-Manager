@@ -134,19 +134,19 @@ Stop at a safe task boundary when possible. Do not silently diverge from governi
 
 Determine applicable authority for the current scope. Use this responsibility model:
 
-| Source | Responsibility |
-|---|---|
-| Current explicit user instruction | Authorization and accepted steering |
-| Project instruction files | Local operating constraints, tools, conventions, and required checks |
-| Main SPEC | Complete required current system |
-| Active change specification | Explicit intended delta from the main SPEC |
-| Main PLAN | Complete from-scratch implementation blueprint |
-| Active change plan | Ordered tasks for the active delta |
-| LAYOUT | Physical location and ownership |
-| ROADMAP | PLAN-derived durable progress view |
-| Verification map | Current component-to-check routing |
-| Journal and recovery state | Transaction state and recovery evidence |
-| Git history | Durable task commits and historical evidence when Git exists |
+| Source                            | Responsibility                                                       |
+| --------------------------------- | -------------------------------------------------------------------- |
+| Current explicit user instruction | Authorization and accepted steering                                  |
+| Project instruction files         | Local operating constraints, tools, conventions, and required checks |
+| Main SPEC                         | Complete required current system                                     |
+| Active change specification       | Explicit intended delta from the main SPEC                           |
+| Main PLAN                         | Complete from-scratch implementation blueprint                       |
+| Active change plan                | Ordered tasks for the active delta                                   |
+| LAYOUT                            | Physical location and ownership                                      |
+| ROADMAP                           | PLAN-derived durable progress view                                   |
+| Verification map                  | Current component-to-check routing                                   |
+| Journal and recovery state        | Transaction state and recovery evidence                              |
+| Git history                       | Durable task commits and historical evidence when Git exists         |
 
 Treat an active change document as overriding the main baseline only where it explicitly defines a revision.
 
@@ -217,16 +217,16 @@ Never report:
 
 Load the minimum applicable set:
 
-| Intent | Required references |
-|---|---|
-| Explore or clarify | `exploration.md` |
-| Inspect status or authorities | `project-discovery.md` |
-| Create or revise development documents | `document-system.md` |
-| Generate or reconcile roadmap | `roadmap.md` |
-| Design or select verification | `verification.md` |
-| Implement or continue | `project-discovery.md`, `implementation.md`, `recovery.md`, `verification.md`, `roadmap.md`, `reporting.md` |
-| Recover interrupted work | `project-discovery.md`, `recovery.md`, `implementation.md` |
-| Review or revise at checkpoint | `checkpoint-steering.md` plus affected workflow references |
-| Report completion or progress | `reporting.md`, with `roadmap.md` for structured progress |
+| Intent                                 | Required references                                                                                         |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Explore or clarify                     | `exploration.md`                                                                                            |
+| Inspect status or authorities          | `project-discovery.md`                                                                                      |
+| Create or revise development documents | `document-system.md`                                                                                        |
+| Generate or reconcile roadmap          | `roadmap.md`                                                                                                |
+| Design or select verification          | `verification.md`                                                                                           |
+| Implement or continue                  | `project-discovery.md`, `implementation.md`, `recovery.md`, `verification.md`, `roadmap.md`, `reporting.md` |
+| Recover interrupted work               | `project-discovery.md`, `recovery.md`, `implementation.md`                                                  |
+| Review or revise at checkpoint         | `checkpoint-steering.md` plus affected workflow references                                                  |
+| Report completion or progress          | `reporting.md`, with `roadmap.md` for structured progress                                                   |
 
 If a referenced later-phase file is not yet present during skill development, report that the corresponding workflow is not implemented rather than improvising an incomplete substitute.
