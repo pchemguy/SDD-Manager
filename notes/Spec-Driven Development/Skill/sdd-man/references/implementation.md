@@ -112,11 +112,12 @@ Before writing the `started` record:
 1. Identify the canonical PLAN task and its phase and milestone.
 2. Read only the relevant SPEC, PLAN, LAYOUT, roadmap, verification-map, code, tests, and instructions.
 3. Enumerate anticipated path operations as `create`, `modify`, `delete`, or `rename`.
-4. Identify focused, dependent, integration, quality, build, and boundary checks required for the task.
-5. Generate a unique task identifier containing the PLAN task identity, a semantic slug, a UTC timestamp, and a collision-resistant suffix when needed.
-6. In Git, record the branch, `HEAD`, staged state, unstaged state, untracked files, and relevant renames.
-7. Refuse to claim or overwrite a dirty target path whose ownership is not established.
-8. Preserve unrelated dirty paths and exclude them from backup, mutation, staging, restoration, and commits.
+4. For substantive code work, apply `in-code-documentation.md`: resolve the effective convention, inspect affected documentation, and include anticipated documentation paths and checks.
+5. Identify focused, dependent, integration, quality, build, and boundary checks required for the task.
+6. Generate a unique task identifier containing the PLAN task identity, a semantic slug, a UTC timestamp, and a collision-resistant suffix when needed.
+7. In Git, record the branch, `HEAD`, staged state, unstaged state, untracked files, and relevant renames.
+8. Refuse to claim or overwrite a dirty target path whose ownership is not established.
+9. Preserve unrelated dirty paths and exclude them from backup, mutation, staging, restoration, and commits.
 
 Do not use broad destructive commands, repository-wide cleanup, blanket staging, or unresolved globs to prepare a task.
 
@@ -190,6 +191,8 @@ If an undeclared path was already modified and its pre-task baseline cannot be p
 
 Modify only declared paths. Implement the complete current task contract, including the code, tests, documentation, and project metadata assigned to that task.
 
+For substantive code changes, reconcile module/package documentation and affected symbol documentation through `in-code-documentation.md` after behavior stabilizes and before verification. Passing tests or absent project guidance does not waive this review.
+
 Keep the governing artifacts aligned:
 
 - update the verification map when a component-to-check relationship changes;
@@ -209,10 +212,11 @@ Before declaring completion:
 1. Compare actual touched paths with the current manifest.
 2. Stop if any undeclared authoritative path changed.
 3. Inspect the focused diff or non-Git equivalent for scope and correctness.
-4. Run the narrowest direct checks first.
-5. Run affected dependent checks identified through the verification map and code relationships.
-6. Run required integration, lint, format, type, build, packaging, or boundary checks in the project-defined order.
-7. Record each command, result, and relevant environment limitation.
+4. For substantive code changes, confirm affected in-code documentation was reconciled or record the concrete reason no change was required.
+5. Run the narrowest direct checks first.
+6. Run affected dependent checks identified through the verification map and code relationships.
+7. Run required integration, documentation, lint, format, type, build, packaging, or boundary checks in the project-defined order.
+8. Record each command, result, and relevant environment limitation.
 
 Use `verification.md` to select and interpret checks. A required unavailable check is not a pass. A failing check must be classified as caused by the task, pre-existing, environment-blocked, or unclear, with evidence.
 

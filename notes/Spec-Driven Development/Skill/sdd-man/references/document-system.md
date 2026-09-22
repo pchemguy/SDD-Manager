@@ -34,6 +34,8 @@ ROADMAP   Which PLAN boundaries are durably complete?
 
 Do not force the four views into identical trees. Align them through explicit routing and shared terminology.
 
+Treat docstrings, API documentation comments, and source-adjacent explanatory comments as implementation-owned in-code documentation governed by `in-code-documentation.md`, not as additional SPEC or PLAN nodes. Authoritative development documents define intended contracts; in-code documentation presents the implemented current contract beside its code. Reconcile both when a change affects their shared subject without duplicating full requirements into source comments.
+
 Do not write a chronological account of feature additions, reversals, or migrations into the main documents. A reader must be able to reconstruct the current project without conversation history, old proposals, temporary change files, the implementation journal, or Git history.
 
 ## Before authoring

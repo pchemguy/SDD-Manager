@@ -72,6 +72,8 @@ Extract applicable requirements including:
 - required build, test, lint, type-check, package, or release commands;
 - completion and commit requirements.
 
+For work that may create or modify code, also determine whether documentation conventions are explicit, tool-enforced, coherently implicit in nearby source, inconsistent, or absent. Identify public API boundaries, generated or vendored paths, and the authoritative generator or template for generated documentation.
+
 Instruction scope is path-sensitive. Determine applicable instructions for every anticipated target. If later work expands into another directory, repeat discovery for the added scope before preparation or mutation.
 
 If an applicable source is missing, unreadable, contradictory, or conflicts with another authority without a precedence rule, classify the state as blocked and request direction.
@@ -148,6 +150,9 @@ Inspect project configuration and instructions for the actual commands used to:
 - build;
 - package;
 - validate generated artifacts;
+- lint docstrings or documentation comments;
+- build or extract API documentation;
+- run doctests, compiled examples, or documentation-link checks;
 - execute full acceptance checks.
 
 Prefer project-declared commands over familiar generic alternatives. Do not install or change tooling during read-only discovery.
@@ -156,6 +161,8 @@ Identify:
 
 - test roots and naming conventions;
 - source-to-test layout conventions;
+- documentation syntax and style used in representative production modules;
+- documentation generators, linters, API extractors, doctest systems, and example runners;
 - markers, suites, or test categories;
 - supported runtime versions;
 - platform-specific commands;

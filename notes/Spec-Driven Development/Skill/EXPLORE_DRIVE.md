@@ -3262,3 +3262,355 @@ It contains:
 * Explicit explanation that this is external companion documentation rather than part of the installable skill package.
 
 The document is approximately 7,300 words, and its table of contents and internal links have been validated.
+
+---
+---
+
+## 📗 Docstrings
+
+> [!NOTE] Prompt
+>  
+> I need to review the skill. I want to add a focused default in-code documentation creation and maintenance governance, when project guidelines are not defined. This should probably be a dedicated compact module defining (sub)workflow triggered after substantive new code creation or modification. The agent must review existing docstrings and update docstrings in modified modules as necessary. There probably also need to be defined a dedicated project wide docstring review process. The default requirement is to use professional comprehensive docstrings aligned with language-specific best practices, using google style where applicable. Where google style for a given language is not available, other predominant style should be used where available. How should this be implemented?
+
+This should be implemented as a focused cross-cutting extension, not as a new top-level lifecycle phase.
+
+The central addition should be a compact module:
+
+```text
+references/in-code-documentation.md
+```
+
+It should define two related workflows:
+
+1. Automatic incremental documentation maintenance during implementation.
+2. An explicitly requested project-wide documentation review.
+
+### 1. Authority and style selection
+
+The module should establish this precedence:
+
+1. Explicit project instructions, such as `AGENTS.md`, `PROJECT.md`, contributor guides, formatter configuration, or documentation-tool configuration.
+2. A clearly consistent existing project convention, even when it is not formally documented.
+3. Google style when a recognized Google convention exists for the language.
+4. The official or predominant language/ecosystem convention.
+5. Conservative idiomatic documentation comments when no stable formal convention exists.
+
+This prevents a Python project consistently using NumPy-style docstrings from being mechanically converted to Google style merely because its contributor guide is silent. Existing coherence is evidence of an implicit convention.
+
+For a new or inconsistent Python project, Google-style docstrings should be the default. Google’s Python guidance requires useful docstrings for public, nontrivial, or non-obvious functions and emphasizes calling semantics rather than implementation narration. ([google.github.io][1])
+
+For other languages, the workflow should use language-native forms rather than trying to transpose Python sections mechanically. For example, Go expects package and exported-identifier documentation comments, while Rust uses rustdoc conventions and discourages repeating information already made clear by types. ([The Go Programming Language][2])
+
+A compact illustrative mapping would be:
+
+| Language   | Default when the project is silent                               |
+| ---------- | ---------------------------------------------------------------- |
+| Python     | Google-style docstrings, consistent with PEP 257 fundamentals    |
+| TypeScript | TSDoc for public API; established JSDoc where applicable         |
+| Java       | Javadoc                                                          |
+| Kotlin     | KDoc                                                             |
+| C#         | XML documentation comments                                       |
+| Rust       | rustdoc                                                          |
+| Go         | Go doc comments                                                  |
+| Ruby       | YARD conventions                                                 |
+| Swift      | Swift Markdown documentation comments                            |
+| C/C++      | Existing tooling convention; otherwise idiomatic API comments    |
+| Shell      | Concise function and file comments; no invented docstring syntax |
+
+This table should be guidance, not a rigid universal catalog.
+
+### 2. Meaning of “professional comprehensive”
+
+The module should explicitly prevent “comprehensive” from becoming “verbose.”
+
+Documentation should be complete relative to the callable or component contract. Where relevant, it should explain:
+
+* purpose and intended use;
+* parameters whose meaning or constraints are not obvious;
+* return or yielded values;
+* raised errors or failure semantics;
+* side effects and mutation;
+* state and lifecycle requirements;
+* resource ownership and cleanup;
+* concurrency, thread-safety, or asynchronous behavior;
+* security-sensitive assumptions;
+* performance constraints that affect correct use;
+* examples only when they materially clarify usage.
+
+It should not:
+
+* paraphrase the function name;
+* duplicate obvious type annotations;
+* narrate implementation line by line;
+* promise behavior not established by the SPEC or code;
+* add docstrings to every trivial private helper;
+* add meaningless test docstrings such as “Tests that X works.”
+
+### 3. Incremental maintenance subworkflow
+
+The workflow should be automatically activated when an authorized task substantively creates or modifies code.
+
+“Substantive” should include changes to:
+
+* public or exported APIs;
+* modules, packages, classes, types, or interfaces;
+* nontrivial functions or methods;
+* behavior, errors, side effects, lifecycle, or ownership;
+* schemas, configuration, serialization, protocols, or CLI behavior;
+* algorithms with important invariants;
+* behavior that makes existing documentation stale or incomplete.
+
+Normally excluded:
+
+* formatting-only changes;
+* generated or vendored code;
+* trivial private helpers;
+* self-explanatory accessors and data holders;
+* routine test cases unless documentation adds useful setup or execution information;
+* changes in languages or contexts where documentation comments would be unidiomatic.
+
+#### Task sequence
+
+The implementation transaction should incorporate documentation at two points.
+
+##### During task preparation
+
+The agent should:
+
+1. Discover applicable documentation rules and tooling.
+2. Determine the effective style using the precedence hierarchy.
+3. Identify documentation-bearing files and symbols affected by the task.
+4. Include anticipated documentation changes in the task’s declared paths.
+5. Include documentation checks in planned verification when available.
+
+##### After code stabilizes, before verification
+
+The agent should:
+
+1. Inspect every created or modified production module.
+2. Inspect module/package documentation and every created or behaviorally affected public symbol.
+3. Inspect non-public symbols whose contracts or logic are non-obvious.
+4. Compare existing documentation with final implemented behavior.
+5. Add, update, remove, or leave documentation unchanged as appropriate.
+6. Remove documentation belonging to deleted or rejected capabilities.
+7. Search for directly affected in-code references to renamed or changed APIs.
+8. Run configured documentation checks as part of task verification.
+
+The important invariant is:
+
+> Every substantively modified production module must be reviewed for documentation impact, but review does not imply that every symbol must receive a docstring.
+
+If documentation changes require a file outside the prepared transaction, the ordinary task-scope extension protocol should apply before modification.
+
+### 4. Completion gate
+
+A task involving substantive code change should not be complete until one of these outcomes is established:
+
+* affected in-code documentation was reconciled with the final behavior; or
+* no documentation modification was necessary, with a concrete reason.
+
+Examples of acceptable “no change” reasons:
+
+* only a private implementation detail changed and the documented contract remained exact;
+* the modified symbol is trivial and documentation would merely repeat its signature;
+* the path is generated;
+* the project explicitly excludes that category from documentation.
+
+“Forgot to inspect” is not an acceptable outcome.
+
+Documentation verification should use, when configured:
+
+* documentation linters;
+* documentation generators or builds;
+* doctests or compiled examples;
+* API extraction checks;
+* broken-reference or link checks;
+* language-specific compiler/linter warnings;
+* formatting checks.
+
+Absent dedicated tooling, the agent should perform a semantic review and rely on ordinary compilation, type checking, import checks, and affected tests to detect structural mistakes. Scripts are unnecessary unless a project-wide inventory or validation step is clearly deterministic.
+
+### 5. Project-wide review workflow
+
+The same module should define a separately invoked workflow for reviewing an entire project.
+
+This should not run automatically after an ordinary task.
+
+#### Review stages
+
+1. **Establish authority**
+
+   * Find project guidance and documentation tooling.
+   * Determine languages and effective conventions.
+   * Identify generated, vendored, experimental, and deprecated areas.
+
+2. **Define coverage**
+
+   * Inspect all production modules.
+   * Prioritize public/exported APIs and nontrivial internal contracts.
+   * Decide whether tests, examples, scripts, and internal helpers are included.
+   * Record exclusions.
+
+3. **Inventory findings**
+
+   * Missing documentation.
+   * Stale or false documentation.
+   * Incomplete behavioral contracts.
+   * Incorrect parameters, returns, errors, or side effects.
+   * Style inconsistencies.
+   * Redundant or implementation-narrating comments.
+   * Broken references and examples.
+   * Documentation attached to obsolete symbols.
+
+4. **Classify severity**
+
+   * Contract-dangerous: could cause incorrect use.
+   * Public API deficiency.
+   * Maintenance deficiency.
+   * Style-only inconsistency.
+   * Redundant documentation.
+
+5. **Choose review or remediation**
+
+   * A review-only request produces findings without mutation.
+   * A remediation request becomes a bounded implementation campaign.
+   * Large projects should be divided by package or component, with each unit independently reviewable and verifiable.
+
+6. **Verify**
+
+   * Run documentation tooling.
+   * Build generated API documentation where applicable.
+   * Run doctests or examples.
+   * Run affected compilation, lint, type, and test checks.
+
+7. **Report**
+
+   * Components and modules inspected.
+   * Documentation added, revised, or removed.
+   * Important contract corrections.
+   * Explicit exclusions.
+   * Checks executed.
+   * Remaining deficiencies.
+
+For a full review, “project-wide” should mean that every in-scope production module is inspected. It should not mean that every function is forced to have a docstring.
+
+### 6. Integration into the existing skill
+
+The change should touch these locations:
+
+| Location                              | Required change                                                                   |
+| ------------------------------------- | --------------------------------------------------------------------------------- |
+| `SKILL.md`                            | Add the new reference and a universal routing rule for substantive implementation |
+| `references/in-code-documentation.md` | Own all governance and both workflows                                             |
+| `references/project-discovery.md`     | Discover doc conventions, tools, generated paths, and API-doc commands            |
+| `references/implementation.md`        | Add documentation impact to preflight and the pre-verification completion gate    |
+| `references/verification.md`          | Include documentation lint/build/doctest/API checks when applicable               |
+| `references/reporting.md`             | Require concise reporting of material documentation reconciliation                |
+| `references/document-system.md`       | Distinguish authoritative SDD documents from in-code API documentation            |
+| `assets/templates/PLAN.md`            | Add documentation impact and verification to the task contract                    |
+
+The `SKILL.md` routing rule could be approximately:
+
+> For every implementation task that substantively creates or modifies code, also read `references/in-code-documentation.md` and perform its incremental maintenance workflow before task verification. For an explicit project-wide in-code documentation review, use project discovery, in-code documentation governance, verification, and reporting.
+
+The PLAN task template should gain:
+
+```markdown
+**In-code documentation impact**
+
+Identify affected module, package, type, and callable documentation, or state why
+the task is not expected to require documentation changes.
+```
+
+Its verification section should include:
+
+```markdown
+- Run applicable documentation lint, build, doctest, example, or API extraction checks.
+```
+
+### 7. Reporting behavior
+
+Documentation should be reported according to materiality.
+
+For an ordinary implementation task:
+
+> In-code documentation for the modified public interfaces was reconciled with the implemented parameter, error, and lifecycle behavior.
+
+For a task where no modification was necessary:
+
+> The modified modules were reviewed; their documented external contracts remain accurate, so no in-code documentation change was required.
+
+For a dedicated review:
+
+> The project-wide review inspected 42 production modules, corrected 11 stale public contracts, added documentation for 8 exported APIs, removed 6 redundant docstrings, and excluded generated sources.
+
+The journal completion record could optionally include:
+
+```json
+{
+  "documentation": {
+    "reviewed": true,
+    "style": "google-python",
+    "updated_paths": ["src/example.py"],
+    "verification": ["pydoclint src", "python -m pytest --doctest-modules"],
+    "notes": "Public errors and resource ownership reconciled."
+  }
+}
+```
+
+This field should be optional; the workflow must not require a new journal schema merely to record that a trivial inspection found no change.
+
+### 8. Acceptance scenarios for the skill change
+
+The revised skill should be tested against at least these scenarios:
+
+1. New Python public module, no project convention: Google-style documentation is created.
+2. Existing Python project consistently using NumPy style: its established style is preserved.
+3. Rust public API change: rustdoc conventions are used, not Python-style sections.
+4. Go exported symbol: an idiomatic Go doc comment is produced.
+5. Trivial private helper edit: documentation is inspected without unnecessary churn.
+6. Public error behavior changes: existing docstrings are updated before completion.
+7. Capability removed through HIL steering: associated positive documentation is removed and unsupported behavior is documented where necessary.
+8. Generated source changed: it is excluded and the generator or source template is considered instead.
+9. Review-only project-wide request: findings are reported without mutations.
+10. Large remediation request: work is divided into bounded component tasks with explicit verification.
+
+This design keeps the governance compact, automatic where it matters, and respectful of language and project conventions. It also fits the current transactional model without introducing mandatory scripts, a second documentation registry, or a new top-level SDD phase.
+
+[1]: https://google.github.io/styleguide/pyguide.html "Google Style Guides | Style guides for Google-originated open-source projects"
+[2]: https://go.dev/doc/comment "Go Doc Comments"
+
+---
+---
+
+## 📗 Docstrings Implementation
+
+> [!NOTE] Prompt
+>  
+>  Implement this change.
+
+Implemented and saved the SDD Manager update.
+
+Key changes:
+
+* Added dedicated `in-code-documentation.md` governance.
+* Automatically triggers documentation review after substantive code changes.
+* Requires inspection of existing documentation in every modified production module.
+* Defaults new or inconsistent Python projects to Google-style docstrings.
+* Preserves coherent established project conventions such as NumPy style.
+* Defines language-specific fallbacks for Rust, Go, TypeScript, Java, C#, and others.
+* Avoids unnecessary documentation for trivial private implementation details.
+* Adds a completion gate requiring documentation reconciliation or a concrete no-change reason.
+* Defines a separate read-only and remediation-oriented project-wide review workflow.
+* Integrates documentation discovery, verification, HIL steering, reporting, and PLAN task structure.
+* Adds no scripts or mandatory documentation tooling.
+
+The change passed structural validation and forward testing for:
+
+* New Python public APIs without project guidelines.
+* Existing NumPy-style Python projects.
+* Trivial private refactoring.
+* Mixed Python/Rust project-wide reviews.
+* Removal of a capability during checkpoint steering.
+
+Open the updated SDD Manager skill. If the displayed version is cached, refresh or reopen the Skills page.

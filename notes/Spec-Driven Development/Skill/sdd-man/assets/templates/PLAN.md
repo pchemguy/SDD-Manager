@@ -70,11 +70,16 @@ Identify prerequisite tasks, contracts, tools, or environment assumptions. State
 2. Keep the task atomic and recoverable.
 3. Update implementation, tests, and affected development documents together.
 
+**In-code documentation impact**
+
+Identify affected module, package, type, and callable documentation. State the expected convention and documentation checks, or explain why the task is not expected to require in-code documentation changes.
+
 **Verification**
 
 - Run direct unit tests.
 - Run affected dependent-component tests.
 - Run relevant integration checks.
+- Reconcile affected in-code documentation and run applicable documentation checks.
 - Run required lint, type, build, formatting, or packaging checks.
 
 **Completion condition**

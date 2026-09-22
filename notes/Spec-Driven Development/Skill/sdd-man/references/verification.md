@@ -77,6 +77,8 @@ Include project-required:
 - build validation;
 - packaging validation;
 - generated-file validation;
+- docstring or documentation-comment lint;
+- documentation builds, API extraction, doctests, compiled examples, and documentation-link checks;
 - platform-specific checks.
 
 ### Boundary verification
@@ -187,9 +189,10 @@ For a task, build the verification set in this order:
 5. Add integration targets crossing an affected boundary.
 6. Add exact checks required by the active PLAN task.
 7. Add checks required by applicable project instructions.
-8. Add milestone, phase, or campaign checks when closing that boundary.
-9. Add a broader regression check when risk or project policy requires it.
-10. Deduplicate identical commands while preserving narrow-to-broad order.
+8. Add applicable documentation checks for substantively changed code or in-code documentation.
+9. Add milestone, phase, or campaign checks when closing that boundary.
+10. Add a broader regression check when risk or project policy requires it.
+11. Deduplicate identical commands while preserving narrow-to-broad order.
 
 If a changed path has no component mapping:
 

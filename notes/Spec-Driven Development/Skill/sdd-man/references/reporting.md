@@ -66,10 +66,13 @@ Report one task as:
 1. **Task:** canonical task identity and semantic name.
 2. **Implemented capability:** the incremental behavior or enabling outcome delivered by this task.
 3. **Boundaries:** important unsupported behavior, deliberate exclusions, or unchanged contracts.
-4. **Verification:** required direct and affected checks, summarized by outcome; identify any justified omissions.
-5. **Durability:** journal/commit/cleanup state as applicable.
-6. **Progress:** completed and total tasks plus containing milestone and phase when trustworthy.
-7. **Next boundary:** next canonical task or the reached HIL stopping boundary.
+4. **Documentation:** material in-code documentation reconciled with the delivered contract, or a useful no-change conclusion.
+5. **Verification:** required direct and affected checks, summarized by outcome; identify any justified omissions.
+6. **Durability:** journal/commit/cleanup state as applicable.
+7. **Progress:** completed and total tasks plus containing milestone and phase when trustworthy.
+8. **Next boundary:** next canonical task or the reached HIL stopping boundary.
+
+Keep documentation subordinate to the capability summary for ordinary implementation work. For a dedicated in-code documentation review or remediation, use `in-code-documentation.md` for the review coverage and finding fields.
 
 Example for a runtime feature:
 
