@@ -2,7 +2,7 @@
 url: https://chatgpt.com/c/6ab8ea11-1b90-83eb-88a9-dd83df7ebe3d
 ---
 
-## 📗 Skill Creator Planning
+## 📗 Agent Package Author
 
 > [!NOTE] Prompt
 >  
@@ -821,7 +821,7 @@ The next step should be the same one that worked well for Hello World: create a 
 ---
 ---
 
-## 📗 Skill Plugin Creator SPEC
+## 📗 SPEC
 
 > [!NOTE] Prompt
 >  
@@ -830,3 +830,25 @@ The next step should be the same one that worked well for Hello World: create a 
 I recommend **`agent-package-author`**. It covers both skills and plugins, is clearer than `agent-ps-creator`, and avoids the existing `skill-creator` name. I found no exact match among the locally available skills; the specification still requires a name check in the intended installation scope.
 
 The SPEC defines both authoring modes, the creator’s resources and validators, and acceptance cases for standalone skills, multi-skill plugins, MCP configuration, failures, and name collisions. It also keeps **format conformance separate from client support**: Agent Plugins defines where bundled skills are discovered, while each client determines how it presents and runs supported components. [
+
+---
+---
+
+## 📗 PLAN
+
+> [!NOTE] Prompt
+>  
+> Proceed to a detailed implementation PLAN.
+
+Created the detailed PLAN.md from `SPEC.md`.
+
+It defines 13 ordered tasks. Each names the files to change, verification commands, and a completion condition. The sequence covers both authoring modes, offline validators, acceptance packages, negative cases, and final conformance review.
+
+---
+---
+
+## 📗 Implementation
+
+> [!NOTE] Prompt
+>  
+>  Proceed to full implementation. Use SDD Manager implementation protocols to ensure resumable process.
