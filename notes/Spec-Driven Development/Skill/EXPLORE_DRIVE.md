@@ -2604,7 +2604,7 @@ It is installed and available under **Sidebar → Plugins → Skills**.
 
 The README should be an external companion document—stored with the skill’s source/distribution materials, but not bundled inside the installable skill package. It should explain the system to humans without duplicating the normative operational references.
 
-## Proposed `README.md` outline
+Below is the proposed `README.md` outline.
 
 ### 1. SDD Manager
 
