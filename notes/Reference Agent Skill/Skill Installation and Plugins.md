@@ -1029,3 +1029,588 @@ So I would revise my earlier suggestion slightly: I would **not establish `.agen
 > **SDD Manager is distributed as a portable Agent Plugins package rooted at `plugin.json`. Consumer repositories install or register that package using the plugin-discovery mechanism supported by their agent host. No cross-vendor repository-local plugin installation directory is currently standardized.**
 
 That is the safest convention if broad compatibility is one of your primary design requirements.
+
+---
+---
+
+## 📗 Plugin Installation Cont 2
+
+> [!NOTE] Prompt
+>  
+> When
+> 
+> ```
+> sdd-manager/
+> ├── plugin.json
+> ├── skills/
+> │   ├── initialize-project/
+> │   ├── implement-plan/
+> │   ├── resume-transaction/
+> │   └── audit-project/
+> └── mcp.json
+> ```
+> 
+> plugin is installed, it exposes skills/* as if those have been installed as skills directly?
+> 
+
+Yes, with one important qualification.
+
+For an **Agent Plugins 1.0–compatible client**, the plugin’s immediate `skills/*` children are discovered as normal Agent Skills. So with:
+
+```text
+sdd-manager/
+├── plugin.json
+├── skills/
+│   ├── initialize-project/
+│   │   └── SKILL.md
+│   ├── implement-plan/
+│   │   └── SKILL.md
+│   ├── resume-transaction/
+│   │   └── SKILL.md
+│   └── audit-project/
+│       └── SKILL.md
+└── mcp.json
+```
+
+the client discovers four skills:
+
+```text
+initialize-project
+implement-plan
+resume-transaction
+audit-project
+```
+
+The Agent Plugins 1.0 spec explicitly requires clients to discover immediate child directories under `skills/` that contain `SKILL.md`. Those skills themselves must conform to the separate Agent Skills specification. :chatgpt-content-reference{index="0"}
+
+Conceptually:
+
+```text
+install plugin
+    ↓
+load plugin.json
+    ↓
+discover skills/
+    ↓
+load each */SKILL.md
+    ↓
+skills become available to the agent
+```
+
+So from the **model/workflow point of view**, they behave much like separately installed skills.
+
+The qualification is that they are **not necessarily exposed identically in the UI or namespace**. The standard deliberately leaves presentation to the client:
+
+> how a client exposes a valid skill to users or models remains client policy. :chatgpt-content-reference{index="1"}
+
+A host might therefore present them as:
+
+```text
+initialize-project
+implement-plan
+```
+
+or perhaps logically namespace them under the plugin:
+
+```text
+sdd-manager / initialize-project
+sdd-manager / implement-plan
+```
+
+or only use them for automatic skill selection without showing them as individually installable entries. That part is host-specific.
+
+There is also an important ownership difference.
+
+If you install these directly:
+
+```text
+.agents/skills/
+├── initialize-project/
+├── implement-plan/
+├── resume-transaction/
+└── audit-project/
+```
+
+they are four independent skill installations.
+
+If they arrive through:
+
+```text
+sdd-manager/
+├── plugin.json
+└── skills/
+    ├── initialize-project/
+    ├── implement-plan/
+    ├── resume-transaction/
+    └── audit-project/
+```
+
+they remain **components owned by one plugin package**. The plugin provides their package identity, versioning, lifecycle, and any shared MCP configuration. :chatgpt-content-reference{index="2"}
+
+That distinction matters operationally:
+
+```text
+Direct skills
+
+initialize-project ─ independent
+implement-plan     ─ independent
+resume-transaction ─ independent
+audit-project      ─ independent
+```
+
+versus:
+
+```text
+SDD Manager plugin
+│
+├── initialize-project
+├── implement-plan
+├── resume-transaction
+└── audit-project
+```
+
+Update/remove the plugin, and those bundled skills normally move with it.
+
+One more technical detail: discovery is only **one level deep**. A compliant client scans:
+
+```text
+skills/<skill>/SKILL.md
+```
+
+but does not recursively discover arbitrary deeper skill directories. :chatgpt-content-reference{index="3"}
+
+So this works:
+
+```text
+skills/
+├── initialize-project/
+│   └── SKILL.md
+└── implement-plan/
+    └── SKILL.md
+```
+
+whereas this would not define two additional independently discovered skills:
+
+```text
+skills/
+└── sdd/
+    ├── SKILL.md
+    └── subskills/
+        ├── initialize-project/
+        │   └── SKILL.md
+        └── implement-plan/
+            └── SKILL.md
+```
+
+Only `sdd` would be discovered at the plugin level.
+
+For SDD Manager, this means plugins give you a very useful model:
+
+> **one installable/versioned SDD Manager package, exposing several independently discoverable Agent Skills, with optional shared MCP capabilities.**
+
+That is probably the strongest architectural reason to package SDD Manager as a plugin rather than as one very large monolithic skill.
+
+---
+---
+
+## 📗 Gemini and Jules
+
+> [!NOTE] Prompt
+>  
+>  Research skill and plugin support by Gemini App (both web and Android) and Jules agent.
+
+As of September 2026, support is quite different between **Gemini Apps** and **Jules**.
+
+| Product | Agent Skills / `SKILL.md` | Plugin standard | MCP | Repo-local discovery |
+|---|---|---|---|---|
+| Gemini web app | **Yes, but only inside Gemini Spark** | No documented Agent Plugins 1.0 support | Not exposed as a general user mechanism | No |
+| Gemini Android app | **Yes, via Gemini Spark** where Spark is available | No documented Agent Plugins 1.0 support | Not exposed as a general user mechanism | No |
+| Jules | **No documented Agent Skills / `SKILL.md` support** | No documented Agent Plugins support | **Yes, limited curated MCP servers** | `AGENTS.md` only |
+
+### Gemini App: actual Agent Skills support
+
+Google now has a feature explicitly called **Skills** in Gemini Apps. This is not merely analogous to Agent Skills: Google accepts a `SKILL.md` package and enforces familiar structural conventions.
+
+Google says a skill can be uploaded either as:
+
+```text
+SKILL.md
+```
+
+or as a ZIP whose root contains:
+
+```text
+my-skill.zip
+├── SKILL.md
+├── references/
+├── scripts/
+└── ...
+```
+
+The skill name in `SKILL.md` must be lowercase and hyphen-separated, and the complete upload may contain Markdown, Python, shell scripts, JSON, YAML, TOML, and other text files. :chatgpt-content-reference{index="0"}
+
+That makes your existing Hello World architecture highly relevant:
+
+```text
+hello-world/
+├── SKILL.md
+├── modules/
+├── resources/
+└── scripts/
+```
+
+could be ZIPped essentially as-is and uploaded to Gemini.
+
+There is, however, a major limitation:
+
+> **Gemini Skills currently work only in Gemini Spark.**
+
+Google explicitly states that Skills are not a general capability of ordinary Gemini chats; they are available in **Spark tasks**. :chatgpt-content-reference{index="1"}
+
+The workflow is approximately:
+
+```text
+Gemini
+└── Spark
+    └── Skills
+        ├── create
+        ├── upload SKILL.md / ZIP
+        ├── enable
+        └── invoke automatically or explicitly
+```
+
+Gemini can automatically recognize that a skill is applicable, and multiple skills can be composed in one task. Skills can also reference other skills. :chatgpt-content-reference{index="2"}
+
+That is surprisingly close to the model you have been designing.
+
+#### Gemini web
+
+On `gemini.google.com`, Skills are supported through **Spark**. You can go to the Skills page and upload a skill package. :chatgpt-content-reference{index="3"}
+
+So:
+
+```text
+Gemini web ordinary chat
+    ❌ no general Skill execution
+
+Gemini web → Spark
+    ✅ Skills
+```
+
+#### Gemini Android
+
+Google also explicitly says Skills are available in **Gemini Spark in the Gemini mobile app**, in addition to the Gemini web app and Mac app. :chatgpt-content-reference{index="4"}
+
+Therefore Android is effectively:
+
+```text
+Gemini Android ordinary chat
+    ❌ not general Agent Skills
+
+Gemini Android → Spark
+    ✅ Skills
+```
+
+There are account, subscription, and regional restrictions: currently a personal Google account, Google AI Pro or Ultra, age 18+, Keep Activity enabled, and some excluded regions. :chatgpt-content-reference{index="5"}
+
+One notable constraint for your skill design is that uploaded scripts **cannot make external website requests/actions**. So scripts are useful for deterministic local processing, but not as arbitrary network integrations. :chatgpt-content-reference{index="6"}
+
+That matches your own design principle of using scripts mainly for deterministic operations rather well. 
+
+---
+
+### Gemini plugins: no Agent Plugins 1.0 support found
+
+I found **no Google documentation indicating support for Agent Plugins 1.0**, including:
+
+```text
+plugin.json
+skills/
+mcp.json
+```
+
+or the Codex-specific:
+
+```text
+.codex-plugin/
+```
+
+in Gemini Apps.
+
+Gemini does have **Connected Apps**, but those are a separate Google product mechanism. Current Gemini Connected Apps include services such as Linear, Adobe, Airtable, monday.com, Webflow, etc., and users connect them through Gemini settings or invoke them with `@`. :chatgpt-content-reference{index="8"}
+
+Architecturally:
+
+```text
+Agent Plugin
+    portable package
+    plugin.json
+    skills/
+    mcp.json
+
+Gemini Connected App
+    Google-managed integration
+    connected through Gemini account/settings
+```
+
+They should not be treated as equivalent.
+
+Likewise, **Gems** still exist. Gems are saved/custom Gemini personas or instruction sets for repetitive tasks. :chatgpt-content-reference{index="9"}
+
+So Gemini now effectively has three distinct concepts:
+
+```text
+Gem
+    persistent custom instructions/persona
+
+Skill
+    reusable workflow package
+    SKILL.md
+    Spark only
+
+Connected App
+    external service/tool integration
+```
+
+There is currently no documented Gemini equivalent of a portable Agent Plugin that bundles the last two together.
+
+---
+
+### Jules
+
+Jules is substantially different.
+
+I searched its current official documentation specifically for:
+
+```text
+SKILL.md
+Agent Skills
+plugin.json
+Agent Plugins
+plugins
+```
+
+and found **no documented support for Agent Skills or Agent Plugins**.
+
+The documented repository instruction mechanism remains:
+
+```text
+AGENTS.md
+```
+
+at the repository root.
+
+Jules automatically looks for root `AGENTS.md` and uses it to understand repository conventions, tools, interaction requirements, and development instructions. :chatgpt-content-reference{index="10"}
+
+So for a Jules-compatible consumer repo today, the supported pattern is:
+
+```text
+consumer-repo/
+├── AGENTS.md        ← Jules reads this
+├── src/
+├── tests/
+└── ...
+```
+
+There is no documented:
+
+```text
+.agents/skills/
+```
+
+discovery by Jules, nor:
+
+```text
+skills/*/SKILL.md
+```
+
+discovery, nor:
+
+```text
+plugin.json
+```
+
+loading.
+
+That is an important distinction from Gemini Spark.
+
+---
+
+#### Jules does support MCP
+
+Jules added MCP support in February 2026. :chatgpt-content-reference{index="11"}
+
+But it is currently **not arbitrary repo-defined MCP configuration** of the sort:
+
+```text
+repo/
+└── mcp.json
+```
+
+Google's documented implementation uses a curated set of external MCP integrations configured through **Jules Settings**.
+
+The initial supported servers include:
+
+```text
+Linear
+Stitch
+Neon
+Tinybird
+Context7
+Supabase
+```
+
+Authentication is currently API-key based. Google explicitly says it intentionally restricts MCP servers to vetted integrations for security reasons. :chatgpt-content-reference{index="12"}
+
+So:
+
+```text
+Portable plugin:
+plugin.json
+mcp.json
+        ❌ Jules does not document this
+
+Jules:
+Settings → MCP → supported service
+        ✅
+```
+
+Jules also has other first-party integrations and event-driven integrations, but those are Jules-specific facilities rather than the Agent Plugins specification. :chatgpt-content-reference{index="13"}
+
+---
+
+### Implications for your SDD Manager
+
+This is where the distinction becomes important.
+
+Suppose SDD Manager becomes:
+
+```text
+sdd-manager/
+├── plugin.json
+├── skills/
+│   ├── initialize-project/
+│   │   └── SKILL.md
+│   ├── implement-plan/
+│   │   └── SKILL.md
+│   ├── resume-transaction/
+│   │   └── SKILL.md
+│   └── audit-project/
+│       └── SKILL.md
+└── mcp.json
+```
+
+##### Gemini Spark
+
+You could distribute the **individual skill directories**:
+
+```text
+initialize-project.zip
+└── SKILL.md
+
+implement-plan.zip
+└── SKILL.md
+
+resume-transaction.zip
+└── SKILL.md
+```
+
+and upload them to Gemini Spark.
+
+Gemini currently would **not consume the enclosing `plugin.json` package**.
+
+So the compatibility boundary would be:
+
+```text
+SDD Manager plugin
+│
+├── plugin.json            ignored/not installable by Gemini
+│
+└── skills/
+    ├── initialize-project ─────► Gemini Skill
+    ├── implement-plan     ─────► Gemini Skill
+    ├── resume-transaction ─────► Gemini Skill
+    └── audit-project      ─────► Gemini Skill
+```
+
+This is strong evidence in favor of keeping each plugin skill genuinely self-contained.
+
+##### Jules
+
+Jules is more problematic.
+
+It would not automatically discover those `SKILL.md` files based on the currently documented behavior.
+
+For Jules you would need an adaptation layer, most naturally through `AGENTS.md`.
+
+For example:
+
+```text
+consumer-repo/
+├── AGENTS.md
+└── .agents/
+    └── skills/
+        └── sdd-manager/
+            ...
+```
+
+and `AGENTS.md` could explicitly instruct Jules to consult the relevant resources:
+
+```text
+For specification-driven development workflows, follow the
+instructions under .agents/skills/...
+```
+
+Whether Jules reliably follows a referenced hierarchy would then be ordinary repository-instruction behavior, **not native skill discovery**.
+
+For your SDD Manager, I would probably provide a small Jules adapter:
+
+```text
+adapters/
+└── jules/
+    └── AGENTS.md
+```
+
+or documentation for adding something equivalent to the consumer's existing `AGENTS.md`.
+
+---
+
+### Portability picture
+
+Based on the official support I could verify today, your compatibility matrix should probably look more like this:
+
+| Feature | ChatGPT/Codex ecosystem | GitHub Copilot | Gemini Spark | Jules |
+|---|---|---|---|---|
+| `SKILL.md` | Yes | Yes | **Yes** | **No documented support** |
+| Skill package resources/scripts | Yes | Yes | Yes, text-based files | Only if explicitly referenced/read |
+| `.agents/skills/` repo discovery | Supported by relevant coding clients | Yes | No — upload instead | No documented support |
+| `plugin.json` Agent Plugin | Yes | Yes/current ecosystem support | No documented support | No |
+| `skills/` inside plugin exposed | Yes | Yes | Not through plugin; individual skill upload possible | No |
+| `mcp.json` in plugin | Yes where supported | Host-dependent | No documented plugin support | No |
+| MCP generally | Yes | Yes | Connected Apps instead/general mechanism differs | **Yes, curated servers** |
+| `AGENTS.md` | Yes in coding-agent contexts | Supported in relevant contexts | Not central | **Yes, primary repo instruction mechanism** |
+
+The interesting development here is **Gemini Spark**. Six months ago I would have classified Gemini as relying mainly on Gems. That is no longer sufficient: Google now has genuine `SKILL.md`-based Skills with packaged resources, automatic triggering, composition, and uploadable ZIPs. :chatgpt-content-reference{index="14"}
+
+For the architecture you're aiming at, I would therefore make **Agent Skills the fundamental portability layer**:
+
+```text
+                 portable core
+                      │
+                      ▼
+                  SKILL.md
+                 /    |    \
+                /     |     \
+          Codex    Copilot   Gemini Spark
+             │
+             │
+       Agent Plugin
+       packaging where
+       supported
+
+Jules
+  │
+  └── AGENTS.md adapter → references same underlying workflow material
+```
+
+That is more portable today than making Agent Plugins the fundamental abstraction: **skills already cross OpenAI, GitHub, and Gemini ecosystems, whereas plugins do not yet have comparable universal client support.**
