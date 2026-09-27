@@ -1,3 +1,7 @@
+---
+url: https://chatgpt.com/c/6aafd74d-9d74-83eb-b046-dd4384744e29
+---
+
 ## 📗 Problem Statement
 
 > [!NOTE] Prompt
