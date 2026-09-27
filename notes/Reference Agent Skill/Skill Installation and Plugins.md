@@ -690,3 +690,342 @@ That is preferable to starting with `.codex-plugin`, because the Agent Plugins 1
 So for your projects I would apply the rule:
 
 > **Use a Skill until you actually have a packaging/distribution problem that requires a Plugin. If you need a Plugin, prefer Agent Plugins 1.0. Add `.codex-plugin` or other client-specific extensions only for functionality that cannot be represented portably.**
+
+---
+---
+
+## 📗 Plugin Installation
+
+> [!NOTE] Prompt
+>  
+> If I make a plugin
+> 
+> ```
+> sdd-manager/
+> ├── plugin.json
+> ├── skills/
+> │   ├── initialize-project/
+> │   ├── implement-plan/
+> │   ├── resume-transaction/
+> │   └── audit-project/
+> └── mcp.json
+> ```
+> 
+> how do I install it into a repo? What is the standard layout?
+> 
+
+For an **Agent Plugins 1.0** plugin, there is an important distinction:
+
+> The standard defines the **plugin package layout**, but it does **not define one universal repository installation directory**.
+
+The standard package itself is:
+
+```text
+sdd-manager/
+├── plugin.json
+├── skills/
+│   ├── initialize-project/
+│   │   └── SKILL.md
+│   ├── implement-plan/
+│   │   └── SKILL.md
+│   ├── resume-transaction/
+│   │   └── SKILL.md
+│   └── audit-project/
+│       └── SKILL.md
+└── mcp.json
+```
+
+That is normative Agent Plugins 1.0 structure: `plugin.json` must be at the plugin root, skills are discovered under `skills/`, and MCP configuration is fixed at `mcp.json`. :chatgpt-content-reference{index="0"}
+
+What the standard deliberately does **not** prescribe is something like:
+
+```text
+repo/.agents/plugins/sdd-manager/
+```
+
+or:
+
+```text
+repo/.plugins/sdd-manager/
+```
+
+The specification explicitly leaves **distribution and installation** to the client. :chatgpt-content-reference{index="1"}
+
+So there is currently no portable equivalent of the fairly recognizable repo-local skill convention:
+
+```text
+.agents/skills/<skill>/
+```
+
+for plugins.
+
+### The practical options
+
+If your repository itself *is* the plugin project, the cleanest structure is simply:
+
+```text
+sdd-manager/
+├── plugin.json
+├── skills/
+├── mcp.json
+├── src/
+├── tests/
+└── ...
+```
+
+In other words, **the repository root is the plugin root**.
+
+That is actually the most standards-pure representation:
+
+```text
+git repository root
+        =
+Agent Plugin root
+```
+
+and `plugin.json` is immediately visible at the top level.
+
+If instead you want to install the plugin **inside some unrelated consumer repository**, you need a host convention. For example, a client could decide to place it under:
+
+```text
+consumer-repo/
+└── .agents/
+    └── plugins/
+        └── sdd-manager/
+            ├── plugin.json
+            ├── skills/
+            └── mcp.json
+```
+
+Structurally this is perfectly reasonable, but **`.agents/plugins/` is not mandated by Agent Plugins 1.0**. A client has to know to scan that location.
+
+That is the key difference from the plugin's internal structure:
+
+```text
+.agents/plugins/sdd-manager/    ← host installation convention
+                         │
+                         ▼
+                    plugin root
+                    ├── plugin.json
+                    ├── skills/
+                    └── mcp.json
+```
+
+Only the part below `sdd-manager/` is standardized.
+
+### What GitHub Copilot does
+
+GitHub currently supports Agent Plugins 1.0 as a portable plugin format, but its documentation likewise treats installation/discovery as client behavior rather than defining `.agents/plugins/` as a cross-client standard. GitHub recommends Agent Plugins 1.0 for new portable plugins while keeping client-specific behavior separate. :chatgpt-content-reference{index="2"}
+
+Therefore I would **not** document this as universally standard:
+
+```text
+/.agents/plugins/sdd-manager/
+```
+
+You can use it as your own convention, but label it accordingly.
+
+### What I would recommend for SDD Manager
+
+There are really two separate distribution scenarios.
+
+If **SDD Manager is its own GitHub repo**, make that repo the plugin:
+
+```text
+sdd-manager/
+├── plugin.json
+├── skills/
+│   ├── initialize-project/
+│   ├── implement-plan/
+│   ├── resume-transaction/
+│   └── audit-project/
+├── mcp.json
+├── docs/
+├── src/
+└── tests/
+```
+
+That is the cleanest solution.
+
+Then a compatible agent/plugin manager installs that package according to its own installation mechanism.
+
+If you want a **vendored repository-local installation** in another repo, I would use:
+
+```text
+consumer-project/
+└── .agents/
+    └── plugins/
+        └── sdd-manager/
+            ├── plugin.json
+            ├── skills/
+            └── mcp.json
+```
+
+but describe it as:
+
+> **recommended repository-local plugin installation convention**
+
+rather than:
+
+> Agent Plugins standard installation path.
+
+That distinction is technically important.
+
+### Why `.agents/plugins/` is still a good choice
+
+Even though it isn't normative, it has good semantics alongside repo-local skills:
+
+```text
+.agents/
+├── skills/
+│   └── standalone-skill/
+└── plugins/
+    └── sdd-manager/
+        ├── plugin.json
+        └── skills/
+```
+
+This gives you a coherent repo namespace:
+
+```text
+.agents/skills/    standalone skills
+.agents/plugins/   installed plugin packages
+```
+
+and avoids vendor namespaces such as:
+
+```text
+.github/
+.codex/
+.claude/
+```
+
+So for your project's **broad-compatibility philosophy**, I think `.agents/plugins/<plugin>/` is a sensible project convention—just not something we should misrepresent as an Agent Plugins 1.0 requirement. 
+
+One further consequence is important. You should **not flatten the plugin's skills into `.agents/skills/`** when installing the plugin:
+
+```text
+# Don't transform this
+
+sdd-manager/
+├── plugin.json
+└── skills/
+    ├── initialize-project/
+    └── implement-plan/
+```
+
+into:
+
+```text
+.agents/skills/
+├── initialize-project/
+└── implement-plan/
+```
+
+Doing that loses the plugin boundary, plugin identity, versioning, MCP configuration, and future plugin extensions.
+
+The installed package should stay intact:
+
+```text
+.agents/plugins/sdd-manager/
+├── plugin.json
+├── skills/
+└── mcp.json
+```
+
+So the rule I would put into your documentation is:
+
+> **An Agent Plugin is installed as an intact directory. `plugin.json` defines its root. Agent Plugins 1.0 standardizes the contents of that root but does not prescribe the parent installation directory. For repository-local vendoring, this project recommends `.agents/plugins/<plugin-name>/`.**
+
+That wording is both portable and technically accurate.
+
+---
+---
+
+## 📗 Plugin Installation Cont
+
+> [!NOTE] Prompt
+>  
+>  So, if I want to install SDD Manager into a consumer repo, there is no cross-vendor recognized plugin installation layout?
+
+Correct. **There is currently no cross-vendor, universally recognized repository-local installation path for plugins** equivalent to the emerging convention for skills such as:
+
+```text
+.agents/skills/<skill-name>/
+```
+
+Agent Plugins 1.0 standardizes the **plugin package itself**:
+
+```text
+sdd-manager/
+├── plugin.json
+├── skills/
+└── mcp.json
+```
+
+but deliberately leaves **installation and discovery** to the host/client. :chatgpt-content-reference{index="0"}
+
+So different hosts use different mechanisms. For example, OpenAI currently supports repo-scoped plugin discovery through:
+
+```text
+$REPO_ROOT/.agents/plugins/marketplace.json
+```
+
+with the actual plugin commonly stored somewhere like:
+
+```text
+$REPO_ROOT/plugins/sdd-manager/
+```
+
+The marketplace then points to that directory. OpenAI explicitly says these plugin directories are examples rather than fixed requirements. :chatgpt-content-reference{index="1"}
+
+GitHub Copilot takes a different approach: repo-level plugin enablement is declared in:
+
+```text
+.github/copilot/settings.json
+```
+
+and plugins may be installed from a marketplace, repository, or local path. :chatgpt-content-reference{index="2"}
+
+So these are **not** equivalent portable standards:
+
+```text
+.agents/plugins/sdd-manager/
+.github/plugins/sdd-manager/
+.codex/plugins/sdd-manager/
+```
+
+None of them is a universal Agent Plugins installation location.
+
+For SDD Manager, I would therefore separate two concerns:
+
+```text
+# Portable plugin package
+sdd-manager/
+├── plugin.json
+├── skills/
+└── mcp.json
+```
+
+and then provide **host adapters/install recipes**:
+
+```text
+OpenAI/Codex:
+.agents/plugins/marketplace.json
+plugins/sdd-manager/
+
+GitHub Copilot:
+.github/copilot/settings.json
++ plugin source / marketplace reference
+
+Other hosts:
+their own installation mechanism
+```
+
+This is actually a useful architectural property: **the plugin artifact stays identical; only its registration/discovery mechanism changes.**
+
+So I would revise my earlier suggestion slightly: I would **not establish `.agents/plugins/<name>/` as your recommended general installation convention**, because that risks looking more standardized than it actually is. A better normative statement for SDD Manager would be:
+
+> **SDD Manager is distributed as a portable Agent Plugins package rooted at `plugin.json`. Consumer repositories install or register that package using the plugin-discovery mechanism supported by their agent host. No cross-vendor repository-local plugin installation directory is currently standardized.**
+
+That is the safest convention if broad compatibility is one of your primary design requirements.
