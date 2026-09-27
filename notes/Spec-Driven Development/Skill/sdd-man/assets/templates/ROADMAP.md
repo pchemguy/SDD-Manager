@@ -17,10 +17,10 @@ This roadmap is a derived implementation-progress view.
 | Milestones | `<count>` | `<count>` |
 | Tasks      | `<count>` | `<count>` |
 
-- [ ] **[Phase: `<semantic phase name>`](PLAN.md#phase-semantic-phase-name)**
-    - [ ] **[Milestone: `<semantic milestone name>`](PLAN.md#milestone-semantic-milestone-name)**
-        - [ ] [Task: `<semantic task name>`](PLAN.md#task-semantic-task-name)
-        - [ ] [Task: `<semantic task name>`](PLAN.md#task-semantic-task-name-1)
+- [ ] **[Phase: `<semantic phase name>`](notes/Spec-Driven%20Development/Skill/sdd-man/assets/templates/PLAN.md#phase-semantic-phase-name)**
+    - [ ] **[Milestone: `<semantic milestone name>`](notes/Spec-Driven%20Development/Skill/sdd-man/assets/templates/PLAN.md#milestone-semantic-milestone-name)**
+        - [ ] [Task: `<semantic task name>`](notes/Spec-Driven%20Development/Skill/sdd-man/assets/templates/PLAN.md#task-semantic-task-name)
+        - [ ] [Task: `<semantic task name>`](notes/Spec-Driven%20Development/Skill/sdd-man/assets/templates/PLAN.md#task-semantic-task-name-1)
 
 <!-- Repeat phases, milestones, and tasks in exact PLAN order. Replace links with canonical PLAN or child-plan anchors. -->
 
