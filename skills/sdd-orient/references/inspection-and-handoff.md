@@ -7,7 +7,7 @@ Use this reference for read-only orientation. Collect enough evidence for the co
 - Resolve the user-supplied path or current directory to a project root. In a monorepo, distinguish the governed subproject from the containing repository. When candidates are genuinely ambiguous, report them instead of choosing one silently.
 - Read applicable root and more deeply scoped `AGENTS.md` files for anticipated paths. Follow their relevant references and project-designated instruction sources, including policies outside the project root when they apply.
 - Identify contradictory or unreadable instructions and the exact affected action. Record rules for language, build, test, documentation, generated files, source ownership, and commit practices when relevant.
-- Inspect `docs/dev/PROJECT.md` as the new project brief. In an existing repository, determine its actual role before applying that assumption: V1 used the same path for development instructions. Report mixed or legacy content, preserve its applicable instructions until explicitly migrated, and route its migration to a document revision workflow.
+- Inspect `docs/dev/PROJECT.md` as the project brief. Determine the role of its actual contents. If it contains operating instructions, report them as applicable instructions and identify their scope and any conflict; document revision is a separate workflow.
 
 ## Git evidence
 
@@ -43,7 +43,7 @@ docs/dev/FEATURE-SPEC.md  docs/dev/FEATURE-PLAN.md
 docs/dev/verification-map.json
 ```
 
-Also identify project-specific equivalents and possible V1 artifacts (`ROADMAP.md`, `IMPLEMENTATION_LOG.jsonl`, `.implementation-state/`). Never treat a V1 journal or recovery directory as authority to run old backup restoration. Report active or contradictory evidence and hand it to the future recovery workflow. Feature documents describe an intended delta; do not silently treat them as a complete current baseline.
+Also identify project-specific equivalents and other execution evidence when present. Do not modify or restore such state during orientation. Report active or contradictory evidence for the recovery workflow. Feature documents describe an intended delta; do not silently treat them as a complete current baseline.
 
 Inspect relevant source, tests, manifests, and declared commands for building, focused checks, integration checks, documentation checks, and packaging. Note unavailable tools without installing dependencies or executing commands with side effects. Use project instructions over guessed defaults.
 
@@ -54,9 +54,9 @@ Produce a concise human-readable handoff with these slots, using `none`, `unknow
 ```text
 Target: project root; Git root; contemplated paths or workflow
 Git: worktree eligibility; branch/detached/unborn; HEAD; relevant status and ownership
-Instructions: applicable sources, scope, conflicts, and migration issues
+Instructions: applicable sources, scope, and conflicts
 Documents: main roots and relevant children; active feature/change documents
-Execution evidence: TASKS/commits, legacy state, and any unresolved discrepancy
+Execution evidence: TASKS/commits, other relevant state, and any unresolved discrepancy
 Tooling: relevant declared commands and environment limitations
 Readiness: read-only possible; repository mutation eligible or blocked; reasons
 Handoff: scoped facts for the next skill; unknowns and checks to repeat
