@@ -192,3 +192,77 @@ The resulting skill could be short: a core decomposition checklist, rules for de
 Added SKILL.md to the plugin. It gives architecture, components, documents, and tasks the same cohesion, interface, dependency, and verifiability checks. A focused layout-governance.md defines `docs/dev/layout.md` as the supporting physical ownership map; authoring that project document remains a separate workflow.
 
 The CAPABILITY-MAP.md and plugin metadata are updated. Structural validation passes for both skills. Committed and pushed as `dca5eba`.
+
+---
+---
+
+## 📗 SDD Conventions Refine
+
+> [!NOTE] Prompt
+> 
+> I was wrong - layout is completely out of place here. I expect from you critical help as well, helping catch my mistakes earlier reducing the need for revisions. Well, remove layout from `sdd-conventions`. Also, its scope must not be limited to structural/decomposition. It should be more extendable. Design decomposition is a shared major concern I have identified so far, but other aspects mat be added later. You cannot define indefinite scope, but it would be nice to clearly hint to possible future expansion.
+
+You were right; I should have flagged the ownership mismatch earlier. I removed layout governance from SKILL.md. Its first focused module is now decomposition.md.
+
+The skill can grow, but a new convention must apply across workflows without taking ownership of an artifact or operational workflow. `layout.md` remains separately owned in the CAPABILITY-MAP.md.
+
+Plugin validation passes. The correction is committed and pushed as `4986a80`.
+
+---
+---
+
+## 📗 Greenfield vs Brownfield
+
+> [!NOTE] Prompt
+> 
+> Now, what do I do with greenfield vs brownfield? Does it concern skills other than `sdd-manage` and `sdd-design`? Should it be defined as part of `sdd-manage` ?
+
+Greenfield versus brownfield should be a **project-context classification**, owned by `sdd-manage`, rather than two separate versions of every skill.
+
+|Capability|Responsibility|
+|---|---|
+|`sdd-orient`|Report evidence: existing code, documents, tests, Git history, active changes, and applicable instructions. It does not decide the workflow.|
+|`sdd-manage`|Classify the **requested scope** and route the work. A repository can contain both a new component and established components.|
+|`sdd-design`|Use that context: design a new system from first principles, or inspect existing boundaries and define a coherent change to them.|
+|SPEC, PLAN, TASKS, implementation, verification|Apply their own narrow differences where the context actually changes their work.|
+|`sdd-conventions`|Apply the same decomposition criteria in either context.|
+
+I would define three useful contexts in `sdd-manage`:
+
+1. **New system:** no implemented baseline for the requested system. Develop its complete intended design and build path.
+2. **Existing system, new capability:** establish the relevant current baseline and define the intended delta, including affected contracts and dependents.
+3. **Existing system, correction or restructuring:** establish current behavior and the desired invariant, then determine whether the change requires architectural design or can proceed as bounded corrective work.
+
+This matters beyond `sdd-design`. For example, verification of existing work needs to identify pre-existing failures; implementation needs to protect existing consumers; and recovery needs to distinguish interrupted agent work from unrelated changes. Those skills should contain only their **own context-dependent procedure**. `sdd-manage` owns the classification and handoff, so each skill does not invent a different definition of “brownfield.”
+
+I would avoid making “greenfield” a permanent repository label. A new subsystem inside an established repository may need from-scratch design while still inheriting repository instructions, interfaces, and tests. The coordinator should classify the **work boundary**, record the evidence and assumptions behind it, and revisit the classification if inspection changes the picture.
+
+---
+---
+
+## 📗 Explore and Design Context
+
+> [!NOTE] Prompt
+> 
+> `sdd-manage` is a later concern. What else capabilities should be defined before `sdd-design`?
+
+**No additional skill is required before `sdd-design`.** `sdd-orient` supplies repository evidence, and `sdd-conventions` supplies the decomposition criteria. Exploration, architectural decisions, and the PROJECT/ARCHITECTURE/DECOMPOSITION document workflow belong inside `sdd-design`.
+
+One **entry contract** does need to be stated before we write it:
+
+- Discussion and read-only design can start directly.
+- Writing project documents requires an explicit document-authoring request, a current `sdd-orient` handoff confirming an eligible Git worktree, and applicable instructions.
+- `sdd-design` references those prerequisites and `sdd-conventions`; it does not reimplement them.
+- Until `sdd-manage` exists, the invoking agent coordinates that handoff. The later coordinator skill will formalize the same boundary.
+
+Layout authoring, verification, reporting, and implementation recovery need not block `sdd-design`; each has a separate owner. This lets us build the design skill next without giving it provisional responsibilities we would have to remove later.
+
+---
+---
+
+## 📗 Explore and Design
+
+> [!NOTE] Prompt
+> 
+> Proceed to `sdd-design`. Exploration, architecture and, decomposition should probably be separate progressively loaded sub-workflows.
+
