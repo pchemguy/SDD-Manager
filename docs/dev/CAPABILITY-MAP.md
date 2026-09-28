@@ -30,7 +30,7 @@ Main documents describe the intended current system. Temporary feature documents
 | Capability | Responsibility | Status |
 | --- | --- | --- |
 | `sdd-orient` | Resolve project and Git roots; discover applicable instructions, documents, relevant tooling, dirty paths, and execution evidence; produce a read-only scoped handoff. | Included |
-| `sdd-conventions` | Provide cross-workflow modularity criteria and context-sensitive SOLID, DRY, and KISS design heuristics. | Included |
+| `sdd-conventions` | Evaluate chosen designs, patterns, component and task boundaries, and code changes using modularity criteria and context-sensitive SOLID, DRY, and KISS heuristics. | Included |
 | `sdd-manage` | Coordinate authorization, transitions, prerequisites, delegated scope, evidence, and stopping boundaries. | Planned |
 | `sdd-design` | Explore facts, assumptions, alternatives, and accepted decisions; develop project brief, architecture, and decomposition for initial work or architectural changes. | Included |
 | Specification | Define and reconcile complete behavioral requirements and feature deltas; retain objective acceptance. | Planned |

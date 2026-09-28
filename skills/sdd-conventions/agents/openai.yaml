@@ -1,9 +1,9 @@
 interface:
   display_name: "SDD Shared Conventions"
-  short_description: "Apply focused conventions across SDD workflows"
+  short_description: "Review architecture, patterns, and code changes"
   icon_small: "./assets/icon.svg"
   icon_large: "./assets/icon.svg"
   brand_color: "#346451"
-  default_prompt: "Use $sdd-conventions to review this work against the relevant shared conventions, including modularity where it applies."
+  default_prompt: "Use $sdd-conventions to evaluate this chosen design, pattern, or code change against relevant modularity and design heuristics."
 policy:
   allow_implicit_invocation: true
