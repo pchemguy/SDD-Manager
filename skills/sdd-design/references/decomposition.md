@@ -1,6 +1,6 @@
 # Decomposition
 
-Refine accepted architecture into understandable component responsibilities and collaboration. Read only the relevant architecture root and children, existing code or contracts where applicable, and the shared **sdd-conventions** decomposition reference. Revisit architecture when decomposition reveals a weak block boundary rather than hiding the conflict in detail.
+Refine accepted architecture into understandable component responsibilities and collaboration. Read only the relevant architecture root and children, existing code or contracts where applicable, and the shared **sdd-conventions** modularity reference. Revisit architecture when decomposition reveals a weak block boundary rather than hiding the conflict in detail.
 
 ## Document ownership
 

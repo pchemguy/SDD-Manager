@@ -1,6 +1,6 @@
 # Architecture
 
-Define the system's high-level arrangement and why it fits the project's purpose. Read accepted exploration decisions and relevant existing project evidence. Apply the shared **sdd-conventions** decomposition checks to major boundaries. Use [decomposition](decomposition.md) when responsibility analysis reaches detailed components.
+Define the system's high-level arrangement and why it fits the project's purpose. Read accepted exploration decisions and relevant existing project evidence. Apply the shared **sdd-conventions** modularity checks to major boundaries. Use [decomposition](decomposition.md) when responsibility analysis reaches detailed components.
 
 ## Document ownership
 

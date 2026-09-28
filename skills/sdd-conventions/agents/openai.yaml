@@ -4,6 +4,6 @@ interface:
   icon_small: "./assets/icon.svg"
   icon_large: "./assets/icon.svg"
   brand_color: "#346451"
-  default_prompt: "Use $sdd-conventions to review this work against the relevant shared conventions, including decomposition where it applies."
+  default_prompt: "Use $sdd-conventions to review this work against the relevant shared conventions, including modularity where it applies."
 policy:
   allow_implicit_invocation: true

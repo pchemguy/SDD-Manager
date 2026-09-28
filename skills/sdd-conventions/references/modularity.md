@@ -1,4 +1,4 @@
-# Decomposition
+# Modularity and unit boundaries
 
 Apply these checks at the abstraction level of the current work, from architecture and component design through specification, planning, tasks, and code changes:
 
