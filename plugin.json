@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sdd-manager",
-  "version": "0.2.1",
-  "description": "Git-based specification-driven development capabilities for project orientation and shared conventions."
+  "version": "0.3.0",
+  "description": "Git-based specification-driven development capabilities for orientation, shared conventions, and project design."
 }
