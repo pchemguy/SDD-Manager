@@ -266,3 +266,8 @@ Layout authoring, verification, reporting, and implementation recovery need not 
 > 
 > Proceed to `sdd-design`. Exploration, architecture and, decomposition should probably be separate progressively loaded sub-workflows.
 
+Added SKILL.md with three progressively loaded sub-workflows: exploration.md, architecture.md, and decomposition.md.
+
+Exploration remains conversational. Project document changes require a requested authoring step and a current Git-eligible `sdd-orient` handoff. Architecture and decomposition each support focused children and scoped feature changes without taking over SPEC, PLAN, or layout ownership.
+
+Plugin validation and reference-routing checks passed. Committed and pushed as `3096f8c`.
