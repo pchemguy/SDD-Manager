@@ -1,0 +1,9 @@
+interface:
+  display_name: "SDD Project Orientation"
+  short_description: "Inspect Git status, project instructions, and design documents"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#215B78"
+  default_prompt: "Use $sdd-orient to inspect this project's Git worktree, governing instructions, and development documents before SDD work."
+policy:
+  allow_implicit_invocation: true
