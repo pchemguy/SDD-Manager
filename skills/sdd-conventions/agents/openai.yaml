@@ -1,9 +1,9 @@
 interface:
-  display_name: "SDD Structural Conventions"
-  short_description: "Review modular boundaries, tasks, and repository layout"
+  display_name: "SDD Shared Conventions"
+  short_description: "Apply focused conventions across SDD workflows"
   icon_small: "./assets/icon.svg"
   icon_large: "./assets/icon.svg"
   brand_color: "#346451"
-  default_prompt: "Use $sdd-conventions to review this design for cohesive components, clear dependencies, and verifiable task boundaries."
+  default_prompt: "Use $sdd-conventions to review this work against the relevant shared conventions, including decomposition where it applies."
 policy:
   allow_implicit_invocation: true

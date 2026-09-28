@@ -30,13 +30,13 @@ Main documents describe the intended current system. Temporary feature documents
 | Capability | Responsibility | Status |
 | --- | --- | --- |
 | `sdd-orient` | Resolve project and Git roots; discover applicable instructions, documents, relevant tooling, dirty paths, and execution evidence; produce a read-only scoped handoff. | Included |
-| `sdd-conventions` | Apply shared cohesion, ownership, boundary, dependency, and verifiable-change rules; define `layout.md` organization without authoring it. | Included |
+| `sdd-conventions` | Provide conventions with clear cross-workflow applicability. Its decomposition module covers cohesion, ownership, boundaries, dependencies, and verifiable change units. | Included |
 | `sdd-manage` | Coordinate authorization, transitions, prerequisites, delegated scope, evidence, and stopping boundaries. | Planned |
 | `sdd-design` | Explore facts, assumptions, alternatives, and accepted decisions; develop project brief, architecture, and decomposition for initial work or architectural changes. | Planned |
 | Specification | Define and reconcile complete behavioral requirements and feature deltas; retain objective acceptance. | Planned |
 | Planning | Define strategy, dependency order, phases, milestones, and boundary verification without task-level instructions. | Planned |
 | Task derivation | Build and maintain TASKS; resolve next task, N tasks, milestone, or phase from verified state. | Planned |
-| Layout authoring | Assign physical ownership and maintain clear relationships to design, SPEC, and TASKS under shared layout conventions. | Planned |
+| Layout authoring | Assign physical ownership and maintain clear relationships to design, SPEC, and TASKS. | Planned |
 | Verification | Derive direct, dependent, integration, and boundary checks from contracts; optionally maintain test routing; classify failures. | Planned |
 | Implementation | Execute the requested bounded range, verify each task, maintain in-code documentation, commit durable results, and stop for steering. | Planned |
 | Recovery | Inspect interrupted work and Git evidence before new tasks; continue when reliable or use a controlled reset that preserves unrelated work. | Planned |
