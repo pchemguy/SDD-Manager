@@ -143,7 +143,7 @@ Plugin and skill structural validation passed. Clean, dirty, and non-Git inspect
 ---
 ---
 
-## 📗 SDD Conventions
+## 📗 SDD Conventions Explore
 
 > [!NOTE] Prompt
 >
@@ -160,3 +160,35 @@ Plugin and skill structural validation passed. Clean, dirty, and non-Git inspect
 > 
 > This capability should probably also introduce LAYOUT.md and its organization. Inspect the saved V1 snapshot and suggest other additions. At the same, we want to keep this capability from blowing it up unnecessarily with stage-specific conventions.
 
+Yes. I would make `sdd-conventions` a **shared set of structural rules** that other skills reference, with decomposition as its central concern. The same questions should apply to a system block, component, specification section, delivery increment, or task: what does it own, how is it used, and what does it depend on?
+
+Your four points are a strong core. From the V1 snapshot, I would add five compact rules:
+
+1. **One clear owner per concern.** A parent explains scope and relationships; a child owns its detail. Avoid repeating authoritative content across documents or components.
+2. **Make dependency direction explicit.** Identify consumers and dependencies, challenge cycles, and resolve unclear ownership before building further work on it.
+3. **Keep boundaries observable.** Specify what a unit provides, what it requires, and how its contract can be verified without inspecting its internals.
+4. **Split for cohesion, not size alone.** A large file is a prompt to inspect responsibilities, not an automatic reason to split. A useful split gives each resulting unit an independent purpose.
+5. **Decompose changes into verifiable increments.** Prefer tasks that affect one module or a few closely related modules, including their tests and documentation. Where a contract change crosses many consumers, use ordered compatibility steps so intermediate states remain coherent.
+
+That last point should be a **preference, not a hard one-module limit**. A public interface change may properly require coordinated edits to its implementation, consumers, tests, and documentation within one bounded task.
+
+### LAYOUT ownership
+
+The V1 layout rules have useful material: physical ownership of source, tests, documentation, fixtures, generated files, and packaging; dependency constraints enforced by placement; and focused children organized by physical domain. I would retain those ideas under **`docs/dev/LAYOUT.md`**, using the capitalization you propose. Its root would give a compact repository map and shared placement rules. Children such as `layout/source.md`, `layout/tests.md`, or `layout/documentation.md` would appear only when those areas have enough independent detail. It should map logical components to locations without repeating ARCHITECTURE or DECOMPOSITION.
+
+To keep `sdd-conventions` small, I recommend that it **define the rules and the LAYOUT document contract**, while a later focused layout workflow creates and maintains the project’s actual LAYOUT files. That preserves its role as a prerequisite across stages instead of turning it into a document-authoring skill. The coordinator can invoke the layout workflow when design has enough detail to assign physical ownership and again when that ownership changes.
+
+The resulting skill could be short: a core decomposition checklist, rules for dependency and change boundaries, and one focused reference for LAYOUT’s ownership and organization. It need not contain separate architecture, SPEC, PLAN, and TASKS procedures. The repository is unchanged; the current capability map still uses lowercase `layout.md` and would be updated when this decision is implemented.
+
+---
+---
+
+## 📗 SDD Conventions
+
+> [!NOTE] Prompt
+> 
+> Accepted. `layout.md`, perhaps, should remain lower case as a supporting shared artifact as opposed to SPEC or PLAN. Proceed to `sdd-conventions`.
+
+Added SKILL.md to the plugin. It gives architecture, components, documents, and tasks the same cohesion, interface, dependency, and verifiability checks. A focused layout-governance.md defines `docs/dev/layout.md` as the supporting physical ownership map; authoring that project document remains a separate workflow.
+
+The CAPABILITY-MAP.md and plugin metadata are updated. Structural validation passes for both skills. Committed and pushed as `dca5eba`.
