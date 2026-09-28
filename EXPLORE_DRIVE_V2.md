@@ -104,8 +104,59 @@ The question I would settle next is whether **DECOMPOSITION.md may define provis
 > 
 > Before we proceed to creation of the `sdd-design` skill, I need to clarify how shared capabilities are managed within the plugin. None of the focused workflow capabilities shall integrate common/shared capabilities. Say, agent repo orientation should occur before any change to the repo occurs. At least the orchestrating agent must orient itself, for subagents workflows might vary, which is ok as orchestrating agent should include the necessary boundaries in subagent context. Orientation shall include, among other things, reading key governing repo docs, verifying availability of git, worktree status, and so on.
 
+Agreed: both `ARCHITECTURE.md` and `DECOMPOSITION.md` may become compact parent documents with focused children. The parent owns the system-wide relationships; each child owns its detailed scope.
 
+For shared capabilities, I recommend a **coordinator and focused skills**:
 
+| Role                 | Responsibility                                                                                                                                                                                        |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sdd-manage`         | Own the lifecycle, authorization boundary, requested work range, and handoffs between skills.                                                                                                         |
+| `sdd-orient`         | Inspect the repository and return a concise, evidence-based context: governing instructions and documents, Git repository and branch, HEAD, worktree state, active changes, and relevant constraints. |
+| `sdd-design`         | Conduct exploration and develop PROJECT, ARCHITECTURE, and DECOMPOSITION. It owns the design method and outputs, not repository orientation.                                                          |
+| Later focused skills | Own specification, planning, task derivation, implementation, steering, and other distinct workflows.                                                                                                 |
 
-Let's create plugin skeleton in the feature branch and the first `sdd-design` skill. Review the saved V1 snapshot to make sure that everything important for the old design is included.
+For a requested repository change, the coordinator would **orient first, select the focused workflow, then verify the result and state before committing or reporting completion**. It would pass the relevant orientation findings and authority boundaries to any subagent. A subagent may inspect more within its assignment; the coordinator remains responsible for resolving conflicts and checking the final repository state.
+
+A focused skill needs a small **entry condition**, but should not reimplement the shared capability: “Repository mutations require a current orientation result showing a valid Git worktree and identifying applicable instructions.” If that condition is missing or stale, it returns control to the coordinator for orientation. Exploration can still proceed conversationally without modifying files. On a non-Git project, orientation can report findings, but the coordinator refuses repository mutation.
+
+One portability limit matters here: a plugin packages discoverable skills, but the format does not enforce a global _run this skill first_ hook. The ordering is therefore a rule of the `sdd-manage` workflow, backed by entry checks in focused skills. We should document direct invocation accordingly: users can invoke `sdd-design` for discussion, while its document-writing path requires orchestration and a current orientation result. This keeps shared behavior in one place without pretending the plugin format supplies automatic interception.
+
+I would make **coordinated entry mandatory for all repository mutations**. That is the cleanest way to meet your requirement that focused workflows never absorb common capabilities.
+
+---
+---
+
+## 📗 Repo Orientation Skill
+
+> [!NOTE] Prompt
+>
+> Yes, this makes sense. When a particular skill requires a shared capability, it can reference it, establishing prereqs or something, ensuring the mandatory steps are obeyed. Plus we will have `sdd-manage`. But should probably be defined later. You probably have sufficient info to create plugin skeleton in the feature branch and the first `sdd-orient` skill. If there are some extra questions needs to be discussed first, let's do it. Otherwise proceed and also review the saved V1 snapshot to make sure that everything important for the old design is included.
+
+Created and pushed the first plugin increment on `feature/architecture-revision` (`1a5831c`).
+
+The package now has a plugin.json and a read-only SKILL.md. Orientation checks the project root, applicable instructions, development documents, Git worktree and dirty state, then produces a scoped handoff. It marks non-Git projects ineligible for repository mutation. It also recognizes that a V1 `PROJECT.md` may contain instructions, which must remain applicable until explicitly migrated to an instruction source.
+
+The V1-MIGRATION.md accounts for all eleven old workflow references and the templates, distinguishing retained capabilities from the backup and non-Git workflows being retired. `sdd-manage` and `sdd-design` remain future work; the current package does not claim to orchestrate mutations.
+
+Plugin and skill structural validation passed. Clean, dirty, and non-Git inspection examples behaved as expected. These checks validate the package and its Git inspection commands; they do not establish that a client has installed or invoked the skill.
+
+---
+---
+
+## 📗 SDD Conventions
+
+> [!NOTE] Prompt
+>
+> The next is probably another shared capability, `sdd-conventions`. We could start it with something in line
+> 
+> ```
+> - Break the system into smaller units that each have one clear purpose, communicate through well-defined interfaces, and can be understood and tested independently
+> - For each unit, you should be able to answer: what does it do, how do you use it, and what does it depend on?
+> - Can someone understand what a unit does without reading its internals? Can you change the internals without breaking consumers? If not, the boundaries need work.
+> - Smaller, well-bounded units are also easier for you to work with - you reason better about code you can hold in context at once, and your edits are more reliable when files are focused. When a file grows large, that's often a signal that it's doing too much.
+> ```
+> 
+> Basically, proper decomposition (in general sense) should be considered at all design stages, starting from architecture and al the way to the `TASKS.md`. The objective is to have modular decoupled design ,which can be tested and evolved in a robust fashion. Most non-architectural mutation/refactor/evolve jobs should be decomposable into well-defined tasks mutating one code module (ideally) or very few at a time with no or localized expected breaks (until the job is complete).
+> 
+> This capability should probably also introduce LAYOUT.md and its organization. Inspect the saved V1 snapshot and suggest other additions. At the same, we want to keep this capability from blowing it up unnecessarily with stage-specific conventions.
 
