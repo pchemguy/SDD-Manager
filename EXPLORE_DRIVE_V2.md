@@ -49,7 +49,7 @@ The first architectural decision I would settle is: **should a dedicated Git wor
 ---
 ---
 
-### 📗 Architectural Revision Refine
+## 📗 Explore and Design
 
 > [!NOTE] Prompt
 >  
@@ -59,5 +59,53 @@ The first architectural decision I would settle is: **should a dedicated Git wor
 > 
 > ARCHITECTURE.md and DECOMPOSITION.md are necessary for from-scratch workflows, and FEATURE_ARCHITECTURE.md (may include feature scope/definition) and FEATURE_DECOMPOSITION.md may be necessary for architectural revisions. ARCHITECTURE.md will need to capture concise project overview and high-level architectural decisions and design, such as major blocks/components (like deterministic core/engine + shell + ...), patterns, etc.. ARCHITECTURE.md should probably include only limited project-specific links. The details shall be developed in DECOMPOSTION.md.
 
+I recommend **`sdd-design`**. It names the outcome of the skill while allowing exploration to remain conversational.
 
+| Name                 | Assessment                                                                                                   |
+| -------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `sdd-explore`        | Suggests the skill stops before producing design documents.                                                  |
+| `sdd-explore-design` | Accurate, but cumbersome to invoke and narrow if the skill is later used to revise an existing architecture. |
+| **`sdd-design`**     | Covers exploration, initial design, and architectural revision without implying that it writes code or SPEC. |
+
+Its description should make the boundary explicit: _explore a software project, develop or revise its architecture and decomposition, and maintain the pre-specification design documents._
+
+### Document responsibilities
+
+| Document                    | Canonical content                                                                                                                                                               |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `docs/dev/PROJECT.md`       | Concise project brief: purpose, users, problem, desired outcomes, scope, key constraints, and terms needed to orient a reader.                                                  |
+| `docs/dev/ARCHITECTURE.md`  | Concise system design: major blocks, their relationships and dependency direction, selected patterns, system-wide design principles, and the reasons for consequential choices. |
+| `docs/dev/DECOMPOSITION.md` | Detailed breakdown of those blocks: responsibilities, boundaries, collaborations, interfaces needing definition, and how components subdivide.                                  |
+
+I would keep the project overview **canonical in PROJECT.md**. ARCHITECTURE.md can open with a two- or three-sentence orientation and link to PROJECT.md, then concentrate on design. That avoids maintaining two slightly different descriptions of the project.
+
+Your proposed boundary for ARCHITECTURE.md is sound. For example, it might establish a deterministic core, an I/O shell, and an adapter layer, explain why those boundaries exist, and show their permitted dependency direction. DECOMPOSITION.md would then identify the components within each block, what each owns, and where their interactions occur. It should be allowed to grow into focused child documents if a single file becomes unwieldy. ARCHITECTURE.md needs only a small set of navigation links to those children and other governing documents.
+
+**DECOMPOSITION is still design, rather than an early PLAN.** It answers “what parts does this system consist of, and what does each part own?” SPEC subsequently defines their required behavior and contracts; LAYOUT assigns physical locations; PLAN determines construction order; TASKS defines execution units. Exploration can revisit architecture when decomposition exposes a weak boundary. Document production need not force a one-way sequence.
+
+### Initial work and revisions
+
+For a from-scratch project, `sdd-design` would produce or update all three documents before SPEC authoring. For an existing project, it would inspect the actual system first and revise only the documents supported by the requested scope.
+
+For a material feature or architectural revision, `FEATURE_ARCHITECTURE.md` can state the feature’s scope and the **proposed changes to the system design**. `FEATURE_DECOMPOSITION.md` can detail affected components and relationships. They should describe the delta, with unchanged parts referenced rather than copied. Once the revision is accepted and implemented, the main architecture and decomposition should describe the resulting system directly; Git preserves the history.
+
+There is one existing convention we must deliberately change: the current sdd-man reads `docs/dev/PROJECT.md` as a **project instruction file**. Under this proposal it becomes a **project overview and design input**. I recommend keeping operational instructions in `AGENTS.md` or another explicitly designated instruction file, and removing the special instruction authority currently assigned to PROJECT.md. Otherwise the new documents would have an ambiguous precedence relationship.
+
+The question I would settle next is whether **DECOMPOSITION.md may define provisional component interfaces**, leaving precise behavioral contracts to SPEC. I recommend yes: it should capture enough interaction detail to test the architecture for coherence, while clearly marking contract details that SPEC must resolve.
+
+---
+---
+
+## 📗 Explore and Design Refine
+
+> [!NOTE] Prompt
+>  
+> Everything is accepted. Both ARCHITECTURE.md and DECOMPOSITION.md should be allowed to use focused children, when appropriate.
+> 
+> Before we proceed to creation of the `sdd-design` skill, I need to clarify how shared capabilities are managed within the plugin. None of the focused workflow capabilities shall integrate common/shared capabilities. Say, agent repo orientation should occur before any change to the repo occurs. At least the orchestrating agent must orient itself, for subagents workflows might vary, which is ok as orchestrating agent should include the necessary boundaries in subagent context. Orientation shall include, among other things, reading key governing repo docs, verifying availability of git, worktree status, and so on.
+
+
+
+
+Let's create plugin skeleton in the feature branch and the first `sdd-design` skill. Review the saved V1 snapshot to make sure that everything important for the old design is included.
 
