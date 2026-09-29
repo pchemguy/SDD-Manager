@@ -5,9 +5,15 @@ description: Use when projecting software-development phases, milestones, and ta
 
 # Hosted task coordination
 
-Use this skill only for a requested hosted operation. Identify the selected hosting provider before loading a backend; [GitHub](references/github.md) is currently the only available backend. If a remote is ambiguous or the provider is unsupported, report that boundary without guessing. Do not make GitHub access a prerequisite for local project work.
+Use this skill only for a requested hosted operation. Identify the selected hosting provider before loading a backend. If a remote is ambiguous or the provider is unsupported, report that boundary without guessing. Do not make hosting access a prerequisite for local project work.
 
-For GitHub, load [GitHub backend](references/github.md), then the branch needed for the request:
+## Available backends
+
+- **GitHub:** Read [GitHub backend](references/github.md) when the requested operation targets a GitHub repository. It resolves repository identity and access, then routes task projection and issue lifecycle operations.
+
+Add a backend here when it supports a concrete hosted operation with its own repository resolution, authentication, object mapping, and reconciliation rules. Give it a focused reference and an explicit trigger; do not advertise a provider before its workflow is defined.
+
+For GitHub, load only the additional reference needed for the request:
 
 | Request | Load |
 | --- | --- |
