@@ -1,5 +1,16 @@
 # GitHub backend
 
+## Operations and sources
+
+Load only the additional reference needed for the request:
+
+| Request | Load |
+| --- | --- |
+| Create or reconcile phase and milestone labels, GitHub milestones, or task issues | [TASKS projection](github-projection.md) |
+| Resolve task IDs to issue numbers for a commit or handoff, check issue status, or close verified issues | [issue lifecycle](github-issue-lifecycle.md) |
+
+`docs/dev/TASKS.md` supplies stable task IDs and progress; PLAN supplies phase and milestone outcomes and exit conditions. SPEC and applicable design or feature documents supply requirements when a task brief needs them. GitHub is a projection, not the authority for task scope or verified completion. Use **sdd-report** to compose issue drafts if available; if unavailable, use the baseline format in the projection reference. Neither dependency is required for a read-only lookup.
+
 ## Repository and access
 
 Determine the intended GitHub repository from the invoking workflow's explicit target or its relevant remote. Normalize SSH and HTTPS remotes to the same `owner/repo` identity. If multiple plausible GitHub repositories exist, require an explicit selection before writing. Do not use a different fork or upstream merely because a token can access it.
@@ -10,4 +21,4 @@ Read existing objects before mutation. Scope all lookups to `owner/repo` and inc
 
 Reconcile only backend-owned fields: stable identity marker, generated issue title and body sections, phase and milestone labels, milestone association, and state when separately authorized and verified. Preserve unrelated issue labels, comments, assignees, and user-authored material. If a user-edited generated section cannot be safely distinguished, report a conflict rather than overwriting it. Re-run safely after partial creation: lookup each object before creating the next, and report completed work if later operations fail.
 
-The backend is optional and has no built-in token store, remote policy, issue-to-task database, or PR operation. Follow [TASKS projection](github-projection.md) or [issue lifecycle](github-issue-lifecycle.md) only for the requested operation.
+The backend is optional and has no built-in token store, remote policy, issue-to-task database, or PR operation. A later PR workflow must respect one PR per source branch.
