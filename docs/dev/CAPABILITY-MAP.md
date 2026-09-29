@@ -20,6 +20,7 @@ This document records the plugin's intended capabilities, ownership, and present
 | `docs/dev/SPEC.md` | Intended behavior, final contracts, errors, invariants, and acceptance conditions. |
 | `docs/dev/FEATURE-SPEC.md` | Scoped change to specified behavior until reconciled into the main SPEC. |
 | `docs/dev/PLAN.md` | Implementation strategy, phases, milestones, dependencies, and exit conditions. |
+| `docs/dev/FEATURE-PLAN.md` | Scoped delivery-strategy delta when a change needs one, until reconciled into the main PLAN. |
 | `docs/dev/TASKS.md` | Ordered executable units, stable task identity, bounded work selection, and progress backed by evidence. |
 | `docs/dev/layout.md` | Physical ownership of implementation, tests, documentation, and other artifacts. |
 | `docs/dev/verification-map.json` | Optional current component-to-check routing where selection is nontrivial. |
@@ -35,9 +36,8 @@ Main documents describe the intended current system. Temporary feature documents
 | `sdd-manage` | Coordinate authorization, transitions, prerequisites, delegated scope, evidence, and stopping boundaries. | Planned |
 | `sdd-design` | Explore facts, assumptions, alternatives, and accepted decisions; develop project brief, architecture, and decomposition for initial work or architectural changes. | **Included** |
 | `sdd-specify` | Define, review, and reconcile complete behavioral requirements and scoped feature deltas; retain objective acceptance. | **Included** |
-| Planning | Define strategy, dependency order, phases, milestones, and boundary verification without task-level instructions. | Planned |
+| `sdd-plan` | Define and reconcile delivery strategy, phases, milestones, boundary verification, and physical ownership in separate PLAN and layout workflows, without task-level instructions. | **Included** |
 | Task derivation | Build and maintain TASKS; resolve next task, N tasks, milestone, or phase from verified state. | Planned |
-| Layout authoring | Assign physical ownership and maintain clear relationships to design, SPEC, and TASKS. | Planned |
 | Verification | Derive direct, dependent, integration, and boundary checks from contracts; optionally maintain test routing; classify failures. | Planned |
 | Implementation | Execute the requested bounded range, verify each task, maintain in-code documentation, commit durable results, and stop for steering. | Planned |
 | Recovery | Inspect interrupted work and Git evidence before new tasks; continue when reliable or use a controlled reset that preserves unrelated work. | Planned |

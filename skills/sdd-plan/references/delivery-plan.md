@@ -1,0 +1,17 @@
+# Delivery plan
+
+`docs/dev/PLAN.md` defines a coherent strategy to deliver the complete intended system. It describes phases and meaningful milestones, dependency order, integration approach, major risks and decision gates, and evidence required at phase and milestone exits. Keep it substantive enough that TASKS can derive bounded executable work without inventing delivery strategy. It is not a record of completed work.
+
+## Establish the strategy
+
+1. Map the accepted architecture and decomposition to the behavioral contracts and end-to-end acceptance in SPEC. Identify critical dependencies and the points where components must integrate.
+2. Choose an order that produces verifiable increments. State why consequential ordering choices matter, particularly where interfaces, data formats, migrations, or external dependencies constrain the sequence. An existing project may need characterization or compatibility checks before a change; a new project may need a thin working path before broadening coverage.
+3. Define phases around major delivery outcomes and milestones around reviewable, verifiable stopping points. For each, state scope, outputs or capabilities, prerequisites, and objective exit evidence. Identify consequential human review or decision gates. Include important failure and integration checks where they establish readiness, without prescribing a test case for every requirement.
+4. Identify cross-cutting verification, documentation, packaging, and release work at the level required for the strategy. State risks, assumptions, unresolved decisions, and their gates without treating guesses as accepted requirements.
+5. Check that every intended capability has a plausible delivery path and that the plan can be executed in bounded units later. Do not enumerate file edits, task IDs, commit transactions, or a per-test command sequence; TASKS owns that detail.
+
+Keep the root compact but substantive: system delivery objective, strategic approach, phase and milestone map, key dependencies, integration and verification gates, and links to focused children. Put independently substantial phase or area detail under `docs/dev/plan/`, with stable semantic names and an explicit scope link from the root. Split by coherent delivery concern, not a file per task. A child refines its parent's strategy without duplicating or contradicting its guarantees.
+
+For a scoped change, `docs/dev/FEATURE-PLAN.md` may define affected phases or milestones, dependency and rollout effects, compatibility or transition work, and exit evidence for the proposed delta. Use it when the change needs a reviewable delivery strategy; do not require it for every correction. Name the main plan decisions it affects, reference unchanged strategy instead of copying it, and reconcile accepted final strategy into the main PLAN. Main PLAN and its children read as the intended complete delivery strategy, not a series of amendments.
+
+The plan can mention paths only when a path is a fixed project constraint or required external artifact. Defer allocation of source and test paths to `layout.md`; let TASKS derive concrete edit scopes from both. When producing both artifacts, establish strategic boundaries first, assign physical ownership, then recheck that the proposed layout supports the planned increments and integration points.
