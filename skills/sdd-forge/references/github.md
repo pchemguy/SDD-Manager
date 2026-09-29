@@ -1,0 +1,13 @@
+# GitHub backend
+
+## Repository and access
+
+Determine the intended GitHub repository from the invoking workflow's explicit target or its relevant remote. Normalize SSH and HTTPS remotes to the same `owner/repo` identity. If multiple plausible GitHub repositories exist, require an explicit selection before writing. Do not use a different fork or upstream merely because a token can access it.
+
+Use an approved token source or authenticated GitHub client at invocation. Token-based API authentication is supported, but never put a token in a project file, plugin setting, command argument, URL, log, issue body, or report. Do not assume that a credential usable for `git push` is available to the API client. Check access for the requested endpoint and repository; report missing credentials or permissions without substituting another identity. Use only the required permissions: reading issues, labels, and milestones for inspection; Issues write for their creation and reconciliation. GitHub's current endpoint documentation determines exact permission requirements.
+
+Read existing objects before mutation. Scope all lookups to `owner/repo` and include open and closed issues or milestones as appropriate. A GitHub issue may represent a pull request in API results; exclude pull requests from task-issue matching. Treat a task ID as the stable join key and issue numbers as repository-local handles. Resolve by the exact managed ID in the issue title and body marker, validate the match, and stop on duplicates or conflicting ownership. Never silently create a second issue when lookup is ambiguous.
+
+Reconcile only backend-owned fields: stable identity marker, generated issue title and body sections, phase and milestone labels, milestone association, and state when separately authorized and verified. Preserve unrelated issue labels, comments, assignees, and user-authored material. If a user-edited generated section cannot be safely distinguished, report a conflict rather than overwriting it. Re-run safely after partial creation: lookup each object before creating the next, and report completed work if later operations fail.
+
+The backend is optional and has no built-in token store, remote policy, issue-to-task database, or PR operation. Follow [TASKS projection](github-projection.md) or [issue lifecycle](github-issue-lifecycle.md) only for the requested operation.

@@ -44,6 +44,6 @@ The main design, SPEC, PLAN, and layout documents describe the intended system, 
 | Steering | Review checkpoint results, make focused corrections, analyze dependents, reconcile documents and tests, and pause before further work. | Planned |
 | Reporting | Give evidence-backed task, milestone, and phase reports with implemented-feature summaries; distinguish partial, blocked, and verified outcomes. | Planned |
 | In-code documentation | Review documentation after substantive code changes; use project conventions, Google style where applicable, and project-wide audits when requested. | Planned |
-| External integrations | Reconcile TASKS with systems such as GitHub issues and milestones without transferring authority over task definitions or completion. | Optional, planned |
+| `sdd-forge` | Optionally reconcile TASKS with GitHub phase and milestone labels, milestones, and task issues; resolve issue references and close verified task issues without transferring authority over completion. | **Included** (GitHub backend) |
 
 An included skill does not imply that any other planned capability is implemented. The repository's instructions and actual evidence govern the current project; a checklist or file's presence alone does not prove completion.
