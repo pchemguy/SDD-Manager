@@ -1,6 +1,6 @@
 # SDD Manager capability map
 
-This document records the plugin's intended capabilities, ownership, and present implementation status. It does not grant authorization to modify a project.
+This document records the plugin's intended capabilities, ownership, and present implementation status. It does not grant authorization to modify a project. **Included** means packaged as a focused skill, not operational as an end-to-end plugin: `sdd-manage` is the required central coordinator and has not been implemented.
 
 ## Package rules
 
