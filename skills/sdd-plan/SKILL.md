@@ -1,6 +1,6 @@
 ---
 name: sdd-plan
-description: Use when creating, reviewing, or revising docs/dev/PLAN.md, focused plan children, FEATURE-PLAN.md, or docs/dev/layout.md; deciding delivery phases, milestones, dependencies, exit conditions, and physical ownership before deriving executable TASKS.
+description: Use when planning delivery phases, milestones, dependencies, or exit gates, or when designing or reviewing a software project's repository layout, directory and package structure, and physical ownership of code, tests, and documentation. Produces or revises PLAN.md, FEATURE-PLAN.md, layout.md, and focused children before executable TASKS are derived.
 ---
 
 # Plan delivery and physical layout
