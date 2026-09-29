@@ -27,4 +27,4 @@ Use a `##` Markdown heading for each phase and a checkbox item directly beneath 
             Evidence: package-level usage and error behavior verified.
 ```
 
-Stable IDs may follow the project's existing convention; otherwise use monotonic task IDs such as `T-001`. Do not reuse or renumber an ID because a task is inserted or removed. Phase and milestone labels should match PLAN so a request can unambiguously target them. A task checkbox can be marked only under [progress and reconciliation](progress-and-reconciliation.md); the initial breakdown is unchecked unless verified prior completion is established.
+Stable IDs may follow the project's existing convention; otherwise use monotonic task IDs such as `T-001`. Do not reuse or renumber an ID because a task is inserted or removed. Keep phase and milestone IDs and names in TASKS consistent with PLAN so a request can unambiguously target them; TASKS supplies the current names for hosted projection. A task checkbox can be marked only under [progress and reconciliation](progress-and-reconciliation.md); the initial breakdown is unchecked unless verified prior completion is established.

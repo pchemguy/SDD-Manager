@@ -8,6 +8,7 @@ description: Use when projecting software-development phases, milestones, and ta
 ## Shared protocol
 
 - **Scope:** Run only for a requested hosted operation. Identify the provider before loading its backend; report ambiguous remotes or unsupported providers without guessing. Local SDD work does not require hosting access.
+- **Hierarchy:** Use the **sdd-conventions** task hierarchy to read phase, milestone, and task IDs and names from TASKS and preserve their parentage in the host projection. The selected backend defines its concrete objects.
 - **Coordination:** Before a hosted mutation, **sdd-manage** coordinates the user's request and a current **sdd-orient** handoff establishing the eligible Git worktree and governing instructions. Read-only inspection needs no Git mutation gate.
 - **Credentials:** **sdd-manage** accepts and stores user-provided tokens in an approved credential store outside the project, supplies a suitable token for the operation, and asks the user when none is available. A caller may instead supply a token directly to **sdd-forge**. Pass it to the selected backend without recording it in project files or handoff text; the backend checks provider-specific access.
 - **Access failure:** On a backend 403, request a suitable token from **sdd-manage** and return the endpoint and required access without exposing the credential. For direct use without **sdd-manage**, ask the user. Recheck access before retrying; a replacement token does not establish permission by itself.

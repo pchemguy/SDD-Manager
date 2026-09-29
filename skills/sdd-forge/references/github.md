@@ -6,7 +6,7 @@ Load only the additional reference needed for the request:
 
 | Request | Load |
 | --- | --- |
-| Create or reconcile phase and milestone labels, GitHub milestones, or task issues | [TASKS projection](github-projection.md) |
+| Create or reconcile phase labels, GitHub milestones, or task issues | [TASKS projection](github-projection.md) |
 | Resolve task IDs to issue numbers for a commit or handoff, check issue status, or close verified issues | [issue lifecycle](github-issue-lifecycle.md) |
 
 `docs/dev/TASKS.md` supplies stable task IDs and progress; PLAN supplies phase and milestone outcomes and exit conditions. SPEC and applicable design or feature documents supply requirements when a task brief needs them. GitHub is a projection, not the authority for task scope or verified completion. Use **sdd-report** to compose issue drafts if available; if unavailable, use the baseline format in the projection reference. Neither dependency is required for a read-only lookup.
@@ -21,6 +21,6 @@ On a 403, stop the affected write and identify the repository, endpoint, attempt
 
 Read existing objects before mutation. Scope all lookups to `owner/repo` and include open and closed issues or milestones as appropriate. A GitHub issue may represent a pull request in API results; exclude pull requests from task-issue matching. Treat a task ID as the stable join key and issue numbers as repository-local handles. Resolve by the exact managed ID in the issue title and body marker, validate the match, and stop on duplicates or conflicting ownership. Never silently create a second issue when lookup is ambiguous.
 
-Reconcile only backend-owned fields: stable identity marker, generated issue title and body sections, phase and milestone labels, milestone association, and state when separately authorized and verified. Preserve unrelated issue labels, comments, assignees, and user-authored material. If a user-edited generated section cannot be safely distinguished, report a conflict rather than overwriting it. Re-run safely after partial creation: lookup each object before creating the next, and report completed work if later operations fail.
+Reconcile only backend-owned fields: stable identity marker, generated issue title and body sections, phase label, milestone association, and state when separately authorized and verified. Preserve unrelated issue labels, comments, assignees, and user-authored material. If a user-edited generated section cannot be safely distinguished, report a conflict rather than overwriting it. Re-run safely after partial creation: lookup each object before creating the next, and report completed work if later operations fail.
 
 The backend is optional and has no built-in token store, remote policy, issue-to-task database, or PR operation. A later PR workflow must respect one PR per source branch.
