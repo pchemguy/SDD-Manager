@@ -30,11 +30,11 @@ Main documents describe the intended current system. Temporary feature documents
 
 | Capability | Responsibility | Status |
 | --- | --- | --- |
-| `sdd-orient` | Resolve project and Git roots; discover applicable instructions, documents, relevant tooling, dirty paths, and execution evidence; produce a read-only scoped handoff. | Included |
-| `sdd-conventions` | Evaluate chosen designs, patterns, component and task boundaries, and code changes using modularity criteria and context-sensitive SOLID, DRY, and KISS heuristics. | Included |
+| `sdd-orient` | Resolve project and Git roots; discover applicable instructions, documents, relevant tooling, dirty paths, and execution evidence; produce a read-only scoped handoff. | **Included** |
+| `sdd-conventions` | Evaluate chosen designs, patterns, component and task boundaries, and code changes using modularity criteria and context-sensitive SOLID, DRY, and KISS heuristics. | **Included** |
 | `sdd-manage` | Coordinate authorization, transitions, prerequisites, delegated scope, evidence, and stopping boundaries. | Planned |
-| `sdd-design` | Explore facts, assumptions, alternatives, and accepted decisions; develop project brief, architecture, and decomposition for initial work or architectural changes. | Included |
-| `sdd-specify` | Define, review, and reconcile complete behavioral requirements and scoped feature deltas; retain objective acceptance. | Included |
+| `sdd-design` | Explore facts, assumptions, alternatives, and accepted decisions; develop project brief, architecture, and decomposition for initial work or architectural changes. | **Included** |
+| `sdd-specify` | Define, review, and reconcile complete behavioral requirements and scoped feature deltas; retain objective acceptance. | **Included** |
 | Planning | Define strategy, dependency order, phases, milestones, and boundary verification without task-level instructions. | Planned |
 | Task derivation | Build and maintain TASKS; resolve next task, N tasks, milestone, or phase from verified state. | Planned |
 | Layout authoring | Assign physical ownership and maintain clear relationships to design, SPEC, and TASKS. | Planned |
