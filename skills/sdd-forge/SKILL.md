@@ -13,6 +13,6 @@ Use this skill only for a requested hosted operation. Identify the selected host
 
 Add a backend here when it supports a concrete hosted operation with its own repository resolution, authentication, object mapping, and reconciliation rules. Give it a focused reference and an explicit trigger; do not advertise a provider before its workflow is defined.
 
-Before changing hosted objects, **sdd-manage** must coordinate the user's requested hosted operation, a current **sdd-orient** handoff establishing the project's eligible Git worktree and governing instructions, and the selected backend's repository and authentication checks. Without `sdd-manage`, this plugin does not execute hosted mutations. Read-only inspection requires no Git mutation gate. Do not create commits, push branches, or create or merge pull requests here.
+Before changing hosted objects, **sdd-manage** must coordinate the user's requested hosted operation, a current **sdd-orient** handoff establishing the project's eligible Git worktree and governing instructions, and the selected backend's repository and authentication checks. Read-only inspection requires no Git mutation gate. Do not create commits, push branches, or create or merge pull requests here.
 
 Return the repository identity, task ID to issue number and URL associations touched, created or changed objects, access failures, ambiguity, and remaining differences. Pass issue references to the implementation and reporting workflows for commit composition. Do not infer task completion from issue state.
