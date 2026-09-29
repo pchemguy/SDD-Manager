@@ -40,10 +40,11 @@ docs/dev/layout.md         docs/dev/layout/
 docs/dev/FEATURE_ARCHITECTURE.md
 docs/dev/FEATURE_DECOMPOSITION.md
 docs/dev/FEATURE-SPEC.md  docs/dev/FEATURE-PLAN.md
+docs/dev/FEATURE-TASKS.md
 docs/dev/verification-map.json
 ```
 
-Also identify project-specific equivalents and other execution evidence when present. Do not modify or restore such state during orientation. Report active or contradictory evidence for the recovery workflow. Feature documents describe an intended delta; do not silently treat them as a complete current baseline.
+Also identify project-specific equivalents and other execution evidence when present. Do not modify or restore such state during orientation. Report active or contradictory evidence for the recovery workflow. Feature documents describe an intended delta; FEATURE-TASKS holds only scoped feature work and is not the complete task baseline. Inspect it with TASKS when establishing active work and progress.
 
 Inspect relevant source, tests, manifests, and declared commands for building, focused checks, integration checks, documentation checks, and packaging. Note unavailable tools without installing dependencies or executing commands with side effects. Use project instructions over guessed defaults.
 
@@ -56,7 +57,7 @@ Target: project root; Git root; contemplated paths or workflow
 Git: worktree eligibility; branch/detached/unborn; HEAD; relevant status and ownership
 Instructions: applicable sources, scope, and conflicts
 Documents: main roots and relevant children; active feature/change documents
-Execution evidence: TASKS/commits, other relevant state, and any unresolved discrepancy
+Execution evidence: TASKS and active FEATURE-TASKS/commits, other relevant state, and any unresolved discrepancy
 Tooling: relevant declared commands and environment limitations
 Readiness: read-only possible; repository mutation eligible or blocked; reasons
 Handoff: scoped facts for the next skill; unknowns and checks to repeat

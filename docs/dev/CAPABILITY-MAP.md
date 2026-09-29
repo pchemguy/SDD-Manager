@@ -21,11 +21,12 @@ This document records the plugin's intended capabilities, ownership, and present
 | `docs/dev/FEATURE-SPEC.md` | Scoped change to specified behavior until reconciled into the main SPEC. |
 | `docs/dev/PLAN.md` | Implementation strategy, phases, milestones, dependencies, and exit conditions. |
 | `docs/dev/FEATURE-PLAN.md` | Scoped delivery-strategy delta when a change needs one, until reconciled into the main PLAN. |
-| `docs/dev/TASKS.md` | Phase headings and a four-space-indented phase → milestone → task checklist, stable task identity, bounded work selection, and progress backed by evidence. |
+| `docs/dev/TASKS.md` | Complete intended phase → milestone → task hierarchy, stable task IDs, bounded selection, and evidence-backed progress. |
+| `docs/dev/FEATURE-TASKS.md` | Active feature's scoped task delta and evidence-backed progress until reconciled into TASKS. |
 | `docs/dev/layout.md` | Physical ownership of implementation, tests, documentation, and other artifacts. |
 | `docs/dev/verification-map.json` | Optional current component-to-check routing where selection is nontrivial. |
 
-The main design, SPEC, PLAN, and layout documents describe the intended system, strategy, and physical ownership. Temporary feature documents describe explicit deltas that are reconciled into the main documents when accepted. TASKS records the current work breakdown and evidence-backed progress. Parent documents may link to focused children without duplicating their detailed requirements.
+The main design, SPEC, PLAN, and layout documents describe the intended system, strategy, and physical ownership. Temporary feature documents describe explicit deltas that are reconciled into the main documents when accepted. TASKS records the complete intended work breakdown and evidence-backed progress. An active FEATURE-TASKS records only the feature's executable delta; task IDs are unique across both lists, and reconciliation preserves verified status and Git evidence. Parent documents may link to focused children without duplicating their detailed requirements.
 
 ## Capability ownership and status
 
@@ -37,13 +38,13 @@ The main design, SPEC, PLAN, and layout documents describe the intended system, 
 | `sdd-design` | Explore facts, assumptions, alternatives, and accepted decisions; develop project brief, architecture, and decomposition for initial work or architectural changes. | **Included** |
 | `sdd-specify` | Define, review, and reconcile complete behavioral requirements and scoped feature deltas; retain objective acceptance. | **Included** |
 | `sdd-plan` | Define and reconcile delivery strategy, phases, milestones, boundary verification, and physical ownership in separate PLAN and layout workflows, without task-level instructions. | **Included** |
-| `sdd-tasks` | Derive and maintain TASKS; resolve next task, N tasks, milestone, or phase from verified state and reconcile progress after steering. | **Included** |
+| `sdd-tasks` | Derive and maintain TASKS and scoped FEATURE-TASKS; select bounded work from the applicable list and reconcile feature progress and steering into TASKS. | **Included** |
 | Verification | Derive direct, dependent, integration, and boundary checks from contracts; optionally maintain test routing; classify failures. | Planned |
 | Implementation | Execute the requested bounded range, verify each task, maintain in-code documentation, commit durable results, and stop for steering. | Planned |
 | Recovery | Inspect interrupted work and Git evidence before new tasks; continue when reliable or use a controlled reset that preserves unrelated work. | Planned |
 | Steering | Review checkpoint results, make focused corrections, analyze dependents, reconcile documents and tests, and pause before further work. | Planned |
 | Reporting | Give evidence-backed task, milestone, and phase reports with implemented-feature summaries; distinguish partial, blocked, and verified outcomes. | Planned |
 | In-code documentation | Review documentation after substantive code changes; use project conventions, Google style where applicable, and project-wide audits when requested. | Planned |
-| `sdd-forge` | Pass managed or directly supplied credentials to the selected backend; optionally reconcile TASKS with GitHub phase labels, milestones, and task issues; resolve issue references and close verified task issues without transferring authority over completion. | **Included** (GitHub backend) |
+| `sdd-forge` | Pass managed or directly supplied credentials to the selected backend; optionally project TASKS or active FEATURE-TASKS to GitHub phase labels, milestones, and task issues; resolve issue references and close verified task issues without transferring authority over completion. | **Included** (GitHub backend) |
 
 An included skill does not imply that any other planned capability is implemented. The repository's instructions and actual evidence govern the current project; a checklist or file's presence alone does not prove completion.

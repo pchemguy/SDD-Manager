@@ -1,6 +1,6 @@
 ---
 name: sdd-plan
-description: Use when planning delivery phases, milestones, dependencies, or exit gates, or when designing or reviewing a software project's repository layout, directory and package structure, and physical ownership of code, tests, and documentation. Produces or revises PLAN.md, FEATURE-PLAN.md, layout.md, and focused children before executable TASKS are derived.
+description: Use when planning delivery phases, milestones, dependencies, or exit gates, or when designing or reviewing a software project's repository layout, directory and package structure, and physical ownership of code, tests, and documentation. Produces or revises PLAN.md, FEATURE-PLAN.md, layout.md, and focused children before executable TASKS or FEATURE-TASKS are derived.
 ---
 
 # Plan delivery and physical layout
@@ -18,6 +18,6 @@ Before authoring, read the relevant PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, 
 
 Read-only review can proceed without changing files. Creating, revising, or removing project documents requires **sdd-manage** to coordinate the user's request and a current **sdd-orient** handoff establishing an eligible Git worktree, applicable instructions, target paths, and ownership of dirty changes. This skill does not perform orientation or authorize another workflow.
 
-PLAN owns delivery strategy and boundary verification; layout owns physical placement and ownership. SPEC owns behavior and acceptance; design owns logical structure; TASKS owns stable, ordered execution units and progress. Use **sdd-conventions** when assessing component or task boundaries, without incorporating its shared rules here. Neither PLAN nor layout is a task checklist, a progress journal, or permission to implement. The downstream task workflow consumes the accepted design, SPEC, PLAN, and layout together.
+PLAN owns delivery strategy and boundary verification; layout owns physical placement and ownership. SPEC owns behavior and acceptance; design owns logical structure; TASKS and an active FEATURE-TASKS own their respective stable, ordered execution units and progress. Use **sdd-conventions** when assessing component or task boundaries, without incorporating its shared rules here. Neither PLAN nor layout is a task checklist, a progress journal, or permission to implement. The downstream task workflow consumes the accepted design, SPEC, PLAN, and layout together.
 
 At completion, report the strategy or placement established, affected phases or ownership boundaries, unresolved material decisions, and documents inspected or updated. Describe proposed work as planned, not implemented.

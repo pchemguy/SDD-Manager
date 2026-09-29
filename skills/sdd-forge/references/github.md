@@ -9,7 +9,7 @@ Load only the additional reference needed for the request:
 | Create or reconcile phase labels, GitHub milestones, or task issues | [TASKS projection](github-projection.md) |
 | Resolve task IDs to issue numbers for a commit or handoff, check issue status, or close verified issues | [issue lifecycle](github-issue-lifecycle.md) |
 
-`docs/dev/TASKS.md` supplies stable task IDs and progress; PLAN supplies phase and milestone outcomes and exit conditions. SPEC and applicable design or feature documents supply requirements when a task brief needs them. GitHub is a projection, not the authority for task scope or verified completion. Use **sdd-report** to compose issue drafts if available; if unavailable, use the baseline format in the projection reference. Neither dependency is required for a read-only lookup.
+`docs/dev/TASKS.md` supplies complete-project task IDs and progress; an active `docs/dev/FEATURE-TASKS.md` supplies its feature's scoped IDs and progress until reconciliation. Task IDs remain unique across both lists. PLAN or active FEATURE-PLAN supplies phase and milestone outcomes and exit conditions. SPEC and applicable design or feature documents supply requirements when a task brief needs them. GitHub is a projection, not the authority for task scope or verified completion. Resolve a task in its owning list; a feature task later incorporated into TASKS retains its original issue. Use **sdd-report** to compose issue drafts if available; if unavailable, use the baseline format in the projection reference. Neither dependency is required for a read-only lookup.
 
 ## Repository and access
 
