@@ -1,0 +1,22 @@
+---
+name: sdd-specify
+description: Use when creating, reviewing, or revising docs/dev/SPEC.md, focused specification children, or FEATURE-SPEC.md; defining required software behavior, interfaces, data contracts, error semantics, invariants, and objective acceptance for a new or existing system.
+---
+
+# Specify required behavior
+
+Choose the requested operation and load only its reference. Enter directly when adequate decisions and project evidence exist; do not replay design exploration as ceremony.
+
+| Work | Load |
+| --- | --- |
+| Create or revise the complete intended system specification | [system specification](references/system-specification.md) |
+| Define a scoped change to existing specified behavior | [change specification](references/change-specification.md) |
+| Review SPEC quality, correct conflicts, or reconcile a settled change into main SPEC | [review and reconciliation](references/review-and-reconciliation.md) |
+
+Before authoring, identify accepted decisions and the relevant PROJECT, ARCHITECTURE, DECOMPOSITION, existing SPEC, and applicable focused children. For an existing implementation, inspect only relevant code and tests to establish observed behavior; do not promote an observation into a requirement without an accepted decision. If a material architectural boundary is undecided or governing sources conflict, return that decision to design or the user rather than inventing a contract.
+
+Read-only review can proceed without modifying files. Creating, revising, or removing project documents requires the user's request for that work and a current **sdd-orient** handoff establishing an eligible Git worktree, applicable instructions, affected paths, and ownership of dirty changes. The invoking agent coordinates this prerequisite until `sdd-manage` owns coordination. This skill does not implement orientation or authorize another workflow.
+
+SPEC is authoritative for intended observable behavior and acceptance. PROJECT owns the brief; ARCHITECTURE and DECOMPOSITION own structural design; PLAN owns delivery strategy; TASKS owns executable units; layout owns physical paths. Use **sdd-conventions** when evaluating contract boundaries and necessary decomposition, without moving those shared checks into SPEC procedure. A feature specification states a scoped intended delta; it does not silently replace the complete main SPEC.
+
+Report the behavior specified or changed, affected contracts and acceptance conditions, unresolved material questions, and the precise documents inspected or updated. Document work does not authorize code changes, task selection, or continuation into implementation.

@@ -18,6 +18,7 @@ This document records the plugin's intended capabilities, ownership, and present
 | `docs/dev/DECOMPOSITION.md` | Component responsibilities, boundaries, collaborations, and provisional interfaces. Focused children are allowed. |
 | `docs/dev/FEATURE_ARCHITECTURE.md`, `docs/dev/FEATURE_DECOMPOSITION.md` | Bounded architectural change definition and affected component breakdown when necessary. |
 | `docs/dev/SPEC.md` | Intended behavior, final contracts, errors, invariants, and acceptance conditions. |
+| `docs/dev/FEATURE-SPEC.md` | Scoped change to specified behavior until reconciled into the main SPEC. |
 | `docs/dev/PLAN.md` | Implementation strategy, phases, milestones, dependencies, and exit conditions. |
 | `docs/dev/TASKS.md` | Ordered executable units, stable task identity, bounded work selection, and progress backed by evidence. |
 | `docs/dev/layout.md` | Physical ownership of implementation, tests, documentation, and other artifacts. |
@@ -33,7 +34,7 @@ Main documents describe the intended current system. Temporary feature documents
 | `sdd-conventions` | Evaluate chosen designs, patterns, component and task boundaries, and code changes using modularity criteria and context-sensitive SOLID, DRY, and KISS heuristics. | Included |
 | `sdd-manage` | Coordinate authorization, transitions, prerequisites, delegated scope, evidence, and stopping boundaries. | Planned |
 | `sdd-design` | Explore facts, assumptions, alternatives, and accepted decisions; develop project brief, architecture, and decomposition for initial work or architectural changes. | Included |
-| Specification | Define and reconcile complete behavioral requirements and feature deltas; retain objective acceptance. | Planned |
+| `sdd-specify` | Define, review, and reconcile complete behavioral requirements and scoped feature deltas; retain objective acceptance. | Included |
 | Planning | Define strategy, dependency order, phases, milestones, and boundary verification without task-level instructions. | Planned |
 | Task derivation | Build and maintain TASKS; resolve next task, N tasks, milestone, or phase from verified state. | Planned |
 | Layout authoring | Assign physical ownership and maintain clear relationships to design, SPEC, and TASKS. | Planned |
