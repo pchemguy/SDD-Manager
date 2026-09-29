@@ -19,4 +19,6 @@ Use the **sdd-conventions** modularity reference when defining or reviewing boun
 
 `PROJECT.md` owns the concise project brief, `ARCHITECTURE.md` owns high-level design, and `DECOMPOSITION.md` owns detailed logical component boundaries. Both architecture and decomposition may have focused children. Scoped feature documents express a proposed architectural delta where necessary. These documents inform SPEC; they neither replace its behavioral contracts nor authorize implementation, planning, layout authoring, or task execution.
 
+Use the relevant architecture or decomposition reference for read-only design review. Incorporation of accepted feature design into main PROJECT, ARCHITECTURE, or DECOMPOSITION belongs to **sdd-integrate-feature**.
+
 At completion, state what was explored or changed, the decisions established, unresolved material questions, and which documents were inspected or updated. Report design as design, never as implemented functionality.

@@ -36,9 +36,10 @@ The main design, SPEC, PLAN, and layout documents describe the intended system, 
 | `sdd-conventions` | Evaluate chosen designs, patterns, component and task boundaries, code changes, and Phase → Milestone → Task identity and hosted mapping conventions. | **Included** |
 | `sdd-manage` | Coordinate authorization, transitions, prerequisites, delegated scope, evidence, and stopping boundaries; accept, securely store, and supply hosting credentials, escalating to the user when none is available. | Planned |
 | `sdd-design` | Explore facts, assumptions, alternatives, and accepted decisions; develop project brief, architecture, and decomposition for initial work or architectural changes. | **Included** |
-| `sdd-specify` | Define, review, and reconcile complete behavioral requirements and scoped feature deltas; retain objective acceptance. | **Included** |
-| `sdd-plan` | Define and reconcile delivery strategy, phases, milestones, boundary verification, and physical ownership in separate PLAN and layout workflows, without task-level instructions. | **Included** |
-| `sdd-tasks` | Derive and maintain TASKS and scoped FEATURE-TASKS; select bounded work from the applicable list and reconcile feature progress and steering into TASKS. | **Included** |
+| `sdd-specify` | Define and review complete behavioral requirements and scoped feature deltas; retain objective acceptance. | **Included** |
+| `sdd-plan` | Define and review delivery strategy, phases, milestones, boundary verification, and physical ownership in separate PLAN and layout workflows, without task-level instructions. | **Included** |
+| `sdd-tasks` | Derive and maintain TASKS and scoped FEATURE-TASKS; select bounded work, update evidence-backed progress, and revise tasks after steering. | **Included** |
+| `sdd-integrate-feature` | Incorporate accepted feature deltas into selected main documents; optionally incorporate FEATURE-TASKS into TASKS without forcing task edits for document-only work. | **Included** |
 | Verification | Derive direct, dependent, integration, and boundary checks from contracts; optionally maintain test routing; classify failures. | Planned |
 | Implementation | Execute the requested bounded range, verify each task, maintain in-code documentation, commit durable results, and stop for steering. | Planned |
 | Recovery | Inspect interrupted work and Git evidence before new tasks; continue when reliable or use a controlled reset that preserves unrelated work. | Planned |

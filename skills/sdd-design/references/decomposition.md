@@ -14,7 +14,7 @@ Interfaces here may be provisional enough to test the architecture for coherence
 
 Inspect actual component boundaries and dependents before proposing changes. `docs/dev/FEATURE_DECOMPOSITION.md` may describe only affected units, altered collaborations and interface boundaries, compatibility needs, and component impact for a scoped architectural revision. Reference unchanged main nodes rather than copying them. It may accompany FEATURE_ARCHITECTURE when both levels change; neither is obligatory for a change that does not affect its level.
 
-Main architecture and decomposition describe the coherent intended system after accepted decisions are incorporated. Feature documents serve the proposed delta until that final state is reconciled into the main documents. Do not leave both contradictory descriptions as current truth.
+Main architecture and decomposition describe the coherent intended system after accepted decisions are incorporated. Feature documents serve the proposed delta until **sdd-integrate-feature** incorporates the accepted change into the main documents. Do not leave both contradictory descriptions as current truth.
 
 ## Review
 

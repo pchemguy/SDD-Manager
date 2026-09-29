@@ -13,4 +13,4 @@ Define:
 
 Reference unaffected main SPEC nodes rather than copying them. If the change alters structural boundaries, align with applicable FEATURE_ARCHITECTURE or FEATURE_DECOMPOSITION decisions; those documents are needed only when their level actually changes. Treat implementation evidence as observed state, not automatic approval of a new requirement.
 
-The feature document describes an intended delta while active. Say explicitly which main requirement it revises; if it conflicts without declaring a change, resolve the conflict before authoring further. It does not contain implementation tasks or chronological migration notes. Reconcile settled final behavior into the main SPEC through [review and reconciliation](review-and-reconciliation.md) when that work is requested.
+The feature document describes an intended delta while active. Say explicitly which main requirement it revises; if it conflicts without declaring a change, resolve the conflict before authoring further. It does not contain implementation tasks or chronological migration notes. Use **sdd-integrate-feature** to incorporate settled final behavior into the main SPEC when requested.

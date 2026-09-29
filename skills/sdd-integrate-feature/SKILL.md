@@ -1,0 +1,14 @@
+---
+name: sdd-integrate-feature
+description: Use when incorporating accepted feature or change documents into the main PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, or layout documents, or optionally incorporating FEATURE-TASKS into TASKS. Reconcile one selected document or a bounded set without requiring task-list changes.
+---
+
+# Integrate an accepted feature
+
+Read [feature incorporation](references/feature-incorporation.md) for the scoped reconciliation procedure. This skill owns incorporation of accepted feature deltas into main project documents and, when requested, the feature task list into TASKS. A request to reconcile one document does not authorize edits to the others. Review without mutation remains with the relevant focused skill.
+
+Identify the requested target set before editing: PROJECT, ARCHITECTURE and its children, DECOMPOSITION and its children, SPEC and its children, PLAN and its children, layout and its children, or TASKS. Reconcile any subset whose accepted source delta and main owner are established. Include TASKS only when task-list incorporation is requested or explicitly included in the coordinated scope. A document-only reconciliation can leave FEATURE-TASKS active; report its affected links or assumptions for later work.
+
+Before mutation, **sdd-manage** coordinates the user's requested scope and a current **sdd-orient** handoff establishing an eligible Git worktree, applicable instructions, target paths, and ownership of dirty changes. Inspect accepted feature sources, main owners, and relevant dependents. Resolve conflicts or missing decisions with their owning workflow rather than guessing. Use **sdd-conventions** for affected document and component boundaries. This skill does not authorize implementation, task execution, hosted mutations, or automatic progression to other stages.
+
+Return the main documents incorporated, feature sources retained or removed, dependency impacts outside the selected scope, unresolved conflicts, and task-list status. Distinguish document incorporation from implementation or verified task completion.
