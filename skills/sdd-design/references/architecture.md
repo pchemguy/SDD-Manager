@@ -19,3 +19,5 @@ For a material architectural change, `docs/dev/FEATURE_ARCHITECTURE.md` may defi
 ## Review
 
 Check that every major responsibility has one owner, important interactions and dependencies are legible, architectural constraints support the desired outcomes, and remaining unknowns are explicit. Confirm PROJECT and ARCHITECTURE do not repeat one another and that any child scope is navigable from the root. Stop at architecture when the user requested only architecture; a sound architecture is not permission to author SPEC or start implementation.
+
+Read PROJECT, the main ARCHITECTURE, and affected children as descriptions of the intended end state. Remove narration of earlier drafts or implementations, including “formerly,” “now,” or “replaces” when those words describe an editing transition. State the settled arrangement directly; keep genuine compatibility constraints as present design constraints. A feature overlay may describe its proposed delta until reconciliation.

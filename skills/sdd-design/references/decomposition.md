@@ -19,3 +19,5 @@ Main architecture and decomposition describe the coherent intended system after 
 ## Review
 
 For each unit, answer what it does, how it is used, what it depends on, and how its boundary can be checked without inspecting its internals. Inspect dependency cycles and unclear ownership; prefer a focused contract or a genuine combined unit to artificial layers. Check that a later SPEC could define objective behavior for each affected boundary, and that planned implementation could proceed in localized, verifiable changes. Report unresolved design decisions rather than inventing final contracts.
+
+Read the main DECOMPOSITION and affected children as the intended component model. Remove narration of prior drafts or implementations after incorporating a feature; describe each settled boundary and responsibility directly. A feature overlay may describe the proposed change while it is active.

@@ -26,3 +26,5 @@ At the appropriate owner, define required successful behavior, inputs and output
 Write acceptance conditions that can be assessed objectively: meaningful success cases, failures, edge cases, and interactions. A test command or an implementation task is not a behavioral requirement. Avoid prescribing redundant tests at every layer; verification planning owns check selection and execution.
 
 Confirm every accepted requirement has one canonical owner, all parent/child links resolve, contracts are mutually consistent, and important behavior can be checked. Label intentionally deferred decisions and their limits. A missing choice that would force SPEC to invent public behavior is a blocker, not a license to complete the prose by assumption.
+
+Read the main SPEC and affected children as a standalone end-state contract. Remove wording that narrates what an earlier draft or implementation did; express accepted behavior directly. Apply the detailed editorial check in [review and reconciliation](review-and-reconciliation.md).
