@@ -5,16 +5,18 @@ description: Use when projecting software-development phases, milestones, and ta
 
 # Hosted task coordination
 
-Use this skill only for a requested hosted operation. Identify the selected hosting provider before loading a backend. If a remote is ambiguous or the provider is unsupported, report that boundary without guessing. Do not make hosting access a prerequisite for local project work.
+## Shared protocol
+
+- **Scope:** Run only for a requested hosted operation. Identify the provider before loading its backend; report ambiguous remotes or unsupported providers without guessing. Local SDD work does not require hosting access.
+- **Coordination:** Before a hosted mutation, **sdd-manage** coordinates the user's request and a current **sdd-orient** handoff establishing the eligible Git worktree and governing instructions. Read-only inspection needs no Git mutation gate.
+- **Credentials:** **sdd-manage** accepts and stores user-provided tokens in an approved credential store outside the project, supplies a suitable token for the operation, and asks the user when none is available. A caller may instead supply a token directly to **sdd-forge**. Pass it to the selected backend without recording it in project files or handoff text; the backend checks provider-specific access.
+- **Access failure:** On a backend 403, request a suitable token from **sdd-manage** and return the endpoint and required access without exposing the credential. For direct use without **sdd-manage**, ask the user. Recheck access before retrying; a replacement token does not establish permission by itself.
+- **Handoff:** Return the repository, task ID to issue number and URL associations, changed objects, access failures, ambiguity, and remaining differences. Pass issue references to implementation and reporting for commit composition. Issue state does not establish task completion.
+
+Do not create commits, push branches, or create or merge pull requests here.
+
+Add a backend only when it supports a concrete hosted operation with its own repository resolution, authentication, object mapping, and reconciliation rules. Give it a focused reference and explicit trigger; do not advertise a provider before its workflow is defined.
 
 ## Available backends
 
 - **GitHub:** Read [GitHub backend](references/github.md) when the requested operation targets a GitHub repository. It resolves repository identity and access, then routes task projection and issue lifecycle operations.
-
-Add a backend here when it supports a concrete hosted operation with its own repository resolution, authentication, object mapping, and reconciliation rules. Give it a focused reference and an explicit trigger; do not advertise a provider before its workflow is defined.
-
-**sdd-manage** accepts and stores a user-provided hosting token in an approved credential store outside the project, then supplies it to **sdd-forge** for a requested operation. If no suitable token is available, **sdd-manage** asks the user. A caller may also provide a token directly to **sdd-forge**. Pass the credential to the selected backend without recording it in project files or handoff text; the backend checks provider-specific access. If the backend reports a 403, request a suitable credential from **sdd-manage** and return the endpoint and required access without exposing the token. For direct use without **sdd-manage**, ask the user for a suitable credential. Do not treat a replacement token as proof that the requested operation is permitted.
-
-Before changing hosted objects, **sdd-manage** must coordinate the user's requested hosted operation and a current **sdd-orient** handoff establishing the project's eligible Git worktree and governing instructions. Read-only inspection requires no Git mutation gate. Do not create commits, push branches, or create or merge pull requests here.
-
-Return the repository identity, task ID to issue number and URL associations touched, created or changed objects, access failures, ambiguity, and remaining differences. Pass issue references to the implementation and reporting workflows for commit composition. Do not infer task completion from issue state.
