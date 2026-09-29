@@ -14,9 +14,7 @@ Keep label names concise and independent of mutable display titles. Descriptions
 When **sdd-report** is available, request its issue draft (`title`, `body`) using TASKS and applicable documents, then enforce the stable task prefix and identity marker here. When it is unavailable, compose a baseline draft with task outcome, reason or relevant context, expected scope, dependencies, acceptance and prescribed checks, and document links where present. Include code context, measurements, or task-kind instructions when the actual task calls for them; example prose from other projects is not a source of requirements. Do not fill absent facts with invented content. Separate each Markdown heading from adjacent content with a blank line, including in generated issue bodies; a heading at the start of a file or template needs no leading blank line. Reserve a clearly delimited backend-owned section, for example:
 
 ```markdown
-<!-- sdd-forge:task-id=T-012 -->
-
-## Task brief
+## Task brief <!-- sdd-forge:task-id=T-012 -->
 
 **Outcome:** ...
 **Context:** ...
