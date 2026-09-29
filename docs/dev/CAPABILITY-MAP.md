@@ -33,7 +33,7 @@ The main design, SPEC, PLAN, and layout documents describe the intended system, 
 | --- | --- | --- |
 | `sdd-orient` | Resolve project and Git roots; discover applicable instructions, documents, relevant tooling, dirty paths, and execution evidence; produce a read-only scoped handoff. | **Included** |
 | `sdd-conventions` | Evaluate chosen designs, patterns, component and task boundaries, and code changes using modularity criteria and context-sensitive SOLID, DRY, and KISS heuristics. | **Included** |
-| `sdd-manage` | Coordinate authorization, transitions, prerequisites, delegated scope, evidence, and stopping boundaries. | Planned |
+| `sdd-manage` | Coordinate authorization, transitions, prerequisites, delegated scope, evidence, and stopping boundaries; accept, securely store, and supply hosting credentials, escalating to the user when none is available. | Planned |
 | `sdd-design` | Explore facts, assumptions, alternatives, and accepted decisions; develop project brief, architecture, and decomposition for initial work or architectural changes. | **Included** |
 | `sdd-specify` | Define, review, and reconcile complete behavioral requirements and scoped feature deltas; retain objective acceptance. | **Included** |
 | `sdd-plan` | Define and reconcile delivery strategy, phases, milestones, boundary verification, and physical ownership in separate PLAN and layout workflows, without task-level instructions. | **Included** |
@@ -44,6 +44,6 @@ The main design, SPEC, PLAN, and layout documents describe the intended system, 
 | Steering | Review checkpoint results, make focused corrections, analyze dependents, reconcile documents and tests, and pause before further work. | Planned |
 | Reporting | Give evidence-backed task, milestone, and phase reports with implemented-feature summaries; distinguish partial, blocked, and verified outcomes. | Planned |
 | In-code documentation | Review documentation after substantive code changes; use project conventions, Google style where applicable, and project-wide audits when requested. | Planned |
-| `sdd-forge` | Optionally reconcile TASKS with GitHub phase and milestone labels, milestones, and task issues; resolve issue references and close verified task issues without transferring authority over completion. | **Included** (GitHub backend) |
+| `sdd-forge` | Pass managed or directly supplied credentials to the selected backend; optionally reconcile TASKS with GitHub phase and milestone labels, milestones, and task issues; resolve issue references and close verified task issues without transferring authority over completion. | **Included** (GitHub backend) |
 
 An included skill does not imply that any other planned capability is implemented. The repository's instructions and actual evidence govern the current project; a checklist or file's presence alone does not prove completion.
