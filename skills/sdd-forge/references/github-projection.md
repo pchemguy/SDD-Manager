@@ -1,6 +1,8 @@
 # GitHub TASKS projection
 
-Project the **sdd-conventions** Phase → Milestone → Task hierarchy into one GitHub repository. Re-read TASKS and the relevant PLAN outcomes and exit conditions before writing. Take all three levels' IDs and names from TASKS; use PLAN for supporting descriptions, not to rename hosted objects. Follow an established project naming convention only when it preserves unambiguous stable identity and the hierarchy.
+Create a GitHub issue for each TASKS task, a GitHub milestone for each SDD milestone, and a phase label for each SDD phase. Assign each task issue its parent milestone and phase label when creating it. After a task is implemented, verified, committed, and reconciled in TASKS, close its issue as completed under [issue lifecycle](github-issue-lifecycle.md). Backends without native milestones may use milestone labels instead, as defined by the **sdd-conventions** task hierarchy.
+
+Project the Phase → Milestone → Task hierarchy into one GitHub repository. Re-read TASKS and the relevant PLAN outcomes and exit conditions before writing. Take all three levels' IDs and names from TASKS; use PLAN for supporting descriptions, not to rename hosted objects. Follow an established project naming convention only when it preserves unambiguous stable identity and the hierarchy.
 
 | SDD item | GitHub object | Name or title | Brief description or body |
 | --- | --- | --- | --- |

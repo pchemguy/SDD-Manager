@@ -6,7 +6,9 @@ Keep IDs stable when inserting work or revising names. A host projection uses th
 
 ## Hosted projection
 
-Represent phase membership with a phase label on each task issue. Use a native host milestone for the parent milestone when the backend supports one; otherwise use a milestone label. Each task issue must carry its phase label and either its native milestone association or its milestone label. The active backend owns object creation, lookup, and reconciliation; it may define an equivalent scheme suited to its host while preserving these relationships.
+When the selected backend supports issues, as GitHub does, create an associated issue for every TASKS task. Represent each phase with a phase label and create a host milestone for each SDD milestone when supported; use a milestone label when native milestones are unavailable. Assign each task issue its phase label and its parent milestone or milestone label when creating it. After the task is implemented, verified, committed, and reconciled in TASKS, close its issue as completed.
+
+The active backend owns object creation, lookup, and reconciliation. It may define equivalent host objects while preserving the phase → milestone → task relationships and issue lifecycle.
 
 For the GitHub backend, use these names from TASKS:
 
