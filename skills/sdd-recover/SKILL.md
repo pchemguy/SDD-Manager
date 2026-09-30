@@ -1,0 +1,16 @@
+---
+name: sdd-recover
+description: Use when resuming interrupted SDD task work, identifying the current task from Git and TASKS or FEATURE-TASKS, committing a task already checked complete, or finishing pending pushes and hosted issue closure even when the worktree is clean.
+---
+
+# Recover interrupted task work
+
+Use a current **sdd-orient** handoff for the repository, governing instructions, branch, dirty paths, and ownership. **sdd-manage** coordinates the requested recovery and any implementation handoff. Read the owning TASKS or active FEATURE-TASKS, the relevant task brief and verification evidence, and Git history. Git and the task list supply recovery state; no separate transaction journal is required.
+
+1. **Establish the committed boundary.** Find the latest completed task identified by a task commit. Inspect its committed task list and result; later maintenance commits do not advance the task boundary. If no task has been committed, use the established preimplementation commit as the baseline. Compare that boundary with the working task list and inspect staged, unstaged, and untracked changes.
+2. **Identify the current task.** If the last checked task is ahead of the last committed task, it is complete work awaiting a commit. Confirm that its pending changes belong to that task and its completion evidence is present, then commit it without repeating implementation. Otherwise identify the current unchecked task from the selected execution order and changes since the boundary; return its remaining work to the implementation workflow. Future unchecked tasks do not identify the interrupted task. Report ambiguous task identity or change ownership before proceeding with the affected work.
+3. **Make completion durable.** Use **sdd-tasks** completion criteria and reconcile the owning checklist with the result. Use **sdd-report** for the commit message, including the task ID and resolved issue references. Commit the task result and status together; if completion evidence is missing or contradictory, obtain the prescribed checks or route the unfinished work for repair before committing it as complete. Preserve valid pending work; do not reset merely because the worktree is dirty.
+4. **Push pending commits.** Check for unpushed commits independently of worktree status. Push all unpushed commits on the current branch to its established remote branch, including when the worktree is clean or the current task is still incomplete. Verify that the remote contains those commits. Do not force-push or guess a missing destination; report a missing destination, access failure, or divergent history to **sdd-manage**.
+5. **Reconcile hosted completion.** When hosted task tracking is active, use **sdd-forge** to close each verified, committed task issue whose closure remains pending. A clean worktree does not prove that push or issue closure has finished. Keep the completed local task state if hosting is unavailable and report the pending operation.
+
+Return the last committed task, current task and status, changes preserved or committed, verification evidence, local and remote commit identities, issue reconciliation, and any remaining work or blocker. Finish recovery before selecting a new task.
