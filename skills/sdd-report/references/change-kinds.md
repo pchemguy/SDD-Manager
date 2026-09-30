@@ -1,29 +1,18 @@
 # Change kinds and evidence
 
-Start with the actual outcome, reason, checks performed, and result. Select only the fields that improve understanding of this change; the labels below are examples, not a fixed questionnaire. Keep a planned issue in future or acceptance language and a completed report in past or present evidence language.
+Start with the actual outcome, reason, checks performed, and result. Select only the fields that improve understanding of this change; the labels below are examples, not a fixed questionnaire. Keep a planned issue in future or acceptance language and a completed report in past or present evidence language. The icon column offers optional PR title prefixes when the project uses them.
 
-| Kind | Add to the shared core when relevant | Evidence boundary |
-| --- | --- | --- |
-| Feature or behavior | User-visible capability, changed contract, acceptance conditions | Distinguish specified behavior from verified implementation. |
-| Bug fix | Reproduction, cause, affected behavior, regression check | Say whether the original failure was reproduced. |
-| Code health or refactor | Maintainability problem, preserved behavior, ownership or coupling improvement | Cite checks supporting behavior preservation; do not promise it without evidence. |
-| Performance | Baseline/current measurements, input size, environment, method, relative change | State uncertainty, simulated conditions, or absence of a meaningful gain. |
-| Security | Risk, affected guarantee, solution, regression checks | Avoid credentials and unnecessary exploit detail; distinguish mitigation from proof. |
-| Testing | Gap, added scenarios, coverage or failure-path result | Describe scenarios rather than inventing a coverage percentage. |
-| Documentation | Audience, corrected guidance, links or examples reviewed | Do not claim runtime verification for a text-only check. |
-| Build, packaging, or tooling | Affected environments, reproducibility, installation or build checks | Name platforms actually exercised and those still untested. |
-| Integration or migration | Cross-component effect, compatibility, transition and rollback conditions | Identify data or API assumptions and the checks that exercised them. |
-
-Optional PR title prefixes when the project uses kind icons:
-
-- ✨ Feature
-- 🐛 Bug fix
-- 🧹 Code health
-- ⚡ Performance
-- 🔒 Security
-- 🧪 Testing
-- 📝 Documentation
-- 🔧 Build or tooling
+| Icon | Kind | Add to the shared core when relevant | Evidence boundary |
+| --- | --- | --- | --- |
+| ✨ | Feature or behavior | User-visible capability, changed contract, acceptance conditions | Distinguish specified behavior from verified implementation. |
+| 🐛 | Bug fix | Reproduction, cause, affected behavior, regression check | Say whether the original failure was reproduced. |
+| 🧹 | Code health or refactor | Maintainability problem, preserved behavior, ownership or coupling improvement | Cite checks supporting behavior preservation; do not promise it without evidence. |
+| ⚡ | Performance | Baseline/current measurements, input size, environment, method, relative change | State uncertainty, simulated conditions, or absence of a meaningful gain. |
+| 🔒 | Security | Risk, affected guarantee, solution, regression checks | Avoid credentials and unnecessary exploit detail; distinguish mitigation from proof. |
+| 🧪 | Testing | Gap, added scenarios, coverage or failure-path result | Describe scenarios rather than inventing a coverage percentage. |
+| 📝 | Documentation | Audience, corrected guidance, links or examples reviewed | Do not claim runtime verification for a text-only check. |
+| 🔧 | Build, packaging, or tooling | Affected environments, reproducibility, installation or build checks | Name platforms actually exercised and those still untested. |
+| 🔄 | Integration or migration | Cross-component effect, compatibility, transition and rollback conditions | Identify data or API assumptions and the checks that exercised them. |
 
 Choose the dominant change; an icon does not certify the work.
 
