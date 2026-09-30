@@ -13,7 +13,7 @@ Return `title` and `body` separately. Format the title as `[<task-id>] <task tit
 
 ## Git commit
 
-Draft a short imperative subject naming the actual change; include the task ID when the project's convention calls for it. Use a body when the reason, verification, migration implications, or multiple issue references need explanation. Base it on the inspected diff and checks, not merely the task brief.
+Draft a short imperative subject naming the actual change and include the task ID. Use a body when the reason, verification, migration implications, or multiple issue references need explanation. Base it on the inspected diff and checks, not merely the task brief.
 
 Use `Refs owner/repo#123` for each verified association that the commit genuinely advances. Multiple references are allowed when the change actually contributes to several tasks. Omit the line when no issue is resolved. Do not use `Fixes`, `Closes`, or `Resolves` merely to trigger host automation; verified issue closure is a separate **sdd-forge** operation. If verification has not been run, say so in a proposed body rather than claiming it passed. The implementation workflow makes and checks the commit.
 
