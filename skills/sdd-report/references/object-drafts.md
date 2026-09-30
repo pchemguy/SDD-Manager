@@ -4,7 +4,10 @@ Keep the same task identity across all outputs. Use the project-wide ID from its
 
 ## Task issue
 
-Return `title` and `body` separately. Format the title as `[<task-id>] <task title>`, using the owning task list. Draft the body from the task outcome, reason and project context, expected scope and dependencies, objective acceptance and prescribed checks, and source document links. For a performance task, identify the measurement plan and baseline if established; do not promise a speedup as achieved. For a security task, state the affected guarantee and risk without exposing exploit instructions or credentials. Add kind-specific context only when supported by the task.
+Return `title` and `body` separately. Format the title as `[<task-id>] <task title>`, using the owning task list. Draft the body from the task outcome, reason and project context, expected scope and dependencies, objective acceptance and prescribed checks, and source document links. Include kind-specific task details when supported by the task:
+
+- **Performance:** Describe the problem with the current implementation, explain how the proposed approach may improve it, and identify the measurement plan and any established baseline. Do not present an expected speedup as an achieved result.
+- **Security:** State the affected guarantee and risk without exposing exploit instructions or credentials.
 
 **sdd-report** owns the title and body format. Preserve an exact task identity marker when one is supplied. Never invent host labels, milestone associations, issue URLs, or resolution state.
 
