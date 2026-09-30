@@ -23,6 +23,9 @@ These compact labels may help where the project accepts emoji headings or bullet
 - ✅ **Verification:** Commands, inspection, and outcomes actually observed.
 - ✨ **Result:** The supported effect, including limitations.
 - 📊 **Measured Improvement:** Baseline and current performance with method and environment, only when measured.
+
+## Kind-specific additions
+
 - ⚠️ **Risk** and 🛡️ **Solution** (security): impact, mitigation, remaining exposure, checks.
 - 📊 **Coverage** (testing): prior gap, added scenarios, evidence.
 - ⚡ **No meaningful gain** (performance): state upfront in PR or completion summary; give rationale.
