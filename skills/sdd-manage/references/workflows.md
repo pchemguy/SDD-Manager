@@ -1,0 +1,27 @@
+# Available workflows
+
+Select by the user's objective, not by which documents happen to be missing. A scoped request may enter any stage whose required inputs are established. A combined request may authorize preparation and implementation together; retain its explicit implementation boundary. Do not require fresh approval for a transition already covered by that request.
+
+| Workflow | Entry and coordination | Outputs and stop |
+| --- | --- | --- |
+| Prepare initial development | Use **sdd-design** for the brief, architecture, and decomposition; **sdd-specify** for behavior and acceptance; **sdd-plan** for delivery strategy and layout; **sdd-tasks** for TASKS. Resolve consequential decisions as they arise. | Selected preparation artifacts and open decisions. A preparation-only request stops before implementation. |
+| Prepare a feature | Inspect existing contracts and implementation. Use design deltas where needed, then **sdd-specify**, **sdd-plan**, and **sdd-tasks** for the necessary FEATURE-SPEC, FEATURE-PLAN, and FEATURE-TASKS. Reuse established design and layout where sufficient. | Bounded feature requirements, delivery strategy, and executable tasks. Stop at preparation unless implementation is included in the request. |
+| Implement a bounded range | Pass the owning TASKS or FEATURE-TASKS, requested IDs/count/milestone/phase, dependencies, and boundary to **sdd-implement**. It resolves the executable range and coordinates **sdd-tdd**, **sdd-docs**, **sdd-verify**, **sdd-report**, and active **sdd-forge** tracking. | Evidence-backed completed tasks, commits, pushes, and applicable issue closure. Stop at the selected checkpoint or blocker. |
+| Resume interrupted implementation | Pass orientation's identified pending task and evidence to **sdd-implement**. It pushes outstanding commits before task selection, tests, or edits, even on a clean tree; it finishes pending work before advancing. Use the established boundary; clarify it if unavailable. | Continuation of the bounded implementation workflow. No separate recovery protocol or automatic reset. |
+| Steer at a checkpoint | Use **sdd-steer** for the human-defined focused amendment during partial implementation. An assessment request returns impact only; a command to implement authorizes direct changes to affected existing development documents, code, tests, and documentation. | Assessment, or a verified, committed, pushed amendment. Create no feature overlay and invoke no integration step. Stop; the human separately resumes implementation. |
+| Integrate accepted feature documents | Pass the accepted sources and explicit target set to **sdd-integrate-feature**. TASKS and FEATURE-TASKS are independently selectable; document-only integration does not imply their reconciliation. | Selected main documents incorporated, task relationships reconciled only within scope, source disposition, and external impacts. Stop without executing tasks. |
+| Review or maintain a selected scope | Route design review to **sdd-design**, behavior review to **sdd-specify**, strategy/layout review to **sdd-plan**, task-list review to **sdd-tasks**, selection-only requests to **sdd-implement**, test strategy or test maintenance to **sdd-tdd**, documentation to **sdd-docs**, and acceptance checks to **sdd-verify**. Use **sdd-conventions** for relevant criteria. | Findings, evidence, or explicitly requested maintenance. Review and verification do not authorize repairs or completion updates. Stop at the selected scope. |
+| Synchronize hosted tracking | Use **sdd-forge** for the requested projection, association lookup, or issue reconciliation. Supply a credential through the credential protocol when needed; leave provider access checks and object mapping to its backend. | Repository and task-to-issue associations, changed hosted objects, differences, and access blockers. Stop after the hosted operation. |
+
+## Feature sequencing
+
+- **Preparation:** Keep feature deltas distinguishable from the complete main documents. Creating a feature task list does not require immediate incorporation into TASKS.
+- **Implementation:** An accepted FEATURE-TASKS can drive implementation while its authoritative feature documents remain active. Identify those sources explicitly in the handoff.
+- **Integration:** Invoke integration for the accepted targets included in the user's request, before, during, or after implementation as appropriate to their established inputs. Do not impose an automatic integration stage or infer feature acceptance from passing tests.
+- **Consistency:** If the selected work requires an unresolved contract or dependency decision, report it before the dependent mutation. Continue independent authorized work when sound.
+
+## Cross-cutting operations
+
+- **Reporting:** Use **sdd-report** throughout, or independently for an issue, commit message, PR description, or progress report. Drafting PR text does not create or merge a PR.
+- **Hosted tracking:** Local workflows remain usable without hosting. When tracking is active, coordinate task associations before commit composition and verified closure through **sdd-forge**; issue state never supplies completion evidence.
+- **Persistence:** Implementation and steering own their commits and pushes. Coordinate persistence of other authorized repository edits through the shared protocol; hosted-only changes have no local commit by implication.

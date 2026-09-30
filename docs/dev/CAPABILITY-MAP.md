@@ -1,6 +1,6 @@
 # SDD Manager capability map
 
-This document records the plugin's intended capabilities, ownership, and present implementation status. It does not grant authorization to modify a project. **Included** means packaged as a focused skill, not operational as an end-to-end plugin: `sdd-manage` is the required central coordinator and has not been implemented.
+This document records the plugin's intended capabilities, ownership, and present implementation status. It does not grant authorization to modify a project. **Included** means packaged as a skill. The central `sdd-manage` coordinator and the focused capabilities are included; packaging validation does not establish end-to-end client execution.
 
 ## Package rules
 
@@ -34,21 +34,21 @@ The main design, SPEC, PLAN, and layout documents describe the intended system, 
 | --- | --- | --- |
 | `sdd-orient` | Resolve project and Git roots; discover applicable instructions, documents, relevant tooling, dirty paths, and execution evidence; identify the last committed task and any completed pending or incomplete work; produce a read-only scoped handoff to the next workflow. | **Included** |
 | `sdd-conventions` | Evaluate chosen designs, patterns, component and task boundaries, code changes, and Phase → Milestone → Task identity and hosted mapping conventions. | **Included** |
-| `sdd-manage` | Coordinate authorization, transitions, prerequisites, delegated scope, evidence, and stopping boundaries; accept, securely store, and supply hosting credentials, escalating to the user when none is available. | Planned |
+| `sdd-manage` | Coordinate authorization, transitions, prerequisites, delegated scope, evidence, and stopping boundaries; accept, securely store, and supply hosting credentials, escalating to the user when none is available. | **Included** |
 | `sdd-design` | Explore facts, assumptions, alternatives, and accepted decisions; develop project brief, architecture, and decomposition for initial work or architectural changes. | **Included** |
 | `sdd-specify` | Define and review complete behavioral requirements and scoped feature deltas; retain objective acceptance. | **Included** |
 | `sdd-plan` | Define and review delivery strategy, phases, milestones, boundary verification, and physical ownership in separate PLAN and layout workflows, without task-level instructions. | **Included** |
-| `sdd-tasks` | Create and review TASKS and scoped FEATURE-TASKS; select bounded work and review progress evidence. Feature-delta reconciliation belongs to `sdd-integrate-feature`; direct checkpoint amendments belong to `sdd-steer`; main task execution and completion updates belong to `sdd-implement`. | **Included** |
+| `sdd-tasks` | Create and review TASKS and scoped FEATURE-TASKS; review progress evidence. Feature-delta reconciliation belongs to `sdd-integrate-feature`; direct checkpoint amendments belong to `sdd-steer`; executable range selection, main task execution, and completion updates belong to `sdd-implement`. | **Included** |
 | `sdd-integrate-feature` | Incorporate separately developed, accepted feature deltas into selected main documents; reconcile affected TASKS and FEATURE-TASKS and optionally incorporate feature tasks into TASKS without forcing task edits for document-only work. | **Included** |
 | `sdd-report` | Draft task issues, commit messages, PR descriptions, and evidence-backed task, milestone, or phase reports with change-kind-specific emphasis. | **Included** |
 | `sdd-tdd` | Define testing strategy and scenarios, create or revise behavior-focused tests with independent expectations, and guide the red → green → refactor cycle; preserve existing code when test-first evidence is absent. Adapted from Superpowers TDD and its test-writing companion. | **Included** |
 | `sdd-verify` | Select and run direct, dependent, integration, and boundary checks for a task, milestone, phase, selected change, or project; assess acceptance coverage, classify failures, and return evidence and remaining gaps. | **Included** |
 | `sdd-docs` | Ensure professional module and API documentation; align README and standalone guides; apply project-specified or established language-appropriate style; audit affected changes or the project; report governing-document amendments to the user and defer their decisions. | **Included** |
 | `sdd-steer` | At a checkpoint during partial task-list implementation, perform a human-commanded focused amendment to previously implemented features, primarily reducing functionality; directly update affected existing development documents, code, and tests, verify, commit, push, and report, then stop without handing off to `sdd-implement`. | **Included** |
-| `sdd-implement` | Run the main implementation workflow driven by TASKS or FEATURE-TASKS. Push all unpushed commits before any other work, regardless of worktree cleanliness; execute or resume the selected range, coordinate `sdd-tdd`, `sdd-verify`, and `sdd-docs`, mark task completion from verified evidence, commit and push results, coordinate issue closure through `sdd-forge`, and stop at the selected checkpoint. | **Included** |
+| `sdd-implement` | Select executable ranges and run the main implementation workflow driven by TASKS or FEATURE-TASKS. For execution, push all unpushed commits before any other work, regardless of worktree cleanliness; execute or resume the selected range, coordinate `sdd-tdd`, `sdd-verify`, and `sdd-docs`, mark task completion from verified evidence, commit and push results, coordinate issue closure through `sdd-forge`, and stop at the selected checkpoint. | **Included** |
 | `sdd-forge` | Pass managed or directly supplied credentials to the selected backend; optionally project TASKS or active FEATURE-TASKS to GitHub phase labels, milestones, and task issues; resolve issue references and close verified task issues without transferring authority over completion. | **Included** (GitHub backend) |
 
-An included skill does not imply that any other planned capability is implemented. The repository's instructions and actual evidence govern the current project; a checklist or file's presence alone does not prove completion.
+The coordinator selects only the capabilities required by the requested workflow. The repository's instructions and actual evidence govern the current project; a checklist or file's presence alone does not prove completion.
 
 ## Execution boundaries
 

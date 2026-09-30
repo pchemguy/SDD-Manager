@@ -22,6 +22,6 @@ Continuation finishes the interrupted task before new task selection. If it fall
 
 ## Select the authorized range
 
-Use **sdd-tasks** to resolve task, next-N-task, milestone, or phase requests into precise IDs, prerequisite evidence, and exit conditions. For feature work, select from the active FEATURE-TASKS and inspect relevant TASKS prerequisites; for main work, use TASKS. Report ambiguous active scope and unmet out-of-range prerequisites rather than selecting silently.
+Use [range selection](range-selection.md) to resolve task, next-N-task, milestone, or phase requests into precise IDs, prerequisite evidence, and exit conditions. For feature work, select from the active FEATURE-TASKS and inspect relevant TASKS prerequisites; for main work, use TASKS. Report ambiguous active scope and unmet out-of-range prerequisites rather than selecting silently.
 
 Keep the selected range and checkpoint visible throughout execution. A user may change the range or pause work; preserve completed commits and current pending work, report the new boundary, and follow the latest instruction. A separate steering request does not authorize automatic continuation afterward.
