@@ -4,7 +4,7 @@ Keep the same task identity across all outputs. Use the project-wide ID from its
 
 ## Task issue
 
-Return `title` and `body` separately. Format the title as `[<task-id>] <task title>`, using the owning task list. Draft the body from the task outcome, reason and project context, expected scope and dependencies, objective acceptance and prescribed checks, and source document links. Include kind-specific task details when supported by the task:
+Return `title` and `body` separately. Format the title as `[<task-id>] <task title>`, using the owning task list. Draft the body from the task outcome, reason and project context, expected scope and dependencies, objective acceptance and prescribed checks, and source document links. Add relevant kind-specific details. For example:
 
 - **Performance:** Describe the problem with the current implementation, explain how the proposed approach may improve it, and identify the measurement plan and any established baseline. Do not present an expected speedup as an achieved result.
 - **Security:** State the affected guarantee and risk without exposing exploit instructions or credentials.
