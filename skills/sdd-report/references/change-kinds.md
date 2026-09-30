@@ -25,10 +25,10 @@ Use these labels when relevant to the requested report and the project's style:
 | ✅ | Verification | | Commands, inspection, and outcomes actually observed. |
 | ✨ | Result | | Supported effect and limitations. |
 | 📊 | Measured Improvement | Performance | Baseline and current measurements, method, environment, and uncertainty; only when measured. |
+| ⚡ | No meaningful gain | Performance | State upfront in a PR or completion summary; explain the rationale. |
 | ⚠️ | Risk | Security | Potential impact and remaining exposure. |
 | 🛡️ | Solution | Security | Mitigation, how it addresses the risk, and relevant checks. |
 | 📊 | Coverage | Testing | Prior gap, added scenarios, and coverage evidence. |
-| ⚡ | No meaningful gain | Performance | State upfront in a PR or completion summary; explain the rationale. |
 
 ## Examples
 
