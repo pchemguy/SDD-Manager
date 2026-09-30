@@ -52,7 +52,7 @@ Inspect relevant source, tests, manifests, and declared commands for building, f
 
 When TASKS or an active FEATURE-TASKS exists, establish the implementation starting point:
 
-1. Find the latest completed task identified by a task commit and inspect its committed checklist and result. Later maintenance commits do not advance that task boundary. If no task has been committed, use the established preimplementation commit as the baseline.
+1. Find the latest completed task identified by a task commit and inspect its committed checklist and result. Later maintenance or steering-amendment commits do not advance that task boundary. If no task has been committed, use the established preimplementation commit as the baseline.
 2. Compare the committed boundary with the owning working checklist and staged, unstaged, and untracked changes. If the last checked task is ahead of the last committed task, identify it as completed work awaiting commit; confirm that pending changes belong to it and existing completion evidence is present. Otherwise identify the current incomplete task from the selected execution order and changes since the boundary. Future unchecked tasks do not identify the interrupted task. If the tree is clean and the checklist agrees with the committed boundary, report no pending task changes.
 3. Include the task ID, owning list, last task commit, pending paths and ownership, existing verification evidence, and remaining work or ambiguity in the handoff to **sdd-implement**. It owns verification, completion, commits, pushes, and issue-closure coordination. Orientation observes existing evidence; it does not repeat implementation or run verification.
 

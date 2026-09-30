@@ -8,4 +8,4 @@ Review existing claims against their accepted task or parent exit conditions and
 
 ## Route findings
 
-Pass task-list reconciliation, including changed task scope, dependencies, or parentage after accepted steering and FEATURE-TASKS incorporation into TASKS, to **sdd-integrate-feature**. Pass unfinished implementation or completion-evidence gaps to **sdd-implement**. Report findings before selecting further work when they affect eligibility or dependencies.
+Pass task-list reconciliation, including feature-delta changes to task scope, dependencies, or parentage and FEATURE-TASKS incorporation into TASKS, to **sdd-integrate-feature**. Direct checkpoint amendments belong to human-commanded **sdd-steer**. Pass unfinished main implementation or completion-evidence gaps to **sdd-implement**. Report findings before selecting further work when they affect eligibility or dependencies.

@@ -1,11 +1,11 @@
 ---
 name: sdd-integrate-feature
-description: Use when incorporating accepted feature or change documents into the main PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, or layout documents, or reconciling TASKS and FEATURE-TASKS after accepted changes, including optional incorporation of FEATURE-TASKS into TASKS. Reconcile one selected document or a bounded set without requiring task-list changes.
+description: Use when incorporating accepted feature or change documents into the main PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, or layout documents, or reconciling TASKS and FEATURE-TASKS from accepted feature deltas, including optional incorporation of FEATURE-TASKS into TASKS. Reconcile one selected document or a bounded set without requiring task-list changes.
 ---
 
 # Integrate an accepted feature
 
-Read [feature incorporation](references/feature-incorporation.md) for the scoped reconciliation procedure. This skill owns incorporation of accepted feature deltas into main project documents and reconciliation of TASKS and FEATURE-TASKS within the requested scope, including task and dependency revisions after accepted steering and feature-list incorporation into TASKS. A request to reconcile one document does not authorize edits to the others. Review without mutation remains with the relevant focused skill.
+Read [feature incorporation](references/feature-incorporation.md) for the scoped reconciliation procedure. This skill owns incorporation of accepted feature deltas into main project documents and reconciliation of TASKS and FEATURE-TASKS within the requested scope, including feature-related task and dependency revisions and feature-list incorporation into TASKS. Direct human-commanded checkpoint amendments belong to **sdd-steer**, which updates existing documents without this integration step. A request to reconcile one document does not authorize edits to the others. Review without mutation remains with the relevant focused skill.
 
 Identify the requested target set before editing: PROJECT, ARCHITECTURE and its children, DECOMPOSITION and its children, SPEC and its children, PLAN and its children, layout and its children, TASKS, or FEATURE-TASKS. Reconcile any subset whose accepted source delta and main owner are established. Include TASKS or FEATURE-TASKS only when task-list reconciliation is requested or explicitly included in the coordinated scope. A document-only reconciliation can leave FEATURE-TASKS active; report its affected links or assumptions for later work.
 

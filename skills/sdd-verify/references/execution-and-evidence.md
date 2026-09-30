@@ -25,4 +25,4 @@ Reuse prior evidence only when its implementation state, environment, and condit
 
 Inspect resulting worktree changes to distinguish expected generated output from unexpected mutations. Preserve unrelated work and report unexplained changes; do not reset or clean the repository to conceal them. Temporary fixtures owned by this verification operation may be cleaned up when no longer needed.
 
-Return evidence facts and locations to **sdd-implement** and **sdd-report**, including unresolved failures and limitations. Preserve raw outputs or artifacts when the project requires them or they are needed to review a consequential claim. Use existing project evidence locations rather than introducing a mandatory journal or new report format.
+Return evidence facts and locations to the active implementation workflow (**sdd-implement** or **sdd-steer**) and **sdd-report**, including unresolved failures and limitations. Preserve raw outputs or artifacts when the project requires them or they are needed to review a consequential claim. Use existing project evidence locations rather than introducing a mandatory journal or new report format.

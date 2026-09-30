@@ -12,15 +12,15 @@ If the test passes immediately, determine whether it covers existing behavior, m
 
 ## GREEN
 
-Hand the failing scenario and observed evidence to **sdd-implement** for the smallest production change that satisfies the accepted contract. Run the focused test again and the relevant regression checks. If the test still fails, return the failure for repair. Do not weaken a valid assertion to make the implementation pass; correct an erroneous expectation only against independent contract evidence.
+Return the failing scenario and observed evidence to the active implementation workflow (**sdd-implement** or **sdd-steer**) for the smallest production change that satisfies the accepted contract. Run the focused test again and the relevant regression checks. If the test still fails, return the failure for repair. Do not weaken a valid assertion to make the implementation pass; correct an erroneous expectation only against independent contract evidence.
 
 Report every observed failure and significant warning. Distinguish new failures, established baseline failures, and environment problems where evidence permits; an unexplained failure remains unresolved. A focused green run does not establish that the whole suite passes.
 
 ## REFACTOR and repeat
 
-Improve test clarity and remove test duplication while preserving coverage. Hand production refactoring to **sdd-implement** within the accepted task scope. Re-run affected checks after changes; refactoring does not introduce new behavior. Repeat the cycle for remaining scenarios.
+Improve test clarity and remove test duplication while preserving coverage. Return production-refactoring needs to the active implementation workflow within the accepted task scope. Re-run affected checks after changes; refactoring does not introduce new behavior. Repeat the cycle for remaining scenarios.
 
-Return command and outcome evidence to **sdd-verify** and **sdd-implement** for the required boundary verification, including the declared full suite when project policy or the selected boundary requires it. Do not mark task completion from this development cycle alone.
+Return command and outcome evidence to **sdd-verify** and the active implementation workflow for the required boundary verification, including the declared full suite when project policy or the selected boundary requires it. Do not mark task completion from this development cycle alone.
 
 ## Interrupted or non-test-first work
 

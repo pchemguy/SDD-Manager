@@ -4,10 +4,10 @@ Inspect the failed command and relevant output before classifying it. Separate a
 
 | Classification | Evidence needed and handoff |
 | --- | --- |
-| Defect in the selected change | Reproduction or inspected evidence connects the failure to changed behavior; return the failure and affected condition to **sdd-implement**. |
+| Defect in the selected change | Reproduction or inspected evidence connects the failure to changed behavior; return the failure and affected condition to the active implementation workflow (**sdd-implement** or **sdd-steer**). |
 | Pre-existing failure | Applicable earlier evidence or a safe isolated baseline demonstrates the same failure before the change. Report it even if outside the selected repair scope. |
 | Environment problem | Evidence identifies a missing dependency, configuration, resource, service, platform, or other execution prerequisite. Report the blocked check and needed action. |
-| Test or fixture problem | Independent contract evidence shows that the check or fixture is incorrect; return the needed test review through **sdd-implement** to **sdd-tdd**. |
+| Test or fixture problem | Independent contract evidence shows that the check or fixture is incorrect; return the needed test review to the active implementation workflow for coordination with **sdd-tdd**. |
 | Unknown cause | Evidence is insufficient to distinguish the causes. Report the failure and uncertainty without calling it unrelated or pre-existing. |
 
 A baseline comparison must preserve the current worktree. Use an existing suitable result or an authorized isolated baseline when needed; do not reset dirty files to obtain one. Do not claim baseline equivalence when dependency or environment differences could explain the result.
@@ -16,4 +16,4 @@ Warnings, expected failures, flaky outcomes, and skips remain visible evidence. 
 
 When a requirement, expected result, or governing instruction is contradictory or unclear, identify the conflicting sources and affected condition for the user or coordinating workflow. Do not rewrite SPEC, PLAN, design, layout, or TASKS to make the verification pass. Independent selected checks may continue where their meaning remains sound.
 
-Return a concrete repair or investigation handoff: command, affected condition, observed failure, relevant state and evidence, classification and confidence, and missing information. Verification supplies evidence; **sdd-implement** decides task completion and coordinates repairs and subsequent verification.
+Return a concrete repair or investigation handoff: command, affected condition, observed failure, relevant state and evidence, classification and confidence, and missing information. Verification supplies evidence; The active implementation workflow decides completion and coordinates repairs and subsequent verification.
