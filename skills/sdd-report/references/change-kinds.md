@@ -16,19 +16,19 @@ Start with the actual outcome, reason, checks performed, and result. Select only
 
 If the project's PR style uses a kind icon, suitable optional title prefixes include `✨` feature, `🐛` bug fix, `🧹` code health, `⚡` performance, `🔒` security, `🧪` testing, `📝` documentation, and `🔧` build or tooling. Use the actual dominant change; an icon does not certify the work.
 
-These compact labels may help where the project accepts emoji headings or bullets:
+Use these labels when relevant to the requested report and the project's style:
 
-- 🎯 **What:** The actual or intended change.
-- 💡 **Why:** The underlying need or rule.
-- ✅ **Verification:** Commands, inspection, and outcomes actually observed.
-- ✨ **Result:** The supported effect, including limitations.
-- 📊 **Measured Improvement:** Baseline and current performance with method and environment, only when measured.
-
-## Kind-specific additions
-
-- ⚠️ **Risk** and 🛡️ **Solution** (security): impact, mitigation, remaining exposure, checks.
-- 📊 **Coverage** (testing): prior gap, added scenarios, evidence.
-- ⚡ **No meaningful gain** (performance): state upfront in PR or completion summary; give rationale.
+| Icon | Label | Domain | Description |
+| --- | --- | --- | --- |
+| 🎯 | What | | Actual or intended change. |
+| 💡 | Why | | Underlying need or governing rule. |
+| ✅ | Verification | | Commands, inspection, and outcomes actually observed. |
+| ✨ | Result | | Supported effect and limitations. |
+| 📊 | Measured Improvement | Performance | Baseline and current measurements, method, environment, and uncertainty; only when measured. |
+| ⚠️ | Risk | Security | Potential impact and remaining exposure. |
+| 🛡️ | Solution | Security | Mitigation, how it addresses the risk, and relevant checks. |
+| 📊 | Coverage | Testing | Prior gap, added scenarios, and coverage evidence. |
+| ⚡ | No meaningful gain | Performance | State upfront in a PR or completion summary; explain the rationale. |
 
 ## Examples
 
