@@ -14,7 +14,18 @@ Start with the actual outcome, reason, checks performed, and result. Select only
 | Build, packaging, or tooling | Affected environments, reproducibility, installation or build checks | Name platforms actually exercised and those still untested. |
 | Integration or migration | Cross-component effect, compatibility, transition and rollback conditions | Identify data or API assumptions and the checks that exercised them. |
 
-If the project's PR style uses a kind icon, suitable optional title prefixes include `✨` feature, `🐛` bug fix, `🧹` code health, `⚡` performance, `🔒` security, `🧪` testing, `📝` documentation, and `🔧` build or tooling. Use the actual dominant change; an icon does not certify the work.
+Optional PR title prefixes when the project uses kind icons:
+
+- ✨ Feature
+- 🐛 Bug fix
+- 🧹 Code health
+- ⚡ Performance
+- 🔒 Security
+- 🧪 Testing
+- 📝 Documentation
+- 🔧 Build or tooling
+
+Choose the dominant change; an icon does not certify the work.
 
 Use these labels when relevant to the requested report and the project's style:
 
