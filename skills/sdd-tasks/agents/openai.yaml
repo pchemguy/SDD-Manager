@@ -1,9 +1,9 @@
 interface:
   display_name: "SDD Tasks"
-  short_description: "Derive project and feature tasks and track progress"
+  short_description: "Derive task lists, select work, and review progress"
   icon_small: "./assets/icon.svg"
   icon_large: "./assets/icon.svg"
   brand_color: "#6954A1"
-  default_prompt: "Use $sdd-tasks to derive executable tasks, select a bounded range, or reconcile task progress."
+  default_prompt: "Use $sdd-tasks to derive executable task lists, select a bounded range, or review task progress."
 policy:
   allow_implicit_invocation: true
