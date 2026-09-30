@@ -40,11 +40,11 @@ The main design, SPEC, PLAN, and layout documents describe the intended system, 
 | `sdd-plan` | Define and review delivery strategy, phases, milestones, boundary verification, and physical ownership in separate PLAN and layout workflows, without task-level instructions. | **Included** |
 | `sdd-tasks` | Derive and maintain TASKS and scoped FEATURE-TASKS; select bounded work, update evidence-backed progress, and revise tasks after steering. | **Included** |
 | `sdd-integrate-feature` | Incorporate accepted feature deltas into selected main documents; optionally incorporate FEATURE-TASKS into TASKS without forcing task edits for document-only work. | **Included** |
+| `sdd-report` | Draft task issues, commit messages, PR descriptions, and evidence-backed task, milestone, or phase reports with change-kind-specific emphasis. | **Included** |
 | Verification | Derive direct, dependent, integration, and boundary checks from contracts; optionally maintain test routing; classify failures. | Planned |
 | Implementation | Execute the requested bounded range, verify each task, maintain in-code documentation, commit durable results, and stop for steering. | Planned |
 | Recovery | Inspect interrupted work and Git evidence before new tasks; continue when reliable or use a controlled reset that preserves unrelated work. | Planned |
 | Steering | Review checkpoint results, make focused corrections, analyze dependents, reconcile documents and tests, and pause before further work. | Planned |
-| Reporting | Give evidence-backed task, milestone, and phase reports with implemented-feature summaries; distinguish partial, blocked, and verified outcomes. | Planned |
 | In-code documentation | Review documentation after substantive code changes; use project conventions, Google style where applicable, and project-wide audits when requested. | Planned |
 | `sdd-forge` | Pass managed or directly supplied credentials to the selected backend; optionally project TASKS or active FEATURE-TASKS to GitHub phase labels, milestones, and task issues; resolve issue references and close verified task issues without transferring authority over completion. | **Included** (GitHub backend) |
 
