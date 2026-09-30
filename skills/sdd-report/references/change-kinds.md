@@ -26,24 +26,26 @@ These compact labels may help where the project accepts emoji headings or bullet
 - ⚠️ **Risk** and 🛡️ **Solution:** Security impact and mitigation without sensitive details.
 - 📊 **Coverage:** New scenarios or measured coverage with its source.
 
-The supplied `array.frombytes()` / `array.tobytes()` / `array.byteswap()` example illustrates a performance report: say what changed in encode and decode, why little-endian portability matters, and qualify measurements from a simulated big-endian local script as such. Record the reported times and speedup only if the current task has those actual results; never reuse an example's numbers as fresh evidence. The `common.py` → `fs.py` example illustrates code health: explain the module ownership rule, cite the layout update and exact checks, and describe the architecture result without claiming behavior changed. For security and testing work, emphasize **Risk/Solution** or **Gap/Coverage** respectively while still reporting verification limits.
+For security work, add **Risk** and **Solution** with remaining exposure and relevant checks. For testing work, add the previous **Gap** and new **Coverage** scenarios. For an optimization without a meaningful measured gain, say so near the beginning of its PR or completion summary and explain why the change is still proposed.
 
-## Illustrative completed summaries
+## Examples
 
-The following adapt the supplied examples as *format examples*, not evidence for the current project:
+These illustrate completed-summary formats. Their details are scenario-specific and must be replaced with evidence from the current task.
 
-```markdown
-- 🎯 **What:** Moved shared filesystem utilities from `common.py` into `fs.py` and updated the documented module owner.
-- 💡 **Why:** The layout assigns each module a focused responsibility and disallows generic dumping grounds.
-- ✅ **Verification:** Inspected layout links and references, then ran the relevant unit tests; include the actual command and result when reporting real work.
-- ✨ **Result:** Filesystem utility ownership is explicit; behavior preservation remains bounded by the checks performed.
-```
+### Code health
 
 ```markdown
-- 🎯 **What:** Replaced per-item `struct` conversion with `array` byte operations and a byte swap for big-endian hosts.
-- 💡 **Why:** The persisted values remain little-endian while avoiding slow per-item packing.
-- 📊 **Measured Improvement:** The supplied example reports decode from 0.154 s to 0.008 s (roughly 18×) and encode from 0.415 s to 0.013 s (roughly 30×) for one million values in an ad-hoc simulated big-endian script. These rounded figures and simulated conditions belong only to that example.
-- ✅ **Verification:** State the portability and round-trip checks actually run; the illustrative benchmark alone does not establish correctness.
+- 🎯 **What:** Renamed `common.py` to `fs.py` and documented its filesystem responsibility in the layout.
+- 💡 **Why:** The project assigns each module a focused owner and disallows generic dumping-ground modules.
+- ✅ **Verification:** Inspected the updated layout and references, ran layout checks, and passed `pytest tests/unit`.
+- ✨ **Result:** Shared filesystem utility ownership is explicit; the cited checks support behavior preservation within their scope.
 ```
 
-For an optimization without a meaningful measured gain, say so near the beginning of its PR or completion summary and explain why the change is still proposed. For a security fix, describe the risk, mitigation, and remaining exposure; for a testing change, identify the gap and newly exercised scenarios without inventing a coverage percentage.
+### Performance
+
+```markdown
+- 🎯 **What:** Used `array.frombytes()`, `array.tobytes()`, and `array.byteswap()` for little-endian unsigned 64-bit conversion.
+- 💡 **Why:** Big-endian hosts need the little-endian format without slow per-item packing and unpacking.
+- 📊 **Measured Improvement:** In an ad-hoc simulated big-endian run of one million values, decode fell from 0.154 s to 0.008 s (reported as roughly 18×), and encode from 0.415 s to 0.013 s (roughly 30×). The simulation and rounded values limit the claim.
+- ✅ **Verification:** The local timing script measured speed only; portability and round-trip correctness still need separate checks.
+```
