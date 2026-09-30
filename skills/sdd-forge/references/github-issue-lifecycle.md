@@ -4,7 +4,7 @@
 
 Given a stable task ID, resolve the intended GitHub repository and find the uniquely matching issue using the exact task prefix and `sdd-forge:task-id` marker. Check both open and closed issues and exclude pull requests. Return the repository, task ID, issue number, URL, and state to the invoking workflow. Do not rely on a remembered number, title substring alone, phase label, or milestone association alone. For several tasks, return each mapping independently; stop the affected operation on missing, duplicate, or conflicting matches.
 
-The implementation workflow owns the Git commit. Pass resolved issue references to its commit composer (or **sdd-report** when available), which can include `T-012` and `Refs owner/repo#123` in a title or body appropriate to the actual change. A commit may mention more than one issue if its verified change genuinely contributes to more than one task. A reference does not itself establish completion. Avoid `Fixes`, `Closes`, or `Resolves` keywords as a substitute for explicit verified closure: GitHub may close linked issues when a commit reaches the default branch, which is a different event from local task verification.
+The implementation workflow owns the Git commit. Pass resolved issue references and verified completion status to its commit composer (or **sdd-report** when available), which determines the message format. A commit may reference more than one issue when its verified change genuinely contributes to each. A reference does not itself establish completion. GitHub may close an issue referenced by a closing keyword when the commit reaches the default branch; reconcile verified task closure under the procedure below without waiting for that event.
 
 ## Close or reopen
 

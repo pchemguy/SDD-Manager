@@ -15,7 +15,7 @@ Return `title` and `body` separately. Format the title as `[<task-id>] <task tit
 
 Draft a short imperative subject naming the actual change and include the task ID. Use a body when the reason, verification, migration implications, or multiple issue references need explanation. Base it on the inspected diff and checks, not merely the task brief.
 
-Use `Refs owner/repo#123` for each verified association that the commit genuinely advances. Multiple references are allowed when the change actually contributes to several tasks. Omit the line when no issue is resolved. Do not use `Fixes`, `Closes`, or `Resolves` merely to trigger host automation; verified issue closure is a separate **sdd-forge** operation. If verification has not been run, say so in a proposed body rather than claiming it passed. The implementation workflow makes and checks the commit.
+Use `Refs owner/repo#123` when the commit advances an issue without completing it. Use `Fixes owner/repo#123`, `Resolves owner/repo#123`, or `Closes owner/repo#123` when the commit fully resolves that issue and the evidence supports completion. A commit may reference multiple issues, with a separate appropriate reference for each; omit issue references when no verified association exists. On GitHub, closing keywords may close an issue when the commit reaches the default branch. **sdd-forge** still reconciles issue closure after verified task completion, without waiting for that automation. If verification has not been run, say so in a proposed body rather than claiming it passed. The implementation workflow makes and checks the commit.
 
 ## Pull request
 
