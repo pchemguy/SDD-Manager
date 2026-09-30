@@ -6,7 +6,7 @@ This document records the plugin's intended capabilities, ownership, and present
 
 - A mutating workflow requires an eligible Git worktree. Read-only inspection and discussion may occur without Git. Repository initialization lies outside this plugin.
 - `sdd-manage` coordinates authorization, shared prerequisites, focused skills, work boundaries, and handoffs. Focused skills declare their prerequisites without implementing shared workflows.
-- Git commits provide durable implementation checkpoints. Recovery compares the last completed task commit with the owning checklist and pending changes, commits completed work, and pushes outstanding commits even when the worktree is clean. Dirty state alone does not require reset; reset policy and task isolation require design before implementation.
+- Git commits provide durable implementation checkpoints. Recovery compares the last completed task commit with the owning checklist and pending changes, then hands the identified task to `sdd-implement`. Before any other work, `sdd-implement` pushes all unpushed commits on the current branch to its established remote branch, even when the worktree is clean. Dirty state alone does not require reset; reset policy and task isolation require design before implementation.
 - Scripts are optional for deterministic, well-defined operations. External integrations are optional capabilities with explicit inputs, effects, and reconciliation rules.
 
 ## Document ownership
@@ -42,8 +42,8 @@ The main design, SPEC, PLAN, and layout documents describe the intended system, 
 | `sdd-integrate-feature` | Incorporate accepted feature deltas into selected main documents; optionally incorporate FEATURE-TASKS into TASKS without forcing task edits for document-only work. | **Included** |
 | `sdd-report` | Draft task issues, commit messages, PR descriptions, and evidence-backed task, milestone, or phase reports with change-kind-specific emphasis. | **Included** |
 | Verification | Derive direct, dependent, integration, and boundary checks from contracts; optionally maintain test routing; classify failures. | Planned |
-| Implementation | Execute the requested bounded range, verify each task, maintain in-code documentation, commit durable results, and stop for steering. | Planned |
-| `sdd-recover` | Identify interrupted work from task commits, the owning checklist, and pending changes; commit completed tasks, hand incomplete tasks back for implementation, push all outstanding commits even with a clean worktree, and reconcile hosted completion. | **Included** |
+| `sdd-implement` | Push all unpushed commits before any other work, regardless of worktree cleanliness; execute or resume the requested bounded range, verify and mark task completion, maintain in-code documentation, commit and push results, coordinate issue closure through `sdd-forge`, and stop for steering. | Planned |
+| `sdd-recover` | Inspect task commits, the owning checklist, pending changes, and existing evidence; identify completed work awaiting commit or incomplete work and provide a read-only handoff to `sdd-implement`. | **Included** |
 | Steering | Review checkpoint results, make focused corrections, analyze dependents, reconcile documents and tests, and pause before further work. | Planned |
 | In-code documentation | Review documentation after substantive code changes; use project conventions, Google style where applicable, and project-wide audits when requested. | Planned |
 | `sdd-forge` | Pass managed or directly supplied credentials to the selected backend; optionally project TASKS or active FEATURE-TASKS to GitHub phase labels, milestones, and task issues; resolve issue references and close verified task issues without transferring authority over completion. | **Included** (GitHub backend) |

@@ -1,9 +1,9 @@
 interface:
   display_name: "SDD Recover"
-  short_description: "Recover task work and finish commits and pushes"
+  short_description: "Identify interrupted tasks and hand off recovery"
   icon_small: "./assets/icon.svg"
   icon_large: "./assets/icon.svg"
   brand_color: "#94663C"
-  default_prompt: "Use $sdd-recover to identify the interrupted task, commit completed pending work, push all unpushed commits even if the worktree is clean, and reconcile issue closure."
+  default_prompt: "Use $sdd-recover to identify the interrupted task, distinguish completed pending work from incomplete work, and prepare a recovery handoff to sdd-implement."
 policy:
   allow_implicit_invocation: true
