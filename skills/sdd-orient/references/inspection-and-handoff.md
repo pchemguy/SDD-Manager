@@ -44,9 +44,19 @@ docs/dev/FEATURE-TASKS.md
 docs/dev/verification-map.json
 ```
 
-Also identify project-specific equivalents and other execution evidence when present. Do not modify or restore such state during orientation. Report active or contradictory evidence for the recovery workflow. Feature documents describe an intended delta; FEATURE-TASKS holds only scoped feature work and is not the complete task baseline. Inspect it with TASKS when establishing active work and progress.
+Also identify project-specific equivalents and other execution evidence when present. Do not modify or restore such state during orientation. Feature documents describe an intended delta; FEATURE-TASKS holds only scoped feature work and is not the complete task baseline. Inspect it with TASKS when establishing active work and progress.
 
 Inspect relevant source, tests, manifests, and declared commands for building, focused checks, integration checks, documentation checks, and packaging. Note unavailable tools without installing dependencies or executing commands with side effects. Use project instructions over guessed defaults.
+
+## Task state at startup
+
+When TASKS or an active FEATURE-TASKS exists, establish the implementation starting point:
+
+1. Find the latest completed task identified by a task commit and inspect its committed checklist and result. Later maintenance commits do not advance that task boundary. If no task has been committed, use the established preimplementation commit as the baseline.
+2. Compare the committed boundary with the owning working checklist and staged, unstaged, and untracked changes. If the last checked task is ahead of the last committed task, identify it as completed work awaiting commit; confirm that pending changes belong to it and existing completion evidence is present. Otherwise identify the current incomplete task from the selected execution order and changes since the boundary. Future unchecked tasks do not identify the interrupted task. If the tree is clean and the checklist agrees with the committed boundary, report no pending task changes.
+3. Include the task ID, owning list, last task commit, pending paths and ownership, existing verification evidence, and remaining work or ambiguity in the handoff to **sdd-implement**. It owns verification, completion, commits, pushes, and issue-closure coordination. Orientation observes existing evidence; it does not repeat implementation or run verification.
+
+Report ambiguous task identity, change ownership, or missing completion evidence without guessing. Git and the owning task list provide startup state; no separate transaction journal is required.
 
 ## Orientation report
 
@@ -57,7 +67,7 @@ Target: project root; Git root; contemplated paths or workflow
 Git: worktree eligibility; branch/detached/unborn; HEAD; relevant status and ownership
 Instructions: applicable sources, scope, and conflicts
 Documents: main roots and relevant children; active feature/change documents
-Execution evidence: TASKS and active FEATURE-TASKS/commits, other relevant state, and any unresolved discrepancy
+Execution evidence: owning TASKS or FEATURE-TASKS; last committed task and commit; current task and status; pending changes; existing verification evidence; remaining work or ambiguity
 Tooling: relevant declared commands and environment limitations
 Readiness: read-only possible; repository mutation eligible or blocked; reasons
 Handoff: scoped facts for the next skill; unknowns and checks to repeat

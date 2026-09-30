@@ -1,6 +1,6 @@
 ---
 name: sdd-orient
-description: Use when locating and inspecting a software project's repository before SDD work, checking Git worktree state, discovering governing instructions and development documents, or handing a scoped project orientation to an orchestrating agent. Read-only; report whether a proposed mutation has the required Git and authority baseline.
+description: Use when locating and inspecting a software project's repository before SDD work, checking Git worktree and interrupted-task state, discovering governing instructions and development documents, or handing a scoped project orientation to an orchestrating agent. Read-only; report whether a proposed mutation has the required Git and authority baseline.
 ---
 
 # Orient in a project
@@ -10,7 +10,7 @@ Establish a factual, scoped starting point before another SDD skill changes repo
 1. Establish the user's intended project path and proposed scope, if supplied. Distinguish the project root from its enclosing Git root; do not assume the current directory is the project.
 2. Identify applicable repository instructions, including root and path-scoped `AGENTS.md`, referenced policies, and project-designated sources. Inspect `docs/dev/PROJECT.md` for the project brief; if it contains operating instructions, preserve their applicability and report their scope and any conflict.
 3. Inspect Git, current branch or detached/unborn state, HEAD, worktree status, and changes affecting the intended paths. Git commands must not change the index, branch, working tree, or configuration.
-4. Discover present development documents and their focused children, the active feature or change context, relevant code and tests, and declared project commands. Inspect execution evidence only to the extent needed to identify an unresolved or ambiguous state; leave recovery and repair to their own workflow.
+4. Discover present development documents and their focused children, the active feature or change context, relevant code and tests, and declared project commands. When a task list exists, identify the last committed task and compare it with the owning checklist, pending changes, and existing verification evidence. Distinguish completed work awaiting commit from incomplete work; pass the identified state to **sdd-implement** for continuation.
 5. Produce the scoped orientation report. Separate observed facts from inferences and unknowns, identify concrete blockers, and state whether the Git prerequisite for a contemplated mutation is met. Re-orient when the project path, target scope, HEAD, instructions, or material worktree state changes.
 
 If the target is outside a usable Git worktree, mark **repository mutation blocked**. Do not initialize Git, create files, clean worktrees, restore files, run tests with side effects, commit, or invoke a mutating workflow. A conversational or read-only inspection may continue.

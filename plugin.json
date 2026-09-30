@@ -2,5 +2,5 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sdd-manager",
   "version": "0.8.0",
-  "description": "Git-based specification-driven development capabilities for orientation, design, specification, planning, layout, executable tasks, reporting, interrupted-task recovery, and optional hosted issue reconciliation."
+  "description": "Git-based specification-driven development capabilities for orientation, design, specification, planning, layout, executable tasks, reporting, startup task-state inspection, and optional hosted issue reconciliation."
 }
