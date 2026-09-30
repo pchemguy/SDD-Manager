@@ -4,9 +4,9 @@ Keep the same task identity across all outputs. Use the project-wide ID from its
 
 ## Task issue
 
-Return `title` and `body` separately. Use the `[<task-id>] <task title>` shape when the host backend requires the SDD ID prefix. Draft the body from the task outcome, reason and project context, expected scope and dependencies, objective acceptance and prescribed checks, and source document links. For a performance task, identify the measurement plan and baseline if established; do not promise a speedup as achieved. For a security task, state the affected guarantee and risk without exposing exploit instructions or credentials. Add kind-specific context only when supported by the task.
+Return `title` and `body` separately. Format the title as `[<task-id>] <task title>`, using the owning task list. Draft the body from the task outcome, reason and project context, expected scope and dependencies, objective acceptance and prescribed checks, and source document links. For a performance task, identify the measurement plan and baseline if established; do not promise a speedup as achieved. For a security task, state the affected guarantee and risk without exposing exploit instructions or credentials. Add kind-specific context only when supported by the task.
 
-Leave exact identity markers and backend-owned sections to **sdd-forge**. If the caller requests a GitHub-ready draft, accept its marker and section boundary from the backend and preserve them exactly. Never invent host labels, milestone associations, issue URLs, or resolution state.
+**sdd-report** owns the title and body format. Preserve an exact task identity marker when one is supplied. Never invent host labels, milestone associations, issue URLs, or resolution state.
 
 ## Git commit
 
