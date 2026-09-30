@@ -16,4 +16,4 @@ Warnings, expected failures, flaky outcomes, and skips remain visible evidence. 
 
 When a requirement, expected result, or governing instruction is contradictory or unclear, identify the conflicting sources and affected condition for the user or coordinating workflow. Do not rewrite SPEC, PLAN, design, layout, or TASKS to make the verification pass. Independent selected checks may continue where their meaning remains sound.
 
-Return a concrete repair or investigation handoff: command, affected condition, observed failure, relevant state and evidence, classification and confidence, and missing information. Verification supplies evidence; The active implementation workflow decides completion and coordinates repairs and subsequent verification.
+Return a concrete repair or investigation handoff: command, affected condition, observed failure, relevant state and evidence, classification and confidence, and missing information. Verification supplies evidence; the active implementation workflow decides completion and coordinates repairs and subsequent verification.

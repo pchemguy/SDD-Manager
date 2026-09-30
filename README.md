@@ -24,3 +24,5 @@ Invoke `sdd-manage` with a project objective and requested boundary. It starts w
 Preparation, integration, and review do not implicitly start implementation. Steering returns control to the human, who separately resumes the task list. Local workflows need no hosting credentials. Requested repository changes are verified, committed, and pushed according to the established policy; hosted results are reported separately.
 
 See the coordinator's [workflow catalog](skills/sdd-manage/references/workflows.md) for entry conditions and stopping points.
+
+The [plugin review](docs/dev/PLUGIN-REVIEW.md) records the reviewed scope, corrections, verification evidence, and remaining runtime validation limits.

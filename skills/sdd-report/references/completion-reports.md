@@ -12,6 +12,6 @@ Summarize the actual capabilities delivered across constituent tasks, rather tha
 
 ## Interrupted or limited evidence
 
-For an interrupted task or unavailable check, state the last trusted Git state, observed dirty or staged work, checks completed and not completed, and the exact blocker. Do not infer that a half-written commit or test log finished the task. Recovery decisions belong to the recovery workflow; this skill summarizes its evidence. If a performance result is statistically inconclusive, a security fix has only partial regression coverage, or a test run excludes a required suite, make that limit visible in the result.
+For an interrupted task or unavailable check, state the last trusted Git state, observed dirty or staged work, checks completed and not completed, and the exact blocker. Do not infer that a half-written commit or test log finished the task. **sdd-orient** identifies interrupted task state, **sdd-manage** coordinates scope, and **sdd-implement** owns continuation; this skill summarizes their evidence. If a performance result is statistically inconclusive, a security fix has only partial regression coverage, or a test run excludes a required suite, make that limit visible in the result.
 
 Use the kind-specific sections in [change kinds](change-kinds.md) where they materially explain the outcome. Keep source attribution near claims: task and document sections for intended behavior; command/output and commits for observed behavior. Do not create a second progress journal or alter TASKS while drafting a report.
