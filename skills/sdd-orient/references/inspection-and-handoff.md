@@ -11,14 +11,14 @@ Use this reference for read-only orientation. Collect enough evidence for the co
 
 ## Git evidence
 
-Use Git's read-only commands or their equivalent on the host. For example, from the candidate project path:
+Use Git's inspection commands with optional writes suppressed. Plain `git status` can refresh index metadata even when file contents are unchanged. Apply `git --no-optional-locks` to each inspection command, or scope `GIT_OPTIONAL_LOCKS=0` to the inspection process; do not change repository or global configuration. For example, from the candidate project path:
 
 ```text
-git rev-parse --is-inside-work-tree
-git rev-parse --show-toplevel
-git symbolic-ref --quiet --short HEAD
-git rev-parse --verify HEAD
-git status --porcelain=v1 --untracked-files=all
+git --no-optional-locks rev-parse --is-inside-work-tree
+git --no-optional-locks rev-parse --show-toplevel
+git --no-optional-locks symbolic-ref --quiet --short HEAD
+git --no-optional-locks rev-parse --verify HEAD
+git --no-optional-locks status --porcelain=v1 --untracked-files=all
 ```
 
 Distinguish a Git worktree from a bare repository, a Git directory outside the target project, or a path with no Git. Record branch or detached state; record an unborn HEAD explicitly. Note staged, unstaged, untracked, deleted, renamed, conflicted, and submodule changes where present. Scope status to the project and anticipated target paths without concealing relevant parent-level or shared files.

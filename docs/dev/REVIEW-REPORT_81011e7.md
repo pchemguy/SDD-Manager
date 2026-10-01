@@ -8,7 +8,7 @@
 | Plugin version at baseline | `0.14.1` |
 | Review plan | [REVIEW-PLAN_81011e7.md](REVIEW-PLAN_81011e7.md) |
 | Historical review | [PLUGIN-REVIEW_49143fa.md](reviews/PLUGIN-REVIEW_49143fa.md) |
-| Campaign state | Complete review coverage; one open defect and one optional recommendation; source unrevised |
+| Campaign state | Baseline review complete; follow-up R01 verified, R02 pending |
 | Review execution date / reviewer | 2026-10-01; primary agent with consuming-agent scenario assessments |
 | Evidence boundary | Fixed source baseline; individual evidence levels recorded below; no live provider/client mutation |
 
@@ -16,16 +16,16 @@ The source baseline is fixed. Report commits can advance the working branch with
 
 ## Executive summary
 
-Reviewed all **15 skills**, **180 criterion rows**, and **95 baseline files**. Completed package validation and cross-skill synthesis; recorded **21 scenario sets**, including consuming-agent dispositions and executable local Git/testing fixtures. Every skill report was committed and pushed before the next skill; P01/P02 followed the same gate. Source skills, README, manifest, and capability map remain unchanged.
+Reviewed all **15 skills**, **180 criterion rows**, and **95 baseline files**. Completed package validation and cross-skill synthesis; recorded **21 scenario sets**, including consuming-agent dispositions and executable local Git/testing fixtures. Every skill report was committed and pushed before the next skill; P01/P02 followed the same gate. The review phase left source skills, README, manifest, and capability map unchanged. Subsequent source revisions are recorded separately in the follow-up section.
 
-| Open priority | Defects | Recommendations | IDs / disposition |
+| Baseline priority | Defects | Recommendations | IDs / baseline disposition |
 | --- | --- | --- | --- |
 | P0 | 0 | 0 | None identified in examined scope. |
 | P1 | 0 | 0 | None identified in examined scope. |
 | P2 | 1 | 0 | SDD-R-001: orientation's plain status example refreshes index metadata despite its read-only invariant. Revise before claiming that invariant. |
 | P3 | 0 | 1 | SDD-R-002: clarify durable checked-task invalidation handoff. Optional responsibility decision; no false completion reproduced. |
 
-**Readiness:** The packaged workflow responsibilities and stopping boundaries are coherent under the exercised cases, with one confirmed read-only Git defect outstanding. Structural validation reports zero errors/warnings but does not establish autonomous client execution, production acceptance, secure credential channels, or live GitHub reconciliation. No global correctness or production-readiness approval is made.
+**Readiness at the reviewed baseline:** The packaged workflow responsibilities and stopping boundaries are coherent under the exercised cases, with one confirmed read-only Git defect outstanding. Structural validation reports zero errors/warnings but does not establish autonomous client execution, production acceptance, secure credential channels, or live GitHub reconciliation. No global correctness or production-readiness approval is made.
 
 **Revision order:** Fix SDD-R-001 and recheck index preservation; separately decide whether to adopt SDD-R-002, then test a fresh-session stale-task continuation. Neither requires a new journal, recovery skill, mandatory issue map, or provider dependency. Independent pinned TDD upstream verification remains blocked; external/client checks are evidence limits, not established source defects.
 
@@ -558,11 +558,11 @@ Each unit accounts for C01–C12, inspected files, contracts, scenarios and find
 
 ## Global finding index
 
-Finding IDs are global and stable. Open source defects and optional recommendations are distinguished below; unavailable external checks are recorded separately.
+Finding IDs are global and stable. The index shows current follow-up dispositions; original baseline evidence and coverage are preserved. Unavailable external checks are recorded separately.
 
 | ID | Title | Type | Priority | Status | Units / criteria | Related IDs |
 | --- | --- | --- | --- | --- | --- | --- |
-| SDD-R-001 | Orientation status example can mutate the index | Defect | P2 | Open | S02 / C07 | None |
+| SDD-R-001 | Orientation status example can mutate the index | Defect | P2 | Verified | S02 / C07 | None |
 | SDD-R-002 | Clarify durable handoff for invalidated checked tasks | Recommendation | P3 | Open | S11, S13 / C04, C05 | None |
 
 ## Finding records
@@ -573,7 +573,7 @@ Canonical finding records below preserve baseline evidence and objective revisio
 
 | Field | Value |
 | --- | --- |
-| Type / priority / status | Defect / P2 / Open |
+| Type / priority / status | Defect / P2 / Verified |
 | Units / criteria / category | S02 / C07 / Git / read-only contract |
 | Affected baseline locations | skills/sdd-orient/SKILL.md:8,12; references/inspection-and-handoff.md:14–21 at 81011e7 |
 | Confidence | High: executed disposable Git fixture reproduced the mutation with unchanged content and clean status |
@@ -582,7 +582,7 @@ Canonical finding records below preserve baseline evidence and objective revisio
 | Recommended correction | Make inspection commands suppress optional Git writes, using git --no-optional-locks or a scoped GIT_OPTIONAL_LOCKS=0 environment. Preserve host portability and explain that read-only means no index refresh. |
 | Recheck | On a disposable committed repo with tracked-file metadata changed but identical content, orientation reports clean status without changing index bytes; verify staged/unstaged/conflicted reporting still works. |
 | Related IDs | None |
-| Revision disposition | Not revised; source held at 81011e7. |
+| Revision disposition | R01: optional Git writes suppressed in entry and all inspection examples. Source-derived command fixtures passed seven states with no repository-byte changes; plain clean-status control still refreshed index. Skill validator exit 0. Commit identified by SDD-R-001 subject; push gate before R02. |
 
 ### SDD-R-002 — Clarify durable handoff for invalidated checked tasks
 
@@ -650,3 +650,16 @@ The confirmed fix and optional clarification are independent. This findings-only
 | Review persistence | One report commit per skill, then P01/P02/P03; all pushed using established saved GitHub credential before dependent work/delivery. | This authenticates/persists the review; it is not a credential-storage or GitHub API workflow test. |
 
 No baseline files remain uninspected and no review unit remains unstarted. Source fixes and optional clarification remain for the revision agent; external/runtime validation remains separate from this completed review coverage.
+
+## Source revision follow-up
+
+This section records revisions after the completed fixed-baseline review. Original findings, scenario IDs, and baseline coverage above remain historical evidence; follow-up checks apply to the revised source only.
+
+### R01 — SDD-R-001
+
+- **Disposition:** Verified in the local test environment.
+- **Changed source:** `skills/sdd-orient/SKILL.md` and `references/inspection-and-handoff.md`: command-scoped suppression of optional Git writes; no repository or global configuration change.
+- **Executed check:** `python /tmp/verify_revised_orientation.py` reads and runs the five actual documented commands in seven disposable fixtures; exit 0. Clean-mtime, staged, unstaged, and conflicted commands all exited 0 with accurate status. Unborn HEAD verification exited 128, detached symbolic-ref exited 1, and non-Git commands exited 128 as expected. Full repository-file byte snapshots remained identical for every guarded inspection. A plain clean-status control exited 0 with empty output but changed index bytes.
+- **Structural check:** `validate_skill.py skills/sdd-orient` exited 0. Heading and relative-link checks passed before commit.
+- **Persistence:** Commit subject identifies SDD-R-001; push and remote containment must succeed before R02.
+- **Limit:** Local Git fixture evidence; no claim of client installation or cross-platform execution.
