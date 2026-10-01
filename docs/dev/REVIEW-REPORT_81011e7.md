@@ -27,7 +27,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S03 | sdd-report | Reviewed | None in examined scope | Commit subject identifies S03; push gate before next unit |
 | S04 | sdd-design | Reviewed | None in examined scope | Commit subject identifies S04; push gate before next unit |
 | S05 | sdd-specify | Reviewed | None in examined scope | Commit subject identifies S05; push gate before next unit |
-| S06 | sdd-plan | Not started | Not assessed | None |
+| S06 | sdd-plan | Reviewed | None in examined scope | Commit subject identifies S06; push gate before next unit |
 | S07 | sdd-tasks | Not started | Not assessed | None |
 | S08 | sdd-tdd | Not started | Not assessed | None |
 | S09 | sdd-docs | Not started | Not assessed | None |
@@ -187,7 +187,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S06 — sdd-plan
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-plan/SKILL.md`; `skills/sdd-plan/agents/openai.yaml`; `skills/sdd-plan/assets/icon.svg`; `skills/sdd-plan/references/delivery-plan.md`; `skills/sdd-plan/references/physical-layout.md`; `skills/sdd-plan/references/review.md`. No files excluded.
+**Relevant contracts:** Consumes accepted design/SPEC plus actual placement evidence; owns delivery strategy and physical layout, optional FEATURE-PLAN; tasks derives units and integrate-feature incorporates accepted delta.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Six resources and routing/metadata checks passed. |
+| C02 | Satisfied | PLAN/layout separate; focused scope does not rewrite the other. |
+| C03 | Satisfied | Material upstream choices return to owner; authoring requires manage/orient scope. |
+| C04 | Satisfied | Tasks consumes accepted strategy and layout; integration separate from direct correction. |
+| C05 | Satisfied | Objective phase/milestone exits, canonical children, optional feature strategy and physical ownership explicit. |
+| C06 | Satisfied | Meaningful stopping boundaries specified for downstream execution, without executing tasks. |
+| C07 | Satisfied | Review-only has no edits; authoring restricted to authorized paths. |
+| C08 | Not applicable | No hosted credentials or execution. |
+| C09 | Satisfied | Boundary evidence planned without claiming checks run; consumer flagged vague exit without inventing target. |
+| C10 | Satisfied | Intended paths differ from observed existence; proposed strategy not implementation. |
+| C11 | Satisfied | Strategy then ownership then consistency; root/child instructions scoped and navigable. |
+| C12 | Satisfied | Main PLAN/layout end state separated from active transition delta and real compatibility obligations. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-plan` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-007: consumer withheld dependent planning for unresolved SPEC/design, reused valid existing feature strategy, flagged unobservable exit and SPEC-removal conflict without inventing decisions.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S06 in its subject, push, and verify containment before advancing.
 
 ### S07 — sdd-tasks
 
@@ -278,6 +302,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-004 | S03 / drafts and status | Unmeasured performance T-012; partial T-013 with verified #123 but no checks; unassigned README; uncommitted task; PR unknown base | No promised achieved speedup or invented identity/checks; partial Refs; pending commit; unknown base disclosed | Read-only consuming-agent draft/disposition | Future benchmark plan only; partial contribution uses Refs and discloses unrun checks; taskless README has no invented ID; pending commit is not completed; unknown PR base and missing diff remain unstated | Drafts only; actual task/branch diff not supplied, so missing details must remain explicit |
 | SC-005 | S04 / design scope and authority | Compare seed architecture; decomposition-only with unsettled errors; replace instruction-bearing PROJECT; behavioral-only feature; code conflicts with accepted decision | No incidental writing/overlays; material unknowns and instruction/decision conflicts resolved before dependent mutation | Read-only consuming-agent assessment | Conversation only for comparison; decomposition can preserve nonmaterial error details for SPEC; preserve PROJECT rules before replacement; no architecture overlay when boundaries unchanged; accepted-decision conflict requires resolution | No documents written; materiality of unsettled errors requires actual project evidence |
 | SC-006 | S05 / specification authority and scope | Parser/design conflict; one-contract feature; review only; undecided errors; divergent duplicate root/child signatures | No code-to-requirement promotion, unrelated rewrites or guessed public behavior; resolve ownership and decisions | Read-only consuming-agent assessment | Resolved decisions required before affected authoring; FEATURE-SPEC references unaffected nodes; review remained read-only; errors block final contract; duplicate interface needs canonical accepted signature | No actual project documents or mutations; hypothetical conflict resolution needs user/project evidence |
+| SC-007 | S06 / planning scope and exits | PLAN-only unresolved SPEC; feature fits current plan/layout; layout-only uncertain component; vague performance exit; PLAN removes SPEC-required behavior | Respect focused scope, upstream ownership, optionality and measurable exits | Read-only consuming-agent assessment | No automatic layout/PLAN crossover; no ceremonial FEATURE-PLAN; material uncertainties returned upstream; vague milestone and removal conflict reported; no invented acceptance thresholds | No documents changed; actual adequacy of existing strategy and materiality need project evidence |
 
 ## Revision queue and human decisions
 
