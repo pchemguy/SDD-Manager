@@ -24,7 +24,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | --- | --- | --- | --- | --- |
 | S01 | sdd-conventions | Reviewed | None in examined scope | Commit subject identifies S01; push gate before next unit |
 | S02 | sdd-orient | Reviewed | SDD-R-001 | Commit subject identifies S02; push gate before next unit |
-| S03 | sdd-report | Not started | Not assessed | None |
+| S03 | sdd-report | Reviewed | None in examined scope | Commit subject identifies S03; push gate before next unit |
 | S04 | sdd-design | Not started | Not assessed | None |
 | S05 | sdd-specify | Not started | Not assessed | None |
 | S06 | sdd-plan | Not started | Not assessed | None |
@@ -103,7 +103,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S03 — sdd-report
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-report/SKILL.md`; `skills/sdd-report/agents/openai.yaml`; `skills/sdd-report/assets/icon.svg`; `skills/sdd-report/references/change-kinds.md`; `skills/sdd-report/references/completion-reports.md`; `skills/sdd-report/references/object-drafts.md`. No files excluded.
+**Relevant contracts:** Consumes owning task, diff, verification and Git evidence; forge supplies unique associations. Owns draft format only; implementation/steering or manage persists changes, forge mutates issues, PR operations remain outside current backend.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | All six skill files checked, directly linked output-specific references and metadata valid. |
+| C02 | Satisfied | SKILL.md limits effects to requested text/structured drafts; labels adapt to the actual change. |
+| C03 | Satisfied | A draft grants no mutation/completion authority and project conventions are read as inputs. |
+| C04 | Satisfied | Forge supplies verified associations when available; object-drafts.md assigns other persistence to manage and active implementation. |
+| C05 | Satisfied | Stable owning IDs required for task work; explicit no-invented-ID exception for taskless preparation; feature parent claims are scoped. |
+| C06 | Satisfied | completion-reports.md names orient/manage/implement for interrupted state and reports pending commits separately. |
+| C07 | Satisfied | Partial Refs versus supported closing keywords, draft-only PR scope, and branch integration distinction are explicit. |
+| C08 | Not applicable | No credential acceptance or provider endpoint execution; credential disclosure prohibited in security reporting. |
+| C09 | Satisfied | Evidence language requires actual checks, measurements, missing reproduction, and coverage limits; consuming scenarios assessed these distinctions. |
+| C10 | Satisfied | Planned issue, performed change, verified result, pending durable commit, and unknown PR base remain separate. |
+| C11 | Satisfied | Output routing and domain tables are concise, separate Risk/Solution and adjacent performance fields; examples at the end of their modules. |
+| C12 | Satisfied | Examples are explicitly illustrative and cannot supply current measurements; no stale recovery owner remains. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-report` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-004: consuming agent drafts/assesses planned performance, partial issue contribution, taskless README, checked-but-uncommitted completion, and PR with unknown base/limited verification. No publication or runtime checks performed.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S03 in its subject, push, and verify containment before advancing.
 
 ### S04 — sdd-design
 
@@ -203,6 +227,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-001 | S01 / conventions | Three cohesive functions with hypothetical consumer; duplicate T-012 across main/feature; milestone2.2 under two phases | Proportionate criteria; block ambiguous identities/parentage without performing hosted effects | Read-only consuming-agent assessment | No speculative interface; both malformed projections blocked; authority decision deferred | No actual refactor or host call; supplied structures assessed, not a complete project |
 | SC-002 | S02 / orientation | Non-Git; unborn; monorepo rule conflict; checked T-002 ahead of T-001 commit; steering commit; detached/conflicted | Report factual readiness/unknowns and task ownership; no tests, reset, initialization, or verification | Read-only consuming-agent assessment | Non-Git/unborn/conflicts block ordinary mutation; scoped rule conflict deferred; T-002 pending-complete or incomplete inferred only with ownership/evidence; detached state reported without inventing universal permission | Supplied states rather than filesystem inspection of a real project |
 | SC-003 | S02 / read-only Git | Disposable main branch; one committed unchanged file; advance tracked file mtime by 5 seconds | Index bytes preserved by orientation's read-only command example | Executed local fixture: git status --porcelain=v1 --untracked-files=all; repeat with GIT_OPTIONAL_LOCKS=0; commands exited 0 | Both status outputs empty; plain run changed index bytes, guarded run did not | SDD-R-001; metadata refresh observed, not staged-content corruption |
+| SC-004 | S03 / drafts and status | Unmeasured performance T-012; partial T-013 with verified #123 but no checks; unassigned README; uncommitted task; PR unknown base | No promised achieved speedup or invented identity/checks; partial Refs; pending commit; unknown base disclosed | Read-only consuming-agent draft/disposition | Future benchmark plan only; partial contribution uses Refs and discloses unrun checks; taskless README has no invented ID; pending commit is not completed; unknown PR base and missing diff remain unstated | Drafts only; actual task/branch diff not supplied, so missing details must remain explicit |
 
 ## Revision queue and human decisions
 
