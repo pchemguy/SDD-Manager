@@ -16,9 +16,16 @@ When a selected target depends on a still-unaccepted decision in another concern
 
 When TASKS or FEATURE-TASKS is selected, reconcile the accepted changes in its owning list; this need not incorporate the feature list into TASKS.
 
-For an accepted feature delta, compare the intended final SPEC, design, PLAN, and layout with existing work, TASKS, and any active feature documents and FEATURE-TASKS. Revise affected tasks and dependency edges, remove obsolete uncompleted work, add necessary corrective work, and re-evaluate previously checked items whose acceptance has changed. Keep unaffected completed work and stable IDs. Revise an active feature list within its scope; revise main TASKS when the accepted end state changes its complete hierarchy. Do not leave a chronological amendment section or a list of discarded approaches in the main TASKS; Git retains that history. Preserve evidence for an implemented capability that was later removed in Git, while the current checklist describes only work required for the accepted end state.
+For an accepted feature delta, compare the intended final SPEC, design, PLAN, and layout with existing work, TASKS, and any active feature documents and FEATURE-TASKS. Revise affected tasks and dependency edges, remove obsolete uncompleted work, add necessary corrective work, and identify previously checked items whose acceptance has changed. Keep unaffected completed work and stable IDs. Revise an active feature list within its scope; revise main TASKS when the accepted end state changes its complete hierarchy. Do not leave a chronological amendment section or a list of discarded approaches in the main TASKS; Git retains that history. Preserve evidence for an implemented capability that was later removed in Git, while the current checklist describes only work required for the accepted end state.
 
-If the feature is withdrawn, preserve Git history and resolve the disposition of completed work before removing its task list. Task execution and completion verification belong to **sdd-implement**; reconciliation preserves evidence-backed status and flags changed acceptance for its review.
+When changed acceptance makes a checked task or parent claim stale:
+
+- Record **Completion reassessment pending** beneath the affected owning entry, or in its existing linked evidence location, only when that location is in the edit scope. Identify the stable task or parent ID, changed acceptance and authoritative source, prior evidence whose scope no longer suffices, and required reassessment.
+- Preserve the checkbox and previous evidence. The pending note makes the checked claim disputed; it is not current completion evidence. **sdd-implement** owns acceptance reassessment and checkbox correction. Direct checkpoint amendments retain **sdd-steer** ownership.
+- Keep the note with the owning entry during task transfer. Preserve prior evidence as historical, and flag affected checked parent claims without inferring whole-project completion from feature results.
+- If the owning list or evidence location is outside scope, report the deferred reassessment and needed edit scope without adding a note there or changing its status. Do not invoke implementation or change hosted state from the finding.
+
+If the feature is withdrawn, preserve Git history and resolve the disposition of completed work before removing its task list. Task execution and completion verification belong to **sdd-implement**; reconciliation preserves evidence and the durable pending-reassessment notes for its review.
 
 ## Scope and cleanup
 

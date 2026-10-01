@@ -8,7 +8,7 @@
 | Plugin version at baseline | `0.14.1` |
 | Review plan | [REVIEW-PLAN_81011e7.md](REVIEW-PLAN_81011e7.md) |
 | Historical review | [PLUGIN-REVIEW_49143fa.md](reviews/PLUGIN-REVIEW_49143fa.md) |
-| Campaign state | Baseline review complete; follow-up R01 verified, R02 pending |
+| Campaign state | Baseline review complete; follow-up R01 and R02 verified; final validation pending |
 | Review execution date / reviewer | 2026-10-01; primary agent with consuming-agent scenario assessments |
 | Evidence boundary | Fixed source baseline; individual evidence levels recorded below; no live provider/client mutation |
 
@@ -502,7 +502,7 @@ Each unit accounts for C01–C12, inspected files, contracts, scenarios and find
 
 **Fresh historical rechecks:** S07/S11 assessed unique task ownership; S03/S15 assessed taskless messages and current continuation owners; S12/S13 assessed older issue backlog; SC-016 actually exercised shared-path isolation, ordinary-index reconciliation, unrelated preservation and bare-remote push. Historical results were not reused as current measurements.
 
-**Findings:** No new structural/discovery defect in examined scope. SDD-R-001 remains open and is unaffected by passing package checks. Full target-client installation/display, autonomous multi-stage execution, real credential channels and live GitHub writes remain unverified. Independent pinned TDD upstream retrieval was blocked; no package-level provenance success is claimed.
+**Findings at the reviewed baseline:** No new structural/discovery defect in examined scope. SDD-R-001 remains open and is unaffected by passing package checks. Full target-client installation/display, autonomous multi-stage execution, real credential channels and live GitHub writes remain unverified. Independent pinned TDD upstream retrieval was blocked; no package-level provenance success is claimed.
 
 **Checkpoint:** `a50c088837eeaed33d5ec2b3e7bca3ae31dc9628`; pushed and remote-tip equality verified before the next pass.
 
@@ -548,7 +548,7 @@ Each unit accounts for C01–C12, inspected files, contracts, scenarios and find
 
 **Status:** Reviewed. All S01–S15 and P01–P02 are covered and pushed. All 180 C01–C12 rows have an outcome and rationale, all 95 fixed-baseline files are accounted for, all 21 scenario IDs are unique, and both stable finding IDs have canonical records and index/coverage references. No source fixes were performed.
 
-**Consistency checks:** Finding counts, priorities, types and queue reconcile. SDD-R-001 remains Open despite candidate-guard experiments; SDD-R-002 remains an optional Recommendation despite coherent conservative interpretation. Unit statuses mean reviewed coverage, not corrected source. Individual checkpoints identify their report commits, which were pushed before dependent review; this final checkpoint is discoverable by its P03 commit subject and final remote containment check.
+**Baseline consistency checks:** Finding counts, priorities, types and queue reconcile. SDD-R-001 remains Open despite candidate-guard experiments; SDD-R-002 remains an optional Recommendation despite coherent conservative interpretation. Unit statuses mean reviewed coverage, not corrected source. Individual checkpoints identify their report commits, which were pushed before dependent review; this final checkpoint is discoverable by its P03 commit subject and final remote containment check.
 
 **Skipped/unavailable operations:** Pinned upstream GitHub/raw provenance retrieval returned DisabledError (S08 C12 Blocked). pytest was absent, so the local runner fixture used available stdlib unittest instead; no installation occurred. No target-client installation/display, full autonomous project implementation, actual code-reduction acceptance, production credential-store/channel exercise, live GitHub write, rate-limit/concurrency test or real cross-platform campaign was performed. These exclusions limit readiness claims; they do not establish bugs or waive a project's own required acceptance.
 
@@ -563,11 +563,11 @@ Finding IDs are global and stable. The index shows current follow-up disposition
 | ID | Title | Type | Priority | Status | Units / criteria | Related IDs |
 | --- | --- | --- | --- | --- | --- | --- |
 | SDD-R-001 | Orientation status example can mutate the index | Defect | P2 | Verified | S02 / C07 | None |
-| SDD-R-002 | Clarify durable handoff for invalidated checked tasks | Recommendation | P3 | Open | S11, S13 / C04, C05 | None |
+| SDD-R-002 | Clarify durable handoff for invalidated checked tasks | Recommendation | P3 | Verified | S11, S13 / C04, C05 | None |
 
 ## Finding records
 
-Canonical finding records below preserve baseline evidence and objective revision checks. Source corrections remain unperformed during this campaign.
+Canonical finding records below preserve baseline evidence and objective revision checks. Current dispositions reflect the source revision follow-up below; the original review did not amend source.
 
 ### SDD-R-001 — Orientation status example can mutate the index
 
@@ -582,13 +582,13 @@ Canonical finding records below preserve baseline evidence and objective revisio
 | Recommended correction | Make inspection commands suppress optional Git writes, using git --no-optional-locks or a scoped GIT_OPTIONAL_LOCKS=0 environment. Preserve host portability and explain that read-only means no index refresh. |
 | Recheck | On a disposable committed repo with tracked-file metadata changed but identical content, orientation reports clean status without changing index bytes; verify staged/unstaged/conflicted reporting still works. |
 | Related IDs | None |
-| Revision disposition | R01: optional Git writes suppressed in entry and all inspection examples. Source-derived command fixtures passed seven states with no repository-byte changes; plain clean-status control still refreshed index. Skill validator exit 0. Commit identified by SDD-R-001 subject; push gate before R02. |
+| Revision disposition | R01: optional Git writes suppressed in entry and all inspection examples. Source-derived command fixtures passed seven states with no repository-byte changes; plain clean-status control still refreshed index. Skill validator exit 0. Commit e6bedf8adcb0b81dd0b1d4203dc5c626c866a3db pushed; remote-tip equality verified before R02. |
 
 ### SDD-R-002 — Clarify durable handoff for invalidated checked tasks
 
 | Field | Value |
 | --- | --- |
-| Type / priority / status | Recommendation / P3 / Open |
+| Type / priority / status | Recommendation / P3 / Verified |
 | Units / criteria / category | S11, S13, P02 / C04, C05 / task-status handoff clarity |
 | Affected baseline locations | `skills/sdd-integrate-feature/references/feature-incorporation.md:19–21`; `skills/sdd-implement/references/range-selection.md:3–5`; `skills/sdd-implement/references/task-execution.md:20` |
 | Confidence | High that the exact integration-side action is unspecified; Medium practical risk. No false-completion outcome reproduced. |
@@ -597,7 +597,7 @@ Canonical finding records below preserve baseline evidence and objective revisio
 | Recommended correction | Define the existing owner's invalidation action and durable reassessment handoff within the selected task list/evidence. Preserve the user-established implementation completion ownership, stable IDs and historical evidence; do not add a journal. State whether integration can uncheck invalid claims or records a scoped pending-reassessment note for implement. This responsibility choice requires acceptance rather than being silently imposed. |
 | Recheck | Integrate a changed accepted contract for a previously checked/committed task, stop, and resume in a fresh consumer. It identifies the stale claim without chat history, does not skip affected work or claim current acceptance, preserves old evidence as historical, and changes status only through the defined owner. |
 | Related IDs | None; independent of SDD-R-001. |
-| Revision disposition | Not revised; optional clarification for subsequent agent/human decision. Source held at 81011e7. |
+| Revision disposition | R02: accepted task-local Completion reassessment pending protocol; integration preserves status/evidence, orientation and selection expose disputed claims, implementation owns correction. Fresh main/feature/out-of-scope consumers and an actual RED/GREEN implementation fixture passed; see R02 follow-up. |
 
 ## Scenario register
 
@@ -649,7 +649,7 @@ The confirmed fix and optional clarification are independent. This findings-only
 | Provider documentation | Current official issue/label/milestone REST references inspected; manifest schema retrieved. | No provider writes/auth/rate-limit/concurrency exercise; pinned TDD upstream independently unavailable. |
 | Review persistence | One report commit per skill, then P01/P02/P03; all pushed using established saved GitHub credential before dependent work/delivery. | This authenticates/persists the review; it is not a credential-storage or GitHub API workflow test. |
 
-No baseline files remain uninspected and no review unit remains unstarted. Source fixes and optional clarification remain for the revision agent; external/runtime validation remains separate from this completed review coverage.
+No baseline files remain uninspected and no review unit remains unstarted. Both source revisions are verified in the follow-up below; external/runtime validation remains separate from this completed review coverage.
 
 ## Source revision follow-up
 
@@ -661,5 +661,16 @@ This section records revisions after the completed fixed-baseline review. Origin
 - **Changed source:** `skills/sdd-orient/SKILL.md` and `references/inspection-and-handoff.md`: command-scoped suppression of optional Git writes; no repository or global configuration change.
 - **Executed check:** `python /tmp/verify_revised_orientation.py` reads and runs the five actual documented commands in seven disposable fixtures; exit 0. Clean-mtime, staged, unstaged, and conflicted commands all exited 0 with accurate status. Unborn HEAD verification exited 128, detached symbolic-ref exited 1, and non-Git commands exited 128 as expected. Full repository-file byte snapshots remained identical for every guarded inspection. A plain clean-status control exited 0 with empty output but changed index bytes.
 - **Structural check:** `validate_skill.py skills/sdd-orient` exited 0. Heading and relative-link checks passed before commit.
-- **Persistence:** Commit subject identifies SDD-R-001; push and remote containment must succeed before R02.
+- **Persistence:** `e6bedf8adcb0b81dd0b1d4203dc5c626c866a3db` committed and pushed; remote-tip equality verified before R02.
 - **Limit:** Local Git fixture evidence; no claim of client installation or cross-platform execution.
+
+### R02 — SDD-R-002
+
+- **Disposition:** Accepted clarification; verified in local fresh-session fixtures.
+- **Changed source:** Integration records task-local **Completion reassessment pending** notes in selected owning lists; preserves checked status and historical evidence; includes affected parents without broadening feature claims. Orientation and read-only selection surface disputed claims. Implementation reassesses within range, corrects unsupported status, and clears notes only after current acceptance or parent exits are established. Push-first and direct steering ownership are preserved.
+- **Integration checks:** Three disposable repositories exercised main-task reconciliation, feature-task reconciliation, and SPEC-only scope. Actual changed paths were respectively SPEC/TASKS, FEATURE-TASKS alone, and SPEC alone. Original checklist lines, stable IDs, historical evidence, unrelated checked tasks, and out-of-scope documents were preserved. Pending notes were recorded only in selected lists; SPEC-only scope reported deferred reassessment. Primary inspection confirmed these assertions before local bare-remote commits/pushes `d0b7e896e485e0ef6e62bf139c54b615c37e3c19`, `4489823c6ed8a83f112d85770d88b7b89b8a7da4`, and `cfbe55e257b972283fe072a641d36e9bd710704a`.
+- **Fresh selection checks:** A separate consumer received only repository artifacts and revised skills. It selected disputed T-012 (main) and T-020 (feature), preserved unrelated work, and detected stale acceptance plus deferred task reconciliation in SPEC-only scope. All three selections left worktrees clean; no checkbox edits, tests, commits, or pushes occurred.
+- **Fresh execution check:** Another consumer cloned the persisted main fixture and implemented the next task without a supplied task ID or prior-session context. `python -m unittest discover -s tests -v` first failed the updated zero-classification test with the other three tests passing; after the repair, all four passed in GREEN and final verification. Code, tests, README, and owning TASKS changed; `git diff --check` passed. Historical evidence and unchanged T-013 were retained; resolved task and parent notes were cleared after current acceptance/exits were verified. Fixture commit `778125e388f185eb1b45ff1bed30b84945faf8f3` was pushed to its local bare remote; primary inspection verified exact changed paths, clean worktree, and remote-tip equality. Execution stopped after T-012.
+- **Structural checks:** Validators for sdd-orient, sdd-integrate-feature, and sdd-implement exited 0. Changed-source headings and relative links passed.
+- **Persistence:** The source/report commit is identified by its SDD-R-002 subject; its push and remote-tip equality must be verified before R03.
+- **Limits:** Small disposable projects on the local platform; fixture baseline completion evidence is test data. No installed-client campaign, cross-platform result, production acceptance, credential-channel test, or live GitHub lifecycle mutation is claimed.

@@ -10,13 +10,14 @@ Check the current branch against the established remote branch and push all unpu
 
 | Observed state | Action |
 | --- | --- |
+| Checked task or parent has a pending completion reassessment | After startup pushing, assess its current acceptance within the authorized range; correct unsupported status, preserve historical evidence, and retain the note until reassessment is resolved. Report out-of-range work as a scope conflict. |
 | Last checked task is ahead of the last completed task commit | Confirm task ownership and existing completion evidence, finish its commit and push, and coordinate its issue closure. Do not reimplement completed work. |
 | Current task is unchecked with task-owned pending changes | Inspect existing work and resume the remaining implementation and verification. |
 | Clean tree and checklist agrees with committed task boundary | Select eligible work within the requested range; do not treat cleanliness as proof that required issue closure has occurred. |
 | Missing or contradictory completion evidence | Obtain the missing checks or repair incomplete work within scope before treating the task as complete. |
 | Ambiguous task identity, ownership, or conflicting changes | Preserve changes and report the ambiguity before mutating the affected work. |
 
-Use the last task commit as the completed boundary; later maintenance or steering-amendment commits do not establish another completed task. Preserve stable IDs in the owning TASKS or FEATURE-TASKS. If no task has been committed, use the established preimplementation baseline.
+Use the last task commit as the historical completed boundary; later maintenance, reconciliation, or steering-amendment commits do not establish another completed task. A pending reassessment disputes current acceptance without erasing that history. Preserve stable IDs in the owning TASKS or FEATURE-TASKS. If no task has been committed, use the established preimplementation baseline.
 
 Continuation finishes the interrupted task before new task selection. If it falls outside the newly requested range or the user directs a conflicting action, report the scope conflict rather than silently expanding or discarding work. When hosted tracking is active, check pending references and closures for verified completed tasks within the established maintained tracking scope through **sdd-forge** as part of normal completion processing, including older tasks completed while hosting was unavailable. Do not limit reconciliation to the resumed or latest task, infer completion from hosted state, or block independent local work solely because hosting remains unavailable.
 
