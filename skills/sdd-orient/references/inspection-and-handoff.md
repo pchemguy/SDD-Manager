@@ -1,0 +1,76 @@
+# Inspection and handoff
+
+Use this reference for read-only orientation. Collect enough evidence for the contemplated action; do not dump an entire monorepo into context.
+
+## Project and authority
+
+- Resolve the user-supplied path or current directory to a project root. In a monorepo, distinguish the governed subproject from the containing repository. When candidates are genuinely ambiguous, report them instead of choosing one silently.
+- Read applicable root and more deeply scoped `AGENTS.md` files for anticipated paths. Follow their relevant references and project-designated instruction sources, including policies outside the project root when they apply.
+- Identify contradictory or unreadable instructions and the exact affected action. Record rules for language, build, test, documentation, generated files, source ownership, and commit practices when relevant.
+- Inspect `docs/dev/PROJECT.md` as the project brief. Determine the role of its actual contents. If it contains operating instructions, report them as applicable instructions and identify their scope and any conflict; document revision is a separate workflow.
+
+## Git evidence
+
+Use Git's read-only commands or their equivalent on the host. For example, from the candidate project path:
+
+```text
+git rev-parse --is-inside-work-tree
+git rev-parse --show-toplevel
+git symbolic-ref --quiet --short HEAD
+git rev-parse --verify HEAD
+git status --porcelain=v1 --untracked-files=all
+```
+
+Distinguish a Git worktree from a bare repository, a Git directory outside the target project, or a path with no Git. Record branch or detached state; record an unborn HEAD explicitly. Note staged, unstaged, untracked, deleted, renamed, conflicted, and submodule changes where present. Scope status to the project and anticipated target paths without concealing relevant parent-level or shared files.
+
+Do not assume dirty paths belong to the current task or the agent. Do not interpret clean status alone as proof that the intended work is finished or that documents agree. For the Git prerequisite to be met, the project must be inside a usable worktree; a missing HEAD, conflict, or ambiguous ownership is an additional blocker for ordinary mutation until a later workflow defines how to handle it.
+
+## Project evidence
+
+Look for present roots and referenced children; absence is a finding, not automatically a defect:
+
+```text
+docs/dev/PROJECT.md
+docs/dev/ARCHITECTURE.md   docs/dev/architecture/
+docs/dev/DECOMPOSITION.md  docs/dev/decomposition/
+docs/dev/SPEC.md           docs/dev/spec/
+docs/dev/PLAN.md           docs/dev/plan/
+docs/dev/TASKS.md          docs/dev/tasks/
+docs/dev/layout.md         docs/dev/layout/
+docs/dev/FEATURE_ARCHITECTURE.md
+docs/dev/FEATURE_DECOMPOSITION.md
+docs/dev/FEATURE-SPEC.md  docs/dev/FEATURE-PLAN.md
+docs/dev/FEATURE-TASKS.md
+docs/dev/verification-map.json
+```
+
+Also identify project-specific equivalents and other execution evidence when present. Do not modify or restore such state during orientation. Feature documents describe an intended delta; FEATURE-TASKS holds only scoped feature work and is not the complete task baseline. Inspect it with TASKS when establishing active work and progress.
+
+Inspect relevant source, tests, manifests, and declared commands for building, focused checks, integration checks, documentation checks, and packaging. Note unavailable tools without installing dependencies or executing commands with side effects. Use project instructions over guessed defaults.
+
+## Task state at startup
+
+When TASKS or an active FEATURE-TASKS exists, establish the implementation starting point:
+
+1. Find the latest completed task identified by a task commit and inspect its committed checklist and result. Later maintenance or steering-amendment commits do not advance that task boundary. If no task has been committed, use the established preimplementation commit as the baseline.
+2. Compare the committed boundary with the owning working checklist and staged, unstaged, and untracked changes. If the last checked task is ahead of the last committed task, identify it as completed work awaiting commit; confirm that pending changes belong to it and existing completion evidence is present. Otherwise identify the current incomplete task from the selected execution order and changes since the boundary. Future unchecked tasks do not identify the interrupted task. If the tree is clean and the checklist agrees with the committed boundary, report no pending task changes.
+3. Include the task ID, owning list, last task commit, pending paths and ownership, existing verification evidence, and remaining work or ambiguity in the handoff to **sdd-implement**. It owns verification, completion, commits, pushes, and issue-closure coordination. Orientation observes existing evidence; it does not repeat implementation or run verification.
+
+Report ambiguous task identity, change ownership, or missing completion evidence without guessing. Git and the owning task list provide startup state; no separate transaction journal is required.
+
+## Orientation report
+
+Produce a concise human-readable handoff with these slots, using `none`, `unknown`, or `not inspected` distinctly:
+
+```text
+Target: project root; Git root; contemplated paths or workflow
+Git: worktree eligibility; branch/detached/unborn; HEAD; relevant status and ownership
+Instructions: applicable sources, scope, and conflicts
+Documents: main roots and relevant children; active feature/change documents
+Execution evidence: owning TASKS or FEATURE-TASKS; last committed task and commit; current task and status; pending changes; existing verification evidence; remaining work or ambiguity
+Tooling: relevant declared commands and environment limitations
+Readiness: read-only possible; repository mutation eligible or blocked; reasons
+Handoff: scoped facts for the next skill; unknowns and checks to repeat
+```
+
+This report is an observation at a particular repository state, not a lasting certificate or permission to mutate. Attribute factual claims to paths or Git output when the distinction matters. Do not invent completion states from checkboxes, timestamps, or file presence alone. The orchestrator must recheck stale facts and retain responsibility for authorization, workflow selection, and final validation.
