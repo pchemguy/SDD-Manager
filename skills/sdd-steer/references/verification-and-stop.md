@@ -16,8 +16,18 @@ Push the amendment commit and outstanding commits on the current branch to its e
 
 When hosted tracking is active, use **sdd-forge** to reconcile issue state warranted by the revised task scope and evidence. Do not reopen an issue solely because historical functionality was removed, or close one solely because its task disappeared. Preserve issue history and report any access failure or ambiguous mapping as pending reconciliation.
 
+## Merge the amendment
+
+After working-branch acceptance and amendment persistence, use **sdd-manage**'s **Git workflows** reference for the default explicit merge into the paused implementation branch. Verify the merged state before making its two-parent merge commit, push the target, and confirm containment. Do not merge into the default branch unless it is the established paused target. Report an already integrated amendment without fabricating a second merge. Conflicts or failed merged checks remain scoped amendment work; preserve the exact merge state when blocked. A rejected target push retains the verified merge commit as pending publication.
+
+## Continue after a blocker
+
+Repair verification failures within the commanded scope and repeat affected checks until verified or concretely blocked. On a blocker, identify working and target branches, trusted checkpoint, pending paths and ownership, completed checks, failed or unavailable conditions, task claims requiring reassessment, and the needed decision or facility. Do not publish unverified work as a completed amendment.
+
+Before integration the target retains its paused checkpoint. A merge attempt may leave a separate target worktree in progress; report that state explicitly rather than describing it as a finished checkpoint. The human can command continuation of this same amendment after the blocker is addressed. Resume the branch or in-progress merge, finish verification/persistence/publication, and return control. No automatic reset, new feature overlay, task-list advancement, or handoff to **sdd-implement** is required.
+
 ## Return control to the human
 
-Report the accepted objective, amended implemented behavior, retained behavior, existing development documents changed, affected task statuses, verification evidence and limitations, commit and push results, and pending hosted reconciliation. Identify consequences for remaining tasks as findings, not instructions that automatically launch their implementation.
+Report the accepted objective, amended implemented behavior, retained behavior, existing development documents changed, affected task statuses, verification evidence and limitations, amendment and merge commits, working/target branches, target publication, and pending hosted reconciliation. Identify consequences for remaining tasks as findings, not instructions that automatically launch their implementation.
 
 Stop after the report, including when the amendment is successful. There is no handoff to **sdd-implement**, no automatic selection of its next task, and no automatic steering follow-up. The human decides whether and when to resume the main workflow or command another amendment.

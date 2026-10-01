@@ -26,3 +26,11 @@
 - **Executed foundation:** SDD-V-001's two-task fixture produced one two-parent boundary merge and published it to its bare remote. Fresh workflow-consumer execution is reserved for SDD-V-007; this checkpoint does not claim agent execution from source inspection alone.
 - **Prior checkpoint:** SDD-V-001 `7077cde` pushed; remote-tip equality verified before this revision.
 - **Persistence gate:** Commit subject identifies SDD-V-002; verify remote containment before SDD-V-003.
+
+### SDD-V-003 — Steering isolation and continuation
+
+- **Source:** Steering establishes/reuses an amendment branch targeting the paused implementation checkpoint, follows default explicit verified merge/publication, and resumes a blocked amendment only on a human command. Coordinated workflows/examples distinguish Git merge from feature-document incorporation.
+- **Checks:** Package validator exit 0; heading/link/metadata checks zero errors. Inspection confirms production repair/reverification remains steering-owned, target publication is required, and no main-task continuation or feature overlay is introduced.
+- **Forward execution:** A fresh consumer was started against a disposable classification project and its local bare remote, with a human-commanded contract reduction and project-required external facility check. Its actual outcome is recorded in the final composition checkpoint; no successful consumer outcome is claimed here.
+- **Prior checkpoint:** SDD-V-002 includes `cfc5af3`, `36c8bda`, and `0b36550`; package resource-loading corrections are retained in history. Final remote-tip equality verified at `0b36550` before this revision.
+- **Persistence gate:** Commit subject identifies SDD-V-003; verify remote containment before SDD-V-004.

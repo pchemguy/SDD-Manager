@@ -18,3 +18,9 @@ Reducing previously implemented functionality is the primary use case; other foc
 Resolve the established request against existing instructions and pending-change ownership. Preserve unrelated or incomplete main-workflow changes; report conflicting ownership or changes that cannot be separated before mutating the affected files. Do not invoke **sdd-implement** to finish them or reset the checkpoint automatically.
 
 If necessary decisions remain unresolved, explain the specific conflict, impact, and alternatives to the human and stop the dependent work. An already explicit implementation command needs no additional permission for routine steps. For an assessment-only request, return the proposed amendment boundary and expected evidence, then stop.
+
+## Amendment branch and continuation
+
+Establish the paused implementation branch and checkpoint as the amendment target under **sdd-manage**'s **Git workflows** reference. Create a scoped amendment branch before edits or reuse the branch for the same unfinished amendment. Record its objective, target, checkpoint, and stable affected IDs in existing task/change evidence or the amendment commit body. Preserve unrelated pending work; use a separate worktree when switching would endanger it. An assessment-only request creates no branch.
+
+A human command to continue a blocked amendment resumes its existing objective and branch. Inspect accepted documents, actual changes, task claims, failed checks, and pending merge/publication state; do not reinterpret it as main-task continuation. If the target or scope is unavailable or conflicting, report that decision before affected edits.
