@@ -18,3 +18,11 @@
 - **Structure:** Package validator exit 0; heading/template, local-link, metadata/icon, and skill-reference checks reported zero errors.
 - **Limits:** Reviewer-operated Git mechanics, not autonomous client execution. No protected-provider writes; a local rejecting receive hook exercises publication refusal.
 - **Persistence gate:** Commit subject identifies SDD-V-001; verify remote containment before SDD-V-002.
+
+### SDD-V-002 — Task and feature boundaries
+
+- **Source:** Connected task startup/completion and coordinator feature sequencing to the shared branch lifecycle; added merge-message and branch-result formats; clarified hosted task closure versus target publication.
+- **Checks:** Package validator exit 0; content/link/metadata checks zero errors. Source inspection confirms per-task push remains before advancement, selection-only does not enter branch mutations, narrow requests cannot incorporate or merge unrelated unfinished feature work, and complete feature incorporation precedes final verification/merge.
+- **Executed foundation:** SDD-V-001's two-task fixture produced one two-parent boundary merge and published it to its bare remote. Fresh workflow-consumer execution is reserved for SDD-V-007; this checkpoint does not claim agent execution from source inspection alone.
+- **Prior checkpoint:** SDD-V-001 `7077cde` pushed; remote-tip equality verified before this revision.
+- **Persistence gate:** Commit subject identifies SDD-V-002; verify remote containment before SDD-V-003.

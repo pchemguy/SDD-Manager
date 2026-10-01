@@ -17,6 +17,10 @@ Draft a short imperative subject naming the actual change. For task-associated w
 
 Use `Refs owner/repo#123` when the commit advances an issue without completing it. Use `Fixes owner/repo#123`, `Resolves owner/repo#123`, or `Closes owner/repo#123` when the commit fully resolves that issue and the evidence supports completion. A commit may reference multiple issues, with a separate appropriate reference for each; omit issue references when no verified association exists. On GitHub, closing keywords may close an issue when the commit reaches the default branch. **sdd-forge** still reconciles issue closure after verified task completion, without waiting for that automation. If verification has not been run, say so in a proposed body rather than claiming it passed. The active implementation workflow makes and checks its commits; **sdd-manage** coordinates persistence for other authorized repository changes.
 
+## Merge commit
+
+Draft a subject identifying the actual feature, steering amendment, or selected range, such as `Merge milestone 2.2 ZIP support`. Return the subject and body separately. Include the working and target branches, starting checkpoint and verified parent tips, included task IDs where applicable, boundary and merged-state checks, material conflict resolutions, and limitations. Do not represent an amendment as completion of the next task. The coordinator performs the explicit two-parent merge; drafting the message does not authorize extra work or a hosted PR.
+
 ## Pull request
 
 Draft a title and description only when requested; this skill does not create a PR. Scope the text to the actual branch diff and its included task IDs. Summarize **What**, **Why**, **Verification**, and **Result**; add the relevant fields from [change kinds](change-kinds.md). State the base branch and integration status only when known. List unrun checks, limitations, and remaining work explicitly rather than presenting partial work as complete.
