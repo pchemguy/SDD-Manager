@@ -31,7 +31,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S07 | sdd-tasks | Reviewed | None in examined scope | Commit subject identifies S07; push gate before next unit |
 | S08 | sdd-tdd | Reviewed | None in examined scope | Commit subject identifies S08; push gate before next unit |
 | S09 | sdd-docs | Reviewed | None in examined scope | Commit subject identifies S09; push gate before next unit |
-| S10 | sdd-verify | Not started | Not assessed | None |
+| S10 | sdd-verify | Reviewed | None in examined scope | Commit subject identifies S10; push gate before next unit |
 | S11 | sdd-integrate-feature | Not started | Not assessed | None |
 | S12 | sdd-forge | Not started | Not assessed | None |
 | S13 | sdd-implement | Not started | Not assessed | None |
@@ -299,7 +299,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S10 — sdd-verify
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-verify/SKILL.md`; `skills/sdd-verify/agents/openai.yaml`; `skills/sdd-verify/assets/icon.svg`; `skills/sdd-verify/references/check-selection.md`; `skills/sdd-verify/references/execution-and-evidence.md`; `skills/sdd-verify/references/failure-assessment.md`. No files excluded.
+**Relevant contracts:** Owns condition coverage, check execution and cause-sensitive evidence; TDD owns tests, docs maintenance and implement/steer repairs/completion/persistence. Current orient/manage scope and environment gate command effects.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Six resources structurally checked. |
+| C02 | Satisfied | Verification excludes source/test/doc/checklist repairs and completion ownership. |
+| C03 | Satisfied | Authorized environment, mutating-command inspection and unrelated work preservation explicit. |
+| C04 | Satisfied | Returns actionable evidence to active owner/TDD/docs/report without automatic repair. |
+| C05 | Satisfied | Owning feature scope and main parent exits distinguished; no requirement rewrite to pass. |
+| C06 | Satisfied | Interrupted run incomplete; state/environment changes invalidate affected reused evidence. |
+| C07 | Satisfied | Generated effects accounted for; no reset/clean to conceal unexplained changes. |
+| C08 | Not applicable | No token/provider access ownership; external commands remain authorization scoped. |
+| C09 | Satisfied | Collection, skips, warnings and condition mapping required; SC-011 and executable SC-012 support distinctions. |
+| C10 | Satisfied | Unknown versus pre-existing requires baseline evidence; retries retain failed history. |
+| C11 | Satisfied | Selection, execution and failure references provide clear progression and evidence tables. |
+| C12 | Satisfied | No fabricated outputs or historical evidence presented as fresh; limitations explicit. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-verify` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-011 consumer covered zero collection, skipped integration/warnings, unsupported pre-existing claim, stale evidence, interrupted execution and failed checked task. SC-012 disposable unittest runs: empty exit5/0 tests; skip-warning exit0/2 tests/1 skipped; assertion exit1/1 failure. pytest unavailable, no installation attempted.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S10 in its subject, push, and verify containment before advancing.
 
 ### S11 — sdd-integrate-feature
 
@@ -378,6 +402,8 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-008 | S07 / identity, form and ownership | Duplicate main/feature T012; existing code/tests with unconfirmed acceptance; select/code request; feature integration; feature-only parent complete | Unique IDs, evidence-gated status, owning skill routing, scoped parent completion | Read-only consuming-agent assessment and checklist draft | New independent feature ID required; prior task unchecked pending evidence; selection to implement and reconciliation to integrate-feature; main parent not inferred complete; sample indentation 0/4/8/12 spaces | No actual derivation, selection, verification or document mutation |
 | SC-009 | S08 / meaningful testing evidence | Import-failure regression; pre-test interrupted code/no deletion; behavior-preserving refactor; self-derived expectation and target mock; unavailable external API | Behavioral RED only, preserve code, independent expectations, bounded mock claims | Read-only consuming-agent assessment; attempted remote provenance inspection | Setup failure not RED; characterization is not historical RED; refactor uses existing protection; target behavior needs real exercise and independent expected value; mocked local pass not integration completion | No tests executed; pinned upstream independently unverified because GitHub and raw fetch returned DisabledError; local license inspected |
 | SC-010 | S09 / documentation authority and coverage | Python no style; generated/vendor and owned module missing docs; README/SPEC option conflict; docs-only discovers behavior bug; governing architecture/layout amendments | Suitable fallback, owned module coverage, no scope/requirement changes via docs | Read-only consuming-agent assessment | Google-style suitable within scope; generated/vendor accounted separately; inspect actual CLI before README resolution; code bug routed without repair; governing amendment fields reported to user, no automatic invocation | No docstrings/examples changed or executed; actual CLI evidence and generated editing policy not supplied |
+| SC-011 | S10 / evidence classification | Exit0/zero collection; focused pass/skipped required integration; outside-file failure; stale prior pass; interrupted run; checked acceptance fails | No false completeness, unsupported cause claim or verify-only repair | Read-only consuming-agent assessment | Zero/stale/incomplete unverified; required skipped check not checked or concretely blocked; unsupported pre-existing remains unknown; failed checkbox reported without edits | Hypothetical cases; actual command policy/state absent |
+| SC-012 | S10 / collection, skips, warnings, failures | Disposable stdlib unittest fixtures: empty directory; passing test + DeprecationWarning + required integration skipped; assertion failure | Counts and limitations visible despite success exit; zero checks not acceptance; failure explicit | Executable local controlled fixture | python -W default -m unittest discover -v: empty exit5, Ran0/NO TESTS RAN; mixed exit0, Ran2/OK skipped1 with warning; assertion exit1, Ran1/FAILED failures1 | pytest unavailable; no dependencies installed. Tests demonstrate runner evidence only, not autonomous plugin acceptance campaign; temporary fixtures removed. |
 
 ## Revision queue and human decisions
 
