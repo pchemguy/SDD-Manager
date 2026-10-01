@@ -31,7 +31,7 @@ Inspect status, response body, rate-limit headers, and transport outcome before 
 
 | Evidence | Disposition |
 | --- | --- |
-| Authentication/permission failure, including a provider-indicated access403 | Stop the write; use the shared suitable-credential path through **sdd-manage**, or the direct caller. Report policy restrictions requiring another remedy. A private-resource404 can conceal denied access; do not infer absence or create replacements without resolving identity/access. |
+| Authentication/permission failure, including a provider-indicated access 403 | Stop the write; use the shared suitable-credential path through **sdd-manage**, or the direct caller. Report policy restrictions requiring another remedy. A private-resource 404 can conceal denied access; do not infer absence or create replacements without resolving identity/access. |
 | Rate-limit403 or 429 | Pause requests; honor Retry-After. When remaining quota is zero, wait until the reset time; satisfy both restrictions if both are present. For secondary limits without timing guidance, wait at least one minute and increase delays on repeated failures. Do not request another token merely to evade the limit. |
 | Transient 5xx or transport failure | Report the affected endpoint and known outcome; use bounded backoff only when a retry is safe. A timeout, disconnect, or failed response after a write may leave the operation applied. |
 | Offline or unavailable client/service | Stop affected hosted work and report synchronization pending. Preserve local verified commits and already confirmed hosted results; do not change credentials or infer remote state from cached evidence. |

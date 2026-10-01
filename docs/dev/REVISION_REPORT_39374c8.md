@@ -58,3 +58,38 @@
 - **Limits:** Durable reporting cannot mechanically prove execution order. Authorized exception and historical evidence cases receive fresh consumer assessment in the final checkpoint; no claimed RED reconstruction.
 - **Prior checkpoint:** SDD-V-005 `d965112` pushed; remote-tip equality verified before this revision.
 - **Persistence gate:** Commit subject identifies SDD-V-006; verify remote containment before SDD-V-007.
+
+### SDD-V-007 — Composition and validation
+
+- **Source:** Updated README workflow examples, capability ownership, coordinator examples, presentation prompts, and target-versus-default-branch terminology. Orientation traces task commits through merge parents rather than treating aggregate merge-message IDs as new task completion.
+- **Prior checkpoint:** SDD-V-006 `fcad16e` pushed; remote-tip equality verified before this revision.
+
+#### Fresh execution results
+
+| Fixture | Observed result | Primary artifact checks |
+| --- | --- | --- |
+| Main T-002 | RED reproduced zero-as-positive; repair retained positive/negative behavior. Three tests and external facility passed on working and prospective merged states. Task `c664d079b5624676fddafb55acb32552712b3d2a`; explicit merge `cf07b853979047c609b04df701643aedc529ec7c` pushed to local target. | Exactly classifier/tests/README/TASKS changed; two parents, remote-tip equality, clean worktree, task command evidence, supplied facility preserved. |
+| Steering blocked | Fresh consumer changed negative classification to ValueError; observed RED then three GREEN tests. Required external facility failed; target remained at b1ed7a6 with amendment work preserved, uncommitted and unmerged. | Consumer output and resulting branch/worktree context retained for the separate continuation. No fabricated facility or main-task progression. |
+| Steering continued | Another fresh consumer used the externally supplied facility, verified/reassessed amendment and parents, committed/pushed `1a13822ca3237e0e0819ac426c756d32679545de`, then verified/published two-parent merge `c4e6f0714bc1e4e6d593b1027fc5b3d8c0d01f43`. | Exact seven amendment paths; task and parent reassessment resolved; prior evidence retained; remote equality and clean worktree. Stopped without main-task continuation. |
+| Document interruption | Fresh consumer recovered partial SPEC incorporation and unfinished TASKS scope from a branch commit. Changed TASKS only, preserving SPEC, checked status/history, stable T-001, and FEATURE-SPEC. Added three pending reassessment notes; pushed `a83e85e37eda1478d90425d99d87d6614abb5500`. Required facility failure blocked merge. | No code/tests/README/unselected document changes or source removal; target unchanged at 18c71f9. Passing old tests were explicitly not current zero acceptance. |
+| Document publication | Another fresh consumer continued after operator supplied facility; required commands passed; explicit document merge `58ac510294219d59aa0535cbda9c3cb9fd22fd82` published. | Compared to checkpoint, only SPEC/TASKS changed; two parents, remote equality, clean tree, all three pending notes and historical evidence retained; source retained. No implementation claimed. |
+
+#### Controlled response and boundary assessments
+
+- **GitHub:** Fresh consumer assessed nine raw response/state fixtures: permission403; primary rate403; secondary429; transient503; offline lookup; timeout after creation, closure, or comment; incomplete duplicate lookup. It distinguished suitable-access escalation from deferred rate limits, calculated reset/retry times, preserved unknown effects, reused unique #12 after uncertain creation, avoided replaying matching closure/comment evidence, and blocked duplicate/incomplete identity. Retry policy stayed bounded; no credential change for outages/rate limits. These are read-only fixture dispositions, not API calls or measured retry execution.
+- **Scope/evidence:** A separate fresh consumer assessed seven cases: narrow feature range with unrelated unfinished branch work; selection-only disputed checked task; duplicate partial transfer with TASKS-only scope; authorized vendor-update TDD exception; taskless work with designated evidence; failed target push after verified merge; publication-only steering continuation. It preserved scope, selected-list ownership, read-only selection, existing evidence priority, explicit exception/gap facts, and continuation without duplicate merges or main-task advancement.
+- **Git regressions:** `python /tmp/branch_workflow_fixtures.py`: eight tests passed after revisions, covering forced two-parent boundaries, task batching, divergent/already-integrated state, conflicts, failed-check publication guard, rejected push, staging/worktree isolation, and destination/name blockers.
+- **Orientation regression:** `python /tmp/verify_revised_orientation.py`: actual five source commands exercised seven states; all repository bytes preserved. Expected unborn/detached/non-Git exits retained; plain-status clean-mtime control reproduced index refresh.
+
+#### Validation boundaries
+
+All forward consumers started in fresh threads with raw requests/artifacts and focused skill sources, without this plan/report or preceding diagnoses. Primary inspected actual completed Git artifacts independently. The full-feature fixture and final package/merge results follow below.
+
+No installed-client campaign, live GitHub lifecycle, real credential-channel test, cross-platform execution, or independent pinned upstream verification is claimed. Protected-publication behavior is modeled with a rejecting local Git receive hook. Provider behavior is assessed from official guidance and raw controlled traces; server-side execution and actual backoff timing remain untested.
+
+#### Full-feature execution and final source checks
+
+- **Full-feature consumer:** Observed zero-classification RED, then three passing tests and facility checks. Task commit `7d9e238`, incorporation `ed7db34`, explicit merge `bb38339ed89bcbcb27ee8fe64073dc9d31d281fa` published to the local target after merged-state verification. SPEC/PLAN/TASKS/FEATURE-TASKS incorporated before merge; positive/negative contracts retained.
+- **Primary inspection:** Exactly classifier/tests/README and the four selected document owners changed; T-002 occurs once as an executable task in TASKS and is retired from FEATURE-TASKS. Historical T-001 evidence and the supplied facility remain; merge has two parents, remote tip equals local target, and worktree is clean.
+- **Final structural checks:** `validate_plugin.py .` exited 0; `inspect_package.py .` enumerated all 15 skills with zero errors/warnings. `/tmp/revised_package_checks.py` checked 101 package/review files, 68 Markdown files, five template headings, 93 local links, all 15 metadata/SVG sets, skill references, manifest consistency, and credential-pattern absence; zero errors. User EXPLORE_DRIVE documents and local tool state remain excluded and unchanged. `git diff --check` passed.
+- **Persistence gate:** Commit subject identifies SDD-V-007. Push and remote containment must precede the campaign merge. The campaign's explicit merge will be verified before commit and target publication, followed by plan/report archive.

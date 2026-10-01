@@ -19,13 +19,13 @@ Provide a concise task result through **sdd-report** before advancing within the
 - In FEATURE-TASKS, a parent checkbox covers only that list's scoped work and relevant FEATURE-PLAN exits. It does not check the corresponding whole-project milestone or phase in TASKS.
 - Commit and push parent status and any additional boundary evidence with the final task when available, or in a focused follow-up commit identifying the relevant task and parent boundary. Do not invent a new task solely to record an exit check.
 - Do not start tasks beyond the requested task count, milestone, phase, or named checkpoint, even if further tasks are ready. Complete the verified boundary's default Git integration before returning. Also stop for an unresolved implementation or push blocker or the user's pause instruction.
-- Report implemented capabilities, completed IDs, acceptance and exit-condition evidence, unresolved failures or limitations, commit and push state, pending issue reconciliation, and remaining tasks. Distinguish feature-branch completion from integration into the default branch.
+- Report implemented capabilities, completed IDs, acceptance and exit-condition evidence, unresolved failures or limitations, commit and push state, pending issue reconciliation, and remaining tasks. Distinguish task/working-branch completion from integration into the established target and its remote publication.
 
 The human decides whether to resume the main task list or command **sdd-steer** for a focused amendment. Do not start either automatically after the selected checkpoint.
 
 ## Integrate the completed boundary
 
-Use the Git workflow in **sdd-manage**'s **Git workflows** reference after the selected tasks and applicable exits are verified, committed, and pushed. Task persistence remains per task; merge once for the completed authorized range. Verify the entire prospective branch difference before integrating: an existing branch containing unrelated or unfinished work is a scope conflict. A pause or blocker returns branch state without a partial merge.
+Use **sdd-manage**'s **Git workflows** reference after the selected tasks and applicable exits are verified, committed, and pushed. Task persistence remains per task; merge once for the completed authorized range. Verify the entire prospective branch difference before integrating: an existing branch containing unrelated or unfinished work is a scope conflict. A pause or blocker returns branch state without a partial merge.
 
 For a complete feature implementation request, coordinate incorporation of the accepted feature documents and task ownership required for its final main-document consistency through **sdd-integrate-feature**, on the working branch before final verification. An explicit selected document set governs incorporation. A narrow task/range request does not authorize incorporation of all feature documents or integration of unfinished work: merge only when the selected branch difference and documents are coherent within that scope; otherwise report the unmet prerequisite. Retain active sources and pending reassessment until their established requirements are satisfied.
 

@@ -6,7 +6,7 @@ These examples illustrate routing and boundaries; repository instructions and th
 | --- | --- |
 | “Prepare the project through TASKS.” An eligible Git worktree exists. | Orient; prepare the necessary design, SPEC, PLAN, layout, and tasks; check and persist the documents; stop before implementation. |
 | “Review this SPEC.” The files are outside Git. | Perform read-only behavioral review and return findings. Do not initialize Git or rewrite files. |
-| “Implement milestone 2.2.” TASKS contains its accepted requirements. | Orient; pass the boundary to **sdd-implement**; it pushes outstanding commits first, executes and persists tasks, and stops at the milestone. |
+| “Implement milestone 2.2.” TASKS contains its accepted requirements. | Orient; pass the boundary to **sdd-implement**; it pushes outstanding commits first, executes/persists tasks on the scoped branch, explicitly merges the verified milestone, verifies/pushes the target, and stops. |
 | “Resume milestone 2.2.” The last checked task is ahead of its last task commit. | Pass pending changes and evidence to **sdd-implement**. It verifies and commits the completed result without repeating implementation, then continues only within the selected boundary. |
 | “Continue.” The tree is clean but task commits are unpushed. | Orient; **sdd-implement** pushes those commits before selecting tasks, testing, or editing. A push blocker prevents further implementation. |
 | “Assess removing encrypted streams.” Implementation is paused at a checkpoint. | Route impact assessment to **sdd-steer**; return the proposed scope without mutation. |
@@ -22,3 +22,14 @@ These examples illustrate routing and boundaries; repository instructions and th
 ## Blocked steering continuation
 
 When a commanded amendment is blocked by an unavailable check, report its branch, paused target, pending changes, and concrete missing facility. A later “Continue that amendment” resumes the same scoped steering workflow after the facility is supplied; it verifies, explicitly merges and publishes, then stops without selecting the next task.
+
+## Branch and operational boundaries
+
+| Context | Result |
+| --- | --- |
+| Feature preparation through implementation is requested. | Reuse one feature branch; incorporate selected accepted documents before final verification, explicit merge, and target publication. |
+| Only one feature task is requested, but the branch includes unrelated unfinished work. | Resolve the scope/branch conflict; do not merge the entire feature by implication. |
+| Document incorporation stopped after SPEC changed but before TASKS reconciliation. | Inspect checkpoint and accepted sources; finish only selected owners, preserve history and reassessment notes, then verify/persist the document boundary. |
+| A merge is committed but target push was rejected. | Preserve the merge and reconcile destination/divergence/access; finish publication without creating a second merge. |
+| Hosted requests encounter rate-limit 403 or 429. | Defer according to backend timing and report pending effects; do not replace a suitable token to evade limits. |
+| A hosted write times out. | Backend re-reads exact identities and effects before retrying; incomplete lookup leaves outcome unknown. |
