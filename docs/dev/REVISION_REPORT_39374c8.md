@@ -42,3 +42,11 @@
 - **Forward execution:** Fresh-session partial-incorporation execution and its artifacts are recorded under SDD-V-007; static inspection here does not claim that execution.
 - **Prior checkpoint:** SDD-V-003 `fa19123` pushed; remote-tip equality verified before this revision.
 - **Persistence gate:** Commit subject identifies SDD-V-004; verify remote containment before SDD-V-005.
+
+### SDD-V-005 — GitHub failure classification
+
+- **Source:** GitHub reference classifies access, rate-limit, transient/offline, invalid-input, and uncertain-write outcomes; shared credential routing now applies to access-related403 rather than every403. Projection/lifecycle require reliable re-read before replay and preserve pending local/hosted differences.
+- **Provider references:** Official English GitHub REST best practices and troubleshooting pages retrieved on 2026-10-01; sources linked in the GitHub reference. They distinguish rate-limit403/429, Retry-After/reset timing, secondary-limit backoff, private-resource404, and repeated error handling.
+- **Checks:** Package validator exit 0; content/link/metadata checks zero errors. A fresh consumer receives nine controlled raw response/state fixtures; dispositions are recorded under SDD-V-007. This checkpoint claims no live provider or autonomous API execution.
+- **Prior checkpoint:** SDD-V-004 `e977a9f` pushed; remote-tip equality verified before this revision.
+- **Persistence gate:** Commit subject identifies SDD-V-005; verify remote containment before SDD-V-006.
