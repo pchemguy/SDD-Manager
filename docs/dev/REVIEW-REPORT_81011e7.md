@@ -33,7 +33,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S09 | sdd-docs | Reviewed | None in examined scope | Commit subject identifies S09; push gate before next unit |
 | S10 | sdd-verify | Reviewed | None in examined scope | Commit subject identifies S10; push gate before next unit |
 | S11 | sdd-integrate-feature | Reviewed | None in examined scope | Commit subject identifies S11; push gate before next unit |
-| S12 | sdd-forge | Not started | Not assessed | None |
+| S12 | sdd-forge | Reviewed | None in examined scope | Commit subject identifies S12; push gate before next unit |
 | S13 | sdd-implement | Not started | Not assessed | None |
 | S14 | sdd-steer | Not started | Not assessed | None |
 | S15 | sdd-manage | Not started | Not assessed | None |
@@ -355,7 +355,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S12 — sdd-forge
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-forge/SKILL.md`; `skills/sdd-forge/agents/openai.yaml`; `skills/sdd-forge/assets/icon.svg`; `skills/sdd-forge/references/github-issue-lifecycle.md`; `skills/sdd-forge/references/github-projection.md`; `skills/sdd-forge/references/github.md`. No files excluded.
+**Relevant contracts:** Optional hosted projection/lifecycle; manage stores/supplies credentials, provider checks access; report optional drafts/fallback; local task/evidence authoritative and implement owns Git/closure coordination.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Six files structurally checked; only defined GitHub backend advertised. |
+| C02 | Satisfied | Requested issue/label/milestone work only, no Git/PR/store operations. |
+| C03 | Satisfied | Correct repository and continuing maintenance versus inspection authority distinguished. |
+| C04 | Satisfied | Report absent uses bounded baseline; manage credential suitability and provider cause preserved. |
+| C05 | Satisfied | Unique stable task marker/prefix and parent identities; PRs excluded, unrelated fields retained. |
+| C06 | Satisfied | Partial writes re-read and reuse; older completed issue can reconcile independent of current task. |
+| C07 | Satisfied | Idempotent matching/evidence closure, partial outcome and branch-vs-integration explicit; live effects untested. |
+| C08 | Satisfied | Scoped external credentials, no token leakage, 403 cause-sensitive/bounded retries; read-only case assessment only. |
+| C09 | Satisfied | Completion requires implementation, verification, durable commit and owning state; checkbox insufficient. |
+| C10 | Satisfied | Response mismatches remain partial/unresolved in SC-014, not successful hosted projection. |
+| C11 | Satisfied | Shared protocol, backend routing and focused projection/lifecycle modules coherent. |
+| C12 | Satisfied | Examples task-bound and facts not copied; GitHub-specific schemes confined to backend. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-forge` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-014 assessed fallback, duplicates, renames, 403, partial writes, older closure, PR exclusion and closed-reason mismatch. Official REST issue/label/milestone docs read on 2026-10-01: Issues write supports writes; PR key excludes PRs; association fields may be dropped without push access; state_reason ignored without state change. No provider writes executed.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S12 in its subject, push, and verify containment before advancing.
 
 ### S13 — sdd-implement
 
@@ -429,6 +453,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-011 | S10 / evidence classification | Exit0/zero collection; focused pass/skipped required integration; outside-file failure; stale prior pass; interrupted run; checked acceptance fails | No false completeness, unsupported cause claim or verify-only repair | Read-only consuming-agent assessment | Zero/stale/incomplete unverified; required skipped check not checked or concretely blocked; unsupported pre-existing remains unknown; failed checkbox reported without edits | Hypothetical cases; actual command policy/state absent |
 | SC-012 | S10 / collection, skips, warnings, failures | Disposable stdlib unittest fixtures: empty directory; passing test + DeprecationWarning + required integration skipped; assertion failure | Counts and limitations visible despite success exit; zero checks not acceptance; failure explicit | Executable local controlled fixture | python -W default -m unittest discover -v: empty exit5, Ran0/NO TESTS RAN; mixed exit0, Ran2/OK skipped1 with warning; assertion exit1, Ran1/FAILED failures1 | pytest unavailable; no dependencies installed. Tests demonstrate runner evidence only, not autonomous plugin acceptance campaign; temporary fixtures removed. |
 | SC-013 | S11 / selected integration and ownership | SPEC only with active feature tasks; TASKS only transfer; joint transfer checked feature parent; retained feature-source reference; changed task acceptance | No implied scope extension, source deletion, duplicate owner or broadened completion claim | Read-only consuming-agent assessment | TASKS-only transfer blocked; joint task move retires source checkbox and retains ID/evidence; main parent not copied complete; active references retain source; stale acceptance flagged for implement | No integration edit performed; ownership wording for invalidating a checked claim requires cross-skill synthesis in P02 |
+| SC-014 | S12 / projection, access and lifecycle | No report; duplicate marker; renamed milestone; policy/rate-limit403; partial label/issue write; older open task; matching PR; closed-not-planned;201 absent parents;200 unchanged reason | Fallback, unique reuse, stop conflicts, cause-sensitive access, partial/idempotent effects and completion evidence | Read-only consuming-agent assessment plus official provider documentation inspection | Fallback draft accepted; duplicates blocked; stable rename reused;403 not blindly token-retried; partial objects reread; verified older issue reconciled with authority; PR excluded; missing returned associations partial; unchanged reason unresolved, no invented reopen sequence | No live API/auth/credential or service concurrency tests. Official references: https://docs.github.com/en/rest/issues/issues , https://docs.github.com/en/rest/issues/labels , https://docs.github.com/en/rest/issues/milestones . Already-closed reason-change fallback requires endpoint-supported policy resolution. |
 
 ## Revision queue and human decisions
 
