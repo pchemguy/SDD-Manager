@@ -32,13 +32,13 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S08 | sdd-tdd | Reviewed | None in examined scope | Commit subject identifies S08; push gate before next unit |
 | S09 | sdd-docs | Reviewed | None in examined scope | Commit subject identifies S09; push gate before next unit |
 | S10 | sdd-verify | Reviewed | None in examined scope | Commit subject identifies S10; push gate before next unit |
-| S11 | sdd-integrate-feature | Reviewed | None in examined scope | Commit subject identifies S11; push gate before next unit |
+| S11 | sdd-integrate-feature | Reviewed | SDD-R-002 recommendation | Commit subject identifies S11; push gate before next unit |
 | S12 | sdd-forge | Reviewed | None in examined scope | Commit subject identifies S12; push gate before next unit |
-| S13 | sdd-implement | Reviewed | None in examined scope | Commit subject identifies S13; push gate before next unit |
+| S13 | sdd-implement | Reviewed | SDD-R-002 recommendation | Commit subject identifies S13; push gate before next unit |
 | S14 | sdd-steer | Reviewed | None in examined scope | Commit subject identifies S14; push gate before next unit |
 | S15 | sdd-manage | Reviewed | None in examined scope | Commit subject identifies S15; push gate before next unit |
 | P01 | Package validation | Reviewed | No new findings; SDD-R-001 remains | Commit subject identifies P01; push gate before P02 |
-| P02 | Cross-skill/workflow synthesis | Not started | Not assessed | None |
+| P02 | Cross-skill/workflow synthesis | Reviewed | SDD-R-001; SDD-R-002 recommendation | Commit subject identifies P02; push gate before P03 |
 | P03 | Consolidation/revision handoff | Not started | Not assessed | None |
 
 ## Skill coverage and evidence
@@ -337,7 +337,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 | C02 | Satisfied | Any selected document subset; no implied implementation/host/next-stage effects. |
 | C03 | Satisfied | Accepted delta, dirty ownership and current scope required; dependent target stops on unsettled decision. |
 | C04 | Satisfied | Direct steering separate; scoped host identity impacts reported rather than executed. |
-| C05 | Satisfied | Exactly one executable entry, stable IDs/evidence, feature versus broader parent claims, source retention explicit. Checked-item invalidation wording deferred to P02 composition check. |
+| C05 | Finding | SDD-R-002 recommendation:  Exactly one executable entry, stable IDs/evidence, feature versus broader parent claims, source retention explicit. Checked-item invalidation wording deferred to P02 composition check. |
 | C06 | Satisfied | Changed acceptance flagged for implement; old evidence not fresh completion. |
 | C07 | Satisfied | Sources retained while out-of-scope dependents need them; no silent link edits or duplicate copies. |
 | C08 | Not applicable | No credentials/provider operations. |
@@ -350,7 +350,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 **Scenarios:** SC-013: consumer preserved SPEC-only scope, required both lists for task transfer, retained needed sources and broader parent status, and flagged stale evidence. Its checked-item re-evaluation/completion ownership tension is reserved for P02.
 
-**Findings:** None in examined scope.
+**Findings:** SDD-R-002 (recommendation added during P02; no reproduced false completion).
 **Checkpoint:** Validate report, commit with S11 in its subject, push, and verify containment before advancing.
 
 ### S12 — sdd-forge
@@ -392,7 +392,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 | C01 | Satisfied | Seven resources structurally checked; startup/selection/execution/completion routing complete. |
 | C02 | Satisfied | Selection-only read-only versus push-first execution and bounded checkpoint explicit. |
 | C03 | Satisfied | No range expansion, mixed-list choice, unowned edits or silent governing amendments. |
-| C04 | Satisfied | TDD/docs/verify/report roles coordinated; forge absent/unavailable does not block independent local work. |
+| C04 | Finding | SDD-R-002 recommendation:  TDD/docs/verify/report roles coordinated; forge absent/unavailable does not block independent local work. |
 | C05 | Satisfied | Task result/status committed together; broader/feature parent exits distinct; stale checked evidence reassessed. |
 | C06 | Satisfied | Outstanding pushes precede selection/tests/edits; pending-complete task committed before new selection; scope conflicts stop. |
 | C07 | Satisfied | Owned staged/hunk isolation and ordinary-index reconciliation explicit; reviewer-operated SC-016 demonstrates recipe preservation and bare push. |
@@ -406,7 +406,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 **Scenarios:** SC-015 consumer covered readonly selection, push blockers, pending-complete resume, out-of-range dependency, mixed hunks, scoped parents, older issue backlog and stale checked acceptance. SC-016 executable temp-index recipe passed all content/index/push assertions.
 
-**Findings:** None in examined scope.
+**Findings:** SDD-R-002 (recommendation added during P02; no reproduced false completion).
 **Checkpoint:** Validate report, commit with S13 in its subject, push, and verify containment before advancing.
 
 ### S14 — sdd-steer
@@ -497,7 +497,41 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### P02 — Cross-skill and workflow synthesis
 
-Not started. Record the producer/consumer matrix, workflow coverage, reciprocal contracts, and cross-skill findings.
+**Status:** Reviewed. Read both directions of consequential handoffs against the fixed baseline and observed the consumer's composed dispositions (SC-019). No source amendments made. SDD-R-002 records an optional clarification of invalidated checked-task handoffs; the tested consumer did not claim stale acceptance was complete.
+
+| Contract | Producer → consumer | Authority / status | Mutation and persistence owner | Stopping rule |
+| --- | --- | --- | --- | --- |
+| Project eligibility and instructions | orient → manage / focused skills | Scoped facts and unknowns, not permission; refresh on material change | orient is read-only; active owner preserves dirty state | Block affected mutation on missing eligible state/ownership. SDD-R-001 applies to shared inspection. |
+| Accepted design and behavior | design → specify → plan → tasks | User decisions govern; code is observation; logical, behavioral, strategic and physical owners separate | Focused author edits scoped documents; manager persists preparation | Stop at requested stage or unsettled material choice. |
+| Executable task identity/range | tasks + accepted main/feature documents → implement | One executable owner per stable ID; feature parent scope is narrower | implement selects; integrate-feature reconciles; steer amends directly | Read-only selection bypasses pushing; execution never expands range silently. |
+| Tests and acceptance | tdd → implement/steer → verify | Independent expectations, actual RED/GREEN; verification condition coverage distinct from development cycle | tdd owns tests; active workflow owns production/repairs/status | Required failed/blocked acceptance prevents completion; verify does not repair. |
+| Documentation findings | docs → user / active workflow | Supported behavior checked against accepted contract; governing amendment needs human decision | docs edits documentation; active workflow or manager persists | Independent docs may continue; no automatic governing authoring. |
+| Accepted feature incorporation | feature sources → integrate-feature → main owners / implement | Only selected targets, both lists for transfer, stable evidence/IDs | integration edits; manager persists; implement reassesses changed completion | No task execution or implied scope extension; invalidation seam SDD-R-002. |
+| Per-task or steering durability | report drafts + verify evidence → implement/steer | Result/status/evidence reconciled before durable completion | Owned-hunk commit; reconcile ordinary index; push confirmed | Per-task push before next task; steering returns human control. |
+| Standalone preparation/maintenance | focused edited scope → manage + report | No invented task ID or completion claim | manager checks, isolates, commits, pushes | Finish selected scope; no automatic task execution. |
+| Credential and hosted projection | manage protected channel → forge/provider; task lists → forge | Suitable credential does not authorize more operations; task evidence governs closure | manage approved external store; forge hosted owned fields only | Stop affected 403/conflict, bounded cause-sensitive retry; local work independent. |
+| Completion and presentation | owning task/Git/check/host facts → report | Planned, verified, committed, pushed, hosted and integrated states separate | report drafts only | No host writes, Git effects or completeness claims from formatting. |
+
+| Workflow exercised | Current evidence | Outcome and boundary |
+| --- | --- | --- |
+| Initial preparation | SC-019 read-only composition; S04–S07/S15 | Accepted inputs flow downstream; manager persists; preparation-only stops before implementation. |
+| Feature preparation and bounded execution | SC-019; S05/S06/S07/S13/S15 | Reuse unchanged architecture/layout; necessary feature tasks stay active; explicit two-task request authorizes transition but no automatic integration. |
+| Main milestone implementation | SC-019; SC-015/SC-016 | Push-first only for execution; prerequisite conflicts block, each task durably persists before advance; milestone exits scoped. Actual full implementation unexecuted. |
+| Interrupted continuation | SC-002/SC-015/SC-019 | Applicable completed pending work is not reimplemented; conflict with newly requested range stops affected continuation. Maintenance/steering commit is not next-task completion. |
+| Checkpoint steering | SC-017/SC-019 | Existing owners amended; retained contracts protected; no overlays/integration/automatic resume. No actual code reduction executed. |
+| Selected integration | SC-013/SC-019; executable SC-020 | TASKS-only transfer deferred without edits; joint authorized edit moved entries once, preserved evidence/status/dependencies and incomplete broader parents. |
+| Focused review/maintenance | SC-010/SC-011/SC-018/SC-019; SC-012 | Verification returns gaps without repairs; docs defers governing amendments to human; manager persists taskless maintenance without capturing unrelated staging. |
+| Hosted synchronization | SC-014/SC-019 + official endpoint inspection | Unique matching, partial-response differences and policy403 remain visible; no invented credential remedy or reason-transition fallback. No live hosted writes. |
+
+**Deferred ownership question resolved at the interpretation level:** current acceptance supersedes old evidence; implement's range selection must inspect disputed/stale checked claims, and its execution corrects unsupported claims. The consumer maintained that boundary. The exact integration-side checkbox invalidation action and durable reassessment signal remain unspecified, hence SDD-R-002 is a recommendation, not a reproduced stale-completion defect.
+
+**Executable evidence:** SC-020 used the consumer to edit a disposable Git fixture after two distinct scopes. Primary inspected actual files/diff, asserted unique executable IDs and preservation, then committed/pushed to a local bare remote. SC-021 expanded SDD-R-001's candidate guard to clean-mtime/staged/unstaged/conflicted fixture states: all status outputs matched expected states, exit 0, no index/worktree byte changes. It demonstrates the proposed suppression mechanism; the baseline source is still unfixed.
+
+**Historical recheck disposition:** five former root causes remain corrected in the examined baseline: staged isolation (SC-016), joint task ownership (SC-020), older issue backlog (SC-014/SC-015), named continuation owners (S03/P02), and taskless message exception (SC-004/SC-018). No historical measurement is presented as fresh evidence.
+
+**Limits:** No installed-client multi-stage run, production acceptance campaign, provider concurrency/real credentials or live mutations. Closed-reason mismatch remains an endpoint-dependent unresolved result, not a fabricated successful closure. All request-scope and missing-capability branches are covered by dispositions; full execution remains outside these claims.
+
+**Checkpoint:** Commit with P02 in its subject, push and confirm containment before P03.
 
 ### P03 — Consolidation and revision handoff
 
@@ -510,6 +544,7 @@ Finding IDs are global and stable across units. An empty index means no findings
 | ID | Title | Type | Priority | Status | Units / criteria | Related IDs |
 | --- | --- | --- | --- | --- | --- | --- |
 | SDD-R-001 | Orientation status example can mutate the index | Defect | P2 | Open | S02 / C07 | None |
+| SDD-R-002 | Clarify durable handoff for invalidated checked tasks | Recommendation | P3 | Open | S11, S13 / C04, C05 | None |
 
 ## Finding records
 
@@ -529,6 +564,21 @@ Canonical finding records below preserve baseline evidence and objective revisio
 | Recheck | On a disposable committed repo with tracked-file metadata changed but identical content, orientation reports clean status without changing index bytes; verify staged/unstaged/conflicted reporting still works. |
 | Related IDs | None |
 | Revision disposition | Not revised; source held at 81011e7. |
+
+### SDD-R-002 — Clarify durable handoff for invalidated checked tasks
+
+| Field | Value |
+| --- | --- |
+| Type / priority / status | Recommendation / P3 / Open |
+| Units / criteria / category | S11, S13, P02 / C04, C05 / task-status handoff clarity |
+| Affected baseline locations | `skills/sdd-integrate-feature/references/feature-incorporation.md:19–21`; `skills/sdd-implement/references/range-selection.md:3–5`; `skills/sdd-implement/references/task-execution.md:20` |
+| Confidence | High that the exact integration-side action is unspecified; Medium practical risk. No false-completion outcome reproduced. |
+| Evidence | Integration must re-evaluate checked tasks after acceptance changes and flag changed acceptance for implement; implement owns completion and reviews disputed/stale checks. S11 and P02 consumers both retained uncertainty about whether integration may uncheck a formerly durable task or must only flag it. S13/P02 correctly refused to treat stale checks as current completion. |
+| Consequence | A subsequent revision/continuation agent has to choose how stale status is represented and who changes it; an ephemeral handoff may leave a misleading checked claim visible between independently invoked workflows. This is potential coordination ambiguity, not observed skipped work. |
+| Recommended correction | Define the existing owner's invalidation action and durable reassessment handoff within the selected task list/evidence. Preserve the user-established implementation completion ownership, stable IDs and historical evidence; do not add a journal. State whether integration can uncheck invalid claims or records a scoped pending-reassessment note for implement. This responsibility choice requires acceptance rather than being silently imposed. |
+| Recheck | Integrate a changed accepted contract for a previously checked/committed task, stop, and resume in a fresh consumer. It identifies the stale claim without chat history, does not skip affected work or claim current acceptance, preserves old evidence as historical, and changes status only through the defined owner. |
+| Related IDs | None; independent of SDD-R-001. |
+| Revision disposition | Not revised; optional clarification for subsequent agent/human decision. Source held at 81011e7. |
 
 ## Scenario register
 
@@ -554,6 +604,9 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-016 | S13 / mixed-hunk commit preservation | Disposable Git repository + bare remote, shared path has owned pending hunk/unrelated staged hunk/unrelated unstaged hunk; second unrelated staged file; task checkbox | Commit owned hunk and status only; keep unrelated index/worktree state; no index reversal; push confirmed | Executable reviewer-operated local Git fixture | python /tmp/sdd_git_isolation_fixture.py exit0; commit contains TASKS.md/shared.txt only; all six content/index/worktree assertions passed; ls-remote equals commit c37030c842f01e2349669637a8b43a6c94600374 | Recipe constructs selected temporary index from HEAD and reconciles owned ordinary-index entries. Not autonomous agent staging, not a plugin script or external hosting test; fixture removed. |
 | SC-017 | S14 / human checkpoint control | Assess reduction; commanded removal with retained neighbors/later tasks; unpushed commit/unrelated dirty state; overlay proposal; subsequent explicit resume; invalidated completion/issue | Direct scoped amendment, preserved contracts/state, no automatic continuation/host status flip | Read-only consuming-agent assessment | Assessment stops without effects; direct existing docs and focused code/tests/docs only; old commits pushed with amendment at finish; no overlay/integrate; later resume separately authorized; reopen requires outstanding revised acceptance and tracking authority | No behavioral removal or actual staging/push/host execution; SC-016 verifies reviewer-operated isolation mechanism only |
 | SC-018 | S15 / coordinator routes and prerequisites | Prep-only; prep+next2 feature tasks; selection-only; missingTDD; token/no store; policy403; SPEC-only integration; ambiguous continue; taskless docs/unrelated staged; report outsideGit | Scoped owner routes, persistent authorization, missing facilities reported, secure credentials, exact stops/persistence | Read-only consuming-agent assessment | Prep stops; combined request enters bounded implement without reconfirmation; selection readonly; missing capability blocks dependent work; transient token only securely/no storage claim; policy remedy not token assumption; selected integration excludes task transfer; continue target resolved; manager persists taskless docs; draft outsideGit allowed | No actual multi-stage implementation, storage/credential transfer, installs or provider writes; disposal/state ownership claims require fixtures/integration evidence |
+| SC-019 | P02 / eight composed workflows | Eight catalog workflows plus changed checked acceptance and standalone staged maintenance | Consistent authority/effects/stops across producers and consumers | Read-only consuming-agent synthesis | No new composed execution defect; scoped transitions preserved; exact invalidation handoff remains unspecified | SDD-R-002 recommendation; no multi-stage effects or actual provider operations |
+| SC-020 | P02 / feature task ownership transfer | Disposable Git accepted plan/lists; main T012/T013, feature T020 checked evidence/T021 unchecked dependencies; TASKS-only then joint authorization | No out-of-scope source edit; one executable owner, stable evidence/status/dependencies and broader parent scope | Consumer-executed fixture edits; primary inspection/assertions and local bare push | First scope no changes; second only two lists; IDs T012/T013/T020/T021 unique, evidence/dependencies preserved, parents unchecked; commit 8afd2f7ddf34394d4488860c5a3bfc8c6a587b60 equals bare remote, final clean | No production verification claimed from fixture evidence strings; other source files untouched; not live hosting |
+| SC-021 | P02 / orientation guard regression matrix | Disposable clean-mtime, staged, unstaged and conflicted repos | Guarded status preserves index and worktree and reports each state | python /tmp/sdd_status_guard_matrix.py | Exit0; outputs empty/M-staged/M-unstaged/UU respectively; all index/worktree bytes unchanged | SDD-R-001 candidate guard demonstrated, source not corrected; local platform only |
 
 ## Revision queue and human decisions
 
