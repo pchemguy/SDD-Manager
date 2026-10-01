@@ -36,7 +36,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S12 | sdd-forge | Reviewed | None in examined scope | Commit subject identifies S12; push gate before next unit |
 | S13 | sdd-implement | Reviewed | None in examined scope | Commit subject identifies S13; push gate before next unit |
 | S14 | sdd-steer | Reviewed | None in examined scope | Commit subject identifies S14; push gate before next unit |
-| S15 | sdd-manage | Not started | Not assessed | None |
+| S15 | sdd-manage | Reviewed | None in examined scope | Commit subject identifies S15; push gate before next unit |
 | P01 | Package validation | Not started | Not assessed | None |
 | P02 | Cross-skill/workflow synthesis | Not started | Not assessed | None |
 | P03 | Consolidation/revision handoff | Not started | Not assessed | None |
@@ -439,9 +439,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S15 — sdd-manage
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-manage/SKILL.md`; `skills/sdd-manage/agents/openai.yaml`; `skills/sdd-manage/assets/icon.svg`; `skills/sdd-manage/references/coordination.md`; `skills/sdd-manage/references/credentials.md`; `skills/sdd-manage/references/examples.md`; `skills/sdd-manage/references/workflows.md`. No files excluded.
+**Relevant contracts:** Coordinates eight workflows/current orient scope, settled decisions, focused capability ownership and external credential storage; implementation/steer persists own work, manager persists preparation/integration/standalone edits.
 
-## Package and composition results
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Seven resources structurally checked; eight workflows and examples route discoverably. |
+| C02 | Satisfied | Preparation, execution, steering, integration, review and hosting have distinct entry/output/stops. |
+| C03 | Satisfied | Session authorization reused; combined transition needs no repeated confirmation; discussion remains nonmutating. |
+| C04 | Satisfied | Missing focused capabilities report blocker; no hidden client/install; report/forge responsibilities respected. |
+| C05 | Satisfied | Inputs accepted not inferred from presence; feature sources/task ownership retained across selected integration. |
+| C06 | Satisfied | Orient current scope/baseline refreshed materially; continuation task/boundary resolved, no automatic recovery/reset. |
+| C07 | Satisfied | Standalone scoped staging/commit/push protocol matches implement/steer isolation; user standing push policy honored. |
+| C08 | Satisfied | Approved external store and protected transfer; absent store transient only with secure channel; policy403 distinct from token suitability. |
+| C09 | Satisfied | Verification appropriate to actual effect; no manufactured completion for preparation/review. |
+| C10 | Satisfied | Planned/implemented/verified/committed/pushed/hosted state and unresolved capability outcomes separate. |
+| C11 | Satisfied | Workflow table, protocol, credentials and examples form useful progressive disclosure. |
+| C12 | Satisfied | No unexplained source history or mandatory new state artifacts; examples explicitly illustrative. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-manage` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-018 consumer assessed all workflow routes, combined prep/next-two execution, readonly selection/report, missing TDD, storage/403 blockers, selected integration and separate resume; no authority drift or source effects observed.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S15 in its subject, push, and verify containment before advancing.
 
 ### P01 — Package validation
 
@@ -505,6 +527,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-015 | S13 / execution and continuation | Selection-only unpushed; execution remote unavailable; checked T002 pending; external T003 dependency; unrelated staged/shared hunks; scoped feature parent; older issue; changed checked acceptance | Push-first execution only, resume before selection, no broadened range/status, preserve unrelated work | Read-only consuming-agent assessment | Selection-only did not push; execution blocked before work on push failure; applicable pending completion reused/committed; dependency not added silently; mixed hunks require isolation; feature parent not main; older closure handled; stale checked scope reassessed | No actual autonomous implementation/remote/hosting execution |
 | SC-016 | S13 / mixed-hunk commit preservation | Disposable Git repository + bare remote, shared path has owned pending hunk/unrelated staged hunk/unrelated unstaged hunk; second unrelated staged file; task checkbox | Commit owned hunk and status only; keep unrelated index/worktree state; no index reversal; push confirmed | Executable reviewer-operated local Git fixture | python /tmp/sdd_git_isolation_fixture.py exit0; commit contains TASKS.md/shared.txt only; all six content/index/worktree assertions passed; ls-remote equals commit c37030c842f01e2349669637a8b43a6c94600374 | Recipe constructs selected temporary index from HEAD and reconciles owned ordinary-index entries. Not autonomous agent staging, not a plugin script or external hosting test; fixture removed. |
 | SC-017 | S14 / human checkpoint control | Assess reduction; commanded removal with retained neighbors/later tasks; unpushed commit/unrelated dirty state; overlay proposal; subsequent explicit resume; invalidated completion/issue | Direct scoped amendment, preserved contracts/state, no automatic continuation/host status flip | Read-only consuming-agent assessment | Assessment stops without effects; direct existing docs and focused code/tests/docs only; old commits pushed with amendment at finish; no overlay/integrate; later resume separately authorized; reopen requires outstanding revised acceptance and tracking authority | No behavioral removal or actual staging/push/host execution; SC-016 verifies reviewer-operated isolation mechanism only |
+| SC-018 | S15 / coordinator routes and prerequisites | Prep-only; prep+next2 feature tasks; selection-only; missingTDD; token/no store; policy403; SPEC-only integration; ambiguous continue; taskless docs/unrelated staged; report outsideGit | Scoped owner routes, persistent authorization, missing facilities reported, secure credentials, exact stops/persistence | Read-only consuming-agent assessment | Prep stops; combined request enters bounded implement without reconfirmation; selection readonly; missing capability blocks dependent work; transient token only securely/no storage claim; policy remedy not token assumption; selected integration excludes task transfer; continue target resolved; manager persists taskless docs; draft outsideGit allowed | No actual multi-stage implementation, storage/credential transfer, installs or provider writes; disposal/state ownership claims require fixtures/integration evidence |
 
 ## Revision queue and human decisions
 
