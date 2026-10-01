@@ -9,7 +9,7 @@ Use these formats for campaign documents coordinated by **sdd-manage**. Apply **
 
 Fill fields from actual scope, accepted decisions, source evidence, and observed outcomes. Omit inapplicable sections and never publish unfilled placeholders as facts. A focused review can omit REVIEW-PLAN; its report still records prompt-defined scope and criteria. Expand coverage/scenario tables for a systematic campaign rather than imposing a fixed criterion count on every review.
 
-Record campaign ID, full starting SHA, exact reviewed/tested state when different, scope, stage status, and companion links. For imported reports, distinguish an unknown reviewed baseline from the campaign's known starting commit. Preserve stable legacy IDs and attribution. Use the canonical finding record once; other views reference it.
+Record campaign ID, full starting SHA, exact reviewed/tested state when different, scope, stage status, and companion links. For imported reports, distinguish an unknown reviewed baseline from the campaign's known starting commit. Preserve stable legacy IDs and attribution. Use the canonical finding record once; other views reference it. Link existing companion files; identify not-yet-created artifacts as planned filenames rather than creating placeholders or implying that they exist.
 
 ## Review plan
 
@@ -24,7 +24,7 @@ Define what will be reviewed and how evidence will be obtained. Order independen
 - Starting baseline: <full SHA>; reviewed source: <exact state>.
 - Objective and included concerns: <scope>.
 - Exclusions and evidence mode: <limits and permitted effects>.
-- Companion report: [REVIEW-REPORT.md](REVIEW-REPORT.md).
+- Companion report: <existing link or planned REVIEW-REPORT.md>.
 - State: Planned.
 
 ## Review order and criteria
@@ -102,7 +102,7 @@ Link accepted actions to review findings; retain rejected/deferred findings with
 - Campaign and starting baseline: <identity; full SHA>.
 - Current revision source: <exact state if different>.
 - Review report: [REVIEW-REPORT.md](REVIEW-REPORT.md).
-- Revision report: [REVISION-REPORT.md](REVISION-REPORT.md).
+- Revision report: <existing link or planned REVISION-REPORT.md>.
 - Accepted, deferred, and rejected findings: <IDs and rationale>.
 - Authorized scope/effects and state: <boundary; Planned>.
 
