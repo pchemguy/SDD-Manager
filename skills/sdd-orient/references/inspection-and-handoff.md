@@ -25,6 +25,8 @@ Distinguish a Git worktree from a bare repository, a Git directory outside the t
 
 Do not assume dirty paths belong to the current task or the agent. Do not interpret clean status alone as proof that the intended work is finished or that documents agree. For the Git prerequisite to be met, the project must be inside a usable worktree; a missing HEAD, conflict, or ambiguous ownership is an additional blocker for ordinary mutation until a later workflow defines how to handle it.
 
+For branch workflows, identify the working and target branches, starting checkpoint, remote destinations, branch occupancy in worktrees, and existing task/change evidence of the authorized boundary. Report in-progress merges, already merged commits awaiting publication, and unresolved target identity. Inspect Git ancestry and parent commits when relevant with optional writes suppressed; do not fetch, switch branches, create worktrees, or infer a target from a branch name alone.
+
 ## Project evidence
 
 Look for present roots and referenced children; absence is a finding, not automatically a defect:
@@ -52,12 +54,16 @@ Inspect relevant source, tests, manifests, and declared commands for building, f
 
 When TASKS or an active FEATURE-TASKS exists, establish the implementation starting point:
 
-1. Find the latest completed task identified by a task commit and inspect its committed checklist and result. Later maintenance or steering-amendment commits do not advance that task boundary. If no task has been committed, use the established preimplementation commit as the baseline.
+1. Find the latest completed task identified by a task commit and inspect its committed checklist and result. Later maintenance, steering-amendment, or boundary-merge commits do not independently advance that task boundary. Trace completed task commits through merge parents rather than interpreting aggregate task IDs in a merge message as newly completed tasks. If no task has been committed, use the established preimplementation commit as the baseline.
    Inspect owning entries and linked evidence for **Completion reassessment pending** notes. Report the affected IDs, changed acceptance, authoritative sources, and historical evidence as disputed completion, even when the tree is clean and boxes remain checked. Do not change status or clear notes during orientation.
 2. Compare the committed boundary with the owning working checklist and staged, unstaged, and untracked changes. If the last checked task is ahead of the last committed task, identify it as completed work awaiting commit; confirm that pending changes belong to it and existing completion evidence is present. Otherwise identify the current incomplete task from the selected execution order and changes since the boundary. Future unchecked tasks do not identify the interrupted task. If the tree is clean and the checklist agrees with the committed boundary, report no pending task changes.
 3. Include the task ID, owning list, last task commit, pending paths and ownership, existing verification evidence, and remaining work or ambiguity in the handoff to **sdd-implement**. It owns verification, completion, commits, pushes, and issue-closure coordination. Orientation observes existing evidence; it does not repeat implementation or run verification.
 
 Report ambiguous task identity, change ownership, or missing completion evidence without guessing. Git and the owning task list provide startup state; no separate transaction journal is required.
+
+## Interrupted document operations
+
+When changes belong to feature-document incorporation or a steering amendment, report that workflow separately from interrupted task execution. Inspect selected sources/owners and their checkpoint diff, existing scope evidence, unfinished reconciliation, and branch/merge state. Preserve task history and unresolved identities; do not assign a document-only operation to the next unchecked task. Route facts to **sdd-manage** and its active owner; orientation does not reconcile files or execute checks.
 
 ## Orientation report
 
@@ -65,7 +71,7 @@ Produce a concise human-readable handoff with these slots, using `none`, `unknow
 
 ```text
 Target: project root; Git root; contemplated paths or workflow
-Git: worktree eligibility; branch/detached/unborn; HEAD; relevant status and ownership
+Git: worktree eligibility; branch/detached/unborn; HEAD; relevant status and ownership; working/target branches, checkpoint, and merge/publication state
 Instructions: applicable sources, scope, and conflicts
 Documents: main roots and relevant children; active feature/change documents
 Execution evidence: owning TASKS or FEATURE-TASKS; last committed task and commit; current task and status; pending changes; existing verification evidence; remaining work or ambiguity

@@ -20,7 +20,11 @@ A caller may provide a token directly to **sdd-forge**. That path does not imply
 
 ## Respond to an access escalation
 
-- **403 context:** Receive the repository, endpoint, attempted operation, and access requirement or other provider-indicated cause from **sdd-forge**, without a credential in the report.
+- **Access 403 context:** Receive the repository, endpoint, attempted operation, and access requirement or other provider-indicated cause from **sdd-forge**, without a credential in the report.
 - **Resolution:** Check the approved store for a suitable credential. When none is available, escalate to the user. Explain a provider restriction requiring another remedy rather than assuming every 403 needs a replacement token.
 - **Retry:** Supply a suitable credential when available; let the backend recheck access before retrying the affected operation. Stop on an unresolved restriction or repeated unchanged failure; do not retry indefinitely.
 - **Report:** Return the attempted operation and unresolved access requirement, preserving successful independent results. Never expose the token or claim that replacement alone proved permission.
+
+## Non-credential operational failures
+
+Use the backend's classification for rate limits, service outages, offline states, invalid input, and uncertain writes. Do not escalate for a replacement token merely because a response is403 or an operation is unavailable. Return sanitized pending effects and retry timing; preserve successful local and hosted results. After uncertain mutations, backend reconciliation must establish actual state before retrying.

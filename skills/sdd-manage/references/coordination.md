@@ -5,9 +5,11 @@
 - **Request:** Capture the objective, inspection or mutation mode, target paths or documents, owning task list, selected boundary, and allowed external effects. Reuse session authorization and decisions.
 - **Orientation:** Start with **sdd-orient**. Use its observed repository, applicable instructions, baseline, pending changes, tooling, and task evidence. Do not mistake an unchecked task or latest maintenance commit for a proven execution boundary.
 - **Git:** Require an eligible worktree for repository mutations. Outside Git, continue discussion or inspection and report the mutation blocker; do not initialize a repository implicitly.
-- **Pending work:** Establish ownership of dirty paths. Preserve unrelated staged and unstaged changes. Do not reset because the tree is dirty. Pass interrupted implementation to **sdd-implement**; if it lies outside the requested new scope, resolve that conflict before overlapping mutations.
+- **Pending work:** Establish ownership of dirty paths. Preserve unrelated staged and unstaged changes. Do not reset because the tree is dirty. Pass interrupted task implementation to **sdd-implement**, document incorporation to **sdd-integrate-feature**, and commanded amendment continuation to **sdd-steer**; if it lies outside the requested new scope, resolve that conflict before overlapping mutations.
 - **Inputs:** Confirm the authoritative requirements, design, strategy, and layout needed by the selected stage. File presence alone does not establish acceptance or consistency.
 - **Facilities:** Check availability of the selected skills and necessary tools. Report concrete missing capabilities. Use ordinary filesystem, Git, and available provider tools; require no particular client, hidden hooks, or implicit installation mechanism.
+
+For branch workflows, use [Git workflows](git-workflows.md) to establish the working branch, target, checkpoint, and final integration. Preserve implementation's push-first prerequisite; a direct focused invocation uses the same protocol.
 
 ## Coordinate execution
 
@@ -16,7 +18,7 @@
 3. Refresh the material baseline when HEAD, instructions, project, target scope, or relevant pending changes change. Do not repeatedly run orientation or checks when the current evidence remains applicable.
 4. Resolve missing human decisions and out-of-scope requirements without guessing or silently expanding work. Continue independent authorized work where possible. State the blocked operation and decision needed.
 5. For verification failures, return repairs to the active **sdd-implement** or **sdd-steer** workflow. A standalone verification request returns findings; it does not start implementation. Documentation findings requiring governing-document changes are returned to the user before any authoring is coordinated.
-6. Stop at the requested boundary. A checkpoint is not permission to select another milestone, start steering, integrate a feature, or create hosted objects. A human-commanded steering amendment always returns control without resuming implementation.
+6. Stop at the requested boundary. A checkpoint is not permission to select another milestone, start steering, incorporate unselected feature documents, or create hosted objects. Complete the default explicit Git merge and target publication for the authorized finished boundary before returning. A human-commanded steering amendment always returns control without resuming implementation.
 
 ## Persist repository changes
 

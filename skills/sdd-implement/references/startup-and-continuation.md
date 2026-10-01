@@ -26,3 +26,7 @@ Continuation finishes the interrupted task before new task selection. If it fall
 Use [range selection](range-selection.md) to resolve task, next-N-task, milestone, or phase requests into precise IDs, prerequisite evidence, and exit conditions. For feature work, select from the active FEATURE-TASKS and inspect relevant TASKS prerequisites; for main work, use TASKS. Report ambiguous active scope and unmet out-of-range prerequisites rather than selecting silently.
 
 Keep the selected range and checkpoint visible throughout execution. A user may change the range or pause work; preserve completed commits and current pending work, report the new boundary, and follow the latest instruction. A separate steering request does not authorize automatic continuation afterward.
+
+## Working branch and integration continuation
+
+After startup pushing, establish or reuse the selected range's working branch and target under **sdd-manage**'s **Git workflows** reference. Record its starting checkpoint in existing task/change evidence. Preserve unfinished task ownership before branch setup; do not create a new branch to evade pending work or push blockers. On continuation, distinguish unfinished tasks, completed tasks awaiting commit/push, an uncommitted merge awaiting conflict repair or verification, and a verified merge awaiting target publication. Finish the authorized state rather than repeating tasks or merging again. Ambiguous branch/target identities or out-of-range work block the affected continuation.

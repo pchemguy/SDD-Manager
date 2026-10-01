@@ -27,7 +27,9 @@ Once the task list is ready:
 
 ```text
 Use sdd-manage to implement milestone 1.1 from TASKS.md.
-Verify, commit, and push each completed task, then stop at the milestone.
+Verify, commit, and push each completed task. Merge the verified milestone
+into its established target with an explicit merge commit, verify and push
+the target, then stop.
 ```
 
 Use the milestone and task IDs from your actual task list. You can start at a later stage when its inputs are already established; the coordinator does not repeat earlier stages by default.
@@ -38,9 +40,9 @@ Use the milestone and task IDs from your actual task list. You can start at a la
 | --- | --- | --- |
 | Explore and prepare a project | “Compare approaches, then prepare the project through TASKS.” | Accepted design, behavior, delivery strategy, physical ownership, and executable tasks. |
 | Prepare a feature | “Define ZIP support and its feature task list.” | Scoped requirements and the necessary feature design, plan, and tasks. |
-| Implement a range | “Implement the next three tasks and stop.” | Verified task results, completion evidence, commits, and pushes. |
+| Implement a range | “Implement the next three tasks and stop.” | Verified task commits on a working branch, explicit boundary merge, merged-state verification, and target publication. |
 | Resume interrupted work | “Resume milestone 2.2 without discarding pending work.” | Existing work inspected and continued before new tasks are selected. |
-| Amend at a checkpoint | “Remove encrypted streams from the implemented scope, including tests and documentation.” | Existing requirements and implementation aligned with the human-defined amendment. |
+| Amend at a checkpoint | “Remove encrypted streams from the implemented scope, including tests and documentation.” | Verified amendment explicitly merged into the paused implementation branch, published, then control returned to the human. |
 | Integrate an accepted feature | “Incorporate FEATURE-SPEC into SPEC only.” | Selected main documents reconciled without unrelated task-list changes. |
 | Review or maintain a scope | “Review PLAN,” “Verify this phase,” or “Align README.” | Findings, evidence, or the explicitly requested maintenance. |
 | Synchronize GitHub tracking | “Create issues and milestones for these tasks.” | Phase labels, milestones, task issues, and verified task associations. |
@@ -49,13 +51,25 @@ Preparation and review stop before implementation unless your request includes i
 
 For detailed entry conditions and stopping rules, see the [workflow catalog](skills/sdd-manage/references/workflows.md).
 
+## Branches and integration
+
+Work on a scoped branch for the selected range, feature, steering amendment, or document integration. Establish its target and starting checkpoint; the target need not be the default branch. Reuse the branch when continuing the same work.
+
+- **Task checkpoints:** Commit and push each completed task before advancing.
+- **Workflow boundary:** Merge the verified completed scope by default with `git merge --no-ff`; every new integration has an explicit two-parent merge commit. Verify the prospective merged state before committing it and push the target.
+- **Feature documents:** Incorporate selected accepted deltas on the feature branch before final verification and merge. A narrow request does not authorize unfinished feature work or unselected document changes.
+- **Steering:** Branch from the paused implementation checkpoint and merge back there. A blocked amendment retains its work and resumes on a human command; successful steering still does not resume the main task list.
+- **Failures:** Preserve valid work and report conflicts, required-check failures, or pending target publication. No automatic rollback or force-push. Separate worktrees can protect unrelated dirty work.
+
+See the [Git workflow](skills/sdd-manage/references/git-workflows.md) for branch reuse, interruption, merge verification, and publication. Git merge and feature-document incorporation have distinct owners; hosted PR operations remain outside the current backend.
+
 ## Skills
 
 The coordinator handles workflow selection and shared prerequisites. Focused skills own the work within each stage.
 
 | Skill | Responsibility |
 | --- | --- |
-| [sdd-manage](skills/sdd-manage/SKILL.md) | Coordinate scope, prerequisites, transitions, credentials, and stopping points. |
+| [sdd-manage](skills/sdd-manage/SKILL.md) | Coordinate scope, prerequisites, branches, explicit integration, credentials, and stopping points. |
 | [sdd-orient](skills/sdd-orient/SKILL.md) | Inspect instructions, repository state, documents, tooling, and interrupted work. |
 | [sdd-conventions](skills/sdd-conventions/SKILL.md) | Apply shared design, modularity, and task-hierarchy criteria. |
 | [sdd-design](skills/sdd-design/SKILL.md) | Explore the problem; develop the project brief, architecture, and decomposition. |
@@ -93,7 +107,7 @@ A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, 
 - **Existing work is preserved.** Orientation compares task and Git evidence with pending changes. Completed work awaiting commit is persisted without repeating its implementation; dirty state alone does not justify reset.
 - **Git provides durable checkpoints.** No transaction journal or recovery directory is required. Commits and task evidence support continuation.
 - **Changes remain scoped.** Unrelated staged and unstaged work is preserved. Documentation findings requiring governing-document amendments are returned to the human.
-- **Hosting reflects local evidence.** GitHub issues close after verified, committed task completion. Hosting failures remain pending and do not erase local results; feature-branch completion is distinct from default-branch integration.
+- **Hosting reflects local evidence.** GitHub issues close after verified, committed task completion. Hosting failures remain pending and do not erase local results; task-branch completion is distinct from target integration and publication. Rate limits/outages remain deferred; uncertain writes are reconciled before retrying.
 
 ## Package status and references
 
