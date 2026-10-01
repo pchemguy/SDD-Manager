@@ -29,7 +29,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S05 | sdd-specify | Reviewed | None in examined scope | Commit subject identifies S05; push gate before next unit |
 | S06 | sdd-plan | Reviewed | None in examined scope | Commit subject identifies S06; push gate before next unit |
 | S07 | sdd-tasks | Reviewed | None in examined scope | Commit subject identifies S07; push gate before next unit |
-| S08 | sdd-tdd | Not started | Not assessed | None |
+| S08 | sdd-tdd | Reviewed | None in examined scope | Commit subject identifies S08; push gate before next unit |
 | S09 | sdd-docs | Not started | Not assessed | None |
 | S10 | sdd-verify | Not started | Not assessed | None |
 | S11 | sdd-integrate-feature | Not started | Not assessed | None |
@@ -243,7 +243,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S08 — sdd-tdd
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-tdd/LICENSE`; `skills/sdd-tdd/SKILL.md`; `skills/sdd-tdd/agents/openai.yaml`; `skills/sdd-tdd/assets/icon.svg`; `skills/sdd-tdd/references/test-first-cycle.md`; `skills/sdd-tdd/references/testing-strategy.md`; `skills/sdd-tdd/references/upstream-provenance.md`; `skills/sdd-tdd/references/writing-good-tests.md`. No files excluded.
+**Relevant contracts:** Owns strategy, tests and development test execution; implement/steer owns production GREEN/refactor, verify acceptance campaign and active workflow persistence. Local MIT provenance retained; pinned upstream not independently fetched.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Eight files structurally checked; local MIT notice and both-module adaptation described. |
+| C02 | Satisfied | Strategy-only distinct from test edits and production handoff. |
+| C03 | Satisfied | Current scope/environment, preserved code and established exceptions respected. |
+| C04 | Satisfied | Test/production/acceptance/docs/report/completion owners explicit. |
+| C05 | Satisfied | Accepted contracts independently determine expectations; no test-defined requirements/layout. |
+| C06 | Satisfied | Missing original RED handled by characterization or isolated sensitivity, not reset/deletion. |
+| C07 | Satisfied | No completion/commit/push/issue effects owned here. |
+| C08 | Not applicable | No credential or provider access ownership. |
+| C09 | Satisfied | Setup versus behavioral RED, refactor baseline, independent values, doubles and sensitivity assessed in SC-009. |
+| C10 | Satisfied | Focused/mock passing evidence and historical RED limits explicit. |
+| C11 | Satisfied | Separate cycle, strategy and test-writing modules; illustrative examples end of test-writing reference. |
+| C12 | Blocked | Local provenance and no conversation-dependent directives confirmed. Independent pinned upstream content/license retrieval returned DisabledError; cannot attest remote provenance in this environment. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-tdd` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-009: consumer classified import failure as blocker, preserved interrupted code, allowed refactor without fabricated RED, rejected self-derived/mocked target checks and retained external integration gap. Pinned GitHub and raw upstream fetches failed with DisabledError.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S08 in its subject, push, and verify containment before advancing.
 
 ### S09 — sdd-docs
 
@@ -328,6 +352,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-006 | S05 / specification authority and scope | Parser/design conflict; one-contract feature; review only; undecided errors; divergent duplicate root/child signatures | No code-to-requirement promotion, unrelated rewrites or guessed public behavior; resolve ownership and decisions | Read-only consuming-agent assessment | Resolved decisions required before affected authoring; FEATURE-SPEC references unaffected nodes; review remained read-only; errors block final contract; duplicate interface needs canonical accepted signature | No actual project documents or mutations; hypothetical conflict resolution needs user/project evidence |
 | SC-007 | S06 / planning scope and exits | PLAN-only unresolved SPEC; feature fits current plan/layout; layout-only uncertain component; vague performance exit; PLAN removes SPEC-required behavior | Respect focused scope, upstream ownership, optionality and measurable exits | Read-only consuming-agent assessment | No automatic layout/PLAN crossover; no ceremonial FEATURE-PLAN; material uncertainties returned upstream; vague milestone and removal conflict reported; no invented acceptance thresholds | No documents changed; actual adequacy of existing strategy and materiality need project evidence |
 | SC-008 | S07 / identity, form and ownership | Duplicate main/feature T012; existing code/tests with unconfirmed acceptance; select/code request; feature integration; feature-only parent complete | Unique IDs, evidence-gated status, owning skill routing, scoped parent completion | Read-only consuming-agent assessment and checklist draft | New independent feature ID required; prior task unchecked pending evidence; selection to implement and reconciliation to integrate-feature; main parent not inferred complete; sample indentation 0/4/8/12 spaces | No actual derivation, selection, verification or document mutation |
+| SC-009 | S08 / meaningful testing evidence | Import-failure regression; pre-test interrupted code/no deletion; behavior-preserving refactor; self-derived expectation and target mock; unavailable external API | Behavioral RED only, preserve code, independent expectations, bounded mock claims | Read-only consuming-agent assessment; attempted remote provenance inspection | Setup failure not RED; characterization is not historical RED; refactor uses existing protection; target behavior needs real exercise and independent expected value; mocked local pass not integration completion | No tests executed; pinned upstream independently unverified because GitHub and raw fetch returned DisabledError; local license inspected |
 
 ## Revision queue and human decisions
 
