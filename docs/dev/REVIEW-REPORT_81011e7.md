@@ -34,7 +34,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S10 | sdd-verify | Reviewed | None in examined scope | Commit subject identifies S10; push gate before next unit |
 | S11 | sdd-integrate-feature | Reviewed | None in examined scope | Commit subject identifies S11; push gate before next unit |
 | S12 | sdd-forge | Reviewed | None in examined scope | Commit subject identifies S12; push gate before next unit |
-| S13 | sdd-implement | Not started | Not assessed | None |
+| S13 | sdd-implement | Reviewed | None in examined scope | Commit subject identifies S13; push gate before next unit |
 | S14 | sdd-steer | Not started | Not assessed | None |
 | S15 | sdd-manage | Not started | Not assessed | None |
 | P01 | Package validation | Not started | Not assessed | None |
@@ -383,7 +383,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S13 — sdd-implement
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-implement/SKILL.md`; `skills/sdd-implement/agents/openai.yaml`; `skills/sdd-implement/assets/icon.svg`; `skills/sdd-implement/references/completion-and-checkpoints.md`; `skills/sdd-implement/references/range-selection.md`; `skills/sdd-implement/references/startup-and-continuation.md`; `skills/sdd-implement/references/task-execution.md`. No files excluded.
+**Relevant contracts:** Owns selection/execution/completion and per-task Git persistence; manage/orient sets prerequisites, TDD tests, docs documentation, verify evidence, report messages, optional forge associations/closure. Feature reconciliation and HIL steering remain separate.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Seven resources structurally checked; startup/selection/execution/completion routing complete. |
+| C02 | Satisfied | Selection-only read-only versus push-first execution and bounded checkpoint explicit. |
+| C03 | Satisfied | No range expansion, mixed-list choice, unowned edits or silent governing amendments. |
+| C04 | Satisfied | TDD/docs/verify/report roles coordinated; forge absent/unavailable does not block independent local work. |
+| C05 | Satisfied | Task result/status committed together; broader/feature parent exits distinct; stale checked evidence reassessed. |
+| C06 | Satisfied | Outstanding pushes precede selection/tests/edits; pending-complete task committed before new selection; scope conflicts stop. |
+| C07 | Satisfied | Owned staged/hunk isolation and ordinary-index reconciliation explicit; reviewer-operated SC-016 demonstrates recipe preservation and bare push. |
+| C08 | Satisfied | No token storage here; unresolved push access stops, hosted credentials routed to forge/manage. |
+| C09 | Satisfied | Current acceptance and sufficient state-bound evidence required; production repairs/test docs coordinate, no fabricated RED. |
+| C10 | Satisfied | Durable/pending/pushed/hosted/default-branch distinctions retained; older hosted backlog handled. |
+| C11 | Satisfied | Progressive references and ordered protocol align; one task then checkpoint evidence. |
+| C12 | Satisfied | No recovery journal/skill, fabricated completion or source-history prose requirements. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-implement` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-015 consumer covered readonly selection, push blockers, pending-complete resume, out-of-range dependency, mixed hunks, scoped parents, older issue backlog and stale checked acceptance. SC-016 executable temp-index recipe passed all content/index/push assertions.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S13 in its subject, push, and verify containment before advancing.
 
 ### S14 — sdd-steer
 
@@ -454,6 +478,8 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-012 | S10 / collection, skips, warnings, failures | Disposable stdlib unittest fixtures: empty directory; passing test + DeprecationWarning + required integration skipped; assertion failure | Counts and limitations visible despite success exit; zero checks not acceptance; failure explicit | Executable local controlled fixture | python -W default -m unittest discover -v: empty exit5, Ran0/NO TESTS RAN; mixed exit0, Ran2/OK skipped1 with warning; assertion exit1, Ran1/FAILED failures1 | pytest unavailable; no dependencies installed. Tests demonstrate runner evidence only, not autonomous plugin acceptance campaign; temporary fixtures removed. |
 | SC-013 | S11 / selected integration and ownership | SPEC only with active feature tasks; TASKS only transfer; joint transfer checked feature parent; retained feature-source reference; changed task acceptance | No implied scope extension, source deletion, duplicate owner or broadened completion claim | Read-only consuming-agent assessment | TASKS-only transfer blocked; joint task move retires source checkbox and retains ID/evidence; main parent not copied complete; active references retain source; stale acceptance flagged for implement | No integration edit performed; ownership wording for invalidating a checked claim requires cross-skill synthesis in P02 |
 | SC-014 | S12 / projection, access and lifecycle | No report; duplicate marker; renamed milestone; policy/rate-limit403; partial label/issue write; older open task; matching PR; closed-not-planned;201 absent parents;200 unchanged reason | Fallback, unique reuse, stop conflicts, cause-sensitive access, partial/idempotent effects and completion evidence | Read-only consuming-agent assessment plus official provider documentation inspection | Fallback draft accepted; duplicates blocked; stable rename reused;403 not blindly token-retried; partial objects reread; verified older issue reconciled with authority; PR excluded; missing returned associations partial; unchanged reason unresolved, no invented reopen sequence | No live API/auth/credential or service concurrency tests. Official references: https://docs.github.com/en/rest/issues/issues , https://docs.github.com/en/rest/issues/labels , https://docs.github.com/en/rest/issues/milestones . Already-closed reason-change fallback requires endpoint-supported policy resolution. |
+| SC-015 | S13 / execution and continuation | Selection-only unpushed; execution remote unavailable; checked T002 pending; external T003 dependency; unrelated staged/shared hunks; scoped feature parent; older issue; changed checked acceptance | Push-first execution only, resume before selection, no broadened range/status, preserve unrelated work | Read-only consuming-agent assessment | Selection-only did not push; execution blocked before work on push failure; applicable pending completion reused/committed; dependency not added silently; mixed hunks require isolation; feature parent not main; older closure handled; stale checked scope reassessed | No actual autonomous implementation/remote/hosting execution |
+| SC-016 | S13 / mixed-hunk commit preservation | Disposable Git repository + bare remote, shared path has owned pending hunk/unrelated staged hunk/unrelated unstaged hunk; second unrelated staged file; task checkbox | Commit owned hunk and status only; keep unrelated index/worktree state; no index reversal; push confirmed | Executable reviewer-operated local Git fixture | python /tmp/sdd_git_isolation_fixture.py exit0; commit contains TASKS.md/shared.txt only; all six content/index/worktree assertions passed; ls-remote equals commit c37030c842f01e2349669637a8b43a6c94600374 | Recipe constructs selected temporary index from HEAD and reconciles owned ordinary-index entries. Not autonomous agent staging, not a plugin script or external hosting test; fixture removed. |
 
 ## Revision queue and human decisions
 
