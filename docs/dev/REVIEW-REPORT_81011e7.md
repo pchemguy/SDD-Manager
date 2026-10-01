@@ -35,7 +35,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S11 | sdd-integrate-feature | Reviewed | None in examined scope | Commit subject identifies S11; push gate before next unit |
 | S12 | sdd-forge | Reviewed | None in examined scope | Commit subject identifies S12; push gate before next unit |
 | S13 | sdd-implement | Reviewed | None in examined scope | Commit subject identifies S13; push gate before next unit |
-| S14 | sdd-steer | Not started | Not assessed | None |
+| S14 | sdd-steer | Reviewed | None in examined scope | Commit subject identifies S14; push gate before next unit |
 | S15 | sdd-manage | Not started | Not assessed | None |
 | P01 | Package validation | Not started | Not assessed | None |
 | P02 | Cross-skill/workflow synthesis | Not started | Not assessed | None |
@@ -411,7 +411,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S14 — sdd-steer
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-steer/SKILL.md`; `skills/sdd-steer/agents/openai.yaml`; `skills/sdd-steer/assets/icon.svg`; `skills/sdd-steer/references/amendment-execution.md`; `skills/sdd-steer/references/objective-and-impact.md`; `skills/sdd-steer/references/verification-and-stop.md`. No files excluded.
+**Relevant contracts:** Owns HIL checkpoint amendment including direct existing governing docs, production/tests/docs coordination, status reassessment and commit/push; no feature-overlay integration or automatic main-list resume.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Six resources structurally checked and scoped assessment/execution/stop routing explicit. |
+| C02 | Satisfied | Assessment-only versus human-commanded amendment and unconditional operation stop. |
+| C03 | Satisfied | Retained contracts and unrelated pending work protected; explicit objective authorizes routine steps. |
+| C04 | Satisfied | TDD/docs/verify/report/forge coordination keeps production repair in steer, no implement handoff. |
+| C05 | Satisfied | Existing owners amended directly; stable IDs retained, removed future work not marked complete, feature list scope preserved. |
+| C06 | Satisfied | Incomplete main work not automatically finished; later explicit resume is separate workflow authorization. |
+| C07 | Satisfied | Amendment-only hunk isolation and postcommit ordinary-index correction align with SC-016 mechanism; outstanding commits pushed at finish. |
+| C08 | Satisfied | Push/hosting failures reported; credential management delegated, no store here. |
+| C09 | Satisfied | Behavioral removal and retained regressions need real evidence; obsolete tests revised to accepted contract. |
+| C10 | Satisfied | Steering commit not next-task completion; pending host/push, remaining work and branch state explicit. |
+| C11 | Satisfied | Impact, direct edits, verification/persistence and human return arranged clearly. |
+| C12 | Satisfied | No amendment appendix, recovered transaction journal or copied facts; current end-state docs explicit. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-steer` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-017 consumer kept assessment-only read-only, implemented only objective scope, preserved unrelated work, excluded overlays/integration, separated later explicit resume and evidence-based issue reopening. Steer has finish-time push, not implement's push-first rule.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S14 in its subject, push, and verify containment before advancing.
 
 ### S15 — sdd-manage
 
@@ -480,6 +504,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-014 | S12 / projection, access and lifecycle | No report; duplicate marker; renamed milestone; policy/rate-limit403; partial label/issue write; older open task; matching PR; closed-not-planned;201 absent parents;200 unchanged reason | Fallback, unique reuse, stop conflicts, cause-sensitive access, partial/idempotent effects and completion evidence | Read-only consuming-agent assessment plus official provider documentation inspection | Fallback draft accepted; duplicates blocked; stable rename reused;403 not blindly token-retried; partial objects reread; verified older issue reconciled with authority; PR excluded; missing returned associations partial; unchanged reason unresolved, no invented reopen sequence | No live API/auth/credential or service concurrency tests. Official references: https://docs.github.com/en/rest/issues/issues , https://docs.github.com/en/rest/issues/labels , https://docs.github.com/en/rest/issues/milestones . Already-closed reason-change fallback requires endpoint-supported policy resolution. |
 | SC-015 | S13 / execution and continuation | Selection-only unpushed; execution remote unavailable; checked T002 pending; external T003 dependency; unrelated staged/shared hunks; scoped feature parent; older issue; changed checked acceptance | Push-first execution only, resume before selection, no broadened range/status, preserve unrelated work | Read-only consuming-agent assessment | Selection-only did not push; execution blocked before work on push failure; applicable pending completion reused/committed; dependency not added silently; mixed hunks require isolation; feature parent not main; older closure handled; stale checked scope reassessed | No actual autonomous implementation/remote/hosting execution |
 | SC-016 | S13 / mixed-hunk commit preservation | Disposable Git repository + bare remote, shared path has owned pending hunk/unrelated staged hunk/unrelated unstaged hunk; second unrelated staged file; task checkbox | Commit owned hunk and status only; keep unrelated index/worktree state; no index reversal; push confirmed | Executable reviewer-operated local Git fixture | python /tmp/sdd_git_isolation_fixture.py exit0; commit contains TASKS.md/shared.txt only; all six content/index/worktree assertions passed; ls-remote equals commit c37030c842f01e2349669637a8b43a6c94600374 | Recipe constructs selected temporary index from HEAD and reconciles owned ordinary-index entries. Not autonomous agent staging, not a plugin script or external hosting test; fixture removed. |
+| SC-017 | S14 / human checkpoint control | Assess reduction; commanded removal with retained neighbors/later tasks; unpushed commit/unrelated dirty state; overlay proposal; subsequent explicit resume; invalidated completion/issue | Direct scoped amendment, preserved contracts/state, no automatic continuation/host status flip | Read-only consuming-agent assessment | Assessment stops without effects; direct existing docs and focused code/tests/docs only; old commits pushed with amendment at finish; no overlay/integrate; later resume separately authorized; reopen requires outstanding revised acceptance and tracking authority | No behavioral removal or actual staging/push/host execution; SC-016 verifies reviewer-operated isolation mechanism only |
 
 ## Revision queue and human decisions
 
