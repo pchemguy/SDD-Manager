@@ -25,7 +25,7 @@ The human decides whether to resume the main task list or command **sdd-steer** 
 
 ## Integrate the completed boundary
 
-Use the Git workflow in **sdd-manage**'s `references/git-workflows.md` after the selected tasks and applicable exits are verified, committed, and pushed. Task persistence remains per task; merge once for the completed authorized range. Verify the entire prospective branch difference before integrating: an existing branch containing unrelated or unfinished work is a scope conflict. A pause or blocker returns branch state without a partial merge.
+Use the Git workflow in **sdd-manage**'s **Git workflows** reference after the selected tasks and applicable exits are verified, committed, and pushed. Task persistence remains per task; merge once for the completed authorized range. Verify the entire prospective branch difference before integrating: an existing branch containing unrelated or unfinished work is a scope conflict. A pause or blocker returns branch state without a partial merge.
 
 For a complete feature implementation request, coordinate incorporation of the accepted feature documents and task ownership required for its final main-document consistency through **sdd-integrate-feature**, on the working branch before final verification. An explicit selected document set governs incorporation. A narrow task/range request does not authorize incorporation of all feature documents or integration of unfinished work: merge only when the selected branch difference and documents are coherent within that scope; otherwise report the unmet prerequisite. Retain active sources and pending reassessment until their established requirements are satisfied.
 
