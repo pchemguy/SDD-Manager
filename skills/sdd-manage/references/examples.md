@@ -33,3 +33,11 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 | A merge is committed but target push was rejected. | Preserve the merge and reconcile destination/divergence/access; finish publication without creating a second merge. |
 | Hosted requests encounter rate-limit 403 or 429. | Defer according to backend timing and report pending effects; do not replace a suitable token to evade limits. |
 | A hosted write times out. | Backend re-reads exact identities and effects before retrying; incomplete lookup leaves outcome unknown. |
+
+## Review and revision campaigns
+
+| Request | Result |
+| --- | --- |
+| “Review the credential protocol.” | Start from the prompt; record scope/criteria, located findings, and limits in the campaign review report. Stop before repairs. |
+| “Plan and run a comprehensive plugin review.” | Create a review plan; update, commit, and push the report after each planned unit; consolidate findings and revision handoff. |
+| “Implement the accepted revision plan.” | Incorporate relevant accepted decisions into governing documents, perform bounded revisions with evidence checkpoints, then verify, explicitly merge, and publish. Retain the campaign plans/reports. |

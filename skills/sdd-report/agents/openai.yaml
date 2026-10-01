@@ -4,6 +4,6 @@ interface:
   icon_small: "./assets/icon.svg"
   icon_large: "./assets/icon.svg"
   brand_color: "#725C92"
-  default_prompt: "Use $sdd-report to draft the requested task issue, task or merge commit message, PR description, or completion report from verified project evidence."
+  default_prompt: "Use $sdd-report to draft the requested task issue, task or merge commit message, PR description, completion report, or review/revision campaign artifact from verified project evidence."
 policy:
   allow_implicit_invocation: true
