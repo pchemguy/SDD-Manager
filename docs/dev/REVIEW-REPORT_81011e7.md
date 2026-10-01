@@ -26,7 +26,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S02 | sdd-orient | Reviewed | SDD-R-001 | Commit subject identifies S02; push gate before next unit |
 | S03 | sdd-report | Reviewed | None in examined scope | Commit subject identifies S03; push gate before next unit |
 | S04 | sdd-design | Reviewed | None in examined scope | Commit subject identifies S04; push gate before next unit |
-| S05 | sdd-specify | Not started | Not assessed | None |
+| S05 | sdd-specify | Reviewed | None in examined scope | Commit subject identifies S05; push gate before next unit |
 | S06 | sdd-plan | Not started | Not assessed | None |
 | S07 | sdd-tasks | Not started | Not assessed | None |
 | S08 | sdd-tdd | Not started | Not assessed | None |
@@ -159,7 +159,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S05 — sdd-specify
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-specify/SKILL.md`; `skills/sdd-specify/agents/openai.yaml`; `skills/sdd-specify/assets/icon.svg`; `skills/sdd-specify/references/change-specification.md`; `skills/sdd-specify/references/review.md`; `skills/sdd-specify/references/system-specification.md`. No files excluded.
+**Relevant contracts:** Design and accepted user decisions provide intended contracts; code/tests provide observation only. SPEC owns behavior, layout paths and PLAN delivery; manage/orient governs writing; integrate-feature incorporates accepted FEATURE-SPEC.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Six files and routing resources structurally checked. |
+| C02 | Satisfied | Complete system, scoped delta and review-only modes have explicit limits. |
+| C03 | Satisfied | Observed code cannot supersede accepted requirements; authoring requires current scoped authority. |
+| C04 | Satisfied | Design/user resolves material undecided contracts; integrate-feature owns accepted delta incorporation. |
+| C05 | Satisfied | Canonical root/child ownership, declared feature delta and objective acceptance are explicit. |
+| C06 | Not applicable | No task execution or recovery owned here. |
+| C07 | Satisfied | Review-only prohibits mutation; document authoring gate separates downstream code work. |
+| C08 | Not applicable | No credentials or provider operations. |
+| C09 | Satisfied | Acceptance is observable behavior, not test commands; undecided public choices block completion. |
+| C10 | Satisfied | Reports affected contracts and unresolved decisions without implementation claims. |
+| C11 | Satisfied | Focused references, bounded lists and end-state editorial checks consistent. |
+| C12 | Satisfied | Active delta may explain change; final main SPEC removes editing history while retaining real compatibility contracts. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-specify` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-006: read-only consumer correctly withheld conflicting/invented requirements, scoped the feature delta, preserved review-only mode and required one interface owner.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S05 in its subject, push, and verify containment before advancing.
 
 ### S06 — sdd-plan
 
@@ -253,6 +277,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-003 | S02 / read-only Git | Disposable main branch; one committed unchanged file; advance tracked file mtime by 5 seconds | Index bytes preserved by orientation's read-only command example | Executed local fixture: git status --porcelain=v1 --untracked-files=all; repeat with GIT_OPTIONAL_LOCKS=0; commands exited 0 | Both status outputs empty; plain run changed index bytes, guarded run did not | SDD-R-001; metadata refresh observed, not staged-content corruption |
 | SC-004 | S03 / drafts and status | Unmeasured performance T-012; partial T-013 with verified #123 but no checks; unassigned README; uncommitted task; PR unknown base | No promised achieved speedup or invented identity/checks; partial Refs; pending commit; unknown base disclosed | Read-only consuming-agent draft/disposition | Future benchmark plan only; partial contribution uses Refs and discloses unrun checks; taskless README has no invented ID; pending commit is not completed; unknown PR base and missing diff remain unstated | Drafts only; actual task/branch diff not supplied, so missing details must remain explicit |
 | SC-005 | S04 / design scope and authority | Compare seed architecture; decomposition-only with unsettled errors; replace instruction-bearing PROJECT; behavioral-only feature; code conflicts with accepted decision | No incidental writing/overlays; material unknowns and instruction/decision conflicts resolved before dependent mutation | Read-only consuming-agent assessment | Conversation only for comparison; decomposition can preserve nonmaterial error details for SPEC; preserve PROJECT rules before replacement; no architecture overlay when boundaries unchanged; accepted-decision conflict requires resolution | No documents written; materiality of unsettled errors requires actual project evidence |
+| SC-006 | S05 / specification authority and scope | Parser/design conflict; one-contract feature; review only; undecided errors; divergent duplicate root/child signatures | No code-to-requirement promotion, unrelated rewrites or guessed public behavior; resolve ownership and decisions | Read-only consuming-agent assessment | Resolved decisions required before affected authoring; FEATURE-SPEC references unaffected nodes; review remained read-only; errors block final contract; duplicate interface needs canonical accepted signature | No actual project documents or mutations; hypothetical conflict resolution needs user/project evidence |
 
 ## Revision queue and human decisions
 
