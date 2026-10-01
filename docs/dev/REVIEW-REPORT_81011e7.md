@@ -25,7 +25,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S01 | sdd-conventions | Reviewed | None in examined scope | Commit subject identifies S01; push gate before next unit |
 | S02 | sdd-orient | Reviewed | SDD-R-001 | Commit subject identifies S02; push gate before next unit |
 | S03 | sdd-report | Reviewed | None in examined scope | Commit subject identifies S03; push gate before next unit |
-| S04 | sdd-design | Not started | Not assessed | None |
+| S04 | sdd-design | Reviewed | None in examined scope | Commit subject identifies S04; push gate before next unit |
 | S05 | sdd-specify | Not started | Not assessed | None |
 | S06 | sdd-plan | Not started | Not assessed | None |
 | S07 | sdd-tasks | Not started | Not assessed | None |
@@ -131,7 +131,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S04 — sdd-design
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-design/SKILL.md`; `skills/sdd-design/agents/openai.yaml`; `skills/sdd-design/assets/icon.svg`; `skills/sdd-design/references/architecture.md`; `skills/sdd-design/references/decomposition.md`; `skills/sdd-design/references/exploration.md`. No files excluded.
+**Relevant contracts:** Owns PROJECT/ARCHITECTURE/DECOMPOSITION design and optional scoped deltas; manage/orient governs writing, conventions informs boundaries, SPEC settles behavior, integrate-feature incorporates accepted overlays.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Metadata, routing links, six baseline files and resource checks valid. |
+| C02 | Satisfied | Exploration, architecture and decomposition bounded; no behavioral implementation authority. |
+| C03 | Satisfied | User decisions, document request and current manage/orient gate explicit; instruction-bearing PROJECT preserved. |
+| C04 | Satisfied | Conventions informs boundaries; SPEC owns final contracts; integrate-feature incorporates overlays. |
+| C05 | Satisfied | Roots and focused children have scoped ownership; optional feature deltas avoid duplication. |
+| C06 | Not applicable | No task execution or interruption recovery owned here. |
+| C07 | Satisfied | No incidental document creation/prototype mutation; governing instructions preserved before replacement. |
+| C08 | Not applicable | No provider credentials or hosted execution. |
+| C09 | Satisfied | Design review checks ownership, cycles and verifiable seams without claiming executable tests. |
+| C10 | Satisfied | Facts, decisions, assumptions and open questions separate; design not reported implemented. |
+| C11 | Satisfied | References are focused and stages may start directly with established inputs. |
+| C12 | Satisfied | Current-state main documents and proposed feature deltas explicitly distinguished. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-design` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-005: five read-only consuming-agent dispositions preserved conversational comparison, decomposition-only scope, instruction authority, optional overlays and explicit accepted decisions.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S04 in its subject, push, and verify containment before advancing.
 
 ### S05 — sdd-specify
 
@@ -228,6 +252,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-002 | S02 / orientation | Non-Git; unborn; monorepo rule conflict; checked T-002 ahead of T-001 commit; steering commit; detached/conflicted | Report factual readiness/unknowns and task ownership; no tests, reset, initialization, or verification | Read-only consuming-agent assessment | Non-Git/unborn/conflicts block ordinary mutation; scoped rule conflict deferred; T-002 pending-complete or incomplete inferred only with ownership/evidence; detached state reported without inventing universal permission | Supplied states rather than filesystem inspection of a real project |
 | SC-003 | S02 / read-only Git | Disposable main branch; one committed unchanged file; advance tracked file mtime by 5 seconds | Index bytes preserved by orientation's read-only command example | Executed local fixture: git status --porcelain=v1 --untracked-files=all; repeat with GIT_OPTIONAL_LOCKS=0; commands exited 0 | Both status outputs empty; plain run changed index bytes, guarded run did not | SDD-R-001; metadata refresh observed, not staged-content corruption |
 | SC-004 | S03 / drafts and status | Unmeasured performance T-012; partial T-013 with verified #123 but no checks; unassigned README; uncommitted task; PR unknown base | No promised achieved speedup or invented identity/checks; partial Refs; pending commit; unknown base disclosed | Read-only consuming-agent draft/disposition | Future benchmark plan only; partial contribution uses Refs and discloses unrun checks; taskless README has no invented ID; pending commit is not completed; unknown PR base and missing diff remain unstated | Drafts only; actual task/branch diff not supplied, so missing details must remain explicit |
+| SC-005 | S04 / design scope and authority | Compare seed architecture; decomposition-only with unsettled errors; replace instruction-bearing PROJECT; behavioral-only feature; code conflicts with accepted decision | No incidental writing/overlays; material unknowns and instruction/decision conflicts resolved before dependent mutation | Read-only consuming-agent assessment | Conversation only for comparison; decomposition can preserve nonmaterial error details for SPEC; preserve PROJECT rules before replacement; no architecture overlay when boundaries unchanged; accepted-decision conflict requires resolution | No documents written; materiality of unsettled errors requires actual project evidence |
 
 ## Revision queue and human decisions
 
