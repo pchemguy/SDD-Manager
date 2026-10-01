@@ -114,5 +114,6 @@ A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, 
 All 15 skills are included. Structural validation, independent coordination assessments, and local Git fixtures have been exercised. Full end-to-end execution in a target client and live GitHub mutation workflows remain untested.
 
 - [Capability map](docs/dev/CAPABILITY-MAP.md): artifact ownership and cross-skill boundaries.
+- [Revision evidence](docs/dev/revision_plans/REVISION_REPORT_39374c8.md): branch workflows, failure handling, fresh-session execution, and validation limits.
 - [Plugin review](docs/dev/reviews/PLUGIN-REVIEW_49143fa.md): findings, corrections, verification evidence, and limits.
 - [TDD provenance](skills/sdd-tdd/references/upstream-provenance.md): adaptation of Superpowers TDD and its test-writing companion, with the retained MIT license.

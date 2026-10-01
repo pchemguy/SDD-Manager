@@ -6,7 +6,7 @@
 - **Baseline:** `39374c8ae60f92ce8dd874774ed69ab3cb15c459`; planning commit `aa2e09c4352caf803748d3c19e25c47bf092ea04`.
 - **Working branch:** `revision/39374c8-branch-workflows`.
 - **Target:** `feature/architecture-revision`, starting checkpoint `aa2e09c4352caf803748d3c19e25c47bf092ea04`.
-- **State:** Source revision in progress. Each stable-ID checkpoint is committed/pushed before its successor; completion requires verified explicit merge and target publication.
+- **State:** SDD-V-001–007 completed; campaign merged and published, with final plan/report archive. Each revision checkpoint was pushed before its successor.
 - **Evidence limits:** Local structural and Git/provider fixtures are distinct from installed-client execution, live hosted mutations, and credential-channel validation.
 
 ## Revision checkpoints
@@ -93,3 +93,22 @@ No installed-client campaign, live GitHub lifecycle, real credential-channel tes
 - **Primary inspection:** Exactly classifier/tests/README and the four selected document owners changed; T-002 occurs once as an executable task in TASKS and is retired from FEATURE-TASKS. Historical T-001 evidence and the supplied facility remain; merge has two parents, remote tip equals local target, and worktree is clean.
 - **Final structural checks:** `validate_plugin.py .` exited 0; `inspect_package.py .` enumerated all 15 skills with zero errors/warnings. `/tmp/revised_package_checks.py` checked 101 package/review files, 68 Markdown files, five template headings, 93 local links, all 15 metadata/SVG sets, skill references, manifest consistency, and credential-pattern absence; zero errors. User EXPLORE_DRIVE documents and local tool state remain excluded and unchanged. `git diff --check` passed.
 - **Persistence gate:** Commit subject identifies SDD-V-007. Push and remote containment must precede the campaign merge. The campaign's explicit merge will be verified before commit and target publication, followed by plan/report archive.
+
+## Campaign integration and archive
+
+- **Working tip:** `cf456b5b9fcad0fbed42551b65c9e3fa9ca33b40`, pushed and remote-tip equality verified before integration.
+- **Explicit merge:** `37ea99359e9b34a202f7e922b0d1b1bc8e62cf3f` into `feature/architecture-revision`; parents are target checkpoint `aa2e09c4352caf803748d3c19e25c47bf092ea04` and the working tip above. No conflicts.
+- **Merged-state verification:** Package validator and inspector passed with zero errors/warnings; content/link/heading/template/metadata checks and staged diff check passed before commit. Prospective merged tree equals the verified working tree. Merge commit pushed; target remote-tip equality verified before archive.
+- **Archive:** Completed plan and this report moved to `docs/dev/revision_plans/`; relative links adjusted. Final archive checkpoint is identified by its commit subject and must be pushed/remote-verified before delivery. Working branch retained; no source campaign is restarted by bookkeeping.
+
+### Source checkpoints
+
+| Revision | Commits | Publication |
+| --- | --- | --- |
+| SDD-V-001 | `7077cdea1e6f3ff53755c90c77b7d414e1a68630` | Pushed before dependent revision; retained in published campaign merge. |
+| SDD-V-002 | `cfc5af339f379f948a3ec94a5f6f5a0717b22877`, `36c8bdacdc0d2e69dd33f7b1db2e74c9ee1ed75b`, `0b36550c803dc74c261fdcc5d883a2ccbf53d6a0` | Pushed before dependent revision; retained in published campaign merge. |
+| SDD-V-003 | `fa19123ae7a6d9297e729017b9463d3b5fe8b487` | Pushed before dependent revision; retained in published campaign merge. |
+| SDD-V-004 | `e977a9f3a7ff0b1619d8c6deb129c0a5f4acb36e` | Pushed before dependent revision; retained in published campaign merge. |
+| SDD-V-005 | `d96511257a1d72bf023c32baf93df3b944a9e513` | Pushed before dependent revision; retained in published campaign merge. |
+| SDD-V-006 | `fcad16e1aacebbe45dde48ea7cf1b01b2923d8ec` | Pushed before dependent revision; retained in published campaign merge. |
+| SDD-V-007 | `cf456b5b9fcad0fbed42551b65c9e3fa9ca33b40` | Pushed before dependent revision; retained in published campaign merge. |
