@@ -23,7 +23,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | Unit | Scope | Status | Finding IDs | Report checkpoint / push evidence |
 | --- | --- | --- | --- | --- |
 | S01 | sdd-conventions | Reviewed | None in examined scope | Commit subject identifies S01; push gate before next unit |
-| S02 | sdd-orient | Not started | Not assessed | None |
+| S02 | sdd-orient | Reviewed | SDD-R-001 | Commit subject identifies S02; push gate before next unit |
 | S03 | sdd-report | Not started | Not assessed | None |
 | S04 | sdd-design | Not started | Not assessed | None |
 | S05 | sdd-specify | Not started | Not assessed | None |
@@ -75,7 +75,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S02 — sdd-orient
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-orient/SKILL.md`; `skills/sdd-orient/agents/openai.yaml`; `skills/sdd-orient/assets/icon.svg`; `skills/sdd-orient/references/inspection-and-handoff.md`. No files excluded.
+**Relevant contracts:** Supplies scoped facts and unknowns to manage/implementation; does not authorize edits or run verification. Root/scoped instructions, active lists, last actual task commit and dirty ownership govern its handoff.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Entry, one complete reference, metadata and SVG checked; resource links resolve. |
+| C02 | Satisfied | SKILL.md defines read-only discovery and scoped factual readiness. |
+| C03 | Satisfied | Instruction scopes and ownership are inspected; no Git initialization, restoration, or tests authorized. |
+| C04 | Satisfied | Handoff identifies prerequisites and unknowns for manage/implement; re-orientation follows material state changes. |
+| C05 | Satisfied | Main/feature lists and task commits are distinguished; maintenance/steering commits do not advance completed-task boundary. |
+| C06 | Satisfied | Non-Git, unborn, detached/conflicted, and incomplete evidence states are explicitly reported; consuming assessment covers readiness and pending task inference. |
+| C07 | Finding | SDD-R-001: plain status command can refresh index, contradicting the stated no-index-mutation invariant. |
+| C08 | Not applicable | Orientation owns no credential operation and must not execute hosting. |
+| C09 | Satisfied | Disposable Git fixture observed index effect with identical clean status; guarded variant preserved bytes. No project verification performed. |
+| C10 | Satisfied | Report slots distinguish none/unknown/not inspected and observed facts from inferences; checks are not repeated. |
+| C11 | Satisfied | Reference scopes evidence collection and gives a usable compact handoff; headings and links passed. |
+| C12 | Satisfied | No hidden conversation or revision-history requirement; declared paths permit project-specific equivalents. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-orient` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-002 uses read-only consuming-agent dispositions for six readiness/continuation cases. SC-003 actually executes the status example in a disposable initialized repository after a metadata-only mtime change; both runs report clean but the unguarded run rewrites index bytes.
+
+**Findings:** SDD-R-001.
+**Checkpoint:** Validate report, commit with S02 in its subject, push, and verify containment before advancing.
 
 ### S03 — sdd-report
 
@@ -149,10 +173,26 @@ Finding IDs are global and stable across units. An empty index means no findings
 
 | ID | Title | Type | Priority | Status | Units / criteria | Related IDs |
 | --- | --- | --- | --- | --- | --- | --- |
+| SDD-R-001 | Orientation status example can mutate the index | Defect | P2 | Open | S02 / C07 | None |
 
 ## Finding records
 
 Canonical finding records below preserve baseline evidence and objective revision checks. Source corrections remain unperformed during this campaign.
+
+### SDD-R-001 — Orientation status example can mutate the index
+
+| Field | Value |
+| --- | --- |
+| Type / priority / status | Defect / P2 / Open |
+| Units / criteria / category | S02 / C07 / Git / read-only contract |
+| Affected baseline locations | skills/sdd-orient/SKILL.md:8,12; references/inspection-and-handoff.md:14–21 at 81011e7 |
+| Confidence | High: executed disposable Git fixture reproduced the mutation with unchanged content and clean status |
+| Evidence | SKILL.md prohibits index changes, but reference calls ordinary git status read-only. After mtime-only change, git status exited 0 and returned empty output while index bytes changed. GIT_OPTIONAL_LOCKS=0 returned the same output and preserved bytes. |
+| Consequence | Routine orientation violates its promised read-only baseline and can refresh shared index state unexpectedly; this is metadata mutation, not evidence of content loss. |
+| Recommended correction | Make inspection commands suppress optional Git writes, using git --no-optional-locks or a scoped GIT_OPTIONAL_LOCKS=0 environment. Preserve host portability and explain that read-only means no index refresh. |
+| Recheck | On a disposable committed repo with tracked-file metadata changed but identical content, orientation reports clean status without changing index bytes; verify staged/unstaged/conflicted reporting still works. |
+| Related IDs | None |
+| Revision disposition | Not revised; source held at 81011e7. |
 
 ## Scenario register
 
@@ -161,6 +201,8 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | Scenario ID | Unit(s) / workflow | Setup and inputs | Expected behavior | Evidence level / command | Observed result | Finding IDs / limits |
 | --- | --- | --- | --- | --- | --- | --- |
 | SC-001 | S01 / conventions | Three cohesive functions with hypothetical consumer; duplicate T-012 across main/feature; milestone2.2 under two phases | Proportionate criteria; block ambiguous identities/parentage without performing hosted effects | Read-only consuming-agent assessment | No speculative interface; both malformed projections blocked; authority decision deferred | No actual refactor or host call; supplied structures assessed, not a complete project |
+| SC-002 | S02 / orientation | Non-Git; unborn; monorepo rule conflict; checked T-002 ahead of T-001 commit; steering commit; detached/conflicted | Report factual readiness/unknowns and task ownership; no tests, reset, initialization, or verification | Read-only consuming-agent assessment | Non-Git/unborn/conflicts block ordinary mutation; scoped rule conflict deferred; T-002 pending-complete or incomplete inferred only with ownership/evidence; detached state reported without inventing universal permission | Supplied states rather than filesystem inspection of a real project |
+| SC-003 | S02 / read-only Git | Disposable main branch; one committed unchanged file; advance tracked file mtime by 5 seconds | Index bytes preserved by orientation's read-only command example | Executed local fixture: git status --porcelain=v1 --untracked-files=all; repeat with GIT_OPTIONAL_LOCKS=0; commands exited 0 | Both status outputs empty; plain run changed index bytes, guarded run did not | SDD-R-001; metadata refresh observed, not staged-content corruption |
 
 ## Revision queue and human decisions
 
