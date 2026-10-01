@@ -25,6 +25,8 @@ Distinguish a Git worktree from a bare repository, a Git directory outside the t
 
 Do not assume dirty paths belong to the current task or the agent. Do not interpret clean status alone as proof that the intended work is finished or that documents agree. For the Git prerequisite to be met, the project must be inside a usable worktree; a missing HEAD, conflict, or ambiguous ownership is an additional blocker for ordinary mutation until a later workflow defines how to handle it.
 
+For branch workflows, identify the working and target branches, starting checkpoint, remote destinations, branch occupancy in worktrees, and existing task/change evidence of the authorized boundary. Report in-progress merges, already merged commits awaiting publication, and unresolved target identity. Inspect Git ancestry and parent commits when relevant with optional writes suppressed; do not fetch, switch branches, create worktrees, or infer a target from a branch name alone.
+
 ## Project evidence
 
 Look for present roots and referenced children; absence is a finding, not automatically a defect:
@@ -65,7 +67,7 @@ Produce a concise human-readable handoff with these slots, using `none`, `unknow
 
 ```text
 Target: project root; Git root; contemplated paths or workflow
-Git: worktree eligibility; branch/detached/unborn; HEAD; relevant status and ownership
+Git: worktree eligibility; branch/detached/unborn; HEAD; relevant status and ownership; working/target branches, checkpoint, and merge/publication state
 Instructions: applicable sources, scope, and conflicts
 Documents: main roots and relevant children; active feature/change documents
 Execution evidence: owning TASKS or FEATURE-TASKS; last committed task and commit; current task and status; pending changes; existing verification evidence; remaining work or ambiguity
