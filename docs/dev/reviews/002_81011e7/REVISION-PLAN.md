@@ -35,4 +35,3 @@ Use the report's canonical finding records and retain their IDs, baseline eviden
 - Upon completion, archive this plan and its companion report under `docs/dev/reviews/`, updating paths and relative links. Commit and push the final validation/report checkpoint before reporting completion. Include direct GitHub links to the branch, report, and revision commits.
 
 Client execution, live GitHub mutations, and independent pinned upstream provenance remain separate validation limits. These revisions do not require provider writes, credential replacement, dependency installation, or a new workflow-state artifact.
-
