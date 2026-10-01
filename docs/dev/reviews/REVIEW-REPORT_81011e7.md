@@ -7,8 +7,8 @@
 | Source baseline | `81011e7db200f0eef89a52d35896bbf97575b6c1` (`81011e7`) |
 | Plugin version at baseline | `0.14.1` |
 | Review plan | [REVIEW-PLAN_81011e7.md](REVIEW-PLAN_81011e7.md) |
-| Historical review | [PLUGIN-REVIEW_49143fa.md](reviews/PLUGIN-REVIEW_49143fa.md) |
-| Campaign state | Baseline review complete; follow-up R01 and R02 verified; final validation pending |
+| Historical review | [PLUGIN-REVIEW_49143fa.md](PLUGIN-REVIEW_49143fa.md) |
+| Campaign state | Baseline review and R01–R03 complete; both findings verified; archived |
 | Review execution date / reviewer | 2026-10-01; primary agent with consuming-agent scenario assessments |
 | Evidence boundary | Fixed source baseline; individual evidence levels recorded below; no live provider/client mutation |
 
@@ -27,7 +27,7 @@ Reviewed all **15 skills**, **180 criterion rows**, and **95 baseline files**. C
 
 **Readiness at the reviewed baseline:** The packaged workflow responsibilities and stopping boundaries are coherent under the exercised cases, with one confirmed read-only Git defect outstanding. Structural validation reports zero errors/warnings but does not establish autonomous client execution, production acceptance, secure credential channels, or live GitHub reconciliation. No global correctness or production-readiness approval is made.
 
-**Revision order:** Fix SDD-R-001 and recheck index preservation; separately decide whether to adopt SDD-R-002, then test a fresh-session stale-task continuation. Neither requires a new journal, recovery skill, mandatory issue map, or provider dependency. Independent pinned TDD upstream verification remains blocked; external/client checks are evidence limits, not established source defects.
+**Revision order at the reviewed baseline:** Fix SDD-R-001 and recheck index preservation; separately decide whether to adopt SDD-R-002, then test a fresh-session stale-task continuation. Neither requires a new journal, recovery skill, mandatory issue map, or provider dependency. Independent pinned TDD upstream verification remains blocked; external/client checks are evidence limits, not established source defects.
 
 ## Unit progress and checkpoints
 
@@ -672,5 +672,14 @@ This section records revisions after the completed fixed-baseline review. Origin
 - **Fresh selection checks:** A separate consumer received only repository artifacts and revised skills. It selected disputed T-012 (main) and T-020 (feature), preserved unrelated work, and detected stale acceptance plus deferred task reconciliation in SPEC-only scope. All three selections left worktrees clean; no checkbox edits, tests, commits, or pushes occurred.
 - **Fresh execution check:** Another consumer cloned the persisted main fixture and implemented the next task without a supplied task ID or prior-session context. `python -m unittest discover -s tests -v` first failed the updated zero-classification test with the other three tests passing; after the repair, all four passed in GREEN and final verification. Code, tests, README, and owning TASKS changed; `git diff --check` passed. Historical evidence and unchanged T-013 were retained; resolved task and parent notes were cleared after current acceptance/exits were verified. Fixture commit `778125e388f185eb1b45ff1bed30b84945faf8f3` was pushed to its local bare remote; primary inspection verified exact changed paths, clean worktree, and remote-tip equality. Execution stopped after T-012.
 - **Structural checks:** Validators for sdd-orient, sdd-integrate-feature, and sdd-implement exited 0. Changed-source headings and relative links passed.
-- **Persistence:** The source/report commit is identified by its SDD-R-002 subject; its push and remote-tip equality must be verified before R03.
+- **Persistence:** `50b095c6294716fcd6c77f6f2475963b365b18bf` committed and pushed; remote-tip equality verified before R03.
 - **Limits:** Small disposable projects on the local platform; fixture baseline completion evidence is test data. No installed-client campaign, cross-platform result, production acceptance, credential-channel test, or live GitHub lifecycle mutation is claimed.
+
+### R03 — Final validation and archive
+
+- **Package checks:** `validate_plugin.py .` and `inspect_package.py .` exited 0; inspector enumerated all 15 skills and reported zero errors and zero warnings. Tool directory: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/`. Changed-skill validators passed in R01/R02.
+- **Content checks:** `/tmp/revised_package_checks.py` checked 97 package/review files, 64 Markdown files, five template headings, 85 relative links, all 15 interface metadata files and SVG assets, known skill references, manifest consistency, and credential-pattern absence. Zero errors after archive links were adjusted. The two user-added EXPLORE_DRIVE documents and local tool state are outside these plugin/review checks and unchanged. `git diff --check` passed.
+- **Composition:** R02's fresh integration/selection/execution fixtures exercised durable handoff, selected document scope, unchanged neighboring tasks, historical evidence, parent exits, and stopping after one task. Source inspection retains one executable owner, push-first startup, existing staging preservation, and human-controlled steering. No additional client/provider execution is claimed.
+- **Archive:** Plan and report moved to `docs/dev/reviews/REVIEW-PLAN_81011e7.md` and `docs/dev/reviews/REVIEW-REPORT_81011e7.md`; mutual and historical relative links resolve. Baseline inventory, review criteria, scenario IDs, and original evidence remain unchanged.
+- **Revision persistence:** R01 `e6bedf8adcb0b81dd0b1d4203dc5c626c866a3db` and R02 `50b095c6294716fcd6c77f6f2475963b365b18bf` were each committed and pushed before the next step, with remote-tip equality verified. This final checkpoint is identified by the R03 archive commit subject; push and remote-tip verification are the delivery gate.
+- **Remaining limits:** Independent pinned upstream verification, installed-client workflows, cross-platform execution, real credential channels, and live hosted mutations remain unverified. These limits do not reopen the two locally verified source findings.

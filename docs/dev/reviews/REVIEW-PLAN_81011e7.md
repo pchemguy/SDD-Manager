@@ -4,11 +4,11 @@
 
 - **Reviewed baseline:** `81011e7db200f0eef89a52d35896bbf97575b6c1` (`81011e7`), plugin version `0.14.1`.
 - **Purpose:** Evaluate all packaged capabilities and their composition; produce located, evidence-backed findings a subsequent agent can revise and verify.
-- **Plan:** `docs/dev/REVIEW-PLAN_81011e7.md`.
-- **Report:** `docs/dev/REVIEW-REPORT_81011e7.md`.
-- **Historical input:** [prior review](reviews/PLUGIN-REVIEW_49143fa.md). Recheck its relevant scenarios; do not treat its results as fresh evidence or automatically reopen corrected findings.
+- **Plan:** `docs/dev/reviews/REVIEW-PLAN_81011e7.md`.
+- **Report:** `docs/dev/reviews/REVIEW-REPORT_81011e7.md`.
+- **Historical input:** [prior review](PLUGIN-REVIEW_49143fa.md). Recheck its relevant scenarios; do not treat its results as fresh evidence or automatically reopen corrected findings.
 - **Review status:** S01–S15 and P01–P03 are complete; results and pushed checkpoints are recorded in the [review report](REVIEW-REPORT_81011e7.md).
-- **Current scope:** Plan the follow-up for SDD-R-001 and SDD-R-002. This update changes the plan only; source revisions and their verification remain unperformed.
+- **Current scope:** Completed source revisions for SDD-R-001 and SDD-R-002, final package validation, and archive. See the report for actual checks, revision commits, and remaining validation limits.
 
 The filename suffix identifies the source revision being reviewed, not the commit containing the plan or later report updates. Keep the suffix fixed throughout this campaign. Review baseline files through `git show 81011e7:<path>` or a detached disposable worktree; commit report updates on the working branch. Record any working-branch differences that affect evidence. A later source revision requires an explicit revised scope or a new baseline-specific campaign; do not silently mix revisions.
 
@@ -128,7 +128,7 @@ For each workflow, distinguish static review, read-only agent assessment, execut
 
 ## Revision follow-up
 
-Use the report's canonical finding records and retain their IDs, baseline evidence, and review coverage. Execute the two revisions separately. This section defines future work; updating this plan does not implement either revision or change its finding disposition.
+Use the report's canonical finding records and retain their IDs, baseline evidence, and review coverage. Execute the two revisions separately. R01 and R02 are implemented and verified; R03 package checks passed. Actual evidence and pushed revision checkpoints are recorded in the companion report. The protocol below remains the revision procedure, distinct from its observed results.
 
 ### R01 — Preserve read-only Git inspection
 
@@ -154,7 +154,7 @@ Use the report's canonical finding records and retain their IDs, baseline eviden
 - Run the skill validators for changed capabilities, the plugin validator and inspector, and heading, template, link, metadata, and skill-reference checks.
 - Recheck the orientation → integration → implementation handoff and existing boundaries: selected integration, one executable task owner, read-only selection, push-first execution, preserved staging, and human-controlled steering stop.
 - Preserve the completed review's fixed baseline and original findings. Append revision commits and observed evidence; mark a finding Verified only after its objective recheck passes. State any blocked or unexecuted check explicitly.
-- Commit and push the final validation/report checkpoint before reporting completion. Include direct GitHub links to the branch, report, and revision commits.
+- Upon completion, archive this plan and its companion report under `docs/dev/reviews/`, updating paths and relative links. Commit and push the final validation/report checkpoint before reporting completion. Include direct GitHub links to the branch, report, and revision commits.
 
 Client execution, live GitHub mutations, and independent pinned upstream provenance remain separate validation limits. These revisions do not require provider writes, credential replacement, dependency installation, or a new workflow-state artifact.
 
