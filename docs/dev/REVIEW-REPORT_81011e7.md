@@ -28,7 +28,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S04 | sdd-design | Reviewed | None in examined scope | Commit subject identifies S04; push gate before next unit |
 | S05 | sdd-specify | Reviewed | None in examined scope | Commit subject identifies S05; push gate before next unit |
 | S06 | sdd-plan | Reviewed | None in examined scope | Commit subject identifies S06; push gate before next unit |
-| S07 | sdd-tasks | Not started | Not assessed | None |
+| S07 | sdd-tasks | Reviewed | None in examined scope | Commit subject identifies S07; push gate before next unit |
 | S08 | sdd-tdd | Not started | Not assessed | None |
 | S09 | sdd-docs | Not started | Not assessed | None |
 | S10 | sdd-verify | Not started | Not assessed | None |
@@ -215,7 +215,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S07 — sdd-tasks
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-tasks/SKILL.md`; `skills/sdd-tasks/agents/openai.yaml`; `skills/sdd-tasks/assets/icon.svg`; `skills/sdd-tasks/references/progress-review.md`; `skills/sdd-tasks/references/task-derivation.md`. No files excluded.
+**Relevant contracts:** Derives stable unchecked main/feature units from accepted design/SPEC/PLAN/layout and reviews progress. Implement owns selection/completion, integrate-feature reconciles, steer amends at human checkpoint.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Five files structurally valid; generation/progress routing explicit. |
+| C02 | Satisfied | Derivation and read-only evidence review exclude implementation/selection/reconciliation. |
+| C03 | Satisfied | Writing requires manage/orient and settled upstream decisions; review cannot check boxes. |
+| C04 | Satisfied | Explicit routing to implement, integrate-feature and steer matches declared ownership. |
+| C05 | Satisfied | One project-wide ID space, four-space nesting, feature-scoped parents and unique executable owner. |
+| C06 | Satisfied | Dependencies and eligibility reviewed as inputs for implement, not selected here. |
+| C07 | Satisfied | No hosted projection/commits authorized; initial completion claims require established evidence. |
+| C08 | Not applicable | No credential or provider operation. |
+| C09 | Satisfied | Checkbox/message/presence not evidence; observed prior acceptance needed for checked derivation. |
+| C10 | Satisfied | Reports structures and evidence gaps separately from implemented functionality. |
+| C11 | Satisfied | Clear hierarchy example, attached task detail and separate owner routing. |
+| C12 | Satisfied | Example explicitly illustrative; active feature and complete main scopes retained. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-tasks` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-008: consumer detected ID collision, left unconfirmed existing code unchecked, routed selection/reconciliation, and preserved independent feature/main parent claims; sample used four-space nesting.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S07 in its subject, push, and verify containment before advancing.
 
 ### S08 — sdd-tdd
 
@@ -303,6 +327,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-005 | S04 / design scope and authority | Compare seed architecture; decomposition-only with unsettled errors; replace instruction-bearing PROJECT; behavioral-only feature; code conflicts with accepted decision | No incidental writing/overlays; material unknowns and instruction/decision conflicts resolved before dependent mutation | Read-only consuming-agent assessment | Conversation only for comparison; decomposition can preserve nonmaterial error details for SPEC; preserve PROJECT rules before replacement; no architecture overlay when boundaries unchanged; accepted-decision conflict requires resolution | No documents written; materiality of unsettled errors requires actual project evidence |
 | SC-006 | S05 / specification authority and scope | Parser/design conflict; one-contract feature; review only; undecided errors; divergent duplicate root/child signatures | No code-to-requirement promotion, unrelated rewrites or guessed public behavior; resolve ownership and decisions | Read-only consuming-agent assessment | Resolved decisions required before affected authoring; FEATURE-SPEC references unaffected nodes; review remained read-only; errors block final contract; duplicate interface needs canonical accepted signature | No actual project documents or mutations; hypothetical conflict resolution needs user/project evidence |
 | SC-007 | S06 / planning scope and exits | PLAN-only unresolved SPEC; feature fits current plan/layout; layout-only uncertain component; vague performance exit; PLAN removes SPEC-required behavior | Respect focused scope, upstream ownership, optionality and measurable exits | Read-only consuming-agent assessment | No automatic layout/PLAN crossover; no ceremonial FEATURE-PLAN; material uncertainties returned upstream; vague milestone and removal conflict reported; no invented acceptance thresholds | No documents changed; actual adequacy of existing strategy and materiality need project evidence |
+| SC-008 | S07 / identity, form and ownership | Duplicate main/feature T012; existing code/tests with unconfirmed acceptance; select/code request; feature integration; feature-only parent complete | Unique IDs, evidence-gated status, owning skill routing, scoped parent completion | Read-only consuming-agent assessment and checklist draft | New independent feature ID required; prior task unchecked pending evidence; selection to implement and reconciliation to integrate-feature; main parent not inferred complete; sample indentation 0/4/8/12 spaces | No actual derivation, selection, verification or document mutation |
 
 ## Revision queue and human decisions
 
