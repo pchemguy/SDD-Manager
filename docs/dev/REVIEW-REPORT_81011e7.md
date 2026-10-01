@@ -30,7 +30,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S06 | sdd-plan | Reviewed | None in examined scope | Commit subject identifies S06; push gate before next unit |
 | S07 | sdd-tasks | Reviewed | None in examined scope | Commit subject identifies S07; push gate before next unit |
 | S08 | sdd-tdd | Reviewed | None in examined scope | Commit subject identifies S08; push gate before next unit |
-| S09 | sdd-docs | Not started | Not assessed | None |
+| S09 | sdd-docs | Reviewed | None in examined scope | Commit subject identifies S09; push gate before next unit |
 | S10 | sdd-verify | Not started | Not assessed | None |
 | S11 | sdd-integrate-feature | Not started | Not assessed | None |
 | S12 | sdd-forge | Not started | Not assessed | None |
@@ -271,7 +271,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S09 — sdd-docs
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-docs/SKILL.md`; `skills/sdd-docs/agents/openai.yaml`; `skills/sdd-docs/assets/icon.svg`; `skills/sdd-docs/references/in-code-documentation.md`; `skills/sdd-docs/references/review-and-findings.md`; `skills/sdd-docs/references/standalone-documentation.md`. No files excluded.
+**Relevant contracts:** Owns scoped module/API/README/guide documentation and checks; manage/orient governs edits, active workflow persists; governing design/SPEC/PLAN/layout amendment findings go to user without automatic invocation.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Six files and selected-work routing structurally checked. |
+| C02 | Satisfied | Docs-only code edits preserve executable statements/signatures; scope/audit distinguished. |
+| C03 | Satisfied | Generated/external policy respected; user decides governing amendments, independent docs continue. |
+| C04 | Satisfied | Implement/steer coordinates maintenance; repairs routed, verify/report boundaries retained. |
+| C05 | Satisfied | All owned modules in selected scope covered, project style or suitable fallback, main contracts not rewritten through docs. |
+| C06 | Not applicable | No task selection/completion/recovery owned here. |
+| C07 | Satisfied | No commits/push/host changes in docs; mutations require scoped eligible state. |
+| C08 | Not applicable | No credentials or provider access. |
+| C09 | Satisfied | Inspection versus execution explicit for examples/lint; final diff checked for behavior changes. |
+| C10 | Satisfied | Coverage/exclusions/check outcomes and governing Location/Issue/Impact/Proposed amendment required. |
+| C11 | Satisfied | Focused modules, coverage tables and blank heading/template spacing consistent. |
+| C12 | Satisfied | Current facts used for snippets, planned capabilities labeled, no conversation-dependent example rules. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-docs` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-010: consumer selected suitable Python fallback, separated generated/vendor policy, kept docs-only repairs scoped and deferred governing amendments without calling owner skills.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S09 in its subject, push, and verify containment before advancing.
 
 ### S10 — sdd-verify
 
@@ -353,6 +377,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-007 | S06 / planning scope and exits | PLAN-only unresolved SPEC; feature fits current plan/layout; layout-only uncertain component; vague performance exit; PLAN removes SPEC-required behavior | Respect focused scope, upstream ownership, optionality and measurable exits | Read-only consuming-agent assessment | No automatic layout/PLAN crossover; no ceremonial FEATURE-PLAN; material uncertainties returned upstream; vague milestone and removal conflict reported; no invented acceptance thresholds | No documents changed; actual adequacy of existing strategy and materiality need project evidence |
 | SC-008 | S07 / identity, form and ownership | Duplicate main/feature T012; existing code/tests with unconfirmed acceptance; select/code request; feature integration; feature-only parent complete | Unique IDs, evidence-gated status, owning skill routing, scoped parent completion | Read-only consuming-agent assessment and checklist draft | New independent feature ID required; prior task unchecked pending evidence; selection to implement and reconciliation to integrate-feature; main parent not inferred complete; sample indentation 0/4/8/12 spaces | No actual derivation, selection, verification or document mutation |
 | SC-009 | S08 / meaningful testing evidence | Import-failure regression; pre-test interrupted code/no deletion; behavior-preserving refactor; self-derived expectation and target mock; unavailable external API | Behavioral RED only, preserve code, independent expectations, bounded mock claims | Read-only consuming-agent assessment; attempted remote provenance inspection | Setup failure not RED; characterization is not historical RED; refactor uses existing protection; target behavior needs real exercise and independent expected value; mocked local pass not integration completion | No tests executed; pinned upstream independently unverified because GitHub and raw fetch returned DisabledError; local license inspected |
+| SC-010 | S09 / documentation authority and coverage | Python no style; generated/vendor and owned module missing docs; README/SPEC option conflict; docs-only discovers behavior bug; governing architecture/layout amendments | Suitable fallback, owned module coverage, no scope/requirement changes via docs | Read-only consuming-agent assessment | Google-style suitable within scope; generated/vendor accounted separately; inspect actual CLI before README resolution; code bug routed without repair; governing amendment fields reported to user, no automatic invocation | No docstrings/examples changed or executed; actual CLI evidence and generated editing policy not supplied |
 
 ## Revision queue and human decisions
 
