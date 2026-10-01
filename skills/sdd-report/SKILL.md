@@ -1,6 +1,6 @@
 ---
 name: sdd-report
-description: Use when drafting a task issue, Git commit message, pull request description, or evidence-backed task, milestone, or phase report for an SDD project. Adapt the summary to feature, bug, code health, performance, security, testing, documentation, integration, or compatibility work without inventing results.
+description: Use when drafting a task issue, Git commit message, pull request description, or evidence-backed task, milestone, or phase report, or review/revision campaign plan or report for an SDD project. Adapt the summary to feature, bug, code health, performance, security, testing, documentation, integration, or compatibility work without inventing results.
 ---
 
 # Report SDD work
@@ -11,6 +11,7 @@ Choose the requested output and load only its reference:
 | --- | --- |
 | Planned task issue title and body, task/amendment or merge commit message, or pull request draft | [drafts for hosted and Git objects](references/object-drafts.md) |
 | Task, milestone, phase, branch boundary, or interrupted-work status report | [completion reports](references/completion-reports.md) |
+| Review plan/report or revision plan/report, including focused prompt-driven review | [campaign artifacts](references/campaign-artifacts.md) |
 | Kind-specific emphasis and reusable What, Why, Verification, Result patterns | [change kinds](references/change-kinds.md) |
 
 Use the owning TASKS or active FEATURE-TASKS entry, applicable design, SPEC, PLAN, and layout, actual changes, verification output, and Git evidence appropriate to the requested output. Obtain hosted issue references from **sdd-forge** when available; a guessed issue number is never acceptable. Separate *planned*, *performed*, *verified*, and *blocked* statements. State missing or limited evidence plainly; do not turn an example, unchecked task, or intended benchmark into a completed result. Follow project-specific title and reporting conventions where they exist.

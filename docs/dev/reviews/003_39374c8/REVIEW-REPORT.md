@@ -1,5 +1,9 @@
 # Comprehensive Critical Review of SDD Manager Plugin
 
+**Campaign:** `003_39374c8`. Current record: `docs/dev/reviews/003_39374c8/REVIEW-REPORT.md`. Established finding IDs and baseline evidence are retained.
+
+**Baseline distinction:** Campaign starting commit: `39374c8ae60f92ce8dd874774ed69ab3cb15c459`. The independent reviewer did not record its exact reviewed source commit; **reviewed baseline unknown**. The addition commit is not proof of the reviewed state.
+
 **Date:** October 2026 (Simulated)
 **Reviewer:** Jules (AI Assistant)
 **Baseline:** Version `0.14.1`

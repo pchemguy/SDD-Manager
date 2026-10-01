@@ -13,6 +13,7 @@ Translate the user's objective into a scoped workflow and coordinate the respons
 | Establish prerequisites, pass scope, resolve blockers, and persist results | [coordination protocol](references/coordination.md) |
 | Establish working branches, integrate verified boundaries, or continue a blocked merge | [Git workflows](references/git-workflows.md) |
 | Accept, store, or supply a hosting token; handle an access escalation | [hosting credentials](references/credentials.md) |
+| Plan or coordinate focused/systematic review and accepted revisions | [review and revision](references/review-and-revision.md) |
 | Check representative requests and expected boundaries | [workflow examples](references/examples.md) |
 
 1. **Establish the request.** Identify the project, objective, requested operation, authoritative inputs, and stopping boundary. Distinguish initial preparation, feature deltas, task-list implementation, checkpoint steering, integration, and focused review. Ask only for missing decisions that materially prevent the requested work.
