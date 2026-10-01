@@ -32,7 +32,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S08 | sdd-tdd | Reviewed | None in examined scope | Commit subject identifies S08; push gate before next unit |
 | S09 | sdd-docs | Reviewed | None in examined scope | Commit subject identifies S09; push gate before next unit |
 | S10 | sdd-verify | Reviewed | None in examined scope | Commit subject identifies S10; push gate before next unit |
-| S11 | sdd-integrate-feature | Not started | Not assessed | None |
+| S11 | sdd-integrate-feature | Reviewed | None in examined scope | Commit subject identifies S11; push gate before next unit |
 | S12 | sdd-forge | Not started | Not assessed | None |
 | S13 | sdd-implement | Not started | Not assessed | None |
 | S14 | sdd-steer | Not started | Not assessed | None |
@@ -327,7 +327,31 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 ### S11 — sdd-integrate-feature
 
-Not started. Files, criteria, scenarios, and findings have not been assessed.
+**Status:** Reviewed (coverage complete; open findings may remain).
+**Inspected baseline files:** `skills/sdd-integrate-feature/SKILL.md`; `skills/sdd-integrate-feature/agents/openai.yaml`; `skills/sdd-integrate-feature/assets/icon.svg`; `skills/sdd-integrate-feature/references/feature-incorporation.md`. No files excluded.
+**Relevant contracts:** Owns accepted feature incorporation and selected task reconciliation. Both lists required for executable ownership transfer; manage/orient governs edits, implement completion/selection, forge hosted projection.
+
+| Criterion | Outcome | Evidence / finding IDs / reason |
+| --- | --- | --- |
+| C01 | Satisfied | Four baseline files structurally checked. |
+| C02 | Satisfied | Any selected document subset; no implied implementation/host/next-stage effects. |
+| C03 | Satisfied | Accepted delta, dirty ownership and current scope required; dependent target stops on unsettled decision. |
+| C04 | Satisfied | Direct steering separate; scoped host identity impacts reported rather than executed. |
+| C05 | Satisfied | Exactly one executable entry, stable IDs/evidence, feature versus broader parent claims, source retention explicit. Checked-item invalidation wording deferred to P02 composition check. |
+| C06 | Satisfied | Changed acceptance flagged for implement; old evidence not fresh completion. |
+| C07 | Satisfied | Sources retained while out-of-scope dependents need them; no silent link edits or duplicate copies. |
+| C08 | Not applicable | No credentials/provider operations. |
+| C09 | Satisfied | Reconciliation preserves evidence-backed claims, identifies changed acceptance without verifying implementation here. |
+| C10 | Satisfied | Narrow document incorporation not global integration or task completion; outside impacts explicit. |
+| C11 | Satisfied | Selected incorporation, task revisions and cleanup separated and scoped. |
+| C12 | Satisfied | Main end-state prose removes amendment history; Git/durable task evidence retained. |
+
+**Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-integrate-feature` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
+
+**Scenarios:** SC-013: consumer preserved SPEC-only scope, required both lists for task transfer, retained needed sources and broader parent status, and flagged stale evidence. Its checked-item re-evaluation/completion ownership tension is reserved for P02.
+
+**Findings:** None in examined scope.
+**Checkpoint:** Validate report, commit with S11 in its subject, push, and verify containment before advancing.
 
 ### S12 — sdd-forge
 
@@ -404,6 +428,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-010 | S09 / documentation authority and coverage | Python no style; generated/vendor and owned module missing docs; README/SPEC option conflict; docs-only discovers behavior bug; governing architecture/layout amendments | Suitable fallback, owned module coverage, no scope/requirement changes via docs | Read-only consuming-agent assessment | Google-style suitable within scope; generated/vendor accounted separately; inspect actual CLI before README resolution; code bug routed without repair; governing amendment fields reported to user, no automatic invocation | No docstrings/examples changed or executed; actual CLI evidence and generated editing policy not supplied |
 | SC-011 | S10 / evidence classification | Exit0/zero collection; focused pass/skipped required integration; outside-file failure; stale prior pass; interrupted run; checked acceptance fails | No false completeness, unsupported cause claim or verify-only repair | Read-only consuming-agent assessment | Zero/stale/incomplete unverified; required skipped check not checked or concretely blocked; unsupported pre-existing remains unknown; failed checkbox reported without edits | Hypothetical cases; actual command policy/state absent |
 | SC-012 | S10 / collection, skips, warnings, failures | Disposable stdlib unittest fixtures: empty directory; passing test + DeprecationWarning + required integration skipped; assertion failure | Counts and limitations visible despite success exit; zero checks not acceptance; failure explicit | Executable local controlled fixture | python -W default -m unittest discover -v: empty exit5, Ran0/NO TESTS RAN; mixed exit0, Ran2/OK skipped1 with warning; assertion exit1, Ran1/FAILED failures1 | pytest unavailable; no dependencies installed. Tests demonstrate runner evidence only, not autonomous plugin acceptance campaign; temporary fixtures removed. |
+| SC-013 | S11 / selected integration and ownership | SPEC only with active feature tasks; TASKS only transfer; joint transfer checked feature parent; retained feature-source reference; changed task acceptance | No implied scope extension, source deletion, duplicate owner or broadened completion claim | Read-only consuming-agent assessment | TASKS-only transfer blocked; joint task move retires source checkbox and retains ID/evidence; main parent not copied complete; active references retain source; stale acceptance flagged for implement | No integration edit performed; ownership wording for invalidating a checked claim requires cross-skill synthesis in P02 |
 
 ## Revision queue and human decisions
 
