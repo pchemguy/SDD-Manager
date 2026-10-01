@@ -61,6 +61,10 @@ When TASKS or an active FEATURE-TASKS exists, establish the implementation start
 
 Report ambiguous task identity, change ownership, or missing completion evidence without guessing. Git and the owning task list provide startup state; no separate transaction journal is required.
 
+## Interrupted document operations
+
+When changes belong to feature-document incorporation or a steering amendment, report that workflow separately from interrupted task execution. Inspect selected sources/owners and their checkpoint diff, existing scope evidence, unfinished reconciliation, and branch/merge state. Preserve task history and unresolved identities; do not assign a document-only operation to the next unchecked task. Route facts to **sdd-manage** and its active owner; orientation does not reconcile files or execute checks.
+
 ## Orientation report
 
 Produce a concise human-readable handoff with these slots, using `none`, `unknown`, or `not inspected` distinctly:

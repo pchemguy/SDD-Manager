@@ -34,3 +34,11 @@
 - **Forward execution:** A fresh consumer was started against a disposable classification project and its local bare remote, with a human-commanded contract reduction and project-required external facility check. Its actual outcome is recorded in the final composition checkpoint; no successful consumer outcome is claimed here.
 - **Prior checkpoint:** SDD-V-002 includes `cfc5af3`, `36c8bda`, and `0b36550`; package resource-loading corrections are retained in history. Final remote-tip equality verified at `0b36550` before this revision.
 - **Persistence gate:** Commit subject identifies SDD-V-003; verify remote containment before SDD-V-004.
+
+### SDD-V-004 — Interrupted document integration
+
+- **Source:** Added artifact-based continuation of selected incorporation; orientation/coordinator now distinguish partial document integration from interrupted task execution. Standalone integration and incorporation inside a feature campaign share branch safety with different finish boundaries.
+- **Checks:** Package validator exit 0; content/link/metadata checks zero errors. Inspection preserves SPEC-only scope, selected-list requirements for ownership transfer, pending reassessment and historical evidence, source retention, and blocked duplicate identities. No rollback/journal or automatic implementation is introduced.
+- **Forward execution:** Fresh-session partial-incorporation execution and its artifacts are recorded under SDD-V-007; static inspection here does not claim that execution.
+- **Prior checkpoint:** SDD-V-003 `fa19123` pushed; remote-tip equality verified before this revision.
+- **Persistence gate:** Commit subject identifies SDD-V-004; verify remote containment before SDD-V-005.
