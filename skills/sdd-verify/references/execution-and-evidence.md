@@ -25,4 +25,16 @@ Reuse prior evidence only when its implementation state, environment, and condit
 
 Inspect resulting worktree changes to distinguish expected generated output from unexpected mutations. Preserve unrelated work and report unexplained changes; do not reset or clean the repository to conceal them. Temporary fixtures owned by this verification operation may be cleaned up when no longer needed.
 
-Return evidence facts and locations to the active implementation workflow (**sdd-implement** or **sdd-steer**) and **sdd-report**, including unresolved failures and limitations. Preserve raw outputs or artifacts when the project requires them or they are needed to review a consequential claim. Use existing project evidence locations rather than introducing a mandatory journal or new report format.
+Return evidence facts and locations to the active implementation workflow (**sdd-implement** or **sdd-steer**) and **sdd-report**, including unresolved failures and limitations. Preserve raw outputs or artifacts when the project requires them or they are needed to review a consequential claim. Honor the project-designated evidence location. If none is designated, return concise durable facts for the active owner to record beside the owning TASKS or FEATURE-TASKS entry, or in that entry's existing linked evidence. For taskless maintenance, use the ordinary change report or commit body rather than inventing a task ID or evidence file. Verification returns facts; the active owner persists them with its scoped result.
+
+## Durable evidence facts
+
+| Fact | Record |
+| --- | --- |
+| Identity and state | Owning task/change, branch, tested commit or pending diff, authoritative condition. |
+| Check | Command, relevant environment, observed exit/outcome, material counts, warnings/skips. |
+| Coverage | Conditions actually exercised, gaps, blocked checks, and evidence location when separate. |
+| Prior evidence | Historical source and applicability; do not present it as a fresh run. |
+| Test-first exception | Concrete limitation, applicable policy or user authorization, alternative evidence actually obtained, and remaining gap. |
+
+Carry these facts to **sdd-report** without requiring a new JSON schema or journal. Preserve raw output when needed to review a consequential claim. For branch integration, identify the working tip and target tip tested in the prospective merge, and retain merged-state outcomes in existing boundary evidence or the merge commit body.

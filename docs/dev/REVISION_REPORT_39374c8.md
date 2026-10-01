@@ -50,3 +50,11 @@
 - **Checks:** Package validator exit 0; content/link/metadata checks zero errors. A fresh consumer receives nine controlled raw response/state fixtures; dispositions are recorded under SDD-V-007. This checkpoint claims no live provider or autonomous API execution.
 - **Prior checkpoint:** SDD-V-004 `e977a9f` pushed; remote-tip equality verified before this revision.
 - **Persistence gate:** Commit subject identifies SDD-V-005; verify remote containment before SDD-V-006.
+
+### SDD-V-006 — Evidence fallback and exceptions
+
+- **Source:** Verification facts retain project policy, with a fallback to owning entries/existing linked evidence and ordinary taskless reports/commit bodies. TDD exception rationale/authorization, alternative checks, and missing chronology stay explicit; implementation, steering, and reporting carry these facts durably.
+- **Checks:** Package validator exit 0; content/link/metadata checks zero errors. No new mandatory evidence artifact/schema or deletion requirement. Fresh task/steering consumers already produced owning-list command/state evidence and merge-message verification; final primary inspection records the actual artifact checks under SDD-V-007.
+- **Limits:** Durable reporting cannot mechanically prove execution order. Authorized exception and historical evidence cases receive fresh consumer assessment in the final checkpoint; no claimed RED reconstruction.
+- **Prior checkpoint:** SDD-V-005 `d965112` pushed; remote-tip equality verified before this revision.
+- **Persistence gate:** Commit subject identifies SDD-V-006; verify remote containment before SDD-V-007.

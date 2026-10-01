@@ -16,6 +16,10 @@ For an interrupted task or unavailable check, state the last trusted Git state, 
 
 Use the kind-specific sections in [change kinds](change-kinds.md) where they materially explain the outcome. Keep source attribution near claims: task and document sections for intended behavior; command/output and commits for observed behavior. Do not create a second progress journal or alter TASKS while drafting a report.
 
+## Evidence and test-first limits
+
+Carry task/change identity, tested state, actual commands/outcomes, condition coverage, and material limitations from the verification handoff. Name the designated or owning-entry evidence location; taskless maintenance may use its ordinary report/commit body. Include any authorized test-first exception with its concrete rationale, applicable policy or user authorization, observed alternative evidence, and remaining gaps. Missing RED history remains missing; a sensitivity check or characterization run is not proof of an earlier test-first cycle. Do not add a separate mandatory evidence format.
+
 ## Branch boundary
 
 Report working and target branches, starting checkpoint, task or amendment commits, merge SHA and parent tips, working-branch and merged-state verification, and remote containment or pending publication. Distinguish a verified task from a completed integrated workflow. A failed merge or target push remains an explicit blocker even when task commits are verified and pushed. Identify already integrated work without claiming a new merge, and state when an explicit user instruction retained work on its branch.

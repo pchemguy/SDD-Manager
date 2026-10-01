@@ -25,3 +25,7 @@ Return command and outcome evidence to **sdd-verify** and the active implementat
 ## Interrupted or non-test-first work
 
 Use existing code and Git evidence without discarding pending work. Characterization tests can establish current behavior; they do not prove a past RED run. When useful and safe, demonstrate regression-test sensitivity against a prior implementation in an isolated worktree or controlled fixture. Label that demonstration accurately and keep the working implementation intact. Report missing evidence, blockers, or an authorized exception rather than claiming strict TDD occurred.
+
+## Record exceptions and gaps
+
+Return the concrete limitation, applicable project policy or existing user authorization, observed alternative checks, and remaining coverage or chronology gap to the active implementation/steering owner and **sdd-report**. Persist those facts with existing task/change evidence; when no location is designated, use the owning entry or its existing linked record, or the ordinary report/commit body for taskless maintenance. Undecided exceptions remain blockers. Missing historical RED, characterization, and isolated sensitivity demonstrations stay accurately labeled; no evidence marker proves unobserved execution order. Do not delete code or fabricate a RED run to reconstruct history.
