@@ -1,8 +1,10 @@
 # SDD Manager revision evidence
 
+**Campaign:** `003_39374c8`. Current record: `docs/dev/reviews/003_39374c8/REVISION-REPORT.md`. Established finding IDs and baseline evidence are retained. Archive paths in historical evidence describe earlier operations, not current storage.
+
 ## Campaign
 
-- **Plan:** [REVISION_PLAN_39374c8.md](REVISION_PLAN_39374c8.md).
+- **Plan:** [REVISION-PLAN.md](REVISION-PLAN.md).
 - **Baseline:** `39374c8ae60f92ce8dd874774ed69ab3cb15c459`; planning commit `aa2e09c4352caf803748d3c19e25c47bf092ea04`.
 - **Working branch:** `revision/39374c8-branch-workflows`.
 - **Target:** `feature/architecture-revision`, starting checkpoint `aa2e09c4352caf803748d3c19e25c47bf092ea04`.

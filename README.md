@@ -44,6 +44,7 @@ Use the milestone and task IDs from your actual task list. You can start at a la
 | Resume interrupted work | “Resume milestone 2.2 without discarding pending work.” | Existing work inspected and continued before new tasks are selected. |
 | Amend at a checkpoint | “Remove encrypted streams from the implemented scope, including tests and documentation.” | Verified amendment explicitly merged into the paused implementation branch, published, then control returned to the human. |
 | Integrate an accepted feature | “Incorporate FEATURE-SPEC into SPEC only.” | Selected main documents reconciled without unrelated task-list changes. |
+| Review and revise a project | “Plan a systematic review,” “Review this protocol,” or “Implement accepted findings.” | Retained campaign plans/reports, stable findings, and authorized verified revisions incorporated into governing documents. |
 | Review or maintain a scope | “Review PLAN,” “Verify this phase,” or “Align README.” | Findings, evidence, or the explicitly requested maintenance. |
 | Synchronize GitHub tracking | “Create issues and milestones for these tasks.” | Phase labels, milestones, task issues, and verified task associations. |
 
@@ -62,6 +63,12 @@ Work on a scoped branch for the selected range, feature, steering amendment, or 
 - **Failures:** Preserve valid work and report conflicts, required-check failures, or pending target publication. No automatic rollback or force-push. Separate worktrees can protect unrelated dirty work.
 
 See the [Git workflow](skills/sdd-manage/references/git-workflows.md) for branch reuse, interruption, merge verification, and publication. Git merge and feature-document incorporation have distinct owners; hosted PR operations remain outside the current backend.
+
+## Review and revision records
+
+Use `docs/dev/reviews/<sequence>_<baseline-sha>/` for the complete campaign: review plan → review → review report → revision plan → revision → revision report. A focused review can start directly from a prompt and record its scope/criteria in REVIEW-REPORT. A comprehensive review plans units and report checkpoints first.
+
+Each planned review unit and completed revision action updates its report and is committed/pushed before dependent work. Accepted revisions update relevant governing documents; all campaign records remain retained. Directory identity stays fixed as HEAD advances. **sdd-report** supplies scalable artifact templates, and **sdd-manage** coordinates scope and execution.
 
 ## Skills
 
@@ -114,6 +121,7 @@ A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, 
 All 15 skills are included. Structural validation, independent coordination assessments, and local Git fixtures have been exercised. Full end-to-end execution in a target client and live GitHub mutation workflows remain untested.
 
 - [Capability map](docs/dev/CAPABILITY-MAP.md): artifact ownership and cross-skill boundaries.
-- [Revision evidence](docs/dev/revision_plans/REVISION_REPORT_39374c8.md): branch workflows, failure handling, fresh-session execution, and validation limits.
-- [Plugin review](docs/dev/reviews/PLUGIN-REVIEW_49143fa.md): findings, corrections, verification evidence, and limits.
+- [Review campaigns](docs/dev/reviews/README.md): ordered review and revision records.
+- [Revision evidence](docs/dev/reviews/003_39374c8/REVISION-REPORT.md): branch workflows, failure handling, fresh-session execution, and validation limits.
+- [Plugin review](docs/dev/reviews/001_49143fa/REVIEW-REPORT.md): findings, corrections, verification evidence, and limits.
 - [TDD provenance](skills/sdd-tdd/references/upstream-provenance.md): adaptation of Superpowers TDD and its test-writing companion, with the retained MIT license.

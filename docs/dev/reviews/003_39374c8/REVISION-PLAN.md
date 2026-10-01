@@ -1,12 +1,14 @@
 # SDD Manager revision plan
 
+**Campaign:** `003_39374c8`. Current record: `docs/dev/reviews/003_39374c8/REVISION-PLAN.md`. Established finding IDs and baseline evidence are retained. The completion-time archive instruction below records the original executed procedure; new campaigns write directly into their stable review directory.
+
 ## Baseline and scope
 
 - **Source baseline:** `39374c8ae60f92ce8dd874774ed69ab3cb15c459` (`39374c8`), plugin version `0.14.1`.
-- **Independent input:** [critical review](../REVIEW-REPORT.md), added at this baseline. Its observations are review hypotheses; it supplies no exact reviewed commit, attached validator output, or reproduced failure fixtures.
-- **Prior verified revisions:** [systematic review and follow-up](../reviews/REVIEW-REPORT_81011e7.md). Preserve SDD-R-001 and SDD-R-002 corrections and their historical evidence.
+- **Independent input:** [critical review](REVIEW-REPORT.md), added at this baseline. Its observations are review hypotheses; it supplies no exact reviewed commit, attached validator output, or reproduced failure fixtures.
+- **Prior verified revisions:** [systematic review and follow-up](../002_81011e7/REVIEW-REPORT.md). Preserve SDD-R-001 and SDD-R-002 corrections and their historical evidence.
 - **Purpose:** Address useful failure-handling clarifications and adopt branch-based workflow boundaries with default, explicit merge commits.
-- **Execution status:** SDD-V-001–007 implemented and validated; explicit campaign merge `37ea99359e9b34a202f7e922b0d1b1bc8e62cf3f` published to `feature/architecture-revision`. Actual evidence and limits: [revision report](REVISION_REPORT_39374c8.md). This completed plan is archived.
+- **Execution status:** SDD-V-001–007 implemented and validated; explicit campaign merge `37ea99359e9b34a202f7e922b0d1b1bc8e62cf3f` published to `feature/architecture-revision`. Actual evidence and limits: [revision report](REVISION-REPORT.md). This completed plan is archived.
 - **Revision IDs:** `SDD-V-001` through `SDD-V-007`, stable within this plan and subsequent implementation reports. These are planned revisions, not newly verified defects.
 
 ## Accepted decisions

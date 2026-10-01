@@ -1,5 +1,9 @@
 # Plugin review
 
+**Campaign:** `001_49143fa`. Current record: `docs/dev/reviews/001_49143fa/REVIEW-REPORT.md`. Established finding IDs and baseline evidence are retained.
+
+Full reviewed baseline: `49143fa039c65e1d9c9e44d40eff470d729e2c8c`. This historical report also contains its corrections and verification; missing separate stage artifacts are not reconstructed.
+
 Review date: 2026-09-30. Reviewed baseline: `49143fa`, plugin version `0.14.0`. Corrections in this review produce version `0.14.1`.
 
 ## Scope and method
