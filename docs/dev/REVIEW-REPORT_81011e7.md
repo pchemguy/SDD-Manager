@@ -37,7 +37,7 @@ Review in progress. Findings and coverage are recorded incrementally; final prio
 | S13 | sdd-implement | Reviewed | None in examined scope | Commit subject identifies S13; push gate before next unit |
 | S14 | sdd-steer | Reviewed | None in examined scope | Commit subject identifies S14; push gate before next unit |
 | S15 | sdd-manage | Reviewed | None in examined scope | Commit subject identifies S15; push gate before next unit |
-| P01 | Package validation | Not started | Not assessed | None |
+| P01 | Package validation | Reviewed | No new findings; SDD-R-001 remains | Commit subject identifies P01; push gate before P02 |
 | P02 | Cross-skill/workflow synthesis | Not started | Not assessed | None |
 | P03 | Consolidation/revision handoff | Not started | Not assessed | None |
 
@@ -465,9 +465,35 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Findings:** None in examined scope.
 **Checkpoint:** Validate report, commit with S15 in its subject, push, and verify containment before advancing.
 
+## Package and composition results
+
 ### P01 — Package validation
 
-Not started. Record inventory, tools/commands, actual outcomes, and unverified portability/client claims.
+**Status:** Reviewed. All 95 baseline files accounted for; no package-owned file excluded. Skill resources are enumerated in S01–S15. The six additional files were read: root `plugin.json` (manifest), `README.md` (entry/routing and limits), `AI_DISCLOSURE.md` (maintainer disclosure and optional README template), `.gitignore` (local-tool exclusions), `docs/dev/CAPABILITY-MAP.md` (ownership map), and `docs/dev/reviews/PLUGIN-REVIEW_49143fa.md` (historical evidence only). The plan/report are later review artifacts, outside the fixed source inventory.
+
+| Inventory class | Count | Assessment |
+| --- | --- | --- |
+| Skill entry points | 15 | Each packaged exactly once; all reviewed. |
+| Focused skill references | 43 | Complete reads and resolved routing; skill names checked. |
+| Presentation metadata / SVG assets | 15 / 15 | Prompt/name/icon paths, description bounds, XML/viewBox and contained references checked. No client display claim. |
+| Retained upstream license | 1 | Local MIT notice read; pinned remote independently unavailable (S08). |
+| Other package-owned files | 6 | Roles described above; manifest matches version 0.14.1 and skill catalog. |
+
+**Tool identity:** Available agent-package-author scripts at `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/`. Python 3.12.14; Git 2.51.1. Tool source hashes: `validate_plugin.py` SHA-256 `6224ff031dc267029abbe2fcd67ddf41aeaf4b0c731d15b52ae2c0e70203491a`; `validate_skill.py` `2bea796cc6a9719f49eed138ed23dd34a6605114d270287253a515bb38737977`; `inspect_package.py` `ef8dbe9123e9128abbbf0a4c1de9b7820d1efd07a4f9c8239e75f7f9862b5dd4`.
+
+| Exact check | Outcome / limitation |
+| --- | --- |
+| `python /root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_plugin.py /tmp/sdd-review-81011e7` | Exit 0, no stdout/stderr. |
+| `python /root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/inspect_package.py /tmp/sdd-review-81011e7` | Exit 0; Agent Plugins 1.0.0; all 15 skills; zero errors/warnings; runtime explicitly unverified. |
+| Per-skill `validate_skill.py` commands in S01–S15 | All exited 0; structural coverage only. |
+| `python /tmp/sdd_package_checks.py` | Exit 0: 62 Markdown files, 3 Markdown-template headings, 81 relative links, 15 YAML records and SVGs, no missing/escaping link, unknown skill name, spacing violation or credential-like value. This is a format check, not meaning/behavior proof. |
+| Manifest schema inspection | Canonical schema retrieved at `https://agent-plugins.org/schemas/1.0.0/plugin.schema.json` on 2026-10-01; root fields agree with inspected schema. Local validator is the executed validation, not remote runtime installation. |
+
+**Fresh historical rechecks:** S07/S11 assessed unique task ownership; S03/S15 assessed taskless messages and current continuation owners; S12/S13 assessed older issue backlog; SC-016 actually exercised shared-path isolation, ordinary-index reconciliation, unrelated preservation and bare-remote push. Historical results were not reused as current measurements.
+
+**Findings:** No new structural/discovery defect in examined scope. SDD-R-001 remains open and is unaffected by passing package checks. Full target-client installation/display, autonomous multi-stage execution, real credential channels and live GitHub writes remain unverified. Independent pinned TDD upstream retrieval was blocked; no package-level provenance success is claimed.
+
+**Checkpoint:** Commit with P01 in its subject, push and confirm containment before P02.
 
 ### P02 — Cross-skill and workflow synthesis
 
