@@ -8,42 +8,53 @@
 | Plugin version at baseline | `0.14.1` |
 | Review plan | [REVIEW-PLAN_81011e7.md](REVIEW-PLAN_81011e7.md) |
 | Historical review | [PLUGIN-REVIEW_49143fa.md](reviews/PLUGIN-REVIEW_49143fa.md) |
-| Campaign state | In progress; findings-only review |
+| Campaign state | Complete review coverage; one open defect and one optional recommendation; source unrevised |
 | Review execution date / reviewer | 2026-10-01; primary agent with consuming-agent scenario assessments |
 | Evidence boundary | Fixed source baseline; individual evidence levels recorded below; no live provider/client mutation |
 
-The source baseline is fixed. Report commits can advance the working branch without changing the reviewed source revision. Review-only findings are reserved for a subsequent revision agent; this scaffold makes no readiness claim.
+The source baseline is fixed. Report commits can advance the working branch without changing the reviewed source revision. Review findings are reserved for a subsequent revision agent. This campaign assesses the stated evidence levels; it does not approve unexecuted client or provider workflows.
 
 ## Executive summary
 
-Review in progress. Findings and coverage are recorded incrementally; final priority counts and readiness are reserved for P03. An empty index at an intermediate checkpoint is not a global zero-findings result.
+Reviewed all **15 skills**, **180 criterion rows**, and **95 baseline files**. Completed package validation and cross-skill synthesis; recorded **21 scenario sets**, including consuming-agent dispositions and executable local Git/testing fixtures. Every skill report was committed and pushed before the next skill; P01/P02 followed the same gate. Source skills, README, manifest, and capability map remain unchanged.
+
+| Open priority | Defects | Recommendations | IDs / disposition |
+| --- | --- | --- | --- |
+| P0 | 0 | 0 | None identified in examined scope. |
+| P1 | 0 | 0 | None identified in examined scope. |
+| P2 | 1 | 0 | SDD-R-001: orientation's plain status example refreshes index metadata despite its read-only invariant. Revise before claiming that invariant. |
+| P3 | 0 | 1 | SDD-R-002: clarify durable checked-task invalidation handoff. Optional responsibility decision; no false completion reproduced. |
+
+**Readiness:** The packaged workflow responsibilities and stopping boundaries are coherent under the exercised cases, with one confirmed read-only Git defect outstanding. Structural validation reports zero errors/warnings but does not establish autonomous client execution, production acceptance, secure credential channels, or live GitHub reconciliation. No global correctness or production-readiness approval is made.
+
+**Revision order:** Fix SDD-R-001 and recheck index preservation; separately decide whether to adopt SDD-R-002, then test a fresh-session stale-task continuation. Neither requires a new journal, recovery skill, mandatory issue map, or provider dependency. Independent pinned TDD upstream verification remains blocked; external/client checks are evidence limits, not established source defects.
 
 ## Unit progress and checkpoints
 
 | Unit | Scope | Status | Finding IDs | Report checkpoint / push evidence |
 | --- | --- | --- | --- | --- |
-| S01 | sdd-conventions | Reviewed | None in examined scope | Commit subject identifies S01; push gate before next unit |
-| S02 | sdd-orient | Reviewed | SDD-R-001 | Commit subject identifies S02; push gate before next unit |
-| S03 | sdd-report | Reviewed | None in examined scope | Commit subject identifies S03; push gate before next unit |
-| S04 | sdd-design | Reviewed | None in examined scope | Commit subject identifies S04; push gate before next unit |
-| S05 | sdd-specify | Reviewed | None in examined scope | Commit subject identifies S05; push gate before next unit |
-| S06 | sdd-plan | Reviewed | None in examined scope | Commit subject identifies S06; push gate before next unit |
-| S07 | sdd-tasks | Reviewed | None in examined scope | Commit subject identifies S07; push gate before next unit |
-| S08 | sdd-tdd | Reviewed | None in examined scope | Commit subject identifies S08; push gate before next unit |
-| S09 | sdd-docs | Reviewed | None in examined scope | Commit subject identifies S09; push gate before next unit |
-| S10 | sdd-verify | Reviewed | None in examined scope | Commit subject identifies S10; push gate before next unit |
-| S11 | sdd-integrate-feature | Reviewed | SDD-R-002 recommendation | Commit subject identifies S11; push gate before next unit |
-| S12 | sdd-forge | Reviewed | None in examined scope | Commit subject identifies S12; push gate before next unit |
-| S13 | sdd-implement | Reviewed | SDD-R-002 recommendation | Commit subject identifies S13; push gate before next unit |
-| S14 | sdd-steer | Reviewed | None in examined scope | Commit subject identifies S14; push gate before next unit |
-| S15 | sdd-manage | Reviewed | None in examined scope | Commit subject identifies S15; push gate before next unit |
-| P01 | Package validation | Reviewed | No new findings; SDD-R-001 remains | Commit subject identifies P01; push gate before P02 |
-| P02 | Cross-skill/workflow synthesis | Reviewed | SDD-R-001; SDD-R-002 recommendation | Commit subject identifies P02; push gate before P03 |
-| P03 | Consolidation/revision handoff | Not started | Not assessed | None |
+| S01 | sdd-conventions | Reviewed | None in examined scope | `dc9b0202901854fcce33c7795419506910cb6a02`; push and remote-tip equality verified before next unit |
+| S02 | sdd-orient | Reviewed | SDD-R-001 | `55493aa5e7ddaaffb4810760d98774632de30d05`; push and remote-tip equality verified before next unit |
+| S03 | sdd-report | Reviewed | None in examined scope | `b5e03269e6fe4f608397606de1913202e01455ff`; push and remote-tip equality verified before next unit |
+| S04 | sdd-design | Reviewed | None in examined scope | `a868b217ae5baf25f62fcebb0313ce1f289d92ef`; push and remote-tip equality verified before next unit |
+| S05 | sdd-specify | Reviewed | None in examined scope | `45994e72b156ab7e975ecb8fe31171507d4cd538`; push and remote-tip equality verified before next unit |
+| S06 | sdd-plan | Reviewed | None in examined scope | `1c568de62505b795f13a7309a21b1c19eeb49091`; push and remote-tip equality verified before next unit |
+| S07 | sdd-tasks | Reviewed | None in examined scope | `0daad3260b6deb2135df25278d9217bc6c904469`; push and remote-tip equality verified before next unit |
+| S08 | sdd-tdd | Reviewed | None in examined scope | `14462477015043ab42ebed7bffaa35525e389e97`; push and remote-tip equality verified before next unit |
+| S09 | sdd-docs | Reviewed | None in examined scope | `ed6a6c440673f1a4839b73038d56f7d49bf852bf`; push and remote-tip equality verified before next unit |
+| S10 | sdd-verify | Reviewed | None in examined scope | `ddae1853317e6c218191fbea3b2e256ba22aa6d1`; push and remote-tip equality verified before next unit |
+| S11 | sdd-integrate-feature | Reviewed | SDD-R-002 recommendation | `c0702aa9295dedf2b213a376562dfe5c4a766d5b`; push and remote-tip equality verified before next unit |
+| S12 | sdd-forge | Reviewed | None in examined scope | `b353c26481f16a99e79d313fd194865bf260c53e`; push and remote-tip equality verified before next unit |
+| S13 | sdd-implement | Reviewed | SDD-R-002 recommendation | `9b983b2b423593979322416fcf4c942e7204c99c`; push and remote-tip equality verified before next unit |
+| S14 | sdd-steer | Reviewed | None in examined scope | `3147e5f8e4621218a274c4f5fbd45745979580d8`; push and remote-tip equality verified before next unit |
+| S15 | sdd-manage | Reviewed | None in examined scope | `aa02043bfaaf81aaefdc7feadd21b7c433674ed8`; push and remote-tip equality verified before next unit |
+| P01 | Package validation | Reviewed | No new findings; SDD-R-001 remains | `a50c088837eeaed33d5ec2b3e7bca3ae31dc9628`; push and remote-tip equality verified before next unit |
+| P02 | Cross-skill/workflow synthesis | Reviewed | SDD-R-001; SDD-R-002 recommendation | `eb67d3faaa8c90484f38a3446d4c6a25e2029e6a`; push and remote-tip equality verified before next unit |
+| P03 | Consolidation/revision handoff | Reviewed | SDD-R-001; SDD-R-002 recommendation | Final P03 report commit; push/containment verified before delivery |
 
 ## Skill coverage and evidence
 
-Populate each unit with the per-skill template in the plan. Account for every C01–C12 criterion, inspected baseline file, relevant contract, scenario, finding ID, and checkpoint.
+Each unit accounts for C01–C12, inspected files, contracts, scenarios and findings. Satisfied means supported at its stated static, disposition or fixture evidence level; it does not imply full operational execution.
 
 ### S01 — sdd-conventions
 
@@ -71,7 +82,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-001: read-only consuming agent loaded all references and returned three concrete dispositions. It rejected a hypothetical SOLID interface and blocked duplicate T-012 projection and two-parent milestone projection; missing authoritative repair decisions were reported rather than guessed.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S01 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `dc9b0202901854fcce33c7795419506910cb6a02`; pushed and remote-tip equality verified before next unit.
 
 ### S02 — sdd-orient
 
@@ -99,7 +110,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-002 uses read-only consuming-agent dispositions for six readiness/continuation cases. SC-003 actually executes the status example in a disposable initialized repository after a metadata-only mtime change; both runs report clean but the unguarded run rewrites index bytes.
 
 **Findings:** SDD-R-001.
-**Checkpoint:** Validate report, commit with S02 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `55493aa5e7ddaaffb4810760d98774632de30d05`; pushed and remote-tip equality verified before next unit.
 
 ### S03 — sdd-report
 
@@ -127,7 +138,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-004: consuming agent drafts/assesses planned performance, partial issue contribution, taskless README, checked-but-uncommitted completion, and PR with unknown base/limited verification. No publication or runtime checks performed.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S03 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `b5e03269e6fe4f608397606de1913202e01455ff`; pushed and remote-tip equality verified before next unit.
 
 ### S04 — sdd-design
 
@@ -155,7 +166,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-005: five read-only consuming-agent dispositions preserved conversational comparison, decomposition-only scope, instruction authority, optional overlays and explicit accepted decisions.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S04 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `a868b217ae5baf25f62fcebb0313ce1f289d92ef`; pushed and remote-tip equality verified before next unit.
 
 ### S05 — sdd-specify
 
@@ -183,7 +194,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-006: read-only consumer correctly withheld conflicting/invented requirements, scoped the feature delta, preserved review-only mode and required one interface owner.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S05 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `45994e72b156ab7e975ecb8fe31171507d4cd538`; pushed and remote-tip equality verified before next unit.
 
 ### S06 — sdd-plan
 
@@ -211,7 +222,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-007: consumer withheld dependent planning for unresolved SPEC/design, reused valid existing feature strategy, flagged unobservable exit and SPEC-removal conflict without inventing decisions.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S06 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `1c568de62505b795f13a7309a21b1c19eeb49091`; pushed and remote-tip equality verified before next unit.
 
 ### S07 — sdd-tasks
 
@@ -239,7 +250,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-008: consumer detected ID collision, left unconfirmed existing code unchecked, routed selection/reconciliation, and preserved independent feature/main parent claims; sample used four-space nesting.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S07 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `0daad3260b6deb2135df25278d9217bc6c904469`; pushed and remote-tip equality verified before next unit.
 
 ### S08 — sdd-tdd
 
@@ -267,7 +278,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-009: consumer classified import failure as blocker, preserved interrupted code, allowed refactor without fabricated RED, rejected self-derived/mocked target checks and retained external integration gap. Pinned GitHub and raw upstream fetches failed with DisabledError.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S08 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `14462477015043ab42ebed7bffaa35525e389e97`; pushed and remote-tip equality verified before next unit.
 
 ### S09 — sdd-docs
 
@@ -295,7 +306,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-010: consumer selected suitable Python fallback, separated generated/vendor policy, kept docs-only repairs scoped and deferred governing amendments without calling owner skills.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S09 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `ed6a6c440673f1a4839b73038d56f7d49bf852bf`; pushed and remote-tip equality verified before next unit.
 
 ### S10 — sdd-verify
 
@@ -323,7 +334,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-011 consumer covered zero collection, skipped integration/warnings, unsupported pre-existing claim, stale evidence, interrupted execution and failed checked task. SC-012 disposable unittest runs: empty exit5/0 tests; skip-warning exit0/2 tests/1 skipped; assertion exit1/1 failure. pytest unavailable, no installation attempted.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S10 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `ddae1853317e6c218191fbea3b2e256ba22aa6d1`; pushed and remote-tip equality verified before next unit.
 
 ### S11 — sdd-integrate-feature
 
@@ -337,7 +348,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 | C02 | Satisfied | Any selected document subset; no implied implementation/host/next-stage effects. |
 | C03 | Satisfied | Accepted delta, dirty ownership and current scope required; dependent target stops on unsettled decision. |
 | C04 | Satisfied | Direct steering separate; scoped host identity impacts reported rather than executed. |
-| C05 | Finding | SDD-R-002 recommendation:  Exactly one executable entry, stable IDs/evidence, feature versus broader parent claims, source retention explicit. Checked-item invalidation wording deferred to P02 composition check. |
+| C05 | Finding | SDD-R-002 recommendation:  Exactly one executable entry, stable IDs/evidence, feature versus broader parent claims, source retention explicit. Checked-item invalidation assessed in P02; SDD-R-002 records the remaining optional clarification. |
 | C06 | Satisfied | Changed acceptance flagged for implement; old evidence not fresh completion. |
 | C07 | Satisfied | Sources retained while out-of-scope dependents need them; no silent link edits or duplicate copies. |
 | C08 | Not applicable | No credentials/provider operations. |
@@ -348,10 +359,10 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 **Structural evidence:** `validate_skill.py /tmp/sdd-review-81011e7/skills/sdd-integrate-feature` exited 0; local resource/heading checks, YAML prompt/icon consistency, and SVG XML/containment checks passed. Tool source: `/root/.codex/skills/remote-skills/skill-6ab91e941cbc8191a00ce5e8e34d83fd/scripts/validate_skill.py`. These checks do not verify display or installation.
 
-**Scenarios:** SC-013: consumer preserved SPEC-only scope, required both lists for task transfer, retained needed sources and broader parent status, and flagged stale evidence. Its checked-item re-evaluation/completion ownership tension is reserved for P02.
+**Scenarios:** SC-013: consumer preserved SPEC-only scope, required both lists for task transfer, retained needed sources and broader parent status, and flagged stale evidence. P02 retains its checked-item handoff tension as recommendation SDD-R-002.
 
 **Findings:** SDD-R-002 (recommendation added during P02; no reproduced false completion).
-**Checkpoint:** Validate report, commit with S11 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `c0702aa9295dedf2b213a376562dfe5c4a766d5b`; pushed and remote-tip equality verified before next unit.
 
 ### S12 — sdd-forge
 
@@ -379,7 +390,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-014 assessed fallback, duplicates, renames, 403, partial writes, older closure, PR exclusion and closed-reason mismatch. Official REST issue/label/milestone docs read on 2026-10-01: Issues write supports writes; PR key excludes PRs; association fields may be dropped without push access; state_reason ignored without state change. No provider writes executed.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S12 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `b353c26481f16a99e79d313fd194865bf260c53e`; pushed and remote-tip equality verified before next unit.
 
 ### S13 — sdd-implement
 
@@ -407,7 +418,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-015 consumer covered readonly selection, push blockers, pending-complete resume, out-of-range dependency, mixed hunks, scoped parents, older issue backlog and stale checked acceptance. SC-016 executable temp-index recipe passed all content/index/push assertions.
 
 **Findings:** SDD-R-002 (recommendation added during P02; no reproduced false completion).
-**Checkpoint:** Validate report, commit with S13 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `9b983b2b423593979322416fcf4c942e7204c99c`; pushed and remote-tip equality verified before next unit.
 
 ### S14 — sdd-steer
 
@@ -435,7 +446,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-017 consumer kept assessment-only read-only, implemented only objective scope, preserved unrelated work, excluded overlays/integration, separated later explicit resume and evidence-based issue reopening. Steer has finish-time push, not implement's push-first rule.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S14 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `3147e5f8e4621218a274c4f5fbd45745979580d8`; pushed and remote-tip equality verified before next unit.
 
 ### S15 — sdd-manage
 
@@ -463,7 +474,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 **Scenarios:** SC-018 consumer assessed all workflow routes, combined prep/next-two execution, readonly selection/report, missing TDD, storage/403 blockers, selected integration and separate resume; no authority drift or source effects observed.
 
 **Findings:** None in examined scope.
-**Checkpoint:** Validate report, commit with S15 in its subject, push, and verify containment before advancing.
+**Checkpoint:** `aa02043bfaaf81aaefdc7feadd21b7c433674ed8`; pushed and remote-tip equality verified before next unit.
 
 ## Package and composition results
 
@@ -493,7 +504,7 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 **Findings:** No new structural/discovery defect in examined scope. SDD-R-001 remains open and is unaffected by passing package checks. Full target-client installation/display, autonomous multi-stage execution, real credential channels and live GitHub writes remain unverified. Independent pinned TDD upstream retrieval was blocked; no package-level provenance success is claimed.
 
-**Checkpoint:** Commit with P01 in its subject, push and confirm containment before P02.
+**Checkpoint:** `a50c088837eeaed33d5ec2b3e7bca3ae31dc9628`; pushed and remote-tip equality verified before the next pass.
 
 ### P02 — Cross-skill and workflow synthesis
 
@@ -531,15 +542,23 @@ Populate each unit with the per-skill template in the plan. Account for every C0
 
 **Limits:** No installed-client multi-stage run, production acceptance campaign, provider concurrency/real credentials or live mutations. Closed-reason mismatch remains an endpoint-dependent unresolved result, not a fabricated successful closure. All request-scope and missing-capability branches are covered by dispositions; full execution remains outside these claims.
 
-**Checkpoint:** Commit with P02 in its subject, push and confirm containment before P03.
+**Checkpoint:** `eb67d3faaa8c90484f38a3446d4c6a25e2029e6a`; pushed and remote-tip equality verified before the next pass.
 
 ### P03 — Consolidation and revision handoff
 
-Not started. Reconcile coverage and findings before assigning a readiness conclusion.
+**Status:** Reviewed. All S01–S15 and P01–P02 are covered and pushed. All 180 C01–C12 rows have an outcome and rationale, all 95 fixed-baseline files are accounted for, all 21 scenario IDs are unique, and both stable finding IDs have canonical records and index/coverage references. No source fixes were performed.
+
+**Consistency checks:** Finding counts, priorities, types and queue reconcile. SDD-R-001 remains Open despite candidate-guard experiments; SDD-R-002 remains an optional Recommendation despite coherent conservative interpretation. Unit statuses mean reviewed coverage, not corrected source. Individual checkpoints identify their report commits, which were pushed before dependent review; this final checkpoint is discoverable by its P03 commit subject and final remote containment check.
+
+**Skipped/unavailable operations:** Pinned upstream GitHub/raw provenance retrieval returned DisabledError (S08 C12 Blocked). pytest was absent, so the local runner fixture used available stdlib unittest instead; no installation occurred. No target-client installation/display, full autonomous project implementation, actual code-reduction acceptance, production credential-store/channel exercise, live GitHub write, rate-limit/concurrency test or real cross-platform campaign was performed. These exclusions limit readiness claims; they do not establish bugs or waive a project's own required acceptance.
+
+**Handoff:** Subsequent agent should inspect the two finding records and queue below against this baseline, preserve IDs/history, keep optional responsibility changes separate from the confirmed fix, and attach actual revision/recheck evidence before changing disposition to Verified. Retain the fixed report suffix; a changed reviewed source needs an explicit new scope.
+
+**Checkpoint:** Commit with P03 in its subject, push using the established saved credential, then confirm remote containment. The final user report supplies the resulting commit; no self-SHA is embedded in its content.
 
 ## Global finding index
 
-Finding IDs are global and stable across units. An empty index means no findings recorded so far, not that unreviewed units are defect-free.
+Finding IDs are global and stable. Open source defects and optional recommendations are distinguished below; unavailable external checks are recorded separately.
 
 | ID | Title | Type | Priority | Status | Units / criteria | Related IDs |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -582,7 +601,7 @@ Canonical finding records below preserve baseline evidence and objective revisio
 
 ## Scenario register
 
-Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs, expected behavior, observed results, evidence level, and gaps; do not mark planned experiments as performed.
+Scenario IDs are stable. Each row records actual setup, expected and observed outcomes, evidence level and limitations. Read-only dispositions do not claim repository or provider execution.
 
 | Scenario ID | Unit(s) / workflow | Setup and inputs | Expected behavior | Evidence level / command | Observed result | Finding IDs / limits |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -598,7 +617,7 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 | SC-010 | S09 / documentation authority and coverage | Python no style; generated/vendor and owned module missing docs; README/SPEC option conflict; docs-only discovers behavior bug; governing architecture/layout amendments | Suitable fallback, owned module coverage, no scope/requirement changes via docs | Read-only consuming-agent assessment | Google-style suitable within scope; generated/vendor accounted separately; inspect actual CLI before README resolution; code bug routed without repair; governing amendment fields reported to user, no automatic invocation | No docstrings/examples changed or executed; actual CLI evidence and generated editing policy not supplied |
 | SC-011 | S10 / evidence classification | Exit0/zero collection; focused pass/skipped required integration; outside-file failure; stale prior pass; interrupted run; checked acceptance fails | No false completeness, unsupported cause claim or verify-only repair | Read-only consuming-agent assessment | Zero/stale/incomplete unverified; required skipped check not checked or concretely blocked; unsupported pre-existing remains unknown; failed checkbox reported without edits | Hypothetical cases; actual command policy/state absent |
 | SC-012 | S10 / collection, skips, warnings, failures | Disposable stdlib unittest fixtures: empty directory; passing test + DeprecationWarning + required integration skipped; assertion failure | Counts and limitations visible despite success exit; zero checks not acceptance; failure explicit | Executable local controlled fixture | python -W default -m unittest discover -v: empty exit5, Ran0/NO TESTS RAN; mixed exit0, Ran2/OK skipped1 with warning; assertion exit1, Ran1/FAILED failures1 | pytest unavailable; no dependencies installed. Tests demonstrate runner evidence only, not autonomous plugin acceptance campaign; temporary fixtures removed. |
-| SC-013 | S11 / selected integration and ownership | SPEC only with active feature tasks; TASKS only transfer; joint transfer checked feature parent; retained feature-source reference; changed task acceptance | No implied scope extension, source deletion, duplicate owner or broadened completion claim | Read-only consuming-agent assessment | TASKS-only transfer blocked; joint task move retires source checkbox and retains ID/evidence; main parent not copied complete; active references retain source; stale acceptance flagged for implement | No integration edit performed; ownership wording for invalidating a checked claim requires cross-skill synthesis in P02 |
+| SC-013 | S11 / selected integration and ownership | SPEC only with active feature tasks; TASKS only transfer; joint transfer checked feature parent; retained feature-source reference; changed task acceptance | No implied scope extension, source deletion, duplicate owner or broadened completion claim | Read-only consuming-agent assessment | TASKS-only transfer blocked; joint task move retires source checkbox and retains ID/evidence; main parent not copied complete; active references retain source; stale acceptance flagged for implement | No integration edit performed; P02 analyzed invalidation ownership; SDD-R-002 recommends an explicit durable handoff |
 | SC-014 | S12 / projection, access and lifecycle | No report; duplicate marker; renamed milestone; policy/rate-limit403; partial label/issue write; older open task; matching PR; closed-not-planned;201 absent parents;200 unchanged reason | Fallback, unique reuse, stop conflicts, cause-sensitive access, partial/idempotent effects and completion evidence | Read-only consuming-agent assessment plus official provider documentation inspection | Fallback draft accepted; duplicates blocked; stable rename reused;403 not blindly token-retried; partial objects reread; verified older issue reconciled with authority; PR excluded; missing returned associations partial; unchanged reason unresolved, no invented reopen sequence | No live API/auth/credential or service concurrency tests. Official references: https://docs.github.com/en/rest/issues/issues , https://docs.github.com/en/rest/issues/labels , https://docs.github.com/en/rest/issues/milestones . Already-closed reason-change fallback requires endpoint-supported policy resolution. |
 | SC-015 | S13 / execution and continuation | Selection-only unpushed; execution remote unavailable; checked T002 pending; external T003 dependency; unrelated staged/shared hunks; scoped feature parent; older issue; changed checked acceptance | Push-first execution only, resume before selection, no broadened range/status, preserve unrelated work | Read-only consuming-agent assessment | Selection-only did not push; execution blocked before work on push failure; applicable pending completion reused/committed; dependency not added silently; mixed hunks require isolation; feature parent not main; older closure handled; stale checked scope reassessed | No actual autonomous implementation/remote/hosting execution |
 | SC-016 | S13 / mixed-hunk commit preservation | Disposable Git repository + bare remote, shared path has owned pending hunk/unrelated staged hunk/unrelated unstaged hunk; second unrelated staged file; task checkbox | Commit owned hunk and status only; keep unrelated index/worktree state; no index reversal; push confirmed | Executable reviewer-operated local Git fixture | python /tmp/sdd_git_isolation_fixture.py exit0; commit contains TASKS.md/shared.txt only; all six content/index/worktree assertions passed; ls-remote equals commit c37030c842f01e2349669637a8b43a6c94600374 | Recipe constructs selected temporary index from HEAD and reconciles owned ordinary-index entries. Not autonomous agent staging, not a plugin script or external hosting test; fixture removed. |
@@ -610,11 +629,24 @@ Allocate stable scenario IDs `SC-001`, `SC-002`, and so on. Record actual inputs
 
 ## Revision queue and human decisions
 
-Not established. Populate after findings are consolidated, ordering by priority and dependency while retaining the stable IDs. Source fixes are not authorized by the review plan alone.
+The confirmed fix and optional clarification are independent. This findings-only campaign did not implement either. Keep their stable IDs in revision commits and objective validation records.
 
 | Order | Finding IDs | Owning skill(s) / paths | Recommended change | Prerequisites / human decisions | Required recheck |
 | --- | --- | --- | --- | --- | --- |
+| 1 | SDD-R-001 | sdd-orient / inspection-and-handoff.md | Suppress optional Git writes for read-only inspection; align concrete example and invariant. | No new workflow/authority decision required; preserve host portability. | Metadata-only clean status preserves index bytes; staged/unstaged/conflicted states still accurately reported without mutation. SC-003/SC-021 demonstrate the failure and candidate mechanism, not a revised baseline. |
+| 2 — optional | SDD-R-002 | sdd-integrate-feature ↔ sdd-implement | Define durable invalidation signal and owner of checkbox correction after accepted scope changes. | Accept the precise responsibility choice; preserve implementation completion ownership and selected edit scope. | Integrate, stop, then fresh consumer resumes: stale checked claim discovered without chat, old evidence retained, no skipped work or false completion, status changed by defined owner. |
+
+**Verification prerequisites outside the source queue:** Retrieve the pinned upstream/provenance independently when access permits. Use a suitable test client/project and separately authorized provider test environment for full execution, credential channels and live hosted lifecycle checks. A mismatch in an already-closed issue's reason should remain unresolved until an endpoint-supported and authorized remedy is established; no invented reopen/close sequence is prescribed here.
 
 ## Validation limits and remaining work
 
-Remaining Not started units have not been assessed. Historical evidence is linked for context and is rechecked where applicable; it is not substituted for fresh results. Record uninspected files, unavailable tools, unexecuted scenarios, external claims needing verification, and client/provider limits as the campaign progresses.
+| Evidence class | Completed | Limit |
+| --- | --- | --- |
+| Static package/content review | All 95 source files; all 15 validators, package validator/inspector; links/headings/templates/metadata/SVG/source references; canonical manifest schema inspection. | Not installed client discovery/display or executable product correctness. |
+| Consuming-agent disposition | 15 individual-skill assessments plus eight composed workflow cases (SC-019). | Supplied cases, no full autonomous multi-stage project execution. |
+| Consumer fixture mutation | Joint task transfer SC-020; primary checks and local bare-remote persistence. | Existing status/evidence are fixture data, not actual production acceptance. |
+| Reviewer-operated executable fixtures | Read-only index failure and guarded matrix; runner collection/skips/warnings/failure; mixed-hunk/index preservation and local bare push. | Local Git 2.51.1/Python 3.12.14 environment; no live hosting or cross-platform claim. |
+| Provider documentation | Current official issue/label/milestone REST references inspected; manifest schema retrieved. | No provider writes/auth/rate-limit/concurrency exercise; pinned TDD upstream independently unavailable. |
+| Review persistence | One report commit per skill, then P01/P02/P03; all pushed using established saved GitHub credential before dependent work/delivery. | This authenticates/persists the review; it is not a credential-storage or GitHub API workflow test. |
+
+No baseline files remain uninspected and no review unit remains unstarted. Source fixes and optional clarification remain for the revision agent; external/runtime validation remains separate from this completed review coverage.
