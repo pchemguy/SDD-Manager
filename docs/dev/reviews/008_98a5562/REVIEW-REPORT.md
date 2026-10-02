@@ -28,10 +28,19 @@
 | U-014 | C-002/C-003/C-005/C-006: entry/all four references inspected. Push-first precedes task work; continuation preserves verified pending completion and scope; dependencies and phase segments explicit; per-task evidence/commit/push/closure and full-phase integration separate. Unrelated index staging protected. No actionable source defect found. | None |
 | U-015 | C-002/C-003/C-005/C-006: entry/all three references inspected. Assessment versus commanded mutation distinguished; minimal identity record and paused target established; direct governing edits/no feature layer; completion reassessment and owner-scoped repairs; publication followed by human stop. No actionable source defect found. | None |
 | U-016 | C-002–C-006: entry/all seven references inspected. Three core workflows and independently selectable stages consistent; branch manager is Git-only; campaign allocation, phase transitions, credential recovery and no-ff merge gates align with focused owners. No actionable source defect found. | None |
+| U-017 | C-001–C-006: complete README/capability map, all skills/references and consequential producer/consumer boundaries assessed. Fifteen actual controlled primitive checks passed; no confirmed source defect. Remaining client execution gap recorded without claiming malfunction. | R-001 |
 
 ## Findings
 
 Findings are canonical below; absence of a finding means no actionable inconsistency found within the assessed scope, not runtime certification.
+
+### R-001 — Composed client workflows remain unverified
+
+- **Type / priority / confidence / status:** Evidence gap / recommendation / P3 / High for missing evidence; no inference of malfunction / Open.
+- **Baseline location:** README.md, Package status and references; docs/dev/reviews/007_df531c2/REVISION-REPORT.md, Limits and Scenario evidence.
+- **Observation and consequence:** The package accurately discloses that full client-driven workflows are untested. Prior consumer interpretation and the present 15 primitive checks do not establish actual skill discovery/routing, scope adherence, or recovery across the complete phase/feature/steering lifecycle. No source-contract failure was found; release/runtime confidence remains limited by this evidence boundary.
+- **Bounded correction:** When a suitable client is available, run a controlled consuming-agent campaign across complete main-phase, feature incorporation/archive and steering workflows, plus failing exits/rejected publication and interrupted continuation. Retain source SHA, client/environment, actual tool effects and independent acceptance assessment. Preserve existing source unless those runs establish a defect.
+- **Objective recheck:** A consumer executes the selected scopes from instructions with independent outcome inspection: incomplete phase does not merge, complete phase uses two-parent published integration, feature tasks retain one active owner after archive, steering returns control, and failed checks/pushes preserve state without advancing. Record any missing facility; scripted caller choices alone cannot close this evidence gap.
 
 ## Checkpoints
 
@@ -68,6 +77,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-015: `39201132d79de246f905780d605b57cff43d71fc`; remote HEAD equality verified. Source cases: blocked amendment resumes only on human command; removal protects retained contracts; task disappearance does not automatically close issue; no task selection or implement invocation after success.
 
 - Before U-016: `e13215e0711b9355ca642443e45f5974af9c86f7`; remote HEAD equality verified. Source cases: complete phase requires verified exits/published target before authorized next phase; preparation preserves feature identity; SSH is not silently changed; uncertain push checked before retry; already integrated tip is not remerged.
+
+- Before U-017: `59f1f54d4fc9124aee774163f13cd894ea5a8ba5`; remote HEAD equality verified. Executed retained lifecycle_fixture.py (10 checks) and failure_fixture.py (5 checks), with results/environment retained. Harness setup assumptions corrected transparently; installed consumer decisions and live backend effects not executed.
 
 ## Scenarios and checks
 
