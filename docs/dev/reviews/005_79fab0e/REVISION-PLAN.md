@@ -15,9 +15,23 @@
 2. **Escalate failure:** On a 403, pass sanitized destination, attempted operation, transport/client, and indicated cause to sdd-manage. Provider-specific classification distinguishes authentication/access failures from rate limits and policy restrictions; escalation does not imply that every 403 is repaired by replacing a token. Other explicit missing/invalid-credential failures may use the same recovery path rather than leaving a noninteractive shell blocked.
 3. **Find a local token:** sdd-manage checks for `*.tkn` within the eligible repository, preferring the conventional file beside its repository-level `.gitignore` for the active backend, such as `gh.tkn`. Select a suitable provider/repository credential; do not guess among ambiguous candidates, traverse unrelated repositories, or print token contents. A token's presence does not prove identity or permission.
 4. **Reuse or request:** If a suitable file exists, use its token to authenticate the shell for the active backend and retry the affected authorized operation. If none exists, ensure `*.tkn` is in the repository-level `.gitignore` before requesting and saving a token. Create `.gitignore` if absent, preserving existing rules; if no suitable ignored file can be safely written, report the concrete blocker.
-5. **Acquire minimally scoped access:** Prefer a fine-grained token when supported. For GitHub Git pushes, request a fine-grained token enabled solely for the target repository with repository **Contents: Read and write** permission. Backend-specific requirements for other authorized operations remain explicit; requested issue/label/milestone writes require their relevant access, not merely Contents permission.
+5. **Acquire repository-scoped access:** Prefer a fine-grained token when supported. For GitHub, request a fine-grained token enabled solely for the target repository with the permission profile below. Token permissions do not authorize operations outside the requested workflow. Other backends define equivalent access for their supported operations.
 6. **Save and authenticate:** Save the provided token as `gh.tkn` for GitHub, or an equivalent unambiguous backend filename, next to the repository-level `.gitignore`. Verify the file is ignored and untracked before writing, and restrict file access where the platform supports it. Restore the active shell/client authentication through an available credential helper, secure process input, or equivalent supported mechanism. Do not embed tokens in command arguments, remote URLs, handoffs, reports, or output.
 7. **Resume and report:** Retry with bounded attempts, then confirm actual operation success and remote containment for pushes. Keep local commits and pending publication on failure; report permission/policy/transport restrictions without exposing credentials or changing destination. Reauthentication does not authorize extra operations, force-pushes, or bypassing protections.
+
+### GitHub fine-grained token permissions
+
+Apply this profile when requesting or assessing the conventional target-repository GitHub token:
+
+| Repository permission | Access |
+| --- | --- |
+| Commit statuses | Read and write |
+| Contents | Read and write |
+| Issues | Read and write |
+| Pull requests | Read and write |
+| Metadata | Read access, added automatically by GitHub |
+
+Enable the token solely for the target repository. The profile supports the intended SDD integration; it does not introduce PR operations into the current backend or authorize unrequested hosted mutations.
 
 The default credential file is the sole intentional project-local secret exception. Before reusing an existing token file, also verify effective ignore coverage and untracked status; repair the ignore rule when needed. An already tracked token is a blocker requiring explicit remediation, not permission to silently rewrite history or expose its contents. Existing unrelated token files and user changes remain untouched.
 
@@ -58,7 +72,7 @@ No governing consumer SPEC/PLAN set exists in this repository to update for this
 | V-004 | C-005 | Update examples, README/capability map, entry routing, and any stale presentation description. | V-003 | Documentation demonstrates authenticated push, ignored-token recovery, first-token acquisition, unsuitable access, and provider limitations with no real token values. |
 | V-005 | C-001–C-005 | Verify source composition, controlled authentication/persistence cases, packaging, and publication boundary; reconcile dispositions in revision report. | V-001–V-004 | All applicable scenarios below have actual evidence and limits; one verified explicit merge publishes the accepted boundary. |
 
-During implementation, verify exact fine-grained permission and authentication-tool behavior against current official GitHub documentation. Contents permission is the requested push baseline; do not assume it authorizes issue operations, workflow-file modifications, protected-branch bypass, or every repository policy exception. Report additional access only when the requested operation actually requires it. No unsupported token-injection mechanism for a connector is prescribed.
+During implementation, verify exact fine-grained permission and authentication-tool behavior against current official GitHub documentation. Use the four-permission read/write profile above as the convention's required GitHub baseline, with Metadata added automatically. Verify permission suitability for the actual endpoint; the profile does not imply workflow-file modification access, protected-branch bypass, or exemption from repository policy. Report additional access only when the requested operation actually requires it. No unsupported token-injection mechanism for a connector is prescribed.
 
 ## Verification scenarios
 
@@ -72,7 +86,7 @@ Use disposable repositories, local remotes, and controlled fake credentials/clie
 | SC-004: Existing unsuitable or ambiguous files | Prefer the active backend's conventional file; surface ambiguity or wrong provider/repository access rather than choosing randomly, exposing values, or overwriting unrelated files. A rejected credential permits a suitable replacement request. |
 | SC-005: Git exclusion and preservation | Exercise missing ignore entry, a negating rule, an already tracked token, and unrelated staged/unstaged work. Validate effective exclusion, preserve unrelated work, and report tracked-secret remediation as blocked. |
 | SC-006: Failure classification and retry | Rate-limit 403, repository policy denial, network failure, and repeated unchanged access denial produce the appropriate bounded/deferred outcome; local commits remain available and unpublished status stays visible. |
-| SC-007: Git versus API | Contents read/write is requested for target-repository pushes; issue writes identify Issues access separately. Git recovery does not imply API-client authorization or require a forge-owned push. |
+| SC-007: Git versus API | The token request specifies target-repository-only access and read/write for Commit statuses, Contents, Issues, and Pull requests, with Metadata added automatically. Git recovery does not imply API-client authorization, a forge-owned push, or permission to execute unrequested PR operations. |
 | SC-008: Secret handling and portability | Tokens are absent from command arguments, URLs, normal handoffs, tracked files, and output. Supported shell credential mechanisms and filesystem restrictions are reported accurately; an unavailable mechanism is a concrete blocker. |
 | SC-009: Package composition | Changed-skill/plugin validators, contained links, headings including template-start exemption, presentation metadata/icons, and credential-pattern checks pass; no contradictory outside-project-only instruction remains in active sources. |
 
