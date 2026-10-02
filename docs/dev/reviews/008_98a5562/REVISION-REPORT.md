@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- State: **Resumed by the user on 2026-10-02.** Interrupted workers diagnosed and resumed; milestone1.1 and isolated reassessment complete, Phase1 completion underway.
+- State: **Suspended by the user on 2026-10-02.** All consumers stopped; owned pending work and exact restoration evidence published.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -59,8 +59,8 @@ Resumed campaign continues under the accepted plan. Earlier suspension records a
 
 1. Re-orient source and consumer repositories, instructions, dirty paths, branch tips and remote refs. Preserve unrelated source `.codex/` and fixture staged/unstaged intent. Do not reset, delete branches or replay setup/creation drivers against existing objects.
 2. Keep the tested package pinned to `529e98d4d3cd7002e3a49e34394552a44bf0a8d0`; portable provenance/hashes are on live consumer main under `vendor/`. Runtime mode is explicit skill-source loading, not installed-client discovery.
-3. Current positive continuation is A-006, live Phase1 completion after published A-005. Keep all already verified/pushed tasks and hosted identities. Continue A-007–A-013 in order only after each preceding assessment is published/remote-verified.
-4. Current isolated continuation is A-014 cross-phase execution after its prerequisite-block subcase, and A-018 merge-publication rejection after verified retained task-commit recovery. A-022 complete. Complete A-019/A-021 and final A-027 when their actual prerequisite checkpoints exist; do not manufacture success or replay initial setup into existing forks.
+3. Current positive continuation is suspended A-006. Live T-004 `b9fabb0` is published; issue4 evidence exists, closure not attempted. T-005 is verified with26 tests but its three owned files remain staged/uncommitted. Preserve them, re-orient, reconcile issue4 by readback, commit/push T-005 and reconcile issue5, then finish explicit verified Phase1 integration/publication. Continue A-007–A-013 only after independent A-006 evidence publication.
+4. Current isolated continuation is suspended A-014 during T-004 RED, preserving two unstaged test files at `83eab02`, and suspended A-018 awaiting its not-yet-started merge-publication subcase after verified retained task-commit recovery. A-022 complete. Complete A-019/A-021 and final A-027 when their actual prerequisite checkpoints exist; do not manufacture success or replay initial setup into existing forks.
 5. Consult the evaluation registry and retained case prompts/journals for precise live state. A pending publisher must finish before another evaluation mutation; an interrupted consumer resumes its same owned work. No new workers are needed.
 6. Source merge remains explicit two-parent into the established target after the authorized revision boundary is complete and verified. Native automatic discovery/installation is still an unavailable facility, not a case pass.
 
@@ -83,8 +83,20 @@ Actual runtime: Python3.12.14; Python3.11 execution was not performed. Explicit 
 
 ## Current continuation checkpoint
 
-Checkpoint registry: **14 Passed, 3 Running (A-006, A-014, A-018), 10 Pending.** Earlier suspension maps are historical. Live main remains `d769b55`; T-004 `b9fabb0` is published on phase1 while T-005 is underway. TST-001 resolved with verified layout/tests. Source/evaluation/live and isolated current tips were re-read after user-requested interruption diagnosis; no merge was pending or reset/setup replay needed. Resume the same workers and actual state. Continue the ordered positive sequence only after each case assessment is committed, pushed and remote-verified. Preserve the tested source identity; record new defects without silently repairing it.
+Prior resumed checkpoint registry: **14 Passed, 3 Running (A-006, A-014, A-018), 10 Pending.** Earlier suspension maps are historical. Live main remains `d769b55`; T-004 `b9fabb0` is published on phase1 while T-005 is underway. TST-001 resolved with verified layout/tests. Source/evaluation/live and isolated current tips were re-read after user-requested interruption diagnosis; no merge was pending or reset/setup replay needed. Resume the same workers and actual state. Continue the ordered positive sequence only after each case assessment is committed, pushed and remote-verified. Preserve the tested source identity; record new defects without silently repairing it.
 
 ## Publication protection
 
 Automatic approval review rejected a proposed raw GitHub response publication as possible private-content disclosure. That attempt did not execute. A safer assessment retained only task IDs/states and verification booleans, alongside product logs and consumer handoffs; publication succeeded at `c41165a`. Raw hosted payloads are excluded from subsequent assessment exports.
+
+## Controlled suspension checkpoint
+
+Final state: **14 Passed, 3 Suspended (A-006, A-014, A-018), 10 Pending; 0 Running, Failed or Blocked.** All six consumers stopped. No new task, merge, phase or hosted write began after the suspension request. Source boundary integration remains pending; no completed-campaign claim.
+
+Evaluation suspension records were committed/pushed separately at `8b117f4` (A-006), `01a9d33` (A-014), and `876c488c95587794ea5f6a6e4a5f944b753eac76` (A-018); exact remote equality verified after each. [Current resume instructions](https://github.com/pchemguy/AgentPlayground/blob/876c488c95587794ea5f6a6e4a5f944b753eac76/docs/dev/reviews/001_608cf12/RESUME.md) are authoritative for this stop.
+
+Live phase1 remains `b9fabb0aab69bf891386f9bf47c503b78be6cf15`, main `d769b55aa63f92d5ccbd8022cb9e87f07e541fae`. T-00425-test completion is durable; pending issue4 closure is recorded without an unknown-write claim. T-00526-test verified pending README/TASKS/distribution-test staged content is exported with exact index hashes, binary patches, file archive and committed-HEAD bundle. No merge or Phase2 work.
+
+Isolated cross-phase fork remains `83eab02a70e7757e11f04f46a64849f69ba64df0`; two pending T-004 test files and actual RED logs retained with matching patches/index hashes and HEAD bundle. No production fix or boundary. Isolated task-publication fork remains at published `7c29721`; its future merge-rejection experiment is unstarted.
+
+Final read-only recheck confirmed saved file hashes, staged index intent and both patches exactly match the stopped worktrees. Unrelated bytecode and source work preserved. Recovery exports exclude credentials and raw provider bodies; scoped provider identity/state/status summary and complete available consumer handoffs retained. No workers were added or left running.
