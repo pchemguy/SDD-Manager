@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- State: **Suspended at the user's request on 2026-10-02.** No further agents or workflows are to start without a resume request.
+- State: **Resumed by the user on 2026-10-02.** Saved checkpoints verified; A-003 hosted projection and A-015 interrupted-task continuation are the first resumed cases.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -35,7 +35,7 @@
 | A-026 | Passed | Consumer and independent reruns observed1 pre-existing baseline failure (exit1), zero selected tests (exit5), and no acceptance from empty collection. No test/source/task repairs. Runtime Python3.12.14. |
 | Remaining19 cases | Pending | A-004–A-014, A-016–A-019, A-021–A-023, A-027 not executed. |
 
-Counts: **6 Passed, 2 Suspended, 19 Pending; 0 Failed, 0 Blocked, 0 Running.** Suspension is not completion. No new source defect was established by these partial trials.
+Counts at the prior suspension: **6 Passed, 2 Suspended, 19 Pending; 0 Failed, 0 Blocked, 0 Running.** Suspension is not completion. Current resumed results will be recorded below. No new source defect was established by these partial trials.
 
 ## Resume protocol
 
