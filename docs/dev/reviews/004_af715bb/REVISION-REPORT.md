@@ -7,7 +7,7 @@
 - **Execution checkpoint:** `4a6bbe2a964e0181119d00b2fda23e43bbf79d28`.
 - **Plan:** [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - **Working branch:** `revision/design-delivery-004`; target: `feature/architecture-revision`.
-- **State:** V-001–V-005 verified on the working branch; integration and target publication pending.
+- **State:** Completed; V-001–V-005 verified, explicitly merged, and target publication verified.
 
 ## Revision evidence
 
@@ -18,7 +18,7 @@
 | V-003 / R-003, R-004 | Established meaningful MVP-first strategy, scoped deferrals/prerequisites, small capability growth, early verification, and preservation of the useful path. Inspected greenfield and existing-system cases; subsystem-first and mocked-only outcomes are insufficient without a meaningful path. Heading/link/diff and plan structural validation passed. | R-003 verified by source inspection; R-004 revised pending task/hierarchy alignment and consumer assessment. | Persisted with this action. |
 | V-004 / R-004, R-005 | Aligned task sizing, hierarchy semantics, milestone decision evidence, and coordinator handoffs. Inspected module-small/behavior-large tasks and suitable milestone decisions; integrated evidence is timely and decisions remain human-controlled. Heading/link/diff and affected skill structural checks passed. | R-004/R-005 verified by source inspection; consumer and final composition assessments follow. | Persisted with this action. |
 
-| V-005 / R-001–R-005 | Aligned README/capability map; all 15 skill validators, plugin validator, package inspector, metadata/icon checks, tracked credential-pattern scan, changed Markdown links/headings, and diff checks passed. Fresh consumer assessment passed SC-001–SC-006; source composition inspection passed SC-007. | All five findings verified within source/consumer-interpretation scope. Installed-client and consumer runtime behavior remain untested. | Persisted with this action; boundary merge pending. |
+| V-005 / R-001–R-005 | Aligned README/capability map; all 15 skill validators, plugin validator, package inspector, metadata/icon checks, tracked credential-pattern scan, changed Markdown links/headings, and diff checks passed. Fresh consumer assessment passed SC-001–SC-006; source composition inspection passed SC-007. | All five findings verified within source/consumer-interpretation scope. Installed-client and consumer runtime behavior remain untested. | Persisted with this action; boundary merge published. |
 
 ## Checkpoints
 
@@ -34,7 +34,7 @@ Completed action commits are pushed and remote HEAD equality is checked before d
 
 ## Limits
 
-Instruction revisions and source/scenario assessments do not establish consumer runtime correctness, empirical delivery speed, or usability. Detailed testing strategy and implementation/completion ownership remain with their existing skills. Final working-branch composition and consumer assessment passed. Merged-state checks and target publication remain pending.
+Instruction revisions and source/scenario assessments do not establish consumer runtime correctness, empirical delivery speed, or usability. Detailed testing strategy and implementation/completion ownership remain with their existing skills. Final working-branch composition and consumer assessment passed. Prospective merged-state heading/link/diff and plugin checks passed; target merge publication is verified.
 
 ## Scenario evidence
 
@@ -61,4 +61,12 @@ A fresh consumer agent read only the relevant five skill entries and their focus
 
 ## Integration
 
-Working-branch checks and the fresh consumer assessment passed. Establish target freshness, verify the prospective merged state, create an explicit two-parent merge, and publish/verify the target before claiming completed integration.
+Fetched the established target before integration; it was up to date. `git merge --no-ff --no-commit revision/design-delivery-004` produced the prospective merge. Changed Markdown heading/link checks, plugin validation, and staged-diff whitespace checks passed before committing.
+
+- **V-005 checkpoint:** `450c52ce7ce55b4f081f032469e1e5aaec447734`; working-branch push and remote HEAD equality verified.
+- **Explicit merge:** `ae90f52fc7ab28a1580074c2452d0b43077b62b1`.
+- **Target parent:** `4a6bbe2a964e0181119d00b2fda23e43bbf79d28`.
+- **Revision parent:** `450c52ce7ce55b4f081f032469e1e5aaec447734`.
+- **Publication:** Pushed `feature/architecture-revision`; remote HEAD equaled the merge SHA. Both parents verified, and the full revision boundary is contained in the target.
+
+This final report/navigation checkpoint records the completed merge; it changes no skill sources. No installed-client or consumer runtime claim follows from these checks.

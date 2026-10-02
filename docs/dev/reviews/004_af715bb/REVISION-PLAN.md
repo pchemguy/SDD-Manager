@@ -7,9 +7,9 @@
 - **Current planning baseline:** `59486ec9dc1c8e30d4814f1396c4624a5621f9de`; the reviewed skill sources remain unchanged.
 - **Date:** 2026-10-02.
 - **Review:** [REVIEW-REPORT.md](REVIEW-REPORT.md).
-- **Revision evidence:** Planned `REVISION-REPORT.md`; create when source revision execution begins.
-- **Disposition:** R-001–R-005 included in the proposed revision scope; none deferred or rejected. Baseline findings remain Open until execution records an actual disposition.
-- **Authorization and state:** Planning and publication only; Planned. This request does not initiate source revisions, consumer implementation, or a merge.
+- **Revision evidence:** [REVISION-REPORT.md](REVISION-REPORT.md).
+- **Disposition:** R-001–R-005 included in the proposed revision scope; none deferred or rejected. All five findings are Verified for source articulation and instruction interpretation; original baseline observations remain retained in the review.
+- **Authorization and state:** Subsequent user instruction authorized execution. V-001–V-005 completed, verified within recorded evidence limits, explicitly merged, and target publication verified; see the revision report. Consumer product implementation remains outside scope.
 
 The intended result is a concise document ownership model and an explicit delivery strategy: reach the simplest practical meaningful end-to-end MVP early, establish rigorous relevant verification, and grow through small meaningful capability increments. Phase and milestone boundaries provide evidence for human decisions about usefulness, usability, risk, and continued investment.
 
