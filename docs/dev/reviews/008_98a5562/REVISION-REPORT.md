@@ -15,6 +15,7 @@
 | --- | --- | --- |
 | V-001 / R-002 | Added non-authoritative historical notices after preserved frontmatter to both tracked EXPLORE transcripts. Removing the inserted notice reproduces original content exactly; current entry links resolve; diff whitespace passed. | R-002 verified within document scope; commit/push follows with this report. |
 | V-002 / R-001 | Pinned exact package/environment and initialized consumer/evidence worktrees; first credential-free push failed, protected supplied-PAT recovery and same-destination GitHub push succeeded. Source V-001 remote tip equality verified. | Setup published; supplied PAT Contents write demonstrated by actual push, API access remains unverified. |
+| V-003 / R-001 | Evidence branch published harness at d6c542b7c6bdde5e1943122f11d02fd538712a69; nine sensitivity/self-tests passed. Initial task-table checker mismatch corrected to nested checked/unchecked owners before consumer assessment. Supplied token GET milestones returned 200 through protected client; API utility setup published on main at 61f9670. | Harness ready; 27 consumer cases still Pending. |
 
 ## Consumer evidence
 
