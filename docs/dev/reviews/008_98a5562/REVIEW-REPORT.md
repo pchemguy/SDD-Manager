@@ -23,6 +23,7 @@
 | U-009 | C-003/C-005/C-006: entry, all four references and retained MIT notice inspected. Behavioral RED distinguished from setup failure; independent expectations, deliberate doubles and sensitivity tests explicit; existing code preserved and missing chronology/authorized exceptions reported. No actionable defect found. | None |
 | U-010 | C-003/C-005: entry and all three references inspected. Every project-owned module in selected scope covered with language-appropriate professional documentation; README/examples and exclusions accounted for. Governing amendments defer to human; behavior/commit/status changes excluded. No actionable defect found. | None |
 | U-011 | C-002/C-003/C-005/C-006: entry and all three references inspected. Commands tied to identified pending/committed state, condition coverage and declared checks; zero collection/skips/unknown failures do not establish acceptance; repairs and status returned to owner. No actionable defect found. | None |
+| U-012 | C-003/C-005/C-006: entry/full reference inspected. Explicit target set, unique executable owner, pending reassessment, source retention and eligible historical archive compose with phase targets. Interrupted moves use actual paths and same identity. No actionable defect found. | None |
 
 ## Findings
 
@@ -53,6 +54,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-010: `07bc0854a05f5fbbbaf682a95b397e107455c924`; remote HEAD equality verified. Source cases: missing project style uses appropriate professional default; SPEC conflict leaves dependent edits unresolved while independent guides may continue.
 
 - Before U-011: `1ebf03361f05c5bbe7f3cea7be27539fbd7652af`; remote HEAD equality verified. Source cases: pre-existing requires baseline evidence; unsupported cause stays unknown; potentially mutating commands inspected and artifacts accounted for; interrupted run not claimed complete.
+
+- Before U-012: `5280db606797366234099818ee234dc30729dc30`; remote HEAD equality verified. Source cases: SPEC-only preserves task lists; transfer requires both lists; out-of-scope dependent links retain active source; archived tasks cannot drive execution.
 
 ## Scenarios and checks
 
