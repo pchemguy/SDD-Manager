@@ -6,8 +6,8 @@
 - **Starting and inspected baseline:** `79fab0e91a06fcc100a0e18cb0e1295085c4146c`.
 - **Input:** Human-defined token storage and shell authentication convention; no separate review stage or review report is required.
 - **Coordinator:** **sdd-manage**, the central skill of the SDD Manager plugin. No new sdd-manager skill is introduced.
-- **State and authorization:** Planned; this request authorizes creation, commit, and push of this plan only. Source revisions and their integration require a subsequent implementation instruction.
-- **Revision evidence:** Planned `REVISION-REPORT.md`; create during authorized source execution.
+- **State and authorization:** Subsequent user instruction authorized implementation of this plan and its permission amendment. V-001–V-005 completed, verified within recorded limits, explicitly merged, and target publication verified; see the revision report.
+- **Revision evidence:** [REVISION-REPORT.md](REVISION-REPORT.md).
 
 ## Accepted protocol
 

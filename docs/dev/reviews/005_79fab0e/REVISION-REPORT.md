@@ -7,7 +7,7 @@
 - **Execution checkpoint:** `0de15769448f1f31808f305f94937d9d4dceadf1`.
 - **Plan:** [REVISION-PLAN.md](REVISION-PLAN.md), introduced at `2438acd`, including the `0de1576` permission amendment.
 - **Working branch:** `revision/token-management-005`; target: `feature/architecture-revision`.
-- **State:** V-001–V-005 verified on the working branch; boundary merge/publication pending.
+- **State:** Completed; V-001–V-005 verified within recorded evidence limits, explicitly merged, and target publication verified.
 
 ## Revision evidence
 
@@ -68,4 +68,12 @@ Earlier explicitly requested live checks in this session created [issue #3](http
 
 ## Integration
 
-Working-branch checks passed. Verify target freshness and prospective merged state, then create one explicit two-parent merge and verify target publication. Retain this report and plan in the campaign directory.
+Fetched the target before integration; it was up to date. `git merge --no-ff --no-commit revision/token-management-005` created the prospective merge. Changed Markdown/link/credential checks, plugin validation, and staged diff whitespace checks passed before the explicit merge commit.
+
+- **V-005 tip:** `998fb878a036d47d0a4263181b58d2d4756fdb63`; working-branch remote HEAD equality verified.
+- **Merge:** `5bf0d8c97279704f81140704900da877ccfa78d2`.
+- **Target parent:** `0de15769448f1f31808f305f94937d9d4dceadf1`.
+- **Revision parent:** `998fb878a036d47d0a4263181b58d2d4756fdb63`.
+- **Publication:** Target push succeeded; remote HEAD equaled the merge SHA. Two-parent integration and revision containment verified.
+
+This final evidence/navigation update changes no skill sources. Campaign plan/report remain retained in the same directory. C-001–C-005 are Verified for source composition and consumer interpretation, with runtime/provider limits retained above.
