@@ -25,6 +25,7 @@
 | U-011 | C-002/C-003/C-005/C-006: entry and all three references inspected. Commands tied to identified pending/committed state, condition coverage and declared checks; zero collection/skips/unknown failures do not establish acceptance; repairs and status returned to owner. No actionable defect found. | None |
 | U-012 | C-003/C-005/C-006: entry/full reference inspected. Explicit target set, unique executable owner, pending reassessment, source retention and eligible historical archive compose with phase targets. Interrupted moves use actual paths and same identity. No actionable defect found. | None |
 | U-013 | C-002/C-003/C-005/C-006: entry and all three backend references inspected. Backend owns provider access/mapping; report optional with baseline; exact task markers, duplicate conflicts and owned-field reconciliation preserve host/user state; closure follows verified committed local evidence. No actionable defect found. | None |
+| U-014 | C-002/C-003/C-005/C-006: entry/all four references inspected. Push-first precedes task work; continuation preserves verified pending completion and scope; dependencies and phase segments explicit; per-task evidence/commit/push/closure and full-phase integration separate. Unrelated index staging protected. No actionable source defect found. | None |
 
 ## Findings
 
@@ -59,6 +60,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-012: `5280db606797366234099818ee234dc30729dc30`; remote HEAD equality verified. Source cases: SPEC-only preserves task lists; transfer requires both lists; out-of-scope dependent links retain active source; archived tasks cannot drive execution.
 
 - Before U-013: `aa7ac8698eb608991613647e5a7ffc8826ae3b33`; remote HEAD equality verified. Source cases: rate-limit403 does not prompt token replacement; private404 not absence; uncertain writes reread before retry; hosting pending does not erase local completion. No live API or current endpoint-document verification performed.
+
+- Before U-014: `15b34c949c93cba9ff86a6aedda8f005e46d5e74`; remote HEAD equality verified. Source cases: selection-only performs no push; reassessment notes prevent skipping checked tasks; interrupted task outside new range blocks overlapping work; older hosted backlog retained; incomplete phase pauses.
 
 ## Scenarios and checks
 
