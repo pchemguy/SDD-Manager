@@ -8,7 +8,7 @@ Define the system's high-level arrangement and why it fits the project's purpose
 - `docs/dev/ARCHITECTURE.md` is a compact but substantive design entry point: a short orientation back to the brief; major blocks and their responsibilities; dependency direction and cross-block interactions; relevant external systems and data ownership; selected patterns, design principles, and consequential tradeoffs; system-wide architectural invariants; and a map of focused children when present.
 - Focused children under `docs/dev/architecture/` may own a substantial architectural area. The root defines their scopes and system-wide relationships; each child adds detail within its area. Split for independent responsibility and navigability, not a fixed size or one child per task.
 
-Keep project-specific links in ARCHITECTURE limited to useful navigation. Put detailed component behavior and final acceptance in SPEC, physical placement in layout, and construction order in PLAN. Record a design choice and its reason where that reason is needed to understand a durable constraint; avoid a chronological decision log in the current-state architecture.
+Keep project-specific links in ARCHITECTURE limited to useful navigation. Put detailed logical component responsibilities and collaboration in DECOMPOSITION, exact observable behavior and acceptance in SPEC, physical placement in layout, and delivery order in PLAN. Use the [document boundaries](../SKILL.md#document-boundaries) comparison to route shared interface, ownership, and invariant concerns by granularity. Record a design choice and its reason where that reason is needed to understand a durable constraint; avoid a chronological decision log in the current-state architecture.
 
 ## Initial and existing systems
 
