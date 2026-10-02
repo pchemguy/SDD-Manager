@@ -2,7 +2,32 @@
 
 Select by the user's objective, not by which documents happen to be missing. A scoped request may enter any stage whose required inputs are established. A combined request may authorize preparation and implementation together; retain its explicit implementation boundary. Do not require fresh approval for a transition already covered by that request.
 
-| Workflow | Entry and coordination | Outputs and stop |
+## Core development workflows
+
+Choose among three core workflows by the intended change. They describe purpose and overall path; focused skills and the operation catalog below supply reusable stages. A workflow name grants no authorization or branch destination.
+
+| Workflow | Purpose | Typical path |
+| --- | --- | --- |
+| Main / greenfield | Build the complete intended system from its initial definition. | Exploration → architecture/decomposition → SPEC → PLAN/layout → TASKS → bounded implementation and verification. |
+| Revision | Correct, simplify, or improve previously defined or implemented work. | Review plan when needed → review → review report → revision plan → revision → revision report. |
+| Feature | Add a scoped capability to an existing system. | Necessary feature design/specification/plan documents → FEATURE-TASKS → implementation → accepted document incorporation and verification. |
+
+- **Entry:** Greenfield follows the main path from exploration; an existing project may enter at an established stage. Main names the development purpose, not Git's main or default branch. Reuse accepted inputs rather than replaying stages.
+- **Revision scope:** Use [review and revision](review-and-revision.md) for formal campaigns. A focused prompt may define review scope or an accepted revision directly; do not invent a preceding review or mandatory artifact stage when it adds no needed evidence.
+- **Feature preparation:** Define the scoped feature package before dependent implementation, using only the design, specification, and planning deltas it needs. FEATURE-TASKS governs active task-list feature work. Reuse sufficient existing design/layout; not every correction needs a feature package.
+- **Shared execution:** Implement only the authorized bounded scope. Apply relevant verification, commit/push checkpoints, and default explicit boundary integration under [Git workflows](git-workflows.md). Preparation, assessment, and review stop before implementation unless it is authorized. A narrow task request does not authorize unrelated incorporation or a whole-project campaign.
+
+### Steering as lightweight revision
+
+**sdd-steer** is the focused human-directed revision path at a paused task-list checkpoint, especially for reducing implemented functionality. The human supplies the amendment objective and commands execution. Steering directly updates affected existing documents, code, tests, and documentation; it creates no feature-document layer and requires no feature-document integration step or obligatory formal review/revision campaign.
+
+Steering still verifies, commits/pushes, explicitly integrates into the paused implementation branch, verifies/publishes that target, and reports. It returns control without handing off to or resuming sdd-implement; the human separately resumes the task list. A broader revision may use the formal campaign instead. Steering is a revision variant, not a fourth core workflow.
+
+## Operation catalog
+
+These entries select stages or supporting operations within a core workflow; they can also be requested independently within their stated boundaries.
+
+| Operation | Entry and coordination | Outputs and stop |
 | --- | --- | --- |
 | Prepare initial development | Use **sdd-design** for the brief, architecture, and decomposition; **sdd-specify** for behavior and acceptance; **sdd-plan** for delivery strategy and layout; **sdd-tasks** for TASKS. Resolve consequential decisions as they arise. | Selected preparation artifacts and open decisions. A preparation-only request stops before implementation. |
 | Prepare a feature | Inspect existing contracts and implementation. Use design deltas where needed, then **sdd-specify**, **sdd-plan**, and **sdd-tasks** for the necessary FEATURE-SPEC, FEATURE-PLAN, and FEATURE-TASKS. Reuse established design and layout where sufficient. | Bounded feature requirements, delivery strategy, and executable tasks. Stop at preparation unless implementation is included in the request. |

@@ -5,6 +5,8 @@ description: Use when the human defines a focused amendment at a checkpoint duri
 
 # Apply a human-directed checkpoint amendment
 
+Steering is the lightweight checkpoint variant of the revision core workflow. Use **sdd-manage**'s **Core development workflows** model in its **Available workflows** reference for purpose and routing; this skill owns the focused amendment procedure and requires no formal campaign artifacts.
+
 The human defines the objective at a checkpoint and decides whether to command its implementation. Distinguish an assessment request from an implementation request; discussion alone does not authorize repository changes. A command to implement the established amendment authorizes routine steps within that scope without repeated confirmation. **sdd-manage** coordinates scope and shared prerequisites. Use **sdd-manage**'s **Git workflows** reference to establish or reuse an amendment branch from the paused implementation checkpoint, with that implementation branch as its target. Use a current **sdd-orient** handoff for repository instructions, Git and task state, pending-change ownership, and the implementation checkpoint.
 
 | Work | Load |
