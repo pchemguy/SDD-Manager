@@ -6,6 +6,8 @@ Use the current **sdd-orient** handoff to establish the eligible Git worktree, c
 
 Check the current branch against the established remote branch and push all unpushed commits, independently of worktree cleanliness. Verify that the remote contains those commits; when no new remote changes occurred, its branch tip should match local HEAD. If no commits are outstanding, continue without creating a push solely for ceremony. Do not force-push, guess a destination, initialize Git, or reset pending work. Report missing destination, access failure, detached or unusable branch state, or divergence that prevents the required push; stop further implementation until resolved.
 
+Attempt the required push with existing shell authentication; do not discover/request tokens first. On a 403 or explicit credential failure, pass sanitized destination, transport, operation, and cause to **sdd-manage**'s **Hosting credentials** protocol for recovery and retry. Confirm remote containment before proceeding; unresolved access remains a push blocker.
+
 ## Interpret the startup task state
 
 | Observed state | Action |

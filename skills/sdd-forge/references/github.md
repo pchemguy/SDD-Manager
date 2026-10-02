@@ -15,7 +15,25 @@ Load only the additional reference needed for the request:
 
 Determine the intended GitHub repository from the invoking workflow's explicit target or its relevant remote. Normalize SSH and HTTPS remotes to the same `owner/repo` identity. If multiple plausible GitHub repositories exist, require an explicit selection before writing. Do not use a different fork or upstream merely because a token can access it.
 
-Use the token, whether it originated with **sdd-manage** or was provided directly to **sdd-forge**, or use an approved authenticated GitHub client. Never put a token in a project file, plugin setting, command argument, URL, log, issue body, or report. Do not assume that a credential usable for `git push` is available to the API client. Check access for the requested endpoint and repository; do not substitute another identity silently. Use only the required permissions: reading issues, labels, and milestones for inspection; Issues write for their creation and reconciliation. GitHub's current endpoint documentation determines exact permission requirements.
+Use the token, whether it originated with **sdd-manage** or was provided directly to **sdd-forge**, or use an approved authenticated GitHub client. Apply **sdd-conventions**' **Hosting tokens** rules: the ignored, untracked `gh.tkn` beside the repository root `.gitignore` is the permitted local credential file. Keep the token out of all other project files, plugin settings, command arguments, URLs, logs, issue bodies, and reports. Do not assume that a credential usable for `git push` is available to the API client. Check access for the requested endpoint and repository; do not substitute another identity silently. Use the conventional permission profile below when requesting or assessing the repository token. GitHub's current endpoint documentation determines actual endpoint access; token permissions do not authorize unrequested operations.
+
+### Conventional fine-grained token
+
+Request a fine-grained personal access token with **Only select repositories** enabled solely for the target repository and this repository-permission profile:
+
+| Permission | Access |
+| --- | --- |
+| Commit statuses | Read and write |
+| Contents | Read and write |
+| Issues | Read and write |
+| Pull requests | Read and write |
+| Metadata | Read, added automatically |
+
+This is the SDD token convention, not a claim that every endpoint requires all four write permissions. The profile does not add PR operations to this backend, grant workflow-file modification access or protected-branch bypass, or override account/repository policy. Verify the relevant endpoint and any indicated approval restriction using GitHub's [token management](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) and [fine-grained permissions](https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens) documentation.
+
+For HTTPS Git authentication, sdd-manage restores a supported shell credential facility from the local token. For this backend's API operations, use the client's supported protected token channel; do not assume shell recovery authenticates a connector or silently substitute a different account. SSH remotes require their transport's authentication and an explicit decision before any transport change.
+
+### Access failures and object ownership
 
 For an access-related 403, stop the affected write and identify the repository, endpoint, attempted operation, and permission or other cause indicated by GitHub without exposing the credential. Classify rate limits before credential escalation using the response protocol below. Follow the shared access-failure protocol to obtain a suitable token from **sdd-manage**, or ask the user when invoked directly. Recheck access before retrying; do not assume every 403 is resolved by a different token or retry indefinitely.
 

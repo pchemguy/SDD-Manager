@@ -1,30 +1,31 @@
-# Hosting credentials
+# Hosting credentials and shell recovery
 
-Load this protocol only when accepting a hosting credential or coordinating a hosted operation that needs one. **sdd-manage** owns accepting, storing, retrieving, and supplying tokens; **sdd-forge** and its selected backend own provider-specific access checks. Ordinary local work needs no hosting token.
+**sdd-manage** owns accepting, discovering, saving, and supplying tokens and recovering shell authentication. Apply **sdd-conventions**' **Hosting tokens** rules. **sdd-forge** and its active backend own provider-specific access requirements; implementation/steering and coordinated persistence retain their Git push ownership. Ordinary local work requires no hosting token.
 
-## Accept and store
+## Existing authentication first
 
-- **Identity:** Associate the credential with its provider, account, repository scope, and intended operation when known. Do not infer account identity or permission from the token's presence.
-- **Storage:** Store a user-provided token in an approved credential store outside the project, using its secure input facility. Prefer an available OS credential manager or established credential helper. Respect the user's established store; never invent a project-local token file.
-- **Handling:** Keep tokens out of project files, ordinary handoffs, reports, command arguments, remote URLs, logs, shell history, and diagnostic output. Use a protected credential channel or process input supported by the selected tools; do not echo token values.
-- **Unavailable store:** Report the storage blocker. Use a user-provided token transiently for its authorized operation when secure transfer is possible, but do not claim durable storage or silently choose another storage mechanism.
+Assume the shell is authenticated and attempt the authorized push to its established destination. Do not search for tokens, probe authentication, or request a credential before every push. An API operation may likewise use its available authenticated client; Git transport success does not establish API access.
 
-## Supply for an operation
+On a 403 or another explicit missing/invalid-credential failure, receive sanitized provider/repository, destination or endpoint, attempted operation, client/transport, and indicated cause. Classify rate limits, policy restrictions, and transport failures before choosing a remedy. Credential recovery must not bypass implementation's outstanding-push prerequisite or change its destination.
 
-1. Identify the provider, repository, and requested operation from the coordinated **sdd-forge** scope.
-2. Retrieve a suitable credential from the approved store, or accept one explicitly provided for this operation. If none is available, ask the user for a suitable credential and explain the operation requiring it. Continue independent local work when possible.
-3. Supply the token to **sdd-forge** through a protected credential mechanism, separate from the normal scope handoff. Report a tool capability blocker if secure transfer is unavailable.
-4. Let the activated backend check access and interpret provider responses. Supplying a token does not authorize additional hosted operations.
+## Find, request, and save
 
-A caller may provide a token directly to **sdd-forge**. That path does not imply the token has been stored by **sdd-manage**; coordinate storage when it is supplied to this coordinator for that purpose.
+1. Resolve the eligible repository root and active backend. Prefer its conventional file beside the root `.gitignore`: `gh.tkn` for GitHub. Check other suitable `*.tkn` candidates only within this repository, excluding nested Git worktrees and unrelated repositories. Resolve ambiguous suitability rather than guessing; file presence does not prove identity or access.
+2. Ensure `*.tkn` is in the root `.gitignore`, preserving existing rules. Create it if missing. Check effective exclusion and untracked status for the selected path before reading for reuse or saving. Correct a conflicting ignore rule within the authorized credential scope; already tracked credentials require explicit remediation. Preserve unrelated staging and work; persist only owned ignore-rule changes through the ordinary scoped commit/push workflow.
+3. If a suitable token exists, use it for the affected client's authentication. If none exists or the selected token is unsuitable, ask the user for a suitable replacement, identifying the target repository, operation, and backend-required permission profile. Prefer fine-grained repository-scoped tokens when available; the GitHub profile is defined by its backend.
+4. Save the accepted credential in the selected conventional file beside `.gitignore`, after the exclusion checks. Restrict file access using supported permissions or ACLs. Replace only the selected credential when the provided token is intended as its replacement; preserve unrelated files. Do not record its value in ordinary project files, handoffs, evidence, diagnostics, history, arguments, or URLs.
 
-## Respond to an access escalation
+If storage, effective Git exclusion, or supported protected credential transfer is unavailable, report the concrete blocker and retained operation state. Do not claim persistence/authentication happened or silently select another repository. The ignored token file is durable credential input; an external helper may hold a session copy but is not the required source of continuity.
 
-- **Access 403 context:** Receive the repository, endpoint, attempted operation, and access requirement or other provider-indicated cause from **sdd-forge**, without a credential in the report.
-- **Resolution:** Check the approved store for a suitable credential. When none is available, escalate to the user. Explain a provider restriction requiring another remedy rather than assuming every 403 needs a replacement token.
-- **Retry:** Supply a suitable credential when available; let the backend recheck access before retrying the affected operation. Stop on an unresolved restriction or repeated unchanged failure; do not retry indefinitely.
-- **Report:** Return the attempted operation and unresolved access requirement, preserving successful independent results. Never expose the token or claim that replacement alone proved permission.
+## Authenticate and resume
 
-## Non-credential operational failures
+- **Git shell:** Use an available credential helper, secure process input, or another supported credential facility for the relevant host/repository. For HTTPS Git, feed username/password fields through protected process input to the helper; never embed the token in a command argument or remote URL. Scope the helper appropriately for the repository and existing configuration. HTTPS tokens do not authenticate an SSH transport; preserve the established transport/destination and report a required transport decision rather than rewriting it implicitly.
+- **API client:** Supply a suitable token to the selected backend using its supported protected mechanism, separately from normal handoff text. Do not assume a connector supports token replacement or that Git authentication updates it; report an unsupported client mechanism precisely.
+- **Retry:** Retry the affected authorized operation after recovery and confirm its actual result. Use the project's bound or at most three recovery retries; stop on repeated unchanged denial or a restriction requiring a different remedy. A replacement token proves no permission until the operation succeeds.
+- **Publication:** The push owner verifies remote containment before further dependent work. Preserve local commits and report pending publication if recovery fails. Authentication does not authorize new operations, another destination, force-pushing, or repository-policy bypass.
 
-Use the backend's classification for rate limits, service outages, offline states, invalid input, and uncertain writes. Do not escalate for a replacement token merely because a response is403 or an operation is unavailable. Return sanitized pending effects and retry timing; preserve successful local and hosted results. After uncertain mutations, backend reconciliation must establish actual state before retrying.
+A direct **sdd-forge** caller may supply a token without a manager handoff. Follow the same convention when persistence is requested; otherwise consume it transiently through the protected client mechanism. Coordinate durable storage with sdd-manage rather than implying a directly supplied token was saved.
+
+## Non-credential failures
+
+Do not request replacement credentials for rate limits, outages, invalid input, or policy restrictions a token cannot remedy. Use provider timing and bounded retry guidance, preserving successful independent results and pending/unknown effects. After an uncertain hosted write, the backend re-reads affected identities/state before replay; after an uncertain push, inspect the established remote before declaring publication or retrying. Report sanitized causes and limits without exposing credentials.
