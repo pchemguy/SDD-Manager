@@ -15,7 +15,11 @@
 | --- | --- | --- |
 | V-001 / R-004, R-005 | Added shared identity, names, global allocation, feature navigation/archive association, and lightweight record rules; aligned review allocator/discovery. Branch/directory naming and override/collision rules inspected; Markdown and convention validator passed. | Source revised; composed checks pending. |
 
+| V-002 / R-001, R-003, R-005 | Extracted coordinator branch manager and aligned phase setup, partial-range pause, sequential phase integration and authorization. Local Git ownership retained; changed headings/links and package validation passed. | Source revised; Git/consumer fixtures follow. |
+
 ## Checkpoints
+
+- Preceding action: `33ffe560761efec267a5bf5d03cdc6749c586280`; push and remote HEAD equality verified.
 
 Each action pushes source/evidence and verifies remote containment before dependent work. Subsequent evidence records preceding exact SHAs.
 

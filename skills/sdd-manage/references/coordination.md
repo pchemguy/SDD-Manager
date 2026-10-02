@@ -9,7 +9,7 @@
 - **Inputs:** Confirm the authoritative requirements, design, strategy, and layout needed by the selected stage. File presence alone does not establish acceptance or consistency.
 - **Facilities:** Check availability of the selected skills and necessary tools. Report concrete missing capabilities. Use ordinary filesystem, Git, and available provider tools; require no particular client, hidden hooks, or implicit installation mechanism.
 
-For branch workflows, use [Git workflows](git-workflows.md) to establish the working branch, target, checkpoint, and final integration. Preserve implementation's push-first prerequisite; a direct focused invocation uses the same protocol.
+For branch workflows, use [branch management](branch-management.md) for setup and [Git workflows](git-workflows.md) for final integration. Preserve implementation's push-first prerequisite; a direct focused invocation uses the same protocol.
 
 ## Coordinate execution
 
@@ -18,7 +18,7 @@ For branch workflows, use [Git workflows](git-workflows.md) to establish the wor
 3. Refresh the material baseline when HEAD, instructions, project, target scope, or relevant pending changes change. Do not repeatedly run orientation or checks when the current evidence remains applicable.
 4. Resolve missing human decisions and out-of-scope requirements without guessing or silently expanding work. Continue independent authorized work where possible. State the blocked operation and decision needed.
 5. For verification failures, return repairs to the active **sdd-implement** or **sdd-steer** workflow. A standalone verification request returns findings; it does not start implementation. Documentation findings requiring governing-document changes are returned to the user before any authoring is coordinated.
-6. Stop at the requested boundary. A checkpoint is not permission to select another milestone, start steering, incorporate unselected feature documents, or create hosted objects. Complete the default explicit Git merge and target publication for the authorized finished boundary before returning. A human-commanded steering amendment always returns control without resuming implementation.
+6. Stop at the requested boundary. A checkpoint is not permission to select another milestone, start steering, incorporate unselected feature documents, or create hosted objects. Complete explicit integration/publication when its workflow gate is met; incomplete main phases push and pause even when the requested task subset is complete. A human-commanded steering amendment always returns control without resuming implementation.
 
 ## Persist repository changes
 

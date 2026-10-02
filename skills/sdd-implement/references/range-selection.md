@@ -9,3 +9,7 @@ Inspect **Completion reassessment pending** notes in owning entries or linked ev
 3. State the selected IDs, prerequisite evidence, expected end condition, and the stopping boundary. An implementation agent must stop at that boundary for human review, even if subsequent tasks are ready. If no eligible work remains, report why without inventing work.
 
 A selection-only request is read-only and stops after reporting the range. It does not enter the push-first execution protocol. Selection within an implementation request follows startup pushing and interrupted-task handling. It does not mark tasks done, run checks, create a commit, or authorize the implementation workflow. A user may explicitly select a different valid order; document the dependency consequences instead of silently replacing their range.
+
+## Phase branch segments
+
+For main TASKS, identify the owning phase of each selected task and its full exit obligations. Execute a partial range on that phase branch and stop after persistence without integrating an unfinished phase. Split an authorized range spanning phases into sequential phase segments; complete/verify/publish each phase before starting the next branch. If the request excludes remaining work or evidence needed for the phase exit, report the blocker or pause rather than expanding the selected IDs. Selection-only identifies these boundaries without branch changes.
