@@ -24,6 +24,7 @@
 | U-010 | C-003/C-005: entry and all three references inspected. Every project-owned module in selected scope covered with language-appropriate professional documentation; README/examples and exclusions accounted for. Governing amendments defer to human; behavior/commit/status changes excluded. No actionable defect found. | None |
 | U-011 | C-002/C-003/C-005/C-006: entry and all three references inspected. Commands tied to identified pending/committed state, condition coverage and declared checks; zero collection/skips/unknown failures do not establish acceptance; repairs and status returned to owner. No actionable defect found. | None |
 | U-012 | C-003/C-005/C-006: entry/full reference inspected. Explicit target set, unique executable owner, pending reassessment, source retention and eligible historical archive compose with phase targets. Interrupted moves use actual paths and same identity. No actionable defect found. | None |
+| U-013 | C-002/C-003/C-005/C-006: entry and all three backend references inspected. Backend owns provider access/mapping; report optional with baseline; exact task markers, duplicate conflicts and owned-field reconciliation preserve host/user state; closure follows verified committed local evidence. No actionable defect found. | None |
 
 ## Findings
 
@@ -56,6 +57,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-011: `1ebf03361f05c5bbe7f3cea7be27539fbd7652af`; remote HEAD equality verified. Source cases: pre-existing requires baseline evidence; unsupported cause stays unknown; potentially mutating commands inspected and artifacts accounted for; interrupted run not claimed complete.
 
 - Before U-012: `5280db606797366234099818ee234dc30729dc30`; remote HEAD equality verified. Source cases: SPEC-only preserves task lists; transfer requires both lists; out-of-scope dependent links retain active source; archived tasks cannot drive execution.
+
+- Before U-013: `aa7ac8698eb608991613647e5a7ffc8826ae3b33`; remote HEAD equality verified. Source cases: rate-limit403 does not prompt token replacement; private404 not absence; uncertain writes reread before retry; hosting pending does not erase local completion. No live API or current endpoint-document verification performed.
 
 ## Scenarios and checks
 
