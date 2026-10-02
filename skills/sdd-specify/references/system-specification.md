@@ -15,6 +15,12 @@ Keep `SPEC.md` compact but substantive. Include the relevant:
 
 PROJECT owns the fuller project brief; ARCHITECTURE and DECOMPOSITION own the structural rationale. Include only the structural facts needed to make behavior intelligible. Do not copy design documents into SPEC or reduce its root to a table of contents.
 
+## Design traceability
+
+SPEC defines the observable guarantees the selected structure must satisfy. Link relevant contracts to responsible components in DECOMPOSITION and, where consequential, their consumers and architectural constraints. Cross-component guarantees have a canonical behavioral owner with links to participating boundaries; do not repeat the contract in every component description or require one specification per component.
+
+Design supplies responsibility, dependency, extension, and verification seams; SPEC settles precise success/failure behavior and acceptance. Feedback is bidirectional: a contract can reveal an inadequate structural boundary, and design analysis can reveal an unresolved behavioral obligation. Surface the conflict to its requirement or design owner and resolve the accepted decision before dependent work. Do not silently redesign in SPEC, invent a requirement to fit the structure, or introduce a separate mapping artifact solely for traceability.
+
 ## Focused children
 
 When distinct contracts have substantial independent detail, place them under `docs/dev/spec/` with stable semantic names. Split by cohesive behavior, component contract, public interface, external protocol, or persistent representation, rather than implementation phase or arbitrary requirement codes. Define each child's scope and relationship in its parent. The child owns detailed requirements; the root retains only the broader system guarantee and route to the child.

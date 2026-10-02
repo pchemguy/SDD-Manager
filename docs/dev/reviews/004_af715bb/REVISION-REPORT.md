@@ -15,7 +15,11 @@
 | --- | --- | --- | --- |
 | V-001 / R-001 | Added shared ownership comparison and structural granularity/routing in design references. Inspected topology, component split, exact behavior, path allocation, and sequencing routing against the actual text; all have distinct owners. Heading/link/diff checks passed. | R-001 verified by source inspection; no client execution claimed. | Persisted with this action; exact SHA recorded in the following checkpoint. |
 
+| V-002 / R-002 | Added contract owner/consumer links and bidirectional design feedback; reviewed component-owned and cross-component guarantees plus incompatible-contract handling. Heading/link/diff and specify structural validation passed. | R-002 verified by source inspection; no mandatory mapping artifact or per-component specification split. | Persisted with this action. |
+
 ## Checkpoints
+
+- V-001: `7c2befc593e944a5d2d85ab623acfc160d0e28d7`; push and remote HEAD equality verified.
 
 Completed action commits are pushed and remote HEAD equality is checked before dependent work. Exact preceding checkpoints are recorded as execution proceeds; Git history supplies the containing commit for each evidence update.
 

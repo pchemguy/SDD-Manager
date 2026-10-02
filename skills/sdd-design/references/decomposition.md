@@ -8,7 +8,7 @@ Refine accepted architecture into understandable component responsibilities and 
 
 Focused children under `docs/dev/decomposition/` may detail a component or coherent area: subcomponents, collaboration, important invariants and design-level interface shape, and how it relates to its parent and peers. A parent defines relationships and shared constraints; a child owns detail. Split only when independent detail justifies it. Avoid duplicating the same normative interface in parent and child.
 
-Interfaces here may be provisional enough to test the architecture for coherence. Identify contract details that SPEC must settle; do not present undecided errors, formats, or behavior as final requirements. Do not turn component descriptions into a file inventory, implementation order, or task checklist.
+Interfaces here may be provisional enough to test the architecture for coherence. Link the relevant SPEC owners and consumers when established; a cross-component guarantee can span several structural units without being copied into each. Feed incompatible obligations back to the affected design or requirement owner for an accepted decision. Identify contract details that SPEC must settle; do not present undecided errors, formats, or behavior as final requirements. Do not turn component descriptions into a file inventory, implementation order, or task checklist.
 
 ## Existing systems and changes
 
