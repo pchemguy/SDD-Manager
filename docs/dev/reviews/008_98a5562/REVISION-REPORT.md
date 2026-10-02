@@ -14,10 +14,11 @@
 | Action | Actual result / checks | Disposition |
 | --- | --- | --- |
 | V-001 / R-002 | Added non-authoritative historical notices after preserved frontmatter to both tracked EXPLORE transcripts. Removing the inserted notice reproduces original content exactly; current entry links resolve; diff whitespace passed. | R-002 verified within document scope; commit/push follows with this report. |
+| V-002 / R-001 | Pinned exact package/environment and initialized consumer/evidence worktrees; first credential-free push failed, protected supplied-PAT recovery and same-destination GitHub push succeeded. Source V-001 remote tip equality verified. | Setup published; supplied PAT Contents write demonstrated by actual push, API access remains unverified. |
 
 ## Consumer evidence
 
-Setup pending. No runtime case is passed from this plan or notice check.
+AgentPlayground setup commit `b9a4549` pins exact portable source `529e98d4d3cd7002e3a49e34394552a44bf0a8d0` with hashes/environment, root instructions and ignored-token policy. Initial push failed for missing shell credentials; the repository-local helper recovered HTTPS access from protected process input and the same main push succeeded. No token appears in tracked content. Evaluation worktree uses evaluation/008-runtime-acceptance; harness creation underway. No consumer runtime case has passed yet.
 
 ## Integration and limits
 
