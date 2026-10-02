@@ -12,4 +12,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `006_0393fee` | Three core development workflows and lightweight steering revision; revisions verified, explicitly merged, and target publication verified. | [Revision plan](006_0393fee/REVISION-PLAN.md), [revision report](006_0393fee/REVISION-REPORT.md) |
 | `007_df531c2` | Focused proposal review of workflow branch identities, phase integration, feature archives, and backend ownership; source revisions verified on the convention-named branch, explicitly merged and target publication verified. | [Review report](007_df531c2/REVIEW-REPORT.md), [revision plan](007_df531c2/REVISION-PLAN.md), [revision report](007_df531c2/REVISION-REPORT.md) |
 
+| `008_98a5562` | Comprehensive current-source plugin review in progress; no source repairs authorized. | [Review plan](008_98a5562/REVIEW-PLAN.md), [review report](008_98a5562/REVIEW-REPORT.md) |
+
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
