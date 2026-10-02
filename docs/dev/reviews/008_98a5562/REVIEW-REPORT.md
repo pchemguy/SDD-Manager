@@ -14,6 +14,7 @@
 | --- | --- | --- |
 | U-001 | C-001: manifest and all 15 skill validators passed; inventory zero errors/warnings; YAML skill prompts, local icons and SVG parse passed; 67 active Markdown files checked for local paths and headings; README discovery/client limits accurate. TDD fenced-code heading matches held for owner review. | None |
 | U-002 | C-002/C-003/C-006: full entry/reference inspected. Non-Git and conflicted/unknown ownership block mutation; optional writes suppressed; task commits traced through merges; invalidated checked tasks and document-only interruptions distinguished; archived snapshots excluded. No actionable defect found. | None |
+| U-003 | C-002–C-006: all six references inspected. Canonical modularity/heuristics, unique task parentage, shared max-plus-one campaign allocation, stable baseline/name identities, phase labels/native milestones and ignored token handling agree with owner boundaries. Explicit overrides and legacy continuation preserved. No actionable defect found. | None |
 
 ## Findings
 
@@ -26,6 +27,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-001: `db0a55a2aa026432dfb322f5a183ae941a9da0c5`; remote HEAD equality verified. Executed inspect_package.py, validate_plugin.py and /tmp/sdd008-check.py; no missing local path found, no runtime claimed.
 
 - Before U-002: `5e39bc5938253e3387ef830b3d9357a3d5a7cdaa`; remote HEAD equality verified. Executed command-scoped no-optional-locks status; Git index hash unchanged. Non-Git/dirty/merge handoffs assessed from source, not installed workflow execution.
+
+- Before U-003: `08b3d8ac9b31bfdd372e24e38815a5570fc76562`; remote HEAD equality verified. Source assessments: missing native milestones permits fallback; feature parent status never establishes project completion; tokens confer no authorization; allocation requires collision resolution. No provider/allocator race executed.
 
 ## Scenarios and checks
 
