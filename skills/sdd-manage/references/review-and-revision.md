@@ -14,6 +14,8 @@ This is the formal campaign path for the [revision core workflow](workflows.md#c
 
 ## Plan accepted revisions
 
+For a directly accepted prompt-defined revision, record its objective, affected owners, and stable action IDs in the revision plan; omit nonexistent review stages and links rather than inventing findings or a review report. Resolve missing requirement/design decisions before dependent work.
+
 - Record which findings are accepted, deferred, rejected, or require a decision, with reasons and retained IDs. A recommendation need not be treated as a confirmed defect.
 - Build an ordered revision plan with affected owners, intended outcomes, dependencies, permitted effects, and verification/recheck criteria. Link actions to findings; one action may address several findings and a finding may require several actions.
 - Identify accepted changes to governing PROJECT/design/SPEC/PLAN/layout and TASKS/FEATURE-TASKS. Incorporate relevant decisions through the owning workflows so implementation has current authoritative inputs. The revision plan remains a retained campaign record, not a replacement SPEC or PLAN.
