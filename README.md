@@ -13,7 +13,8 @@ Load the package using your agent client's supported plugin mechanism. The packa
 - **Project changes:** Use an existing, eligible Git worktree with applicable project instructions. Repository initialization is outside the plugin's scope.
 - **Commits and pushes:** Establish the branch and remote destination. Implementation pushes outstanding commits before starting further task work, then commits and pushes each completed task before advancing.
 - **Checks:** Use the project's declared test, build, and documentation tools.
-- **Hosting:** GitHub access is needed only for requested hosted operations. Local development does not require a hosting token.
+- **Authentication:** Attempt pushes with the current shell session. On an access/credential failure, sdd-manage reuses a suitable ignored repository token or requests and saves one beside the root .gitignore before recovering the client session. `*.tkn` files remain untracked.
+- **Hosting:** GitHub access is needed only for remote operations. The conventional fine-grained token selects solely the target repository with read/write for Commit statuses, Contents, Issues, and Pull requests; Metadata read access is automatic. Git and API clients authenticate separately. Local development does not require a hosting token.
 
 Give the coordinator a concrete objective and stopping point. For example:
 

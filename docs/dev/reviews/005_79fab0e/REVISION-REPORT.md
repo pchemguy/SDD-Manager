@@ -19,11 +19,15 @@
 
 | V-003 / C-003, C-004 | Wired push authentication recovery to the coordinator and aligned forge/GitHub credential consumption. Added target-repository fine-grained profile and Git/API distinctions; official GitHub token/permission documentation inspected. Heading/link/diff and affected skill validation passed. | C-003/C-004 revised; controlled scenarios pending. |
 
+| V-004 / C-005 | Aligned examples, README, capability map, coordinator workflow handoffs and metadata with shell-first authentication and ignored token continuity. Source search removed active outside-project-only conflicts; heading/link/diff and plugin checks passed. | C-005 revised; final verification pending. |
+
 ## Checkpoints
 
 - Previous action: `ea7608d5e265629f180adbf6044746928195ca17`; push and remote HEAD equality verified.
 
 - Previous action: `d45682ae88e2d58e400b4e2fda6f62d585cb2d4a`; push and remote HEAD equality verified.
+
+- Previous action: `dcd50572d3f41d15d009e34211deab6cd48ca4ed`; push and remote HEAD equality verified.
 
 Each completed action is committed and pushed; remote HEAD equality is checked before dependent execution. The following action records preceding exact SHAs; Git history retains the containing checkpoint.
 

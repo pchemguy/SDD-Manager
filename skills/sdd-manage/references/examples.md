@@ -15,9 +15,21 @@ These examples illustrate routing and boundaries; repository instructions and th
 | “Incorporate feature tasks into TASKS only.” FEATURE-TASKS owns their active entries. | Explain that ownership transfer requires both lists in scope; defer the transfer rather than duplicating IDs or editing an unselected source. Independent reconciliation of existing TASKS entries may proceed. |
 | “Verify this phase.” Some required checks are blocked. | **sdd-verify** returns observed evidence and blocked acceptance conditions. Do not repair code, mark tasks complete, or close issues. |
 | “Align README.” **sdd-docs** finds a conflict with SPEC. | Report the conflict and proposed governing-document amendment to the user; continue independent authorized README work. Do not invoke **sdd-specify** automatically. |
-| “Create task issues on GitHub.” No suitable token is available. | Resolve the requested hosted scope; ask for a suitable credential; do not require a token for unrelated local work or write one into the project. |
+| “Create task issues on GitHub.” No suitable token is available. | Try the available authenticated API client for the requested scope. If credential recovery is needed, find a suitable ignored token or ensure `*.tkn` exclusion and request/save `gh.tkn` with the GitHub backend profile. Local work needs no token. |
 | Resume active hosted tracking after an outage left several completed tasks open. | Reconcile verified completed tasks in the maintained tracking scope, including older pending issues; do not inspect only the latest task or add a recovery journal. |
-| Active hosted tracking returns 403 during issue closure. | Receive sanitized operation context; check the approved store and escalate when necessary; recheck access before retrying. Report pending hosted closure separately from verified local completion. |
+| Active hosted tracking returns 403 during issue closure. | Receive sanitized operation context; check suitable ignored repository tokens and escalate when necessary; recheck access before retrying. Report pending hosted closure separately from verified local completion. |
+
+## Credential recovery examples
+
+| Context | Result |
+| --- | --- |
+| Authorized push succeeds with the current shell session. | Verify remote containment; no token discovery or credential prompt is needed. |
+| Push returns access 403 and gh.tkn is suitable. | sdd-manage verifies ignored/untracked status, refreshes supported shell authentication, retries the established destination, and confirms publication. |
+| Shell lacks credentials and no token file exists. | Preserve/create root .gitignore with `*.tkn`, verify exclusion, request a target-repository fine-grained token with the GitHub profile, save gh.tkn beside .gitignore, authenticate, and retry. |
+| A token creates an issue but cannot close it. | Treat actual endpoint denial as failed access; check Issues write suitability and request a suitable replacement when needed. Creation alone does not prove closure permission. |
+| Several token files have ambiguous provider/repository ownership. | Resolve suitability before selection; preserve unrelated files and do not print values. |
+| A token file is already tracked or an ignore negation exposes it. | Block tracked-secret remediation for an explicit decision; fix effective ignore coverage for an untracked file before reuse/save. Preserve unrelated work. |
+| Git push succeeds but a connector's API operation is denied. | Recover the API client through its supported credential mechanism or report that mechanism unavailable; shell authentication is not connector authorization. |
 
 ## Blocked steering continuation
 
