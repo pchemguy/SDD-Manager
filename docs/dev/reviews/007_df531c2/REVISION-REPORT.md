@@ -7,17 +7,17 @@
 - **Execution checkpoint:** `e1e387d` (plan publication; full SHA recoverable from Git).
 - **Plan:** [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - **Working branch:** `revision/007_df531c2-workflow-branches`; target: preserved legacy `feature/architecture-revision`.
-- **State:** V-001–V-004 verified on the working branch; final integration/publication pending.
+- **State:** Completed; V-001–V-004 verified, explicitly merged and published to the preserved integration target.
 
 ## Revision evidence
 
 | Action / findings | Actual changes and checks | Disposition / limits |
 | --- | --- | --- |
-| V-001 / R-004, R-005 | Added shared identity, names, global allocation, feature navigation/archive association, and lightweight record rules; aligned review allocator/discovery. Branch/directory naming and override/collision rules inspected; Markdown and convention validator passed. | Source revised; composed checks pending. |
+| V-001 / R-004, R-005 | Added shared identity, names, global allocation, feature navigation/archive association, and lightweight record rules; aligned review allocator/discovery. Branch/directory naming and override/collision rules inspected; Markdown and convention validator passed. | Verified within composed source/consumer and fixture scope below. |
 
-| V-002 / R-001, R-003, R-005 | Extracted coordinator branch manager and aligned phase setup, partial-range pause, sequential phase integration and authorization. Local Git ownership retained; changed headings/links and package validation passed. | Source revised; Git/consumer fixtures follow. |
+| V-002 / R-001, R-003, R-005 | Extracted coordinator branch manager and aligned phase setup, partial-range pause, sequential phase integration and authorization. Local Git ownership retained; changed headings/links and package validation passed. | Verified within composed source/consumer and fixture scope below. |
 
-| V-003 / R-002, R-004 | Defined active feature identity/navigation, eligible retained archive and historical task snapshots; aligned orientation, minimal steering record and report context. Partial incorporation retains active owners and sources. Heading/link/diff and package checks passed. | Source revised; archive/consumer fixtures follow. |
+| V-003 / R-002, R-004 | Defined active feature identity/navigation, eligible retained archive and historical task snapshots; aligned orientation, minimal steering record and report context. Partial incorporation retains active owners and sources. Heading/link/diff and package checks passed. | Verified within composed source/consumer and fixture scope below. |
 
 | V-004 / R-001–R-005 | Aligned README/capability/examples, phase-aware messages and execution prompt. Ten executed Git/archive primitive checks and ten fresh consumer cases passed; all skill/package/metadata/link/credential checks passed. | Findings verified in source/interpretation and recorded fixture scope; runtime limits retained. |
 
@@ -28,6 +28,8 @@
 - Preceding action: `eb187367466bc99092386ac2edd4f9211a0f03fa`; push and remote HEAD equality verified.
 
 - Preceding action: `b85db47145a6a55bd8793a6f44acbe9834bfb989`; push and remote HEAD equality verified.
+
+- Final action: `99d7415d693fef640b2036c7f7db0fcc569531b2`; working-branch push and remote HEAD equality verified before integration.
 
 Each action pushes source/evidence and verifies remote containment before dependent work. Subsequent evidence records preceding exact SHAs.
 
@@ -66,4 +68,4 @@ R-001–R-005 are Verified within source/consumer and fixture limits above. Init
 
 ## Integration
 
-Working-branch checks passed. Verify final branch publication and fresh target state, check prospective merge, explicitly integrate this revision, publish/verify target, and retain actual merge evidence here.
+Working-branch publication and fresh target equality were verified before integration. Prospective merged-state heading/link/credential, plugin and staged whitespace checks passed. Explicit merge `44ee9fcadfc77e43713d4cb8bc9a07cfade6b1f0` has parents `e1e387dd29d38505c1d98a11131684374f23bf33` and `99d7415d693fef640b2036c7f7db0fcc569531b2`. Target `feature/architecture-revision` was pushed; remote tip equaled the merge SHA and contained the complete working tip. This final record follows on the target without another implementation merge. No consumer phase or legacy migration was executed.

@@ -6,8 +6,8 @@
 - **Starting/reviewed baseline:** `df531c2cdd4b192832a1be4a7ab9f8c71ad16947`.
 - **Planning checkpoint:** `b5a8e53f3e88d7feb907b17d25e06d94af962a85`.
 - **Review:** [REVIEW-REPORT.md](REVIEW-REPORT.md); R-001–R-005 accepted with the Git-only follow-up.
-- **Authorization/state:** Plan and execute the revision, including verification, commits/pushes, and explicit integration; Planned.
-- **Evidence:** Planned `REVISION-REPORT.md`.
+- **Authorization/state:** Plan and execute the revision, including verification, commits/pushes, and explicit integration; Completed.
+- **Evidence:** [REVISION-REPORT.md](REVISION-REPORT.md), including checks, limits and published merge evidence.
 
 ## Accepted implementation policy
 
