@@ -12,6 +12,12 @@ This document records the plugin's intended capabilities, ownership, and present
 - Authentication assumes a usable shell session and attempts the authorized push first. sdd-conventions defines ignored repository `*.tkn` storage; sdd-manage selects/saves tokens and recovers shell/client access after credential failures. Provider-specific permission profiles belong to the active backend, and Git transport access does not prove API access.
 - Scripts are optional for deterministic, well-defined operations. External integrations are optional capabilities with explicit inputs, effects, and reconciliation rules.
 
+## Core development workflows
+
+The [canonical model](../../skills/sdd-manage/references/workflows.md#core-development-workflows) defines three purposes: main/greenfield builds the complete intended system; revision corrects, simplifies, or improves defined/implemented work, typically through review/revision records; feature adds a scoped capability through the necessary feature package before implementation. Stages can be entered when their inputs are established, and operations can be requested independently. Main does not identify a Git branch.
+
+Steering is the lightweight human-directed revision variant at a paused implementation checkpoint. It directly amends existing documents and implemented behavior without feature overlays or a mandatory formal campaign, integrates into the paused branch, and returns control without resuming the task list. Shared verification/persistence/integration rules remain applicable; taxonomy alone grants no extra scope.
+
 ## Document ownership
 
 | Document | Canonical responsibility |

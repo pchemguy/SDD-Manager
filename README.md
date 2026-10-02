@@ -35,7 +35,19 @@ the target, then stop.
 
 Use the milestone and task IDs from your actual task list. You can start at a later stage when its inputs are already established; the coordinator does not repeat earlier stages by default.
 
-## Workflows
+## Core development workflows
+
+| Workflow | Purpose and typical path |
+| --- | --- |
+| **Main / greenfield** | Define the complete system, then implement it in bounded increments from design, SPEC, PLAN/layout, and TASKS. Existing projects can enter at an established stage. |
+| **Revision** | Correct, simplify, or improve defined/implemented work, typically through the retained review/revision process. A focused accepted prompt can supply the revision objective directly. |
+| **Feature** | Add a scoped capability through the necessary feature document package and FEATURE-TASKS, then implement and incorporate accepted deltas within the authorized boundary. |
+
+**Steering is a lightweight revision path** at a paused implementation checkpoint. You command a focused amendment; the agent updates existing documents, code, tests, and documentation without feature overlays or an obligatory formal campaign. It verifies and integrates into the paused branch, then returns control so you decide when to resume.
+
+Main describes the development purpose, not the default Git branch. The [canonical workflow model](skills/sdd-manage/references/workflows.md#core-development-workflows) defines entry and scope; the operations below are stages or supporting work, rather than additional core workflows.
+
+## Operations
 
 | Objective | Example request | Result |
 | --- | --- | --- |
@@ -121,7 +133,7 @@ A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, 
 
 ## Package status and references
 
-All 15 skills are included. Structural validation, independent coordination assessments, and local Git fixtures have been exercised. Full end-to-end execution in a target client and live GitHub mutation workflows remain untested.
+All 15 skills are included. Structural validation, independent coordination assessments, and local Git fixtures have been exercised. Full end-to-end execution in a target client and complete hosted-tracking workflows remain untested; an isolated live GitHub issue creation/closure check is recorded in the token revision evidence.
 
 - [Capability map](docs/dev/CAPABILITY-MAP.md): artifact ownership and cross-skill boundaries.
 - [Review campaigns](docs/dev/reviews/README.md): ordered review and revision records.
