@@ -37,6 +37,18 @@
 
 Counts at the prior suspension: **6 Passed, 2 Suspended, 19 Pending; 0 Failed, 0 Blocked, 0 Running.** Suspension is not completion. Current resumed results will be recorded below. No new source defect was established by these partial trials.
 
+## Resumed execution
+
+| Checkpoint | Actual result / publication | State |
+| --- | --- | --- |
+| Shell recovery | Source push initially failed for a missing shell credential session. Existing ignored/untracked source token reused through a restored repository-scoped helper; same branch1780f87 pushed and remote equality checked. Consumer credentials were not copied. | Recovered |
+| A-003 | Eight issue creations and second agent synchronization independently checked. Issue1 human body/foreign label preserved; all issue/parent IDs reused without duplicates or changes. Earlier integration403 remains retained. Case evidence77b6a91 published. | Passed |
+| A-015 | Fresh consumer committed35df4a0 and pushed existing checked/verified task. All five code/test hashes unchanged;7 tests rechecked, no following task/merge. Case evidenced33986f published. | Passed |
+| A-016 | Clean task commit57234b3 pushed before task selection/tests/edits, then6 tests rechecked; no credential lookup/new commit/next task/merge. Case evidence160e2da published. | Passed |
+| A-023 | Tested controlled hosted adapter published (three self-checks); actual outage consumer received503, retained local completion and issued no writes. Restoration/uncertain-response continuation remains pending. | In progress |
+
+Resumed campaign continues under the accepted plan. Earlier suspension records above remain historical; current case registry is authoritative for live counts. No automatic client-discovery or completed-campaign claim is made.
+
 ## Resume protocol
 
 1. Re-orient source and consumer repositories, instructions, dirty paths, branch tips and remote refs. Preserve unrelated source `.codex/` and fixture staged/unstaged intent. Do not reset, delete branches or replay setup/creation drivers against existing objects.
