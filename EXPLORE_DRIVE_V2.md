@@ -2,6 +2,8 @@
 url: https://chatgpt.com/c/6aafd74d-9d74-83eb-b046-dd4384744e29
 ---
 
+> **Historical exploration transcript.** This document is retained for provenance and is not authoritative for current behavior or agent instructions. Use [README.md](README.md) and [CAPABILITY-MAP.md](docs/dev/CAPABILITY-MAP.md) for the current plugin and workflow entry points.
+
 ## 📗 Architectural Revision
 
 > [!NOTE] Prompt
