@@ -14,6 +14,12 @@ Select by the user's objective, not by which documents happen to be missing. A s
 | Review or maintain a selected scope | Route design review to **sdd-design**, behavior review to **sdd-specify**, strategy/layout review to **sdd-plan**, task-list review to **sdd-tasks**, selection-only requests to **sdd-implement**, test strategy or test maintenance to **sdd-tdd**, documentation to **sdd-docs**, and acceptance checks to **sdd-verify**. Use **sdd-conventions** for relevant criteria. | Findings, evidence, or explicitly requested maintenance. Review and verification do not authorize repairs or completion updates. Stop at the selected scope. |
 | Synchronize hosted tracking | Use **sdd-forge** for the requested projection, association lookup, or issue reconciliation. Supply a credential through the credential protocol when needed; leave provider access checks and object mapping to its backend. | Repository and task-to-issue associations, changed hosted objects, differences, and access blockers. Stop after the hosted operation. |
 
+## Delivery strategy handoff
+
+Preparation carries the accepted design/contracts into an early meaningful end-to-end MVP and small testable capability increments through **sdd-plan**, then derives their bounded executable work through **sdd-tasks**. Retain complete intended design and SPEC, justified prerequisite exceptions, preserved useful behavior, and relevant exit evidence. A scoped feature uses the earliest meaningful changed path rather than rebuilding the whole project.
+
+Pass the selected range, owning capability/milestone outcomes, dependencies, verification obligations, and applicable human decision gates into implementation. At consequential checkpoints, return the demonstrated functionality and relevant usability/risk evidence for the human's continue/amend/simplify/stop decision. This does not authorize automatic steering, broaden the selected range, or require approval for routine work already authorized.
+
 ## Feature sequencing
 
 - **Preparation:** Establish or reuse a scoped feature branch and target under [Git workflows](git-workflows.md). Keep feature deltas distinguishable from the complete main documents. Creating a feature task list does not require immediate incorporation into TASKS.

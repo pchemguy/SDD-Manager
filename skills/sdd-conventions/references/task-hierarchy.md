@@ -4,6 +4,12 @@ Use one Phase → Milestone → Task hierarchy. Each task has exactly one parent
 
 Keep IDs stable across both lists and feature reconciliation. A host projection uses the project-wide task ID to recognize an object and reconciles its name when the owning list changes. Resolve duplicate task IDs across lists, mismatched parent identities, phase headings and checkboxes, or ambiguous parentage before publishing. Task completion remains evidence-backed in its owning list; a host object's state is not completion authority.
 
+## Delivery and decision boundaries
+
+Phases express major delivery or risk outcomes; milestones expose meaningful integrated capabilities and suitable exit evidence; tasks supply bounded executable work within them. PLAN defines the early meaningful end-to-end MVP, subsequent small capability increments, and appropriate functional/usability decision gates. Module-sized tasks alone do not establish incremental functionality, and a task need not independently produce user-visible value.
+
+At consequential milestones, identify the demonstration or feedback that informs a human decision to continue, amend, simplify, or stop. Keep these decisions with the human; the hierarchy does not authorize automatic steering, stopping, or task-list continuation. Stable identities, parentage, and completion evidence remain governed by the owning lists and execution workflow.
+
 ## Hosted projection
 
 When the selected backend supports issues, as GitHub does, create an associated issue for every task in TASKS or the active FEATURE-TASKS being projected; never duplicate an issue for the same project task ID. Represent each phase with a phase label and create a host milestone for each SDD milestone when supported; use a milestone label when native milestones are unavailable. Assign each task issue its phase label and its parent milestone or milestone label when creating it. After the task is implemented, verified, committed, and reconciled in its owning task list, close its issue as completed. A feature parent checkbox does not establish completion of the whole-project phase or milestone.

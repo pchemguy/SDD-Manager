@@ -19,11 +19,15 @@
 
 | V-003 / R-003, R-004 | Established meaningful MVP-first strategy, scoped deferrals/prerequisites, small capability growth, early verification, and preservation of the useful path. Inspected greenfield and existing-system cases; subsystem-first and mocked-only outcomes are insufficient without a meaningful path. Heading/link/diff and plan structural validation passed. | R-003 verified by source inspection; R-004 revised pending task/hierarchy alignment and consumer assessment. | Persisted with this action. |
 
+| V-004 / R-004, R-005 | Aligned task sizing, hierarchy semantics, milestone decision evidence, and coordinator handoffs. Inspected module-small/behavior-large tasks and suitable milestone decisions; integrated evidence is timely and decisions remain human-controlled. Heading/link/diff and affected skill structural checks passed. | R-004/R-005 verified by source inspection; consumer and final composition assessments follow. | Persisted with this action. |
+
 ## Checkpoints
 
 - V-001: `7c2befc593e944a5d2d85ab623acfc160d0e28d7`; push and remote HEAD equality verified.
 
 - V-002: `95684309582603f1ad1e5bc287c6ad0f10596fee`; push and remote HEAD equality verified.
+
+- V-003: `cdc989cbe9c15d48d60be6216f172e7df8ea1254`; push and remote HEAD equality verified.
 
 Completed action commits are pushed and remote HEAD equality is checked before dependent work. Exact preceding checkpoints are recorded as execution proceeds; Git history supplies the containing commit for each evidence update.
 
