@@ -46,6 +46,8 @@ docs/dev/FEATURE-TASKS.md
 docs/dev/verification-map.json
 ```
 
+Inspect relevant reviews/features package navigation for branch identity and source disposition. Archived feature documents and historical task snapshots under docs/dev/features are retained evidence, not active FEATURE-TASKS; discover active ownership from main TASKS and explicitly active root sources. Observe partially moved paths/links as unfinished incorporation, without repairing them.
+
 Also identify project-specific equivalents and other execution evidence when present. Do not modify or restore such state during orientation. Feature documents describe an intended delta; FEATURE-TASKS holds only scoped feature work and is not the complete task baseline. Inspect it with TASKS when establishing active work and progress.
 
 Inspect relevant source, tests, manifests, and declared commands for building, focused checks, integration checks, documentation checks, and packaging. Note unavailable tools without installing dependencies or executing commands with side effects. Use project instructions over guessed defaults.

@@ -47,9 +47,10 @@ Pass the selected range, owning capability/milestone outcomes, dependencies, ver
 
 ## Feature sequencing
 
-- **Preparation:** Establish or reuse a scoped feature branch and target under [Git workflows](git-workflows.md). Keep feature deltas distinguishable from the complete main documents. Creating a feature task list does not require immediate incorporation into TASKS.
+- **Preparation:** Establish or reuse the convention's feature branch/package identity under [branch management](branch-management.md). Create its features-directory README linking the active root FEATURE sources; preserve another active package in the same worktree. Keep feature deltas distinguishable from the complete main documents. Creating a feature task list does not require immediate incorporation into TASKS.
 - **Implementation:** An accepted FEATURE-TASKS can drive implementation while its authoritative feature documents remain active. Identify those sources explicitly in the handoff.
 - **Document integration:** Incorporate accepted targets included in the request on the feature branch before final verification and Git merge. A complete feature implementation includes incorporation needed for a coherent final project; a preparation-only or narrow task request does not authorize unrelated incorporation. Do not infer acceptance from passing tests.
+- **Archive:** After accepted final incorporation and task/evidence disposition, **sdd-integrate-feature** retains eligible sources under the package directory, repairs selected links, and marks historical snapshots. Partial/narrow integration retains needed active documents; verify archive ownership before final merge.
 - **Git integration:** Merge the verified completed boundary into its established target by default with an explicit merge commit, verify the merged state, and publish the target. Preparation-only persists its documents on the feature branch and stops before implementation or full-feature merge.
 - **Consistency:** If the selected work requires an unresolved contract or dependency decision, report it before the dependent mutation. Continue independent authorized work when sound.
 

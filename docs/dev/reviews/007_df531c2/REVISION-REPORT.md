@@ -17,9 +17,13 @@
 
 | V-002 / R-001, R-003, R-005 | Extracted coordinator branch manager and aligned phase setup, partial-range pause, sequential phase integration and authorization. Local Git ownership retained; changed headings/links and package validation passed. | Source revised; Git/consumer fixtures follow. |
 
+| V-003 / R-002, R-004 | Defined active feature identity/navigation, eligible retained archive and historical task snapshots; aligned orientation, minimal steering record and report context. Partial incorporation retains active owners and sources. Heading/link/diff and package checks passed. | Source revised; archive/consumer fixtures follow. |
+
 ## Checkpoints
 
 - Preceding action: `33ffe560761efec267a5bf5d03cdc6749c586280`; push and remote HEAD equality verified.
+
+- Preceding action: `eb187367466bc99092386ac2edd4f9211a0f03fa`; push and remote HEAD equality verified.
 
 Each action pushes source/evidence and verifies remote containment before dependent work. Subsequent evidence records preceding exact SHAs.
 
