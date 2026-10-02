@@ -15,7 +15,11 @@
 | --- | --- | --- |
 | V-001 | Added canonical three-workflow model before an explicitly named operation catalog; linked formal revision and lightweight steering without duplicating procedures. Inspected entry, document optionality, authorization, branch meaning, and steering stop boundaries. Changed Markdown and affected package checks passed. | Source revised; composed consumer assessment pending. |
 
+| V-002 | Aligned README overview and capability map with the canonical model and lightweight revision distinction. Inspected short/full overview consistency; package, heading/link, and diff checks passed. Corrected broad untested-hosting status to distinguish prior isolated issue test from untested complete hosted tracking. | Source aligned; final consumer assessment pending. |
+
 ## Checkpoints
+
+- V-001: `c073a3932dc40771b3109c4bd373ca4333f1367f`; push and remote HEAD equality verified.
 
 Action reports are committed/pushed with their source; remote containment is verified before dependent actions. Subsequent evidence records preceding exact SHAs.
 
