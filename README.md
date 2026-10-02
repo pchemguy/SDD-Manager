@@ -102,9 +102,11 @@ The main documents describe the complete intended project. Task lists record exe
 | `ARCHITECTURE.md` | Major blocks, relationships, dependency direction, and design decisions. |
 | `DECOMPOSITION.md` | Component responsibilities, collaborations, and design-level interfaces. |
 | `SPEC.md` | Required behavior, final contracts, errors, invariants, and acceptance. |
-| `PLAN.md` | Delivery strategy, phases, milestones, dependencies, and exit conditions. |
+| `PLAN.md` | Meaningful end-to-end MVP, small capability increments, phases/milestones, dependencies, and verification/decision gates. |
 | `layout.md` | Physical ownership of source, tests, documentation, and other artifacts. |
 | `TASKS.md` | Phase → Milestone → Task hierarchy, stable IDs, and progress evidence. |
+
+PLAN defaults to the simplest practical meaningful end-to-end MVP, then grows it through small testable capability increments. Necessary prerequisites are justified; the complete intended design and SPEC remain authoritative. Appropriate milestone demonstrations and functional/usability feedback inform human decisions to continue, amend, simplify, or stop. TASKS supplies bounded work within these increments.
 
 A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, `FEATURE-SPEC.md`, `FEATURE-PLAN.md`, and `FEATURE-TASKS.md` as needed. Accepted deltas are incorporated into the selected main documents through **sdd-integrate-feature**. Checkpoint steering directly amends existing documents and creates no feature-document layer.
 
