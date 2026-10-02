@@ -26,6 +26,7 @@
 | U-012 | C-003/C-005/C-006: entry/full reference inspected. Explicit target set, unique executable owner, pending reassessment, source retention and eligible historical archive compose with phase targets. Interrupted moves use actual paths and same identity. No actionable defect found. | None |
 | U-013 | C-002/C-003/C-005/C-006: entry and all three backend references inspected. Backend owns provider access/mapping; report optional with baseline; exact task markers, duplicate conflicts and owned-field reconciliation preserve host/user state; closure follows verified committed local evidence. No actionable defect found. | None |
 | U-014 | C-002/C-003/C-005/C-006: entry/all four references inspected. Push-first precedes task work; continuation preserves verified pending completion and scope; dependencies and phase segments explicit; per-task evidence/commit/push/closure and full-phase integration separate. Unrelated index staging protected. No actionable source defect found. | None |
+| U-015 | C-002/C-003/C-005/C-006: entry/all three references inspected. Assessment versus commanded mutation distinguished; minimal identity record and paused target established; direct governing edits/no feature layer; completion reassessment and owner-scoped repairs; publication followed by human stop. No actionable source defect found. | None |
 
 ## Findings
 
@@ -62,6 +63,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-013: `aa7ac8698eb608991613647e5a7ffc8826ae3b33`; remote HEAD equality verified. Source cases: rate-limit403 does not prompt token replacement; private404 not absence; uncertain writes reread before retry; hosting pending does not erase local completion. No live API or current endpoint-document verification performed.
 
 - Before U-014: `15b34c949c93cba9ff86a6aedda8f005e46d5e74`; remote HEAD equality verified. Source cases: selection-only performs no push; reassessment notes prevent skipping checked tasks; interrupted task outside new range blocks overlapping work; older hosted backlog retained; incomplete phase pauses.
+
+- Before U-015: `39201132d79de246f905780d605b57cff43d71fc`; remote HEAD equality verified. Source cases: blocked amendment resumes only on human command; removal protects retained contracts; task disappearance does not automatically close issue; no task selection or implement invocation after success.
 
 ## Scenarios and checks
 
