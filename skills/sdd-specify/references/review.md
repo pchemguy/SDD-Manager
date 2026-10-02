@@ -2,7 +2,7 @@
 
 For a review-only request, read the relevant SPEC root and children, accepted design, and any active change specification. Assess completeness, clarity, ownership, objective acceptance, and consistency without editing files. State concrete findings and their consequences; do not demand invented detail where the project intentionally delegates a decision.
 
-Check the canonical owner of each behavior and the affected consumers. Recheck parent-child routing, public contracts, errors, formats, compatibility, and end-to-end acceptance. Compare with PROJECT, ARCHITECTURE, and DECOMPOSITION; report needed decisions to their owners. Identify impacts on PLAN, TASKS, any active FEATURE-TASKS, tests, and user documentation. A direct correction belongs to the owning SPEC node under [system specification](system-specification.md); incorporating an accepted feature delta into main documents belongs to **sdd-integrate-feature**.
+Check the canonical behavioral owner, relevant structural owner links, and affected consumers using [design traceability](system-specification.md#design-traceability). Ensure cross-component guarantees identify participating boundaries and design/contract conflicts are surfaced for accepted decisions. Recheck parent-child routing, public contracts, errors, formats, compatibility, and end-to-end acceptance. Compare with PROJECT, ARCHITECTURE, and DECOMPOSITION; report needed decisions to their owners. Identify impacts on PLAN, TASKS, any active FEATURE-TASKS, tests, and user documentation. A direct correction belongs to the owning SPEC node under [system specification](system-specification.md); incorporating an accepted feature delta into main documents belongs to **sdd-integrate-feature**.
 
 ## End-state language
 

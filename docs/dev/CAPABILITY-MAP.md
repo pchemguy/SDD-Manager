@@ -21,12 +21,14 @@ This document records the plugin's intended capabilities, ownership, and present
 | `docs/dev/FEATURE_ARCHITECTURE.md`, `docs/dev/FEATURE_DECOMPOSITION.md` | Bounded architectural change definition and affected component breakdown when necessary. |
 | `docs/dev/SPEC.md` | Intended behavior, final contracts, errors, invariants, and acceptance conditions. |
 | `docs/dev/FEATURE-SPEC.md` | Scoped change to specified behavior until reconciled into the main SPEC. |
-| `docs/dev/PLAN.md` | Implementation strategy, phases, milestones, dependencies, and exit conditions. |
+| `docs/dev/PLAN.md` | Meaningful end-to-end MVP and small capability increments, phases/milestones, dependencies, verification exits, and human decision evidence. |
 | `docs/dev/FEATURE-PLAN.md` | Scoped delivery-strategy delta when a change needs one, until reconciled into the main PLAN. |
 | `docs/dev/TASKS.md` | Complete intended phase → milestone → task hierarchy, stable task IDs, bounded selection, and evidence-backed progress. |
 | `docs/dev/FEATURE-TASKS.md` | Active feature's scoped task delta and evidence-backed progress until reconciled into TASKS. |
 | `docs/dev/layout.md` | Physical ownership of implementation, tests, documentation, and other artifacts. |
 | `docs/dev/verification-map.json` | Optional current component-to-check routing where selection is nontrivial. |
+
+ARCHITECTURE describes major structure and rationale; DECOMPOSITION refines logical responsibility and collaboration; SPEC defines observable guarantees linked to relevant structural owners/consumers. Conflicts return to their owners for accepted decisions. PLAN stages the complete intent through an early meaningful usable slice and small testable growth, with appropriate functional/usability decisions kept human-controlled.
 
 The main design, SPEC, PLAN, and layout documents describe the intended system, strategy, and physical ownership. Temporary feature documents describe explicit deltas that are reconciled into the main documents when accepted. TASKS records the complete intended work breakdown and evidence-backed progress. An active FEATURE-TASKS records only the feature's executable delta; task IDs are unique across both lists, and reconciliation preserves verified status and Git evidence. Parent documents may link to focused children without duplicating their detailed requirements.
 
