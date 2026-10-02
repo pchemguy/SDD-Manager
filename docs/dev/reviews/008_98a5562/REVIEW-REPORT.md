@@ -20,6 +20,7 @@
 | U-006 | C-003/C-004/C-005: entry and all references inspected. Canonical behavior, structural traceability and affected consumers explicit; no requirement invented from code; complete end-state roots/children and feature delta scope preserved. No actionable defect found. | None |
 | U-007 | C-003/C-004/C-006: entry and all references inspected. Meaningful usable MVP, justified prerequisites, small capability growth, timely rigorous checks and human decision evidence articulated; layout separated from logical design and delivery strategy. No actionable defect found. | None |
 | U-008 | C-003–C-005: entry and both references inspected. Task derivation consumes accepted strategy/layout; four-space hierarchy and project-wide IDs explicit; feature parents remain scoped; creation/review separated from reconciliation, execution and completion. No actionable defect found. | None |
+| U-009 | C-003/C-005/C-006: entry, all four references and retained MIT notice inspected. Behavioral RED distinguished from setup failure; independent expectations, deliberate doubles and sensitivity tests explicit; existing code preserved and missing chronology/authorized exceptions reported. No actionable defect found. | None |
 
 ## Findings
 
@@ -44,6 +45,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-007: `7bb6a66d956a36941f0e05fe3ffb3c18493ab7c7`; remote HEAD equality verified. Source cases: mocked skeleton alone fails usefulness criterion; PLAN-only does not authorize layout edits; full intended scope retained despite MVP deferrals.
 
 - Before U-008: `f566e469f180366f50a80f0f251b145aaf7a59c0`; remote HEAD equality verified. Source cases: new feature work receives new IDs; conflicts block derivation; progress review neither repairs nor checks tasks.
+
+- Before U-009: `72a146ec5fbb5a74ba0f4ecd1e1effb8f3b4cf87`; remote HEAD equality verified. The two heading matches from U-001 are Python comments inside a fenced example, not Markdown headings; manually dismissed. Upstream attribution/commit recorded; upstream content not independently fetched.
 
 ## Scenarios and checks
 
