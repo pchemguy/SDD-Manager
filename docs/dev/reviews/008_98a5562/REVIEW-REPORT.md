@@ -18,6 +18,7 @@
 | U-004 | C-003/C-005: all four references inspected. Planned versus observed language, general/domain tables, task IDs and verified issue refs, qualified closing keywords, phase-aware merge drafts and scalable campaign templates preserve ownership. No actionable defect found. | None |
 | U-005 | C-003/C-004: entry and all references inspected. Architecture defines major arrangement/rationale; decomposition refines responsibilities/interfaces; SPEC settles precise behavior; layout/PLAN excluded. Existing evidence, provisional interfaces and accepted decisions distinguished. No actionable defect found. | None |
 | U-006 | C-003/C-004/C-005: entry and all references inspected. Canonical behavior, structural traceability and affected consumers explicit; no requirement invented from code; complete end-state roots/children and feature delta scope preserved. No actionable defect found. | None |
+| U-007 | C-003/C-004/C-006: entry and all references inspected. Meaningful usable MVP, justified prerequisites, small capability growth, timely rigorous checks and human decision evidence articulated; layout separated from logical design and delivery strategy. No actionable defect found. | None |
 
 ## Findings
 
@@ -38,6 +39,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-005: `4ddb6685bdbb030c7d19005a92c469e1fc638de5`; remote HEAD equality verified. Source cases: architecture-only stops; unresolved design blocks final contracts; existing PROJECT instructions retain authority.
 
 - Before U-006: `222d8f32db021cf91b53949b4f4ec4a588e7cbc1`; remote HEAD equality verified. Source cases: cross-component guarantees have one behavioral owner; contract/design conflict returned for decision; feature incorporation routed separately.
+
+- Before U-007: `7bb6a66d956a36941f0e05fe3ffb3c18493ab7c7`; remote HEAD equality verified. Source cases: mocked skeleton alone fails usefulness criterion; PLAN-only does not authorize layout edits; full intended scope retained despite MVP deferrals.
 
 ## Scenarios and checks
 
