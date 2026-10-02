@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- State: **Suspended by the user on 2026-10-02.** All consumers stopped; owned pending work and exact restoration evidence published.
+- Current state: **Suspended with runtime blockers.** On 2026-10-02 UTC, resumption found no reusable consumer workers. A-006/A-014/A-018 are Blocked; A-007–A-009 remain unstarted. Current counts: 14 Passed, 3 Blocked, 10 Pending. Historical execution and suspension records follow.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -100,3 +100,20 @@ Live phase1 remains `b9fabb0aab69bf891386f9bf47c503b78be6cf15`, main `d769b55aa6
 Isolated cross-phase fork remains `83eab02a70e7757e11f04f46a64849f69ba64df0`; two pending T-004 test files and actual RED logs retained with matching patches/index hashes and HEAD bundle. No production fix or boundary. Isolated task-publication fork remains at published `7c29721`; its future merge-rejection experiment is unstarted.
 
 Final read-only recheck confirmed saved file hashes, staged index intent and both patches exactly match the stopped worktrees. Unrelated bytecode and source work preserved. Recovery exports exclude credentials and raw provider bodies; scoped provider identity/state/status summary and complete available consumer handoffs retained. No workers were added or left running.
+
+## Resumption inspection and renewed suspension
+
+Read-only startup inspection matched the published source `4d5851eb3500717ded281f02263a78d4b8ad6180`, evaluation `876c488c95587794ea5f6a6e4a5f944b753eac76`, live phase1 `b9fabb0aab69bf891386f9bf47c503b78be6cf15` and main `d769b55aa63f92d5ccbd8022cb9e87f07e541fae`. All historical worktrees exist. The current agent inventory contains only the root evaluator: original stopped consumer workers cannot be resumed here. The user prohibits additional agents and requires evaluator/oracle isolation. No replacement agent or evaluator-driven product implementation was substituted. This is a runtime blocker, not a demonstrated pinned-plugin defect.
+
+| Requested case | Actual disposition | Publication |
+| --- | --- | --- |
+| A-006 | Blocked before consumer continuation; T-005 staged work preserved; no hosted reconciliation or merge. | `f550240e1bd06f170e9c75c703463abe1b03b651` |
+| A-014 | Blocked before consumer continuation; existing two-file RED work preserved; no repair or phase transition. | `6f51f1dee0c16bdf6d28a7de7853f6d78737a4a9` |
+| A-018 | Blocked before remaining merge-publication subcase; completed task-rejection/recovery evidence preserved at `7c29721c438ca31d681d26178f38dc471f822df4`. | `9c714981b61564a80768154745450b892fd9ff7d` |
+| A-007–A-009 | Pending, unstarted; prerequisite positive boundaries have not completed. | No consumer execution claimed. |
+
+Each blocked assessment was committed, pushed and exact remote equality verified sequentially. [Updated recovery instructions](https://github.com/pchemguy/AgentPlayground/blob/9c714981b61564a80768154745450b892fd9ff7d/docs/dev/reviews/001_608cf12/RESUME.md) preserve the original case-specific continuation steps. Each case retains a resumption-blocker-20261002.json observation. No pending case beyond the selected six began.
+
+Preservation checks verified all 97 pinned-package file hashes, live/isolated owned-file hashes and index entries, both saved binary patch sets and committed-HEAD recovery bundles. Existing archived pending contents remain valid; no reset, staging, checkout, product test, implementation or hosted read/write occurred. Source unrelated work and consumer bytecode remain preserved. Main and product branch tips are unchanged; overall source boundary integration remains pending.
+
+Final counts: **14 Passed, 3 Blocked, 10 Pending; 0 Failed, Suspended or Running.** No consumer workers are running. Restore access to the original workers, or obtain explicit authorization for replacement isolated consumers, before continuation. Keep assessor records/oracles out of their contexts; then resume existing work and the unchanged six-case order, publishing each independent assessment before dependent advancement. Stop after A-009. The scheduled task was disabled because it cannot proceed under the current worker restriction. No complete-campaign claim is made.
