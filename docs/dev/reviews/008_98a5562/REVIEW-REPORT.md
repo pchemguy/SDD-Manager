@@ -21,6 +21,7 @@
 | U-007 | C-003/C-004/C-006: entry and all references inspected. Meaningful usable MVP, justified prerequisites, small capability growth, timely rigorous checks and human decision evidence articulated; layout separated from logical design and delivery strategy. No actionable defect found. | None |
 | U-008 | C-003–C-005: entry and both references inspected. Task derivation consumes accepted strategy/layout; four-space hierarchy and project-wide IDs explicit; feature parents remain scoped; creation/review separated from reconciliation, execution and completion. No actionable defect found. | None |
 | U-009 | C-003/C-005/C-006: entry, all four references and retained MIT notice inspected. Behavioral RED distinguished from setup failure; independent expectations, deliberate doubles and sensitivity tests explicit; existing code preserved and missing chronology/authorized exceptions reported. No actionable defect found. | None |
+| U-010 | C-003/C-005: entry and all three references inspected. Every project-owned module in selected scope covered with language-appropriate professional documentation; README/examples and exclusions accounted for. Governing amendments defer to human; behavior/commit/status changes excluded. No actionable defect found. | None |
 
 ## Findings
 
@@ -47,6 +48,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-008: `f566e469f180366f50a80f0f251b145aaf7a59c0`; remote HEAD equality verified. Source cases: new feature work receives new IDs; conflicts block derivation; progress review neither repairs nor checks tasks.
 
 - Before U-009: `72a146ec5fbb5a74ba0f4ecd1e1effb8f3b4cf87`; remote HEAD equality verified. The two heading matches from U-001 are Python comments inside a fenced example, not Markdown headings; manually dismissed. Upstream attribution/commit recorded; upstream content not independently fetched.
+
+- Before U-010: `07bc0854a05f5fbbbaf682a95b397e107455c924`; remote HEAD equality verified. Source cases: missing project style uses appropriate professional default; SPEC conflict leaves dependent edits unresolved while independent guides may continue.
 
 ## Scenarios and checks
 
