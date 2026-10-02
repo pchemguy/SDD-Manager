@@ -93,3 +93,21 @@ These priorities describe required policy precision, not demonstrated runtime de
 ## Scope and readiness
 
 The naming/storage direction is coherent. A revision plan should resolve R-001–R-005 into explicit actions and acceptance cases, particularly phase pause versus merge, active feature placement/archive gates, and the concrete hosted capability boundary. Recommendations above supply practical defaults for that plan; no source implementation or revision plan is performed in this review. No runtime bug, provider support, or consumer execution result is claimed.
+
+## Follow-up decisions and branch-manager placement
+
+The human clarified that branch management belongs to Git operations, not sdd-forge. R-003 is accepted with that resolution: no hosted branch capability or additional forge-driving steps are included in the proposed revision. The optional hosted-operation discussion above records the initial proposal assessment, not accepted implementation scope.
+
+Recommended placement is a focused `sdd-manage/references/branch-management.md` reference, discoverable from the coordinator entry and workflow catalog. This is the coordinator's branch-management procedure, not a new independently invoked skill or a separate state store.
+
+| Owner / reference | Responsibility |
+| --- | --- |
+| sdd-conventions workflow identity/naming reference | Stable campaign/phase identity, naming patterns, allocation/collision rules, and associated artifact locations. |
+| sdd-manage branch-management.md | Resolve working/target identities and starting checkpoint; allocate or recover campaign association; create/reuse/check out eligible local branches; handle occupancy, continuation, collisions, and authorized phase transitions. |
+| sdd-manage git-workflows.md | Coordinate verification, explicit merge, target publication, conflict/blocker continuation, and integration evidence. Link branch setup to the branch manager rather than duplicate it. |
+| sdd-implement / sdd-steer / coordinated persistence | Retain task/amendment execution and scoped commits/pushes, invoking branch management through the coordinator's shared protocol. |
+| sdd-orient | Observe repository/branch/worktree state; branch setup remains mutating coordinator work. |
+
+An appropriate revision can extract current Establish the working branch rules from git-workflows.md, extend them with the accepted naming and phase lifecycle, and leave integration in its existing reference. Read-only selection/review does not create branches; implementation push-first remains before branch setup; steering still targets the paused branch and returns control. Artifact incorporation/archive decisions stay with their document owner, while branch management carries the shared identity and prerequisites.
+
+This follow-up records placement recommendations only. No branch-manager source or revision plan is created yet.
