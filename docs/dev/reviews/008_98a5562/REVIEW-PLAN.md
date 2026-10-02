@@ -7,7 +7,7 @@
 - Date: 2026-10-02. Review artifacts are written on the existing `feature/architecture-revision`; source repairs, branch migration, hosted mutations and client installation are excluded.
 - Evidence: static source/contract assessment and offline packaging/navigation checks; synthetic local checks where useful. No live credentials are read. No installed-client behavior is claimed.
 - Report: [REVIEW-REPORT.md](REVIEW-REPORT.md).
-- State: Planned.
+- State: Completed; all 18 units assessed and retained in the report.
 
 ## Criteria
 
