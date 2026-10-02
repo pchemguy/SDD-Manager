@@ -1,6 +1,6 @@
 ---
 name: sdd-manage
-description: Coordinate SDD workflows for initial development, feature preparation, bounded or resumed task implementation, human-directed checkpoint amendments, accepted feature integration, focused review or maintenance, and hosted task synchronization. Use for multi-stage project requests, shared prerequisites, workflow transitions, stopping boundaries, recovering shell authentication, or supplying hosting credentials to sdd-forge.
+description: Coordinate SDD workflows for initial development, feature preparation, bounded or resumed task implementation, human-directed checkpoint amendments, accepted feature integration, focused review or maintenance, and hosted task synchronization. Use for multi-stage project requests, shared prerequisites, branch management and phase transitions, workflow transitions, stopping boundaries, recovering shell authentication, or supplying hosting credentials to sdd-forge.
 ---
 
 # Coordinate specification-driven development

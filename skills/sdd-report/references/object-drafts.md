@@ -19,7 +19,7 @@ Use `Refs owner/repo#123` when the commit advances an issue without completing i
 
 ## Merge commit
 
-Draft a subject identifying the actual feature, steering amendment, or selected range, such as `Merge milestone 2.2 ZIP support`. Return the subject and body separately. Include the working and target branches, starting checkpoint and verified parent tips, included task IDs where applicable, boundary and merged-state checks, material conflict resolutions, and limitations. Do not represent an amendment as completion of the next task. The coordinator performs the explicit two-parent merge; drafting the message does not authorize extra work or a hosted PR.
+Draft a subject identifying the actual feature, steering amendment, or selected range, such as `Merge phase 2 Archive support` or `Merge feature ZIP support`. A main milestone/task subset does not justify a merge draft while its phase remains incomplete. Return the subject and body separately. Include the working and target branches, starting checkpoint and verified parent tips, included task IDs where applicable, boundary and merged-state checks, material conflict resolutions, and limitations. Do not represent an amendment as completion of the next task. The coordinator performs the explicit two-parent merge; drafting the message does not authorize extra work or a hosted PR.
 
 ## Pull request
 

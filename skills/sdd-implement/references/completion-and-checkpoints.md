@@ -21,7 +21,7 @@ Provide a concise task result through **sdd-report** before advancing within the
 - Do not start tasks beyond the requested task count, milestone, phase, or named checkpoint, even if further tasks are ready. Integrate only when the workflow gate is met; a completed main task subset in an incomplete phase pushes and pauses without a merge. Also stop for an unresolved implementation or push blocker or the user's pause instruction.
 - Report implemented capabilities, completed IDs, acceptance and exit-condition evidence, unresolved failures or limitations, commit and push state, pending issue reconciliation, and remaining tasks. Distinguish task/working-branch completion from integration into the established target and its remote publication.
 
-The human decides whether to resume the main task list or command **sdd-steer** for a focused amendment. Do not start either automatically after the selected checkpoint.
+After the requested stopping boundary, the human decides whether to resume the main task list or command **sdd-steer** for a focused amendment. Do not start either automatically after the selected checkpoint.
 
 ## Integrate the completed boundary
 
