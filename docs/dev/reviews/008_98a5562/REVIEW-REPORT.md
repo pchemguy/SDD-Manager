@@ -19,6 +19,7 @@
 | U-005 | C-003/C-004: entry and all references inspected. Architecture defines major arrangement/rationale; decomposition refines responsibilities/interfaces; SPEC settles precise behavior; layout/PLAN excluded. Existing evidence, provisional interfaces and accepted decisions distinguished. No actionable defect found. | None |
 | U-006 | C-003/C-004/C-005: entry and all references inspected. Canonical behavior, structural traceability and affected consumers explicit; no requirement invented from code; complete end-state roots/children and feature delta scope preserved. No actionable defect found. | None |
 | U-007 | C-003/C-004/C-006: entry and all references inspected. Meaningful usable MVP, justified prerequisites, small capability growth, timely rigorous checks and human decision evidence articulated; layout separated from logical design and delivery strategy. No actionable defect found. | None |
+| U-008 | C-003–C-005: entry and both references inspected. Task derivation consumes accepted strategy/layout; four-space hierarchy and project-wide IDs explicit; feature parents remain scoped; creation/review separated from reconciliation, execution and completion. No actionable defect found. | None |
 
 ## Findings
 
@@ -41,6 +42,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-006: `222d8f32db021cf91b53949b4f4ec4a588e7cbc1`; remote HEAD equality verified. Source cases: cross-component guarantees have one behavioral owner; contract/design conflict returned for decision; feature incorporation routed separately.
 
 - Before U-007: `7bb6a66d956a36941f0e05fe3ffb3c18493ab7c7`; remote HEAD equality verified. Source cases: mocked skeleton alone fails usefulness criterion; PLAN-only does not authorize layout edits; full intended scope retained despite MVP deferrals.
+
+- Before U-008: `f566e469f180366f50a80f0f251b145aaf7a59c0`; remote HEAD equality verified. Source cases: new feature work receives new IDs; conflicts block derivation; progress review neither repairs nor checks tasks.
 
 ## Scenarios and checks
 
