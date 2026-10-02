@@ -16,6 +16,7 @@
 | U-002 | C-002/C-003/C-006: full entry/reference inspected. Non-Git and conflicted/unknown ownership block mutation; optional writes suppressed; task commits traced through merges; invalidated checked tasks and document-only interruptions distinguished; archived snapshots excluded. No actionable defect found. | None |
 | U-003 | C-002–C-006: all six references inspected. Canonical modularity/heuristics, unique task parentage, shared max-plus-one campaign allocation, stable baseline/name identities, phase labels/native milestones and ignored token handling agree with owner boundaries. Explicit overrides and legacy continuation preserved. No actionable defect found. | None |
 | U-004 | C-003/C-005: all four references inspected. Planned versus observed language, general/domain tables, task IDs and verified issue refs, qualified closing keywords, phase-aware merge drafts and scalable campaign templates preserve ownership. No actionable defect found. | None |
+| U-005 | C-003/C-004: entry and all references inspected. Architecture defines major arrangement/rationale; decomposition refines responsibilities/interfaces; SPEC settles precise behavior; layout/PLAN excluded. Existing evidence, provisional interfaces and accepted decisions distinguished. No actionable defect found. | None |
 
 ## Findings
 
@@ -32,6 +33,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-003: `08b3d8ac9b31bfdd372e24e38815a5570fc76562`; remote HEAD equality verified. Source assessments: missing native milestones permits fallback; feature parent status never establishes project completion; tokens confer no authorization; allocation requires collision resolution. No provider/allocator race executed.
 
 - Before U-004: `2afb93d693b627fc9795e4cae1a467f158e96f80`; remote HEAD equality verified. Assessments: partial issue uses Refs; fully evidenced resolution permits closing keyword; drafting cannot mutate hosted objects; omitted stages are not fabricated.
+
+- Before U-005: `4ddb6685bdbb030c7d19005a92c469e1fc638de5`; remote HEAD equality verified. Source cases: architecture-only stops; unresolved design blocks final contracts; existing PROJECT instructions retain authority.
 
 ## Scenarios and checks
 
