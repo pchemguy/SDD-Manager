@@ -17,6 +17,7 @@
 | U-003 | C-002–C-006: all six references inspected. Canonical modularity/heuristics, unique task parentage, shared max-plus-one campaign allocation, stable baseline/name identities, phase labels/native milestones and ignored token handling agree with owner boundaries. Explicit overrides and legacy continuation preserved. No actionable defect found. | None |
 | U-004 | C-003/C-005: all four references inspected. Planned versus observed language, general/domain tables, task IDs and verified issue refs, qualified closing keywords, phase-aware merge drafts and scalable campaign templates preserve ownership. No actionable defect found. | None |
 | U-005 | C-003/C-004: entry and all references inspected. Architecture defines major arrangement/rationale; decomposition refines responsibilities/interfaces; SPEC settles precise behavior; layout/PLAN excluded. Existing evidence, provisional interfaces and accepted decisions distinguished. No actionable defect found. | None |
+| U-006 | C-003/C-004/C-005: entry and all references inspected. Canonical behavior, structural traceability and affected consumers explicit; no requirement invented from code; complete end-state roots/children and feature delta scope preserved. No actionable defect found. | None |
 
 ## Findings
 
@@ -35,6 +36,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-004: `2afb93d693b627fc9795e4cae1a467f158e96f80`; remote HEAD equality verified. Assessments: partial issue uses Refs; fully evidenced resolution permits closing keyword; drafting cannot mutate hosted objects; omitted stages are not fabricated.
 
 - Before U-005: `4ddb6685bdbb030c7d19005a92c469e1fc638de5`; remote HEAD equality verified. Source cases: architecture-only stops; unresolved design blocks final contracts; existing PROJECT instructions retain authority.
+
+- Before U-006: `222d8f32db021cf91b53949b4f4ec4a588e7cbc1`; remote HEAD equality verified. Source cases: cross-component guarantees have one behavioral owner; contract/design conflict returned for decision; feature incorporation routed separately.
 
 ## Scenarios and checks
 
