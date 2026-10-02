@@ -35,14 +35,14 @@
 
 | ID | Type | Priority | Status |
 | --- | --- | --- | --- |
-| R-001 | Evidence gap / recommendation | P3 | Open |
-| R-002 | Documentation recommendation | P3 | Open |
+| R-001 | Evidence gap / recommendation | P3 | Accepted for planning |
+| R-002 | Documentation recommendation | P3 | Accepted for planning |
 
 Findings are canonical below; absence of a finding means no actionable inconsistency found within the assessed scope, not runtime certification.
 
 ### R-001 — Composed client workflows remain unverified
 
-- **Type / priority / confidence / status:** Evidence gap / recommendation / P3 / High for missing evidence; no inference of malfunction / Open.
+- **Type / priority / confidence / status:** Evidence gap / recommendation / P3 / High for missing evidence; no inference of malfunction / Open at review completion; Accepted for planning subsequently.
 - **Baseline location:** README.md, Package status and references; docs/dev/reviews/007_df531c2/REVISION-REPORT.md, Limits and Scenario evidence.
 - **Observation and consequence:** The package accurately discloses that full client-driven workflows are untested. Prior consumer interpretation and the present 15 primitive checks do not establish actual skill discovery/routing, scope adherence, or recovery across the complete phase/feature/steering lifecycle. No source-contract failure was found; release/runtime confidence remains limited by this evidence boundary.
 - **Bounded correction:** When a suitable client is available, run a controlled consuming-agent campaign across complete main-phase, feature incorporation/archive and steering workflows, plus failing exits/rejected publication and interrupted continuation. Retain source SHA, client/environment, actual tool effects and independent acceptance assessment. Preserve existing source unless those runs establish a defect.
@@ -50,7 +50,7 @@ Findings are canonical below; absence of a finding means no actionable inconsist
 
 ### R-002 — Identify root exploration transcripts as non-authoritative history
 
-- **Type / priority / confidence / status:** Documentation recommendation / P3 / High for conflicting historical text; medium for reader confusion / Open.
+- **Type / priority / confidence / status:** Documentation recommendation / P3 / High for conflicting historical text; medium for reader confusion / Open at review completion; Accepted for planning subsequently.
 - **Baseline location:** EXPLORE_DRIVE_V1.md, Problem Statement; EXPLORE_DRIVE_V2.md, Architectural Revision opening and Git-only recovery discussion.
 - **Observation and consequence:** Root transcripts visibly retain old proposals for non-Git operation, transactions/journals and reset-based recovery. Their conversational form and V1/V2 names indicate history, and active README/skills do not reference them, but they have no explicit current-authority classification. Reusing their instructions as present policy would contradict the current preserve-work/Git-only protocol. This is navigation/document hygiene, not an observed agent failure.
 - **Bounded correction:** If accepted, label both transcripts historical/non-authoritative with a link to current README/capability entry, or move them into an explicitly historical directory and preserve existing history/links. Do not rewrite the conversations as current policy or remove them merely for age.
@@ -134,7 +134,7 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 
 ## Readiness and revision queue
 
-Coverage: all 18 planned units; 15 skills and all 50 skill references. Finding counts: zero P1, zero P2, two P3; zero confirmed source defects, one runtime evidence recommendation and one historical-document classification recommendation. All findings remain Open proposals; no repair is accepted or executed by this review.
+Coverage: all 18 planned units; 15 skills and all 50 skill references. Finding counts: zero P1, zero P2, two P3; zero confirmed source defects, one runtime evidence recommendation and one historical-document classification recommendation. At review completion, all findings were Open proposals; the later planning decision is recorded below. No repair was executed by the review.
 
 | Order | Finding | Proposed action / dependency |
 | --- | --- | --- |
@@ -142,3 +142,7 @@ Coverage: all 18 planned units; 15 skills and all 50 skill references. Finding c
 | 2 | R-001 | Obtain a suitable consuming-client environment, then run independent composed workflow acceptance/failure cases. No source rewrite required without observed failure; unavailable execution facilities remain a reported gap. |
 
 The package is structurally valid and source protocols are internally consistent within this review. Controlled client trials are the next evidence step; full client/provider behavior is not certified. Stop at review; subsequent source revision requires an accepted objective. Review artifacts and evidence are published on the established feature/architecture-revision branch; per-unit SHA history records publication. No implementation merge is needed for this read-only source campaign.
+
+## Revision planning decision
+
+The user requested a revision plan for R-001 and R-002, supplied AgentPlayground as the consumer repository and authorized choosing a small project. Both recommendations are Accepted for planning; baseline observations remain intact. [REVISION-PLAN.md](REVISION-PLAN.md) defines historical notices and the TextStats agent-driven campaign. No recommendation is marked Revised or Verified by plan publication, and project implementation has not started.
