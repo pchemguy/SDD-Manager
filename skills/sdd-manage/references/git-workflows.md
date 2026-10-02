@@ -36,3 +36,7 @@ Git merge is a local repository operation. Protected target policy may block dir
 Recover the working/target identities and starting checkpoint from Git and existing task/change evidence. Inspect actual diffs, unresolved merge entries, committed parents, accepted inputs, and pending checks. A clean tree or checked list alone does not establish completed integration. If the next action or ownership is ambiguous, preserve state and report it.
 
 Continue the same authorized operation when commanded; do not start another task or amendment. For an in-progress merge, finish scoped conflict/verification work before its commit. A verified merge committed but not pushed needs publication, not a second merge. Aborting a merge or reverting published work is a separate explicit recovery decision with unrelated work protected; no automatic rollback or new transaction journal is required.
+
+## Push authentication recovery
+
+Attempt authorized pushes with existing shell authentication. For a 403 or explicit missing/invalid-credential failure, use [hosting credentials and shell recovery](credentials.md), passing sanitized destination, operation, transport, and cause. Recover the current client's access and retry the same established destination; classify rate-limit or policy restrictions before replacing a token. Keep the commit and report pending publication on an unresolved failure. Authentication recovery does not bypass push-first execution, change the target, or authorize force-pushing.
