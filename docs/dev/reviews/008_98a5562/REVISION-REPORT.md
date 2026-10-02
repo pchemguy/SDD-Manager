@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- State: **Resumed by the user on 2026-10-02.** Saved checkpoints verified; A-003 hosted projection and A-015 interrupted-task continuation are the first resumed cases.
+- State: **Resumed by the user on 2026-10-02.** Saved checkpoints verified; live T-001 and hosted projection complete, with milestone1.1 and isolated reassessment now underway.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -43,9 +43,12 @@ Counts at the prior suspension: **6 Passed, 2 Suspended, 19 Pending; 0 Failed, 0
 | --- | --- | --- |
 | Shell recovery | Source push initially failed for a missing shell credential session. Existing ignored/untracked source token reused through a restored repository-scoped helper; same branch1780f87 pushed and remote equality checked. Consumer credentials were not copied. | Recovered |
 | A-003 | Eight issue creations and second agent synchronization independently checked. Issue1 human body/foreign label preserved; all issue/parent IDs reused without duplicates or changes. Earlier integration403 remains retained. Case evidence77b6a91 published. | Passed |
-| A-015 | Fresh consumer committed35df4a0 and pushed existing checked/verified task. All five code/test hashes unchanged;7 tests rechecked, no following task/merge. Case evidenced33986f published. | Passed |
-| A-016 | Clean task commit57234b3 pushed before task selection/tests/edits, then6 tests rechecked; no credential lookup/new commit/next task/merge. Case evidence160e2da published. | Passed |
-| A-023 | Tested controlled hosted adapter published (three self-checks); actual outage consumer received503, retained local completion and issued no writes. Restoration/uncertain-response continuation remains pending. | In progress |
+| A-015 | Fresh consumer committed35df4a0 and pushed existing checked/verified task. All five code/test hashes unchanged;7 tests rechecked, no following task/merge. Case evidence `d33986f` published. | Passed |
+| A-016 | Clean task commit57234b3 pushed before task selection/tests/edits, then6 tests rechecked; no credential lookup/new commit/next task/merge. Case evidence `160e2da` published. | Passed |
+| A-023 | Controlled adapter self-checks and actual consumer outage/uncertain-write continuation retained. Initial503 caused no writes; restored access found the applied comment after its response503 before closing the controlled issue. Exactly one comment and one closure, human material preserved, Git unchanged. Evidence `13251df` published; no live issue901 outcome is claimed. | Passed |
+| A-004 | Live T-001 core task `3b201a3` independently verified, pushed on phase1, issue1 closed with evidence. Nine tests plus eight independent literal API cases passed; only T-001 checked, main unchanged, human issue material preserved. Evidence `924ec7c` published. | Passed |
+| A-017 | Real isolated regression reproduced as three failures, repaired in scope and rechecked with seven tests; task commit `8a204f9` published to bare origin. No next task or partial-phase merge. Assessor corrected an invalid local-main assumption to the actual origin/main ref and retained that correction. Evidence `8aa3b3b` published. | Passed |
+| A-005 / TST-001 | Next milestone consumer started after input/oracle checkpoint `ee023da` was published. Preparation prompt omitted accepted tests/unit and tests/integration organization; retained flat tests remain valid. Bounded sample layout correction is explicitly included in this request, with no pinned-plugin change. TST-001 is a campaign-input omission, not a plugin defect. | In progress |
 
 Resumed campaign continues under the accepted plan. Earlier suspension records above remain historical; current case registry is authoritative for live counts. No automatic client-discovery or completed-campaign claim is made.
 
@@ -74,3 +77,7 @@ If scratch paths disappear, clone the published source/evaluation branches, veri
 ## Evidence limits
 
 Actual runtime: Python3.12.14; Python3.11 execution was not performed. Explicit loading and fresh consumer contexts are recorded; automatic discovery/installation and complete native tool-message export were unavailable. Journals and full final handoffs are labeled as such. Fixture-only primitives are not agent-driven passes; injected failures are separate from GitHub observations. The reusable fixture recreation script was consolidated after the first isolated runs; retained individual prompts, adapter contents, logs and actual states preserve that chronology. R-001 remains partially addressed pending the campaign and separate client coverage.
+
+## Current continuation checkpoint
+
+Current registry: **12 Passed, A-005 and A-022 underway; remaining cases pending.** Earlier suspension maps are historical. Live main remains `d769b55`; phase1 task tip `3b201a3`. Continue the ordered positive sequence only after each assessed case is committed, pushed and remote-verified. Current TST-001 correction must be checked before resolution. Preserve the tested source identity and record new defects without silently repairing it.
