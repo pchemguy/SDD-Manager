@@ -17,9 +17,13 @@
 
 | V-002 / R-002 | Added contract owner/consumer links and bidirectional design feedback; reviewed component-owned and cross-component guarantees plus incompatible-contract handling. Heading/link/diff and specify structural validation passed. | R-002 verified by source inspection; no mandatory mapping artifact or per-component specification split. | Persisted with this action. |
 
+| V-003 / R-003, R-004 | Established meaningful MVP-first strategy, scoped deferrals/prerequisites, small capability growth, early verification, and preservation of the useful path. Inspected greenfield and existing-system cases; subsystem-first and mocked-only outcomes are insufficient without a meaningful path. Heading/link/diff and plan structural validation passed. | R-003 verified by source inspection; R-004 revised pending task/hierarchy alignment and consumer assessment. | Persisted with this action. |
+
 ## Checkpoints
 
 - V-001: `7c2befc593e944a5d2d85ab623acfc160d0e28d7`; push and remote HEAD equality verified.
+
+- V-002: `95684309582603f1ad1e5bc287c6ad0f10596fee`; push and remote HEAD equality verified.
 
 Completed action commits are pushed and remote HEAD equality is checked before dependent work. Exact preceding checkpoints are recorded as execution proceeds; Git history supplies the containing commit for each evidence update.
 

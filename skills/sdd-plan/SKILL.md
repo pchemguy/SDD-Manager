@@ -5,6 +5,8 @@ description: Use when planning delivery phases, milestones, dependencies, or exi
 
 # Plan delivery and physical layout
 
+Default to an early meaningful end-to-end MVP followed by small, testable capability increments; preserve the complete intended design and SPEC. Use the delivery reference for scope, prerequisite exceptions, and exit evidence.
+
 Choose the requested work and load only its references. A request for complete delivery planning develops both PLAN and layout when physical ownership needs to be established; a focused request to review or revise one document does not automatically authorize rewriting the other.
 
 | Work | Load |
