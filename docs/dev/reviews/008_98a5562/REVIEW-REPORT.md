@@ -22,6 +22,7 @@
 | U-008 | C-003–C-005: entry and both references inspected. Task derivation consumes accepted strategy/layout; four-space hierarchy and project-wide IDs explicit; feature parents remain scoped; creation/review separated from reconciliation, execution and completion. No actionable defect found. | None |
 | U-009 | C-003/C-005/C-006: entry, all four references and retained MIT notice inspected. Behavioral RED distinguished from setup failure; independent expectations, deliberate doubles and sensitivity tests explicit; existing code preserved and missing chronology/authorized exceptions reported. No actionable defect found. | None |
 | U-010 | C-003/C-005: entry and all three references inspected. Every project-owned module in selected scope covered with language-appropriate professional documentation; README/examples and exclusions accounted for. Governing amendments defer to human; behavior/commit/status changes excluded. No actionable defect found. | None |
+| U-011 | C-002/C-003/C-005/C-006: entry and all three references inspected. Commands tied to identified pending/committed state, condition coverage and declared checks; zero collection/skips/unknown failures do not establish acceptance; repairs and status returned to owner. No actionable defect found. | None |
 
 ## Findings
 
@@ -50,6 +51,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-009: `72a146ec5fbb5a74ba0f4ecd1e1effb8f3b4cf87`; remote HEAD equality verified. The two heading matches from U-001 are Python comments inside a fenced example, not Markdown headings; manually dismissed. Upstream attribution/commit recorded; upstream content not independently fetched.
 
 - Before U-010: `07bc0854a05f5fbbbaf682a95b397e107455c924`; remote HEAD equality verified. Source cases: missing project style uses appropriate professional default; SPEC conflict leaves dependent edits unresolved while independent guides may continue.
+
+- Before U-011: `1ebf03361f05c5bbe7f3cea7be27539fbd7652af`; remote HEAD equality verified. Source cases: pre-existing requires baseline evidence; unsupported cause stays unknown; potentially mutating commands inspected and artifacts accounted for; interrupted run not claimed complete.
 
 ## Scenarios and checks
 
