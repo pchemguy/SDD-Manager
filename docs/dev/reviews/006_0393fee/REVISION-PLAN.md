@@ -6,7 +6,7 @@
 - **Starting baseline:** `0393fee5382be42465c7089924f315f0f6f44f7e`.
 - **Input:** Human-defined three-workflow model and accepted placement discussion; no separate review report is needed.
 - **Authorization:** Plan and execute this documentation revision, including verification, checkpoint publication, and explicit boundary integration.
-- **State:** Planned. Revision evidence will be retained in `REVISION-REPORT.md` during execution.
+- **State:** Completed; V-001–V-003 verified within recorded limits, explicitly merged, and target publication verified. Evidence: [REVISION-REPORT.md](REVISION-REPORT.md).
 
 ## Intended model
 

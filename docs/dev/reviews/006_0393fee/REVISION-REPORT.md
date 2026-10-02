@@ -7,7 +7,7 @@
 - **Execution checkpoint:** `124b5e29543e740817699851de82ab6ac35db30d`.
 - **Plan:** [REVISION-PLAN.md](REVISION-PLAN.md).
 - **Working branch:** `revision/core-workflows-006`; target: `feature/architecture-revision`.
-- **State:** V-001–V-003 verified on the working branch; target integration/publication pending.
+- **State:** Completed; V-001–V-003 verified within recorded limits, explicitly merged, and target publication verified.
 
 ## Revision evidence
 
@@ -29,7 +29,7 @@ Action reports are committed/pushed with their source; remote containment is ver
 
 ## Limits
 
-Documentation/source interpretation checks do not establish consumer runtime execution. No consumer production code, live hosted object, credential policy, task ownership, or transaction workflow is changed. Working-branch validation passed; integration/publication remain pending.
+Documentation/source interpretation checks do not establish consumer runtime execution. No consumer production code, live hosted object, credential policy, task ownership, or transaction workflow is changed. Working-branch and prospective merged-state checks passed; target publication verified.
 
 ## Structural verification
 
@@ -41,7 +41,15 @@ Documentation/source interpretation checks do not establish consumer runtime exe
 
 ## Integration
 
-Working-branch consumer assessment passed; final checkpoint and integration publication follow. Verify target freshness and prospective merged state, create one explicit two-parent merge, and verify target publication before declaring completion.
+Fetched target before integration; it was up to date. `git merge --no-ff --no-commit revision/core-workflows-006` created the prospective merge. Changed Markdown/link/credential checks, plugin validation and staged-diff whitespace passed before the explicit commit.
+
+- **V-003 tip:** `0b127d73b966e76714a5dd5363db51b789839b4a`; working-branch remote equality verified.
+- **Merge:** `2188b8ffc2418bd25ae58087abffd8b734ad5961`.
+- **Target parent:** `124b5e29543e740817699851de82ab6ac35db30d`.
+- **Revision parent:** `0b127d73b966e76714a5dd5363db51b789839b4a`.
+- **Publication:** Target push succeeded; remote HEAD equaled the merge SHA. Two-parent integration and source-boundary containment verified.
+
+This final retained evidence/navigation checkpoint changes no skill sources.
 
 ## Consumer scenario evidence
 
