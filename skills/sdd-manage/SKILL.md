@@ -1,6 +1,6 @@
 ---
 name: sdd-manage
-description: Coordinate SDD workflows for initial development, feature preparation, bounded or resumed task implementation, human-directed checkpoint amendments, accepted feature integration, focused review or maintenance, and hosted task synchronization. Use for multi-stage project requests, shared prerequisites, workflow transitions, stopping boundaries, or supplying hosting credentials to sdd-forge.
+description: Coordinate SDD workflows for initial development, feature preparation, bounded or resumed task implementation, human-directed checkpoint amendments, accepted feature integration, focused review or maintenance, and hosted task synchronization. Use for multi-stage project requests, shared prerequisites, workflow transitions, stopping boundaries, recovering shell authentication, or supplying hosting credentials to sdd-forge.
 ---
 
 # Coordinate specification-driven development
@@ -12,7 +12,7 @@ Translate the user's objective into a scoped workflow and coordinate the respons
 | Select a practical workflow and its entry, outputs, and stopping point | [available workflows](references/workflows.md) |
 | Establish prerequisites, pass scope, resolve blockers, and persist results | [coordination protocol](references/coordination.md) |
 | Establish working branches, integrate verified boundaries, or continue a blocked merge | [Git workflows](references/git-workflows.md) |
-| Accept, store, or supply a hosting token; handle an access escalation | [hosting credentials](references/credentials.md) |
+| Discover, save, or supply a repository token; recover shell/API authentication | [hosting credentials](references/credentials.md) |
 | Plan or coordinate focused/systematic review and accepted revisions | [review and revision](references/review-and-revision.md) |
 | Check representative requests and expected boundaries | [workflow examples](references/examples.md) |
 

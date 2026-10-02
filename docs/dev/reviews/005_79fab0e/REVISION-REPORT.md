@@ -15,7 +15,11 @@
 | --- | --- | --- |
 | V-001 / C-001 | Added contained hosting-token reference, Available conventions trigger, and relevant discovery/presentation wording. Inspected operation ownership and provider-neutral invariants; convention does not execute credential recovery. Heading/link/diff and conventions validator passed. | C-001 revised; composed verification pending. |
 
+| V-002 / C-002 | Replaced coordinator credential storage and recovery protocol; inspected assumed-auth push, local selection, absent/unsuitable token escalation, ignore-before-save, protected client supply and retry boundaries. Heading/link/diff and manage validator passed. | C-002 revised; fixture checks follow. |
+
 ## Checkpoints
+
+- Previous action: `ea7608d5e265629f180adbf6044746928195ca17`; push and remote HEAD equality verified.
 
 Each completed action is committed and pushed; remote HEAD equality is checked before dependent execution. The following action records preceding exact SHAs; Git history retains the containing checkpoint.
 
