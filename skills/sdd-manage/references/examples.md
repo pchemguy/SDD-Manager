@@ -6,7 +6,7 @@ These examples illustrate routing and boundaries; repository instructions and th
 | --- | --- |
 | “Prepare the project through TASKS.” An eligible Git worktree exists. | Orient; prepare the necessary design, SPEC, PLAN, layout, and tasks; check and persist the documents; stop before implementation. |
 | “Review this SPEC.” The files are outside Git. | Perform read-only behavioral review and return findings. Do not initialize Git or rewrite files. |
-| “Implement milestone 2.2.” TASKS contains its accepted requirements. | Orient; pass the boundary to **sdd-implement**; it pushes outstanding commits first, executes/persists tasks on the scoped branch, explicitly merges the verified milestone, verifies/pushes the target, and stops. |
+| “Implement milestone 2.2.” TASKS contains its accepted requirements. | Orient; pass the boundary to **sdd-implement**; it pushes outstanding commits first, executes/persists tasks on the owning phase branch, and pauses if the phase remains incomplete. A fully verified phase explicitly merges and publishes before stopping. |
 | “Resume milestone 2.2.” The last checked task is ahead of its last task commit. | Pass pending changes and evidence to **sdd-implement**. It verifies and commits the completed result without repeating implementation, then continues only within the selected boundary. |
 | “Continue.” The tree is clean but task commits are unpushed. | Orient; **sdd-implement** pushes those commits before selecting tasks, testing, or editing. A push blocker prevents further implementation. |
 | “Assess removing encrypted streams.” Implementation is paused at a checkpoint. | Route impact assessment to **sdd-steer**; return the proposed scope without mutation. |
@@ -18,6 +18,17 @@ These examples illustrate routing and boundaries; repository instructions and th
 | “Create task issues on GitHub.” No suitable token is available. | Try the available authenticated API client for the requested scope. If credential recovery is needed, find a suitable ignored token or ensure `*.tkn` exclusion and request/save `gh.tkn` with the GitHub backend profile. Local work needs no token. |
 | Resume active hosted tracking after an outage left several completed tasks open. | Reconcile verified completed tasks in the maintained tracking scope, including older pending issues; do not inspect only the latest task or add a recovery journal. |
 | Active hosted tracking returns 403 during issue closure. | Receive sanitized operation context; check suitable ignored repository tokens and escalate when necessary; recheck access before retrying. Report pending hosted closure separately from verified local completion. |
+
+## Branch and artifact examples
+
+| Request/context | Result |
+| --- | --- |
+| Main phase 2 contains an accepted milestone request, but other phase work remains. | Use phase/2-<slug>, verify/commit/push selected work, and pause without main merge or phase 3 creation. |
+| Phase 2 and all exits are complete; phase 3 execution is authorized. | Explicitly integrate/publish phase 2, then branch phase 3 from updated main; absent authorization, stop. |
+| Commanded steering at paused phase 2. | Allocate matching review identity/revision branch, retain a minimal revision report, amend and integrate into phase 2, and return control. |
+| Feature SPEC alone is incorporated while FEATURE-TASKS remains active. | Retain necessary active sources and task owner; do not archive the whole package. |
+| A complete feature is incorporated with tasks transferred. | Retain eligible sources in its features directory, repair links, mark historical snapshots, then verify/integrate the feature boundary. |
+| A legacy working branch already owns the interrupted scope. | Preserve the suitable identity/name and target; do not rename from the new convention alone. |
 
 ## Credential recovery examples
 

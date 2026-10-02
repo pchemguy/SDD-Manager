@@ -11,6 +11,12 @@ Fill fields from actual scope, accepted decisions, source evidence, and observed
 
 Record campaign ID, full starting SHA, exact reviewed/tested state when different, scope, stage status, and companion links. For imported reports, distinguish an unknown reviewed baseline from the campaign's known starting commit. Preserve stable legacy IDs and attribution. Use the canonical finding record once; other views reference it. Link existing companion files; identify not-yet-created artifacts as planned filenames rather than creating placeholders or implying that they exist.
 
+## Workflow context
+
+Apply **sdd-conventions**' **Workflow identity** for branch/directory association. Record campaign or phase ID, full baseline, actual working/target branches, current authoritative sources and relevant artifact status. A lightweight steering revision report may contain only objective/context, actual changes, verification, and publication; omit absent review/plan links.
+
+For a feature package README, present identity/full baseline, branch/target, scope, active source links, and main owner links. At archive, replace active navigation with actual archived paths and historical status/evidence; identify current task owners. This record is navigation/provenance, not a competing progress checklist. A partial phase report distinguishes pushed task-range completion from uncompleted phase integration.
+
 ## Review plan
 
 Define what will be reviewed and how evidence will be obtained. Order independent foundations before dependent implementation/coordinator concerns where appropriate. Prescribe a report update, commit, push, and remote verification after each planned unit. Do not claim the plan's scenarios have run.

@@ -23,7 +23,7 @@ For a directly accepted prompt-defined revision, record its objective, affected 
 
 ## Revise, verify, and finish
 
-1. Establish/reuse the scoped working branch and target under [Git workflows](git-workflows.md). A request to implement the accepted revision plan authorizes routine work within that boundary, including its default verified explicit merge/publication.
+1. Establish/reuse the scoped working branch and target under [branch management](branch-management.md), using [Git workflows](git-workflows.md) for integration. A request to implement the accepted revision plan authorizes routine work within that boundary, including its default verified explicit merge/publication.
 2. Coordinate accepted governing-document updates and bounded source/test/document changes with their owners. Use task-list execution where executable tasks govern the work; use authorized focused maintenance where no task is assigned. Never invent a task ID from a finding ID.
 3. After each revision action, update the revision report with actual changed artifacts, relevant acceptance/recheck evidence, finding disposition, limitations, and Git state. Commit and push source and evidence together before dependent revisions. Unresolved failures retain their actual state; do not mark a finding verified from a planned check or commit alone.
 4. Recheck composition and relevant regressions after coupled changes. Keep original review evidence intact; append current verification or link it from canonical dispositions without rewriting the baseline observation as if it never occurred.

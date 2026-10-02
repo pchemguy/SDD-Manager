@@ -28,9 +28,9 @@ Once the task list is ready:
 
 ```text
 Use sdd-manage to implement milestone 1.1 from TASKS.md.
-Verify, commit, and push each completed task. Merge the verified milestone
-into its established target with an explicit merge commit, verify and push
-the target, then stop.
+Verify, commit, and push each completed task on its phase branch.
+If the phase remains incomplete, pause without merging into main.
+Integrate only a complete verified phase, then stop at my requested boundary.
 ```
 
 Use the milestone and task IDs from your actual task list. You can start at a later stage when its inputs are already established; the coordinator does not repeat earlier stages by default.
@@ -53,7 +53,7 @@ Main describes the development purpose, not the default Git branch. The [canonic
 | --- | --- | --- |
 | Explore and prepare a project | “Compare approaches, then prepare the project through TASKS.” | Accepted design, behavior, delivery strategy, physical ownership, and executable tasks. |
 | Prepare a feature | “Define ZIP support and its feature task list.” | Scoped requirements and the necessary feature design, plan, and tasks. |
-| Implement a range | “Implement the next three tasks and stop.” | Verified task commits on a working branch, explicit boundary merge, merged-state verification, and target publication. |
+| Implement a range | “Implement the next three tasks and stop.” | Verified task commits on the phase/feature branch; incomplete phases pause, while eligible complete boundaries explicitly integrate and publish. |
 | Resume interrupted work | “Resume milestone 2.2 without discarding pending work.” | Existing work inspected and continued before new tasks are selected. |
 | Amend at a checkpoint | “Remove encrypted streams from the implemented scope, including tests and documentation.” | Verified amendment explicitly merged into the paused implementation branch, published, then control returned to the human. |
 | Integrate an accepted feature | “Incorporate FEATURE-SPEC into SPEC only.” | Selected main documents reconciled without unrelated task-list changes. |
@@ -70,12 +70,15 @@ For detailed entry conditions and stopping rules, see the [workflow catalog](ski
 Work on a scoped branch for the selected range, feature, steering amendment, or document integration. Establish its target and starting checkpoint; the target need not be the default branch. Reuse the branch when continuing the same work.
 
 - **Task checkpoints:** Commit and push each completed task before advancing.
-- **Workflow boundary:** Merge the verified completed scope by default with `git merge --no-ff`; every new integration has an explicit two-parent merge commit. Verify the prospective merged state before committing it and push the target.
+- **Phase boundary:** Main development uses `phase/<number>-<slug>`. Task/milestone subsets push and pause; complete verified phases explicitly merge into the established main integration branch. An authorized next phase starts from the updated published main tip.
+- **Revision and feature boundaries:** Use `revision/<campaign>-<slug>` or `feature/<campaign>-<slug>`, matching the artifact identity. Eligible coherent boundaries integrate with `git merge --no-ff`, merged-state verification, and target publication.
 - **Feature documents:** Incorporate selected accepted deltas on the feature branch before final verification and merge. A narrow request does not authorize unfinished feature work or unselected document changes.
 - **Steering:** Branch from the paused implementation checkpoint and merge back there. A blocked amendment retains its work and resumes on a human command; successful steering still does not resume the main task list.
 - **Failures:** Preserve valid work and report conflicts, required-check failures, or pending target publication. No automatic rollback or force-push. Separate worktrees can protect unrelated dirty work.
 
-See the [Git workflow](skills/sdd-manage/references/git-workflows.md) for branch reuse, interruption, merge verification, and publication. Git merge and feature-document incorporation have distinct owners; hosted PR operations remain outside the current backend.
+Revision and steering records live under `docs/dev/reviews/<campaign>/`; feature identity/navigation and completed incorporated sources live under `docs/dev/features/<campaign>/`. Both use one repository-wide sequence and stable starting-SHA identity. Active feature files remain in docs/dev until safely incorporated and archived; historical task snapshots are not executable owners. Main governing documents remain in docs/dev. Explicit project/user overrides and suitable legacy branches are preserved.
+
+See [branch management](skills/sdd-manage/references/branch-management.md) for naming/setup/phase transitions and the [Git workflow](skills/sdd-manage/references/git-workflows.md) for branch reuse, interruption, merge verification, and publication. Git merge and feature-document incorporation have distinct owners; hosted PR operations remain outside the current backend.
 
 ## Review and revision records
 

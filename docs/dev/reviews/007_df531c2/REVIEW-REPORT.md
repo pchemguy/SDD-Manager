@@ -111,3 +111,7 @@ Recommended placement is a focused `sdd-manage/references/branch-management.md` 
 An appropriate revision can extract current Establish the working branch rules from git-workflows.md, extend them with the accepted naming and phase lifecycle, and leave integration in its existing reference. Read-only selection/review does not create branches; implementation push-first remains before branch setup; steering still targets the paused branch and returns control. Artifact incorporation/archive decisions stay with their document owner, while branch management carries the shared identity and prerequisites.
 
 This follow-up records placement recommendations only. No branch-manager source or revision plan is created yet.
+
+## Implementation disposition
+
+R-001–R-005 are Verified for accepted source policy, consumer interpretation, and the recorded Git/file fixture surfaces. Original proposal observations and follow-up decisions above remain retained. Actual revisions, scenarios, checks, integration state, and limits: [REVISION-REPORT.md](REVISION-REPORT.md).
