@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- State: **Resumed by the user on 2026-10-02.** Saved checkpoints verified; live T-001 and hosted projection complete, with milestone1.1 and isolated reassessment now underway.
+- State: **Resumed by the user on 2026-10-02.** Interrupted workers diagnosed and resumed; milestone1.1 and isolated reassessment complete, Phase1 completion underway.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -48,7 +48,10 @@ Counts at the prior suspension: **6 Passed, 2 Suspended, 19 Pending; 0 Failed, 0
 | A-023 | Controlled adapter self-checks and actual consumer outage/uncertain-write continuation retained. Initial503 caused no writes; restored access found the applied comment after its response503 before closing the controlled issue. Exactly one comment and one closure, human material preserved, Git unchanged. Evidence `13251df` published; no live issue901 outcome is claimed. | Passed |
 | A-004 | Live T-001 core task `3b201a3` independently verified, pushed on phase1, issue1 closed with evidence. Nine tests plus eight independent literal API cases passed; only T-001 checked, main unchanged, human issue material preserved. Evidence `924ec7c` published. | Passed |
 | A-017 | Real isolated regression reproduced as three failures, repaired in scope and rechecked with seven tests; task commit `8a204f9` published to bare origin. No next task or partial-phase merge. Assessor corrected an invalid local-main assumption to the actual origin/main ref and retained that correction. Evidence `8aa3b3b` published. | Passed |
-| A-005 / TST-001 | Next milestone consumer started after input/oracle checkpoint `ee023da` was published. Preparation prompt omitted accepted tests/unit and tests/integration organization; retained flat tests remain valid. Bounded sample layout correction is explicitly included in this request, with no pinned-plugin change. TST-001 is a campaign-input omission, not a plugin defect. | In progress |
+| A-005 / TST-001 | Milestone1.1 complete: T-002 `9042c20`, T-003 `8836c49` pushed, issues2/3 closed/completed. Independent eight literal CLI cases and17 discovered tests passed; main `d769b55` unchanged. Layout `0b97f4b` corrected the omitted test-directory requirement while preserving moved test bytes. Evidence `c41165a` published; TST-001 resolved as campaign-input omission, pinned plugin unchanged. | Passed |
+| A-022 | Selected SPEC/TASKS incorporation preserved checked T-001/historical evidence with durable pending reassessment; independent orientation/selection included it. In-scope regression reassessment `332f2a4` published; seven tests passed, behavior AST unchanged, note resolved, parents/main preserved. Evidence `4a37e44` published. | Passed |
+| A-018 | Server rejected actual T-002 commit `7c29721`; worker retained it and stopped without policy changes. After root-controlled restoration, separate continuation pushed the same commit before later checks. Ten tests passed, no replacement commit/next task. Evidence `cc6c85b` published; merge-publication subcase pending. | In progress |
+| A-014 / A-006 | Out-of-range T-002 prerequisite caused a mutation-free stop. Separate isolated cross-phase execution and live Phase1 completion are now underway; neither is claimed complete. | In progress |
 
 Resumed campaign continues under the accepted plan. Earlier suspension records above remain historical; current case registry is authoritative for live counts. No automatic client-discovery or completed-campaign claim is made.
 
@@ -56,17 +59,17 @@ Resumed campaign continues under the accepted plan. Earlier suspension records a
 
 1. Re-orient source and consumer repositories, instructions, dirty paths, branch tips and remote refs. Preserve unrelated source `.codex/` and fixture staged/unstaged intent. Do not reset, delete branches or replay setup/creation drivers against existing objects.
 2. Keep the tested package pinned to `529e98d4d3cd7002e3a49e34394552a44bf0a8d0`; portable provenance/hashes are on live consumer main under `vendor/`. Runtime mode is explicit skill-source loading, not installed-client discovery.
-3. Resume A-003 first on AgentPlayground main at published `d769b55aa63f92d5ccbd8022cb9e87f07e541fae`. Re-read all-state identities and reuse labels/milestones1–4. Connector403 concerns its integration; supplied PAT proved metadata writes separately, not Issues write. The protected helper can attempt the authorized issue operation after appropriate access checks; do not print or commit `gh.tkn`. Complete first projection, independent readback, and second reconciliation/preservation trial before A-004.
-4. Continue A-004–A-013 in the accepted order, with committed/pushed case assessments before dependent work. The live consumer has no product implementation; isolated A-020 code is acceptance evidence, not work to silently promote into main.
-5. Resume A-015 separately with a fresh consumer after deliberately releasing its controlled commit hook. Use the existing checked/verified T-001 and pending files; do not reimplement or advance. Completion requires durable commit/push and independent assessment. Preserve earlier rejected attempt and recovery evidence.
-6. Continue remaining isolated cases, then A-027 and source integration. Source merge must be explicit two-parent `--no-ff` into the established target only after the authorized revision boundary is complete and verified.
+3. Current positive continuation is A-006, live Phase1 completion after published A-005. Keep all already verified/pushed tasks and hosted identities. Continue A-007–A-013 in order only after each preceding assessment is published/remote-verified.
+4. Current isolated continuation is A-014 cross-phase execution after its prerequisite-block subcase, and A-018 merge-publication rejection after verified retained task-commit recovery. A-022 complete. Complete A-019/A-021 and final A-027 when their actual prerequisite checkpoints exist; do not manufacture success or replay initial setup into existing forks.
+5. Consult the evaluation registry and retained case prompts/journals for precise live state. A pending publisher must finish before another evaluation mutation; an interrupted consumer resumes its same owned work. No new workers are needed.
+6. Source merge remains explicit two-parent into the established target after the authorized revision boundary is complete and verified. Native automatic discovery/installation is still an unavailable facility, not a case pass.
 
 ## Worktree and restoration map
 
 | Purpose | Local path | Durable checkpoint |
 | --- | --- | --- |
 | Source revision | `/workspace/scratch/6420baa7afea` | Source revision branch; this report and plan |
-| Live consumer | `/workspace/scratch/AgentPlayground-sdd-008` | AgentPlayground main `d769b55`; no product source |
+| Live consumer | `/workspace/scratch/AgentPlayground-sdd-008` | Main `d769b55`; phase1 published T-004 `b9fabb0`, T-005 pending at this checkpoint |
 | Evaluation | `/workspace/scratch/AgentPlayground-evidence-008` | `evaluation/008-runtime-acceptance`; case records and RESUME.md |
 | Interrupted task | `/workspace/scratch/sdd008-A-015/repo` | `runs/A-015/` bundle, pending-file/index snapshot, actual RED/GREEN/check/hook evidence |
 | Staging trial | `/workspace/scratch/sdd008-A-020/repo` | `runs/A-020/` bundle at `57234b3`, unrelated content/index snapshot |
@@ -80,4 +83,8 @@ Actual runtime: Python3.12.14; Python3.11 execution was not performed. Explicit 
 
 ## Current continuation checkpoint
 
-Current registry: **12 Passed, A-005 and A-022 underway; remaining cases pending.** Earlier suspension maps are historical. Live main remains `d769b55`; phase1 task tip `3b201a3`. Continue the ordered positive sequence only after each assessed case is committed, pushed and remote-verified. Current TST-001 correction must be checked before resolution. Preserve the tested source identity and record new defects without silently repairing it.
+Checkpoint registry: **14 Passed, 3 Running (A-006, A-014, A-018), 10 Pending.** Earlier suspension maps are historical. Live main remains `d769b55`; T-004 `b9fabb0` is published on phase1 while T-005 is underway. TST-001 resolved with verified layout/tests. Source/evaluation/live and isolated current tips were re-read after user-requested interruption diagnosis; no merge was pending or reset/setup replay needed. Resume the same workers and actual state. Continue the ordered positive sequence only after each case assessment is committed, pushed and remote-verified. Preserve the tested source identity; record new defects without silently repairing it.
+
+## Publication protection
+
+Automatic approval review rejected a proposed raw GitHub response publication as possible private-content disclosure. That attempt did not execute. A safer assessment retained only task IDs/states and verification booleans, alongside product logs and consumer handoffs; publication succeeded at `c41165a`. Raw hosted payloads are excluded from subsequent assessment exports.
