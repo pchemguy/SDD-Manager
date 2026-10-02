@@ -27,6 +27,7 @@
 | U-013 | C-002/C-003/C-005/C-006: entry and all three backend references inspected. Backend owns provider access/mapping; report optional with baseline; exact task markers, duplicate conflicts and owned-field reconciliation preserve host/user state; closure follows verified committed local evidence. No actionable defect found. | None |
 | U-014 | C-002/C-003/C-005/C-006: entry/all four references inspected. Push-first precedes task work; continuation preserves verified pending completion and scope; dependencies and phase segments explicit; per-task evidence/commit/push/closure and full-phase integration separate. Unrelated index staging protected. No actionable source defect found. | None |
 | U-015 | C-002/C-003/C-005/C-006: entry/all three references inspected. Assessment versus commanded mutation distinguished; minimal identity record and paused target established; direct governing edits/no feature layer; completion reassessment and owner-scoped repairs; publication followed by human stop. No actionable source defect found. | None |
+| U-016 | C-002–C-006: entry/all seven references inspected. Three core workflows and independently selectable stages consistent; branch manager is Git-only; campaign allocation, phase transitions, credential recovery and no-ff merge gates align with focused owners. No actionable source defect found. | None |
 
 ## Findings
 
@@ -65,6 +66,8 @@ Plan/report initialization; subsequent entries record exact preceding commits an
 - Before U-014: `15b34c949c93cba9ff86a6aedda8f005e46d5e74`; remote HEAD equality verified. Source cases: selection-only performs no push; reassessment notes prevent skipping checked tasks; interrupted task outside new range blocks overlapping work; older hosted backlog retained; incomplete phase pauses.
 
 - Before U-015: `39201132d79de246f905780d605b57cff43d71fc`; remote HEAD equality verified. Source cases: blocked amendment resumes only on human command; removal protects retained contracts; task disappearance does not automatically close issue; no task selection or implement invocation after success.
+
+- Before U-016: `e13215e0711b9355ca642443e45f5974af9c86f7`; remote HEAD equality verified. Source cases: complete phase requires verified exits/published target before authorized next phase; preparation preserves feature identity; SSH is not silently changed; uncertain push checked before retry; already integrated tip is not remerged.
 
 ## Scenarios and checks
 
