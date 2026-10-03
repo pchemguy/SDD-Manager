@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "case_id": "A-008",
+  "checks": [
+    {
+      "id": "active-ownership",
+      "kind": "task_ownership"
+    },
+    {
+      "id": "final-head",
+      "kind": "git",
+      "field": "head",
+      "expected_ref": "checkpoint_refs.product_commit"
+    },
+    {
+      "id": "published",
+      "kind": "git",
+      "field": "publication",
+      "expected": "published"
+    }
+  ],
+  "required_agent_checks": [
+    "Feature branch/package identity and reserved directory correspond; deltas and FEATURE-TASKS exist at convention root paths; unrelated active package preserved.",
+    "Named-file range completion does not depend on delivering future stdin. Trace first derived feature dependency to supplied input/pinned guidance; do not coach consumer."
+  ]
+}

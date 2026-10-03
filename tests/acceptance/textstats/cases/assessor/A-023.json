@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "case_id": "A-023",
+  "checks": [
+    {
+      "id": "active-ownership",
+      "kind": "task_ownership"
+    },
+    {
+      "id": "final-head",
+      "kind": "git",
+      "field": "head",
+      "expected_ref": "checkpoint_refs.product_commit"
+    }
+  ],
+  "required_agent_checks": [
+    "Real local completion persists while hosted effect is unavailable/unknown; pending operation uses exact discovered hosted identity.",
+    "Readback precedes replay; no duplicate issue/comment/closure; restored access reconciles older maintained backlog. Distinguish injected response from provider readback."
+  ]
+}
