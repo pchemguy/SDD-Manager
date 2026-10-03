@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- Current state: **Safely suspended after A-018, as requested.** This continuation completed A-006, A-014 and A-018, with independent checks and published records. Current counts: **17 Passed, 10 Pending; 0 Failed, Blocked, Suspended or Running cases.** The campaign itself is paused; A-007–A-009 remain unstarted and overall revision integration remains pending.
+- Current state: **Authorized two-case continuation in progress.** User requested the next two pending cases: A-007 live JSON milestone, then A-008 line-selection feature preparation. Stop before A-009. Prior suspended checkpoint was17 Passed/10 Pending, with all prior records published; final assessments will update counts.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -155,3 +155,7 @@ The user changed the stopping boundary to **after A-018**. No A-007–A-009 or o
 [Current resume instructions](https://github.com/pchemguy/AgentPlayground/blob/evaluation/008-runtime-acceptance/docs/dev/reviews/001_608cf12/RESUME.md) and SUSPENSION-20261003.json were committed as `0b961bc`; they identify A-007 as the next positive case only after a new resumption request. Counts reconcile at17 Passed/10 Pending and no running/failed/blocked cases. Overall R-001 remains partially addressed, and the source boundary merge is deferred until the accepted remaining campaign is completed and assessed. No new pinned-plugin defect was established by this bounded continuation.
 
 Evidence limits remain: explicit pinned source loading with independent fresh consumers, not automatic installation/discovery; actual Python3.12.14, no3.11 execution; complete available new journals/outputs/handoffs, not fabricated native tool-message exports. Earlier T004/Phase1 excerpts are labeled accurately. Controlled fixture setup/restoration is distinguished from consumer actions. Automatic publication authorization blockage was resolved by the user’s explicit authorization and both repositories’ pushes succeeded; it is not a remaining blocker.
+
+## Next two-case continuation
+
+The user requested “Next two cases - go”, authorizing A-007 and A-008 only. Current source/evidence/live checkpoints were reoriented; live main remains29c2758 and owned tracked state is clean, with existing unrelated bytecode preserved. A fresh isolated consumer consumes pinned529e98d to deliver JSON milestone2.1 on its phase branch while maintaining hosted tracking, then pauses. A-008 will prepare the accepted line-selection feature package in a separate fresh context only after independent A-007 evidence publication. Stop before SPEC-only incorporation A-009 or any feature implementation. Earlier named-destination and replacement-consumer authorization persists.
