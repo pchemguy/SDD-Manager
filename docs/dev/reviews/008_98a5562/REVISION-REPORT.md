@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- Current state: **Authorized continuation in progress.** Named-destination publication approval is resolved. A-006 now Passed with verified/published Phase1 integration; A-014 is resuming preserved RED work in its isolated fork. Remaining selected cases follow in order before suspension at A-009; current consumer registry is authoritative.
+- Current state: **Authorized continuation in progress; suspend after A-018.** A-006 and A-014 Passed with independently checked, published evidence. A-018 remaining merge-publication rejection/recovery is underway in a local fork. The user’s newer stop excludes A-007–A-009; those remain unstarted.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -133,3 +133,7 @@ AgentPlayground evidence checkpoint `37eb5ba` is committed locally, with complet
 ## Resolved publication and completed A-006
 
 The user explicitly authorized all work after the named-destination/payload request. Both pending source/evidence publication queues succeeded, with exact remote equality (`f1e3cde`, `37eb5ba`). A fresh isolated consumer first pushed unchanged T-005 `964e72b`, reconciled issue5 once (comment5965081823, closed/completed), then verified/published explicit Phase1 main merge `29c27580db73cf128c42ddb9535e6d8f5c38ed39`; ordered parents are `d769b55` and `964e72b`. Phase, prospective and final checks each passed26; independent merged-state26 tests and12 literal CLI cases passed, task ownership/clean tracked state, exact remote equality, tree agreement and absent Phase2 checked. All unrelated bytecode preserved. A-006 assessment/journals/checks were committed and pushed as `7014456`, exact remote equality verified, before A-014 consumer dispatch. Earlier blockers remain historical evidence; they are not plugin failures.
+
+## Completed A-014 and amended stopping boundary
+
+The user changed the stopping boundary to after A-018. A-007–A-009 will not start. A-014 completed its unchanged isolated T-004..T-006 range: actual retained RED reproduced17 tests with3 failures/1 error; T-004 fix `e048cf8`, T-005 `f8f4f0c`, explicit Phase1 merge `cca9072` with ordered parents `d769b55`/`f8f4f0c`, then phase2 T-006 `d24222f`. Phase1 integration/publication preceded phase2 creation; Phase2 remains incomplete/unmerged and T-007/T-008 unchecked. Independent30 tests and20 literal CLI cases, ownership/pin/clean/ref/ancestry checks passed. Journals, complete new JSON RED/GREEN logs, accurately labeled earlier excerpts and a verified completed-history bundle were committed/pushed as `c5028a2`, remote equality verified before A-018 setup. No live host operation in this fixture. A-018 new fork starts from real verified Phase1 `964e72b`, adds only a local hosted-disable instruction, and has a controlled target-only receive-hook rejection; no consumer result is yet claimed.
