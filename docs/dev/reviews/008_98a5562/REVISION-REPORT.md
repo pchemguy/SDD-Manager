@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- Current state: **Authorized three-case continuation.** A-010 independently Passed and published; A-011 assessment is underway, A-012 not started. Registry currently21 Passed/6 Pending. Stop after A-012, before A-013; source boundary integration remains pending.
+- Current state: **Authorized three-case continuation.** A-010/A-011 independently Passed and published; A-012 JSON-removal amendment underway. Registry currently22 Passed/5 Pending. Stop after A-012, before A-013; source boundary integration remains pending.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -194,3 +194,10 @@ The user requested “Next three cases - go”, authorizing A-010/A-011/A-012 in
 The consumer verified and published explicit feature merge `d0eeeffc0432a45a603ef17cca457e9f04544876` into paused `phase/2-output-and-input-extensions`, with ordered parents `8a53078d0f734165075691dae0dbfa224a63446f` and `799e5c703dbc9c99a3832f19ea2aad44949f5e51`. Independent41 tests/83 literal CLI cases passed, including full-input UTF-8/BOM ordering, range/JSON/error/EOF/Unicode and4301-digit endpoints. Eleven unique task owners,56 local links, exact feature/target/main remote refs,97 pinned hashes and12 unrelated bytecode hashes passed. Issues9–11 are closed/completed with one evidence comment each pointing to reachable task commits; hosted IDs, foreign body hashes and pre-existing labels preserved. Main29c2758 unchanged; no stdin/main-phase continuation.
 
 Evidence `66820aca60d1b1e34c732f4061d5c23e200e977b` pushed to AgentPlayground with exact remote equality. A local metadata-output path TypeError after successful projection was corrected without duplicate writes. Consumer disclosed an incidental directory-name inventory; no other case file contents/evaluator/oracles were read. Retained journals/logs are actual available records, not a native transcript. Explicit-source/Python3.12.14 and simulated-permission limits remain. A-011 is the next assessment-only request; A-012 begins only after its independent assessment publication. No pinned-plugin defect was established.
+
+
+## A-011 assessment completed
+
+A fresh pinned-source consumer assessed JSON removal without implementation. It identified current document/CLI/README/CLI-and-distribution-test impacts, T006/Milestone2.1 retired-scope disposition, T010/T011/Milestone2.3 reassessment, planned plain-output stdin and warranted hosted reconciliation. Exact plain output and public API/counting/named-file/BOM/range/UTF-8/error/resource obligations remain; --json becomes unknown-option usage2 while literal dash-prefixed filenames remain supported. No material product ambiguity was reported.
+
+Independent full HEAD/branch/refs/tree/index/worktree preservation, absence of new untracked repository files,12 bytecode hashes and unchanged selected metadata for11 hosted tasks support the assessment-only boundary. No tests, repository changes, campaign reservation, hosted actions, task continuation or merge by the consumer. Its locally observed remote-tracking refs/live-hosting limits are explicit; parent protected GET observation is separately labeled. Full assessment/inspection journal retained. Evidence `f087c9b261ff5db8aee9aad8260a804274320f33` committed/pushed to AgentPlayground with exact remote equality. A-012 has been commanded in a separate context using only the specifically authorized assessment inputs and current project state; no A-013 work is authorized in this continuation.
