@@ -3,12 +3,90 @@ import importlib.util
 import json
 from pathlib import Path
 import subprocess
+import sys
 try:
-    from .support import Sandbox, git
+    from .support import Sandbox, SCRIPTS, git
 except ImportError:
-    from support import Sandbox, git
+    from support import Sandbox, SCRIPTS, git
 
 class RecoveryTests(Sandbox):
+    def _consumer_snapshot(self):
+        return (git(self.repo,'rev-parse','HEAD').stdout,
+                git(self.repo,'for-each-ref').stdout,
+                git(self.repo,'status','--porcelain').stdout,
+                (self.repo/'.git/index').read_bytes(),
+                (self.repo/'owned.txt').read_bytes(),
+                (self.repo/'owned.txt').stat().st_mode,
+                sorted(str(p.relative_to(self.repo)) for p in self.repo.rglob('*') if '.git' not in p.relative_to(self.repo).parts))
+
+    def _observe_from_caller(self, output):
+        (self.root/'inputs.json').write_text(json.dumps(self.inputs))
+        (self.root/'state.json').write_text(json.dumps(self.state))
+        return subprocess.run([sys.executable,str(SCRIPTS/'observe.py'),
+                               '--inputs','inputs.json','--run-state','state.json',
+                               '--output',str(output)],cwd=self.root,capture_output=True,text=True)
+
+    def _assert_caller_export(self, output):
+        before=self._consumer_snapshot()
+        proc=self._observe_from_caller(output)
+        self.assertEqual(proc.returncode,0,proc.stdout+proc.stderr)
+        out=self.root/output
+        data=json.loads(out.read_text())
+        export=Path(data['recovery']['path'])
+        self.assertTrue(export.is_absolute())
+        self.assertEqual(export,Path(str(out)+'.recovery'))
+        manifest_path=export/'manifest.json'
+        self.assertEqual(hashlib.sha256(manifest_path.read_bytes()).hexdigest(),data['recovery']['manifest_sha256'])
+        manifest=json.loads(manifest_path.read_text())
+        self.assertTrue(manifest['complete'])
+        self.assertEqual(manifest['bundle'],'objects.bundle')
+        self.assertIn('objects.bundle',manifest['artifact_hashes'])
+        for name,expected in manifest['artifact_hashes'].items():
+            self.assertEqual(hashlib.sha256((export/name).read_bytes()).hexdigest(),expected,name)
+        self.assertEqual(self._consumer_snapshot(),before)
+        restored=out.parent/(out.name+'.restored')
+        git(self.root,'clone',str(self.remote),str(restored))
+        git(restored,'bundle','verify',str(export/'objects.bundle'))
+        git(restored,'fetch',str(export/'objects.bundle'),'refs/heads/main')
+        self.assertEqual(git(restored,'rev-parse','FETCH_HEAD').stdout.strip(),manifest['head'])
+
+    def test_caller_relative_cli_exports_verified_bundle_outside_consumer(self):
+        for output in (Path('relative-observation.json'),Path('new-attempt/nested/observation.json')):
+            with self.subTest(output=str(output)):
+                self._assert_caller_export(output)
+
+    def test_absolute_cli_output_creates_missing_parent(self):
+        self._assert_caller_export(self.root/'absolute-attempt/nested/observation.json')
+
+    def test_cli_refuses_occupied_and_dangling_output_and_recovery_paths(self):
+        for suffix,cause in (('', 'output_occupied'),('.recovery','recovery_export_occupied')):
+            for kind in ('file','directory','symlink','dangling-symlink'):
+                with self.subTest(suffix=suffix,kind=kind):
+                    output=Path('refuse-'+kind+('-recovery' if suffix else '')+'.json')
+                    occupied=self.root/(str(output)+suffix)
+                    target=self.root/(str(output)+'.target')
+                    if kind=='file': occupied.write_text('retained evidence\n')
+                    elif kind=='directory':
+                        occupied.mkdir()
+                        (occupied/'retained').write_text('retained evidence\n')
+                    else:
+                        if kind=='symlink': target.mkdir()
+                        occupied.symlink_to(target,target_is_directory=True)
+                    before=self._consumer_snapshot()
+                    proc=self._observe_from_caller(output)
+                    self.assertEqual(proc.returncode,2,proc.stdout+proc.stderr)
+                    self.assertEqual(json.loads(proc.stdout)['cause'],cause)
+                    self.assertEqual(self._consumer_snapshot(),before)
+                    if kind=='file': self.assertEqual(occupied.read_text(),'retained evidence\n')
+                    elif kind=='directory': self.assertEqual((occupied/'retained').read_text(),'retained evidence\n')
+                    else:
+                        self.assertTrue(occupied.is_symlink())
+                        self.assertEqual(occupied.readlink(),target)
+                        if kind=='symlink': self.assertEqual(list(target.iterdir()),[])
+                        else: self.assertFalse(target.exists())
+                    if suffix: self.assertFalse((self.root/output).exists())
+                    else: self.assertFalse(Path(str(self.root/output)+'.recovery').exists())
+
     def test_actual_staged_and_unstaged_intent_export_and_restore(self):
         (self.repo / 'owned.txt').write_text('staged\n')
         git(self.repo,'add','owned.txt')

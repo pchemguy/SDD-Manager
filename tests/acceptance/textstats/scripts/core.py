@@ -367,8 +367,10 @@ def reconcile(actual, state, repo_info):
 
 
 def export_recovery(root, actual, output, state=None):
-    destination=Path(str(output)+'.recovery')
-    if destination.exists(): raise Stop('recovery_export_occupied')
+    # Git runs in the consumer checkout; Python and Git must share the caller's path.
+    # Keep the lexical target so dangling symlinks still count as occupied evidence.
+    destination=Path(str(output)+'.recovery').absolute()
+    if destination.exists() or destination.is_symlink(): raise Stop('recovery_export_occupied')
     # Inspect eligible content before writing an export, excluding protected paths entirely.
     index=[e for e in actual['index'] if not protected(e['path'])]
     omitted=any(protected(e['path']) for e in actual['index'])
@@ -418,7 +420,7 @@ def export_recovery(root, actual, output, state=None):
         if name and protected(name): safe_bundle=False; continue
         typ=git(root,'cat-file','-t',oid).stdout.strip()
         if typ in {'blob','commit','tag'} and safe_bundle: clean_bytes(git(root,'cat-file',typ,oid,binary=True).stdout)
-    destination.mkdir()
+    destination.mkdir(parents=True)
     for directory,contents in [('blobs',objects),('files',files)]:
         (destination/directory).mkdir()
         for name,content in contents.items(): (destination/directory/name).write_bytes(content)

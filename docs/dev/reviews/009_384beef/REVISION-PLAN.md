@@ -5,7 +5,7 @@
 - **Campaign:** `009_384beef`.
 - **Starting baseline:** `384beefb6186348af9b100de9bec2f5a4a024692`.
 - **Origin:** User-requested integration of TextStats as a reusable SDD Manager diagnostic test project, following the [008 campaign report](../008_98a5562/REVISION-REPORT.md).
-- **State:** Execution active: Task1 entry documents/schemas implemented and reviewed; portable helpers and case contracts follow. New live acceptance awaits its dedicated repository input.
+- **State:** Tasks 1–3 implemented and reviewed: entry documents/schemas, portable helpers and case contracts complete; fresh directory-only bootstrap verified. New live acceptance remains an explicit follow-up awaiting its dedicated repository input.
 - **Scope:** Self-contained test infrastructure, agent/human entry documents, phased execution, interruption recovery and diagnostic reporting. No plugin defect repair is implied by this plan.
 - **Execution:** Coordinate accepted revision work through SDD Manager, preserving scope, verification, reporting and publication boundaries.
 
@@ -190,4 +190,4 @@ If no confirmed plugin defect is found, state directly: “No confirmed SDD Mana
 
 The directory alone supplies the reusable context; the agent requests only missing external inputs. Fresh and resumed execution use the same entry point. Phase boundaries, controlled triggers and unexpected termination have observed recovery evidence. Test outcomes remain separate from diagnosis, and proposed plugin fixes are causal, bounded and verifiable. No essential runtime dependency remains on the old chat, scratch workspace or AgentPlayground repository.
 
-This document is a plan. The test bundle and new execution have not yet been implemented.
+The reusable test bundle is implemented and reviewed. New live acceptance remains unexecuted and pending as the explicit dedicated-repository follow-up.
