@@ -6,10 +6,10 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- Current state: **Resumed on explicit user instruction.** Complete remaining A-021 and A-027 under the accepted plan, then verified source revision integration. Registry25 Passed/2 Pending at resumption; no prior-case replay. Source boundary integration remains pending.
-- Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
+- Current state: **All27 scoped cases Passed after independent final assessment.** Explicit-source runtime evidence is complete; installed-client discovery/routing/activation remains open. V007 integration/publication follows the verified working checkpoint below.
+- Current counts: **27 Passed;0 Failed,Blocked,Suspended,Running,Pending**. Preserve both source branches and unrelated work. Earlier checkpoint instructions/counts below are historical and superseded by this disposition.
 
-## Revision evidence
+## Initial execution evidence (historical checkpoint)
 
 | Action | Actual result / checks | Disposition |
 | --- | --- | --- |
@@ -20,7 +20,7 @@
 | V-005 / R-001 | Controlled API routing, credential exclusion, verification limits and staged-work consumers executed. Commit hook stopped an actual verified task before commit; fresh recovery has not run. | A-020/A-024/A-025/A-026 Passed within stated fixture scope; A-015 Suspended. Remaining negative cases Pending. |
 | V-006 / V-007 | Final campaign assessment and completed source integration not executed. | Resume required; no complete runtime or installed-client certification. |
 
-## Published consumer evidence
+## Initial published consumer evidence (historical checkpoint)
 
 [AgentPlayground acceptance records](https://github.com/pchemguy/AgentPlayground/tree/evaluation/008-runtime-acceptance/docs/dev/reviews/001_608cf12) contain the case registry, assessments, retained prompts, available action journals/final handoffs and actual checks. Reusable tools and isolated scenario setup are in the same branch's `tests/workflows/`. [RESUME.md](https://github.com/pchemguy/AgentPlayground/blob/evaluation/008-runtime-acceptance/docs/dev/reviews/001_608cf12/RESUME.md) records continuation and checkpoint restoration.
 
@@ -55,7 +55,7 @@ Counts at the prior suspension: **6 Passed, 2 Suspended, 19 Pending; 0 Failed, 0
 
 Resumed campaign continues under the accepted plan. Earlier suspension records above remain historical; current case registry is authoritative for live counts. No automatic client-discovery or completed-campaign claim is made.
 
-## Resume protocol
+## Earlier resume protocol (historical checkpoint)
 
 1. Re-orient source and consumer repositories, instructions, dirty paths, branch tips and remote refs. Preserve unrelated source `.codex/` and fixture staged/unstaged intent. Do not reset, delete branches or replay setup/creation drivers against existing objects.
 2. Keep the tested package pinned to `529e98d4d3cd7002e3a49e34394552a44bf0a8d0`; portable provenance/hashes are on live consumer main under `vendor/`. Runtime mode is explicit skill-source loading, not installed-client discovery.
@@ -64,7 +64,7 @@ Resumed campaign continues under the accepted plan. Earlier suspension records a
 5. Consult the evaluation registry and retained case prompts/journals for precise live state. A pending publisher must finish before another evaluation mutation; an interrupted consumer resumes its same owned work. No new workers are needed.
 6. Source merge remains explicit two-parent into the established target after the authorized revision boundary is complete and verified. Native automatic discovery/installation is still an unavailable facility, not a case pass.
 
-## Worktree and restoration map
+## Earlier worktree and restoration map (historical checkpoint)
 
 | Purpose | Local path | Durable checkpoint |
 | --- | --- | --- |
@@ -231,3 +231,19 @@ The user requested “Resume” after the controlled stop. Current continuation 
 ### A-021 — Interrupted feature transfer and archive recovery completed
 
 Two fresh consumers performed the actual partial T009 transfer and its continuation. Nine dirty documents and needed active sources were preserved at interruption; continuation transferred T010/T011, retained complete main task evidence and historical archives/navigation, published feature b74570a and explicit target merge5f2be6b. Independent41 tests/83 CLI cases,57 document links, sole ownership,97 pinned hashes and exact local-origin refs passed; main/T007/T008/whole Phase2 remain incomplete. The historical archive correctly points to already-transferred T009 evidence in main rather than duplicating its row. Assessor local-main and archive-duplication assumptions were corrected with original checkers/disclosures retained; no product repairs. Incidental historical commit-subject inventory is disclosed, without content use. Evidence f20a93baa371a90d39bef6b96a0469f19a9c42da was pushed and exact remote equality verified. Current counts26 Passed/1 Pending(A027); source integration remains pending final assessment.
+
+### Final-audit interruption diagnosis and same-worker recovery
+
+The user reported interruption and requested resume. Actual worker status was interrupted during A027 evidence reconciliation; all fresh live46 tests, evidence17 tests and retained CLI-oracle commands had already exited0, with observation artifacts retained. Root re-read source/evidence/live/A021 HEAD, branch, tracked state and MERGE_HEAD: no pending merge, no product/evidence changes, only five intended source status-doc edits. The same assessor was resumed from its actual outputs/context; no setup, task implementation, hosted writes or completed-case replay. Diagnosis is retained with final integration evidence.
+
+## Final A-027 assessment and scoped dispositions
+
+The independent assessor inspected actual A001–A026 consumer inputs/journals/handoffs, failed attempts, state exports and publication evidence, then freshly passed46 product tests,17 evidence self-tests and122 retained literal CLI cases plus3 help/literal-filename checks. It verified97 pinned bytes,9 recovery bundles,16 exact current remote branch tips,seven actual lifecycle merges/ancestry,11 unchanged selected hosted rows,57 A021 links and60 source links. All26 cases and A027 are supported within the recorded scope. The report, coverage rows, actual logs and evidence hashes are published under AgentPlayground evaluation runs/A-027 at8bf3ab7d0497134b1fbc61645549be302ff49617, pushed with exact remote equality verified. No new blocking pinned-plugin defect was established.
+
+R-002 is Verified: both notices preserve original transcripts and direct readers to current authority. R-001 is partially addressed: the available explicit-source composed-runtime gap is verified, while installed-client discovery/routing/activation/display remains Not run and open. Python3.12.14 was observed, no3.11 execution. Available action journals/logs/handoffs are not native complete transcripts. Controlled hooks/readiness/API adapters and external owner restorations are fixture evidence, not real hosted outages; A024 covers API-session recovery, not lost Git-shell session, and A025 covers tracked synthetic-token rejection, not a separate uncommitted staged-secret commit rejection. Historical milestones1–3 remain open; current Phase2 milestones4/5 are closed. No claim covers all historical milestones or unselected provider fields.
+
+TST001 input omission, TST002 scope clarification, TST003 checklist defect/coordinator review assistance, and TST004 provider-body retention/display mistake with sanitation before publication remain disclosed; no unassisted first-pass or fully compliant initial handling claim. A014 retains partial Phase1 RED/GREEN excerpts. Assessor local-ref/heading/archive assumptions were corrected with original failures retained, without product/oracle changes. The final assessor stopped without authoritative or hosted writes. A027 interruption was recovered through the same worker and actual retained outputs.
+
+## V-007 source boundary readiness
+
+The complete revision diff from target98a083b is scoped to historical notices, current README/review status and campaign008 records/verification harness. All97 tested package files are identical to pin529e98d; no plugin behavior revision occurred. The target was fetched and remained98a083b. Source local links, reversible notice preservation, package validator and diff checks pass. The verified working checkpoint will be pushed before explicit no-ff/no-commit integration into feature/architecture-revision, followed by prospective/committed checks and exact remote verification. Actual boundary identities/publication will be added after the merge, without deleting branches or unrelated work.
