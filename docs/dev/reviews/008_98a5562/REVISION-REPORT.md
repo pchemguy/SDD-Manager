@@ -1,5 +1,34 @@
 # Historical notices and composed workflow revision report
 
+## TextStats diagnostic summary
+
+TextStats was the controlled test project for diagnosing SDD Manager’s development workflows. The application, its governing documents and its delivery history supplied concrete test material; the diagnostic outcome concerns how agents applied the pinned plugin instructions.
+
+### What testing demonstrated
+
+All 27 scoped cases passed final independent assessment in explicit skill-source loading mode. Actual consumer work exercised preparation and bounded task selection, incremental implementation, verification/documentation, hosted tracking, complete-phase integration, feature incorporation/archive, steering amendments, and interrupted or rejected-operation recovery. Independent assessment inspected application behavior, document/task ownership, preserved state, Git parents and publication effects. Final campaign checks passed 46 product tests, 17 harness self-tests and 122 literal CLI cases, plus three help/filename checks.
+
+These are outcomes under the recorded conditions, including coordinator clarification/review assistance and controlled owner restoration. They do not demonstrate unassisted first-pass success for every case. Installed-client discovery/routing/activation remains untested; Python 3.12.14 was observed, with no Python 3.11 execution. Available journals are not complete native transcripts. Controlled failure fixtures are distinct from real hosted failures.
+
+### Diagnostic findings and actions taken
+
+| Observation | Recorded diagnosis and action | SDD Manager change |
+| --- | --- | --- |
+| TST-001: required test-directory organization omitted from preparation input | Corrected the campaign input and TextStats layout while preserving moved test bytes. | None. |
+| TST-002: future stdin compatibility became a feature-completion dependency | Clarified campaign scope and reviewed/corrected the feature documents. Pass includes this assistance. | None; a plugin instruction defect was not established. |
+| TST-003: retired JSON work remained executable | Coordinator review corrected TextStats task/plan retirement while preserving identity and historical evidence. Pass includes this assistance. | None; a plugin instruction defect was not established. |
+| TST-004: provider bodies retained/displayed during assessment | Sanitized retained records before publication and used metadata-only observers; the original handling error remains disclosed. | None; this was campaign record handling. |
+
+The [diagnostic findings](https://github.com/pchemguy/AgentPlayground/blob/main/docs/dev/reviews/001_608cf12/FINDINGS.md) and [final independent assessment](https://github.com/pchemguy/AgentPlayground/blob/main/docs/dev/reviews/001_608cf12/runs/A-027/A-027-final.md) retain the original observations, corrections and limits. Assessor checker assumptions were also corrected without changing the product to fit expectations. Later integration of the evidence into AgentPlayground main corrected its ownership harness to exclude archived review snapshots; that was a test-harness change.
+
+**No TextStats-derived change was made to SDD Manager’s skills, workflow instructions or implementation.** All 97 pinned package files remained unchanged. Source-repository actions were evidence/status documentation and publication. R-002’s historical-transcript notices were implemented before TextStats testing and were not a test-derived fix. R-001’s explicit-source runtime evidence gap was addressed; its installed-client coverage remains open.
+
+### Change decision and proposed follow-up
+
+**No confirmed SDD Manager source defect was established by this campaign, and no test-derived plugin patch is proposed on the current evidence.** This states the present diagnosis, not that the plugin is defect-free. Application and coordinator errors are diagnostic evidence; their classification alone does not prove the plugin guidance was sufficient.
+
+A focused diagnostic follow-up is recommended for TST-002 and TST-003: trace the original consumer decisions to the exact supplied inputs and pinned instructions, distinguish input ambiguity or application error from missing/conflicting guidance, and reproduce any suspected instruction weakness before proposing a bounded fix. This investigation has not been performed or converted into an accepted repair. Separately, installed-client execution is required to assess the remaining discovery/routing/activation gap. Successful assisted completion and case counts alone do not close either question.
+
 ## Campaign and suspension
 
 - Campaign: `008_98a5562`; reviewed baseline `98a556218d81870a4751ad308f6586587ac1d7da`.
