@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- Current state: **All27 scoped cases Passed after independent final assessment.** Explicit-source runtime evidence is complete; installed-client discovery/routing/activation remains open. V007 integration/publication follows the verified working checkpoint below.
+- Current state: **All27 scoped cases Passed after independent final assessment.** Explicit-source runtime evidence is complete; installed-client discovery/routing/activation remains open. V007 explicit merge606da0d is published and verified; final checkpoint records below supersede earlier pending instructions.
 - Current counts: **27 Passed;0 Failed,Blocked,Suspended,Running,Pending**. Preserve both source branches and unrelated work. Earlier checkpoint instructions/counts below are historical and superseded by this disposition.
 
 ## Initial execution evidence (historical checkpoint)
@@ -247,3 +247,9 @@ TST001 input omission, TST002 scope clarification, TST003 checklist defect/coord
 ## V-007 source boundary readiness
 
 The complete revision diff from target98a083b is scoped to historical notices, current README/review status and campaign008 records/verification harness. All97 tested package files are identical to pin529e98d; no plugin behavior revision occurred. The target was fetched and remained98a083b. Source local links, reversible notice preservation, package validator and diff checks pass. The verified working checkpoint will be pushed before explicit no-ff/no-commit integration into feature/architecture-revision, followed by prospective/committed checks and exact remote verification. Actual boundary identities/publication will be added after the merge, without deleting branches or unrelated work.
+
+## V-007 published boundary and final controlled stop
+
+Verified working revision29060f7498834cd1508e69348317e96b0e208f0c was pushed and exact remote equality checked before integration. Refreshed target remained98a083b555a211e45f8a16bfd3ea83829b9aa25e. Explicit no-ff/no-commit merge passed all source checks in the prospective state; committed merge606da0d81eafb39a67aaeadbe0803b2bc84fb526 has those exact ordered parents and identical prospective tree3bc5e8e03d8f6e41a5546bbe5a1d6e11363ec381. Committed source checks passed again, including97 unchanged pinned files, both preserved transcripts,60 links, package validator and scoped diff. Target push succeeded and exact remote606da0d equality was checked before this follow-up evidence record. Actual states/checks/publication proof are retained in [evidence](evidence/V007-merge-publication.json).
+
+All27 acceptance cases are Passed within explicit-source mode, independently assessed and published at AgentPlayground8bf3ab7. Live product remains main05c3553 and unchanged. All consumers/assessor stopped; no pending merge or owned product work. Source revision branch is retained at29060f7, target contains the explicit merge; unrelated source/fixture work and credentials are preserved. This follow-up records publication without another boundary merge. No automatic continuation is scheduled. Further installed-client facilities require separate actual execution before R-001 can be fully closed; current evidence, limitations and TST corrections remain authoritative.
