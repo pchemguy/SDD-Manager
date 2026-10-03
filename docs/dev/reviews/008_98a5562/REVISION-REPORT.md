@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- Current state: **Authorized three-case continuation.** A-010/A-011 independently Passed and published; A-012 JSON-removal amendment underway. Registry currently22 Passed/5 Pending. Stop after A-012, before A-013; source boundary integration remains pending.
+- Current state: **Authorized extended continuation.** A-010–A-012 independently Passed and published; continue A-013 and A-019 without suspension after A-012, then stop before A-021. Registry23 Passed/4 Pending. Source boundary integration remains pending.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -201,3 +201,9 @@ Evidence `66820aca60d1b1e34c732f4061d5c23e200e977b` pushed to AgentPlayground wi
 A fresh pinned-source consumer assessed JSON removal without implementation. It identified current document/CLI/README/CLI-and-distribution-test impacts, T006/Milestone2.1 retired-scope disposition, T010/T011/Milestone2.3 reassessment, planned plain-output stdin and warranted hosted reconciliation. Exact plain output and public API/counting/named-file/BOM/range/UTF-8/error/resource obligations remain; --json becomes unknown-option usage2 while literal dash-prefixed filenames remain supported. No material product ambiguity was reported.
 
 Independent full HEAD/branch/refs/tree/index/worktree preservation, absence of new untracked repository files,12 bytecode hashes and unchanged selected metadata for11 hosted tasks support the assessment-only boundary. No tests, repository changes, campaign reservation, hosted actions, task continuation or merge by the consumer. Its locally observed remote-tracking refs/live-hosting limits are explicit; parent protected GET observation is separately labeled. Full assessment/inspection journal retained. Evidence `f087c9b261ff5db8aee9aad8260a804274320f33` committed/pushed to AgentPlayground with exact remote equality. A-012 has been commanded in a separate context using only the specifically authorized assessment inputs and current project state; no A-013 work is authorized in this continuation.
+
+### A-012 — Accepted JSON removal and extended continuation
+
+The focused amendment `6561e287e59c8b4e86c7a3cdeaaa48a60df82154` on `revision/003_d0eeeff-remove-json` was verified and published, then integrated into paused phase2 by explicit merge `1d11ae343bfb3a1dcd6c12431ad401ecba77bfa6`. Main remains `29c27580db73cf128c42ddb9535e6d8f5c38ed39`. Independent full39 tests,62 literal CLI cases, help and real literal `--json` filename checks pass; exact remote refs,97 pinned hashes,12 bytecodes, public core/file/API modules and historical feature sources are preserved. Ten unique current owners exclude retired T-006; original delivery evidence and provider IDs/history remain. T007/T008 and phase2 remain unchecked.
+
+TST-003 records the initial retired-scope checklist inconsistency, the coordinator correction and final objective recheck. This pass includes disclosed review assistance. Evidence `a6e0d7c6333d64d75552f02d575ea2832950d1c9` pushed with exact remote equality. Available journal/explicit-source/Python3.12.14 limits remain. The user's latest instruction extends this continuation through A-013 and A-019 without suspension after A-012; the prior stop instruction is superseded. Stop before A-021 after those two cases and publication. Overall R-001 and source boundary integration remain incomplete.
