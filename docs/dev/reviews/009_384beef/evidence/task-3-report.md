@@ -1,5 +1,7 @@
 # Task 3 — Case contracts and isolated handoffs
 
+Layout note: Markdown paths were updated to `acceptance/textstats/` after the recorded run. Original commands/results remain in the referenced commits and unmodified raw logs; this path normalization does not claim the earlier run used the new layout.
+
 Implemented and scoped-committed at **909e7fce443618cde907327c7fab695e29270a3c** (base 08b700b), on revision/009_384beef-textstats-test-project.
 
 ## Scope
@@ -21,7 +23,7 @@ Resolved rendering input/checkpoint/publication shape is documented in cases/ass
 
 - `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -v`: **58 tests passed** (41 existing + 17 new), nonempty suite.
 - New tests: valid all27 catalog; duplicate/missing/invalid IDs; genuine cycle/unknown prerequisite; missing/duplicate/escaping assets; empty/unknown/ref-invalid DSL; routing leakage; missing trigger; historical identity exclusion; isolated selected rendering; missing/ambiguous/unassessed predecessor; actual unpushed ref and mismatched published evidence rejection; placeholder resolution; empty-product/failure-report handoffs; raw command status/channels; derived error/fixture facts; every literal suite altered-actual sensitivity; all27 contracts consumed by actual finalized helper DSL; unavailable product import rejection.
-- `PYTHONDONTWRITEBYTECODE=1 python tests/acceptance/textstats/cases/assessor/catalog_tools.py validate`: 27 resolved cases, static validation, live_acceptance false.
+- `PYTHONDONTWRITEBYTECODE=1 python acceptance/textstats/cases/assessor/catalog_tools.py validate`: 27 resolved cases, static validation, live_acceptance false.
 - `git diff --check` and scoped `git diff --cached --check`: passed.
 - Scratch logs: task-3-tests.log and task-3-catalog-tests.log retain actual verification output.
 

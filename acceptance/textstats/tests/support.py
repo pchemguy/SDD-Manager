@@ -7,7 +7,7 @@ import tempfile
 import unittest
 
 SCRIPTS = Path(__file__).resolve().parents[1] / 'scripts'
-SOURCE = Path(__file__).resolve().parents[4]
+SOURCE = Path(__file__).resolve().parents[3]
 
 def git(root, *args, check=True):
     return subprocess.run(['git', '-C', str(root), *args], capture_output=True, text=True, check=check)

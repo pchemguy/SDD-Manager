@@ -1,11 +1,13 @@
 # Fresh directory-only bootstrap observation
 
+Layout note: Markdown paths were updated to `acceptance/textstats/` after the recorded run. Original commands/results remain in the referenced commits and unmodified raw logs; this path normalization does not claim the earlier run used the new layout.
+
 ## Invocation and observed result
 
-A fresh coordinator context was started with exactly:
+A fresh coordinator context was started with a directory-only invocation (path displayed at its current location):
 
 ```text
-Run the test project in /workspace/scratch/6420baa7afea/tests/acceptance/textstats/.
+Run the test project in /workspace/scratch/6420baa7afea/acceptance/textstats/.
 ```
 
 No prior conversation, repository destination, expected answer or assessor correction was supplied. Source checkpoint: `f6fd96f`. The fresh context independently read bundle instructions and reported:

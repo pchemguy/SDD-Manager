@@ -48,4 +48,4 @@ Runtime `expected_ref` resolves exactly one existing schema-validated checkpoint
 
 Assessment shape: `{"schema_version":1,"status":"Checks passed"|"Checks failed"|"Not run","checks":[{"id":"...","status":"Passed"|"Failed","reason":"..."}],"agent_behavior_assessed":false,"required_agent_checks":[...]}`. Deterministic success never confers case Passed or full acceptance. Agent routing, ownership decisions, assistance, interruption/fresh-context behavior and causal diagnosis require independent assessment.
 
-Run the complete nonempty support suite from the package root: `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -v`. Tests use only disposable repositories and local bare remotes; no hosted writes occur.
+Run the complete nonempty support suite from the package root: `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v`. Tests use only disposable repositories and local bare remotes; no hosted writes occur.

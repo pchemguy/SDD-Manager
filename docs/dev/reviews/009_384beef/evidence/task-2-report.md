@@ -1,5 +1,7 @@
 # Task 2 portable support implementation
 
+Layout note: Markdown paths were updated to `acceptance/textstats/` after the recorded run. Original commands/results remain in the referenced commits and unmodified raw logs; this path normalization does not claim the earlier run used the new layout.
+
 Implemented and committed as `fb5bbf1` (`test(textstats): add portable coordinator setup and recovery support`), based on `8afda4d`, on `revision/009_384beef-textstats-test-project`. No branch switch, push, live consumer campaign, real hosted write, credential-store inspection or package repair occurred. Owned paths are the four CLI entry points/shared stdlib core, helper interface guide, three support test modules/test utilities/discovery package markers, and one SETUP guide link. Source `.codex/` and revision report were not changed.
 
 ## Interfaces and behavior
@@ -63,8 +65,8 @@ The new regression uses a complete disposable source and bare local remote conta
 
 Retained commands and outcomes (all logs under `/workspace/scratch/textstats-revision-009/`):
 
-- RED: `PYTHONDONTWRITEBYTECODE=1 python -m unittest -v tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown` — **1 collected test, 3 expected assertion subtest failures**, zero errors. `task-2-shallow-red.log` records the actual wrong unpublished/absent/not-observed results before production changes.
-- Relevant GREEN: `PYTHONDONTWRITEBYTECODE=1 python -m unittest -v tests.acceptance.textstats.tests.test_recovery` — **17 tests collected, 17 passed**, zero failures/errors. Output: `task-2-shallow-green.log`.
+- RED: `PYTHONDONTWRITEBYTECODE=1 python -m unittest -v acceptance.textstats.tests.test_recovery.RecoveryTests.test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown` — **1 collected test, 3 expected assertion subtest failures**, zero errors. `task-2-shallow-red.log` records the actual wrong unpublished/absent/not-observed results before production changes.
+- Relevant GREEN: `PYTHONDONTWRITEBYTECODE=1 python -m unittest -v acceptance.textstats.tests.test_recovery` — **17 tests collected, 17 passed**, zero failures/errors. Output: `task-2-shallow-green.log`.
 - One final full-suite GREEN after the code/test changes: `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -v` — **41 tests collected, 41 passed**, zero failures/errors; exit 0. Output: `task-2-shallow-full-green.log`.
 - `git diff --check` passed before committing; the scoped commit contains exactly the two owned paths.
 

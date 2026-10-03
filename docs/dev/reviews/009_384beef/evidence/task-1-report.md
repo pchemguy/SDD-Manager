@@ -1,5 +1,7 @@
 # Task 1 completion report
 
+Layout note: Markdown paths were updated to `acceptance/textstats/` after the recorded run. Original commands/results remain in the referenced commits and unmodified raw logs; this path normalization does not claim the earlier run used the new layout.
+
 ## Scope and commit
 
 Implemented only the assigned coordinator entry/scenario documents, configuration example/schemas and root README navigation. Commit: `63322e66087d16190890787545045869962d0e44` (`Add portable TextStats plugin test coordinator documents and schemas`). No push was performed. No consumer test run, remote operation, product implementation or plugin-package edit was performed. Unrelated root `.codex/` and revision report were preserved.
@@ -7,9 +9,9 @@ Implemented only the assigned coordinator entry/scenario documents, configuratio
 Owned paths:
 
 - `README.md` (one test-project navigation link)
-- `tests/acceptance/textstats/{AGENTS,README,OBJECTIVES,SCENARIO,SETUP,EXECUTION,RECOVERY,DIAGNOSTICS}.md`
-- `tests/acceptance/textstats/templates/inputs.example.json`
-- `tests/acceptance/textstats/schemas/{inputs,run-state}.schema.json`
+- `acceptance/textstats/{AGENTS,README,OBJECTIVES,SCENARIO,SETUP,EXECUTION,RECOVERY,DIAGNOSTICS}.md`
+- `acceptance/textstats/templates/inputs.example.json`
+- `acceptance/textstats/schemas/{inputs,run-state}.schema.json`
 
 ## Interfaces
 

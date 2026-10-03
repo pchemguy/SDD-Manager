@@ -1,5 +1,7 @@
 # Final bounded fixwave report
 
+Layout note: Markdown paths were updated to `acceptance/textstats/` after the recorded run. Original commands/results remain in the referenced commits and unmodified raw logs; this path normalization does not claim the earlier run used the new layout.
+
 Base: `f6fd96f`. Scoped commit: `584cfe07ea6fe540c6cb81c8413e53fe45d53d17` (`Fix caller-relative TextStats recovery export paths`) on `revision/009_384beef-textstats-test-project`.
 
 ## Findings addressed
@@ -10,9 +12,9 @@ Base: `f6fd96f`. Scoped commit: `584cfe07ea6fe540c6cb81c8413e53fe45d53d17` (`Fix
 
 ## Exact committed paths
 
-1. `tests/acceptance/textstats/scripts/core.py`
-2. `tests/acceptance/textstats/tests/test_recovery.py`
-3. `tests/acceptance/textstats/scripts/HELPER-INTERFACES.md`
+1. `acceptance/textstats/scripts/core.py`
+2. `acceptance/textstats/tests/test_recovery.py`
+3. `acceptance/textstats/scripts/HELPER-INTERFACES.md`
 4. `docs/dev/reviews/009_384beef/REVISION-PLAN.md`
 
 ## Retained verification
@@ -20,13 +22,13 @@ Base: `f6fd96f`. Scoped commit: `584cfe07ea6fe540c6cb81c8413e53fe45d53d17` (`Fix
 All commands ran from `/workspace/scratch/6420baa7afea`; outputs were redirected to the exact retained logs below. RED ran after adding tests and before production changes.
 
 ```sh
-PYTHONDONTWRITEBYTECODE=1 python -m unittest -v tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_caller_relative_cli_exports_verified_bundle_outside_consumer tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_absolute_cli_output_creates_missing_parent tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_cli_refuses_occupied_and_dangling_output_and_recovery_paths > /workspace/scratch/textstats-revision-009/final-fix-red.log 2>&1
+PYTHONDONTWRITEBYTECODE=1 python -m unittest -v acceptance.textstats.tests.test_recovery.RecoveryTests.test_caller_relative_cli_exports_verified_bundle_outside_consumer acceptance.textstats.tests.test_recovery.RecoveryTests.test_absolute_cli_output_creates_missing_parent acceptance.textstats.tests.test_recovery.RecoveryTests.test_cli_refuses_occupied_and_dangling_output_and_recovery_paths > /workspace/scratch/textstats-revision-009/final-fix-red.log 2>&1
 ```
 
 RED: exit 1; **3 tests, 4 failing subcases, zero errors**. Direct caller-relative output reported `git_operation_unavailable`; relative and absolute missing-parent outputs reported `support_operation_failed`; dangling recovery symlink returned a generic failure rather than the explicit occupied-evidence classification. Other occupied/symlink refusal subcases passed. The original reviewed reproduction log was retained unchanged; no old failure artifacts were removed or retried.
 
 ```sh
-PYTHONDONTWRITEBYTECODE=1 python -m unittest -v tests.acceptance.textstats.tests.test_recovery > /workspace/scratch/textstats-revision-009/final-fix-green.log 2>&1
+PYTHONDONTWRITEBYTECODE=1 python -m unittest -v acceptance.textstats.tests.test_recovery > /workspace/scratch/textstats-revision-009/final-fix-green.log 2>&1
 ```
 
 Focused GREEN: exit 0; **20 tests passed**, zero failures/errors, 3.903 seconds.

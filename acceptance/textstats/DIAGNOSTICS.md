@@ -31,7 +31,7 @@ Confidence may be confirmed, likely or unresolved; explain the discriminating ev
 
 ## Historical lessons to recheck
 
-The [008 report](../../../docs/dev/reviews/008_98a5562/REVISION-REPORT.md) retained these lessons. They are **not pre-filled findings or passes in this run**:
+The [008 report](../../docs/dev/reviews/008_98a5562/REVISION-REPORT.md) retained these lessons. They are **not pre-filled findings or passes in this run**:
 
 | Lesson | New-run handling |
 | --- | --- |

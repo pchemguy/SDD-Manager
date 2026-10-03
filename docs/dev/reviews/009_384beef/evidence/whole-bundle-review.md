@@ -1,5 +1,7 @@
 # Whole-bundle independent review
 
+Layout note: Markdown paths were updated to `acceptance/textstats/` after the recorded run. Original commands/results remain in the referenced commits and unmodified raw logs; this path normalization does not claim the earlier run used the new layout.
+
 Reviewed immutable tip `f6fd96f` against implementation start `78d51c4`, the whole-bundle brief/diff, campaign 009 requirements/report and retained Task 1–3 implementation/review evidence. This is a cross-task infrastructure readiness review. Live acceptance remains a separately documented follow-up requiring an explicitly identified dedicated repository.
 
 ## Specification verdict: changes required
@@ -14,7 +16,7 @@ The separation of product consumers, coordinator evidence and independent assess
 
 ### WB-R1 — P2: caller-relative observer output is resolved against two different directories
 
-**Locations:** `tests/acceptance/textstats/scripts/core.py:369–371,421–429`; the caller-relative promise in `scripts/HELPER-INTERFACES.md` opening paragraph; observation/recovery integration in EXECUTION and RECOVERY.
+**Locations:** `acceptance/textstats/scripts/core.py:369–371,421–429`; the caller-relative promise in `scripts/HELPER-INTERFACES.md` opening paragraph; observation/recovery integration in EXECUTION and RECOVERY.
 
 `export_recovery()` keeps `destination` relative to the caller and creates its directory/blobs there with Python. It then passes the same relative bundle path to `git(root, 'bundle', ...)`, whose `git -C <consumer checkout>` makes Git resolve the path against the consumer instead. A coordinator running the helper from another directory with the documented `--output NEW.json` interface therefore receives `Blocked/git_operation_unavailable`, even with valid local repositories and all objects available. Its requested observation and recovery manifest are absent; a partial export remains at the caller location. Retrying the same name then encounters occupied recovery evidence. The diagnostic points at repository/access prerequisites although the repository is healthy.
 

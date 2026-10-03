@@ -1,5 +1,7 @@
 # Task 3 independent review
 
+Layout note: Markdown paths were updated to `acceptance/textstats/` after the recorded run. Original commands/results remain in the referenced commits and unmodified raw logs; this path normalization does not claim the earlier run used the new layout.
+
 Reviewed commit `909e7fce443618cde907327c7fab695e29270a3c` against base `08b700b`, the Task 3 brief/interface ruling/review boundary, finalized helper contract/code, chosen scenario and the original A-001–A-027 table in `docs/dev/reviews/008_98a5562/REVISION-PLAN.md`.
 
 ## Specification verdict: changes requested
@@ -14,7 +16,7 @@ The validator/renderer use the finalized helper DSL; successful capture records 
 
 ### T3-R1 — P1: failed capture discards diagnostic first-attempt command evidence
 
-**Location:** `tests/acceptance/textstats/cases/assessor/capture.py:43–46, 65–75, 100–111`.
+**Location:** `acceptance/textstats/cases/assessor/capture.py:43–46, 65–75, 100–111`.
 
 `invoke()` adds a journal entry only after `subprocess.run()` returns and output safety checks pass. Thus launch errors/timeouts retain neither the attempted command nor `TimeoutExpired`'s available partial stdout/stderr. `capture()` owns a private journal and returns it only after the entire suite succeeds. Import failure/origin rejection and later capture errors discard even completed entries. `main()` catches those errors and emits only `actual capture unavailable; retain failed command/session evidence separately`, without writing provenance or exposing the sanitized nested diagnostics. An outer session transcript cannot recover bytes already captured inside the failed subprocess.
 

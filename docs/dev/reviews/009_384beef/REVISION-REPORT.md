@@ -52,18 +52,24 @@ A fresh coordinator received only the bundle directory pointer at `f6fd96f`. It 
 
 Whole-bundle review initially reproduced caller-relative recovery export failure and identified stale plan status. The single final fix wave (`584cfe0`) aligned Python/Git export paths, supported nested output parents, preserved occupied/symlink refusal and corrected the plan metadata. The reviewer independently reran both original path failures and accepted specification and quality with no new fix-diff breakage. [Whole review](evidence/whole-bundle-review.md), [original reproduction](evidence/whole-bundle-review-repro.log), [fix report](evidence/final-fix-report.md), [RED](evidence/final-fix-red.log), [67-test GREEN](evidence/final-fix-full-green.log) and [independent recheck](evidence/final-fix-review-repro.log) remain retained.
 
-`PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -v` collected 67 tests and passed all 67, with zero failures/errors. Final integration checks found 71 resolving local Markdown targets, no missing targets and all 97 plugin files byte-identical to the pre-revision snapshot. Revision-range whitespace checks passed. [Integration observation](evidence/final-integration-checks.json) records the checked implementation identity. No new installed-client, live provider, product-worker interruption or 27-case acceptance result is inferred.
+`PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` collects the relocated 67-test suite. The original pre-relocation verification collected 67 tests and passed all 67, with zero failures/errors. Final integration checks found 71 resolving local Markdown targets, no missing targets and all 97 plugin files byte-identical to the pre-revision snapshot. Revision-range whitespace checks passed. [Integration observation](evidence/final-integration-checks.json) records the checked implementation identity. No new installed-client, live provider, product-worker interruption or 27-case acceptance result is inferred.
 
 The reviewed infrastructure and evidence are committed on `revision/009_384beef-textstats-test-project` for publication. The established target is retained; the branch is not represented as fully live-accepted or integrated while the follow-up remains open. No unfinished consumer work exists in this revision because no new consumer destination was selected.
 
+## Root-level acceptance layout correction
+
+Following the user's layout correction, the bundle now lives at `acceptance/textstats/`, outside the repository's `tests/` tree. Removed the three higher-level package markers; the only retained `__init__.py` is `acceptance/textstats/tests/__init__.py`. Updated helper/source-root depth, schema identifiers, active links, invocations and live-acceptance prompts. Focused discovery uses `python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v`, so higher-level packages are unnecessary.
+
+The relocated suite passes all 67 tests ([execution log](evidence/relocation-final-tests.log)); all 27 catalog entries validate. [Layout checks](evidence/relocation-checks.json) found 120 resolving local document targets, no stale active layout references, only the intended test package marker, and all 97 plugin files unchanged. Markdown references in earlier evidence were normalized to the current layout and labeled; raw logs preserve the original executed commands. Live acceptance remains the follow-up below.
+
 ## Follow-up
 
-- [ ] **Live acceptance on a dedicated test repository.** Obtain an explicitly supplied repository URL or checkout path and execute the completed bundle through fresh consumers and independent assessors. Cover real Git/GitHub lifecycle, controlled partial-work interruption and unexpected termination/resumption, then publish the final diagnostic report with retained original attempts and explicit findings, actions and plugin proposals. This is outstanding live acceptance work; helper self-tests and infrastructure reviews do not complete it. The [test-project README](../../../../tests/acceptance/textstats/README.md#follow-up-live-acceptance-on-a-dedicated-test-repository) records the same follow-up.
+- [ ] **Live acceptance on a dedicated test repository.** Obtain an explicitly supplied repository URL or checkout path and execute the completed bundle through fresh consumers and independent assessors. Cover real Git/GitHub lifecycle, controlled partial-work interruption and unexpected termination/resumption, then publish the final diagnostic report with retained original attempts and explicit findings, actions and plugin proposals. This is outstanding live acceptance work; helper self-tests and infrastructure reviews do not complete it. The [test-project README](../../../../acceptance/textstats/README.md#follow-up-live-acceptance-on-a-dedicated-test-repository) records the same follow-up.
 
 Copyable agent prompt (replace the placeholders):
 
 ```text
-Run live acceptance for SDD Manager using <SDD-Manager-checkout>/tests/acceptance/textstats/.
+Run live acceptance for SDD Manager using <SDD-Manager-checkout>/acceptance/textstats/.
 Use the dedicated test repository <repository URL or existing checkout path>.
 Read AGENTS.md in the bundle and follow its linked setup, execution, recovery and diagnostic procedures.
 Use the full-github profile and the full supported case scope. Continue through authorized phases;

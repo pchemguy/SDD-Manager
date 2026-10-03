@@ -27,14 +27,14 @@ A-003/API unavailable makes its dependent tracking claims Blocked. A local-only 
 
 ## Skill handoff map
 
-Load entries/references from the pinned package; the links identify source-relative originals. Coordinator setup uses [sdd-manage](../../../skills/sdd-manage/SKILL.md) and [sdd-orient](../../../skills/sdd-orient/SKILL.md); load shared [sdd-conventions](../../../skills/sdd-conventions/SKILL.md) when directed. Consumer dispatch follows the real request and pinned instructions, not this map as an assessor answer.
+Load entries/references from the pinned package; the links identify source-relative originals. Coordinator setup uses [sdd-manage](../../skills/sdd-manage/SKILL.md) and [sdd-orient](../../skills/sdd-orient/SKILL.md); load shared [sdd-conventions](../../skills/sdd-conventions/SKILL.md) when directed. Consumer dispatch follows the real request and pinned instructions, not this map as an assessor answer.
 
 | Work | Available pinned skill references |
 | --- | --- |
-| Preparation | [sdd-design](../../../skills/sdd-design/SKILL.md), [sdd-specify](../../../skills/sdd-specify/SKILL.md), [sdd-plan](../../../skills/sdd-plan/SKILL.md), [sdd-tasks](../../../skills/sdd-tasks/SKILL.md) |
-| Implementation/checks/docs | [sdd-implement](../../../skills/sdd-implement/SKILL.md), [sdd-tdd](../../../skills/sdd-tdd/SKILL.md), [sdd-verify](../../../skills/sdd-verify/SKILL.md), [sdd-docs](../../../skills/sdd-docs/SKILL.md) |
-| Feature/steering | [sdd-integrate-feature](../../../skills/sdd-integrate-feature/SKILL.md), [sdd-steer](../../../skills/sdd-steer/SKILL.md) |
-| Tracking/reports | [sdd-forge](../../../skills/sdd-forge/SKILL.md), [sdd-report](../../../skills/sdd-report/SKILL.md) |
+| Preparation | [sdd-design](../../skills/sdd-design/SKILL.md), [sdd-specify](../../skills/sdd-specify/SKILL.md), [sdd-plan](../../skills/sdd-plan/SKILL.md), [sdd-tasks](../../skills/sdd-tasks/SKILL.md) |
+| Implementation/checks/docs | [sdd-implement](../../skills/sdd-implement/SKILL.md), [sdd-tdd](../../skills/sdd-tdd/SKILL.md), [sdd-verify](../../skills/sdd-verify/SKILL.md), [sdd-docs](../../skills/sdd-docs/SKILL.md) |
+| Feature/steering | [sdd-integrate-feature](../../skills/sdd-integrate-feature/SKILL.md), [sdd-steer](../../skills/sdd-steer/SKILL.md) |
+| Tracking/reports | [sdd-forge](../../skills/sdd-forge/SKILL.md), [sdd-report](../../skills/sdd-report/SKILL.md) |
 
 ## Stops and evidence ownership
 
@@ -46,6 +46,6 @@ RUN-STATE is the coordinator's cursor, not product authority or a transaction gu
 
 Each entry resolves a unique consumer request, strict version 1 deterministic contract and independent assessor guide. Read [COMMON](cases/assessor/COMMON.md) and [INTERRUPTIONS](cases/assessor/INTERRUPTIONS.md) only in coordinator/assessor roles. The latter defines all controlled trigger/fresh-context pairs and native uncontrolled termination, including kill during an uncertain checkpoint/write/push/API effect. A missing runtime control facility is a coverage gap.
 
-Run `python tests/acceptance/textstats/cases/assessor/catalog_tools.py validate` from package root before dispatch; it checks actual asset/graph/contract integrity and explicitly does not certify runtime acceptance. Render selected consumer input with `catalog_tools.py render --case A-NNN --bindings RESOLVED.json --output NEW.md`. See COMMON for resolved checkpoint/assessment publication shape. Renderer verifies retained prerequisite objects and live destination containment; coordinator must independently establish assessment and exact current-state facts first. P0 initializes/publishes a bounded operating/harness baseline for initially empty repositories; A-001 has no completed product prerequisite. A-027 can report failed/blocked campaigns without a successful final product checkpoint.
+Run `python acceptance/textstats/cases/assessor/catalog_tools.py validate` from package root before dispatch; it checks actual asset/graph/contract integrity and explicitly does not certify runtime acceptance. Render selected consumer input with `catalog_tools.py render --case A-NNN --bindings RESOLVED.json --output NEW.md`. See COMMON for resolved checkpoint/assessment publication shape. Renderer verifies retained prerequisite objects and live destination containment; coordinator must independently establish assessment and exact current-state facts first. P0 initializes/publishes a bounded operating/harness baseline for initially empty repositories; A-001 has no completed product prerequisite. A-027 can report failed/blocked campaigns without a successful final product checkpoint.
 
 Checkpoint bindings distinguish independently observed **starting** refs (especially A-002/A-011 no-action comparisons) from assessed **reached** refs. Never overwrite starting refs with final HEAD before a no-change comparison. Runtime task/feature/revision/hosted identities come from actual owners/observations. Consumer input receives selected ordinary product request/current-state only; all fault setup and desired decisions stay in assessor guides. Exact literal checks require actual capture.py output plus raw command provenance. Combine nonoverlapping suite literal keys into one version 1 evidence file without changing observations; retain each original capture/provenance. Use extracted package import root for distribution capture and retain actual packaging/extraction checks.

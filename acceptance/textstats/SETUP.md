@@ -30,7 +30,7 @@ Search retained campaign records and relevant local/remote branches. A named exi
 
 A newly supplied dedicated remote may be empty/unborn. After verifying that it is genuinely the authorized empty repository, the coordinator may select a safe new local workspace and use `prepare.py --workspace <explicit-new-path>`; the user need not choose every local path. Bound initial setup to the pinned vendor/harness, operating instructions/provenance and owned ignore rules, without product implementation. Resolve author, integration branch and publication destination using ordinary SDD/Git protocols and actual remote/API discovery; do not silently configure a global identity or overwrite a branch. Publish/verify the owned setup checkpoint, then use its full SHA as the consumer baseline for campaign allocation. This coordinator initialization is outside the product skill's implementation scope. If access/author/default-branch facts remain unavailable, report the particular blocked operation rather than treating every empty repository as ineligible.
 
-For a fresh run reserve the consumer repository's shared review/feature sequence using the pinned [branch rules](../../../skills/sdd-manage/references/branch-management.md). Keep full baseline SHA, campaign directory, evidence branch, product working branch and integration target distinct. Evidence belongs under `docs/dev/reviews/<campaign>/`; the stable branch uses `revision/<campaign>-<slug>` according to current naming/collision rules. Phase and feature branches are consumer-produced workflow objects, not this evidence branch. Avoid using the same branch in two worktrees.
+For a fresh run reserve the consumer repository's shared review/feature sequence using the pinned [branch rules](../../skills/sdd-manage/references/branch-management.md). Keep full baseline SHA, campaign directory, evidence branch, product working branch and integration target distinct. Evidence belongs under `docs/dev/reviews/<campaign>/`; the stable branch uses `revision/<campaign>-<slug>` according to current naming/collision rules. Phase and feature branches are consumer-produced workflow objects, not this evidence branch. Avoid using the same branch in two worktrees.
 
 ## Pin source and runtime before consumers
 
@@ -42,7 +42,7 @@ Record interpreter, Git, available API/client versions, client loading mode and 
 
 ## Protected authentication
 
-Use current session Git authentication for authorized publication and an available authenticated API client for hosted operations. Git success does not prove API authentication; API success does not prove Git transport. Follow the **pinned** [sdd-manage credential protocol](../../../skills/sdd-manage/references/credentials.md) and [GitHub backend](../../../skills/sdd-forge/references/github.md). Request protected credentials only after classified unavailable access for the target operation. Rate limits, outages, quota, validation and policy restrictions need their actual remedy, not token substitution.
+Use current session Git authentication for authorized publication and an available authenticated API client for hosted operations. Git success does not prove API authentication; API success does not prove Git transport. Follow the **pinned** [sdd-manage credential protocol](../../skills/sdd-manage/references/credentials.md) and [GitHub backend](../../skills/sdd-forge/references/github.md). Request protected credentials only after classified unavailable access for the target operation. Rate limits, outages, quota, validation and policy restrictions need their actual remedy, not token substitution.
 
 On eligible auth failure, identify sanitized provider/repository, operation, endpoint/destination, client/transport and cause. Discover an eligible ignored/untracked `gh.tkn` only inside the dedicated test repository, beside its root `.gitignore`; check effective ignore including negations and tracked/index status before reading/saving. Preserve existing rules/staging and restrict permissions/ACLs. Tracked credentials require explicit remediation; never clear staging broadly. A source-repository credential is not transferable authorization.
 
@@ -57,9 +57,9 @@ All support helpers use `--inputs <resolved-inputs.json>` and `--output <observa
 Resolve helper paths from the pinned harness location, not a previous scratch checkout. Example from the source root (with a real resolved input file):
 
 ```sh
-python tests/acceptance/textstats/scripts/preflight.py --inputs /path/to/INPUTS.json --output /path/to/preflight.json
-python tests/acceptance/textstats/scripts/observe.py --inputs /path/to/INPUTS.json --run-state /path/to/RUN-STATE.json --output /path/to/observed.json
-python tests/acceptance/textstats/scripts/assess.py --inputs /path/to/INPUTS.json --run-state /path/to/RUN-STATE.json --output /path/to/assessment.json
+python acceptance/textstats/scripts/preflight.py --inputs /path/to/INPUTS.json --output /path/to/preflight.json
+python acceptance/textstats/scripts/observe.py --inputs /path/to/INPUTS.json --run-state /path/to/RUN-STATE.json --output /path/to/observed.json
+python acceptance/textstats/scripts/assess.py --inputs /path/to/INPUTS.json --run-state /path/to/RUN-STATE.json --output /path/to/assessment.json
 ```
 
 Commit/push sanitized evidence on the reserved evidence branch at case boundaries and before dependents. Verify destination containment; label pending local artifacts and unpushed evidence accurately. Product commits and integration remain consumer/plugin-owned. Mid-operation preservation must not create a false product completion commit. Store protected credentials separately from all recovery exports.

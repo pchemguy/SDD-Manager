@@ -5,7 +5,7 @@ This portable project diagnoses **SDD Manager plugin behavior** by having consum
 Minimal invocation:
 
 ```text
-Run the test project in tests/acceptance/textstats/.
+Run the test project in acceptance/textstats/.
 Use the dedicated repository <URL or existing checkout>.
 ```
 
@@ -29,6 +29,16 @@ Without the repository, the coordinator asks for it before writes. No old reposi
 | [schemas/run-state.schema.json](schemas/run-state.schema.json) | Version 1 coordinator checkpoints |
 | [scripts/](scripts/) | Preflight, bounded preparation, observation and checks |
 | [tests/](tests/) | Harness sensitivity/recovery checks |
+
+## Support-test discovery
+
+From the repository root, run:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v
+```
+
+Only `acceptance/textstats/tests/` contains a package marker. The acceptance directories are not regular Python packages.
 
 ## Configuration and profiles
 
@@ -60,7 +70,7 @@ Bundle self-tests and document reviews verify the reusable infrastructure. They 
 Copyable agent prompt (replace the placeholders):
 
 ```text
-Run live acceptance for SDD Manager using <SDD-Manager-checkout>/tests/acceptance/textstats/.
+Run live acceptance for SDD Manager using <SDD-Manager-checkout>/acceptance/textstats/.
 Use the dedicated test repository <repository URL or existing checkout path>.
 Read AGENTS.md in the bundle and follow its linked setup, execution, recovery and diagnostic procedures.
 Use the full-github profile and the full supported case scope. Continue through authorized phases;
@@ -73,4 +83,4 @@ actions taken and concrete proposed SDD Manager changes, or the supported no-def
 Do not modify the tested plugin package during the run. Record unavailable facilities as Blocked/Not run.
 ```
 
-Historical provenance: [campaign 008 plan](../../../docs/dev/reviews/008_98a5562/REVISION-PLAN.md) and [report](../../../docs/dev/reviews/008_98a5562/REVISION-REPORT.md). These explain derivation and limits; they are not bootstrap inputs or expected new-run results.
+Historical provenance: [campaign 008 plan](../../docs/dev/reviews/008_98a5562/REVISION-PLAN.md) and [report](../../docs/dev/reviews/008_98a5562/REVISION-REPORT.md). These explain derivation and limits; they are not bootstrap inputs or expected new-run results.

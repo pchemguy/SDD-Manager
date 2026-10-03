@@ -11,7 +11,7 @@
 
 **Goal:** Add a self-contained TextStats diagnostic test project to SDD Manager so an agent directed only to its directory can obtain the context, resolve missing inputs, set up a test repository, execute phased tests, recover interruptions and report actionable plugin findings.
 
-**Architecture:** A repository-owned test bundle at `tests/acceptance/textstats/` contains agent/human entry documents, the scenario, ordered procedures, separated consumer/assessor inputs and portable support tools. Run-specific state and evidence live in the supplied test repository; fresh consumers receive only their selected scenario instructions and the exact tested plugin snapshot. The bundle is test infrastructure outside the plugin skill package.
+**Architecture:** A repository-owned test bundle at `acceptance/textstats/` contains agent/human entry documents, the scenario, ordered procedures, separated consumer/assessor inputs and portable support tools. Run-specific state and evidence live in the supplied test repository; fresh consumers receive only their selected scenario instructions and the exact tested plugin snapshot. The bundle is test infrastructure outside the plugin skill package.
 
 **Tech Stack:** Markdown, versioned JSON manifests/schemas, Python 3.11+ standard-library helpers/unittest, Git, and the plugin's supported GitHub backend/credential mechanisms. Actual interpreter and client mode are recorded.
 
@@ -19,7 +19,7 @@
 
 ## Requirements
 
-1. A new agent receiving only “Run the test project in tests/acceptance/textstats/” can discover its purpose, inputs, procedures, required skill references, checkpoints and diagnostic deliverables without previous conversation context.
+1. A new agent receiving only “Run the test project in acceptance/textstats/” can discover its purpose, inputs, procedures, required skill references, checkpoints and diagnostic deliverables without previous conversation context.
 2. TextStats is explicitly a plugin test project. Its capabilities are test material; development documents inside the consumer repository remain ordinary product artifacts generated through the tested workflows.
 3. Request a dedicated test repository when none is supplied. Existing authentication is used first; request suitable GitHub credentials when required access is actually unavailable. Never assume the old AgentPlayground destination, a previous token or a previous session.
 4. Support complete execution and bounded phase/case scopes, planned stops, injected interruption cases and unexpected interruption. Resumption preserves actual unfinished work and uses durable evidence rather than prompt memory.
@@ -28,7 +28,7 @@
 
 ## Global constraints
 
-- Put the bundle at `tests/acceptance/textstats/`; link it from the root README. Do not insert its instructions/oracles into shipped skill entries.
+- Put the bundle at `acceptance/textstats/`; link it from the root README. Do not insert its instructions/oracles into shipped skill entries.
 - Default tested source is the committed SDD Manager HEAD at run start; an explicitly supplied revision overrides it. Record full SHA and package-file hashes before consumer execution. Handle requested dirty-source testing explicitly rather than calling it HEAD testing.
 - Require an explicitly identified dedicated test repository, with `main`/`origin` defaults only after discovery confirms them. Preserve existing contents, instructions, staging, credentials and hosted objects; never reset an existing repository to start a test.
 - Full coverage includes real Git publication and GitHub tracking plus isolated controlled failures. If facilities are unavailable, label affected cases Blocked/Not run; a local-only subset is not full acceptance.
@@ -41,7 +41,7 @@
 
 The source bundle contains reusable instructions and tools. It does not contain a copied finished TextStats implementation or a new duplicate of the historical campaign.
 
-| Proposed path beneath `tests/acceptance/textstats/` | Responsibility |
+| Proposed path beneath `acceptance/textstats/` | Responsibility |
 | --- | --- |
 | `AGENTS.md` | Agent entry: role, exact reading order, input resolution, automatic next action, isolation, stopping/resumption and reporting obligations. |
 | `README.md` | Human entry: purpose, directory map, minimal invocation, required inputs, profiles, phases, outputs and recovery overview. |

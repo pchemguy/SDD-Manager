@@ -106,7 +106,7 @@
     "test_repository"
   ],
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://sdd-manager.invalid/tests/acceptance/textstats/inputs.schema.json",
+  "$id": "https://sdd-manager.invalid/acceptance/textstats/inputs.schema.json",
   "title": "TextStats non-secret run inputs, version 1",
   "description": "Coordinator configuration only. Tokens, credential paths and credential handoff are not fields. Missing/blank repository must yield the documented missing-input action before writes."
 }

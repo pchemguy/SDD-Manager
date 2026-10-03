@@ -392,7 +392,7 @@
     "evidence_paths"
   ],
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://sdd-manager.invalid/tests/acceptance/textstats/run-state.schema.json",
+  "$id": "https://sdd-manager.invalid/acceptance/textstats/run-state.schema.json",
   "title": "TextStats coordinator checkpoint, version 1",
   "description": "Non-secret coordinator cursor; reconcile actual files/index/Git/provider effects on resume. Not product transaction authority. Credential values/paths are forbidden."
 }

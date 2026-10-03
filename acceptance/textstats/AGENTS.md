@@ -1,10 +1,10 @@
 # TextStats plugin test coordinator
 
-The caller of “Run the test project in tests/acceptance/textstats/” is the **test coordinator**. TextStats is a sample product used to diagnose SDD Manager workflows. This directory owns the test instructions, independent expectations and run evidence protocol; it does not supply completed product artifacts. Do not load these instructions into ordinary product skill entries.
+The caller of “Run the test project in acceptance/textstats/” is the **test coordinator**. TextStats is a sample product used to diagnose SDD Manager workflows. This directory owns the test instructions, independent expectations and run evidence protocol; it does not supply completed product artifacts. Do not load these instructions into ordinary product skill entries.
 
 ## Read and act
 
-Read in order: [OBJECTIVES](OBJECTIVES.md), [SETUP](SETUP.md), [SCENARIO](SCENARIO.md), [EXECUTION](EXECUTION.md), [RECOVERY](RECOVERY.md), [DIAGNOSTICS](DIAGNOSTICS.md), then selected entries in [the catalog](cases/catalog.json). Read consumer requests and assessor contracts only in their appropriate roles. [README](README.md) is the human map. Source-relative skill paths resolve three directories above this bundle; load them from the pinned package, not whichever checkout happens to be current.
+Read in order: [OBJECTIVES](OBJECTIVES.md), [SETUP](SETUP.md), [SCENARIO](SCENARIO.md), [EXECUTION](EXECUTION.md), [RECOVERY](RECOVERY.md), [DIAGNOSTICS](DIAGNOSTICS.md), then selected entries in [the catalog](cases/catalog.json). Read consumer requests and assessor contracts only in their appropriate roles. [README](README.md) is the human map. Source-relative skill paths resolve two directories above this bundle; load them from the pinned package, not whichever checkout happens to be current.
 
 Resolve non-secret configuration in this order: explicit current invocation; explicitly supplied [input file](templates/inputs.example.json); existing checkpoint for a requested continuation; documented defaults. Conflicting repository, source, destination, run identity or scope requires resolution before affected writes. Default scope is the full supported campaign, continuing through authorized phases. A requested boundary limits it.
 

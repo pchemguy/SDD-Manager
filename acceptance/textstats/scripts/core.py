@@ -14,7 +14,7 @@ import tempfile
 from urllib.parse import parse_qsl, urlsplit
 
 BUNDLE = Path(__file__).resolve().parents[1]
-SOURCE = Path(__file__).resolve().parents[4]
+SOURCE = Path(__file__).resolve().parents[3]
 MISSING = 'Which dedicated test repository should this run use? Supply its URL or local checkout path.'
 SECRET = re.compile(r'(?:github_pat_|gh[pousr]_|Bearer\s+)[A-Za-z0-9_\-]+', re.I)
 
