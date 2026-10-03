@@ -1,0 +1,24 @@
+{
+  "reviewed_tip": "584cfe07ea6fe540c6cb81c8413e53fe45d53d17",
+  "reproductions": [
+    {
+      "case": "original-relative-output",
+      "exit": 0,
+      "output_exists": true,
+      "export_absolute": true,
+      "manifest_complete": true,
+      "artifact_hashes_valid": true,
+      "bundle_valid": true
+    },
+    {
+      "case": "original-absent-parent",
+      "exit": 0,
+      "output_exists": true,
+      "export_absolute": true,
+      "manifest_complete": true,
+      "artifact_hashes_valid": true,
+      "bundle_valid": true
+    }
+  ],
+  "consumer_refs_index_workfile_unchanged": true
+}

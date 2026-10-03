@@ -176,6 +176,8 @@ If no confirmed plugin defect is found, state directly: “No confirmed SDD Mana
 
 ### Task 4 — Fresh-context bootstrap, interruption and diagnostic acceptance
 
+Directory-only missing-repository discovery was verified at `f6fd96f`; [the observation](evidence/directory-bootstrap.md) records unchanged source state. Authentication and live execution below remain the explicit dedicated-repository follow-up in the report and bundle README; the compound acceptance steps are intentionally unchecked.
+
 **Files:** New run records in the explicitly supplied test repository; source bundle changes only for evidenced fixes.
 
 **Interfaces:** Consumes the completed bundle plus caller-provided repository/credential capabilities. Produces durable actual case evidence, resumption proof and DIAGNOSTIC-REPORT.

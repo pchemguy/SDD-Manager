@@ -1,0 +1,7 @@
+Reviewed source: f6fd96f; base: 78d51c4. Disposable Sandbox fixture only; Python CLI invocations used caller cwd at the fixture root and consumer checkout at its consumer/ child. No live provider or consumer execution.
+
+{"case":"caller-relative-observer-output","exit":2,"stdout":{"schema_version":1,"status":"Blocked","cause":"git_operation_unavailable","next_action":"Inspect repository/access prerequisites using the pinned plugin protocols; retain pending work."},"output_exists":false,"export_exists":true,"export_manifest_exists":false,"consumer_status":""}
+{"control":"absolute-observer-output","exit":0,"output_exists":true,"export_manifest_exists":true}
+{"case":"absolute-observer-output-new-parent","exit":2,"stdout":{"schema_version":1,"status":"Blocked","cause":"support_operation_failed","next_action":"Inspect sanitized prerequisites and retain existing work before retrying."},"output_exists":false,"parent_exists":false}
+
+Reproduction: import tests.acceptance.textstats.tests.support.Sandbox and SCRIPTS; call Sandbox.setUp(); write fixture inputs/state JSON to fixture root; subprocess.run([sys.executable, str(SCRIPTS/'observe.py'), '--inputs', 'inputs.json', '--run-state', 'state.json', '--output', 'relative-observation.json'], cwd=fixture.root, capture_output=True, text=True). Repeat once with a distinct absolute output in fixture root as positive control. Separate fixture invokes an absolute output under an absent new-attempt/ directory. All fixture resources removed via doCleanups().

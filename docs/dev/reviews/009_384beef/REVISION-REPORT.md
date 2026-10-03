@@ -4,14 +4,14 @@
 
 Campaign `009_384beef`, baseline `384beefb6186348af9b100de9bec2f5a4a024692`. The user authorized execution of [REVISION-PLAN](REVISION-PLAN.md). Execution branch: `revision/009_384beef-textstats-test-project`, starting at `78d51c4`. Established target: `feature/architecture-revision`.
 
-The reusable test bundle is being implemented and verified. No new live consumer campaign has started. Live acceptance requires an explicitly supplied dedicated test repository; none has been supplied for this run. The previous AgentPlayground campaign is historical evidence and is not the new destination.
+The reusable test bundle is implemented and independently reviewed through `584cfe0`. All 67 support/catalog tests pass. No new live consumer campaign has started. Live acceptance requires an explicitly supplied dedicated test repository; none has been supplied for this run. The previous AgentPlayground campaign is historical evidence and is not the new destination.
 
 ## Diagnostic summary
 
-- **Demonstrated so far:** reviewed coordinator documentation and schemas; portable helper self-tests, including fresh-clone restoration of pending files, index intent and conflicted merge state. These checks establish infrastructure behavior, not new SDD Manager consumer acceptance.
-- **Issues observed:** document review identified an ambiguous repeated stop on resume. Implementation inspection identified recovery of an unreferenced incoming merge commit as an edge requiring explicit export coverage. Both were addressed in the bundle; independent helper review reproduced destination reconciliation, symlink containment and SSH URL defects. Their first fixes passed 40 tests. Re-review identified incomplete shallow ancestry as a remaining reconciliation defect. Commit `3b4049e` corrected it; independent re-review accepted both specification and quality.
-- **Actions taken:** added the test-project entry/procedures/schemas and support tools. Clarified one-shot reached stops. Added recovery and checker sensitivity tests. No SDD Manager plugin package files were changed.
-- **Plugin changes proposed:** none on the basis of this infrastructure work. The new live campaign and its causal diagnosis remain pending; previous findings are provenance, not new outcomes.
+- **Demonstrated:** a complete reusable 27-case bundle, strict configuration, independent actual-output checks, and support tests that restore pending files/index/conflicted merge state in fresh clones. A fresh directory-only coordinator discovered the missing repository requirement and made no setup writes. These are infrastructure results; no new live SDD Manager consumer outcomes are claimed.
+- **Issues observed:** reviews found ambiguous stop consumption, incorrect pending-destination reconciliation, symlink containment gaps, SSH URL over-rejection, shallow-ancestry uncertainty, lost failed-capture provenance and inconsistent recovery output paths. Each was corrected and independently rechecked. Original failures remain in the evidence ledger.
+- **Actions taken:** added and reviewed the documents, schemas, helpers, all 27 case contracts/requests/guides and sensitivity/recovery checks; corrected the reported infrastructure defects. Both this report and the bundle README include the explicit live-acceptance TODO and copyable agent prompt. All 97 shipped plugin files remain unchanged.
+- **Plugin changes proposed:** none on the basis of this infrastructure work. Live execution and its causal plugin diagnosis remain the documented follow-up; historical findings are provenance, not new outcomes.
 
 ## Interface rulings
 
@@ -44,9 +44,17 @@ Commit `fb5bbf1` added bounded preflight/preparation, actual-state observation/r
 
 Task 2 passed its support review gate. Task 3 implementation starts at `08b700b`: preserve all 27 original intents, runtime prerequisites and separate expectations; do not copy completed records or product implementation. Commit `909e7fc` added all 27 cases, isolated requests, independent guides/literals, catalog validation, handoff rendering and actual-output capture. All 58 support/catalog tests passed. Independent review found one blocker, T3-R1: failed/timed-out nested capture could discard first-attempt provenance. Commit `5bb917d` preserves sanitized failed-capture provenance, partial channels and prior attempts without successful literal evidence. All 64 support/catalog tests passed; independent specification and quality re-review approved Task 3. [Implementation report](evidence/task-3-report.md), [independent review](evidence/task-3-review.md), [original reproduction](evidence/task-3-review-repro.log), [regression RED](evidence/task-3-fixwave1-red.log) and [final GREEN](evidence/task-3-fixwave1-tests.log) are retained. Root retains this ledger.
 
-### Task 4 — Fresh-context bootstrap: active; live acceptance follow-up open
+### Task 4 — Fresh-context bootstrap verified; live acceptance follow-up open
 
-Directory-only missing-input behavior can be checked after the bundle is complete. Actual setup, fresh consumers/assessors, controlled and unexpected interruption recovery, hosted reconciliation and the final diagnostic report require the dedicated test repository and available facilities. Missing facilities remain Blocked/Not run, never Passed.
+A fresh coordinator received only the bundle directory pointer at `f6fd96f`. It independently identified the exact required repository question, no default destination and the before-write gate. Before/after HEAD, branch, 283 tracked-file hashes, refs and status matched. [Bootstrap observation](evidence/directory-bootstrap.md) retains the actual response, verification method and limits. Authentication, actual setup, fresh product consumers/assessors, controlled/unexpected product interruption recovery, hosted reconciliation and the final live diagnostic report remain the dedicated-repository follow-up. Task 4 is partially verified, not fully complete; missing facilities remain Blocked/Not run, never Passed.
+
+## Final infrastructure verification and publication boundary
+
+Whole-bundle review initially reproduced caller-relative recovery export failure and identified stale plan status. The single final fix wave (`584cfe0`) aligned Python/Git export paths, supported nested output parents, preserved occupied/symlink refusal and corrected the plan metadata. The reviewer independently reran both original path failures and accepted specification and quality with no new fix-diff breakage. [Whole review](evidence/whole-bundle-review.md), [original reproduction](evidence/whole-bundle-review-repro.log), [fix report](evidence/final-fix-report.md), [RED](evidence/final-fix-red.log), [67-test GREEN](evidence/final-fix-full-green.log) and [independent recheck](evidence/final-fix-review-repro.log) remain retained.
+
+`PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -v` collected 67 tests and passed all 67, with zero failures/errors. Final integration checks found 71 resolving local Markdown targets, no missing targets and all 97 plugin files byte-identical to the pre-revision snapshot. Revision-range whitespace checks passed. [Integration observation](evidence/final-integration-checks.json) records the checked implementation identity. No new installed-client, live provider, product-worker interruption or 27-case acceptance result is inferred.
+
+The reviewed infrastructure and evidence are committed on `revision/009_384beef-textstats-test-project` for publication. The established target is retained; the branch is not represented as fully live-accepted or integrated while the follow-up remains open. No unfinished consumer work exists in this revision because no new consumer destination was selected.
 
 ## Follow-up
 
@@ -70,4 +78,4 @@ Do not modify the tested plugin package during the run. Record unavailable facil
 
 ## Next action
 
-Verify the complete bundle and directory-only bootstrap, complete whole-branch review, and publish source evidence. Live acceptance remains the explicit follow-up above; its invocation requests the dedicated destination when absent. Do not claim a new live campaign passed from infrastructure checks.
+Use the copyable prompt above when ready for live acceptance on the explicitly supplied dedicated repository. The reusable infrastructure is reviewed and verified; preserve this evidence and start a separately identified live run. Do not claim a new live campaign passed from infrastructure checks.
