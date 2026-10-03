@@ -291,6 +291,22 @@ def paths(repo,*args):
     return sorted(filter(None,git(repo,*args,binary=True).stdout.decode('utf-8').split('\x00')))
 
 
+def ancestor_containment(root, candidate, destination):
+    """Return True/False only for proven containment/non-containment; otherwise None."""
+    try:
+        if any(git(root,'cat-file','-e',commit+'^{commit}',required=False).returncode for commit in (candidate,destination)): return None
+        result=git(root,'merge-base','--is-ancestor',candidate,destination,required=False)
+        if result.returncode==0: return True
+        if result.returncode!=1: return None
+        shallow=git(root,'rev-parse','--is-shallow-repository',required=False)
+        if shallow.returncode or shallow.stdout.strip()!='false': return None
+        # Endpoint availability alone does not establish a complete usable commit graph.
+        if git(root,'rev-list','--parents',candidate,destination,required=False).returncode: return None
+        return False
+    except Stop:
+        return None
+
+
 def observe_git(repo_info):
     root=repo_info['local_checkout']
     if not root: raise Stop('local_checkout_required')
@@ -315,11 +331,12 @@ def observe_git(repo_info):
         publication='unpublished'
         containment='absent'
         if destination==head: publication='published'; containment='equal'
-        elif destination and git(root,'cat-file','-e',destination+'^{commit}',required=False).returncode:
-            publication='unknown'; containment='ancestry-unavailable'
         elif destination:
-            if not git(root,'merge-base','--is-ancestor',head,destination,required=False).returncode:
+            proven=ancestor_containment(root,head,destination)
+            if proven is True:
                 publication='published'; containment='ancestor'
+            elif proven is None:
+                publication='unknown'; containment='ancestry-unavailable'
     return {'head':head,'branch':branch,'parents':parents,'merge_heads':merges,'index':index,'staged_paths':paths(root,'diff','--cached','--name-only','-z'),'unstaged_paths':paths(root,'diff','--name-only','-z'),'untracked_paths':paths(root,'ls-files','--others','--exclude-standard','-z'),'conflict_paths':sorted({e['path'] for e in index if e['stage']}),'refs':git(root,'for-each-ref','--format=%(objectname) %(refname)').stdout.splitlines(),'worktrees':git(root,'worktree','list','--porcelain').stdout.splitlines(),'publication':publication,'remote_containment':containment,'remote_heads':remote['refs'],'remote_observation_status':remote['status']}
 
 
@@ -340,9 +357,9 @@ def reconcile(actual, state, repo_info):
         if commit and remote==commit: result['effect']='observed-published'
         elif actual['remote_observation_status']=='observed' and ref and commit:
             if remote is None: result['effect']='not-observed-at-destination'
-            elif git(repo_info['local_checkout'],'cat-file','-e',remote+'^{commit}',required=False).returncode or git(repo_info['local_checkout'],'cat-file','-e',commit+'^{commit}',required=False).returncode: result['effect']='unknown'
-            elif not git(repo_info['local_checkout'],'merge-base','--is-ancestor',commit,remote,required=False).returncode: result['effect']='observed-published'
-            else: result['effect']='not-observed-at-destination'
+            else:
+                proven=ancestor_containment(repo_info['local_checkout'],commit,remote)
+                result['effect']='observed-published' if proven is True else 'not-observed-at-destination' if proven is False else 'unknown'
         else: result['effect']='unknown'
     elif operation['status']=='uncertain': result['effect']='unknown'
     else: result['effect']='unfinished'

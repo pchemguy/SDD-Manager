@@ -1,4 +1,5 @@
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 import subprocess
@@ -239,3 +240,44 @@ class RecoveryTests(Sandbox):
         self.assertEqual(data['git']['publication'],'unpublished')
         self.assertEqual(data['reconciliation']['effect'],'observed-published')
         self.assertFalse(data['reconciliation']['retry_safe'])
+
+    def test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown(self):
+        candidate=git(self.repo,'rev-parse','HEAD').stdout.strip()
+        git(self.repo,'branch','candidate',candidate)
+        (self.repo/'owned.txt').write_text('middle\n')
+        git(self.repo,'commit','-am','middle')
+        middle=git(self.repo,'rev-parse','HEAD').stdout.strip()
+        (self.repo/'owned.txt').write_text('destination\n')
+        git(self.repo,'commit','-am','destination')
+        destination=git(self.repo,'rev-parse','HEAD').stdout.strip()
+        git(self.repo,'push','origin','main','candidate')
+        self.assertEqual(git(self.repo,'merge-base','--is-ancestor',candidate,destination).returncode,0)
+        shallow=self.root/'shallow'
+        git(self.root,'clone','--depth','2','--no-single-branch','--branch','main',self.remote.as_uri(),str(shallow))
+        git(shallow,'checkout','-B','main',candidate)
+        for commit in (candidate,destination):
+            self.assertEqual(git(shallow,'cat-file','-e',commit+'^{commit}').returncode,0)
+        self.assertEqual(git(shallow,'rev-parse','--is-shallow-repository').stdout.strip(),'true')
+        self.assertEqual(git(shallow,'merge-base','--is-ancestor',candidate,destination,check=False).returncode,1)
+        before=(git(shallow,'for-each-ref').stdout,git(shallow,'status','--porcelain').stdout,(shallow/'.git/shallow').read_bytes(),git(shallow,'cat-file','--batch-all-objects','--batch-check=%(objectname)').stdout)
+        spec=importlib.util.spec_from_file_location('textstats_core',Path(__file__).resolve().parents[1]/'scripts/core.py')
+        core=importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(core)
+        inputs=dict(self.inputs,test_repository=self.remote.as_uri(),local_checkout=str(shallow))
+        self.state['pending_operation']={'kind':'push','status':'uncertain','description':'lost response','identity':{'repository':self.remote.as_uri(),'ref':'refs/heads/main','commit':candidate}}
+        # Exercise readback without recovery export: shallow bundle portability is outside this ancestry check.
+        data=core.observation(inputs,self.state,self.root/'unused-output',exports=False)
+        for actual,expected in ((data['git']['publication'],'unknown'),(data['git']['remote_containment'],'ancestry-unavailable'),(data['reconciliation']['effect'],'unknown')):
+            with self.subTest(actual=actual,expected=expected): self.assertEqual(actual,expected)
+        self.assertFalse(data['reconciliation']['retry_safe'])
+        self.assertEqual(before,(git(shallow,'for-each-ref').stdout,git(shallow,'status','--porcelain').stdout,(shallow/'.git/shallow').read_bytes(),git(shallow,'cat-file','--batch-all-objects','--batch-check=%(objectname)').stdout))
+        # Equality and a visible positive ancestry path still establish the exact pending effect.
+        for commit in (destination,middle):
+            with self.subTest(proven_commit=commit):
+                self.state['pending_operation']['identity']['commit']=commit
+                data=core.observation(inputs,self.state,self.root/'unused-output',exports=False)
+                self.assertEqual(data['reconciliation']['effect'],'observed-published')
+        git(shallow,'checkout','-B','main',middle)
+        data=core.observation(inputs,self.state,self.root/'unused-output',exports=False)
+        self.assertEqual(data['git']['publication'],'published')
+        self.assertEqual(data['git']['remote_containment'],'ancestor')
