@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- Current state: **Authorized continuation in progress; suspend after A-018.** A-006 and A-014 Passed with independently checked, published evidence. A-018 remaining merge-publication rejection/recovery is underway in a local fork. The user’s newer stop excludes A-007–A-009; those remain unstarted.
+- Current state: **Safely suspended after A-018, as requested.** This continuation completed A-006, A-014 and A-018, with independent checks and published records. Current counts: **17 Passed, 10 Pending; 0 Failed, Blocked, Suspended or Running cases.** The campaign itself is paused; A-007–A-009 remain unstarted and overall revision integration remains pending.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -137,3 +137,21 @@ The user explicitly authorized all work after the named-destination/payload requ
 ## Completed A-014 and amended stopping boundary
 
 The user changed the stopping boundary to after A-018. A-007–A-009 will not start. A-014 completed its unchanged isolated T-004..T-006 range: actual retained RED reproduced17 tests with3 failures/1 error; T-004 fix `e048cf8`, T-005 `f8f4f0c`, explicit Phase1 merge `cca9072` with ordered parents `d769b55`/`f8f4f0c`, then phase2 T-006 `d24222f`. Phase1 integration/publication preceded phase2 creation; Phase2 remains incomplete/unmerged and T-007/T-008 unchecked. Independent30 tests and20 literal CLI cases, ownership/pin/clean/ref/ancestry checks passed. Journals, complete new JSON RED/GREEN logs, accurately labeled earlier excerpts and a verified completed-history bundle were committed/pushed as `c5028a2`, remote equality verified before A-018 setup. No live host operation in this fixture. A-018 new fork starts from real verified Phase1 `964e72b`, adds only a local hosted-disable instruction, and has a controlled target-only receive-hook rejection; no consumer result is yet claimed.
+
+## A-018 verified recovery and final controlled stop
+
+A-018’s additional merge-publication trial used a local bare-origin fork from actual completed/verified Phase1. The consumer passed26 working/prospective tests, made explicit merge `7f845c755464890e72a5e0cbd1fd6a8d41addac4` with ordered parents `d769b55`/`841a3311`, and received the real controlled pre-receive rejection on its single target push. It retained the clean merge, old remote target, working branch and stopping boundary, without retry, server-policy change, force or Phase2. Independent26 tests/12 literal CLI checks, exact parents/refs/policy hash and clean-state checks passed; rejection evidence committed/pushed `cbcd810` before recovery.
+
+The evaluator owner removed only the fingerprinted synthetic receive hook, leaving all Git refs untouched. A fresh consumer published the exact retained `7f845c7`, rechecked26 tests, verified remote containment and stopped. Independent post-publication HEAD/parents/product hashes and remote equality prove no duplicate boundary or product change. Prior independent behavior checks apply to that same commit; no redundant root full-suite claim is made. A-018’s earlier task-publication trial remains preserved at `7c29721`; verified task and merge history bundles are retained. Final case evidence `b1377fd` was committed/pushed and remote-verified. This is a local injected failure/recovery, not a live GitHub server-rejection claim.
+
+| Completed case | Independent result | Durable evidence |
+| --- | --- | --- |
+| A-006 | Published real Phase1 main29c2758;26 tests/12 CLI checks; unique issue5 closure; no Phase2 | AgentPlayground7014456 |
+| A-014 | Correct local cross-phase ordering; maincca9072 then JSONd24222f;30 tests/20 CLI cases; no incomplete-phase merge | AgentPlaygroundc5028a2 |
+| A-018 | Retained/published same task and merge after controlled rejections; merge26 tests/12 CLI checks; no duplicate/advance | AgentPlaygroundcbcd810/b1377fd |
+
+The user changed the stopping boundary to **after A-018**. No A-007–A-009 or other pending case began. All four replacement consumers completed and no consumer tool is pending. Live main remains `29c2758`, phase1 `964e72b`; no live phase2/feature package. Isolated A-014 phase2 remains paused at `d24222f` beforeT007/T008; A-018 main/remote is `7f845c7` with no Phase2. Effective real-token exclusion, clean tracked live state, all97 pinned hashes and all three retained bundles were independently checked. Existing unrelated source/consumer work is preserved.
+
+[Current resume instructions](https://github.com/pchemguy/AgentPlayground/blob/evaluation/008-runtime-acceptance/docs/dev/reviews/001_608cf12/RESUME.md) and SUSPENSION-20261003.json were committed as `0b961bc`; they identify A-007 as the next positive case only after a new resumption request. Counts reconcile at17 Passed/10 Pending and no running/failed/blocked cases. Overall R-001 remains partially addressed, and the source boundary merge is deferred until the accepted remaining campaign is completed and assessed. No new pinned-plugin defect was established by this bounded continuation.
+
+Evidence limits remain: explicit pinned source loading with independent fresh consumers, not automatic installation/discovery; actual Python3.12.14, no3.11 execution; complete available new journals/outputs/handoffs, not fabricated native tool-message exports. Earlier T004/Phase1 excerpts are labeled accurately. Controlled fixture setup/restoration is distinguished from consumer actions. Automatic publication authorization blockage was resolved by the user’s explicit authorization and both repositories’ pushes succeeded; it is not a remaining blocker.
