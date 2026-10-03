@@ -1,0 +1,21 @@
+test_index_conflict_export_restores_usable_merge_metadata (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_index_conflict_export_restores_usable_merge_metadata) ... FAIL
+
+======================================================================
+FAIL: test_index_conflict_export_restores_usable_merge_metadata (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_index_conflict_export_restores_usable_merge_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 177, in test_index_conflict_export_restores_usable_merge_metadata
+    self.assertEqual(git(restored,'ls-files','--stage').stdout,git(self.repo,'ls-files','--stage').stdout)
+AssertionError: '100644 e45c9c2666d44e0327c1f9c239a74c508336053e 0\towned.txt\n' != '100644 180b47c18ba7e484fc0d7350bc6cad8ec3423ea0 [134 chars]xt\n'
++ 100644 180b47c18ba7e484fc0d7350bc6cad8ec3423ea0 1	owned.txt
++ 100644 ba2906d0666cf726c7eaadd2cd3db615dedfdf3a 2	owned.txt
+- 100644 e45c9c2666d44e0327c1f9c239a74c508336053e 0	owned.txt
+?                                                 ^
++ 100644 e45c9c2666d44e0327c1f9c239a74c508336053e 3	owned.txt
+?                                                 ^
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.224s
+
+FAILED (failures=1)

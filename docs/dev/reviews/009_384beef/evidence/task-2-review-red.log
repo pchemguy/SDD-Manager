@@ -1,0 +1,47 @@
+test_prepare_refuses_dangling_workspace_symlink_before_resolving (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_prepare_refuses_dangling_workspace_symlink_before_resolving) ... FAIL
+test_dirty_package_parent_symlink_is_not_followed (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_dirty_package_parent_symlink_is_not_followed) ... FAIL
+test_uncertain_push_explicit_ref_overrides_current_branch_publication (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_explicit_ref_overrides_current_branch_publication) ... FAIL
+test_uncertain_push_explicit_ref_with_unknown_ancestry_stays_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_explicit_ref_with_unknown_ancestry_stays_unknown) ... FAIL
+
+======================================================================
+FAIL: test_prepare_refuses_dangling_workspace_symlink_before_resolving (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_prepare_refuses_dangling_workspace_symlink_before_resolving)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 148, in test_prepare_refuses_dangling_workspace_symlink_before_resolving
+    self.assertNotEqual(p.returncode,0)
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_dirty_package_parent_symlink_is_not_followed (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_dirty_package_parent_symlink_is_not_followed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 172, in test_dirty_package_parent_symlink_is_not_followed
+    self.assertNotEqual(p.returncode,0)
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_uncertain_push_explicit_ref_overrides_current_branch_publication (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_explicit_ref_overrides_current_branch_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 204, in test_uncertain_push_explicit_ref_overrides_current_branch_publication
+    self.assertEqual(data['reconciliation']['effect'],'not-observed-at-destination')
+AssertionError: 'observed-published' != 'not-observed-at-destination'
+- observed-published
++ not-observed-at-destination
+
+
+======================================================================
+FAIL: test_uncertain_push_explicit_ref_with_unknown_ancestry_stays_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_explicit_ref_with_unknown_ancestry_stays_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 219, in test_uncertain_push_explicit_ref_with_unknown_ancestry_stays_unknown
+    self.assertEqual(data['reconciliation']['effect'],'unknown')
+AssertionError: 'observed-published' != 'unknown'
+- observed-published
++ unknown
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.001s
+
+FAILED (failures=4)

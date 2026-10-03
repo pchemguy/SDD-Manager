@@ -1,0 +1,14 @@
+test_boolean_is_not_integer_and_validated_runtime_ref_binding (tests.acceptance.textstats.tests.test_checkers.CheckerTests.test_boolean_is_not_integer_and_validated_runtime_ref_binding) ... FAIL
+
+======================================================================
+FAIL: test_boolean_is_not_integer_and_validated_runtime_ref_binding (tests.acceptance.textstats.tests.test_checkers.CheckerTests.test_boolean_is_not_integer_and_validated_runtime_ref_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_checkers.py", line 72, in test_boolean_is_not_integer_and_validated_runtime_ref_binding
+    self.assertNotEqual(p.returncode,0)
+AssertionError: 0 == 0
+
+----------------------------------------------------------------------
+Ran 1 test in 0.089s
+
+FAILED (failures=1)

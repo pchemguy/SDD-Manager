@@ -1,0 +1,17 @@
+test_unavailable_remote_does_not_claim_unpublished (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_unavailable_remote_does_not_claim_unpublished) ... FAIL
+
+======================================================================
+FAIL: test_unavailable_remote_does_not_claim_unpublished (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_unavailable_remote_does_not_claim_unpublished)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 91, in test_unavailable_remote_does_not_claim_unpublished
+    self.assertEqual(data['git']['publication'],'unknown')
+AssertionError: 'unpublished' != 'unknown'
+- unpublished
++ unknown
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.141s
+
+FAILED (failures=1)

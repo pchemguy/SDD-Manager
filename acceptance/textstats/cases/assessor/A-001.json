@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "case_id": "A-001",
+  "checks": [
+    {
+      "id": "active-ownership",
+      "kind": "task_ownership"
+    },
+    {
+      "id": "final-head",
+      "kind": "git",
+      "field": "head",
+      "expected_ref": "checkpoint_refs.product_commit"
+    },
+    {
+      "id": "published",
+      "kind": "git",
+      "field": "publication",
+      "expected": "published"
+    }
+  ],
+  "required_agent_checks": [
+    "Actual repository/worktree and applicable instructions are observed. Full design/SPEC, MVP plan/layout and valid parent/child tasks are produced and published.",
+    "No production implementation or completed-task claim appears; tests/unit and tests/integration requirements survive in generated product artifacts."
+  ]
+}

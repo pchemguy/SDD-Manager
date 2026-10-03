@@ -1,0 +1,45 @@
+test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown) ...
+  test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown) (actual='unpublished', expected='unknown') ... FAIL
+  test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown) (actual='absent', expected='ancestry-unavailable') ... FAIL
+  test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown) (actual='not-observed-at-destination', expected='unknown') ... FAIL
+
+======================================================================
+FAIL: test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown) (actual='unpublished', expected='unknown')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 271, in test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown
+    with self.subTest(actual=actual,expected=expected): self.assertEqual(actual,expected)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unpublished' != 'unknown'
+- unpublished
++ unknown
+
+
+======================================================================
+FAIL: test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown) (actual='absent', expected='ancestry-unavailable')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 271, in test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown
+    with self.subTest(actual=actual,expected=expected): self.assertEqual(actual,expected)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'absent' != 'ancestry-unavailable'
+- absent
++ ancestry-unavailable
+
+
+======================================================================
+FAIL: test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown) (actual='not-observed-at-destination', expected='unknown')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 271, in test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown
+    with self.subTest(actual=actual,expected=expected): self.assertEqual(actual,expected)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'not-observed-at-destination' != 'unknown'
+- not-observed-at-destination
++ unknown
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.227s
+
+FAILED (failures=3)

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "case_id": "A-003",
+  "checks": [
+    {
+      "id": "active-ownership",
+      "kind": "task_ownership"
+    },
+    {
+      "id": "final-head",
+      "kind": "git",
+      "field": "head",
+      "expected_ref": "checkpoint_refs.product_commit"
+    },
+    {
+      "id": "published",
+      "kind": "git",
+      "field": "publication",
+      "expected": "published"
+    }
+  ],
+  "required_agent_checks": [
+    "Each task has one maintained issue; exact markers, phase labels/native milestones and initial parent assignments match actual hierarchy.",
+    "Second projection reuses identities; foreign labels, user text/comments and unrelated hosted objects are preserved. Live provider readback is required."
+  ]
+}

@@ -1,0 +1,23 @@
+test_actual_cli_import_failure_retains_first_attempt_channels (tests.acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_actual_cli_import_failure_retains_first_attempt_channels) ... FAIL
+test_timeout_preserves_actual_partial_channels_and_not_completed_status (tests.acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_timeout_preserves_actual_partial_channels_and_not_completed_status) ... FAIL
+
+======================================================================
+FAIL: test_actual_cli_import_failure_retains_first_attempt_channels (tests.acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_actual_cli_import_failure_retains_first_attempt_channels)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_catalog.py", line 178, in test_actual_cli_import_failure_retains_first_attempt_channels
+    self.assertTrue(provenance.exists(),'failed first attempt provenance must survive')
+AssertionError: False is not true : failed first attempt provenance must survive
+
+======================================================================
+FAIL: test_timeout_preserves_actual_partial_channels_and_not_completed_status (tests.acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_timeout_preserves_actual_partial_channels_and_not_completed_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_catalog.py", line 193, in test_timeout_preserves_actual_partial_channels_and_not_completed_status
+    self.assertEqual(len(journal),1,'started timed-out command must survive')
+AssertionError: 0 != 1 : started timed-out command must survive
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.127s
+
+FAILED (failures=2)

@@ -1,0 +1,4 @@
+{"outer_stderr": "", "outer_stdout": "{\"schema_version\": 1, \"error\": \"actual capture unavailable; retain failed command/session evidence separately\"}\n", "output_exists": false, "provenance_exists": false, "retained_nested_marker": false, "status": 2, "trial": "actual-import-failure"}
+{"journal": [], "trial": "timeout-with-available-partial-bytes"}
+{"outer_stdout": "{\"schema_version\": 1, \"error\": \"actual capture unavailable; retain failed command/session evidence separately\"}\n", "output_exists": false, "provenance_exists": false, "status": 2, "trial": "timeout-main"}
+{"actual": {"json": {"lines": true, "words": 2}, "name": "typed-json", "returncode": 0, "single_object_newline": true, "stderr": "", "unchanged": true}, "matches_integer_expected": false, "trial": "bool-int-sensitive-json"}

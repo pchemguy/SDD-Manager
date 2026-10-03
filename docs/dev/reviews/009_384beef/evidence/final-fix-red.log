@@ -1,0 +1,55 @@
+test_caller_relative_cli_exports_verified_bundle_outside_consumer (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_caller_relative_cli_exports_verified_bundle_outside_consumer) ...
+  test_caller_relative_cli_exports_verified_bundle_outside_consumer (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_caller_relative_cli_exports_verified_bundle_outside_consumer) (output='relative-observation.json') ... FAIL
+  test_caller_relative_cli_exports_verified_bundle_outside_consumer (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_caller_relative_cli_exports_verified_bundle_outside_consumer) (output='new-attempt/nested/observation.json') ... FAIL
+test_absolute_cli_output_creates_missing_parent (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_absolute_cli_output_creates_missing_parent) ... FAIL
+test_cli_refuses_occupied_and_dangling_output_and_recovery_paths (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_cli_refuses_occupied_and_dangling_output_and_recovery_paths) ...
+  test_cli_refuses_occupied_and_dangling_output_and_recovery_paths (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_cli_refuses_occupied_and_dangling_output_and_recovery_paths) (suffix='.recovery', kind='dangling-symlink') ... FAIL
+
+======================================================================
+FAIL: test_caller_relative_cli_exports_verified_bundle_outside_consumer (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_caller_relative_cli_exports_verified_bundle_outside_consumer) (output='relative-observation.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 56, in test_caller_relative_cli_exports_verified_bundle_outside_consumer
+    self._assert_caller_export(output)
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 32, in _assert_caller_export
+    self.assertEqual(proc.returncode,0,proc.stdout+proc.stderr)
+AssertionError: 2 != 0 : {"schema_version": 1, "status": "Blocked", "cause": "git_operation_unavailable", "next_action": "Inspect repository/access prerequisites using the pinned plugin protocols; retain pending work."}
+
+
+======================================================================
+FAIL: test_caller_relative_cli_exports_verified_bundle_outside_consumer (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_caller_relative_cli_exports_verified_bundle_outside_consumer) (output='new-attempt/nested/observation.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 56, in test_caller_relative_cli_exports_verified_bundle_outside_consumer
+    self._assert_caller_export(output)
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 32, in _assert_caller_export
+    self.assertEqual(proc.returncode,0,proc.stdout+proc.stderr)
+AssertionError: 2 != 0 : {"schema_version": 1, "status": "Blocked", "cause": "support_operation_failed", "next_action": "Inspect sanitized prerequisites and retain existing work before retrying."}
+
+
+======================================================================
+FAIL: test_absolute_cli_output_creates_missing_parent (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_absolute_cli_output_creates_missing_parent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 59, in test_absolute_cli_output_creates_missing_parent
+    self._assert_caller_export(self.root/'absolute-attempt/nested/observation.json')
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 32, in _assert_caller_export
+    self.assertEqual(proc.returncode,0,proc.stdout+proc.stderr)
+AssertionError: 2 != 0 : {"schema_version": 1, "status": "Blocked", "cause": "support_operation_failed", "next_action": "Inspect sanitized prerequisites and retain existing work before retrying."}
+
+
+======================================================================
+FAIL: test_cli_refuses_occupied_and_dangling_output_and_recovery_paths (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_cli_refuses_occupied_and_dangling_output_and_recovery_paths) (suffix='.recovery', kind='dangling-symlink')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 78, in test_cli_refuses_occupied_and_dangling_output_and_recovery_paths
+    self.assertEqual(json.loads(proc.stdout)['cause'],cause)
+AssertionError: 'support_operation_failed' != 'recovery_export_occupied'
+- support_operation_failed
++ recovery_export_occupied
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.011s
+
+FAILED (failures=4)

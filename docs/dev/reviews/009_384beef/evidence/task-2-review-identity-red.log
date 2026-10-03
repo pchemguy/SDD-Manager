@@ -1,0 +1,30 @@
+test_username_only_ssh_transport_is_allowed_but_embedded_credentials_rejected (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_username_only_ssh_transport_is_allowed_but_embedded_credentials_rejected) ... FAIL
+test_uncertain_push_recorded_repository_mismatch_is_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_recorded_repository_mismatch_is_unknown) ... FAIL
+
+======================================================================
+FAIL: test_username_only_ssh_transport_is_allowed_but_embedded_credentials_rejected (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_username_only_ssh_transport_is_allowed_but_embedded_credentials_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 179, in test_username_only_ssh_transport_is_allowed_but_embedded_credentials_rejected
+    data,_=self.ok(self.invoke('preflight',dict(self.inputs,test_repository=url)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : {"schema_version": 1, "status": "Blocked", "cause": "invalid_nonsecret_configuration", "next_action": "Resolve the reported prerequisite before retrying."}
+
+
+======================================================================
+FAIL: test_uncertain_push_recorded_repository_mismatch_is_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_recorded_repository_mismatch_is_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 226, in test_uncertain_push_recorded_repository_mismatch_is_unknown
+    self.assertEqual(data['reconciliation']['effect'],'unknown')
+AssertionError: 'observed-published' != 'unknown'
+- observed-published
++ unknown
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.234s
+
+FAILED (failures=2)

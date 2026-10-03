@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "case_id": "A-009",
+  "checks": [
+    {
+      "id": "active-ownership",
+      "kind": "task_ownership"
+    },
+    {
+      "id": "final-head",
+      "kind": "git",
+      "field": "head",
+      "expected_ref": "checkpoint_refs.product_commit"
+    },
+    {
+      "id": "published",
+      "kind": "git",
+      "field": "publication",
+      "expected": "published"
+    }
+  ],
+  "required_agent_checks": [
+    "Only selected SPEC owners change; outside impacts are reported. FEATURE-TASKS remains active sole executable owner.",
+    "Still-needed sources persist; no whole package archive, implementation or phase completion."
+  ]
+}

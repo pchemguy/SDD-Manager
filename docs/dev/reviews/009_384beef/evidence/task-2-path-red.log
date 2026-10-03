@@ -1,0 +1,46 @@
+test_boolean_is_not_integer_and_validated_runtime_ref_binding (tests.acceptance.textstats.tests.test_checkers.CheckerTests.test_boolean_is_not_integer_and_validated_runtime_ref_binding) ... ok
+test_empty_or_invalid_evidence_cannot_pass (tests.acceptance.textstats.tests.test_checkers.CheckerTests.test_empty_or_invalid_evidence_cannot_pass) ... ok
+test_empty_task_collection_and_path_escape_fail (tests.acceptance.textstats.tests.test_checkers.CheckerTests.test_empty_task_collection_and_path_escape_fail) ... ok
+test_git_evidence_reads_actual_state (tests.acceptance.textstats.tests.test_checkers.CheckerTests.test_git_evidence_reads_actual_state) ... ok
+test_literal_output_channel_and_status_sensitivity (tests.acceptance.textstats.tests.test_checkers.CheckerTests.test_literal_output_channel_and_status_sensitivity) ... ok
+test_task_ownership_excludes_historical_evidence_and_rejects_duplicates (tests.acceptance.textstats.tests.test_checkers.CheckerTests.test_task_ownership_excludes_historical_evidence_and_rejects_duplicates) ... ok
+test_without_contract_is_not_run (tests.acceptance.textstats.tests.test_checkers.CheckerTests.test_without_contract_is_not_run) ... ok
+test_ambiguous_remotes_require_resolution (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_ambiguous_remotes_require_resolution) ... ok
+test_blank_repository_requests_same_input (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_blank_repository_requests_same_input) ... ok
+test_dirty_source_fingerprint_and_committed_default (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_dirty_source_fingerprint_and_committed_default) ... ok
+test_dirty_source_tracks_executable_mode_changes (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_dirty_source_tracks_executable_mode_changes) ... ok
+test_missing_repository_requests_input_without_any_output_write (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_missing_repository_requests_input_without_any_output_write) ... ok
+test_pin_uses_git_object_bytes_and_nonempty_97_package_manifest (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_pin_uses_git_object_bytes_and_nonempty_97_package_manifest) ... ok
+test_preflight_has_no_worktree_or_index_side_effects (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_preflight_has_no_worktree_or_index_side_effects) ... ok
+test_prepare_isolated_clone_contains_only_vendor_and_provenance (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_prepare_isolated_clone_contains_only_vendor_and_provenance) ... ok
+test_prepare_new_unborn_remote_is_bounded_and_does_not_publish (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_prepare_new_unborn_remote_is_bounded_and_does_not_publish) ... ok
+test_prepare_requires_new_explicit_workspace_and_preserves_existing_run (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_prepare_requires_new_explicit_workspace_and_preserves_existing_run) ... ok
+test_prepare_resume_does_not_clone (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_prepare_resume_does_not_clone) ... ok
+test_repository_identity_mismatch_fails (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_repository_identity_mismatch_fails) ... ok
+test_strict_schema_constraints_and_no_type_coercion (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_strict_schema_constraints_and_no_type_coercion) ... ok
+test_unknown_and_secret_configuration_fails_without_echo (tests.acceptance.textstats.tests.test_preflight.PreflightTests.test_unknown_and_secret_configuration_fails_without_echo) ... ok
+test_actual_staged_and_unstaged_intent_export_and_restore (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_actual_staged_and_unstaged_intent_export_and_restore) ... ok
+test_deletion_and_conflict_stages_merge_parents_preserved (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_deletion_and_conflict_stages_merge_parents_preserved) ... ok
+test_index_conflict_export_restores_usable_merge_metadata (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_index_conflict_export_restores_usable_merge_metadata) ... ok
+test_parent_symlink_cannot_export_external_workfile_contents (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_parent_symlink_cannot_export_external_workfile_contents) ... FAIL
+test_protected_file_is_not_read_or_exported (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_protected_file_is_not_read_or_exported) ... ok
+test_remote_tip_with_unavailable_ancestry_remains_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_remote_tip_with_unavailable_ancestry_remains_unknown) ... ok
+test_secret_state_and_unknown_nested_field_fails_without_leak (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_secret_state_and_unknown_nested_field_fails_without_leak) ... ok
+test_staged_deletion_and_unstaged_deletion_are_reconstructable (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_staged_deletion_and_unstaged_deletion_are_reconstructable) ... ok
+test_unavailable_remote_does_not_claim_unpublished (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_unavailable_remote_does_not_claim_unpublished) ... ok
+test_uncertain_api_effect_remains_unknown_no_replay (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_api_effect_remains_unknown_no_replay) ... ok
+test_uncertain_push_reconciles_actual_destination_even_cursor_lags (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_reconciles_actual_destination_even_cursor_lags) ... ok
+test_unpublished_commit_recognized_without_checkpoint_hint (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_unpublished_commit_recognized_without_checkpoint_hint) ... ok
+
+======================================================================
+FAIL: test_parent_symlink_cannot_export_external_workfile_contents (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_parent_symlink_cannot_export_external_workfile_contents)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 195, in test_parent_symlink_cannot_export_external_workfile_contents
+    self.assertNotEqual(p.returncode,0)
+AssertionError: 0 == 0
+
+----------------------------------------------------------------------
+Ran 33 tests in 7.178s
+
+FAILED (failures=1)

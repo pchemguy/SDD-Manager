@@ -5,13 +5,13 @@
 - **Campaign:** `009_384beef`.
 - **Starting baseline:** `384beefb6186348af9b100de9bec2f5a4a024692`.
 - **Origin:** User-requested integration of TextStats as a reusable SDD Manager diagnostic test project, following the [008 campaign report](../008_98a5562/REVISION-REPORT.md).
-- **State:** Planning only; bundle implementation and new test execution have not started.
+- **State:** Tasks 1–3 implemented and reviewed: entry documents/schemas, portable helpers and case contracts complete; fresh directory-only bootstrap verified. New live acceptance remains an explicit follow-up awaiting its dedicated repository input.
 - **Scope:** Self-contained test infrastructure, agent/human entry documents, phased execution, interruption recovery and diagnostic reporting. No plugin defect repair is implied by this plan.
 - **Execution:** Coordinate accepted revision work through SDD Manager, preserving scope, verification, reporting and publication boundaries.
 
 **Goal:** Add a self-contained TextStats diagnostic test project to SDD Manager so an agent directed only to its directory can obtain the context, resolve missing inputs, set up a test repository, execute phased tests, recover interruptions and report actionable plugin findings.
 
-**Architecture:** A repository-owned test bundle at `tests/acceptance/textstats/` contains agent/human entry documents, the scenario, ordered procedures, separated consumer/assessor inputs and portable support tools. Run-specific state and evidence live in the supplied test repository; fresh consumers receive only their selected scenario instructions and the exact tested plugin snapshot. The bundle is test infrastructure outside the plugin skill package.
+**Architecture:** A repository-owned test bundle at `acceptance/textstats/` contains agent/human entry documents, the scenario, ordered procedures, separated consumer/assessor inputs and portable support tools. Run-specific state and evidence live in the supplied test repository; fresh consumers receive only their selected scenario instructions and the exact tested plugin snapshot. The bundle is test infrastructure outside the plugin skill package.
 
 **Tech Stack:** Markdown, versioned JSON manifests/schemas, Python 3.11+ standard-library helpers/unittest, Git, and the plugin's supported GitHub backend/credential mechanisms. Actual interpreter and client mode are recorded.
 
@@ -19,7 +19,7 @@
 
 ## Requirements
 
-1. A new agent receiving only “Run the test project in tests/acceptance/textstats/” can discover its purpose, inputs, procedures, required skill references, checkpoints and diagnostic deliverables without previous conversation context.
+1. A new agent receiving only “Run the test project in acceptance/textstats/” can discover its purpose, inputs, procedures, required skill references, checkpoints and diagnostic deliverables without previous conversation context.
 2. TextStats is explicitly a plugin test project. Its capabilities are test material; development documents inside the consumer repository remain ordinary product artifacts generated through the tested workflows.
 3. Request a dedicated test repository when none is supplied. Existing authentication is used first; request suitable GitHub credentials when required access is actually unavailable. Never assume the old AgentPlayground destination, a previous token or a previous session.
 4. Support complete execution and bounded phase/case scopes, planned stops, injected interruption cases and unexpected interruption. Resumption preserves actual unfinished work and uses durable evidence rather than prompt memory.
@@ -28,7 +28,7 @@
 
 ## Global constraints
 
-- Put the bundle at `tests/acceptance/textstats/`; link it from the root README. Do not insert its instructions/oracles into shipped skill entries.
+- Put the bundle at `acceptance/textstats/`; link it from the root README. Do not insert its instructions/oracles into shipped skill entries.
 - Default tested source is the committed SDD Manager HEAD at run start; an explicitly supplied revision overrides it. Record full SHA and package-file hashes before consumer execution. Handle requested dirty-source testing explicitly rather than calling it HEAD testing.
 - Require an explicitly identified dedicated test repository, with `main`/`origin` defaults only after discovery confirms them. Preserve existing contents, instructions, staging, credentials and hosted objects; never reset an existing repository to start a test.
 - Full coverage includes real Git publication and GitHub tracking plus isolated controlled failures. If facilities are unavailable, label affected cases Blocked/Not run; a local-only subset is not full acceptance.
@@ -41,7 +41,7 @@
 
 The source bundle contains reusable instructions and tools. It does not contain a copied finished TextStats implementation or a new duplicate of the historical campaign.
 
-| Proposed path beneath `tests/acceptance/textstats/` | Responsibility |
+| Proposed path beneath `acceptance/textstats/` | Responsibility |
 | --- | --- |
 | `AGENTS.md` | Agent entry: role, exact reading order, input resolution, automatic next action, isolation, stopping/resumption and reporting obligations. |
 | `README.md` | Human entry: purpose, directory map, minimal invocation, required inputs, profiles, phases, outputs and recovery overview. |
@@ -146,10 +146,10 @@ If no confirmed plugin defect is found, state directly: “No confirmed SDD Mana
 
 **Interfaces:** Produces complete relative reading paths, input fields and phase/checkpoint contracts consumed by the support tools and coordinator.
 
-- [ ] Extract reusable requirements/procedures from the historical campaign; remove fixed machine paths, repository defaults, issue IDs and completed-answer content.
-- [ ] Write the entry/linked documents and configuration schemas, including every interruption state above.
-- [ ] Check all relative links and manually trace a fresh directory-only invocation and a resumed invocation without using historical chat context.
-- [ ] Commit the coherent documentation bundle with scope limited to the test infrastructure and its README navigation.
+- [x] Extract reusable requirements/procedures from the historical campaign; remove fixed machine paths, repository defaults, issue IDs and completed-answer content.
+- [x] Write the entry/linked documents and configuration schemas, including every interruption state above.
+- [x] Check all relative links and manually trace a fresh directory-only invocation and a resumed invocation without using historical chat context.
+- [x] Commit the coherent documentation bundle with scope limited to the test infrastructure and its README navigation.
 
 ### Task 2 — Portable setup, observation and recovery support
 
@@ -157,11 +157,11 @@ If no confirmed plugin defect is found, state directly: “No confirmed SDD Mana
 
 **Interfaces:** Scripts accept `--inputs <path>` and `--output <path>`; execution helpers additionally accept `--run-state <path>` where needed. Non-secret structured observations return exit 0 on success, nonzero with a sanitized cause on failure. Preflight is read-only; prepare creates only a resolved fresh workspace. Observers never resume/mutate consumer work.
 
-- [ ] Write failing tests for missing/ambiguous repository input, existing-run preservation, secret-value rejection in configuration, pending-publication recognition and uncertain-operation reconciliation.
-- [ ] Port only the reusable Git/task/oracle/fixture primitives from the old harness; parameterize repository roots/endpoints/refs and exclude historical review snapshots from current ownership.
-- [ ] Implement the documented script interfaces; recovery reads actual state rather than trusting RUN-STATE alone. Restrict credential handling to plugin-owned protected mechanisms.
-- [ ] Run the support suite with intentionally invalid evidence and nonempty collection. Verify no real hosted writes in self-tests.
-- [ ] Commit the tested helpers before a consumer run relies on them.
+- [x] Write failing tests for missing/ambiguous repository input, existing-run preservation, secret-value rejection in configuration, pending-publication recognition and uncertain-operation reconciliation.
+- [x] Port only the reusable Git/task/oracle/fixture primitives from the old harness; parameterize repository roots/endpoints/refs and exclude historical review snapshots from current ownership.
+- [x] Implement the documented script interfaces; recovery reads actual state rather than trusting RUN-STATE alone. Restrict credential handling to plugin-owned protected mechanisms.
+- [x] Run the support suite with intentionally invalid evidence and nonempty collection. Verify no real hosted writes in self-tests.
+- [x] Commit the tested helpers before a consumer run relies on them.
 
 ### Task 3 — Case contracts and isolated worker handoffs
 
@@ -169,12 +169,14 @@ If no confirmed plugin defect is found, state directly: “No confirmed SDD Mana
 
 **Interfaces:** Each catalog case resolves its dependency checkpoints, selected worker input and independent assessor contract. Input rendering substitutes resolved non-secret identities; expected results never enter consumer input.
 
-- [ ] Port all 27 original case intents with real prerequisite/interrupt triggers; literal expectations remain independent of application code.
-- [ ] Define controlled stop/resume pairs and uncontrolled interruption injection points, covering dirty transfer, staged work, rejected push, conflict, failed required check and uncertain hosted effects.
-- [ ] Define the two focused diagnostic probes for dependency inflation and retired-task handling, without coaching consumers toward assessor answers.
-- [ ] Verify catalog dependency consistency, resolvable input paths and separation of worker/assessor context; commit the complete case bundle.
+- [x] Port all 27 original case intents with real prerequisite/interrupt triggers; literal expectations remain independent of application code.
+- [x] Define controlled stop/resume pairs and uncontrolled interruption injection points, covering dirty transfer, staged work, rejected push, conflict, failed required check and uncertain hosted effects.
+- [x] Define the two focused diagnostic probes for dependency inflation and retired-task handling, without coaching consumers toward assessor answers.
+- [x] Verify catalog dependency consistency, resolvable input paths and separation of worker/assessor context; commit the complete case bundle.
 
 ### Task 4 — Fresh-context bootstrap, interruption and diagnostic acceptance
+
+Directory-only missing-repository discovery was verified at `f6fd96f`; [the observation](evidence/directory-bootstrap.md) records unchanged source state. Authentication and live execution below remain the explicit dedicated-repository follow-up in the report and bundle README; the compound acceptance steps are intentionally unchecked.
 
 **Files:** New run records in the explicitly supplied test repository; source bundle changes only for evidenced fixes.
 
@@ -190,4 +192,4 @@ If no confirmed plugin defect is found, state directly: “No confirmed SDD Mana
 
 The directory alone supplies the reusable context; the agent requests only missing external inputs. Fresh and resumed execution use the same entry point. Phase boundaries, controlled triggers and unexpected termination have observed recovery evidence. Test outcomes remain separate from diagnosis, and proposed plugin fixes are causal, bounded and verifiable. No essential runtime dependency remains on the old chat, scratch workspace or AgentPlayground repository.
 
-This document is a plan. The test bundle and new execution have not yet been implemented.
+The reusable test bundle is implemented and reviewed. New live acceptance remains unexecuted and pending as the explicit dedicated-repository follow-up.

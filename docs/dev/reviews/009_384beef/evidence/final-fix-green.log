@@ -1,0 +1,25 @@
+test_absolute_cli_output_creates_missing_parent (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_absolute_cli_output_creates_missing_parent) ... ok
+test_actual_staged_and_unstaged_intent_export_and_restore (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_actual_staged_and_unstaged_intent_export_and_restore) ... ok
+test_caller_relative_cli_exports_verified_bundle_outside_consumer (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_caller_relative_cli_exports_verified_bundle_outside_consumer) ... ok
+test_cli_refuses_occupied_and_dangling_output_and_recovery_paths (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_cli_refuses_occupied_and_dangling_output_and_recovery_paths) ... ok
+test_deletion_and_conflict_stages_merge_parents_preserved (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_deletion_and_conflict_stages_merge_parents_preserved) ... ok
+test_index_conflict_export_restores_usable_merge_metadata (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_index_conflict_export_restores_usable_merge_metadata) ... ok
+test_parent_symlink_cannot_export_external_workfile_contents (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_parent_symlink_cannot_export_external_workfile_contents) ... ok
+test_protected_file_is_not_read_or_exported (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_protected_file_is_not_read_or_exported) ... ok
+test_remote_tip_with_unavailable_ancestry_remains_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_remote_tip_with_unavailable_ancestry_remains_unknown) ... ok
+test_secret_state_and_unknown_nested_field_fails_without_leak (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_secret_state_and_unknown_nested_field_fails_without_leak) ... ok
+test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_shallow_checkout_with_both_endpoints_keeps_unproven_containment_unknown) ... ok
+test_staged_deletion_and_unstaged_deletion_are_reconstructable (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_staged_deletion_and_unstaged_deletion_are_reconstructable) ... ok
+test_unavailable_remote_does_not_claim_unpublished (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_unavailable_remote_does_not_claim_unpublished) ... ok
+test_uncertain_api_effect_remains_unknown_no_replay (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_api_effect_remains_unknown_no_replay) ... ok
+test_uncertain_push_explicit_ref_overrides_current_branch_publication (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_explicit_ref_overrides_current_branch_publication) ... ok
+test_uncertain_push_explicit_ref_with_unknown_ancestry_stays_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_explicit_ref_with_unknown_ancestry_stays_unknown) ... ok
+test_uncertain_push_explicit_target_ancestor_is_published_when_current_branch_is_not (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_explicit_target_ancestor_is_published_when_current_branch_is_not) ... ok
+test_uncertain_push_reconciles_actual_destination_even_cursor_lags (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_reconciles_actual_destination_even_cursor_lags) ... ok
+test_uncertain_push_recorded_repository_mismatch_is_unknown (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_uncertain_push_recorded_repository_mismatch_is_unknown) ... ok
+test_unpublished_commit_recognized_without_checkpoint_hint (tests.acceptance.textstats.tests.test_recovery.RecoveryTests.test_unpublished_commit_recognized_without_checkpoint_hint) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 3.903s
+
+OK

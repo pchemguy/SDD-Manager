@@ -138,6 +138,7 @@ A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, 
 
 All 15 skills are included. Structural validation and independent coordination assessments have been exercised. The [runtime acceptance campaign](docs/dev/reviews/008_98a5562/REVISION-REPORT.md) records actual fresh-agent workflows through explicit skill-source loading, live GitHub tracking/publication, and controlled failure/recovery fixtures. Installed-client discovery, routing and activation remain untested; available journals are not complete native transcripts. All 27 scoped cases passed independent assessment; source integration is recorded in the campaign report.
 
+- [TextStats acceptance test project](acceptance/textstats/README.md): portable coordinator entry, sample contracts, case inputs, independent assessment and interruption recovery.
 - [Capability map](docs/dev/CAPABILITY-MAP.md): artifact ownership and cross-skill boundaries.
 - [Review campaigns](docs/dev/reviews/README.md): ordered review and revision records.
 - [Revision evidence](docs/dev/reviews/003_39374c8/REVISION-REPORT.md): branch workflows, failure handling, fresh-session execution, and validation limits.
