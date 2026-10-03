@@ -157,11 +157,11 @@ If no confirmed plugin defect is found, state directly: “No confirmed SDD Mana
 
 **Interfaces:** Scripts accept `--inputs <path>` and `--output <path>`; execution helpers additionally accept `--run-state <path>` where needed. Non-secret structured observations return exit 0 on success, nonzero with a sanitized cause on failure. Preflight is read-only; prepare creates only a resolved fresh workspace. Observers never resume/mutate consumer work.
 
-- [ ] Write failing tests for missing/ambiguous repository input, existing-run preservation, secret-value rejection in configuration, pending-publication recognition and uncertain-operation reconciliation.
-- [ ] Port only the reusable Git/task/oracle/fixture primitives from the old harness; parameterize repository roots/endpoints/refs and exclude historical review snapshots from current ownership.
-- [ ] Implement the documented script interfaces; recovery reads actual state rather than trusting RUN-STATE alone. Restrict credential handling to plugin-owned protected mechanisms.
-- [ ] Run the support suite with intentionally invalid evidence and nonempty collection. Verify no real hosted writes in self-tests.
-- [ ] Commit the tested helpers before a consumer run relies on them.
+- [x] Write failing tests for missing/ambiguous repository input, existing-run preservation, secret-value rejection in configuration, pending-publication recognition and uncertain-operation reconciliation.
+- [x] Port only the reusable Git/task/oracle/fixture primitives from the old harness; parameterize repository roots/endpoints/refs and exclude historical review snapshots from current ownership.
+- [x] Implement the documented script interfaces; recovery reads actual state rather than trusting RUN-STATE alone. Restrict credential handling to plugin-owned protected mechanisms.
+- [x] Run the support suite with intentionally invalid evidence and nonempty collection. Verify no real hosted writes in self-tests.
+- [x] Commit the tested helpers before a consumer run relies on them.
 
 ### Task 3 — Case contracts and isolated worker handoffs
 

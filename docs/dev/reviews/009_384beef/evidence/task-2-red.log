@@ -1,0 +1,293 @@
+test_boolean_is_not_integer_and_validated_runtime_ref_binding (test_checkers.CheckerTests.test_boolean_is_not_integer_and_validated_runtime_ref_binding) ... FAIL
+test_empty_or_invalid_evidence_cannot_pass (test_checkers.CheckerTests.test_empty_or_invalid_evidence_cannot_pass) ... ok
+test_empty_task_collection_and_path_escape_fail (test_checkers.CheckerTests.test_empty_task_collection_and_path_escape_fail) ... ok
+test_git_evidence_reads_actual_state (test_checkers.CheckerTests.test_git_evidence_reads_actual_state) ... FAIL
+test_literal_output_channel_and_status_sensitivity (test_checkers.CheckerTests.test_literal_output_channel_and_status_sensitivity) ... FAIL
+test_task_ownership_excludes_historical_evidence_and_rejects_duplicates (test_checkers.CheckerTests.test_task_ownership_excludes_historical_evidence_and_rejects_duplicates) ... FAIL
+test_without_contract_is_not_run (test_checkers.CheckerTests.test_without_contract_is_not_run) ... FAIL
+test_ambiguous_remotes_require_resolution (test_preflight.PreflightTests.test_ambiguous_remotes_require_resolution) ... ERROR
+test_blank_repository_requests_same_input (test_preflight.PreflightTests.test_blank_repository_requests_same_input) ... FAIL
+test_dirty_source_fingerprint_and_committed_default (test_preflight.PreflightTests.test_dirty_source_fingerprint_and_committed_default) ... FAIL
+test_missing_repository_requests_input_without_any_output_write (test_preflight.PreflightTests.test_missing_repository_requests_input_without_any_output_write) ... ERROR
+test_pin_uses_git_object_bytes_and_nonempty_97_package_manifest (test_preflight.PreflightTests.test_pin_uses_git_object_bytes_and_nonempty_97_package_manifest) ... FAIL
+test_preflight_has_no_worktree_or_index_side_effects (test_preflight.PreflightTests.test_preflight_has_no_worktree_or_index_side_effects) ... FAIL
+test_prepare_isolated_clone_contains_only_vendor_and_provenance (test_preflight.PreflightTests.test_prepare_isolated_clone_contains_only_vendor_and_provenance) ... FAIL
+test_prepare_new_unborn_remote_is_bounded_and_does_not_publish (test_preflight.PreflightTests.test_prepare_new_unborn_remote_is_bounded_and_does_not_publish) ... FAIL
+test_prepare_requires_new_explicit_workspace_and_preserves_existing_run (test_preflight.PreflightTests.test_prepare_requires_new_explicit_workspace_and_preserves_existing_run) ... ok
+test_prepare_resume_does_not_clone (test_preflight.PreflightTests.test_prepare_resume_does_not_clone) ... ok
+test_repository_identity_mismatch_fails (test_preflight.PreflightTests.test_repository_identity_mismatch_fails) ... ERROR
+test_strict_schema_constraints_and_no_type_coercion (test_preflight.PreflightTests.test_strict_schema_constraints_and_no_type_coercion) ... ok
+test_unknown_and_secret_configuration_fails_without_echo (test_preflight.PreflightTests.test_unknown_and_secret_configuration_fails_without_echo) ... ok
+test_actual_staged_and_unstaged_intent_export_and_restore (test_recovery.RecoveryTests.test_actual_staged_and_unstaged_intent_export_and_restore) ... FAIL
+test_deletion_and_conflict_stages_merge_parents_preserved (test_recovery.RecoveryTests.test_deletion_and_conflict_stages_merge_parents_preserved) ... FAIL
+test_protected_file_is_not_read_or_exported (test_recovery.RecoveryTests.test_protected_file_is_not_read_or_exported) ... FAIL
+test_secret_state_and_unknown_nested_field_fails_without_leak (test_recovery.RecoveryTests.test_secret_state_and_unknown_nested_field_fails_without_leak) ... ok
+test_unavailable_remote_does_not_claim_unpublished (test_recovery.RecoveryTests.test_unavailable_remote_does_not_claim_unpublished) ... FAIL
+test_uncertain_api_effect_remains_unknown_no_replay (test_recovery.RecoveryTests.test_uncertain_api_effect_remains_unknown_no_replay) ... FAIL
+test_uncertain_push_reconciles_actual_destination_even_cursor_lags (test_recovery.RecoveryTests.test_uncertain_push_reconciles_actual_destination_even_cursor_lags) ... FAIL
+test_unpublished_commit_recognized_without_checkpoint_hint (test_recovery.RecoveryTests.test_unpublished_commit_recognized_without_checkpoint_hint) ... FAIL
+
+======================================================================
+ERROR: test_ambiguous_remotes_require_resolution (test_preflight.PreflightTests.test_ambiguous_remotes_require_resolution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 22, in test_ambiguous_remotes_require_resolution
+    self.assertEqual(json.loads(p.stdout)['cause'], 'repository_ambiguous')
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+======================================================================
+ERROR: test_missing_repository_requests_input_without_any_output_write (test_preflight.PreflightTests.test_missing_repository_requests_input_without_any_output_write)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 11, in test_missing_repository_requests_input_without_any_output_write
+    self.assertEqual(json.loads(p.stdout)['next_action'], 'Which dedicated test repository should this run use? Supply its URL or local checkout path.')
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+======================================================================
+ERROR: test_repository_identity_mismatch_fails (test_preflight.PreflightTests.test_repository_identity_mismatch_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 29, in test_repository_identity_mismatch_fails
+    self.assertEqual(json.loads(p.stdout)['cause'], 'repository_identity_mismatch')
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+======================================================================
+FAIL: test_boolean_is_not_integer_and_validated_runtime_ref_binding (test_checkers.CheckerTests.test_boolean_is_not_integer_and_validated_runtime_ref_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_checkers.py", line 71, in test_boolean_is_not_integer_and_validated_runtime_ref_binding
+    self.ok(self.assess([{'id':'head','kind':'git','field':'head','expected_ref':'checkpoint_refs.product_commit'}]))
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/assess.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_git_evidence_reads_actual_state (test_checkers.CheckerTests.test_git_evidence_reads_actual_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_checkers.py", line 36, in test_git_evidence_reads_actual_state
+    data,_=self.ok(self.assess([{'id':'clean','kind':'git','field':'staged_paths','expected':[]}]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/assess.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_literal_output_channel_and_status_sensitivity (test_checkers.CheckerTests.test_literal_output_channel_and_status_sensitivity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_checkers.py", line 19, in test_literal_output_channel_and_status_sensitivity
+    data,_=self.ok(self.assess(checks,evidence))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/assess.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_task_ownership_excludes_historical_evidence_and_rejects_duplicates (test_checkers.CheckerTests.test_task_ownership_excludes_historical_evidence_and_rejects_duplicates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_checkers.py", line 50, in test_task_ownership_excludes_historical_evidence_and_rejects_duplicates
+    self.ok(self.assess([{'id':'ownership','kind':'task_ownership'}]))
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/assess.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_without_contract_is_not_run (test_checkers.CheckerTests.test_without_contract_is_not_run)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_checkers.py", line 63, in test_without_contract_is_not_run
+    data,_=self.ok(self.invoke('assess',state=self.state))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/assess.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_blank_repository_requests_same_input (test_preflight.PreflightTests.test_blank_repository_requests_same_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 16, in test_blank_repository_requests_same_input
+    self.assertIn('Which dedicated test repository', p.stdout)
+AssertionError: 'Which dedicated test repository' not found in ''
+
+======================================================================
+FAIL: test_dirty_source_fingerprint_and_committed_default (test_preflight.PreflightTests.test_dirty_source_fingerprint_and_committed_default)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 116, in test_dirty_source_fingerprint_and_committed_default
+    committed,_=self.ok(self.invoke('preflight',extra=['--source-root',source]))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/preflight.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_pin_uses_git_object_bytes_and_nonempty_97_package_manifest (test_preflight.PreflightTests.test_pin_uses_git_object_bytes_and_nonempty_97_package_manifest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 44, in test_pin_uses_git_object_bytes_and_nonempty_97_package_manifest
+    data, _ = self.ok(self.invoke('preflight'))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/preflight.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_preflight_has_no_worktree_or_index_side_effects (test_preflight.PreflightTests.test_preflight_has_no_worktree_or_index_side_effects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 56, in test_preflight_has_no_worktree_or_index_side_effects
+    self.ok(self.invoke('preflight'))
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/preflight.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_prepare_isolated_clone_contains_only_vendor_and_provenance (test_preflight.PreflightTests.test_prepare_isolated_clone_contains_only_vendor_and_provenance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 85, in test_prepare_isolated_clone_contains_only_vendor_and_provenance
+    data, _ = self.ok(self.invoke('prepare', extra=['--workspace',target]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/prepare.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_prepare_new_unborn_remote_is_bounded_and_does_not_publish (test_preflight.PreflightTests.test_prepare_new_unborn_remote_is_bounded_and_does_not_publish)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_preflight.py", line 97, in test_prepare_new_unborn_remote_is_bounded_and_does_not_publish
+    data, _ = self.ok(self.invoke('prepare', {'schema_version':1,'test_repository':str(empty),'profile':'local-only'}, extra=['--workspace',target]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/prepare.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_actual_staged_and_unstaged_intent_export_and_restore (test_recovery.RecoveryTests.test_actual_staged_and_unstaged_intent_export_and_restore)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 14, in test_actual_staged_and_unstaged_intent_export_and_restore
+    data, _ = self.ok(self.invoke('observe', state=self.state))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/observe.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_deletion_and_conflict_stages_merge_parents_preserved (test_recovery.RecoveryTests.test_deletion_and_conflict_stages_merge_parents_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 56, in test_deletion_and_conflict_stages_merge_parents_preserved
+    data,_=self.ok(self.invoke('observe',state=self.state))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/observe.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_protected_file_is_not_read_or_exported (test_recovery.RecoveryTests.test_protected_file_is_not_read_or_exported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 93, in test_protected_file_is_not_read_or_exported
+    data,out=self.ok(self.invoke('observe',state=self.state))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/observe.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_unavailable_remote_does_not_claim_unpublished (test_recovery.RecoveryTests.test_unavailable_remote_does_not_claim_unpublished)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 87, in test_unavailable_remote_does_not_claim_unpublished
+    data,_=self.ok(self.invoke('observe',values,state=self.state))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/observe.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_uncertain_api_effect_remains_unknown_no_replay (test_recovery.RecoveryTests.test_uncertain_api_effect_remains_unknown_no_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 80, in test_uncertain_api_effect_remains_unknown_no_replay
+    data,_=self.ok(self.invoke('observe',state=self.state))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/observe.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_uncertain_push_reconciles_actual_destination_even_cursor_lags (test_recovery.RecoveryTests.test_uncertain_push_reconciles_actual_destination_even_cursor_lags)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 74, in test_uncertain_push_reconciles_actual_destination_even_cursor_lags
+    data,_=self.ok(self.invoke('observe',state=self.state))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/observe.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_unpublished_commit_recognized_without_checkpoint_hint (test_recovery.RecoveryTests.test_unpublished_commit_recognized_without_checkpoint_hint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/test_recovery.py", line 67, in test_unpublished_commit_recognized_without_checkpoint_hint
+    data,_=self.ok(self.invoke('observe',state=self.state))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6420baa7afea/tests/acceptance/textstats/tests/support.py", line 52, in ok
+    self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/6420baa7afea/tests/acceptance/textstats/scripts/observe.py': [Errno 2] No such file or directory
+
+
+----------------------------------------------------------------------
+Ran 28 tests in 1.741s
+
+FAILED (failures=18, errors=3)
