@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- Current state: **Safely suspended after A-019.** A-013/A-019 independently Passed, records and resume checkpoint published. Registry25 Passed/2 Pending (A-021/A-027),0 Failed/Blocked/Suspended/Running. All consumers stopped; no automatic continuation. Source boundary integration remains pending.
+- Current state: **Resumed on explicit user instruction.** Complete remaining A-021 and A-027 under the accepted plan, then verified source revision integration. Registry25 Passed/2 Pending at resumption; no prior-case replay. Source boundary integration remains pending.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -223,3 +223,7 @@ Required prospective check0 preceded the third consumer's actual commit; full26 
 ### Controlled stop after the extended continuation
 
 The latest instruction completed the next two cases A-013/A-019 without suspension after A-012. All consumers are stopped. Live main remains verified/published `05c35532ce836c1e9681f6dd6c21e1801293236f`, full retained Phase2 complete, tracked clean,97 pin hashes/12 unrelated bytecodes preserved. Isolated A-019 is clean with no pending merge. Safe-stop snapshot and current resume instructions were committed/pushed as `8aa0ede0c4a5e78691c3b90af6db177a88c30461`. Counts **25 Passed,2 Pending;0 Failed,Blocked,Suspended,Running**. Stop before A-021; no automatic resumption. A-021 interrupted feature transfer/archive and A-027 final coverage assessment remain unexecuted, as do overall R-001 acceptance and source boundary integration into `feature/architecture-revision`. Existing explicit-source/Python3.12.14/available-journal limits and disclosed TST004 record-handling correction remain.
+
+### Renewed resumption for remaining acceptance and revision boundary
+
+The user requested “Resume” after the controlled stop. Current continuation covers A-021 actual interrupted feature transfer/archive in a new isolated local-origin fork, followed by A-027 final independent coverage assessment and V-007 verified source integration if supported by evidence. Existing named publication/replacement-consumer authorization and isolation persist. Live product main remains published `05c3553`; prior25 cases are not replayed. A-021 starts from actually completed historical feature `f391de5`, retains campaign002_8a53078 and paused phase2 baseline8a53078, and disables hosting/credentials. Caller setup changes only isolated operating instructions/ref checkpoints, never task-transfer/archive outcomes. Reusable setup helper was committed/pushed before use. No completion is claimed from setup checks.
