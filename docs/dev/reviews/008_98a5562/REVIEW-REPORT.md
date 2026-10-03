@@ -35,8 +35,8 @@
 
 | ID | Type | Priority | Status |
 | --- | --- | --- | --- |
-| R-001 | Evidence gap / recommendation | P3 | Accepted for planning |
-| R-002 | Documentation recommendation | P3 | Accepted for planning |
+| R-001 | Evidence gap / recommendation | P3 | Partially addressed — explicit-source runtime; client coverage open |
+| R-002 | Documentation recommendation | P3 | Verified — historical notices |
 
 Findings are canonical below; absence of a finding means no actionable inconsistency found within the assessed scope, not runtime certification.
 
@@ -146,3 +146,11 @@ The package is structurally valid and source protocols are internally consistent
 ## Revision planning decision
 
 The user requested a revision plan for R-001 and R-002, supplied AgentPlayground as the consumer repository and authorized choosing a small project. Both recommendations are Accepted for planning; baseline observations remain intact. [REVISION-PLAN.md](REVISION-PLAN.md) defines historical notices and the TextStats agent-driven campaign. No recommendation is marked Revised or Verified by plan publication, and project implementation has not started.
+
+## Execution checkpoint
+
+Subsequent authorized execution verified R-002 historical notices and partially addressed R-001 through actual consumer trials. The user suspended the campaign on 2026-10-02: six cases Passed, two Suspended, nineteen Pending. R-001 is not complete; see [REVISION-REPORT.md](REVISION-REPORT.md) for published evidence, limitations and resume instructions. Earlier review and planning observations remain historical.
+
+## Current revision disposition
+
+All26 actual consumer cases and A027 independent final assessment Passed within the available explicit-source runtime mode. Source integration/publication is recorded in the revision report. Explicit-source workflows and live hosted effects are distinguished from controlled local failures. R-001 remains open for installed-client discovery/routing/activation; R-002 is verified. Earlier review and suspension observations are historical. Current evidence and candid TST-001–TST-004 corrections are in [REVISION-REPORT.md](REVISION-REPORT.md).
