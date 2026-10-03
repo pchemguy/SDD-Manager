@@ -1,0 +1,141 @@
+import json
+from pathlib import Path
+import sys
+try:
+    from .support import Sandbox, git, SOURCE
+except ImportError:
+    from support import Sandbox, git, SOURCE
+
+class PreflightTests(Sandbox):
+    def test_missing_repository_requests_input_without_any_output_write(self):
+        p, data, out = self.invoke('preflight', {'schema_version': 1})
+        self.assertNotEqual(p.returncode, 0)
+        self.assertFalse(out.exists())
+        self.assertEqual(json.loads(p.stdout)['next_action'], 'Which dedicated test repository should this run use? Supply its URL or local checkout path.')
+
+    def test_blank_repository_requests_same_input(self):
+        p, data, out = self.invoke('prepare', {'schema_version': 1, 'test_repository': ''})
+        self.assertFalse(out.exists())
+        self.assertIn('Which dedicated test repository', p.stdout)
+
+    def test_ambiguous_remotes_require_resolution(self):
+        git(self.repo, 'remote', 'add', 'backup', str(self.remote))
+        p, data, out = self.invoke('preflight')
+        self.assertNotEqual(p.returncode, 0)
+        self.assertEqual(json.loads(p.stdout)['cause'], 'repository_ambiguous')
+        self.assertFalse(out.exists())
+
+    def test_repository_identity_mismatch_fails(self):
+        values = dict(self.inputs, test_repository=str(self.root / 'other.git'))
+        p, _, _ = self.invoke('preflight', values)
+        self.assertNotEqual(p.returncode, 0)
+        self.assertEqual(json.loads(p.stdout)['cause'], 'repository_identity_mismatch')
+
+    def test_unknown_and_secret_configuration_fails_without_echo(self):
+        for values in [dict(self.inputs, token='SECRET_SENTINEL'), dict(self.inputs, scope={'typo': 'SECRET_SENTINEL'}), dict(self.inputs, test_repository='https://user:SECRET_SENTINEL@example.invalid/repo.git'), dict(self.inputs, plugin_revision='github_pat_SECRET_SENTINEL')]:
+            p, _, out = self.invoke('preflight', values)
+            self.assertNotEqual(p.returncode, 0)
+            self.assertNotIn('SECRET_SENTINEL', p.stdout + p.stderr)
+            self.assertFalse(out.exists())
+
+    def test_strict_schema_constraints_and_no_type_coercion(self):
+        for updates in [{'schema_version': True}, {'scope': {'cases': ['A-001','A-001']}}, {'scope': {'cases':['A-999']}}, {'stop_after':'P9'}, {'run_id':'../escape'}, {'profile':'full'}]:
+            p, _, _ = self.invoke('preflight', dict(self.inputs, **updates))
+            self.assertNotEqual(p.returncode, 0)
+
+    def test_pin_uses_git_object_bytes_and_nonempty_97_package_manifest(self):
+        data, _ = self.ok(self.invoke('preflight'))
+        self.assertEqual(data['plugin_source']['commit'], git(SOURCE, 'rev-parse', 'HEAD').stdout.strip())
+        self.assertEqual(len(data['plugin_source']['package_hashes']), 97)
+        self.assertEqual(data['plugin_source']['source_mode'], 'committed')
+        self.assertEqual(data['repository']['remote'], 'origin')
+        self.assertFalse(data['capabilities']['github_api'])
+
+    def test_preflight_has_no_worktree_or_index_side_effects(self):
+        (self.repo / 'owned.txt').write_text('staged\n')
+        git(self.repo, 'add', 'owned.txt')
+        (self.repo / 'owned.txt').write_text('unstaged\n')
+        before = git(self.repo, 'ls-files', '--stage').stdout
+        self.ok(self.invoke('preflight'))
+        self.assertEqual(git(self.repo, 'ls-files', '--stage').stdout, before)
+        self.assertEqual((self.repo / 'owned.txt').read_text(), 'unstaged\n')
+
+    def test_prepare_requires_new_explicit_workspace_and_preserves_existing_run(self):
+        campaign = self.repo / 'docs/dev/reviews/001_fixture'
+        campaign.mkdir(parents=True)
+        (campaign / 'RUN-STATE.json').write_text('retained')
+        p, _, _ = self.invoke('prepare')
+        self.assertNotEqual(p.returncode, 0)
+        self.assertEqual((campaign / 'RUN-STATE.json').read_text(), 'retained')
+        target = self.root / 'occupied'
+        target.mkdir()
+        (target / 'foreign').write_text('retain')
+        p, _, _ = self.invoke('prepare', extra=['--workspace',target])
+        self.assertNotEqual(p.returncode, 0)
+        self.assertEqual((target / 'foreign').read_text(), 'retain')
+
+    def test_prepare_resume_does_not_clone(self):
+        target = self.root / 'fresh'
+        p, _, _ = self.invoke('prepare', dict(self.inputs, run_id='001_fixture'), extra=['--workspace',target])
+        self.assertNotEqual(p.returncode, 0)
+        self.assertFalse(target.exists())
+
+    def test_prepare_isolated_clone_contains_only_vendor_and_provenance(self):
+        (self.repo / 'AGENTS.md').write_text('original operating instructions\n')
+        git(self.repo, 'add', 'AGENTS.md')
+        git(self.repo, 'commit', '-m', 'instructions')
+        target = self.root / 'fresh'
+        data, _ = self.ok(self.invoke('prepare', extra=['--workspace',target]))
+        self.assertEqual((target / 'AGENTS.md').read_text(), 'original operating instructions\n')
+        self.assertFalse((target / 'textstats').exists())
+        snapshot = Path(data['plugin_source']['snapshot_path'])
+        self.assertEqual(len([p for p in snapshot.rglob('*') if p.is_file()]), 97)
+        self.assertFalse((snapshot / 'tests').exists())
+        self.assertEqual(git(self.repo,'status','--porcelain').stdout, '')
+
+    def test_prepare_new_unborn_remote_is_bounded_and_does_not_publish(self):
+        empty = self.root / 'empty.git'
+        git(self.root, 'init', '--bare', str(empty))
+        target = self.root / 'unborn'
+        data, _ = self.ok(self.invoke('prepare', {'schema_version':1,'test_repository':str(empty),'profile':'local-only'}, extra=['--workspace',target]))
+        self.assertTrue((target / 'AGENTS.md').exists())
+        self.assertTrue((target / '.gitignore').exists())
+        self.assertEqual(git(empty,'for-each-ref').stdout, '')
+        self.assertEqual(git(target,'rev-parse','--verify','HEAD',check=False).returncode, 128)
+
+    def test_dirty_source_fingerprint_and_committed_default(self):
+        source=self.root/'source'
+        git(self.root,'init','-b','main',str(source))
+        git(source,'config','user.name','Fixture')
+        git(source,'config','user.email','fixture@example.invalid')
+        (source/'skills/demo').mkdir(parents=True)
+        (source/'skills/demo/SKILL.md').write_text('committed\n')
+        (source/'plugin.json').write_text('{"name":"fixture"}\n')
+        git(source,'add','.')
+        git(source,'commit','-m','package')
+        import hashlib
+        (source/'skills/demo/SKILL.md').write_text('dirty\n')
+        (source/'skills/demo/new.md').write_text('new dirty\n')
+        committed,_=self.ok(self.invoke('preflight',extra=['--source-root',source]))
+        self.assertEqual(committed['plugin_source']['package_hashes']['skills/demo/SKILL.md'],hashlib.sha256(b'committed\n').hexdigest())
+        dirty,_=self.ok(self.invoke('preflight',dict(self.inputs,source_mode='dirty'),extra=['--source-root',source]))
+        self.assertEqual(dirty['plugin_source']['package_hashes']['skills/demo/SKILL.md'],hashlib.sha256(b'dirty\n').hexdigest())
+        self.assertIn('skills/demo/new.md',dirty['plugin_source']['changed_package_paths'])
+        self.assertNotEqual(dirty['plugin_source']['fingerprint'],committed['plugin_source']['fingerprint'])
+
+    def test_dirty_source_tracks_executable_mode_changes(self):
+        source=self.root/'mode-source'
+        git(self.root,'init','-b','main',str(source))
+        git(source,'config','user.name','Fixture')
+        git(source,'config','user.email','fixture@example.invalid')
+        (source/'skills/demo').mkdir(parents=True)
+        path=source/'skills/demo/run.sh'
+        path.write_text('echo fixture\n')
+        (source/'plugin.json').write_text('{}\n')
+        git(source,'add','.')
+        git(source,'commit','-m','package')
+        base,_=self.ok(self.invoke('preflight',extra=['--source-root',source]))
+        path.chmod(0o755)
+        dirty,_=self.ok(self.invoke('preflight',dict(self.inputs,source_mode='dirty'),extra=['--source-root',source]))
+        self.assertNotEqual(base['plugin_source']['fingerprint'],dirty['plugin_source']['fingerprint'])
+        self.assertIn('skills/demo/run.sh',dirty['plugin_source']['changed_package_paths'])
