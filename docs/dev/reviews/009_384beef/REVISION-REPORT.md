@@ -54,7 +54,7 @@ Whole-bundle review initially reproduced caller-relative recovery export failure
 
 `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` collects the relocated 67-test suite. The original pre-relocation verification collected 67 tests and passed all 67, with zero failures/errors. Final integration checks found 71 resolving local Markdown targets, no missing targets and all 97 plugin files byte-identical to the pre-revision snapshot. Revision-range whitespace checks passed. [Integration observation](evidence/final-integration-checks.json) records the checked implementation identity. No new installed-client, live provider, product-worker interruption or 27-case acceptance result is inferred.
 
-The reviewed infrastructure and evidence are committed on `revision/009_384beef-textstats-test-project` for publication. The established target is retained; the branch is not represented as fully live-accepted or integrated while the follow-up remains open. No unfinished consumer work exists in this revision because no new consumer destination was selected.
+The reviewed infrastructure and evidence are committed on `revision/009_384beef-textstats-test-project`. The user subsequently authorized merging this branch into its established target, `feature/architecture-revision`, with live acceptance retained as an explicit follow-up. Integration accepts the reusable infrastructure; it does not claim the live campaign ran. No unfinished consumer work exists in this revision because no new consumer destination was selected.
 
 ## Root-level acceptance layout correction
 
@@ -81,6 +81,12 @@ Publish the diagnostic report with coverage, original attempts and assistance, o
 actions taken and concrete proposed SDD Manager changes, or the supported no-defect/no-change conclusion.
 Do not modify the tested plugin package during the run. Record unavailable facilities as Blocked/Not run.
 ```
+
+## Authorized integration
+
+Refreshed target `feature/architecture-revision`: `78d51c48189a5bb734df638f0075a5071de61a4d`.
+Verified working implementation: `96abd6a093a72c8b5aa2e1495d9cf43397b40dce`.
+User authorized the merge after infrastructure review and relocation verification. Retain the revision branch, use an explicit two-parent merge, verify the prospective merged state and publish to the established target. Actual merge parents, checks and publication are recorded in the merge commit and retained integration evidence; live acceptance remains unchecked.
 
 ## Next action
 
