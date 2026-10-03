@@ -1,0 +1,3 @@
+{"both_nested_markers_retained": true, "command_returncode": 1, "literal_exists": false, "outer_stdout": "{\"schema_version\": 1, \"error\": \"actual capture unavailable\", \"failed_provenance_retained\": true}", "provenance_status": "Failed", "status": 2, "trial": "actual-import-failure"}
+{"literal_exists": false, "original_provenance_unchanged": true, "status": 2, "trial": "same-attempt-retry"}
+{"both_partial_channels_retained": true, "command": ["actual-first-attempt"], "returncode": null, "status": "Timed out", "trial": "timeout-with-partial-bytes"}

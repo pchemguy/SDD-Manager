@@ -1,0 +1,11 @@
+test_actual_cli_import_failure_retains_first_attempt_channels (tests.acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_actual_cli_import_failure_retains_first_attempt_channels) ... ok
+test_cli_later_timeout_retains_prior_command_and_partial_bytes (tests.acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_cli_later_timeout_retains_prior_command_and_partial_bytes) ... ok
+test_cli_launch_failure_and_occupied_attempt_are_preserved (tests.acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_cli_launch_failure_and_occupied_attempt_are_preserved) ... ok
+test_failed_capture_withholds_protected_partial_output (tests.acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_failed_capture_withholds_protected_partial_output) ... ok
+test_outside_import_origin_rejection_retains_observation (tests.acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_outside_import_origin_rejection_retains_observation) ... ok
+test_timeout_preserves_actual_partial_channels_and_not_completed_status (tests.acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_timeout_preserves_actual_partial_channels_and_not_completed_status) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.399s
+
+OK

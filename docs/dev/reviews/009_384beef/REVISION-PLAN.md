@@ -169,10 +169,10 @@ If no confirmed plugin defect is found, state directly: “No confirmed SDD Mana
 
 **Interfaces:** Each catalog case resolves its dependency checkpoints, selected worker input and independent assessor contract. Input rendering substitutes resolved non-secret identities; expected results never enter consumer input.
 
-- [ ] Port all 27 original case intents with real prerequisite/interrupt triggers; literal expectations remain independent of application code.
-- [ ] Define controlled stop/resume pairs and uncontrolled interruption injection points, covering dirty transfer, staged work, rejected push, conflict, failed required check and uncertain hosted effects.
-- [ ] Define the two focused diagnostic probes for dependency inflation and retired-task handling, without coaching consumers toward assessor answers.
-- [ ] Verify catalog dependency consistency, resolvable input paths and separation of worker/assessor context; commit the complete case bundle.
+- [x] Port all 27 original case intents with real prerequisite/interrupt triggers; literal expectations remain independent of application code.
+- [x] Define controlled stop/resume pairs and uncontrolled interruption injection points, covering dirty transfer, staged work, rejected push, conflict, failed required check and uncertain hosted effects.
+- [x] Define the two focused diagnostic probes for dependency inflation and retired-task handling, without coaching consumers toward assessor answers.
+- [x] Verify catalog dependency consistency, resolvable input paths and separation of worker/assessor context; commit the complete case bundle.
 
 ### Task 4 — Fresh-context bootstrap, interruption and diagnostic acceptance
 

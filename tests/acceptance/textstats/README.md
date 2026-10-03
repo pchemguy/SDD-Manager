@@ -51,4 +51,26 @@ Coordinator evidence lives in the dedicated test repository at `docs/dev/reviews
 
 A stop preserves unfinished work rather than turning it into a completion commit. A resumed run reads actual Git/files/index/hosted state before trusting its cursor or retrying uncertain operations. Cross-machine continuation requires exported pending files, index intent and Git objects as well as published refs. [RECOVERY](RECOVERY.md) specifies each case and the exact unrecoverable-boundary report when an export is missing.
 
+## Follow-up: live acceptance on a dedicated test repository
+
+- [ ] **Live acceptance on a dedicated test repository.** Supply an explicitly identified repository URL or checkout path, then run this bundle through fresh consumers and independent assessors. Exercise real Git publication and GitHub tracking, controlled partial-work interruption, unexpected worker termination and resumption from retained state. Publish the diagnostic report with original attempts, assistance, findings, actions and proposed plugin changes.
+
+Bundle self-tests and document reviews verify the reusable infrastructure. They do not complete this live acceptance follow-up. Record unavailable facilities as Blocked/Not run and retain the exact remaining scope. Use existing authentication first; request protected credentials only after a classified access failure, following [SETUP](SETUP.md#protected-authentication).
+
+Copyable agent prompt (replace the placeholders):
+
+```text
+Run live acceptance for SDD Manager using <SDD-Manager-checkout>/tests/acceptance/textstats/.
+Use the dedicated test repository <repository URL or existing checkout path>.
+Read AGENTS.md in the bundle and follow its linked setup, execution, recovery and diagnostic procedures.
+Use the full-github profile and the full supported case scope. Continue through authorized phases;
+preserve actual state at interruptions and resume from retained evidence. Use fresh consumer and
+independent assessor contexts, keeping assessor expectations out of consumer handoffs.
+Use existing authentication first. If the repository is omitted, request it before setup writes;
+request protected credentials only when required access is actually unavailable.
+Publish the diagnostic report with coverage, original attempts and assistance, observed issues,
+actions taken and concrete proposed SDD Manager changes, or the supported no-defect/no-change conclusion.
+Do not modify the tested plugin package during the run. Record unavailable facilities as Blocked/Not run.
+```
+
 Historical provenance: [campaign 008 plan](../../../docs/dev/reviews/008_98a5562/REVISION-PLAN.md) and [report](../../../docs/dev/reviews/008_98a5562/REVISION-REPORT.md). These explain derivation and limits; they are not bootstrap inputs or expected new-run results.
