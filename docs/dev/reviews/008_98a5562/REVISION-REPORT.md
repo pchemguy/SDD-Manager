@@ -6,7 +6,7 @@
 - Plan: [REVISION-PLAN.md](REVISION-PLAN.md); findings: [REVIEW-REPORT.md](REVIEW-REPORT.md).
 - Execution start: `98a083b555a211e45f8a16bfd3ea83829b9aa25e`.
 - Source branch: `revision/008_98a5562-runtime-acceptance`; established target: `feature/architecture-revision`.
-- Current state: **Suspended with runtime blockers.** On 2026-10-02 UTC, resumption found no reusable consumer workers. A-006/A-014/A-018 are Blocked; A-007–A-009 remain unstarted. Current counts: 14 Passed, 3 Blocked, 10 Pending. Historical execution and suspension records follow.
+- Current state: **Authorized six-case continuation in progress.** On 2026-10-03 UTC+3, the user explicitly authorized replacement isolated consumers after the unavailable-worker blocker was explained. Resume A-006, A-014, A-018, then A-007–A-009; publish each independent assessment before dependency advancement and suspend after A-009. Historical blocked counts were 14 Passed, 3 Blocked, 10 Pending; the consumer registry remains authoritative for current results.
 - Source boundary merge remains pending because the acceptance revision is incomplete. Preserve both branches and unrelated source work.
 
 ## Revision evidence
@@ -117,3 +117,7 @@ Each blocked assessment was committed, pushed and exact remote equality verified
 Preservation checks verified all 97 pinned-package file hashes, live/isolated owned-file hashes and index entries, both saved binary patch sets and committed-HEAD recovery bundles. Existing archived pending contents remain valid; no reset, staging, checkout, product test, implementation or hosted read/write occurred. Source unrelated work and consumer bytecode remain preserved. Main and product branch tips are unchanged; overall source boundary integration remains pending.
 
 Final counts: **14 Passed, 3 Blocked, 10 Pending; 0 Failed, Suspended or Running.** No consumer workers are running. Restore access to the original workers, or obtain explicit authorization for replacement isolated consumers, before continuation. Keep assessor records/oracles out of their contexts; then resume existing work and the unchanged six-case order, publishing each independent assessment before dependent advancement. Stop after A-009. The scheduled task was disabled because it cannot proceed under the current worker restriction. No complete-campaign claim is made.
+
+## Authorized replacement-consumer continuation
+
+The user’s `Proceed` explicitly authorizes replacement isolated consumers for the six requested cases. Original stopped workers remain unavailable. Fresh contexts receive only retained consumer scope, pinned skills and actual product state, without assessor reports/oracles. The evaluator preserved startup file/index hashes, maintains independent checks, and stops after A-009. No automatic discovery certification or completed-revision claim follows from this bounded continuation. A read-only observer with retained Git/task/suite/literal-oracle results was committed in AgentPlayground as `2064474`; existing checker/product-runner tests passed 13 checks. Its push initially met an automatic approval destination-disclosure rejection; exact authorized AgentPlayground remote and observer-only credential-free diff were verified, then the same push succeeded.
