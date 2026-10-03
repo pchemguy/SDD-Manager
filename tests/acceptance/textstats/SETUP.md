@@ -14,7 +14,7 @@ Use [inputs.schema.json](schemas/inputs.schema.json), schema version 1. Resolve 
 | `plugin_revision` | `HEAD`: full committed source HEAD observed at run start; supplied revision resolves to full SHA |
 | `source_mode` | `committed`; explicit `dirty` testing snapshots requested package edits and records base SHA plus hashes/diff |
 | `scope` | `{}` means full supported campaign; optional `phases`/`cases` arrays bound selection |
-| `stop_after` | `null`; optional P0–P5 or A-001–A-027 boundary; stop after its assessment/checkpoint |
+| `stop_after` | `null`; optional one-shot P0–P5 or A-001–A-027 boundary; stop after its assessment/checkpoint |
 | `profile` | `full-github`; `local-only` is partial acceptance, `installed-client` additionally requests installed execution |
 | `run_id` | Optional existing campaign identity when explicitly resuming; allocate a fresh identity otherwise |
 
@@ -23,6 +23,8 @@ If no repository is supplied, ask exactly: “Which dedicated test repository sh
 Inspect checkout eligibility, applicable instructions, branches/remotes, default branch, HEAD, worktrees, tracked/untracked paths and index ownership. URLs and remote displays must be sanitized; reject credential-bearing URL inputs rather than record them. Confirm repository identity against the requested destination. `main` and `origin` are defaults **only after discovery confirms them**; preserve explicit/legacy branches, transport and remote. Multiple plausible remotes require selection before writes. Preserve all existing files, instructions, staging, hosted objects and credentials. Do not reset/clean/stash/force-push or repurpose an unrelated checkout.
 
 ## Fresh or resume
+
+A stored `stop_after` is a **one-shot boundary**, not a permanent ceiling on every continuation. A requested resume consumes that prior boundary only when actual assessment/checkpoint evidence establishes it was reached and the stop was recorded. Continue only within the remaining previously authorized scope; if that scope is exhausted, report completion and request new scope rather than inventing more work. An unreached or unverified boundary stays active. Preserve the original INPUTS and stop evidence; record consumption in RUN-STATE/RESUME and the continuation evidence instead of deleting history. A newly explicit boundary in the current invocation is a new active instruction and is not consumed merely because a prior stop had the same value.
 
 Search retained campaign records and relevant local/remote branches. A named existing `run_id` is a continuation, not permission to recreate it. Verify INPUTS/RUN-STATE/RESUME identity and [reconcile actual state](RECOVERY.md). If records exist but intent is ambiguous, resolve resume versus distinct new run before writes. A new run gets a new convention campaign/evidence branch and isolated workspace; it must not overwrite an existing campaign/product. An unborn source cannot supply a committed HEAD identity. Detached/conflicted or insufficiently identified work blocks affected actions until identity/ownership is established; an empty dedicated destination can receive the bounded setup below.
 

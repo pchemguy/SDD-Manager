@@ -12,7 +12,7 @@ Commit/push sanitized recovery exports and coordinator checkpoint on the evidenc
 
 ## Controlled stop versus unexpected loss
 
-**Planned boundary:** after the requested case/phase checkpoint, verify refs/evidence, update RESUME with next authorized selection and stop. No pending work means no new fixture execution on resume.
+**Planned boundary:** after the requested case/phase checkpoint, verify refs/evidence, record that the one-shot `stop_after` boundary was reached and its publication status, update RESUME with next authorized selection and stop. On a requested resume, confirm that reached stop against actual evidence and record its consumption without deleting original inputs/stop records. Finish any pending checkpoint/publication, then continue only within the remaining previously authorized scope. If scope is exhausted, report completion and request new scope. An unreached or unverified stop remains active; a new explicit boundary is a new active instruction. No pending work means no new fixture execution on resume.
 
 **Injected case:** choose the catalog trigger (for example checked task staged but uncommitted, partial feature transfer, pending merge or unavailable response). Start from an assessed real prerequisite in an isolated fork. Observe an actual partial consumer action, interrupt, capture the unfinished state and disclose the injection. Hand a separate fresh consumer the same pinned source, run/case identity, actual current-state handoff and selected continuation request. Retain both original/continuation inputs and assessments. Do not replay preparation or fabricate a completed prerequisite. Missing injection or fresh context is a coverage blocker.
 
@@ -22,7 +22,7 @@ Commit/push sanitized recovery exports and coordinator checkpoint on the evidenc
 
 | Actual state | Required continuation |
 | --- | --- |
-| Planned boundary; no pending work | Verify pinned source/run identity, branch/HEAD/targets, assessment and remote containment; select next authorized case without setup replay. |
+| Planned boundary; no pending work | Verify pinned source/run identity, branch/HEAD/targets, assessment and remote containment. Consume a reached/recorded one-shot stop on requested resume, retain its evidence, and select only the next case in remaining authorized scope without setup replay. If scope is exhausted, report completion and request new scope; an unreached/unverified stop remains active. |
 | Dirty task or partial document transfer | Inspect actual paths/diffs/source retention and task owners. Preserve exact pending changes and unrelated work. Continue same task/feature identity; both task lists must be in scope for ownership transfer. Do not archive needed sources or select new work first. |
 | Verified staged task, not committed | Export/inspect index separately from working tree; separate owned/unrelated stages. Reconcile recorded checks with staged source. Complete scoped commit using retained work, then push/verify before selecting next task; rerun only checks made stale or missing. |
 | Local completion commit not published | Resolve existing commit/branch and read destination refs. If absent, publish that retained commit; if present, record containment. Do not reimplement or select new task to evade pending push. |
