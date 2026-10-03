@@ -160,3 +160,96 @@ class CaptureSensitivity(Sandbox):
 
     def test_capture_import_origin_rejects_unavailable_product(self):
         with self.assertRaises(ValueError): capture.capture(self.root,'baseline')
+
+class FailedCaptureProvenance(Sandbox):
+    def cli(self,product=None,python=None,occupied=False):
+        import subprocess
+        output=self.root/'capture.json'; provenance=self.root/'commands.json'
+        if occupied: provenance.write_text('original attempt')
+        command=[sys.executable,str(ASSESSOR/'capture.py'),'--product-root',str(product or self.root),'--suite','baseline','--output',str(output),'--provenance',str(provenance)]
+        if python: command += ['--python',str(python)]
+        proc=subprocess.run(command,capture_output=True,text=True)
+        return proc,output,provenance
+
+    def test_actual_cli_import_failure_retains_first_attempt_channels(self):
+        (self.root/'textstats.py').write_text('import sys\nprint("FIRST_IMPORT_STDOUT_MARKER")\nsys.stderr.write("FIRST_IMPORT_STDERR_MARKER\\n")\nraise RuntimeError("observed import failure")\n')
+        proc,output,provenance=self.cli()
+        self.assertEqual(proc.returncode,2); self.assertFalse(output.exists())
+        self.assertTrue(provenance.exists(),'failed first attempt provenance must survive')
+        data=json.loads(provenance.read_text())
+        self.assertEqual(data['status'],'Failed')
+        self.assertEqual(data['commands'][0]['returncode'],1)
+        self.assertIn('FIRST_IMPORT_STDOUT_MARKER',data['commands'][0]['stdout'])
+        self.assertIn('FIRST_IMPORT_STDERR_MARKER',data['commands'][0]['stderr'])
+        self.assertIn('RuntimeError',data['commands'][0]['stderr'])
+
+    def test_timeout_preserves_actual_partial_channels_and_not_completed_status(self):
+        import subprocess
+        def timeout(command,**kwargs):
+            raise subprocess.TimeoutExpired(command,30,output=b'FIRST_TIMEOUT_STDOUT',stderr=b'FIRST_TIMEOUT_STDERR')
+        journal=[]
+        with self.assertRaises(subprocess.TimeoutExpired):
+            capture.invoke([sys.executable,'-c','actual command'],self.root,{},b'',journal,runner=timeout)
+        self.assertEqual(len(journal),1,'started timed-out command must survive')
+        self.assertEqual(journal[0]['status'],'Timed out'); self.assertIsNone(journal[0]['returncode'])
+        self.assertEqual(journal[0]['stdout'],'FIRST_TIMEOUT_STDOUT'); self.assertEqual(journal[0]['stderr'],'FIRST_TIMEOUT_STDERR')
+        self.assertTrue(journal[0]['stdout_base64']); self.assertTrue(journal[0]['stderr_base64'])
+
+    def test_cli_launch_failure_and_occupied_attempt_are_preserved(self):
+        proc,output,provenance=self.cli(python=self.root/'absent-interpreter')
+        self.assertEqual(proc.returncode,2); self.assertFalse(output.exists())
+        command=json.loads(provenance.read_text())['commands'][0]
+        self.assertEqual(command['status'],'Not started'); self.assertIsNone(command['returncode'])
+        self.assertEqual(command['launch_error'],'FileNotFoundError')
+        original=provenance.read_bytes()
+        proc,output,provenance=self.cli()
+        self.assertEqual(proc.returncode,2); self.assertEqual(provenance.read_bytes(),original); self.assertFalse(output.exists())
+
+    def test_cli_later_timeout_retains_prior_command_and_partial_bytes(self):
+        import contextlib,io,subprocess
+        from unittest.mock import patch
+        (self.root/'textstats.py').write_text('# Empty module used only for actual import-origin observation.\n')
+        output=self.root/'timeout-literals.json'; provenance=self.root/'timeout-commands.json'
+        calls=[]
+        def runner(command,**kwargs):
+            calls.append(command)
+            if len(calls)==1: return subprocess.run(command,**kwargs)
+            raise subprocess.TimeoutExpired(command,30,output=b'PARTIAL_SUITE_STDOUT',stderr=b'PARTIAL_SUITE_STDERR')
+        original=capture.capture
+        def timed_capture(root,suite,python,provenance):
+            return original(root,suite,python,runner=runner,provenance=provenance)
+        args=['capture','--product-root',str(self.root),'--suite','baseline','--output',str(output),'--provenance',str(provenance)]
+        with patch.object(sys,'argv',args),patch.object(capture,'capture',timed_capture),contextlib.redirect_stdout(io.StringIO()):
+            code=capture.main()
+        self.assertEqual(code,2); self.assertFalse(output.exists())
+        data=json.loads(provenance.read_text()); self.assertEqual(data['status'],'Failed'); self.assertEqual(len(data['commands']),2)
+        self.assertTrue(data['commands'][0]['origin_accepted'])
+        self.assertEqual(data['commands'][1]['status'],'Timed out'); self.assertIsNone(data['commands'][1]['returncode'])
+        self.assertEqual(data['commands'][1]['stdout'],'PARTIAL_SUITE_STDOUT'); self.assertEqual(data['commands'][1]['stderr'],'PARTIAL_SUITE_STDERR')
+
+    def test_failed_capture_withholds_protected_partial_output(self):
+        import contextlib,io,subprocess
+        from unittest.mock import patch
+        secret='ghp_'+'SYNTHETIC_NOT_A_CREDENTIAL'
+        def runner(command,**kwargs):
+            raise subprocess.TimeoutExpired(command,30,output=b'safe partial',stderr=secret.encode())
+        output=self.root/'blocked-literals.json'; provenance=self.root/'blocked-commands.json'
+        original=capture.capture
+        def protected_capture(root,suite,python,provenance):
+            return original(root,suite,python,runner=runner,provenance=provenance)
+        args=['capture','--product-root',str(self.root),'--suite','baseline','--output',str(output),'--provenance',str(provenance)]
+        with patch.object(sys,'argv',args),patch.object(capture,'capture',protected_capture),contextlib.redirect_stdout(io.StringIO()) as stdout:
+            code=capture.main()
+        self.assertEqual(code,2); self.assertFalse(output.exists()); self.assertTrue(provenance.exists())
+        retained=provenance.read_text(); self.assertNotIn(secret,retained+stdout.getvalue())
+        data=json.loads(retained); self.assertEqual(data['status'],'Failed'); self.assertEqual(data['commands'][0]['channels'],'Withheld: sensitive content')
+        self.assertNotIn('stdout_base64',data['commands'][0]); self.assertNotIn('stderr_base64',data['commands'][0])
+
+    def test_outside_import_origin_rejection_retains_observation(self):
+        import subprocess
+        def runner(command,**kwargs):
+            return subprocess.CompletedProcess(command,0,b'/outside/textstats.py\n',b'origin diagnostic\n')
+        provenance={}
+        with self.assertRaises(ValueError): capture.capture(self.root,'baseline',runner=runner,provenance=provenance)
+        self.assertEqual(provenance['status'],'Failed'); self.assertFalse(provenance['commands'][0]['origin_accepted'])
+        self.assertEqual(provenance['commands'][0]['stdout'],'/outside/textstats.py\n'); self.assertEqual(provenance['commands'][0]['stderr'],'origin diagnostic\n')
