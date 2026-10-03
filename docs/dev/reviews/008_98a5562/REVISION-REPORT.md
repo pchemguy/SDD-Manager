@@ -25,7 +25,7 @@ The [diagnostic findings](https://github.com/pchemguy/AgentPlayground/blob/main/
 
 ### Change decision and proposed follow-up
 
-**No confirmed SDD Manager source defect was established by this campaign, and no test-derived plugin patch is proposed on the current evidence.** This states the present diagnosis, not that the plugin is defect-free. Application and coordinator errors are diagnostic evidence; their classification alone does not prove the plugin guidance was sufficient.
+**The TextStats campaign identified no confirmed SDD Manager defects. No plugin changes were made or are currently proposed based on its results.**
 
 A focused diagnostic follow-up is recommended for TST-002 and TST-003: trace the original consumer decisions to the exact supplied inputs and pinned instructions, distinguish input ambiguity or application error from missing/conflicting guidance, and reproduce any suspected instruction weakness before proposing a bounded fix. This investigation has not been performed or converted into an accepted repair. Separately, installed-client execution is required to assess the remaining discovery/routing/activation gap. Successful assisted completion and case counts alone do not close either question.
 
