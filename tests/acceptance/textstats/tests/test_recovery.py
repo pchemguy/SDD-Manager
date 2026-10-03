@@ -224,3 +224,18 @@ class RecoveryTests(Sandbox):
         self.state['pending_operation']={'kind':'push','status':'uncertain','description':'lost response','identity':{'repository':str(self.root/'different.git'),'branch':'main','commit':head}}
         data,_=self.ok(self.invoke('observe',state=self.state))
         self.assertEqual(data['reconciliation']['effect'],'unknown')
+
+    def test_uncertain_push_explicit_target_ancestor_is_published_when_current_branch_is_not(self):
+        (self.repo/'owned.txt').write_text('candidate\n')
+        git(self.repo,'commit','-am','candidate')
+        candidate=git(self.repo,'rev-parse','HEAD').stdout.strip()
+        git(self.repo,'checkout','-b','other-target')
+        (self.repo/'owned.txt').write_text('descendant\n')
+        git(self.repo,'commit','-am','descendant')
+        git(self.repo,'push','origin','other-target')
+        git(self.repo,'checkout','main')
+        self.state['pending_operation']={'kind':'push','status':'uncertain','description':'lost response','identity':{'repository':str(self.remote),'branch':'main','ref':'refs/heads/other-target','commit':candidate}}
+        data,_=self.ok(self.invoke('observe',state=self.state))
+        self.assertEqual(data['git']['publication'],'unpublished')
+        self.assertEqual(data['reconciliation']['effect'],'observed-published')
+        self.assertFalse(data['reconciliation']['retry_safe'])
