@@ -11,12 +11,12 @@ import stat
 import subprocess
 import sys
 import tempfile
-from urllib.parse import urlsplit
+from urllib.parse import parse_qsl, urlsplit
 
 BUNDLE = Path(__file__).resolve().parents[1]
 SOURCE = Path(__file__).resolve().parents[4]
 MISSING = 'Which dedicated test repository should this run use? Supply its URL or local checkout path.'
-SECRET = re.compile(r'(?:github_pat_|gh[pousr]_|Bearer\s+)[A-Za-z0-9_\-]+|://[^/\s]+@', re.I)
+SECRET = re.compile(r'(?:github_pat_|gh[pousr]_|Bearer\s+)[A-Za-z0-9_\-]+', re.I)
 
 class Stop(Exception):
     def __init__(self, cause, action='Resolve the reported prerequisite before retrying.'):
@@ -29,6 +29,20 @@ def protected(path):
     return any(p.lower() in {'.git', '.ssh', '.aws', '.credentials', 'credentials', '.env', 'gh.tkn', '.netrc', '.npmrc', '.pypirc', '.git-credentials', 'id_rsa', 'id_ed25519'} or p.lower().endswith(('.tkn', '.pem', '.key')) or p.lower().startswith('.env.') for p in parts)
 
 
+def sensitive_text(value):
+    if SECRET.search(value): return True
+    for matched in re.finditer(r"[A-Za-z][A-Za-z0-9+.-]*://[^\s<>\"'`]+", value):
+        try:
+            url = urlsplit(matched.group())
+            if url.password is not None: return True
+            if url.username is not None and url.scheme.lower() != 'ssh': return True
+            if url.scheme.lower() == 'ssh' and url.query: return True
+            if any(key.lower() in {'token','access_token','password','credential','credentials','api_key','auth','authorization'} for key,_ in parse_qsl(url.query)): return True
+        except ValueError:
+            return True
+    return False
+
+
 def no_secret(value):
     if isinstance(value, dict):
         for key, item in value.items():
@@ -37,12 +51,12 @@ def no_secret(value):
             no_secret(item)
     elif isinstance(value, list):
         for item in value: no_secret(item)
-    elif isinstance(value, str) and (SECRET.search(value) or '\x00' in value):
+    elif isinstance(value, str) and (sensitive_text(value) or '\x00' in value):
         raise Stop('invalid_nonsecret_configuration')
 
 
 def clean_bytes(data):
-    if SECRET.search(data.decode('utf-8', errors='replace')):
+    if sensitive_text(data.decode('utf-8', errors='replace')):
         raise Stop('sensitive_content_not_exportable', 'Retain protected content separately; do not publish it as test evidence.')
     return data
 
@@ -177,6 +191,7 @@ def repository(inputs):
 
 
 def package(source, inputs):
+    source=Path(source).resolve()
     commit=git(source,'rev-parse','--verify',inputs['plugin_revision']+'^{commit}').stdout.strip()
     if not re.fullmatch('[0-9a-f]{40}',commit): raise Stop('source_revision_unavailable')
     names=git(source,'ls-tree','-rz','--name-only',commit,'plugin.json','skills',binary=True).stdout.decode().split('\x00')
@@ -201,6 +216,8 @@ def package(source, inputs):
         for name in set(filter(None,candidates)):
             if protected(name): raise Stop('protected_package_path')
             path=Path(source)/name
+            if any(parent.is_symlink() for parent in path.parents if parent != Path(source).resolve() and parent.is_relative_to(Path(source).resolve())): raise Stop('package_symlink_unsupported')
+            if not path.parent.resolve().is_relative_to(Path(source).resolve()): raise Stop('unsafe_package_path')
             if path.is_symlink(): raise Stop('package_symlink_unsupported')
             if path.is_file():
                 dirty[name]=clean_bytes(path.read_bytes())
@@ -232,7 +249,9 @@ def prepare(inputs, source, workspace):
     info=preflight(inputs,source)
     if inputs.get('run_id'): raise Stop('resume_not_fresh','Use observe with the retained checkpoint; do not replay setup.')
     if workspace is None: raise Stop('workspace_required','Select an explicit new isolated workspace using --workspace.')
-    target=Path(workspace).expanduser().resolve()
+    requested=Path(workspace).expanduser()
+    if requested.exists() or requested.is_symlink(): raise Stop('workspace_occupied')
+    target=requested.resolve()
     if target.exists() or target.is_symlink(): raise Stop('workspace_occupied')
     target.parent.mkdir(parents=True,exist_ok=True)
     source_repo=info['repository']['local_checkout'] or inputs['test_repository']
@@ -304,19 +323,26 @@ def observe_git(repo_info):
     return {'head':head,'branch':branch,'parents':parents,'merge_heads':merges,'index':index,'staged_paths':paths(root,'diff','--cached','--name-only','-z'),'unstaged_paths':paths(root,'diff','--name-only','-z'),'untracked_paths':paths(root,'ls-files','--others','--exclude-standard','-z'),'conflict_paths':sorted({e['path'] for e in index if e['stage']}),'refs':git(root,'for-each-ref','--format=%(objectname) %(refname)').stdout.splitlines(),'worktrees':git(root,'worktree','list','--porcelain').stdout.splitlines(),'publication':publication,'remote_containment':containment,'remote_heads':remote['refs'],'remote_observation_status':remote['status']}
 
 
-def reconcile(actual, state):
+def reconcile(actual, state, repo_info):
     operation=(state or {}).get('pending_operation')
     result={'effect':'none','retry_safe':False}
     if not operation: return result
     if operation['kind']=='push':
         identity=operation.get('identity',{})
+        recorded_repository=identity.get('repository')
+        if recorded_repository and normalize(recorded_repository) not in {normalize(repo_info['identity']), normalize(repo_info['remote_url'])}:
+            result['effect']='unknown'
+            return result
         branch=identity.get('branch') or actual['branch']
         commit=identity.get('commit') or actual['head']
         ref=identity.get('ref') or ('refs/heads/'+branch if branch else None)
         remote=actual['remote_heads'].get(ref)
         if commit and remote==commit: result['effect']='observed-published'
-        elif commit==actual['head'] and branch==actual['branch'] and actual['publication']=='published': result['effect']='observed-published'
-        elif actual['remote_observation_status']=='observed' and ref and commit: result['effect']='not-observed-at-destination'
+        elif actual['remote_observation_status']=='observed' and ref and commit:
+            if remote is None: result['effect']='not-observed-at-destination'
+            elif git(repo_info['local_checkout'],'cat-file','-e',remote+'^{commit}',required=False).returncode or git(repo_info['local_checkout'],'cat-file','-e',commit+'^{commit}',required=False).returncode: result['effect']='unknown'
+            elif not git(repo_info['local_checkout'],'merge-base','--is-ancestor',commit,remote,required=False).returncode: result['effect']='observed-published'
+            else: result['effect']='not-observed-at-destination'
         else: result['effect']='unknown'
     elif operation['status']=='uncertain': result['effect']='unknown'
     else: result['effect']='unfinished'
@@ -402,7 +428,7 @@ def export_recovery(root, actual, output, state=None):
 def observation(inputs,state,output,exports=True):
     repo=repository(inputs)
     actual=observe_git(repo)
-    effect=reconcile(actual,state)
+    effect=reconcile(actual,state,repo)
     if actual['conflict_paths'] or actual['merge_heads']: action='Preserve merge/index stages and continue the same scoped resolution and required checks.'
     elif actual['staged_paths'] or actual['unstaged_paths'] or actual['untracked_paths']: action='Preserve actual staged/unstaged ownership and continue the same unfinished work; do not replay setup.'
     elif actual['publication']=='unpublished': action='Reconcile and publish the existing commit before selecting new work.'

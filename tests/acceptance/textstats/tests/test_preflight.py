@@ -139,3 +139,47 @@ class PreflightTests(Sandbox):
         dirty,_=self.ok(self.invoke('preflight',dict(self.inputs,source_mode='dirty'),extra=['--source-root',source]))
         self.assertNotEqual(base['plugin_source']['fingerprint'],dirty['plugin_source']['fingerprint'])
         self.assertIn('skills/demo/run.sh',dirty['plugin_source']['changed_package_paths'])
+
+    def test_prepare_refuses_dangling_workspace_symlink_before_resolving(self):
+        lexical=self.root/'requested-workspace'
+        destination=self.root/'foreign-destination'
+        lexical.symlink_to(destination,target_is_directory=True)
+        p,data,out=self.invoke('prepare',extra=['--workspace',lexical])
+        self.assertNotEqual(p.returncode,0)
+        self.assertFalse(destination.exists())
+        self.assertTrue(lexical.is_symlink())
+        self.assertFalse(out.exists())
+
+    def test_dirty_package_parent_symlink_is_not_followed(self):
+        source=self.root/'boundary-source'
+        git(self.root,'init','-b','main',str(source))
+        git(source,'config','user.name','Fixture')
+        git(source,'config','user.email','fixture@example.invalid')
+        (source/'skills/demo').mkdir(parents=True)
+        (source/'skills/demo/SKILL.md').write_text('committed\n')
+        (source/'plugin.json').write_text('{}\n')
+        (source/'.gitignore').write_text('/skills/demo\n')
+        git(source,'add','plugin.json','.gitignore')
+        git(source,'add','-f','skills/demo/SKILL.md')
+        git(source,'commit','-m','package')
+        (source/'skills/demo/SKILL.md').unlink()
+        (source/'skills/demo').rmdir()
+        foreign=self.root/'foreign-package'
+        foreign.mkdir()
+        (foreign/'SKILL.md').write_text('EXTERNAL_SENTINEL')
+        (source/'skills/demo').symlink_to(foreign,target_is_directory=True)
+        p,data,out=self.invoke('preflight',dict(self.inputs,source_mode='dirty'),extra=['--source-root',source])
+        self.assertNotEqual(p.returncode,0)
+        self.assertFalse(out.exists())
+        self.assertNotIn('EXTERNAL_SENTINEL',p.stdout+p.stderr)
+
+    def test_username_only_ssh_transport_is_allowed_but_embedded_credentials_rejected(self):
+        url='ssh://git@example.invalid/owner/repository.git'
+        git(self.repo,'remote','set-url','origin',url)
+        data,_=self.ok(self.invoke('preflight',dict(self.inputs,test_repository=url)))
+        self.assertEqual(data['repository']['remote_url'],url)
+        for value in ['ssh://git:SECRET_SENTINEL@example.invalid/owner/repo.git','ssh://git@example.invalid/owner/repo.git?token=SECRET_SENTINEL','https://user@example.invalid/owner/repo.git','https://example.invalid/owner/repo.git?access_token=SECRET_SENTINEL']:
+            p,data,out=self.invoke('preflight',dict(self.inputs,test_repository=value))
+            self.assertNotEqual(p.returncode,0)
+            self.assertNotIn('SECRET_SENTINEL',p.stdout+p.stderr)
+            self.assertFalse(out.exists())

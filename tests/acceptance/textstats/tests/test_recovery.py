@@ -195,3 +195,32 @@ class RecoveryTests(Sandbox):
         self.assertNotEqual(p.returncode,0)
         self.assertFalse(out.exists())
         self.assertNotIn('EXTERNAL_SENTINEL',p.stdout+p.stderr)
+
+    def test_uncertain_push_explicit_ref_overrides_current_branch_publication(self):
+        head=git(self.repo,'rev-parse','HEAD').stdout.strip()
+        self.state['pending_operation']={'kind':'push','status':'uncertain','description':'lost response','identity':{'branch':'main','ref':'refs/heads/missing-target','commit':head}}
+        data,_=self.ok(self.invoke('observe',state=self.state))
+        self.assertEqual(data['git']['publication'],'published')
+        self.assertEqual(data['reconciliation']['effect'],'not-observed-at-destination')
+        self.assertFalse(data['reconciliation']['retry_safe'])
+
+    def test_uncertain_push_explicit_ref_with_unknown_ancestry_stays_unknown(self):
+        head=git(self.repo,'rev-parse','HEAD').stdout.strip()
+        other=self.root/'incoming-push'
+        git(self.root,'clone',str(self.remote),str(other))
+        git(other,'checkout','main')
+        git(other,'config','user.name','Fixture')
+        git(other,'config','user.email','fixture@example.invalid')
+        (other/'owned.txt').write_text('remote advance\n')
+        git(other,'commit','-am','advance')
+        git(other,'push','origin','HEAD:refs/heads/other-target')
+        self.state['pending_operation']={'kind':'push','status':'uncertain','description':'lost response','identity':{'branch':'main','ref':'refs/heads/other-target','commit':head}}
+        data,_=self.ok(self.invoke('observe',state=self.state))
+        self.assertEqual(data['reconciliation']['effect'],'unknown')
+
+    def test_uncertain_push_recorded_repository_mismatch_is_unknown(self):
+        head=git(self.repo,'rev-parse','HEAD').stdout.strip()
+        self.state['repository']={'identity':str(self.remote)}
+        self.state['pending_operation']={'kind':'push','status':'uncertain','description':'lost response','identity':{'repository':str(self.root/'different.git'),'branch':'main','commit':head}}
+        data,_=self.ok(self.invoke('observe',state=self.state))
+        self.assertEqual(data['reconciliation']['effect'],'unknown')
