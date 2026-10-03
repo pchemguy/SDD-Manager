@@ -29,6 +29,8 @@ The [diagnostic findings](https://github.com/pchemguy/AgentPlayground/blob/main/
 
 A focused diagnostic follow-up is recommended for TST-002 and TST-003: trace the original consumer decisions to the exact supplied inputs and pinned instructions, distinguish input ambiguity or application error from missing/conflicting guidance, and reproduce any suspected instruction weakness before proposing a bounded fix. This investigation has not been performed or converted into an accepted repair. Separately, installed-client execution is required to assess the remaining discovery/routing/activation gap. Successful assisted completion and case counts alone do not close either question.
 
+The reusable TextStats test-project integration is planned separately in [009_384beef/REVISION-PLAN.md](../009_384beef/REVISION-PLAN.md); implementation has not started.
+
 ## Campaign and suspension
 
 - Campaign: `008_98a5562`; reviewed baseline `98a556218d81870a4751ad308f6586587ac1d7da`.

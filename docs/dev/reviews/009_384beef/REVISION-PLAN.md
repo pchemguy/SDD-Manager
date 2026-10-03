@@ -1,6 +1,13 @@
-# TextStats Test Project Integration Implementation Plan
+# TextStats diagnostic test project integration revision plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+## Campaign, scope and state
+
+- **Campaign:** `009_384beef`.
+- **Starting baseline:** `384beefb6186348af9b100de9bec2f5a4a024692`.
+- **Origin:** User-requested integration of TextStats as a reusable SDD Manager diagnostic test project, following the [008 campaign report](../008_98a5562/REVISION-REPORT.md).
+- **State:** Planning only; bundle implementation and new test execution have not started.
+- **Scope:** Self-contained test infrastructure, agent/human entry documents, phased execution, interruption recovery and diagnostic reporting. No plugin defect repair is implied by this plan.
+- **Execution:** Coordinate accepted revision work through SDD Manager, preserving scope, verification, reporting and publication boundaries.
 
 **Goal:** Add a self-contained TextStats diagnostic test project to SDD Manager so an agent directed only to its directory can obtain the context, resolve missing inputs, set up a test repository, execute phased tests, recover interruptions and report actionable plugin findings.
 
@@ -8,7 +15,7 @@
 
 **Tech Stack:** Markdown, versioned JSON manifests/schemas, Python 3.11+ standard-library helpers/unittest, Git, and the plugin's supported GitHub backend/credential mechanisms. Actual interpreter and client mode are recorded.
 
-**Spec:** The Requirements section of this plan is the implementation brief. This plan's implementation-skill header is not a dependency of the delivered test bundle: its runtime entry uses the repository's SDD skills and available agent tools.
+**Spec:** The Requirements section of this plan is the implementation brief. The delivered test bundle uses the repository's SDD skills and available agent tools.
 
 ## Requirements
 
