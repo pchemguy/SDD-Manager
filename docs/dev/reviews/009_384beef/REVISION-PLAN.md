@@ -5,7 +5,7 @@
 - **Campaign:** `009_384beef`.
 - **Starting baseline:** `384beefb6186348af9b100de9bec2f5a4a024692`.
 - **Origin:** User-requested integration of TextStats as a reusable SDD Manager diagnostic test project, following the [008 campaign report](../008_98a5562/REVISION-REPORT.md).
-- **State:** Planning only; bundle implementation and new test execution have not started.
+- **State:** Execution active: Task1 entry documents/schemas implemented and reviewed; portable helpers and case contracts follow. New live acceptance awaits its dedicated repository input.
 - **Scope:** Self-contained test infrastructure, agent/human entry documents, phased execution, interruption recovery and diagnostic reporting. No plugin defect repair is implied by this plan.
 - **Execution:** Coordinate accepted revision work through SDD Manager, preserving scope, verification, reporting and publication boundaries.
 
@@ -146,10 +146,10 @@ If no confirmed plugin defect is found, state directly: “No confirmed SDD Mana
 
 **Interfaces:** Produces complete relative reading paths, input fields and phase/checkpoint contracts consumed by the support tools and coordinator.
 
-- [ ] Extract reusable requirements/procedures from the historical campaign; remove fixed machine paths, repository defaults, issue IDs and completed-answer content.
-- [ ] Write the entry/linked documents and configuration schemas, including every interruption state above.
-- [ ] Check all relative links and manually trace a fresh directory-only invocation and a resumed invocation without using historical chat context.
-- [ ] Commit the coherent documentation bundle with scope limited to the test infrastructure and its README navigation.
+- [x] Extract reusable requirements/procedures from the historical campaign; remove fixed machine paths, repository defaults, issue IDs and completed-answer content.
+- [x] Write the entry/linked documents and configuration schemas, including every interruption state above.
+- [x] Check all relative links and manually trace a fresh directory-only invocation and a resumed invocation without using historical chat context.
+- [x] Commit the coherent documentation bundle with scope limited to the test infrastructure and its README navigation.
 
 ### Task 2 — Portable setup, observation and recovery support
 
