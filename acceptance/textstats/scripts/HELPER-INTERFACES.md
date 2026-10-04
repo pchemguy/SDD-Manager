@@ -49,3 +49,17 @@ Runtime `expected_ref` resolves exactly one existing schema-validated checkpoint
 Assessment shape: `{"schema_version":1,"status":"Checks passed"|"Checks failed"|"Not run","checks":[{"id":"...","status":"Passed"|"Failed","reason":"..."}],"agent_behavior_assessed":false,"required_agent_checks":[...]}`. Deterministic success never confers case Passed or full acceptance. Agent routing, ownership decisions, assistance, interruption/fresh-context behavior and causal diagnosis require independent assessment.
 
 Run the complete nonempty support suite from the package root: `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v`. Tests use only disposable repositories and local bare remotes; no hosted writes occur.
+
+## Task ownership document model
+
+`task_ownership` reads active TASKS.md/FEATURE-TASKS.md roots, excluding archive, features, reviews and vendor/run-resource history. It does not follow ordinary Markdown links. An optional additive `documents` array names explicit active child lists by repository-relative Markdown path; default roots still participate. Paths must be nonempty, unique, normalized with `/`, safe and nonprotected. Missing files, symlinks in the path and historical documents block the check. Catalog validation checks the option's syntax; runtime assessment additionally checks actual files. Naming a document does not establish that the assessor selected every required child list.
+
+Task IDs are case-sensitive ASCII tokens beginning with a letter, with alphanumeric segments separated by single hyphens or underscores. An ID must contain a digit or a separator: `T-001`, `F-001`, `TASK_001`, `ABC42` and `BUILD-alpha` are supported. Checkbox IDs may be plain, inline-code or bold tokens. Recognized `Phase <id>` and `Milestone <id>` checkbox parents are excluded; other checkbox candidates require a valid task ID. Task tables use exactly one `ID` or `Task ID` column and a `Status` column, with a separator row and nonempty status values. Malformed candidates fail instead of being silently skipped; the checker reports ownership, not completion eligibility.
+
+Backtick and tilde fenced examples are excluded, including fences indented inside task details. A closing fence uses the same marker, at least the opening length and no non-whitespace suffix. An unmatched opening fence fails the collection rather than concealing later work. General prose, headings and non-owning links are not task entries. Unsupported/ambiguous candidate rows produce a sanitized validation failure. Every actual duplicate task ID across the selected active documents fails. Repeated discovery of one document is deduplicated; duplicate explicit option entries are invalid. Empty executable collections fail. Independent assessment remains necessary for task hierarchy, scope, dependencies and selection coverage.
+
+Example additive child-list contract:
+
+```json
+{"id":"owners","kind":"task_ownership","documents":["docs/dev/tasks/streaming.md"]}
+```

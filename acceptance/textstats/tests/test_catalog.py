@@ -56,6 +56,18 @@ class CatalogIntegrity(unittest.TestCase):
             changed=copy.deepcopy(value); changed['checks']=checks; path.write_text(json.dumps(changed))
             with self.assertRaises(ValueError): catalog.validate_catalog(self.root)
 
+    def test_optional_ownership_documents_contract_validation(self):
+        def contract(documents):
+            return {'schema_version': 1, 'case_id': 'A-002',
+                    'checks': [{'id': 'owners', 'kind': 'task_ownership', 'documents': documents}],
+                    'required_agent_checks': ['Assess actual task-list coverage independently.']}
+        catalog.validate_contract(contract(['docs/dev/tasks/slice.md']), 'A-002')
+        for documents in [[], 'docs/dev/tasks/slice.md', [False], ['../escape.md'], ['/absolute.md'],
+                          ['gh.tkn'], ['docs/dev/reviews/old/TASKS.md'],
+                          ['docs/dev/tasks/slice.md', 'docs/dev/tasks/slice.md']]:
+            with self.subTest(documents=documents), self.assertRaises(ValueError):
+                catalog.validate_contract(contract(documents), 'A-002')
+
     def test_route_answer_leakage_and_missing_trigger_fail(self):
         path=self.root/'cases/consumer/A-012.md'; original=path.read_text()
         path.write_text(original+'\nThe expected routing is sdd-steer.\n')
