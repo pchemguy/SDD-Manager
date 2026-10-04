@@ -39,3 +39,7 @@ Correction: define concise root reports covering children, stable findings, appe
 ## Handoff and limits
 
 Three source-policy gaps identified. Existing semantic criteria are foundations, not evidence that automatic gates already run. No runtime failure is claimed. Source revision, fresh consumer checks and acceptance-case updates remain planned in [REVISION-PLAN.md](REVISION-PLAN.md). Preparation report scope does not authorize unrelated code implementation or a project-wide audit.
+
+## Policy record integration — 2026-10-04
+
+The human commanded merging the policy revision. Published revision tip `8e25b52acbb77eb7ebbbc69e32e433130cc7b0d0` was explicitly integrated into `feature/architecture-revision` as two-parent merge `606f6eea7a0a21b49f9300ecf40c7e5b202db644`; target parent `a3b2ad9bdbe68d42c32cdcdf0bd80fc2a598dad9`. Prospective checks validated four documents, 37 local links, full campaign baselines, no whitespace errors and no conflicts. The diff contains policy/assessment/plan/index records only; skills and acceptance are unchanged. Target push succeeded and exact remote readback matched the merge SHA. This publishes the preparation records; source revision actions V-001–V-008 remain planned.
