@@ -4,6 +4,7 @@
 
 - Campaign: `010_3f56922`; [plan](REVISION-PLAN.md), [accepted intent](LIFECYCLE-POLICY.md), [baseline findings](REVIEW-REPORT.md).
 - Starting baseline: `3f56922a936c8fe039f906ed27566b5662b5440c`; preparation amendment checkpoint: `7efe45b7e7b6bcf2abd703fba5ee6d1b201ea89d`.
+- Source revision commit: `60dc077df7b89e8302f8ae34b550b5e747330444` (V-001–V-007 and local/consumer evidence).
 - Working branch: `revision/010_3f56922-backend-lifecycle`; established integration target: `feature/architecture-revision`.
 - Result: lifecycle source instructions, workflow ownership/report placement and TextStats assessment criteria revised. Local source/catalog/support checks and fresh read-only consumer assessments are recorded below. Provider lifecycle execution, revision publication and integration remain pending.
 - Canonical authority: [backend object lifecycle](../../../../skills/sdd-conventions/references/backend-object-lifecycle.md). Campaign policy is retained accepted intent, not a competing shipped authority.
