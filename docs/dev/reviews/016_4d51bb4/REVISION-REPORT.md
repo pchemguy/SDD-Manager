@@ -6,7 +6,7 @@
 - Baseline: `4d51bb4fa5f627809e6b449e28f89791b7b52f4d`.
 - Working branch: `revision/016_4d51bb4-codex-manifest`.
 - Target: `feature/architecture-revision`.
-- State: source revision verified; publication/integration pending.
+- State: source revision verified, explicitly integrated and published; installed UI rendering unverified.
 
 ## Superpowers comparison and changes
 
@@ -22,4 +22,6 @@ TextStats package pinning now includes `.codex-plugin`, root assets and skills; 
 
 The full support suite passed: `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` (68 tests). The 27-case catalog validated. Direct checks passed manifest format/exact metadata, short-description and prompt limits, 15 skill entries, four contained icon references, 128-pixel SVG and decoded 512-pixel PNG, size limits, and four documents / 70 local links. Visual inspection confirmed the PNG retains the SVG artwork. Actual dirty-source snapshot checks captured 104 package files, including the moved manifest and exact binary logo bytes, with no root manifest. Whitespace checks passed.
 
-Publication/integration evidence will be appended after completion. Changing manifest format is the requested compatibility experiment, not a verified repair of the installed plugin page. The repository revision does not update the installed account release. The archived root-manifest campaign records remain historical evidence.
+Revision `217ffcb00fa78bacb4a54cfd16778053b01ccb69` was pushed to the retained working branch and exact remote readback matched. The complete 11-file branch difference contains only manifest/presentation, package documentation, TextStats snapshot compatibility and campaign records/index. Explicit merge `458716bcd4ae28829f74b00c70c53fdb912841b8` has parents `4d51bb4fa5f627809e6b449e28f89791b7b52f4d` and that revision tip. The prospective merged result passed all 68 support tests, the 27-case catalog, whitespace and conflict checks. Pinning the published revision captured 104 files; every snapshot file matched the prospective merge's bytes and all four icon paths resolved inside the snapshot. Target push and exact remote readback succeeded. This campaign did not advance `main`.
+
+Changing manifest format is the requested compatibility experiment, not a verified repair of the installed plugin page. The repository revision does not update the installed account release. The archived root-manifest campaign records remain historical evidence.
