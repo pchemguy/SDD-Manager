@@ -111,6 +111,12 @@ The coordinator handles workflow selection and shared prerequisites. Focused ski
 | [sdd-report](skills/sdd-report/SKILL.md) | Draft issues, commit messages, PR descriptions, and evidence-backed progress reports. |
 | [sdd-forge](skills/sdd-forge/SKILL.md) | Project tasks to GitHub and reconcile verified issue status. |
 
+## Development-document quality gates
+
+Completed SPEC is reviewed against accepted PROJECT/design before PLAN; PLAN and relevant layout are reviewed against SPEC before TASKS; TASKS is reviewed against PLAN before implementation or hosted projection. Authoring includes scoped correction/recheck and an adjacent `SPEC-REVIEW-REPORT.md`, `PLAN-REVIEW-REPORT.md` or `TASKS-REVIEW-REPORT.md` (feature counterparts beside their roots). Confirmed unresolved issues block dependent progression. Reports retain original findings and append Revision N correction/recheck evidence; read-only review does not authorize repairs.
+
+Prefer 3–5 delivery milestones per phase and delivery tasks per milestone when the scope supports it. Review 1–2 groups for fragmentation and 10+ for overloading/drift; assess semantic scope in every range. Exclude dedicated review units from delivery counts while retaining their mandatory execution. Justify narrow groups and avoid padding or quota-driven splits. See [shared QC policy](skills/sdd-conventions/references/development-document-qc.md) and [coordinator gates](skills/sdd-manage/references/document-qc-gates.md).
+
 ## Development documents
 
 The main documents describe the complete intended project. Task lists record executable work and evidence-backed progress. Roots can link to focused children when a concern needs substantial detail.

@@ -25,3 +25,7 @@ Preserve stable task and parent IDs and unaffected completion evidence. Remove o
 5. Use **sdd-verify**, repair amendment defects, and repeat affected checks until required evidence supports the result or a concrete blocker remains.
 
 Do not execute subsequent main-list tasks, invoke **sdd-integrate-feature**, or hand production repairs to **sdd-implement**. All work in this execution cycle remains within the commanded steering amendment. If blocked, preserve valid work and report its state without claiming completion or resuming the main workflow.
+
+## Reassess affected preparation gates
+
+Before production work consumes materially amended governing inputs, apply **sdd-manage**'s **Document QC gates** to the selected affected SPEC/PLAN/TASKS and relevant design/layout. This skill retains commanded correction ownership; obtain focused owner assessment and append the adjacent report's Revision N evidence within scope. Correct confirmed conformance issues before dependent use; route new decisions beyond the amendment rather than rewriting upstream intent. Preserve original findings and unaffected valid evidence. Report unselected invalidated assessments without editing them or resuming main implementation; a coherent scoped amendment does not claim whole-project preparation Ready.

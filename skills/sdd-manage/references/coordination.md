@@ -7,6 +7,7 @@
 - **Git:** Require an eligible worktree for repository mutations. Outside Git, continue discussion or inspection and report the mutation blocker; do not initialize a repository implicitly.
 - **Pending work:** Establish ownership of dirty paths. Preserve unrelated staged and unstaged changes. Do not reset because the tree is dirty. Pass interrupted task implementation to **sdd-implement**, document incorporation to **sdd-integrate-feature**, and commanded amendment continuation to **sdd-steer**; if it lies outside the requested new scope, resolve that conflict before overlapping mutations.
 - **Inputs:** Confirm the authoritative requirements, design, strategy, and layout needed by the selected stage. File presence alone does not establish acceptance or consistency.
+- **Document readiness:** Use [document QC gates](document-qc-gates.md) before dependent PLAN/TASKS generation, implementation or hosted projection. Compare actual reviewed/governing state and coverage; route missing focused review within scope instead of trusting file presence or a Ready label.
 - **Facilities:** Check availability of the selected skills and necessary tools. Report concrete missing capabilities. Use ordinary filesystem, Git, and available provider tools; require no particular client, hidden hooks, or implicit installation mechanism.
 
 For branch workflows, use [branch management](branch-management.md) for setup and [Git workflows](git-workflows.md) for final integration. Preserve implementation's push-first prerequisite; a direct focused invocation uses the same protocol.
