@@ -55,6 +55,8 @@ Place the root review report beside the artifact being reviewed:
 | `docs/dev/TASKS.md` | `docs/dev/TASKS-REVIEW-REPORT.md` |
 | Active `FEATURE-SPEC.md`, `FEATURE-PLAN.md`, `FEATURE-TASKS.md` | `FEATURE-SPEC-REVIEW-REPORT.md`, `FEATURE-PLAN-REVIEW-REPORT.md`, `FEATURE-TASKS-REVIEW-REPORT.md` beside their respective roots. |
 
+Adjacency governs these preparation QC reports, including reports beside active FEATURE documents in docs/dev. The existing phase/feature prefixes continue to govern implementation reports and feature package records; source revision must distinguish these categories explicitly.
+
 A root report covers its applicable focused children; do not require a separate report per child. During feature archive, retain selected reports beside the corresponding archived feature sources and repair in-scope links. After accepted incorporation, reassess affected main-document conformance; a feature review is not proof that the complete main documents conform. General campaign records retain their standard reviews layout. These preparation reports are distinct from implementation milestone/phase reports defined by the backend lifecycle.
 
 Keep each report concise: artifact identity and exact reviewed state, governing source identities, scope/criteria, coverage and counts, stable located findings with consequence and correction/recheck, current gate result and limits. Use `Ready` only after current applicable conformance and QC pass; otherwise `Blocked`, with explicit reasons. Counts and justified exceptions are assessment results, not findings automatically.
