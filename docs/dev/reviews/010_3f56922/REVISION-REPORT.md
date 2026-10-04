@@ -6,7 +6,7 @@
 - Starting baseline: `3f56922a936c8fe039f906ed27566b5662b5440c`; preparation amendment checkpoint: `7efe45b7e7b6bcf2abd703fba5ee6d1b201ea89d`.
 - Source revision commit: `60dc077df7b89e8302f8ae34b550b5e747330444` (V-001–V-007 and local/consumer evidence).
 - Working branch: `revision/010_3f56922-backend-lifecycle`; established integration target: `feature/architecture-revision`.
-- Result: lifecycle source instructions, workflow ownership/report placement and TextStats assessment criteria revised. Local source/catalog/support checks and fresh read-only consumer assessments are recorded below. Provider lifecycle execution, revision publication and integration remain pending.
+- Result: lifecycle source instructions, workflow ownership/report placement and TextStats assessment criteria revised. Local source/catalog/support checks and fresh read-only consumer assessments are recorded below. Provider lifecycle execution remains pending. The revision branch is published; target integration is in progress under the explicit 2026-10-04 publication/integration command.
 - Canonical authority: [backend object lifecycle](../../../../skills/sdd-conventions/references/backend-object-lifecycle.md). Campaign policy is retained accepted intent, not a competing shipped authority.
 
 ## Revision evidence
@@ -31,15 +31,15 @@
 
 ## Persistence and integration
 
-All V-001–V-007 source/criteria changes are verified locally; their commit is identifiable by this campaign and its retained report. Publication/integration have not completed. The external publication blocker prevented normal per-action push checkpoints; source actions were retained as one coherent local revision boundary. Automatic approval review rejected the attempted preparation push, stating that explicit authorization to publish the amended payload was required. The user then requested the policy amendment: implementing a revision authorizes its scoped publication. No rejected push was bypassed. Established remote revision tip at the last confirmed readback was `1823d8a15124fe688329870f31f61d3b0c4ab8b2`.
+All V-001–V-007 source/criteria changes are verified locally; their commit is identifiable by this campaign and its retained report. The source branch through checkpoint d738c04 is published; target integration is being verified. The external publication blocker prevented normal per-action push checkpoints; source actions were retained as one coherent local revision boundary. Automatic approval review rejected the attempted preparation push, stating that explicit authorization to publish the amended payload was required. The user then requested the policy amendment: implementing a revision authorizes its scoped publication. No rejected push was bypassed. Established remote revision tip at the last confirmed readback was `1823d8a15124fe688329870f31f61d3b0c4ab8b2`.
 
-No revision merge or target publication is claimed. Preserve completed local changes and exact branch identity while publication remains blocked; do not integrate an unpublished source boundary or start unrelated work.
+The human explicitly authorized pushing this revision and completing verified integration. The push from 1823d8a to d738c04 succeeded; the refreshed target remains 3f56922a936c8fe039f906ed27566b5662b5440c. Verify the prospective two-parent merge before committing/publishing the target.
 
 ## TODO and live acceptance
 
 - Run live acceptance on a dedicated disposable repository using `acceptance/textstats/AGENTS.md`, a pinned revised source and real provider readback. Repository identity and suitable API access must be supplied or requested; missing access does not establish a pass.
 - Execute controlled and uncontrolled interruption variants at actual projection, report persistence, milestone closure and phase integration actions. Runtime termination and safe response-loss facilities are required; unavailable variants remain Blocked/Not run.
-- Publish the verified revision branch, then complete explicit integration, merged-state checks and target publication after the publication blocker is resolved.
+- Complete explicit integration, merged-state checks and target publication; record the resulting merge and readback.
 
 No identified non-critical source issue is being deferred. These TODOs are outstanding verification/publication work, not admissible code defects carried past a completed milestone gate.
 
