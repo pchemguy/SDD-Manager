@@ -6,6 +6,8 @@ TASKS and an active FEATURE-TASKS are human-readable status views of the complet
 
 Review existing claims against their accepted task or parent exit conditions and the implementation, verification, documentation, and Git evidence supplied by **sdd-implement**. It owns completion criteria and task or parent checkbox updates. **sdd-report** composes the resulting implementation summaries. Report missing evidence or a claimed scope broader than the evidence supports; this review does not perform completion updates.
 
+Validate explicit review units and their report paths against the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md). Checked parents need review/report evidence as well as delivery-task exits; a feature parent cannot establish whole-project hosted closure. Report missing review tasks as an accepted-hierarchy amendment need, never silently insert them.
+
 ## Route findings
 
 Pass task-list reconciliation, including feature-delta changes to task scope, dependencies, or parentage and FEATURE-TASKS incorporation into TASKS, to **sdd-integrate-feature**. Direct checkpoint amendments belong to human-commanded **sdd-steer**. Pass unfinished main implementation or completion-evidence gaps to **sdd-implement**. Report eligibility and dependency findings to **sdd-implement** before it selects further work.

@@ -4,15 +4,15 @@ Apply this convention when naming, organizing, or referencing review and revisio
 
 ## Campaign identity and storage
 
-Use `docs/dev/reviews/<sequence>_<baseline-sha>/` for the entire review/remediation lifecycle. For example, `003_39374c8` identifies the third repository campaign and its starting Git baseline.
+Use `docs/dev/reviews/<sequence>_<baseline-sha>/` for a general review/remediation lifecycle. Phase-checkpoint steering instead uses `docs/dev/reports/phases/<phase-id>/revisions/<sequence>_<baseline-sha>/`. Apply [backend object lifecycle](backend-object-lifecycle.md) for milestone/phase/feature implementation report placement. For example, `003_39374c8` identifies the third repository campaign and its starting Git baseline.
 
-- **Sequence:** Allocate the next unused repository-wide positive campaign number, padded to at least three digits. Use the shared [workflow identity](workflow-identity.md) allocation across reviews and features. Inspect both collections and relevant remote state; resolve concurrent collisions before publication. Do not renumber established campaigns.
+- **Sequence:** Allocate the next unused repository-wide positive campaign number, padded to at least three digits. Use the shared [workflow identity](workflow-identity.md) allocation across reviews, features and phase-nested revisions. Inspect both collections and relevant remote state; resolve concurrent collisions before publication. Do not renumber established campaigns.
 - **Baseline:** Use the campaign's starting commit, with at least seven hexadecimal characters and enough characters to resolve it uniquely. Record the full SHA inside each artifact. Keep the directory name stable as review/report/revision commits advance HEAD.
 - **Start:** Create the directory when writing the first artifact, not only after completion. A focused review can begin directly from a prompt; missing optional stages need no placeholder files.
 - **Files:** Use `REVIEW-PLAN.md`, `REVIEW-REPORT.md`, `REVISION-PLAN.md`, and `REVISION-REPORT.md`. Keep one current artifact per stage; Git retains its edit history. Do not repeat sequence or commit suffixes in filenames.
 - **Independent reviews:** Distinguish the campaign starting baseline from the exact source reviewed by each reviewer. When importing a report with no recorded source commit, say **reviewed baseline unknown**; its addition commit does not establish what was reviewed. Additional independently authored reports may use named subdirectories such as `independent/REVIEW-REPORT.md`; retain attribution and avoid overwriting another report.
 
-Steering uses the same directory/branch association but may retain only a concise revision report; do not invent absent review/plan stages. Full campaigns and lightweight amendments share stable identity, not mandatory artifact counts.
+Steering uses its owning phase's revisions prefix with the same campaign/branch identity but may retain only a concise revision report; do not invent absent review/plan stages. Full campaigns and lightweight amendments share stable identity, not mandatory artifact counts.
 
 ## Stable references
 

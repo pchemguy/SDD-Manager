@@ -70,7 +70,8 @@
       "assessor_guide": "cases/assessor/A-003.md",
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
-        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects."
+        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
+        "Eligible first-phase hierarchy and hosted access; future phases remain planned locally only."
       ],
       "checkpoint_bindings": {
         "start": {
@@ -128,7 +129,8 @@
       "assessor_guide": "cases/assessor/A-005.md",
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
-        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects."
+        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
+        "Milestone 1.1 explicit review task/report and actual hosted issue/milestone readback."
       ],
       "checkpoint_bindings": {
         "start": {
@@ -157,7 +159,8 @@
       "assessor_guide": "cases/assessor/A-006.md",
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
-        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects."
+        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
+        "Delivery milestone closure and final single-task phase review milestone from actual accepted hierarchy."
       ],
       "checkpoint_bindings": {
         "start": {
@@ -186,7 +189,8 @@
       "assessor_guide": "cases/assessor/A-007.md",
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
-        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects."
+        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
+        "Verified published phase 1 and authorized phase 2 activation."
       ],
       "checkpoint_bindings": {
         "start": {
@@ -702,7 +706,8 @@
       "assessor_guide": "cases/assessor/A-023.md",
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
-        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects."
+        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
+        "Safe isolated adapter/runtime for actual phase projection and milestone closure response-loss variants."
       ],
       "checkpoint_bindings": {
         "start": {

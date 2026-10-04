@@ -21,6 +21,7 @@
   ],
   "required_agent_checks": [
     "Actual repository/worktree and applicable instructions are observed. Full design/SPEC, MVP plan/layout and valid parent/child tasks are produced and published.",
-    "No production implementation or completed-task claim appears; tests/unit and tests/integration requirements survive in generated product artifacts."
+    "No production implementation or completed-task claim appears; tests/unit and tests/integration requirements survive in generated product artifacts.",
+    "Accepted PLAN/TASKS reserve a final single-task phase review milestone per phase, and every delivery milestone ends with an explicit milestone review/testing/report task with stable IDs and report links. Preparation does not create hosted future-phase objects."
   ]
 }

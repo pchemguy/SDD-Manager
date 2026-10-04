@@ -8,7 +8,7 @@ Read the accepted contract and requested work boundary before selecting commands
 | --- | --- |
 | Task | Its acceptance conditions and directly affected behavior, including necessary regressions. |
 | Selected change | Changed contracts, affected consumers, compatibility, and integration paths. |
-| Milestone or phase | Applicable PLAN exit conditions, constituent results, and cross-component behavior. |
+| Milestone or phase | Separate implementation code review and check evidence, applicable PLAN exits, constituent results, cross-component behavior and report/TODO evidence. Load boundary review for explicit review tasks. |
 | Project | Requested acceptance, integration, build, packaging, or other project-level checks. |
 
 For feature work, use the owning FEATURE-TASKS and relevant feature contracts alongside applicable main requirements. A feature's scoped parent checkbox does not establish the whole-project milestone or phase exit conditions.

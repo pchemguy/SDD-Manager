@@ -1,7 +1,11 @@
 # Backend object lifecycle policy proposal
 
 Campaign: `010_3f56922`. Starting baseline: `3f56922a936c8fe039f906ed27566b5662b5440c`.
-Status: proposed policy for discussion and subsequent plugin revision; shipped instructions have not been changed. See the [baseline assessment](REVIEW-REPORT.md) and [revision plan](REVISION-PLAN.md).
+Status: accepted for implementation by the human command to implement this revision; implementation results are recorded separately in REVISION-REPORT.md. The canonical implemented policy is [backend object lifecycle](../../../../skills/sdd-conventions/references/backend-object-lifecycle.md); this campaign record retains the accepted intent. See the [baseline assessment](REVIEW-REPORT.md) and [revision plan](REVISION-PLAN.md).
+
+## Execution authorization
+
+A command to implement an accepted revision authorizes its routine scoped edits, verification, commits, pushes to the established repository/branch, and verified integration/publication under the Git workflow. Do not request separate publication confirmation for that same scope. Respect explicit pause, local-only or destination overrides.
 
 ## Authority and object model
 

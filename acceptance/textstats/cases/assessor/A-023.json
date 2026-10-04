@@ -15,6 +15,7 @@
   ],
   "required_agent_checks": [
     "Real local completion persists while hosted effect is unavailable/unknown; pending operation uses exact discovered hosted identity.",
-    "Readback precedes replay; no duplicate issue/comment/closure; restored access reconciles older maintained backlog. Distinguish injected response from provider readback."
+    "Readback precedes replay; no duplicate issue/comment/closure; restored access reconciles older maintained backlog. Distinguish injected response from provider readback.",
+    "Additionally interrupt an actual phase projection and actual milestone closure in isolated trials. Preserve exact identities; after lost response, read provider state before replay and do not create duplicate objects or advance on unknown closure."
   ]
 }

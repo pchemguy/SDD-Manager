@@ -6,7 +6,7 @@ Campaign: `010_3f56922`. Full starting baseline: `3f56922a936c8fe039f906ed27566b
 Working branch: `revision/010_3f56922-backend-lifecycle`. Target: `feature/architecture-revision`.
 Inputs: user's lifecycle requirements, [policy proposal](LIFECYCLE-POLICY.md), [baseline assessment](REVIEW-REPORT.md).
 
-State: policy articulated and initial static gap assessment complete; plugin revision and live acceptance not started. The current checkpoint contains proposed policy and revision documents only. The user's sequence is policy articulation, implementation/workflow review, then plugin revision. Do not infer that these proposal files have already changed shipped behavior.
+State: implementation authorized by the human command to implement this revision, including the amended report placement. Routine scoped verification, commits, pushes to the established repository/branch, and verified integration/publication are authorized without a separate publication confirmation. Actual progress and external blockers are recorded in REVISION-REPORT.md.
 
 ## Ordered revisions
 
@@ -37,7 +37,7 @@ V-005 implements report formats/links; V-006 reconciles storage conventions and 
 
 At implementation entry, inspect current orientation, outstanding commits, scope and dirty ownership; reuse this campaign identity and appropriate working branch. Source and corresponding revision evidence are committed/pushed at each coherent action before dependent work. Do not create a second progress registry, renumber existing task IDs, modify historical campaign results, or mutate a test repository during policy articulation.
 
-REVISION-REPORT.md is created when source revision starts and records actual actions, checks, commit/push state and remaining findings. Complete authorized revision uses working-branch verification, explicit two-parent integration, merged-state checks and target publication under existing Git rules. This policy/preparation checkpoint stops before that implementation/integration boundary.
+REVISION-REPORT.md is created when source revision starts and records actual actions, checks, commit/push state and remaining findings. Complete authorized revision uses working-branch verification, explicit two-parent integration, merged-state checks and target publication under existing Git rules. Stop at the completed revision boundary or an unresolved external blocker; do not begin unrelated development.
 
 Live acceptance requires a dedicated disposable test repository and authenticated provider access. The agent should follow `acceptance/textstats/AGENTS.md`, request missing repository/access inputs under its setup protocol, and retain sanitized readback. Do not silently reuse the historical TextStats repository or claim hosted lifecycle coverage from local harness tests.
 

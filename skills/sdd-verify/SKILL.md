@@ -1,6 +1,6 @@
 ---
 name: sdd-verify
-description: Use when selecting and running checks for an SDD task, selected change, milestone, phase, or project; assessing acceptance and exit-condition coverage; classifying observed failures; or returning verification evidence and remaining gaps before completion.
+description: Use when selecting and running checks for an SDD task, selected change, milestone, phase, or project; assessing acceptance and exit-condition coverage; classifying observed failures; performing read-only milestone/phase implementation code review, or returning verification evidence and remaining gaps before completion.
 ---
 
 # Verify a selected work boundary
@@ -9,11 +9,14 @@ Establish the requested task, change, milestone, phase, or project scope. Load t
 
 | Work | Load |
 | --- | --- |
+| Review milestone/phase implementation code and findings | [boundary review](references/boundary-review.md) |
 | Derive checks from requirements, changes, and dependencies | [check selection](references/check-selection.md) |
 | Execute checks and assess acceptance evidence | [execution and evidence](references/execution-and-evidence.md) |
 | Classify failures and return unresolved work | [failure assessment](references/failure-assessment.md) |
 
 Use a current **sdd-orient** handoff for governing instructions, Git state, dirty-path ownership, relevant documents, and declared commands. **sdd-manage** coordinates the requested scope and execution prerequisites; the active implementation workflow, **sdd-implement** for main task work or **sdd-steer** for a checkpoint amendment, requests verification within its boundary. Read the owning TASKS or FEATURE-TASKS, relevant SPEC contracts, PLAN exit conditions, design and layout, actual changes, tests, and existing evidence as needed. Read-only check planning can precede execution; commands with side effects require the established eligible Git worktree and authorized environment.
+
+For an explicit boundary review task, load boundary review and assess implementation code separately from test execution. Neither activity substitutes for the other. Return findings and recheck evidence without repairs or task/hosted state changes.
 
 1. Identify the acceptance and exit conditions to verify and the implementation state being checked.
 2. Select sufficient direct, dependent, integration, and boundary checks. Use project commands and an existing verification map where useful; neither a map nor new scripts are required.

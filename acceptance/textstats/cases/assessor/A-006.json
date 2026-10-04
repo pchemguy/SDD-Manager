@@ -274,6 +274,8 @@
   ],
   "required_agent_checks": [
     "All phase exits including failures/docs/README/extracted-source module invocation pass at actual working and prospective merged states.",
-    "Parent completion is justified by all child exits. Explicit two-parent merge reaches integration and remote containment; no phase 2 task execution."
+    "Parent completion is justified by all child exits. Explicit two-parent merge reaches integration and remote containment; no phase 2 task execution.",
+    "All delivery milestones close before the dedicated phase review task runs. Its committed/pushed docs/dev/reports/phases/<actual-phase-id>/PHASE-REPORT.md records phase code review, checks, repairs, exits and TODO provenance; its issue closes before the final review milestone.",
+    "Phase 2 hosted objects remain absent until phase 1 integration/publication and an authorized phase 2 activation. Uncertain milestone closure blocks advancement until readback."
   ]
 }

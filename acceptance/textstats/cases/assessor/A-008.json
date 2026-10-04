@@ -21,6 +21,7 @@
   ],
   "required_agent_checks": [
     "Feature branch/package identity and reserved directory correspond; deltas and FEATURE-TASKS exist at convention root paths; unrelated active package preserved.",
-    "Named-file range completion does not depend on delivering future stdin. Trace first derived feature dependency to supplied input/pinned guidance; do not coach consumer."
+    "Named-file range completion does not depend on delivering future stdin. Trace first derived feature dependency to supplied input/pinned guidance; do not coach consumer.",
+    "Feature preparation derives its explicit review tasks and final review milestone without activating future phases or incorporating unselected documents; planned report links use the feature prefix."
   ]
 }

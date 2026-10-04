@@ -14,6 +14,7 @@ Translate the user's objective into a scoped workflow and coordinate the respons
 | Resolve identities, create/reuse workflow branches, or manage phase transitions | [branch management](references/branch-management.md) |
 | Integrate verified boundaries or continue a blocked merge | [Git workflows](references/git-workflows.md) |
 | Discover, save, or supply a repository token; recover shell/API authentication | [hosting credentials](references/credentials.md) |
+| Gate phase eligibility and active hosted object creation before execution | [phase activation](references/phase-activation.md) |
 | Plan or coordinate focused/systematic review and accepted revisions | [review and revision](references/review-and-revision.md) |
 | Check representative requests and expected boundaries | [workflow examples](references/examples.md) |
 

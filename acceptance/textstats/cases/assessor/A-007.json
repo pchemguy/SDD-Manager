@@ -134,6 +134,7 @@
   ],
   "required_agent_checks": [
     "Phase 2 begins at published phase 1 integration; JSON and default text behavior pass independent captures.",
-    "Integration remains at phase 1; stdin work has not been implemented."
+    "Integration remains at phase 1; stdin work has not been implemented.",
+    "Phase 2 activation creates/readbacks only its own label, milestones and all issues after phase 1 completion/publication and before phase 2 first-task execution."
   ]
 }

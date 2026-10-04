@@ -76,13 +76,13 @@ Work on a scoped branch for the selected range, feature, steering amendment, or 
 - **Steering:** Branch from the paused implementation checkpoint and merge back there. A blocked amendment retains its work and resumes on a human command; successful steering still does not resume the main task list.
 - **Failures:** Preserve valid work and report conflicts, required-check failures, or pending target publication. No automatic rollback or force-push. Separate worktrees can protect unrelated dirty work.
 
-Revision and steering records live under `docs/dev/reviews/<campaign>/`; feature identity/navigation and completed incorporated sources live under `docs/dev/features/<campaign>/`. Both use one repository-wide sequence and stable starting-SHA identity. Active feature files remain in docs/dev until safely incorporated and archived; historical task snapshots are not executable owners. Main governing documents remain in docs/dev. Explicit project/user overrides and suitable legacy branches are preserved.
+General revision records live under `docs/dev/reviews/<campaign>/`; checkpoint steering records live under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>/`; feature identity/navigation and completed incorporated sources live under `docs/dev/features/<campaign>/`. Reviews, steering revisions and features use one repository-wide sequence and stable starting-SHA identity. Active feature files remain in docs/dev until safely incorporated and archived; historical task snapshots are not executable owners. Main governing documents remain in docs/dev. Explicit project/user overrides and suitable legacy branches are preserved.
 
 See [branch management](skills/sdd-manage/references/branch-management.md) for naming/setup/phase transitions and the [Git workflow](skills/sdd-manage/references/git-workflows.md) for branch reuse, interruption, merge verification, and publication. Git merge and feature-document incorporation have distinct owners; hosted PR operations remain outside the current backend.
 
 ## Review and revision records
 
-Use `docs/dev/reviews/<sequence>_<baseline-sha>/` for the complete campaign: review plan → review → review report → revision plan → revision → revision report. A focused review can start directly from a prompt and record its scope/criteria in REVIEW-REPORT. A comprehensive review plans units and report checkpoints first.
+Use `docs/dev/reviews/<sequence>_<baseline-sha>/` for a general campaign (phase-checkpoint steering uses its phase-specific revisions prefix): review plan → review → review report → revision plan → revision → revision report. A focused review can start directly from a prompt and record its scope/criteria in REVIEW-REPORT. A comprehensive review plans units and report checkpoints first.
 
 Each planned review unit and completed revision action updates its report and is committed/pushed before dependent work. Accepted revisions update relevant governing documents; all campaign records remain retained. Directory identity stays fixed as HEAD advances. **sdd-report** supplies scalable artifact templates, and **sdd-manage** coordinates scope and execution.
 
@@ -122,6 +122,8 @@ The main documents describe the complete intended project. Task lists record exe
 | `layout.md` | Physical ownership of source, tests, documentation, and other artifacts. |
 | `TASKS.md` | Phase → Milestone → Task hierarchy, stable IDs, and progress evidence. |
 
+Each delivery milestone ends with an explicit code review/testing/report task. Each phase ends with a dedicated milestone containing one phase review/testing/report task; it runs after delivery milestones close. Main implementation reports live at `docs/dev/reports/phases/<phase-id>/PHASE-REPORT.md` and `<milestone-id>.md` in that same directory; feature reports stay under `docs/dev/features/<feature-id>/`. With hosted tracking active, only the eligible phase is projected before its first task; verified/pushed task issues close before milestone closure. See the [backend lifecycle](skills/sdd-conventions/references/backend-object-lifecycle.md) for gates, ownership, TODO aggregation and recovery.
+
 PLAN defaults to the simplest practical meaningful end-to-end MVP, then grows it through small testable capability increments. Necessary prerequisites are justified; the complete intended design and SPEC remain authoritative. Appropriate milestone demonstrations and functional/usability feedback inform human decisions to continue, amend, simplify, or stop. TASKS supplies bounded work within these increments.
 
 A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, `FEATURE-SPEC.md`, `FEATURE-PLAN.md`, and `FEATURE-TASKS.md` as needed. Accepted deltas are incorporated into the selected main documents through **sdd-integrate-feature**. Checkpoint steering directly amends existing documents and creates no feature-document layer.
@@ -135,6 +137,8 @@ A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, 
 - **Hosting reflects local evidence.** GitHub issues close after verified, committed task completion. Hosting failures remain pending and do not erase local results; task-branch completion is distinct from target integration and publication. Rate limits/outages remain deferred; uncertain writes are reconciled before retrying.
 
 ## Package status and references
+
+The backend lifecycle now defines phase-gated hosted creation, dedicated boundary review/report tasks, milestone closure, workflow-specific report placement and interruption reconciliation. [Campaign 010](docs/dev/reviews/010_3f56922/REVISION-REPORT.md) records source and consumer verification; live acceptance of these new rules remains pending a dedicated test repository.
 
 All 15 skills are included. Structural validation and independent coordination assessments have been exercised. The [runtime acceptance campaign](docs/dev/reviews/008_98a5562/REVISION-REPORT.md) records actual fresh-agent workflows through explicit skill-source loading, live GitHub tracking/publication, and controlled failure/recovery fixtures. Installed-client discovery, routing and activation remain untested; available journals are not complete native transcripts. All 27 scoped cases passed independent assessment; source integration is recorded in the campaign report.
 

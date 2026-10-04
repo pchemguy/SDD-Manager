@@ -15,6 +15,8 @@ Record campaign ID, full starting SHA, exact reviewed/tested state when differen
 
 Apply **sdd-conventions**' **Workflow identity** for branch/directory association. Record campaign or phase ID, full baseline, actual working/target branches, current authoritative sources and relevant artifact status. A lightweight steering revision report may contain only objective/context, actual changes, verification, and publication; omit absent review/plan links.
 
+Use the convention's workflow-specific report prefix: general campaigns under reviews, checkpoint steering under its phase's nested revisions, and feature records/reports under the feature directory. Retain stable identity and stage filenames; no implicit migration of historical records.
+
 For a feature package README, present identity/full baseline, branch/target, scope, active source links, and main owner links. At archive, replace active navigation with actual archived paths and historical status/evidence; identify current task owners. This record is navigation/provenance, not a competing progress checklist. A partial phase report distinguishes pushed task-range completion from uncompleted phase integration.
 
 ## Review plan

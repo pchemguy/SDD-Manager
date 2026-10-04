@@ -596,6 +596,7 @@
   "required_agent_checks": [
     "Selection uses current amended requirements; retired JSON work is not selected/reintroduced. Inspect actual orientation decisions before implementation.",
     "Stdin/range/BOM whole-input combinations, locale-independent bytes, errors/lifetime, named-file regressions and final docs/distribution pass.",
-    "All phase exits precede explicit two-parent phase integration/publication; no invented third phase."
+    "All phase exits precede explicit two-parent phase integration/publication; no invented third phase.",
+    "Final phase review and its committed PHASE-REPORT.md are required even after delivery milestone reviews passed; final IMPLEMENTATION-REPORT.md aggregates admissible unresolved milestone/phase TODO findings with solution options and provenance. Review issue and milestone closure precede completed-phase integration."
   ]
 }

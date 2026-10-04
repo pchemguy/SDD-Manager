@@ -8,6 +8,10 @@ Consumers receive [the preparation brief](cases/consumer/preparation.md) and the
 
 Use Python 3.11+ and standard-library `unittest`, with no third-party runtime dependency, network service, database or performance claim. Record the actual interpreter; executing a newer interpreter does not prove 3.11 was tested. Product code is importable as `textstats`; module CLI is `python -m textstats`. Product tests are organized under **`tests/unit/` and `tests/integration/`**, as discoverable packages with nonzero collection. Workflow harness/fixture checks are separate under `tests/workflows/`. Maintain professional module/public API docs, a runnable README and an extracted source-package module-entry check.
 
+## Review and reporting boundaries
+
+The consumer derives its own stable review task IDs under the pinned plugin policy: each delivery milestone ends with a milestone review/testing/report task, and each phase ends with a dedicated one-task phase review milestone. Product milestone numbers below name delivery outcomes; reserve a subsequent phase review milestone without renumbering those outcomes. Main milestone/phase reports share docs/dev/reports/phases/<actual-phase-id>/; steering records use its revisions/<actual-revision-id>/ subtree; feature reports stay under docs/dev/features/<actual-feature-id>/. Check code review, required tests, committed report and hosted closure as separate evidence. Deferred non-critical findings must retain remedy options through phase and final reports.
+
 ## Counting and API
 
 Export immutable `TextStats(lines: int, words: int)` with nonnegative values, `count_text(text: str, *, strip_bom: bool = True) -> TextStats`, and `count_file(path: str | os.PathLike[str], *, strip_bom: bool = True) -> TextStats` directly from `textstats`. API operations count the whole input; range selection adds no public API parameter/export. Calls emit no stdout/stderr. File decoding is strict UTF-8; missing/unreadable input raises an `OSError` subtype and bad bytes raise `UnicodeDecodeError`, with no partial result. Close owned file handles on every outcome.

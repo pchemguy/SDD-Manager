@@ -1,5 +1,7 @@
 # Task issue references and lifecycle
 
+Apply the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md); issue completion requires the task result/status commit to be pushed with verified remote containment before closure. Milestone closure is a separate subsequent operation.
+
 ## Resolve for implementation
 
 Given a stable task ID, resolve the intended GitHub repository and find the uniquely matching issue using the exact task prefix and `sdd-forge:task-id` marker. Check both open and closed issues and exclude pull requests. Return the repository, task ID, issue number, URL, and state to the invoking workflow. Do not rely on a remembered number, title substring alone, phase label, or milestone association alone. For several tasks, return each mapping independently; stop the affected operation on missing, duplicate, or conflicting matches.
@@ -13,3 +15,9 @@ When the project has opted into GitHub task-issue tracking, reconcile issue stat
 If later steering invalidates completion, do not silently flip hosted state. Reassess TASKS, any active FEATURE-TASKS, and evidence, then reopen the unique issue if the user has requested hosted reconciliation, stating the new outstanding work and preserving its history. An issue closed on an unmerged working branch represents verified task work there; report its branch and commit explicitly. Default Git integration happens at the completed workflow boundary and is reported separately with its target and merge commit. Do not reopen a verified task merely because target publication is pending. PR creation and merge are separate operations outside this backend's present scope.
 
 No local issue-map file is needed initially. The project-wide stable task ID from the owning list, exact GitHub marker, scoped repository identity, and handoff provide bidirectional lookup. Introduce a checked-in mapping only for a demonstrated offline or cross-host requirement, with ownership and conflict reconciliation specified first; otherwise it would become a second mutable record of GitHub state.
+
+## Retired task disposition
+
+An explicitly accepted scope amendment may retire an unfinished managed task. Resolve its stable ID from the amendment and retained owning-list/Git history; verify its exact issue marker and preserve history. Under authorized hosted reconciliation, record the accepted retirement/commit and close an open retired issue with reason `not_planned`, not `completed`; read back state/reason. A removed checkbox alone does not authorize closure. Already completed historical work remains historical completion unless current acceptance is explicitly invalidated. Unknown retirement writes require the same readback-before-replay protocol.
+
+Use GitHub's [issue update documentation](https://docs.github.com/en/rest/issues/issues#update-an-issue) for current state/reason semantics. Retirement is a scope disposition, not verified implementation; milestone closure still requires the accepted remaining tasks and current review/exits/report evidence.

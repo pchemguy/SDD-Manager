@@ -1,6 +1,6 @@
 ---
 name: sdd-forge
-description: Use when projecting software-development phases, milestones, and tasks to a hosted repository; creating or reconciling GitHub labels, milestones, and task issues; finding an issue for a task ID; or closing a verified task issue. GitHub is the available backend. Ordinary local Git and SDD work does not require hosting access.
+description: Use when projecting software-development phases, milestones, and tasks to a hosted repository; creating or reconciling GitHub labels, milestones, and task issues; finding an issue for a task ID; or closing verified task issues and milestones, reopening invalidated milestones, or recovering interrupted hosted transitions. GitHub is the available backend. Ordinary local Git and SDD work does not require hosting access.
 ---
 
 # Hosted task coordination
@@ -21,4 +21,4 @@ Add a backend only when it supports a concrete hosted operation with its own rep
 
 ## Available backends
 
-- **GitHub:** Read [GitHub backend](references/github.md) when the requested operation targets a GitHub repository. It resolves repository identity and access, then routes task projection and issue lifecycle operations.
+- **GitHub:** Read [GitHub backend](references/github.md) when the requested operation targets a GitHub repository. It resolves repository identity and access, then routes eligible-phase projection, issue lifecycle and milestone lifecycle operations. Apply the shared backend object lifecycle; task completion evidence comes from execution, not hosted state.

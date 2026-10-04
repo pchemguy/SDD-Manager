@@ -7,7 +7,7 @@
 - Working branch: `revision/010_3f56922-backend-lifecycle`; established target: `feature/architecture-revision`.
 - Scope: prompt-defined phase object creation, task and milestone closure, milestone/phase review and reports, explicit review tasks, interruption recovery and skill responsibilities.
 - Evidence: static inspection of shipped instructions and TextStats acceptance criteria. No provider mutations or lifecycle execution trials performed.
-- Assessment: task issue closure is implemented; the additional requested lifecycle is only partly covered. The [policy proposal](LIFECYCLE-POLICY.md) states the intended behavior; the [revision plan](REVISION-PLAN.md) identifies dependent changes. Plugin implementation is unchanged at this checkpoint.
+- Assessment: task issue closure is implemented; the additional requested lifecycle is only partly covered. The [policy proposal](LIFECYCLE-POLICY.md) states the intended behavior; the [revision plan](REVISION-PLAN.md) identifies dependent changes. The baseline observations below are retained; subsequent source changes and consumer checks are recorded in [REVISION-REPORT.md](REVISION-REPORT.md).
 
 ## Coverage
 
@@ -26,7 +26,7 @@
 
 ### R-001 — Projection is not gated by phase activation
 
-Priority: high for the requested policy. Status: Open (policy gap).
+Priority: high for the requested policy. Status: Revised; source changes and local/consumer rechecks recorded in REVISION-REPORT.md; hosted execution remains pending.
 
 `github-projection.md` reads the complete TASKS and active FEATURE-TASKS and creates requested projection objects without requiring prior-phase completion or restricting creation to the eligible phase. `task-hierarchy.md` describes complete-list hosted mapping. A caller can therefore project future-phase objects before the proposed activation gate.
 
@@ -34,7 +34,7 @@ Correction: separate complete local planning from eligible-phase projection; coo
 
 ### R-002 — Mandatory review units are not generated
 
-Priority: high for the requested policy. Status: Open (policy gap).
+Priority: high for the requested policy. Status: Revised; source changes and local/consumer rechecks recorded in REVISION-REPORT.md; hosted execution remains pending.
 
 `task-derivation.md` includes milestone-exit work but never requires a last milestone review/report task or final one-task phase review milestone. Shared hierarchy and PLAN ownership do not establish this structure. Existing lists can exhaust delivery tasks without an executable review/report boundary.
 
@@ -42,7 +42,7 @@ Correction: PLAN reserves review milestones/exits; conventions specify structure
 
 ### R-003 — Hosted milestone closure has no execution owner/procedure
 
-Priority: high for the requested policy. Status: Open (policy gap).
+Priority: high for the requested policy. Status: Revised; source changes and local/consumer rechecks recorded in REVISION-REPORT.md; hosted execution remains pending.
 
 GitHub routing offers projection and issue lifecycle only. `completion-and-checkpoints.md` updates verified local parents but does not close hosted milestones after their issues close. Existing continuation reconciles task issues without a milestone closure backlog. A locally completed milestone may remain open indefinitely; new activation gates would have no reliable closure evidence.
 
@@ -50,7 +50,7 @@ Correction: forge defines milestone lookup, all-issue/exit/report preconditions,
 
 ### R-004 — Review reports, deferral rules and owner handoffs are incomplete
 
-Priority: high for the requested policy. Status: Open (policy gap).
+Priority: high for the requested policy. Status: Revised; source changes and local/consumer rechecks recorded in REVISION-REPORT.md; hosted execution remains pending.
 
 `completion-reports.md` asks for delivered capability, aggregate verification, exits and unresolved defects, but does not require a dedicated code review, report commit before closure, admissible non-critical deferral with solution options, or final TODO aggregation. Verify currently selects/runs checks and returns evidence; manage routes focused reviews, but no existing skill explicitly owns milestone/phase implementation code review.
 
@@ -58,7 +58,7 @@ Correction: adopt the proposed read-only review remit for verify; retain repair/
 
 ### R-005 — Acceptance lacks the new lifecycle checks
 
-Priority: medium, required before claiming the revised policy works. Status: Open (coverage gap).
+Priority: medium, required before claiming the revised policy works. Status: Revised acceptance criteria; live lifecycle execution remains pending.
 
 TextStats assessor A-003 checks mapping/reuse, A-005 checks milestone capability/persistence and pause, A-006 checks phase exits/integration. None explicitly requires phase-gated object creation, milestone closure, generated review tasks or committed review reports/TODO aggregation. Historical campaign results and harness support tests do not establish these new behaviors.
 
@@ -66,6 +66,6 @@ Correction: revise affected consumer/assessor inputs, criteria and catalog depen
 
 ## Handoff and limits
 
-Five open findings; no shipped source repairs made. These are gaps against the user's proposed policy, not retrospective claims that earlier task issue closure failed. Task completion/push/issue closure and uncertain-write recovery should be retained rather than replaced.
+At the baseline checkpoint, five gaps were open and no shipped source repairs had been made. The later authorized revision addresses their source/criteria changes; see REVISION-REPORT.md for actual disposition and execution limits. These are gaps against the user's proposed policy, not retrospective claims that earlier task issue closure failed. Task completion/push/issue closure and uncertain-write recovery should be retained rather than replaced.
 
-The phase-review ordering interpretation and ownership proposal are explicit in LIFECYCLE-POLICY.md. Current assessment inspected the listed handoffs; it is not an exhaustive unrelated plugin audit or an executed provider test. Revision actions and their acceptance checks remain planned.
+The phase-review ordering interpretation and ownership proposal are explicit in LIFECYCLE-POLICY.md. Current assessment inspected the listed handoffs; it is not an exhaustive unrelated plugin audit or an executed provider test. Provider execution and actual controlled/uncontrolled lifecycle trials remain unexecuted; local and fresh-consumer rechecks are recorded separately.

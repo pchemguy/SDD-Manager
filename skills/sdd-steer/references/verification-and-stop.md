@@ -14,7 +14,7 @@ Use **sdd-report** to describe the actual amendment, reason, verification, and s
 
 Push the amendment commit and outstanding commits on the current branch to its established remote branch and confirm remote containment. Use existing shell authentication first; on a 403 or explicit credential failure, coordinate **sdd-manage**'s **Hosting credentials** recovery and retry the same push. Do not guess a destination or force-push. On an unresolved push failure, preserve the commit and report the pending push; do not resume task-list implementation.
 
-When hosted tracking is active, use **sdd-forge** to reconcile issue state warranted by the revised task scope and evidence. Do not reopen an issue solely because historical functionality was removed, or close one solely because its task disappeared. Preserve issue history and report any access failure or ambiguous mapping as pending reconciliation.
+When hosted tracking is active, use **sdd-forge** to reconcile issue state warranted by the revised task scope and evidence. Apply the shared backend object lifecycle to affected review/report and milestone acceptance. Reconcile authorized milestone reopening through sdd-forge when current exits are invalidated, and retain reassessment pending until established again. Preserve earlier reports and required TODO provenance. Do not reopen an issue solely because historical functionality was removed, or close one solely because its task disappeared. Preserve issue history and report any access failure or ambiguous mapping as pending reconciliation.
 
 ## Merge the amendment
 

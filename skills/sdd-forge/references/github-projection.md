@@ -1,6 +1,8 @@
 # GitHub TASKS projection
 
-For the requested TASKS or active FEATURE-TASKS projection, create one GitHub issue per task, one GitHub milestone per SDD milestone, and one phase label per SDD phase. Assign each task issue its parent milestone and phase label when creating it. Do not duplicate an issue already projected from the other list. After a task is implemented, verified, committed, and reconciled in its owning task list, close its issue as completed under [issue lifecycle](github-issue-lifecycle.md).
+Apply the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md): read the full hierarchy but project only the eligible phase identified by sdd-manage. Do not create future-phase objects before predecessor completion/integration/publication. First-phase bootstrap needs no predecessor. Create and verify all phase objects, including dedicated review milestones/tasks, before its first task. Preparation or a complete local backlog does not activate every phase.
+
+For that phase in the requested TASKS or active FEATURE-TASKS projection, create one GitHub issue per task, one GitHub milestone per SDD milestone, and one phase label per SDD phase. Assign each task issue its parent milestone and phase label when creating it. Do not duplicate an issue already projected from the other list. After a task is implemented, verified, committed, and reconciled in its owning task list, close its issue as completed under [issue lifecycle](github-issue-lifecycle.md).
 
 Project the Phase → Milestone → Task hierarchy into one GitHub repository. Re-read TASKS, any active FEATURE-TASKS, and relevant PLAN or FEATURE-PLAN outcomes and exit conditions before writing. Take IDs and names from the task's owning list; use the applicable plan for supporting descriptions, not to rename hosted objects. For reused parents, ensure names match TASKS; stop for conflicting IDs, names, or parentage across the lists. Follow an established project naming convention only when it preserves unambiguous stable identity and the hierarchy.
 
@@ -26,5 +28,7 @@ When **sdd-report** is available, supply the exact task identity marker and requ
 ```
 
 Use the exact ID for lookup. Before creation, search open and closed issues and exclude pull requests; validate any candidate's marker and title against the owning task list and the other active list for duplicate IDs. Reuse a unique match and report a conflict for multiple or contradictory matches. Create or reconcile the phase label and GitHub milestone, then the task issue with both associations. Apply the GitHub operational-failure protocol after failed or interrupted writes: re-read affected identities before retrying, preserve unknown outcomes, and create nothing when lookup is incomplete or ambiguous. Do not close or reopen an issue merely because a task list changed; use the issue lifecycle procedure.
+
+Complete the phase label, all native milestones and all task issues/associations with provider readback before returning activation ready. A partial or uncertain projection remains pending; recover by identity lookup before creation. Preserve and report pre-existing future-phase objects rather than deleting them retrospectively.
 
 Report created, matched, updated, and conflicted objects with IDs and URLs. Return the task-to-issue associations as the handoff; a separate checked-in mapping artifact is not required for this projection.
