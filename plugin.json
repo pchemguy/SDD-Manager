@@ -8,7 +8,9 @@
     "com.openai": {
       "interface": {
         "displayName": "SDD Manager",
-        "websiteURL": "https://github.com/pchemguy/Skill-SDD-Manager"
+        "websiteURL": "https://github.com/pchemguy/Skill-SDD-Manager",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
       }
     }
   }
