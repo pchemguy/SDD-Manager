@@ -87,7 +87,7 @@ See [branch management](skills/sdd-manage/references/branch-management.md) for n
 
 Use `docs/dev/reviews/<sequence>_<baseline-sha>/` for a general campaign (phase-checkpoint steering uses its phase-specific revisions prefix): review plan → review → review report → revision plan → revision → revision report. A focused review can start directly from a prompt and record its scope/criteria in REVIEW-REPORT. A comprehensive review plans units and report checkpoints first.
 
-Each planned review unit and completed revision action updates its report and is committed/pushed before dependent work. Accepted revisions update relevant governing documents; all campaign records remain retained. Directory identity stays fixed as HEAD advances. **sdd-report** supplies scalable artifact templates, and **sdd-manage** coordinates scope and execution.
+Each planned review unit ends with its report commit. The coordinating workflow publishes that checkpoint before dependent work; pushes do not invoke review skills. Full revision and implementation workflows include their prescribed pushes under the existing scoped authorization. Accepted revisions update relevant governing documents; all campaign records remain retained. Directory identity stays fixed as HEAD advances. **sdd-report** supplies scalable artifact templates, and **sdd-manage** coordinates scope and execution.
 
 ## Skills
 

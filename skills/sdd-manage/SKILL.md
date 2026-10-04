@@ -5,7 +5,7 @@ description: Coordinate SDD workflows for initial development, feature preparati
 
 # Coordinate specification-driven development
 
-Translate the user's objective into a scoped workflow and coordinate the responsible skills. Use the request and established session decisions as authorization; continue routine steps within that scope without repeated confirmation. Apply the dedicated scoped authorization policy for review/revision commits, pushes and verified integration; after rejection, supply the actual human request, scope, destinations and verification evidence to platform review. Discussion, assessment, or review alone does not authorize edits. Start at the requested stage when its inputs are established, and stop at the requested boundary.
+Translate the user's objective into a scoped workflow and coordinate the responsible skills. Use the request and established session decisions as authorization; continue routine steps within that scope without repeated confirmation. Apply the workflow authorization policy to commits, publication, eligible integration and maintained hosting. Reviews end at their report commit; the execution owner publishes under the existing workflow authority without invoking a review skill for a push. Platform-enforced tool checks remain outside the plugin's control. Discussion, assessment, or review alone does not authorize edits. Start at the requested stage when its inputs are established, and stop at the requested boundary.
 
 | Coordination concern | Load |
 | --- | --- |
@@ -14,7 +14,7 @@ Translate the user's objective into a scoped workflow and coordinate the respons
 | Enforce SPEC/PLAN/TASKS preparation readiness and affected reassessment | [document QC gates](references/document-qc-gates.md) |
 | Establish prerequisites, pass scope, resolve blockers, and persist results | [coordination protocol](references/coordination.md) |
 | Resolve identities, create/reuse workflow branches, or manage phase transitions | [branch management](references/branch-management.md) |
-| Establish review/revision publication authorization or respond to an approval rejection | [scoped authorization](references/revision-authorization.md) |
+| Carry workflow authorization through publication and classify platform blockers | [scoped authorization](references/revision-authorization.md) |
 | Integrate verified boundaries or continue a blocked merge | [Git workflows](references/git-workflows.md) |
 | Discover, save, or supply a repository token; recover shell/API authentication | [hosting credentials](references/credentials.md) |
 | Gate phase eligibility and active hosted object creation before execution | [phase activation](references/phase-activation.md) |

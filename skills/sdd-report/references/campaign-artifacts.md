@@ -21,7 +21,7 @@ For a feature package README, present identity/full baseline, branch/target, sco
 
 ## Review plan
 
-Define what will be reviewed and how evidence will be obtained. Order independent foundations before dependent implementation/coordinator concerns where appropriate. Prescribe a report update, commit, push, and remote verification after each planned unit. Do not claim the plan's scenarios have run.
+Define what will be reviewed and how evidence will be obtained. Order independent foundations before dependent implementation/coordinator concerns where appropriate. Prescribe a report update and commit after each planned unit, then publication and remote verification by the coordinating workflow. Review ends at the report commit; publication is not review work. Do not claim the plan's scenarios have run.
 
 ```markdown
 # Review plan
@@ -43,7 +43,7 @@ Define what will be reviewed and how evidence will be obtained. Order independen
 
 ## Evidence and persistence
 
-Record inspected baseline locations, commands/outcomes, evidence class, unknowns, and exclusions. Allocate stable finding IDs with objective rechecks. After each unit, update and commit/push the report and verify remote containment before dependent work.
+Record inspected baseline locations, commands/outcomes, evidence class, unknowns, and exclusions. Allocate stable finding IDs with objective rechecks. After each unit, update and commit the report. The coordinating workflow pushes that committed checkpoint and verifies remote containment before dependent work.
 
 ## Consolidation and stopping
 

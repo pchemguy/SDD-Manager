@@ -6,10 +6,10 @@ This is the formal campaign path for the [revision core workflow](workflows.md#c
 
 ## Review
 
-1. Establish the request, authoritative instructions, exact reviewed source, concerns, criteria, evidence mode, and stopping boundary. A read-only review does not authorize source repairs or external effects. Writing requested review artifacts and their established commit/push checkpoints is distinct from changing the reviewed source.
+1. Establish the request, authoritative instructions, exact reviewed source, concerns, criteria, evidence mode, and stopping boundary. A read-only review does not authorize source repairs or external effects. Writing and committing requested review artifacts is distinct from changing the reviewed source. The review ends at its report commit; the coordinating workflow owns subsequent publication under the established workflow authority.
 2. For a comprehensive/systematic review, create a review plan defining units, dependency order, criteria, representative positive/negative scenarios, tooling, evidence limits, and report checkpoints. For a focused review, the prompt may supply the plan; record its scope and criteria in the review report without requiring another file.
 3. Route each concern to its owning focused skill and relevant conventions. Review both sides of consequential handoffs, not merely file presence. Distinguish inspected source, consumer assessment, actual local execution, and authorized external verification. Record unavailable checks and unknowns without fabricating evidence.
-4. Maintain the review report as each unit is assessed. Allocate stable finding IDs, located baseline evidence, consequence, confidence, bounded correction, and objective recheck. Preserve no-finding coverage and deferred units. Commit and push the updated report after each planned review unit before dependent work.
+4. Maintain the review report as each unit is assessed. Allocate stable finding IDs, located baseline evidence, consequence, confidence, bounded correction, and objective recheck. Preserve no-finding coverage and deferred units. Commit the updated report after each planned review unit. Hand the committed result to the coordinating workflow for its prescribed push before dependent work; do not invoke a review skill for publication.
 5. Consolidate coverage, canonical findings, counts, priorities, dependencies, and actual readiness. Return the report and proposed revision queue. Stop before revision unless the request already authorizes it; do not ask again when accepted revisions and their execution are already covered.
 
 ## Plan accepted revisions
@@ -23,7 +23,7 @@ For a directly accepted prompt-defined revision, record its objective, affected 
 
 ## Revision execution authorization
 
-Use [scoped authorization](revision-authorization.md) for requested review-record commits/pushes, verified review-branch integration and authorized source revision publication. It defines the eligible effects and the authorization context to supply after platform rejection. Respect the actual human scope/limits and platform controls; do not infer approval or broaden a review into repairs.
+Use [workflow authorization](revision-authorization.md) for the complete accepted scope. Review ends at its report commit; the coordinating workflow owns report publication and eligible integration. Full revision workflows include prescribed pushes without a separate review or permission-review skill. Carry existing human authority forward, respect explicit limits and distinguish platform denial from missing authorization.
 
 ## Revise, verify, and finish
 
