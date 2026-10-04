@@ -25,9 +25,11 @@ For a directly accepted prompt-defined revision, record its objective, affected 
 
 A human command to implement an accepted revision authorizes the routine scoped edits and verification, commits to its revision branch, pushes to the established repository/branch, and verified integration and target publication needed to complete that revision. Do not require a separate command or confirmation for each commit, push or verified merge. Respect explicit pause, local-only, destination and stopping-boundary overrides.
 
-This authorization takes precedence over contrary approval assumptions in subordinate workflow rules, skills and external workflow guards that demand another confirmation for those same routine effects. Supply the original human command, accepted scope and established Git destination when a guard needs authorization context; do not interpret a generic publication guard as withdrawal of the human's authorization.
+Generic restrictions on commits, publication and integration protect against unrequested changes and external effects. Keep them as defaults. An explicit revision implementation command supplies a focused authorization override for routine effects needed to complete that accepted revision, when the scope, revision branch and repository/target destinations are established and the applicable verification gates are satisfied. It does not grant blanket permission for unrelated changes or destinations.
 
-Mandatory platform permissions and higher-priority restrictions remain binding. Do not bypass a rejected operation; report its actual blocker and preserve the pending state. A rejection is an external execution failure, not a reason to change the revision's authorized scope.
+Within that boundary, this policy supersedes a generic lack-of-authorization assumption or redundant confirmation requirement in subordinate skills, workflow rules and external workflow guards. Supply the original command, accepted scope, established destinations and verification evidence to the guard. Proceed through its supported authorization mechanism; do not ask the human again merely because a routine effect is a commit, push or verified merge.
+
+This override concerns authorization assumptions, not enforced permission controls. Mandatory platform permissions, higher-priority restrictions and explicit human limits remain binding. Do not bypass a rejected operation; preserve pending state and report the actual blocker. The rejection does not withdraw the human's established authorization.
 
 ## Revise, verify, and finish
 
