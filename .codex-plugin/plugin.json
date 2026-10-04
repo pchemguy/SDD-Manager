@@ -3,7 +3,7 @@
   "version": "0.14.3",
   "description": "Git-based specification-driven development with central workflow coordination, design, specification, planning, task lists, documentation, TDD, verification, bounded implementation, human-directed steering, feature integration, reporting, and optional hosted issue reconciliation.",
   "author": {
-    "name": "pchemguy",
+    "name": "PChemGuy",
     "url": "https://github.com/pchemguy"
   },
   "homepage": "https://github.com/pchemguy/Skill-SDD-Manager",
@@ -34,7 +34,7 @@
     "logo": "./assets/logo.png",
     "shortDescription": "Specification-led development",
     "longDescription": "Git-based specification-driven development with central workflow coordination, design, specification, planning, task lists, documentation, TDD, verification, bounded implementation, human-directed steering, feature integration, reporting, and optional hosted issue reconciliation.",
-    "developerName": "pchemguy",
+    "developerName": "PChemGuy",
     "defaultPrompt": [
       "Prepare this Git project through design, specification, plan and tasks.",
       "Resume the interrupted task range, verify, commit and push."
