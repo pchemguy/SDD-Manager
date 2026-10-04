@@ -13,6 +13,7 @@ The human defines the objective at a checkpoint and decides whether to command i
 | --- | --- |
 | Establish the objective, scope, and affected work | [objective and impact](references/objective-and-impact.md) |
 | Amend existing development documents and implemented behavior | [amendment execution](references/amendment-execution.md) |
+| Bootstrap disclosure and usage records before the first SDD commit | **sdd-manage**: `skills/sdd-manage/references/repository-bootstrap.md` (bundled dependency) |
 | Verify, commit, push, report, and stop | [verification and stop](references/verification-and-stop.md) |
 
 1. **Establish the amendment.** Allocate or recover its shared review-campaign identity and matching revision branch; retain a minimal REVISION-REPORT with objective, scope, full baseline and paused target, adding observed verification/publication at completion. Require no fabricated review or plan. Identify the human's intended end state, affected implemented features, retained behavior, relevant existing documents and task IDs, and the checkpoint baseline. Report missing decisions or conflicts that prevent the focused amendment.

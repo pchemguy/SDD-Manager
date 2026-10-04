@@ -6,11 +6,14 @@ SDD Manager is an Agent Plugin for specification-driven development in Git repos
 
 Start with **sdd-manage**, the central coordinator. It routes your request to the relevant skills, reuses established project decisions, and stops at the boundary you specify.
 
+Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).
+
 ## Getting started
 
 Load the package using your agent client's supported plugin mechanism. The package uses `.codex-plugin/plugin.json` for ChatGPT/Codex discovery and presentation, with 15 skills under `skills/` and bundled icons under `assets/`. It uses the Codex plugin format; it does not ship a root Agent Plugins 1.0 manifest. Manifest paths resolve from the repository/package root. The workflows require an agent with access to project files and the tools needed for the requested work.
 
 - **Project changes:** Use an existing, eligible Git worktree with applicable project instructions. Repository initialization is outside the plugin's scope.
+- **First SDD commit:** Include root `AI_DISCLOSURE.md` and `SDD-MANAGER.md` from the bundled assets, with discoverable README links. Preserve and reconcile existing disclosures. See [repository bootstrap](skills/sdd-manage/references/repository-bootstrap.md) for ownership, explicit scope limits and resumable adoption.
 - **Commits and pushes:** Establish the branch and remote destination. Implementation pushes outstanding commits before starting further task work, then commits and pushes each completed task before advancing.
 - **Checks:** Use the project's declared test, build, and documentation tools.
 - **Authentication:** Attempt pushes with the current shell session. On an access/credential failure, sdd-manage reuses a suitable ignored repository token or requests and saves one beside the root .gitignore before recovering the client session. `*.tkn` files remain untracked.
