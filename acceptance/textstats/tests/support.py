@@ -1,3 +1,7 @@
+"""Disposable Git fixtures and subprocess assertions for helper sensitivity tests.
+
+Sandbox owns temporary repositories/local remotes and cleanup; no hosted writes
+or consumer workflow acceptance occur here. Inputs and checkpoints are synthetic."""
 import json
 import os
 from pathlib import Path

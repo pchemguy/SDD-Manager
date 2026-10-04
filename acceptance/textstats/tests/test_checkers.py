@@ -1,3 +1,7 @@
+"""Behavioral regressions for deterministic evidence and executable task ownership.
+
+Exercises helper CLI results against literal contracts and disposable task lists;
+passing these tests does not establish independent agent or live acceptance."""
 import json
 try:
     from .support import Sandbox, git

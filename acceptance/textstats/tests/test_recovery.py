@@ -1,3 +1,7 @@
+"""Actual-state observation and recovery reconstruction tests in disposable repos.
+
+Checks retained files/index stages/commit roots and uncertainty at local remotes.
+These controlled restores test helper exports, not fresh-agent recovery behavior."""
 import hashlib
 import importlib.util
 import json
