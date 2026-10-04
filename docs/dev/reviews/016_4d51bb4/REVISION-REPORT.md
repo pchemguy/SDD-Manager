@@ -29,3 +29,7 @@ Changing manifest format is the requested compatibility experiment, not a verifi
 ## Publisher display-name correction
 
 The human clarified that the publisher is stylized `PChemGuy`. The follow-up branch `revision/016_4d51bb4-publisher-styling` starts at `efe1a1900fd756fc50d905d5cc3ce33e331d53d6` and changes only `author.name` and `interface.developerName` to that exact spelling. GitHub URL values and package version remain unchanged. Direct comparison with the baseline confirms only these two manifest values change; JSON and whitespace checks pass. Revision `83a38f948c9510ec505f56d902789f0d110d9fb2` was pushed with exact remote readback. Explicit merge `d6a516da960039ac5914caf619ac0fe91cc0b1ce` has parents `efe1a1900fd756fc50d905d5cc3ce33e331d53d6` and that revision tip; merged metadata, conflict and whitespace checks passed. Target publication and exact remote readback succeeded.
+
+## Terminology correction
+
+The human corrected the listing subtitle to use “driven.” `interface.shortDescription` is now `Spec-driven development` (23 characters), preserving the 30-character listing limit. The follow-up branch `revision/016_4d51bb4-driven-subtitle` starts at `a1ae2542f824a2d2ed5d9c2f7ed069155f144c87`. JSON, exact wording and length checks pass; only this manifest value changes. Publication/integration pending.
