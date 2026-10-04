@@ -6,7 +6,7 @@
 - Baseline: `f7c4de64a8178f5ea372e435c659df60e360bbed`.
 - Working branch: `revision/014_f7c4de6-plugin-icon`.
 - Integration target: `feature/architecture-revision`.
-- State: artwork and package verified locally; publication/integration pending.
+- State: artwork and package verified, explicitly integrated and published.
 
 ## Artwork and package
 
@@ -20,4 +20,4 @@ Decoded PNG checks passed: 1254 × 1254 pixels, RGBA, alpha range 0–255, 615,3
 
 Both manifest asset paths resolve to the same included file inside the package. Website/display-name values are retained. Three campaign/index documents and 38 local links passed; whitespace passed. No skill behavior changed. Client rendering and installed listing refresh are not established by repository verification.
 
-Publication and explicit merge evidence will be appended after completion.
+Revision `5704241d5c28a1f6a1bb3b9b99296b3020a697a6` was pushed to the retained working branch; exact remote readback matched. The five changed files contain only the icon, manifest and campaign records/index. Explicit merge `dadcdfa1764cd161cd3309260f18854a462d1b65` has parents `f7c4de64a8178f5ea372e435c659df60e360bbed` and that revision tip. The prospective merged result passed decoded image, hash, manifest references/retained metadata, campaign links, whitespace and conflict checks. Target publication succeeded; remote readback matched the merge SHA. This campaign did not advance `main`.

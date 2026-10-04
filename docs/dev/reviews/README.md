@@ -17,6 +17,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `011_a3b2ad9` | Development-document QC policy, assessment and revision plan explicitly merged and published; source revision planned, not started. | [Policy](011_a3b2ad9/QC-POLICY.md), [review report](011_a3b2ad9/REVIEW-REPORT.md), [revision plan](011_a3b2ad9/REVISION-PLAN.md) |
 | `012_21cba43` | Dedicated scoped review/revision authorization policy and rejection response implemented, verified, explicitly merged and published. | [Revision report](012_21cba43/REVISION-REPORT.md) |
 | `013_86ce4eb` | Requested plugin website and display-name metadata verified, explicitly merged and published. | [Revision plan](013_86ce4eb/REVISION-PLAN.md), [revision report](013_86ce4eb/REVISION-REPORT.md) |
-| `014_f7c4de6` | Custom plugin icon revision. | [Revision plan](014_f7c4de6/REVISION-PLAN.md), [revision report](014_f7c4de6/REVISION-REPORT.md) |
+| `014_f7c4de6` | Custom plugin icon generated, packaged, verified, explicitly merged and published. | [Revision plan](014_f7c4de6/REVISION-PLAN.md), [revision report](014_f7c4de6/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
