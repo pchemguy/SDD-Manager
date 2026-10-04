@@ -8,7 +8,7 @@
 - Working branch: `revision/017_54d55ed-comprehensive-review`.
 - Integration target: `feature/architecture-revision` in pchemguy/Skill-SDD-Manager.
 - Canonical findings: [review report](REVIEW-REPORT.md), R-001–R-003.
-- State: the human commanded execution on 2026-10-04; V-001–V-004 repairs and local rechecks are recorded in [REVISION-REPORT.md](REVISION-REPORT.md), with observed integration/publication status there. The earlier preparation request did not authorize source repairs; the execution command authorizes this bounded implementation.
+- State: V-001–V-004 completed, verified, explicitly integrated and published; [REVISION-REPORT.md](REVISION-REPORT.md) records observed evidence. The human commanded this bounded implementation on 2026-10-04. Pending separate-review TODOs remain unexecuted.
 - Selected implementation scope: correct R-001/R-002 as one cohesive task-ownership checker change, then document consequential helper interfaces for R-003. Final verification and revision reporting cover that boundary.
 - Deferred: P-001 campaign 011 QC implementation and E-001/E-002 live/client acceptance. These are pending TODOs for a separate later review; they are neither prerequisites nor completion requirements for this revision.
 - Revision execution will update `REVISION-REPORT.md` in this directory. No empty report is created during preparation.
