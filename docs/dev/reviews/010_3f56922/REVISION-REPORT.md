@@ -6,7 +6,7 @@
 - Starting baseline: `3f56922a936c8fe039f906ed27566b5662b5440c`; preparation amendment checkpoint: `7efe45b7e7b6bcf2abd703fba5ee6d1b201ea89d`.
 - Source revision commit: `60dc077df7b89e8302f8ae34b550b5e747330444` (V-001–V-007 and local/consumer evidence).
 - Working branch: `revision/010_3f56922-backend-lifecycle`; established integration target: `feature/architecture-revision`.
-- Result: lifecycle source instructions, workflow ownership/report placement and TextStats assessment criteria revised. Local source/catalog/support checks and fresh read-only consumer assessments are recorded below. Provider lifecycle execution remains pending. The revision branch is published; target integration is in progress under the explicit 2026-10-04 publication/integration command.
+- Result: lifecycle source instructions, workflow ownership/report placement and TextStats assessment criteria revised. Local source/catalog/support checks and fresh read-only consumer assessments are recorded below. Provider lifecycle execution remains pending. The revision branch and verified explicit target integration are published under the 2026-10-04 publication/integration command.
 - Canonical authority: [backend object lifecycle](../../../../skills/sdd-conventions/references/backend-object-lifecycle.md). Campaign policy is retained accepted intent, not a competing shipped authority.
 
 ## Revision evidence
@@ -31,17 +31,23 @@
 
 ## Persistence and integration
 
-All V-001–V-007 source/criteria changes are verified locally; their commit is identifiable by this campaign and its retained report. The source branch through checkpoint d738c04 is published; target integration is being verified. The external publication blocker prevented normal per-action push checkpoints; source actions were retained as one coherent local revision boundary. Automatic approval review rejected the attempted preparation push, stating that explicit authorization to publish the amended payload was required. The user then requested the policy amendment: implementing a revision authorizes its scoped publication. No rejected push was bypassed. Established remote revision tip at the last confirmed readback was `1823d8a15124fe688329870f31f61d3b0c4ab8b2`.
+- Source revision: `60dc077` is identified by the full source commit above; evidence checkpoint `d738c04`, publication checkpoint `1a5d8eab3ff2d49c2b6f28d672c77e199a956a4a`.
+- Revision branch published at `1a5d8eab3ff2d49c2b6f28d672c77e199a956a4a`; exact remote readback matched.
+- Explicit two-parent merge: `06e0b2e97dc15c69aedf9f1991ed2f79497e0aec` into `feature/architecture-revision`.
+- Target parent: `3f56922a936c8fe039f906ed27566b5662b5440c`; revision parent: `1a5d8eab3ff2d49c2b6f28d672c77e199a956a4a`.
+- Prospective merged state: no conflicts; 67 support tests passed, catalog 27 validated, local links/frontmatter valid, all verified source snapshot hashes matched. [Merge verification](evidence/merge-verification.json), [merged test output](evidence/merged-support-tests.log).
+- Committed merged state: two parents confirmed; source hashes rechecked unchanged. Target push succeeded and exact remote readback matched merge SHA `06e0b2e97dc15c69aedf9f1991ed2f79497e0aec` before this report-only publication follow-up.
 
-The human explicitly authorized pushing this revision and completing verified integration. The push from 1823d8a to d738c04 succeeded; the refreshed target remains 3f56922a936c8fe039f906ed27566b5662b5440c. Verify the prospective two-parent merge before committing/publishing the target.
+Earlier automatic approval review rejected the preparation push. The human subsequently explicitly authorized pushing the revision to pchemguy/Skill-SDD-Manager and completing verified integration; publication then succeeded using the established Git destination. The earlier block prevented normal per-action push checkpoints, so the verified source actions were retained as one coherent local revision boundary before publication. No rejected operation was bypassed.
+
+The revision branch is retained. This integration target is feature/architecture-revision; no default-branch integration is claimed. Live provider acceptance is a separate pending diagnostic run, not an integration check that was executed here.
 
 ## TODO and live acceptance
 
 - Run live acceptance on a dedicated disposable repository using `acceptance/textstats/AGENTS.md`, a pinned revised source and real provider readback. Repository identity and suitable API access must be supplied or requested; missing access does not establish a pass.
 - Execute controlled and uncontrolled interruption variants at actual projection, report persistence, milestone closure and phase integration actions. Runtime termination and safe response-loss facilities are required; unavailable variants remain Blocked/Not run.
-- Complete explicit integration, merged-state checks and target publication; record the resulting merge and readback.
 
-No identified non-critical source issue is being deferred. These TODOs are outstanding verification/publication work, not admissible code defects carried past a completed milestone gate.
+No identified non-critical source issue is being deferred. These TODOs are outstanding live verification work, not admissible code defects carried past a completed milestone gate.
 
 Agent prompt for the pending live run:
 
