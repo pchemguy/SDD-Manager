@@ -8,7 +8,7 @@ Start with **sdd-manage**, the central coordinator. It routes your request to th
 
 ## Getting started
 
-Load the package using your agent client's supported plugin mechanism. The package contains a root `plugin.json` and 15 skills under `skills/`; discovery and invocation depend on the client. The workflows require an agent with access to project files and the tools needed for the requested work.
+Load the package using your agent client's supported plugin mechanism. The package uses `.codex-plugin/plugin.json` for ChatGPT/Codex discovery and presentation, with 15 skills under `skills/` and bundled icons under `assets/`. It uses the Codex plugin format; it does not ship a root Agent Plugins 1.0 manifest. Manifest paths resolve from the repository/package root. The workflows require an agent with access to project files and the tools needed for the requested work.
 
 - **Project changes:** Use an existing, eligible Git worktree with applicable project instructions. Repository initialization is outside the plugin's scope.
 - **Commits and pushes:** Establish the branch and remote destination. Implementation pushes outstanding commits before starting further task work, then commits and pushes each completed task before advancing.

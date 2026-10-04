@@ -15,6 +15,7 @@ from urllib.parse import parse_qsl, urlsplit
 
 BUNDLE = Path(__file__).resolve().parents[1]
 SOURCE = Path(__file__).resolve().parents[3]
+PACKAGE_PATHS = ('plugin.json', '.codex-plugin', 'skills', 'assets')
 MISSING = 'Which dedicated test repository should this run use? Supply its URL or local checkout path.'
 SECRET = re.compile(r'(?:github_pat_|gh[pousr]_|Bearer\s+)[A-Za-z0-9_\-]+', re.I)
 
@@ -194,10 +195,10 @@ def package(source, inputs):
     source=Path(source).resolve()
     commit=git(source,'rev-parse','--verify',inputs['plugin_revision']+'^{commit}').stdout.strip()
     if not re.fullmatch('[0-9a-f]{40}',commit): raise Stop('source_revision_unavailable')
-    names=git(source,'ls-tree','-rz','--name-only',commit,'plugin.json','skills',binary=True).stdout.decode().split('\x00')
+    names=git(source,'ls-tree','-rz','--name-only',commit,*PACKAGE_PATHS,binary=True).stdout.decode().split('\x00')
     files={}
     modes={}
-    for row in git(source,'ls-tree','-rz',commit,'plugin.json','skills',binary=True).stdout.decode().split('\x00'):
+    for row in git(source,'ls-tree','-rz',commit,*PACKAGE_PATHS,binary=True).stdout.decode().split('\x00'):
         if row:
             metadata,name=row.split('\t',1)
             modes[name]=metadata.split()[0]
@@ -205,12 +206,11 @@ def package(source, inputs):
         if protected(name): raise Stop('protected_package_path')
         if modes[name] not in {'100644','100755'}: raise Stop('package_mode_unsupported')
         files[name]=clean_bytes(git(source,'show',commit+':'+name,binary=True).stdout)
-    if 'plugin.json' not in files: raise Stop('package_unavailable')
     changed=[]
     committed_modes=dict(modes)
     if inputs['source_mode']=='dirty':
         if commit != git(source,'rev-parse','HEAD').stdout.strip(): raise Stop('dirty_source_requires_current_head')
-        candidates=git(source,'ls-files','-z','--cached','--others','--exclude-standard','plugin.json','skills',binary=True).stdout.decode().split('\x00')
+        candidates=git(source,'ls-files','-z','--cached','--others','--exclude-standard',*PACKAGE_PATHS,binary=True).stdout.decode().split('\x00')
         dirty={}
         dirty_modes={}
         for name in set(filter(None,candidates)):
@@ -225,6 +225,7 @@ def package(source, inputs):
         changed=sorted(name for name in set(files)|set(dirty) if files.get(name)!=dirty.get(name) or committed_modes.get(name)!=dirty_modes.get(name))
         files=dirty
         modes=dirty_modes
+    if not any(name in files for name in ('plugin.json', '.codex-plugin/plugin.json')): raise Stop('package_unavailable')
     hashes={name:hashlib.sha256(data).hexdigest() for name,data in sorted(files.items())}
     fingerprint=hashlib.sha256(json.dumps({'hashes':hashes,'modes':modes},sort_keys=True,separators=(',',':')).encode()).hexdigest()
     return {'revision':inputs['plugin_revision'],'commit':commit,'source_mode':inputs['source_mode'],'package_hashes':hashes,'package_file_modes':modes,'fingerprint':fingerprint,'changed_package_paths':changed},files
@@ -269,7 +270,7 @@ def prepare(inputs, source, workspace):
     manifest=vendor.parent/'PLUGIN-SOURCE.json'
     pinned['manifest_path']=str(manifest)
     if inputs['source_mode']=='dirty':
-        diff=git(source,'diff','--binary',pinned['commit'],'--','plugin.json','skills',binary=True).stdout
+        diff=git(source,'diff','--binary',pinned['commit'],'--',*PACKAGE_PATHS,binary=True).stdout
         clean_bytes(diff)
         (vendor.parent/'DIRTY-DIFF.patch').write_bytes(diff)
         pinned['dirty_diff_path']=str(vendor.parent/'DIRTY-DIFF.patch')

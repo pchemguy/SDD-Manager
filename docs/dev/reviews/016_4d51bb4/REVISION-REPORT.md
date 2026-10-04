@@ -1,0 +1,25 @@
+# Codex manifest and presentation revision report
+
+## Context and result
+
+- Campaign: `016_4d51bb4`; [plan](REVISION-PLAN.md).
+- Baseline: `4d51bb4fa5f627809e6b449e28f89791b7b52f4d`.
+- Working branch: `revision/016_4d51bb4-codex-manifest`.
+- Target: `feature/architecture-revision`.
+- State: source revision verified; publication/integration pending.
+
+## Superpowers comparison and changes
+
+The inspected installed Superpowers `6.4.2` manifest is `.codex-plugin/plugin.json`. It uses top-level `interface`, `skills: ./skills/`, empty `hooks`, publisher/repository/license/keywords and detailed listing metadata. Its actual installed assets differ from the supplied source example: composer SVG, dark composer PNG, and both logo PNGs live under `.codex-plugin/assets/`; paths are relative to the package root. This observation is not proof that asset directory placement or format caused SDD Manager's installed-page fallback.
+
+SDD Manager now uses only `.codex-plugin/plugin.json`, with a top-level `interface`, explicit skills discovery, empty hooks, author/developer `pchemguy`, repository/homepage, focused keywords, short/long descriptions, starter prompts, category/capabilities and brand colors. Its version is `0.14.3`. SVG composer paths and PNG logo paths are explicit for both themes. `assets/logo.png` is rendered from the retained `assets/icon.svg`; both assets remain at the package root's assets directory. README identifies this as Codex packaging rather than a root Agent Plugins 1.0 package.
+
+No repository-wide license is present; only the bundled TDD component carries a license. No publisher email or plugin-specific privacy/terms policy is established. Those fields were not fabricated or copied from Superpowers. Its `package.json` serves separate Node/Pi integrations, not Codex manifest discovery; no such runtime was introduced.
+
+TextStats package pinning now includes `.codex-plugin`, root assets and skills; historical root-manifest snapshots remain supported. Manifest availability is checked after dirty overlays as well. Documentation is updated, brittle fixed-file-count assertions are replaced by exact Git inventory comparisons, and a regression exercises Codex manifest pinning plus binary asset/untracked asset preservation in dirty preparation.
+
+## Verification and limits
+
+The full support suite passed: `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` (68 tests). The 27-case catalog validated. Direct checks passed manifest format/exact metadata, short-description and prompt limits, 15 skill entries, four contained icon references, 128-pixel SVG and decoded 512-pixel PNG, size limits, and four documents / 70 local links. Visual inspection confirmed the PNG retains the SVG artwork. Actual dirty-source snapshot checks captured 104 package files, including the moved manifest and exact binary logo bytes, with no root manifest. Whitespace checks passed.
+
+Publication/integration evidence will be appended after completion. Changing manifest format is the requested compatibility experiment, not a verified repair of the installed plugin page. The repository revision does not update the installed account release. The archived root-manifest campaign records remain historical evidence.
