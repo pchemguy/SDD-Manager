@@ -5,7 +5,7 @@ Status: accepted for implementation by the human command to implement this revis
 
 ## Execution authorization
 
-Generic commit, publication and integration restrictions remain default protections against unrequested work. A command to implement an accepted revision supplies a focused authorization override for its routine scoped edits/verification, revision-branch commits, established-destination pushes and verified integration/target publication. Established scope/destinations and applicable verification gates bound the override; it grants no blanket permission for unrelated effects.
+General restrictions require explicit authorization for commits, publication and integration. This policy defines a command to implement an accepted revision as explicit authorization for its routine scoped edits/verification, revision-branch commits, established-destination pushes and verified integration/target publication. The command therefore satisfies the authorization requirement within established scope/destinations and applicable verification gates; it grants no blanket permission for unrelated effects.
 
 Within that boundary, the command supersedes redundant confirmation or lack-of-authorization assumptions in subordinate skills, workflow rules and external workflow guards. Supply the original command, scope, destinations and verification evidence through the guard's supported authorization mechanism. Explicit pause, local-only, destination and stopping-boundary limits still apply. Mandatory platform permissions and higher-priority restrictions remain binding; report an enforced rejection without bypassing it. See the shipped [revision execution authorization](../../../../skills/sdd-manage/references/review-and-revision.md#revision-execution-authorization).
 
