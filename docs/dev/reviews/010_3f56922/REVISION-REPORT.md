@@ -54,3 +54,9 @@ Agent prompt for the pending live run:
 ```text
 Run live acceptance of SDD Manager's revised backend lifecycle using acceptance/textstats/AGENTS.md and the revised source pinned by exact commit/hash. Read the acceptance directory for setup and run instructions. Request a dedicated disposable test repository and suitable GitHub access if absent. Execute the affected lifecycle cases and controlled/uncontrolled interruption variants with independent assessor evidence, actual report commits and provider readback. Preserve scope and unknown outcomes; report unavailable checks as Blocked/Not run. Publish sanitized evidence only within the authorized test destinations.
 ```
+
+## Authorization policy follow-up — 2026-10-04
+
+The human requested explicit precedence over redundant external guards. The coordinator entry and review/revision reference now state that an accepted revision implementation command authorizes routine revision-branch commits, established-destination pushes, verified integration and target publication. Subordinate workflow/skill and external workflow-guard confirmation assumptions yield to that authorization. Enforced platform permissions and higher-priority restrictions remain binding; rejected operations are reported without bypass. Campaign policy/plan links reflect this ownership.
+
+This follow-up changes authorization guidance only. TextStats lifecycle criteria and procedures remain as recorded in V-007; 67 support tests and catalog validation passed during the source revision and merge. Live acceptance remains pending a dedicated test repository. Local link/frontmatter and diff checks are used for this focused guidance amendment.
