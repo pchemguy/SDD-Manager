@@ -110,3 +110,15 @@ Review checkpoints c1a08db, 676458f, 30212d5, 56f26aa and 3bb2bc5 were pushed on
 Explicit merge `68748e872c8fb2dca8b94af269e05993f87b4db6` has exactly those two parents. The prospective merged state passed staged diff checks, baseline source SHA-256 equality, review-record link/JSON validation, review-only path-scope inspection and absence-of-conflicts checks. The full helper suite was not repeated because integration changed only review records and exact helper source hashes remained unchanged. No conflict resolution or source repair was needed.
 
 The merge was pushed to origin/feature/architecture-revision; actual ls-remote readback confirms the target at that merge and the review branch at its final working tip. This follow-up records observed publication on the target; it makes no new source claim. Stop boundary: completed comprehensive review and proposed correction queue, before repair implementation. Working branch retained; main was not merged or pushed by this campaign.
+
+## Planning disposition — 2026-10-04
+
+The human requested an implementation plan and explicitly deferred campaign 011 QC implementation and live/client acceptance to a separate later review. [REVISION-PLAN.md](REVISION-PLAN.md) selects R-001/R-002 checker repairs and R-003 documentation maintenance for planning; source execution has not started. The original observations and proposed queue above are retained as review history. The current plan takes precedence for the next revision's scope: P-001 and E-001/E-002 are pending TODOs, outside its actions and exit requirements.
+
+| Disposition | Work | Current state |
+| --- | --- | --- |
+| Planned revision | R-001, R-002, R-003 | Plan prepared; implementation not started. |
+| TODO-017-001 | Campaign 011 QC implementation / P-001 | Pending; separate later review. |
+| TODO-017-002 | Live/client acceptance / E-001/E-002 | Pending; separate later review. |
+
+Both TODOs must remain visible in the future revision report and handoff; completing the selected repairs cannot establish their completion.
