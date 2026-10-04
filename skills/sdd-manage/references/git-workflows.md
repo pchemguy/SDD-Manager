@@ -34,7 +34,7 @@ Continue the same authorized operation when commanded; do not start another task
 
 ## Platform authorization rejection
 
-If platform review rejects a commit, push or integration operation, use [scoped authorization](revision-authorization.md). Preserve the rejected operation/state and supply the actual human request, accepted scope, observed repository/branches, exact effect and verification evidence through the supported review mechanism. Do not characterize this as an automatic exemption or override. A platform review rejection is not a Git authentication failure; report a remaining blocker instead of evading review or substituting credentials.
+Use [workflow authorization](revision-authorization.md). Execute prescribed pushes as ordinary workflow operations; never invoke a review skill or add a permission-review stage for publication. If the platform itself rejects a tool action, preserve the exact operation/state and distinguish that execution denial from the existing human authorization. Supply observed scope/evidence through a supported operation channel when it resolves a mismatch. Do not bypass platform controls, substitute credentials for a policy restriction or require duplicate human authorization as a plugin gate.
 
 ## Push authentication recovery
 

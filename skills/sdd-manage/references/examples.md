@@ -62,5 +62,5 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 | Request | Result |
 | --- | --- |
 | “Review the credential protocol.” | Start from the prompt; record scope/criteria, located findings, and limits in the campaign review report. Stop before repairs. |
-| “Plan and run a comprehensive plugin review.” | Create a review plan; update, commit, and push the report after each planned unit; consolidate findings and revision handoff. |
+| “Plan and run a comprehensive plugin review.” | Create a review plan; assess and commit each unit's report; the coordinator publishes the committed checkpoint before dependent work; consolidate findings and revision handoff. |
 | “Implement the accepted revision plan.” | Incorporate relevant accepted decisions into governing documents, perform bounded revisions with evidence checkpoints, then verify, explicitly merge, and publish. Retain the campaign plans/reports. |
