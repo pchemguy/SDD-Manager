@@ -14,7 +14,15 @@ Objective: implement the human-requested dedicated sdd-manage authorization poli
 
 ## Persistence
 
-Scoped source revision prepared locally. Commit/push/integration evidence is recorded when observed; no platform approval is inferred merely from this policy's existence. Existing unrelated workspace material is preserved.
+Source amendment committed as `67e1794bdbc217d05ebddfca7fda21cd49e2c64f`. The push request supplied the human objective, observed Git destination, exact commit/eight changed files, verification and review-branch/target context. Platform automatic approval review rejected publication, stating that the policy-creation request did not explicitly authorize publishing this new commit to GitHub and that the destination/content required explicit authorization. Read-only remote lookup confirmed that the new branch is absent. Push and integration remain pending; the denied write was not repeated or bypassed. Existing unrelated workspace material is preserved.
+
+### Scoped authorization supplied after rejection
+
+- Human request: add the dedicated sdd-manage authorization policy, authorizing revision pushes and verified review-branch integration, and supply scoped authorization after platform rejection.
+- Policy: `skills/sdd-manage/references/revision-authorization.md`, applied with that actual request rather than as an exemption.
+- Requested publication: current revision commits to `pchemguy/Skill-SDD-Manager`, branch `revision/012_21cba43-scoped-authorization`; established target `feature/architecture-revision` at baseline `21cba43132d2211d1a7e788bbc7d9cdb1fab2ae7`.
+- Scope/evidence: the dedicated policy, three coordinator routing/protocol files, retained campaign 010 policy/plan links, campaign 012 report and campaign index; local links/frontmatter/whitespace checks passed.
+- Remaining platform requirement: explicit authorization to publish this revision branch and complete verified target integration. No supported mechanism available in this session can treat the policy file alone as approval; preserve the source commit and request that specific missing authorization.
 
 ## Remaining work
 
