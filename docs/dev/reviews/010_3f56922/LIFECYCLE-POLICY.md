@@ -61,7 +61,21 @@ Only non-critical code issues that do not violate SPEC/PLAN may be deferred. Eac
 
 Reports are concise, evidence-based boundary records: identity and reviewed source, delivered capability, review coverage and findings, actual commands/outcomes and limits, repairs and commits, exit-condition assessment, TODO, and next boundary. Review and testing are separate activities; green tests alone are not a code review. Reports describe defects fixed during review and deferred findings without claiming checks that were not run.
 
-Project-designated report locations take precedence. Default to `docs/dev/reports/milestones/<milestone-id>.md`, `docs/dev/reports/phases/<phase-id>.md`, and `docs/dev/reports/IMPLEMENTATION-REPORT.md`; use filesystem-safe stable IDs and campaign/feature qualification where needed to avoid collisions. Link reports from their owning review tasks. These are implementation reports, distinct from retained review/revision campaign records under `docs/dev/reviews/`.
+### Report placement
+
+Use the workflow's report prefix and filesystem-safe stable IDs. Link each report from its owning review task or revision/feature record.
+
+| Workflow / report | Placement |
+| --- | --- |
+| Greenfield / main implementation — phase report | `docs/dev/reports/phases/<phase-id>/PHASE-REPORT.md` |
+| Greenfield / main implementation — milestone report | `docs/dev/reports/phases/<phase-id>/<milestone-id>.md` |
+| Greenfield / main implementation — final implementation report | `docs/dev/reports/IMPLEMENTATION-REPORT.md` |
+| Steering revision at a phase checkpoint — revision artifacts | Prefix `docs/dev/reports/phases/<phase-id>/revisions/<revision-id>/`; the revision report is `REVISION-REPORT.md` within this directory. |
+| Feature implementation — reports and associated feature records | Prefix `docs/dev/features/<feature-id>/`; keep feature milestone, phase and final reports within this feature directory. |
+
+A steering revision uses the owning phase's nested revisions directory instead of `docs/dev/reviews/<revision-id>/`. Retain the revision's stable identity and applicable artifact filenames (`REVIEW-PLAN.md`, `REVIEW-REPORT.md`, `REVISION-PLAN.md`, `REVISION-REPORT.md`); a lightweight steering revision still needs only the applicable records. General review/revision campaigns that are not phase-checkpoint steering retain `docs/dev/reviews/<revision-id>/`. This backend lifecycle campaign is such a general revision and remains in its existing directory.
+
+Feature reports stay under their feature prefix throughout execution and retention; do not place them in the main implementation's phase-report tree. If a feature spans multiple phases, qualify report paths within its feature directory by stable phase ID to avoid collisions. The feature implementation's final `IMPLEMENTATION-REPORT.md` belongs at the feature prefix. Feature document/task incorporation and archive eligibility retain their separate ownership rules.
 
 The phase report carries forward unresolved milestone TODO items and adds phase-review findings, preserving IDs and provenance. After the full authorized task list is complete, the final implementation report aggregates all unresolved/deferred milestone and phase items, deduplicated by ID, with solution options retained. Resolved items remain traceable to their earlier report and resolution evidence. The last phase review task includes this final report when it completes the full task list; a bounded partial request produces no full-project completion claim.
 
