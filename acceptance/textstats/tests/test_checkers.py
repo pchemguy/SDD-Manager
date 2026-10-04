@@ -98,6 +98,24 @@ class CheckerTests(Sandbox):
             with self.subTest(fence=fence):
                 self.ok(self.assess([{'id': 'owners', 'kind': 'task_ownership'}]))
 
+    def test_fence_closers_require_matching_marker_length_and_plain_suffix(self):
+        self.task_documents({'TASKS.md': '- [ ] T-001 actual\n````markdown\n'
+                             '```\n~~~\n```` trailing text\n- [ ] T-001 example\n`````\n'
+                             '- [ ] F-001 executable after close\n'})
+        self.ok(self.assess([{'id': 'owners', 'kind': 'task_ownership'}]))
+        self.task_documents({'FEATURE-TASKS.md': '- [ ] F-001 duplicate after fence\n'})
+        proc, data, _ = self.assess([{'id': 'owners', 'kind': 'task_ownership'}])
+        self.assertEqual(proc.returncode, 1)
+        self.assertEqual(data['checks'][0]['reason'], 'duplicate_task_ownership')
+
+    def test_ids_preserve_case_and_markdown_token_identity(self):
+        self.task_documents({'TASKS.md': '- [ ] `TASK_001` main\n- [ ] **task_001** distinct\n'})
+        self.ok(self.assess([{'id': 'owners', 'kind': 'task_ownership'}]))
+        self.task_documents({'FEATURE-TASKS.md': '- [ ] **TASK_001** duplicate\n'})
+        proc, data, _ = self.assess([{'id': 'owners', 'kind': 'task_ownership'}])
+        self.assertEqual(proc.returncode, 1)
+        self.assertEqual(data['checks'][0]['reason'], 'duplicate_task_ownership')
+
     def test_incomplete_fences_and_unsupported_tasks_fail_closed(self):
         for content in ['- [ ] T-001 actual\n```markdown\n- [ ] F-001 hidden\n',
                         '- [ ] T-001 actual\n- [ ] F- invalid identifier\n',
@@ -121,7 +139,8 @@ class CheckerTests(Sandbox):
         self.task_documents({'TASKS.md': '- [ ] T-001 root\n', 'reviews/old/slice.md': '- [ ] F-001 history\n'})
         invalid = [[], 'docs/dev/TASKS.md', [False], ['../outside.md'], ['/outside.md'],
                    ['gh.tkn'], ['docs/dev/missing.md'], ['docs/dev/reviews/old/slice.md'],
-                   ['docs/dev/TASKS.md', 'docs/dev/TASKS.md']]
+                   ['docs/dev/TASKS.md', 'docs/dev/TASKS.md'], ['docs//dev/TASKS.md'],
+                   ['docs/./dev/TASKS.md'], ['docs\\dev\\TASKS.md']]
         for documents in invalid:
             with self.subTest(documents=documents):
                 proc, _, _ = self.assess([{'id': 'owners', 'kind': 'task_ownership', 'documents': documents}])
@@ -143,7 +162,9 @@ class CheckerTests(Sandbox):
     def test_malformed_table_rows_do_not_hide_behind_valid_tasks(self):
         for table in ['| ID | Status |\n| --- | --- |\n| F- | Pending |\n',
                       '| ID | Status |\n| --- | --- |\n| F-001 | |\n',
-                      '| ID | Status |\n| --- | --- |\n| F-001 | Pending | extra |\n']:
+                      '| ID | Status |\n| --- | --- |\n| F-001 | Pending | extra |\n',
+                      '| IDs | Status |\n| --- | --- |\n| F-001 | Pending |\n',
+                      '| ID | Status |\n| F-001 | Pending |\n']:
             self.task_documents({'TASKS.md': '- [ ] T-001 actual\n\n' + table})
             with self.subTest(table=table):
                 proc, _, _ = self.assess([{'id': 'owners', 'kind': 'task_ownership'}])

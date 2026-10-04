@@ -4,7 +4,7 @@ import datetime
 import hashlib
 import json
 import os
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import re
 import shutil
 import stat
@@ -466,51 +466,108 @@ def relative(root,name):
     return path
 
 
-def ownership(root):
-    """Current checkbox/table ownership, excluding historical review/feature snapshots."""
-    documents=[]
-    owners={}
-    pending=sorted(p for p in Path(root).rglob('*.md') if p.name in {'TASKS.md','FEATURE-TASKS.md'} and '.git' not in p.parts)
-    seen=set()
-    while pending:
-        path=pending.pop(0)
-        rel=path.relative_to(root)
-        if any('archive' in p.lower() or p.lower() in {'features','reviews','textstats-run-resources'} for p in rel.parts[:-1]): continue
-        path=relative(root,str(rel))
+def task_history(path):
+    return any('archive' in part.lower() or part.lower() in {'.git', 'features', 'reviews', 'textstats-run-resources'} for part in Path(path).parts[:-1])
+
+
+def validate_task_documents(documents):
+    if not isinstance(documents, list) or not documents: raise Stop('invalid_contract')
+    seen = set()
+    for name in documents:
+        if not isinstance(name, str) or not name or any(c in name for c in ('\\', ':', '\x00')):
+            raise Stop('invalid_contract')
+        path = PurePosixPath(name)
+        if path.is_absolute() or str(path) != name or any(part in {'.', '..'} for part in path.parts) or not name.endswith('.md') or protected(name) or task_history(name) or name in seen:
+            raise Stop('invalid_contract')
+        seen.add(name)
+    return documents
+
+
+def task_identifier(value):
+    value = value.strip()
+    if value.startswith('`') and value.endswith('`'): value = value[1:-1]
+    elif value.startswith('**') and value.endswith('**'): value = value[2:-2]
+    if not re.fullmatch(r'[A-Za-z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*', value) or not any(c.isdigit() or c in '-_' for c in value):
+        raise Stop('invalid_task_identifier')
+    return value
+
+
+def task_lines(content):
+    fence = None
+    for number, line in enumerate(content.splitlines(), 1):
+        marker = re.match(r'^\s*(`{3,}|~{3,})(.*)$', line)
+        if fence:
+            if marker and marker[1][0] == fence[0] and len(marker[1]) >= fence[1] and not marker[2].strip(): fence = None
+            continue
+        if marker:
+            if marker[1][0] == '`' and '`' in marker[2]: raise Stop('invalid_task_collection')
+            fence = (marker[1][0], len(marker[1]))
+            continue
+        yield number, line
+    if fence: raise Stop('invalid_task_collection')
+
+
+def task_rows(content):
+    headers = None
+    separator = False
+    for number, line in task_lines(content):
+        checkbox = re.match(r'^\s*[-*+]\s+\[([^]]*)\](?:\s+(.*))?$', line)
+        if checkbox:
+            if headers is not None and not separator: raise Stop('invalid_task_collection')
+            headers = None
+            text = checkbox[2] or ''
+            if checkbox[1] not in {' ', 'x', 'X'}: raise Stop('invalid_task_collection')
+            if re.match(r'^(?:Phase|Milestone)\s+[A-Za-z0-9]+(?:[._-][A-Za-z0-9]+)*(?:\s|$)', text): continue
+            token = text.split()[0] if text.split() else ''
+            yield number, task_identifier(token), 'Checked' if checkbox[1].lower() == 'x' else 'Unchecked'
+        elif line.strip().startswith('|'):
+            cells = [cell.strip() for cell in line.strip().strip('|').split('|')]
+            normalized = [cell.strip('`*').lower().replace(' ', '_') for cell in cells]
+            if 'id' in normalized or 'task_id' in normalized:
+                if headers is not None and not separator: raise Stop('invalid_task_collection')
+                if sum(normalized.count(key) for key in ('id', 'task_id')) != 1 or normalized.count('status') != 1 or len(set(normalized)) != len(normalized):
+                    raise Stop('invalid_task_collection')
+                headers, separator = normalized, False
+            elif headers is not None:
+                if len(cells) != len(headers): raise Stop('invalid_task_collection')
+                is_separator = all(re.fullmatch(r':?-+:?', cell) for cell in cells)
+                if not separator:
+                    if not is_separator: raise Stop('invalid_task_collection')
+                    separator = True
+                else:
+                    if is_separator: raise Stop('invalid_task_collection')
+                    row = dict(zip(headers, cells))
+                    if not row['status']: raise Stop('invalid_task_collection')
+                    yield number, task_identifier(row.get('id', row.get('task_id'))), row['status']
+            elif 'status' in normalized:
+                raise Stop('invalid_task_collection')
+        else:
+            if headers is not None and not separator: raise Stop('invalid_task_collection')
+            headers = None
+    if headers is not None and not separator: raise Stop('invalid_task_collection')
+
+
+def ownership(root, documents=None):
+    """Read executable checkbox/table owners from roots and explicit child lists."""
+    root = Path(root).resolve()
+    selected = sorted(p for p in root.rglob('*.md') if p.name in {'TASKS.md', 'FEATURE-TASKS.md'} and not task_history(p.relative_to(root)))
+    if documents is not None:
+        selected.extend(root / name for name in validate_task_documents(documents))
+    owners, inspected, seen = {}, [], set()
+    for path in selected:
+        rel = path.relative_to(root)
+        path = relative(root, str(rel))
+        if any(parent.is_symlink() for parent in path.parents if parent.is_relative_to(root)) or not path.is_file():
+            raise Stop('invalid_task_document')
         if path in seen: continue
         seen.add(path)
-        documents.append(str(rel))
-        content=clean_bytes(path.read_bytes()).decode()
-        headers=None
-        for number,line in enumerate(content.splitlines(),1):
-            checkbox=re.match(r'^\s*[-*+]\s+\[([ xX])\]\s+[`*]*(T-[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)\b',line)
-            identifier=None
-            status=None
-            if checkbox: identifier=checkbox[2]; status='Checked' if checkbox[1].lower()=='x' else 'Unchecked'
-            elif line.strip().startswith('|'):
-                cells=[c.strip().strip('`*') for c in line.strip().strip('|').split('|')]
-                normalized=[c.lower().replace(' ','_') for c in cells]
-                if 'id' in normalized or 'task_id' in normalized:
-                    headers=normalized
-                    if 'status' not in headers: raise Stop('invalid_task_collection')
-                    continue
-                if headers is not None and not all(re.fullmatch(r':?-+:?',c) for c in cells):
-                    if len(cells)!=len(headers): raise Stop('invalid_task_collection')
-                    row=dict(zip(headers,cells))
-                    identifier=row.get('id',row.get('task_id'))
-                    status=row['status']
-                    if not identifier: raise Stop('invalid_task_collection')
-            else: headers=None
-            if identifier:
-                if identifier in owners: raise Stop('duplicate_task_ownership')
-                owners[identifier]={'document':str(rel),'line':number,'status':status}
-        for target in re.findall(r'\[[^]]+\]\(([^)]+)\)',content):
-            target=target.split('#',1)[0]
-            if ':' not in target and target.endswith('.md'):
-                child=(path.parent/target).resolve()
-                if child.is_relative_to(Path(root).resolve()) and child.is_file(): pending.append(child)
+        inspected.append(str(rel))
+        content = clean_bytes(path.read_bytes()).decode()
+        for number, identifier, status in task_rows(content):
+            if identifier in owners: raise Stop('duplicate_task_ownership')
+            owners[identifier] = {'document': str(rel), 'line': number, 'status': status}
     if not owners: raise Stop('empty_task_collection')
-    return {'documents':documents,'owners':owners}
+    return {'documents': inspected, 'owners': owners}
 
 
 def assessment(inputs,state,contract_path,evidence_path):
@@ -533,8 +590,9 @@ def assessment(inputs,state,contract_path,evidence_path):
         if type(check) is not dict or type(check.get('id')) is not str or not check['id'] or check['id'] in identifiers: raise Stop('invalid_contract')
         identifiers.add(check['id'])
         kind=check.get('kind')
-        allowed={'literal':{'id','kind','key','expected'},'git':{'id','kind','field','expected','expected_ref'},'file':{'id','kind','path','exists','sha256'},'task_ownership':{'id','kind'}}
+        allowed={'literal':{'id','kind','key','expected'},'git':{'id','kind','field','expected','expected_ref'},'file':{'id','kind','path','exists','sha256'},'task_ownership':{'id','kind','documents'}}
         if kind not in allowed or set(check)-allowed[kind]: raise Stop('invalid_contract')
+        if kind == 'task_ownership' and 'documents' in check: validate_task_documents(check['documents'])
         expected=check.get('expected')
         if kind=='git':
             if ('expected' in check)==('expected_ref' in check): raise Stop('invalid_contract')
@@ -562,7 +620,7 @@ def assessment(inputs,state,contract_path,evidence_path):
                 passed=('exists' not in check or path.exists()==check['exists'])
                 if 'sha256' in check: passed=passed and path.is_file() and hashlib.sha256(clean_bytes(path.read_bytes())).hexdigest()==check['sha256']
             else:
-                ownership(repo['local_checkout']); passed=True
+                ownership(repo['local_checkout'], check.get('documents')); passed=True
             rows.append({'id':check['id'],'status':'Passed' if passed else 'Failed','reason':'Literal invariant satisfied.' if passed else 'Literal invariant differs.'})
         except Stop as error:
             if error.cause in {'invalid_contract','invalid_check_path','invalid_expected_ref','sensitive_content_not_exportable'}: raise

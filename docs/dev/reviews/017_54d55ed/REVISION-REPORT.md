@@ -18,3 +18,11 @@ Actual RED command: `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=acceptance/textstats p
 - **TODO-017-002:** Live/client acceptance / E-001/E-002. Pending for a separate later review with an explicitly supplied dedicated repository, supported client/independent contexts/interruption facilities and protected credentials only when classified access failure requires them.
 
 Neither TODO is an exit requirement or executed action in this revision. No installation refresh, live acceptance or hosted test object creation is claimed.
+
+## V-002 — Ownership correction and GREEN
+
+V-001 RED checkpoint: `bfb2454`, pushed on the campaign branch before production changes. The runtime checker now parses case-sensitive stable IDs without a T-prefix assumption; validates malformed checkbox/table candidates; skips properly closed backtick/tilde examples and rejects incomplete fences. Default active task roots remain authoritative; arbitrary linked Markdown is not traversed. Optional additive child documents are validated for safe normalized paths/history exclusions and checked against actual files/symlink parents. Runtime and catalog DSL validation share the option syntax validator. PurePosixPath keeps the declared slash-separated option syntax independent of the host OS.
+
+Focused GREEN: `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=acceptance/textstats python -m unittest tests.test_checkers tests.test_catalog -v` ran 39 tests, exit 0 ([output](evidence/revision-green-focused.txt)). Subsequent closing-fence, decorated/case-sensitive ID and malformed-path/table regressions were added during code inspection. Full GREEN: `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` ran **79 tests**, exit 0, 23.012 seconds, no reported skips/failures ([output](evidence/revision-green-full.txt)). Catalog validation: 27 valid static cases, exit 0 ([output](evidence/revision-catalog.json)).
+
+All four original probe expectations now hold; the corrected result is a separate [artifact](evidence/ownership-probes-corrected.json) recording the tested pending source hashes. Original review observations are unchanged. R-001/R-002 behavior is rechecked; final composed review/integration remains V-004. Helper package pinning/recovery/capture regressions also pass; this is local support verification, not live/client acceptance.
