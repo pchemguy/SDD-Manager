@@ -21,6 +21,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `015_5ef0e32` | SVG icon, Developer Tools category and requested capabilities verified, explicitly merged and published; installed UI outcome unverified. | [Revision plan](015_5ef0e32/REVISION-PLAN.md), [revision report](015_5ef0e32/REVISION-REPORT.md) |
 | `016_4d51bb4` | Codex manifest, expanded listing metadata and TextStats package snapshot compatibility verified, explicitly merged and published; installed rendering unverified. | [Revision plan](016_4d51bb4/REVISION-PLAN.md), [revision report](016_4d51bb4/REVISION-REPORT.md) |
 
-| `017_54d55ed` | Comprehensive review in progress; review-only source and support checks. | [Review plan](017_54d55ed/REVIEW-PLAN.md), [review report](017_54d55ed/REVIEW-REPORT.md) |
+| `017_54d55ed` | Comprehensive review complete: two reproduced ownership-checker defects, one documentation gap; pending QC and live/client coverage recorded. Review records only. | [Review plan](017_54d55ed/REVIEW-PLAN.md), [review report](017_54d55ed/REVIEW-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
