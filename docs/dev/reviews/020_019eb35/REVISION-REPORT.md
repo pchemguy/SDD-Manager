@@ -1,6 +1,6 @@
 # Workflow publication revision report
 
-Campaign: 020_019eb35. Baseline: 019eb354cf0921ebd6056e6579763ac33d0baec2. Branch: revision/020_019eb35-workflow-publication. Target: feature/architecture-revision. Status: verified working revision; publication/integration pending.
+Campaign: 020_019eb35. Baseline: 019eb354cf0921ebd6056e6579763ac33d0baec2. Branch: revision/020_019eb35-workflow-publication. Target: feature/architecture-revision. Status: implemented, verified, integrated and published.
 
 ## Incident and attribution
 
@@ -17,3 +17,11 @@ V-002: package version is 0.14.4. The tested acceptance package remains immutabl
 ## Verification and limitations
 
 All 79 support tests pass with the documented package-root discovery command; all 27 catalog cases validate. Changed live references, 15 skill frontmatter records, JSON/asset paths and whitespace checks pass. Independent assessment of five workflow requests found no material contradiction. Initial discovery omitted the required -t package root, causing a relative-import error; corrected invocation passed without source changes. Logs and summary are retained in verification/. Independent source provenance is retained in independent/. No claim that plugin instructions change platform enforcement or that the installed package has refreshed. Source publication and integration will be recorded from actual refs.
+
+## Publication and integration evidence
+
+Normal execution-owner Git publication (no review skill for push) published revision commit 55655e9a0ae2ddd2add42318e084e3846367b18b. Explicit merge eb42efeaf346b6876c014e24f2b6e38e8a65f947 has parents 019eb354cf0921ebd6056e6579763ac33d0baec2 and 55655e9a0ae2ddd2add42318e084e3846367b18b. Prospective merged state passed all 79 support tests, 27-case catalog validation and staged whitespace checks; its package/skill/README tree exactly matches the verified revision. Exact Git remote readback confirmed both revision and feature/architecture-revision tips. Main was not changed. Original source checkout's unrelated untracked files were preserved.
+
+The source package is 0.14.4. Installed-client reload/update is not exposed here and is not claimed. The tested 0.14.3 acceptance snapshot remains unchanged.
+
+The host subsequently rejected an even narrower same-repository completion comment containing only already-published commit/TASKS links, stating explicit payload/destination disclosure authorization was absent. Independent GET still shows issue #1 open. No further retry, alternate channel or closure was attempted. This demonstrates the platform limitation remains; the source change removes plugin-level routing and redundant approval behavior, not host enforcement.
