@@ -10,6 +10,10 @@
 4. Identify cross-cutting verification, documentation, packaging, and release work at the level required for the strategy. State risks, assumptions, unresolved decisions, and their gates without treating guesses as accepted requirements.
 5. Check that every intended capability has a plausible delivery path and that the plan can be executed in bounded units later. Do not enumerate file edits, task IDs, commit transactions, or a per-test command sequence; TASKS owns that detail.
 
+## Review boundaries
+
+Apply the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md). Reserve one final phase review milestone with a single phase review/testing/report outcome. Every preceding delivery milestone includes its own final milestone review/testing/report outcome. Define code review, focused testing/regressions, blocker repair and committed report evidence as exits. The phase review starts after all delivery milestones complete/close; its own milestone closes afterward. PLAN owns these boundaries; TASKS assigns executable task IDs. Include final TODO aggregation when the last phase completes the full task list.
+
 ## Incremental growth
 
 - **Bound behavior:** Evolve the usable path through the smallest meaningful capability increments that can be integrated, reviewed, and robustly checked. State affected contracts, dependencies, and acceptance; small file scope alone does not establish a small functional change.

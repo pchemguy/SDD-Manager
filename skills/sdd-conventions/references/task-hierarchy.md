@@ -10,9 +10,11 @@ Phases express major delivery or risk outcomes; milestones expose meaningful int
 
 At consequential milestones, identify the demonstration or feedback that informs a human decision to continue, amend, simplify, or stop. Keep these decisions with the human; the hierarchy does not authorize automatic steering, stopping, or task-list continuation. Stable identities, parentage, and completion evidence remain governed by the owning lists and execution workflow.
 
+Apply [backend object lifecycle](backend-object-lifecycle.md) for mandatory delivery review tasks, the final single-task phase review milestone, completion gates and report placement. PLAN reserves those milestones/exits; TASKS derives their tasks.
+
 ## Hosted projection
 
-When the selected backend supports issues, as GitHub does, create an associated issue for every task in TASKS or the active FEATURE-TASKS being projected; never duplicate an issue for the same project task ID. Represent each phase with a phase label and create a host milestone for each SDD milestone when supported; use a milestone label when native milestones are unavailable. Assign each task issue its phase label and its parent milestone or milestone label when creating it. After the task is implemented, verified, committed, and reconciled in its owning task list, close its issue as completed. A feature parent checkbox does not establish completion of the whole-project phase or milestone.
+When the selected backend supports issues, as GitHub does, create an associated issue for every task of the eligible phase in TASKS or the active FEATURE-TASKS being projected; never duplicate an issue for the same project task ID. Represent each phase with a phase label and create a host milestone for each SDD milestone when supported; use a milestone label only when a backend defines equivalent completion/reconciliation semantics; otherwise report milestone lifecycle unsupported. Assign each task issue its phase label and its parent milestone or milestone label when creating it. After the task is implemented, verified, committed, and reconciled in its owning task list, close its issue as completed. A feature parent checkbox does not establish completion of the whole-project phase or milestone.
 
 The active backend owns object creation, lookup, and reconciliation. It may define equivalent host objects while preserving the phase → milestone → task relationships and issue lifecycle.
 

@@ -27,6 +27,10 @@ When changed acceptance makes a checked task or parent claim stale:
 
 If the feature is withdrawn, preserve Git history and resolve the disposition of completed work before removing its task list. Task execution and completion verification belong to **sdd-implement**; reconciliation preserves evidence and the durable pending-reassessment notes for its review.
 
+Apply the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md) when reconciling accepted review tasks, report links and parent evidence. Preserve milestone/phase review tasks and stable IDs during transfer; existing project-wide parents retain their full scope. Report warranted hosted reopening/reparenting to sdd-forge under authorized reconciliation, without performing it here. Future-phase feature work remains unprojected; scoped feature completion cannot close an unfinished project milestone.
+
+Feature implementation reports remain under `docs/dev/features/<feature-id>/`, including after document incorporation/archive. Keep their provenance links from current owning entries; archiving feature sources does not relocate reports to the main phase tree.
+
 ## Scope and cleanup
 
 Feature source documents remain active while other levels are integrated or work still depends on them. A selected SPEC-only incorporation does not archive the whole package, remove FEATURE-TASKS, or transfer unselected tasks. Preserve active sources and report deferred link/owner changes outside scope.

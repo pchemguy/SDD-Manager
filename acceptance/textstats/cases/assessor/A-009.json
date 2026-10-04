@@ -21,6 +21,7 @@
   ],
   "required_agent_checks": [
     "Only selected SPEC owners change; outside impacts are reported. FEATURE-TASKS remains active sole executable owner.",
-    "Still-needed sources persist; no whole package archive, implementation or phase completion."
+    "Still-needed sources persist; no whole package archive, implementation or phase completion.",
+    "Selected SPEC-only incorporation preserves feature review task/report ownership and links outside its selected scope; it does not create reports, close feature/project milestones or move unselected feature records."
   ]
 }

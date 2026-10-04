@@ -46,7 +46,7 @@ docs/dev/FEATURE-TASKS.md
 docs/dev/verification-map.json
 ```
 
-Inspect relevant reviews/features package navigation for branch identity and source disposition. Archived feature documents and historical task snapshots under docs/dev/features are retained evidence, not active FEATURE-TASKS; discover active ownership from main TASKS and explicitly active root sources. Observe partially moved paths/links as unfinished incorporation, without repairing them.
+Inspect relevant reviews/features package navigation for branch identity and source disposition. Archived feature documents and historical task snapshots under docs/dev/features are retained evidence, not active FEATURE-TASKS; discover active ownership from main TASKS and explicitly active root sources. Observe partially moved paths/links as unfinished incorporation, without repairing them. Inspect the workflow-specific report prefix and retained review/report commits, pending publication and issue/milestone reconciliation facts when available. Distinguish unfinished review, committed report awaiting push, closed milestone awaiting local parent persistence, and completed phase review awaiting integration. Unknown hosted effects remain unknown until provider readback; orientation observes and hands off rather than replaying writes.
 
 Also identify project-specific equivalents and other execution evidence when present. Do not modify or restore such state during orientation. Feature documents describe an intended delta; FEATURE-TASKS holds only scoped feature work and is not the complete task baseline. Inspect it with TASKS when establishing active work and progress.
 

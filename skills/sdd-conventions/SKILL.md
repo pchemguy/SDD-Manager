@@ -13,6 +13,8 @@ Use the relevant convention only when its concern occurs in the current work. Re
 - **Design heuristics:** Read [design heuristics](references/design-heuristics.md) when evaluating a chosen design or pattern, reviewing an implementation or refactor, or comparing options using SOLID, DRY, or KISS.
 - **Task hierarchy:** Read [task hierarchy](references/task-hierarchy.md) when defining or reviewing Phase → Milestone → Task identity and parentage in TASKS, or projecting that hierarchy to hosted issues, labels, and milestones.
 
+- **Backend object lifecycle:** Read [backend object lifecycle](references/backend-object-lifecycle.md) for phase-gated projection, explicit review units, issue/milestone closure, report placement and interruption recovery.
+
 - **Workflow identity:** Read [workflow identity](references/workflow-identity.md) when allocating revision/feature campaign identities, naming workflow branches, or locating active and retained workflow artifacts.
 
 - **Review campaigns:** Read [review campaigns](references/review-campaigns.md) when organizing review/revision plans and reports, assigning campaign/finding identities, or retaining findings and evidence alongside governing project documents.

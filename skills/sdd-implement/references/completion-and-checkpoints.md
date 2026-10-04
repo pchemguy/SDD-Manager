@@ -12,12 +12,18 @@
 
 Provide a concise task result through **sdd-report** before advancing within the authorized range. The commit's task ID, checklist, and evidence establish the boundary for startup inspection if execution is interrupted.
 
+## Execute review/report tasks
+
+Apply the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md). Execute milestone/phase review tasks as explicit selected tasks; do not skip them or append unselected tasks to satisfy a requested count. Use sdd-verify for read-only code review and check evidence, sdd-tdd/sdd-docs for their focused changes, and sdd-report for the committed boundary report. Repair bugs, critical issues and contract violations before review task completion. Include admissible non-critical TODO findings with options/provenance; the final phase review includes the final implementation report when the full list completes. A report draft without completed review/tests is incomplete task work.
+
+After the review task's result/report/status is committed, pushed and its issue closed, request sdd-forge milestone closure/readback. A phase review waits for every delivery milestone closure; its final milestone closes after its own review task. Retain pending closures on backend failure; do not infer synchronization from local checkboxes or advance to dependent phase gates. Local-only mode applies the same evidence gates without hosted objects.
+
 ## Parent completion and stopping
 
-- Check a milestone only when its constituent tasks and applicable PLAN exit conditions are verified; check a phase only when its milestones and phase exit conditions are verified. Empty or blocked groups are not complete by default.
+- Check a milestone only when its constituent tasks, required review/report and applicable PLAN exit conditions are verified; check a phase only when its milestones and phase exit conditions are verified. Empty or blocked groups are not complete by default.
 - Reassess flagged parent claims against their current exit conditions; correct unsupported checked status and retain the pending note until those conditions are established. A resolved task reassessment alone does not clear its parent's note.
 - In FEATURE-TASKS, a parent checkbox covers only that list's scoped work and relevant FEATURE-PLAN exits. It does not check the corresponding whole-project milestone or phase in TASKS.
-- Commit and push parent status and any additional boundary evidence with the final task when available, or in a focused follow-up commit identifying the relevant task and parent boundary. Do not invent a new task solely to record an exit check.
+- Commit and push parent status and any additional boundary evidence with the final task when available, or in a focused follow-up commit identifying the relevant task and parent boundary. Do not invent a new task solely to record parent status; explicit review/report tasks are already required by accepted PLAN/TASKS. Hosted closure remains a separately observed state, not authority for local acceptance.
 - Do not start tasks beyond the requested task count, milestone, phase, or named checkpoint, even if further tasks are ready. Integrate only when the workflow gate is met; a completed main task subset in an incomplete phase pushes and pauses without a merge. Also stop for an unresolved implementation or push blocker or the user's pause instruction.
 - Report implemented capabilities, completed IDs, acceptance and exit-condition evidence, unresolved failures or limitations, commit and push state, pending issue reconciliation, and remaining tasks. Distinguish task/working-branch completion from integration into the established target and its remote publication.
 

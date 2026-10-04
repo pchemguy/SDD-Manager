@@ -10,7 +10,7 @@ Every capability here is **plugin test material**. TextStats' generated design, 
 | Branch/publication lifecycle | Per-task commits pushed before advancing; incomplete phases pause; eligible complete boundaries have explicit two-parent merges, merged checks and target containment |
 | Feature incorporation | Selected main owners only; both lists in scope for transfer; stable IDs/issues, sole executable ownership, needed sources retained until eligible archive |
 | Steering | Assessment-only is read-only; commanded subtraction amends existing owners, retires obsolete tasks, integrates into paused phase and stops |
-| Hosted tracking | Real task/phase/milestone projection, reuse and closure only from completion evidence; foreign fields preserved; pending/uncertain effects reconciled |
+| Hosted tracking | Eligible-phase-only projection before first task, review issue and milestone closure ordering with provider readback, reuse and closure only from completion evidence; foreign fields preserved; pending/uncertain effects reconciled |
 | Failure and recovery | Genuine partial work retained; fresh continuation uses actual files/index/refs/identities; no resets, duplicate hosted writes or invented successful prerequisites |
 | Diagnostic quality | Original attempts, assistance and gaps visible; causal confidence and reproducible bounded change proposals rather than automatic source repair |
 
@@ -30,3 +30,7 @@ The catalog imports A-001–A-027 intents. Full supported coverage requires ever
 A test count, checkbox, closed issue or consumer completion claim cannot establish acceptance alone. Empty collection is not passing verification. Eventual repair can yield Passed with assistance without erasing a first failure. Blocked dependents do not pass through a waived prerequisite. Coverage totals reconcile all catalog IDs and all attempts, including selected omissions. Diagnose input/consumer/checker/environment/plugin causes separately; an input explanation requires evidence and may coexist with weak plugin guidance.
 
 The source under test remains immutable throughout a campaign. A proposed plugin fix requires a separately accepted change and a new pinned identity; do not silently repair instructions and report the old source passed. Historical TST-001–004 are lessons, not observations in a new run; see [DIAGNOSTICS](DIAGNOSTICS.md).
+
+## Boundary review lifecycle
+
+Assess explicit delivery milestone review tasks and final single-task phase review milestones, separate code review/testing evidence, committed reports at workflow-specific paths, blocker repair and admissible TODO solution-option aggregation. Local support tests validate harness behavior only; new lifecycle claims require consumer execution and live provider readback.

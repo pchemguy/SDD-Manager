@@ -7,7 +7,7 @@ Apply these provider-neutral defaults when naming workflow branches or associati
 | Workflow | Branch | Associated documents |
 | --- | --- | --- |
 | Revision | `revision/<campaign>-<slug>` | `docs/dev/reviews/<campaign>/` |
-| Steering | `revision/<campaign>-<slug>` | Same review location; a minimal revision record is sufficient. |
+| Steering | `revision/<campaign>-<slug>` | `docs/dev/reports/phases/<phase-id>/revisions/<campaign>/`; a minimal revision record is sufficient. |
 | Feature | `feature/<campaign>-<slug>` | `docs/dev/features/<campaign>/` for package identity/navigation and completed incorporated sources. |
 | Main phase | `phase/<phase-number>-<slug>` | Main governing documents and owning TASKS remain in `docs/dev/`. |
 
@@ -15,7 +15,7 @@ A campaign is `<sequence>_<baseline-sha>`, for example `007_df531c2`; revision/f
 
 ## Identity and collisions
 
-- **Allocate once:** Inspect `docs/dev/reviews/` and `docs/dev/features/` plus relevant published records/refs. Use one greater than the highest allocated/reserved repository-wide positive sequence, padded to at least three digits across both collections; do not fill historical gaps or reuse an ID. Reserve identity at the first record/branch preparation; resolve concurrent allocation conflicts before publication, without renumbering established records.
+- **Allocate once:** Inspect `docs/dev/reviews/`, `docs/dev/features/` and `docs/dev/reports/phases/*/revisions/` plus relevant published records/refs. Use one greater than the highest allocated/reserved repository-wide positive sequence, padded to at least three digits across reviews, features and phase-nested revisions; do not fill historical gaps or reuse an ID. Reserve identity at the first record/branch preparation; resolve concurrent allocation conflicts before publication, without renumbering established records.
 - **Pin baseline:** Use the campaign's starting commit, at least seven uniquely resolving hexadecimal characters, and record its full SHA in retained context. Keep branch/directory identity stable as HEAD advances, including review-to-revision continuation.
 - **Slug:** Use concise lowercase ASCII words separated by hyphens. Validate the full name with `git check-ref-format --branch`. If occupied by unrelated work, keep identity and choose a distinct descriptive suffix; never reuse a branch from its name alone.
 - **Overrides:** Respect explicit project/user naming and location policy; record its equivalent identity/target association. Preserve suitable legacy/in-flight branches and historical directories on continuation; never rename or delete them automatically. An occupied old phase branch needs a verified matching continuation or a distinct slug.
@@ -23,7 +23,7 @@ A campaign is `<sequence>_<baseline-sha>`, for example `007_df531c2`; revision/f
 
 ## Artifact lifecycle
 
-Review/revision artifacts use the **Review campaigns** convention. Lightweight steering allocates the same identity and can use a concise REVISION-REPORT recording objective, scope, baseline, paused target, verification, and publication, without a fabricated review or plan.
+Review/revision artifacts use the **Review campaigns** convention. Lightweight steering allocates the same global identity under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>/` and can use a concise REVISION-REPORT recording objective, scope, baseline, paused target, verification, and publication, without a fabricated review or plan.
 
 Feature preparation creates a small package identity/navigation record, `docs/dev/features/<campaign>/README.md`, referencing the active root FEATURE documents and branch context. Active FEATURE sources keep their established paths in docs/dev; isolated branches/worktrees may carry separate packages, but one worktree must not overwrite an unrelated active package. This record supplies navigation, not a second workflow state store.
 
