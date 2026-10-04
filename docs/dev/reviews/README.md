@@ -18,6 +18,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `012_21cba43` | Dedicated scoped review/revision authorization policy and rejection response implemented, verified, explicitly merged and published. | [Revision report](012_21cba43/REVISION-REPORT.md) |
 | `013_86ce4eb` | Requested plugin website and display-name metadata verified, explicitly merged and published. | [Revision plan](013_86ce4eb/REVISION-PLAN.md), [revision report](013_86ce4eb/REVISION-REPORT.md) |
 | `014_f7c4de6` | Custom plugin icon generated, packaged, verified, explicitly merged and published. | [Revision plan](014_f7c4de6/REVISION-PLAN.md), [revision report](014_f7c4de6/REVISION-REPORT.md) |
-| `015_5ef0e32` | SVG icon, Developer Tools category and requested capabilities revision. | [Revision plan](015_5ef0e32/REVISION-PLAN.md), [revision report](015_5ef0e32/REVISION-REPORT.md) |
+| `015_5ef0e32` | SVG icon, Developer Tools category and requested capabilities verified, explicitly merged and published; installed UI outcome unverified. | [Revision plan](015_5ef0e32/REVISION-PLAN.md), [revision report](015_5ef0e32/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
