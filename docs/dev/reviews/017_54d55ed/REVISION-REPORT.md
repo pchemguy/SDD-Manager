@@ -34,3 +34,17 @@ V-002 repair checkpoint: `0024d20`, pushed before documentation work. Added modu
 Semantic review checked package pinning and mode-sensitive fingerprints, prepare's new-clone mutation/partial-failure limits, export_recovery's declared completeness/protected-history/retained-root limits, reconciliation's exact-destination and retry-safe-false behavior, assessment's deterministic-only status, and callers' error propagation. Documentation describes observed implementation rather than promising arbitrary secret detection, atomic JSON writes, automatic restoration, complete task coverage or live authentication. HELPER-INTERFACES remains the canonical operational contract.
 
 [Documentation verification](evidence/documentation-verification.json) confirms module coverage, all core interface docstrings and identical executable ASTs against V-002 for all five edited Python files after stripping documentation. Python 3.11 syntax parsing succeeds; actual runtime remains Python 3.12.14. Prior 79-test GREEN evidence remains applicable to unchanged executable behavior. R-003 is rechecked by API/caller inspection; docstring counts alone are supporting inventory, not the semantic review.
+
+## V-004 — Composed code and documentation review
+
+Reviewed the complete execution-checkpoint-to-working-tip difference, including all preceding action commits. The checker has one shared document-option syntax owner; runtime alone checks consumer files. Explicit children supplement rather than replace discovered roots; each document is parsed once while actual task IDs still fail on duplication. Stable IDs retain case/decorated identity, parent labels are excluded, malformed candidates/fences fail, and history/unsafe paths cannot be supplied as active children. Independent list-coverage/agent assessment remains required; this is a deliberately bounded task-document model, not a general Markdown parser.
+
+Test inspection confirmed independently chosen expected outcomes and positive controls for real duplicates. Tests exercise actual helper CLI/collection failures, child roots, tables, fenced examples and both DSL consumers. All 27 shipped contracts remain unchanged and validate. Recovery/pinning/capture code changed only in documentation, confirmed by executable AST comparison; related existing regressions pass. Final document review found and corrected the older DSL summary row that still said ownership had no additional fields; it now agrees with the optional additive documents contract.
+
+| Finding | Current disposition | Evidence |
+| --- | --- | --- |
+| R-001 | Verified on the repaired local source | Custom/mixed IDs and table/checkbox regressions; real duplicate controls; corrected original probes. |
+| R-002 | Verified on the repaired local source | Linked reports/specifications excluded; fences/closing rules checked; explicitly selected child owners preserved. |
+| R-003 | Verified by source/API review | Core interface and five module documentation coverage; actual contracts/callers reviewed; unchanged executable AST for documentation action. |
+
+Required local checks and working scope are established. Explicit integration and target publication remain pending until their observed evidence below is recorded. Neither pending separate-review TODO is resolved by these dispositions.

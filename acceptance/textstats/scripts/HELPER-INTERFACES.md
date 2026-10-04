@@ -42,7 +42,7 @@ Contract version 1:
 | `literal` | `key`, `expected`: exact JSON equality including type, array order, stdout/stderr whitespace and exit code; bool differs from integer. |
 | `git` | `field`, exactly one of `expected`/`expected_ref`; fields are `head`, `branch`, `parents`, `merge_heads`, `staged_paths`, `unstaged_paths`, `untracked_paths`, `conflict_paths`, `publication`, `remote_containment`. |
 | `file` | Relative safe `path`; at least one of boolean `exists` or lowercase `sha256`. No absolute/escaping/protected/symlink paths. |
-| `task_ownership` | No additional fields; parse active TASKS/FEATURE-TASKS checkbox/table owners and linked child lists, reject empty collections/duplicate IDs/malformed rows; exclude archive, feature and review history/vendor resources. |
+| `task_ownership` | Optional additive `documents` array for explicit child lists; parse active TASKS/FEATURE-TASKS owners, reject empty collections/duplicates/malformed candidates; exclude history/vendor resources and fenced examples. Ordinary links are not traversed. |
 
 Runtime `expected_ref` resolves exactly one existing schema-validated checkpoint field such as `checkpoint_refs.product_commit`, `checkpoint_refs.integration_commit` or `checkpoint_refs.merge_parents`; it never hardcodes historical identities and does not certify checkpoint freshness. Evidence shape is exactly `{"schema_version":1,"literals":{"named-file":{"returncode":0,"stdout":"lines=3 words=2\n","stderr":""}}}`. Literal keys and values are independently retained actual observations, not a case registry or consumer claims. No automated agent-case result is accepted.
 
