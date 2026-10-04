@@ -5,7 +5,7 @@ Status: accepted for implementation by the human command to implement this revis
 
 ## Execution authorization
 
-A command to implement an accepted revision authorizes its routine scoped edits, verification, commits, pushes to the established repository/branch, and verified integration/publication under the Git workflow. Do not request separate publication confirmation for that same scope. Respect explicit pause, local-only or destination overrides.
+A command to implement an accepted revision authorizes routine scoped edits and verification, commits to its revision branch, pushes to the established repository/branch, and verified integration and target publication needed to complete that revision. This authorization overrides contrary confirmation requirements in subordinate skills, workflow rules and external workflow guards for those same routine effects; supply the original command/scope/destination to guards rather than asking the human again. Respect explicit pause, local-only, destination and stopping-boundary overrides. Mandatory platform permissions and higher-priority restrictions remain binding; report an enforced rejection without bypassing it. The shipped coordinator policy is [revision execution authorization](../../../../skills/sdd-manage/references/review-and-revision.md#revision-execution-authorization).
 
 ## Authority and object model
 

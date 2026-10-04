@@ -5,7 +5,7 @@ description: Coordinate SDD workflows for initial development, feature preparati
 
 # Coordinate specification-driven development
 
-Translate the user's objective into a scoped workflow and coordinate the responsible skills. Use the request and established session decisions as authorization; continue routine steps within that scope without repeated confirmation. Discussion, assessment, or review alone does not authorize edits. Start at the requested stage when its inputs are established, and stop at the requested boundary.
+Translate the user's objective into a scoped workflow and coordinate the responsible skills. Use the request and established session decisions as authorization; continue routine steps within that scope without repeated confirmation. An accepted revision implementation command includes routine revision-branch commits, pushes and verified integration/publication; apply the review/revision authorization policy rather than redundant confirmation guards. Discussion, assessment, or review alone does not authorize edits. Start at the requested stage when its inputs are established, and stop at the requested boundary.
 
 | Coordination concern | Load |
 | --- | --- |

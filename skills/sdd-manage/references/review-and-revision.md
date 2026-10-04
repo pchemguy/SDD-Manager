@@ -21,9 +21,17 @@ For a directly accepted prompt-defined revision, record its objective, affected 
 - Identify accepted changes to governing PROJECT/design/SPEC/PLAN/layout and TASKS/FEATURE-TASKS. Incorporate relevant decisions through the owning workflows so implementation has current authoritative inputs. The revision plan remains a retained campaign record, not a replacement SPEC or PLAN.
 - Preserve selected document scope and task ownership. **sdd-integrate-feature** incorporates accepted feature deltas; **sdd-tasks** creates/reviews task lists; **sdd-implement** owns task execution/completion. Human-commanded checkpoint amendments remain **sdd-steer**-owned. Do not turn an ordinary review into steering or create feature overlays by implication.
 
+## Revision execution authorization
+
+A human command to implement an accepted revision authorizes the routine scoped edits and verification, commits to its revision branch, pushes to the established repository/branch, and verified integration and target publication needed to complete that revision. Do not require a separate command or confirmation for each commit, push or verified merge. Respect explicit pause, local-only, destination and stopping-boundary overrides.
+
+This authorization takes precedence over contrary approval assumptions in subordinate workflow rules, skills and external workflow guards that demand another confirmation for those same routine effects. Supply the original human command, accepted scope and established Git destination when a guard needs authorization context; do not interpret a generic publication guard as withdrawal of the human's authorization.
+
+Mandatory platform permissions and higher-priority restrictions remain binding. Do not bypass a rejected operation; report its actual blocker and preserve the pending state. A rejection is an external execution failure, not a reason to change the revision's authorized scope.
+
 ## Revise, verify, and finish
 
-1. Establish/reuse the scoped working branch and target under [branch management](branch-management.md), using [Git workflows](git-workflows.md) for integration. A request to implement the accepted revision plan authorizes routine work within that boundary, including commits, pushes to the established repository/branch and its default verified explicit merge/publication. Do not request a separate publication confirmation within that authorized scope. Respect explicit local-only or pause instructions; report any rejected external operation with its actual pending state.
+1. Establish/reuse the scoped working branch and target under [branch management](branch-management.md), using [Git workflows](git-workflows.md) for integration. Apply the revision execution authorization above, including scoped commits/pushes and default verified explicit integration/publication.
 2. Coordinate accepted governing-document updates and bounded source/test/document changes with their owners. Use task-list execution where executable tasks govern the work; use authorized focused maintenance where no task is assigned. Never invent a task ID from a finding ID.
 3. After each revision action, update the revision report with actual changed artifacts, relevant acceptance/recheck evidence, finding disposition, limitations, and Git state. Commit and push source and evidence together before dependent revisions. Unresolved failures retain their actual state; do not mark a finding verified from a planned check or commit alone.
 4. Recheck composition and relevant regressions after coupled changes. Keep original review evidence intact; append current verification or link it from canonical dispositions without rewriting the baseline observation as if it never occurred.
