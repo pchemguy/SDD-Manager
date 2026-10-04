@@ -7,7 +7,7 @@ Baseline: `0ea2adfde7855465cc8d04e58ba98180c42e54a4`.
 Working branch: `revision/018_0ea2adf-repository-disclosure`.
 Target: `feature/architecture-revision`.
 
-V-001 is implemented and locally verified. Initial target-repository adoption includes the packaged disclosure and a discoverable SDD Manager usage notice with the first authorized SDD result. This is an agent workflow instruction, not an installed-client hook. Integration/publication evidence is appended below after readback.
+V-001 is implemented, verified, explicitly integrated and published. Initial target-repository adoption includes the packaged disclosure and a discoverable SDD Manager usage notice with the first authorized SDD result. This is an agent workflow instruction, not an installed-client hook. Integration/publication evidence is recorded below.
 
 ## Changes and ownership
 
@@ -40,3 +40,11 @@ Plan checkpoint `1c15a1d5500ecd3b463ab25cd4ee455becde17c5` was pushed and verifi
 ## Remaining TODOs and limits
 
 Campaign 011 QC implementation and live/client acceptance remain pending a separate later review. The live follow-up now includes first-consumer-commit bootstrap, existing-content preservation, selected-path limits and interruption/resumption checks described in TextStats SETUP. No dedicated acceptance repository run, plugin reinstall, release/version change, or installed-client activation is claimed here.
+
+## Verified integration and publication
+
+Source commit `b346210` and evidence correction `a4902e3fac387c5892ccb03edd635ced62f60153` were pushed; remote readback returned the pinned revision tip. The prospective merged index tree exactly matched the verified source tree, so the 79-test result remains applicable without another runtime change. Merged root asset equality and README links were checked again; the full merge diff check excluding only the byte-preserved disclosure passed.
+
+Explicit merge: `3883680c9e555d23f982f29aafcd7268b0a9a93b`.
+Parents: `0ea2adfde7855465cc8d04e58ba98180c42e54a4` and `a4902e3fac387c5892ccb03edd635ced62f60153`.
+Target push succeeded and remote readback returned that exact merge SHA. The source branch is retained. This publication supplement is a target report checkpoint after verified integration; Git records its own subsequent commit identity. No other branch was integrated or published.
