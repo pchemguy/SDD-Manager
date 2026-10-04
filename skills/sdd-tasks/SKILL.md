@@ -7,9 +7,12 @@ description: Use when deriving or reviewing executable software-development task
 
 Choose the requested operation and load only its reference. A request to generate TASKS does not authorize implementation.
 
+Apply **sdd-conventions**' **Development-document QC** reference (`skills/sdd-conventions/references/development-document-qc.md`, bundled dependency). Authoring includes scoped review, correction/recheck and the adjacent report before dependent progression; pure review does not authorize corrections.
+
 | Work | Load |
 | --- | --- |
-| Derive or review the complete task hierarchy or a scoped feature task list | [task derivation](references/task-derivation.md) |
+| Derive the complete task hierarchy or a scoped feature task list | [task derivation](references/task-derivation.md), then [conformance review](references/conformance-review.md) |
+| Review generated task structure and PLAN conformance | [conformance review](references/conformance-review.md) |
 | Review status, completion evidence, and dependencies | [progress review](references/progress-review.md) |
 
 Read the relevant accepted PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout, and their focused children or active feature documents as needed for the operation. Inspect TASKS and any active FEATURE-TASKS, Git evidence, and affected code or tests when status or existing work matters. Use **sdd-conventions** to assess task boundaries and Phase → Milestone → Task identity and parentage. Do not invent requirements, delivery strategy, or physical ownership when those inputs are unresolved.

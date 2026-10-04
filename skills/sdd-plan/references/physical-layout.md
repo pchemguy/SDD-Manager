@@ -13,3 +13,7 @@
 Keep `layout.md` a concise authoritative entry point. If physical organization needs substantial independent detail, use focused children under `docs/dev/layout/` with explicit scopes and links from the root. The root retains repository-wide conventions and the ownership map; children refine distinct areas without repeating it. Do not use layout as a phase plan, task list, or completion tracker.
 
 For an existing project, a proposed change may alter only a few ownership rules. Update the affected main layout nodes to describe the intended final physical organization when the decision is accepted; an active feature plan can describe the transition work. Preserve accurate unaffected areas. A path's presence does not prove a component is complete, and a proposed path is not an implementation claim.
+
+## Layout and preparation QC
+
+Include material layout changes in the affected PLAN QC scope under [review](review.md). Assess design ownership and the delivery/integration route; identify any affected SPEC/TASKS review invalidation. A focused layout request neither authorizes rewriting PLAN nor creating an unrequested PLAN report: return the affected review need and block dependent use until its scope/readiness is established. When coordinated PLAN/layout preparation includes reporting, cover layout in the adjacent PLAN review report rather than requiring a report for each child.
