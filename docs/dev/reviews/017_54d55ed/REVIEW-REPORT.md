@@ -4,7 +4,7 @@
 
 Campaign `017_54d55ed`; reviewed source `54d55edebd8a7af6499d625bdbb357f864a4db1d`. Working branch `revision/017_54d55ed-comprehensive-review`; target `feature/architecture-revision`. [Review plan](REVIEW-PLAN.md).
 
-State: source and local support review complete; publication/integration pending. Evidence combines source inspection and actual local checks; no fresh-agent/live-client acceptance is claimed. No source repairs are authorized by this review.
+State: review records verified, explicitly integrated and published; source repairs remain proposed. Evidence combines source inspection and actual local checks; no fresh-agent/live-client acceptance is claimed. No source repairs are authorized by this review.
 
 | Unit | State | Evidence/findings |
 | --- | --- | --- |
@@ -102,3 +102,11 @@ The standalone HELPER-INTERFACES guide gives useful operational contracts, but 2
 There is no newly confirmed defect in the reviewed skill lifecycle instructions. The two functional findings are in acceptance support and therefore weaken diagnostic evidence rather than proving the product workflows fail. A source-level review cannot establish fresh-agent routing or live GitHub ordering. Python 3.12 was exercised in this environment; minimum Python 3.11, other operating systems, installed icon rendering, protected credential recovery and live provider interruptions were not newly exercised. Historical reports were used for pending-work/provenance context, not certified again as current runtime evidence. Consumer cases A-001–A-027 were not run anew.
 
 No correction queue is marked accepted or implemented by this review. Finish publication and verified integration of these review records, then stop before repairs.
+
+## Publication and integration evidence
+
+Review checkpoints c1a08db, 676458f, 30212d5, 56f26aa and 3bb2bc5 were pushed on revision/017_54d55ed-comprehensive-review. Final working tip: `3bb2bc57e2272fbef79b4e5c65cc7ed1d6201151`. Refreshed target: `54d55edebd8a7af6499d625bdbb357f864a4db1d`.
+
+Explicit merge `68748e872c8fb2dca8b94af269e05993f87b4db6` has exactly those two parents. The prospective merged state passed staged diff checks, baseline source SHA-256 equality, review-record link/JSON validation, review-only path-scope inspection and absence-of-conflicts checks. The full helper suite was not repeated because integration changed only review records and exact helper source hashes remained unchanged. No conflict resolution or source repair was needed.
+
+The merge was pushed to origin/feature/architecture-revision; actual ls-remote readback confirms the target at that merge and the review branch at its final working tip. This follow-up records observed publication on the target; it makes no new source claim. Stop boundary: completed comprehensive review and proposed correction queue, before repair implementation. Working branch retained; main was not merged or pushed by this campaign.
