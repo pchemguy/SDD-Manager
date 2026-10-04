@@ -27,7 +27,7 @@ V-001 is implemented and locally verified. Initial target-repository adoption in
 | Manifest / package inventory | Codex manifest JSON parses. Generic Agent Plugins inspector reports `UNKNOWN: no root SKILL.md or plugin.json`; this is the established Codex layout, not a portable manifest claim. |
 | TextStats support | `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v`: 79 tests pass, 14.534 seconds. |
 | Actual asset carriage | Disposable local-only `prepare` with `source_mode: dirty` copied both current assets byte for byte into the pinned vendor snapshot; target-root copies remained absent. Fixture remotes were local only. |
-| Diff / ownership | `git diff --check` passes; unrelated pending content is preserved and excluded from staging. |
+| Diff / ownership | Working-tree check passed before staging new assets. The complete staged check then flagged two pre-existing quoted blank lines copied verbatim from the disclosure (`> `). Preserve the requested exact copy; the branch diff check excluding only `assets/AI_DISCLOSURE.md` passes. Unrelated pending content is preserved and excluded from staging. |
 
 Source scenario inspection covered initial preparation/review records, direct task and steering persistence, existing disclosure retention, read-only no-write, selected-path conflicts, nested project/root scope, pending copies/index and committed-but-unpushed continuation. These are protocol inspections, not fresh-agent runtime outcomes. The canonical load paths and ordinary commit owners are explicit; no hidden client hook is assumed.
 
