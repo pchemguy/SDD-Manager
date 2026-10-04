@@ -12,6 +12,7 @@ Execute the user's requested task-list boundary. **sdd-manage** coordinates auth
 | Push outstanding commits, resume pending work, and select the range | [startup and continuation](references/startup-and-continuation.md) |
 | Resolve next task, next N tasks, milestone, or phase requests | [range selection](references/range-selection.md) |
 | Execute tasks with tests, documentation, and verification | [task execution](references/task-execution.md) |
+| Bootstrap disclosure and usage records before the first SDD commit | **sdd-manage**: `skills/sdd-manage/references/repository-bootstrap.md` (bundled dependency) |
 | Mark completion, commit and push, reconcile issues, and stop | [completion and checkpoints](references/completion-and-checkpoints.md) |
 
 For a selection-only request, use the range-selection reference and return the IDs, dependencies, and stopping point without mutations. For an implementation request, follow this protocol:

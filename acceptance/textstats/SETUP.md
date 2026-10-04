@@ -40,6 +40,12 @@ Default source is committed HEAD even when the source working tree is dirty: cop
 
 Record interpreter, Git, available API/client versions, client loading mode and facilities: fresh worker contexts, independent assessor context, interruption control, Git publication, hosted read/write, protected credential channel, recovery exports and installed-plugin mechanism. Use Python 3.11+ for the sample/harness and ordinary filesystem/Git tools. Execute only available checks and record actual versions. Explicit skill-source loading is supported without installation, but cannot certify automatic discovery/routing/activation. Missing facilities label affected cases Blocked/Not run. No API write probe or unrelated auth probe is needed simply because no token file exists.
 
+## Consumer repository disclosure
+
+The pinned package must contain `assets/AI_DISCLOSURE.md` and `assets/SDD-MANAGER.md`. Preparation vendors those assets; the harness must not create the target root copies or README links on the consumer's behalf. Inspect the first consumer-owned SDD commit (normally A-001 preparation): root disclosure matches the pinned asset bytes when newly added, root usage notice names/links SDD Manager and links the disclosure, and the root README links both. With existing records, verify truthful preservation/reconciliation and the reported retention reason. If the repository already has an SDD checkpoint, assess idempotent reuse or scoped backfill instead of claiming first-commit bootstrap.
+
+For isolated follow-up fixtures, cover read-only no-write, explicit selected-path conflict, differing existing disclosure preservation, interrupted pending copies/index, and committed-but-unpushed continuation. These are live follow-up checks, not established outcomes of this source revision.
+
 ## Protected authentication
 
 Use current session Git authentication for authorized publication and an available authenticated API client for hosted operations. Git success does not prove API authentication; API success does not prove Git transport. Follow the **pinned** [sdd-manage credential protocol](../../skills/sdd-manage/references/credentials.md) and [GitHub backend](../../skills/sdd-forge/references/github.md). Request protected credentials only after classified unavailable access for the target operation. Rate limits, outages, quota, validation and policy restrictions need their actual remedy, not token substitution.

@@ -4,6 +4,7 @@ This document records the plugin's intended capabilities, ownership, and present
 
 ## Package rules
 
+- The first authorized SDD commit includes root disclosure/usage records and discoverable README links under [repository bootstrap](../../skills/sdd-manage/references/repository-bootstrap.md). sdd-manage coordinates adoption; sdd-implement/sdd-steer own their commits, sdd-report checks evidence, and sdd-orient inspects without writing. Existing repositories missing records receive a scoped next-commit backfill without history rewriting.
 - A mutating workflow requires an eligible Git worktree. Read-only inspection and discussion may occur without Git. Repository initialization lies outside this plugin.
 - `sdd-manage` coordinates authorization, shared prerequisites, focused skills, work boundaries, and handoffs. Focused skills declare their prerequisites without implementing shared workflows.
 - Git commits provide durable implementation checkpoints. `sdd-orient` compares the last completed task commit with the owning checklist and pending changes, then hands the identified task state to `sdd-implement`. Before any other work, `sdd-implement` pushes all unpushed commits on the current branch to its established remote branch, even when the worktree is clean. Dirty state alone does not require reset.

@@ -9,6 +9,7 @@ Choose the requested output and load only its reference:
 
 | Output | Load |
 | --- | --- |
+| First SDD commit disclosure/usage evidence (drafting only) | **sdd-manage**: `skills/sdd-manage/references/repository-bootstrap.md` (bundled dependency) |
 | Planned task issue title and body, task/amendment or merge commit message, or pull request draft | [drafts for hosted and Git objects](references/object-drafts.md) |
 | Task, milestone, phase, final implementation, branch boundary, or interrupted-work status report | [completion reports](references/completion-reports.md) |
 | Review plan/report or revision plan/report, including focused prompt-driven review | [campaign artifacts](references/campaign-artifacts.md) |

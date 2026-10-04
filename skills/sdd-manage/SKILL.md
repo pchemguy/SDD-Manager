@@ -10,6 +10,7 @@ Translate the user's objective into a scoped workflow and coordinate the respons
 | Coordination concern | Load |
 | --- | --- |
 | Select a practical workflow and its entry, outputs, and stopping point | [available workflows](references/workflows.md) |
+| Place disclosure and discoverable usage records in the first target-repository SDD commit | [repository bootstrap](references/repository-bootstrap.md) |
 | Establish prerequisites, pass scope, resolve blockers, and persist results | [coordination protocol](references/coordination.md) |
 | Resolve identities, create/reuse workflow branches, or manage phase transitions | [branch management](references/branch-management.md) |
 | Establish review/revision publication authorization or respond to an approval rejection | [scoped authorization](references/revision-authorization.md) |

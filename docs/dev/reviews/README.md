@@ -23,4 +23,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `017_54d55ed` | Comprehensive review and R-001–R-003 repairs verified, explicitly integrated and published (79 support tests pass). Campaign 011 QC and live/client acceptance remain pending TODOs for a separate later review. | [Review plan](017_54d55ed/REVIEW-PLAN.md), [review report](017_54d55ed/REVIEW-REPORT.md), [revision plan](017_54d55ed/REVISION-PLAN.md), [revision report](017_54d55ed/REVISION-REPORT.md) |
 
+| `018_0ea2adf` | Packaged AI disclosure and first-commit target-repository usage/disclosure bootstrap revision. | [Revision plan](018_0ea2adf/REVISION-PLAN.md), [revision report](018_0ea2adf/REVISION-REPORT.md) |
+
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
