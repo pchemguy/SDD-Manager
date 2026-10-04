@@ -5,7 +5,7 @@
 Campaign `019_609d084`; baseline `609d08495fd28022eea133e560c7bd3842412585`.
 [Plan](REVISION-PLAN.md); accepted input [Campaign 011 policy](../011_a3b2ad9/QC-POLICY.md).
 Branch `revision/019_609d084-dev-docs-qc`; target `feature/architecture-revision`.
-Current result: Campaign 011 source implementation is complete and locally verified. Explicit integration/publication is the remaining V-004 step.
+Current result: Campaign 011 QC implementation is complete, verified, explicitly integrated and published.
 
 ## V-001 — Shared policy, owner protocols and report format
 
@@ -55,3 +55,13 @@ Final structural validation: all 15 skills pass. Changed prose links resolve, Co
 ## Finding disposition and remaining work
 
 Campaign 011 R-001, R-002 and R-003 are resolved in shipped source with the owner/gate/report implementation and local review evidence above. TODO-017-001 (Campaign 011 QC implementation) is fulfilled by this new revision; its original policy and baseline observations remain retained. Live/client acceptance (TODO-017-002) remains pending separately, now including QC workflows and negative/scoped/recovery checks. No dedicated repository campaign, real hosted QC projection, release, installation or Gemini integration was performed.
+
+## Verified integration and publication
+
+Revision tip `b029b94f98b041ae877b1c33c86898ea066cc84b` was pushed and exact remote readback matched. The established target remained `609d08495fd28022eea133e560c7bd3842412585`. The prospective merged index tree exactly matched the verified revision tree; all 15 skill validations, evidence hash checks, 27-case catalog validation and complete staged whitespace checks passed. The 79-test suite result remains applicable: no Python/runtime change occurred after that run, and the merge introduced no different source tree. [Raw support output](evidence/support-tests.txt) is retained.
+
+Explicit two-parent merge: `67a781f0886055f7e57a63e8e1ba59a5222fba90`.
+Parents: `609d08495fd28022eea133e560c7bd3842412585` and `b029b94f98b041ae877b1c33c86898ea066cc84b`.
+Target push succeeded; exact remote readback returned the merge SHA. This publication supplement is a report checkpoint after integration; Git supplies its subsequent commit identity. Revision branch is retained. Unrelated pending content was preserved and excluded from every commit. No main/default-branch merge was performed.
+
+Stop: this new revision is complete. Campaign 011 QC implementation is no longer pending. Dedicated live/client acceptance remains a separate pending follow-up, with no current source implementation blocker established by these checks.
