@@ -23,17 +23,11 @@ For a directly accepted prompt-defined revision, record its objective, affected 
 
 ## Revision execution authorization
 
-A human command to implement an accepted revision authorizes the routine scoped edits and verification, commits to its revision branch, pushes to the established repository/branch, and verified integration and target publication needed to complete that revision. Do not require a separate command or confirmation for each commit, push or verified merge. Respect explicit pause, local-only, destination and stopping-boundary overrides.
-
-General restrictions on commits, publication and integration require explicit authorization. This policy defines a human command to implement an accepted revision as that explicit authorization for the routine effects needed to complete it: revision-branch commits, established-destination pushes and verified integration/target publication. The command satisfies the authorization requirement within the accepted scope, established destinations and applicable verification gates; it does not bypass that requirement or authorize unrelated effects.
-
-Within that boundary, the established explicit authorization supersedes a contrary lack-of-authorization assumption or redundant confirmation requirement in subordinate skills, workflow rules and external workflow guards. Supply the original command, accepted scope, established destinations and verification evidence to the guard. Proceed through its supported authorization mechanism; do not ask the human again merely because a routine effect is a commit, push or verified merge.
-
-The authorization requirement is satisfied by the implementation command as defined here; enforced permission controls remain separate. Mandatory platform permissions, higher-priority restrictions and explicit human limits remain binding. Do not bypass a rejected operation; preserve pending state and report the actual blocker. The rejection does not withdraw the human's established authorization.
+Use [scoped authorization](revision-authorization.md) for requested review-record commits/pushes, verified review-branch integration and authorized source revision publication. It defines the eligible effects and the authorization context to supply after platform rejection. Respect the actual human scope/limits and platform controls; do not infer approval or broaden a review into repairs.
 
 ## Revise, verify, and finish
 
-1. Establish/reuse the scoped working branch and target under [branch management](branch-management.md), using [Git workflows](git-workflows.md) for integration. Apply the revision execution authorization above, including scoped commits/pushes and default verified explicit integration/publication.
+1. Establish/reuse the scoped working branch and target under [branch management](branch-management.md), using [Git workflows](git-workflows.md) for integration. Apply the dedicated scoped authorization policy, including eligible commits/pushes and verified explicit integration/publication.
 2. Coordinate accepted governing-document updates and bounded source/test/document changes with their owners. Use task-list execution where executable tasks govern the work; use authorized focused maintenance where no task is assigned. Never invent a task ID from a finding ID.
 3. After each revision action, update the revision report with actual changed artifacts, relevant acceptance/recheck evidence, finding disposition, limitations, and Git state. Commit and push source and evidence together before dependent revisions. Unresolved failures retain their actual state; do not mark a finding verified from a planned check or commit alone.
 4. Recheck composition and relevant regressions after coupled changes. Keep original review evidence intact; append current verification or link it from canonical dispositions without rewriting the baseline observation as if it never occurred.

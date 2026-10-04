@@ -32,6 +32,10 @@ Recover the working/target identities and starting checkpoint from Git and exist
 
 Continue the same authorized operation when commanded; do not start another task or amendment. For an in-progress merge, finish scoped conflict/verification work before its commit. A verified merge committed but not pushed needs publication, not a second merge. Aborting a merge or reverting published work is a separate explicit recovery decision with unrelated work protected; no automatic rollback or new transaction journal is required.
 
+## Platform authorization rejection
+
+If platform review rejects a commit, push or integration operation, use [scoped authorization](revision-authorization.md). Preserve the rejected operation/state and supply the actual human request, accepted scope, observed repository/branches, exact effect and verification evidence through the supported review mechanism. Do not characterize this as an automatic exemption or override. A platform review rejection is not a Git authentication failure; report a remaining blocker instead of evading review or substituting credentials.
+
 ## Push authentication recovery
 
 Attempt authorized pushes with existing shell authentication. For a 403 or explicit missing/invalid-credential failure, use [hosting credentials and shell recovery](credentials.md), passing sanitized destination, operation, transport, and cause. Recover the current client's access and retry the same established destination; classify rate-limit or policy restrictions before replacing a token. Keep the commit and report pending publication on an unresolved failure. Authentication recovery does not bypass push-first execution, change the target, or authorize force-pushing.
