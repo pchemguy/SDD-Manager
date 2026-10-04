@@ -84,3 +84,7 @@ Persist corrected artifacts and report/recheck evidence together. On interruptio
 Initial preparation QC needs no extra implementation milestones/tasks solely for administrative review. It is part of the authoring workflow. Milestone/phase implementation code review remains mandatory later and is owned as defined by the backend lifecycle.
 
 Review readiness is tied to actual artifact and governing source state. Material amendments invalidate affected downstream assessments until rechecked; unchanged scope may retain supported evidence. Review the impacted dependency chain rather than rerunning every project audit after every edit. Reuse demonstrably current equivalent prior reviews for existing projects; absent or stale evidence requires the focused missing review, not a new fictional historical pass. Feature preparation reviews its selected delta and affected interfaces against accepted main inputs, without forcing a whole-project rewrite.
+
+## Source implementation follow-up — campaign 019
+
+The human requested a new revision implementing this policy. [Campaign 019 implementation report](../019_609d084/REVISION-REPORT.md) records the source changes, verification and publication. R-001–R-003 are resolved in that source revision; this campaign's original proposal, baseline findings and preparation-only history remain retained. Dedicated live/client acceptance remains separate and pending.

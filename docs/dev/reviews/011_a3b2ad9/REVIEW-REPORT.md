@@ -43,3 +43,7 @@ Three source-policy gaps identified. Existing semantic criteria are foundations,
 ## Policy record integration — 2026-10-04
 
 The human commanded merging the policy revision. Published revision tip `8e25b52acbb77eb7ebbbc69e32e433130cc7b0d0` was explicitly integrated into `feature/architecture-revision` as two-parent merge `606f6eea7a0a21b49f9300ecf40c7e5b202db644`; target parent `a3b2ad9bdbe68d42c32cdcdf0bd80fc2a598dad9`. Prospective checks validated four documents, 37 local links, full campaign baselines, no whitespace errors and no conflicts. The diff contains policy/assessment/plan/index records only; skills and acceptance are unchanged. Target push succeeded and exact remote readback matched the merge SHA. This publishes the preparation records; source revision actions V-001–V-008 remain planned.
+
+## Source implementation follow-up — campaign 019
+
+The human requested a new revision implementing this policy. [Campaign 019 implementation report](../019_609d084/REVISION-REPORT.md) records the source changes, verification and publication. R-001–R-003 are resolved in that source revision; this campaign's original proposal, baseline findings and preparation-only history remain retained. Dedicated live/client acceptance remains separate and pending.
