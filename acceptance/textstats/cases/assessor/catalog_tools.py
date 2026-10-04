@@ -47,8 +47,11 @@ def validate_contract(value, case_id):
         require(isinstance(check, dict) and isinstance(check.get('id'), str) and check['id'] and check['id'] not in seen, 'duplicate/invalid check')
         seen.add(check['id'])
         kind = check.get('kind')
-        allowed = {'literal':{'id','kind','key','expected'},'git':{'id','kind','field','expected','expected_ref'},'file':{'id','kind','path','exists','sha256'},'task_ownership':{'id','kind'}}
+        allowed = {'literal':{'id','kind','key','expected'},'git':{'id','kind','field','expected','expected_ref'},'file':{'id','kind','path','exists','sha256'},'task_ownership':{'id','kind','documents'}}
         require(kind in allowed and set(check) <= allowed[kind], 'invalid DSL fields')
+        if kind == 'task_ownership' and 'documents' in check:
+            try: core.validate_task_documents(check['documents'])
+            except core.Stop: raise ValueError('invalid task documents') from None
         if kind == 'literal':
             require(isinstance(check.get('key'),str) and check['key'] and 'expected' in check, 'invalid literal')
         elif kind == 'git':

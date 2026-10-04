@@ -1,10 +1,17 @@
-"""Portable, stdlib-only coordinator support; never performs a product workflow."""
+"""Portable, stdlib-only TextStats coordinator helpers.
+
+Own non-secret configuration, source pinning, bounded fresh preparation, actual
+Git/recovery observation and deterministic assessment. HELPER-INTERFACES.md is the
+canonical machine/operational contract. Helpers never perform an agent/product
+workflow or authenticate, commit, push or mutate hosted task objects. Preparation
+and recovery exports have explicit filesystem effects and are not transactions.
+"""
 import argparse
 import datetime
 import hashlib
 import json
 import os
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import re
 import shutil
 import stat
@@ -20,17 +27,32 @@ MISSING = 'Which dedicated test repository should this run use? Supply its URL o
 SECRET = re.compile(r'(?:github_pat_|gh[pousr]_|Bearer\s+)[A-Za-z0-9_\-]+', re.I)
 
 class Stop(Exception):
+    """Report a sanitized prerequisite or contract failure to the CLI.
+
+    Attributes:
+        cause: Stable non-secret failure category.
+        action: Safe continuation guidance, never a failed input or provider body."""
     def __init__(self, cause, action='Resolve the reported prerequisite before retrying.'):
         self.cause, self.action = cause, action
 
 
 def protected(path):
-    """Classify credential paths without opening them."""
+    """Classify a credential or Git-metadata path without reading its content.
+
+    Args:
+        path: A path whose components are checked case-insensitively.
+
+    Returns:
+        Whether a component matches a protected name, prefix or extension."""
     parts = Path(path).parts
     return any(p.lower() in {'.git', '.ssh', '.aws', '.credentials', 'credentials', '.env', 'gh.tkn', '.netrc', '.npmrc', '.pypirc', '.git-credentials', 'id_rsa', 'id_ed25519'} or p.lower().endswith(('.tkn', '.pem', '.key')) or p.lower().startswith('.env.') for p in parts)
 
 
 def sensitive_text(value):
+    """Detect recognizable token patterns and credential-bearing URLs in text.
+
+    Username-only SSH URLs are allowed; URL parse errors are treated as unsafe.
+    This is a conservative pattern check, not a general secret detector."""
     if SECRET.search(value): return True
     for matched in re.finditer(r"[A-Za-z][A-Za-z0-9+.-]*://[^\s<>\"'`]+", value):
         try:
@@ -45,6 +67,10 @@ def sensitive_text(value):
 
 
 def no_secret(value):
+    """Reject protected keys, recognizable secrets and NULs in JSON-like data.
+
+    Recurses through dictionaries/lists without mutating the value. Raises Stop
+    with invalid_nonsecret_configuration instead of echoing the failed value."""
     if isinstance(value, dict):
         for key, item in value.items():
             if key != 'protected_credentials' and re.fullmatch(r'(?:token|password|credentials?|secret|access_token|credential_path)', key, re.I):
@@ -57,12 +83,20 @@ def no_secret(value):
 
 
 def clean_bytes(data):
+    """Return bytes unchanged after screening their decoded text for secrets.
+
+    UTF-8 replacement decoding is used only for screening; binary bytes remain
+    intact. Raises Stop for recognizable sensitive content before export."""
     if sensitive_text(data.decode('utf-8', errors='replace')):
         raise Stop('sensitive_content_not_exportable', 'Retain protected content separately; do not publish it as test evidence.')
     return data
 
 
 def exact(left, right):
+    """Compare JSON-like values without type coercion.
+
+    Dictionary key order is irrelevant; array order and exact value types are
+    significant, so booleans cannot satisfy integer expectations."""
     if type(left) is not type(right): return False
     if isinstance(left, dict): return left.keys() == right.keys() and all(exact(left[k], right[k]) for k in left)
     if isinstance(left, list): return len(left) == len(right) and all(exact(a,b) for a,b in zip(left,right))
@@ -70,7 +104,16 @@ def exact(left, right):
 
 
 def validate(value, schema):
-    """Bounded validator for all keywords used by the bundle's version 1 schemas."""
+    """Validate the bounded keywords used by the bundle's version 1 schemas.
+
+    Args:
+        value: JSON-like data to check without mutation or type coercion.
+        schema: A trusted bundle schema using the supported keyword subset.
+
+    Raises:
+        Stop: The data violates a supported constraint (invalid_schema).
+
+    This is not a general JSON Schema implementation."""
     if 'anyOf' in schema:
         for child in schema['anyOf']:
             try: validate(value, child); break
@@ -105,6 +148,10 @@ def validate(value, schema):
 
 
 def load(path):
+    """Read JSON and screen it for protected values before returning it.
+
+    Raises Stop with invalid_json for read/parse errors, or a sanitized secret
+    failure. The caller controls the path; no file is modified."""
     try:
         data = json.loads(Path(path).read_text())
     except (OSError, ValueError): raise Stop('invalid_json')
@@ -113,6 +160,10 @@ def load(path):
 
 
 def configuration(path):
+    """Load strict version 1 inputs and apply non-secret helper defaults.
+
+    Missing repository input raises Stop with the dedicated setup question.
+    Successful validation returns a new dictionary without modifying inputs."""
     data = load(path)
     if isinstance(data,dict) and not str(data.get('test_repository','')).strip():
         raise Stop('missing_repository',MISSING)
@@ -123,6 +174,17 @@ def configuration(path):
 
 
 def checkpoint(path, inputs):
+    """Load an optional strict checkpoint and check supplied run/repo identity.
+
+    Args:
+        path: Checkpoint JSON path, or None to return None.
+        inputs: Resolved configuration used for identity comparisons.
+
+    Returns:
+        Validated checkpoint data, not proof of its freshness or actual effects.
+
+    Raises:
+        Stop: Invalid data or conflicting recorded run/repository identity."""
     if path is None: return None
     state = load(path)
     validate(state,load(BUNDLE/'schemas/run-state.schema.json'))
@@ -133,6 +195,22 @@ def checkpoint(path, inputs):
 
 
 def git(repo, *args, required=True, binary=False):
+    """Run one bounded Git command with captured output and no terminal prompt.
+
+    Args:
+        repo: Git command working directory.
+        *args: Already selected Git arguments; credential values are forbidden.
+        required: Raise Stop on a nonzero exit when true.
+        binary: Capture bytes instead of decoded text when true.
+
+    Returns:
+        subprocess.CompletedProcess for the attempted command.
+
+    Raises:
+        Stop: Launch/30-second timeout failure, or required command failure.
+
+    Optional locks and fsmonitor are disabled. This wrapper does not make an
+    arbitrary command read-only; callers own permitted Git effects."""
     env = dict(os.environ,GIT_OPTIONAL_LOCKS='0',GIT_TERMINAL_PROMPT='0')
     try:
         result = subprocess.run(['git','-c','core.fsmonitor=false','-C',str(repo),*args],capture_output=True,text=not binary,env=env,timeout=30)
@@ -142,11 +220,27 @@ def git(repo, *args, required=True, binary=False):
 
 
 def normalize(value):
+    """Normalize a repository locator for the helper's identity comparisons.
+
+    Local paths are expanded/resolved; transport locators lose a trailing slash
+    and .git suffix. SSH and HTTPS spellings are not unified by this helper."""
     if '://' in value or re.match(r'^[^/]+@[^:]+:',value): return value.rstrip('/').removesuffix('.git')
     return str(Path(value).expanduser().resolve())
 
 
 def remote_read(repo, remote):
+    """Read actual remote refs/default branch without fetching or writing.
+
+    Args:
+        repo: Git working directory used for ls-remote.
+        remote: Established remote name or non-secret locator.
+
+    Returns:
+        Status, full observed SHA-1 refs and optional symbolic default branch.
+        A nonzero response is unavailable, never evidence of absent refs.
+
+    Raises:
+        Stop: Git cannot be launched or completes beyond its bounded timeout."""
     result = git(repo,'ls-remote','--symref',remote,required=False)
     refs, default = {}, None
     if result.returncode: return {'status':'unavailable','refs':{},'default_branch':None}
@@ -161,6 +255,21 @@ def remote_read(repo, remote):
 
 
 def repository(inputs):
+    """Resolve the requested checkout and uniquely matching authorized remote.
+
+    Args:
+        inputs: Validated configuration with test_repository/local_checkout.
+
+    Returns:
+        Repository identity, local state, retained run paths and live remote
+        readback. URL/bare-remote input can return no local checkout. The local
+        branch is a fallback integration candidate when no default is observed.
+
+    Raises:
+        Stop: Ineligible/ambiguous checkout, mismatched or ambiguous remotes,
+            protected locators, or unavailable required Git operations.
+
+    Reads only; ref discovery does not certify write access or authorization."""
     identified = inputs['test_repository']
     explicit = inputs.get('local_checkout')
     local = Path(explicit or identified).expanduser()
@@ -192,6 +301,23 @@ def repository(inputs):
 
 
 def package(source, inputs):
+    """Pin supported package files to Git objects or an explicit dirty snapshot.
+
+    Args:
+        source: Eligible source Git checkout.
+        inputs: Resolved plugin_revision and committed/dirty source_mode.
+
+    Returns:
+        A (provenance, files) pair. Provenance records full commit, exact hashes,
+        modes, changed paths and mode-sensitive fingerprint; files maps relative
+        package paths to exact binary bytes.
+
+    Raises:
+        Stop: Missing manifest/revision, unsupported modes/symlinks, protected
+            paths/content, or dirty mode requested against a non-current HEAD.
+
+    Reads source only. Dirty snapshots include nonignored untracked package
+    files; default committed snapshots ignore pending source edits."""
     source=Path(source).resolve()
     commit=git(source,'rev-parse','--verify',inputs['plugin_revision']+'^{commit}').stdout.strip()
     if not re.fullmatch('[0-9a-f]{40}',commit): raise Stop('source_revision_unavailable')
@@ -232,12 +358,30 @@ def package(source, inputs):
 
 
 def preflight(inputs, source):
+    """Observe repository/source/runtime prerequisites without certification.
+
+    Returns non-secret provenance and conservative false capability flags.
+    Remote read access cannot establish publication/API/agent/client facilities.
+    Repository or package prerequisite failures propagate as Stop."""
     repo=repository(inputs)
     pinned,_=package(source,inputs)
     return {'schema_version':1,'resolved_inputs':inputs,'repository':repo,'plugin_source':pinned,'runtime':{'python':sys.version.split()[0],'git':git(source,'--version').stdout.strip()},'capabilities':{'git_publication':False,'github_api':False,'fresh_consumers':False,'independent_assessor':False,'installed_client':False,'notes':['Remote refs are read-only observations; write access and external agent/API facilities are not certified by this helper.']},'next_action':'Reconcile an existing run before continuation; otherwise reserve a distinct isolated workspace.'}
 
 
 def write_new(path, value):
+    """Write screened JSON exclusively to a new evidence path.
+
+    Args:
+        path: Caller-selected output path; missing parents are created.
+        value: JSON-serializable non-secret content.
+
+    Raises:
+        Stop: Output already exists (including dangling symlinks) or screening
+            rejects a value.
+        OSError: Directory/file creation or writing fails.
+
+    An exclusive leaf create preserves older attempts. The JSON write is not
+    atomic; an interrupted write can leave a new incomplete attempt."""
     path=Path(path)
     if path.exists() or path.is_symlink(): raise Stop('output_occupied','Retain existing evidence and choose a new output path.')
     no_secret(value)
@@ -247,6 +391,25 @@ def write_new(path, value):
 
 
 def prepare(inputs, source, workspace):
+    """Create a fresh isolated clone containing pinned package/provenance only.
+
+    Args:
+        inputs: Validated fresh-run configuration; run_id is not allowed.
+        source: Source package checkout used for pinning.
+        workspace: Explicit absent destination, including no dangling symlink.
+
+    Returns:
+        Preflight data updated with new workspace and pinned resource paths.
+
+    Raises:
+        Stop: Discovery/pinning failure, resume request, occupied destination or
+            run resources, or clone/remote configuration failure.
+        OSError: Workspace or resource writing fails.
+
+    Writes only the new clone/resources and bounded empty-repository operating
+    files; preserves its authorized origin. Never commits, pushes, authenticates
+    or implements TextStats. Failure may leave a partial new workspace; this is
+    not a rollback or resume driver."""
     info=preflight(inputs,source)
     if inputs.get('run_id'): raise Stop('resume_not_fresh','Use observe with the retained checkpoint; do not replay setup.')
     if workspace is None: raise Stop('workspace_required','Select an explicit new isolated workspace using --workspace.')
@@ -289,11 +452,26 @@ def prepare(inputs, source, workspace):
 
 
 def paths(repo,*args):
+    """Return sorted nonempty paths from a selected NUL-delimited Git query.
+
+    Arguments must request NUL-delimited path output. UTF-8 path decoding and
+    required Git errors propagate; no workspace write is performed here."""
     return sorted(filter(None,git(repo,*args,binary=True).stdout.decode('utf-8').split('\x00')))
 
 
 def ancestor_containment(root, candidate, destination):
-    """Return True/False only for proven containment/non-containment; otherwise None."""
+    """Prove commit containment/non-containment locally, or return None.
+
+    Args:
+        root: Checkout containing the candidate/destination commit objects.
+        candidate: Commit whose publication is being assessed.
+        destination: Observed remote destination tip.
+
+    Returns:
+        True for proven ancestry; False for non-ancestry with usable complete
+        local graphs; None for unavailable objects/ancestry or shallow uncertainty.
+
+    Does not fetch missing objects or authorize an operation retry."""
     try:
         if any(git(root,'cat-file','-e',commit+'^{commit}',required=False).returncode for commit in (candidate,destination)): return None
         result=git(root,'merge-base','--is-ancestor',candidate,destination,required=False)
@@ -309,6 +487,21 @@ def ancestor_containment(root, candidate, destination):
 
 
 def observe_git(repo_info):
+    """Capture actual checkout/index/merge state against supplied remote readback.
+
+    Args:
+        repo_info: repository() result with local_checkout/remote_observation.
+
+    Returns:
+        HEAD/branch/parents, exact index stages, changed paths, local refs/worktrees
+        and publication/containment assessment. Unknown ancestry/access remains
+        unknown; local tracking refs do not establish publication.
+
+    Raises:
+        Stop: No local checkout, unavailable required Git data or unsafe metadata.
+
+    Reads the checkout and uses the provided remote observation; it does not
+    fetch, mutate index/files or independently refresh that observation."""
     root=repo_info['local_checkout']
     if not root: raise Stop('local_checkout_required')
     head=git(root,'rev-parse','--verify','HEAD',required=False).stdout.strip() or None
@@ -342,6 +535,19 @@ def observe_git(repo_info):
 
 
 def reconcile(actual, state, repo_info):
+    """Assess a recorded pending effect from actual destination evidence.
+
+    Args:
+        actual: Current observe_git() result.
+        state: Validated checkpoint, or None.
+        repo_info: Resolved repository and remote identity.
+
+    Returns:
+        Effect category and retry_safe false. An explicit pending ref overrides
+        branch fallback; repository mismatch/unavailable containment stays unknown.
+        Uncertain API effects require separate hosted readback.
+
+    Never replays a write or infers that readback itself authorizes replay."""
     operation=(state or {}).get('pending_operation')
     result={'effect':'none','retry_safe':False}
     if not operation: return result
@@ -370,6 +576,29 @@ def reconcile(actual, state, repo_info):
 def export_recovery(root, actual, output, state=None):
     # Git runs in the consumer checkout; Python and Git must share the caller's path.
     # Keep the lexical target so dangling symlinks still count as occupied evidence.
+    """Export bounded Git/index/nonignored work state beside a new output path.
+
+    Args:
+        root: Consumer checkout; its files/index/refs remain unchanged.
+        actual: Current observe_git() state to export, not a stale checkpoint.
+        output: Observation path; export is an adjacent .recovery directory.
+        state: Optional checkpoint supplying additional retained commit roots.
+
+    Returns:
+        Absolute export path, manifest hash, declared completeness and local-only
+        publication. Completeness covers declared eligible state, not credentials,
+        ignored files, submodule working state or arbitrary machine resources.
+
+    Raises:
+        Stop: Occupied export, sensitive content, unsafe work paths or unavailable
+            required Git operations.
+        OSError: Artifact reading/writing fails.
+
+    Writes hashed blobs/workfiles, patches, merge metadata and, when eligible, a
+    verified bundle. Protected paths are omitted without reading content;
+    protected history or unavailable required roots prevent a complete export.
+    Failure may leave partial new artifacts. Restoration/publication is external
+    coordinator work and requires independent integrity/equivalence checks."""
     destination=Path(str(output)+'.recovery').absolute()
     if destination.exists() or destination.is_symlink(): raise Stop('recovery_export_occupied')
     # Inspect eligible content before writing an export, excluding protected paths entirely.
@@ -446,6 +675,20 @@ def export_recovery(root, actual, output, state=None):
 
 
 def observation(inputs,state,output,exports=True):
+    """Combine real repository/Git state, pending-effect assessment and exports.
+
+    Args:
+        inputs: Resolved configuration.
+        state: Validated checkpoint used only as pending-operation context.
+        output: Caller-selected new observation path for export placement.
+        exports: Whether to create adjacent recovery artifacts.
+
+    Returns:
+        Non-secret observation and continuation advice; recorded checkpoint state
+        is explicitly not trusted as current reality. Does not write output JSON.
+
+    Reads the consumer and optionally writes recovery artifacts; no operation is
+    replayed. Discovery/export failures propagate to the CLI."""
     repo=repository(inputs)
     actual=observe_git(repo)
     effect=reconcile(actual,state,repo)
@@ -460,60 +703,190 @@ def observation(inputs,state,output,exports=True):
 
 
 def relative(root,name):
+    """Resolve a safe nonprotected check path beneath a repository root.
+
+    Rejects absolute/parent-traversal paths, leaf symlinks and resolved escapes.
+    Existence is caller-specific. Ownership additionally rejects symlink parents.
+    Raises Stop with invalid_check_path without exposing the failed value."""
     if not isinstance(name,str) or not name or Path(name).is_absolute() or '..' in Path(name).parts or protected(name): raise Stop('invalid_check_path')
     path=Path(root)/name
     if path.is_symlink() or not path.resolve().is_relative_to(Path(root).resolve()): raise Stop('invalid_check_path')
     return path
 
 
-def ownership(root):
-    """Current checkbox/table ownership, excluding historical review/feature snapshots."""
-    documents=[]
-    owners={}
-    pending=sorted(p for p in Path(root).rglob('*.md') if p.name in {'TASKS.md','FEATURE-TASKS.md'} and '.git' not in p.parts)
-    seen=set()
-    while pending:
-        path=pending.pop(0)
-        rel=path.relative_to(root)
-        if any('archive' in p.lower() or p.lower() in {'features','reviews','textstats-run-resources'} for p in rel.parts[:-1]): continue
-        path=relative(root,str(rel))
+def task_history(path):
+    """Classify historical/vendor parent directories excluded from active owners.
+
+    The filename itself is not a history marker. This is the retained bundle
+    convention, not a general repository archival detector."""
+    return any('archive' in part.lower() or part.lower() in {'.git', 'features', 'reviews', 'textstats-run-resources'} for part in Path(path).parts[:-1])
+
+
+def validate_task_documents(documents):
+    """Validate the additive ownership option without opening any document.
+
+    Args:
+        documents: Nonempty list of unique normalized slash-separated Markdown
+            paths, relative to the consumer repository root.
+
+    Returns:
+        The original list when syntax, protection and history exclusions hold.
+
+    Raises:
+        Stop: Invalid option shape/path (invalid_contract).
+
+    Catalog and runtime use this same syntax contract; runtime separately checks
+    existence, file kind and symlinks. This does not certify list completeness."""
+    if not isinstance(documents, list) or not documents: raise Stop('invalid_contract')
+    seen = set()
+    for name in documents:
+        if not isinstance(name, str) or not name or any(c in name for c in ('\\', ':', '\x00')):
+            raise Stop('invalid_contract')
+        path = PurePosixPath(name)
+        if path.is_absolute() or str(path) != name or any(part in {'.', '..'} for part in path.parts) or not name.endswith('.md') or protected(name) or task_history(name) or name in seen:
+            raise Stop('invalid_contract')
+        seen.add(name)
+    return documents
+
+
+def task_identifier(value):
+    """Return exact case-sensitive ID from a supported plain/code/bold token.
+
+    Accepts ASCII alphanumeric segments joined by hyphens/underscores, beginning
+    with a letter and containing a digit or separator. Raises Stop for malformed
+    or ambiguous tokens; never truncates a bad ID into a valid prefix."""
+    value = value.strip()
+    if value.startswith('`') and value.endswith('`'): value = value[1:-1]
+    elif value.startswith('**') and value.endswith('**'): value = value[2:-2]
+    if not re.fullmatch(r'[A-Za-z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*', value) or not any(c.isdigit() or c in '-_' for c in value):
+        raise Stop('invalid_task_identifier')
+    return value
+
+
+def task_lines(content):
+    """Yield original line numbers/text outside supported fenced examples.
+
+    Backtick/tilde fences may be indented in task details. Closing markers must
+    match kind, meet opening length and have no text suffix. Unclosed/malformed
+    fences raise Stop; the generator must be exhausted to establish validity."""
+    fence = None
+    for number, line in enumerate(content.splitlines(), 1):
+        marker = re.match(r'^\s*(`{3,}|~{3,})(.*)$', line)
+        if fence:
+            if marker and marker[1][0] == fence[0] and len(marker[1]) >= fence[1] and not marker[2].strip(): fence = None
+            continue
+        if marker:
+            if marker[1][0] == '`' and '`' in marker[2]: raise Stop('invalid_task_collection')
+            fence = (marker[1][0], len(marker[1]))
+            continue
+        yield number, line
+    if fence: raise Stop('invalid_task_collection')
+
+
+def task_rows(content):
+    """Yield (line, ID, status) from supported executable checkbox/table rows.
+
+    Phase/milestone checkbox parents are excluded; task IDs preserve identity.
+    Tables need one ID/Task ID and Status column plus a separator row. Fenced
+    examples are skipped; malformed candidates raise Stop instead of disappearing.
+    Status strings represent source claims, not verified completion."""
+    headers = None
+    separator = False
+    for number, line in task_lines(content):
+        checkbox = re.match(r'^\s*[-*+]\s+\[([^]]*)\](?:\s+(.*))?$', line)
+        if checkbox:
+            if headers is not None and not separator: raise Stop('invalid_task_collection')
+            headers = None
+            text = checkbox[2] or ''
+            if checkbox[1] not in {' ', 'x', 'X'}: raise Stop('invalid_task_collection')
+            if re.match(r'^(?:Phase|Milestone)\s+[A-Za-z0-9]+(?:[._-][A-Za-z0-9]+)*(?:\s|$)', text): continue
+            token = text.split()[0] if text.split() else ''
+            yield number, task_identifier(token), 'Checked' if checkbox[1].lower() == 'x' else 'Unchecked'
+        elif line.strip().startswith('|'):
+            cells = [cell.strip() for cell in line.strip().strip('|').split('|')]
+            normalized = [cell.strip('`*').lower().replace(' ', '_') for cell in cells]
+            if 'id' in normalized or 'task_id' in normalized:
+                if headers is not None and not separator: raise Stop('invalid_task_collection')
+                if sum(normalized.count(key) for key in ('id', 'task_id')) != 1 or normalized.count('status') != 1 or len(set(normalized)) != len(normalized):
+                    raise Stop('invalid_task_collection')
+                headers, separator = normalized, False
+            elif headers is not None:
+                if len(cells) != len(headers): raise Stop('invalid_task_collection')
+                is_separator = all(re.fullmatch(r':?-+:?', cell) for cell in cells)
+                if not separator:
+                    if not is_separator: raise Stop('invalid_task_collection')
+                    separator = True
+                else:
+                    if is_separator: raise Stop('invalid_task_collection')
+                    row = dict(zip(headers, cells))
+                    if not row['status']: raise Stop('invalid_task_collection')
+                    yield number, task_identifier(row.get('id', row.get('task_id'))), row['status']
+            elif 'status' in normalized:
+                raise Stop('invalid_task_collection')
+        else:
+            if headers is not None and not separator: raise Stop('invalid_task_collection')
+            headers = None
+    if headers is not None and not separator: raise Stop('invalid_task_collection')
+
+
+def ownership(root, documents=None):
+    """Collect actual executable owners from active roots and explicit children.
+
+    Args:
+        root: Consumer repository root.
+        documents: Optional additive list validated by validate_task_documents().
+
+    Returns:
+        Inspected relative document paths and a map from exact task ID to its
+        document, original line number and source status.
+
+    Raises:
+        Stop: Unsafe/missing document, malformed candidate/fence, duplicate task
+            ID or empty task collection.
+
+    Reads non-secret Markdown only. History/vendor roots and ordinary links are
+    excluded; repeated selection of one document is deduplicated. Independent
+    assessment must establish whether the selected lists cover the project."""
+    root = Path(root).resolve()
+    selected = sorted(p for p in root.rglob('*.md') if p.name in {'TASKS.md', 'FEATURE-TASKS.md'} and not task_history(p.relative_to(root)))
+    if documents is not None:
+        selected.extend(root / name for name in validate_task_documents(documents))
+    owners, inspected, seen = {}, [], set()
+    for path in selected:
+        rel = path.relative_to(root)
+        path = relative(root, str(rel))
+        if any(parent.is_symlink() for parent in path.parents if parent.is_relative_to(root)) or not path.is_file():
+            raise Stop('invalid_task_document')
         if path in seen: continue
         seen.add(path)
-        documents.append(str(rel))
-        content=clean_bytes(path.read_bytes()).decode()
-        headers=None
-        for number,line in enumerate(content.splitlines(),1):
-            checkbox=re.match(r'^\s*[-*+]\s+\[([ xX])\]\s+[`*]*(T-[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)\b',line)
-            identifier=None
-            status=None
-            if checkbox: identifier=checkbox[2]; status='Checked' if checkbox[1].lower()=='x' else 'Unchecked'
-            elif line.strip().startswith('|'):
-                cells=[c.strip().strip('`*') for c in line.strip().strip('|').split('|')]
-                normalized=[c.lower().replace(' ','_') for c in cells]
-                if 'id' in normalized or 'task_id' in normalized:
-                    headers=normalized
-                    if 'status' not in headers: raise Stop('invalid_task_collection')
-                    continue
-                if headers is not None and not all(re.fullmatch(r':?-+:?',c) for c in cells):
-                    if len(cells)!=len(headers): raise Stop('invalid_task_collection')
-                    row=dict(zip(headers,cells))
-                    identifier=row.get('id',row.get('task_id'))
-                    status=row['status']
-                    if not identifier: raise Stop('invalid_task_collection')
-            else: headers=None
-            if identifier:
-                if identifier in owners: raise Stop('duplicate_task_ownership')
-                owners[identifier]={'document':str(rel),'line':number,'status':status}
-        for target in re.findall(r'\[[^]]+\]\(([^)]+)\)',content):
-            target=target.split('#',1)[0]
-            if ':' not in target and target.endswith('.md'):
-                child=(path.parent/target).resolve()
-                if child.is_relative_to(Path(root).resolve()) and child.is_file(): pending.append(child)
+        inspected.append(str(rel))
+        content = clean_bytes(path.read_bytes()).decode()
+        for number, identifier, status in task_rows(content):
+            if identifier in owners: raise Stop('duplicate_task_ownership')
+            owners[identifier] = {'document': str(rel), 'line': number, 'status': status}
     if not owners: raise Stop('empty_task_collection')
-    return {'documents':documents,'owners':owners}
+    return {'documents': inspected, 'owners': owners}
 
 
 def assessment(inputs,state,contract_path,evidence_path):
+    """Evaluate strict deterministic checks without running product commands.
+
+    Args:
+        inputs: Resolved repository configuration.
+        state: Validated checkpoint for optional expected_ref bindings.
+        contract_path: Optional version 1 DSL path; None yields Not run.
+        evidence_path: Optional independently captured literal evidence path.
+
+    Returns:
+        (result, exit_code): code 0 for passed/Not run, 1 for failed invariants.
+        Result always states agent_behavior_assessed false.
+
+    Raises:
+        Stop: Invalid contract/path/source evidence or prerequisite data. Ordinary
+            missing literal/ownership invariants are recorded as failed checks.
+
+    Reads actual files/Git/owners and supplied literals, never authenticates,
+    commits, repairs or writes the result. Expected refs do not prove freshness."""
     if not contract_path:
         return {'schema_version':1,'status':'Not run','checks':[],'agent_behavior_assessed':False,'reason':'No deterministic contract supplied.'},0
     contract=load(contract_path)
@@ -533,8 +906,9 @@ def assessment(inputs,state,contract_path,evidence_path):
         if type(check) is not dict or type(check.get('id')) is not str or not check['id'] or check['id'] in identifiers: raise Stop('invalid_contract')
         identifiers.add(check['id'])
         kind=check.get('kind')
-        allowed={'literal':{'id','kind','key','expected'},'git':{'id','kind','field','expected','expected_ref'},'file':{'id','kind','path','exists','sha256'},'task_ownership':{'id','kind'}}
+        allowed={'literal':{'id','kind','key','expected'},'git':{'id','kind','field','expected','expected_ref'},'file':{'id','kind','path','exists','sha256'},'task_ownership':{'id','kind','documents'}}
         if kind not in allowed or set(check)-allowed[kind]: raise Stop('invalid_contract')
+        if kind == 'task_ownership' and 'documents' in check: validate_task_documents(check['documents'])
         expected=check.get('expected')
         if kind=='git':
             if ('expected' in check)==('expected_ref' in check): raise Stop('invalid_contract')
@@ -562,7 +936,7 @@ def assessment(inputs,state,contract_path,evidence_path):
                 passed=('exists' not in check or path.exists()==check['exists'])
                 if 'sha256' in check: passed=passed and path.is_file() and hashlib.sha256(clean_bytes(path.read_bytes())).hexdigest()==check['sha256']
             else:
-                ownership(repo['local_checkout']); passed=True
+                ownership(repo['local_checkout'], check.get('documents')); passed=True
             rows.append({'id':check['id'],'status':'Passed' if passed else 'Failed','reason':'Literal invariant satisfied.' if passed else 'Literal invariant differs.'})
         except Stop as error:
             if error.cause in {'invalid_contract','invalid_check_path','invalid_expected_ref','sensitive_content_not_exportable'}: raise
@@ -572,6 +946,18 @@ def assessment(inputs,state,contract_path,evidence_path):
 
 
 def main(command):
+    """Dispatch one helper CLI and publish only a new screened output artifact.
+
+    Args:
+        command: preflight, prepare, observe or assess; argv supplies its inputs.
+
+    Returns:
+        0 for successful helper output, 1 for failed deterministic checks, or 2
+        with generic non-secret stdout for blocked/invalid operations. argparse
+        handles CLI usage failures separately.
+
+    A failure never replaces existing evidence. Prepare/recovery side effects
+    follow their own contracts; partial newly created artifacts may remain."""
     parser=argparse.ArgumentParser(description='TextStats portable coordinator support; no authentication, publication or agent workflow execution.')
     parser.add_argument('--inputs',required=True,type=Path)
     parser.add_argument('--output',required=True,type=Path)

@@ -122,3 +122,7 @@ The human requested an implementation plan and explicitly deferred campaign 011 
 | TODO-017-002 | Live/client acceptance / E-001/E-002 | Pending; separate later review. |
 
 Both TODOs must remain visible in the future revision report and handoff; completing the selected repairs cannot establish their completion.
+
+## Revision disposition — 2026-10-04
+
+The human commanded the prepared revision. R-001/R-002 ownership behavior and R-003 helper documentation have been repaired and rechecked; actual action evidence and integration status are recorded in [REVISION-REPORT.md](REVISION-REPORT.md). Original baseline findings/probe outputs are retained. TODO-017-001 campaign 011 QC implementation and TODO-017-002 live/client acceptance remain pending for a separate later review, outside this revision.

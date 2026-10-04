@@ -1,3 +1,7 @@
+"""Preflight and fresh-preparation contract tests using isolated Git fixtures.
+
+Checks source pinning, protected configuration, repository identity and bounded
+setup without authenticating, publishing hosted work or changing source inputs."""
 import json
 from pathlib import Path
 import sys
