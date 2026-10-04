@@ -9,6 +9,8 @@ Default to an early meaningful end-to-end MVP followed by small, testable capabi
 
 Choose the requested work and load only its references. A request for complete delivery planning develops both PLAN and layout when physical ownership needs to be established; a focused request to review or revise one document does not automatically authorize rewriting the other.
 
+Apply **sdd-conventions**' **Development-document QC** reference (`skills/sdd-conventions/references/development-document-qc.md`, bundled dependency). Authoring includes scoped review, correction/recheck and the adjacent report before dependent progression; pure review does not authorize corrections.
+
 | Work | Load |
 | --- | --- |
 | Prepare both delivery strategy and physical placement for task derivation | [delivery plan](references/delivery-plan.md) and [physical layout](references/physical-layout.md) |

@@ -64,3 +64,7 @@ The merge was pushed to origin/feature/architecture-revision. Actual ls-remote r
 Remaining TODOs are unchanged: **TODO-017-001 campaign 011 QC implementation** and **TODO-017-002 live/client acceptance**, both pending for a separate later review. No current in-scope blocker or additional deferred repair was established. Python 3.12.14 was executed; Python 3.11 syntax was checked but its runtime and other platforms were not executed. Passing helper/catalog checks establish neither fresh-agent workflow execution nor installed/live-provider acceptance.
 
 Stop boundary: completed, verified and published campaign 017 support revision. Retain the working branch. Do not start either pending TODO or merge main automatically.
+
+## Later TODO disposition — campaign 019
+
+TODO-017-001 is completed by the separately authorized [Campaign 019 QC implementation](../019_609d084/REVISION-REPORT.md). This updates its current disposition without changing campaign 017's original scope or evidence. TODO-017-002 live/client acceptance remains pending separately.

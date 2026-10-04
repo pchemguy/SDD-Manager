@@ -17,6 +17,8 @@ Use the relevant convention only when its concern occurs in the current work. Re
 
 - **Workflow identity:** Read [workflow identity](references/workflow-identity.md) when allocating revision/feature campaign identities, naming workflow branches, or locating active and retained workflow artifacts.
 
+- **Development-document QC:** Read [development-document QC](references/development-document-qc.md) when authoring/reviewing SPEC, PLAN or TASKS, evaluating delivery decomposition, establishing stage readiness, or reassessing affected feature/steering documents.
+
 - **Review campaigns:** Read [review campaigns](references/review-campaigns.md) when organizing review/revision plans and reports, assigning campaign/finding identities, or retaining findings and evidence alongside governing project documents.
 
 - **Hosting tokens:** Read [hosting tokens](references/hosting-tokens.md) when discovering, storing, or supplying repository credentials, or recovering shell/backend authentication.

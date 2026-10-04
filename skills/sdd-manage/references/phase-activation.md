@@ -8,3 +8,7 @@ Use the [backend object lifecycle](../../sdd-conventions/references/backend-obje
 4. Hand off eligible tasks, exact phase identity, report prefix, applicable exits and confirmed/pending hosted state to sdd-implement. Respect count/boundary selection. Never create later-phase objects or run later tasks solely because the full backlog is available.
 
 On continuation, recover the same phase identity and confirmed objects rather than allocating another phase. Finish missing creation/associations with readback and preserve unrelated objects. Before next-phase activation, reconcile pending task/milestone closures and existing merge/publication; unknown effects block that transition. Independent local work in an already activated phase remains governed by its requested range and actual dependencies.
+
+## Preparation readiness before projection
+
+Before creating the eligible phase's hosted objects or starting its first task, establish current owning TASKS/PLAN/SPEC readiness under [document QC gates](document-qc-gates.md). This adds no administrative task or phase and does not activate future phases. Resolve focused missing assessment within scope; stale or confirmed blocked inputs stop dependent projection/execution. Existing issue/milestone closure still follows verified implementation lifecycle evidence, not a document Ready label.

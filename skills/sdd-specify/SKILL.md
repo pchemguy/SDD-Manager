@@ -7,6 +7,8 @@ description: Use when creating, reviewing, or revising docs/dev/SPEC.md, focused
 
 Choose the requested operation and load only its reference. Enter directly when adequate decisions and project evidence exist; do not replay design exploration as ceremony.
 
+Apply **sdd-conventions**' **Development-document QC** reference (`skills/sdd-conventions/references/development-document-qc.md`, bundled dependency). Authoring includes scoped review, correction/recheck and the adjacent report before dependent progression; pure review does not authorize corrections.
+
 | Work | Load |
 | --- | --- |
 | Create or revise the complete intended system specification | [system specification](references/system-specification.md) |

@@ -111,6 +111,12 @@ The coordinator handles workflow selection and shared prerequisites. Focused ski
 | [sdd-report](skills/sdd-report/SKILL.md) | Draft issues, commit messages, PR descriptions, and evidence-backed progress reports. |
 | [sdd-forge](skills/sdd-forge/SKILL.md) | Project tasks to GitHub and reconcile verified issue status. |
 
+## Development-document quality gates
+
+Completed SPEC is reviewed against accepted PROJECT/design before PLAN; PLAN and relevant layout are reviewed against SPEC before TASKS; TASKS is reviewed against PLAN before implementation or hosted projection. Authoring includes scoped correction/recheck and an adjacent `SPEC-REVIEW-REPORT.md`, `PLAN-REVIEW-REPORT.md` or `TASKS-REVIEW-REPORT.md` (feature counterparts beside their roots). Confirmed unresolved issues block dependent progression. Reports retain original findings and append Revision N correction/recheck evidence; read-only review does not authorize repairs.
+
+Prefer 3–5 delivery milestones per phase and delivery tasks per milestone when the scope supports it. Review 1–2 groups for fragmentation and 10+ for overloading/drift; assess semantic scope in every range. Exclude dedicated review units from delivery counts while retaining their mandatory execution. Justify narrow groups and avoid padding or quota-driven splits. See [shared QC policy](skills/sdd-conventions/references/development-document-qc.md) and [coordinator gates](skills/sdd-manage/references/document-qc-gates.md).
+
 ## Development documents
 
 The main documents describe the complete intended project. Task lists record executable work and evidence-backed progress. Roots can link to focused children when a concern needs substantial detail.
@@ -142,6 +148,8 @@ A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, 
 ## Package status and references
 
 The backend lifecycle now defines phase-gated hosted creation, dedicated boundary review/report tasks, milestone closure, workflow-specific report placement and interruption reconciliation. [Campaign 010](docs/dev/reviews/010_3f56922/REVISION-REPORT.md) records source and consumer verification; live acceptance of these new rules remains pending a dedicated test repository.
+
+[Campaign 019](docs/dev/reviews/019_609d084/REVISION-REPORT.md) implements the development-document QC policy prepared in campaign 011, with source verification and local reviewer/correction-cycle evidence. Dedicated live/client acceptance remains a separate pending follow-up.
 
 All 15 skills are included. Structural validation and independent coordination assessments have been exercised. The [runtime acceptance campaign](docs/dev/reviews/008_98a5562/REVISION-REPORT.md) records actual fresh-agent workflows through explicit skill-source loading, live GitHub tracking/publication, and controlled failure/recovery fixtures. Installed-client discovery, routing and activation remain untested; available journals are not complete native transcripts. All 27 scoped cases passed independent assessment; source integration is recorded in the campaign report.
 

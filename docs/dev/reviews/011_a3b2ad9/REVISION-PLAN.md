@@ -35,3 +35,7 @@ Use the current campaign/branch for the accepted source revision; maintain actua
 An accepted revision implementation command includes routine commits, established-destination pushes and verified integration/publication under the coordinator's explicit authorization policy. Persist coherent source/report checkpoints, verify the complete boundary and stop at its authorized completion or actual blocker. Existing user limits and enforced permissions remain binding.
 
 No new skill is proposed. Review responsibility stays with the artifact owner; the coordinator enforces progression, report composes evidence, and upstream owners settle necessary decisions. Live acceptance prerequisites remain a dedicated repository and appropriate runtime/provider facilities where execution claims require them; historical support tests cannot prove new QC workflows ran.
+
+## Source implementation follow-up — campaign 019
+
+The human requested a new revision implementing this policy. [Campaign 019 implementation report](../019_609d084/REVISION-REPORT.md) records the source changes, verification and publication. R-001–R-003 are resolved in that source revision; this campaign's original proposal, baseline findings and preparation-only history remain retained. Dedicated live/client acceptance remains separate and pending.

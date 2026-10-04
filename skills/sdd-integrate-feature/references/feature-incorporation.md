@@ -56,3 +56,11 @@ For a withdrawn feature, preserve historical evidence and resolve completed/rema
 - **Finish:** Check selected document consistency, links, task identity/ownership, and retained sources. Report coherent changes and unresolved dependencies to **sdd-manage** for commit/push and default explicit Git integration of the authorized boundary. Within a larger feature campaign, persist this document checkpoint on its branch and leave final merge to that campaign's boundary. Partial or conflicting incorporation is not a successful merge prerequisite.
 
 Branch isolation protects the target from unpublished partial edits; it does not make individual working-branch edits transactional. No automatic rollback, reset, separate journal, or implementation invocation is required.
+
+## Conformance after incorporation and archive
+
+Material selected incorporation/reconciliation requires affected preparation QC under **sdd-manage**'s **Document QC gates**, using sdd-specify/sdd-plan/sdd-tasks assessment criteria while this workflow retains correction ownership. Persist selected corrected roots/children and their adjacent report/recheck evidence together within authorized scope. A feature review does not establish current full main-document conformance. Append Revision N cycles and retain original findings.
+
+Do not expand a SPEC-only or literal selected-path request to amend unselected PLAN/TASKS or their reports. Report their affected invalidation and block dependent use until authorized reassessment; the coherent selected incorporation can finish without claiming whole-project readiness. Required selected-root QC whose report paths are explicitly forbidden is a scope conflict to resolve before claiming that preparation gate passed.
+
+When selected feature sources become archive-eligible, move their associated QC reports with them, preserving adjacency/basenames, original reviewed identity/history and valid in-scope links. Retain a source/report pair if required link repairs or either move is outside scope. Preparation QC reports are distinct from milestone/phase implementation reports, which keep their established feature prefix. Recheck main-owner readiness independently; archived Ready is historical only.
