@@ -721,7 +721,7 @@
       "order": 19,
       "phase": "P4",
       "dependencies": [
-        "A-005"
+        "A-006"
       ],
       "mode": "isolated-trial",
       "consumer_input": "cases/consumer/A-019.md",
@@ -729,16 +729,18 @@
       "assessor_guide": "cases/assessor/A-019.md",
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
-        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects."
+        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
+        "Actual complete reviewed phase retained as incoming parent of assessed A006 merge; isolate pre-integration target/incoming parents and verify all exits before trial divergence."
       ],
       "checkpoint_bindings": {
         "start": {
-          "from_case": "A-005",
+          "from_case": "A-006",
           "checkpoint_fields": [
             "product_commit",
             "product_branch",
             "integration_commit",
-            "integration_branch"
+            "integration_branch",
+            "merge_parents"
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."

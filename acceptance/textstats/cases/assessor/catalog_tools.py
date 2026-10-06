@@ -154,6 +154,9 @@ def render(case_id, bindings, root=BUNDLE, bindings_root=None, variant=None):
         refs = p.get('checkpoint_refs',{})
         require(graded.get('checkpoint_refs')==refs, 'assessment checkpoint mismatch')
         for field in c['checkpoint_bindings']['start']['checkpoint_fields']:
+            if field=='merge_parents':
+                require(isinstance(refs.get(field),list) and len(refs[field])==2 and all(re.fullmatch('[a-f0-9]{40}',str(x)) for x in refs[field]), 'missing actual two-parent integration')
+                continue
             require(isinstance(refs.get(field),str) and refs[field], 'missing predecessor ref')
             if field.endswith('commit'): require(bool(re.fullmatch('[a-f0-9]{40}',refs[field])), 'invalid actual commit')
         repository = p.get('local_checkout')
