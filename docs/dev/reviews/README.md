@@ -28,6 +28,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `022_4d24148` | README control-flow diagrams for preparation, implementation/continuation, steering and review/revision; documentation checked, explicitly merged and published. | [Revision report](022_4d24148/REVISION-REPORT.md) |
 
-| `023_642e93d` | Root manifest copy, packaged README/license and root SVG logo naming; source/support verification recorded. | [Revision report](023_642e93d/REVISION-REPORT.md) |
+| `023_642e93d` | Root manifest copy, packaged README/license and root SVG logo naming; 107 support tests Passed, explicitly integrated and published as 0.14.6. | [Revision report](023_642e93d/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
