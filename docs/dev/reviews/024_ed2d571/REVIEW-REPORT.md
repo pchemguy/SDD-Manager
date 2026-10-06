@@ -2,14 +2,14 @@
 
 Campaign **024_ed2d571**, source **ed2d571d20aa8ad6ee77f25ad89602e82e6a653b**, version **0.14.6**, 2026-10-06. See [review plan](REVIEW-PLAN.md).
 
-State: review in progress. No release verdict yet. Report-only branch `revision/024_ed2d571-pre-release-review`; source target `feature/architecture-revision`. Tracked source was clean at orientation; unrelated untracked work is preserved. Remote main and source target both named the reviewed baseline at orientation.
+State: **comprehensive source/local pre-release review complete; hold an unqualified acceptance-certified release**. Four confirmed defects (one Important, three Minor) and one separate release-evidence gap are open as proposals. Fix R-001 before relying on required live failure-trial acceptance. No confirmed workflow-policy defect was found. Report-only branch `revision/024_ed2d571-pre-release-review`; source target `feature/architecture-revision`. Tracked source was clean at orientation; unrelated untracked work is preserved. Remote main and source target both named the reviewed baseline at orientation.
 
 | Unit | State | Evidence |
 | --- | --- | --- |
 | U-001 Package | Assessed; no confirmed release blocker | [Package checks](package-checks.json), [navigation/presentation checks](navigation-checks.json); 15/15 skill validators pass; 16 SVGs parse; metadata copies match |
 | U-002 Skills/workflows | Assessed; no confirmed workflow-policy defect | All 15 entrypoints and consequential handoffs inspected; scenario matrix below |
 | U-003 Harness | Assessed; two confirmed defects | 107 support tests Passed; 27 static catalog cases validated; independent and coordinator reproductions |
-| U-004 Documentation/consolidation | Pending | Planned |
+| U-004 Documentation/consolidation | Assessed; two minor documentation defects and release evidence gap | Package navigation, campaign index, historical hashes, four diagrams and independently reconciled findings |
 
 No source repair, new live campaign or installed-client activation has been performed.
 
@@ -67,3 +67,82 @@ Reviewed helper boundaries include committed/dirty package hashing, schema and c
 - Objective recheck: dangling and occupied receipt symlinks rejected without referent mutation; ordinary new receipt and held continuation work; existing drift/failed/unknown receipt non-replay tests still pass.
 
 Fresh independent assessment is retained at [independent/REVIEW-REPORT.md](independent/REVIEW-REPORT.md). Independent-01 maps to R-001 and Independent-02 to R-002; these are two canonical defects, not duplicate findings.
+
+## U-004 documentation and release evidence
+
+The full current source scan found no actual missing local file navigation links (293 tokens across 149 Markdown files, excluding code blocks). Checking the *shipped snapshot* separately revealed R-003. [Package navigation](package-navigation.json) records all 45 root README local link occurrences: 32 resolve within the 114-file snapshot; 13 do not. Eleven missing occurrences concern acceptance/development material explicitly identified as source-only; those are a navigation improvement opportunity, not additional defects. The other two are the notices in R-003. Snapshot fingerprint **60840f4b62aa5566d1d25fe11f6e035ac9fd20c2e4a368ecf5868a024be459d1** matches campaign 023's retained package validation.
+
+[Release evidence checks](release-evidence-checks.json) independently recomputed all nine imported campaign 021 file hashes; all match retained import provenance. Historical diagnostic grades remain **20 Passed / seven Blocked for 0.14.3**, not results for 0.14.6. Older campaign 008 explicitly records its own assisted-source evidence and limits; no historical pass is promoted to current acceptance. Four README Mermaid blocks were inspected for workflow semantics and source syntax. No rendered preview or installed UI validation is claimed.
+
+TextStats README's full-run prompt and AGENTS reading/role/scope protocol agree: explicit dedicated destination, existing authentication first, fresh consumer and assessor isolation, preserved real interruption state, pinned-source immutability, separate assistance, required versus optional classification, and final evidence-only integration into test main unless an explicit earlier boundary applies. No automatic run on a previous repository is implied by this review.
+
+### R-003 — Packaged README links to notices omitted from its snapshot
+
+- Type/severity/confidence/disposition: **Defect / Minor (P3) / High / Open, proposed repair**.
+- Location: README.md line 9 and package section lines 43–45; acceptance/textstats/scripts/core.py PACKAGE_PATHS at line 24.
+- Observed: committed snapshot includes README and assets/SDD-MANAGER.md plus assets/AI_DISCLOSURE.md, but excludes the two root notices named by README's usage/disclosure links. Independent reviewer corroborated this against the baseline after coordinator observation.
+- Consequence: two user-facing local links fail in the pinned package. Bootstrap templates remain available, so no bootstrap implementation blocker is demonstrated. Ordinary whole-repository checkout links work.
+- Proposed correction: include the two existing root notices in the package selection, preserving byte/hash provenance, or redirect to the included assets after checking their relative links. Prefer including root notices to preserve existing source README navigation. Source-only links may separately use repository URLs; do not pull assessor material into consumer packages to repair navigation.
+- Objective recheck: enumerate the real committed snapshot; resolve both README notice links and their own dependent local links within it; retain dirty/committed fingerprint tests and consumer assessor isolation.
+
+### R-004 — Campaign navigation omits 020 and interrupts its table
+
+- Type/severity/confidence/disposition: **Defect / Minor (P3) / High / Open, proposed repair**.
+- Location: docs/dev/reviews/README.md lines 25–31.
+- Observed: 020_019eb35/REVISION-REPORT.md exists but no 020 index row exists. Blank lines before 021, 022 and 023 terminate the preceding GFM table; these standalone rows lack a header/separator. Independent reviewer corroborated both facts. This is source inspection, not a claimed rendered preview.
+- Consequence: a completed authorization/publication campaign is absent from sequential navigation, and newer rows render as pipe-delimited paragraphs. Original records and their direct links remain intact.
+- Proposed correction: add the truthful 020 entry and keep the index rows contiguous. Add this campaign's navigation entry when integrating accepted documentation work; preserve existing identities and evidence.
+- Objective recheck: GFM rendering yields a single campaign table; baseline campaigns 001–023 each appear once with resolving record links, followed by any subsequently accepted campaign entries.
+
+### R-005 — Current release has no fresh live or installed-client acceptance evidence
+
+- Type/severity/confidence/disposition: **Evidence gap / Important for an acceptance-certified release / High / Open, follow-up scope required**. This is not a confirmed plugin defect or a failed live case.
+- Location: README.md Testing with TextStats and Package status; campaign 021/023 revision limits; source pin and results in imported diagnostic/provenance.
+- Observed: local support checks and structural validation cover 0.14.6. Retained completed live diagnostic tested 0.14.3; campaign 021 changed authorization instructions and harness, and 023 changed discovery metadata/package contents. Installed-client discovery/routing/activation remains untested. No fresh consumer run was selected or performed here.
+- Consequence: unconditional current-version live or installed-client readiness cannot be substantiated. The reviewed source can be distributed as a clearly qualified pre-release candidate, subject to known defects, but current support passes alone cannot certify the advertised agent behavior.
+- Proposed follow-up: after R-001 correction and package repin, execute the supported required live scope on an explicitly identified dedicated repository using fresh consumers and independent assessors. Validate actual supported-client discovery, routing and presentation for any client advertised as tested. Preserve original attempts, interventions and literal/Git/hosted evidence; integrate final test evidence as prescribed. A full current scope contains **32 required variants across 27 cases**, not a retrospective split of historical case grades.
+- Objective recheck: publish newly pinned current-source grades with independently assessed required coverage and exact publication/integration evidence, plus a separately identified installed-client observation if claiming client readiness. Optional A-023 live-response-loss and A-024 native-recovery remain separately Not run/non-blocking without their facilities; cooperative controls never become native evidence. Their absence alone does not gate ordinary required acceptance.
+
+## Canonical findings and readiness
+
+| ID | Type | Severity / priority | Disposition | Release consequence |
+| --- | --- | --- | --- | --- |
+| R-001 | Harness defect | Important / first repair | Open proposal | Required failure-trial baseline is unreliable |
+| R-002 | Harness defect | Minor / subsequent repair | Open proposal | Receipt path rejection is ineffective |
+| R-003 | Package documentation defect | Minor / subsequent repair | Open proposal | Two notice links fail in pinned package |
+| R-004 | Source documentation defect | Minor / subsequent repair | Open proposal | Missing campaign navigation and broken table |
+| R-005 | Evidence gap | Important for certified release / after repairs | Open follow-up | No new-source live or installed-client certification |
+
+**Counts: four confirmed defects, one evidence gap; zero repairs implemented by this review.** No Critical finding and no confirmed contradiction in inspected workflow policies. All four planned review units are assessed; assessed does not mean findings resolved.
+
+| Readiness boundary | Supported conclusion |
+| --- | --- |
+| Skill structure and local support checks | 15/15 validators, 16 XML SVGs, matching manifests and 107 support tests pass; 27 catalog cases validate |
+| Harness for required acceptance | Hold reliance on A-017/A-026 baseline until R-001 is repaired/rechecked; support suite misses the reproduced public-API boundaries |
+| Explicit-source agent behavior on 0.14.6 | Not certified by this review; fresh required consumer assessment remains pending |
+| Installed ChatGPT/Codex discovery/routing/presentation | Not certified; need actual target-client observations |
+| Generic Agent Plugins 1.0 / Gemini / Antigravity portability | Not a declared verified target; intentional Codex metadata copy is not portable conformance |
+| Optional complex live/native recovery | Non-blocking omissions when unavailable; full execution needs isolated hosted post-send suppression/readback or protected native access/recovery facilities respectively |
+
+## Proposed revision order and stopping point
+
+1. Repair R-001's public API boundary and independent regression tests before starting a new acceptance campaign. Update injection/guide layout assumptions together.
+2. Repair R-002's lexical path validation and regression checks. R-003 and R-004 documentation/package corrections can proceed independently; package changes require synchronized source provenance and appropriate checks.
+3. Run focused regression then the full support suite on the accepted repairs; structurally validate and repin the resulting package. A separately accepted revision campaign should retain original findings and use its normal verified merge/publication boundary.
+4. Close R-005 through explicitly selected current-source required live acceptance and target-client smoke evidence. Keep unavailable complex optional extensions non-blocking and disclose Python 3.11 and rendered Mermaid coverage separately if still unexecuted.
+
+These are bounded proposals, not accepted source amendments or an executed REVISION-PLAN. Review-only evidence remains on revision/024_ed2d571-pre-release-review; no source merge or installed package update was performed. The coordinating workflow publishes the final report normally and verifies the exact remote ref after its commit.
+
+## Published checkpoints and evidence limits
+
+| Boundary | Commit | Publication evidence |
+| --- | --- | --- |
+| Plan | 82ad0ceb998f0aa5ce6d16b0278e15c368f524b4 | Normal push; exact remote review ref read back |
+| U-001 | fbe66f0197f2dfc8d9091ca835dd91dabb7f68d3 | Normal push; exact remote review ref read back before dependent assessment |
+| U-002 | af97b69ad348629cf25461fedac36f2bdd45df20 | Normal push; exact remote review ref read back |
+| U-003 | c1c7d882af734bc4d6cc8c2baf3b2a4cfc6c83cc | Normal push; exact remote review ref read back |
+| U-004 / final report | This report's final Git commit | Coordinator performs normal push and exact ref verification after the report commit; report does not embed its own SHA |
+
+Source inspection, mechanical structure/navigation checks, actual local support execution and independently reproduced isolated faults are the achieved evidence classes. No fresh live campaign, installed-client activation, native kill, protected credential recovery, live response-loss or authorization-setting behavior was exercised. Python 3.12.14 was observed; no Python 3.11 execution. No Mermaid/GFM rendered preview was available. None of these limitations is silently relabelled as a source defect or consumer failure.
+
+Primary standards consulted for format distinctions: [Agent Skills specification](https://agentskills.io/specification) and [Agent Plugins 1.0 specification](https://agent-plugins.org/specification), accessed 2026-10-06. Local validators enforce their own documented strict authoring policy. Their success/failure is structural evidence, not client installation evidence.

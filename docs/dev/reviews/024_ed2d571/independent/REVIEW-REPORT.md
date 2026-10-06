@@ -22,3 +22,10 @@ Harness configuration/pinning, Git observation, recovery export, deterministic a
 ## Limits
 
 No fresh consumer workflow or live acceptance campaign, installed-client discovery/routing/activation, native termination, protected credential recovery or live GitHub verification. Historical 0.14.3 grades are not current-source evidence. Intentional Codex metadata exact-copy design is not counted as a portable-format defect.
+
+## Independently corroborated documentation follow-up
+
+After the coordinator supplied two located candidates, this reviewer independently checked them against the same baseline. Both are P3, high-confidence defects with limited release impact. These follow-up checks were candidate-directed, distinct from the fresh initial review.
+
+- **Canonical R-003:** core.package returns 114 files but omits root notices named by README line 9, despite including their asset templates. Include root notices or redirect to included assets; bootstrap templates remain usable. Recheck committed snapshot local navigation and notice dependencies. Source-only acceptance/development URLs are optional improvement, not another required defect.
+- **Canonical R-004:** docs/dev/reviews/README.md omits completed 020 and has blank lines before 021–023 that terminate its GFM table. Add truthful 020 row and remove row gaps; recheck one rendered campaign table and resolving links while retaining historical identities.
