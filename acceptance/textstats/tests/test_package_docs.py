@@ -1,9 +1,40 @@
 """Actual package pinning retains user documentation and its dirty identity."""
 import hashlib
+from pathlib import PurePosixPath
 from .support import Sandbox, git
 
 
 class PackageDocumentation(Sandbox):
+    def test_notice_navigation_is_retained_in_committed_and_dirty_snapshots(self):
+        source=self.root/'notice-package'
+        git(self.root,'init','-b','main',str(source))
+        git(source,'config','user.name','Fixture');git(source,'config','user.email','fixture@example.invalid')
+        (source/'plugin.json').write_text('{"name":"fixture"}\n')
+        readme=b'Development uses [SDD Manager](SDD-MANAGER.md). See [disclosure](AI_DISCLOSURE.md).\n'
+        notice=b'# Usage\n\nSee [disclosure](AI_DISCLOSURE.md).\n'
+        disclosure=b'# Disclosure\n\nMaintainer owns the published work.\n'
+        (source/'README.md').write_bytes(readme)
+        (source/'SDD-MANAGER.md').write_bytes(notice)
+        (source/'AI_DISCLOSURE.md').write_bytes(disclosure)
+        git(source,'add','.');git(source,'commit','-m','notice links')
+        import sys
+        from pathlib import Path
+        sys.path.insert(0,str(Path(__file__).parents[1]/'scripts'))
+        import core
+        inputs={'plugin_revision':git(source,'rev-parse','HEAD').stdout.strip(),'source_mode':'committed'}
+        committed,files=core.package(source,inputs)
+        import re
+        for owner in ['README.md','SDD-MANAGER.md']:
+            self.assertIn(owner,files)
+            for target in re.findall(r'\]\(([^)]+)\)',files[owner].decode()):
+                self.assertIn(str(PurePosixPath(owner).parent/target),files)
+        self.assertEqual(files.get('AI_DISCLOSURE.md'),disclosure)
+        (source/'AI_DISCLOSURE.md').write_bytes(disclosure+b'Updated notice.\n')
+        dirty,files=core.package(source,dict(inputs,source_mode='dirty'))
+        self.assertIn('AI_DISCLOSURE.md',dirty['changed_package_paths'])
+        self.assertEqual(files['AI_DISCLOSURE.md'],disclosure+b'Updated notice.\n')
+        self.assertNotEqual(dirty['fingerprint'],committed['fingerprint'])
+
     def test_committed_and_dirty_readme_and_license_are_packaged(self):
         source=self.root/'package-source'
         git(self.root,'init','-b','main',str(source))
