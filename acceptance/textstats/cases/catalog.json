@@ -492,7 +492,8 @@
       "order": 14,
       "phase": "P4",
       "dependencies": [
-        "A-001"
+        "A-001",
+        "A-004"
       ],
       "mode": "isolated-trial",
       "consumer_input": "cases/consumer/A-014.md",
@@ -500,11 +501,12 @@
       "assessor_guide": "cases/assessor/A-014.md",
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
-        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects."
+        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
+        "Cross-phase variant starts after actual out-of-range prerequisites are independently complete/published and allows phase publication; refusal variant separately uses prepared state."
       ],
       "checkpoint_bindings": {
         "start": {
-          "from_case": "A-001",
+          "from_case": "A-004",
           "checkpoint_fields": [
             "product_commit",
             "product_branch",
@@ -531,7 +533,10 @@
           "evidence_class": "consumer",
           "facilities": []
         }
-      ]
+      ],
+      "variant_predecessors": {
+        "prerequisite-refusal": "A-001"
+      }
     },
     {
       "id": "A-015",

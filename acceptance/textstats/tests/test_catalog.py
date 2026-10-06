@@ -83,14 +83,15 @@ class CatalogIntegrity(unittest.TestCase):
         self.assertNotIn('expected.json',capture.Path(capture.__file__).read_text())
 
 class HandoffIntegrity(Sandbox):
-    def bindings(self):
+    def bindings(self, case_id="A-001"):
+        # Synthetic independent predecessor identity; actual publication is still checked.
         head=git(self.repo,'rev-parse','HEAD').stdout.strip()
         refs={'product_commit':head,'product_branch':'main','integration_commit':head,'integration_branch':'main'}
-        assessment={'case_id':'A-001','status':'Passed','agent_behavior_assessed':True,'checkpoint_refs':refs}
+        assessment={'case_id':case_id,'status':'Passed','agent_behavior_assessed':True,'checkpoint_refs':refs}
         path=self.repo/'independent.json'; path.write_text(json.dumps(assessment))
         git(self.repo,'add','independent.json'); git(self.repo,'commit','-m','independent assessment'); git(self.repo,'push')
         evidence=git(self.repo,'rev-parse','HEAD').stdout.strip()
-        point={'case_id':'A-001','status':'Passed','assessment_path':'independent.json','checkpoint_refs':refs,'local_checkout':str(self.repo),'remote':'origin','remote_ref':'refs/heads/main','evidence_publication':{'status':'published','commit':evidence,'path':'independent.json','remote':'origin','ref':'refs/heads/main'}}
+        point={'case_id':case_id,'status':'Passed','assessment_path':'independent.json','checkpoint_refs':refs,'local_checkout':str(self.repo),'remote':'origin','remote_ref':'refs/heads/main','evidence_publication':{'status':'published','commit':evidence,'path':'independent.json','remote':'origin','ref':'refs/heads/main'}}
         return {'checkpoints':[point],'current':{'summary':'Authorized selection only. Actual main checkout contains prepared product work.'}}
 
     def test_render_uses_only_request_and_actual_current_state(self):
@@ -115,7 +116,7 @@ class HandoffIntegrity(Sandbox):
         with self.assertRaisesRegex(ValueError,'published assessment differs'): catalog.render('A-002',value,bindings_root=self.repo)
 
     def test_selected_placeholders_require_actual_values(self):
-        value=self.bindings()
+        value=self.bindings('A-004')
         with self.assertRaisesRegex(ValueError,'selected input'): catalog.render('A-014',value,bindings_root=self.repo)
         value['current'].update(range_start='observed first owner',range_end='observed final owner')
         text=catalog.render('A-014',value,bindings_root=self.repo)

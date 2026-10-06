@@ -98,6 +98,8 @@ def validate_catalog(root=BUNDLE, value=None):
         require(start.get('checkpoint_fields') and all(f in REFS for f in start['checkpoint_fields']), 'invalid checkpoint fields')
         for name, ref in c.get('input_bindings',{}).items():
             require(re.fullmatch('[a-z_]+',name) and ref == 'current.'+name, 'invalid input binding')
+        overrides=c.get('variant_predecessors',{})
+        require(isinstance(overrides,dict) and all(k in {v['id'] for v in campaign.variants(c)} and dep in deps for k,dep in overrides.items()), 'invalid variant predecessor')
         trigger = c.get('interruption_trigger')
         if trigger:
             require(trigger.get('protocol') in PROTOCOLS and isinstance(trigger.get('observe'),str) and trigger['observe'] and trigger.get('fresh_context') is True, 'invalid actual interruption trigger')
@@ -124,7 +126,7 @@ def validate_catalog(root=BUNDLE, value=None):
     return by_id
 
 
-def render(case_id, bindings, root=BUNDLE, bindings_root=None):
+def render(case_id, bindings, root=BUNDLE, bindings_root=None, variant=None):
     cases = validate_catalog(root)
     require(case_id in cases, 'unknown selected case')
     core.no_secret(bindings)
@@ -136,7 +138,9 @@ def render(case_id, bindings, root=BUNDLE, bindings_root=None):
     require(isinstance(checkpoints,list) and all(isinstance(c,dict) for c in checkpoints), 'invalid checkpoints')
     require(len({c.get('case_id') for c in checkpoints}) == len(checkpoints), 'ambiguous predecessor checkpoints')
     c = cases[case_id]
-    source = c['checkpoint_bindings']['start']['from_case']
+    if variant is not None:
+        require(variant in {v['id'] for v in campaign.variants(c)}, 'unknown selected variant')
+    source = c.get('variant_predecessors',{}).get(variant,c['checkpoint_bindings']['start']['from_case'])
     if source is not None:
         matches = [p for p in checkpoints if p.get('case_id') == source]
         require(len(matches)==1, 'missing/ambiguous selected predecessor')
@@ -183,13 +187,13 @@ def render(case_id, bindings, root=BUNDLE, bindings_root=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command',choices=['validate','render'])
-    parser.add_argument('--case'); parser.add_argument('--bindings',type=Path); parser.add_argument('--output',type=Path)
+    parser.add_argument('--case'); parser.add_argument('--variant'); parser.add_argument('--bindings',type=Path); parser.add_argument('--output',type=Path)
     args=parser.parse_args()
     try:
         if args.command=='validate':
             cases=validate_catalog(); print(json.dumps({'schema_version':1,'catalog_cases':len(cases),'kind':'static asset validation','live_acceptance':False})); return 0
         require(args.case and args.bindings and args.output, 'render arguments required')
-        text=render(args.case,core.load(args.bindings),bindings_root=args.bindings.parent)
+        text=render(args.case,core.load(args.bindings),bindings_root=args.bindings.parent,variant=args.variant)
         require(not args.output.exists() and not args.output.is_symlink(), 'output occupied')
         args.output.parent.mkdir(parents=True,exist_ok=True)
         with args.output.open('x') as stream: stream.write(text)
