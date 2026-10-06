@@ -76,10 +76,15 @@ def execute(root, actions, watched, receipt, hold_after=None, resume=False, pend
     A failed/unknown action is retained and requires independent reconciliation,
     rather than automatic replay. Held is cooperative control, not native kill.
     """
-    root=Path(root).resolve();receipt=Path(receipt).resolve();core.no_secret(actions)
+    root=Path(root).resolve();receipt=Path(receipt).absolute();core.no_secret(actions)
+    # Preserve the caller's lexical path until link checks have run. Resolving
+    # first would hide both a dangling receipt link and symlinked parents.
+    if any(path.is_symlink() for path in (receipt,*receipt.parents)):
+        raise ValueError('symlink receipt path')
+    receipt=receipt.resolve()
     if not isinstance(actions,list) or not actions or any(not isinstance(a,list) or not a or any(not isinstance(x,str) or not x or '\x00' in x for x in a) for a in actions):raise ValueError('invalid action argv')
     if not watched or len(watched)!=len(set(watched)) or any(p not in watched for p in pending_paths):raise ValueError('invalid watch/pending selection')
-    if receipt.is_symlink() or any(receipt==(root/p).resolve() for p in watched):raise ValueError('receipt overlaps product')
+    if any(receipt==(root/p).resolve() for p in watched):raise ValueError('receipt overlaps product')
     identity=digest({'root':str(root),'actions':actions,'watched':watched,'pending_paths':list(pending_paths)})
     current=snapshot(root,watched)
     if resume:
