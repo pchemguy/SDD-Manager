@@ -2,7 +2,7 @@
 
 Campaign 024_ed2d571. [Accepted plan](REVISION-PLAN.md), [original review](REVIEW-REPORT.md). User authorized R-001–R-004; live testing explicitly out of scope. R-005 remains excluded/unexecuted.
 
-Working branch revision/024_ed2d571-pre-release-review; integration target feature/architecture-revision. Original source ed2d571d20aa8ad6ee77f25ad89602e82e6a653b; repair baseline 21d144057413473f7e402fa0ce679cf2e3095024. State: all four repairs and the prospective merged boundary verified; merge commit/target publication pending.
+Working branch revision/024_ed2d571-pre-release-review; integration target feature/architecture-revision. Original source ed2d571d20aa8ad6ee77f25ad89602e82e6a653b; repair baseline 21d144057413473f7e402fa0ce679cf2e3095024. State: **completed, verified, explicitly integrated and published**. All four accepted defects are resolved in source 0.14.7; live testing remains out of scope.
 
 | Action | State | Evidence |
 | --- | --- | --- |
@@ -38,3 +38,9 @@ Target refreshed and still names ed2d571d20aa8ad6ee77f25ad89602e82e6a653b. Publi
 The required two-parent merge commit and target push follow this verified boundary. Final publication/readback is recorded after its observed result. The revision branch is retained; main and installed clients remain outside this integration scope.
 
 Merged diff whitespace check caught one trailing space emitted by unittest in the RED log. The final text log trims that formatting only; original raw bytes remain in V-002 commit 4e8162f66cd97f3ad8ce81da1aebf7fbf1bca028. [Normalization provenance](log-format-normalization.json) records both hashes. Test outcomes are unchanged.
+
+## Completed integration and publication
+
+Explicit merge **1b3ec542f16e266c13a00da34938a9a2896ee7e8** has ordered parents ed2d571d20aa8ad6ee77f25ad89602e82e6a653b and 85a2d3f39728af2445f37de831fc6f3ce526a092. Normal push published feature/architecture-revision; exact remote ref readback confirmed that merge. Post-commit package pinning gives the same verified 116-file fingerprint, and source/harness/navigation paths exactly match independently reviewed e33949aded51c55013d2de6318e0564127a13d3d. [Final revision evidence](FINAL-REVISION.json) retains observed identities and scope.
+
+R-001–R-004 are verified and integrated. There is no remaining blocker within the accepted repair scope. R-005 remains an unexecuted evidence gap explicitly outside this request; no live test or installed-client activation occurred. Main and existing test repositories were unchanged. Revision branch retained; unrelated untracked work preserved. This final evidence-only checkpoint is normally published on the established target after its commit, with exact destination verification.

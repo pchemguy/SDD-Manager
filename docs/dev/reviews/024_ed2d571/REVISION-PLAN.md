@@ -12,3 +12,5 @@ User authorized fixes R-001–R-004 and explicitly excluded live testing. R-005 
 | V-004 | R-004 | Restore missing 020 campaign and contiguous campaign table; add truthful current campaign links | Complete sequential navigation and resolving links; inspect GFM table structure |
 
 No governing product contract or task-list change is selected. Public API requirements remain unchanged; only erroneous probe assumptions and package path selection change. Observe meaningful RED before behavioral fixes; verify GREEN and persist each action before dependent work. Finish with full support suite, package/catalog checks and fresh independent review, then explicit two-parent merge, merged-state verification and normal target publication/readback. Record actual repair dispositions without rewriting original review observations.
+
+Execution status: V-001–V-004 verified and explicitly merged/published in 0.14.7; see [revision report](REVISION-REPORT.md). No live testing performed.
