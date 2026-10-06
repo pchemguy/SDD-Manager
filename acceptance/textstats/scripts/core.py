@@ -261,7 +261,7 @@ def remote_read(repo, remote):
     return {'status':'observed','refs':refs,'default_branch':default}
 
 
-def repository(inputs):
+def repository(inputs, observe_remote=True):
     """Resolve the requested checkout and uniquely matching authorized remote.
 
     Args:
@@ -281,6 +281,7 @@ def repository(inputs):
     explicit = inputs.get('local_checkout')
     local = Path(explicit or identified).expanduser()
     if not explicit and (not local.is_dir() or git(local,'rev-parse','--is-bare-repository',required=False).stdout.strip()=='true'):
+        if not observe_remote:raise Stop('local_checkout_required')
         read = remote_read(SOURCE,identified)
         return {'identity':identified,'local_checkout':None,'remote':None,'remote_url':identified,'integration_branch':read['default_branch'],'remote_observation':read,'head':None,'existing_runs':[]}
     root = git(local,'rev-parse','--show-toplevel',required=False)
@@ -297,7 +298,7 @@ def repository(inputs):
     if not remotes: raise Stop('repository_identity_mismatch')
     if len(remotes) != 1: raise Stop('repository_ambiguous','Select one unambiguous dedicated repository and authorized remote before writes.')
     name,url=remotes[0]
-    read=remote_read(checkout,name)
+    read=remote_read(checkout,name) if observe_remote else {'status':'not-requested','refs':{},'default_branch':None}
     branch=git(checkout,'symbolic-ref','--quiet','--short','HEAD',required=False).stdout.strip() or None
     refs=git(checkout,'for-each-ref','--format=%(refname)','refs/heads').stdout.splitlines()
     integration = read['default_branch']
@@ -909,7 +910,8 @@ def assessment(inputs,state,contract_path,evidence_path):
     agent_checks=contract.get('required_agent_checks',[])+variant_checks.get(selected_variant,[])
     evidence=load(evidence_path) if evidence_path else None
     if evidence is not None and (type(evidence) is not dict or set(evidence)!={'schema_version','literals'} or not exact(evidence['schema_version'],1) or type(evidence['literals']) is not dict): raise Stop('invalid_evidence')
-    repo=repository(inputs)
+    needs_remote=any(c.get('kind')=='git' and c.get('field') in {'publication','remote_containment'} for c in checks)
+    repo=repository(inputs,observe_remote=needs_remote)
     if not repo['local_checkout']: raise Stop('local_checkout_required')
     actual_git=None
     rows=[]
