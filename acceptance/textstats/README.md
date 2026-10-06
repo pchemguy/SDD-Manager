@@ -61,7 +61,7 @@ Coordinator evidence lives in the dedicated test repository at `docs/dev/reviews
 
 A stop preserves unfinished work rather than turning it into a completion commit. A resumed run reads actual Git/files/index/hosted state before trusting its cursor or retrying uncertain operations. Cross-machine continuation requires exported pending files, index intent and Git objects as well as published refs. [RECOVERY](RECOVERY.md) specifies each case and the exact unrecoverable-boundary report when an export is missing.
 
-## Follow-up: live acceptance on a dedicated test repository
+## Fresh full live acceptance on a dedicated test repository
 
 - [ ] **Live acceptance on a dedicated test repository.** Supply an explicitly identified repository URL or checkout path, then run this bundle through fresh consumers and independent assessors. Exercise real Git publication and GitHub tracking, controlled partial-work interruption, unexpected worker termination and resumption from retained state. Publish the diagnostic report with original attempts, assistance, findings, actions and proposed plugin changes.
 
