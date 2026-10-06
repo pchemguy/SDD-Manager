@@ -55,7 +55,7 @@ Required: `test_repository` (explicit URL or unambiguous existing checkout). Opt
 | P2 | Verified/published baseline product phase |
 | P3 | JSON increment, line feature, steering removal, stdin and final integration |
 | P4 | Actual prerequisite forks, failures and fresh continuation trials |
-| P5 | Coverage reconciliation, diagnostic report and verified stop |
+| P5 | Required/optional reconciliation, final report, evidence-only merge into main, verified main publication and checkpoint |
 
 Coordinator evidence lives in the dedicated test repository at `docs/dev/reviews/<campaign>/`: `INPUTS.json`, `RUN-STATE.json`, `RESUME.md`, `runs/<case-id>/<attempt>/`, `DIAGNOSTIC-REPORT.md` and retained recovery exports. Reserve one convention-named evidence branch. [EXECUTION](EXECUTION.md) defines publication gates. Record capabilities/source once; update only changed facts.
 
@@ -63,9 +63,9 @@ A stop preserves unfinished work rather than turning it into a completion commit
 
 ## Fresh full live acceptance on a dedicated test repository
 
-- [ ] **Live acceptance on a dedicated test repository.** Supply an explicitly identified repository URL or checkout path, then run this bundle through fresh consumers and independent assessors. Exercise real Git publication and GitHub tracking, controlled partial-work interruption, unexpected worker termination and resumption from retained state. Publish the diagnostic report with original attempts, assistance, findings, actions and proposed plugin changes.
+- [ ] **Live acceptance on a dedicated test repository.** Supply an explicitly identified repository URL or checkout path, then run this bundle through fresh consumers and independent assessors. Exercise real Git publication and GitHub tracking, controlled partial-work interruption and resumption from retained state. Native termination and complex live/native recovery are optional extensions with separately reported facilities and outcomes. Publish the diagnostic report with original attempts, assistance, findings, actions and proposed plugin changes.
 
-Bundle self-tests and document reviews verify the reusable infrastructure. They do not complete this live acceptance follow-up. Record unavailable facilities as Blocked/Not run and retain the exact remaining scope. Use existing authentication first; request protected credentials only after a classified access failure, following [SETUP](SETUP.md#protected-authentication).
+Bundle self-tests and document reviews verify the reusable infrastructure. They do not complete this live acceptance follow-up. Report unavailable required facilities as Blocked and optional extensions as Not run/non-blocking; retain exact scope and evidence classes. See [variants](VARIANTS.md) and [controls](TRIAL-CONTROLS.md). Use existing authentication first; request protected credentials only after a classified access failure, following [SETUP](SETUP.md#protected-authentication).
 
 Copyable agent prompt (replace the placeholders):
 
@@ -80,7 +80,9 @@ Use existing authentication first. If the repository is omitted, request it befo
 request protected credentials only when required access is actually unavailable.
 Publish the diagnostic report with coverage, original attempts and assistance, observed issues,
 actions taken and concrete proposed SDD Manager changes, or the supported no-defect/no-change conclusion.
-Do not modify the tested plugin package during the run. Record unavailable facilities as Blocked/Not run.
+Do not modify the tested plugin package during the run. Record unavailable required facilities as Blocked
+and optional extensions as Not run/non-blocking. Finish by merging final acceptance evidence into test main
+and verifying its publication, unless an explicit earlier stopping boundary applies.
 ```
 
 Historical provenance: [campaign 008 plan](../../docs/dev/reviews/008_98a5562/REVISION-PLAN.md) and [report](../../docs/dev/reviews/008_98a5562/REVISION-REPORT.md). These explain derivation and limits; they are not bootstrap inputs or expected new-run results.

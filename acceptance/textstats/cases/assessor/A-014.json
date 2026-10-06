@@ -20,7 +20,14 @@
     }
   ],
   "required_agent_checks": [
-    "Selection divides actual range into phase segments; earlier phase completes full exits/integration/publication before later phase starts.",
-    "Prerequisites outside range are surfaced, not silently executed. Consumer chooses behavior; coordinator never scripts a successful phase transition."
-  ]
+    "Selected scope, actual prerequisite state, retained ownership and permitted publication are independently established; no unauthorized outside prerequisite is executed."
+  ],
+  "variant_agent_checks": {
+    "cross-phase": [
+      "Selection divides actual range into phase segments; earlier phase completes full exits/integration/publication before later phase starts."
+    ],
+    "prerequisite-refusal": [
+      "An actual incomplete outside prerequisite is surfaced; consumer refuses dependent execution without implementing the prerequisite or starting the later phase. Refusal is not a cross-phase execution pass."
+    ]
+  }
 }

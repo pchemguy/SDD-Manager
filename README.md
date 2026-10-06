@@ -87,7 +87,26 @@ See [branch management](skills/sdd-manage/references/branch-management.md) for n
 
 Use `docs/dev/reviews/<sequence>_<baseline-sha>/` for a general campaign (phase-checkpoint steering uses its phase-specific revisions prefix): review plan → review → review report → revision plan → revision → revision report. A focused review can start directly from a prompt and record its scope/criteria in REVIEW-REPORT. A comprehensive review plans units and report checkpoints first.
 
-Each planned review unit ends with its report commit. The coordinating workflow publishes that checkpoint before dependent work; pushes do not invoke review skills. Full revision and implementation workflows include their prescribed pushes under the existing scoped authorization. Accepted revisions update relevant governing documents; all campaign records remain retained. Directory identity stays fixed as HEAD advances. **sdd-report** supplies scalable artifact templates, and **sdd-manage** coordinates scope and execution.
+Each planned review unit ends with its report commit. The coordinating workflow publishes that checkpoint before dependent work; pushes remain part of the complete workflow. Host automatic tool review has separate ownership from plugin content review. Full revision and implementation workflows include their prescribed pushes under the existing scoped authorization. Accepted revisions update relevant governing documents; all campaign records remain retained. Directory identity stays fixed as HEAD advances. **sdd-report** supplies scalable artifact templates, and **sdd-manage** coordinates scope and execution.
+
+## ChatGPT website approvals and host automatic review
+
+In ChatGPT web, the user observed these controls in **Profile → Settings → Integrations → Cloud computer** during the October 2026 run. UI locations and labels may differ by client/version. OpenAI's [Cloud browser documentation](https://help.openai.com/en/articles/20001280-using-cloud-browser-in-chatgpt) describes **Settings → Cloud browser**, website approval modes and site-specific permissions.
+
+A narrower website-access configuration is **ChatGPT Work website approvals → Auto approve**, with **Add website → GitHub → Always allow**. A broader alternative is **Always allow** as the main website policy. The documented Auto approve mode still reviews website destinations; site-specific permissions override the general website setting. Consequential actions may have separate confirmation requirements. These options describe browser website access, not a guarantee that Git pushes or other shell/API requests will avoid sandbox automatic review.
+
+Automatic review is a separate host agent/control for requests crossing ChatGPT sandbox boundaries; similar controls may operate in other systems. It is not part of SDD Manager's content-review definition and does not remove pushes from complete workflows. The exact effect of the observed website settings on shell/API authorization review is unverified. Keep the plugin's [scoped workflow authorization policy](skills/sdd-manage/references/revision-authorization.md): carry existing human scope through publication, distinguish credentials from payload authority, and preserve/report host denials accurately. Changing account settings is a human choice, not an acceptance-run prerequisite.
+
+## Testing with TextStats
+
+[TextStats](acceptance/textstats/README.md) exercises the plugin through fresh consumer workflows and independent assessments in a dedicated test repository. Its README describes setup, required variants, optional complex recovery, retained evidence and final integration into test main. Support tests check the harness; they do not establish live acceptance of a revised source.
+
+Prior test repositories (retain this list when adding runs):
+
+- [Skill-Test-SDD-Manager-TextStats-20261003](https://github.com/pchemguy/Skill-Test-SDD-Manager-TextStats-20261003)
+- [Skill-Test-SDD-Manager-TextStats-20261004](https://github.com/pchemguy/Skill-Test-SDD-Manager-TextStats-20261004)
+
+Repository names are history, not default destinations or acceptance verdicts. The [20261004 diagnostic](docs/dev/reviews/021_85f2857/DIAGNOSTIC-REPORT.md) retains **20 Passed / seven Blocked** for pinned 0.14.3; its evidence was subsequently merged into test main. [Campaign 021](docs/dev/reviews/021_85f2857/REVISION-REPORT.md) implements the resulting harness/documentation amendments. Revised-source live and installed-client acceptance remain separately pending.
 
 ## Skills
 
@@ -147,7 +166,7 @@ A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, 
 
 ## Package status and references
 
-The backend lifecycle now defines phase-gated hosted creation, dedicated boundary review/report tasks, milestone closure, workflow-specific report placement and interruption reconciliation. [Campaign 010](docs/dev/reviews/010_3f56922/REVISION-REPORT.md) records source and consumer verification; live acceptance of these new rules remains pending a dedicated test repository.
+The backend lifecycle now defines phase-gated hosted creation, dedicated boundary review/report tasks, milestone closure, workflow-specific report placement and interruption reconciliation. [Campaign 010](docs/dev/reviews/010_3f56922/REVISION-REPORT.md) records source and consumer verification; later live evidence and limits are retained in the [20261004 diagnostic](docs/dev/reviews/021_85f2857/DIAGNOSTIC-REPORT.md); revised-source acceptance remains separate.
 
 All 15 skills are included. Structural validation and independent coordination assessments have been exercised. The [runtime acceptance campaign](docs/dev/reviews/008_98a5562/REVISION-REPORT.md) records actual fresh-agent workflows through explicit skill-source loading, live GitHub tracking/publication, and controlled failure/recovery fixtures. Installed-client discovery, routing and activation remain untested; available journals are not complete native transcripts. All 27 scoped cases passed independent assessment; source integration is recorded in the campaign report.
 

@@ -14,7 +14,7 @@ For branch workflows, use [branch management](branch-management.md) for setup an
 
 ## Coordinate execution
 
-1. Give each responsible skill the objective, scope, authoritative inputs, decisions, relevant task IDs, branch/HEAD, dirty-path ownership, permitted effects, required evidence, and stopping point. Keep credentials out of ordinary handoff text.
+1. Give each responsible skill the objective, scope, authoritative inputs, decisions, relevant task IDs, branch/HEAD, dirty-path ownership, permitted effects, required evidence, and stopping point. Carry the actual human grant, destination/ref, payload scope and explicit limits through handoffs; do not ask each worker to obtain the same approval again. Read [workflow authorization](revision-authorization.md) before authority decisions or approval requests. Keep credentials out of ordinary handoff text.
 2. Let the skill perform its owned procedure. Collect its changed paths, observed evidence, findings, and remaining differences before the next dependent stage.
 3. Refresh the material baseline when HEAD, instructions, project, target scope, or relevant pending changes change. Do not repeatedly run orientation or checks when the current evidence remains applicable.
 4. Resolve missing human decisions and out-of-scope requirements without guessing or silently expanding work. Continue independent authorized work where possible. State the blocked operation and decision needed.

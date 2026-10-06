@@ -10,6 +10,7 @@ import sys
 BUNDLE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(BUNDLE / 'scripts'))
 import core
+import campaign
 
 IDS = {f'A-{i:03}' for i in range(1, 28)}
 PROTOCOLS = {'staged-work', 'unpublished-commit', 'failed-required-check', 'rejected-push',
@@ -36,12 +37,14 @@ def asset(root, name, prefix):
 
 
 def validate_contract(value, case_id):
-    require(isinstance(value, dict) and set(value) <= {'schema_version','case_id','checks','required_agent_checks'}, 'unknown contract field')
+    require(isinstance(value, dict) and set(value) <= {'schema_version','case_id','checks','required_agent_checks','variant_agent_checks'}, 'unknown contract field')
     require(type(value.get('schema_version')) is int and value['schema_version'] == 1 and value.get('case_id') == case_id, 'invalid contract identity')
     checks = value.get('checks')
     require(isinstance(checks, list) and checks, 'empty contract')
     criteria = value.get('required_agent_checks')
     require(isinstance(criteria, list) and criteria and all(isinstance(s,str) and s.strip() for s in criteria), 'missing independent criteria')
+    variant_checks=value.get('variant_agent_checks',{})
+    require(isinstance(variant_checks,dict) and all(re.fullmatch('[a-z][a-z0-9-]*',k) and isinstance(v,list) and v and all(isinstance(x,str) and x.strip() for x in v) for k,v in variant_checks.items()), 'invalid variant criteria')
     seen = set()
     for check in checks:
         require(isinstance(check, dict) and isinstance(check.get('id'), str) and check['id'] and check['id'] not in seen, 'duplicate/invalid check')
@@ -81,6 +84,7 @@ def validate_catalog(root=BUNDLE, value=None):
     protocols = set()
     for c in cases:
         require(c.get('phase') in {'P1','P2','P3','P4','P5'} and c.get('mode') in {'product','isolated-trial','independent-assessment'}, 'invalid phase/mode')
+        campaign.variants(c)
         deps = c.get('dependencies')
         require(isinstance(deps,list) and len(deps)==len(set(deps)) and all(d in IDS and d != c['id'] for d in deps), 'invalid prerequisite ID')
         for field, prefix in [('consumer_input','cases/consumer/'),('assessor_contract','cases/assessor/'),('assessor_guide','cases/assessor/')]:
@@ -89,13 +93,17 @@ def validate_catalog(root=BUNDLE, value=None):
             paths.add(name)
             path = asset(root,name,prefix)
             if field == 'consumer_input': require(not LEAK.search(path.read_text()), 'consumer route-answer leakage')
-            if field == 'assessor_contract': validate_contract(core.load(path),c['id'])
+            if field == 'assessor_contract':
+                contract=core.load(path);validate_contract(contract,c['id'])
+                if 'variant_agent_checks' in contract:require(set(contract['variant_agent_checks'])=={v['id'] for v in campaign.variants(c)}, 'variant criteria/catalog mismatch')
         require(isinstance(c.get('prerequisites'),list) and c['prerequisites'], 'missing prerequisites')
         start = c.get('checkpoint_bindings',{}).get('start',{})
         require(start.get('from_case') is None if not deps or c['mode']=='independent-assessment' else start.get('from_case') in deps, 'invalid starting checkpoint dependency')
         require(start.get('checkpoint_fields') and all(f in REFS for f in start['checkpoint_fields']), 'invalid checkpoint fields')
         for name, ref in c.get('input_bindings',{}).items():
             require(re.fullmatch('[a-z_]+',name) and ref == 'current.'+name, 'invalid input binding')
+        overrides=c.get('variant_predecessors',{})
+        require(isinstance(overrides,dict) and all(k in {v['id'] for v in campaign.variants(c)} and dep in deps for k,dep in overrides.items()), 'invalid variant predecessor')
         trigger = c.get('interruption_trigger')
         if trigger:
             require(trigger.get('protocol') in PROTOCOLS and isinstance(trigger.get('observe'),str) and trigger['observe'] and trigger.get('fresh_context') is True, 'invalid actual interruption trigger')
@@ -111,6 +119,9 @@ def validate_catalog(root=BUNDLE, value=None):
         for dep in by_id[identifier]['dependencies']: visit(dep)
         visiting.remove(identifier); visited.add(identifier)
     for identifier in by_id: visit(identifier)
+    for c in cases:
+        for dep in c['dependencies']:
+            require(any(v['requirement']=='required' for v in campaign.variants(by_id[dep])), 'optional prerequisite gates required work')
     require(all(by_id[d]['order'] < c['order'] for c in cases for d in c['dependencies']), 'prerequisite order invalid')
     require(protocols == PROTOCOLS, 'missing intended protocol')
     require(by_id['A-008'].get('focused_probe')=='dependency-inflation' and all(by_id[c].get('focused_probe')=='retired-task-selection' for c in ['A-012','A-013']), 'missing focused probe')
@@ -119,7 +130,7 @@ def validate_catalog(root=BUNDLE, value=None):
     return by_id
 
 
-def render(case_id, bindings, root=BUNDLE, bindings_root=None):
+def render(case_id, bindings, root=BUNDLE, bindings_root=None, variant=None):
     cases = validate_catalog(root)
     require(case_id in cases, 'unknown selected case')
     core.no_secret(bindings)
@@ -131,7 +142,9 @@ def render(case_id, bindings, root=BUNDLE, bindings_root=None):
     require(isinstance(checkpoints,list) and all(isinstance(c,dict) for c in checkpoints), 'invalid checkpoints')
     require(len({c.get('case_id') for c in checkpoints}) == len(checkpoints), 'ambiguous predecessor checkpoints')
     c = cases[case_id]
-    source = c['checkpoint_bindings']['start']['from_case']
+    if variant is not None:
+        require(variant in {v['id'] for v in campaign.variants(c)}, 'unknown selected variant')
+    source = c.get('variant_predecessors',{}).get(variant,c['checkpoint_bindings']['start']['from_case'])
     if source is not None:
         matches = [p for p in checkpoints if p.get('case_id') == source]
         require(len(matches)==1, 'missing/ambiguous selected predecessor')
@@ -145,6 +158,9 @@ def render(case_id, bindings, root=BUNDLE, bindings_root=None):
         refs = p.get('checkpoint_refs',{})
         require(graded.get('checkpoint_refs')==refs, 'assessment checkpoint mismatch')
         for field in c['checkpoint_bindings']['start']['checkpoint_fields']:
+            if field=='merge_parents':
+                require(isinstance(refs.get(field),list) and len(refs[field])==2 and all(re.fullmatch('[a-f0-9]{40}',str(x)) for x in refs[field]), 'missing actual two-parent integration')
+                continue
             require(isinstance(refs.get(field),str) and refs[field], 'missing predecessor ref')
             if field.endswith('commit'): require(bool(re.fullmatch('[a-f0-9]{40}',refs[field])), 'invalid actual commit')
         repository = p.get('local_checkout')
@@ -178,13 +194,13 @@ def render(case_id, bindings, root=BUNDLE, bindings_root=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command',choices=['validate','render'])
-    parser.add_argument('--case'); parser.add_argument('--bindings',type=Path); parser.add_argument('--output',type=Path)
+    parser.add_argument('--case'); parser.add_argument('--variant'); parser.add_argument('--bindings',type=Path); parser.add_argument('--output',type=Path)
     args=parser.parse_args()
     try:
         if args.command=='validate':
             cases=validate_catalog(); print(json.dumps({'schema_version':1,'catalog_cases':len(cases),'kind':'static asset validation','live_acceptance':False})); return 0
         require(args.case and args.bindings and args.output, 'render arguments required')
-        text=render(args.case,core.load(args.bindings),bindings_root=args.bindings.parent)
+        text=render(args.case,core.load(args.bindings),bindings_root=args.bindings.parent,variant=args.variant)
         require(not args.output.exists() and not args.output.is_symlink(), 'output occupied')
         args.output.parent.mkdir(parents=True,exist_ok=True)
         with args.output.open('x') as stream: stream.write(text)

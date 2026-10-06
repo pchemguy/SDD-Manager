@@ -5,7 +5,7 @@ description: Coordinate SDD workflows for initial development, feature preparati
 
 # Coordinate specification-driven development
 
-Translate the user's objective into a scoped workflow and coordinate the responsible skills. Use the request and established session decisions as authorization; continue routine steps within that scope without repeated confirmation. Apply the workflow authorization policy to commits, publication, eligible integration and maintained hosting. Reviews end at their report commit; the execution owner publishes under the existing workflow authority without invoking a review skill for a push. Platform-enforced tool checks remain outside the plugin's control. Discussion, assessment, or review alone does not authorize edits. Start at the requested stage when its inputs are established, and stop at the requested boundary.
+Translate the user's objective into a scoped workflow and coordinate the responsible skills. Use the request and established session decisions as authorization; continue routine steps within that scope without repeated confirmation. Apply the workflow authorization policy to commits, publication, eligible integration and maintained hosting. Reviewer assessment ends at its report commit; publication remains part of the complete workflow under existing scope. Host automatic review is a separate platform control, not a plugin review skill. Read the authorization policy before authority decisions or approval requests. Discussion, assessment, or review alone does not authorize edits. Start at the requested stage when its inputs are established, and stop at the requested boundary.
 
 | Coordination concern | Load |
 | --- | --- |

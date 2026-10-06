@@ -21,7 +21,7 @@ For a feature package README, present identity/full baseline, branch/target, sco
 
 ## Review plan
 
-Define what will be reviewed and how evidence will be obtained. Order independent foundations before dependent implementation/coordinator concerns where appropriate. Prescribe a report update and commit after each planned unit, then publication and remote verification by the coordinating workflow. Review ends at the report commit; publication is not review work. Do not claim the plan's scenarios have run.
+Define what will be reviewed and how evidence will be obtained. Order independent foundations before dependent implementation/coordinator concerns where appropriate. Prescribe a report update and commit after each planned unit, then publication and remote verification by the coordinating workflow. Reviewer assessment ends at the report commit; publication remains an execution step of the complete workflow. Host automatic tool review is a separate platform control. Do not claim the plan's scenarios have run.
 
 ```markdown
 # Review plan

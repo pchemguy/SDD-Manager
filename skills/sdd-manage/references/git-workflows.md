@@ -34,7 +34,7 @@ Continue the same authorized operation when commanded; do not start another task
 
 ## Platform authorization rejection
 
-Use [workflow authorization](revision-authorization.md). Execute prescribed pushes as ordinary workflow operations; never invoke a review skill or add a permission-review stage for publication. If the platform itself rejects a tool action, preserve the exact operation/state and distinguish that execution denial from the existing human authorization. Supply observed scope/evidence through a supported operation channel when it resolves a mismatch. Do not bypass platform controls, substitute credentials for a policy restriction or require duplicate human authorization as a plugin gate.
+Use [workflow authorization](revision-authorization.md). Execute prescribed pushes as ordinary steps of the complete workflow; do not add a redundant plugin approval stage. Host automatic review of sandbox-crossing requests remains a separate control regardless of plugin stage ownership. If the platform itself rejects a tool action, preserve the exact operation/state and distinguish that execution denial from the existing human authorization. Supply observed scope/evidence through a supported operation channel when it resolves a mismatch. Do not bypass platform controls, substitute credentials for a policy restriction or require duplicate human authorization as a plugin gate.
 
 ## Push authentication recovery
 

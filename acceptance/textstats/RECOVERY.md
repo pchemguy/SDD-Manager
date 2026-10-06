@@ -42,3 +42,7 @@ Commit/push sanitized recovery exports and coordinator checkpoint on the evidenc
 5. Record external restoration, checkpoint repair and unresolved uncertainty as interventions. Resume only the same permitted operation. Publish recovered case evidence, independently assess continuation, then allow dependent selection after its gate.
 
 For ambiguous ownership, inaccessible remote or unavailable hosted lookup, preserve state and state the needed decision/facility. Do not guess effect success/failure. A failed recovery attempt remains retained even if a later authorized restoration passes.
+
+## Final evidence continuation
+
+A retained final report is followed by [evidence integration](EXECUTION.md#final-evidence-integration). Inspect exact main/evidence refs, merge parents, campaign-only delta and immutable source/assessment hashes before continuing. Already-integrated evidence needs verification, not a duplicate merge. A retained unpublished evidence merge needs its pending normal push and exact main readback. An earlier explicit pause/unmerged limit remains effective. Preserve product completion identity independently of evidence integration identity.

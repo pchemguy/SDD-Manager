@@ -25,7 +25,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-002",
@@ -54,7 +62,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-003",
@@ -84,7 +100,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-004",
@@ -113,7 +137,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-005",
@@ -143,7 +175,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-006",
@@ -173,7 +213,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-007",
@@ -203,7 +251,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-008",
@@ -233,7 +289,15 @@
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
       },
-      "focused_probe": "dependency-inflation"
+      "focused_probe": "dependency-inflation",
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-009",
@@ -262,7 +326,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-010",
@@ -291,7 +363,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-011",
@@ -320,7 +400,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-012",
@@ -350,7 +438,15 @@
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
       },
-      "focused_probe": "retired-task-selection"
+      "focused_probe": "retired-task-selection",
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-013",
@@ -380,7 +476,15 @@
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
       },
-      "focused_probe": "retired-task-selection"
+      "focused_probe": "retired-task-selection",
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-014",
@@ -388,7 +492,8 @@
       "order": 14,
       "phase": "P4",
       "dependencies": [
-        "A-001"
+        "A-001",
+        "A-004"
       ],
       "mode": "isolated-trial",
       "consumer_input": "cases/consumer/A-014.md",
@@ -396,11 +501,12 @@
       "assessor_guide": "cases/assessor/A-014.md",
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
-        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects."
+        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
+        "Cross-phase variant starts after actual out-of-range prerequisites are independently complete/published and allows phase publication; refusal variant separately uses prepared state."
       ],
       "checkpoint_bindings": {
         "start": {
-          "from_case": "A-001",
+          "from_case": "A-004",
           "checkpoint_fields": [
             "product_commit",
             "product_branch",
@@ -413,6 +519,23 @@
       "input_bindings": {
         "range_start": "current.range_start",
         "range_end": "current.range_end"
+      },
+      "variants": [
+        {
+          "id": "cross-phase",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        },
+        {
+          "id": "prerequisite-refusal",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ],
+      "variant_predecessors": {
+        "prerequisite-refusal": "A-001"
       }
     },
     {
@@ -449,7 +572,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-016",
@@ -485,7 +616,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-017",
@@ -493,7 +632,7 @@
       "order": 17,
       "phase": "P4",
       "dependencies": [
-        "A-003"
+        "A-005"
       ],
       "mode": "isolated-trial",
       "consumer_input": "cases/consumer/A-017.md",
@@ -501,11 +640,12 @@
       "assessor_guide": "cases/assessor/A-017.md",
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
-        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects."
+        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
+        "Actual usable counting implementation, independently passing literal baseline, disclosed isolated valid-contract regression and consumer-visible failing required check; a passing injected test is not a trigger."
       ],
       "checkpoint_bindings": {
         "start": {
-          "from_case": "A-003",
+          "from_case": "A-005",
           "checkpoint_fields": [
             "product_commit",
             "product_branch",
@@ -521,7 +661,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "failed-check",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-018",
@@ -557,7 +705,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-019",
@@ -565,7 +721,7 @@
       "order": 19,
       "phase": "P4",
       "dependencies": [
-        "A-005"
+        "A-006"
       ],
       "mode": "isolated-trial",
       "consumer_input": "cases/consumer/A-019.md",
@@ -573,16 +729,18 @@
       "assessor_guide": "cases/assessor/A-019.md",
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
-        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects."
+        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
+        "Actual complete reviewed phase retained as incoming parent of assessed A006 merge; isolate pre-integration target/incoming parents and verify all exits before trial divergence."
       ],
       "checkpoint_bindings": {
         "start": {
-          "from_case": "A-005",
+          "from_case": "A-006",
           "checkpoint_fields": [
             "product_commit",
             "product_branch",
             "integration_commit",
-            "integration_branch"
+            "integration_branch",
+            "merge_parents"
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
@@ -593,7 +751,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "integration-recovery",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-020",
@@ -622,7 +788,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-021",
@@ -658,7 +832,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "partial-transfer",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-022",
@@ -690,7 +872,15 @@
       },
       "input_bindings": {
         "acceptance_change": "current.acceptance_change"
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-023",
@@ -707,7 +897,7 @@
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
         "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
-        "Safe isolated adapter/runtime for actual phase projection and milestone closure response-loss variants."
+        "Required core: authorized disposable controlled effect ledger and exact readback; optional live-response-loss additionally needs isolated provider identity and safe post-send suppression."
       ],
       "checkpoint_bindings": {
         "start": {
@@ -723,11 +913,28 @@
       },
       "interruption_trigger": {
         "protocol": "uncertain-hosted-effect",
-        "observe": "Observe real consumer hosted write/closure request followed by injected unavailable/lost response; retain exact operation identity.",
+        "observe": "Observe consumer-selected controlled fixture write with unavailable/lost response; only optional live-response-loss requires actual hosted write/closure and provider readback. Retain exact selected operation identity.",
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "controlled-reconciliation",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": []
+        },
+        {
+          "id": "live-response-loss",
+          "requirement": "optional",
+          "evidence_class": "live-provider",
+          "facilities": [
+            "isolated_hosted_identity",
+            "post_write_response_suppression"
+          ]
+        }
+      ]
     },
     {
       "id": "A-024",
@@ -763,7 +970,37 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "denial",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": []
+        },
+        {
+          "id": "rate-limit",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": []
+        },
+        {
+          "id": "unavailable-access",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": []
+        },
+        {
+          "id": "native-recovery",
+          "requirement": "optional",
+          "evidence_class": "native",
+          "facilities": [
+            "protected_handoff",
+            "recoverable_native_credentials",
+            "fresh_context"
+          ]
+        }
+      ]
     },
     {
       "id": "A-025",
@@ -792,7 +1029,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-026",
@@ -824,7 +1069,27 @@
       },
       "input_bindings": {
         "verification_commands": "current.verification_commands"
-      }
+      },
+      "variants": [
+        {
+          "id": "empty-selection",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        },
+        {
+          "id": "failing-baseline",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        },
+        {
+          "id": "preservation",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-027",
@@ -878,7 +1143,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "inspection",
+          "facilities": []
+        }
+      ]
     }
   ]
 }

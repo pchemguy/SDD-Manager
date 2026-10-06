@@ -170,6 +170,13 @@ def configuration(path):
     validate(data,load(BUNDLE/'schemas/inputs.schema.json'))
     resolved = {'plugin_revision':'HEAD','source_mode':'committed','scope':{},'stop_after':None,'profile':'full-github'}
     resolved.update(data)
+    if 'variants' in resolved:
+        import campaign
+        cases={c['id']:c for c in load(BUNDLE/'cases/catalog.json')['cases']}
+        scope=resolved['scope']
+        cases={k:c for k,c in cases.items() if (not scope.get('cases') or k in scope['cases']) and (not scope.get('phases') or c['phase'] in scope['phases'])}
+        try: campaign.select(cases,resolved['variants'])
+        except (ValueError,TypeError): raise Stop('invalid_variant_selection') from None
     return resolved
 
 
@@ -254,7 +261,7 @@ def remote_read(repo, remote):
     return {'status':'observed','refs':refs,'default_branch':default}
 
 
-def repository(inputs):
+def repository(inputs, observe_remote=True):
     """Resolve the requested checkout and uniquely matching authorized remote.
 
     Args:
@@ -274,6 +281,7 @@ def repository(inputs):
     explicit = inputs.get('local_checkout')
     local = Path(explicit or identified).expanduser()
     if not explicit and (not local.is_dir() or git(local,'rev-parse','--is-bare-repository',required=False).stdout.strip()=='true'):
+        if not observe_remote:raise Stop('local_checkout_required')
         read = remote_read(SOURCE,identified)
         return {'identity':identified,'local_checkout':None,'remote':None,'remote_url':identified,'integration_branch':read['default_branch'],'remote_observation':read,'head':None,'existing_runs':[]}
     root = git(local,'rev-parse','--show-toplevel',required=False)
@@ -290,7 +298,7 @@ def repository(inputs):
     if not remotes: raise Stop('repository_identity_mismatch')
     if len(remotes) != 1: raise Stop('repository_ambiguous','Select one unambiguous dedicated repository and authorized remote before writes.')
     name,url=remotes[0]
-    read=remote_read(checkout,name)
+    read=remote_read(checkout,name) if observe_remote else {'status':'not-requested','refs':{},'default_branch':None}
     branch=git(checkout,'symbolic-ref','--quiet','--short','HEAD',required=False).stdout.strip() or None
     refs=git(checkout,'for-each-ref','--format=%(refname)','refs/heads').stdout.splitlines()
     integration = read['default_branch']
@@ -890,14 +898,20 @@ def assessment(inputs,state,contract_path,evidence_path):
     if not contract_path:
         return {'schema_version':1,'status':'Not run','checks':[],'agent_behavior_assessed':False,'reason':'No deterministic contract supplied.'},0
     contract=load(contract_path)
-    if type(contract) is not dict or set(contract)-{'schema_version','checks','required_agent_checks','case_id'} or not exact(contract.get('schema_version'),1): raise Stop('invalid_contract')
+    if type(contract) is not dict or set(contract)-{'schema_version','checks','required_agent_checks','case_id','variant_agent_checks'} or not exact(contract.get('schema_version'),1): raise Stop('invalid_contract')
     checks=contract.get('checks')
     if not isinstance(checks,list) or not checks: raise Stop('empty_check_collection')
     if 'required_agent_checks' in contract and (not isinstance(contract['required_agent_checks'],list) or not all(isinstance(x,str) and x for x in contract['required_agent_checks'])): raise Stop('invalid_contract')
     if 'case_id' in contract and not re.fullmatch(r'A-0(0[1-9]|1[0-9]|2[0-7])',str(contract['case_id'])): raise Stop('invalid_contract')
+    variant_checks=contract.get('variant_agent_checks',{})
+    if not isinstance(variant_checks,dict) or any(not re.fullmatch('[a-z][a-z0-9-]*',str(k)) or not isinstance(v,list) or not v or any(not isinstance(x,str) or not x for x in v) for k,v in variant_checks.items()):raise Stop('invalid_contract')
+    selected_variant=(state or {}).get('variant')
+    if selected_variant and variant_checks and selected_variant not in variant_checks:raise Stop('invalid_contract')
+    agent_checks=contract.get('required_agent_checks',[])+variant_checks.get(selected_variant,[])
     evidence=load(evidence_path) if evidence_path else None
     if evidence is not None and (type(evidence) is not dict or set(evidence)!={'schema_version','literals'} or not exact(evidence['schema_version'],1) or type(evidence['literals']) is not dict): raise Stop('invalid_evidence')
-    repo=repository(inputs)
+    needs_remote=any(c.get('kind')=='git' and c.get('field') in {'publication','remote_containment'} for c in checks)
+    repo=repository(inputs,observe_remote=needs_remote)
     if not repo['local_checkout']: raise Stop('local_checkout_required')
     actual_git=None
     rows=[]
@@ -942,7 +956,14 @@ def assessment(inputs,state,contract_path,evidence_path):
             if error.cause in {'invalid_contract','invalid_check_path','invalid_expected_ref','sensitive_content_not_exportable'}: raise
             rows.append({'id':check['id'],'status':'Failed','reason':error.cause})
     failed=any(row['status']=='Failed' for row in rows)
-    return {'schema_version':1,'status':'Checks failed' if failed else 'Checks passed','checks':rows,'agent_behavior_assessed':False,'required_agent_checks':contract.get('required_agent_checks',[])},int(failed)
+    result={'schema_version':1,'status':'Checks failed' if failed else 'Checks passed','checks':rows,'agent_behavior_assessed':False,'required_agent_checks':agent_checks}
+    if variant_checks:
+        result['variant_selection_required']=selected_variant is None
+        result['selected_variant']=selected_variant
+        if selected_variant is None:
+            result['available_variant_agent_checks']=variant_checks
+            result['agent_assessment_limit']='Select a declared variant before independent grading; deterministic compatibility is not complete variant criteria.'
+    return result,int(failed)
 
 
 def main(command):

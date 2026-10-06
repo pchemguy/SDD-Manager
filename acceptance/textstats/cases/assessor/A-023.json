@@ -14,8 +14,14 @@
     }
   ],
   "required_agent_checks": [
-    "Real local completion persists while hosted effect is unavailable/unknown; pending operation uses exact discovered hosted identity.",
-    "Readback precedes replay; no duplicate issue/comment/closure; restored access reconciles older maintained backlog. Distinguish injected response from provider readback.",
-    "Additionally interrupt an actual phase projection and actual milestone closure in isolated trials. Preserve exact identities; after lost response, read provider state before replay and do not create duplicate objects or advance on unknown closure."
-  ]
+    "Exact observed identity, retained valid work and readback before any uncertain-effect retry; no duplicate effect. Evidence class is explicit."
+  ],
+  "variant_agent_checks": {
+    "controlled-reconciliation": [
+      "Independently observe fixture send-then-lost-response, applied effect readback and pre-send unapplied effect. Fresh consumer chooses bounded reconciliation; fixture responses are not GitHub acceptance."
+    ],
+    "live-response-loss": [
+      "Optional real provider task/backlog, eligible-phase projection and milestone closure trials in legitimate isolated namespace; suppress response after actual send and inspect exact live objects before replay. Missing facilities are optional Not run."
+    ]
+  }
 }

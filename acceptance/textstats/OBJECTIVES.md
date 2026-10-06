@@ -14,7 +14,7 @@ Every capability here is **plugin test material**. TextStats' generated design, 
 | Failure and recovery | Genuine partial work retained; fresh continuation uses actual files/index/refs/identities; no resets, duplicate hosted writes or invented successful prerequisites |
 | Diagnostic quality | Original attempts, assistance and gaps visible; causal confidence and reproducible bounded change proposals rather than automatic source repair |
 
-The catalog imports A-001–A-027 intents. Full supported coverage requires every available case's prerequisite, execution and independent assessment, actual positive-sequence Git/GitHub operations, and controlled failures in isolated fixtures. A script preparing a failure is not the consumer action being tested. Installed-client discovery, routing and activation require their own observed runtime facility; explicit skill loading proves only explicit-source execution. Recorded interpreter/tool versions bound compatibility claims.
+The catalog imports A-001–A-027 intents. Required readiness uses [selected required variants](VARIANTS.md), with optional outcomes separately visible. Full required coverage requires each required prerequisite, execution and independent assessment, actual positive-sequence Git/GitHub operations, and controlled failures in isolated fixtures. A script preparing a failure is not the consumer action being tested. Installed-client discovery, routing and activation require their own observed runtime facility; explicit skill loading proves only explicit-source execution. Recorded interpreter/tool versions bound compatibility claims.
 
 ## Outcomes
 
@@ -25,7 +25,7 @@ The catalog imports A-001–A-027 intents. Full supported coverage requires ever
 | Passed | Independent evidence meets the contract; explicitly label assistance and original-attempt result |
 | Failed | Observed behavior contradicts the contract; retain evidence and causal uncertainty |
 | Blocked | Required input, prerequisite or facility prevents meaningful execution/continuation |
-| Not run | Excluded by bounded scope/profile or unsupported client facility; state the reason |
+| Not run | Excluded by scope/profile or an unavailable optional extension/client facility; non-blocking for required readiness, with reason |
 
 A test count, checkbox, closed issue or consumer completion claim cannot establish acceptance alone. Empty collection is not passing verification. Eventual repair can yield Passed with assistance without erasing a first failure. Blocked dependents do not pass through a waived prerequisite. Coverage totals reconcile all catalog IDs and all attempts, including selected omissions. Diagnose input/consumer/checker/environment/plugin causes separately; an input explanation requires evidence and may coexist with weak plugin guidance.
 
