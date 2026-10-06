@@ -7,7 +7,7 @@ Working branch revision/024_ed2d571-pre-release-review; integration target featu
 | Action | State | Evidence |
 | --- | --- | --- |
 | V-001 / R-001 | Implemented and focused recheck passed | [RED](probe-red.txt): two actual boundary assertions fail; [GREEN](probe-green.txt): five checks pass. Public package import/origin, package-only layout, broken public export, actual injected assertions and import/setup distinction tested. Injector/assessor guides disclose its narrower layout. |
-| V-002 / R-002 | Pending | Receipt path preservation checks |
+| V-002 / R-002 | Implemented and focused recheck passed | [RED](receipt-red.txt): three behavioral assertion failures and two prior resume/load errors (not behavioral RED). [GREEN](receipt-green.txt): nine tests pass; fresh/resume dangling and occupied symlinks plus parent links rejected before effects; ordinary held continuation/drift/uncertain non-replay retained. |
 | V-003 / R-003 | Pending | Real package snapshot and notice navigation |
 | V-004 / R-004 | Pending | Campaign table completeness/navigation |
 
