@@ -376,6 +376,11 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "variant": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Current variant name for new split-case attempts; absent remains a historical unsplit case."
     }
   },
   "required": [

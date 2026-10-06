@@ -170,6 +170,13 @@ def configuration(path):
     validate(data,load(BUNDLE/'schemas/inputs.schema.json'))
     resolved = {'plugin_revision':'HEAD','source_mode':'committed','scope':{},'stop_after':None,'profile':'full-github'}
     resolved.update(data)
+    if 'variants' in resolved:
+        import campaign
+        cases={c['id']:c for c in load(BUNDLE/'cases/catalog.json')['cases']}
+        scope=resolved['scope']
+        cases={k:c for k,c in cases.items() if (not scope.get('cases') or k in scope['cases']) and (not scope.get('phases') or c['phase'] in scope['phases'])}
+        try: campaign.select(cases,resolved['variants'])
+        except (ValueError,TypeError): raise Stop('invalid_variant_selection') from None
     return resolved
 
 

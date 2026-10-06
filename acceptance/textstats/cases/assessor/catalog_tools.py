@@ -10,6 +10,7 @@ import sys
 BUNDLE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(BUNDLE / 'scripts'))
 import core
+import campaign
 
 IDS = {f'A-{i:03}' for i in range(1, 28)}
 PROTOCOLS = {'staged-work', 'unpublished-commit', 'failed-required-check', 'rejected-push',
@@ -81,6 +82,7 @@ def validate_catalog(root=BUNDLE, value=None):
     protocols = set()
     for c in cases:
         require(c.get('phase') in {'P1','P2','P3','P4','P5'} and c.get('mode') in {'product','isolated-trial','independent-assessment'}, 'invalid phase/mode')
+        campaign.variants(c)
         deps = c.get('dependencies')
         require(isinstance(deps,list) and len(deps)==len(set(deps)) and all(d in IDS and d != c['id'] for d in deps), 'invalid prerequisite ID')
         for field, prefix in [('consumer_input','cases/consumer/'),('assessor_contract','cases/assessor/'),('assessor_guide','cases/assessor/')]:
@@ -111,6 +113,9 @@ def validate_catalog(root=BUNDLE, value=None):
         for dep in by_id[identifier]['dependencies']: visit(dep)
         visiting.remove(identifier); visited.add(identifier)
     for identifier in by_id: visit(identifier)
+    for c in cases:
+        for dep in c['dependencies']:
+            require(any(v['requirement']=='required' for v in campaign.variants(by_id[dep])), 'optional prerequisite gates required work')
     require(all(by_id[d]['order'] < c['order'] for c in cases for d in c['dependencies']), 'prerequisite order invalid')
     require(protocols == PROTOCOLS, 'missing intended protocol')
     require(by_id['A-008'].get('focused_probe')=='dependency-inflation' and all(by_id[c].get('focused_probe')=='retired-task-selection' for c in ['A-012','A-013']), 'missing focused probe')

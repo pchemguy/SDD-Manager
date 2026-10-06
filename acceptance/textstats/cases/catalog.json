@@ -25,7 +25,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-002",
@@ -54,7 +62,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-003",
@@ -84,7 +100,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-004",
@@ -113,7 +137,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-005",
@@ -143,7 +175,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-006",
@@ -173,7 +213,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-007",
@@ -203,7 +251,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-008",
@@ -233,7 +289,15 @@
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
       },
-      "focused_probe": "dependency-inflation"
+      "focused_probe": "dependency-inflation",
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-009",
@@ -262,7 +326,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-010",
@@ -291,7 +363,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-011",
@@ -320,7 +400,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-012",
@@ -350,7 +438,15 @@
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
       },
-      "focused_probe": "retired-task-selection"
+      "focused_probe": "retired-task-selection",
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-013",
@@ -380,7 +476,15 @@
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
       },
-      "focused_probe": "retired-task-selection"
+      "focused_probe": "retired-task-selection",
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-014",
@@ -413,7 +517,21 @@
       "input_bindings": {
         "range_start": "current.range_start",
         "range_end": "current.range_end"
-      }
+      },
+      "variants": [
+        {
+          "id": "cross-phase",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        },
+        {
+          "id": "prerequisite-refusal",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-015",
@@ -449,7 +567,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-016",
@@ -485,7 +611,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-017",
@@ -521,7 +655,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "failed-check",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-018",
@@ -557,7 +699,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-019",
@@ -593,7 +743,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "integration-recovery",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-020",
@@ -622,7 +780,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-021",
@@ -658,7 +824,15 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "partial-transfer",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-022",
@@ -690,7 +864,15 @@
       },
       "input_bindings": {
         "acceptance_change": "current.acceptance_change"
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-023",
@@ -727,7 +909,24 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "controlled-reconciliation",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": []
+        },
+        {
+          "id": "live-response-loss",
+          "requirement": "optional",
+          "evidence_class": "live-provider",
+          "facilities": [
+            "isolated_hosted_identity",
+            "post_write_response_suppression"
+          ]
+        }
+      ]
     },
     {
       "id": "A-024",
@@ -763,7 +962,37 @@
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"
-      }
+      },
+      "variants": [
+        {
+          "id": "denial",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": []
+        },
+        {
+          "id": "rate-limit",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": []
+        },
+        {
+          "id": "unavailable-access",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": []
+        },
+        {
+          "id": "native-recovery",
+          "requirement": "optional",
+          "evidence_class": "native",
+          "facilities": [
+            "protected_handoff",
+            "recoverable_native_credentials",
+            "fresh_context"
+          ]
+        }
+      ]
     },
     {
       "id": "A-025",
@@ -792,7 +1021,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-026",
@@ -824,7 +1061,27 @@
       },
       "input_bindings": {
         "verification_commands": "current.verification_commands"
-      }
+      },
+      "variants": [
+        {
+          "id": "empty-selection",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        },
+        {
+          "id": "failing-baseline",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        },
+        {
+          "id": "preservation",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": []
+        }
+      ]
     },
     {
       "id": "A-027",
@@ -878,7 +1135,15 @@
           ]
         },
         "identities": "Resolve task IDs, owner paths, feature/revision branch and hosted IDs from actual sanitized current-state observations; do not substitute historical values."
-      }
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "inspection",
+          "facilities": []
+        }
+      ]
     }
   ]
 }
