@@ -38,6 +38,12 @@ Integrate only a complete verified phase, then stop at my requested boundary.
 
 Use the milestone and task IDs from your actual task list. You can start at a later stage when its inputs are already established; the coordinator does not repeat earlier stages by default.
 
+## Plugin package
+
+The package includes root `plugin.json`, an identical `.codex-plugin/plugin.json` for Codex discovery, root `README.md` and `LICENSE`, `skills/`, and `assets/`. Keep both manifest copies synchronized when changing metadata or versions. The root manifest preserves the same client metadata; its presence alone does not establish Agent Plugins 1.0 conformance.
+
+The PNG and SVG artwork share the basename `logo`: `assets/logo.png` and `assets/logo.svg`. Manifest presentation paths select the corresponding files. README is user-facing package documentation; runtime workflow instructions live in the skills. Acceptance and development material linked here belongs to the source repository and is outside the pinned skill package.
+
 ## Core development workflows
 
 | Workflow | Purpose and typical path |

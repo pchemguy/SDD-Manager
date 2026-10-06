@@ -1,0 +1,9 @@
+# Root manifest, package README and logo naming — 023_642e93d
+
+Baseline: `642e93dc06f79719809881e077c6fba3e0719ca6`. Working branch: `revision/023_642e93d-package-root-metadata`; target: `feature/architecture-revision`. User authorized root copy of the Codex manifest, README inclusion in the plugin package and root SVG rename to logo.
+
+Root `plugin.json` is a byte-identical copy of `.codex-plugin/plugin.json`; both are version 0.14.6. Root asset `assets/icon.svg` is renamed to `assets/logo.svg` with unchanged bytes; both composer icon fields now reference it. Existing `assets/logo.png` and per-skill icons are preserved. No portable-schema conversion is implied by copying client metadata.
+
+TextStats package pinning now includes root README and LICENSE in committed/dirty manifests and mode-sensitive fingerprints; historical snapshots remain unchanged. README documents package membership and manifest synchronization; snapshot/setup instructions agree. The license is included with the distributed documentation; its bytes are unchanged. Source-only acceptance/development files remain outside consumer skill snapshots.
+
+Test-first evidence: actual committed fixture preflight omitted README, producing an assertion failure before the package-path change. Focused GREEN passed; complete support suite: 107 tests Passed (28.056s). [Retained output](support-suite.txt) and [package checks](package-validation.json) record actual verification. Manifest bytes match, all four presentation references resolve, SVG XML parses, artwork/license bytes and all skill files remain unchanged. Actual dirty-source snapshot contains matching manifests, README/LICENSE and renamed SVG, with no obsolete root icon path. Catalog validation passes for all 27 cases; diff whitespace checks pass. Normal working-branch publication and explicit target integration remain pending.
