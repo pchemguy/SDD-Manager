@@ -632,7 +632,7 @@
       "order": 17,
       "phase": "P4",
       "dependencies": [
-        "A-003"
+        "A-005"
       ],
       "mode": "isolated-trial",
       "consumer_input": "cases/consumer/A-017.md",
@@ -640,11 +640,12 @@
       "assessor_guide": "cases/assessor/A-017.md",
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
-        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects."
+        "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
+        "Actual usable counting implementation, independently passing literal baseline, disclosed isolated valid-contract regression and consumer-visible failing required check; a passing injected test is not a trigger."
       ],
       "checkpoint_bindings": {
         "start": {
-          "from_case": "A-003",
+          "from_case": "A-005",
           "checkpoint_fields": [
             "product_commit",
             "product_branch",
