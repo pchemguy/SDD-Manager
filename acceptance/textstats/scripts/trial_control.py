@@ -104,6 +104,13 @@ def execute(root, actions, watched, receipt, hold_after=None, resume=False, pend
             try:row.update(stdout=core.clean_bytes(proc.stdout).decode(errors='replace'),stderr=core.clean_bytes(proc.stderr).decode(errors='replace'))
             except core.Stop:row['channels']='Withheld: sensitive content'
         except (OSError,subprocess.TimeoutExpired) as error:
+            row={'argv':actions[i],'returncode':None,'status':'Interrupted','failure':type(error).__name__}
+            if isinstance(error,subprocess.TimeoutExpired):
+                try:
+                    row.update(stdout=core.clean_bytes(error.stdout or b'').decode(errors='replace'),stderr=core.clean_bytes(error.stderr or b'').decode(errors='replace'))
+                except core.Stop:
+                    row['channels']='Withheld: sensitive content'
+            record['commands'].append(row)
             record['status']='Uncertain';record['failure']=type(error).__name__;save();raise ValueError('operation incomplete; reconcile before retry') from error
         record['commands'].append(row)
         if proc.returncode:record['status']='Failed';save();return record

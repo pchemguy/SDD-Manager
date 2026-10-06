@@ -25,3 +25,22 @@ class LocalAssessment(Sandbox):
         contract=__import__('pathlib').Path(__file__).parents[1]/'cases/assessor/A-024.json';state=dict(self.state,variant='denial');state['checkpoint_refs']={'product_commit':git(self.repo,'rev-parse','HEAD').stdout.strip()}
         result,code=core.assessment(self.inputs,state,contract,None)
         self.assertEqual(code,0);self.assertFalse(any('native handoff' in x for x in result['required_agent_checks']))
+
+    def test_refusal_variant_does_not_require_cross_phase_execution(self):
+        (self.repo/'TASKS.md').write_text('- [ ] T-ONE actual local task\n')
+        contract=__import__('pathlib').Path(__file__).parents[1]/'cases/assessor/A-014.json'
+        state=dict(self.state,variant='prerequisite-refusal');state['checkpoint_refs']={'product_commit':git(self.repo,'rev-parse','HEAD').stdout.strip()}
+        result,code=core.assessment(self.inputs,state,contract,None)
+        self.assertEqual(code,0)
+        self.assertFalse(any('earlier phase completes' in x for x in result['required_agent_checks']))
+        self.assertTrue(any('refus' in x.lower() for x in result['required_agent_checks']))
+
+    def test_legacy_checkpoint_discloses_missing_variant_criteria_selection(self):
+        (self.repo/'TASKS.md').write_text('- [ ] T-ONE actual local task\n')
+        contract=__import__('pathlib').Path(__file__).parents[1]/'cases/assessor/A-024.json'
+        state=dict(self.state);state['checkpoint_refs']={'product_commit':git(self.repo,'rev-parse','HEAD').stdout.strip()}
+        result,code=core.assessment(self.inputs,state,contract,None)
+        self.assertEqual(code,0)
+        self.assertTrue(result.get('variant_selection_required'))
+        self.assertIn('native-recovery',result.get('available_variant_agent_checks',{}))
+        self.assertFalse(result['agent_behavior_assessed'])

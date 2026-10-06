@@ -6,7 +6,7 @@ Campaign: `021_85f2857`. Starting owning-source baseline: `85f2857b9e4a8cb6dcd1b
 
 Inputs: [imported review](REVIEW-REPORT.md), [final live diagnostic](DIAGNOSTIC-REPORT.md), [Batches 1 and 2](PROPOSED-AMENDMENTS.md), [authorization proposals](runs/A-004/1/AUTHORIZATION-AMENDMENT-PROPOSAL.md) and [supplement](AUTHORIZATION-AMENDMENT-SUPPLEMENT.md). [Import provenance](IMPORT-PROVENANCE.json) preserves tested-source identity and exact published evidence. The live campaign tested 0.14.3 at `019eb354cf0921ebd6056e6579763ac33d0baec2`; its 20 Passed / seven Blocked disposition remains unchanged.
 
-**Status: drafted for subsequent implementation.** The current request authorizes test-evidence integration, report import and plan drafting. It does not start source implementation, change ChatGPT settings, deploy a plugin or dispatch another acceptance campaign. The planned `REVISION-REPORT.md` will be created when implementation starts; no placeholder completion report is fabricated.
+**Status: implementation authorized and in progress.** The subsequent user's “Execute campaign” instruction activates V-001–V-014 on the retained branch. [REVISION-REPORT](REVISION-REPORT.md) records actual actions and evidence. This execution does not change ChatGPT settings, deploy installed skills or dispatch the separately identified live follow-up.
 
 The test evidence merge is already published at `2d18ec0c74fa4dfec62a28ab9c0c1701134817b1`, with parents `d3f206a1970504c2fc2aff3e8965e630eeab8c81` and `c380436e0f8337d2faf3f299d24dc0b95f621acf`. No repeated test-main merge is needed. Historical source STOP/pending-merge wording is retained as evidence and superseded by the current integration record.
 
@@ -51,7 +51,7 @@ Do not introduce schema keys without updating their readers/writers and examples
 
 ## Planned execution evidence and live follow-up
 
-When implementation is authorized, create `REVISION-REPORT.md` with action IDs, actual changed owners, commands/results, commit/publication state, original finding dispositions and limits. Commit and normally push each completed action before dependent edits. Development review ends at its result commit; pushes remain ordinary execution steps of the encompassing workflow. Supply existing scope/effect evidence through supported platform channels on a rejection and preserve valid pending work.
+During the authorized implementation, maintain `REVISION-REPORT.md` with action IDs, actual changed owners, commands/results, commit/publication state, original finding dispositions and limits. Commit and normally push each completed action before dependent edits. Development review ends at its result commit; pushes remain ordinary execution steps of the encompassing workflow. Supply existing scope/effect evidence through supported platform channels on a rejection and preserve valid pending work.
 
 After source/harness verification, allocate a separately identified targeted follow-up campaign using the revised full source pin. Select the repaired required variants and affected regressions explicitly. Reuse independently verified compatible prerequisite objects; record new fixture bindings without rewriting old attempts. Missing prerequisites are not authority to replay the entire product workflow. The original frozen package and 20/7 result remain unchanged.
 
@@ -63,4 +63,4 @@ This plan does not dispatch that follow-up now. Its facilities, selected units, 
 
 Implementation completion requires verified source changes for the planned actions, a truthful revision report, coherent target integration/publication and retained unresolved optional coverage. Live acceptance is a separate evidence gate and cannot be inferred from support-suite success or a commit.
 
-Current preparation ends after the imported review artifacts and this plan are committed and published on the owning-source campaign branch. Do not implement proposed harness/policy changes, change account settings, deploy revised skills or start live acceptance during this drafting request.
+The original drafting boundary was completed before the subsequent execution instruction. The active boundary is completion of V-001–V-014: verified source amendments, explicit target integration/publication and retained report. Stop before account-setting changes, installed-plugin deployment or the separately scoped live follow-up.

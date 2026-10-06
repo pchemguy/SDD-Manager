@@ -897,7 +897,7 @@
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
         "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
-        "Safe isolated adapter/runtime for actual phase projection and milestone closure response-loss variants."
+        "Required core: authorized disposable controlled effect ledger and exact readback; optional live-response-loss additionally needs isolated provider identity and safe post-send suppression."
       ],
       "checkpoint_bindings": {
         "start": {
@@ -913,7 +913,7 @@
       },
       "interruption_trigger": {
         "protocol": "uncertain-hosted-effect",
-        "observe": "Observe real consumer hosted write/closure request followed by injected unavailable/lost response; retain exact operation identity.",
+        "observe": "Observe consumer-selected controlled fixture write with unavailable/lost response; only optional live-response-loss requires actual hosted write/closure and provider readback. Retain exact selected operation identity.",
         "continuation_input": "cases/consumer/continuation.md",
         "fresh_context": true,
         "guide": "cases/assessor/INTERRUPTIONS.md"

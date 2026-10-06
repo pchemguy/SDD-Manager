@@ -956,7 +956,14 @@ def assessment(inputs,state,contract_path,evidence_path):
             if error.cause in {'invalid_contract','invalid_check_path','invalid_expected_ref','sensitive_content_not_exportable'}: raise
             rows.append({'id':check['id'],'status':'Failed','reason':error.cause})
     failed=any(row['status']=='Failed' for row in rows)
-    return {'schema_version':1,'status':'Checks failed' if failed else 'Checks passed','checks':rows,'agent_behavior_assessed':False,'required_agent_checks':agent_checks},int(failed)
+    result={'schema_version':1,'status':'Checks failed' if failed else 'Checks passed','checks':rows,'agent_behavior_assessed':False,'required_agent_checks':agent_checks}
+    if variant_checks:
+        result['variant_selection_required']=selected_variant is None
+        result['selected_variant']=selected_variant
+        if selected_variant is None:
+            result['available_variant_agent_checks']=variant_checks
+            result['agent_assessment_limit']='Select a declared variant before independent grading; deterministic compatibility is not complete variant criteria.'
+    return result,int(failed)
 
 
 def main(command):

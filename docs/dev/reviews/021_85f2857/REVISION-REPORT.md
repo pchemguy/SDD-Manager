@@ -22,4 +22,33 @@ Starting baseline: `85f2857b9e4a8cb6dcd1b4b9e2a5d2f5d7b2a14b`. Working branch: `
 
 | V-012 | README adds date-qualified observed ChatGPT UI labels, official website-mode documentation, narrower GitHub exception and broad alternative, with explicit uncertainty about shell/API review. Adds concise TextStats entry and retained 20261003/20261004 history, truthful pinned 20/7 outcome and revised-source limits. Root MIT and upstream license are preserved; fresh-run heading/prompt remain with only scoped optional/integration alignment. | Implemented; no account setting change or implied test verdict. |
 
-No live consumer rerun, account setting change, deployment or historical grade update has been performed. Later action rows will record actual checks and publication. Existing unrelated untracked files are preserved. Optional/native facilities remain runtime limits, not new passing evidence.
+| V-013 | Version 0.14.5 records the compatible source/harness/documentation revision; helper interfaces and campaign/index status reconciled. Independent review found four Important coupled-criteria inconsistencies and one Minor timeout-evidence loss; corrections and RED/GREEN evidence are retained in the linked review. Full suite: 106 tests Passed; catalog, 15 skill entries, manifests/assets, syntax, local links, licenses and nine imported evidence hashes verified. | Source/support verified; final independent correction confirmation and target integration follow. |
+
+No live consumer rerun, account setting change, deployment or historical grade update has been performed. No runtime acceptance is inferred from these source/support checks. Existing unrelated untracked files are preserved. Optional/native facilities remain runtime limits, not new passing evidence.
+
+## Source checks and independent review
+
+- [Source/package validation](evidence/source-validation.json), including source/harness byte hashes, unchanged licenses/imported evidence and coverage limits.
+- [Full support-suite output](evidence/support-suite.txt): 106 tests Passed.
+- [Independent consistency review and correction dispositions](evidence/independent-consistency-review.md).
+
+Version 0.14.5 is a compatible patch release of the owning 0.14.4 source. It does not change TextStats production counting behavior or the historical 0.14.3 test grade. No separate PROJECT/SPEC/PLAN roots exist in this plugin checkout; authoritative acceptance procedures, skill references, helper contracts and campaign navigation were reconciled directly.
+
+## Per-action source commits
+
+Each completed action was normally pushed before dependent edits. Final exact branch readback will establish containment of these retained commits together.
+
+| Action | Source commit |
+| --- | --- |
+| V-001 | `14e2e52a00dd1da57e427c119a888c687f5574f9` |
+| V-002 | `2b06a27496343eb238b0a23a7eef3ba897a088a1` |
+| V-003 | `b62aca9c2f690d951502a4b4f30cc278982e760a` |
+| V-004 | `59c0f8646d718be6247eb29dfa5a046ca1cab40e` |
+| V-005 | `69190f9f9c2ea0749890a4a6ad8d3f3c3208659b` |
+| V-006 | `199b5409e5f5b089306045cbd05d2f1da8d8e052` |
+| V-007 | `bf7413f969ba7d045fda3344f28fdba63709dba1` |
+| V-008 | `377d18b6fc9435c3c7749630086ade174782f2c2` |
+| V-009 | `1ea746c9dea30fcd6f081a6f898325d81dcba192` |
+| V-010 | `9c7356dc2acc7a3dc084dd9392f63c0e130a6b63` |
+| V-011 | `897ddf5c691d7b26e7616d9e03ee723869dff443` |
+| V-012 | `91a60f2342edee5ef21c752bf644edbde78b1120` |

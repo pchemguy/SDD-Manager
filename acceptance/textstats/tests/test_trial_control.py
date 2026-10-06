@@ -46,3 +46,24 @@ class TrialControls(Sandbox):
         m=self.module();actions=[[sys.executable,'-c','from pathlib import Path; Path("one.md").write_text("done"); Path("two.md").write_text("done")'],[sys.executable,'-c','pass']]
         with self.assertRaisesRegex(ValueError,'pending transfer'):
             m.execute(self.repo,actions,['one.md','two.md'],self.root/'gate.json',hold_after=1,pending_paths=['two.md'])
+
+    def test_timeout_retains_safe_partial_channels_without_replay(self):
+        import json
+        import subprocess
+        from unittest.mock import patch
+        m=self.module();gate=self.root/'timeout.json';actions=[[sys.executable,'-c','pass']]
+        # Simulate the subprocess exception boundary; not a live process-kill claim.
+        failure=subprocess.TimeoutExpired(actions[0],60,output=b'partial observation',stderr=b'partial diagnostic')
+        original=m.subprocess.run
+        def inject(argv,*args,**kwargs):
+            if argv==actions[0]:raise failure
+            return original(argv,*args,**kwargs)
+        with patch.object(m.subprocess,'run',side_effect=inject):
+            with self.assertRaisesRegex(ValueError,'reconcile'):
+                m.execute(self.repo,actions,['pending.md'],gate)
+        record=json.loads(gate.read_text())
+        self.assertEqual(record['status'],'Uncertain')
+        self.assertEqual(record['commands'][0]['stdout'],'partial observation')
+        self.assertEqual(record['commands'][0]['stderr'],'partial diagnostic')
+        self.assertEqual(record['completed'],0)
+        with self.assertRaises(ValueError):m.execute(self.repo,actions,['pending.md'],gate,resume=True)

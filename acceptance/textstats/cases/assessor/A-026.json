@@ -8,7 +8,7 @@
     }
   ],
   "required_agent_checks": [
-    "Verification only preserves source/task/index state and accurately records actual commands, nonempty collection and scope limits."
+    "Verification only preserves source/task/index state and accurately records actual commands, collection counts (including zero) and scope limits."
   ],
   "variant_agent_checks": {
     "empty-selection": [
