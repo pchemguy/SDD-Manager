@@ -22,7 +22,7 @@ Starting baseline: `85f2857b9e4a8cb6dcd1b4b9e2a5d2f5d7b2a14b`. Working branch: `
 
 | V-012 | README adds date-qualified observed ChatGPT UI labels, official website-mode documentation, narrower GitHub exception and broad alternative, with explicit uncertainty about shell/API review. Adds concise TextStats entry and retained 20261003/20261004 history, truthful pinned 20/7 outcome and revised-source limits. Root MIT and upstream license are preserved; fresh-run heading/prompt remain with only scoped optional/integration alignment. | Implemented; no account setting change or implied test verdict. |
 
-| V-013 | Version 0.14.5 records the compatible source/harness/documentation revision; helper interfaces and campaign/index status reconciled. Independent review found four Important coupled-criteria inconsistencies and one Minor timeout-evidence loss; corrections and RED/GREEN evidence are retained in the linked review. Full suite: 106 tests Passed; catalog, 15 skill entries, manifests/assets, syntax, local links, licenses and nine imported evidence hashes verified. | Source/support verified; final independent correction confirmation and target integration follow. |
+| V-013 | Version 0.14.5 records the compatible source/harness/documentation revision; helper interfaces and campaign/index status reconciled. Independent review found four Important coupled-criteria inconsistencies and one Minor timeout-evidence loss; corrections and RED/GREEN evidence are retained in the linked review. Full suite: 106 tests Passed; catalog, 15 skill entries, manifests/assets, syntax, local links, licenses and nine imported evidence hashes verified. | Source/support independently confirmed; no remaining Important/Critical blocker; target integration follows. |
 
 No live consumer rerun, account setting change, deployment or historical grade update has been performed. No runtime acceptance is inferred from these source/support checks. Existing unrelated untracked files are preserved. Optional/native facilities remain runtime limits, not new passing evidence.
 
@@ -52,3 +52,8 @@ Each completed action was normally pushed before dependent edits. Final exact br
 | V-010 | `9c7356dc2acc7a3dc084dd9392f63c0e130a6b63` |
 | V-011 | `897ddf5c691d7b26e7616d9e03ee723869dff443` |
 | V-012 | `91a60f2342edee5ef21c752bf644edbde78b1120` |
+| V-013 | `2729c67662749dd8de10313d334e12432718c4d7` |
+
+## Verified source boundary before integration
+
+Independent correction review: exact source `2729c67662749dd8de10313d334e12432718c4d7`, 47 focused tests Passed and catalog validation Passed; no remaining Important/Critical blocker in reviewed scope. All 241 recorded shipped source/harness path hashes match committed objects. Exact remote campaign ref read back at this SHA; every preceding action commit is its ancestor. Target readback remains `85f2857b9e4a8cb6dcd1b4b9e2a5d2f5d7b2a14b`. This report-only checkpoint precedes the explicit target merge; target publication is not yet claimed.
