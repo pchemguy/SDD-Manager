@@ -2,6 +2,8 @@
 
 Campaign **024_ed2d571**, source **ed2d571d20aa8ad6ee77f25ad89602e82e6a653b**, version **0.14.6**, 2026-10-06. See [review plan](REVIEW-PLAN.md).
 
+**Current repair disposition:** user authorized R-001–R-004 and excluded live testing. All four are verified on 0.14.7 source e33949aded51c55013d2de6318e0564127a13d3d; see [revision report](REVISION-REPORT.md). R-005 remains an unexecuted evidence gap outside scope. The original 0.14.6 observations and readiness assessment below remain historical baseline evidence.
+
 State: **comprehensive source/local pre-release review complete; hold an unqualified acceptance-certified release**. Four confirmed defects (one Important, three Minor) and one separate release-evidence gap are open as proposals. Fix R-001 before relying on required live failure-trial acceptance. No confirmed workflow-policy defect was found. Report-only branch `revision/024_ed2d571-pre-release-review`; source target `feature/architecture-revision`. Tracked source was clean at orientation; unrelated untracked work is preserved. Remote main and source target both named the reviewed baseline at orientation.
 
 | Unit | State | Evidence |
@@ -146,3 +148,15 @@ These are bounded proposals, not accepted source amendments or an executed REVIS
 Source inspection, mechanical structure/navigation checks, actual local support execution and independently reproduced isolated faults are the achieved evidence classes. No fresh live campaign, installed-client activation, native kill, protected credential recovery, live response-loss or authorization-setting behavior was exercised. Python 3.12.14 was observed; no Python 3.11 execution. No Mermaid/GFM rendered preview was available. None of these limitations is silently relabelled as a source defect or consumer failure.
 
 Primary standards consulted for format distinctions: [Agent Skills specification](https://agentskills.io/specification) and [Agent Plugins 1.0 specification](https://agent-plugins.org/specification), accessed 2026-10-06. Local validators enforce their own documented strict authoring policy. Their success/failure is structural evidence, not client installation evidence.
+
+## Revision 1 — Accepted four-defect repair recheck
+
+| Finding | Current disposition | Recheck |
+| --- | --- | --- |
+| R-001 | Verified on 0.14.7 | Public-only/broken-public/private-correct tests and genuine injected assertions; outside import rejected |
+| R-002 | Verified on 0.14.7 | Lexical/parent symlink rejection before effects on fresh/resume; hold/resume/nonreplay retained |
+| R-003 | Verified on 0.14.7 | Actual 116-file package notice navigation and dirty fingerprint changes |
+| R-004 | Verified on 0.14.7 | One contiguous unique 001–024 campaign table and resolving links |
+| R-005 | Open evidence gap; explicitly outside current scope | No live or installed-client test executed |
+
+Full support suite: 112 Passed. Fresh independent repair review reports no remaining scoped issue. Original observations, four-defect baseline count and source identities are retained; no historical live grades are rewritten. Revision integration/publication state is recorded in the companion report.
