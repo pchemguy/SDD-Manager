@@ -45,7 +45,7 @@ jobs:
 
       - name: Build package and checksum
         run: |
-          package="sdd-manager-${GITHUB_REF_NAME}.zip"
+          package="sdd-manager.zip"
           git archive \
             --format=zip \
             --prefix=sdd-manager/ \
@@ -61,7 +61,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
-          package="sdd-manager-${GITHUB_REF_NAME}.zip"
+          package="sdd-manager.zip"
           gh release create "$GITHUB_REF_NAME" \
             "$package" "$package.sha256" \
             --verify-tag \
