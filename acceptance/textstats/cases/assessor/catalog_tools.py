@@ -37,12 +37,14 @@ def asset(root, name, prefix):
 
 
 def validate_contract(value, case_id):
-    require(isinstance(value, dict) and set(value) <= {'schema_version','case_id','checks','required_agent_checks'}, 'unknown contract field')
+    require(isinstance(value, dict) and set(value) <= {'schema_version','case_id','checks','required_agent_checks','variant_agent_checks'}, 'unknown contract field')
     require(type(value.get('schema_version')) is int and value['schema_version'] == 1 and value.get('case_id') == case_id, 'invalid contract identity')
     checks = value.get('checks')
     require(isinstance(checks, list) and checks, 'empty contract')
     criteria = value.get('required_agent_checks')
     require(isinstance(criteria, list) and criteria and all(isinstance(s,str) and s.strip() for s in criteria), 'missing independent criteria')
+    variant_checks=value.get('variant_agent_checks',{})
+    require(isinstance(variant_checks,dict) and all(re.fullmatch('[a-z][a-z0-9-]*',k) and isinstance(v,list) and v and all(isinstance(x,str) and x.strip() for x in v) for k,v in variant_checks.items()), 'invalid variant criteria')
     seen = set()
     for check in checks:
         require(isinstance(check, dict) and isinstance(check.get('id'), str) and check['id'] and check['id'] not in seen, 'duplicate/invalid check')
@@ -91,7 +93,9 @@ def validate_catalog(root=BUNDLE, value=None):
             paths.add(name)
             path = asset(root,name,prefix)
             if field == 'consumer_input': require(not LEAK.search(path.read_text()), 'consumer route-answer leakage')
-            if field == 'assessor_contract': validate_contract(core.load(path),c['id'])
+            if field == 'assessor_contract':
+                contract=core.load(path);validate_contract(contract,c['id'])
+                if 'variant_agent_checks' in contract:require(set(contract['variant_agent_checks'])=={v['id'] for v in campaign.variants(c)}, 'variant criteria/catalog mismatch')
         require(isinstance(c.get('prerequisites'),list) and c['prerequisites'], 'missing prerequisites')
         start = c.get('checkpoint_bindings',{}).get('start',{})
         require(start.get('from_case') is None if not deps or c['mode']=='independent-assessment' else start.get('from_case') in deps, 'invalid starting checkpoint dependency')
