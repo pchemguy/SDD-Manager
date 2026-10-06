@@ -40,7 +40,7 @@ Use the milestone and task IDs from your actual task list. You can start at a la
 
 ## Plugin package
 
-The package includes root `plugin.json`, an identical `.codex-plugin/plugin.json` for Codex discovery, root `README.md` and `LICENSE`, `skills/`, and `assets/`. Keep both manifest copies synchronized when changing metadata or versions. The root manifest preserves the same client metadata; its presence alone does not establish Agent Plugins 1.0 conformance.
+The package includes root `plugin.json`, an identical `.codex-plugin/plugin.json` for Codex discovery, root `README.md`, `LICENSE`, `SDD-MANAGER.md` and `AI_DISCLOSURE.md`, `skills/`, and `assets/`. Keep both manifest copies synchronized when changing metadata or versions. The root manifest preserves the same client metadata; its presence alone does not establish Agent Plugins 1.0 conformance.
 
 The PNG and SVG artwork share the basename `logo`: `assets/logo.png` and `assets/logo.svg`. Manifest presentation paths select the corresponding files. README is user-facing package documentation; runtime workflow instructions live in the skills. Acceptance and development material linked here belongs to the source repository and is outside the pinned skill package.
 

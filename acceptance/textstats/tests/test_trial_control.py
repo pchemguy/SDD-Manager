@@ -42,6 +42,27 @@ class TrialControls(Sandbox):
         self.assertEqual(m.facilities({'requirement':'optional','facilities':['native']},set())['status'],'Not run')
         self.assertEqual(m.facilities({'requirement':'required','facilities':['native']},set())['status'],'Blocked')
 
+    def test_receipt_symlinks_rejected_before_fresh_or_resume_operations(self):
+        m=self.module();actions=[[sys.executable,'-c','pass']]
+        for occupied in (False,True):
+            for resume in (False,True):
+                with self.subTest(occupied=occupied,resume=resume):
+                    target=self.root/f'target-{occupied}-{resume}.json'
+                    if occupied:target.write_text('preserve this evidence')
+                    receipt=self.root/f'link-{occupied}-{resume}.json';receipt.symlink_to(target)
+                    with self.assertRaisesRegex(ValueError,'symlink'):
+                        m.execute(self.repo,actions,['pending.md'],receipt,resume=resume)
+                    self.assertTrue(receipt.is_symlink())
+                    if occupied:self.assertEqual(target.read_text(),'preserve this evidence')
+                    else:self.assertFalse(target.exists())
+
+    def test_symlinked_receipt_parent_rejected_without_creation(self):
+        m=self.module();target=self.root/'real-directory';target.mkdir()
+        linked=self.root/'linked-directory';linked.symlink_to(target,target_is_directory=True)
+        with self.assertRaisesRegex(ValueError,'symlink'):
+            m.execute(self.repo,[[sys.executable,'-c','pass']],['pending.md'],linked/'gate.json')
+        self.assertEqual(list(target.iterdir()),[])
+
     def test_pending_selected_transfer_cannot_already_be_completed(self):
         m=self.module();actions=[[sys.executable,'-c','from pathlib import Path; Path("one.md").write_text("done"); Path("two.md").write_text("done")'],[sys.executable,'-c','pass']]
         with self.assertRaisesRegex(ValueError,'pending transfer'):

@@ -23,7 +23,7 @@ def child(root):
     try:
         sys.path.insert(0,str(root))
         with contextlib.redirect_stdout(output),contextlib.redirect_stderr(output):
-            from textstats import core as product
+            import textstats as product
         if not Path(product.__file__).resolve().is_relative_to(root):raise ValueError('outside import origin')
         class Counts(unittest.TestCase):
             def test_crlf_and_final_segment(self):
@@ -50,6 +50,11 @@ def probe(root):
 
 def inject(root, expected_head):
     """Introduce a disclosed off-by-one count fault in an explicitly isolated copy.
+
+    This injector supports a module-level count_text in textstats/core.py whose
+    public export delegates to that implementation. Other valid public layouts
+    use an equivalently documented, caller-authorized regression fixture instead.
+    The layout-independent public probe remains their baseline acceptance check.
 
     The clean starting Git identity must match the caller's independently pinned
     baseline. A repeat injection, missing count function or escaping path fails.
