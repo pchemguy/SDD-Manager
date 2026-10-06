@@ -50,6 +50,100 @@ Use the milestone and task IDs from your actual task list. You can start at a la
 
 Main describes the development purpose, not the default Git branch. The [canonical workflow model](skills/sdd-manage/references/workflows.md#core-development-workflows) defines entry and scope; the operations below are stages or supporting work, rather than additional core workflows.
 
+## Workflow diagrams
+
+`sdd-manage` coordinates scope, prerequisites and stopping boundaries; `sdd-orient` establishes actual repository state, including retained work on continuation. The diagrams show common handoffs. Enter at the stage supported by current inputs, use `sdd-conventions` where relevant, and honor explicit user boundaries. A blocker preserves valid work and stops the affected path until resolved.
+
+### Project preparation
+
+Each document owner reviews its artifact against accepted upstream inputs and corrects findings within authorized scope before the next stage. These gates produce adjacent review reports, rather than separate implementation tasks.
+
+```mermaid
+flowchart TB
+    M["sdd-manage + sdd-orient<br/>Establish scope and repository state"] --> D["sdd-design<br/>PROJECT, architecture and decomposition"]
+    D -->|"accepted design"| S["sdd-specify<br/>Behavior and acceptance contracts"]
+    S --> SQ{"SPEC review ready?"}
+    SQ -->|"correction needed"| S
+    SQ -->|"ready"| P["sdd-plan<br/>Delivery strategy and layout"]
+    P --> PQ{"PLAN review ready?"}
+    PQ -->|"correction needed"| P
+    PQ -->|"ready"| T["sdd-tasks<br/>Executable task hierarchy"]
+    T --> TQ{"TASKS review ready?"}
+    TQ -->|"correction needed"| T
+    TQ -->|"ready"| E["Preparation checkpoint<br/>Commit, push and return result"]
+```
+
+Preparation-only stops here. A combined request can authorize implementation after these gates. See [document QC gates](skills/sdd-manage/references/document-qc-gates.md).
+
+### Implementation and continuation
+
+This diagram shows bounded main-phase task execution. `sdd-implement` owns production changes, completion, commits and pushes; supporting skills supply tests, documentation, verification and report text. With hosted tracking enabled, `sdd-manage` and `sdd-forge` establish the eligible phase and task associations before its first task. The optional hosted path below shows completion reconciliation.
+
+```mermaid
+flowchart TB
+    O["sdd-manage + sdd-orient<br/>Scope, actual state and task evidence"] --> I["sdd-implement<br/>Push outstanding commits<br/>Resume pending work or select within range"]
+    I -->|"task ready"| T["sdd-tdd<br/>Test and implementation cycle"]
+    T -->|"implementation ready"| D["sdd-docs<br/>Maintain affected documentation"]
+    D --> V["sdd-verify<br/>Required checks and acceptance evidence"]
+    V -->|"repair needed"| I
+    V -->|"verified"| R["sdd-report<br/>Completion evidence and commit text"]
+    R --> C["sdd-implement<br/>Complete, commit and push task"]
+    C --> H{"Hosted tracking active?"}
+    H -->|"yes"| F["sdd-forge<br/>Reconcile verified issue and milestone closures"]
+    H -->|"no"| B{"Selected range complete?"}
+    F --> B
+    B -->|"no"| I
+    B -->|"yes"| G{"Complete verified main phase?"}
+    G -->|"no"| E["Report checkpoint and stop"]
+    G -->|"yes"| P["sdd-manage + sdd-verify<br/>Explicit merge, merged checks<br/>Target push and readback"]
+    P --> E
+```
+
+Milestone and phase review/report tasks run through the same cycle and supply their required code review, testing and exit evidence. An incomplete phase pushes and pauses. A request covering another phase continues only after verified integration/publication, from the updated target. Feature task execution reuses the cycle, with required accepted-document incorporation through `sdd-integrate-feature` before final boundary verification; feature and revision integration use their own eligibility gates. See [implementation](skills/sdd-implement/SKILL.md) and [Git workflows](skills/sdd-manage/references/git-workflows.md).
+
+### Checkpoint steering
+
+The human commands an amendment at a paused implementation checkpoint. `sdd-steer` owns changes to the affected existing documents and implementation, including persistence and integration into that paused branch.
+
+```mermaid
+flowchart TB
+    H["Human commands checkpoint amendment"] --> M["sdd-manage + sdd-orient<br/>Establish scope and paused target"]
+    M --> S["sdd-steer<br/>Amend existing documents and implementation"]
+    S --> D["sdd-tdd + sdd-docs<br/>Align tests and documentation"]
+    D --> V["sdd-verify<br/>Amendment and regression checks"]
+    V -->|"repair needed"| S
+    V -->|"verified"| R["sdd-report<br/>Amendment result and evidence"]
+    R --> C["sdd-steer<br/>Commit and push amendment"]
+    C --> G["sdd-steer + sdd-verify<br/>Merge into paused branch<br/>Merged checks, target push and readback"]
+    G --> E["Return control to human<br/>Stop before task-list continuation"]
+```
+
+An assessment-only request returns impact without taking the amendment path. Successful steering does not resume implementation automatically. See [steering](skills/sdd-steer/SKILL.md).
+
+### Review and revision
+
+Focused owners assess the selected concerns; `sdd-report` composes the evidence. Source changes require revision authorization. An already accepted amendment can enter revision planning directly.
+
+```mermaid
+flowchart TB
+    M["sdd-manage + sdd-orient<br/>Scope, source identity and criteria"] --> F["Focused skills<br/>Review selected concerns"]
+    F --> R["sdd-report<br/>Findings and review report"]
+    R --> C["Reviewer commits report<br/>sdd-manage coordinates checkpoint push"]
+    C --> A{"Revisions authorized?"}
+    A -->|"no: review-only"| E["Return result and stop"]
+    A -->|"yes"| P["sdd-manage<br/>Accepted revision plan"]
+    M -->|"already accepted amendment"| P
+    P --> W["Owning skills<br/>Scoped source and document changes"]
+    W --> V["sdd-verify<br/>Checks and findings recheck"]
+    V -->|"repair needed"| W
+    V -->|"verified"| RR["sdd-report<br/>Revision results and remaining findings"]
+    RR --> CP["Execution owner<br/>Commit and push completed actions"]
+    CP --> G["sdd-manage + sdd-verify<br/>Eligible explicit merge, merged checks<br/>Target push and readback"]
+    G --> E
+```
+
+Systematic reviews use a review plan; focused requests can supply the criteria directly. Repeat report checkpoints or revision actions as scoped, publishing each completed unit before dependent work. Reviewer assessment ends at its report commit; the encompassing workflow includes publication. Host automatic review has separate ownership and is not a skill handoff in these diagrams. See [review and revision](skills/sdd-manage/references/review-and-revision.md).
+
 ## Operations
 
 | Objective | Example request | Result |

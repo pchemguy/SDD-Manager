@@ -26,4 +26,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `021_85f2857` | Imported 20261004 live diagnostic (20 Passed / seven Blocked), completed test evidence integration, and harness/policy/README amendments independently verified, explicitly integrated and published as 0.14.5; revised-source live acceptance remains separate. | [Review report](021_85f2857/REVIEW-REPORT.md), [amendments](021_85f2857/PROPOSED-AMENDMENTS.md), [revision plan](021_85f2857/REVISION-PLAN.md), [revision report](021_85f2857/REVISION-REPORT.md) |
 
+| `022_4d24148` | README control-flow diagrams for preparation, implementation/continuation, steering and review/revision; documentation checks recorded. | [Revision report](022_4d24148/REVISION-REPORT.md) |
+
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
