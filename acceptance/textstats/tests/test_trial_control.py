@@ -41,3 +41,8 @@ class TrialControls(Sandbox):
         m=self.module()
         self.assertEqual(m.facilities({'requirement':'optional','facilities':['native']},set())['status'],'Not run')
         self.assertEqual(m.facilities({'requirement':'required','facilities':['native']},set())['status'],'Blocked')
+
+    def test_pending_selected_transfer_cannot_already_be_completed(self):
+        m=self.module();actions=[[sys.executable,'-c','from pathlib import Path; Path("one.md").write_text("done"); Path("two.md").write_text("done")'],[sys.executable,'-c','pass']]
+        with self.assertRaisesRegex(ValueError,'pending transfer'):
+            m.execute(self.repo,actions,['one.md','two.md'],self.root/'gate.json',hold_after=1,pending_paths=['two.md'])
