@@ -1,7 +1,7 @@
 {
   "name": "sdd-manager",
-  "version": "0.14.9",
-  "description": "Git-based specification-driven development with central workflow coordination, design, specification, planning, task lists, documentation, TDD, verification, bounded implementation, human-directed steering, feature integration, reporting, and optional hosted issue reconciliation.",
+  "version": "0.15.0",
+  "description": "A learning-by-doing experiment in Git-based specification-driven development with central workflow coordination, design, specification, planning, task lists, documentation, TDD, verification, bounded implementation, human-directed steering, feature integration, reporting, and optional hosted issue reconciliation.",
   "author": {
     "name": "PChemGuy",
     "url": "https://github.com/pchemguy"
@@ -31,7 +31,7 @@
       "Write"
     ],
     "shortDescription": "Spec-driven development",
-    "longDescription": "Git-based specification-driven development with central workflow coordination, design, specification, planning, task lists, documentation, TDD, verification, bounded implementation, human-directed steering, feature integration, reporting, and optional hosted issue reconciliation.",
+    "longDescription": "A learning-by-doing experiment in Git-based specification-driven development with central workflow coordination, design, specification, planning, task lists, documentation, TDD, verification, bounded implementation, human-directed steering, feature integration, reporting, and optional hosted issue reconciliation.",
     "developerName": "PChemGuy",
     "defaultPrompt": [
       "Prepare this Git project through design, specification, plan and tasks.",

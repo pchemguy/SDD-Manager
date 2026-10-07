@@ -64,3 +64,22 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 | “Review the credential protocol.” | Start from the prompt; record scope/criteria, located findings, and limits in the campaign review report. Stop before repairs. |
 | “Plan and run a comprehensive plugin review.” | Create a review plan; assess and commit each unit's report; the coordinator publishes the committed checkpoint before dependent work; consolidate findings and revision handoff. |
 | “Implement the accepted revision plan.” | Incorporate relevant accepted decisions into governing documents, perform bounded revisions with evidence checkpoints, then verify, explicitly merge, and publish. Retain the campaign plans/reports. |
+
+## Proactive tracking choices
+
+| Context | Coordinated result |
+| --- | --- |
+| Token supplied for the established GitHub workflow; no tracking choice | Recommend enable and ask to manage the eligible phase label, milestones/task issues, associations and verified lifecycle closures. Keep confirmation pending; create no objects yet. |
+| Prior explicit decline, followed by a token for normal Git pushes | Preserve the decline and perform authorized pushes; do not interpret the credential as activation. |
+| Tracking confirmed after several local tasks completed | Discover/reconcile eligible objects and attach verified retained evidence; leave incomplete work open and keep historical inactive-state reports truthful. |
+| Preparation may continue while tracking confirmation is pending | Continue independent authorized documents; resolve the actual activation choice before dependent phase execution. |
+
+## Authority, diagnostics and retained notes
+
+| Context | Coordinated result |
+| --- | --- |
+| Verified report push has existing user authority; host requests destination/payload context and permits reconsideration | Supply exact repository/ref, commit/paths, actual user grant, checks and stated denial through that channel, then attempt the contextualized request; no repeated user authorization question. |
+| Suitable credential but genuine policy rejection, or authority revoked | Preserve state and report the observed restriction/revocation. Do not substitute credentials, fabricate authority or evade controls. |
+| Tracking omission discovered; earlier PLAN merely says inactive | Diagnose missing capability-choice coordination, not a proven user refusal or compulsory activation. Offer the actual pending decision. |
+| User requests amendment notes be collected in the current findings file | Persist stable findings within that scope; report its actual commit/push state. Do not start source repairs unless selected. |
+| Notes exist only in conversation and no write scope exists | Report conversation-only storage; no claim of a durable register or implementation. |

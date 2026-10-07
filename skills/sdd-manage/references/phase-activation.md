@@ -12,3 +12,7 @@ On continuation, recover the same phase identity and confirmed objects rather th
 ## Preparation readiness before projection
 
 Before creating the eligible phase's hosted objects or starting its first task, establish current owning TASKS/PLAN/SPEC readiness under [document QC gates](document-qc-gates.md). This adds no administrative task or phase and does not activate future phases. Resolve focused missing assessment within scope; stale or confirmed blocked inputs stop dependent projection/execution. Existing issue/milestone closure still follows verified implementation lifecycle evidence, not a document Ready label.
+
+## Optional tracking decision at handoff
+
+Use **sdd-manage**'s [tracking decision](tracking-decision.md) before dependent phase activation. Carry the recommendation, actual confirmation/decline, repository/scope and observed hosted state separately. A supplied GitHub token recommends enabled tracking but does not activate it; unresolved activation choices return to the manager. Reuse confirmed scope without repeated approval. Late confirmation reconciles retained evidence instead of replaying product tasks.

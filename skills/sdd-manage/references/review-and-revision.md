@@ -2,7 +2,7 @@
 
 Use **sdd-conventions**' **Review campaigns** reference for campaign identity/storage and **sdd-report**'s **Campaign artifacts** reference for formats. Scope the work before choosing focused reviewers; a campaign does not require a separate review or revision skill.
 
-This is the formal campaign path for the [revision core workflow](workflows.md#core-development-workflows). A directly accepted focused amendment can enter revision planning without fabricating a preceding review. At a paused implementation checkpoint, [lightweight steering](workflows.md#steering-as-lightweight-revision) uses the human-defined objective and existing documents rather than requiring campaign artifacts. Both paths retain their own scope and stop rules. Checkpoint steering records live under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>/`; general campaign records retain the reviews prefix.
+This is the formal campaign path for the [revision core workflow](workflows.md#core-development-workflows). A directly accepted focused amendment can enter revision planning without fabricating a preceding review. At a paused implementation checkpoint, [lightweight steering](workflows.md#steering-as-lightweight-revision) uses the human-defined objective and existing documents rather than requiring campaign artifacts. Both paths retain their own scope and stop rules. Checkpoint steering records live under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>-<slug>/`; general campaign records retain the reviews prefix.
 
 ## Review
 
@@ -34,3 +34,13 @@ Use [workflow authorization](revision-authorization.md) for the complete accepte
 5. Verify the completed authorized boundary, explicitly merge, verify the merged result, and publish the target. Record working/target branches, revision commits, merge, publication, and remaining findings. Keep all campaign artifacts in their original directory; no completion-time move or transaction journal is required.
 
 For a blocked campaign, preserve valid work and report the exact active action, affected source/evidence, branch/merge state, and needed decision or facility. A later authorized continuation resumes that campaign and scope rather than repeating completed review units or starting unrelated implementation.
+
+## Diagnose an omission from evidence
+
+Compare the applicable instruction, actual user decision, recorded execution state and observed failure before proposing a repair. Distinguish authority to perform an operation from the choice to activate an optional capability. Identify the concrete omitted handoff/decision and its effect. Do not treat an agent-authored assumption as a user decision, invent a policy violation to justify an apology, or quote an unavailable rejection trace. State the evidence limit and correct an inaccurate diagnosis explicitly.
+
+## Retain requested amendment findings
+
+When findings persistence is authorized, use the established findings/backlog artifact and preserve stable IDs, context/evidence, proposed correction, owning capability, validation and disposition. If no artifact exists, select an appropriate scoped document with its provenance; do not create a plugin revision or edit installed skills merely to record a note. Preserve explicit location/branch/pause limits and secret exclusion. Where writing is outside scope, say that notes remain conversation-only and identify the pending persistence decision.
+
+Keep original observations and later decisions/results separate. Superseded or rejected proposals remain distinguishable from accepted, revised and verified work. Link actual implementation/check evidence before marking Verified; a promise, file draft or commit alone does not establish behavioral verification.

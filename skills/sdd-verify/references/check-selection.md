@@ -22,3 +22,9 @@ For feature work, use the owning FEATURE-TASKS and relevant feature contracts al
 5. Identify coverage gaps and unsuitable checks. Return needed test design or changes through the implementation workflow to **sdd-tdd**; verification does not silently add tests or redefine acceptance.
 
 Select checks proportionate to the requested claim. For example, compilation does not establish runtime behavior, a unit check may not establish packaging, and a timing run does not establish correctness. Documentation may need inspected contracts, executable examples, link checks, or documentation generation instead of unrelated runtime tests. Performance or security claims require evidence appropriate to the particular claim.
+
+## Representative capability readiness
+
+Derive environment probes from the capabilities required by the planned checks. Installation success, package presence or a trivial smoke check verifies only what it exercised; it cannot establish repeated-session, rendering, platform or native-delivery capability. Record observed coverage and limits, then route an actual facility blocker to the manager and affected execution workflow. Do not silently reduce acceptance to available evidence.
+
+Load the shared [browser capability guidance](../../sdd-implement/references/browser-capabilities.md) only when selected provisioning, session, rendering or native browser checks require it. Browser/fonts/Canvas checks are not prerequisites for unrelated CLI or pure engine tasks. Keep modeled handler evidence separate from native event delivery.

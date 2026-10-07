@@ -51,3 +51,5 @@ These illustrate completed-summary formats. Their details are scenario-specific 
 - 📊 **Measured Improvement:** In an ad-hoc simulated big-endian run of one million values, decode fell from 0.154 s to 0.008 s (reported as roughly 18×), and encode from 0.415 s to 0.013 s (roughly 30×). The simulation and rounded values limit the claim.
 - ✅ **Verification:** The local timing script measured speed only; portability and round-trip correctness still need separate checks.
 ```
+
+For omission or recovery reports, separate instruction, actual user grant/choice, observed state, failure cause and evidence limits. Cite the actual basis for a diagnosis; an agent-authored inactive-mode line is not a user refusal, and a supplied token is not confirmation of an optional capability.

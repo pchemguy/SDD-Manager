@@ -22,3 +22,7 @@ Align README and guides with accepted scope and the supported implementation. La
 - Check local links and referenced files; assess external links when relevant to the requested work and access permits. Report links that could not be checked.
 - Remove stale references and unnecessary duplication within scope. Follow layout rules for placement; propose a layout amendment to the user if the required organization cannot fit them.
 - Separate Markdown headings from adjacent content with blank lines, including examples and templates. The beginning of a file or template needs no leading blank line.
+
+## Agent orientation
+
+Apply the manager's [agent orientation](../../sdd-manage/references/agent-orientation.md) when material source/layout/check commands, governing links or active task/feature ownership changes within this workflow. Preserve controlling manual instructions and update affected root AGENTS.md with the verified owned checkpoint. Feature archive/transfer keeps current canonical owner links accurate; historical checklists are not duplicated as executable owners. Explicit path limits or real policy conflicts return to the manager. An unchanged startup requires no rewrite.

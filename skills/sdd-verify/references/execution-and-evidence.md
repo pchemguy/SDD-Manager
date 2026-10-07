@@ -38,3 +38,7 @@ Return evidence facts and locations to the active implementation workflow (**sdd
 | Test-first exception | Concrete limitation, applicable policy or user authorization, alternative evidence actually obtained, and remaining gap. |
 
 Carry these facts to **sdd-report** without requiring a new JSON schema or journal. Preserve raw output when needed to review a consequential claim. For branch integration, identify the working tip and target tip tested in the prospective merge, and retain merged-state outcomes in existing boundary evidence or the merge commit body.
+
+## Environment coverage
+
+Report the capabilities actually exercised by readiness probes, not just installation success. Distinguish artifact validity, executable launch, suite lifecycle, rendering and native delivery when relevant. A modeled or injected handler check does not establish native delivery; preserve its useful evidence and record the missing facility separately.

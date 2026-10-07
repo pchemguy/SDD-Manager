@@ -38,3 +38,15 @@ After startup pushing, establish or reuse the selected range's working branch an
 ## Current preparation inputs
 
 After pushing outstanding commits and reconciling pending state, use **sdd-manage**'s **Document QC gates** reference before new task execution or hosted projection. Inspect current owning task/design/SPEC/PLAN/layout review scope and evidence; ordinary completion status updates alone do not invalidate unchanged contract/decomposition review. Do not use a stale Ready label to resume changed requirements or select a guessed repair scope. Coordinate focused missing review within existing authorization; report a correction requiring new decisions or paths as a blocker. This does not postpone publication of an already verified committed result or authorize new implementation while resolving readiness.
+
+## Optional tracking decision at handoff
+
+Use **sdd-manage**'s [tracking decision](../../sdd-manage/references/tracking-decision.md) before dependent phase activation. Carry the recommendation, actual confirmation/decline, repository/scope and observed hosted state separately. A supplied GitHub token recommends enabled tracking but does not activate it; unresolved activation choices return to the manager. Reuse confirmed scope without repeated approval. Late confirmation reconciles retained evidence instead of replaying product tasks.
+
+## Scoped authority handoff
+
+Carry the established user grant, destination/ref or hosted identity, owned payload scope and observed verification through the manager's [authorization-context procedure](../../sdd-manage/references/revision-authorization.md#supply-missing-authorization-context-proactively). Credentials remain protected; host controls and optional-capability confirmation are distinct from existing workflow authority.
+
+## Environment readiness
+
+For observed installation/runtime blockers, use [environment recovery](environment-recovery.md) after the push-first prerequisite. Return actual attempts, supported alternatives and remaining required capabilities to the manager. Browser detail is conditional; ordinary engine/CLI work loads no browser prerequisites.

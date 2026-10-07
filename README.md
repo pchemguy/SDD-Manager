@@ -2,7 +2,7 @@
 
 **Develop from explicit requirements, implement in bounded steps, and keep the human in control.**
 
-SDD Manager is an Agent Plugin for specification-driven development in Git repositories. It takes a project from exploration and design through specifications, plans, executable task lists, implementation, and verification. It also supports feature changes, interruption recovery, and focused amendments at implementation checkpoints.
+SDD Manager is a learning-by-doing experiment in specification-driven development with coding agents, packaged as an Agent Plugin for Git repositories. Practical project runs inform its refinement; source and local checks establish only their recorded coverage, and installed-client or live acceptance is reported separately. It takes a project from exploration and design through specifications, plans, executable task lists, implementation, and verification. It also supports feature changes, interruption recovery, and focused amendments at implementation checkpoints.
 
 Start with **sdd-manage**, the central coordinator. It routes your request to the relevant skills, reuses established project decisions, and stops at the boundary you specify.
 
@@ -13,7 +13,7 @@ Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development
 Load the package using your agent client's supported plugin mechanism. The package uses `.codex-plugin/plugin.json` for ChatGPT/Codex discovery and presentation, with 15 skills under `skills/` and bundled icons under `assets/`. It uses the Codex plugin format; it does not ship a root Agent Plugins 1.0 manifest. Manifest paths resolve from the repository/package root. The workflows require an agent with access to project files and the tools needed for the requested work.
 
 - **Project changes:** Use an existing, eligible Git worktree with applicable project instructions. Repository initialization is outside the plugin's scope.
-- **First SDD commit:** Include root `AI_DISCLOSURE.md` and `SDD-MANAGER.md` from the bundled assets, with discoverable README links. Preserve and reconcile existing disclosures. See [repository bootstrap](skills/sdd-manage/references/repository-bootstrap.md) for ownership, explicit scope limits and resumable adoption.
+- **First SDD commit:** Ensure a concise root `AGENTS.md` provides current purpose, canonical owners, validated commands and instruction navigation; preserve existing human instructions. Include root `AI_DISCLOSURE.md` and `SDD-MANAGER.md` from the bundled assets, with discoverable README links. Preserve and reconcile existing disclosures. See [repository bootstrap](skills/sdd-manage/references/repository-bootstrap.md) for ownership, explicit scope limits and resumable adoption.
 - **Commits and pushes:** Establish the branch and remote destination. Implementation pushes outstanding commits before starting further task work, then commits and pushes each completed task before advancing.
 - **Checks:** Use the project's declared test, build, and documentation tools.
 - **Authentication:** Attempt pushes with the current shell session. On an access/credential failure, sdd-manage reuses a suitable ignored repository token or requests and saves one beside the root .gitignore before recovering the client session. `*.tkn` files remain untracked.
@@ -179,13 +179,13 @@ Work on a scoped branch for the selected range, feature, steering amendment, or 
 - **Steering:** Branch from the paused implementation checkpoint and merge back there. A blocked amendment retains its work and resumes on a human command; successful steering still does not resume the main task list.
 - **Failures:** Preserve valid work and report conflicts, required-check failures, or pending target publication. No automatic rollback or force-push. Separate worktrees can protect unrelated dirty work.
 
-General revision records live under `docs/dev/reviews/<campaign>/`; checkpoint steering records live under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>/`; feature identity/navigation and completed incorporated sources live under `docs/dev/features/<campaign>/`. Reviews, steering revisions and features use one repository-wide sequence and stable starting-SHA identity. Active feature files remain in docs/dev until safely incorporated and archived; historical task snapshots are not executable owners. Main governing documents remain in docs/dev. Explicit project/user overrides and suitable legacy branches are preserved.
+General revision records live under `docs/dev/reviews/<campaign>-<slug>/`; checkpoint steering records live under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>-<slug>/`; feature identity/navigation and completed incorporated sources live under `docs/dev/features/<campaign>-<slug>/`. Reviews, steering revisions and features use one repository-wide sequence and stable starting-SHA identity. Active feature files remain in docs/dev until safely incorporated and archived; historical task snapshots are not executable owners. Main governing documents remain in docs/dev. Explicit project/user overrides and suitable legacy branches are preserved.
 
 See [branch management](skills/sdd-manage/references/branch-management.md) for naming/setup/phase transitions and the [Git workflow](skills/sdd-manage/references/git-workflows.md) for branch reuse, interruption, merge verification, and publication. Git merge and feature-document incorporation have distinct owners; hosted PR operations remain outside the current backend.
 
 ## Review and revision records
 
-Use `docs/dev/reviews/<sequence>_<baseline-sha>/` for a general campaign (phase-checkpoint steering uses its phase-specific revisions prefix): review plan → review → review report → revision plan → revision → revision report. A focused review can start directly from a prompt and record its scope/criteria in REVIEW-REPORT. A comprehensive review plans units and report checkpoints first.
+Use `docs/dev/reviews/<sequence>_<baseline-sha>-<slug>/` for a general campaign (phase-checkpoint steering uses its phase-specific revisions prefix): review plan → review → review report → revision plan → revision → revision report. A focused review can start directly from a prompt and record its scope/criteria in REVIEW-REPORT. A comprehensive review plans units and report checkpoints first.
 
 Each planned review unit ends with its report commit. The coordinating workflow publishes that checkpoint before dependent work; pushes remain part of the complete workflow. Host automatic tool review has separate ownership from plugin content review. Full revision and implementation workflows include their prescribed pushes under the existing scoped authorization. Accepted revisions update relevant governing documents; all campaign records remain retained. Directory identity stays fixed as HEAD advances. **sdd-report** supplies scalable artifact templates, and **sdd-manage** coordinates scope and execution.
 
@@ -281,3 +281,7 @@ All 15 skills are included. Structural validation and independent coordination a
 ## License
 
 SDD Manager is licensed under the [MIT License](LICENSE). Bundled third-party material retains its own license and attribution, including [the TDD adaptation license](skills/sdd-tdd/LICENSE).
+
+## Related projects
+
+[GitHub Spec Kit](https://github.com/github/spec-kit) provides structured workflows and reusable assets for coding agents. [Superpowers](https://github.com/obra/superpowers) presents a development methodology built from composable skills. These are related reading for users exploring agent-assisted development; they are not dependencies, endorsements or claims of derivation.

@@ -22,3 +22,5 @@ Add a backend only when it supports a concrete hosted operation with its own rep
 ## Available backends
 
 - **GitHub:** Read [GitHub backend](references/github.md) when the requested operation targets a GitHub repository. It resolves repository identity and access, then routes eligible-phase projection, issue lifecycle and milestone lifecycle operations. Apply the shared backend object lifecycle; task completion evidence comes from execution, not hosted state.
+
+For hosted-operation context, carry confirmed scope and existing user authority through [workflow authorization](../sdd-manage/references/revision-authorization.md#supply-missing-authorization-context-proactively); do not expose credentials or equate authentication with optional tracking activation.
