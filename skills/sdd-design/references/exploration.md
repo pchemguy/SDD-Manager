@@ -28,3 +28,7 @@ An exploratory prototype inside the governed project is project implementation. 
 ## Handoff
 
 Architecture work is ready when the purpose and scope are understood, principal boundaries can be argued, and no unresolved question would force a material architecture choice to be invented. If the user requests architecture earlier, identify the missing decisions and distinguish blockers from deliberate design options. Read [architecture](architecture.md) only when architecture becomes the requested work. Read [decomposition](decomposition.md) only when detailed components become the requested work.
+
+## Evidence-backed project positioning
+
+Establish the actual purpose, intended audience, learning objectives when applicable, and demonstrated maturity separately from intended capabilities. A learning experiment can be described as such when supported by the brief; do not characterize every consumer project that way. Related projects provide context, not inferred affiliation, dependencies, superiority or provenance.

@@ -2,7 +2,7 @@
 
 **Develop from explicit requirements, implement in bounded steps, and keep the human in control.**
 
-SDD Manager is an Agent Plugin for specification-driven development in Git repositories. It takes a project from exploration and design through specifications, plans, executable task lists, implementation, and verification. It also supports feature changes, interruption recovery, and focused amendments at implementation checkpoints.
+SDD Manager is a learning-by-doing experiment in specification-driven development with coding agents, packaged as an Agent Plugin for Git repositories. Practical project runs inform its refinement; source and local checks establish only their recorded coverage, and installed-client or live acceptance is reported separately. It takes a project from exploration and design through specifications, plans, executable task lists, implementation, and verification. It also supports feature changes, interruption recovery, and focused amendments at implementation checkpoints.
 
 Start with **sdd-manage**, the central coordinator. It routes your request to the relevant skills, reuses established project decisions, and stops at the boundary you specify.
 
@@ -13,7 +13,7 @@ Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development
 Load the package using your agent client's supported plugin mechanism. The package uses `.codex-plugin/plugin.json` for ChatGPT/Codex discovery and presentation, with 15 skills under `skills/` and bundled icons under `assets/`. It uses the Codex plugin format; it does not ship a root Agent Plugins 1.0 manifest. Manifest paths resolve from the repository/package root. The workflows require an agent with access to project files and the tools needed for the requested work.
 
 - **Project changes:** Use an existing, eligible Git worktree with applicable project instructions. Repository initialization is outside the plugin's scope.
-- **First SDD commit:** Include root `AI_DISCLOSURE.md` and `SDD-MANAGER.md` from the bundled assets, with discoverable README links. Preserve and reconcile existing disclosures. See [repository bootstrap](skills/sdd-manage/references/repository-bootstrap.md) for ownership, explicit scope limits and resumable adoption.
+- **First SDD commit:** Ensure a concise root `AGENTS.md` provides current purpose, canonical owners, validated commands and instruction navigation; preserve existing human instructions. Include root `AI_DISCLOSURE.md` and `SDD-MANAGER.md` from the bundled assets, with discoverable README links. Preserve and reconcile existing disclosures. See [repository bootstrap](skills/sdd-manage/references/repository-bootstrap.md) for ownership, explicit scope limits and resumable adoption.
 - **Commits and pushes:** Establish the branch and remote destination. Implementation pushes outstanding commits before starting further task work, then commits and pushes each completed task before advancing.
 - **Checks:** Use the project's declared test, build, and documentation tools.
 - **Authentication:** Attempt pushes with the current shell session. On an access/credential failure, sdd-manage reuses a suitable ignored repository token or requests and saves one beside the root .gitignore before recovering the client session. `*.tkn` files remain untracked.
@@ -281,3 +281,7 @@ All 15 skills are included. Structural validation and independent coordination a
 ## License
 
 SDD Manager is licensed under the [MIT License](LICENSE). Bundled third-party material retains its own license and attribution, including [the TDD adaptation license](skills/sdd-tdd/LICENSE).
+
+## Related projects
+
+[GitHub Spec Kit](https://github.com/github/spec-kit) provides structured workflows and reusable assets for coding agents. [Superpowers](https://github.com/obra/superpowers) presents a development methodology built from composable skills. These are related reading for users exploring agent-assisted development; they are not dependencies, endorsements or claims of derivation.

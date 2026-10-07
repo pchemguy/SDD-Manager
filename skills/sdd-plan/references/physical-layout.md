@@ -17,3 +17,7 @@ For an existing project, a proposed change may alter only a few ownership rules.
 ## Layout and preparation QC
 
 Include material layout changes in the affected PLAN QC scope under [review](review.md). Assess design ownership and the delivery/integration route; identify any affected SPEC/TASKS review invalidation. A focused layout request neither authorizes rewriting PLAN nor creating an unrequested PLAN report: return the affected review need and block dependent use until its scope/readiness is established. When coordinated PLAN/layout preparation includes reporting, cover layout in the adjacent PLAN review report rather than requiring a report for each child.
+
+## Instruction file ownership
+
+Apply the manager's [agent orientation](../../sdd-manage/references/agent-orientation.md) when material source/layout/check commands, governing links or active task/feature ownership changes within this workflow. Preserve controlling manual instructions and update affected root AGENTS.md with the verified owned checkpoint. Feature archive/transfer keeps current canonical owner links accurate; historical checklists are not duplicated as executable owners. Explicit path limits or real policy conflicts return to the manager. An unchanged startup requires no rewrite.

@@ -33,3 +33,7 @@ Before integration the target retains its paused checkpoint. A merge attempt may
 Report the accepted objective, amended implemented behavior, retained behavior, existing development documents changed, affected task statuses, verification evidence and limitations, amendment and merge commits, working/target branches, target publication, and pending hosted reconciliation. Identify consequences for remaining tasks as findings, not instructions that automatically launch their implementation.
 
 Stop after the report, including when the amendment is successful. There is no handoff to **sdd-implement**, no automatic selection of its next task, and no automatic steering follow-up. The human decides whether and when to resume the main workflow or command another amendment.
+
+## Affected orientation checkpoint
+
+Apply the manager's [agent orientation](../../sdd-manage/references/agent-orientation.md) when material source/layout/check commands, governing links or active task/feature ownership changes within this workflow. Preserve controlling manual instructions and update affected root AGENTS.md with the verified owned checkpoint. Feature archive/transfer keeps current canonical owner links accurate; historical checklists are not duplicated as executable owners. Explicit path limits or real policy conflicts return to the manager. An unchanged startup requires no rewrite.

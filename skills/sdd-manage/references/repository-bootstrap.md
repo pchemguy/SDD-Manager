@@ -10,6 +10,8 @@ For implementation, push outstanding commits first under the existing startup pr
 
 ## Root artifacts and discoverability
 
+Ensure root AGENTS.md through [agent orientation](agent-orientation.md) during authorized adoption. Read existing controlling instructions first; preserve manual content and explicit path limits. Include affected orientation with the same first result checkpoint, not a separate administrative commit. Its ownership and subsequent maintenance are independent of disclosure byte-copy requirements.
+
 Resolve assets relative to the loaded plugin root: this reference is at `skills/sdd-manage/references/repository-bootstrap.md`; bundled files are at `assets/AI_DISCLOSURE.md` and `assets/SDD-MANAGER.md`. Use the same installed or pinned source as the running skills, including an acceptance vendor snapshot. Do not fetch a newer template silently or fabricate a missing asset.
 
 1. Inspect the target Git root, applicable instructions, root `AI_DISCLOSURE.md`, `SDD-MANAGER.md`, README and relevant Git history. Establish bootstrap ownership separately from unrelated pending content. For a project nested in a Git repository, place these records at the **target repository root**, not inside `docs/dev/` or the project subdirectory; resolve incompatible repository-wide scope before writing.

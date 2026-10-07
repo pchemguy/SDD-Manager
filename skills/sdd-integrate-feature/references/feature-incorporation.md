@@ -66,3 +66,7 @@ Do not expand a SPEC-only or literal selected-path request to amend unselected P
 When selected feature sources become archive-eligible, move their associated QC reports with them, preserving adjacency/basenames, original reviewed identity/history and valid in-scope links. Retain a source/report pair if required link repairs or either move is outside scope. Preparation QC reports are distinct from milestone/phase implementation reports, which keep their established feature prefix. Recheck main-owner readiness independently; archived Ready is historical only.
 
 Recover actual package paths from the recorded branch/directory association, including established unsuffixed overrides. Do not calculate archive destinations by dropping a branch slug. An explicitly selected rename includes affected owner, archive and navigation links; convention adoption alone does not rename historical packages.
+
+## Orientation during incorporation
+
+Apply the manager's [agent orientation](../../sdd-manage/references/agent-orientation.md) when material source/layout/check commands, governing links or active task/feature ownership changes within this workflow. Preserve controlling manual instructions and update affected root AGENTS.md with the verified owned checkpoint. Feature archive/transfer keeps current canonical owner links accurate; historical checklists are not duplicated as executable owners. Explicit path limits or real policy conflicts return to the manager. An unchanged startup requires no rewrite.

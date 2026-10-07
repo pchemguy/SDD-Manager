@@ -10,6 +10,7 @@ Translate the user's objective into a scoped workflow and coordinate the respons
 | Coordination concern | Load |
 | --- | --- |
 | Select a practical workflow and its entry, outputs, and stopping point | [available workflows](references/workflows.md) |
+| Create/maintain root AGENTS.md without weakening governing instructions | [agent orientation](references/agent-orientation.md) |
 | Place disclosure and discoverable usage records in the first target-repository SDD commit | [repository bootstrap](references/repository-bootstrap.md) |
 | Enforce SPEC/PLAN/TASKS preparation readiness and affected reassessment | [document QC gates](references/document-qc-gates.md) |
 | Establish prerequisites, pass scope, resolve blockers, and persist results | [coordination protocol](references/coordination.md) |
