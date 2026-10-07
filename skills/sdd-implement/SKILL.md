@@ -5,7 +5,7 @@ description: Use when selecting an executable task range, or executing or resumi
 
 # Implement a selected task range
 
-Execute the user's requested task-list boundary. **sdd-manage** coordinates authorization, prerequisites, and focused capabilities; an implementation request authorizes work within its established scope without repeated confirmation for routine steps. Use a current **sdd-orient** handoff at startup for repository instructions, Git and task state, dirty-path ownership, and environment. Read the relevant references:
+Execute the user's requested task-list boundary. **sdd-manage** coordinates authorization, prerequisites, and focused capabilities; an implementation request authorizes work within its established scope without repeated confirmation for routine steps. Use a current **sdd-orient** handoff at startup for repository instructions, Git and task state, dirty-path ownership, and environment. Read the relevant references: Load [environment recovery](references/environment-recovery.md) when installation/runtime facilities block selected work; load its browser guidance only for relevant browser checks.
 
 | Work | Load |
 | --- | --- |

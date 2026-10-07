@@ -46,3 +46,7 @@ Use **sdd-manage**'s [tracking decision](../../sdd-manage/references/tracking-de
 ## Scoped authority handoff
 
 Carry the established user grant, destination/ref or hosted identity, owned payload scope and observed verification through the manager's [authorization-context procedure](../../sdd-manage/references/revision-authorization.md#supply-missing-authorization-context-proactively). Credentials remain protected; host controls and optional-capability confirmation are distinct from existing workflow authority.
+
+## Environment readiness
+
+For observed installation/runtime blockers, use [environment recovery](environment-recovery.md) after the push-first prerequisite. Return actual attempts, supported alternatives and remaining required capabilities to the manager. Browser detail is conditional; ordinary engine/CLI work loads no browser prerequisites.

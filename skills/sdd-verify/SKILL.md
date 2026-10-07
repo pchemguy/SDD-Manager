@@ -20,7 +20,7 @@ For an explicit boundary review task, load boundary review and assess implementa
 
 1. Identify the acceptance and exit conditions to verify and the implementation state being checked.
 2. Select sufficient direct, dependent, integration, and boundary checks. Use project commands and an existing verification map where useful; neither a map nor new scripts are required.
-3. Run the selected checks and inspect actual outcomes, including failures, warnings, skips, and collection counts where relevant.
+3. Establish representative environment capabilities for the planned checks through check selection; load its browser guidance only for relevant browser work. Run the selected checks and inspect actual outcomes, including failures, warnings, skips, and collection counts where relevant.
 4. Associate each condition with evidence and any limitation. Distinguish verified, failed, blocked, and not checked conditions; passing checks do not establish acceptance they never exercised.
 5. Classify observed failures where evidence permits and return remaining work to its owner. Do not silently omit an unrelated or pre-existing failure from the results.
 

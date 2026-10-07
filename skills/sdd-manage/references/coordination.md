@@ -41,3 +41,7 @@ Use **sdd-report** for the result format. Include the fulfilled objective and af
 ## Diagnostic and findings handoff
 
 Return instruction source, actual user choice/grant, observed state and evidence limits separately when explaining omissions. Persist explicit amendment notes under the authorized [review/revision findings procedure](review-and-revision.md#retain-requested-amendment-findings), reporting conversation-only, written, committed, pushed and implemented states truthfully. Operation-context handoffs follow [workflow authorization](revision-authorization.md#supply-missing-authorization-context-proactively).
+
+## Coordinate environment recovery
+
+On a relevant environment/tooling blocker, coordinate investigation of reasonable supported alternatives within authorized scope before declaring the work blocked. Route technical investigation to the affected execution workflow; implementation uses [environment recovery](../../sdd-implement/references/environment-recovery.md). Preserve partial work, require actual attempt/capability evidence, disclose material substitutions and resolve consequential scope/requirement decisions. Bound investigation by real constraints rather than an arbitrary retry quota. Platform policy denials remain under workflow authorization and cannot be reframed as tooling recovery.
