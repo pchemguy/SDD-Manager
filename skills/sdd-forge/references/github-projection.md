@@ -36,3 +36,7 @@ Report created, matched, updated, and conflicted objects with IDs and URLs. Retu
 ## Document QC prerequisite
 
 Before creating/projecting task issues, phase/milestone labels or milestones, establish current owning-list and upstream preparation readiness through **sdd-manage**'s **Document QC gates** reference. A direct forge call uses the same gate; report missing/stale or blocked conformance to the coordinator without silently editing governing documents or creating objects first. Read-only mapping assessment may proceed and report blocked projection. This prerequisite does not turn report Ready into task completion or replace lifecycle verification for existing issue/milestone closure.
+
+## Confirmed scope and late activation
+
+Require the manager's [tracking decision](../../sdd-manage/references/tracking-decision.md) handoff to identify confirmed/requested repository and lifecycle scope before projection. Authentication or an inactive-state statement is not activation confirmation. Late confirmed projection discovers existing objects first and reconciles eligible completed work from retained commits/checks without replaying tasks. Return pending/unknown effects separately from recommendation and confirmation.

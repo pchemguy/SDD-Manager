@@ -11,7 +11,7 @@
 
 | Action | Findings | Actual result | Verification / limits | Disposition |
 | --- | --- | --- | --- | --- |
-| V-001 | F001/F002 | Pending | Pending | Accepted |
+| V-001 | F001/F002 | Added canonical tracking-decision reference, proactive manager checkpoints and implementation/forge/report handoffs. | Inspected confirmed/declined/pending/late paths and conditional scope; fresh amended-source exercise is queued in V-006. | Revised; behavioral recheck pending |
 | V-002 | F003/F004/F005 | Pending | Pending | Accepted |
 | V-003 | F006 | Pending | Pending | Accepted |
 | V-004 | F007 | Pending | Pending | Accepted |

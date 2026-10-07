@@ -33,3 +33,7 @@ Carry task/change identity, tested state, actual commands/outcomes, condition co
 Include the campaign/phase identity and retained directory where applicable. A completed task range in an incomplete main phase is a pushed checkpoint, not a completed integration; report phase work/exits remaining and the paused branch. Report eligible feature archive paths and main task owners, without treating historical lists as executable.
 
 Report working and target branches, starting checkpoint, task or amendment commits, merge SHA and parent tips, working-branch and merged-state verification, and remote containment or pending publication. Distinguish a verified task from a completed integrated workflow. A failed merge or target push remains an explicit blocker even when task commits are verified and pushed. Identify already integrated work without claiming a new merge, and state when an explicit user instruction retained work on its branch.
+
+## Optional capability state
+
+For hosted tracking, report recommendation, pending/confirmed/declined decision, activation and observed provider objects separately. Cite the actual user decision or carried scope. An inactive-state line in an agent-authored plan does not prove refusal; a token or general push authority does not prove activation confirmation. Late reconciliation is current recovery, not proof that projection preceded historical task execution.
