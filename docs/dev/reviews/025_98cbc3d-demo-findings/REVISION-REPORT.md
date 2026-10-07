@@ -1,31 +1,46 @@
 # Revision report
 
-## Campaign and scope
+## Campaign and result
 
-- Campaign: `025_98cbc3d`; plugin baseline: `98cbc3d2fb81de225e5e1088517b86fc22feec3a`.
-- Working/target branches: `revision/025_98cbc3d-demo-findings` / `main`.
-- Inputs: [imported findings](SDD-MANAGER-FINDINGS.md), [revision plan](REVISION-PLAN.md).
-- State: Planned; imported evidence is retained unchanged. No finding is yet verified on revised source.
+- Stable campaign: `025_98cbc3d`; original plugin baseline: `98cbc3d2fb81de225e5e1088517b86fc22feec3a` (0.14.9).
+- Working branch: `revision/025_98cbc3d-demo-findings`; integration target: `main`.
+- Inputs: [unaltered imported findings](SDD-MANAGER-FINDINGS.md), [retained revision plan](REVISION-PLAN.md).
+- Source verified and independently assessed: `719540de681cb3cfcf3e8a06dbeb7f4940cc755a` (0.15.0).
+- Current state: nine findings implemented and verified within the source/decision/fixture coverage below; completed boundary evidence prepared for explicit integration. No global installed/live certification is claimed.
+- F001–F009 below abbreviate the retained original SDD-F001–SDD-F009 IDs; no finding was renumbered. Imported history and original inconsistencies remain intact.
 
-## Revision evidence
+## Revision evidence and dispositions
 
-| Action | Findings | Actual result | Verification / limits | Disposition |
-| --- | --- | --- | --- | --- |
-| V-001 | F001/F002 | Added canonical tracking-decision reference, proactive manager checkpoints and implementation/forge/report handoffs. | Inspected confirmed/declined/pending/late paths and conditional scope; fresh amended-source exercise is queued in V-006. | Revised; behavioral recheck pending |
-| V-002 | F003/F004/F005 | Added concrete supported review-context facts, omission diagnosis and authorized findings persistence guidance with dependent handoffs/examples. | Baseline positive authorization control retained; scoped changed-source and notes exercises pending V-006. | Revised; behavioral recheck pending |
-| V-003 | F006 | Separated manager recovery coordination, implementation technical recovery and verification readiness; one conditional shared browser reference. | Routing/source checks inspected; representative decision scenarios pending V-006. No browser installed or native delivery claimed. | Revised; behavioral recheck pending |
-| V-004 | F007 | New feature/revision/steering packages retain matching branch slugs; allocation uses stable prefixes; actual legacy/archive associations preserved. | Placeholder/path cross-reference inspection; allocation/collision/continuation/rename exercises pending V-006. No historical directories renamed. | Revised; behavioral recheck pending |
-| V-005 | F008/F009 | Added concise root AGENTS.md and canonical bootstrap/maintenance policy with read-only orientation and dependent owners; README/manifests identify an experiment and related projects. | Official Spec Kit/Superpowers repositories checked; current source/command/navigation inspected. Fixture and fresh-context behavior pending V-006. | Revised; behavioral recheck pending |
-| V-006 | All | Pending | Pending | Accepted |
+| Action / findings | Actual source outcome | Observed recheck | Commit / disposition |
+| --- | --- | --- | --- |
+| V-001 / F001,F002 | Proactive manager checkpoints; canonical tracking recommendation/confirmation; phase, implementation, forge and report handoffs preserve decline and late reconciliation. | D1–D4 and D8 pass independently assessed decisions; source handoffs inspected. No premature hosted write performed or inferred. | `71cc993`; Verified within stated scope. |
+| V-002 / F003,F004,F005 | Concrete supported review-context facts, actual-choice diagnostics, truthful authorized findings persistence and dependent handoffs. | D5–D10 pass independently assessed decisions; policy denial/revocation preserved, no secret exposure or manufactured consent. | `66d21fe`; Verified decisions/source, actual live denial not selected. |
+| V-003 / F006 | General manager recovery, technical execution reference, verification readiness, one shared conditional browser reference. | R1–R6 pass recovery/evidence decisions. CLI-only routing excludes browser obligations; malformed artifact, repeated contexts, glyphs, fresh-cache and native/model distinctions are addressed. | `839104a`; Verified decisions/source; no actual browser provisioning/native execution claimed. |
+| V-004 / F007 | New feature/revision/steering directories match branch slugs; stable max-plus-one prefix allocation, collision handling, actual legacy/archive association. | D11/D12 pass new/collision/legacy/selected-rename decisions. O4 passes fixture owner/archive navigation; its explicit recorded slug is not a new allocation test. Historical directories preserved. | `16d49cd`; Verified source/decisions and scoped navigation, no live campaign migration claimed. |
+| V-005 / F008,F009 | README/manifests describe an experiment and link related official projects; root AGENTS.md and canonical bootstrap/maintenance policy with downstream owners. | O1–O5 actual fixture applications pass, manual/nested instructions and unrelated bytes preserved, current state no-op; official project references checked. Root source guidance and read-only orient inspected. | `5bf56df`; Verified source/fixture scope; automatic host discovery not certified. |
+| V-006 / All | Synchronized package version 0.15.0; retained fresh consumers, literal outputs/runner/fixture archive and independent assessment. | 112 support tests pass; 211 actual local links/anchors, 122-file archive byte integrity, asset/manifest/import/secret checks pass; independent review finds no blockers and accepts all 23 scoped cases. | `719540d` source; completed evidence checkpoint and integration recorded below. |
 
-## Baseline evidence
+All source checkpoints were pushed to the established revision ref; exact readback at `719540d` confirmed its remote tip. Their Git history and later containment establish persistence, not an inferred file-presence claim. [Source check facts](evidence/source-checks.json) identify actual commands/runtime and coverage.
 
-Fresh-context [baseline consumer exercise](evidence/baseline-consumer.md) inspected source `98cbc3d` without the imported findings or assessment expectations. It left token-supplied tracking inactive without a required proposal, produced an unsuffixed feature directory, and found no root AGENTS creation obligation. These reproduce the policy gaps in F002/F007/F009. It preserved prior decline and supplied existing scoped authority through the supported reconsideration channel; those positive controls are retained. Its CLI response did not load browser guidance. This is a hypothetical decision exercise, with no provider writes or live policy denial.
+## Fresh contexts and actual evidence
+
+The baseline consumer read original source without this report or expectations; it reproduced the tracking, naming and missing-root-orientation gaps while preserving positive authorization/decline controls. The changed-source consumers used separate fresh contexts pinned to `719540d`, without imported findings, baseline answers or assessor expectations.
+
+- [Baseline response](evidence/baseline-consumer.md).
+- [D1–D12 literal decisions](evidence/decisions-consumer.md): hypothetical independent states, no actual provider writes.
+- [O1–O5 / R1–R6 consumer response](evidence/orientation-recovery-consumer.md): five actual orientation applications and six hypothetical recovery decisions.
+- [Actual runner](evidence/exercise_orientation.py), [fixture results](evidence/orientation-results.json), [fixture links](evidence/fixture-link-check.json), [fixture files](evidence/orientation-fixtures.zip). The archive omits Git internals and generated bytecode. Original absolute scratch paths identify the executed artifacts; the retained archive preserves their files.
+- [Independent assessment](evidence/independent-review.md): literal case grading, actual fixture inspection, four CLI commands and four two-test suites independently rerun, all 43 fixture links checked.
+- [Full support output](evidence/support-tests.txt): 112 tests in 24.085 seconds, OK. The log alone does not embed source identity; the execution/source record supplies that attribution.
+
+The assessor accepted **23/23 scoped cases** (12 decisions + five orientation applications + six recovery decisions), not 23 live executions. Original attempts are retained. The first coordinator link scan matched literal template/code links; excluding those corrected the checker, with no source repair needed. The byte-preserved attachment uses CRLF, so whitespace checks used command-scoped `cr-at-eol` rather than normalizing imported evidence.
 
 ## Composition and integration
 
-Not yet performed. Commit and remote facts will be recorded with actual outcomes; a local artifact is not publication evidence.
+Independent review at `719540d` found no source blockers or actionable minor defects across all nine findings and coupled owner boundaries. The complete authorized branch includes only this revision and its evidence beyond the original main baseline. Explicit main integration, merged-state verification and exact destination readback are the remaining final steps at this checkpoint.
 
-## Remaining evidence limits
+## Remaining limits and stop
 
-Live TextStats acceptance, installed-host automatic instruction discovery, native browser/desktop delivery and live automatic-review behavior are not selected. Behavioral responses and local fixture execution will be reported separately from source review and support-suite results.
+Live TextStats acceptance remains excluded. No browser installation, native desktop event delivery, actual host-policy rejection/reconsideration, production feature migration or installed-host automatic discovery was executed. Existing evidence proves the stated source, fresh decisions and fixture applications; it does not establish general facility/client compatibility. No additional consumer/Tetris work or tracking activation is selected.
+
+A new tagged release was not requested: source version 0.15.0 is prepared and integrated through this campaign; existing release assets are not replaced or retagged. Stop after published integration and final evidence.
