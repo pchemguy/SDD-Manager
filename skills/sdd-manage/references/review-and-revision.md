@@ -2,7 +2,7 @@
 
 Use **sdd-conventions**' **Review campaigns** reference for campaign identity/storage and **sdd-report**'s **Campaign artifacts** reference for formats. Scope the work before choosing focused reviewers; a campaign does not require a separate review or revision skill.
 
-This is the formal campaign path for the [revision core workflow](workflows.md#core-development-workflows). A directly accepted focused amendment can enter revision planning without fabricating a preceding review. At a paused implementation checkpoint, [lightweight steering](workflows.md#steering-as-lightweight-revision) uses the human-defined objective and existing documents rather than requiring campaign artifacts. Both paths retain their own scope and stop rules. Checkpoint steering records live under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>/`; general campaign records retain the reviews prefix.
+This is the formal campaign path for the [revision core workflow](workflows.md#core-development-workflows). A directly accepted focused amendment can enter revision planning without fabricating a preceding review. At a paused implementation checkpoint, [lightweight steering](workflows.md#steering-as-lightweight-revision) uses the human-defined objective and existing documents rather than requiring campaign artifacts. Both paths retain their own scope and stop rules. Checkpoint steering records live under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>-<slug>/`; general campaign records retain the reviews prefix.
 
 ## Review
 

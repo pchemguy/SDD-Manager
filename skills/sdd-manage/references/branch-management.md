@@ -32,3 +32,7 @@ Feature/revision integration into a phase updates that phase's accepted inputs a
 ## Continuation
 
 Recover identities and actual file paths from retained records and Git; names alone do not prove state. Distinguish incomplete phase work, pending archive/reconciliation, uncommitted merge, completed merge awaiting push, and an already integrated campaign. Resume the same authorized operation rather than allocate another identity or repeat an existing merge. Report ambiguous ownership/target and preserve valid work. Retain branches unless deletion is explicitly requested or covered by project policy.
+
+## Descriptive directory association
+
+For new revision, feature and phase-nested steering packages, reserve `<campaign>-<slug>` with the matching complete branch suffix. Discover both suffixed and established unsuffixed directories by their stable sequence/baseline prefix; different slugs do not permit duplicate sequence reservations. Record collision suffixes and actual paths in existing context. Continuation uses that association; never migrate retained directories from the default alone.

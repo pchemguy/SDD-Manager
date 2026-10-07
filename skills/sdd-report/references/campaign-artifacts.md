@@ -166,3 +166,5 @@ List unresolved/deferred IDs, partial or blocked checks, exception rationale, an
 ## Imported and conversation-only findings
 
 Preserve imported reports and their attribution, original inconsistencies and source-relative evidence; describe such limits in a companion record rather than rewriting baseline history. Requested amendment notes use stable IDs, evidence, proposed changes, owner, validation and disposition. Report whether notes are conversation-only, written, committed/published, revised or verified. Record actual user decisions separately from agent assumptions and performed state. A later execution result does not retroactively validate the original diagnosis.
+
+New campaign records state the stable campaign ID and the actual descriptive directory/branch separately. Their new directory basename is `<campaign>-<slug>`; use recorded established paths for continuation and historical links. A suffix change does not allocate a new stable ID.

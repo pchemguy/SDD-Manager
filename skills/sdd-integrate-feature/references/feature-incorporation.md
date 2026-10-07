@@ -29,13 +29,13 @@ If the feature is withdrawn, preserve Git history and resolve the disposition of
 
 Apply the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md) when reconciling accepted review tasks, report links and parent evidence. Preserve milestone/phase review tasks and stable IDs during transfer; existing project-wide parents retain their full scope. Report warranted hosted reopening/reparenting to sdd-forge under authorized reconciliation, without performing it here. Future-phase feature work remains unprojected; scoped feature completion cannot close an unfinished project milestone.
 
-Feature implementation reports remain under `docs/dev/features/<feature-id>/`, including after document incorporation/archive. Keep their provenance links from current owning entries; archiving feature sources does not relocate reports to the main phase tree.
+Feature implementation reports remain under the actual recorded `docs/dev/features/<feature-id>/` package (`<feature-id>` includes the descriptive suffix for new packages), including after document incorporation/archive. Keep their provenance links from current owning entries; archiving feature sources does not relocate reports to the main phase tree.
 
 ## Scope and cleanup
 
 Feature source documents remain active while other levels are integrated or work still depends on them. A selected SPEC-only incorporation does not archive the whole package, remove FEATURE-TASKS, or transfer unselected tasks. Preserve active sources and report deferred link/owner changes outside scope.
 
-For a completed accepted feature, apply **sdd-conventions**' **Workflow identity** archive location. After selected final incorporation and task/evidence disposition, retain eligible sources in `docs/dev/features/<campaign>/` with their basenames rather than deleting them. Archive on the feature branch before final verification and Git integration; this skill owns document disposition, while sdd-manage owns the Git merge.
+For a completed accepted feature, apply **sdd-conventions**' **Workflow identity** archive location. After selected final incorporation and task/evidence disposition, retain eligible sources in `docs/dev/features/<campaign>-<slug>/` with their basenames rather than deleting them. Archive on the feature branch before final verification and Git integration; this skill owns document disposition, while sdd-manage owns the Git merge.
 
 ### Archive eligibility and procedure
 
@@ -64,3 +64,5 @@ Material selected incorporation/reconciliation requires affected preparation QC 
 Do not expand a SPEC-only or literal selected-path request to amend unselected PLAN/TASKS or their reports. Report their affected invalidation and block dependent use until authorized reassessment; the coherent selected incorporation can finish without claiming whole-project readiness. Required selected-root QC whose report paths are explicitly forbidden is a scope conflict to resolve before claiming that preparation gate passed.
 
 When selected feature sources become archive-eligible, move their associated QC reports with them, preserving adjacency/basenames, original reviewed identity/history and valid in-scope links. Retain a source/report pair if required link repairs or either move is outside scope. Preparation QC reports are distinct from milestone/phase implementation reports, which keep their established feature prefix. Recheck main-owner readiness independently; archived Ready is historical only.
+
+Recover actual package paths from the recorded branch/directory association, including established unsuffixed overrides. Do not calculate archive destinations by dropping a branch slug. An explicitly selected rename includes affected owner, archive and navigation links; convention adoption alone does not rename historical packages.

@@ -14,7 +14,7 @@
 | V-001 | F001/F002 | Added canonical tracking-decision reference, proactive manager checkpoints and implementation/forge/report handoffs. | Inspected confirmed/declined/pending/late paths and conditional scope; fresh amended-source exercise is queued in V-006. | Revised; behavioral recheck pending |
 | V-002 | F003/F004/F005 | Added concrete supported review-context facts, omission diagnosis and authorized findings persistence guidance with dependent handoffs/examples. | Baseline positive authorization control retained; scoped changed-source and notes exercises pending V-006. | Revised; behavioral recheck pending |
 | V-003 | F006 | Separated manager recovery coordination, implementation technical recovery and verification readiness; one conditional shared browser reference. | Routing/source checks inspected; representative decision scenarios pending V-006. No browser installed or native delivery claimed. | Revised; behavioral recheck pending |
-| V-004 | F007 | Pending | Pending | Accepted |
+| V-004 | F007 | New feature/revision/steering packages retain matching branch slugs; allocation uses stable prefixes; actual legacy/archive associations preserved. | Placeholder/path cross-reference inspection; allocation/collision/continuation/rename exercises pending V-006. No historical directories renamed. | Revised; behavioral recheck pending |
 | V-005 | F008/F009 | Pending | Pending | Accepted |
 | V-006 | All | Pending | Pending | Accepted |
 
