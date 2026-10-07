@@ -6,7 +6,7 @@
 - Working branch: `revision/025_98cbc3d-demo-findings`; integration target: `main`.
 - Inputs: [unaltered imported findings](SDD-MANAGER-FINDINGS.md), [retained revision plan](REVISION-PLAN.md).
 - Source verified and independently assessed: `719540de681cb3cfcf3e8a06dbeb7f4940cc755a` (0.15.0).
-- Current state: nine findings implemented and verified within the source/decision/fixture coverage below; completed boundary evidence prepared for explicit integration. No global installed/live certification is claimed.
+- Current state: all nine findings implemented and verified within the source/decision/fixture coverage below; explicit main integration is committed, published and verified. No global installed/live certification is claimed.
 - F001–F009 below abbreviate the retained original SDD-F001–SDD-F009 IDs; no finding was renumbered. Imported history and original inconsistencies remain intact.
 
 ## Revision evidence and dispositions
@@ -37,10 +37,19 @@ The assessor accepted **23/23 scoped cases** (12 decisions + five orientation ap
 
 ## Composition and integration
 
-Independent review at `719540d` found no source blockers or actionable minor defects across all nine findings and coupled owner boundaries. The complete authorized branch includes only this revision and its evidence beyond the original main baseline. Explicit main integration, merged-state verification and exact destination readback are the remaining final steps at this checkpoint.
+Independent review at `719540d` found no source blockers or actionable minor defects across all nine findings and coupled owner boundaries. The complete authorized branch includes only this revision and its evidence beyond the original main baseline.
+
+- Completed boundary checkpoint: `89d1b8004753c0f6f11c6701e01983f3acc480fc`; its exact revision remote ref was verified before integration.
+- Refreshed main baseline: `98cbc3d2fb81de225e5e1088517b86fc22feec3a`; fetch and fast-forward-only reconciliation found it current.
+- Explicit two-parent merge: `0e704fb29ea1c4cb73353358f7213f4d486f8c21`, with parents `98cbc3d2fb81de225e5e1088517b86fc22feec3a` and `89d1b8004753c0f6f11c6701e01983f3acc480fc`. No conflicts or resolution edits occurred.
+- Prospective merged tree and pinned revision tree both equal `c5d6616531cc717816356aeef7e08f10e9f96850`; the independently reviewed source was unchanged.
+- Merged-state [support output](evidence/main-support-tests.txt): 112 tests in 23.902 seconds, OK. Synchronized 0.15.0 manifests, imported attachment SHA256 and scoped whitespace checks also passed before the merge commit.
+- Normal publication to `https://github.com/pchemguy/SDD-Manager.git`, `refs/heads/main`, succeeded. Exact destination readback returned `0e704fb29ea1c4cb73353358f7213f4d486f8c21`.
+
+This final report checkpoint is recorded on main after that observed integration. It changes only campaign evidence and navigation; the final checkpoint's push/readback is verified separately in the execution record. The working branch is retained. Unrelated local files were preserved.
 
 ## Remaining limits and stop
 
 Live TextStats acceptance remains excluded. No browser installation, native desktop event delivery, actual host-policy rejection/reconsideration, production feature migration or installed-host automatic discovery was executed. Existing evidence proves the stated source, fresh decisions and fixture applications; it does not establish general facility/client compatibility. No additional consumer/Tetris work or tracking activation is selected.
 
-A new tagged release was not requested: source version 0.15.0 is prepared and integrated through this campaign; existing release assets are not replaced or retagged. Stop after published integration and final evidence.
+A new tagged release was not requested: source version 0.15.0 is prepared and integrated through this campaign; existing release assets are not replaced or retagged. The authorized source implementation is complete; stop after publication of this final evidence checkpoint.
