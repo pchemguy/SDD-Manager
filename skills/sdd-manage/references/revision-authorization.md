@@ -39,3 +39,20 @@ Read this policy before deciding that an operation needs authorization, before r
 Authentication is evidence of access capability. A read/write token alone does not authorize arbitrary payloads or destinations or override a rejection. Where the host requests authorization context, accurately supply the existing human grant and exact scoped operation through the supported channel; do not falsely claim that credentials create the grant. A concrete authorized request need not be reauthorized merely because authentication uses a token.
 
 Record workflow authority, review completion, local commit, publication, integration and hosted state as distinct facts. Existing campaign/task evidence is sufficient; no extra mutable authorization registry or transaction journal is required. Resume the retained operation after the execution facility permits it.
+
+## Supply missing authorization context proactively
+
+Before declaring authority missing or asking the user again, inspect the actual request, standing grants and explicit limits. Interpret a supplied token with its accompanying repository/workflow request; access credentials alone are not an arbitrary grant. Carry existing scoped authority through every worker and publication handoff.
+
+For a reviewer request or rejection citing absent context, prepare the supported request context with these concrete facts:
+
+| Fact | Required content |
+| --- | --- |
+| Operation and needed authority | Normal verified commit push, eligible integration, or confirmed hosted lifecycle operation; identify which effect is requested. |
+| Destination | Established repository/ref or exact hosted object identity. |
+| Payload | Exact commit and owned paths/content scope, or concrete object projection/state transition. |
+| Existing user grant | Relevant current request/standing instruction, plus optional-capability confirmation when applicable; never include a token value. |
+| Verification and denial | Applicable observed checks, exact stated rejection reason and actual remote/object readback. |
+| Supported response | Available operation-context/reconsideration mechanism and the changed contextual facts. |
+
+When the denial demonstrably concerns missing context and the supported channel permits reconsideration, supply this context and attempt the contextualized operation proactively. Do not require the user to restate an already sufficient grant. If no such channel exists, report its absence and preserve the pending effect; do not invent a reviewer-messaging API. A revoked grant, genuine policy restriction or explicit host demand for additional human confirmation remains a blocker under the preceding rejection procedure. Never repeat an unchanged denial or change tools/accounts/transports to evade it.

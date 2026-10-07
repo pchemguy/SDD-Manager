@@ -73,3 +73,13 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 | Prior explicit decline, followed by a token for normal Git pushes | Preserve the decline and perform authorized pushes; do not interpret the credential as activation. |
 | Tracking confirmed after several local tasks completed | Discover/reconcile eligible objects and attach verified retained evidence; leave incomplete work open and keep historical inactive-state reports truthful. |
 | Preparation may continue while tracking confirmation is pending | Continue independent authorized documents; resolve the actual activation choice before dependent phase execution. |
+
+## Authority, diagnostics and retained notes
+
+| Context | Coordinated result |
+| --- | --- |
+| Verified report push has existing user authority; host requests destination/payload context and permits reconsideration | Supply exact repository/ref, commit/paths, actual user grant, checks and stated denial through that channel, then attempt the contextualized request; no repeated user authorization question. |
+| Suitable credential but genuine policy rejection, or authority revoked | Preserve state and report the observed restriction/revocation. Do not substitute credentials, fabricate authority or evade controls. |
+| Tracking omission discovered; earlier PLAN merely says inactive | Diagnose missing capability-choice coordination, not a proven user refusal or compulsory activation. Offer the actual pending decision. |
+| User requests amendment notes be collected in the current findings file | Persist stable findings within that scope; report its actual commit/push state. Do not start source repairs unless selected. |
+| Notes exist only in conversation and no write scope exists | Report conversation-only storage; no claim of a durable register or implementation. |

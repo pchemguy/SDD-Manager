@@ -37,3 +37,7 @@ Use this procedure for document preparation, accepted integration, and standalon
 ## Return results
 
 Use **sdd-report** for the result format. Include the fulfilled objective and affected artifacts or task IDs, observed verification and gaps, commits and push status when applicable, hosted changes or pending reconciliation, unresolved decisions, and the boundary reached. Keep planned work distinct from implemented functionality. No extra workflow-state artifact is required: current documents, task evidence, Git, and applicable session decisions supply continuation context.
+
+## Diagnostic and findings handoff
+
+Return instruction source, actual user choice/grant, observed state and evidence limits separately when explaining omissions. Persist explicit amendment notes under the authorized [review/revision findings procedure](review-and-revision.md#retain-requested-amendment-findings), reporting conversation-only, written, committed, pushed and implemented states truthfully. Operation-context handoffs follow [workflow authorization](revision-authorization.md#supply-missing-authorization-context-proactively).

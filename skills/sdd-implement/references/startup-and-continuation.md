@@ -42,3 +42,7 @@ After pushing outstanding commits and reconciling pending state, use **sdd-manag
 ## Optional tracking decision at handoff
 
 Use **sdd-manage**'s [tracking decision](../../sdd-manage/references/tracking-decision.md) before dependent phase activation. Carry the recommendation, actual confirmation/decline, repository/scope and observed hosted state separately. A supplied GitHub token recommends enabled tracking but does not activate it; unresolved activation choices return to the manager. Reuse confirmed scope without repeated approval. Late confirmation reconciles retained evidence instead of replaying product tasks.
+
+## Scoped authority handoff
+
+Carry the established user grant, destination/ref or hosted identity, owned payload scope and observed verification through the manager's [authorization-context procedure](../../sdd-manage/references/revision-authorization.md#supply-missing-authorization-context-proactively). Credentials remain protected; host controls and optional-capability confirmation are distinct from existing workflow authority.
