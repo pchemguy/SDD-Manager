@@ -29,6 +29,8 @@ Campaign REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN and REVISION-REPORT belong on
 
 ## Artifact lifecycle
 
+Apply the [closed campaign record boundary](review-campaigns.md#closed-campaign-records). Complete archive moves, navigation and historical markers while the owning campaign is active; closure freezes its resulting package. Later naming, link or implementation changes do not reopen its documents or require compatibility review.
+
 Review/revision artifacts use the **Review campaigns** convention. Lightweight steering allocates the same global identity under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>-<slug>/` and can use a concise REVISION-REPORT recording objective, scope, baseline, paused target, verification, and publication, without a fabricated review or plan.
 
 Feature preparation creates a small package identity/navigation record, `docs/dev/features/<campaign>-<slug>/README.md`, referencing the active root FEATURE documents, design-docs branch, default preparation target and intended implementation branch. Active FEATURE sources keep their established paths in docs/dev; isolated branches/worktrees may carry separate packages, but one worktree must not overwrite an unrelated active package. This record supplies navigation, not a second workflow state store. The preparation merge retains the feature delta as an active source; it does not incorporate that delta into complete main documents or complete feature tasks.
@@ -41,4 +43,4 @@ Parse the leading numeric sequence and hexadecimal baseline prefix in both `007_
 
 New directory basenames include the same complete descriptive slug as their branch, including an approved collision suffix. Keep campaign ID and descriptive association stable as HEAD advances. Record actual directory, branch, full baseline and target in existing navigation/report context. Established unsuffixed packages and explicit overrides remain valid on continuation; do not infer their path by substituting the new default.
 
-Rename only when explicitly selected. Include all affected incoming/outgoing navigation, archived source paths and evidence references in one coherent scoped update; verify active owners and archive links before publication. Never rename an existing package merely because the default changed. Main phase directories retain phase numbers.
+Rename an active package only when explicitly selected. Include its affected maintained/active navigation, source paths and evidence references in one coherent scoped update; verify active owners and archive links before publication. Closed packages and their links remain unchanged. Never rename an existing package merely because the default changed. Main phase directories retain phase numbers.
