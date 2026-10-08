@@ -31,4 +31,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `025_98cbc3d` | Nine browser-demo amendments implemented as source 0.15.0; 112 support tests and 23 independently assessed scoped cases pass; explicitly integrated and published. | [Campaign](025_98cbc3d-demo-findings/README.md), [imported findings](025_98cbc3d-demo-findings/SDD-MANAGER-FINDINGS.md), [revision plan](025_98cbc3d-demo-findings/REVISION-PLAN.md), [revision report](025_98cbc3d-demo-findings/REVISION-REPORT.md) |
 
+| `026_ad9c0c9` | Accepted design-docs preparation baseline and default-branch integration gate; revision planned. | [Revision plan](026_ad9c0c9-preimplementation-baseline/REVISION-PLAN.md) |
+
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
