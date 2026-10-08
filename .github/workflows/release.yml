@@ -26,8 +26,10 @@ jobs:
           import os
           from pathlib import Path
 
-          manifest = json.loads(Path("plugin.json").read_text())
-          version = manifest["version"]
+          manifest = Path("plugin.json").read_bytes()
+          if manifest != Path(".codex-plugin/plugin.json").read_bytes():
+              raise SystemExit("Legacy manifest differs from canonical manifest")
+          version = json.loads(manifest)["version"]
           if os.environ["GITHUB_REF_NAME"] != f"v{version}":
               raise SystemExit("Tag does not match manifest version")
           PYCODE
@@ -48,7 +50,7 @@ jobs:
             --prefix=sdd-manager/ \
             --output="$package" \
             HEAD \
-            assets skills \
+            assets skills .codex-plugin \
             LICENSE plugin.json README.md AGENTS.md \
             SDD-MANAGER.md AI_DISCLOSURE.md
           sha256sum "$package" > "$package.sha256"

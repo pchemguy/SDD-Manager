@@ -10,7 +10,7 @@ Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development
 
 ## Getting started
 
-Load the package using your agent client's supported plugin mechanism. The package uses root `plugin.json` for discovery and presentation, with 15 skills under `skills/` and bundled icons under `assets/`. Manifest paths resolve from the repository/package root. The workflows require an agent with access to project files and the tools needed for the requested work.
+Load the package using your agent client's supported plugin mechanism. The package uses root `plugin.json` for discovery and presentation, with an identical `.codex-plugin/plugin.json` retained temporarily for legacy ChatGPT/Codex discovery, 15 skills under `skills/` and bundled icons under `assets/`. Manifest paths resolve from the repository/package root. The workflows require an agent with access to project files and the tools needed for the requested work.
 
 - **Project changes:** Use an existing, eligible Git worktree with applicable project instructions. Repository initialization is outside the plugin's scope.
 - **First SDD commit:** Ensure a concise root `AGENTS.md` provides current purpose, canonical owners, validated commands and instruction navigation; preserve existing human instructions. Include root `AI_DISCLOSURE.md` and `SDD-MANAGER.md` from the bundled assets, with discoverable README links. Preserve and reconcile existing disclosures. See [repository bootstrap](skills/sdd-manage/references/repository-bootstrap.md) for ownership, explicit scope limits and resumable adoption.
@@ -40,7 +40,7 @@ Use the milestone and task IDs from your actual task list. You can start at a la
 
 ## Plugin package
 
-The package includes root `plugin.json`, root `README.md`, `AGENTS.md`, `LICENSE`, `SDD-MANAGER.md` and `AI_DISCLOSURE.md`, `skills/`, and `assets/`. Root `plugin.json` is the single manifest to update when changing metadata or versions.
+The package includes root `plugin.json`, its temporary legacy compatibility copy `.codex-plugin/plugin.json`, root `README.md`, `AGENTS.md`, `LICENSE`, `SDD-MANAGER.md` and `AI_DISCLOSURE.md`, `skills/`, and `assets/`. Root `plugin.json` is canonical; keep the legacy copy byte-identical when changing metadata or versions. The root manifest preserves the same client metadata; its presence alone does not establish Agent Plugins 1.0 conformance.
 
 Artwork is provided as `assets/icon.svg`, `assets/icon.png`, `assets/logo.svg`, and `assets/logo.png`. Manifest presentation paths use `assets/icon.svg` for the composer icon and `assets/logo.svg` for the logo, including their dark variants. README is user-facing package documentation; runtime workflow instructions live in the skills. Acceptance and development material linked here belongs to the source repository and is outside the pinned skill package.
 

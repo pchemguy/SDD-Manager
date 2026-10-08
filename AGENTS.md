@@ -5,7 +5,7 @@ SDD Manager is an Agent Plugin for specification-driven development in Git repos
 ## Source and instructions
 
 - Workflow source: `skills/<skill>/SKILL.md` and its conditionally loaded references. Start coordinated work at [sdd-manage](skills/sdd-manage/SKILL.md); inspect the selected owner before edits.
-- Metadata: root `plugin.json` is the package manifest. Artwork/templates live in `assets/`; package notices are `SDD-MANAGER.md` and `AI_DISCLOSURE.md`.
+- Metadata: root `plugin.json` is the canonical package manifest; keep `.codex-plugin/plugin.json` byte-identical for temporary legacy client compatibility. Artwork/templates live in `assets/`; package notices are `SDD-MANAGER.md` and `AI_DISCLOSURE.md`.
 - Test tooling and fixtures: `acceptance/textstats/`. Read its [AGENTS.md](acceptance/textstats/AGENTS.md) before touching or executing that scope. A support-suite run is distinct from a live acceptance campaign.
 - Retained development evidence: [review/revision index](docs/dev/reviews/README.md). This repository has campaign plans/reports rather than a root project TASKS owner; do not invent executable task IDs from findings. Current work/branch state is discoverable through Git and the selected campaign record.
 

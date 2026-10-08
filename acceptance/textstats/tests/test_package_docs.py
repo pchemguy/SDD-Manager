@@ -1,10 +1,16 @@
 """Actual package pinning retains user documentation and its dirty identity."""
 import hashlib
-from pathlib import PurePosixPath
+from pathlib import Path, PurePosixPath
 from .support import Sandbox, git
 
 
 class PackageDocumentation(Sandbox):
+    def test_legacy_manifest_matches_canonical_manifest(self):
+        source = Path(__file__).resolve().parents[3]
+        legacy = source / '.codex-plugin/plugin.json'
+        self.assertTrue(legacy.is_file(), 'Legacy discovery manifest is missing')
+        self.assertEqual(legacy.read_bytes(), (source / 'plugin.json').read_bytes())
+
     def test_notice_navigation_is_retained_in_committed_and_dirty_snapshots(self):
         source=self.root/'notice-package'
         git(self.root,'init','-b','main',str(source))
