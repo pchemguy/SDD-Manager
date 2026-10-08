@@ -42,6 +42,8 @@ Record workflow authority, review completion, local commit, publication, integra
 
 ## Supply missing authorization context proactively
 
+For the required design-docs preparation merge, the implementation/workflow grant includes pushing the verified merge to the repository's actual default branch, whatever its name. Claim that existing scoped authority explicitly when the supported operation channel requires context, and supply the destination/ref, merge commit, document scope and checks below. Complete and verify this default-branch push before a dependent implementation branch is created. The push of design-docs itself or a local default merge does not satisfy the prerequisite.
+
 Before declaring authority missing or asking the user again, inspect the actual request, standing grants and explicit limits. Interpret a supplied token with its accompanying repository/workflow request; access credentials alone are not an arbitrary grant. Carry existing scoped authority through every worker and publication handoff.
 
 For a reviewer request or rejection citing absent context, prepare the supported request context with these concrete facts:

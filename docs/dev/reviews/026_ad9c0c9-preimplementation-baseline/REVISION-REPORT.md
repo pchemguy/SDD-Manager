@@ -26,4 +26,10 @@ Before the user clarified campaign ownership, the agent incorrectly put the firs
 
 ## Integration and stopping boundary
 
+Initial campaign integration completed as two-parent merge `92580c084987852863ce7ec4cc5f06b29886ed01`, with parents `0b57b29d57ace3ba0ce46e58b1d1f0768d1b78ef` and `6182148300c4d5e13151c2bb8ff597a21a61ea4e`, pushed to origin/main. Merged checks passed: 113 support tests, four Git lifecycle exercises, 202 local links/anchors, manifest equality and whitespace checks.
+
+### Explicit default publication clarification
+
+The user reiterates that the default branch may have any name and the design-docs merge must be pushed, claiming existing authorization when necessary. Branch management now names this push as mandatory, separates the design-docs/main convention from target discovery, and points directly to proactive authorization context. The authorization owner and README repeat the required default push before implementation branching. Campaign records remain revision-owned. Verification uses the existing Git exercise with nonstandard default `trunk` and the unpublished local merge case, plus scoped link/whitespace checks; no new product behavior or host-control bypass is introduced.
+
 Commit and push the verified revision checkpoint, refresh main, inspect the complete owned branch difference, then perform `git merge --no-ff --no-commit` with merged-state checks before the two-parent commit and target push. Confirm actual parent tips and remote containment; preserve the revision branch. Stop at this campaign boundary without product task execution, new hosted objects, or changes to host approval controls. Live client acceptance remains unexecuted.
