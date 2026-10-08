@@ -50,7 +50,7 @@ class PreflightTests(Sandbox):
     def test_pin_uses_git_object_bytes_and_complete_package_manifest(self):
         data, _ = self.ok(self.invoke('preflight'))
         self.assertEqual(data['plugin_source']['commit'], git(SOURCE, 'rev-parse', 'HEAD').stdout.strip())
-        expected=set(git(SOURCE,'ls-tree','-r','--name-only','HEAD','plugin.json','.codex-plugin','README.md','LICENSE','SDD-MANAGER.md','AI_DISCLOSURE.md','skills','assets').stdout.splitlines())
+        expected=set(git(SOURCE,'ls-tree','-r','--name-only','HEAD','plugin.json','README.md','AGENTS.md','LICENSE','SDD-MANAGER.md','AI_DISCLOSURE.md','skills','assets').stdout.splitlines())
         self.assertEqual(set(data['plugin_source']['package_hashes']), expected)
         self.assertEqual(data['plugin_source']['source_mode'], 'committed')
         self.assertEqual(data['repository']['remote'], 'origin')
@@ -128,32 +128,34 @@ class PreflightTests(Sandbox):
         self.assertIn('skills/demo/new.md',dirty['plugin_source']['changed_package_paths'])
         self.assertNotEqual(dirty['plugin_source']['fingerprint'],committed['plugin_source']['fingerprint'])
 
-    def test_codex_package_preserves_manifest_and_binary_assets_in_dirty_snapshot(self):
+    def test_package_preserves_manifest_orientation_and_binary_assets_in_dirty_snapshot(self):
         import hashlib
-        source=self.root/'codex-source'
+        source=self.root/'package-source'
         git(self.root,'init','-b','main',str(source))
         git(source,'config','user.name','Fixture')
         git(source,'config','user.email','fixture@example.invalid')
-        (source/'.codex-plugin').mkdir()
-        (source/'.codex-plugin/plugin.json').write_text('{"name":"fixture","skills":"./skills/"}\n')
+        (source/'plugin.json').write_text('{"name":"fixture","skills":"./skills/"}\n')
+        (source/'AGENTS.md').write_text('Use package instructions.\n')
         (source/'assets').mkdir()
         asset=source/'assets/logo.png'
         original=b'\x89PNG\r\n\x1a\nfixture\x00'
         asset.write_bytes(original)
         git(source,'add','.')
-        git(source,'commit','-m','codex package')
+        git(source,'commit','-m','package')
         committed,_=self.ok(self.invoke('preflight',extra=['--source-root',source]))
-        self.assertIn('.codex-plugin/plugin.json',committed['plugin_source']['package_hashes'])
+        self.assertIn('plugin.json',committed['plugin_source']['package_hashes'])
+        self.assertEqual(committed['plugin_source']['package_hashes']['AGENTS.md'],hashlib.sha256(b'Use package instructions.\n').hexdigest())
         self.assertEqual(committed['plugin_source']['package_hashes']['assets/logo.png'],hashlib.sha256(original).hexdigest())
         changed=original+b'dirty'
         asset.write_bytes(changed)
-        (source/'.codex-plugin/new.svg').write_text('<svg/>')
+        (source/'AGENTS.md').write_text('Use changed package instructions.\n')
         target=self.root/'codex-snapshot'
         dirty,_=self.ok(self.invoke('prepare',dict(self.inputs,source_mode='dirty'),extra=['--source-root',source,'--workspace',target]))
         snapshot=Path(dirty['plugin_source']['snapshot_path'])
         self.assertEqual((snapshot/'assets/logo.png').read_bytes(),changed)
-        self.assertTrue((snapshot/'.codex-plugin/plugin.json').is_file())
-        self.assertIn('.codex-plugin/new.svg',dirty['plugin_source']['changed_package_paths'])
+        self.assertTrue((snapshot/'plugin.json').is_file())
+        self.assertEqual((snapshot/'AGENTS.md').read_text(),'Use changed package instructions.\n')
+        self.assertIn('AGENTS.md',dirty['plugin_source']['changed_package_paths'])
         self.assertIn('assets/logo.png',dirty['plugin_source']['changed_package_paths'])
         diff=Path(dirty['plugin_source']['dirty_diff_path']).read_bytes()
         self.assertIn(b'assets/logo.png',diff)

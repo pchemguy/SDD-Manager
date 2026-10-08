@@ -22,7 +22,7 @@ from urllib.parse import parse_qsl, urlsplit
 
 BUNDLE = Path(__file__).resolve().parents[1]
 SOURCE = Path(__file__).resolve().parents[3]
-PACKAGE_PATHS = ('plugin.json', '.codex-plugin', 'README.md', 'LICENSE', 'SDD-MANAGER.md', 'AI_DISCLOSURE.md', 'skills', 'assets')
+PACKAGE_PATHS = ('plugin.json', 'README.md', 'AGENTS.md', 'LICENSE', 'SDD-MANAGER.md', 'AI_DISCLOSURE.md', 'skills', 'assets')
 MISSING = 'Which dedicated test repository should this run use? Supply its URL or local checkout path.'
 SECRET = re.compile(r'(?:github_pat_|gh[pousr]_|Bearer\s+)[A-Za-z0-9_\-]+', re.I)
 
@@ -359,7 +359,7 @@ def package(source, inputs):
         changed=sorted(name for name in set(files)|set(dirty) if files.get(name)!=dirty.get(name) or committed_modes.get(name)!=dirty_modes.get(name))
         files=dirty
         modes=dirty_modes
-    if not any(name in files for name in ('plugin.json', '.codex-plugin/plugin.json')): raise Stop('package_unavailable')
+    if 'plugin.json' not in files: raise Stop('package_unavailable')
     hashes={name:hashlib.sha256(data).hexdigest() for name,data in sorted(files.items())}
     fingerprint=hashlib.sha256(json.dumps({'hashes':hashes,'modes':modes},sort_keys=True,separators=(',',':')).encode()).hexdigest()
     return {'revision':inputs['plugin_revision'],'commit':commit,'source_mode':inputs['source_mode'],'package_hashes':hashes,'package_file_modes':modes,'fingerprint':fingerprint,'changed_package_paths':changed},files

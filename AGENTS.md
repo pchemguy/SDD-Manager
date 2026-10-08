@@ -1,15 +1,15 @@
 # Agent orientation
 
-SDD Manager is a learning-by-doing Agent Plugin for specification-driven development in Git repositories. Read [README.md](README.md) for capabilities, package contents and evidence limits.
+SDD Manager is an Agent Plugin for specification-driven development in Git repositories. This file is the entry point for agents working on this repository and for agents reading an installed SDD Manager package. Read [README.md](README.md) for capabilities, package contents and evidence limits.
 
 ## Source and instructions
 
 - Workflow source: `skills/<skill>/SKILL.md` and its conditionally loaded references. Start coordinated work at [sdd-manage](skills/sdd-manage/SKILL.md); inspect the selected owner before edits.
-- Metadata: root `plugin.json` and `.codex-plugin/plugin.json` must remain byte-identical. Artwork/templates live in `assets/`; package notices are `SDD-MANAGER.md` and `AI_DISCLOSURE.md`.
+- Metadata: root `plugin.json` is the package manifest. Artwork/templates live in `assets/`; package notices are `SDD-MANAGER.md` and `AI_DISCLOSURE.md`.
 - Test tooling and fixtures: `acceptance/textstats/`. Read its [AGENTS.md](acceptance/textstats/AGENTS.md) before touching or executing that scope. A support-suite run is distinct from a live acceptance campaign.
 - Retained development evidence: [review/revision index](docs/dev/reviews/README.md). This repository has campaign plans/reports rather than a root project TASKS owner; do not invent executable task IDs from findings. Current work/branch state is discoverable through Git and the selected campaign record.
 
-Read applicable nested AGENTS.md before work on its paths. If your host does not discover this entry point, load it explicitly. Keep maintained navigation accurate without overwriting controlling human instructions.
+When installed as a package, use this file for package-level orientation and then load the selected skill's `SKILL.md` plus only the references it requires. When working on the SDD Manager source repository, also read applicable nested AGENTS.md before work on its paths. If your host does not discover this entry point, load it explicitly. Keep maintained navigation accurate without overwriting controlling human instructions.
 
 ## Verification and persistence
 
