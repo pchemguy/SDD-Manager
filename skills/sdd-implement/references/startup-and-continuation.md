@@ -47,7 +47,7 @@ Use **sdd-manage**'s [tracking decision](../../sdd-manage/references/tracking-de
 
 ## Scoped authority handoff
 
-Before the first push, use the manager's [first-request authority resolution](../../sdd-manage/references/revision-authorization.md#first-request-authority-resolution). Carry the established user grant/limits, destination/ref or hosted identity, exact commit and complete owned payload scope, checks and actual supported request field through continuation. Apply its rejection table before demanding fresh consent or claiming no supported context route; credentials remain protected and optional tracking confirmation remains separate. Preserve that same grant through any warranted credential recovery.
+Carry the established user grant, destination/ref or hosted identity, owned payload scope and observed verification through the manager's [authorization-context procedure](../../sdd-manage/references/revision-authorization.md#supply-missing-authorization-context-proactively). Credentials remain protected; host controls and optional-capability confirmation are distinct from existing workflow authority.
 
 ## Environment readiness
 
