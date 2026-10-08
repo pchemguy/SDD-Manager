@@ -48,7 +48,7 @@ The follow-up [capability checks](CAPABILITY-EVIDENCE.md) found an exposed GitHu
 
 R-001–R-004 are proposed policy/procedure improvements supported by source and input analysis. R-005 is a regression requirement. Available evidence does not establish why the incident's reviewer decision changed, whether earlier retries used complete context, or whether the reported publication happened. No hostile-review simulation may be labelled actual host approval. Preparation branch sequencing is already covered by campaign 026; this campaign will test that interaction without mutating the incident repository.
 
-See the [revision plan](REVISION-PLAN.md) for actions, scenario expectations and the planning-only stopping boundary.
+See the [revision plan](REVISION-PLAN.md) for actions and scenario expectations. The subsequent execution instruction and current source dispositions are retained separately in [revision results](REVISION-REPORT.md); the baseline findings above remain historical observations.
 
 ## Observed planning-publication rejection
 
