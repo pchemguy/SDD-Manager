@@ -30,6 +30,6 @@ A direct **sdd-forge** caller may supply a token without a manager handoff. Foll
 
 Do not request replacement credentials for rate limits, outages, invalid input, or policy restrictions a token cannot remedy. Use provider timing and bounded retry guidance, preserving successful independent results and pending/unknown effects. After an uncertain hosted write, the backend re-reads affected identities/state before replay; after an uncertain push, inspect the established remote before declaring publication or retrying. Report sanitized causes and limits without exposing credentials.
 
-## Authority context
+## Scope through recovery
 
-Carry the user's actual scoped repository/workflow request with credential recovery under [workflow authorization](revision-authorization.md). Recover access capability only when the observed failure warrants it. A missing authorization-context response needs the supported contextualized request, not replacement credentials or a repeated user grant.
+Keep the existing request scope, destination and payload through credential recovery; recovering authentication does not require a new publication grant. Recover access only for an observed authentication failure. Preserve/report a host denial through [Git recovery](git-workflows.md#platform-authorization-rejection); replacing credentials cannot resolve a policy restriction.

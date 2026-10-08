@@ -33,4 +33,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `026_ad9c0c9` | Design-docs project preparation baseline and default-branch integration gate implemented; campaign records retain revision-branch ownership; local verification and final integration protocol recorded. | [Revision plan](026_ad9c0c9-preimplementation-baseline/REVISION-PLAN.md), [revision report](026_ad9c0c9-preimplementation-baseline/REVISION-REPORT.md) |
 
+| `028_5e2624e` | Standalone authorization policy removed; active callers reconciled to concise existing handoff/recovery owners; 113 support tests pass. | [Revision plan](028_5e2624e-remove-authorization-policy/REVISION-PLAN.md), [revision report](028_5e2624e-remove-authorization-policy/REVISION-REPORT.md) |
+
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.

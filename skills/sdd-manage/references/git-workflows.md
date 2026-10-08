@@ -36,7 +36,7 @@ Continue the same authorized operation when commanded; do not start another task
 
 ## Platform authorization rejection
 
-Use [workflow authorization](revision-authorization.md). Execute prescribed pushes as ordinary steps of the complete workflow; do not add a redundant plugin approval stage. Host automatic review of sandbox-crossing requests remains a separate control regardless of plugin stage ownership. If the platform itself rejects a tool action, preserve the exact operation/state and distinguish that execution denial from the existing human authorization. Supply observed scope/evidence through a supported operation channel when it resolves a mismatch. Do not bypass platform controls, substitute credentials for a policy restriction or require duplicate human authorization as a plugin gate.
+For a host denial, retain the commit, attempted destination/ref and actual reason. Distinguish denial from missing credentials; use available scope/evidence only through a supported resolution, without inventing an approval mechanism or asking for a grant already present. Inspect the remote first if the effect is uncertain. Do not repeat an unchanged denied operation, substitute credentials for a policy restriction, or switch tools/transports/accounts to evade it. Report pending publication accurately and respect the host's requirements.
 
 ## Push authentication recovery
 

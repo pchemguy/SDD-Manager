@@ -6,7 +6,7 @@ Campaign: `010_3f56922`. Full starting baseline: `3f56922a936c8fe039f906ed27566b
 Working branch: `revision/010_3f56922-backend-lifecycle`. Target: `feature/architecture-revision`.
 Inputs: user's lifecycle requirements, [policy proposal](LIFECYCLE-POLICY.md), [baseline assessment](REVIEW-REPORT.md).
 
-State: implementation authorized by the human command to implement this revision, including the amended report placement. Routine scoped commits, revision pushes and verified integration use the coordinator's [scoped authorization policy](../../../../skills/sdd-manage/references/revision-authorization.md); after rejection the coordinator supplies actual authorization context without claiming a platform override. Observed progress and blockers are recorded in REVISION-REPORT.md.
+State: implementation authorized by the human command to implement this revision, including the amended report placement. Routine scoped commits, revision pushes and verified integration use the coordinator's [scoped authorization policy (historical reference)](https://github.com/pchemguy/SDD-Manager/blob/5e2624e625e33410245cb3b51b1b31120ad18747/skills/sdd-manage/references/revision-authorization.md); after rejection the coordinator supplies actual authorization context without claiming a platform override. Observed progress and blockers are recorded in REVISION-REPORT.md.
 
 ## Ordered revisions
 

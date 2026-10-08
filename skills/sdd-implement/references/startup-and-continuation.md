@@ -47,7 +47,7 @@ Use **sdd-manage**'s [tracking decision](../../sdd-manage/references/tracking-de
 
 ## Scoped authority handoff
 
-Carry the established user grant, destination/ref or hosted identity, owned payload scope and observed verification through the manager's [authorization-context procedure](../../sdd-manage/references/revision-authorization.md#supply-missing-authorization-context-proactively). Credentials remain protected; host controls and optional-capability confirmation are distinct from existing workflow authority.
+Carry the existing request, destination/ref or hosted identity, payload scope, checks and explicit limits through the manager's [coordination handoff](../../sdd-manage/references/coordination.md#coordinate-execution). Keep credentials protected and optional tracking decisions separate. Preserve blocked publication under [Git recovery](../../sdd-manage/references/git-workflows.md#platform-authorization-rejection).
 
 ## Environment readiness
 

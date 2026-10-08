@@ -1,6 +1,6 @@
 # Investigate an execution environment blocker
 
-Load when installation, provisioning or runtime behavior prevents the selected task/checks. Technical investigation stays with the affected execution workflow; **sdd-manage** coordinates decisions and scope under its recovery policy. A host policy denial follows workflow authorization and is not an installation obstacle to work around.
+Load when installation, provisioning or runtime behavior prevents the selected task/checks. Technical investigation stays with the affected execution workflow; **sdd-manage** coordinates decisions and scope under its recovery policy. A host policy denial follows [Git recovery](../../sdd-manage/references/git-workflows.md#platform-authorization-rejection); retain the pending operation rather than treating the denial as an installation obstacle.
 
 1. Preserve valid partial work and record the exact attempted check, environment, artifact and observed failure. Distinguish missing tool/dependency, malformed download, incompatible executable, runtime configuration and insufficient evidence.
 2. Inspect declared setup/check commands and actual requirements. Validate the artifact's format/content and executable compatibility rather than trusting HTTP success or a package-install exit code. Avoid exposing secrets or modifying unrelated tooling.
