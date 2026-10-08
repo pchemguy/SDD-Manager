@@ -16,6 +16,8 @@ Steering uses its owning phase's revisions prefix with the same campaign/branch 
 
 ## Stable references
 
+Apply the [closed-record boundary](#closed-campaign-records) before maintaining a finding or reference. Stable IDs do not make a closed record a current maintenance target.
+
 Use local finding IDs such as `R-001` and external references such as `003_39374c8/R-001`. Allocate IDs once, never reuse them, and retain IDs when a finding is deferred, superseded, or resolved. Criterion, unit, and scenario IDs may similarly identify coverage and evidence within the campaign.
 
 For existing records, preserve their established IDs rather than renumbering evidence. Qualify a legacy ID with its campaign when necessary. Keep each finding's canonical record in the review report; link revision actions and verification back to it rather than creating conflicting copies.
@@ -29,3 +31,15 @@ Campaign records hold scope, analysis, findings, accepted repair plans, and obse
 A review finding is not an accepted requirement or permission to mutate. Record acceptance, deferral, and scope explicitly. Keep the reviewed baseline evidence separate from current source and revision results. A reviewed unit means coverage was assessed, not that every finding is corrected. A planned check is not an observed result, and a revised finding becomes verified only after its stated recheck supports that disposition.
 
 The directory suffix describes purpose and matches the actual branch; the stable sequence/baseline identity qualifies findings independently of that suffix. Discover both established unsuffixed and new descriptive paths under [workflow identity](workflow-identity.md#discover-descriptive-and-established-packages), without renaming retained campaigns.
+
+## Closed campaign records
+
+A closed campaign has finished its accepted scope and required final persistence/integration/publication, with completion or closure established by the existing request, results and Git state. A paused or incomplete campaign remains active; a directory name, checkbox or archive marker alone does not establish closure. Resolve uncertain ownership/status before editing potentially closed records, using existing evidence rather than a new registry.
+
+After closure, retain the campaign's review/revision plans and reports, imported assessments, evidence, feature design/SPEC/PLAN/layout/TASKS sources, associated QC reports and package navigation unchanged. Do not edit, append, repair links, rewrite status, rename, move or delete them in a later campaign. Finish that campaign's eligible archive/navigation/report work before its closure. Archived sources in a still-active campaign may need authorized finalization; closed package contents are frozen.
+
+These records describe their own campaign context. They need not remain valid after subsequent changes and are not current governing documents. Later changes create no duty to validate or report historical compatibility, repair old links or claims, or create errata/supersession findings. Maintain current implementation, canonical documents and active campaign records within scope; leave closed records alone.
+
+Do not load prior campaign documents during routine orientation, planning, implementation or verification. Read only the relevant records/sections when the current task establishes a specific historical question. Identity allocation and protected-path discovery use names/paths without reading their contents. Targeted consultation creates no maintenance duty. Exclude closed records from current-document validation and report only the actual current/active check scope.
+
+Before staging and integration, inspect the full campaign diff for incidental changes to prior closed review, feature and nested steering packages, including evidence. Remove those changes from the proposed result; do not replace them with historical-compatibility reporting. Later corrective work changes current owners in its new campaign, leaving the closed package frozen.

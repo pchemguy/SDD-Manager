@@ -4,6 +4,8 @@
 
 For a change-scoped review, inspect affected modules, consequential API changes, and README or guide sections that describe them. Report wider gaps without silently expanding the work boundary. For a project-wide audit, inventory every project-owned code module and the project's standalone documentation; include scripts, entry points, and tests unless project policy excludes them. Account for generated or externally maintained code separately and report the applicable editing policy.
 
+Exclude [closed campaign records](../../sdd-conventions/references/review-campaigns.md#closed-campaign-records) from routine inventory/content loading and current-validity review, including broad documentation audits. Read selected history only for a specific question in the requested task. Old links, claims and feature snapshots need not remain compatible with later changes; create no maintenance findings or errata for that difference and leave them unchanged.
+
 Assess module coverage, documentation style, API contracts, README alignment, examples, navigation, duplication, stale guidance, and documentation placement as relevant. Missing documentation and misleading documentation are distinct findings. A module's docstring existing is not proof that its content is adequate.
 
 ## Governing-document amendments

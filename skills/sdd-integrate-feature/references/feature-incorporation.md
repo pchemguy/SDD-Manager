@@ -2,6 +2,8 @@
 
 Treat each accepted feature document as a scoped delta and each main document as the complete intended description of its own concern. Identify which main nodes the selected delta changes and which unchanged nodes it references. Project instructions and accepted decisions govern; observed code or an unchecked task does not settle a design or behavioral conflict.
 
+Use active selected deltas and current main owners. A [closed feature package](../../sdd-conventions/references/review-campaigns.md#closed-campaign-records) is frozen historical evidence, not a current-validity target. Do not load or reconcile prior packages without a specific task need; consultation does not permit editing them or create compatibility reporting duties.
+
 ## Select and incorporate
 
 1. Confirm the selected main target or targets and the corresponding accepted feature source. A feature may have no overlay for some levels. Permit a single document, such as SPEC alone, when its change can be expressed coherently there. Record affected but unselected dependents; do not expand the edit scope silently.
@@ -20,7 +22,7 @@ For an accepted feature delta, compare the intended final SPEC, design, PLAN, an
 
 When changed acceptance makes a checked task or parent claim stale:
 
-- Record **Completion reassessment pending** beneath the affected owning entry, or in its existing linked evidence location, only when that location is in the edit scope. Identify the stable task or parent ID, changed acceptance and authoritative source, prior evidence whose scope no longer suffices, and required reassessment.
+- Record **Completion reassessment pending** beneath the affected current owning entry, or in an active linked evidence location, only when that location is in the edit scope. Identify the stable task or parent ID, changed acceptance and authoritative source, relevant evidence and required reassessment. Never put the note in a closed report or feature snapshot; its historical status is not a current completion claim.
 - Preserve the checkbox and previous evidence. The pending note makes the checked claim disputed; it is not current completion evidence. **sdd-implement** owns acceptance reassessment and checkbox correction. Direct checkpoint amendments retain **sdd-steer** ownership.
 - Keep the note with the owning entry during task transfer. Preserve prior evidence as historical, and flag affected checked parent claims without inferring whole-project completion from feature results.
 - If the owning list or evidence location is outside scope, report the deferred reassessment and needed edit scope without adding a note there or changing its status. Do not invoke implementation or change hosted state from the finding.
@@ -38,6 +40,8 @@ Feature source documents remain active while other levels are integrated or work
 For a completed accepted feature, apply **sdd-conventions**' **Workflow identity** archive location. After selected final incorporation and task/evidence disposition, retain eligible sources in `docs/dev/features/<campaign>-<slug>/` with their basenames rather than deleting them. Archive on the feature branch before final verification and Git integration; this skill owns document disposition, while sdd-manage owns the Git merge.
 
 ### Archive eligibility and procedure
+
+This procedure finalizes the owning active campaign before closure. Its moves, link repairs, QC report disposition, historical markers and README updates do not apply to packages from prior closed campaigns. Preserve those bytes/paths, even when current links or requirements change; do not report their resulting historical incompatibilities.
 
 1. Recover the package identity/full baseline and actual active sources from its navigation record and Git. Confirm completion and accepted incorporation scope; if completion verification or a necessary owner is unresolved, retain the active source and report the blocker.
 2. Ensure accepted content is represented in the main owners, transferred tasks have one executable owner in TASKS, remaining work has a current authorized owner, and historical evidence remains findable. No active work may rely on a moved file as its sole authoritative source. FEATURE-TASKS remains active until its work/evidence disposition permits archival; document-only integration does not change it by implication.
@@ -65,7 +69,7 @@ Do not expand a SPEC-only or literal selected-path request to amend unselected P
 
 When selected feature sources become archive-eligible, move their associated QC reports with them, preserving adjacency/basenames, original reviewed identity/history and valid in-scope links. Retain a source/report pair if required link repairs or either move is outside scope. Preparation QC reports are distinct from milestone/phase implementation reports, which keep their established feature prefix. Recheck main-owner readiness independently; archived Ready is historical only.
 
-Recover actual package paths from the recorded branch/directory association, including established unsuffixed overrides. Do not calculate archive destinations by dropping a branch slug. An explicitly selected rename includes affected owner, archive and navigation links; convention adoption alone does not rename historical packages.
+Recover actual active package paths from the recorded branch/directory association, including established unsuffixed overrides. Do not calculate archive destinations by dropping a branch slug. An explicitly selected active-package rename includes affected maintained/active owner, archive and navigation links; closed packages remain unchanged.
 
 ## Orientation during incorporation
 

@@ -13,6 +13,8 @@ Read the accepted contract and requested work boundary before selecting commands
 
 For feature work, use the owning FEATURE-TASKS and relevant feature contracts alongside applicable main requirements. A feature's scoped parent checkbox does not establish the whole-project milestone or phase exit conditions.
 
+Select current maintained documents and active campaign records for documentation/link checks. Exclude [closed campaign artifacts](../../sdd-conventions/references/review-campaigns.md#closed-campaign-records); they are historical, need no current compatibility check and must not produce a repair/report backlog. Read selected history only for a specific task question. Verify preservation through the proposed path/object diff, without loading old contents. Describe actual check scope accurately.
+
 ## Select checks
 
 1. Identify observable acceptance conditions and the evidence each needs. Reuse meaningful tests, inspections, examples, or measurements; do not create artificial tests merely to populate a checklist.

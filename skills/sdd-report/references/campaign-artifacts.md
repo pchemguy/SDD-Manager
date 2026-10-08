@@ -13,6 +13,8 @@ Fill fields from actual scope, accepted decisions, source evidence, and observed
 
 Record campaign ID, full starting SHA, exact reviewed/tested state when different, scope, stage status, and companion links. For imported reports, distinguish an unknown reviewed baseline from the campaign's known starting commit. Preserve stable legacy IDs and attribution. Use the canonical finding record once; other views reference it. Link existing companion files; identify not-yet-created artifacts as planned filenames rather than creating placeholders or implying that they exist.
 
+Apply the [closed campaign record boundary](../../sdd-conventions/references/review-campaigns.md#closed-campaign-records). These update/recheck/disposition templates apply to active records. Finish final reports and feature package navigation before closure; later campaigns do not amend closed reports or snapshots. Historical records need no current-validity checks or compatibility findings. Load prior records only for a specific current question, not routine report preparation.
+
 ## Workflow context
 
 Apply **sdd-conventions**' **Workflow identity** for branch/directory association. Record campaign or phase ID, full baseline, actual working/target branches, current authoritative sources and relevant artifact status. A lightweight steering revision report may contain only objective/context, actual changes, verification, and publication; omit absent review/plan links.
