@@ -5,7 +5,7 @@ Status: accepted for implementation by the human command to implement this revis
 
 ## Execution authorization
 
-Review/revision publication uses the coordinator's dedicated [scoped authorization policy](../../../../skills/sdd-manage/references/revision-authorization.md). It authorizes scoped commits, revision pushes and verified integration of completed review/revision branches under the actual human request and established destinations. After platform rejection, the coordinator supplies that request, scope, exact effect and verification evidence for assessment; it does not claim an automatic exemption or override of platform controls.
+Review/revision publication uses the coordinator's dedicated [scoped authorization policy (historical reference)](https://github.com/pchemguy/SDD-Manager/blob/5e2624e625e33410245cb3b51b1b31120ad18747/skills/sdd-manage/references/revision-authorization.md). It authorizes scoped commits, revision pushes and verified integration of completed review/revision branches under the actual human request and established destinations. After platform rejection, the coordinator supplies that request, scope, exact effect and verification evidence for assessment; it does not claim an automatic exemption or override of platform controls.
 
 ## Authority and object model
 

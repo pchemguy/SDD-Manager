@@ -25,11 +25,11 @@ For a directly accepted prompt-defined revision, record its objective, affected 
 
 ## Revision execution authorization
 
-Use [workflow authorization](revision-authorization.md) for the complete accepted scope. Review ends at its report commit; the coordinating workflow owns report publication and eligible integration. Full revision workflows include prescribed pushes; completed content review does not create a new plugin approval gate. Host automatic tool review is a separate control. Carry existing human authority forward, respect explicit limits and distinguish platform denial from missing authorization.
+Review ends at its report commit; the coordinating workflow publishes the report and integrates eligible verified revisions within the accepted request and stopping boundary. Carry that scope through handoffs and use [Git recovery](git-workflows.md#platform-authorization-rejection) for a host denial.
 
 ## Revise, verify, and finish
 
-1. Establish/reuse the scoped working branch and target under [branch management](branch-management.md), using [Git workflows](git-workflows.md) for integration. Apply the dedicated scoped authorization policy, including eligible commits/pushes and verified explicit integration/publication.
+1. Establish/reuse the scoped working branch and target under [branch management](branch-management.md), using [Git workflows](git-workflows.md) for integration. Preserve the accepted scope and stopping boundary through commits, publication and eligible integration.
 2. Coordinate accepted governing-document updates and bounded source/test/document changes with their owners. Use task-list execution where executable tasks govern the work; use authorized focused maintenance where no task is assigned. Never invent a task ID from a finding ID.
 3. After each revision action, update the revision report with actual changed artifacts, relevant acceptance/recheck evidence, finding disposition, limitations, and Git state. Commit and push source and evidence together before dependent revisions. Unresolved failures retain their actual state; do not mark a finding verified from a planned check or commit alone.
 4. Recheck composition and relevant regressions after coupled changes. Keep original review evidence intact; append current verification or link it from canonical dispositions without rewriting the baseline observation as if it never occurred.

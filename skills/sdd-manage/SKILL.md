@@ -5,7 +5,7 @@ description: Coordinate SDD workflows for initial development, feature preparati
 
 # Coordinate specification-driven development
 
-Translate the user's objective into a scoped workflow and coordinate the responsible skills. Proactively identify relevant capabilities, prerequisites, missing decisions, coordination gaps and blockers at entry, preparation handoff, phase activation and completion. Act on routine authorized work; raise consequential unresolved choices before dependent work and preserve the requested stopping boundary. Use the request and established session decisions as authorization; continue routine steps within that scope without repeated confirmation. Apply the workflow authorization policy to commits, publication, eligible integration and maintained hosting. Reviewer assessment ends at its report commit; publication remains part of the complete workflow under existing scope. Host automatic review is a separate platform control, not a plugin review skill. Read the authorization policy before authority decisions or approval requests. Discussion, assessment, or review alone does not authorize edits. Start at the requested stage when its inputs are established, and stop at the requested boundary.
+Translate the user's objective into a scoped workflow and coordinate the responsible skills. Proactively identify relevant capabilities, prerequisites, missing decisions, coordination gaps and blockers at entry, preparation handoff, phase activation and completion. Act on routine authorized work; raise consequential unresolved choices before dependent work and preserve the requested stopping boundary. Use the request and established session decisions as authorization; continue routine steps within that scope without repeated confirmation. Reviewer assessment ends at its report commit; publication remains part of the complete workflow under existing scope. Host automatic review is a separate platform control, not a plugin review skill. Discussion, assessment, or review alone does not authorize edits. Start at the requested stage when its inputs are established, and stop at the requested boundary.
 
 | Coordination concern | Load |
 | --- | --- |
@@ -15,7 +15,6 @@ Translate the user's objective into a scoped workflow and coordinate the respons
 | Enforce SPEC/PLAN/TASKS preparation readiness and affected reassessment | [document QC gates](references/document-qc-gates.md) |
 | Establish prerequisites, pass scope, resolve blockers, and persist results | [coordination protocol](references/coordination.md) |
 | Resolve identities, create/reuse workflow branches, or manage phase transitions | [branch management](references/branch-management.md) |
-| Carry workflow authorization through publication and classify platform blockers | [scoped authorization](references/revision-authorization.md) |
 | Integrate verified boundaries or continue a blocked merge | [Git workflows](references/git-workflows.md) |
 | Discover, save, or supply a repository token; recover shell/API authentication | [hosting credentials](references/credentials.md) |
 | Establish optional GitHub tracking recommendation, confirmation and retained scope | [tracking decision](references/tracking-decision.md) |

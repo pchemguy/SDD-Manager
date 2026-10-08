@@ -7,7 +7,7 @@
 - Working branch: `revision/013_86ce4eb-plugin-metadata`.
 - Integration target: `feature/architecture-revision`.
 - Accepted request: set the plugin website to `https://github.com/pchemguy/Skill-SDD-Manager` and display name to `SDD Manager`.
-- Authorization: the requested repository revision and the coordinator's [scoped authorization policy](../../../../skills/sdd-manage/references/revision-authorization.md) cover routine scoped commit, push and verified integration.
+- Authorization: the requested repository revision and the coordinator's [scoped authorization policy (historical reference)](https://github.com/pchemguy/SDD-Manager/blob/5e2624e625e33410245cb3b51b1b31120ad18747/skills/sdd-manage/references/revision-authorization.md) cover routine scoped commit, push and verified integration.
 
 ## Action and acceptance
 
