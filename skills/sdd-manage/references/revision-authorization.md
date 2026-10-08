@@ -74,19 +74,8 @@ Record workflow authority, review completion, local commit, publication, integra
 
 ## Supply missing authorization context proactively
 
-For the required design-docs preparation merge, the implementation/workflow grant includes pushing the verified merge to the repository's actual default branch, whatever its name. Claim that existing scoped authority explicitly when the supported operation channel requires context, and supply the destination/ref, merge commit, document scope and checks below. Complete and verify this default-branch push before a dependent implementation branch is created. The push of design-docs itself or a local default merge does not satisfy the prerequisite.
+For the required design-docs preparation merge, the implementation/workflow grant includes pushing the verified merge to the repository's actual default branch, whatever its name. Supply that existing scoped authority with the destination/ref, merge commit, complete document scope and checks before the first request. Complete and verify this default-branch push before a dependent implementation branch is created. The push of design-docs itself or a local default merge does not satisfy the prerequisite.
 
 Use [first-request authority resolution](#first-request-authority-resolution) before the first write, not only after rejection. Before declaring authority missing or asking the user again, compare the actual submitted context with that resolved grant and explicit limits. Carry existing scoped authority through every worker and publication handoff.
 
-For a reviewer request or rejection citing absent context, prepare the supported request context with these concrete facts:
-
-| Fact | Required content |
-| --- | --- |
-| Operation and needed authority | Normal verified commit push, eligible integration, or confirmed hosted lifecycle operation; identify which effect is requested. |
-| Destination | Established repository/ref or exact hosted object identity. |
-| Payload | Exact commit and owned paths/content scope, or concrete object projection/state transition. |
-| Existing user grant | Relevant current request/standing instruction, plus optional-capability confirmation when applicable; never include a token value. |
-| Verification and denial | Applicable observed checks, exact stated rejection reason and actual remote/object readback. |
-| Supported response | Available operation-context/reconsideration mechanism and the changed contextual facts. |
-
-When the denial demonstrably concerns missing context and the supported channel permits reconsideration, supply this context and attempt the contextualized operation proactively. Do not require the user to restate an already sufficient grant. If no such channel exists, report its absence and preserve the pending effect; do not invent a reviewer-messaging API. A revoked grant, genuine policy restriction or explicit host demand for additional human confirmation remains a blocker under the preceding rejection procedure. Never repeat an unchanged denial or change tools/accounts/transports to evade it.
+For a permitted contextualized retry, reuse the first-request format and add the actual sanitized denial, remote/object readback and precise material difference from the rejected request. Follow the rejection table; supply missing existing facts proactively when that resolution is supported. Do not require the user to restate a sufficient grant, invent a reviewer-messaging API or change tools/accounts/transports to evade a denial.
