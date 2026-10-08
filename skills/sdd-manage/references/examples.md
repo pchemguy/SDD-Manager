@@ -4,7 +4,7 @@ These examples illustrate routing and boundaries; repository instructions and th
 
 | Request and context | Coordinated result |
 | --- | --- |
-| “Prepare the project through TASKS.” An eligible Git worktree exists. | Orient; prepare the necessary design, SPEC, PLAN, layout, and tasks; check and persist the documents; stop before implementation. |
+| “Prepare the project through TASKS.” An eligible Git worktree exists. | Orient; establish design-docs, prepare the necessary project design, SPEC, PLAN, layout, tasks and QC reports; commit/push them there; stop before implementation. |
 | “Review this SPEC.” The files are outside Git. | Perform read-only behavioral review and return findings. Do not initialize Git or rewrite files. |
 | “Implement milestone 2.2.” TASKS contains its accepted requirements. | Orient; pass the boundary to **sdd-implement**; it pushes outstanding commits first, executes/persists tasks on the owning phase branch, and pauses if the phase remains incomplete. A fully verified phase explicitly merges and publishes before stopping. |
 | “Resume milestone 2.2.” The last checked task is ahead of its last task commit. | Pass pending changes and evidence to **sdd-implement**. It verifies and commits the completed result without repeating implementation, then continues only within the selected boundary. |
@@ -50,7 +50,12 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 
 | Context | Result |
 | --- | --- |
-| Feature preparation through implementation is requested. | Reuse one feature branch; incorporate selected accepted documents before final verification, explicit merge, and target publication. |
+| Feature preparation through implementation is requested. | Prepare/commit/push project documents on design-docs; explicitly merge, verify and publish them into the actual default branch; then create the feature implementation branch from that checkpoint. Incorporate selected accepted deltas before final implementation verification and integration. |
+| Initial preparation is accepted and implementation is requested. | Explicitly merge the design-docs tip into the actual default branch, verify/publish the merge and confirm containment; only then create the first phase branch from that baseline. |
+| Preparation merge is committed but default publication fails. | Preserve the merge and stop before creating the implementation branch; finish publication on continuation without repeating the merge. |
+| Accepted preparation is already merged and published. | Verify the exact preparation tip is contained; reuse that default baseline without another merge. |
+| A revision campaign needs only its plan/report and bounded source edits. | Author campaign records on the revision branch; do not create design-docs or preliminarily merge the campaign plan into default. |
+| A revision campaign also needs new project SPEC/PLAN/TASKS preparation. | Keep campaign records on revision; prepare project documents on design-docs, integrate/verify/publish them into default, then incorporate that baseline into the retained revision branch before source implementation. |
 | Only one feature task is requested, but the branch includes unrelated unfinished work. | Resolve the scope/branch conflict; do not merge the entire feature by implication. |
 | Document incorporation stopped after SPEC changed but before TASKS reconciliation. | Inspect checkpoint and accepted sources; finish only selected owners, preserve history and reassessment notes, then verify/persist the document boundary. |
 | A merge is committed but target push was rejected. | Preserve the merge and reconcile destination/divergence/access; finish publication without creating a second merge. |

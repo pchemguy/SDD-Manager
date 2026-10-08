@@ -19,6 +19,8 @@ Load **sdd-conventions**' **Development-document QC** reference (`skills/sdd-con
 
 ## Amendments, scope and continuation
 
+Readiness and branch integration are separate gates. Persist project preparation artifacts and adjacent QC reports together on design-docs. Before creating a dependent implementation branch, the manager completes [preparation integration](branch-management.md#preparation-integration-gate) into the repository default branch, verifies the merged state and publishes it. A Ready report or design-docs push alone does not satisfy that baseline. Campaign plans/reports retain their revision-branch ownership.
+
 Material changes to design, behavior, strategy, hierarchy/dependencies or layout invalidate affected downstream review until rechecked. Recheck only impacted concerns; routine completion status/evidence updates alone need not invalidate unchanged conformance. Initial preparation and focused direct calls use the same gate. Main/feature task execution still pushes outstanding commits before other task work; readiness review follows that prerequisite and precedes new execution/phase projection.
 
 sdd-integrate-feature and sdd-steer retain their accepted correction ownership. Coordinate owners' focused assessment of changed main/feature documents and their adjacent reports before dependent use. A SPEC-only incorporation does not authorize unselected TASKS/PLAN edits: report their invalidation and keep those downstream gates blocked until their separately authorized recheck. It can finish its coherent selected incorporation without claiming whole-project readiness.

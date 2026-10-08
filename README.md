@@ -62,7 +62,7 @@ Main describes the development purpose, not the default Git branch. The [canonic
 
 ### Project preparation
 
-Each document owner reviews its artifact against accepted upstream inputs and corrects findings within authorized scope before the next stage. These gates produce adjacent review reports, rather than separate implementation tasks.
+Project preparation runs on a dedicated `design-docs/main` or scoped `design-docs/<campaign>-<slug>` branch. Each document owner reviews its artifact against accepted upstream inputs and corrects findings within authorized scope before the next stage. These gates produce adjacent review reports, rather than separate implementation tasks.
 
 ```mermaid
 flowchart TB
@@ -76,10 +76,14 @@ flowchart TB
     PQ -->|"ready"| T["sdd-tasks<br/>Executable task hierarchy"]
     T --> TQ{"TASKS review ready?"}
     TQ -->|"correction needed"| T
-    TQ -->|"ready"| E["Preparation checkpoint<br/>Commit, push and return result"]
+    TQ -->|"ready"| E["Preparation checkpoint<br/>Commit and push design-docs"]
+    E --> A{"Implementation authorized?"}
+    A -->|"no"| R["Return preparation result"]
+    A -->|"yes"| G["Merge into actual default branch<br/>Verify and publish baseline"]
+    G --> B["Create implementation branch<br/>From published default checkpoint"]
 ```
 
-Preparation-only stops here. A combined request can authorize implementation after these gates. See [document QC gates](skills/sdd-manage/references/document-qc-gates.md).
+Preparation-only stops after the design-docs checkpoint. Before creating a dependent implementation branch, SDD Manager explicitly merges accepted project preparation into the actual default branch, verifies and publishes the merge, and confirms containment. Campaign plans and reports stay on their revision branch. See [preparation integration](skills/sdd-manage/references/branch-management.md#preparation-integration-gate) and [document QC gates](skills/sdd-manage/references/document-qc-gates.md).
 
 ### Implementation and continuation
 
@@ -173,8 +177,10 @@ For detailed entry conditions and stopping rules, see the [workflow catalog](ski
 Work on a scoped branch for the selected range, feature, steering amendment, or document integration. Establish its target and starting checkpoint; the target need not be the default branch. Reuse the branch when continuing the same work.
 
 - **Task checkpoints:** Commit and push each completed task before advancing.
+- **Preparation baseline:** Commit project design, SPEC, PLAN/layout, TASKS, feature counterparts and their QC reports on design-docs. Explicitly merge, verify and publish accepted preparation into the actual default branch before creating a dependent implementation branch from that checkpoint. Preparation-only stops on design-docs; a failed merge or publication blocks branch creation.
 - **Phase boundary:** Main development uses `phase/<number>-<slug>`. Task/milestone subsets push and pause; complete verified phases explicitly merge into the established main integration branch. An authorized next phase starts from the updated published main tip.
 - **Revision and feature boundaries:** Use `revision/<campaign>-<slug>` or `feature/<campaign>-<slug>`, matching the artifact identity. Eligible coherent boundaries integrate with `git merge --no-ff`, merged-state verification, and target publication.
+- **Campaign records:** Author review/revision plans and reports on the campaign revision branch. They do not need a preliminary design-docs/default merge. A revision with separate project preparation keeps these branch roles distinct and incorporates the published project baseline before dependent source work.
 - **Feature documents:** Incorporate selected accepted deltas on the feature branch before final verification and merge. A narrow request does not authorize unfinished feature work or unselected document changes.
 - **Steering:** Branch from the paused implementation checkpoint and merge back there. A blocked amendment retains its work and resumes on a human command; successful steering still does not resume the main task list.
 - **Failures:** Preserve valid work and report conflicts, required-check failures, or pending target publication. No automatic rollback or force-push. Separate worktrees can protect unrelated dirty work.
