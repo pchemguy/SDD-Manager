@@ -7,8 +7,9 @@
 - Inputs: user-requested planning and [derived findings](REVIEW-REPORT.md). Conversation material is not retained in the publication payload.
 - Follow-up evidence: [actual capability and destination checks](CAPABILITY-EVIDENCE.md); R-006 adds premature capability/destination conclusions to the assessment.
 - Objective: use established scoped authority on the first publication request and permitted context retries, eliminating redundant approval questions; preserve genuine platform restrictions, explicit stopping boundaries and protected authentication.
-- Current authority: open, analyze, write, commit and publish this campaign plan and evidence on its revision branch. Source implementation and main-branch integration are not included in this planning request.
-- Status: Planned. R-001–R-004 have proposed corrective actions; R-005 defines regression coverage. No claim of accepted implementation, repaired source or live reviewer compliance.
+- Initial authority: open, analyze, write, commit and publish this campaign plan and evidence on its revision branch; planning alone did not authorize source implementation or integration.
+- Subsequent decision: the user instructed execution of this retained plan after the reduced planning payload was rejected. Its scoped revisions, required checkpoint publication and eligible verified integration are now authorized. See [revision results](REVISION-REPORT.md) for actual implementation and evidence limits.
+- Status: Executing. R-001–R-004 have corrective actions; R-005 defines regression coverage. Live reviewer compliance is not guaranteed.
 
 ## Intended operating contract
 
@@ -57,4 +58,4 @@ The [review report](REVIEW-REPORT.md#observed-planning-publication-rejection) su
 
 ## Persistence and stopping
 
-Publish the inspected planning artifacts on this revision branch under the user's planning request and standing commit/push instructions. Stop after planning publication. Campaign source implementation and eventual verified integration require a subsequent instruction to execute; do not treat publication of this plan as that instruction. Keep the campaign branch and directory for continuation.
+The initial planning boundary ended at publication of its sanitized checkpoint. The subsequent instruction to execute permits the ordered source revisions and eligible verified integration/publication. Stop after this campaign boundary; create no new campaign or product task. Keep the campaign branch and directory for continuation and evidence.
