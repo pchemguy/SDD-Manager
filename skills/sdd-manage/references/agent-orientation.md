@@ -15,6 +15,8 @@ During authorized SDD adoption/bootstrap, ensure root `AGENTS.md` provides accur
 
 Keep operational instructions distinguishable from document navigation. Link detailed canonical rules instead of restating them. No secret, credential-file contents or transient helper/installation path belongs here.
 
+Point routine orientation to current main owners and the active campaign, not a reading queue of earlier campaign documents. Historical identity/path discovery requires no content loading; read selected prior records only for a specific task need. Maintain root/current navigation within scope without rewriting a closed package's README, historical links or status.
+
 ## Preserve and reconcile
 
 1. Read root/applicable nested instructions before editing. Establish file ownership, write scope and any symlink destination; do not follow symlinks to edit an external file/directory.

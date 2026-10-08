@@ -5,7 +5,7 @@ Campaign `029_4a93f0f`; baseline `4a93f0fa2723b1da11024165e6ca967701f747a6`. Wor
 | Action | Actual outcome | Evidence and limits |
 | --- | --- | --- |
 | V-001 | Defined closure/freeze and targeted historical reading in existing review-campaign conventions; aligned workflow identity's archive/rename boundaries. | Source inspection: closed records are frozen and excluded from current compatibility obligations; active finalization remains possible. Protected-path diff and complete-source checks follow. |
-| V-002 | Pending. | Orientation, coordination and reporting handoffs. |
+| V-002 | Aligned orient entry/inspection, manager entry/coordination/review workflow, report templates and agent orientation with active-only records and targeted historical reading. | Inspected both discovery and handoff guidance; historical IDs/paths can be found without loading contents. V-001 published as `e4254a4`. No closed package is edited. |
 | V-003 | Pending. | Feature, documentation and verification owners. |
 | V-004 | Pending. | Scenario assessment, protected-path diff, regressions and complete-tip integration. |
 
