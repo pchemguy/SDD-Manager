@@ -9,7 +9,7 @@
 - Objective: use established scoped authority on the first publication request and permitted context retries, eliminating redundant approval questions; preserve genuine platform restrictions, explicit stopping boundaries and protected authentication.
 - Initial authority: open, analyze, write, commit and publish this campaign plan and evidence on its revision branch; planning alone did not authorize source implementation or integration.
 - Subsequent decision: the user instructed execution of this retained plan after the reduced planning payload was rejected. Its scoped revisions, required checkpoint publication and eligible verified integration are now authorized. See [revision results](REVISION-REPORT.md) for actual implementation and evidence limits.
-- Status: Executing. R-001–R-004 have corrective actions; R-005 defines regression coverage. Live reviewer compliance is not guaranteed.
+- Status: Source revision executed, verified, explicitly integrated and published. R-001–R-004/R-006 have source corrections; R-005 defines retained regression coverage. Fresh consumer acceptance remains unverified; live reviewer compliance is not guaranteed. See [revision results](REVISION-REPORT.md).
 
 ## Intended operating contract
 

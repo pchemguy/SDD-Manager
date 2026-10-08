@@ -14,7 +14,7 @@ The sanitized plan commit `6b9c8f5d8b67f8002eea5f93ef4977b3b82ff05a` was then pu
 | V-002 | Implemented an evidence-based rejection table distinguishing omitted grants, generic objections, new/revoked scope, explicit host requirements, separate disclosure/destination grounds, actual channel limits and unknown effects. | Checked each row against SC-003–SC-007 and SC-009/SC-012/SC-013; no generic objection automatically demands fresh consent or authorizes a retry. V-001 checkpoint published as `429131d`. |
 | V-003 | Implemented manager entry, coordination, Git/default-preparation integration, implementation startup/completion, steering, credential recovery, examples and README handoffs to first-request resolution and denial classification. | Inspected both sides of publication/recovery handoffs. V-002 checkpoint published as `ee4329d`. Document links/anchors and complete-source scenario assessment follow in V-004. |
 | V-004 | Assessed all 13 scenarios against the complete source and retained explicit evidence classes in [scenario assessment](SCENARIO-ASSESSMENT.md). Removed the duplicate context table so the first-request format has one owner. | Four actual Git lifecycle assertions pass, including arbitrary default trunk and campaign-plan separation. V-003 checkpoint published as `4b4ed85`. Fresh consumer/independent assessor cases remain unavailable, not passed. |
-| V-005 | Working-branch composition and regressions verified; source boundary ready for explicit integration/publication. | 113 support tests pass; four Git assertions pass; actual source/campaign Markdown links and heading anchors resolve; skill-entry frontmatter checked; canonical and legacy manifests remain byte-identical at 0.15.0. V-004 checkpoint published as `3b87042`. Merged-state verification and target publication remain next. |
+| V-005 | Completed working/prospective-merge checks, explicit two-parent integration and default publication. | 113 support tests pass on the working source and prospective merge; four Git assertions pass; actual source/campaign Markdown links and heading anchors resolve; skill-entry frontmatter checked; canonical and legacy manifests remain byte-identical at 0.15.0. Published merge and exact remote readback recorded below. |
 
 ## Finding disposition
 
@@ -22,7 +22,14 @@ R-001–R-004 and R-006 have implemented source procedure corrections. R-005's p
 
 ## Boundary and integration
 
-The working branch contains only this campaign's derived records and scoped authorization/publication instruction changes. No project-preparation documents require a design-docs stage. The integration target is the repository's established default `main`; refresh it and merge the published campaign tip with two parents, verify the merged result, then publish that target under the same execution grant. Keep the revision branch and campaign directory. Stop after this campaign; do not open product work or a new revision.
+The working branch contains only this campaign's derived records and scoped authorization/publication instruction changes. No project-preparation documents require a design-docs stage. The repository's established default `main` was refreshed and the published campaign tip explicitly merged. The prospective merged tree exactly matched the verified campaign tree and all 113 support tests passed before its merge commit.
+
+- Published campaign source/evidence tip: `8d7616440cdd266ecf49d406ef7537e4a1154826`.
+- Target parent: `0a4bd053f1778932fd9e1d02acf21e60b46888b1`.
+- Verified two-parent merge: `4708642a7b08aa49970fd32f24adba98eb8c5f43`.
+- Normal same-transport `main` push succeeded; separate remote readback confirms that exact merge at `refs/heads/main`.
+
+This final publication record is retained on the campaign revision branch after source integration, rather than creating another source merge solely to report the first merge. Keep the revision branch and campaign directory. Execution ends here; no product work or new revision is opened. Fresh consumer/host-generalization acceptance remains unverified.
 
 ## Evidence limits
 
