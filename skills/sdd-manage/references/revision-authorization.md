@@ -24,7 +24,28 @@ Apply explicit human limits, including preparation-only, pause, local-only, unme
 
 Perform the established Git push through the normal Git execution tool with existing authentication as part of the authorized full workflow. Content verification and required code review finish before the result commit; the execution owner then publishes. Do not add a redundant plugin approval stage or reopen completed content review solely because a push is due. This ownership rule does not classify or suppress the host's automatic review of the tool request.
 
-Supply the actual human request, repository/ref, exact commit, content scope and applicable verification as operation context when needed. Preserve that context through coordinator/worker handoffs rather than requiring each worker to rediscover permission. A handoff conveys existing authorization; it does not create new authorization.
+Before the first publication request, perform [first-request authority resolution](#first-request-authority-resolution). Preserve its grant, limits and concrete operation facts through coordinator/worker handoffs rather than requiring each worker to rediscover permission. A handoff conveys existing authorization; it does not create new authorization.
+
+## First-request authority resolution
+
+1. Resolve the actual repository/workflow request, standing session publication instructions, accepted scope and explicit limits. A token supplied with that request provides access for the accompanying authorized workflow; carry the combined request from the start. A bare token without an accompanying scope is not arbitrary publication authority. Keep optional hosted tracking confirmation separate.
+2. Inspect the complete pending payload, including earlier commits reachable by the push. Include only the requested work and required scoped evidence. Using conversation material as input does not request retaining or publishing a conversation copy. Remove unrequested material within the authorized scope before publication; do not hide denied content behind a renamed file or changed transport.
+3. Resolve the exact operation, observed destination/ref, commit or hosted object, owned content and checks. Verify an uncertain destination/account through available read-only facilities when needed; existing verified facts need not be reprobed before every push.
+4. Inspect the exposed operation tool's fields and active host restrictions. Supply the existing authority and concrete operation facts through supported request context before the first write. A normal tool request may carry context without offering direct reviewer messaging. Use only fields actually documented by that tool; do not invent an approval API, misuse an escalation question as consent submission, or change permission settings to avoid review.
+5. Execute the scoped operation. Retain the actual channel/field used and observed outcome in existing evidence. Text included in a request proves inclusion, not that a reviewer recognized it as authority or allowed the action. Do not claim a context-free command, user-facing commentary or a credential handed approval to a reviewer.
+
+Use this compact format in the supported request field; omit secrets and unnecessary conversation text:
+
+```text
+Authority: current repository/workflow request and applicable standing publication grant; explicit limits.
+Operation: normal push / eligible integration publication / confirmed hosted transition.
+Destination: verified repository and ref, or exact hosted identity.
+Payload: full commit or concrete object delta; owned paths/content; pending-history scope.
+Verification: actual checks and relevant destination/effect readback.
+Channel: actual tool and supported context field; interpretation unverified until observed.
+```
+
+Use an exact short instruction only when it is available and useful; otherwise give a truthful scoped summary. Do not export the conversation to prove authority. A later continuation carries its new instruction alongside existing grants, retained operation identity and previous outcomes; it does not retroactively prove what an earlier reviewer received.
 
 ## Platform rejection and interrupted effects
 
@@ -44,7 +65,7 @@ Record workflow authority, review completion, local commit, publication, integra
 
 For the required design-docs preparation merge, the implementation/workflow grant includes pushing the verified merge to the repository's actual default branch, whatever its name. Claim that existing scoped authority explicitly when the supported operation channel requires context, and supply the destination/ref, merge commit, document scope and checks below. Complete and verify this default-branch push before a dependent implementation branch is created. The push of design-docs itself or a local default merge does not satisfy the prerequisite.
 
-Before declaring authority missing or asking the user again, inspect the actual request, standing grants and explicit limits. Interpret a supplied token with its accompanying repository/workflow request; access credentials alone are not an arbitrary grant. Carry existing scoped authority through every worker and publication handoff.
+Use [first-request authority resolution](#first-request-authority-resolution) before the first write, not only after rejection. Before declaring authority missing or asking the user again, compare the actual submitted context with that resolved grant and explicit limits. Carry existing scoped authority through every worker and publication handoff.
 
 For a reviewer request or rejection citing absent context, prepare the supported request context with these concrete facts:
 
