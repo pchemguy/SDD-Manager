@@ -19,7 +19,7 @@ Align README and guides with accepted scope and the supported implementation. La
 
 - Verify snippets against actual imports, signatures, options, paths, and prerequisites. Use current project facts rather than copying scenario-specific details from another project.
 - Run examples or relevant documentation checks where practical within the authorized environment. Distinguish inspected examples from executed examples and record expected versus observed outcomes.
-- Check local links and referenced files; assess external links when relevant to the requested work and access permits. Report links that could not be checked.
+- Check local links and referenced files in maintained documentation and active records; assess external links when relevant to the requested work and access permits. Report links that could not be checked within that scope. Exclude closed campaign artifacts from current link validation and repair; do not report their compatibility with later changes.
 - Remove stale references and unnecessary duplication within scope. Follow layout rules for placement; propose a layout amendment to the user if the required organization cannot fit them.
 - Separate Markdown headings from adjacent content with blank lines, including examples and templates. The beginning of a file or template needs no leading blank line.
 

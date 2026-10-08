@@ -14,6 +14,8 @@ Commit and push completed task or amendment work on the working branch. Do not m
 
 Inspect the complete branch difference against the target, including earlier unmerged commits. If it contains unrelated or unfinished work, resolve the branch/scope conflict rather than integrating that work by implication. A narrower continuation on an existing feature branch may require a separate scoped branch; do not cherry-pick a guessed subset silently.
 
+Check that the full proposed campaign delta leaves prior closed review, feature and nested steering records unchanged, using path/object identity without reading their contents. Remove incidental historical edits before integration. Later source/link changes do not justify repairing those artifacts or reporting their compatibility; use the [closed-record boundary](../../sdd-conventions/references/review-campaigns.md#closed-campaign-records).
+
 Verify working-branch acceptance and applicable exits. Reconcile selected feature documents on that branch before its final verification. Retain source documents still required by active work. Commit and push boundary evidence before integration. A pause or unresolved blocker retains the working branch and does not authorize a partial merge.
 
 ## Merge, verify, and publish
