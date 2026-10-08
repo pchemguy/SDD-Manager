@@ -6,12 +6,18 @@ Apply these provider-neutral defaults when naming workflow branches or associati
 
 | Workflow | Branch | Associated documents |
 | --- | --- | --- |
+| Initial project preparation | `design-docs/main` | Project design, SPEC, PLAN/layout, TASKS and adjacent QC reports in `docs/dev/`. |
+| Scoped project preparation | `design-docs/<campaign>-<slug>` | Active feature or accepted project-document deltas and their QC reports under established owners. |
 | Revision | `revision/<campaign>-<slug>` | `docs/dev/reviews/<campaign>-<slug>/` |
 | Steering | `revision/<campaign>-<slug>` | `docs/dev/reports/phases/<phase-id>/revisions/<campaign>-<slug>/`; a minimal revision record is sufficient. |
 | Feature | `feature/<campaign>-<slug>` | `docs/dev/features/<campaign>-<slug>/` for package identity/navigation and completed incorporated sources. |
 | Main phase | `phase/<phase-number>-<slug>` | Main governing documents and owning TASKS remain in `docs/dev/`. |
 
 A campaign is `<sequence>_<baseline-sha>`, for example `007_df531c2`; new revision/feature/steering directory basenames match the branch suffix `<campaign>-<slug>`. The stable campaign ID is the sequence/baseline prefix, not the descriptive suffix. Use the phase number/name from accepted PLAN/TASKS, not a campaign counter. The main integration branch is established explicitly; a workflow name never selects Git's default branch.
+
+Project preparation and implementation are distinct branch stages. Commit newly authored preimplementation project documents on the applicable `design-docs/` branch. Explicitly merge, verify and publish the accepted preparation boundary into the actual repository default branch before creating a dependent implementation branch from that checkpoint. Apply **sdd-manage**'s [preparation integration gate](../../sdd-manage/references/branch-management.md#preparation-integration-gate). Preparation-only stops on its design-docs branch; an implementation request includes the prerequisite preparation merge.
+
+Campaign REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN and REVISION-REPORT belong on the campaign's `revision/<campaign>-<slug>` branch. Do not send these campaign artifacts through design-docs or merge them into default merely to authorize revision execution. A revision requiring separate project preparation uses design-docs for those project documents; its campaign records retain revision-branch ownership. One campaign identity and directory association spans its participating branches.
 
 ## Identity and collisions
 
@@ -25,7 +31,7 @@ A campaign is `<sequence>_<baseline-sha>`, for example `007_df531c2`; new revisi
 
 Review/revision artifacts use the **Review campaigns** convention. Lightweight steering allocates the same global identity under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>-<slug>/` and can use a concise REVISION-REPORT recording objective, scope, baseline, paused target, verification, and publication, without a fabricated review or plan.
 
-Feature preparation creates a small package identity/navigation record, `docs/dev/features/<campaign>-<slug>/README.md`, referencing the active root FEATURE documents and branch context. Active FEATURE sources keep their established paths in docs/dev; isolated branches/worktrees may carry separate packages, but one worktree must not overwrite an unrelated active package. This record supplies navigation, not a second workflow state store.
+Feature preparation creates a small package identity/navigation record, `docs/dev/features/<campaign>-<slug>/README.md`, referencing the active root FEATURE documents, design-docs branch, default preparation target and intended implementation branch. Active FEATURE sources keep their established paths in docs/dev; isolated branches/worktrees may carry separate packages, but one worktree must not overwrite an unrelated active package. This record supplies navigation, not a second workflow state store. The preparation merge retains the feature delta as an active source; it does not incorporate that delta into complete main documents or complete feature tasks.
 
 After complete accepted feature incorporation and task/evidence disposition, retain eligible feature sources under that directory with their basenames. Update links and mark archived sources historical: main documents/TASKS own current state, and archived checkboxes are not executable task owners. Partial incorporation retains still-needed active sources. The feature owner verifies archive eligibility on the feature branch before final integration; naming alone proves neither incorporation nor completion.
 

@@ -1,5 +1,7 @@
 # Review and revision artifacts
 
+Author and commit campaign plans/reports on the campaign revision branch. Project preparation artifacts and their QC reports have separate design-docs ownership; campaign records do not require a preliminary default-branch merge. Final eligible campaign integration carries its retained records into the established target.
+
 Use these formats for campaign documents coordinated by **sdd-manage**. Apply **sdd-conventions**' **Review campaigns** naming and identity rules. The templates define presentation, not permission to review, revise, run checks, or merge.
 
 - [Review plan](#review-plan)

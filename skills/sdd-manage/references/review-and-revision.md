@@ -14,6 +14,8 @@ This is the formal campaign path for the [revision core workflow](workflows.md#c
 
 ## Plan accepted revisions
 
+Create/reuse the campaign revision branch before writing campaign plans and reports. These artifacts are retained on `revision/<campaign>-<slug>` through execution; do not route them through a design-docs branch or require their preliminary default-branch merge. If the accepted revision needs preimplementation project design/SPEC/PLAN/layout/TASKS changes, prepare those project artifacts separately on design-docs and complete [preparation integration](branch-management.md#preparation-integration-gate) before dependent source execution. Preserve the campaign branch and incorporate the published default baseline there when it already exists.
+
 For a directly accepted prompt-defined revision, record its objective, affected owners, and stable action IDs in the revision plan; omit nonexistent review stages and links rather than inventing findings or a review report. Resolve missing requirement/design decisions before dependent work.
 
 - Record which findings are accepted, deferred, rejected, or require a decision, with reasons and retained IDs. A recommendation need not be treated as a confirmed defect.

@@ -1,12 +1,14 @@
 # Working branches and explicit integration
 
-Use this protocol for a bounded implementation range, feature campaign, steering amendment, or selected document integration. **sdd-manage** establishes and coordinates the Git lifecycle; the active owner performs its scoped work and persistence. A direct invocation of a focused skill follows this same protocol. Read-only requests do not create branches or merge.
+Use this protocol for a bounded implementation range, feature campaign, steering amendment, project preparation baseline, or selected document integration. **sdd-manage** establishes and coordinates the Git lifecycle; the active owner performs its scoped work and persistence. A direct invocation of a focused skill follows this same protocol. Read-only requests do not create branches or merge.
 
 ## Establish the working branch
 
 Use [branch management](branch-management.md) for identities, targets, convention names, eligible creation/reuse, worktree preservation, and phase transitions. Implementation's push-first prerequisite remains before new setup. Read-only review/selection does not create branches. The integration boundary below depends on workflow scope, not merely the last completed task range.
 
 ## Work and prepare the boundary
+
+Project preparation uses the [preparation integration gate](branch-management.md#preparation-integration-gate): commit project documents on design-docs, explicitly merge the accepted boundary into the actual default branch, verify and publish that target, then create the dependent implementation branch. This document-only boundary does not require implementation phase completion. Campaign plans/reports remain on their revision branch; preparation merging does not incorporate feature deltas or complete executable tasks.
 
 Commit and push completed task or amendment work on the working branch. Do not merge every task commit. A main request stops at its selected task count/milestone/checkpoint, but its phase branch integrates only when the complete phase and exits are verified. Otherwise push completed work and pause without merging. A feature/revision integrates its coherent authorized boundary after applicable incorporation/archive gates; steering integrates its commanded amendment into the paused branch and stops.
 

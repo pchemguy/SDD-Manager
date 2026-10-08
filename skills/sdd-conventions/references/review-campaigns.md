@@ -22,6 +22,8 @@ For existing records, preserve their established IDs rather than renumbering evi
 
 ## Authority and retention
 
+Campaign review/revision plans and reports are authored and committed on the campaign revision branch. Project preparation documents and their QC reports follow design-docs ownership under [workflow identity](workflow-identity.md); campaign artifacts do not. Final verified campaign integration may carry retained records into its established target, but do not merge campaign planning into default as a prerequisite for starting the revision.
+
 Campaign records hold scope, analysis, findings, accepted repair plans, and observed evidence. They remain after accepted changes are incorporated into PROJECT, design, SPEC, PLAN, layout, or task lists. Those governing documents describe the accepted resulting project; they do not become chronological review logs.
 
 A review finding is not an accepted requirement or permission to mutate. Record acceptance, deferral, and scope explicitly. Keep the reviewed baseline evidence separate from current source and revision results. A reviewed unit means coverage was assessed, not that every finding is corrected. A planned check is not an observed result, and a revised finding becomes verified only after its stated recheck supports that disposition.
