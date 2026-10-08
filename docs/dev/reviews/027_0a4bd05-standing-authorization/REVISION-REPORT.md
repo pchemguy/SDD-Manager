@@ -11,7 +11,7 @@ The sanitized plan commit `6b9c8f5d8b67f8002eea5f93ef4977b3b82ff05a` was then pu
 | Action | Result | Recheck and limits |
 | --- | --- | --- |
 | V-001 | Implemented first-request resolution, combined scoped request/credential interpretation, concrete context format, real-field discovery and pending-history inspection in revision-authorization.md. | Inspected the procedure against standing grant, bare credential, planning-only and worker-continuation cases; whitespace passes. Behavioral consumer acceptance remains pending. |
-| V-002 | Pending. | Rejection classification and verified capabilities. |
+| V-002 | Implemented an evidence-based rejection table distinguishing omitted grants, generic objections, new/revoked scope, explicit host requirements, separate disclosure/destination grounds, actual channel limits and unknown effects. | Checked each row against SC-003–SC-007 and SC-009/SC-012/SC-013; no generic objection automatically demands fresh consent or authorizes a retry. V-001 checkpoint published as `429131d`. |
 | V-003 | Pending. | Entry/publication/recovery handoffs and examples. |
 | V-004 | Pending. | Scenario assessment and meaningful regressions. |
 | V-005 | Pending. | Composition, support suite, explicit integration and publication. |
