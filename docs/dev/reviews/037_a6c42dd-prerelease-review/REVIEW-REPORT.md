@@ -6,7 +6,7 @@
 - Exact reviewed source: `a6c42dd754843abf9bafca7dee2aee9e733b046a`; version `0.15.0`. Reviewer: coordinating assistant, 2026-10-09 UTC / 2026-10-10 Europe/Moscow; no independent/fresh reviewer is claimed.
 - Exact locally built package: `sdd-manager.zip`, 132 regular files, 298720 bytes; SHA-256 `52a828f85e7ff619a0ebe028b446650ba999d89b2445efe573714ba96a012b2d`.
 - Branch: `revision/037_a6c42dd-prerelease-review`; main is unchanged. Review authority covers artifacts/publication and scoped checks, not repairs or product release.
-- State: In progress; U-001/U-002 assessed, U-003–U-007 pending.
+- State: In progress; U-001–U-003 assessed, U-004–U-007 pending.
 - Findings remain Open unless an actual human disposition is recorded. No deferral or risk acceptance has been supplied.
 
 ## Unit coverage and checkpoints
@@ -14,7 +14,8 @@
 | Unit / criterion | Outcome and evidence | Findings | Persistence |
 | --- | --- | --- | --- |
 | U-001 / C-001 | Root documentation/manifest/prompt/notices and all nine convention references inspected; supported owners, scope and frozen-history rules coherent. | None | `a7a3da2ea7ea384edd4525bbc2858b196176bdcc`; push/readback matched. |
-| U-002 / C-002 | All five preparation/incorporation skill entries and fourteen focused references inspected; scope, ownership, QC and human checkpoints align. | None | This unit report checkpoint; commit/push readback established in Git before the next unit. |
+| U-002 / C-002 | All five preparation/incorporation skill entries and thirteen focused references inspected; scope, ownership, QC and human checkpoints align. | None | `2fc398a3113d3a218989d952153d4c532c749233`; push/readback matched. |
+| U-003 / C-003 | All manager/orientation/execution/steering entries and references assessed; owned effects, continuation and stopping gates are explicit. | None | This unit report checkpoint; commit/push readback established in Git before the next unit. |
 
 ## Assessment detail
 
@@ -25,6 +26,10 @@ Inspected root README/AGENTS.md, canonical/legacy manifest contract, greenfield 
 ### U-002 — Preparation and feature incorporation
 
 S-004–S-007 source-assessed across sdd-design, sdd-specify, sdd-plan, sdd-tasks and sdd-integrate-feature. Main roots retain complete intended end-state contracts; logical design, behavior, delivery, physical placement and task status have separate owners. Feature overlays are conditional, stable task IDs are project-wide and transfer requires both lists in scope. SPEC-only incorporation preserves unselected active sources and reports their invalidation rather than expanding edits. Archive procedure keeps eligible sources/reports together, updates active links and freezes history only after closure. New PLAN strategy and layout have separate human/QC checkpoints; existing adequate layout is reusable. Missing upstream readiness triggers focused review; downstream owners cannot rewrite requirements/strategy to fit their outputs. Code-review/testing/report tasks are derived from PLAN rather than inserted during execution. No confirmed defect found at instruction-source level; actual consumer execution remains unverified.
+
+### U-003 — Coordination, execution and recovery
+
+S-008–S-012 source-assessed. Compared manager coordination/branch/QC/human/tracking/activation/bootstrap/credentials/Git/campaign/profile/examples/workflow sources with orient inspection and implement/steer execution references. Partial main-phase ranges pause without merge; complete phases integrate only after review/exit/hosted closure gates. Clean-tree continuation resolves outstanding publication first. Every owned commit, including ancillary report/status and merge commits, must be pushed/read back before independent or dependent work; uncertainty permits inspection/recovery only. Existing merge/publication is finished rather than duplicated; unrelated staging/dirty work is preserved. Steering updates existing owners, targets the paused branch, reconciles changed acceptance and stops without resuming implementation. Preparation, review, tracking activation, human acceptance and permission capability remain distinct. The new prerelease reminder is advisory and explicit review is candidate-scoped/report-only unless separately authorized. No confirmed instruction defect in this unit; these branch paths were assessed, not executed in a fresh product consumer.
 
 ## Canonical findings
 
