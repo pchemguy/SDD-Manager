@@ -6,7 +6,7 @@
 - Exact reviewed source: `a6c42dd754843abf9bafca7dee2aee9e733b046a`; version `0.15.0`. Reviewer: coordinating assistant, 2026-10-09 UTC / 2026-10-10 Europe/Moscow; no independent/fresh reviewer is claimed.
 - Exact locally built package: `sdd-manager.zip`, 132 regular files, 298720 bytes; SHA-256 `52a828f85e7ff619a0ebe028b446650ba999d89b2445efe573714ba96a012b2d`.
 - Branch: `revision/037_a6c42dd-prerelease-review`; main is unchanged. Review authority covers artifacts/publication and scoped checks, not repairs or product release.
-- State: In progress; U-001–U-005 assessed, U-006–U-007 pending; four Open findings.
+- State: In progress; U-001–U-006 assessed, U-007 pending; four Open defects and one Open evidence gap.
 - Findings remain Open unless an actual human disposition is recorded. No deferral or risk acceptance has been supplied.
 
 ## Unit coverage and checkpoints
@@ -17,7 +17,8 @@
 | U-002 / C-002 | All five preparation/incorporation skill entries and thirteen focused references inspected; scope, ownership, QC and human checkpoints align. | None | `2fc398a3113d3a218989d952153d4c532c749233`; push/readback matched. |
 | U-003 / C-003 | All manager/orientation/execution/steering entries and references assessed; owned effects, continuation and stopping gates are explicit. | None | `a5758ed0401b15cc2d5eb443a882fd124f92a49b`; push/readback matched. |
 | U-004 / C-004 | All docs/report sources and current root/capability navigation assessed; two located documentation defects; four diagrams semantically inspected, rendering unavailable. | R-001, R-002 | `d0500161e92aad53a69f3ed2f95c6aa68df5b319`; push/readback matched. |
-| U-005 / C-005 | All eight forge references and actual release CI assessed; curated-note transfer and publication recovery/verification are missing from CI. | R-003, R-004 | This unit report checkpoint; commit/push readback established in Git before the next unit. |
+| U-005 / C-005 | All eight forge references and actual release CI assessed; curated-note transfer and publication recovery/verification are missing from CI. | R-003, R-004 | `983393b224e00e76f400fee7fff98aa4851e78ae`; push/readback matched. |
+| U-006 / C-006 | Both entries/all nine TDD/verify references assessed; harness implementation and case assets inspected; 113 support tests and 27-case static catalog pass. | None | This unit report checkpoint; commit/push readback established in Git before the next unit. |
 
 ## Assessment detail
 
@@ -41,6 +42,10 @@ S-013–S-015 assessed: all four README diagrams preserve owner handoffs, repair
 
 S-016–S-019 source-assessed across projection, exact issue/milestone identity and lifecycle, permissions, retry/readback, highlights, package, workflow and release ownership. A disposable real Git fixture executed the documented highlights collection recipe: previous stable first-parent baseline selected, merged feature commit and full multiline body retained, and the pending tag rejected as its own baseline. This does not exercise editorial curation or incremental-watermark agent behavior. Actual tag-only release.yml checks metadata, runs support tests, archives members and calls unconditional gh release create with generated notes. Compared with its current canonical requirements, it lacks the shared curated-note transfer (R-003), serialized/reconciled publication and actual archive/remote verification (R-004). Current primary actions repositories advertise checkout/setup-python v7; these are not invalid action references. Primary CLI/provider references consulted: https://cli.github.com/manual/gh_release_create, https://github.com/actions/checkout, https://github.com/actions/setup-python and https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases (2026-10-09). No live tracking write, CI run, release, installed download or latest-state mutation was performed. One initial U-005 read occurred after U-004 push acknowledgement but before remote readback completed; no mutation/commit intervened, and matching containment was confirmed before continuation.
 
+### U-006 — Verification, TDD and acceptance support
+
+S-020–S-022 assessed. Inspected core configuration/schema validation, committed/dirty package pinning, repository identity, actual Git/remote containment, recovery exports, task parsing/ownership and deterministic assessment, all auxiliary command/fault/probe/merge/coverage helpers, capture and catalog renderer, support test modules, schemas, coordinator instructions, all consumer requests and 27 independent guides. Catalog/contracts/fixture consistency were additionally exercised by the actual suite. Tests include wrong channels/status/type, duplicate owners, invalid/escaping/symlink paths, absent/ambiguous prerequisites, false scripted grades, failed/partial provenance, protected output, staged/unstaged/deleted/binary/conflict reconstruction, public-API regression sensitivity and shallow ancestry uncertainty. Expectations are independently literal and helper success explicitly remains non-agent evidence. Test fixture lstrip is a deliberately narrow two-vector probe fixture, not the product implementation or an assertion of full BOM semantics. Actual command: PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v; exit 0, 113 tests in 17.188s, OK, no skips reported; Python 3.12.14, Git 2.51.1. catalog_tools.py validate exited 0 with 27 cases and live_acceptance false. Python 3.11 and other environments were not executed. No dedicated live test repository is selected by this review; source/harness inspection and disposable local tests do not run the TextStats consumer campaign, install a client or certify fresh-context recovery. No confirmed additional defect in this unit; remaining runtime acceptance evidence is R-005.
+
 ## Canonical findings
 
 | Finding | Type | Priority | Disposition |
@@ -49,6 +54,7 @@ S-016–S-019 source-assessed across projection, exact issue/milestone identity 
 | R-002 | Defect | P2 | Open; proposed, no human acceptance/deferral recorded. |
 | R-003 | Defect | P1 | Open; proposed, no human acceptance/deferral recorded. |
 | R-004 | Defect | P2 | Open; proposed, no human acceptance/deferral recorded. |
+| R-005 | Evidence gap | P2 | Open; proposed, no human acceptance/deferral recorded. |
 
 ### R-001 — Packaged root navigation points at excluded source-only paths
 
@@ -93,6 +99,17 @@ S-016–S-019 source-assessed across projection, exact issue/milestone identity 
 | Bounded correction / owner | sdd-forge workflow owner: reconcile an existing matching release and serialize the publisher; inspect the built archive before publication and read back required source, notes, asset inventory/checksum and selected latest/prerelease state. Stop safely on mismatch without clobbering unrelated content. |
 | Objective recheck | Run first publication, rerun, partial/uncertain write and competing-run cases in an authorized disposable target; inject a wrong/missing archive member and mismatched existing source/body/asset. Verify safe stops, recovery and final remote evidence. |
 | Decision / dependencies | Open; requires affected publishing-path recheck with R-003. No actual human acceptance of this verification/recovery gap is recorded. |
+
+### R-005 — Current candidate lacks fresh-consumer and installed-client acceptance evidence in this review
+
+| Field | Evidence / proposal |
+| --- | --- |
+| Type / priority / confidence | Evidence gap; P2; confirmed absence in this campaign, not a claim that the plugin fails at runtime. |
+| Baseline location / evidence | README.md Testing with TextStats and acceptance/textstats/OBJECTIVES.md, EXECUTION.md and DIAGNOSTICS.md distinguish support/static tests from independently assessed consumer behavior. U-001–U-006 scenarios were source-assessed; the actual 113-test suite exercises harness/local fixtures, not current candidate agent routing, human gates, installation, live tracking or fresh continuation. |
+| Observation / consequence | This report cannot certify those consequential supported workflow handoffs or installed discovery. Structural coherence and passing support tests leave current runtime behavior unestablished; unavailable evidence does not establish a product defect or retroactively erase retained historical results. |
+| Bounded correction / owner | sdd-manage/acceptance coordinator: separately authorize a dedicated consumer acceptance destination and facilities, pin the repaired candidate, execute applicable required cases with separate consumers/assessors, and explicitly retain client/live/native limits. Prioritize publication barriers, human checkpoints, preparation QC and the optional-review distinction while covering current supported workflows. |
+| Objective recheck | Publish independently assessed real case attempts with exact source/package/runtime, handoffs, first results/interventions, actual Git/provider effects and required/optional totals; distinguish explicit-source loading from installed client discovery. Reassess readiness for that exact candidate. |
+| Decision / dependencies | Open; proposed follow-up acceptance scope. No human waiver/deferral has been recorded. It limits runtime acceptance claims; it is not a fabricated failure or a newly mandatory prerelease campaign gate. |
 
 ## Executed checks and limits
 
