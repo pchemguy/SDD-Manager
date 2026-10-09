@@ -6,7 +6,7 @@
 - Exact reviewed source: `a6c42dd754843abf9bafca7dee2aee9e733b046a`; version `0.15.0`. Reviewer: coordinating assistant, 2026-10-09 UTC / 2026-10-10 Europe/Moscow; no independent/fresh reviewer is claimed.
 - Exact locally built package: `sdd-manager.zip`, 132 regular files, 298720 bytes; SHA-256 `52a828f85e7ff619a0ebe028b446650ba999d89b2445efe573714ba96a012b2d`.
 - Branch: `revision/037_a6c42dd-prerelease-review`; main is unchanged. Review authority covers artifacts/publication and scoped checks, not repairs or product release.
-- State: In progress; U-001–U-004 assessed, U-005–U-007 pending; two Open findings.
+- State: In progress; U-001–U-005 assessed, U-006–U-007 pending; four Open findings.
 - Findings remain Open unless an actual human disposition is recorded. No deferral or risk acceptance has been supplied.
 
 ## Unit coverage and checkpoints
@@ -16,7 +16,8 @@
 | U-001 / C-001 | Root documentation/manifest/prompt/notices and all nine convention references inspected; supported owners, scope and frozen-history rules coherent. | None | `a7a3da2ea7ea384edd4525bbc2858b196176bdcc`; push/readback matched. |
 | U-002 / C-002 | All five preparation/incorporation skill entries and thirteen focused references inspected; scope, ownership, QC and human checkpoints align. | None | `2fc398a3113d3a218989d952153d4c532c749233`; push/readback matched. |
 | U-003 / C-003 | All manager/orientation/execution/steering entries and references assessed; owned effects, continuation and stopping gates are explicit. | None | `a5758ed0401b15cc2d5eb443a882fd124f92a49b`; push/readback matched. |
-| U-004 / C-004 | All docs/report sources and current root/capability navigation assessed; two located documentation defects; four diagrams semantically inspected, rendering unavailable. | R-001, R-002 | This unit report checkpoint; commit/push readback established in Git before the next unit. |
+| U-004 / C-004 | All docs/report sources and current root/capability navigation assessed; two located documentation defects; four diagrams semantically inspected, rendering unavailable. | R-001, R-002 | `d0500161e92aad53a69f3ed2f95c6aa68df5b319`; push/readback matched. |
+| U-005 / C-005 | All eight forge references and actual release CI assessed; curated-note transfer and publication recovery/verification are missing from CI. | R-003, R-004 | This unit report checkpoint; commit/push readback established in Git before the next unit. |
 
 ## Assessment detail
 
@@ -36,12 +37,18 @@ S-008–S-012 source-assessed. Compared manager coordination/branch/QC/human/tra
 
 S-013–S-015 assessed: all four README diagrams preserve owner handoffs, repair loops, authorization and stop branches; preparation prose explicitly preserves separate human checkpoints despite grouped design/PLAN-layout nodes. No semantic diagram defect confirmed. No Mermaid CLI/module is installed, so syntax/rendered legibility are not certified. Documentation/report owners consistently separate drafting from effects, verified results from intended outcomes, adjacent QC reports from implementation/campaign records and findings from accepted deferrals. Broad static discovery checked 166 current Markdown documents and 488 local link occurrences without loading closed record contents; candidate hits were manually classified. Fence-first headings, template-relative example links and inline bootstrap copy examples are legitimate template content, not confirmed broken source links/style defects. Actual package root navigation and current capability map misalignment produced R-001/R-002. Professional-module/API documentation is also assessed with executable tooling in U-006.
 
+### U-005 — Hosted tracking, highlights and releases
+
+S-016–S-019 source-assessed across projection, exact issue/milestone identity and lifecycle, permissions, retry/readback, highlights, package, workflow and release ownership. A disposable real Git fixture executed the documented highlights collection recipe: previous stable first-parent baseline selected, merged feature commit and full multiline body retained, and the pending tag rejected as its own baseline. This does not exercise editorial curation or incremental-watermark agent behavior. Actual tag-only release.yml checks metadata, runs support tests, archives members and calls unconditional gh release create with generated notes. Compared with its current canonical requirements, it lacks the shared curated-note transfer (R-003), serialized/reconciled publication and actual archive/remote verification (R-004). Current primary actions repositories advertise checkout/setup-python v7; these are not invalid action references. Primary CLI/provider references consulted: https://cli.github.com/manual/gh_release_create, https://github.com/actions/checkout, https://github.com/actions/setup-python and https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases (2026-10-09). No live tracking write, CI run, release, installed download or latest-state mutation was performed. One initial U-005 read occurred after U-004 push acknowledgement but before remote readback completed; no mutation/commit intervened, and matching containment was confirmed before continuation.
+
 ## Canonical findings
 
 | Finding | Type | Priority | Disposition |
 | --- | --- | --- | --- |
 | R-001 | Defect | P2 | Open; proposed, no human acceptance/deferral recorded. |
 | R-002 | Defect | P2 | Open; proposed, no human acceptance/deferral recorded. |
+| R-003 | Defect | P1 | Open; proposed, no human acceptance/deferral recorded. |
+| R-004 | Defect | P2 | Open; proposed, no human acceptance/deferral recorded. |
 
 ### R-001 — Packaged root navigation points at excluded source-only paths
 
@@ -64,6 +71,28 @@ S-013–S-015 assessed: all four README diagrams preserve owner handoffs, repair
 | Bounded correction / owner | sdd-docs/current map owner: reconcile the concise map with current supported capabilities and branch/artifact paths; link canonical release, preparation, publication, human review and optional prerelease policies rather than reproduce their detailed procedures. |
 | Objective recheck | Compare every capability row and workflow/path rule with current entries and canonical owners; resolve current local links and check that gate summaries distinguish human acceptance, technical QC and publication. |
 | Decision / dependencies | Open; map-only repair proposal. Does not authorize editing frozen history or redesigning the workflow. |
+
+### R-003 — Configured release workflow cannot receive shared curated highlights
+
+| Field | Evidence / proposal |
+| --- | --- |
+| Type / priority / confidence | Defect; P1; high confidence from complete workflow and canonical release-source comparison. |
+| Baseline location / evidence | .github/workflows/release.yml, Publish GitHub release uses only --generate-notes. skills/sdd-forge/references/github-release-workflows.md and github-releases.md require a prepared transfer of shared curated highlights before a tag-triggered publisher; the ignored local highlights file is absent from checkout and no input/artifact/file transfer is configured. |
+| Observation / consequence | The configured automated publisher cannot deliver the required curated human release body. The supported release path therefore fails its own required contract even when source metadata and support tests pass. |
+| Bounded correction / owner | sdd-forge workflow owner: define and implement one exact-candidate curated-note transfer and consume it in the existing publisher; retain human editorial sections and reject missing/mismatched transfer. Keep prerelease comprehensive review advisory. |
+| Objective recheck | Exercise the chosen transfer on a disposable authorized release target: exact candidate/body, missing and mismatched notes, and generated-note exclusion; read back the published body against the approved curated content. |
+| Decision / dependencies | Open; blocks readiness of the configured tag-triggered publishing path. A different authorized compliant route would require its own verified evidence. |
+
+### R-004 — Actual release CI omits required reconciliation and verification
+
+| Field | Evidence / proposal |
+| --- | --- |
+| Type / priority / confidence | Defect; P2; high confidence from actual workflow; no claim that a corrupted hosted asset was observed. |
+| Baseline location / evidence | .github/workflows/release.yml has no concurrency policy, existing-release lookup/reconciliation, inspection of the actual ZIP contents, or remote source/body/assets/checksum/latest-state readback. It ends with unconditional gh release create. Current github-release-workflows.md, github-packaging.md and github-releases.md require these boundaries. |
+| Observation / consequence | A rerun or uncertain publication has no explicit recovery path, overlapping publishers are not serialized, and successful CLI exit is treated as completion without evidence of the required delivered inventory/body. Metadata checks and a checksum calculation do not establish the inspected artifact or remote result. |
+| Bounded correction / owner | sdd-forge workflow owner: reconcile an existing matching release and serialize the publisher; inspect the built archive before publication and read back required source, notes, asset inventory/checksum and selected latest/prerelease state. Stop safely on mismatch without clobbering unrelated content. |
+| Objective recheck | Run first publication, rerun, partial/uncertain write and competing-run cases in an authorized disposable target; inject a wrong/missing archive member and mismatched existing source/body/asset. Verify safe stops, recovery and final remote evidence. |
+| Decision / dependencies | Open; requires affected publishing-path recheck with R-003. No actual human acceptance of this verification/recovery gap is recorded. |
 
 ## Executed checks and limits
 
