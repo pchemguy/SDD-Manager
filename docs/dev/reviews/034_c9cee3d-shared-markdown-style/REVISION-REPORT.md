@@ -60,7 +60,7 @@ Actions V-005 and V-006 are verified for the written policy, source examples, lo
 
 ## Reopened amendment — list-marker separator
 
-On 2026-10-09 the user reopened campaign 034 from published main `77a82e04842f6f80bf770b359fc85ab40b77a74f` to require one space after each list marker. V-007 and V-008 are authorized; implementation and local verification complete, package/integration verification pending. The completed earlier boundaries remain retained as evidence.
+On 2026-10-09 the user reopened campaign 034 from published main `77a82e04842f6f80bf770b359fc85ab40b77a74f` to require one space after each list marker. V-007 and V-008 are authorized; implementation, local checks and committed-package verification complete; integration/publication follows the containing Git merge boundary. The completed earlier boundaries remain retained as evidence.
 
 
 ### List-marker amendment evidence
@@ -68,6 +68,13 @@ On 2026-10-09 the user reopened campaign 034 from published main `77a82e04842f6f
 | Action | Actual changes and evidence | State |
 | --- | --- | --- |
 | V-007 | Added exactly-one-ASCII-space marker separators to the shared convention, 14 dependent skill summaries, root guidance and scoped QC. Inspection found no existing violations in the 98 current documents/templates, so no content normalization was necessary. | Implemented and verified by current-source and parser checks. |
-| V-008 | Added SC-015 and SC-016: bullet, numbered, nested and task-marker spacing; multiple-space/tab rejection; Markdown-template inclusion; code/data and horizontal-rule exclusions. All 16 local scenarios and 113 support tests pass; the shared convention passes its standalone validator. | Local checks passed; committed package and merged-state verification pending. |
+| V-008 | Added SC-015 and SC-016: bullet, numbered, nested and task-marker spacing; multiple-space/tab rejection; Markdown-template inclusion; code/data and horizontal-rule exclusions. All 16 local scenarios and 113 support tests pass; the shared convention passes its standalone validator. | Local and committed-package checks passed; merged-state verification and publication follow the Git boundary. |
 
 The [marker checker](evidence/verify_markers.mjs) traverses parsed list tokens and explicitly labeled Markdown templates. It preserves indentation before markers, task checkbox states, literal code/data and non-list constructs. [Support evidence](evidence/marker-support-tests.log) records the suite result. This development-only checker adds no runtime plugin dependency. Current source check scope, historical-record preservation and live-consumer limitations remain unchanged.
+
+
+### List-marker amendment completion
+
+Committed source `966bc94` passed [marker source checks](evidence/marker-source-checks.json): all 16 scenarios, 98 scoped Markdown files and 443 local path links. The [unmodified release build](evidence/marker-package-check.json) produced a verified 131-file byte-for-byte package and checksum. All 113 support tests passed. The complete report and evidence are committed before the explicit merge; the prospective merged tree must equal the campaign tip and pass the suite and scoped checks before publication.
+
+V-007 and V-008 are verified for source policy, local parser scenarios and committed packaging. The containing two-parent merge establishes final integration and includes all amendment artifacts. Version remains `0.15.0`; other closed records are unchanged. Live agent/browser behavior and isolated-skill portability beyond bundled dependencies remain unverified. No unresolved in-scope source finding remains.
