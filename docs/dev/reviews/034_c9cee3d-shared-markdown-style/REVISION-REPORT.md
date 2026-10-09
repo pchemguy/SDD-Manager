@@ -57,3 +57,7 @@ The scoped scan covers the same 98 current/active Markdown documents. Blank line
 Committed source `229194a` passed [amendment source checks](evidence/amendment-source-checks.json): 98 scoped files, 439 local path links and all 14 scenarios. The [unmodified release build](evidence/amendment-package-check.json) produced 131 files matching that commit byte for byte, with a verified SHA-256 checksum. The support suite passed 113 tests. The complete amended report and evidence are committed before integration; the required prospective merge must match this complete campaign tip and pass the suite and scoped checks before commit/publication.
 
 Actions V-005 and V-006 are verified for the written policy, source examples, local parser cases and committed package. The final two-parent merge records the continuation's parents and includes all amendment artifacts. No post-closure evidence commit is required. No unresolved in-scope source finding remains; live agent/browser acceptance and isolated-skill portability beyond explicit bundled dependencies remain unverified. Version is `0.15.0`.
+
+## Reopened amendment — list-marker separator
+
+On 2026-10-09 the user reopened campaign 034 from published main `77a82e04842f6f80bf770b359fc85ab40b77a74f` to require one space after each list marker. V-007 and V-008 are authorized; implementation/verification pending. The completed earlier boundaries remain retained as evidence.
