@@ -41,3 +41,7 @@ These files are ordinary bootstrap outputs of an authorized initial SDD workflow
 On interruption, inspect actual files, index and Git evidence. Reuse valid pending copies in the same first result, preserving unrelated staged work. If the first SDD commit already includes the records, continue its pending push instead of making another bootstrap commit. On subsequent invocations, retain established files and links without duplicate sections or version churn. If an older SDD-managed repository lacks the records, add them to the next authorized coherent commit within scope and report this as adoption backfill; never rewrite history or claim they were in its original first commit. Report missing/conflicting records for scoped repair when their creation is not currently authorized.
 
 A plugin update does not automatically overwrite the target's disclosure or notice. Version/commit provenance may be added when accurately known, but is not a prerequisite and must not misrepresent a dirty-source snapshot as a released version.
+
+## Human review at startup
+
+Apply [human document review](human-document-review.md) from greenfield entry. Walk the human through necessary new documents, pausing at each created root before dependent work. For existing or interrupted main/feature preparation, assess progress and reuse acceptable inputs without automatically entering interactive mode. Begin with explicitly requested interactive reviews; raise important startup concerns and offer review before advancing. Retain real pending review/stopping instructions.

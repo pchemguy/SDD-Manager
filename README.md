@@ -58,25 +58,31 @@ Artwork is provided as `assets/icon.svg`, `assets/icon.png`, `assets/logo.svg`, 
 
 Main describes the development purpose, not the default Git branch. The [canonical workflow model](skills/sdd-manage/references/workflows.md#core-development-workflows) defines entry and scope; the operations below are stages or supporting work, rather than additional core workflows.
 
+## Human document review
+
+Greenfield preparation walks the human through each necessary new document: PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS. Each receives concise substantive analysis and its own human review pause before dependent work; PLAN and layout remain separate. Agent QC and standing Git authorization do not accept these documents.
+
+Existing or interrupted preparation starts with assessment of actual progress and normally continues using acceptable inputs. Explicitly requested interactive reviews come first; important startup issues can prompt an offer. Feature campaigns apply the same approach to necessary new deltas, reusing sufficient main inputs and keeping optional overlays optional. See [human document review](skills/sdd-manage/references/human-document-review.md) for decision and continuation rules.
+
 ## Workflow diagrams
 
 `sdd-manage` coordinates scope, prerequisites and stopping boundaries; `sdd-orient` establishes actual repository state, including retained work on continuation. The diagrams show common handoffs. Enter at the stage supported by current inputs, use `sdd-conventions` where relevant, and honor explicit user boundaries. A blocker preserves valid work and stops the affected path until resolved.
 
 ### Project preparation
 
-Project preparation runs on a dedicated `design-docs/main` or scoped `design-docs/<campaign>-<slug>` branch. Each document owner reviews its artifact against accepted upstream inputs and corrects findings within authorized scope before the next stage. These gates produce adjacent review reports, rather than separate implementation tasks.
+Project preparation runs on a dedicated `design-docs/main` or scoped `design-docs/<campaign>-<slug>` branch. Each document owner reviews its artifact against accepted upstream inputs and corrects findings within authorized scope before the next stage. SPEC/PLAN/TASKS QC produces adjacent review reports. Each necessary new root also has its own human checkpoint; the grouped diagram below does not combine those decisions.
 
 ```mermaid
 flowchart TB
     M["sdd-manage + sdd-orient<br/>Establish scope and repository state"] --> D["sdd-design<br/>PROJECT, architecture and decomposition"]
     D -->|"accepted design"| S["sdd-specify<br/>Behavior and acceptance contracts"]
-    S --> SQ{"SPEC review ready?"}
+    S --> SQ{"SPEC QC ready and human accepted?"}
     SQ -->|"correction needed"| S
     SQ -->|"ready"| P["sdd-plan<br/>Delivery strategy and layout"]
-    P --> PQ{"PLAN review ready?"}
+    P --> PQ{"PLAN and layout QC ready?<br/>Separate human decisions accepted?"}
     PQ -->|"correction needed"| P
     PQ -->|"ready"| T["sdd-tasks<br/>Executable task hierarchy"]
-    T --> TQ{"TASKS review ready?"}
+    T --> TQ{"TASKS QC ready and human accepted?"}
     TQ -->|"correction needed"| T
     TQ -->|"ready"| E["Preparation checkpoint<br/>Commit and push design-docs"]
     E --> A{"Implementation authorized?"}

@@ -76,3 +76,9 @@ Pass the selected range, owning capability/milestone outcomes, dependencies, ver
 ## Optional tracking decision at handoff
 
 Use **sdd-manage**'s [tracking decision](tracking-decision.md) before dependent phase activation. Carry the recommendation, actual confirmation/decline, repository/scope and observed hosted state separately. A supplied GitHub token recommends enabled tracking but does not activate it; unresolved activation choices return to the manager. Reuse confirmed scope without repeated approval. Late confirmation reconciles retained evidence instead of replaying product tasks.
+
+## Human preparation sequence
+
+Use [human document review](human-document-review.md) for both initial and feature preparation. Guide the human through every necessary newly created root/proposal; hold dependent progression for its acceptance. PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS each have their own boundary; PLAN/layout are separate even in a combined request. Feature campaigns review their necessary deltas and reuse sufficient existing main inputs without inventing optional overlays.
+
+At startup or after interruption, assess existing progress and continue from the next eligible stage by default. An explicitly requested interactive review comes first; important issues can prompt a concern and offer. Preserve actual pending human boundaries. Agent QC and broad continuation authority do not replace the creation checkpoints.

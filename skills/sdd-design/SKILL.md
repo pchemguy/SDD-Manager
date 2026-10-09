@@ -5,6 +5,8 @@ description: Use when exploring a software project or feature, forming architect
 
 # Explore and design
 
+Apply the manager's [human document review](../sdd-manage/references/human-document-review.md) for PROJECT, ARCHITECTURE and DECOMPOSITION, including necessary feature design proposals, including direct calls. Newly created necessary documents pause for substantive human review before dependent progression. Reuse acceptable existing inputs after startup assessment without automatic interactive replay; requested interactive review comes first. Agent QC and repository-operation authority do not supply human acceptance.
+
 For preimplementation project authoring, have **sdd-manage** establish the dedicated design-docs branch under its [preparation integration gate](../sdd-manage/references/branch-management.md#preparation-integration-gate). Commit project documents and required QC reports there. Before a dependent implementation branch is created, the manager explicitly merges accepted preparation into the actual default branch, verifies and publishes that baseline. Campaign plans/reports remain on revision branches; active implementation and steering amendments preserve their working-branch ownership. Read-only work creates no branch.
 
 Choose the work requested and load only its reference. A request for a later stage can start there when its inputs are established; do not replay earlier stages as ceremony.
