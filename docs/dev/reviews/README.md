@@ -35,4 +35,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `028_5e2624e` | Standalone authorization policy removed; active callers reconciled to concise existing handoff/recovery owners; 113 support tests pass. | [Revision plan](028_5e2624e-remove-authorization-policy/REVISION-PLAN.md), [revision report](028_5e2624e-remove-authorization-policy/REVISION-REPORT.md) |
 
+| `030_a3f35e4` | Greenfield root prompt, startup routing and release/pinned-package inclusion locally verified; publication pending. | [Revision plan](030_a3f35e4-greenfield-prompt-template/REVISION-PLAN.md), [revision report](030_a3f35e4-greenfield-prompt-template/REVISION-REPORT.md) |
+
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.

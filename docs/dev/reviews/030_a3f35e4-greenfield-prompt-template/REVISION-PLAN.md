@@ -7,7 +7,7 @@
 - Branch: `revision/030_a3f35e4-greenfield-prompt-template`.
 - Eventual integration target: the repository default branch, currently `main`.
 - Opening checkpoint: `873ca1a7f85940c8753e60d20f6e265da03b2fb4`.
-- State: plan amended from the user's supplied draft and AI revision; source execution has not started.
+- State: authorized execution; source actions locally verified. See [revision report](REVISION-REPORT.md) for evidence and the publication blocker.
 
 ## Accepted direction
 
@@ -52,7 +52,7 @@ These are planned assessments, not executed outcomes. Do not create a live proje
 
 ## Boundaries and persistence
 
-The opening request and current clarification authorize campaign planning and publication. Commit/push this amended plan on its revision branch, then stop before source execution or default-branch integration. No completed review/revision report is fabricated.
+The opening request and clarifications authorized campaign planning and publication. The subsequent “Execute campaign” instruction authorizes the accepted source revisions and eligible integration/publication. Preserve distinct local verification and remote publication states; see the revision report for actual outcomes.
 
 Campaign records stay on this revision branch. If later execution needs project preparation documents, use their prescribed design-docs ownership separately. Prior closed campaign records remain frozen, outside routine loading and compatibility checks; verify preservation through Git paths/object identities only.
 
