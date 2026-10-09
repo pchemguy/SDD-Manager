@@ -3,10 +3,10 @@
 ## Campaign, candidate and evidence
 
 - Campaign: `037_a6c42dd`; [review plan](REVIEW-PLAN.md), [complete source inventory](SOURCE-INVENTORY.md).
-- Exact reviewed source: `a6c42dd754843abf9bafca7dee2aee9e733b046a`; version `0.15.0`. Reviewer: coordinating assistant, 2026-10-09 UTC / 2026-10-10 Europe/Moscow; no independent/fresh reviewer is claimed.
+- Exact reviewed source: `a6c42dd754843abf9bafca7dee2aee9e733b046a`; version `0.15.0`. Reviewer: coordinating assistant, 2026-10-09 UTC; no independent/fresh reviewer is claimed.
 - Exact locally built package: `sdd-manager.zip`, 132 regular files, 298720 bytes; SHA-256 `52a828f85e7ff619a0ebe028b446650ba999d89b2445efe573714ba96a012b2d`.
 - Branch: `revision/037_a6c42dd-prerelease-review`; main is unchanged. Review authority covers artifacts/publication and scoped checks, not repairs or product release.
-- State: In progress; U-001–U-006 assessed, U-007 pending; four Open defects and one Open evidence gap.
+- State: Review complete; U-001–U-007 assessed; four Open defects (one P1, three P2) and one Open P2 evidence gap; revision execution not started.
 - Findings remain Open unless an actual human disposition is recorded. No deferral or risk acceptance has been supplied.
 
 ## Unit coverage and checkpoints
@@ -18,7 +18,8 @@
 | U-003 / C-003 | All manager/orientation/execution/steering entries and references assessed; owned effects, continuation and stopping gates are explicit. | None | `a5758ed0401b15cc2d5eb443a882fd124f92a49b`; push/readback matched. |
 | U-004 / C-004 | All docs/report sources and current root/capability navigation assessed; two located documentation defects; four diagrams semantically inspected, rendering unavailable. | R-001, R-002 | `d0500161e92aad53a69f3ed2f95c6aa68df5b319`; push/readback matched. |
 | U-005 / C-005 | All eight forge references and actual release CI assessed; curated-note transfer and publication recovery/verification are missing from CI. | R-003, R-004 | `983393b224e00e76f400fee7fff98aa4851e78ae`; push/readback matched. |
-| U-006 / C-006 | Both entries/all nine TDD/verify references assessed; harness implementation and case assets inspected; 113 support tests and 27-case static catalog pass. | None | This unit report checkpoint; commit/push readback established in Git before the next unit. |
+| U-006 / C-006 | Both entries/all nine TDD/verify references assessed; harness implementation and case assets inspected; 113 support tests and 27-case static catalog pass. | None | `3fccd6b8e042369dc1880f57891cb4933532162d`; push/readback matched. |
+| U-007 / C-007 | Actual 132-file ZIP matches pinned source byte-for-byte; archive/resource checks pass except R-001 root links; presentation rendered; strict portable-format limits retained. | None | This unit report checkpoint; commit/push readback established in Git before the next unit. |
 
 ## Assessment detail
 
@@ -45,6 +46,10 @@ S-016–S-019 source-assessed across projection, exact issue/milestone identity 
 ### U-006 — Verification, TDD and acceptance support
 
 S-020–S-022 assessed. Inspected core configuration/schema validation, committed/dirty package pinning, repository identity, actual Git/remote containment, recovery exports, task parsing/ownership and deterministic assessment, all auxiliary command/fault/probe/merge/coverage helpers, capture and catalog renderer, support test modules, schemas, coordinator instructions, all consumer requests and 27 independent guides. Catalog/contracts/fixture consistency were additionally exercised by the actual suite. Tests include wrong channels/status/type, duplicate owners, invalid/escaping/symlink paths, absent/ambiguous prerequisites, false scripted grades, failed/partial provenance, protected output, staged/unstaged/deleted/binary/conflict reconstruction, public-API regression sensitivity and shallow ancestry uncertainty. Expectations are independently literal and helper success explicitly remains non-agent evidence. Test fixture lstrip is a deliberately narrow two-vector probe fixture, not the product implementation or an assertion of full BOM semantics. Actual command: PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v; exit 0, 113 tests in 17.188s, OK, no skips reported; Python 3.12.14, Git 2.51.1. catalog_tools.py validate exited 0 with 27 cases and live_acceptance false. Python 3.11 and other environments were not executed. No dedicated live test repository is selected by this review; source/harness inspection and disposable local tests do not run the TextStats consumer campaign, install a client or certify fresh-context recovery. No confirmed additional defect in this unit; remaining runtime acceptance evidence is R-005.
+
+### U-007 — Exact package, presentation and consolidation
+
+S-023–S-025 assessed. Verified ZIP CRC, exact and case-fold duplicate absence, root prefix, traversal/absolute/backslash/symlink safety, complete expected source inventory, per-member Git-object bytes, byte size and SHA-256, and development/acceptance/Git/cache/credential-path exclusions. Canonical and legacy manifest bytes match; version and declared skill root agree. Parsed all 15 openai.yaml files, checked prompt names/description lengths and all 34 icon/logo references (17 distinct SVGs); parsed SVG XML, rendered all 17 with existing Inkscape and visually inspected the contact sheet: no clipping, missing glyph or illegible mark found at 100px. This is artwork evidence, not an installed-client UI result. Resolved 296 skill Markdown resource occurrences inside the whole extracted package; three future-output/bootstrap inline examples were manually classified rather than treated as links at the source reference location. An initial simplistic regex probe falsely flagged those examples and angle-bracket Markdown; corrected classification produced no missing skill resource. Root links to excluded source-only members remain R-001. Offline Agent Skills validator: sdd-conventions passes, other 14 fail on 31 cross-skill resource-root constraints. Agent Plugins 1.0 validator exits 1 with 35 errors: missing standard $schema, three client-specific manifest fields and the same 31 cross-skill escapes. Whole-package resolution succeeds, but standalone portability and strict standard conformance are not certified; current README already disclaims universal conformance, so this is not invented as a newly required migration defect. Source-only support is intentionally excluded. No installed-client discovery/activation or hosted asset/download was exercised. No further confirmed defect.
 
 ## Canonical findings
 
@@ -113,8 +118,31 @@ S-020–S-022 assessed. Inspected core configuration/schema validation, committe
 
 ## Executed checks and limits
 
-Source assessment is in progress. Local/package/external checks and unavailable facilities will be recorded in their owning units. Planned scenarios are not execution results.
+| Executed check | Observed result / exact boundary |
+| --- | --- |
+| Declared support suite | Python 3.12.14 / Git 2.51.1; `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v`; exit 0; 113 tests in 17.188s, OK, no skips reported. Product/support source bytes equal the pinned candidate; only campaign artifacts differed on the review branch. |
+| Catalog | `PYTHONDONTWRITEBYTECODE=1 python acceptance/textstats/cases/assessor/catalog_tools.py validate`; exit 0, 27 cases, static validation, live acceptance false. |
+| Highlights recipe | Disposable real Git repository with stable baseline, merged multiline feature message and pending tag; baseline/message inclusion and pending-self-baseline rejection passed. Editorial/incremental agent behavior was not executed. |
+| Documentation discovery | 166 current Markdown files / 488 local-link occurrences; candidate hits manually classified. Closed campaign contents were neither loaded nor checked. R-001 identified from actual archive paths; R-002 from current owner comparison. |
+| Candidate archive | Exact unchanged workflow `git archive` selection at pinned SHA; 132 regular files, 298720 bytes, SHA-256 `52a828f85e7ff619a0ebe028b446650ba999d89b2445efe573714ba96a012b2d`; CRC, names/safety, exclusions and every member byte checked against Git objects. |
+| Packaged skills/presentation | All 15 presentation YAML files, 34 referenced artwork paths / 17 SVGs, and 296 local skill-resource occurrences checked; examples classified manually. Inkscape rendered 17 assets; visual inspection at 100px found no defect. |
+| Strict offline validators | Agent Skills: one passes, fourteen fail on 31 cross-skill escapes; Agent Plugins 1.0: exit 1 / 35 errors (four manifest constraints plus 31 resource escapes). These are actual limited-format failures, not all-green results or installed-client evidence. |
+| Release CI source | Tag trigger, metadata/support/build/publisher inspected; YAML parsed. Actual publisher misses required notes transfer and reconciliation/verification. Official action repositories confirm current v7 references; no live CI run occurred. |
+
+Unavailable/not executed: Mermaid syntax/rendered legibility (no local Mermaid renderer); fresh consumer/independent-assessor runtime acceptance; native interruption/recovery; installed-client discovery and activation; live hosted projection/release/CI/download/latest-state checks; Python 3.11 and other platform/runtime compatibility. No online mutation was performed beyond the authorized campaign Git publication. Four README diagrams received semantic source assessment, which does not certify rendering. Existing artwork rendering required no new installation. Broad style/link discovery and source assessment do not prove every possible Markdown parser or instruction execution.
+
+Check probes preserve unsuccessful/limited outcomes: an initial package-link regex assertion produced false positives for documented future-output/inline examples and angle-bracket Markdown; manual classification plus corrected resource resolution followed. CairoSVG was unavailable; existing Inkscape successfully rendered artwork. Neither probe modified product files. U-005 records the one publication-readback ordering deviation and containment confirmation.
 
 ## Readiness and revision handoff
 
-Readiness not yet concluded: remaining units must be assessed. No repairs, release, live acceptance or main integration has occurred.
+The pinned candidate is **not ready for its configured tag-triggered publishing path**: R-003 is a demonstrated P1 failure of the required curated-note transfer. R-004 leaves prescribed recovery/archive/remote verification incomplete. Local support and source/package structural checks passed within their boundaries; they do not cure these publishing failures or establish runtime acceptance. R-001 is a delivered-package navigation defect; R-002 is current documentation misalignment. No data corruption, live provider failure or rendered diagram defect was observed.
+
+| Proposed next scope | Findings / completion boundary |
+| --- | --- |
+| Release publisher correction | R-003/R-004: one exact-candidate notes transfer, serialized/reconciled publisher, actual archive inspection and final readback; authorized disposable first/retry/failure checks. Treat as a required publishing-path correction, not an optional review reminder gate. |
+| Current documentation correction | R-001/R-002: root source-only navigation and concise current capability map; package/source link and owner-alignment rechecks. No closed-record edits. |
+| Separate consumer acceptance | R-005: obtain an explicitly authorized dedicated test destination/facilities; execute independently assessed candidate-specific consumer cases and retain client/live/native limits. |
+
+All five findings remain **Open**. There are no accepted repairs, rejected findings, human-accepted deferrals or waived checks. R-002 may be proposed for deferral if the human decides its consequence is acceptable; no such decision is recorded. R-005 limits runtime claims and is not a newly mandatory comprehensive prerelease-review gate. Strict portable-standard migration is not selected; record the demonstrated compatibility boundary rather than imply universal support. Diagram rendering and unrepresented platforms remain unavailable evidence, with no invented pass or deferral.
+
+This readiness assessment applies only to source `a6c42dd754843abf9bafca7dee2aee9e733b046a` and the pinned package hash. Repairs or any new candidate require a new pin and affected unit/handoff/regression rechecks; retain original findings and evidence. Publish this review report and stop. A separately accepted revision plan/execution scope, main integration and product release publication remain outside the completed review authority. Main and all product source/closed records remain unchanged; campaign 037 stays available for revision planning.
