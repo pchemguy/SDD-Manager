@@ -22,7 +22,7 @@ from urllib.parse import parse_qsl, urlsplit
 
 BUNDLE = Path(__file__).resolve().parents[1]
 SOURCE = Path(__file__).resolve().parents[3]
-PACKAGE_PATHS = ('plugin.json', '.codex-plugin', 'README.md', 'AGENTS.md', 'LICENSE', 'SDD-MANAGER.md', 'AI_DISCLOSURE.md', 'skills', 'assets')
+PACKAGE_PATHS = ('plugin.json', '.codex-plugin', 'README.md', 'AGENTS.md', 'Greenfield Project Prompt Template.md', 'LICENSE', 'SDD-MANAGER.md', 'AI_DISCLOSURE.md', 'skills', 'assets')
 MISSING = 'Which dedicated test repository should this run use? Supply its URL or local checkout path.'
 SECRET = re.compile(r'(?:github_pat_|gh[pousr]_|Bearer\s+)[A-Za-z0-9_\-]+', re.I)
 

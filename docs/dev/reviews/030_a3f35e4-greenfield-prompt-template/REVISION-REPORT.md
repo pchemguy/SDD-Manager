@@ -14,7 +14,7 @@
 | --- | --- | --- |
 | V-001 | Assessed current manager entry, workflows, repository bootstrap, design/exploration, tracking decision, credentials, branch management and Git workflows. Existing owners cover clarification, acceptance/stop boundaries, authorization continuity, publication, credentials and explicit tracking confirmation. | Verified by source inspection; no consumer execution claimed. |
 | V-002 | Added greenfield startup routing to repository-bootstrap and an explicit manager step-2 load trigger. Existing adoption/disclosure procedure remains intact. | Source revised; coupled checks pending. |
-| V-003 | Pending root template, README navigation and package inclusion. | Not executed. |
+| V-003 | Added the root prompt and README link; updated release archive and acceptance pinning inventories, their documentation and existing committed/dirty snapshot regression. | Revised; package/check execution pending. |
 | V-004 | Pending coupled review, package/check execution and integration. | Not executed. |
 
 ## Coverage decision
