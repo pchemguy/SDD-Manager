@@ -26,3 +26,4 @@ Include applicable details rather than filling every possible section. For examp
 - Check names and contracts against inspected implementation, callers, tests, and accepted requirements. Report requirement conflicts to the user under the skill's amendment protocol.
 - Use declared documentation lint, syntax, generation, or example checks when relevant and available. Report unrun checks and distinguish inspection from execution.
 - Inspect the final diff for unintended behavior changes. Preserve annotations, executable statements, and public signatures; route necessary code repairs to the implementation workflow.
+

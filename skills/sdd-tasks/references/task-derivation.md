@@ -33,6 +33,7 @@ Use a `##` Markdown heading for each phase and a checkbox item directly beneath 
         - [ ] T-004 — Review, test and report phase 1
             Depends on: milestone 1.1 completion/closure. Evidence: phase review, exits, repairs and committed report.
             Report: docs/dev/reports/phases/1/PHASE-REPORT.md.
+
 ```
 
 Stable IDs may follow the project's existing convention; otherwise use monotonic task IDs such as `T-001`. Do not reuse or renumber an ID because a task is inserted or removed. Keep parent IDs and names in TASKS consistent with PLAN, and in FEATURE-TASKS with the active feature plan and unaffected main hierarchy. Resolve collisions across the lists before selection or hosted projection. The owning task list supplies task and parent names for hosted projection; do not project conflicting names for one stable ID. Use [progress review](progress-review.md) to assess existing completion evidence; the initial breakdown is unchecked unless verified prior completion is established. **sdd-implement** owns completion updates during execution. Apply the same checklist form and indentation to FEATURE-TASKS. Keep feature progress there until **sdd-integrate-feature** incorporates it into TASKS; do not insert its tasks into TASKS merely to select or implement them.

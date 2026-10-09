@@ -5,7 +5,7 @@ description: Use when selecting an executable task range, or executing or resumi
 
 # Implement a selected task range
 
-For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists and code blocks, plus four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
 
 Execute the user's requested task-list boundary. **sdd-manage** coordinates authorization, prerequisites, and focused capabilities; an implementation request authorizes work within its established scope without repeated confirmation for routine steps. Use a current **sdd-orient** handoff at startup for repository instructions, Git and task state, dirty-path ownership, and environment. Read the relevant references: Load [environment recovery](references/environment-recovery.md) when installation/runtime facilities block selected work; load its browser guidance only for relevant browser checks.
 

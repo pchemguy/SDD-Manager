@@ -5,7 +5,7 @@ description: Use when drafting a task issue, Git commit message, pull request de
 
 # Report SDD work
 
-For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists and code blocks, plus four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
 
 Choose the requested output and load only its reference:
 

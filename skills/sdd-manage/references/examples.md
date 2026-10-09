@@ -113,3 +113,4 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 - A small feature reuses sufficient architecture/strategy/layout: create only the necessary FEATURE-SPEC and FEATURE-TASKS deltas, reviewing each new proposal before dependent work. A larger delta reviews each needed design/PLAN/placement proposal separately.
 - Human requests revisions or the conversation is interrupted at PLAN review: preserve the pending decision, revise/recheck the same owner and present its actual state. No assumed acceptance and no regenerated chain.
 - Standing Git/token authority: persist the checkpoint without another repository-operation permission question; still pause for document acceptance.
+

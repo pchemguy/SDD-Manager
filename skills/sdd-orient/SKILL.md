@@ -5,7 +5,7 @@ description: Use when locating and inspecting a software project's repository be
 
 # Orient in a project
 
-For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists and code blocks, plus four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
 
 Establish a factual, scoped starting point before another SDD skill changes repository files. This skill is a shared, **read-only** capability. It neither authorizes a mutation nor decides which later workflow to run. Read [inspection and handoff](references/inspection-and-handoff.md) for the evidence checks and report contract.
 
