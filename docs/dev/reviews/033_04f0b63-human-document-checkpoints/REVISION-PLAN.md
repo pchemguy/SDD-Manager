@@ -115,3 +115,7 @@ These are planned checks, not executed acceptance results. Source-level review c
 ## Current persistence and stopping point
 
 The review report and this proposed plan are retained on the campaign revision branch with navigation in the current campaign index. Opening/assessment does not merge an unfinished campaign into main. Source-policy changes, support tests, product packaging and live acceptance have not been executed. The campaign remains open for subsequent revision execution; no REVISION-REPORT is fabricated before revisions begin.
+
+## Execution disposition
+
+The human instructed execution. V-001–V-004 are implemented and source-verified; see [REVISION-REPORT.md](REVISION-REPORT.md) for actual checks, scenario assessments and limits. Proposed baseline observations above are retained as planning evidence.
