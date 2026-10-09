@@ -25,7 +25,7 @@
 - Consequence: direct authoring of other documents has no explicit common style obligation.
 - Accepted correction: elevate the existing rule into shared Markdown guidance for every authored or maintained document, including examples/templates, main and feature documents, active reports, skills/references, README/guides and Markdown hosted drafts. Retain the existing before-heading rule; explicitly require a blank line after each heading.
 - Recheck: shared rule is reachable from document owners and direct calls; examples with prose, a list, another heading or a fence immediately following a heading are identified and corrected within authorized current scope.
-- Disposition: accepted requirement for revision planning; source unchanged.
+- Disposition: accepted in planning; verified by V-001 through V-004 at the source/local fixture level. See [revision evidence](REVISION-REPORT.md). Baseline observations above remain unchanged.
 
 ### R-002 — Four-space indentation is confined to task checklists
 
@@ -34,7 +34,7 @@
 - Consequence: other nested bullet, numbered and mixed lists can use inconsistent indentation despite the requested global style.
 - Accepted correction: define four spaces per structural indentation level, spaces rather than tabs, and four additional spaces for each nested list level, with valid continuation/block attachment. Keep TASKS hierarchy semantics with its owner and connect it to the shared style rule.
 - Recheck: ordinary, ordered, mixed and task lists follow the same nesting rule; continuation paragraphs and nested blocks remain attached to their item. Preserve literal code/data indentation inside code examples according to their language instead of reformatting executable syntax as Markdown.
-- Disposition: accepted requirement for revision planning; source unchanged.
+- Disposition: accepted in planning; verified by V-001 through V-004 at the source/local fixture level. See [revision evidence](REVISION-REPORT.md). Baseline observations above remain unchanged.
 
 ## Limits and revision handoff
 
