@@ -37,7 +37,7 @@ R-001 and R-002 are verified at the written-policy and local fixture level. Live
 
 ## Reopened amendment
 
-The user explicitly reopened campaign 034 on 2026-10-09 to add blank lines around non-indented top-level lists and code blocks. The published starting checkpoint for this continuation is `8b9749c75b56eff028fee1575fdeaf917fe5d7f0`; the original campaign identity remains unchanged. Actions V-005 and V-006 in the amended plan are authorized for execution. State: reopened amendment implemented; local verification passed; committed package verification and final integration pending.
+The user explicitly reopened campaign 034 on 2026-10-09 to add blank lines around non-indented top-level lists and code blocks. The published starting checkpoint for this continuation is `8b9749c75b56eff028fee1575fdeaf917fe5d7f0`; the original campaign identity remains unchanged. Actions V-005 and V-006 in the amended plan are authorized for execution. State: reopened amendment implemented; local and committed-package verification passed; final integration/publication follows the containing Git merge boundary.
 
 
 ### Amendment execution evidence
@@ -45,8 +45,15 @@ The user explicitly reopened campaign 034 on 2026-10-09 to add blank lines aroun
 | Action | Actual changes and evidence | State |
 | --- | --- | --- |
 | V-005 | Shared rule now requires blank lines around each entire non-indented top-level list and all code blocks, with compact nested lists and code attachment preserved. All 14 dependent skill summaries, root guidance and scoped QC checks carry the rule. Nine current documents/templates received separator lines; executable code contents and task identities are unchanged. | Implemented and locally verified. |
-| V-006 | Extended verification with SC-011–SC-014 for list/code boundaries, compact nested lists, indented/fenced code and nested-code attachment. All 14 scenarios and 113 support tests pass. The shared convention passes its standalone validator. | Local checks passed; committed package and merged-state checks pending. |
+| V-006 | Extended verification with SC-011–SC-014 for list/code boundaries, compact nested lists, indented/fenced code and nested-code attachment. All 14 scenarios and 113 support tests pass. The shared convention passes its standalone validator. | Local and committed package checks passed; merged-state checks and publication follow the Git boundary. |
 
 The source verification script reports its Git HEAD and working-tree changes separately. [Spacing helper](evidence/verify_spacing.mjs) is development-only verification using preinstalled marked; it adds no shipped formatter or runtime dependency. [Amendment support log](evidence/amendment-support-tests.log) retains the observed suite result. Tests for task-template preservation now compare its trimmed Markdown contents because the amendment deliberately adds a trailing separator blank line.
 
 The scoped scan covers the same 98 current/active Markdown documents. Blank lines were inserted around whole top-level lists, not nested list boundaries. Marked confirms nested code contents and attachment; source/code preservation remains covered. EOF separator blank lines are intentional, so the diff check disables only Git's blank-at-EOF warning. Other whitespace checks remain active. Prior closed packages, version and manifests are unchanged; live consumer behavior remains untested.
+
+
+### Amendment completion and integration
+
+Committed source `229194a` passed [amendment source checks](evidence/amendment-source-checks.json): 98 scoped files, 439 local path links and all 14 scenarios. The [unmodified release build](evidence/amendment-package-check.json) produced 131 files matching that commit byte for byte, with a verified SHA-256 checksum. The support suite passed 113 tests. The complete amended report and evidence are committed before integration; the required prospective merge must match this complete campaign tip and pass the suite and scoped checks before commit/publication.
+
+Actions V-005 and V-006 are verified for the written policy, source examples, local parser cases and committed package. The final two-parent merge records the continuation's parents and includes all amendment artifacts. No post-closure evidence commit is required. No unresolved in-scope source finding remains; live agent/browser acceptance and isolated-skill portability beyond explicit bundled dependencies remain unverified. Version is `0.15.0`.
