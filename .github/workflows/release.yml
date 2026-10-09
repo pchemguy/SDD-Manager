@@ -52,6 +52,7 @@ jobs:
             HEAD \
             assets skills .codex-plugin \
             LICENSE plugin.json README.md AGENTS.md \
+            "Greenfield Project Prompt Template.md" \
             SDD-MANAGER.md AI_DISCLOSURE.md
           sha256sum "$package" > "$package.sha256"
 
