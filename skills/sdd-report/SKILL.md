@@ -1,6 +1,6 @@
 ---
 name: sdd-report
-description: Use when drafting a task issue, Git commit message, pull request description, or evidence-backed task, milestone, phase or final implementation report, or review/revision campaign plan or report for an SDD project. Adapt the summary to feature, bug, code health, performance, security, testing, documentation, integration, or compatibility work without inventing results.
+description: Use when drafting a task issue, Git commit message, pull request description, or evidence-backed task, milestone, phase or final implementation report, review/revision campaign plan or report, package preparation result, release notes or release outcome for an SDD project. Adapt the summary to feature, bug, code health, performance, security, testing, documentation, integration, or compatibility work without inventing results.
 ---
 
 # Report SDD work
@@ -12,6 +12,7 @@ Choose the requested output and load only its reference:
 | First SDD commit disclosure/usage evidence (drafting only) | **sdd-manage**: `skills/sdd-manage/references/repository-bootstrap.md` (bundled dependency) |
 | Planned task issue title and body, task/amendment or merge commit message, or pull request draft | [drafts for hosted and Git objects](references/object-drafts.md) |
 | Task, milestone, phase, final implementation, branch boundary, or interrupted-work status report | [completion reports](references/completion-reports.md) |
+| Package/workflow preparation, release notes or release outcomes | [package and release reporting](references/releases.md) |
 | Adjacent SPEC/PLAN/TASKS preparation QC reports and appended correction/recheck sections | [document QC reports](references/document-qc-reports.md) |
 | Review plan/report or revision plan/report, including focused prompt-driven review | [campaign artifacts](references/campaign-artifacts.md) |
 | Kind-specific emphasis and reusable What, Why, Verification, Result patterns | [change kinds](references/change-kinds.md) |

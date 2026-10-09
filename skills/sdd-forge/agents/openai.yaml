@@ -1,9 +1,9 @@
 interface:
   display_name: "SDD Forge"
-  short_description: "Project eligible phases and reconcile hosted closures"
+  short_description: "Coordinate GitHub tracking, packages and releases"
   icon_small: "./assets/icon.svg"
   icon_large: "./assets/icon.svg"
   brand_color: "#176C68"
-  default_prompt: "Use $sdd-forge to project the eligible phase and reconcile its verified task issues and milestone lifecycle with GitHub."
+  default_prompt: "Use $sdd-forge for the requested GitHub tracking, release package/workflow preparation, or release operation. Resolve source and repository, verify the selected outputs, and stop at the requested boundary."
 policy:
   allow_implicit_invocation: true
