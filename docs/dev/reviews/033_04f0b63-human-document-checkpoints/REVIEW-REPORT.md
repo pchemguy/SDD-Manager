@@ -111,3 +111,11 @@ Scoped validation checked all seven boundary rows, three stable finding records,
 ## Handoff and stopping point
 
 The prompt supplies the required direction: seven mandatory **human** reviews after document creation. The proposed repair queue is R-001 → R-002 → R-003 with coordinated owner/consumer updates and source-level scenario verification. Detailed source edits and their verification belong to the subsequent revision execution. This review ends at its report checkpoint, then the coordinating workflow publishes it on the campaign branch. The campaign remains open; no default-branch merge or source-policy implementation is claimed.
+
+## Subsequent human clarification — 2026-10-09
+
+The human clarified applicability after the baseline review and initial proposed plan. Greenfield creation walks the human through the document chain. Existing documents at entry, including interrupted explicitly staged work, receive an initial agent assessment through orientation and the appropriate owner checks; acceptable results normally allow continuation to the next eligible stage without interactive review.
+
+An explicit request to review existing artifacts means interactive review and must be the first work step. It presents concise substantive analysis to the human, including consequential choices, consistency/coverage, important issues and a reasoned recommendation. If startup assessment finds important document issues, the agent can raise concerns and proactively offer this review before advancing. The offer does not itself activate interactive mode or remove a real readiness blocker.
+
+This clarification scopes R-001–R-003 and supersedes the initial plan's broader proposed rule that every material change to an existing accepted document automatically requires interactive reacceptance. Preserve the original baseline observations; the repair should add missing created-document checkpoints and selected interactive-review behavior without retroactive acceptance ceremonies or automatic interactive mode for acceptable existing inputs. The current [revision plan](REVISION-PLAN.md) incorporates these requirements; no source edits have been executed.
