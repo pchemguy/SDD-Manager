@@ -41,6 +41,7 @@ These illustrate completed-summary formats. Their details are scenario-specific 
 - 💡 **Why:** The project assigns each module a focused owner and disallows generic dumping-ground modules.
 - ✅ **Verification:** Inspected the updated layout and references, ran layout checks, and passed `pytest tests/unit`.
 - ✨ **Result:** Shared filesystem utility ownership is explicit; the cited checks support behavior preservation within their scope.
+
 ```
 
 ### Performance
@@ -50,6 +51,7 @@ These illustrate completed-summary formats. Their details are scenario-specific 
 - 💡 **Why:** Big-endian hosts need the little-endian format without slow per-item packing and unpacking.
 - 📊 **Measured Improvement:** In an ad-hoc simulated big-endian run of one million values, decode fell from 0.154 s to 0.008 s (reported as roughly 18×), and encode from 0.415 s to 0.013 s (roughly 30×). The simulation and rounded values limit the claim.
 - ✅ **Verification:** The local timing script measured speed only; portability and round-trip correctness still need separate checks.
+
 ```
 
 For omission or recovery reports, separate instruction, actual user grant/choice, observed state, failure cause and evidence limits. Cite the actual basis for a diagnosis; an agent-authored inactive-mode line is not a user refusal, and a supplied token is not confirmation of an optional capability.

@@ -18,3 +18,4 @@ I authorize every repository operation required for this project under SDD Manag
 
 Enable and maintain GitHub tracking for phase labels, milestones and task issues.
 ````
+

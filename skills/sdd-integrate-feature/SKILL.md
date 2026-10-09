@@ -5,7 +5,7 @@ description: Use when incorporating accepted feature or change documents into th
 
 # Integrate an accepted feature
 
-For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists and code blocks, plus four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
 
 Read [feature incorporation](references/feature-incorporation.md) for the scoped reconciliation procedure. This skill owns incorporation of accepted feature deltas into main project documents and reconciliation of TASKS and FEATURE-TASKS within the requested scope, including feature-related task and dependency revisions and feature-list incorporation into TASKS. Direct human-commanded checkpoint amendments belong to **sdd-steer**, which updates existing documents without this integration step. A request to reconcile one document does not authorize edits to the others. Review without mutation remains with the relevant focused skill.
 

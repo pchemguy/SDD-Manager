@@ -51,3 +51,19 @@ Use scoped inspection/rendering or syntax-aware checks appropriate to the actual
 The current request covers the review and campaign opening/planning. Stop before source implementation. On a later execution instruction, retain this branch/identity and the user's two rules, publish pending planning checkpoints first, then execute actions in dependency order with their evidence and ordinary checkpoint persistence. Finish the full report before eligible integration so no campaign commit is left outside the merge.
 
 No version bump, release/tag creation, full TextStats acceptance, unrelated style overhaul or historical-record edit is included. Publication remains blocked until the host permits the authorized destination and payload; local review and planning are complete.
+
+## Reopened amendment — list and code-block separation
+
+The user explicitly reopened this campaign on 2026-10-09 after integration/publication at `8b9749c75b56eff028fee1575fdeaf917fe5d7f0`. The original review, accepted rules and execution evidence remain provenance; this amendment is authorized for immediate implementation, verification, report amendment and publication. The established campaign branch is refreshed from that published main baseline. Other closed campaigns remain frozen.
+
+Add two shared presentation rules to the same owner:
+
+- Place a blank line before and after an entire top-level, non-indented list. The list includes its nested items and continuation blocks. Do not require extra blank lines around nested lists or between ordinary list items.
+- Place a blank line before and after code blocks, including fenced and indented blocks and blocks nested inside list items. Preserve list attachment and literal code/data indentation. Document boundaries need no artificial leading blank line; a final list or fenced code block still has a trailing blank line.
+
+| Action | Outcome | Verification |
+| --- | --- | --- |
+| V-005 | Extend the shared convention, its Markdown example, scoped QC guidance and concise entry-point summaries; normalize affected maintained current documents/templates. | SC-011: top-level bullet/numbered list separation; SC-012: compact nested lists remain valid; SC-013: fenced/indented code separation; SC-014: nested code stays attached and code bytes preserved. |
+| V-006 | Extend local verification, run required support/package checks, append amendment evidence to this report and update current navigation; explicitly merge and publish the complete tip. | Positive/negative spacing fixtures, current-source checks and package bytes; merged-state suite and clean Git/remote readback. |
+
+Keep version `0.15.0`, artifact ownership, human acceptance boundaries, task identities and literal source semantics unchanged. No new formatter/dependency or live acceptance is required. Stop after verified integration/publication of this amendment.

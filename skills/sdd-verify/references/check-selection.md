@@ -1,6 +1,6 @@
 # Select sufficient checks
 
-Include the shared [Markdown style](../../sdd-conventions/references/markdown-style.md) in scoped document checks: heading separation, four-space structural/list indentation, continuation attachment and Markdown templates. Preserve literal code/data syntax and exclude closed records. Formatting checks do not replace substantive conformance or authorize repairs.
+Include the shared [Markdown style](../../sdd-conventions/references/markdown-style.md) in scoped document checks: heading, top-level list and code-block separation, four-space structural/list indentation, continuation attachment and Markdown templates. Preserve literal code/data syntax and exclude closed records. Formatting checks do not replace substantive conformance or authorize repairs.
 
 Read the accepted contract and requested work boundary before selecting commands. Inspect the actual diff or relevant implementation, declared tooling, and tests. A task's expected edit scope helps locate effects; it does not excuse ignoring dependent behavior affected by its changes.
 

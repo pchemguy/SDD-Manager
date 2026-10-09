@@ -23,3 +23,4 @@ For existing behavior, inspect relevant tests before adding duplicates. For a bu
 - Keep tests deterministic where possible; control time, randomness, external state, and fixture cleanup when they affect the contract.
 - Surface unavailable dependencies, unclear contracts, or disputed expected behavior before implementation proceeds on that assumption.
 - Return strategy and evidence gaps to the caller. Amendments to accepted requirements or layout need their authorized owning workflow; test design does not silently redefine them.
+

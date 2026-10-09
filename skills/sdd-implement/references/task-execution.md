@@ -19,3 +19,4 @@ Development-cycle test runs do not replace the verification campaign. Verificati
 - Report observed pre-existing or unrelated failures; do not silently expand repairs beyond authorization or claim the suite passes. Resolve whether required acceptance can be established before marking completion.
 - If work cannot be completed, keep the task unchecked or correct an unsupported checked claim, including one from an earlier durable task result. Preserve partial work, historical evidence, and any unresolved completion-reassessment note; report the blocker and remaining steps. Commit a partial checkpoint only when the user or project policy authorizes it, clearly distinguishing it from a completed task commit.
 - Do not create feature overlays, reconcile the task hierarchy, or perform a checkpoint amendment merely to make the selected task pass. Those changes require their own established scope and owning workflow.
+
