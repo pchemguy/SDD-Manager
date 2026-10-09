@@ -5,6 +5,8 @@ description: Use when projecting software-development phases, milestones, and ta
 
 # Git release preparation and hosted operations
 
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+
 ## Shared protocol
 
 - **Scope:** Run only for a requested hosted operation or release/package preparation, including local Git release highlights. Route shared highlights before provider selection; identify the provider before loading a hosted backend; report ambiguous remotes or unsupported providers without guessing. Local SDD work does not require hosting access.

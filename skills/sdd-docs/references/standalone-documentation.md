@@ -21,7 +21,7 @@ Align README and guides with accepted scope and the supported implementation. La
 - Run examples or relevant documentation checks where practical within the authorized environment. Distinguish inspected examples from executed examples and record expected versus observed outcomes.
 - Check local links and referenced files in maintained documentation and active records; assess external links when relevant to the requested work and access permits. Report links that could not be checked within that scope. Exclude closed campaign artifacts from current link validation and repair; do not report their compatibility with later changes.
 - Remove stale references and unnecessary duplication within scope. Follow layout rules for placement; propose a layout amendment to the user if the required organization cannot fit them.
-- Separate Markdown headings from adjacent content with blank lines, including examples and templates. The beginning of a file or template needs no leading blank line.
+- Check the shared [Markdown style](../../sdd-conventions/references/markdown-style.md), including blank lines after headings, four-space list nesting, continuation attachment and Markdown examples/templates. Preserve embedded code/data syntax.
 
 ## Agent orientation
 

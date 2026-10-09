@@ -213,6 +213,8 @@ See [branch management](skills/sdd-manage/references/branch-management.md) for n
 
 Closed review, revision, steering and feature packages are historical artifacts within their own campaign context. They remain unchanged and need not stay valid after later changes. Routine work does not load, validate, repair or report their historical compatibility; consult only relevant records/sections when the current task specifically needs them. Finish archive/navigation/report updates before campaign closure, and maintain current main documents in later campaigns. See [closed campaign records](skills/sdd-conventions/references/review-campaigns.md#closed-campaign-records).
 
+All authored or maintained Markdown documents use a blank line after each heading and four-space structural indentation, including nested lists. The shared [Markdown style](skills/sdd-conventions/references/markdown-style.md) covers document owners, templates, reports and hosted drafts; literal code/data syntax and closed records are preserved.
+
 Use `docs/dev/reviews/<sequence>_<baseline-sha>-<slug>/` for a general campaign (phase-checkpoint steering uses its phase-specific revisions prefix): review plan → review → review report → revision plan → revision → revision report. A focused review can start directly from a prompt and record its scope/criteria in REVIEW-REPORT. A comprehensive review plans units and report checkpoints first.
 
 Each planned review unit ends with its report commit. The coordinating workflow publishes that checkpoint before dependent work; pushes remain part of the complete workflow. Host automatic tool review has separate ownership from plugin content review. Full revision and implementation workflows include their prescribed pushes under the existing scoped authorization. Accepted revisions update relevant governing documents; all campaign records remain retained. Directory identity stays fixed as HEAD advances. **sdd-report** supplies scalable artifact templates, and **sdd-manage** coordinates scope and execution.
@@ -244,7 +246,7 @@ The coordinator handles workflow selection and shared prerequisites. Focused ski
 | --- | --- |
 | [sdd-manage](skills/sdd-manage/SKILL.md) | Coordinate scope, prerequisites, branches, explicit integration, credentials, and stopping points. |
 | [sdd-orient](skills/sdd-orient/SKILL.md) | Inspect instructions, repository state, documents, tooling, and interrupted work. |
-| [sdd-conventions](skills/sdd-conventions/SKILL.md) | Apply shared design, modularity, and task-hierarchy criteria. |
+| [sdd-conventions](skills/sdd-conventions/SKILL.md) | Apply shared design, modularity, task-hierarchy and Markdown style criteria. |
 | [sdd-design](skills/sdd-design/SKILL.md) | Explore the problem; develop the project brief, architecture, and decomposition. |
 | [sdd-specify](skills/sdd-specify/SKILL.md) | Define observable behavior, contracts, and acceptance conditions. |
 | [sdd-plan](skills/sdd-plan/SKILL.md) | Define delivery strategy, milestones, exit conditions, and physical layout. |
