@@ -1,6 +1,6 @@
 ---
 name: sdd-verify
-description: Use when selecting and running checks for an SDD task, selected change, milestone, phase, or project; assessing acceptance and exit-condition coverage; classifying observed failures; performing read-only milestone/phase implementation code review, checking release package contents, release workflows, CI outputs and hosted asset integrity; or returning verification evidence and remaining gaps before completion.
+description: Use when selecting and running checks for an SDD task, selected change, milestone, phase, or project; assessing acceptance and exit-condition coverage; classifying observed failures; performing read-only milestone/phase implementation code review, checking Git release-highlight ranges and drafts, release package contents, release workflows, CI outputs and hosted asset integrity; or returning verification evidence and remaining gaps before completion.
 ---
 
 # Verify a selected work boundary
@@ -11,7 +11,7 @@ Establish the requested task, change, milestone, phase, or project scope. Load t
 | --- | --- |
 | Review milestone/phase implementation code and findings | [boundary review](references/boundary-review.md) |
 | Derive checks from requirements, changes, and dependencies | [check selection](references/check-selection.md) |
-| Assess package contents, release workflows, CI outputs and hosted download evidence | [package and release checks](references/release-checks.md) |
+| Assess Git highlights, package contents, release workflows, CI outputs and hosted download evidence | [package and release checks](references/release-checks.md) |
 | Execute checks and assess acceptance evidence | [execution and evidence](references/execution-and-evidence.md) |
 | Classify failures and return unresolved work | [failure assessment](references/failure-assessment.md) |
 

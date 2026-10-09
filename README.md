@@ -168,6 +168,7 @@ Systematic reviews use a review plan; focused requests can supply the criteria d
 | Integrate an accepted feature | “Incorporate FEATURE-SPEC into SPEC only.” | Selected main documents reconciled without unrelated task-list changes. |
 | Review and revise a project | “Plan a systematic review,” “Review this protocol,” or “Implement accepted findings.” | Retained campaign plans/reports, stable findings, and authorized verified revisions incorporated into governing documents. |
 | Review or maintain a scope | “Review PLAN,” “Verify this phase,” or “Align README.” | Findings, evidence, or the explicitly requested maintenance. |
+| Collect release highlights | “Summarize key changes since the latest release; update the draft incrementally.” | Provider-independent Git range, curated ignored YAML draft and body-only release notes; no hosting access or publication required. |
 | Prepare release packaging | “Verify this ZIP and prepare a workflow that builds it.” | Assessed package contents, stable asset names, build/checksum procedure and verified workflow preparation; interactive development when needed. |
 | Create a GitHub release | “Create release v1.2.3 from the verified commit using the configured packages.” | One publisher, complete assets, release state/readback and applicable stable download URLs; actual CI/download verification limits. |
 | Synchronize GitHub tracking | “Create issues and milestones for these tasks.” | Phase labels, milestones, task issues, and verified task associations. |
@@ -177,6 +178,8 @@ Preparation and review stop before implementation unless your request includes i
 For detailed entry conditions and stopping rules, see the [workflow catalog](skills/sdd-manage/references/workflows.md).
 
 ### Release packages and commands
+
+Use [Git release highlights](skills/sdd-forge/references/release-highlights.md) to collect complete commit messages since the selected release tag, including merged work, and curate key user changes. The default ignored `.release-highlights.md` draft records the previous release commit and last analyzed commit in YAML; incremental updates preserve edits and cuts. Release preparation refreshes it through the exact source and passes only its Markdown body to the publisher. An ignored draft requires explicit CI notes transfer; cleanup follows verified published-body consumption. Local preparation works before provider selection and needs no token.
 
 Use [package preparation](skills/sdd-forge/references/github-packaging.md) for archive contents and conventional variant names, [release workflows](skills/sdd-forge/references/github-release-workflows.md) to prepare/dispatch a build, and [release creation](skills/sdd-forge/references/github-releases.md) to publish verified assets. Filenames remain version-free, for example `project.zip` or `project-windows-x64.zip`; tags and release metadata retain version identity. Stable downloads use `https://github.com/{OWNER}/{REPO}/releases/latest/download/{ASSET_NAME}`. Each latest stable release must contain the complete advertised asset set.
 
@@ -247,7 +250,7 @@ The coordinator handles workflow selection and shared prerequisites. Focused ski
 | [sdd-verify](skills/sdd-verify/SKILL.md) | Run the required checks and assess acceptance evidence, failures, and gaps. |
 | [sdd-docs](skills/sdd-docs/SKILL.md) | Maintain professional module/API documentation, README, guides, and examples. |
 | [sdd-report](skills/sdd-report/SKILL.md) | Draft issues, commit messages, PR descriptions, and evidence-backed progress reports. |
-| [sdd-forge](skills/sdd-forge/SKILL.md) | Coordinate GitHub task tracking, release packages/workflows and verified release publication. |
+| [sdd-forge](skills/sdd-forge/SKILL.md) | Prepare shared Git release highlights and coordinate GitHub task tracking, packages/workflows and verified releases. |
 
 ## Development-document quality gates
 
