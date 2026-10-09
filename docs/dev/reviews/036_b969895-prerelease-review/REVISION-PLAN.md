@@ -6,8 +6,8 @@
 - Working branch: `revision/036_b969895-prerelease-review`; eventual integration target: `main` in `pchemguy/SDD-Manager`.
 - Objective: define an explicitly selectable comprehensive prerelease review campaign and make release workflows produce an advisory reminder about it.
 - Accepted input: the human's prerelease review proposal and follow-up instruction to open a revision campaign, with the review optional for now. This is a directly accepted amendment, not a defect finding from a performed review.
-- State: Planned. This request authorizes campaign planning and publication; source implementation and integration await a separate execution instruction.
-- Planned execution evidence: `REVISION-REPORT.md`. No preceding review report is required or implied.
+- State: Execution authorized by the subsequent human “Execute” instruction. The initial planning request stopped after publication; observed results are in [REVISION-REPORT.md](REVISION-REPORT.md).
+- Execution evidence: [REVISION-REPORT.md](REVISION-REPORT.md). No preceding review report is required or implied.
 - Product source version remains `0.15.0`; planning does not authorize a version change, tag, product release, workflow dispatch or hosted tracking change.
 
 ## Resulting workflow contract

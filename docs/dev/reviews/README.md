@@ -47,6 +47,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `035_6ac4f0a` | Shared per-commit publication barrier implemented across workflow owners; eight source scenarios, support suite, changed-document and package checks passed; integration recorded by the Git merge boundary. | [Revision plan](035_6ac4f0a-per-commit-publication/REVISION-PLAN.md), [revision report](035_6ac4f0a-per-commit-publication/REVISION-REPORT.md) |
 
-| `036_b969895` | Planned optional comprehensive prerelease review profile and advisory release-time reminder; source execution not started. | [Revision plan](036_b969895-prerelease-review/REVISION-PLAN.md) |
+| `036_b969895` | Optional comprehensive prerelease review profile and advisory release-time reminder implemented; 16 source scenarios, 113 support tests and package checks verified; integration recorded by the Git merge boundary. | [Revision plan](036_b969895-prerelease-review/REVISION-PLAN.md), [revision report](036_b969895-prerelease-review/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
