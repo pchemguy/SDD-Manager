@@ -49,4 +49,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `036_b969895` | Optional comprehensive prerelease review profile and advisory release-time reminder implemented; 16 source scenarios, 113 support tests and package checks verified; integration recorded by the Git merge boundary. | [Revision plan](036_b969895-prerelease-review/REVISION-PLAN.md), [revision report](036_b969895-prerelease-review/REVISION-REPORT.md) |
 
+| `037_a6c42dd` | Comprehensive prerelease review opened against pinned source 0.15.0 and its exact locally built package; assessment in progress. | [Review plan](037_a6c42dd-prerelease-review/REVIEW-PLAN.md), [source inventory](037_a6c42dd-prerelease-review/SOURCE-INVENTORY.md) |
+
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
