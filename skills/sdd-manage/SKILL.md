@@ -5,6 +5,8 @@ description: Coordinate Git release highlights, release package/workflow prepara
 
 # Coordinate specification-driven development
 
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+
 Translate the user's objective into a scoped workflow and coordinate the responsible skills. Proactively identify relevant capabilities, prerequisites, missing decisions, coordination gaps and blockers at entry, preparation handoff, phase activation and completion. Act on routine authorized work; raise consequential unresolved choices before dependent work and preserve the requested stopping boundary. Use the request and established session decisions as authorization; continue routine steps within that scope without repeated confirmation. Reviewer assessment ends at its report commit; publication remains part of the complete workflow under existing scope. Host automatic review is a separate platform control, not a plugin review skill. Discussion, assessment, or review alone does not authorize edits. Start at the requested stage when its inputs are established, and stop at the requested boundary. Apply [human document review](references/human-document-review.md): broad workflow authority does not preaccept newly created documents; acceptable existing inputs permit normal continuation after startup assessment.
 
 | Coordination concern | Load |

@@ -5,6 +5,8 @@ description: Use when the human defines a focused amendment at a checkpoint duri
 
 # Apply a human-directed checkpoint amendment
 
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+
 Steering is the lightweight checkpoint variant of the revision core workflow. Use **sdd-manage**'s **Core development workflows** model in its **Available workflows** reference for purpose and routing; this skill owns the focused amendment procedure and requires no formal campaign artifacts.
 
 The human defines the objective at a checkpoint and decides whether to command its implementation. Distinguish an assessment request from an implementation request; discussion alone does not authorize repository changes. A command to implement the established amendment authorizes routine steps within that scope without repeated confirmation. **sdd-manage** coordinates scope and shared prerequisites. Use **sdd-manage**'s **Branch management** reference to establish or reuse an amendment branch from the paused implementation checkpoint, with that implementation branch as its target. Use a current **sdd-orient** handoff for repository instructions, Git and task state, pending-change ownership, and the implementation checkpoint.

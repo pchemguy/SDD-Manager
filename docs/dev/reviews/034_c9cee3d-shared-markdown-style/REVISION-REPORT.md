@@ -13,3 +13,4 @@
 | Action / findings | Actual change | Evidence and limits | State |
 | --- | --- | --- | --- |
 | V-001 / R-001, R-002 | Added the shared Markdown reference and catalogue trigger. | Source inspection: heading separation, four-space nesting, continuation attachment, code/template boundary and scoped review are explicit. Live consumer behavior not tested. | Implemented; coupled verification pending. |
+| V-002 / R-001, R-002 | Connected all 14 other skill entries, current root guidance, scoped QC/verification, documentation and GitHub draft guidance to the shared owner. | Direct relative paths resolve to the bundled reference; local generic heading rules reconciled; task-specific hierarchy unchanged. | Implemented; source/link checks pending. |

@@ -5,6 +5,8 @@ description: Use when creating, reviewing, or maintaining professional module an
 
 # Maintain project documentation
 
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+
 Choose the requested scope: documentation for affected code, README or selected guides, or a project-wide audit. Read only the relevant references:
 
 | Work | Load |
@@ -19,6 +21,6 @@ Follow the documentation style specified by governing project documents. Otherwi
 
 Maintain documentation against both accepted requirements and observed implementation. Clearly distinguish supported behavior from planned capabilities. If a discrepancy requires an amendment to SPEC, PLAN, design, layout, or another authoritative requirement, identify its location, issue, impact, and proposed amendment and report it to the user. Defer the decision to the user; do not amend the governing document or invoke its owning skill automatically. Continue independent documentation work and report anything dependent on that decision as unresolved.
 
-Keep code edits confined to documentation unless additional work is authorized. Do not mark tasks complete, create commits, push, or change hosted objects here; the active implementation workflow owns those operations. For Markdown, separate every heading from adjacent content with blank lines; a heading at the beginning of a file or template needs no preceding blank line.
+Keep code edits confined to documentation unless additional work is authorized. Do not mark tasks complete, create commits, push, or change hosted objects here; the active implementation workflow owns those operations.
 
 Return the reviewed scope, chosen style and source, documentation changed, checks and observed outcomes, unreviewed or excluded areas, and unresolved findings or user decisions. Use **sdd-report** for a completion summary when requested.

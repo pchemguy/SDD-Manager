@@ -5,6 +5,8 @@ description: Use when selecting and running checks for an SDD task, selected cha
 
 # Verify a selected work boundary
 
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+
 Establish the requested task, change, milestone, phase, or project scope. Load the relevant references:
 
 | Work | Load |

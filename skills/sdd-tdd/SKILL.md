@@ -6,6 +6,8 @@ license: MIT
 
 # Design tests and guide test-first implementation
 
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+
 Choose the requested operation and load its references:
 
 | Work | Load |
