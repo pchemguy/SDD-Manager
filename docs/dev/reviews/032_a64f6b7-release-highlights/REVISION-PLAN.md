@@ -7,8 +7,8 @@
 - Working branch: `revision/032_a64f6b7-release-highlights`.
 - Directory: `docs/dev/reviews/032_a64f6b7-release-highlights/`.
 - Integration target: actual repository default branch, currently `main`.
-- State: opened and planned; implementation has not started.
-- Authority/boundary: open and publish the campaign planning checkpoint; stop before source implementation, default-branch integration or product release creation.
+- State: execution authorized by the subsequent “Execute” instruction; results are recorded in [revision report](REVISION-REPORT.md).
+- Authority/boundary: the opening request authorized the planning checkpoint. The subsequent “Execute” instruction authorizes the accepted revisions, verification, complete explicit default-branch integration and ordinary publication. Stop before any product release/tag creation or CI dispatch; retain source version 0.15.0.
 
 ## Requested behavior and ownership
 

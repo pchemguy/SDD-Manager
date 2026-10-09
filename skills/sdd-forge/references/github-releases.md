@@ -6,6 +6,8 @@ Use for requested release creation, draft completion, release readback or recove
 
 Establish repository, exact verified source SHA, version/tag, expected package/checksum set, title/notes, draft/prerelease state and latest selection from the request and current project policy. Ask for consequential unresolved choices, not an authorization already supplied. No TASKS or tracking activation is needed for a standalone release. Prepare missing package inputs through the package owner before publication.
 
+Before creating/pushing the pending release tag or triggering its publisher, create/update [shared Git highlights](release-highlights.md) through the exact verified source, explicitly excluding that pending tag from previous-baseline selection. On retries validate/reuse the pinned prior baseline. Prepare final body-only notes through reporting, preserving accepted human sections. Establish direct notes-file/API use or the workflow’s [notes transfer](github-release-workflows.md#notes-transfer); a tag-only publisher without transfer needs extension before triggering.
+
 Look up the tag and release by repository/tag; inspect draft and published states using the authenticated client. Peel an annotated tag to its commit and compare it with the intended source. When the tag is absent and creation is covered, **sdd-manage** coordinates a tag on that exact verified commit and its ordinary Git publication, or the selected supported API creates it at the exact SHA. Never use an unspecified default-branch target, move an existing tag or force-push. Verify remote target before upload/publication.
 
 Choose one route: [dispatch the established workflow](github-release-workflows.md#dispatch-and-monitor), or publish already verified packages using an available authenticated client/CLI/API. Verify that a tag push or another trigger has not already started the workflow's publisher before taking the direct route. Do not dispatch and separately create a duplicate release. Missing provider capabilities are reported precisely; ordinary local Git persistence stays with its existing owner.
@@ -13,7 +15,7 @@ Choose one route: [dispatch the established workflow](github-release-workflows.m
 ## Draft, upload and publish
 
 1. Inspect an existing matching release before writing. Validate tag target, owned fields, state and asset inventory. Reuse a uniquely matching draft. An already complete published release can satisfy a repeated request after readback; a conflicting source or unexpected state needs reconciliation rather than a second release.
-2. Create a draft if absent, explicitly referencing the verified existing tag. Prepare release notes through **sdd-report**'s [release reporting](../../sdd-report/references/releases.md), preserving user-authored material. Generated notes may seed editing; they do not replace required compatibility/install guidance.
+2. Create a draft if absent, explicitly referencing the verified existing tag. Use the finalized body-only notes prepared from shared highlights through **sdd-report**'s [release reporting](../../sdd-report/references/releases.md), preserving user-authored material. Refresh coverage if the source advanced. For an existing draft reconcile its body without duplicate highlights before publication. Generated notes may supplement curation; they do not replace required highlights or compatibility/install guidance.
 3. Upload every expected archive/checksum with its stable filename and appropriate type. Read existing assets first. Reuse matching verified assets and upload only missing ones; mismatching content, duplicate names, unexplained assets or failed/starter uploads require a bounded repair decision. Do not silently delete or `--clobber` assets. Hash the exact bytes supplied, not a subsequently rebuilt archive.
 4. Verify the complete draft inventory, source/tag, asset sizes and hashes where available. On a partial upload/build failure, retain the draft and successful assets; do not publish or advance latest. Draft completeness applies even when immutable releases are disabled.
 5. Publish only when this request covers publication and all expected assets are ready. Apply the established prerelease/latest policy: latest is for complete stable releases, not drafts/prereleases. Historical/backport releases should not silently displace latest. Respect existing immutable-release settings; do not enable them as an incidental repository change.
@@ -23,7 +25,7 @@ Example commands for an already published, verified tag and locally verified fil
 ```text
 gh release create v1.2.3 --repo OWNER/REPO --verify-tag --draft --title "Project v1.2.3" --notes-file release-notes.md
 gh release upload v1.2.3 project.zip project.zip.sha256 --repo OWNER/REPO
-gh release view v1.2.3 --repo OWNER/REPO --json tagName,isDraft,isPrerelease,assets,url
+gh release view v1.2.3 --repo OWNER/REPO --json tagName,isDraft,isPrerelease,body,assets,url
 gh release edit v1.2.3 --repo OWNER/REPO --draft=false --latest
 ```
 
@@ -38,6 +40,8 @@ Follow the backend's bounded failure protocol for permissions, rate limits, outa
 Confirm draft identity and content before resuming pending uploads. A published release requires readback, not another create. Unexpected source, published asset mismatch or ambiguous ownership blocks replay. Return known successful, pending and unknown effects and the next supported action; replacing a token cannot resolve a policy denial. Do not switch publication channels to evade a host rejection.
 
 ## Read back and report
+
+Read the actual release body through supported CLI/API fields (for example `gh release view TAG --repo OWNER/REPO --json body,isDraft,url`). Confirm intended highlights and preserved human sections, with no YAML front matter or duplicate curated section. A missing/mismatching body keeps note consumption unverified. Only confirmed published-body consumption permits **sdd-manage** to remove the untracked workflow-owned draft under [shared cleanup](release-highlights.md#consume-and-retain-or-clean-up); retain it for draft-only, failed/uncertain or missing readback and explicit retention. Reconcile uncertain writes before replay or cleanup.
 
 Verify repository and release identity, peeled tag source, release state, expected asset names/count/sizes/digests and latest selection. Retain tag-specific release/asset URLs and, for the actual latest stable release, [stable URLs](github-packaging.md#names-and-urls). Re-read repository latest rather than infer it from a successful edit response. Check that every advertised stable filename exists in that release; there is no older-variant fallback.
 

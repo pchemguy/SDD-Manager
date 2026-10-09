@@ -20,6 +20,14 @@ A tag pushed with the repository's `GITHUB_TOKEN` does not normally trigger anot
 
 Verify syntax with suitable tooling, inspect permissions/inputs/checkout identity and execute the local build/verification where supported. Use [release checks](../../sdd-verify/references/release-checks.md). Distinguish a parsed YAML file, successful local package build, actual CI run and hosted release verification. GitHub Actions syntax and runtime compatibility are not proved merely by YAML parsing.
 
+## Notes transfer
+
+Use [shared Git highlights](release-highlights.md) to prepare/update curated notes through the exact intended source before dispatch or a publishing tag push. Select the previous baseline before creating the pending release tag, or explicitly exclude that tag; retries retain the validated prior baseline. Complete semantic editing on the agent side. An ignored local draft is absent from checkout, and ordinary Actions runners do not implicitly supply an AI agent. If a workflow collects Git evidence itself, establish complete tags/history (a default shallow checkout is insufficient), but deterministic log collection is not semantic distillation.
+
+Inspect the existing publisher’s declared mechanism. For manual dispatch, a declared string notes input can carry the finalized Markdown via a supported structured/JSON input file; the publishing job must consume that value as data through a notes file/API body, not shell interpolation. Check input size limits and preserve multiline bytes. For larger notes or tag-only workflows, establish an authorized source-associated artifact/file transfer with explicit retrieval and integrity/identity checks; never assume the ignored draft was pushed. Keep YAML control data out of the final body. Do not add an untrusted arbitrary download/execute mechanism.
+
+If the existing workflow has no supported notes transfer, extend and verify it before triggering publication or return the prepared handoff as pending. Generated notes alone do not satisfy requested curated highlights. Reuse one publisher, preserve human notes, avoid duplicate highlights and retain the local draft until published-body readback confirms consumption. Build-only or failed runs retain it.
+
 ## Dispatch and monitor
 
 Dispatch only when the request covers running the selected workflow and its effects. Resolve repository, workflow ID/path, selected ref, actual inputs, exact intended release source and expected outputs. Check [operation-specific access](github.md#release-and-workflow-access); Workflows write does not imply Actions write. Do not enable a disabled workflow or change repository settings by implication.

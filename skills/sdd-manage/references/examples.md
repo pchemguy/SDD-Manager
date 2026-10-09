@@ -83,9 +83,13 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 
 | Request or state | Coordinated result |
 | --- | --- |
+| Collect highlights locally since the last stable release | Run shared forge Git preparation without selecting a host or requesting a token; create/update the ignored YAML draft and stop before release/tag writes. |
+| Existing highlights draft has manual cuts; target advances | Validate its tag/ancestry/release line, analyze only pending commits and preserve curation; a revert can remove an old claim. Save coverage only after successful complete analysis. |
 | Supplied ZIP; prepare a building workflow only | Inspect real contents/source and resolve package layout; prepare/verify/persist the workflow through existing Git ownership. Stop before product release creation. |
 | Several platforms need different package contents | Resolve material variants interactively, retain decisions, use stable conventional suffixes and collect the full expected asset set before one publisher. |
 | Create release from an accepted verified tag and package set | Select direct publication or the established workflow; create/reuse a matching draft, upload/verify all assets, publish within the requested state/latest policy and read back. No TASKS or tracking activation prerequisite. |
+| Ignored highlights draft; tag-only CI has no notes-transfer input | Prepare/extend the single publisher’s declared transfer mechanism before triggering; pushing a tag does not carry the ignored file. |
+| Release remains draft-only or published body cannot be confirmed | Retain the local highlights draft; successful assets or accepted dispatch alone do not justify cleanup. |
 | Contents/Workflows access exists; Actions dispatch is denied | Diagnose operation-specific Actions access; do not assume workflow-file permission authenticates dispatch or replace a token for a policy denial. |
 | Upload times out after a draft asset may exist | Read draft/tag/assets before replay; resume only missing matched work and preserve pending/unknown effects. Do not clobber published assets. |
 | Latest release lacks an advertised variant | Keep the asset/latest result unverified; latest URLs do not fall back to older variant assets. |
