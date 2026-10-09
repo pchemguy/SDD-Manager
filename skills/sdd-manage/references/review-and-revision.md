@@ -4,6 +4,8 @@ Use **sdd-conventions**' **Review campaigns** reference for campaign identity/st
 
 This is the formal campaign path for the [revision core workflow](workflows.md#core-development-workflows). A directly accepted focused amendment can enter revision planning without fabricating a preceding review. At a paused implementation checkpoint, [lightweight steering](workflows.md#steering-as-lightweight-revision) uses the human-defined objective and existing documents rather than requiring campaign artifacts. Both paths retain their own scope and stop rules. Checkpoint steering records live under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>-<slug>/`; general campaign records retain the reviews prefix.
 
+For an explicitly selected comprehensive prerelease review, load the [prerelease profile](prerelease-review.md) for candidate scope, coverage, owner routing and readiness criteria. It uses this lifecycle; release reminders do not activate review.
+
 ## Review
 
 Review the selected current source and active records. Prior closed campaigns are [frozen historical artifacts](../../sdd-conventions/references/review-campaigns.md#closed-campaign-records), not routine review inputs or current-validity targets. Read selected historical material only for a specific task need. Maintain findings/rechecks in the active campaign only; do not append to closed reports or create findings about their incompatibility with later changes.

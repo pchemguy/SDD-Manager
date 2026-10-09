@@ -30,6 +30,8 @@ If the existing workflow has no supported notes transfer, extend and verify it b
 
 ## Dispatch and monitor
 
+For a run that will publish a release, apply the shared [advisory prerelease review reminder](../../sdd-manage/references/prerelease-review.md#advisory-release-reminder), reusing any disposition from the release handoff. Build-only runs retain their preparation boundary. Apply the same handoff before an authorized publishing tag trigger through the release lifecycle.
+
 Dispatch only when the request covers running the selected workflow and its effects. Resolve repository, workflow ID/path, selected ref, actual inputs, exact intended release source and expected outputs. Check [operation-specific access](github.md#release-and-workflow-access); Workflows write does not imply Actions write. Do not enable a disabled workflow or change repository settings by implication.
 
 For a configured workflow, a command recipe is:

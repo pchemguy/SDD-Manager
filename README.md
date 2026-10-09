@@ -174,6 +174,7 @@ Systematic reviews use a review plan; focused requests can supply the criteria d
 | Integrate an accepted feature | “Incorporate FEATURE-SPEC into SPEC only.” | Selected main documents reconciled without unrelated task-list changes. |
 | Review and revise a project | “Plan a systematic review,” “Review this protocol,” or “Implement accepted findings.” | Retained campaign plans/reports, stable findings, and authorized verified revisions incorporated into governing documents. |
 | Review or maintain a scope | “Review PLAN,” “Verify this phase,” or “Align README.” | Findings, evidence, or the explicitly requested maintenance. |
+| Review a release candidate | “Run a comprehensive prerelease review of this candidate.” | Complete current-product coverage, candidate-specific findings and readiness; published report, with repairs and release kept within separately authorized scope. |
 | Collect release highlights | “Summarize key changes since the latest release; update the draft incrementally.” | Provider-independent Git range, curated ignored YAML draft and body-only release notes; no hosting access or publication required. |
 | Prepare release packaging | “Verify this ZIP and prepare a workflow that builds it.” | Assessed package contents, stable asset names, build/checksum procedure and verified workflow preparation; interactive development when needed. |
 | Create a GitHub release | “Create release v1.2.3 from the verified commit using the configured packages.” | One publisher, complete assets, release state/readback and applicable stable download URLs; actual CI/download verification limits. |
@@ -184,6 +185,8 @@ Preparation and review stop before implementation unless your request includes i
 For detailed entry conditions and stopping rules, see the [workflow catalog](skills/sdd-manage/references/workflows.md).
 
 ### Release packages and commands
+
+A [comprehensive prerelease review](skills/sdd-manage/references/prerelease-review.md) assesses current product coherence, contracts, implementation, tests, documentation, README/AGENTS.md, diagrams and distribution evidence. Select it explicitly to open a review campaign. Release publication workflows provide an advisory reminder; this review is optional and does not block an authorized release or replace its required checks.
 
 Use [Git release highlights](skills/sdd-forge/references/release-highlights.md) to collect complete commit messages since the selected release tag, including merged work, and curate key user changes. The default ignored `.release-highlights.md` draft records the previous release commit and last analyzed commit in YAML; incremental updates preserve edits and cuts. Release preparation refreshes it through the exact source and passes only its Markdown body to the publisher. An ignored draft requires explicit CI notes transfer; cleanup follows verified published-body consumption. Local preparation works before provider selection and needs no token.
 

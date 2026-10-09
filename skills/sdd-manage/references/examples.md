@@ -70,6 +70,16 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 | “Plan and run a comprehensive plugin review.” | Create a review plan; assess and commit each unit's report; the coordinator publishes the committed checkpoint before dependent work; consolidate findings and revision handoff. |
 | “Implement the accepted revision plan.” | Incorporate relevant accepted decisions into governing documents, perform bounded revisions with evidence checkpoints, then verify, explicitly merge, and publish. Retain the campaign plans/reports. |
 
+## Prerelease review and reminder examples
+
+| Request / context | Coordinated result |
+| --- | --- |
+| “Run comprehensive prerelease review.” Only a small release diff exists. | Load the [prerelease profile](prerelease-review.md), pin the candidate and inventory the complete current supported product; prioritize changed/risky paths and publish the review report. Stop before repairs or release unless independently authorized. |
+| “Create this release.” No review was selected. | Give the shared advisory reminder once, then continue the authorized release under its ordinary required checks. Do not ask for confirmation, infer a waiver or start review. |
+| Direct sdd-forge call to a publishing workflow after the manager already gave the reminder. | Reuse the handoff disposition; no duplicate reminder or new review gate. Build-only preparation remains outside publication. |
+| Human previously declined review, or an applicable candidate-specific review is available. | Reuse the actual decision/evidence and its scope. Candidate changes identify affected evidence/rechecks without automatically activating review. |
+| “Review before publishing.” Publication was otherwise authorized. | Honor the explicitly requested review-first sequence and report boundary; review selection alone does not expand repair or external-check authority. |
+
 ## Proactive tracking choices
 
 | Context | Coordinated result |

@@ -23,6 +23,8 @@ Add a backend only when it supports a concrete hosted operation with its own rep
 
 ## Shared release preparation
 
+For requested release creation/completion or a publishing workflow run, apply sdd-manage's shared [advisory prerelease review reminder](../sdd-manage/references/prerelease-review.md#advisory-release-reminder), including direct calls. Reuse its handoff disposition when already covered by the coordinator.
+
 For “collect key changes since the latest release,” local note preparation or incremental highlights, load [Git release highlights](references/release-highlights.md). Pin the release-tag baseline and target, collect complete messages, curate an ignored YAML-checkpointed draft and return body-only notes. No provider, token, tracking or TASKS is required. Release creation consumes this shared workflow; preparation alone stops before publication. Keep draft cleanup tied to verified published-body consumption.
 
 ## Available backends
