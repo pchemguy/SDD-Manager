@@ -1,10 +1,20 @@
-# Disclose SDD Manager use in a target repository
+# Bootstrap SDD Manager in a target repository
+
+## Greenfield startup
+
+Load this section at greenfield entry, before the first persistence operation. Treat a preliminary project description as a seed for exploration, not an accepted specification. Use the current **sdd-orient** handoff to establish the eligible Git repository, controlling instructions and actual state; route problem framing, alternatives and consequential choices to **sdd-design**'s [exploration](../../sdd-design/references/exploration.md). Retain established decisions and identify assumptions without imposing an unrequested product, stack or feature set.
+
+Carry the supplied repository, project scope, stopping boundary and explicit repository-operation authorization into [coordination](coordination.md). Apply the existing [workflows](workflows.md) and [document QC gates](document-qc-gates.md) for acceptance and execution boundaries, and [Git workflows](git-workflows.md) for complete checkpoint publication and synchronization. Ask for material missing information or consequential decisions; continue independent authorized work when sound. Standing repository authority does not accept proposed requirements or select an implementation range.
+
+Treat an explicit request for GitHub phase labels, milestones and task issues as tracking confirmation under [tracking decision](tracking-decision.md); carry that choice without asking again. Delegate projection, associations and verified state updates to **sdd-forge** and [phase activation](phase-activation.md) at their eligible boundaries. Protect a supplied token through [hosting credentials](credentials.md); its technical permissions neither define project scope nor require unrelated operations.
+
+The root [Greenfield Project Prompt Template](<../../../Greenfield Project Prompt Template.md>) supplies the user's project seed, repository/token inputs, standing authorization and tracking selection. The plugin owns startup and subsequent procedures. Continue through the requested stages and checkpoints; preserve preparation-only, local-only and explicit stop instructions. The disclosure/adoption trigger below remains the first authorized SDD commit, not the start of conversational exploration.
 
 ## Ownership and trigger
 
 Before the **first authorized SDD commit** in a target repository, include the disclosure and usage notice below in that same commit. This includes initial document preparation or review records, not just the first implementation task. “Initial” means SDD adoption in an already eligible Git worktree; do not initialize Git implicitly. Read-only orientation, discussion, selection and verification create nothing.
 
-**sdd-manage** owns this shared policy and coordinates bootstrap for preparation, maintenance and feature incorporation. **sdd-implement** and **sdd-steer** apply it in their own commit procedures, including direct invocations. **sdd-report** checks bootstrap evidence when composing a commit but does not write or commit files. Load this reference before the first persistence operation; it is an ordinary agent procedure, not a hidden hook or client installer.
+**sdd-manage** owns this shared policy and coordinates bootstrap for preparation, maintenance and feature incorporation. **sdd-implement** and **sdd-steer** apply it in their own commit procedures, including direct invocations. **sdd-report** checks bootstrap evidence when composing a commit but does not write or commit files. Load this reference at greenfield entry and before the first persistence operation in other adoption workflows; it is an ordinary agent procedure, not a hidden hook or client installer.
 
 For implementation, push outstanding commits first under the existing startup protocol, then perform bootstrap before staging the first new result. Do not make a separate bootstrap commit ahead of the requested result. A preparation-only request can bootstrap with its preparation commit and still stop before implementation.
 
