@@ -39,4 +39,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `031_646af89` | GitHub release/package/workflow guidance and Workflows token profile implemented at source version 0.16.0; 113 support tests, actual package build and 16 source assessments verified. Live release acceptance unverified. | [Revision plan](031_646af89-github-release-workflow/REVISION-PLAN.md), [revision report](031_646af89-github-release-workflow/REVISION-REPORT.md) |
 
+| `032_a64f6b7` | Provider-independent Git release highlights, incremental YAML draft, curated release-message handoff and verified cleanup; planning only. | [Revision plan](032_a64f6b7-release-highlights/REVISION-PLAN.md) |
+
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
