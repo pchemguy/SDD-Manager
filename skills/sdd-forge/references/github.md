@@ -6,11 +6,16 @@ Load only the additional reference needed for the request:
 
 | Request | Load |
 | --- | --- |
+| Assess a ZIP or develop release package contents/names interactively | [package preparation](github-packaging.md) |
+| Prepare, extend or dispatch/monitor a release workflow | [release workflows](github-release-workflows.md) |
+| Create/finish a release, upload assets or recover/read back publication | [release lifecycle](github-releases.md) |
 | Create or reconcile phase labels, GitHub milestones, or task issues | [TASKS projection](github-projection.md) |
 | Close/reopen a milestone, assess milestone closure backlog or confirm hosted phase gates | [milestone lifecycle](github-milestone-lifecycle.md) |
 | Resolve task IDs to issue numbers for a commit or handoff, check issue status, or close verified issues | [issue lifecycle](github-issue-lifecycle.md) |
 
-`docs/dev/TASKS.md` supplies complete-project task IDs and progress; an active `docs/dev/FEATURE-TASKS.md` supplies its feature's scoped IDs and progress until reconciliation. Task IDs remain unique across both lists. PLAN or active FEATURE-PLAN supplies phase and milestone outcomes and exit conditions. SPEC and applicable design or feature documents supply requirements when a task brief needs them. GitHub is a projection, not the authority for task scope or verified completion. Resolve a task in its owning list; a feature task later incorporated into TASKS retains its original issue. Use **sdd-report** to compose issue drafts if available; if unavailable, use the baseline format in the projection reference. Neither dependency is required for a read-only lookup.
+For task tracking, `docs/dev/TASKS.md` supplies complete-project task IDs and progress; an active `docs/dev/FEATURE-TASKS.md` supplies its feature's scoped IDs and progress until reconciliation. Task IDs remain unique across both lists. PLAN or active FEATURE-PLAN supplies phase and milestone outcomes and exit conditions. SPEC and applicable design or feature documents supply requirements when a task brief needs them. GitHub is a projection, not the authority for task scope or verified completion. Resolve a task in its owning list; a feature task later incorporated into TASKS retains its original issue. Use **sdd-report** to compose issue drafts if available; if unavailable, use the baseline format in the projection reference. Neither dependency is required for a read-only lookup.
+
+Package and release operations use their accepted source/build/release inputs; they do not require TASKS or tracking activation. Repository file edits are coordinated through sdd-manage and normal Git persistence; provider release/dispatch writes remain backend-owned.
 
 ## Repository and access
 
@@ -28,13 +33,25 @@ Request a fine-grained personal access token with **Only select repositories** e
 | Contents | Read and write |
 | Issues | Read and write |
 | Pull requests | Read and write |
+| Workflows | Read and write |
 | Metadata | Read, added automatically |
 
-This is the SDD token convention, not a claim that every endpoint requires all four write permissions. The profile does not add PR operations to this backend, grant workflow-file modification access or protected-branch bypass, or override account/repository policy. Verify the relevant endpoint and any indicated approval restriction using GitHub's [token management](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) and [fine-grained permissions](https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens) documentation.
+This is the SDD token convention, not a claim that every endpoint requires the full profile. Workflows write supports authorized workflow-file modification together with the relevant Contents access. The profile does not add PR operations, protected-branch bypass or automatic workflow dispatch, or override account/repository policy. Verify the relevant endpoint and any indicated approval restriction using GitHub's [token management](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) and [fine-grained permissions](https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens) documentation.
 
 For HTTPS Git authentication, sdd-manage restores a supported shell credential facility from the local token. For this backend's API operations, use the client's supported protected token channel; do not assume shell recovery authenticates a connector or silently substitute a different account. SSH remotes require their transport's authentication and an explicit decision before any transport change.
 
-### Access failures and object ownership
+### Release and workflow access
+
+| Operation | Access to assess |
+| --- | --- |
+| Commit/push or API-edit workflow files | Relevant Contents write plus Workflows write; normal repository/Git protections still apply. |
+| Create/update releases and upload assets | Contents write; creating a missing tag at a workflow-changing target can additionally require Workflows write under current provider rules. Prefer an explicitly verified existing tag. |
+| Dispatch or perform requested run-management writes | Conditional Actions write; Workflows write is not a substitute. |
+| Inspect private workflows/runs/artifacts | Conditional Actions read under the relevant endpoint; public read endpoints may permit unauthenticated access. |
+
+Check current [workflow endpoints](https://docs.github.com/en/rest/actions/workflows), [release endpoints](https://docs.github.com/en/rest/releases/releases) and [release asset endpoints](https://docs.github.com/en/rest/releases/assets) for the selected operation. Add Actions access only for the required operation. A workflow job uses its own scoped GITHUB_TOKEN permissions, not the user PAT profile. Updating these instructions does not change an existing PAT; recover only an observed access failure through the manager. Never assume file-edit permission proves dispatch access.
+
+### Access failures and tracking object ownership
 
 For an access-related 403, stop the affected write and identify the repository, endpoint, attempted operation, and permission or other cause indicated by GitHub without exposing the credential. Classify rate limits before credential escalation using the response protocol below. Follow the shared access-failure protocol to obtain a suitable token from **sdd-manage**, or ask the user when invoked directly. Recheck access before retrying; do not assume every 403 is resolved by a different token or retry indefinitely.
 

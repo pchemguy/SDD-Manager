@@ -79,6 +79,17 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 | Tracking confirmed after several local tasks completed | Discover/reconcile eligible objects and attach verified retained evidence; leave incomplete work open and keep historical inactive-state reports truthful. |
 | Preparation may continue while tracking confirmation is pending | Continue independent authorized documents; resolve the actual activation choice before dependent phase execution. |
 
+## Release preparation and publication
+
+| Request or state | Coordinated result |
+| --- | --- |
+| Supplied ZIP; prepare a building workflow only | Inspect real contents/source and resolve package layout; prepare/verify/persist the workflow through existing Git ownership. Stop before product release creation. |
+| Several platforms need different package contents | Resolve material variants interactively, retain decisions, use stable conventional suffixes and collect the full expected asset set before one publisher. |
+| Create release from an accepted verified tag and package set | Select direct publication or the established workflow; create/reuse a matching draft, upload/verify all assets, publish within the requested state/latest policy and read back. No TASKS or tracking activation prerequisite. |
+| Contents/Workflows access exists; Actions dispatch is denied | Diagnose operation-specific Actions access; do not assume workflow-file permission authenticates dispatch or replace a token for a policy denial. |
+| Upload times out after a draft asset may exist | Read draft/tag/assets before replay; resume only missing matched work and preserve pending/unknown effects. Do not clobber published assets. |
+| Latest release lacks an advertised variant | Keep the asset/latest result unverified; latest URLs do not fall back to older variant assets. |
+
 ## Authority, diagnostics and retained notes
 
 | Context | Coordinated result |

@@ -1,6 +1,6 @@
 ---
 name: sdd-verify
-description: Use when selecting and running checks for an SDD task, selected change, milestone, phase, or project; assessing acceptance and exit-condition coverage; classifying observed failures; performing read-only milestone/phase implementation code review, or returning verification evidence and remaining gaps before completion.
+description: Use when selecting and running checks for an SDD task, selected change, milestone, phase, or project; assessing acceptance and exit-condition coverage; classifying observed failures; performing read-only milestone/phase implementation code review, checking release package contents, release workflows, CI outputs and hosted asset integrity; or returning verification evidence and remaining gaps before completion.
 ---
 
 # Verify a selected work boundary
@@ -11,10 +11,11 @@ Establish the requested task, change, milestone, phase, or project scope. Load t
 | --- | --- |
 | Review milestone/phase implementation code and findings | [boundary review](references/boundary-review.md) |
 | Derive checks from requirements, changes, and dependencies | [check selection](references/check-selection.md) |
+| Assess package contents, release workflows, CI outputs and hosted download evidence | [package and release checks](references/release-checks.md) |
 | Execute checks and assess acceptance evidence | [execution and evidence](references/execution-and-evidence.md) |
 | Classify failures and return unresolved work | [failure assessment](references/failure-assessment.md) |
 
-Use a current **sdd-orient** handoff for governing instructions, Git state, dirty-path ownership, relevant documents, and declared commands. **sdd-manage** coordinates the requested scope and execution prerequisites; the active implementation workflow, **sdd-implement** for main task work or **sdd-steer** for a checkpoint amendment, requests verification within its boundary. Read the owning TASKS or FEATURE-TASKS, relevant SPEC contracts, PLAN exit conditions, design and layout, actual changes, tests, and existing evidence as needed. Read-only check planning can precede execution; commands with side effects require the established eligible Git worktree and authorized environment.
+Use a current **sdd-orient** handoff for governing instructions, Git state, dirty-path ownership, relevant documents, and declared commands. **sdd-manage** coordinates the requested scope and execution prerequisites; the active implementation workflow, **sdd-implement** for main task work or **sdd-steer** for a checkpoint amendment, requests verification within its boundary. For standalone package/release work, use accepted source/build/package inputs without inventing TASKS; load release checks. Otherwise read the owning TASKS or FEATURE-TASKS, relevant SPEC contracts, PLAN exit conditions, design and layout, actual changes, tests, and existing evidence as needed. Read-only check planning can precede execution; commands with side effects require the established eligible Git worktree and authorized environment.
 
 For an explicit boundary review task, load boundary review and assess implementation code separately from test execution. Neither activity substitutes for the other. Return findings and recheck evidence without repairs or task/hosted state changes.
 

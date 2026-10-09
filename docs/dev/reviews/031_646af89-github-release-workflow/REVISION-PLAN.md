@@ -7,8 +7,8 @@
 - Working branch: `revision/031_646af89-github-release-workflow`.
 - Directory: `docs/dev/reviews/031_646af89-github-release-workflow/`.
 - Integration target: actual repository default branch, verified as `main`.
-- State: campaign opened; planning only. Implementation, workflow dispatch, tags and releases have not been performed.
-- Authority: the user requested opening this campaign and developing its scope. Commit and publish this planning checkpoint to the campaign branch; stop before source execution and default-branch integration.
+- State: execution authorized by the user’s “Execute”; source revision in progress. Product workflow dispatch, tags and releases are outside this campaign’s execution effects.
+- Authority: the user authorized planning publication and subsequently commanded execution. Implement the accepted plan, verify/publish checkpoints and explicitly merge/publish the complete verified campaign into the established default branch. Do not create a product release merely to exercise the new capability.
 
 ## Requested direction
 
@@ -127,7 +127,7 @@ Scenarios are planned, not executed. During implementation, choose appropriate d
 
 Signing, SBOMs, custom provenance, installers, package-registry publication, release channels beyond GitHub latest, automatic version bumping and changelog generation are optional future/project-specific work. Support their declared requirements without making them universal prerequisites. Automatic release creation after every phase is not proposed.
 
-Recommended defaults in this plan are draft-first publication, checksums, retained asset names, an exact verified source and supported release creation on request. They remain proposals until accepted for execution. A target project's actual release version, platforms and packaging choices are resolved in that project's request rather than hardcoded into SDD Manager.
+Recommended defaults in this plan are draft-first publication, checksums, retained asset names, an exact verified source and supported release creation on request. They were accepted for execution by the user’s “Execute” instruction. A target project's actual release version, platforms and packaging choices are resolved in that project's request rather than hardcoded into SDD Manager.
 
 ## Provider sources
 
@@ -143,4 +143,4 @@ English primary sources inspected on 2026-10-09; implementation must recheck mat
 
 ## Persistence and limits
 
-Publish this campaign plan on its revision branch and leave `main` unchanged. No source behavior, existing release workflow, PAT permissions, tags or releases change at opening. Execution will create its own evidence in planned `REVISION-REPORT.md`; no nonexistent report is linked. Prior closed review/feature records remain outside routine context and validation. Identity discovery inspected names/refs only.
+The opening checkpoint was published on the revision branch without changing `main`. Authorized execution retains source/evidence there until the complete verified explicit merge. The repository’s own release workflow and existing PAT permissions/tags/releases need no mutation to implement this instruction capability. Execution records actual evidence in `REVISION-REPORT.md`. Prior closed review/feature records remain outside routine context and validation. Identity discovery inspected names/refs only.

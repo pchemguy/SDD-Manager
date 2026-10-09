@@ -19,7 +19,7 @@ Load the package using your agent client's supported plugin mechanism. The packa
 - **Commits and pushes:** Establish the branch and remote destination. Implementation pushes outstanding commits before starting further task work, then commits and pushes each completed task before advancing.
 - **Checks:** Use the project's declared test, build, and documentation tools.
 - **Authentication:** Attempt pushes with the current shell session. On an access/credential failure, sdd-manage reuses a suitable ignored repository token or requests and saves one beside the root .gitignore before recovering the client session. `*.tkn` files remain untracked.
-- **Hosting:** GitHub access is needed only for remote operations. The conventional fine-grained token selects solely the target repository with read/write for Commit statuses, Contents, Issues, and Pull requests; Metadata read access is automatic. Git and API clients authenticate separately. Local development does not require a hosting token.
+- **Hosting:** GitHub access is needed only for remote operations. The conventional fine-grained token selects solely the target repository with read/write for Commit statuses, Contents, Issues, Pull requests, and Workflows; Metadata read access is automatic. Add Actions access when required for workflow dispatch or private run inspection. Git and API clients authenticate separately. Local development does not require a hosting token.
 
 Give the coordinator a concrete objective and stopping point. For example:
 
@@ -168,11 +168,19 @@ Systematic reviews use a review plan; focused requests can supply the criteria d
 | Integrate an accepted feature | “Incorporate FEATURE-SPEC into SPEC only.” | Selected main documents reconciled without unrelated task-list changes. |
 | Review and revise a project | “Plan a systematic review,” “Review this protocol,” or “Implement accepted findings.” | Retained campaign plans/reports, stable findings, and authorized verified revisions incorporated into governing documents. |
 | Review or maintain a scope | “Review PLAN,” “Verify this phase,” or “Align README.” | Findings, evidence, or the explicitly requested maintenance. |
+| Prepare release packaging | “Verify this ZIP and prepare a workflow that builds it.” | Assessed package contents, stable asset names, build/checksum procedure and verified workflow preparation; interactive development when needed. |
+| Create a GitHub release | “Create release v1.2.3 from the verified commit using the configured packages.” | One publisher, complete assets, release state/readback and applicable stable download URLs; actual CI/download verification limits. |
 | Synchronize GitHub tracking | “Create issues and milestones for these tasks.” | Phase labels, milestones, task issues, and verified task associations. |
 
 Preparation and review stop before implementation unless your request includes it. Steering finishes the amendment and returns control to you; you separately decide when to resume the task list. Transferring feature tasks into the main task list requires both lists in scope so each task retains one executable owner.
 
 For detailed entry conditions and stopping rules, see the [workflow catalog](skills/sdd-manage/references/workflows.md).
+
+### Release packages and commands
+
+Use [package preparation](skills/sdd-forge/references/github-packaging.md) for archive contents and conventional variant names, [release workflows](skills/sdd-forge/references/github-release-workflows.md) to prepare/dispatch a build, and [release creation](skills/sdd-forge/references/github-releases.md) to publish verified assets. Filenames remain version-free, for example `project.zip` or `project-windows-x64.zip`; tags and release metadata retain version identity. Stable downloads use `https://github.com/{OWNER}/{REPO}/releases/latest/download/{ASSET_NAME}`. Each latest stable release must contain the complete advertised asset set.
+
+Preparing a workflow does not itself publish a product release. Release requests can use the existing workflow or verified local packages through supported GitHub CLI/API operations. The references include `gh workflow run` and draft/upload/publish command recipes. No task tracking activation is required. [Release checks](skills/sdd-verify/references/release-checks.md) and [reporting](skills/sdd-report/references/releases.md) distinguish local build, CI execution, hosted metadata and downloaded-byte verification.
 
 ## Branches and integration
 
@@ -239,7 +247,7 @@ The coordinator handles workflow selection and shared prerequisites. Focused ski
 | [sdd-verify](skills/sdd-verify/SKILL.md) | Run the required checks and assess acceptance evidence, failures, and gaps. |
 | [sdd-docs](skills/sdd-docs/SKILL.md) | Maintain professional module/API documentation, README, guides, and examples. |
 | [sdd-report](skills/sdd-report/SKILL.md) | Draft issues, commit messages, PR descriptions, and evidence-backed progress reports. |
-| [sdd-forge](skills/sdd-forge/SKILL.md) | Project tasks to GitHub and reconcile verified issue status. |
+| [sdd-forge](skills/sdd-forge/SKILL.md) | Coordinate GitHub task tracking, release packages/workflows and verified release publication. |
 
 ## Development-document quality gates
 
