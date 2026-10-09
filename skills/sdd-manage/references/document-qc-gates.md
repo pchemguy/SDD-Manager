@@ -28,3 +28,9 @@ sdd-integrate-feature and sdd-steer retain their accepted correction ownership. 
 Feature QC reports stay adjacent to their active roots and, when eligible/in scope, archived sources. Implementation reports retain their lifecycle phase/feature prefixes. Preserve scope, report/source identity, original findings and review history during moves; archive readiness is historical, not current main-document acceptance.
 
 After interruption, inspect files, report source identities, pending corrections, index and commits. Finish the same correction/recheck/report/push without regenerating valid documents or duplicating Revision sections. Do not mark a gate Ready from a lost response, checkbox or commit subject. No new transaction journal is required.
+
+## Human acceptance alongside QC
+
+Apply [human document review](human-document-review.md) independently of technical Ready/Blocked. Each necessary new root/proposal pauses for human review before dependent progression, including direct calls and feature deltas. Existing acceptable startup inputs need no retrospective interactive review; requested review and actual pending human boundaries remain binding.
+
+For a newly created PLAN awaiting new layout, assess/persist strategy-scoped QC and explicitly state pending layout/TASKS readiness. Review PLAN with the human before dependent layout authoring. After layout is prepared, complete affected combined PLAN/layout QC in the adjacent PLAN report and hold TASKS for the distinct human layout checkpoint. Do not misrepresent strategy-only Ready as combined readiness.

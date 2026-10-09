@@ -18,3 +18,5 @@ Use current governing documents and the active campaign for routine orientation.
 If the target is outside a usable Git worktree, mark **repository mutation blocked**. Do not initialize Git, create files, clean worktrees, restore files, run tests with side effects, commit, or invoke a mutating workflow. A conversational or read-only inspection may continue.
 
 For a subagent, the orchestrator supplies the applicable path scope, instructions, relevant document authorities, Git baseline, known dirty paths, and prohibited mutations. A subagent can inspect additional evidence within its scope; the orchestrator rechecks the overall state before coordinating any mutation or commit.
+
+For main/feature preparation, observe actual document progress and pending human instructions under [human document review](../sdd-manage/references/human-document-review.md). Pass the next unfinished stage and any selected review to the coordinator; absent retrospective acceptance evidence alone does not require interactive replay. Keep readiness observation separate from authoring and substantive owner QC.

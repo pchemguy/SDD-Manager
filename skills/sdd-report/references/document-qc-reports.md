@@ -50,3 +50,7 @@ Append `Revision 1`, `Revision 2`, etc. for each correction/recheck cycle, inclu
 Ready requires current applicable coverage and no unresolved confirmed issue. A justified small/large group or rejected false positive is an assessment with reasoning; a knowingly deferred confirmed issue is Blocked. Explicit human exceptions keep their scope/consequences visible and do not relabel the review as passed. The implementation report's non-critical code TODO allowance does not clear document preparation gates.
 
 Return the report, checked source identities, gate supplied by its owner, actual checks, limits and required corrections. The active authoring/integration/steering workflow persists corrected artifacts and report together under ordinary scoped Git rules.
+
+## Human decision evidence
+
+Use the actual owner/coordinator evidence under [human document review](../../sdd-manage/references/human-document-review.md). Keep technical readiness and human review pending/accepted/revise state separate. Record presented document/proposal scope, exact source identity and actual decision in existing preparation/handoff evidence; never infer acceptance from Ready, a commit, silence or broad operation authority. A PLAN strategy-only report identifies pending layout coverage and blocked TASKS readiness; the subsequent layout review updates combined QC without erasing the separate human decisions.

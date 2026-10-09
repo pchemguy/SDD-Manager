@@ -83,3 +83,7 @@ Handoff: scoped facts for the next skill; unknowns and checks to repeat
 ```
 
 This report is an observation at a particular repository state, not a lasting certificate or permission to mutate. Attribute factual claims to paths or Git output when the distinction matters. Do not invent completion states from checkboxes, timestamps, or file presence alone. The orchestrator must recheck stale facts and retain responsibility for authorization, workflow selection, and final validation.
+
+## Document preparation progress
+
+Observe existing main/active feature roots, relevant decisions and exact source state, the next unfinished preparation stage, and actual pending human reviews or stopping instructions. Include these in the orientation handoff separately from technical QC. Missing historical acceptance records alone do not mean interactive review is pending. Do not perform repairs or activate interactive mode during orientation. The manager applies [human document review](../../sdd-manage/references/human-document-review.md): reuse acceptable inputs, prioritize requested interactive review, or raise important concerns and offer it.

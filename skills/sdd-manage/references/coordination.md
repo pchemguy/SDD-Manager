@@ -47,3 +47,7 @@ Return instruction source, actual user choice/grant, observed state and evidence
 ## Coordinate environment recovery
 
 On a relevant environment/tooling blocker, coordinate investigation of reasonable supported alternatives within authorized scope before declaring the work blocked. Route technical investigation to the affected execution workflow; implementation uses [environment recovery](../../sdd-implement/references/environment-recovery.md). Preserve partial work, require actual attempt/capability evidence, disclose material substitutions and resolve consequential scope/requirement decisions. Bound investigation by real constraints rather than an arbitrary retry quota. For a host denial, retain the pending operation and report the observed reason; do not reframe it as a tooling failure or switch tools to evade it.
+
+## Human document handoffs
+
+Apply [human document review](human-document-review.md) at entry and each newly created root/proposal. Pass actual presented scope/state, human decision or pending review, technical readiness and authorized next action separately. A multi-stage request still pauses after each necessary new document; routine operation authority carries through its persistence. Reuse acceptable existing main/feature inputs without interactive replay, prioritize requested interactive review and offer it for important startup concerns without assuming selection.

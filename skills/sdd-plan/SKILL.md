@@ -5,6 +5,8 @@ description: Use when planning delivery phases, milestones, dependencies, or exi
 
 # Plan delivery and physical layout
 
+Apply the manager's [human document review](../sdd-manage/references/human-document-review.md) for PLAN and layout, including necessary feature strategy/placement proposals, including direct calls. Newly created necessary documents pause for substantive human review before dependent progression. Reuse acceptable existing inputs after startup assessment without automatic interactive replay; requested interactive review comes first. Agent QC and repository-operation authority do not supply human acceptance.
+
 For preimplementation project authoring, have **sdd-manage** establish the dedicated design-docs branch under its [preparation integration gate](../sdd-manage/references/branch-management.md#preparation-integration-gate). Commit project documents and required QC reports there. Before a dependent implementation branch is created, the manager explicitly merges accepted preparation into the actual default branch, verifies and publishes that baseline. Campaign plans/reports remain on revision branches; active implementation and steering amendments preserve their working-branch ownership. Read-only work creates no branch.
 
 Default to an early meaningful end-to-end MVP followed by small, testable capability increments; preserve the complete intended design and SPEC. Use the delivery reference for scope, prerequisite exceptions, and exit evidence.

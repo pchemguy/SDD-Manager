@@ -103,3 +103,13 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 | Tracking omission discovered; earlier PLAN merely says inactive | Diagnose missing capability-choice coordination, not a proven user refusal or compulsory activation. Offer the actual pending decision. |
 | User requests amendment notes be collected in the current findings file | Persist stable findings within that scope; report its actual commit/push state. Do not start source repairs unless selected. |
 | Notes exist only in conversation and no write scope exists | Report conversation-only storage; no claim of a durable register or implementation. |
+
+## Human document review examples
+
+- “Prepare the whole greenfield project through TASKS”: create/QC/persist PROJECT, present substantive analysis and pause. Acceptance permits the authorized ARCHITECTURE step; repeat at each necessary root, with SPEC before PLAN and separate PLAN/layout checkpoints.
+- “Continue preparation; PROJECT through SPEC already exist”: orient and assess actual progress, reuse acceptable inputs, then create PLAN and pause at its new-document review. Do not replay existing documents unless requested or actually pending.
+- “Review the existing architecture with me, then continue”: begin with concise structural analysis and resolve that selected interactive review before dependent work.
+- Startup finds contradictory feature contracts: explain the concern and offer interactive review; an unselected offer is not interactive mode, and declining cannot clear the contract blocker.
+- A small feature reuses sufficient architecture/strategy/layout: create only the necessary FEATURE-SPEC and FEATURE-TASKS deltas, reviewing each new proposal before dependent work. A larger delta reviews each needed design/PLAN/placement proposal separately.
+- Human requests revisions or the conversation is interrupted at PLAN review: preserve the pending decision, revise/recheck the same owner and present its actual state. No assumed acceptance and no regenerated chain.
+- Standing Git/token authority: persist the checkpoint without another repository-operation permission question; still pause for document acceptance.
