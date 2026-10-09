@@ -42,6 +42,8 @@ These entries select stages or supporting operations within a core workflow; the
 
 ## Release operations
 
+For requested release publication, apply the [advisory prerelease review reminder](prerelease-review.md#advisory-release-reminder) at entry and carry its disposition through the release handoff. The shared policy defines when to remind and how to continue; selecting release work does not select review.
+
 | Request | Route and boundary |
 | --- | --- |
 | Collect/revise highlights since a release | Use sdd-forge’s [shared Git highlights](../../sdd-forge/references/release-highlights.md) before provider selection and sdd-report for curation. Coordinate draft/ignore ownership and exact source coverage. Return the ignored local draft or finalized body; no hosting access, TASKS, release/tag creation or publication is required. |

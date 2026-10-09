@@ -4,6 +4,8 @@ Use for requested release creation, draft completion, release readback or recove
 
 ## Resolve identity and select one publisher
 
+At release entry, apply the shared [advisory prerelease review reminder](../../sdd-manage/references/prerelease-review.md#advisory-release-reminder), reusing the coordinator/direct-call disposition. Follow that policy without adding a review gate to this lifecycle.
+
 Establish repository, exact verified source SHA, version/tag, expected package/checksum set, title/notes, draft/prerelease state and latest selection from the request and current project policy. Ask for consequential unresolved choices, not an authorization already supplied. No TASKS or tracking activation is needed for a standalone release. Prepare missing package inputs through the package owner before publication.
 
 Before creating/pushing the pending release tag or triggering its publisher, create/update [shared Git highlights](release-highlights.md) through the exact verified source, explicitly excluding that pending tag from previous-baseline selection. On retries validate/reuse the pinned prior baseline. Prepare final body-only notes through reporting, preserving accepted human sections. Establish direct notes-file/API use or the workflow’s [notes transfer](github-release-workflows.md#notes-transfer); a tag-only publisher without transfer needs extension before triggering.
