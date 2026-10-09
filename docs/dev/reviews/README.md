@@ -37,6 +37,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `030_a3f35e4` | Greenfield root prompt, startup routing and release/pinned-package inclusion locally verified; publication pending. | [Revision plan](030_a3f35e4-greenfield-prompt-template/REVISION-PLAN.md), [revision report](030_a3f35e4-greenfield-prompt-template/REVISION-REPORT.md) |
 
-| `031_646af89` | GitHub Release Workflow: package assessment/build preparation, stable asset names, release creation/recovery and Workflows token permission; planning only. | [Revision plan](031_646af89-github-release-workflow/REVISION-PLAN.md) |
+| `031_646af89` | GitHub release/package/workflow guidance and Workflows token profile implemented at source version 0.16.0; 113 support tests, actual package build and 16 source assessments verified. Live release acceptance unverified. | [Revision plan](031_646af89-github-release-workflow/REVISION-PLAN.md), [revision report](031_646af89-github-release-workflow/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
