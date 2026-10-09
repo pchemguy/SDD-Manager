@@ -1,6 +1,6 @@
 ---
 name: sdd-conventions
-description: "Use when designing or reviewing a chosen architecture, design pattern, component boundary, API, module, refactor, Phase → Milestone → Task hierarchy, task breakdown, hosted task mapping, repository hosting-token storage or authentication recovery, workflow branch identities and artifact locations, review/revision campaign records, or code change; also use during code review and when comparing design options. Assess cohesion, dependencies, testability, complexity, and SOLID, DRY, and KISS where relevant."
+description: "Use when designing or reviewing a chosen architecture, design pattern, component boundary, API, module, refactor, Phase → Milestone → Task hierarchy, task breakdown, hosted task mapping, repository hosting-token storage or authentication recovery, workflow branch identities and artifact locations, review/revision campaign records, Markdown document style, or code change; also use during code review and when comparing design options. Assess cohesion, dependencies, testability, complexity, and SOLID, DRY, and KISS where relevant."
 ---
 
 # Shared conventions
@@ -9,6 +9,7 @@ Use the relevant convention only when its concern occurs in the current work. Re
 
 ## Available conventions
 
+- **Markdown style:** Read [Markdown style](references/markdown-style.md) whenever authoring, revising or reviewing Markdown documents, templates or hosted drafts of any type.
 - **Modularity:** Read [modularity](references/modularity.md) when creating or assessing boundaries among system blocks, components, document nodes, code modules, or executable tasks, including code review.
 - **Design heuristics:** Read [design heuristics](references/design-heuristics.md) when evaluating a chosen design or pattern, reviewing an implementation or refactor, or comparing options using SOLID, DRY, or KISS.
 - **Task hierarchy:** Read [task hierarchy](references/task-hierarchy.md) when defining or reviewing Phase → Milestone → Task identity and parentage in TASKS, or projecting that hierarchy to hosted issues, labels, and milestones.
