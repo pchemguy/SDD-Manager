@@ -45,4 +45,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `034_c9cee3d` | Shared Markdown heading/list/code-block spacing, four-space indentation and one-space list-marker separators implemented; amendments verified by 16 scenarios, support and package checks; integration recorded by the Git merge boundary. | [Review report](034_c9cee3d-shared-markdown-style/REVIEW-REPORT.md), [revision plan](034_c9cee3d-shared-markdown-style/REVISION-PLAN.md), [revision report](034_c9cee3d-shared-markdown-style/REVISION-REPORT.md) |
 
+| `035_6ac4f0a` | Shared per-commit publication barrier implemented across workflow owners; eight source scenarios, support suite, changed-document and package checks passed; integration recorded by the Git merge boundary. | [Revision plan](035_6ac4f0a-per-commit-publication/REVISION-PLAN.md), [revision report](035_6ac4f0a-per-commit-publication/REVISION-REPORT.md) |
+
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
