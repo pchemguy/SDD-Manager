@@ -211,6 +211,8 @@ See [branch management](skills/sdd-manage/references/branch-management.md) for n
 
 ## Review and revision records
 
+Every workflow-owned commit is pushed to its established remote branch and read back before work advances or another commit is made. Local commits are not accumulated for later publication; unresolved pushes pause progression. Explicit user-directed local-only/deferred publication is a scoped exception. This cadence applies to documents, reviews, maintenance, task work, steering, reports and merges without changing merge eligibility. See [per-commit publication](skills/sdd-manage/references/git-workflows.md#publish-each-commit).
+
 Closed review, revision, steering and feature packages are historical artifacts within their own campaign context. They remain unchanged and need not stay valid after later changes. Routine work does not load, validate, repair or report their historical compatibility; consult only relevant records/sections when the current task specifically needs them. Finish archive/navigation/report updates before campaign closure, and maintain current main documents in later campaigns. See [closed campaign records](skills/sdd-conventions/references/review-campaigns.md#closed-campaign-records).
 
 All authored or maintained Markdown documents use blank lines after each heading and around top-level lists and code blocks, plus four-space structural indentation, including nested lists, and exactly one space after each list marker. The shared [Markdown style](skills/sdd-conventions/references/markdown-style.md) covers document owners, templates, reports and hosted drafts; literal code/data syntax and closed records are preserved.

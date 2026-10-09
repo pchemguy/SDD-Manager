@@ -28,4 +28,6 @@ For a selection-only request, use the range-selection reference and return the I
 
 This skill owns executable range selection, task execution, repairs, completion updates, commits, pushes, and issue-closure coordination. **sdd-tasks** owns task-list creation and review; **sdd-integrate-feature** owns feature-delta reconciliation. Human-commanded checkpoint amendments to existing development documents and prior implementation belong to **sdd-steer**. Report governing-document changes needed outside the selected implementation scope to the user rather than silently rewriting the requirements.
 
+Apply the shared [per-commit publication](../sdd-manage/references/git-workflows.md#publish-each-commit) rule to every owned commit, including ancillary report/status commits, not only task-result commits. Preserve its explicit user-directed local-only exception and block advancement on unresolved publication.
+
 Git commits and the owning checklist provide continuation state. No transaction journal, recovery state directory, or separate recovery skill is required. Return completed task IDs and implemented capabilities, verification evidence and gaps, commit and push results, hosted reconciliation, remaining work, and the stopping boundary through **sdd-report**.

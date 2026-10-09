@@ -2,6 +2,14 @@
 
 Use this protocol for a bounded implementation range, feature campaign, steering amendment, project preparation baseline, or selected document integration. **sdd-manage** establishes and coordinates the Git lifecycle; the active owner performs its scoped work and persistence. A direct invocation of a focused skill follows this same protocol. Read-only requests do not create branches or merge.
 
+## Publish each commit
+
+After **each workflow-owned commit**, push it to the established remote branch and verify remote containment before advancing project work or creating another commit. Do not accumulate local commits for later publication, including in an agent's temporary sandbox. This rule applies to preparation, reviews/revisions, maintenance, implementation, steering, feature incorporation, report-only commits and merge commits, including direct focused calls. The commit owner publishes; a coordinator/reviewer handoff must finish publication before the next work unit, whether independent or dependent.
+
+Resolve eligible outstanding workflow commits before new commit-producing work. If publication fails, is uncertain or lacks an established destination, preserve the commit, reconcile the remote/recover access where supported, and report the pending operation. Pause workflow advancement and further commits until publication is verified. Commit inspection, push/readback and scoped recovery remain allowed to finish that operation. Do not switch branches, tools or workflows to accumulate unpublished work or evade a blocker.
+
+An **explicit user instruction** for local-only work or deferred publication overrides this cadence only within its stated scope; report committed-but-unpushed state accurately. This rule does not authorize publication outside the granted scope, bypass host/repository restrictions, guess a destination or permit force-pushing. Per-commit pushes do not require per-commit merges or alter human acceptance and integration gates.
+
 ## Establish the working branch
 
 Use [branch management](branch-management.md) for identities, targets, convention names, eligible creation/reuse, worktree preservation, and phase transitions. Implementation's push-first prerequisite remains before new setup. Read-only review/selection does not create branches. The integration boundary below depends on workflow scope, not merely the last completed task range.

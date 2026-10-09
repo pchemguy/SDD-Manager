@@ -25,4 +25,6 @@ python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstat
 
 Use Python 3.11 or the established supported runtime; release CI uses 3.11. Check changed Markdown links, manifest synchronization, presentation asset paths and actual package contents as applicable. State the tested source and evidence limits; passing support tests do not establish live agent/client acceptance.
 
+Push every workflow-owned commit and verify remote containment before further project work or another commit; do not accumulate commits in the sandbox. Pause on an unresolved push. Honor explicit user-directed local-only/deferred publication within its stated scope. See [per-commit publication](skills/sdd-manage/references/git-workflows.md#publish-each-commit).
+
 Follow [Git integration and recovery](skills/sdd-manage/references/git-workflows.md) and the user's scope/stopping boundaries. Preserve unrelated changes; stage owned paths only. Completed authorized workflows include normal checkpoint pushes and eligible verified integration. Never force-push or reset unrelated work. Keep credentials out of source, reports and handoffs; use existing protected authentication.

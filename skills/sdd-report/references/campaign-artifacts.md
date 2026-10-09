@@ -25,7 +25,7 @@ For a feature package README, present identity/full baseline, branch/target, sco
 
 ## Review plan
 
-Define what will be reviewed and how evidence will be obtained. Order independent foundations before dependent implementation/coordinator concerns where appropriate. Prescribe a report update and commit after each planned unit, then publication and remote verification by the coordinating workflow. Reviewer assessment ends at the report commit; publication remains an execution step of the complete workflow. Host automatic tool review is a separate platform control. Do not claim the plan's scenarios have run.
+Define what will be reviewed and how evidence will be obtained. Order independent foundations before dependent implementation/coordinator concerns where appropriate. Prescribe a report update and commit after each planned unit, then [per-commit publication](../../sdd-manage/references/git-workflows.md#publish-each-commit) and remote verification by the coordinating workflow before the next unit, including independent work. Reviewer assessment ends at the report commit; publication remains an execution step of the complete workflow. Host automatic tool review is a separate platform control. Do not claim the plan's scenarios have run.
 
 ```markdown
 # Review plan
@@ -47,7 +47,7 @@ Define what will be reviewed and how evidence will be obtained. Order independen
 
 ## Evidence and persistence
 
-Record inspected baseline locations, commands/outcomes, evidence class, unknowns, and exclusions. Allocate stable finding IDs with objective rechecks. After each unit, update and commit the report. The coordinating workflow pushes that committed checkpoint and verifies remote containment before dependent work.
+Record inspected baseline locations, commands/outcomes, evidence class, unknowns, and exclusions. Allocate stable finding IDs with objective rechecks. After each unit, update and commit the report. The coordinating workflow pushes that committed checkpoint and verifies remote containment before any next review unit, project work or additional commit.
 
 ## Consolidation and stopping
 
@@ -132,7 +132,7 @@ Link accepted actions to review findings; retain rejected/deferred findings with
 
 ## Execution and persistence
 
-Establish the scoped working branch, target, and checkpoint. Update retained revision evidence, commit/push each completed action before dependent work, then verify the boundary and explicitly merge, verify, and publish the target. Governing documents hold accepted project state; campaign artifacts remain retained.
+Establish the scoped working branch, target, and checkpoint. Update retained revision evidence, publish and verify each action commit before any next work unit or additional commit, then verify the boundary and explicitly merge, verify, and publish the target. Governing documents hold accepted project state; campaign artifacts remain retained.
 
 ## Limits and stopping
 
