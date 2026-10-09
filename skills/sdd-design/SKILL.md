@@ -5,7 +5,7 @@ description: Use when exploring a software project or feature, forming architect
 
 # Explore and design
 
-For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists and code blocks, plus four-space structural indentation, including nested lists. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists and code blocks, plus four-space structural indentation, including nested lists, with exactly one space after each list marker. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
 
 Apply the manager's [human document review](../sdd-manage/references/human-document-review.md) for PROJECT, ARCHITECTURE and DECOMPOSITION, including necessary feature design proposals, including direct calls. Newly created necessary documents pause for substantive human review before dependent progression. Reuse acceptable existing inputs after startup assessment without automatic interactive replay; requested interactive review comes first. Agent QC and repository-operation authority do not supply human acceptance.
 

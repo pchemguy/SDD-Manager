@@ -14,6 +14,8 @@ Place a blank line before and after each entire top-level, non-indented list. Tr
 
 Use spaces, never tabs, for Markdown structural indentation. Use **four spaces per indentation level**, including nested bulleted, numbered, mixed and task lists. Start a top-level list at its container's left margin; indent each child list four additional spaces relative to its parent. Keep siblings at the same indentation and preserve their intended parentage.
 
+Use **exactly one ordinary ASCII space after each list marker**, at every nesting level: `- item`, `* item`, `+ item`, `1. item` and `1) item`. Do not pad markers with multiple spaces or tabs to align their text. In a task item such as `- [ ] task`, this separator is the space between the bullet and checkbox. Indentation before the marker still follows the four-space nesting rule.
+
 Indent continuation paragraphs and nested blocks to stay attached to their list item. Normally this uses the next four-space level; when a wide ordered-list marker requires more space, use the smallest additional four-space level that reaches the item's content column. Do not trade valid Markdown attachment for a mechanically fixed absolute column. TASKS retains its phase/milestone/task checklist semantics with its owner; this reference supplies the common spacing rule.
 
 ````markdown
@@ -51,6 +53,6 @@ Apply the rules inside Markdown examples and templates intended to produce docum
 
 ## Scoped review
 
-Check heading separation, top-level list and code-block separation, and list nesting/continuations in the selected current documents and active records, using syntax-aware inspection or rendering where attachment is uncertain. Text searches help discover candidates but do not prove correct parsing. Check examples/templates as well as surrounding prose. Repairs remain with the authorized artifact owner; this convention does not authorize edits or introduce a new human acceptance gate, formatter or dependency.
+Check heading separation, top-level list and code-block separation, single-space list-marker separators, and list nesting/continuations in the selected current documents and active records, using syntax-aware inspection or rendering where attachment is uncertain. Text searches help discover candidates but do not prove correct parsing. Check examples/templates as well as surrounding prose. Repairs remain with the authorized artifact owner; this convention does not authorize edits or introduce a new human acceptance gate, formatter or dependency.
 
 Follow the [closed campaign record boundary](review-campaigns.md#closed-campaign-records). Closed records are excluded from routine style checks and repairs; consult them only for a specific historical need, without a maintenance obligation. Current source checks do not validate live agent behavior.

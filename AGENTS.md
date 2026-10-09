@@ -15,7 +15,7 @@ Use current source and the active campaign for routine work. Prior closed review
 
 ## Verification and persistence
 
-Apply the shared [Markdown style](skills/sdd-conventions/references/markdown-style.md) to authored or maintained documents: blank lines after every heading and around top-level lists and code blocks, plus four spaces per structural indentation level, including nested lists. Preserve literal code/data syntax and closed records.
+Apply the shared [Markdown style](skills/sdd-conventions/references/markdown-style.md) to authored or maintained documents: blank lines after every heading and around top-level lists and code blocks, plus four spaces per structural indentation level, including nested lists, and exactly one space after each list marker. Preserve literal code/data syntax and closed records.
 
 From repository root, run the support suite for changes affecting acceptance tooling and for coherent plugin boundary integration:
 

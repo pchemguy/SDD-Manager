@@ -4,6 +4,7 @@
  */
 import fs from 'node:fs';
 import {spacingIssues} from './verify_spacing.mjs';
+import {markerIssues} from './verify_markers.mjs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
@@ -34,7 +35,7 @@ function issues(src){
  }
  return out;
 }
-for(const f of files){const src=fs.readFileSync(f,'utf8');assert.deepEqual(issues(src),[],f);assert.deepEqual(spacingIssues(src),[],f);}
+for(const f of files){const src=fs.readFileSync(f,'utf8');assert.deepEqual(issues(src),[],f);assert.deepEqual(spacingIssues(src),[],f);assert.deepEqual(markerIssues(src),[],f);}
 const scenarios=[];
 function check(id,fn){fn();scenarios.push({id,result:'passed',method:'local parser/source assertion'});}
 check('SC-001',()=>{for(const body of ['prose','## Child\n\n','- item','| A |\n| --- |','```text\nx\n```']){assert.equal(issues('# Heading\n'+body).length,1);assert.deepEqual(issues('# Heading\n\n'+body),[]);assert.equal(marked.lexer('# Heading\n\n'+body)[0].type,'heading');}});
@@ -52,6 +53,8 @@ check('SC-011',()=>{for(const marker of ['-','1.']){assert.deepEqual(spacingIssu
 check('SC-012',()=>{const src='- Parent\n    - Child\n        - Grandchild\n- Sibling\n\n';assert.deepEqual(spacingIssues(src),[]);assert.equal(marked.lexer(src)[0].items.length,2);});
 check('SC-013',()=>{assert.deepEqual(spacingIssues('Intro\n\n```py\nx=1\n```\n\nAfter\n'),[]);assert(spacingIssues('Intro\n```py\nx=1\n```\nAfter\n').some(x=>x.kind==='fenced block before'));assert(spacingIssues('Intro\n```py\nx=1\n```\nAfter\n').some(x=>x.kind==='fenced block after'));assert.deepEqual(spacingIssues('Intro\n\n    x=1\n\nAfter\n'),[]);assert(marked.lexer('Intro\n\n    x=1\n\nAfter\n').some(t=>t.type==='code'));assert(spacingIssues('```text\nx\n```\n').length);assert.deepEqual(spacingIssues('```text\nx\n```\n\n'),[]);});
 check('SC-014',()=>{const src='- Parent\n\n    ```python\n    if True:\n        print(1)\n    ```\n\n- Sibling\n\n';assert.deepEqual(spacingIssues(src),[]);const block=marked.lexer(src)[0].items[0].tokens.find(t=>t.type==='code');assert.equal(block.text,'if True:\n    print(1)');assert(spacingIssues('- Parent\n    ```python\n    x=1\n    ```\n- Sibling\n\n').length);});
+check('SC-015',()=>{for(const marker of ['-','*','+','1.','1)','100.']){for(const content of ['item','[ ] task','[x] task']){for(const indent of ['', '    ']){const prefix=indent?'- Parent\n':'';assert.deepEqual(markerIssues(`${prefix}${indent}${marker} ${content}\n`),[]);assert(markerIssues(`${prefix}${indent}${marker}  ${content}\n`).length);assert(markerIssues(`${prefix}${indent}${marker}\t${content}\n`).length);}}}});
+check('SC-016',()=>{for(const src of ['---\nx: 1\n---\n','*  *  *\n','    -  literal code\n','```python\n-  literal code\n```\n','````markdown\n```text\n-  literal code\n```\n````\n'])assert.deepEqual(markerIssues(src),[]);assert(markerIssues('````markdown\n-  template item\n````\n').length);assert.deepEqual(markerIssues('````markdown\n- template item\n````\n'),[]);});
 let links=0;
 for(const f of files){marked.walkTokens(marked.lexer(fs.readFileSync(f,'utf8')),token=>{if(token.type!=='link')return;const target=token.href.split('#')[0];if(!target||/^\w+:/.test(target)||target.includes('<'))return;assert(fs.existsSync(path.resolve(path.dirname(f),target)),`${f}: ${target}`);links++;});}
 assert.equal(fs.readFileSync('plugin.json','utf8'),fs.readFileSync('.codex-plugin/plugin.json','utf8'));
