@@ -15,7 +15,7 @@ The new shared forge [Git highlights workflow](../../../../skills/sdd-forge/refe
 | V-003 | Minimal front matter, ownership/ignore checks, ancestry/tag validation, pending-only updates, no-op curation, atomic saves and truthful watermarks are specified. Chunk checkpoints must cover complete ancestry ranges. |
 | V-004 | Reporting curates outcomes and assembles body-only notes; GitHub release/workflow references refresh the exact source, transfer notes to one publisher, reconcile body readback and retain/delete only under the selected boundary. |
 | V-005 | Current README, skill entries, forge presentation and manager examples expose the capability. Version and package metadata remain unchanged. |
-| V-006 | Local fixtures and support checks completed; final package/navigation and explicit integration/publication evidence are recorded below as they occur. |
+| V-006 | Local fixtures, support, package and navigation checks completed. The finished records precede integration; the two-parent merge commit records merged-state checks and the final publication is verified from remote containment. |
 
 This is an agent instruction workflow with an inline collection recipe, not a new hosted backend, autonomous editor, CLI command or runtime draft-management framework. The repository’s existing tag-only release publisher has no curated-notes transfer mechanism; it was not dispatched or replaced here. A future release request following the new guidance must establish/extend that transfer before triggering it.
 
@@ -29,7 +29,9 @@ Environment: Python **3.12.14**, the established available runtime; baseline com
 | `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` | **113 passed**. Support/tooling regression coverage; no live TextStats acceptance campaign. |
 | Existing `quick_validate.py` on forge/manage/report/verify | **Four passed**. Skill entry metadata/format checks. |
 | Agent Package Author strict validators/inspector | Inspected 15 skills; baseline strict inspection reports 13 errors, current inspection 14 (the added bundled route). Strict portable-package validation rejects this repository’s manifest/schema and bundled cross-skill links, including the new manager-to-forge route. The normal repository skill checks pass; full standalone skill/Agent Plugins 1.0 conformance is not claimed. This campaign does not migrate the existing package format. |
-| Navigation / preservation | 123 current local Markdown links pass; 80 links to closed records excluded. 254 retained document paths have unchanged Git object identities. Package build awaits committed-source verification. |
+| Navigation / preservation | 123 current local Markdown links pass; 80 links to closed records excluded. 254 retained document paths have unchanged Git object identities. Both manifests remain byte-identical to the starting source at version 0.15.0. |
+
+| Actual package build | Executed the existing workflow’s build/checksum step in a disposable clone at `b7c6f6e9bf70b3a5441176c7c03461448f796ac6`: **129 files**, exact inventory and per-member source bytes, ZIP integrity and SHA-256 passed. The new highlights reference ships; drafts, credentials and development records are excluded. This is local build execution, not CI. |
 
 ### Scenario assessment
 
@@ -62,4 +64,6 @@ No fresh independent consumer or assessor, installed-client run, live release, A
 
 ## Persistence and stopping point
 
-Source/evidence checkpoint is being prepared on the revision branch. Finish current navigation/package checks and this report before merging the complete tip with the required two-parent boundary. The merge commit records pinned parents and merged-state verification; remote containment establishes publication. Retain the campaign branch. Stop after verified ordinary campaign/default-branch publication, with version 0.15.0 and no product release.
+Implementation/evidence checkpoint `b7c6f6e9bf70b3a5441176c7c03461448f796ac6` was pushed and matched `origin/revision/032_a64f6b7-release-highlights`. A subsequent protected ordinary fetch confirmed default target `a64f6b7f0f6861343fa7aab4bbede685bd5ca63d` unchanged. This finished report and maintained index are committed/published on the campaign before integration.
+
+The complete verified campaign tip, including final records, is eligible for explicit two-parent integration into that target. The resulting merge commit is the durable record of both pinned parents, exact-tree comparison, merged-state checks and conflict disposition; remote containment establishes actual publication. No post-closure report-only commit is needed. Retain the campaign branch and stop after verified ordinary campaign/default-branch publication, with version 0.15.0 and no product release. No source or verification failure remains within the selected repository contract; strict portable-format and live-consumer/provider limits above remain explicit.
