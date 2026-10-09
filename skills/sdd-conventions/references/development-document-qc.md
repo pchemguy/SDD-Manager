@@ -1,6 +1,6 @@
 # Development-document quality and conformance
 
-Include the shared [Markdown style](markdown-style.md) in scoped document checks: heading, top-level list and code-block separation, four-space structural/list indentation, continuation attachment and Markdown templates. Preserve literal code/data syntax and exclude closed records. Formatting checks do not replace substantive conformance or authorize repairs.
+Include the shared [Markdown style](markdown-style.md) in scoped document checks: heading, top-level list and code-block separation, four-space structural/list indentation, single-space marker separators, continuation attachment and Markdown templates. Preserve literal code/data syntax and exclude closed records. Formatting checks do not replace substantive conformance or authorize repairs.
 
 Apply these invariants through the artifact owner and coordinator. This reference defines shared criteria and readiness, not authorization to edit an artifact.
 

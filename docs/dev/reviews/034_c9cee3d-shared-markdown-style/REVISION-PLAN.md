@@ -67,3 +67,16 @@ Add two shared presentation rules to the same owner:
 | V-006 | Extend local verification, run required support/package checks, append amendment evidence to this report and update current navigation; explicitly merge and publish the complete tip. | Positive/negative spacing fixtures, current-source checks and package bytes; merged-state suite and clean Git/remote readback. |
 
 Keep version `0.15.0`, artifact ownership, human acceptance boundaries, task identities and literal source semantics unchanged. No new formatter/dependency or live acceptance is required. Stop after verified integration/publication of this amendment.
+
+## Reopened amendment — one space after list markers
+
+The user reopened campaign 034 again on 2026-10-09, from published main `77a82e04842f6f80bf770b359fc85ab40b77a74f`, to require exactly one space after list markers. This continuation retains the campaign identity and authorizes planning, execution, report amendment and verified integration/publication. Other closed campaigns remain frozen.
+
+Use exactly one ordinary ASCII space between a Markdown list marker and its content at every nesting level: `- item`, `* item`, `+ item`, `1. item` and `1) item`. For a task item, the list-marker separator is the space between the bullet and checkbox, as in `- [ ] task`. Do not use multiple spaces or tabs after markers to align text. Four-space indentation before nested markers and valid continuation attachment remain unchanged. Literal code/data, verbatim material, horizontal rules and YAML metadata are not list markers to normalize.
+
+| Action | Outcome | Verification |
+| --- | --- | --- |
+| V-007 | Add the shared marker-spacing rule, reconcile affected summaries/QC and inspect maintained documents/templates for violations. | SC-015: one-space acceptance and multiple-space/tab rejection across marker types, nesting and task items. SC-016: code/data/horizontal-rule exclusions and Markdown-template inclusion. |
+| V-008 | Persist verification and amend the report/navigation; explicitly merge and publish the complete tip. | All local scenarios, mandatory support suite, committed package byte/checksum validation and merged-state verification. |
+
+Version stays `0.15.0`; no new formatter/dependency or live acceptance is included. Stop after verified integration/publication of this amendment.
