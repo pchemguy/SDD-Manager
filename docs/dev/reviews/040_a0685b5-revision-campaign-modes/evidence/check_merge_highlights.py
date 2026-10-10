@@ -153,6 +153,18 @@ class CollectionChecks(unittest.TestCase):
         self.assertIsNone(data["commits"][-1]["campaign_hint"])
         self.assertIn("message", data["commits"][-1])
 
+    def test_phase_and_document_preparation_integrations(self):
+        expected = set()
+        for branch in ["design-docs/main", "design-docs/040-docs", "phase/1-delivery"]:
+            self.git("switch", "-c", branch)
+            self.change(branch.replace("/", "-"), "Scope for " + branch)
+            self.git("switch", "main")
+            self.git("merge", "--no-ff", branch, "-m", "Merge " + branch + "\n\nScope: accepted preparation or verified phase")
+            expected.add(self.git("rev-parse", "HEAD"))
+            self.git("branch", "-D", branch)
+        data = self.valid()
+        self.assertEqual({r["commit"] for r in data["commits"] if "message" in r}, expected)
+
     def test_side_history_release_tag_requires_policy(self):
         self.git("switch", "-c", "feature/tag")
         self.change("side", "Side change")
