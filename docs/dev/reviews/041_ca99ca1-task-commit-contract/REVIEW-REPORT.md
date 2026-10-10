@@ -38,3 +38,7 @@ Correction: define one task per closing commit while retaining clearly identifie
 ## Limits and stopping boundary
 
 The quoted combined feature commit and separate multi-task checkbox commit illustrate a reported composition failure; subjects alone cannot prove actual diffs or completion evidence. No demo Git history is rewritten, no hosted tracking is reconstructed, no plugin source is changed and no live consumer test is claimed. This campaign stops after publishing its review and proposed plan for human consideration.
+
+## Execution dispositions
+
+The human authorized execution on 2026-10-10. R-001–R-004 were revised through V-001–V-003 and rechecked under V-004; the baseline observations above remain unchanged. Current source walkthroughs, seven subject examples, independent hypothetical application and support/package checks are recorded in [revision evidence](REVISION-REPORT.md). Verification applies to the instruction contracts and named checks, not live agent compliance or the supplied demo history.

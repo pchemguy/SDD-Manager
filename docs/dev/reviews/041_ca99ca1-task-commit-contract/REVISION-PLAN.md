@@ -7,7 +7,7 @@
 - Suspended parent and eventual return target: `revision/037_a6c42dd-prerelease-review`.
 - Objective: make task subjects predictable and each task closure independently durable, with task result, verification evidence and owning checklist status committed together.
 - Basis: [focused review](REVIEW-REPORT.md), R-001–R-004, and human-provided test-run examples.
-- State: accepted for execution by the human’s “Execute” instruction, 2026-10-10. Parent prerelease execution remains suspended.
+- State: accepted and executed; V-001–V-004 complete with local/source verification. Final integration/publication and return are recorded in Git. Parent prerelease execution remains suspended.
 - Exclusions: rewriting demo or plugin published history, automatic tracking reconstruction, release/version change, live test campaign, modification of earlier closed campaign packages and parent review resumption.
 
 ## Proposed contract
