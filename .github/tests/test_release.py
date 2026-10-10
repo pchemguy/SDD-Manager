@@ -8,6 +8,7 @@ import subprocess
 import tempfile
 import unittest
 import zipfile
+import warnings
 
 SCRIPT = Path(__file__).parents[1] / 'scripts' / 'release.py'
 if SCRIPT.exists():
@@ -99,7 +100,9 @@ class PackageTests(Contract):
                 with zipfile.ZipFile(paths['sdd-manager.zip']) as original, zipfile.ZipFile(bad,'w') as z:
                     for item in original.infolist():
                         if not item.is_dir(): z.writestr(item.filename,original.read(item.filename))
-                    z.writestr(bad_name,b'wrong')
+                    with warnings.catch_warnings():
+                        warnings.filterwarnings('ignore', message='Duplicate name:', category=UserWarning)
+                        z.writestr(bad_name,b'wrong')
                 with self.assertRaises(ValueError): publisher.inspect_archive(self.root,self.sha,bad)
 
 
