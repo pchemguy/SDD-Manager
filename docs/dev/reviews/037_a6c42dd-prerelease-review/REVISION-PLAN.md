@@ -172,3 +172,8 @@ The human authorized this detailed all-target plan, not its source execution. Th
 ## CP-016 bounded harness finding
 
 Actual A-004 found R-007: unchanged-integration assessor wording contradicts required document-only preparation integration. This bounded correction/recheck is within the selected acceptance-tooling scope. Keep original Failed evidence and immutable tested resources; publish corrected guide/JSON and support checks, then separately pin/reassess retained task evidence with explicit unchanged-plugin applicability. No successful predecessor is invented and no blocked gate is waived. CP-016 remains Running until actual milestone/phase results are assessed.
+
+
+## CP-016 reached checkpoint
+
+First-task/milestone corrected assessor rechecks and full A-006 independent acceptance are published. Phase1 main `e7cae5b` is explicitly integrated and remotely verified; playground assessment `39f4c3c` verifies complete phase exits, closures and preservation. CP-016 is complete with original failed harness attempts retained. CP-017 may proceed through the authorized ordinary JSON increment; CP-018 has three additional independently Passed A-026 variants, while its remaining controlled cases stay pending. No required-campaign readiness or source final integration is claimed.
