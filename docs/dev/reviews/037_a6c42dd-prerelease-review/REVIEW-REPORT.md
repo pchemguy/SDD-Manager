@@ -304,3 +304,14 @@ Full preparation, selection-only and initial/repeated eligible-phase tracking in
 | Bounded correction | State the allowed prerequisite preparation merge explicitly; retain incomplete-phase integration prohibition and exact before/after refs. Source guide and JSON changed together; immutable tested harness stays unchanged. |
 | Recheck | Required support suite, guide/JSON alignment and separate newly pinned independent reassessment of actual retained lifecycle/source applicability. Original Failed result remains at its original pin. |
 | Decision | Corrected at published assessor pin fc193b0; independently rechecked using eligible unchanged actual lifecycle evidence. Original assessor-pin Failed stays exact; reassessment-only corrected result Passed. Full readiness remains Open. |
+
+## R-008 — Milestone assessor prematurely requires later failure-handling exits
+
+| Field | Evidence / disposition |
+| --- | --- |
+| Type / priority / confidence | Acceptance harness scope defect; P2; high confidence from SCENARIO, accepted PLAN/TASKS and independent captures. |
+| Location | A-005.json compares full baseline CLI including no-traceback file/decode failures at milestone1.1. SCENARIO assigns failure handling to milestone1.2; accepted PLAN maps R-008 there and T-003 explicitly defers complete diagnostics to T-005. |
+| Actual result | API and success CLI captures Passed; missing/decode observations fail original premature criteria. Actual original captures and deterministic Failed retained; milestone code/review/hosted lifecycle independently assessed separately. |
+| Bounded correction | Guide/JSON require accepted milestone scope, compare four fixed observed baseline success rows, retain complete captures/provenance and independent help/lifecycle checks. Full Phase1 failure requirements stay unchanged at A-006. |
+| Recheck | Support suite, source alignment and separately pinned reassessment of exact actual retained evidence; original failed pin never relabeled. |
+| Decision | Correction executed under selected bounded harness-repair scope; independent recheck pending. Full readiness remains Open. |
