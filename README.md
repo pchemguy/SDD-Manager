@@ -97,27 +97,32 @@ Preparation-only stops after the design-docs checkpoint. Before creating a depen
 
 ### Implementation and continuation
 
-This diagram shows bounded main-phase task execution. `sdd-implement` owns production changes, completion, commits and pushes; supporting skills supply tests, documentation, verification and report text. With hosted tracking enabled, `sdd-manage` and `sdd-forge` establish the eligible phase and task associations before its first task. The optional hosted path below shows completion reconciliation.
+This diagram shows bounded main-phase execution. Before edits or tests, inspect actual task persistence and publish outstanding commits, then establish requested tracking readiness for the eligible phase and selected tasks. A missing initial or added-task association blocks execution; an outage after verified activation can leave independent completion and hosted closure pending.
 
 ```mermaid
 flowchart TB
-    O["sdd-manage + sdd-orient<br/>Scope, actual state and task evidence"] --> I["sdd-implement<br/>Push outstanding commits<br/>Resume pending work or select within range"]
-    I -->|"task ready"| T["sdd-tdd<br/>Test and implementation cycle"]
-    T -->|"implementation ready"| D["sdd-docs<br/>Maintain affected documentation"]
-    D --> V["sdd-verify<br/>Required checks and acceptance evidence"]
-    V -->|"repair needed"| I
-    V -->|"verified"| R["sdd-report<br/>Completion evidence and commit text"]
-    R --> C["sdd-implement<br/>Complete, commit and push task"]
-    C --> H{"Hosted tracking active?"}
-    H -->|"yes"| F["sdd-forge<br/>Reconcile verified issue and milestone closures"]
-    H -->|"no"| B{"Selected range complete?"}
-    F --> B
-    B -->|"no"| I
-    B -->|"yes"| G{"Complete verified main phase?"}
+    O["Orient: actual state and task evidence"] --> A{"Task persistence audit valid?"}
+    A -->|"no"| X["Preserve work; scoped recovery; stop affected path"]
+    A -->|"yes"| I["Publish outstanding commits; resume or select range"]
+    I --> H{"Requested tracking readiness?"}
+    H -->|"pending, partial or unknown"| X
+    H -->|"verified or explicitly declined"| T["Implement: tests, code and documentation"]
+    T --> V{"Required verification passes?"}
+    V -->|"repair"| T
+    V -->|"yes"| C["One task closing commit: result, evidence and checkbox"]
+    C --> P["Leading single task ID; push and remote readback"]
+    P --> F["Reconcile active issue and milestone closures"]
+    F --> B{"Selected range complete?"}
+    B -->|"no; dependencies ready"| I
+    B -->|"yes"| G{"Complete main phase and integration audit valid?"}
     G -->|"no"| E["Report checkpoint and stop"]
-    G -->|"yes"| P["sdd-manage + sdd-verify<br/>Explicit merge, merged checks<br/>Target push and readback"]
-    P --> E
+    G -->|"yes"| M["Explicit merge; merged checks; target push and readback"]
+    M --> E
 ```
+
+The entry audit and the integration audit inspect actual selected closing commits, including relevant merge parents. Each task closes with its result, current evidence and initial completion checkbox together under one leading `[T-XXX]` imperative subject. Authorized partial checkpoints remain unchecked and are referenced at closure. An invalid audit preserves work for scoped recovery; a merge summary cannot replace valid task commits. See the [task commit contract](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract).
+
+The tracking gate distinguishes **pending**, **verified** and **explicitly declined**. Verified activation allows only work with confirmed associations; added unprojected work must pass the gate too. After an activated outage, report closures as pending and continue only independent eligible work. Pending dependent closures or unknown effects block review and next-phase progression. `sdd-manage` owns the decision/readiness gate, `sdd-forge` owns hosted writes/readback and `sdd-implement` owns atomic task closure and publication.
 
 Milestone and phase review/report tasks run through the same cycle and supply their required code review, testing and exit evidence. An incomplete phase pushes and pauses. A request covering another phase continues only after verified integration/publication, from the updated target. Feature task execution reuses the cycle, with required accepted-document incorporation through `sdd-integrate-feature` before final boundary verification; feature and revision integration use their own eligibility gates. See [implementation](skills/sdd-implement/SKILL.md) and [Git workflows](skills/sdd-manage/references/git-workflows.md).
 
