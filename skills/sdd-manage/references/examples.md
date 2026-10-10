@@ -84,6 +84,7 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 
 | Context | Coordinated result |
 | --- | --- |
+| Explicit “Enable and maintain GitHub tracking” accompanies the broad project request | Carry requested/confirmed tracking without another question; after accepted preparation verify the eligible phase label, all milestones/tasks and associations before task edits/tests. No objects yet means projection pending, not tracking declined. |
 | Token supplied for the established GitHub workflow; no tracking choice | Recommend enable and ask to manage the eligible phase label, milestones/task issues, associations and verified lifecycle closures. Keep confirmation pending; create no objects yet. |
 | Prior explicit decline, followed by a token for normal Git pushes | Preserve the decline and perform authorized pushes; do not interpret the credential as activation. |
 | Tracking confirmed after several local tasks completed | Discover/reconcile eligible objects and attach verified retained evidence; leave incomplete work open and keep historical inactive-state reports truthful. |

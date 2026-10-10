@@ -1,11 +1,11 @@
-# Proposed tracking-fidelity revision plan
+# Tracking-fidelity revision plan
 
 ## Campaign and decisions
 
 - Campaign: `038_d6218f1`; baseline `d6218f1458b3805ecd27f6be6942162ec4a815ed`; [review report](REVIEW-REPORT.md), [scope and supplied result](README.md).
 - Working branch: `revision/038_d6218f1-tracking-fidelity`; eventual target: `revision/037_a6c42dd-prerelease-review`, not main. Parent 037 remains suspended until separately resumed.
-- State: **Proposed; not accepted or executed.** R-001–R-003 remain Open. No human rejection, deferral, acceptance or override is recorded.
-- Current authority covers review/campaign publication and these concrete proposals. Source edits, consumer execution, demo fixes, provider mutations and integration require a subsequent authorized revision scope.
+- State: Accepted for execution by the human on 2026-10-10 (“Execute campaign”); execution in progress. R-001/R-002 accepted for source revision, R-003 retained as an evidence gap; no human deferral or override is recorded.
+- Authority covers the planned wording changes, focused scenario preparation, verification, per-action publication and eligible integration into the parent campaign branch. No dedicated consumer/hosted test destination is supplied; live comparison remains unavailable, with no implied demo mutation, main merge or product release.
 - Intended result: the existing requested-tracking policy is explicit and mandatory at the manager/executor handoff, with observable activation evidence and locally stated outage boundaries. No guarantee of LLM compliance is implied.
 
 ## Ordered actions
