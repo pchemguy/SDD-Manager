@@ -18,11 +18,13 @@ Ruling: execute the plan’s recommended single manual-dispatch publisher route,
 
 ## Checkpoint ledger
 
-| Checkpoint | Actual result | Remaining gate |
+| Checkpoint | Actual result | Publication |
 | --- | --- | --- |
-| CP-001 | Repository/source orientation recorded; clean baseline and origin refs observed. | Published `56d5a8e2ab77bd522733481df934ba7f8d0d7cd2`; exact origin branch readback matched before CP-002. |
-| CP-002 | Selected handoff/lifecycle and current primary limits documented. | Publish/read back before test-first work. |
-| CP-003–CP-025 | Pending. | Follow the detailed plan’s separate commits and per-commit publication barrier. |
+| CP-001–CP-006 | Orientation, handoff design, red contracts, input validation, exact package inspection and draft reconciliation. | Separate commits pushed and exact remote tips verified before successors. |
+| CP-007 | Complete local publisher, 22 publisher / 113 support tests Passed. | First push rejected for missing source workflow permission; updated credential recovered the same commit, exact origin readback verified. |
+| CP-008–CP-010 | Package navigation, capability map, implementation gates and all four rendered diagrams verified. | Each separate commit pushed and exact origin tip verified. |
+| CP-011 | Source-ready local boundary verified below. | This checkpoint must publish/read back before immutable acceptance setup. |
+| CP-012–CP-025 | Pending. | Follow separate commits and per-commit publication barrier. |
 
 ## Findings and readiness
 
@@ -88,3 +90,9 @@ Reconciled all 15 skill rows and canonical boundaries: release/highlights/packag
 Revised the implementation graph/key to make pending/partial/unknown requested tracking block edits/tests, distinguish verified activation from explicit decline, show an atomic one-task result/evidence/initial checkbox commit and strict leading ID, and expose continuation and pre-integration persistence audits. The key distinguishes an activated outage with pending closure from missing initial/added-task projection and retains dependent review/next-phase gates. Main full-phase integration and feature incorporation keep their existing boundaries.
 
 Installed isolated local Mermaid CLI **12.0.0** and rendered all **four** current README diagrams using its actual bundled browser. All four PNGs were visually inspected: labels and branch directions are readable at native size, without clipping; the tall vertical diagrams require scrolling. Retained [render provenance](diagram-evidence/render.json) and the four actual images in this campaign, outside the shipped package. The CLI no longer accepts the older `-w` option; its actual help supplied the supported command, which then rendered successfully. This is rendering evidence, not installed plugin/client acceptance.
+
+## CP-011 — repaired source boundary
+
+Fresh source pin: `629d4cb7d6494fd49b9ac3c83a578ce4a9997409`. Observed publisher suite **22 Passed** and support suite **113 Passed** (15.413s), Python 3.12.14. Canonical/legacy manifest bytes match, version remains 0.15.0. Actual archive hash `b96c01003182d1e7e6f91a45b90e610b0c55525fd8a37e7da413481186a3defd`; 197 members including directories, all file bytes verified against Git and all 76 packaged root link targets checked. No package expansion. Render provenance pins the same README bytes. Git path diff against the published planning checkpoint confirms campaigns 038–041 unchanged. Removed only executor-created local bytecode; no unrelated work or protected runtime files were touched.
+
+R-001, R-002 and R-006 meet their source/document objective rechecks and are corrected at this pin. R-003/R-004 meet local contract checks but remain Open for actual CI/provider observations. R-005 remains Open; no consumer, installed-client, Python 3.11 CI or platform acceptance is claimed. This source-ready boundary authorizes candidate pinning, not production readiness. CP-012 pins the next published immutable commit and must account for report-only source advancement and exact archive bytes.

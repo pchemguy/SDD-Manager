@@ -260,3 +260,18 @@ On 2026-10-10 the human specified absolute `https://github.com/pchemguy/SDD-Mana
 ## Authorized planning publication
 
 The human explicitly instructed: “publish campaign 037’s updated plan, report, and index to pchemguy/SDD-Manager”, 2026-10-10. Published the retained initial planning commit `80bc30018f205ce88e96cbbc10a6cc4d132ffe69`; exact remote branch readback matched before this next checkpoint. The earlier denial and pending-draft statements above describe their historical state, not the current publication result. This checkpoint contains the complete all-target plan, 25 intermediate commit checkpoints and explicit absolute blob/main root-link decision, plus its report/index navigation. Final commit/publication/readback is established by Git; source execution, test repository selection, finding closure, main integration and release effects remain outside this publication instruction.
+
+## Execution source recheck — CP-011
+
+The human authorized execution with the dedicated playground on 2026-10-10. [Revision evidence](REVISION-REPORT.md) retains separate CP-001–CP-011 actions and observations; earlier pending-planning statements above are historical. Current product recheck is `629d4cb7d6494fd49b9ac3c83a578ce4a9997409`, archive SHA-256 `b96c01003182d1e7e6f91a45b90e610b0c55525fd8a37e7da413481186a3defd`.
+
+| Finding | Current disposition at this source pin |
+| --- | --- |
+| R-001 | Corrected: all 13 excluded-doc occurrences use accepted absolute current-main URLs; actual extracted-root targets and committed member bytes verified. |
+| R-002 | Corrected: all 15 skills, canonical owner links and current preparation/tracking/revision/task/release boundaries reconciled; feature/campaign paths corrected. |
+| R-003 | Locally corrected, Open for actual CI/provider recheck: strict source-associated curated notes and single manual publisher implemented; local contracts pass. |
+| R-004 | Locally corrected, Open for actual CI/provider recheck: archive inspection, serialized reconciled draft/assets/publication and downloaded-byte/source/body/state/latest readback implemented. |
+| R-005 | Open: full independent candidate-specific acceptance and supplementary facilities remain pending. |
+| R-006 | Corrected: entry tracking/persistence, atomic task closure and integration audit appear in graph/key; all four diagrams actually rendered and visually inspected. |
+
+Fresh publisher tests: 22 Passed. Fresh support suite: 113 Passed. Source-only checks do not establish live CI/release, consumer fidelity or installed-client acceptance. Production release readiness remains unestablished; no version bump or product release occurred.
