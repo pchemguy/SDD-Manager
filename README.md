@@ -6,6 +6,8 @@ SDD Manager is a learning-by-doing experiment in specification-driven developmen
 
 Start with **sdd-manage**, the central coordinator. It routes your request to the relevant skills, reuses established project decisions, and stops at the boundary you specify.
 
+Formal revisions support [nested revision campaigns and reopened campaign amendments](skills/sdd-manage/references/revision-modes.md). Nested revisions suspend an active campaign and default to its branch as source/return target; eligible human-authorized amendments reuse the last closed revision’s identity. Both verify/publish integration and return the worktree to the interrupted branch without automatically resuming its work.
+
 Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).
 
 ## Getting started

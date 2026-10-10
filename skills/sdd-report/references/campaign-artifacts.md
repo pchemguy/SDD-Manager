@@ -15,6 +15,10 @@ Record campaign ID, full starting SHA, exact reviewed/tested state when differen
 
 Apply the [closed campaign record boundary](../../sdd-conventions/references/review-campaigns.md#closed-campaign-records). These update/recheck/disposition templates apply to active records. Finish final reports and feature package navigation before closure; later campaigns do not amend closed reports or snapshots. Historical records need no current-validity checks or compatibility findings. Load prior records only for a specific current question, not routine report preparation.
 
+## Reopened amendment evidence
+
+Only an authorized eligible [reopened campaign amendment](../../sdd-manage/references/revision-modes.md#reopened-campaign-amendment) permits updates to the selected formerly closed package. Retain the original campaign ID/baseline and observations, decisions, checks and closure facts. Record qualifying prior merge, current reopening checkpoint/target, human acceptance and added stable action IDs; append actual amendment checks/dispositions and subsequent integration/publication separately. Mark the amendment active/blocked until required final persistence completes, then record its new closure. Other closed records remain frozen. Do not infer new-candidate verification from old results or rewrite historical completion as though the amendment existed then.
+
 ## Workflow context
 
 Apply **sdd-conventions**' **Workflow identity** for branch/directory association. Record campaign or phase ID, full baseline, actual working/target branches, current authoritative sources and relevant artifact status. A lightweight steering revision report may contain only objective/context, actual changes, verification, and publication; omit absent review/plan links.

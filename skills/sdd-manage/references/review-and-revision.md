@@ -6,6 +6,8 @@ This is the formal campaign path for the [revision core workflow](workflows.md#c
 
 For an explicitly selected comprehensive prerelease review, load the [prerelease profile](prerelease-review.md) for candidate scope, coverage, owner routing and readiness criteria. It uses this lifecycle; release reminders do not activate review.
 
+Before campaign branch setup, load [revision modes](revision-modes.md) when opening a revision within an active campaign or extending the eligible last closed revision. Nested revision establishes parent suspension/source/return context; a reopened campaign amendment requires verified eligibility and human authority. Ordinary closed records remain frozen; only an authorized selected reopening changes that record boundary.
+
 ## Review
 
 Review the selected current source and active records. Prior closed campaigns are [frozen historical artifacts](../../sdd-conventions/references/review-campaigns.md#closed-campaign-records), not routine review inputs or current-validity targets. Read selected historical material only for a specific task need. Maintain findings/rechecks in the active campaign only; do not append to closed reports or create findings about their incompatibility with later changes.
