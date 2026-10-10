@@ -314,4 +314,4 @@ Full preparation, selection-only and initial/repeated eligible-phase tracking in
 | Actual result | API and success CLI captures Passed; missing/decode observations fail original premature criteria. Actual original captures and deterministic Failed retained; milestone code/review/hosted lifecycle independently assessed separately. |
 | Bounded correction | Guide/JSON require accepted milestone scope, compare four fixed observed baseline success rows, retain complete captures/provenance and independent help/lifecycle checks. Full Phase1 failure requirements stay unchanged at A-006. |
 | Recheck | Support suite, source alignment and separately pinned reassessment of exact actual retained evidence; original failed pin never relabeled. |
-| Decision | Correction executed under selected bounded harness-repair scope; independent recheck pending. Full readiness remains Open. |
+| Decision | Corrected at published assessor355e3d3; separate independent reassessment Passed with unchanged plugin/evidence applicability and explicit native historical RED/transcript/isolation limits. Original failedpin/result retained. Full readiness remains Open. |
