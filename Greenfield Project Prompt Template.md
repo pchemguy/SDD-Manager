@@ -2,15 +2,19 @@
 
 Replace the placeholders, then copy the prompt below.
 
+Supply a GitHub token when existing authenticated tools cannot perform all required repository and tracking operations; omit the token line only when sufficient access is already available.
+
+Git access and GitHub API access are separate. A token can address missing authentication or permissions; an unsupported adapter operation still needs another supported execution path, such as a direct API request. SDD Manager should report unsupported operations or missing permissions.
+
 ````text
 Help me develop the following project using $sdd-manager.
 
 GitHub repository: https://github.com/{OWNER}/{REPO}
 GitHub token: {FINE_GRAINED_GH_TOKEN}
 
-I authorize every repository operation required for this project under SDD Manager within the agreed scope and the token's permissions, including branch creation, commits, pushes, merges and GitHub tracking updates. This authorization applies throughout this conversation. Perform these operations without asking for separate or repeated permission, unless I explicitly instruct otherwise or SDD Manager requires a human document review checkpoint or execution boundary.
+Throughout this conversation, I authorize the repository operations required by SDD Manager within the agreed project scope and available permissions, including branches, commits, pushes, merges and GitHub tracking updates. Do not request separate or repeated authorization for these operations. Preserve SDD Manager's required human document reviews and execution boundaries, and follow any later instructions that change this scope.
 
-Enable and maintain GitHub tracking for phase labels, milestones and task issues.
+Enable and maintain GitHub tracking for phase labels, milestones and task issues. Before implementing an eligible phase, create or reconcile its required tracking objects and verify their associations by readback. If this prerequisite cannot be satisfied, report the blocker before proceeding with affected implementation.
 
 Preliminary project description:
 
