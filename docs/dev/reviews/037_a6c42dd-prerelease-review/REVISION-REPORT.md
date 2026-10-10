@@ -46,3 +46,9 @@ Primary checks on 2026-10-10:
 - Official [checkout v7](https://github.com/actions/checkout/releases/tag/v7.0.0) and [setup-python v7](https://github.com/actions/setup-python/releases/tag/v7.0.0) release pages resolve; retain existing supported major references and Python 3.11 in CI.
 
 CP-003 will add executable contract tests as an explicitly incomplete red checkpoint. CP-004–CP-007 deliver the separately scoped implementation and local verification. Actual GitHub behavior remains pending CP-013–CP-014.
+
+## CP-003 — intentional red publisher contract checkpoint
+
+Added 17 executable contract tests under `.github/tests/test_release.py`. Real temporary Git repositories and ZIPs cover exact tree bytes, exclusions, version/source/manifest mismatch and archive tampering. A controlled external provider boundary covers first publication, readback, complete rerun without mutations, partial drafts, conflicting/duplicate/starter/foreign assets, download-byte mismatch, upload failure, opt-in/latest preservation and lost upload response reconciliation. Multiline hostile notes are treated as literal data; malformed/missing/source/hash/type/size/front-matter inputs must stop.
+
+Observed `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s .github/tests -v`: **17 failures**, each explicitly reports the absent selected publisher implementation. This test-only partial checkpoint is intentionally red; it does not close R-003/R-004 or claim publisher completion. Implementation starts at CP-004. Existing release workflow remains unchanged at this checkpoint.
