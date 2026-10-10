@@ -1,5 +1,28 @@
 # Prerelease revision execution report
 
+## Current revised candidate — CP024
+
+Campaign037 corrections and final assessed reporting are published on `revision/037_a6c42dd-prerelease-review`. Full required readiness remains **false**: original32-required results27 Passed/2 Failed/3 Blocked, separately corrected-recheck lens29 Passed/3 Blocked; two optional variants Not run,14 supplements outside these totals. Scoped final reporting independently Passed. A013 default publication, A014 named new live trial branches and A027 dependent evidence integration are Blocked. Main product merge549a is accepted locally but unpublished after two automatic review rejections before execution; no retry or workaround follows. Source/evidence final default integration remains pending. See [actual reached checkpoint and exact evidence](REVISION-REPORT.md#cp-023--final-reached-reconciliation-default-integration-blocked).
+
+| Finding | Current disposition | Actual applicability and remaining limit |
+| --- | --- | --- |
+| R001 root navigation | Corrected | Extracted shipped links/objective rechecks Passed; current shipped bytes equal tested pin. |
+| R002 capability map | Corrected | Current owner/path/capability coverage rechecked; current shipped bytes equal tested pin. |
+| R003 curated notes | Corrected with bounded actual provider recheck | Structured publisher transfer and exact actual fixture body Passed; human editorial curation is separately scoped. |
+| R004 publisher lifecycle | Corrected with bounded actual provider recheck | Acknowledged-ID repair21e29c4; clean first-create and unchanged complete rerun Passed using byte-identical current release.py, separately pinned fixture wrapper. Initial failures remain Failed. |
+| R005 required acceptance | Open | Three required Blocked outcomes; installed/native/platform facilities and evidence limits remain. No deferral/risk acceptance or production readiness. |
+| R006 implementation diagram | Corrected | Actual four rendered PNGs at629d4cb retain exact current README/diagram-byte applicability; no new renderer run. |
+| R007 A004 assessor contradiction | Corrected harness; separate recheck Passed | Original Failed retained; corrected criterion atfc193b0 did not alter plugin bytes or retroactively pass the original attempt. |
+| R008 A005 premature vectors | Corrected harness; separate recheck Passed | Original Failed retained; corrected owner criteria at355e3d3 did not alter plugin bytes or retroactively pass the original attempt. |
+
+The current133 shipped paths/modes/blob bytes remain identical to immutable acceptance plugin `ea515f5624c8a34cc4572731a2590223a5eb27f4`. Canonical/legacy manifests are byte-identical, version0.15.0. Actual final build-only ZIP SHA `935ad686d34caa953979a6d7de85152621c923a7bd43337b8238ecb1aabece6b`,317911 bytes,133 exact members, retains package applicability across these source-only report edits. Current release.py SHA `03a2c1e5686ad1b9e0cae64db3a359a7c049e8c084667ed5496eec2613ebfa4b` is byte-identical to actual tested tooling4a56c7d; the controlled fixture wrapper and provider candidate170adc remain separate identities. Fresh source support113 and publisher26 tests at083c50e Passed; this is source support, not live installed-client acceptance.
+
+Actual strict validators retain39 errors: four manifest and35 standalone resource constraints. All120 explicit skill-entry resources resolve inside the plugin root; no portable-standard Pass is claimed. Explicit pinned-source loading/Python3.12.14 and actual separate publisher Python3.11 CI are established; local Python3.11, Windows CMD, installed discovery/activation and unrepresented platforms remain unexecuted. Shared unrestricted filesystem, structured transcript scope, lost first helper channels, bounded recovery and historical A014 JSON NUL-format exception are preserved. No confirmed consumer instruction defect is inferred from automatic approval barriers.
+
+Frozen campaigns038–041 retain all16 original path/mode/object/byte identities versusb246f8f without loading closed prose. Original opening commit is `d692b9040da1fd2eb620f2f27a5c91968b15bae4`, main baseline `a6c42dd754843abf9bafca7dee2aee9e733b046a`; included actual child scope remains recorded in this campaign's U008/current evidence. Supplemental LOCAL042 trials are test fixtures, not new source child campaigns. No production tag/release/version bump is selected.
+
+## Historical campaign record
+
 ## Authority and state
 
 Campaign `037_a6c42dd` executes the [accepted detailed plan](REVISION-PLAN.md) following the human’s 2026-10-10 “Execute” instruction and supplied dedicated playground. All R-001–R-006 and optional targets remain selected. No production version, tag or release is authorized by this campaign.
@@ -16,7 +39,7 @@ Campaign `037_a6c42dd` executes the [accepted detailed plan](REVISION-PLAN.md) f
 
 Ruling: execute the plan’s recommended single manual-dispatch publisher route, with exact source/tag, curated notes and explicit build-only/publication policy. The human instructed execution of this detailed plan; the recommended route is within that accepted scope. Retiring the inadequate tag-only publisher avoids competing creators. Record the full input/lifecycle contract at CP-002 before implementation. If this interpretation is wrong, the trigger route requires amendment before integration; no production release is involved.
 
-## Checkpoint ledger
+## Historical checkpoint ledger
 
 | Checkpoint | Actual result | Publication |
 | --- | --- | --- |
@@ -33,7 +56,7 @@ Ruling: execute the plan’s recommended single manual-dispatch publisher route,
 | CP-018 | Running: A015–A021 controlled recovery/preservation variants independently Passed; A014 cross-phase Blocked and A022 pending. Original failures/interventions retained. | A021 assessment `ea9ab9d` pushed and exact readback; required totals23 Passed/2 Failed/7 unresolved. |
 | CP-019–CP-025 | Pending. | Follow separate commits and per-commit publication barrier. |
 
-## Findings and readiness
+## Orientation findings and readiness — historical
 
 R-001–R-006 remain Open. No source repair, package trial, independent consumer acceptance or production readiness is claimed by orientation. The reviewed product baseline and prior review evidence remain historical; execution will identify exact new candidates separately.
 
@@ -423,3 +446,7 @@ A013 final independent assessment SHA `ef96dabb49056c5be080a33a03d19abf0f1fc0f32
 Fresh prospective product merged checks passed37 unit/34 integration and478 actual extracted cases/probes with1628 explicit-B/bytecode-suppressed children; twelve prior README/API fences are reused only for unchanged public bytes. Their2776-child campaign and ZIP hash remain separate from the actual merged ZIP. Final exact export contains9809 independently whole-file/genericJSON screened files including7537 immutable consumer records, original failures and bounded current191-file/207-object recovery. Complete reachable-history bundle and lost first logger channels remain unclaimed. Native own issue/milestone closure order and separately timed foreign-preservation observations are retained. Shared-filesystem isolation, structured transcripts, runtime/platform/installed-client and original historical A014 JSON-format limitations remain explicit.
 
 This completes final coverage/reporting assessment and its publication on the authorized evidence branch. CP023's default integration exit, CP025 final source integration and full required readiness remain **Blocked/pending**. R005 stays Open. No production release/tag/version change is claimed; previous checkpoint statements above are historical observations.
+
+## CP-024 — current findings and readiness
+
+The current revised-candidate table above is authoritative for reached dispositions. Final findings, package/publisher/diagram applicability, required and optional outcomes, strict/client/platform limitations and frozen16 preservation are reconciled against independently assessed published evidence92171db. Old observations remain chronological. CP024 recording is complete; CP023 default evidence integration and CP025 final source integration remain Blocked/pending, and R005 remains Open.

@@ -1,5 +1,28 @@
 # Comprehensive prerelease revision and acceptance plan
 
+## Current revised candidate — CP024
+
+Campaign037 corrections and final assessed reporting are published on `revision/037_a6c42dd-prerelease-review`. Full required readiness remains **false**: original32-required results27 Passed/2 Failed/3 Blocked, separately corrected-recheck lens29 Passed/3 Blocked; two optional variants Not run,14 supplements outside these totals. Scoped final reporting independently Passed. A013 default publication, A014 named new live trial branches and A027 dependent evidence integration are Blocked. Main product merge549a is accepted locally but unpublished after two automatic review rejections before execution; no retry or workaround follows. Source/evidence final default integration remains pending. See [actual reached checkpoint and exact evidence](REVISION-REPORT.md#cp-023--final-reached-reconciliation-default-integration-blocked).
+
+| Finding | Current disposition | Actual applicability and remaining limit |
+| --- | --- | --- |
+| R001 root navigation | Corrected | Extracted shipped links/objective rechecks Passed; current shipped bytes equal tested pin. |
+| R002 capability map | Corrected | Current owner/path/capability coverage rechecked; current shipped bytes equal tested pin. |
+| R003 curated notes | Corrected with bounded actual provider recheck | Structured publisher transfer and exact actual fixture body Passed; human editorial curation is separately scoped. |
+| R004 publisher lifecycle | Corrected with bounded actual provider recheck | Acknowledged-ID repair21e29c4; clean first-create and unchanged complete rerun Passed using byte-identical current release.py, separately pinned fixture wrapper. Initial failures remain Failed. |
+| R005 required acceptance | Open | Three required Blocked outcomes; installed/native/platform facilities and evidence limits remain. No deferral/risk acceptance or production readiness. |
+| R006 implementation diagram | Corrected | Actual four rendered PNGs at629d4cb retain exact current README/diagram-byte applicability; no new renderer run. |
+| R007 A004 assessor contradiction | Corrected harness; separate recheck Passed | Original Failed retained; corrected criterion atfc193b0 did not alter plugin bytes or retroactively pass the original attempt. |
+| R008 A005 premature vectors | Corrected harness; separate recheck Passed | Original Failed retained; corrected owner criteria at355e3d3 did not alter plugin bytes or retroactively pass the original attempt. |
+
+The current133 shipped paths/modes/blob bytes remain identical to immutable acceptance plugin `ea515f5624c8a34cc4572731a2590223a5eb27f4`. Canonical/legacy manifests are byte-identical, version0.15.0. Actual final build-only ZIP SHA `935ad686d34caa953979a6d7de85152621c923a7bd43337b8238ecb1aabece6b`,317911 bytes,133 exact members, retains package applicability across these source-only report edits. Current release.py SHA `03a2c1e5686ad1b9e0cae64db3a359a7c049e8c084667ed5496eec2613ebfa4b` is byte-identical to actual tested tooling4a56c7d; the controlled fixture wrapper and provider candidate170adc remain separate identities. Fresh source support113 and publisher26 tests at083c50e Passed; this is source support, not live installed-client acceptance.
+
+Actual strict validators retain39 errors: four manifest and35 standalone resource constraints. All120 explicit skill-entry resources resolve inside the plugin root; no portable-standard Pass is claimed. Explicit pinned-source loading/Python3.12.14 and actual separate publisher Python3.11 CI are established; local Python3.11, Windows CMD, installed discovery/activation and unrepresented platforms remain unexecuted. Shared unrestricted filesystem, structured transcript scope, lost first helper channels, bounded recovery and historical A014 JSON NUL-format exception are preserved. No confirmed consumer instruction defect is inferred from automatic approval barriers.
+
+Frozen campaigns038–041 retain all16 original path/mode/object/byte identities versusb246f8f without loading closed prose. Original opening commit is `d692b9040da1fd2eb620f2f27a5c91968b15bae4`, main baseline `a6c42dd754843abf9bafca7dee2aee9e733b046a`; included actual child scope remains recorded in this campaign's U008/current evidence. Supplemental LOCAL042 trials are test fixtures, not new source child campaigns. No production tag/release/version bump is selected.
+
+## Historical campaign record
+
 ## Campaign, authority and state
 
 - Campaign: `037_a6c42dd`; original baseline `a6c42dd754843abf9bafca7dee2aee9e733b046a`.
