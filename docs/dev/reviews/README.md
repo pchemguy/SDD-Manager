@@ -52,3 +52,5 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `037_a6c42dd` | Suspended on 2026-10-10 for a focused tracking-fidelity campaign; completed prerelease review and its four Open defects/one evidence gap retained; no repairs executed. | [Review plan](037_a6c42dd-prerelease-review/REVIEW-PLAN.md), [source inventory](037_a6c42dd-prerelease-review/SOURCE-INVENTORY.md), [review report](037_a6c42dd-prerelease-review/REVIEW-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
+
+| `038_d6218f1` | Focused tracking-fidelity review opened from suspended campaign 037; supplied consumer omission retained with credential redacted; source revisions not authorized. | [Campaign scope and supplied result](038_d6218f1-tracking-fidelity/README.md) |
