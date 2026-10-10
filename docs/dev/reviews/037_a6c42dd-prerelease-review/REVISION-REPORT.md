@@ -24,7 +24,9 @@ Ruling: execute the plan’s recommended single manual-dispatch publisher route,
 | CP-007 | Complete local publisher, 22 publisher / 113 support tests Passed. | First push rejected for missing source workflow permission; updated credential recovered the same commit, exact origin readback verified. |
 | CP-008–CP-010 | Package navigation, capability map, implementation gates and all four rendered diagrams verified. | Each separate commit pushed and exact origin tip verified. |
 | CP-011 | Source-ready local boundary verified below. | This checkpoint must publish/read back before immutable acceptance setup. |
-| CP-012–CP-025 | Pending. | Follow separate commits and per-commit publication barrier. |
+| CP-012 | Immutable source, publisher/product/evidence setup published. | Source `1fe66a9` and playground refs recovered from origin after sandbox loss. |
+| CP-013 | First trial failed after draft creation; recovery publication verified; complete rerun in progress. | Recovery evidence published through `d61fd81`; final CP-013 outcome remains pending. |
+| CP-014–CP-025 | Pending; A-001 preparation consumer started independently from P0. | Follow separate commits and per-commit publication barrier. |
 
 ## Findings and readiness
 
@@ -108,3 +110,15 @@ R-001, R-002 and R-006 meet their source/document objective rechecks and are cor
 - Fresh conversation handoffs and independent assessor tools exist. Workers share unrestricted filesystem access; handoffs will exclude assessor material, but filesystem isolation is **not certified** and isolation-dependent claims cannot be certified. Installed discovery, Windows CMD/native platform, native agent kill and isolated post-write live response suppression remain unestablished. Optional unavailable controls remain Not run; required missing facilities block affected claims. The observed renderer browser is not installed-plugin evidence.
 
 Every setup commit in both repositories was pushed and its exact destination ref read back before the next commit/work unit. Source CP-012 must publish/read back before dispatch or consumer work. No tag/release, actual CI run or consumer acceptance is claimed by this setup checkpoint.
+
+## Sandbox restoration and CP-013 continuation
+
+On 2026-10-10 the execution-service transport disconnected and local workspaces later returned at an older state. Normal fetch/fast-forward restored source `1fe66a96cfbadb2f4e00c02c5d62857788b9c7ca`; normal clone/worktree restoration recovered playground main `eff696b`, publisher `fb7324d` and evidence `2cde2bb`. No reset, force push, history rewrite or fresh product setup was used. Original uncommitted dispatch/log files and ZIP were unavailable. Provider readbacks reconstruct effects, with lost records explicitly identified; missing command history is not invented.
+
+First publisher run [38043868742](https://github.com/pchemguy/SDD-Manager-Prerelease-Playground/actions/runs/38043868742) failed after creating draft `408861830`, at immediate release-inventory readback. The supplied repository credential observes the exact curated draft and zero assets. A later GET-only Contents-write workflow-token probe [38044886069](https://github.com/pchemguy/SDD-Manager-Prerelease-Playground/actions/runs/38044886069) Passed: list and exact-ID reads find that draft; tag read returns 404. The backend cause of the first immediate inventory miss is unresolved. The test-only diagnostic tooling at `be0f6d4` leaves package source and publisher implementation unchanged and has no release writes.
+
+Read-before-replay verified the existing exact draft and tag. Recovery publisher run [38045002859](https://github.com/pchemguy/SDD-Manager-Prerelease-Playground/actions/runs/38045002859) Passed with Python 3.11 CI. Independent authenticated readback verifies the original release ID, published/prerelease state, exact curated body, no latest release, two uploaded assets `627669329`/`627669376` and actual downloaded ZIP/checksum agreement. Downloaded ZIP SHA-256 `08ae8da54f128179b03cfd71f647cddf35af71f07195b971845aa126158a0217` equals the original CI builder hash; all 133 files match the pinned committed playground tree. The first failure remains Failed; successful recovery is assisted by external restoration/diagnosis. Complete-release rerun `037-complete-rerun-001` is dispatched but not yet assessed. No production source tag/release was created.
+
+The reconstructed source ZIP at `ea515f5` passes all member-byte checks under current Git 2.51.1 but has hash `fdac66999958619b7746d9d7a1aa50a390b7472954e308f8d68a94418de588ba`, differing from the original recorded ZIP. Original ZIP container-byte identity cannot be recovered; both identities remain visible. Immutable committed package files and the actual provider ZIP are verified separately.
+
+Sanitized recovery evidence is published at [test evidence checkpoint d61fd81](https://github.com/pchemguy/SDD-Manager-Prerelease-Playground/tree/d61fd81d75fb1df8891ea19d7d8efc729ec67715) in the playground repository. A fresh A-001 consumer has started from the retained product setup using explicit pinned-source loading. Real human document reviews remain required; no acceptance is manufactured. Filesystem isolation remains uncertified. R-003/R-004 remain Open for final repeated/fault observations; R-005 remains Open.
