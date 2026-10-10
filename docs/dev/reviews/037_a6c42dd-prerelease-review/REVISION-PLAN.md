@@ -183,3 +183,6 @@ CP-018 progress: controlled A023 independently Passed and published15ac1bd with 
 
 
 CP017 progress: A007 independent Passed published5f16f79 and verified; A008 ordinary named-file range feature preparation is eligible. No stdin implementation, whole Phase2 integration or full readiness claim.
+
+
+CP018 progress: A020 exact foreign index/worktree preservation independently Passed and published5291d8a with remote readback. Remaining controlled trials pending; no full-campaign acceptance claim.
