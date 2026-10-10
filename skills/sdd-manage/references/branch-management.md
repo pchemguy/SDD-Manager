@@ -11,6 +11,7 @@ Use this coordinator procedure for mutating branch setup, reuse, continuation, a
 
 ## Create or reuse
 
+- For a closed revision amendment, establish [reopened campaign eligibility](revision-modes.md#eligibility-and-authority) before reuse; retain its original identity and record the new source/target checkpoint. An active blocked workflow resumes rather than reopening.
 - Reuse only when context, history, target and pending work fit the same scope. Preserve suitable legacy/in-flight names or explicit project/user overrides and their recorded association; no automatic migration.
 - For new work, choose the workflow convention's branch name and validate it with `git check-ref-format --branch`. Inspect local/remote name collisions and worktree occupancy. An unrelated occupied name needs a distinct slug suffix without changing campaign identity; remote uncertainty is not proof the name is free.
 - Create project preparation branches from the refreshed default checkpoint, and dependent implementation branches from the verified/published default preparation checkpoint under the gate below. Other scoped branches start from their established target checkpoint. Use a separate worktree where unrelated dirty work or target availability requires it; preserve original staging/work and never implicitly stash/reset/clean. Do not check out one branch in two worktrees.

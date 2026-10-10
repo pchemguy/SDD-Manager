@@ -24,7 +24,7 @@ Translate the user's objective into a scoped workflow and coordinate the respons
 | Establish optional GitHub tracking recommendation, confirmation and retained scope | [tracking decision](references/tracking-decision.md) |
 | Gate phase eligibility and active hosted object creation before execution | [phase activation](references/phase-activation.md) |
 | Run an explicitly selected comprehensive prerelease review, or issue its advisory release reminder | [prerelease review](references/prerelease-review.md) |
-| Open a revision inside an active campaign | [revision modes](references/revision-modes.md) |
+| Open a nested revision or amend the eligible last closed campaign | [revision modes](references/revision-modes.md) |
 | Plan or coordinate focused/systematic review and accepted revisions | [review and revision](references/review-and-revision.md) |
 | Prepare local Git highlights, release packages/workflows or create/finish a GitHub release | [release operations](references/workflows.md#release-operations) and sdd-forge's [shared Git highlights](../sdd-forge/references/release-highlights.md) or selected [GitHub backend](../sdd-forge/references/github.md) |
 | Check representative requests and expected boundaries | [workflow examples](references/examples.md) |
@@ -39,4 +39,4 @@ Apply [per-commit publication](references/git-workflows.md#publish-each-commit) 
 
 Use **sdd-report** for presentation, keeping planned, implemented, verified, committed, pushed, and hosted states distinct. Return the accomplished objective, affected artifacts or task IDs, evidence and limitations, commit/push and hosting outcomes when applicable, remaining decisions, and the exact stopping point. Do not require a transaction journal, recovery directory, extra issue map, or a new skill for interruption recovery. This coordinator requires the focused skills selected by the workflow; if one is unavailable, report the blocked capability rather than claiming it ran.
 
-Respect the [closed campaign record boundary](../sdd-conventions/references/review-campaigns.md#closed-campaign-records): retain closed packages unchanged and outside routine context loading or current validation. Consult them only for a specific current need; later changes create no historical-compatibility work or reporting obligation.
+Apply [revision modes](references/revision-modes.md) before a nested campaign or selected closed-campaign amendment; verify amendment eligibility/authority rather than silently reopening. Respect the [closed campaign record boundary](../sdd-conventions/references/review-campaigns.md#closed-campaign-records): retain closed packages unchanged and outside routine context loading or current validation, except the selected package while explicitly reopened under that procedure. Consult them only for a specific current need; later changes create no historical-compatibility work or reporting obligation.

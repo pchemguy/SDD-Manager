@@ -11,7 +11,7 @@ SDD Manager is an Agent Plugin for specification-driven development in Git repos
 
 When installed as a package, use this file for package-level orientation and then load the selected skill's `SKILL.md` plus only the references it requires. When working on the SDD Manager source repository, also read applicable nested AGENTS.md before work on its paths. If your host does not discover this entry point, load it explicitly. Keep maintained navigation accurate without overwriting controlling human instructions.
 
-Use current source and the active campaign for routine work. Prior closed review/feature/steering records are frozen history: do not load their contents without a specific current need, edit them, or check/report their compatibility with subsequent changes. Discover identities/paths without reading contents and verify preservation from Git path/object diffs. See [closed campaign records](skills/sdd-conventions/references/review-campaigns.md#closed-campaign-records).
+Use current source and the active campaign for routine work. Prior closed review/feature/steering records are frozen history, except the selected eligible revision campaign explicitly reopened under [revision modes](skills/sdd-manage/references/revision-modes.md): do not load their contents without a specific current need, edit them, or check/report their compatibility with subsequent changes. Discover identities/paths without reading contents and verify preservation from Git path/object diffs. See [closed campaign records](skills/sdd-conventions/references/review-campaigns.md#closed-campaign-records).
 
 ## Verification and persistence
 

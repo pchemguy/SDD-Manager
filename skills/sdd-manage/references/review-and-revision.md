@@ -6,7 +6,7 @@ This is the formal campaign path for the [revision core workflow](workflows.md#c
 
 For an explicitly selected comprehensive prerelease review, load the [prerelease profile](prerelease-review.md) for candidate scope, coverage, owner routing and readiness criteria. It uses this lifecycle; release reminders do not activate review.
 
-For revision work within an active campaign, select the [nested revision campaign mode](revision-modes.md#nested-revision-campaign) before branch setup; it establishes the parent suspension, source/return target and stopping boundary.
+Before campaign branch setup, load [revision modes](revision-modes.md) when opening a revision within an active campaign or extending the eligible last closed revision. Nested revision establishes parent suspension/source/return context; a reopened campaign amendment requires verified eligibility and human authority. Ordinary closed records remain frozen; only an authorized selected reopening changes that record boundary.
 
 ## Review
 
