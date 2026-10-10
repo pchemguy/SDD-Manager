@@ -21,7 +21,41 @@ Use `Refs owner/repo#123` when the commit advances an issue without completing i
 
 ## Merge commit
 
-Draft a subject identifying the actual feature, steering amendment, or selected range, such as `Merge phase 2 Archive support` or `Merge feature ZIP support`. A main milestone/task subset does not justify a merge draft while its phase remains incomplete. Return the subject and body separately. Include the working and target branches, starting checkpoint and verified parent tips, included task IDs where applicable, boundary and merged-state checks, material conflict resolutions, and limitations. Do not represent an amendment as completion of the next task. The coordinator performs the explicit two-parent merge; drafting the message does not authorize extra work or a hosted PR.
+Draft a subject identifying the actual feature, revision campaign, steering amendment or selected completed range. For a campaign, include its stable ID and a concise title derived from the final delivered scope, such as `Merge revision 040_a0685b5 — Revision campaign modes`; do not retain a stale opening title when scope changed. A main milestone/task subset does not justify a merge while its phase remains incomplete. Return subject/body separately; the coordinator owns the explicit two-parent integration.
+
+### Campaign integration summary
+
+Every ordinary, nested or reopened revision integration, and every feature, steering, completed phase or accepted document-preparation integration, carries a concise, self-contained summary for [release highlights](../../sdd-forge/references/release-highlights.md#use-integration-summaries-first). Include the following facts, with labels when useful rather than a mandatory machine schema:
+
+- **Objective:** The problem or intended outcome and why it matters.
+- **Review:** Actual reviewed scope/coverage and material conclusions; state when no separate review was performed. Do not imply a comprehensive review from a focused amendment.
+- **Delivered:** Actual executed scope and consequential features/fixes/documentation or workflow changes, including effects relevant to users. Separate accepted/executed work from proposals, exclusions and unfinished parent work.
+- **Verification:** Actual boundary and merged-state checks/results, with relevant counts/environment and evidence limits. Record blocked/unrun checks, material conflict resolutions, compatibility/migration consequences and deferred work when applicable; passing local tests does not prove live acceptance.
+- **Integration:** Campaign/phase/preparation identity and mode where applicable, working and return-target branches, full original campaign-opening commit ID, full original branch-off/base commit ID (the starting baseline), and distinct reopening checkpoint when applicable, verified parent/source tips and affected task/action IDs. Apply campaign-opening provenance to campaigns; do not invent a campaign ID/opening for an initial preparation or phase that has none. Git parents establish ancestry; titles/branch names alone do not establish coverage.
+
+A reopened amendment carries forward a concise cumulative summary of the campaign’s retained result and objective/review coverage, then clearly separates the new delta and added actions. Include prior integration, the original campaign-opening commit pointer and original branch-off SHA alongside the reopening checkpoint. Every amendment retains the first opening pointer; do not replace it with an amendment’s first commit. Make the latest cumulative summary sufficient for release highlights without tracing earlier campaign merges: carry forward all relevant retained outcomes, review coverage and material superseded/withdrawn consequences, with original opening provenance and separately identified new delta. Retain relevant earlier information without copying raw prior messages or presenting original delivery as new. Correct superseded outcomes in the cumulative result and distinguish historical checks/source from actual new merged-state verification; inherited verification is not fresh evidence.
+
+Subsequent summaries may also retain compact explicit scope references for the original opening and individual reopenings: identify each opening/reopening commit or checkpoint, added action IDs and its review/execution scope. Carry needed scope distinctions forward in the latest message rather than requiring readers to follow older merge bodies; distinguish these provenance references from the cumulative user outcome and current delta. They are not a new registry or raw chronological transcript.
+
+The campaign-opening commit is the verified first commit opening that campaign and its retained records. It is distinct from the branch-off/shared source checkpoint and from later reopening commits; do not infer it from current branch tips or invent an unavailable identity.
+
+An enclosing integration summarizes the combined delivered result and identifies included nested campaigns/amendments sufficiently to prevent duplicate release highlights. Keep the semantic summary prominent and technical provenance compact; do not substitute raw logs or a list of commit subjects for the outcome.
+
+Phase summaries describe actual completed phase scope, delivery/reviews/exits and verification; retain the full-phase merge gate and report an explicit partial-integration override accurately. Document-preparation summaries identify accepted documents/review coverage and readiness for their dependent stage, without claiming implementation or task completion. Use the plugin’s established `design-docs/*` document-preparation branches; prefixes discover candidates but never establish scope or acceptance. Preserve repeated preparation deltas as distinct scope, with appropriate source/checkpoint evidence.
+
+The message is an **integration summary**, not proof that closure/publication already happened. It is committed before its push and final worktree return; do not claim those future steps succeeded. Closure still requires the applicable verified target publication and return boundary. Review-only publication does not fabricate a closure merge. Do not represent an amendment as completion of the next task, an interrupted parent or a product release. Drafting authorizes no extra work or hosted PR.
+
+```text
+Merge revision 040_a0685b5 — Revision campaign modes
+
+Objective: Define nested revisions and eligible campaign amendments.
+Review: Assessed campaign routing, branch ownership, closure and reporting.
+Delivered: Added both modes, eligibility checks, scoped reopening and
+explicit return to the interrupted campaign branch.
+Verification: 16 source scenarios checked; 113 support tests passed on the
+merged state. Package and link checks passed; live compliance not assessed.
+Integration: <campaign/mode, original opening, branch-off/reopening, branches/parents>
+```
 
 ## Pull request
 
