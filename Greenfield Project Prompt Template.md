@@ -14,7 +14,7 @@ GitHub token: {FINE_GRAINED_GH_TOKEN}
 
 Throughout this conversation, I authorize the repository operations required by SDD Manager within the agreed project scope and available permissions, including branches, commits, pushes, merges and GitHub tracking updates. Do not request separate or repeated authorization for these operations. Preserve SDD Manager's required human document reviews and execution boundaries, and follow any later instructions that change this scope.
 
-Enable and maintain GitHub tracking for phase labels, milestones and task issues. Before implementing an eligible phase, create or reconcile its required tracking objects and verify their associations by readback. If this prerequisite cannot be satisfied, report the blocker before proceeding with affected implementation.
+Enable and maintain GitHub tracking for phase labels, milestones and task issues. Apply sdd-manage’s phase activation workflow before implementing each eligible phase: create or reconcile its required tracking objects and verify their associations by readback. If this prerequisite cannot be satisfied, report the blocker and stop affected implementation.
 
 Preliminary project description:
 

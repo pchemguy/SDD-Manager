@@ -29,3 +29,15 @@ V-002 revises persistent authorization while preserving human reviews, execution
 - Active campaign links resolve; Markdown heading/marker/fence separation and whitespace checks pass; root manifest copies remain identical. Release-shaped staged-tree archive contains the revised template exactly.
 - `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v`: 113 tests passed in 16.351 seconds, exit 0, Python 3.12.14.
 - Full amendment diff is limited to four owned paths: template, current index and this explicitly reopened campaign’s plan/report. Other campaigns remain untouched. No live agent/provider acceptance is selected or inferred. Prospective merge checks and final target publication are retained in the integration commit/Git refs.
+
+## Authorized reopening: V-003
+
+The human accepted the explicit phase activation reference and reopened campaign 039. Amendment source/target checkpoint: `f64e7eb3e6286f9d7ed74d74401e45ee24d3a6f1`. V-001/V-002 results remain retained as historical action evidence.
+
+V-003 names sdd-manage’s phase activation workflow in the tracking paragraph, applies it before each eligible phase and explicitly stops affected implementation when the prerequisite cannot be satisfied. State: V-003 complete with local checks passed.
+
+- Exact comparison against the reopening checkpoint verifies the accepted tracking paragraph is the only template change. All other wording, token guidance, placeholders, five-block order and final description/fences are unchanged.
+- Inspected current phase-activation owner: eligible-phase projection/readback precedes affected execution; incomplete/unknown projection blocks execution and later phases are not activated in advance. The prompt now names that owner without duplicating its detailed procedure.
+- Markdown/links and whitespace checks pass; manifests remain byte-identical. Release-shaped staged-tree archive extraction matches the amended template; four authorized paths only, no other campaign edits.
+- `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v`: 113 tests passed in 16.022 seconds, exit 0, Python 3.12.14.
+- Final prospective merged-state evidence, parents, merge and target publication/containment are recorded in Git. Campaign 037 remains suspended; no live agent/provider acceptance, main merge or release is implied. Final action and explicit parent integration/publication facts are retained in Git. No live compliance claim is made.
