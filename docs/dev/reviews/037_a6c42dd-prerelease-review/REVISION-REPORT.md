@@ -60,3 +60,9 @@ Implemented strict handoff validation in `.github/scripts/release.py`: exact ful
 ## CP-005 — exact package inspection
 
 Implemented committed-tree inventory and actual ZIP inspection before checksum generation. Retained the existing shipped whitelist; excluded development/acceptance files stay excluded. Candidate HEAD must match the full source, both manifests must be byte-identical and tag/version must agree. Every archive file must match its committed blob; missing, duplicate/case-colliding, unsafe, unexpected and symlink members stop. Observed package subset: **4 tests Passed**, including real Git/ZIP byte comparison and deliberately tampered ZIPs. The duplicate-member fixture deliberately creates a malformed archive; its expected writer warning is scoped to that fixture. Provider lifecycle and complete workflow remain pending.
+
+## CP-006 — draft and asset reconciliation
+
+Implemented read-before-write draft/asset reconciliation. Existing tag must resolve to the selected source; matching draft fields and every present asset’s actual downloaded bytes are checked before upload. Duplicate, foreign, starter, wrong-size/byte and body conflicts stop without mutation. Missing assets alone are uploaded; partial effects remain drafts. An uncertain upload exits rather than blindly replaying; the next invocation reconciles its actual effect. Build-only touches no provider interface.
+
+Observed full publisher contracts: **14 Passed, three Failed**. The remaining intentional failures are first final publication, unexpected latest-change detection and opt-in latest verification, all pending CP-007. No final publish operation is yet implemented or claimed. These controlled provider tests are local contract evidence, not live GitHub trials.

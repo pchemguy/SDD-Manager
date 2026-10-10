@@ -114,3 +114,54 @@ def build_package(root, data, output):
     checksum = output / 'sdd-manager.zip.sha256'
     checksum.write_text(hashlib.sha256(archive.read_bytes()).hexdigest() + '  sdd-manager.zip\n', encoding='ascii')
     return {archive.name: archive, checksum.name: checksum}
+
+
+def verify_release(api, release, data, files, complete):
+    """Read and compare owned fields and every available asset's actual bytes."""
+    if (release['tag_name'] != data['tag'] or release['name'] != 'SDD Manager ' + data['tag']
+            or release['body'] != data['notes'] or release['prerelease'] != data['prerelease']):
+        raise ValueError('Release fields conflict with selected handoff')
+    assets = release['assets']
+    names = [asset['name'] for asset in assets]
+    if len(names) != len(set(names)) or not set(names) <= set(files):
+        raise ValueError('Duplicate or foreign release assets')
+    for asset in assets:
+        raw = files[asset['name']]
+        if asset['state'] != 'uploaded' or asset['size'] != len(raw):
+            raise ValueError('Incomplete or mismatching release asset')
+        if api.download(asset) != raw:
+            raise ValueError('Downloaded release bytes differ')
+    if complete and set(names) != set(files):
+        raise ValueError('Release asset inventory is incomplete')
+    return set(names)
+
+
+def reconcile_release(api, data, files):
+    """Reconcile matching drafts without destructive or blind mutation replay."""
+    validate_handoff(data)
+    if not data['publish']:
+        return None
+    if api.tag_source(data['tag']) != data['source']:
+        raise ValueError('Existing tag differs from selected source')
+    before_latest = api.latest_id()
+    release = api.find_release(data['tag'])
+    if release is not None:
+        verify_release(api, release, data, files, complete=not release['draft'])
+    else:
+        api.create_draft(data)
+        release = api.find_release(data['tag'])
+        if release is None: raise ValueError('Draft creation readback is missing')
+        verify_release(api, release, data, files, complete=False)
+    if release['draft']:
+        for name, raw in files.items():
+            # Read before each effect; uncertainty exits, later runs re-read first.
+            release = api.find_release(data['tag'])
+            if release is None or not release['draft']:
+                raise ValueError('Draft changed during upload')
+            present = verify_release(api, release, data, files, complete=False)
+            if name not in present:
+                api.upload(release, name, raw)
+        release = api.find_release(data['tag'])
+        verify_release(api, release, data, files, complete=True)
+    # Final publication and policy readback are deliberately pending CP-007.
+    return release
