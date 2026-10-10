@@ -48,4 +48,20 @@ Bonus for clearing multiple lines.
 
 ### Feature Campaign: Autohidden Ghost Piece
 
+```
+Dynamically hide ghost piece when it is projected into the top half of the board.
+```
 
+### Feature Campaign: Xray or Tunnel Mode
+
+In the xray/tunnel mode a piece is allowed to go through blocking (filled) cells. This mode may be defined as one bonus switch at user's will per piece. For example, at the beginning user may be granted a certain number of activation. Alternatively, one activation may be granted for each case of simultaneously clearing 4 lines, possibly with a capped maximum.
+
+#### Non-interfering Variant
+
+When there is an empty region blocked by pieces above it in where the current piece could fit (non-interfering variant), a piece in the xray/tunnel mode is allowed to go through the blocking pieces.
+
+#### Interfering Variant
+
+When there is an empty region blocked by pieces above it in where the current piece could fit, a piece 
+
+In the xray/tunnel mode with interference a piece can go down irrespective of any blocking pieces as low as it can cover at least one empty cell, possibly overlapping with field cells.
