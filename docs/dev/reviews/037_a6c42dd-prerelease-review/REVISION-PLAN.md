@@ -177,3 +177,6 @@ Actual A-004 found R-007: unchanged-integration assessor wording contradicts req
 ## CP-016 reached checkpoint
 
 First-task/milestone corrected assessor rechecks and full A-006 independent acceptance are published. Phase1 main `e7cae5b` is explicitly integrated and remotely verified; playground assessment `39f4c3c` verifies complete phase exits, closures and preservation. CP-016 is complete with original failed harness attempts retained. CP-017 may proceed through the authorized ordinary JSON increment; CP-018 has three additional independently Passed A-026 variants, while its remaining controlled cases stay pending. No required-campaign readiness or source final integration is claimed.
+
+
+CP-018 progress: controlled A023 independently Passed and published15ac1bd with exact remote readback. A020 fresh scoped completion/preservation consumer and separate assessor are active. A007 independent review remains pending. Neither CP017 nor CP018 is complete.
