@@ -8,7 +8,7 @@
 - Package built locally from the exact source using the unchanged release workflow's `git archive` member selection; this is not a hosted asset or installed-client result.
 - Objective: apply the [comprehensive prerelease profile](../../../../skills/sdd-manage/references/prerelease-review.md) to the entire CURRENT supported SDD Manager product and report defects, evidence gaps and bounded improvement opportunities.
 - Scope authority: create/publish this campaign's review plan, inventory and report; run scoped local checks. No repairs, revision execution, product release/tag, publishing dispatch, hosted settings/tracking writes or main merge are authorized by this review request.
-- State: Suspended by the human on 2026-10-10. The completed [REVIEW-REPORT.md](REVIEW-REPORT.md), pinned candidate and five Open findings are retained; no prerelease repairs or reassessment proceed while the focused tracking-fidelity campaign is active.
+- State: Resumed by the human on 2026-10-10 for supplemental comprehensive assessment of integrated campaigns 038–041. The original candidate, completed assessment and five Open findings remain retained. This continuation updates review evidence only; repair planning/execution and main integration remain outside scope.
 - Inventory: [SOURCE-INVENTORY.md](SOURCE-INVENTORY.md) accounts for every current nonhistorical tracked path; packaged files and source-only support tooling have distinct evidence boundaries.
 
 ## Review order, criteria and scenarios
@@ -40,3 +40,18 @@ Keep findings Open until the human actually accepts, rejects or defers them. Rea
 Commit/push/read back the plan and inventory before assessment. After each unit, maintain the canonical review report (including no-finding coverage and actual checks), commit it and verify remote containment before any next unit or additional project work. Report checkpoints remain on this campaign branch. Do not merge review-only planning/report changes into main as an implementation prerequisite.
 
 Consolidate coverage, canonical findings/counts, readiness, proposed revision queue and evidence limits; publish the final report and return it. Stop before repairs, revision execution or product release publication. This campaign remains available for a separately accepted revision plan and authorized execution.
+
+## Resumed assessment: campaigns 038–041
+
+Human request: resume 037 and update its comprehensive report with findings/assessments related to the four integrated campaigns. Original candidate and U-001–U-007 evidence remain historical; they do not certify the changed candidate.
+
+- Supplemental exact source: `b246f8f92f35a8d2077bce467102f63270d64f2b`, version `0.15.0`; branch `revision/037_a6c42dd-prerelease-review`.
+- Integration provenance: 038 at `8bb3b3d`; 039 and its amendments at `7f06904`, `f64e7eb`, `a0685b5`; 040 and its amendment at `e24f30c`, `ca99ca1`; 041 at `b246f8f`. Full identities and parent/source containment are available in Git.
+- Selected historical consultation: only these four child campaigns' reports and merge evidence, to establish delivered scope and evidence limits. Other closed records remain excluded and unchanged.
+- Supplement existing inventory with exact changed path/blob identities. Build the workflow-shaped package from the new pin and record hash/member checks; no hosted asset or installed-client result is implied.
+
+| Unit / criteria | Affected coverage | Assessment and rechecks |
+| --- | --- | --- |
+| U-008 / C-001–C-007 | Campaigns 038–041 and their cross-unit effects on U-001–U-007. | Read all changed current product/support guidance and relevant unchanged authorities; compare tracking/activation/outage handoffs, prompt authorization/checkpoints, nested/reopened identity/return, cumulative summaries/highlights, atomic task closure/audit/recovery. Reassess README/AGENTS/diagrams and original R-001–R-005 where affected. Run support/catalog checks and the shipped highlights recipe fixtures; inspect exact package and changed-resource links. Distinguish source scenarios, local execution and child historical evidence from live fidelity. |
+
+U-008 is one bounded supplemental unit with four campaign subassessments and final cross-unit consolidation; its completion checkpoint publishes the report before further project work. Unchanged baseline coverage may be reused only with byte-identity and relevant handoff applicability established. Record unavailable or incomplete rechecks rather than infer full candidate readiness. Allocate R-006 onward only for demonstrated new findings; consolidate overlapping runtime gaps under R-005. No full TextStats/live consumer campaign, hosted tracking/release mutation, product source repair, child-record amendment, revision execution, main merge or release is selected.

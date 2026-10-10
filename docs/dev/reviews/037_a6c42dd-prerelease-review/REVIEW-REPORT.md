@@ -6,7 +6,7 @@
 - Exact reviewed source: `a6c42dd754843abf9bafca7dee2aee9e733b046a`; version `0.15.0`. Reviewer: coordinating assistant, 2026-10-09 UTC; no independent/fresh reviewer is claimed.
 - Exact locally built package: `sdd-manager.zip`, 132 regular files, 298720 bytes; SHA-256 `52a828f85e7ff619a0ebe028b446650ba999d89b2445efe573714ba96a012b2d`.
 - Branch: `revision/037_a6c42dd-prerelease-review`; main is unchanged. Review authority covers artifacts/publication and scoped checks, not repairs or product release.
-- State: Suspended by the human on 2026-10-10 after completed review; U-001–U-007 assessed; four Open defects (one P1, three P2) and one Open P2 evidence gap; revision execution not started.
+- State: Resumed by the human on 2026-10-10 for the campaigns 038–041 supplemental assessment at `b246f8f92f35a8d2077bce467102f63270d64f2b`. U-001–U-007 below retain the original candidate assessment; U-008 is in progress. Original four Open defects (one P1, three P2) and one Open P2 evidence gap remain; revision execution not started.
 - Findings remain Open unless an actual human disposition is recorded. No deferral or risk acceptance has been supplied.
 
 ## Unit coverage and checkpoints
