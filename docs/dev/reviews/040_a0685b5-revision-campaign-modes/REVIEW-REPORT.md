@@ -50,3 +50,14 @@ The proposed plan establishes two explicit modes using existing manager, Git and
 ## Subsequent accepted revision
 
 The human authorized execution with “Execute campaign” and clarified that both modes must switch the worktree back to the interrupted campaign branch after closure. All three source actions are delivered; [REVISION-REPORT.md](REVISION-REPORT.md) records actual checks. R-001/R-002 are Verified for the accepted source definitions/source scenario rechecks, with no claim of live agent fidelity. Baseline observations and the original Proposed-stage assessment above remain retained. Final integration is into suspended campaign 037 only.
+
+## Accepted amendment findings: integration summaries
+
+Reopening assessment source: `e24f30c6d6da128b5c59e95cd3a782d6a7215335`. The human accepted the full suggestions for campaign integration summaries and summary-first highlights as an amendment to this campaign. Earlier baseline observations/results remain retained.
+
+- R-003, P2 reporting improvement, Accepted: sdd-report object-drafts “Merge commit” requires branches, checkpoints, parents, checks/conflicts/limits but does not explicitly require campaign title, objective, reviewed scope and delivered outcomes as a self-contained release-ready summary. Define the contract for ordinary/nested/reopened revisions and feature/steering integrations; derive title from final scope and distinguish new amendment delta from previous delivery. Recheck producer entry/lifecycle and actual final merge message against those fields.
+- R-004, P2 release-evidence improvement, Accepted: forge release-highlights range step 5/recipe and incremental instructions require all full messages; reporting/verify/forge entry repeat that expectation. Branch enumeration/tips cannot replace integrated history: refs can disappear/advance and ordinary tip commits need not summarize closure. Define summary-first editorial consumption over complete reachable range identities/parents, nested integration and direct-change coverage, outcome/amendment consolidation and targeted fallback. Recheck actual Git collection mechanics and source curation/coverage policy; mechanical success is not semantic acceptance.
+
+Both findings are executed under V-004 in the amended [revision plan](REVISION-PLAN.md), with results in [REVISION-REPORT.md](REVISION-REPORT.md). No earlier campaign records are reviewed or repaired.
+
+V-004 incorporates the human’s subsequent cumulative-summary/original-opening/per-opening-scope clarifications. R-003/R-004 are Verified for the source contract and collection mechanics documented in REVISION-REPORT; no independent semantic curation or live acceptance is claimed. The latest adequate cumulative summary is sufficient without routine earlier merge-body traversal; full identity/parent coverage and targeted fallback remain required.

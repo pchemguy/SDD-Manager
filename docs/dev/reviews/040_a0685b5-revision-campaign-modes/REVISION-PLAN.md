@@ -1,4 +1,4 @@
-# Revision campaign modes revision plan
+# Revision campaign modes and integration summaries revision plan
 
 ## Campaign and accepted decisions
 
@@ -40,3 +40,23 @@ After acceptance, update the revision report with each action’s actual changes
 ## Execution clarification
 
 During execution the human clarified: “after the closure of either nested or amendment campaign, switch the worktree back to the interrupted campaign branch.” This is an accepted refinement of V-003’s return boundary. Both mode definitions explicitly require actual branch/HEAD confirmation after verified integration/publication; separate-worktree return preserves occupancy and dirty work without reset/stash. Returning the branch does not authorize resumed parent execution.
+
+## Authorized reopening: integration summaries and highlights
+
+The human requested: “Let’s integrate your suggestions/findings in full as an amendment to campaign 040.” Qualifying latest first-parent merge and reopening/target checkpoint: `e24f30c6d6da128b5c59e95cd3a782d6a7215335`, with campaign source parent `f4187b1dd3f627b34bc35c185301ae7236f1e222`. Both published refs and prior completed return are established; active target is `revision/037_a6c42dd-prerelease-review`. The amendment extends the integration/reporting definitions; retain original campaign identity/baseline and V-001–V-003 results.
+
+| Action | Accepted scope | Objective recheck |
+| --- | --- | --- |
+| V-004 / R-003/R-004 | Define concise campaign integration summaries for every revision mode and feature/steering integrations: final title, objective, reviewed scope, executed/delivered scope, actual merged-state verification/limits and integration provenance. Amendments summarize new delta/actions. Route lifecycle/Git/reporting to this contract. Make release highlights summary-first with complete range identity/parent inventory, reachable nested integration summaries, outcome consolidation/deduplication, targeted fallback for incomplete/contradicted/reverted/superseded summaries and direct changes. Branch tips are discovery only. Align collection recipe, incremental coverage and verify guidance. | Inspect all producer/consumer handoffs; execute the revised recipe against disposable real Git fixtures for nested/amended/deleted/moved refs, direct/uncovered changes, reverts, empty/initial/incremental ranges and baseline/pending-tag safeguards; inspect summary/coverage source scenarios, changed links/style/package and run support suite. Keep semantic curation/live acceptance distinct from mechanical checks. |
+
+This reopening authorizes the coupled producer/consumer wording and documented collection recipe revision plus retained focused verification evidence. It does not change release publication authority or publish a release. Commit/push/read back V-004, explicitly merge/verify/publish to the suspended parent, and confirm worktree return without resuming parent review. Earlier closed packages remain unchanged.
+
+### V-004 execution clarification
+
+The human proposed retaining the original branch-off commit ID and extending amendment merge summaries with prior information carried forward. Incorporate both: integration provenance includes the full original branch-off/base SHA separately from the reopening checkpoint/current parents; cumulative summaries retain concise relevant campaign outcomes/review context while separately labeling new delta/actions and fresh versus historical verification. Release extraction remains range-based and must not reannounce prior released/analyzed delivery from cumulative text. A first campaign-authored commit is distinct from branch-off and is optional verified provenance, not a substitute for the base SHA.
+
+The human then clarified that the first-commit pointer must point to the original campaign opening. This supersedes treating that pointer as the branch-off commit: record both separately. Campaign 040’s original opening is `020cf0568d69e0feede2f8e4bc89a4f843755783`; branch-off remains `a0685b578045637f9f503aef39ab3a5bf0930456`. Every amendment retains the original opening pointer and records its own reopening checkpoint/current integration parents separately. The first opening must be verified from actual Git/campaign evidence, not inferred from a branch tip.
+
+The human clarified the cumulative summary’s purpose: release highlights should not need to trace earlier reopened-campaign merges. The latest adequate cumulative summary becomes primary for that campaign; collect complete identity/parent metadata but defer earlier same-campaign merge bodies unless a concrete coverage/contradiction/identity gap requires them. Subject campaign hints prioritize retrieval only and never prove identity/adequacy. Preserve reachable nested/direct-change coverage, prior baseline and incremental watermark checks. Update the documented recipe and real-Git verification accordingly.
+
+The human also clarified that subsequent merge messages may retain explicit scope references to individual openings/reopenings. The cumulative contract allows compact opening/reopening checkpoint, action and review/execution-scope references, carried forward as needed in the latest summary. This preserves granular scope provenance without requiring earlier merge-message traversal, a new registry or copying a chronological transcript.
