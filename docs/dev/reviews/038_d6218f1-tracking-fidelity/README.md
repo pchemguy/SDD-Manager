@@ -8,7 +8,7 @@
 - Product wording reviewed: current repository source at this baseline, equivalent to product source `a6c42dd754843abf9bafca7dee2aee9e733b046a`, version `0.15.0`. Parent campaign commits change review records only.
 - Objective: review the explicit requested GitHub tracking decision, phase activation and implementation handoff against the supplied test result; propose bounded wording changes to improve agent fidelity.
 - Authority: create and publish this focused campaign's evidence, review report and proposed revision plan. Source revisions, demo repository operations, live tracking writes, implementation, main merge and product release are outside this request.
-- State: Open; focused assessment in progress. The prompt defines the review scope; no separate comprehensive review plan is required.
+- State: Focused review complete; [REVIEW-REPORT.md](REVIEW-REPORT.md) and [proposed REVISION-PLAN.md](REVISION-PLAN.md) are published campaign artifacts. Source revision is not accepted or executed. The prompt defines the review scope; no separate comprehensive review plan is required.
 
 ## Prompt-defined review criteria
 

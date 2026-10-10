@@ -1,0 +1,27 @@
+# Proposed tracking-fidelity revision plan
+
+## Campaign and decisions
+
+- Campaign: `038_d6218f1`; baseline `d6218f1458b3805ecd27f6be6942162ec4a815ed`; [review report](REVIEW-REPORT.md), [scope and supplied result](README.md).
+- Working branch: `revision/038_d6218f1-tracking-fidelity`; eventual target: `revision/037_a6c42dd-prerelease-review`, not main. Parent 037 remains suspended until separately resumed.
+- State: **Proposed; not accepted or executed.** R-001–R-003 remain Open. No human rejection, deferral, acceptance or override is recorded.
+- Current authority covers review/campaign publication and these concrete proposals. Source edits, consumer execution, demo fixes, provider mutations and integration require a subsequent authorized revision scope.
+- Intended result: the existing requested-tracking policy is explicit and mandatory at the manager/executor handoff, with observable activation evidence and locally stated outage boundaries. No guarantee of LLM compliance is implied.
+
+## Ordered actions
+
+| Action | Findings | Proposed targets / outcome | Dependencies | Acceptance and recheck |
+| --- | --- | --- | --- | --- |
+| V-001 | R-001 | tracking-decision first explicit-request branch; phase-activation condition says requested/confirmed scope; concise linked gates in manager and executor SKILL.md and coordination/implementation workflow handoff; examples distinguish token-only from explicit request and requested from projected state. | Accepted wording/scope. | All consequential entry paths load existing owners before task execution; explicit request requires no second confirmation; pending objects never become implicit local-only mode. Preparation/human review and selection-only scope remain intact. |
+| V-002 | R-002 | Bound startup/completion outage clauses to already activated/projected independent work; add missed-gate recovery separately from genuinely late confirmation; cross-check shared lifecycle/forge guidance and relevant workflow/example wording. | V-001. | Initial/added-work missing projection blocks affected execution; later outage can retain verified local results without false hosted completion; closures/dependencies/phase transitions retain gates. Same task/objects/commits reused; no historical rewrite, all-phase bulk projection or reset. |
+| V-003 | R-001–R-003 | Prepare focused behavioral scenarios in existing acceptance owners: broad seed-request retention, direct executor entry, initial/partial/unknown projection, token-only/decline, activated outage, added work, omission recovery and next-phase controls. Inspect supplied runtime provenance only if made available within scoped authority. | V-001/V-002 for revised-source comparison; concrete consumer/assessor/provider facilities for execution. | Actual isolated consumer behavior, independent assessment, exact source and command/provider ordering, original failures/interventions and evidence limits retained. Preserve 27 stable case IDs; do not expand default required campaign coverage by implication. Local structure/support checks remain distinct from behavioral acceptance. |
+
+The detailed language proposed in REVIEW-REPORT is the starting draft. Keep phase policy in phase-activation/shared lifecycle, decision policy in tracking-decision and provider details in forge. Entry skills carry short trigger/stop cues and exact links, not duplicate procedures. Preserve literal user choices and credential separation. Root README/AGENTS changes are conditional on a demonstrated orientation need; avoid another unrelated documentation campaign.
+
+## Verification and persistence if accepted
+
+Inspect current branch/target before execution, preserving campaign 037 records. For each accepted action, update REVISION-REPORT with actual changes, finding disposition and executed rechecks; commit, push and verify containment before another action or commit. Validate changed links, Markdown style and complete policy consistency. Run the declared support suite for coherent plugin boundary integration; it cannot mark instruction fidelity Verified by itself.
+
+Fresh consumer comparison needs separately identified/authorized disposable destination and facilities. Use ordinary request/state handoffs without assessor routing answers. Include both positive and refusal/outage controls. Unavailable consumer checks stay Not run/Blocked with the specific facility; do not certify improved fidelity from text inspection. Source revisions may be reported Revised with runtime acceptance pending; Verified requires the accepted objective recheck. Resolve the acceptable completion boundary if live facilities remain unavailable.
+
+Only a complete accepted and verified revision is eligible for explicit two-parent merge into the established parent target, merged-state checks and target publication. Do not merge an unexecuted proposal or automatically resume/close 037. The parent review must re-pin changed source/package and reassess affected units when resumed. Product release and main integration remain separate authorized scopes.
