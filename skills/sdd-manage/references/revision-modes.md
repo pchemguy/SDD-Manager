@@ -1,0 +1,14 @@
+# Revision campaign modes
+
+Use these modes within the existing [review/revision lifecycle](review-and-revision.md). They select campaign identity, suspension and integration context; they are not additional core development workflows or authority to execute a proposed repair. [Branch management](branch-management.md), [Git workflows](git-workflows.md) and the selected focused owners perform the work.
+
+## Nested revision campaign
+
+When opening a new revision campaign while another campaign is active, suspend the parent’s execution and default to branching from and merging back into its actual campaign branch. An already suspended, incomplete parent remains active for this purpose. Identify the immediate parent from the request, current worktree and retained evidence; branch prefixes alone do not establish ownership. Respect an explicit human target override rather than silently selecting main/default or the parent’s eventual integration target.
+
+1. Establish the parent campaign, actual branch, refreshed published checkpoint, unfinished scope and pending-work ownership. Publish outstanding owned verified checkpoints before further work; unresolved publication or a missing usable source/target blocks dependent setup. Preserve files/index and unrelated work without implicit stash/reset/clean. Use a separate worktree when safe switching is unavailable; do not manufacture a completion commit for unverified work.
+2. Allocate a new [campaign identity](../../sdd-conventions/references/workflow-identity.md) and branch/directory. Record parent suspension, child source/target, return boundary and actual authority in existing active campaign evidence; no new registry is required. Parent source and return target default to the same established branch. Existing project-preparation, review and execution prerequisites remain in force.
+3. Run only the selected child review/revision scope. A review-only request publishes its report and stops before source repairs/integration. Accepted execution follows the normal action verification, per-commit publication and explicit two-parent merge into the refreshed parent target, merged-state checks and target publication. Do not infer implementation authority from opening a campaign.
+4. Return to parent context with the child’s verified merge/publication, remaining work and affected inputs/evidence identified. Child integration does not complete, close or automatically resume the parent. Resume only when actual human continuation authority already covers that action; otherwise return control with the parent suspended. A candidate-specific review must re-pin changed source and recheck affected units when resumed.
+
+Lightweight [steering](workflows.md#steering-as-lightweight-revision) remains the human-directed path at a task-list checkpoint without obligatory formal campaign artifacts. A formal nested revision uses its own campaign records; do not silently substitute one path for the other.

@@ -1,15 +1,15 @@
 # Revision campaign modes revision plan
 
-## Campaign and proposed decisions
+## Campaign and accepted decisions
 
 - Campaign: `040_a0685b5`; baseline `a0685b578045637f9f503aef39ab3a5bf0930456`; [review report](REVIEW-REPORT.md).
-- Working branch: `revision/040_a0685b5-revision-campaign-modes`; proposed target: suspended `revision/037_a6c42dd-prerelease-review`. Main is outside this campaign’s target boundary.
-- State: Proposed, not executed. The human requested the two modes; proposed names, detailed eligibility and integration wording are presented for acceptance before source revision.
-- Proposed names: **nested revision campaign** and **reopened campaign amendment**. Both are modes of the existing revision workflow. “Extension” describes the relationship of the change; “amendment” names the additional authorized scope. Git commit amend/history rewriting is not part of either mode.
+- Working branch: `revision/040_a0685b5-revision-campaign-modes`; target: suspended `revision/037_a6c42dd-prerelease-review`. Main is outside this campaign’s target boundary.
+- State: Accepted by the human’s “Execute campaign” instruction on 2026-10-10; execution in progress. Names, mode contracts and three actions accepted.
+- Accepted names: **nested revision campaign** and **reopened campaign amendment**. Both are modes of the existing revision workflow. “Extension” describes the relationship of the change; “amendment” names the additional authorized scope. Git commit amend/history rewriting is not part of either mode.
 - Scope: definitions/routing, branch selection/reuse, parent suspension/return, latest-merge eligibility, scoped reopening of retained records, stable action/evidence handling and relevant navigation/examples.
 - Exclusions: campaign 037 repair/resumption/re-pinning, edits to earlier campaign packages, new skills/registries, acceptance-tool implementation, live provider/consumer testing, main integration and release publication.
 
-## Ordered proposed actions
+## Ordered accepted actions
 
 | Action | Findings | Targets / outcome | Dependencies | Acceptance/recheck |
 | --- | --- | --- | --- | --- |
@@ -17,7 +17,7 @@
 | V-002 | R-002 | Add reopened amendment definition/eligibility to the same owner; align review-campaigns, workflow-identity, report campaign-artifacts and manager/root orientation freezing cues with a narrow human-authorized reopening exception. Include contextual proposal guidance. | V-001. | Verify latest first-parent merge matches published closure of the related campaign and established target/source; retain original identity/baseline/paths and history, add reopening checkpoint/new stable actions/results, bring branch forward safely and merge again. Proactive suggestion is not reopening authority. All other closed records remain frozen. |
 | V-003 | R-001/R-002 | Add concise examples/current README navigation as needed; inspect all consequential entry/identity/report handoffs and focused positive/negative cases, actual package links/content and declared support suite. Finish revision report/index before eligible integration. | V-001/V-002. | Cover nested parent types, review-only and execute boundaries, target override, dirty/unpublished/ambiguous parent, qualifying related amendment, later non-merge work, disqualifying later merge/wrong target/unknown closure/unrelated change, repeated amendments, suggestion versus accepted reopening, blocked push/merge recovery and parent return. Record checks actually performed; distinguish text/source checks from live fidelity. |
 
-## Proposed mode contracts
+## Accepted mode contracts
 
 ### Nested revision campaign
 

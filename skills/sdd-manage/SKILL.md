@@ -24,6 +24,7 @@ Translate the user's objective into a scoped workflow and coordinate the respons
 | Establish optional GitHub tracking recommendation, confirmation and retained scope | [tracking decision](references/tracking-decision.md) |
 | Gate phase eligibility and active hosted object creation before execution | [phase activation](references/phase-activation.md) |
 | Run an explicitly selected comprehensive prerelease review, or issue its advisory release reminder | [prerelease review](references/prerelease-review.md) |
+| Open a revision inside an active campaign | [revision modes](references/revision-modes.md) |
 | Plan or coordinate focused/systematic review and accepted revisions | [review and revision](references/review-and-revision.md) |
 | Prepare local Git highlights, release packages/workflows or create/finish a GitHub release | [release operations](references/workflows.md#release-operations) and sdd-forge's [shared Git highlights](../sdd-forge/references/release-highlights.md) or selected [GitHub backend](../sdd-forge/references/github.md) |
 | Check representative requests and expected boundaries | [workflow examples](references/examples.md) |
