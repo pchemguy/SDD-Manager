@@ -6,10 +6,10 @@
 - Exact reviewed source: `a6c42dd754843abf9bafca7dee2aee9e733b046a`; version `0.15.0`. Reviewer: coordinating assistant, 2026-10-09 UTC; no independent/fresh reviewer is claimed.
 - Exact locally built package: `sdd-manager.zip`, 132 regular files, 298720 bytes; SHA-256 `52a828f85e7ff619a0ebe028b446650ba999d89b2445efe573714ba96a012b2d`.
 - Branch: `revision/037_a6c42dd-prerelease-review`; main is unchanged. Review authority covers artifacts/publication and scoped checks, not repairs or product release.
-- State: Resumed by the human on 2026-10-10 for the campaigns 038–041 supplemental assessment at `b246f8f92f35a8d2077bce467102f63270d64f2b`. U-001–U-007 below retain the original candidate assessment; U-008 is in progress. Original four Open defects (one P1, three P2) and one Open P2 evidence gap remain; revision execution not started.
+- State: Resumed by the human on 2026-10-10 for the campaigns 038–041 supplemental assessment at `b246f8f92f35a8d2077bce467102f63270d64f2b`. U-001–U-007 below retain the original candidate assessment; U-008 below is complete at source/package level; independent live behavioral acceptance remains unexecuted. Original four Open defects (one P1, three P2) and one Open P2 evidence gap remain; revision execution not started.
 - Findings remain Open unless an actual human disposition is recorded. No deferral or risk acceptance has been supplied.
 
-## Unit coverage and checkpoints
+## Original candidate: unit coverage and checkpoints
 
 | Unit / criterion | Outcome and evidence | Findings | Persistence |
 | --- | --- | --- | --- |
@@ -59,7 +59,8 @@ S-023–S-025 assessed. Verified ZIP CRC, exact and case-fold duplicate absence,
 | R-002 | Defect | P2 | Open; proposed, no human acceptance/deferral recorded. |
 | R-003 | Defect | P1 | Open; proposed, no human acceptance/deferral recorded. |
 | R-004 | Defect | P2 | Open; proposed, no human acceptance/deferral recorded. |
-| R-005 | Evidence gap | P2 | Open; proposed, no human acceptance/deferral recorded. |
+| R-005 | Evidence gap | P2 | Open; expanded for the supplemental candidate below; no human acceptance/deferral recorded. |
+| R-006 | Improvement recommendation | P3 | Open; supplemental implementation-diagram proposal; optional, not a demonstrated workflow defect. |
 
 ### R-001 — Packaged root navigation points at excluded source-only paths
 
@@ -150,3 +151,94 @@ This readiness assessment applies only to source `a6c42dd754843abf9bafca7dee2aee
 ## Suspension checkpoint
 
 The human suspended prerelease campaign 037 on 2026-10-10 to open a separate focused tracking-fidelity review/revision campaign from this branch. Preserve the completed assessment, original candidate identity and all five Open findings. This suspension neither accepts proposed repairs nor clears the release blocker. The focused campaign will retain its own findings/proposals; no product change is authorized by that review alone. Resume 037 only when directed, inspect its actual branch state and re-pin/recheck affected coverage if product source or package changed. Main remains unchanged.
+
+## Resumed comprehensive assessment: campaigns 038–041
+
+### Candidate, authority and coverage
+
+The human resumed 037 on 2026-10-10 and selected assessment of the four integrated campaigns, then explicitly authorized pushing this campaign's updated review plan and report to `pchemguy/SDD-Manager`. Resume plan checkpoint: `dd33132f71860e0eb7169dec68eab49c31024f74`; push and exact remote branch readback confirmed before this unit. Two earlier publication attempts were rejected by host automatic review; after explicit authorization, missing shell credentials were recovered from the existing ignored repository credential. No secret values are retained here.
+
+- Supplemental reviewed product source: `b246f8f92f35a8d2077bce467102f63270d64f2b`, version `0.15.0`. Review date: 2026-10-10; coordinating assistant, not an independent fresh consumer.
+- Workflow-shaped local package: 133 regular files, 317420 bytes; SHA-256 `7a4d5893c1413246d7553f8577202eecd3123e79efa20d31a3cc0da630c5614a`. Built with the unchanged workflow's exact `git archive` selection at this SHA; not a hosted release or installed-client package result.
+- U-008 / C-001–C-007: all 33 changed current product/support paths inspected, plus relevant unchanged lifecycle, preparation, release and recovery authorities. The appended [source inventory](SOURCE-INVENTORY.md#supplemental-candidate-inventory) records exact changed blobs and unit effects.
+- Selected child report/merge consultation establishes delivered scope and historical evidence only. Campaigns 038–041 remain closed and unmodified. Earlier child source walkthroughs, hypothetical assessments and support results are not relabeled as newly executed or independent live acceptance.
+- Scope stops at this published assessment. No source repair, revision execution, child reopening, main merge, tag/release, hosted tracking write, publisher dispatch or full TextStats acceptance ran.
+
+### Campaign subassessments and cross-unit effects
+
+| Campaign / integration | Assessed current sources and affected units | Assessment / findings |
+| --- | --- | --- |
+| 038 / `8bb3b3d` | Manager dispatch, tracking-decision/phase-activation, executor direct/resume/completion, forge entry, shared lifecycle, workflow examples and source-only fidelity follow-ups; U-001/U-003/U-005/U-006. | Requested/confirmed tracking is separate from pending/verified projection. Initial, partial, unknown and added-work projection block affected edits/tests; an outage permits only independent already-projected work with satisfied dependencies. Omission recovery preserves results/history and differs from genuine late confirmation. No new confirmed source defect. Consumer comparison remains unexecuted: consolidate under R-005, preserving child R-001/R-002 Revised and R-003 Open rather than importing them as parent Verified findings. |
+| 039 / `7f06904`, `f64e7eb`, `a0685b5` | Root greenfield prompt, current tracking/activation, human-review and authorization authorities; U-001/U-003/U-004/U-007. | Description-last order, persistent scoped repository authority, optional-token guidance and named activation/readback/stop are mutually consistent. Token availability is not API operation support or a tracking decision. Human document checkpoints and later scope changes are preserved. No new confirmed source defect; ordering/wording does not prove improved agent retention (R-005). |
+| 040 / `e24f30c`, `ca99ca1` | Revision-modes, branch/identity/frozen-record owners, review lifecycle, Git integration, report summaries, forge highlights, release notes/checks, root overview/examples; U-001–U-005/U-007. | New nested identity defaults to immediate parent source/return target; integration/return does not resume the parent. Reopening needs human authority and the latest qualifying first-parent published closure; original opening and branch-off remain distinct. Summary producer/consumer handoffs preserve cumulative context, new delta, direct/revert/resolution coverage, ancestry, deduplication and analyzed watermark. Phase delivery and accepted design-docs preparation remain distinct. Ten current recipe fixtures pass; semantic curation and consumer compliance remain R-005. Current capability-map omissions expand R-002. |
+| 041 / `b246f8f` | Manager/orientation entries, task execution/completion/continuation, report subjects, Git integration audits and root AGENTS; U-001/U-003/U-004/U-007. | One executable task closes per commit with result/current evidence/initial owning checkbox; exact leading single ID and staged/committed composition inspections are explicit. Authorized partial checkpoints, later repairs and eligible parent-only follow-ups do not permit detached initial task completion. Audit/recovery preserves published violations and requires scoped disposition; non-task campaigns/preparation/merges invent no task IDs. No new confirmed source defect; actual task-execution compliance remains R-005. Diagram discoverability is optional R-006. |
+
+The detailed rules retain canonical owners and link callers rather than creating another registry or journal. Some invariants are restated at consequential entries to make direct invocation enforceable; no competing detailed authority was confirmed. Reporting drafts remain separate from execution authority, and recovery does not imply history rewriting. Both sides of the changed handoffs were compared.
+
+### Supplemental source scenarios
+
+These are coordinating-reviewer source applications, not independent agent executions. The outcome means current instructions support the stated boundary, not that an agent or provider actually followed it.
+
+| Scenario | Located supported outcome |
+| --- | --- |
+| Broad explicit tracking request, no objects yet | tracking-decision and manager dispatch retain confirmation; phase-activation requires eligible objects/readback before edits/tests. |
+| Direct executor/resume with missing or partial projection | implementation entry/startup retain work and return a concrete blocker; no manager bypass or automatic local-only downgrade. |
+| Backend outage after verified activation | lifecycle/startup/completion allow only independent projected work; required closure, added-work and next-phase gates remain. |
+| Original request omitted versus genuinely late choice | tracking-decision distinguishes both; omission recovery retains history/results and reconciles before further affected execution. |
+| Token supplied without choice, or after explicit decline | decision table requires an actual scope choice and preserves decline; token guidance distinguishes transport/API support. |
+| Broad prompt repository authority | prompt preserves required human document reviews and execution boundaries; description order changes no authority. |
+| Nested child while parent is already suspended | revision-modes treats incomplete suspended parent as active; explicit integration/return retains suspension. |
+| Related reopening after ordinary commits versus an intervening merge | latest first-parent closure test retains intervening ordinary work and rejects convenient older-campaign fallback. |
+| Dirty worktree, unpublished checkpoint or unknown closure | branch/Git/revision-mode owners preserve index/work/history; safe worktree and publication/identity gates precede dependent work. |
+| Latest cumulative summary, deleted refs and nested delivery | summary/highlights owners require reachable parent/identity coverage, adequate enclosing context and targeted gaps, not branch-tip proof or duplicate bullets. |
+| Direct revert or incomplete summary in an increment | full identity inventory and targeted net changes precede watermark advance; preserve prior baseline and human cuts. |
+| Phase versus document-preparation summary | report/highlights distinguish delivered phase exits from accepted preparation/readiness; use canonical design-docs naming. |
+| One task result and first completion transition | completion contract inspects staged and committed result/evidence/status with the exact owning leading ID. |
+| Bundled result or detached checkbox with a valid subject | composition audit rejects it despite subject shape; explicit recovery/exception needed, no automatic published rewrite. |
+| Authorized partial checkpoint and final closure | unchecked partial state and real prior authority remain; closing tree/evidence/check identifies retained checkpoints without duplicating unchanged code. |
+| Review task, parent-only follow-up and taskless campaign | substantive review evidence closes its task atomically; parent exception cannot split initial closure; taskless work invents no ID. |
+
+### Original finding reassessment and new recommendation
+
+| Finding | Supplemental evidence / current disposition |
+| --- | --- |
+| R-001 | Actual package inspection still finds the same 13 root-link occurrences to excluded source-only paths (11 README, two AGENTS). Changed overview/orientation material does not repair them. Open P2 defect. |
+| R-002 | CAPABILITY-MAP.md is byte-identical to the original pin. Its original omissions persist; it additionally does not expose requested-tracking readiness, nested/reopened revision modes, cumulative integration/highlights support or the strict atomic task persistence/audit contract. Extend its existing concise owner-alignment correction/recheck to these capabilities; do not duplicate their detailed rules. Open P2 documentation defect. |
+| R-003 | Actual release.yml is byte-identical and still uses generated notes with no curated exact-source transfer. New summary/highlights guidance does not implement the publisher handoff. Open P1 publishing-path blocker. |
+| R-004 | The unchanged workflow still lacks the prescribed serialized/reconciled publisher, actual archive inspection and remote source/body/asset/latest readback. Local archive verification in this review does not repair CI. Open P2 defect. |
+| R-005 | Expand the existing P2 evidence gap to the new tracking retention/entry/outage behavior, prompt fidelity, nested/reopened routing/return, cumulative editorial coverage/deduplication and task composition/audit/recovery. Source walkthroughs, recipe tests and child hypothetical applications establish neither actual task/provider chronology nor installed discovery. Open; no numerical fidelity claim, waiver or accepted deferral. |
+| R-006 | Optional P3 implementation-diagram clarity improvement, defined below. No new release blocker or mandatory workflow gate. |
+
+R-005's proposed acceptance scope and objective recheck now include the applicable separately selected tracking-fidelity follow-ups, actual single-task result/checklist/evidence commits, resumed violation handling, nested/amended return behavior and editorial incremental coverage. Retain real first attempts/interventions, exact source/package/runtime/loading mode and Git/provider observations; keep assessor material out of consumers. Missing native/installed/fault facilities remain unavailable checks, not simulated passes. This expands the existing gap rather than allocating duplicate evidence-gap findings for each child campaign.
+
+### R-006 — Make activation and task-persistence gates visible in the implementation diagram
+
+| Field | Evidence / proposal |
+| --- | --- |
+| Type / priority / confidence | Improvement recommendation; P3; high confidence from source comparison, optional rather than a demonstrated execution defect. |
+| Candidate location / evidence | README.md, Implementation and continuation: diagram proceeds from executor resume/select via “task ready” to the development cycle; it shows hosted tracking as a post-commit completion branch. Surrounding prose explicitly places phase/task associations before the first task. New manager/executor owners require requested-tracking projection/readback and persistence audits. |
+| Observation / consequence | The prose and linked authorities preserve the gates, so the diagram is not evidence of a contrary policy. Its prominent flow leaves the activation blocker and resume/integration audit implicit; a reader using the visual alone sees those obligations less clearly than current direct-entry instructions. |
+| Bounded proposed correction / owner | sdd-docs with sdd-manage/implement: make pre-execution readiness explicit in the implementation diagram or its immediately adjacent key, including requested projection/readback, blocked execution and claimed task-boundary audit; make atomic result/evidence/initial-status closure and applicable integration audit discoverable without copying the full contract. Preserve local-only and already-activated outage behavior and keep the diagram readable. |
+| Objective recheck | Compare graph/prose with current phase-activation, startup/completion and Git integration; source-assess requested pending/verified/declined states and violated closing boundary. Render with an available Mermaid renderer and inspect readability. Do not claim consumer compliance from rendering. |
+| Decision / dependencies | Open recommendation; no human acceptance or deferral supplied. Separate from R-002's capability-map repair and R-005's behavioral evidence. Not a release blocker. |
+
+All four README diagrams received affected semantic reassessment. Preparation and steering flows retain their established boundaries; the formal review/revision graph remains a general flow with nested/reopened target/return details supplied by current overview and canonical links. No additional semantic diagram defect was confirmed. Mermaid rendering was not executed: no local mmdc was available. Do not turn every omitted detail of an overview into a mandatory diagram requirement.
+
+### Fresh local checks and evidence reuse
+
+| Check | Actual outcome / limit |
+| --- | --- |
+| Support suite | PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v: 113 tests passed in 16.187s, exit 0; Python 3.12.14, Git 2.51.1. Current product/support bytes equal the supplemental pin; only active campaign artifacts differ. |
+| Catalog | PYTHONDONTWRITEBYTECODE=1 python acceptance/textstats/cases/assessor/catalog_tools.py validate: exit 0; 27 cases, static asset validation, live_acceptance false. Supplementary fidelity scenarios do not change default grades/totals. |
+| Actual shipped highlights recipe | PYTHONDONTWRITEBYTECODE=1 python docs/dev/reviews/040_a0685b5-revision-campaign-modes/evidence/check_merge_highlights.py: ten disposable real-Git fixture tests passed in 1.094s, exit 0. Extracts/executes current shipped recipe; covers cumulative increment, direct gap/revert, nested/deleted refs, phase/preparation, baseline/pending tags, ambiguity and shallow/invalid ancestry. Mechanical collection, not semantic curation. |
+| Package | Exact expected Git archive file set, CRC, duplicate/case-fold duplicate absence, safe names and every regular member's Git-blob bytes passed. 133 files / 317420 bytes and hash above. One new packaged reference is revision-modes.md; source-only follow-ups remain excluded intentionally. Manifest copies identical, version unchanged. |
+| Resource/navigation check | 255 nonliteral relative link occurrences in all 33 changed product/support Markdown paths resolve in the source checkout. Packaged skill links resolve after classifying two unchanged bootstrap future-output examples; 13 missing root-source links remain R-001. No new broken skill resource confirmed. |
+| Unchanged authorities/assets | Git confirms byte-identical release workflow, capability map, manifests, assets and support test modules against the original pin. Original artwork inspection is retained only for those unchanged bytes; no installed UI claim. Original strict-validator counts remain historical, not a fresh pass for this candidate's new cross-skill references. |
+
+The original comprehensive U-001–U-007 assessment remains evidence for its own pin. U-008 reuses unchanged concerns only where byte identity and the changed handoffs were assessed; it does not falsely report a new line-by-line full-product review. The inventory covers the delta and preserved baseline, with source-only test helpers and changed assessor/consumer guides accounted for. No new dependency, manifest/version, platform or artwork change was introduced by these children. Full standards validators, Mermaid rendering, Python 3.11/unrepresented platforms, fresh consumers/native recovery, installed discovery and live tracking/release/CI remain unexecuted in this continuation.
+
+### Current readiness and stopping point
+
+At `b246f8f92f35a8d2077bce467102f63270d64f2b` and package hash `7a4d5893c1413246d7553f8577202eecd3123e79efa20d31a3cc0da630c5614a`, the configured tag-triggered publication path remains **not ready** because of R-003; R-004's required recovery/readback gaps also remain. Four defects, one expanded evidence gap and one optional improvement recommendation are Open. No original defect was repaired or silently closed by integrating the child campaigns. There are no newly accepted repairs, rejected findings or human-accepted deferrals.
+
+Proposed revision queue remains release publisher R-003/R-004, current documentation R-001/R-002, then separately authorized candidate-specific acceptance R-005; optional R-006 can accompany a selected documentation scope. Priority is consequence-based, not authority to execute. This assessment completes the requested report update and publication, not campaign repair execution or closure/main integration. Campaign 037 is resumed and available for revision planning; version remains 0.15.0. Subsequent source/package changes require affected rechecks against a new exact pin. Final report commit/publication is established by Git and remote readback, not by this precommit prose.

@@ -8,7 +8,7 @@
 - Package built locally from the exact source using the unchanged release workflow's `git archive` member selection; this is not a hosted asset or installed-client result.
 - Objective: apply the [comprehensive prerelease profile](../../../../skills/sdd-manage/references/prerelease-review.md) to the entire CURRENT supported SDD Manager product and report defects, evidence gaps and bounded improvement opportunities.
 - Scope authority: create/publish this campaign's review plan, inventory and report; run scoped local checks. No repairs, revision execution, product release/tag, publishing dispatch, hosted settings/tracking writes or main merge are authorized by this review request.
-- State: Resumed by the human on 2026-10-10 for supplemental comprehensive assessment of integrated campaigns 038–041. The original candidate, completed assessment and five Open findings remain retained. This continuation updates review evidence only; repair planning/execution and main integration remain outside scope.
+- State: Resumed by the human on 2026-10-10 for supplemental comprehensive assessment of integrated campaigns 038–041. The original candidate, completed assessment and five Open findings remain retained. Supplemental U-008 assessment is complete; this continuation updates review evidence only; repair planning/execution and main integration remain outside scope.
 - Inventory: [SOURCE-INVENTORY.md](SOURCE-INVENTORY.md) accounts for every current nonhistorical tracked path; packaged files and source-only support tooling have distinct evidence boundaries.
 
 ## Review order, criteria and scenarios

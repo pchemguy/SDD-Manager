@@ -272,3 +272,43 @@ Exact source: `a6c42dd754843abf9bafca7dee2aee9e733b046a`. Inventory uses tracked
 | U-006 | `skills/sdd-verify/references/release-checks.md` | `cd9f319607de3ac8486cfd3d303baf96e5cff434` |
 
 Unlinked EXPLORE_DRIVE drafts are exploratory inputs, not supported product instructions; their historical discussion is excluded from current-validity assessment. Git ignore configuration is assessed for secret exclusion. No root PROJECT/SPEC/PLAN/TASKS is required by this repository; current workflow contracts reside in skills.
+
+## Supplemental candidate inventory
+
+Exact supplemental source: `b246f8f92f35a8d2077bce467102f63270d64f2b`. The original table remains the original candidate inventory. These 33 changed current product/support paths replace their baseline blobs or add new resources; unchanged inventory entries retain their byte identities. Child campaign records are consulted only for the selected provenance question, not current-compatibility validation. U-008 cross-checks affected original units and the entire actual 133-file shipped archive.
+
+| Candidate path | Supplemental Git blob | Primary affected concern |
+| --- | --- | --- |
+| `AGENTS.md` | `5f0582d3b3fe681c2167e3c0881f57197eea986d` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `Greenfield Project Prompt Template.md` | `4816775d4196094f9a3fb2a636b2b59aa67d4b92` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `README.md` | `24c3744fa09acf3d8ec1a6d99525a2e79397467c` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `acceptance/textstats/cases/assessor/A-003.md` | `ea0dbe272272b5518d411a770cf1b1779ae7fce1` | U-006: source-only fidelity assessment |
+| `acceptance/textstats/cases/assessor/COMMON.md` | `f18bde094a45e9dc63c2c3d40bca212e4b2deba5` | U-006: source-only fidelity assessment |
+| `acceptance/textstats/cases/assessor/TRACKING-FIDELITY.md` | `efe8a7ba2539ff1b963ac1fa5acf4d21ee59ebe6` | U-006: source-only fidelity assessment |
+| `acceptance/textstats/cases/consumer/tracking-fidelity.md` | `88d2aeff9e47ba239d9144900709a81ea5415a35` | U-006: source-only fidelity assessment |
+| `skills/sdd-conventions/references/backend-object-lifecycle.md` | `cb36d54a708c6085fc36b5fef1fbff268646ffe5` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-conventions/references/review-campaigns.md` | `82d9503c93ac424ffb7ef2a82125d94fda885493` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-conventions/references/workflow-identity.md` | `bd0e99d3c1ff4f3410ae898d20881fb961e6474d` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-forge/SKILL.md` | `aa1c1e657037e97e9c1f770f8b2ac0efcf71e409` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-forge/references/release-highlights.md` | `e9165abd49085f09d0cf74b08b73c26582c65f2a` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-implement/SKILL.md` | `d3825b2c598e6573409fe1aaacb762aafee68fc8` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-implement/references/completion-and-checkpoints.md` | `e5df84707816e0541560717fb3d66ba3dff89d44` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-implement/references/startup-and-continuation.md` | `e89feee044835f89bc217211308aa992d8d8732f` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-implement/references/task-execution.md` | `78b3755d2d5119d6c0ed2c2f16ceb6fbb5643a06` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-manage/SKILL.md` | `c25203f73bef5da236dc72f672610002249f981f` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-manage/references/agent-orientation.md` | `5d14404048625eda4260dc02c8b1dac031220661` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-manage/references/branch-management.md` | `a71817e9ff75d734b647b1b5b237f47414b4f5f9` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-manage/references/coordination.md` | `963ca67e70f7f65a7ddf37700eacdf2faa7e9639` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-manage/references/examples.md` | `ac2a66694acf0c7435ed7d6469e54c6dac2cb408` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-manage/references/git-workflows.md` | `15fb0fe786a0d3f56a37ca7b79ad6a0d8901a04b` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-manage/references/phase-activation.md` | `b83ee8bb17ed09c77df5a1156176a0dd81147501` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-manage/references/review-and-revision.md` | `7abf28f242cc9b84ee16e19519a7f1f6fd0f1782` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-manage/references/revision-modes.md` | `2c3c1a6c7e3f7f95812d72d40fdf0646b9513868` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-manage/references/tracking-decision.md` | `1ad8c47d82ef183d458331272f8a9a4361516367` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-manage/references/workflows.md` | `7e4f466303d94a7e2d253595db7421e35ed038bc` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-orient/references/inspection-and-handoff.md` | `1e664a82486e4fafb13fe998d3c29588710acf5a` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-report/SKILL.md` | `b3f821e619d78fb2bde6c2c13c29feddbf01bd51` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-report/references/campaign-artifacts.md` | `d697641616c8c69327af01fad98238879544cfce` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-report/references/object-drafts.md` | `54f094710bc3a1617c8031c959b362c5837aaeaa` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-report/references/releases.md` | `a069cfd1840c12f3307a6b99e70e89ebc5a7a133` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
+| `skills/sdd-verify/references/release-checks.md` | `124c1d32cfe467f2fadb101b9cbb65540f399c1c` | U-001/U-003/U-004/U-005: changed instructions and handoffs |
