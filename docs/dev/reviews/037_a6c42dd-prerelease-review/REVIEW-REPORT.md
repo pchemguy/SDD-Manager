@@ -6,7 +6,7 @@
 - Exact reviewed source: `a6c42dd754843abf9bafca7dee2aee9e733b046a`; version `0.15.0`. Reviewer: coordinating assistant, 2026-10-09 UTC; no independent/fresh reviewer is claimed.
 - Exact locally built package: `sdd-manager.zip`, 132 regular files, 298720 bytes; SHA-256 `52a828f85e7ff619a0ebe028b446650ba999d89b2445efe573714ba96a012b2d`.
 - Branch: `revision/037_a6c42dd-prerelease-review`; main is unchanged. Review authority covers artifacts/publication and scoped checks, not repairs or product release.
-- State: Review complete; U-001–U-007 assessed; four Open defects (one P1, three P2) and one Open P2 evidence gap; revision execution not started.
+- State: Suspended by the human on 2026-10-10 after completed review; U-001–U-007 assessed; four Open defects (one P1, three P2) and one Open P2 evidence gap; revision execution not started.
 - Findings remain Open unless an actual human disposition is recorded. No deferral or risk acceptance has been supplied.
 
 ## Unit coverage and checkpoints
@@ -146,3 +146,7 @@ The pinned candidate is **not ready for its configured tag-triggered publishing 
 All five findings remain **Open**. There are no accepted repairs, rejected findings, human-accepted deferrals or waived checks. R-002 may be proposed for deferral if the human decides its consequence is acceptable; no such decision is recorded. R-005 limits runtime claims and is not a newly mandatory comprehensive prerelease-review gate. Strict portable-standard migration is not selected; record the demonstrated compatibility boundary rather than imply universal support. Diagram rendering and unrepresented platforms remain unavailable evidence, with no invented pass or deferral.
 
 This readiness assessment applies only to source `a6c42dd754843abf9bafca7dee2aee9e733b046a` and the pinned package hash. Repairs or any new candidate require a new pin and affected unit/handoff/regression rechecks; retain original findings and evidence. Publish this review report and stop. A separately accepted revision plan/execution scope, main integration and product release publication remain outside the completed review authority. Main and all product source/closed records remain unchanged; campaign 037 stays available for revision planning.
+
+## Suspension checkpoint
+
+The human suspended prerelease campaign 037 on 2026-10-10 to open a separate focused tracking-fidelity review/revision campaign from this branch. Preserve the completed assessment, original candidate identity and all five Open findings. This suspension neither accepts proposed repairs nor clears the release blocker. The focused campaign will retain its own findings/proposals; no product change is authorized by that review alone. Resume 037 only when directed, inspect its actual branch state and re-pin/recheck affected coverage if product source or package changed. Main remains unchanged.
