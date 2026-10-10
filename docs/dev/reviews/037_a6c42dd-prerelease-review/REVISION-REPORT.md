@@ -26,7 +26,8 @@ Ruling: execute the plan’s recommended single manual-dispatch publisher route,
 | CP-011 | Source-ready local boundary verified below. | This checkpoint must publish/read back before immutable acceptance setup. |
 | CP-012 | Immutable source, publisher/product/evidence setup published. | Source `1fe66a9` and playground refs recovered from origin after sandbox loss. |
 | CP-013 | First trial Failed; matching-draft recovery Passed with assistance; complete published-release rerun Passed. | Independent provider/archive/repeated-identity evidence and recovery cursor published through `e597649`; clean first-attempt success is not claimed. |
-| CP-014–CP-025 | Pending; A-001 preparation consumer started independently from P0. | Follow separate commits and per-commit publication barrier. |
+| CP-014 | Controlled acknowledged-upload stop/recovery, actual serialized overlaps, invalid-source/body/foreign-inventory refusals assessed; repeated fresh-create defect retained. | Playground evidence `8d6d127`; fresh-create repair and clean proof remain pending. |
+| CP-015–CP-025 | Pending; A-001 concrete preparation through layout accepted under delegated coordinator authority; TASKS/QC in progress. | Follow separate commits and per-commit publication barrier. |
 
 ## Findings and readiness
 
@@ -132,3 +133,27 @@ A-001 fresh consumer published [PROJECT](https://github.com/pchemguy/SDD-Manager
 Evidence is published at [e597649](https://github.com/pchemguy/SDD-Manager-Prerelease-Playground/tree/e5976494000835dd42a53a3cb18c6aa1c7801b78/docs/dev/reviews/001_eff696b-prerelease-acceptance). Coordinator recovery initially wrote an invalid string pending-operation value and its validation command did not stop the subsequent commit. Published history/original cursor are preserved in an explicit intervention; the corrected structured pending-operation and INPUTS both pass pinned schema validation. This is a coordinator error, distinct from consumer/plugin outcomes. Source publication recovered from the stale credential using the already supplied replacement; the retained `65b9fe8` commit was pushed normally and exact origin readback matched before further work.
 
 Next authorized work remains CP-014 publisher fault/partial/overlap observations and the remaining full acceptance/supplemental scope. Product preparation resumes only after the real PROJECT decision; CP-015 full preparation/selection/tracking is not completed by this initial checkpoint. Every new source/playground checkpoint was pushed and read back before successor work.
+
+## Delegated test artifact review
+
+The user explicitly states: “THIS IS A TEST RUN. YOU ARE RESPONSIBLE for assessing/accepting test artifacts. It is your job to verify workflows/checkpoints/behavior and evaluation of any intermediate test artifacts.” This supersedes the earlier request for a direct-human PROJECT decision in this test. The coordinator now substantively assesses each concrete artifact, retains exact commit/blob identities and scoped decisions, and enables only its dependent step. No unseen artifact is preaccepted and no delegated decision is labeled direct-human review.
+
+A-001 PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC/QC, PLAN strategy/QC and layout/combined QC have separate published decisions. Latest concrete layout checkpoint is `b3ba0338d71c167aaec8ca85317d09002557ea2d`; TASKS/QC is being prepared. Full A-001 and CP-015 are not yet Passed. Pinned plugin `ea515f5` remains unchanged.
+
+## CP-014 — live failure, reconciliation and preservation trials
+
+Published test tooling `fde1bf67ddcbccc0ff1e4a5ec41b3533bd076044` wraps the original publisher only for named controlled post-upload stops. Isolated package metadata fixture `83fcaa47479857f69ade044d463c793460826a61` changes synchronized manifests to `0.15.0-cp014`; annotated tag `v0.15.0-cp014` peels to it. This is separate from the immutable consumer package and original release candidate.
+
+| Trial | Actual observation / assessment |
+| --- | --- |
+| Initial isolated partial attempt `38046045373` | Failed at immediate draft inventory readback after creation of empty draft `408880857`; upload injection was not reached. Retains the second observed fresh-create failure. |
+| Controlled partial retry `38046245961` | After exact empty draft readback, real upload acknowledges archive `627714735` then wrapper suppresses response by raising. Draft retains one uploaded asset; independently downloaded archive matches all 133 fixture files. Controlled acknowledged-effect interruption, not native network loss. |
+| Recovery `38046420841` | Passed with assistance: same release/archive ID and creation/update time, only missing checksum `627720214` added, exact body/source, published/prerelease, latest absent. ZIP hash `1ebd303abe58c45451ae67bd34ea2ac47c838db48df9b9d715257a1a939ce248` matches checksum. |
+| Overlap `38046050281` / `38046055292` | Both Passed; second observed pending while first running. First executed jobs end 10:46:47Z, second begins 10:46:50Z, with no executed-job overlap. Original release/asset identities, times and body unchanged. |
+| Invalid source `38046061342` | Build rejects mismatched notes-source before publisher; publish skipped and existing objects preserved. |
+| Body conflict `38046659644` | Publisher rejects `Release fields conflict with selected handoff`; build succeeds. Existing exact body and package assets preserved. |
+| Foreign inventory `38046666461` | Publisher rejects `Duplicate or foreign release assets`; build succeeds. Coordinator-owned sentinel `627726873`, foreign only to the expected publisher inventory, remains alongside unchanged package assets. No destructive cleanup. |
+
+[Published evidence](https://github.com/pchemguy/SDD-Manager-Prerelease-Playground/tree/8d6d127/docs/dev/reviews/001_eff696b-prerelease-acceptance) retains inputs, before/effect/after observations and actual run/job identities. The source publisher's fresh-create path discards the acknowledged release ID and immediately requires the global inventory to contain the draft. Later direct-ID/inventory visibility and successful existing-draft runs establish the failed boundary; the provider's internal visibility cause remains unknown. Four new local contracts reproduce lagging inventory and test direct readback/missing/substituted identity safeguards; before repair the 26-test suite has three expected failures and the reproduced draft-readback exception. R-004 stays Open pending a separately published repair and fresh live first-run proof.
+
+Coordinator validation accidentally staged bytecode in evidence commit `0e5c6d9`; corrective `8d4da19` removes that sole generated file, restoring the pinned harness. Published history is retained. This intervention is separate from consumer outcomes. Every commit is pushed/read back before successor work; no production release, source version bump or source-main integration is claimed.
