@@ -17,6 +17,9 @@
 - V-001 checkpoint: `390c388891c7b5b3088635043303c61977832454`; push succeeded and exact remote branch readback matched before V-002. Seven subject-shape/second-identity cases and contrary-example check passed.
 - V-002: implemented the canonical one-task closing contract and precommit/postcommit inspections, explicit non-bundling and atomic initial status/evidence rules, review task results, shared-file ownership, authorized partial/repair/parent exceptions and bounded audit/recovery. Linked implementation entry, execution and continuation. Inspected the resulting diffs against R-002/R-004 scenarios; final coupled/source checks remain pending. No task list or demo history is modified.
 
+- V-002 checkpoint: `3b899eb8d1a07c4f119a4f98ebc1eed50c4d4ecc`; push succeeded and exact remote branch readback matched before V-003.
+- V-003: coordinator entry and maintained root orientation expose the invariant; orientation inspects the claimed task boundary read-only, and Git integration requires the bounded per-task audit. Detailed composition/recovery remains implementation-owned; non-task campaign work is exempt from invented task identity. Inspected direct/coordinated/continued and phase/feature handoffs; final checks pending.
+
 ## Limits
 
 Source checks assess the instructions and examples, not live agent compliance. Demo history/tracking, release/version changes, older campaign records and parent continuation are outside scope. Final checks and explicit integration/publication remain pending.
