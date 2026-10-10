@@ -4,7 +4,7 @@
 
 - Campaign: `040_a0685b5`; baseline `a0685b578045637f9f503aef39ab3a5bf0930456`; [review report](REVIEW-REPORT.md).
 - Working branch: `revision/040_a0685b5-revision-campaign-modes`; target: suspended `revision/037_a6c42dd-prerelease-review`. Main is outside this campaign’s target boundary.
-- State: Accepted by the human’s “Execute campaign” instruction on 2026-10-10; execution in progress. Names, mode contracts and three actions accepted.
+- State: Accepted by the human’s “Execute campaign” instruction on 2026-10-10; execution complete; see [actual revision evidence](REVISION-REPORT.md). Names, mode contracts and three actions accepted.
 - Accepted names: **nested revision campaign** and **reopened campaign amendment**. Both are modes of the existing revision workflow. “Extension” describes the relationship of the change; “amendment” names the additional authorized scope. Git commit amend/history rewriting is not part of either mode.
 - Scope: definitions/routing, branch selection/reuse, parent suspension/return, latest-merge eligibility, scoped reopening of retained records, stable action/evidence handling and relevant navigation/examples.
 - Exclusions: campaign 037 repair/resumption/re-pinning, edits to earlier campaign packages, new skills/registries, acceptance-tool implementation, live provider/consumer testing, main integration and release publication.
@@ -36,3 +36,7 @@ Reopen only the selected package, retain original identity/full baseline/branch/
 ## Verification, publication and stopping
 
 After acceptance, update the revision report with each action’s actual changes and objective rechecks; commit/push/read back before the next action or other project work. Run current-document Markdown/links, owner alignment, package checks and the declared support suite for coherent integration. Preserve parent/closed campaign records by full path diff. Final accepted revision explicitly integrates into suspended campaign 037, with prospective merged-state checks and target publication; Git may retain final integration facts without post-closure record edits. Stop at this selected boundary. The parent prerelease assessment stays suspended and requires separately authorized re-pinning/reassessment when resumed.
+
+## Execution clarification
+
+During execution the human clarified: “after the closure of either nested or amendment campaign, switch the worktree back to the interrupted campaign branch.” This is an accepted refinement of V-003’s return boundary. Both mode definitions explicitly require actual branch/HEAD confirmation after verified integration/publication; separate-worktree return preserves occupancy and dirty work without reset/stash. Returning the branch does not authorize resumed parent execution.

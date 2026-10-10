@@ -46,3 +46,7 @@ At the reviewed baseline, `git log --first-parent --merges -1 --format='%H%n%P%n
 ## Revision handoff and limits
 
 The proposed plan establishes two explicit modes using existing manager, Git and reporting owners. Keep lightweight steering distinct; do not add a new skill, registry, workflow counter or transaction protocol. Source-defined scenario checks and support tests can verify wording/package integration; improved agent fidelity requires separate behavioral evidence. Publish this report/plan, then stop before product-source revision. No main merge, release, prerelease resumption or amendment of campaign 039 is selected.
+
+## Subsequent accepted revision
+
+The human authorized execution with “Execute campaign” and clarified that both modes must switch the worktree back to the interrupted campaign branch after closure. All three source actions are delivered; [REVISION-REPORT.md](REVISION-REPORT.md) records actual checks. R-001/R-002 are Verified for the accepted source definitions/source scenario rechecks, with no claim of live agent fidelity. Baseline observations and the original Proposed-stage assessment above remain retained. Final integration is into suspended campaign 037 only.

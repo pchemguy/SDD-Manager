@@ -128,3 +128,12 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 - Human requests revisions or the conversation is interrupted at PLAN review: preserve the pending decision, revise/recheck the same owner and present its actual state. No assumed acceptance and no regenerated chain.
 - Standing Git/token authority: persist the checkpoint without another repository-operation permission question; still pause for document acceptance.
 
+
+## Revision campaign modes
+
+- “Open a focused revision while this feature campaign is active”: use a new nested revision identity from the feature’s published branch, suspend its execution, and default the child merge to that same branch. A review-only request publishes findings and stops; accepted repairs verify/publish the child and parent merge, then return the worktree to the feature branch without automatically resuming feature tasks.
+- “Reopen the last campaign to extend this closely related change”: first verify that the active branch’s latest first-parent merge is the selected revision’s published final merge and that target/source/closure match. Reuse its original identity and append the accepted delta/new actions and rechecks; explicitly merge again and return the worktree to the interrupted target branch. Preserve earlier closure and check evidence.
+- A later ordinary commit does not itself disqualify amendment: preserve it in the current target checkpoint and inspect dependencies/scope. A later unrelated merge, different return target or unknown closure blocks this mode; do not skip back to an older convenient merge.
+- If readily available context suggests a qualifying amendment, propose the campaign and relation to the human. Do not reopen or edit frozen records until actual authority is established. Unrelated work uses a new campaign, and incomplete integration/publication resumes the existing active operation.
+
+Use [revision modes](revision-modes.md) for the controlling eligibility, authority, preservation and worktree-return rules. Neither mode silently resumes an interrupted parent or bypasses required project-preparation/phase gates.
