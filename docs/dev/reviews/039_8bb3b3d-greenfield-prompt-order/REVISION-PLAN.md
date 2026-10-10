@@ -19,3 +19,13 @@
 ## Persistence and stopping
 
 Commit the single coherent source/evidence action, push and read back before integration work. Explicitly merge into the refreshed parent branch, inspect and verify the prospective merged state, commit/push/read back the target. Record final Git identities and checks in the merge commit without leaving a post-closure report amendment. Preserve prior campaign records and stop with campaign 037 suspended.
+
+## Authorized reopening and V-002
+
+The human explicitly reopened campaign 039: “Reopen the last campaign and integrate your earlier improvements and this token-related clarification.” This amendment extends the original block-order-only scope; V-001 and its evidence remain retained. Reopening checkpoint and target parent: `7f06904ea47eb1f7f2243e34d24b74f2aa7c24fa`. Reuse the same campaign branch/directory, brought forward to this published parent checkpoint. Campaign 037 stays suspended.
+
+| Action | Accepted revision | Recheck |
+| --- | --- | --- |
+| V-002 | Retain the five-block order. Replace the overloaded authorization paragraph with persistent operational permission and distinct human-review/execution boundaries. Add explicit eligible-phase projection/readback and blocker wording. Outside the copied prompt, explain optional token supply, separate Git/API access and a supported path for operations an adapter cannot perform. | Check exact accepted wording, unchanged placeholder set/order, description-last structure and fences. Confirm no claim that Git authentication establishes API capability or that a token supplies an unsupported operation. Inspect alignment with tracking decision/phase activation, current links/Markdown, manifest equality and actual release-shaped package content; run declared support suite and merged-state checks. |
+
+This authorizes template guidance changes, not authentication-code or plugin-policy changes. Preserve V-001’s historical claims as evidence of that earlier action; append V-002’s actual results separately. Commit/push/read back the amendment before explicit verified parent integration/publication, then stop. Live consumer/provider testing is outside this amendment.
