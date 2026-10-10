@@ -6,14 +6,14 @@ Campaign037 corrections and final assessed reporting are published on `revision/
 
 | Finding | Current disposition | Actual applicability and remaining limit |
 | --- | --- | --- |
-| R001 root navigation | Corrected | Extracted shipped links/objective rechecks Passed; current shipped bytes equal tested pin. |
-| R002 capability map | Corrected | Current owner/path/capability coverage rechecked; current shipped bytes equal tested pin. |
-| R003 curated notes | Corrected with bounded actual provider recheck | Structured publisher transfer and exact actual fixture body Passed; human editorial curation is separately scoped. |
-| R004 publisher lifecycle | Corrected with bounded actual provider recheck | Acknowledged-ID repair21e29c4; clean first-create and unchanged complete rerun Passed using byte-identical current release.py, separately pinned fixture wrapper. Initial failures remain Failed. |
-| R005 required acceptance | Open | Three required Blocked outcomes; installed/native/platform facilities and evidence limits remain. No deferral/risk acceptance or production readiness. |
-| R006 implementation diagram | Corrected | Actual four rendered PNGs at629d4cb retain exact current README/diagram-byte applicability; no new renderer run. |
-| R007 A004 assessor contradiction | Corrected harness; separate recheck Passed | Original Failed retained; corrected criterion atfc193b0 did not alter plugin bytes or retroactively pass the original attempt. |
-| R008 A005 premature vectors | Corrected harness; separate recheck Passed | Original Failed retained; corrected owner criteria at355e3d3 did not alter plugin bytes or retroactively pass the original attempt. |
+| R-001 root navigation | Corrected | Extracted shipped links/objective rechecks Passed; current shipped bytes equal tested pin. |
+| R-002 capability map | Corrected | Current owner/path/capability coverage rechecked; current shipped bytes equal tested pin. |
+| R-003 curated notes | Corrected with bounded actual provider recheck | Structured publisher transfer and exact actual fixture body Passed; human editorial curation is separately scoped. |
+| R-004 publisher lifecycle | Corrected with bounded actual provider recheck | Acknowledged-ID repair21e29c4; clean first-create and unchanged complete rerun Passed using byte-identical current release.py, separately pinned fixture wrapper. Initial failures remain Failed. |
+| R-005 required acceptance | Open | Three required Blocked outcomes; installed/native/platform facilities and evidence limits remain. No deferral/risk acceptance or production readiness. |
+| R-006 implementation diagram | Corrected | Actual four rendered PNGs at629d4cb retain exact current README/diagram-byte applicability; no new renderer run. |
+| R-007 A004 assessor contradiction | Corrected harness; separate recheck Passed | Original Failed retained; corrected criterion atfc193b0 did not alter plugin bytes or retroactively pass the original attempt. |
+| R-008 A005 premature vectors | Corrected harness; separate recheck Passed | Original Failed retained; corrected owner criteria at355e3d3 did not alter plugin bytes or retroactively pass the original attempt. |
 
 The current133 shipped paths/modes/blob bytes remain identical to immutable acceptance plugin `ea515f5624c8a34cc4572731a2590223a5eb27f4`. Canonical/legacy manifests are byte-identical, version0.15.0. Actual final build-only ZIP SHA `935ad686d34caa953979a6d7de85152621c923a7bd43337b8238ecb1aabece6b`,317911 bytes,133 exact members, retains package applicability across these source-only report edits. Current release.py SHA `03a2c1e5686ad1b9e0cae64db3a359a7c049e8c084667ed5496eec2613ebfa4b` is byte-identical to actual tested tooling4a56c7d; the controlled fixture wrapper and provider candidate170adc remain separate identities. Fresh source support113 and publisher26 tests at083c50e Passed; this is source support, not live installed-client acceptance.
 
@@ -450,3 +450,7 @@ This completes final coverage/reporting assessment and its publication on the au
 ## CP-024 — current findings and readiness
 
 The current revised-candidate table above is authoritative for reached dispositions. Final findings, package/publisher/diagram applicability, required and optional outcomes, strict/client/platform limitations and frozen16 preservation are reconciled against independently assessed published evidence92171db. Old observations remain chronological. CP024 recording is complete; CP023 default evidence integration and CP025 final source integration remain Blocked/pending, and R005 remains Open.
+
+## CP-025 preparation — final integration pending
+
+[Concrete integration preparation and cumulative summary](INTEGRATION-PREPARATION.md) records actual no-conflict prospective source/evidence trees, fresh113/26 source checks and133/frozen16 preservation. No source/evidence main merge commit or push was made. Final integration remains pending the blocked publication exits; the review branch records all completed unaffected work.
