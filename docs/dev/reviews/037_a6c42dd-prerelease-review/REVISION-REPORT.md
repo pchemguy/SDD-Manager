@@ -29,7 +29,9 @@ Ruling: execute the plan’s recommended single manual-dispatch publisher route,
 | CP-014 | Controlled acknowledged-upload stop/recovery, actual serialized overlaps, invalid-source/body/foreign-inventory refusals assessed; repeated fresh-create defect retained. | Original playground evidence `8d6d127`; repair `21e29c4`, clean first-create proof and unchanged complete rerun now verified. |
 | CP-015 | A-001 preparation, A-002 selection-only and A-003 first/repeated eligible tracking independently Passed; exact preservation fixtures assessed. | Playground evidence `65b6f80` pushed and exact remote tip verified; this source checkpoint follows. |
 | CP-016 | Running: T-001 completed/published; literal A-004 contract Failed for preparation-integration contradiction, consumer workflow Passed. Separate bounded harness repair/recheck follows. | Playground assessment `14ea149` remotely verified; every product/evidence commit published. |
-| CP-017–CP-025 | Pending. | Follow separate commits and per-commit publication barrier. |
+| CP-017 | Pending. | Requires independently assessed/published A-006. |
+| CP-018 | Running: A-014 prerequisite-refusal, A-025 and all three A-026 variants independently Passed; remaining failure/continuation variants pending. | A-026 evidence `b31ddce` pushed and exact remote tip verified. |
+| CP-019–CP-025 | Pending. | Follow separate commits and per-commit publication barrier. |
 
 ## Findings and readiness
 
@@ -211,3 +213,12 @@ R-008 corrects source A-005 guide/JSON milestone scope: SCENARIO explicitly plac
 R-008 source verification:113 support tests Passed in Python3.12.14; guide/JSON exact criterion alignment and four fixed success-vector identities verified; whitespace checks Passed. No shipped plugin paths or frozen campaigns changed. Complete original API/baseline observations remain retained; full-phase baseline contract unchanged. Separate newly pinned independent recheck remains required.
 
 R-008 independent applicability and reassessment-only checks Passed at published assessor `355e3d31e053d3a27078d1b75e753ea179ec1112`, with unchanged shipped plugin `ea515f5`. Original A-005 Failed retained with exact seal275089ea9c208f9dd23f2a8d6a105a62cf259851f2ec4c2fc9554088cff04c84 and full captures. Corrected API/four-success-vector literal comparison and fresh help/provider readbacks Passed; task/milestone checkpoint semantically unchanged. New assessor evidence published in playground `fa73830` (remote containment gate before dependent work). Native historical RED/raw transcript, shared isolation and runtime limits remain explicit; no fresh consumer execution or retroactive oldpin pass is claimed. A-006 may consume the corrected successful actual milestone checkpoint after evidence publication.
+
+
+## CP-018 — verification-only variants
+
+All three A-026 variants independently Passed from the actual assessed counting milestone `7d003c1`, in separate published trial clones. Preservation ran21unit/12integration successfully; empty selection actually collected0tests with exit5 and was rejected as verification. Failing-baseline setup first passed the public probe, then committed/published disclosed core fixture `8604602`; separate archive independently demonstrated2tests/2assertion failures/0errors before consumer dispatch. Consumer retained actual failures without repair or completion. Incidental wrapper-signature regression and additional bounded read-only checks remain explicitly fixture effects.
+
+Independent assessor compared169tracked-file bytes/modes, index, HEAD/branch/all local refs, working/cached diffs, status and task checkboxes, plus exact remote trial tips. All preserved. Original seals, independent command streams/final snapshots and separate deterministic ownership checks are published at playground evidence `b31ddceefbbe43780183aea8bd1aa763cdb81b0f`, exact remote readback verified before this checkpoint. Historical native transcripts, continuous mutation/hosted audits and shared-filesystem isolation remain uncertified; no unmodified product/plugin defect or fresh broader lifecycle certification is inferred. CP-018 remains Running.
+
+Original-pin required accounting now8Passed/2Failed/22unresolved; A004/A005 separately pinned corrected assessments remain attributed separately without erasing historical failures. A-006 consumer has sealed and published Phase1 main merge `e7cae5b2216ff7dd311b6f7296d829d1927a6a8a`; independent full-phase assessment remains pending. Phase2 has not begun and readiness R-005 remains Open.
