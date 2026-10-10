@@ -168,3 +168,7 @@ A failed required check or uncertain external effect blocks its affected complet
 ## Current planning and publication boundary
 
 The human authorized this detailed all-target plan, not its source execution. The test repository is deliberately unresolved until execution as instructed. Current work consists only of active campaign planning/report/navigation updates. The human explicitly authorized publication of this updated plan/report/index on 2026-10-10. The initial planning commit’s publication is complete with matching remote readback; this expanded plan and its companion updates form the next ordinary checkpoint, whose commit/push/readback identities are retained in Git. No source execution is implied. Host rejection history remains recorded in the report; no transport/account bypass was used.
+
+## CP-016 bounded harness finding
+
+Actual A-004 found R-007: unchanged-integration assessor wording contradicts required document-only preparation integration. This bounded correction/recheck is within the selected acceptance-tooling scope. Keep original Failed evidence and immutable tested resources; publish corrected guide/JSON and support checks, then separately pin/reassess retained task evidence with explicit unchanged-plugin applicability. No successful predecessor is invented and no blocked gate is waived. CP-016 remains Running until actual milestone/phase results are assessed.

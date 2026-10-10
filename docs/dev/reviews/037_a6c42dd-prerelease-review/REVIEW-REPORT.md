@@ -293,3 +293,14 @@ Fresh first publication and complete rerun both Passed under separately pinned a
 ## CP-015 consumer acceptance recheck
 
 Full preparation, selection-only and initial/repeated eligible-phase tracking independently Passed at unchanged prepared product `1e3305c8` with immutable package `ea515f5`. Actual preservation fixtures, hosted identities/associations and exact unmanaged material are verified in [revision evidence](REVISION-REPORT.md#cp-015--preparation-selection-and-hosted-activation-acceptance) and [published independent results](https://github.com/pchemguy/SDD-Manager-Prerelease-Playground/tree/65b6f802f16a66ff58e6d251c5cf77d24cda1f9e/docs/dev/reviews/001_eff696b-prerelease-acceptance). Original failures, coordinator recovery and platform-approval interventions remain retained. R-005 stays Open: five required variants Passed, remaining 27 required variants and selected supplemental/optional/native/installed/platform targets incomplete. No product implementation or readiness is inferred from P1 completion. R-001/R-002/R-006 retain corrected-source dispositions; R-003/R-004 retain corrected-publisher dispositions for their separately tested pins.
+
+## R-007 — First-task assessor contract conflicts with required preparation integration
+
+| Field | Evidence / disposition |
+| --- | --- |
+| Type / priority / confidence | Acceptance harness contract defect; P2; high confidence from actual fresh consumer and independent assessment. |
+| Location | acceptance/textstats/cases/assessor/A-004.md and A-004.json require unchanged integration. Pinned startup-and-continuation.md requires accepted preparation merged/published before implementation branch creation. |
+| Actual evidence | Main advanced only through document-only preparation merge `88a5c4b`; first task `9dc8075` stays on unmerged phase branch. Fifteen tests and independent probes Passed; literal original case Failed, consumer workflow Passed. |
+| Bounded correction | State the allowed prerequisite preparation merge explicitly; retain incomplete-phase integration prohibition and exact before/after refs. Source guide and JSON changed together; immutable tested harness stays unchanged. |
+| Recheck | Required support suite, guide/JSON alignment and separate newly pinned independent reassessment of actual retained lifecycle/source applicability. Original Failed result remains at its original pin. |
+| Decision | Source correction executed under accepted bounded acceptance-repair scope; recheck pending, readiness remains Open. |
