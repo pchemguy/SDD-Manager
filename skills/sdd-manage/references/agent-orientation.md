@@ -10,7 +10,7 @@ During authorized SDD adoption/bootstrap, ensure root `AGENTS.md` provides accur
 | Governing inputs | Links to present PROJECT/design/SPEC/PLAN/layout/TASKS owners; state missing inputs only where relevant, without fabricating files or requirements. |
 | Active ownership | Discoverable current task/feature owner and archive transfer navigation. Use canonical owners; no duplicated executable checklist, status journal or branch/HEAD snapshot. |
 | Setup and checks | Declared and validated commands, working directory, supported environment/shell constraints and concrete evidence limits. Do not invent a command or claim an unrun setup is validated. |
-| Workflow constraints | Durable verification, scoped commit/publication and user stopping-boundary expectations under established authority; link detailed policy. |
+| Workflow constraints | Durable verification, the [task commit contract](../../sdd-implement/references/completion-and-checkpoints.md#task-commit-contract) for task-list execution, scoped commit/publication and user stopping-boundary expectations under established authority; link detailed policy. |
 | Instruction discovery | Read applicable nested instructions for selected paths. Explicitly load this file when the host does not discover it; promise no universal host-discovery mechanism. |
 
 Keep operational instructions distinguishable from document navigation. Link detailed canonical rules instead of restating them. No secret, credential-file contents or transient helper/installation path belongs here.

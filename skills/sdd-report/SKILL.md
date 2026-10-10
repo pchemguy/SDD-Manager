@@ -23,4 +23,6 @@ Use the owning TASKS or active FEATURE-TASKS entry, applicable design, SPEC, PLA
 
 Compose only the requested text or structured draft. Keep a concise shared core of **What**, **Why**, **Verification**, and **Result**, varying the labels and optional sections to suit the actual change. For a planned issue, Verification is an acceptance or check plan and Result is an intended outcome, not a completed claim. Emoji labels are optional presentation, not required metadata.
 
+Task-associated subjects must begin with exactly one owning `[<task-id>]` marker and an imperative description; use the [task subject rules](references/object-drafts.md#task-commit-subjects) and return composition conflicts to the commit owner. Do not invent IDs for non-task campaign, preparation or merge work.
+
 This skill drafts reports and messages. The active implementation or steering workflow owns its work commits and task status; **sdd-manage** coordinates other persistence and explicit boundary merges, **sdd-forge** owns hosted issue/milestone mutations, and any future PR workflow owns PR creation or merge. A draft does not grant authorization for those actions or establish task completion. Return the draft, source task IDs and issue references actually resolved, evidence used, and any facts still needed before publication.
