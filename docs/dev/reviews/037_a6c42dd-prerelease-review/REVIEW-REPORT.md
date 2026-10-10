@@ -315,3 +315,7 @@ Full preparation, selection-only and initial/repeated eligible-phase tracking in
 | Bounded correction | Guide/JSON require accepted milestone scope, compare four fixed observed baseline success rows, retain complete captures/provenance and independent help/lifecycle checks. Full Phase1 failure requirements stay unchanged at A-006. |
 | Recheck | Support suite, source alignment and separately pinned reassessment of exact actual retained evidence; original failed pin never relabeled. |
 | Decision | Corrected at published assessor355e3d3; separate independent reassessment Passed with unchanged plugin/evidence applicability and explicit native historical RED/transcript/isolation limits. Original failedpin/result retained. Full readiness remains Open. |
+
+## Current required acceptance disposition
+
+Published original-pin totals are 21 Passed, 2 Failed and 9 unresolved. A017 recovery independently Passed with explicit assistance/local-delivery limits, published f6cec4f. Original A004/A005 failures and separately pinned corrected rechecks remain distinct. A010 continues detailed docs/distribution/final review; A019 final merge/independent grade and A021 actual partial transfer/recovery remain pending. A014 cross-phase live branch creation was rejected by automatic approval review, recorded d4e1297, with no retry/bypass. Full readiness R-005 remains Open.

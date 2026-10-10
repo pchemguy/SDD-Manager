@@ -192,3 +192,5 @@ CP018 progress: actual A015 staged-work hold/freshrecovery independently Passed 
 
 
 CP017 progress: A008 scopedrangefeature preparation independently Passed with sourceactivation assistance retained, published0611f1b verified. A009 mainSPEC-only incorporation eligible; remainingfeaturedelivery/steering/stdin gates pending. CP018 continues actuallocalpublication recoverytrials, with originals/interventions retained.
+
+CP-018 progress: A017 independent recovery Passed and externally published f6cec4f, full exact objects retained. Required original-pin totals21 Passed/2 Failed/9 unresolved. A019 repair accepted with both genuine interruption states retained; final integration grade pending. A021 setup/handoff published before fresh operation selection. A014 cross-phase specific live trial destinations remain automatically rejected; continue unaffected CP017/018 and later eligible assessment work. CP017/018 are not complete.
