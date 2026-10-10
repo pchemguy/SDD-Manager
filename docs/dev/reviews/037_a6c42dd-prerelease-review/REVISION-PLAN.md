@@ -189,3 +189,6 @@ CP018 progress: A020 exact foreign index/worktree preservation independently Pas
 
 
 CP018 progress: actual A015 staged-work hold/freshrecovery independently Passed with assistance, completeobjectbundle/assessment publisheda747ab4 and verified. Distinct local A016/A018 publicationcontrols are prepared/publishedd25735b and actualworkers active. Remaining gates/coverage limits retained; no fullcampaign acceptance.
+
+
+CP017 progress: A008 scopedrangefeature preparation independently Passed with sourceactivation assistance retained, published0611f1b verified. A009 mainSPEC-only incorporation eligible; remainingfeaturedelivery/steering/stdin gates pending. CP018 continues actuallocalpublication recoverytrials, with originals/interventions retained.
