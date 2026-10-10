@@ -246,3 +246,17 @@ Proposed revision queue remains release publisher R-003/R-004, current documenta
 ## Revision planning continuation
 
 On 2026-10-10 the human requested pulling origin and resuming 037. The published branch is current at `b2cc1d4`; U-001–U-008 review coverage is complete, so no review unit is repeated. The next artifact is the [proposed correction plan](REVISION-PLAN.md), covering the four defects, recommended optional R-006 documentation scope and separately selected R-005/live-provider evidence. All six findings remain Open; no source repair, finding acceptance/deferral, main integration or release effect is inferred from this planning continuation. Execution selection remains pending.
+
+## Detailed all-target planning instruction
+
+The human requested a detailed plan including all targets and optional targets, an execution-time test repository and clear intermediate commit checkpoints on 2026-10-10. The [revision plan](REVISION-PLAN.md) now includes R-001–R-006, 25 source-campaign checkpoints, full 27-case/32-required-variant TextStats scope, both optional catalog variants and named fidelity/native/client/platform/presentation follow-ups. Actual effects and facilities remain execution inputs; inclusion is not an observed pass, finding closure or source-execution authority.
+
+Initial planning commit `80bc300` is retained locally. Host automatic approval review rejected its publication, stating that pulling/resuming did not authorize publishing new artifacts and the destination was not verified as trusted. Read-only verification confirms the established origin and remote tip `b2cc1d4`; no transport/account workaround or repeated denied push is performed. The expanded plan/report remain pending publication, and no product source changed.
+
+### R-001 correction decision
+
+On 2026-10-10 the human specified absolute `https://github.com/pchemguy/SDD-Manager/blob/main/<repository-path>` URLs for packaged README/AGENTS links to excluded docs, exemplified by the capability-map URL. The plan's CP-008 now applies this exact rule to all affected root occurrences; shipped-resource links remain relative. R-001 remains Open pending actual source repair and extracted-package/path verification. This records the selected correction method, not an implementation pass.
+
+## Authorized planning publication
+
+The human explicitly instructed: “publish campaign 037’s updated plan, report, and index to pchemguy/SDD-Manager”, 2026-10-10. Published the retained initial planning commit `80bc30018f205ce88e96cbbc10a6cc4d132ffe69`; exact remote branch readback matched before this next checkpoint. The earlier denial and pending-draft statements above describe their historical state, not the current publication result. This checkpoint contains the complete all-target plan, 25 intermediate commit checkpoints and explicit absolute blob/main root-link decision, plus its report/index navigation. Final commit/publication/readback is established by Git; source execution, test repository selection, finding closure, main integration and release effects remain outside this publication instruction.
