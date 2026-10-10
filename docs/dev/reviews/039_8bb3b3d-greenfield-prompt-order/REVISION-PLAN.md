@@ -29,3 +29,13 @@ The human explicitly reopened campaign 039: “Reopen the last campaign and inte
 | V-002 | Retain the five-block order. Replace the overloaded authorization paragraph with persistent operational permission and distinct human-review/execution boundaries. Add explicit eligible-phase projection/readback and blocker wording. Outside the copied prompt, explain optional token supply, separate Git/API access and a supported path for operations an adapter cannot perform. | Check exact accepted wording, unchanged placeholder set/order, description-last structure and fences. Confirm no claim that Git authentication establishes API capability or that a token supplies an unsupported operation. Inspect alignment with tracking decision/phase activation, current links/Markdown, manifest equality and actual release-shaped package content; run declared support suite and merged-state checks. |
 
 This authorizes template guidance changes, not authentication-code or plugin-policy changes. Preserve V-001’s historical claims as evidence of that earlier action; append V-002’s actual results separately. Commit/push/read back the amendment before explicit verified parent integration/publication, then stop. Live consumer/provider testing is outside this amendment.
+
+## Authorized reopening and V-003
+
+The human instructed “Reopen/amend the last campaign with the above”, accepting the explicit phase activation wording. Reopening checkpoint/target parent: `f64e7eb3e6286f9d7ed74d74401e45ee24d3a6f1`. Reuse campaign 039 and its branch, brought forward to this published checkpoint; retain V-001/V-002 evidence.
+
+| Action | Accepted revision | Objective recheck |
+| --- | --- | --- |
+| V-003 | Name sdd-manage’s phase activation workflow in the tracking paragraph, apply it to each eligible phase and state “report the blocker and stop affected implementation.” | Exact replacement of the accepted paragraph only; all other template text, placeholders/order and token guidance unchanged. Inspect alignment with current phase-activation owner, Markdown/fences, package inclusion and support-suite boundary checks. |
+
+Publish and read back V-003 before explicit parent integration; verify and publish the merged state. Parent 037 remains suspended. No plugin policy edits, live provider/consumer tests, main merge or release are authorized by this focused amendment.
