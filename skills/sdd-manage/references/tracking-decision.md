@@ -18,3 +18,9 @@ Record the actual user decision and its source, repository/scope, eligible phase
 ## Late confirmation
 
 When confirmed after local execution begins, discover existing eligible-phase objects and reconcile missing identities/associations idempotently. Attach retained commit/check evidence and close only verified tasks/milestones; leave incomplete work open. Do not repeat product tasks, create future-phase objects or rewrite historical reports to imply earlier projection. Apply phase activation, document readiness and backend lifecycle rules to the actual continuation state.
+
+## Recover an omitted requested gate
+
+An initial explicit tracking request discovered after untracked execution is not late user confirmation. Retain the actual request, missed boundary and performed state separately; do not ask the human to enable tracking again or rewrite evidence to imply earlier compliance.
+
+Preserve pending files/index, task identities and verified results. Publish already verified retained commits first. Before further affected implementation edits/tests or phase advancement, route discovery/reconciliation of the existing eligible phase and required predecessor lifecycle through sdd-forge and [phase activation](phase-activation.md). Reuse matched objects, read uncertain effects before retry, attach retained commit/check evidence and close only verified work. Missing or unknown required projection/closure remains a blocker. Do not replay product tasks, reset work, bulk-project future phases or fabricate historical projection. An actual explicit human local-only override records its scope and pending hosted obligations.
