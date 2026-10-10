@@ -84,8 +84,12 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 
 | Context | Coordinated result |
 | --- | --- |
+| Explicit “Enable and maintain GitHub tracking” accompanies the broad project request | Carry requested/confirmed tracking without another question; after accepted preparation verify the eligible phase label, all milestones/tasks and associations before task edits/tests. No objects yet means projection pending, not tracking declined. |
 | Token supplied for the established GitHub workflow; no tracking choice | Recommend enable and ask to manage the eligible phase label, milestones/task issues, associations and verified lifecycle closures. Keep confirmation pending; create no objects yet. |
 | Prior explicit decline, followed by a token for normal Git pushes | Preserve the decline and perform authorized pushes; do not interpret the credential as activation. |
+| Requested tracking has no verified objects, or initial projection is partial/unknown | Stop affected task edits/tests; finish projection/readback or report the blocker. Do not apply the later-outage allowance or silently choose local-only execution. |
+| Provider outage after full phase activation | Retain verified results and pending closures; continue only independent already-projected tasks with satisfied dependencies. Added unprojected work and dependent phase/review transitions remain blocked. |
+| Original explicit request was omitted during execution | Preserve the request/work/evidence, publish retained verified commits and reconcile the missed gate before further affected implementation. No repeated enable question or fabricated earlier compliance. |
 | Tracking confirmed after several local tasks completed | Discover/reconcile eligible objects and attach verified retained evidence; leave incomplete work open and keep historical inactive-state reports truthful. |
 | Preparation may continue while tracking confirmation is pending | Continue independent authorized documents; resolve the actual activation choice before dependent phase execution. |
 
