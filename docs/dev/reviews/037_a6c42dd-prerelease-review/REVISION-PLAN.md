@@ -200,3 +200,10 @@ Current execution checkpoint: A019 independent Passed and published d2f8ebc; req
 
 
 Latest execution checkpoint: A021 independently Passed and published ea9ab9d; original-pin totals23 Passed/2 Failed/7 unresolved. A010 reconciliation accepted in1dab6fa and publishing before paused integration. CP020 isolated tracking scope controls are active after8f625d2 setup publication; full live guide certification is not claimed. CP022 diagram byte applicability and exact persisted PNG hashes are verified in COMPATIBILITY-EVIDENCE.json; no duplicate render or native discovery claim. All remaining selected work and readiness boundaries stay explicit.
+
+
+## CP-017 — full range delivery independently assessed
+
+A010 independently Passed with assistance. Exact range feature6f161448 was integrated by two-parent795f3a3542c9981f8d43c8e182876f3efa5b5f16 into paused Phase2, immediately published and exact readback verified; main remains preparation-onlyfbe8bed. Complete143 exact screened assessor artifacts and safe hosted preservation readbacks are published in playground af641fb55bacb55f0d5d925cdfc2c4936826f265; current cursor reconciled17e766f. Original nine deterministic checks,107+107 CLI vectors,31 resource/API probes,31unit/28integration,315 real extraction cases,124 links and76 hosted comparisons Passed. Canonical24 unique owners/19checked/fivepending, current QC, three archived source/QC pairs, seven task-closing commits and preserved unmanaged issue/milestone material verified. Original failures and an interrupted assessor check with possible ignored-ZIP regeneration remain explicitly disclosed; later tests used exact owned exports. No whole Phase2 completion.
+
+Required original-pin totals24Passed/2Failed/6unresolved; originalA004/A005 failures and corrected rechecks remain separate. CP017 continues through assessment/steering/stdin completion; R005Open. Supplemental tracking scope, focused QC and first nested local review Passed outside32 with limited facility/chronology scope. New A014 live refs remain automatically rejected without retry.
