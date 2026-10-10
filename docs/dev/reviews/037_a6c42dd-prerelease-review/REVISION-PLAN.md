@@ -197,3 +197,6 @@ CP-018 progress: A017 independent recovery Passed and externally published f6cec
 
 
 Current execution checkpoint: A019 independent Passed and published d2f8ebc; required original-pin totals22 Passed/2 Failed/8 unresolved. A021 exact accepted recovery checkpoint is locally published and awaiting independent final grade. A010 final feature reports accepted in44d271f; final task lifecycle, ownership/archive and paused integration remain gated. Fresh stale-QC supplement Passed outside required totals, coverage inventory/addendum published1edc29f; fresh strict package checks retain known format limits inef3a458. Remaining executable follow-ups continue; unavailable optional facilities remain Not run. CP017/018 Running and R005 Open.
+
+
+Latest execution checkpoint: A021 independently Passed and published ea9ab9d; original-pin totals23 Passed/2 Failed/7 unresolved. A010 reconciliation accepted in1dab6fa and publishing before paused integration. CP020 isolated tracking scope controls are active after8f625d2 setup publication; full live guide certification is not claimed. CP022 diagram byte applicability and exact persisted PNG hashes are verified in COMPATIBILITY-EVIDENCE.json; no duplicate render or native discovery claim. All remaining selected work and readiness boundaries stay explicit.
