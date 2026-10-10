@@ -185,4 +185,51 @@ class LifecycleTests(Contract):
         self.run_release(); self.assertNotIn('upload:sdd-manager.zip',self.api.events)
 
 
+class AdapterTests(Contract):
+    def setUp(self):
+        super().setUp()
+        self.assertTrue(hasattr(publisher, 'GitHub'), 'Actual provider adapter is absent')
+
+    def test_annotated_tag_is_peeled(self):
+        replies=[{'object':{'type':'tag','sha':'b'*40}}, {'object':{'type':'commit','sha':'a'*40}}]
+        calls=[]
+        def request(method,path,**kwargs): calls.append((method,path)); return replies.pop(0)
+        api=publisher.GitHub('owner/repo', request=request)
+        self.assertEqual(api.tag_source('v0.15.0'),'a'*40)
+        self.assertIn('/git/tags/',calls[1][1])
+
+    def test_complete_assets_are_paginated(self):
+        calls=[]
+        def request(method,path,**kwargs):
+            calls.append(path)
+            if '/releases?' in path: return [dict(id=23,tag_name='v0.15.0',assets=[])]
+            if '&page=1' in path: return [dict(id=i,name=str(i)) for i in range(100)]
+            return [dict(id=101,name='last')]
+        api=publisher.GitHub('owner/repo',request=request)
+        self.assertEqual(len(api.find_release('v0.15.0')['assets']),101)
+        self.assertTrue(any('page=2' in path for path in calls))
+
+    def test_missing_lookup_and_transport_failure_are_distinct(self):
+        api=publisher.GitHub('owner/repo',request=lambda *a,**k:None)
+        self.assertIsNone(api.tag_source('v0.15.0'))
+        with self.assertRaises(ValueError): api.find_release('v0.15.0')
+
+    def test_body_and_upload_are_structured_data(self):
+        calls=[]
+        def request(method,path,**kwargs): calls.append((method,path,kwargs)); return {'id':23}
+        api=publisher.GitHub('owner/repo',request=request)
+        api.create_draft(handoff()); api.upload({'id':23},'sdd-manager.zip',b'actual')
+        self.assertEqual(calls[0][2]['data']['body'],handoff()['notes'])
+        self.assertTrue(calls[0][2]['data']['draft'])
+        self.assertEqual(calls[1][2]['data'],b'actual')
+        self.assertTrue(calls[1][1].startswith('https://uploads.github.com/'))
+
+    def test_event_handoff_is_read_as_data(self):
+        self.assertTrue(hasattr(publisher, 'read_event'), 'Workflow event reader is absent')
+        with tempfile.TemporaryDirectory() as directory:
+            event=Path(directory)/'event.json'
+            event.write_text(json.dumps({'inputs':{'handoff':json.dumps(handoff())}}))
+            self.assertEqual(publisher.read_event(event),handoff())
+
+
 if __name__=='__main__': unittest.main()

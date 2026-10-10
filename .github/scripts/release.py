@@ -163,5 +163,155 @@ def reconcile_release(api, data, files):
                 api.upload(release, name, raw)
         release = api.find_release(data['tag'])
         verify_release(api, release, data, files, complete=True)
-    # Final publication and policy readback are deliberately pending CP-007.
+    if release['draft']:
+        api.publish(release, data)
+    release = api.find_release(data['tag'])
+    if release is None or release['draft']:
+        raise ValueError('Published release readback is missing or still draft')
+    verify_release(api, release, data, files, complete=True)
+    if api.tag_source(data['tag']) != data['source']:
+        raise ValueError('Published tag source changed')
+    expected_latest = release['id'] if data['make_latest'] else before_latest
+    if api.latest_id() != expected_latest:
+        raise ValueError('Actual latest release differs from requested policy')
     return release
+
+
+class GitHub:
+    """REST boundary with complete inventories and no automatic write retries."""
+    def __init__(self, repository, token=None, request=None):
+        if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repository):
+            raise ValueError('Invalid repository identity')
+        self.repository = repository
+        self.base = 'https://api.github.com/repos/' + repository
+        self.token = token
+        self.request = request or self._request
+
+    def _request(self, method, url, data=None, binary=False, content_type='application/json'):
+        import urllib.error
+        import urllib.request
+        if not url.startswith((self.base + '/', 'https://uploads.github.com/repos/' + self.repository + '/')):
+            raise ValueError('Provider request escapes selected repository')
+        headers = {'Accept': 'application/octet-stream' if binary else 'application/vnd.github+json',
+                   'X-GitHub-Api-Version': '2022-11-28', 'User-Agent': 'SDD-Manager-publisher'}
+        if self.token: headers['Authorization'] = 'Bearer ' + self.token
+        if data is not None:
+            data = data if isinstance(data, bytes) else json.dumps(data, ensure_ascii=False).encode('utf-8')
+            headers['Content-Type'] = content_type
+        class SafeRedirect(urllib.request.HTTPRedirectHandler):
+            def redirect_request(self, req, fp, code, msg, hdrs, newurl):
+                if not newurl.startswith('https://'):
+                    raise ValueError('Insecure asset redirect')
+                redirected = super().redirect_request(req, fp, code, msg, hdrs, newurl)
+                if redirected is not None: redirected.remove_header('Authorization')
+                return redirected
+        opener = urllib.request.build_opener(SafeRedirect())
+        try:
+            with opener.open(urllib.request.Request(url, data=data, headers=headers, method=method), timeout=60) as response:
+                raw = response.read()
+        except urllib.error.HTTPError as error:
+            if method == 'GET' and error.code == 404: return None
+            # Never include provider body or credentials in exception evidence.
+            raise RuntimeError('GitHub request failed: HTTP ' + str(error.code)) from None
+        return raw if binary else (json.loads(raw) if raw else None)
+
+    def pages(self, path):
+        result = []
+        for page in range(1, 1001):
+            separator = '&' if '?' in path else '?'
+            items = self.request('GET', path + separator + 'per_page=100&page=' + str(page))
+            if not isinstance(items, list): raise ValueError('Incomplete provider inventory')
+            result.extend(items)
+            if len(items) < 100: return result
+        raise ValueError('Provider inventory exceeds supported pagination bound')
+
+    def tag_source(self, tag):
+        from urllib.parse import quote
+        item = self.request('GET', self.base + '/git/ref/tags/' + quote(tag, safe=''))
+        if item is None: return None
+        obj = item['object']
+        for _ in range(10):
+            if obj['type'] == 'commit': return obj['sha']
+            if obj['type'] != 'tag': raise ValueError('Tag does not resolve to commit')
+            obj = self.request('GET', self.base + '/git/tags/' + obj['sha'])['object']
+        raise ValueError('Annotated tag chain exceeds supported bound')
+
+    def latest_id(self):
+        release = self.request('GET', self.base + '/releases/latest')
+        return None if release is None else release['id']
+
+    def find_release(self, tag):
+        matches = [r for r in self.pages(self.base + '/releases') if r['tag_name'] == tag]
+        if len(matches) > 1: raise ValueError('Ambiguous provider release identity')
+        if not matches: return None
+        release = matches[0]
+        release['assets'] = self.pages(self.base + '/releases/' + str(release['id']) + '/assets')
+        return release
+
+    def create_draft(self, data):
+        return self.request('POST', self.base + '/releases', data={
+            'tag_name': data['tag'], 'target_commitish': data['source'],
+            'name': 'SDD Manager ' + data['tag'], 'body': data['notes'],
+            'draft': True, 'prerelease': data['prerelease'], 'make_latest': 'false'})
+
+    def upload(self, release, name, raw):
+        from urllib.parse import quote
+        url = ('https://uploads.github.com/repos/' + self.repository + '/releases/'
+               + str(release['id']) + '/assets?name=' + quote(name, safe=''))
+        return self.request('POST', url, data=raw, content_type='application/octet-stream')
+
+    def download(self, asset):
+        raw = self.request('GET', self.base + '/releases/assets/' + str(asset['id']), binary=True)
+        if not isinstance(raw, bytes): raise ValueError('Asset download is missing')
+        return raw
+
+    def publish(self, release, data):
+        return self.request('PATCH', self.base + '/releases/' + str(release['id']), data={
+            'draft': False, 'prerelease': data['prerelease'],
+            'make_latest': 'true' if data['make_latest'] else 'false'})
+
+
+def read_event(path):
+    from pathlib import Path
+    event = json.loads(Path(path).read_text(encoding='utf-8'))
+    raw = event['inputs']['handoff']
+    if not isinstance(raw, str) or len(raw.encode('utf-8')) > 60000:
+        raise ValueError('Invalid structured dispatch handoff')
+    return validate_handoff(json.loads(raw))
+
+
+def main():
+    import argparse
+    import os
+    from pathlib import Path
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--event', required=True)
+    parser.add_argument('--root', required=True)
+    parser.add_argument('--output', required=True)
+    parser.add_argument('--build-only', action='store_true')
+    parser.add_argument('--expected-sha256')
+    args = parser.parse_args()
+    data = read_event(args.event)
+    root = Path(args.root)
+    paths = build_package(root, data, Path(args.output))
+    archive_hash = hashlib.sha256(paths['sdd-manager.zip'].read_bytes()).hexdigest()
+    if args.expected_sha256 and archive_hash != args.expected_sha256:
+        raise ValueError('Publisher rebuild differs from verified build job')
+    result = None if args.build_only else reconcile_release(
+        GitHub(os.environ['GITHUB_REPOSITORY'], os.environ.get('GITHUB_TOKEN')),
+        data, {name: path.read_bytes() for name, path in paths.items()})
+    if os.environ.get('GITHUB_OUTPUT'):
+        with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as outputs:
+            outputs.write('archive_sha256=' + archive_hash + '\n')
+    observation = {'source': data['source'], 'request_id': data['request_id'],
+                   'workflow_source': os.environ.get('GITHUB_SHA'),
+                   'run_id': os.environ.get('GITHUB_RUN_ID'),
+                   'published': result is not None,
+                   'release_id': None if result is None else result['id'],
+                   'assets': {name: hashlib.sha256(path.read_bytes()).hexdigest() for name, path in paths.items()}}
+    (Path(args.output) / 'release-observation.json').write_text(json.dumps(observation, indent=2) + '\n')
+    print(json.dumps(observation, sort_keys=True))
+
+
+if __name__ == '__main__':
+    main()
