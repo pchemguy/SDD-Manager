@@ -303,4 +303,4 @@ Full preparation, selection-only and initial/repeated eligible-phase tracking in
 | Actual evidence | Main advanced only through document-only preparation merge `88a5c4b`; first task `9dc8075` stays on unmerged phase branch. Fifteen tests and independent probes Passed; literal original case Failed, consumer workflow Passed. |
 | Bounded correction | State the allowed prerequisite preparation merge explicitly; retain incomplete-phase integration prohibition and exact before/after refs. Source guide and JSON changed together; immutable tested harness stays unchanged. |
 | Recheck | Required support suite, guide/JSON alignment and separate newly pinned independent reassessment of actual retained lifecycle/source applicability. Original Failed result remains at its original pin. |
-| Decision | Source correction executed under accepted bounded acceptance-repair scope; recheck pending, readiness remains Open. |
+| Decision | Corrected at published assessor pin fc193b0; independently rechecked using eligible unchanged actual lifecycle evidence. Original assessor-pin Failed stays exact; reassessment-only corrected result Passed. Full readiness remains Open. |
