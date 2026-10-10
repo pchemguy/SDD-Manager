@@ -186,3 +186,6 @@ CP017 progress: A007 independent Passed published5f16f79 and verified; A008 ordi
 
 
 CP018 progress: A020 exact foreign index/worktree preservation independently Passed and published5291d8a with remote readback. Remaining controlled trials pending; no full-campaign acceptance claim.
+
+
+CP018 progress: actual A015 staged-work hold/freshrecovery independently Passed with assistance, completeobjectbundle/assessment publisheda747ab4 and verified. Distinct local A016/A018 publicationcontrols are prepared/publishedd25735b and actualworkers active. Remaining gates/coverage limits retained; no fullcampaign acceptance.
