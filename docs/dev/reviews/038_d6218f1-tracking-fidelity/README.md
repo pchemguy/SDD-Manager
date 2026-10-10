@@ -3,12 +3,12 @@
 ## Identity, authority and boundary
 
 - Campaign: `038_d6218f1`; starting baseline `d6218f1458b3805ecd27f6be6942162ec4a815ed`.
-- Working branch: `revision/038_d6218f1-tracking-fidelity`; parent and proposed eventual integration target: `revision/037_a6c42dd-prerelease-review`, explicitly selected by the human. Main is not the immediate target.
+- Working branch: `revision/038_d6218f1-tracking-fidelity`; parent and integration target: `revision/037_a6c42dd-prerelease-review`, explicitly selected by the human. Main is not the immediate target.
 - Parent campaign 037 is suspended; its completed prerelease assessment, exact candidate and Open findings remain unchanged by this focused review.
 - Product wording reviewed: current repository source at this baseline, equivalent to product source `a6c42dd754843abf9bafca7dee2aee9e733b046a`, version `0.15.0`. Parent campaign commits change review records only.
 - Objective: review the explicit requested GitHub tracking decision, phase activation and implementation handoff against the supplied test result; propose bounded wording changes to improve agent fidelity.
-- Authority: create and publish this focused campaign's evidence, review report and proposed revision plan. Source revisions, demo repository operations, live tracking writes, implementation, main merge and product release are outside this request.
-- State: Focused review complete; [REVIEW-REPORT.md](REVIEW-REPORT.md) and [proposed REVISION-PLAN.md](REVISION-PLAN.md) are published campaign artifacts. Source revision is not accepted or executed. The prompt defines the review scope; no separate comprehensive review plan is required.
+- Authority: the initial review request covered evidence/report/proposed plan; the human’s 2026-10-10 “Execute campaign” accepts the source revisions, focused scenario preparation, local verification, publication and integration into the suspended parent branch. Demo operations, live tracking writes, main merge and product release remain outside scope.
+- State: Focused review and accepted source/scenario revision complete; see [baseline review](REVIEW-REPORT.md), [accepted plan](REVISION-PLAN.md) and [execution report](REVISION-REPORT.md). Applicable local checks pass; R-001/R-002 Revised with behavioral recheck pending, R-003 Open. Final parent integration/publication facts are retained in Git; 037 remains suspended.
 
 ## Prompt-defined review criteria
 
@@ -23,7 +23,7 @@
 
 Assess one focused unit across sdd-manage entry/tracking/activation/coordination/workflows/examples, sdd-implement entry/startup/completion, sdd-forge projection and shared backend lifecycle. Inspect current wording and both sides of the handoff. Use Technical Writing Assistant composition criteria for prominence, conditional clarity, referents and reader burden. No independent external research or live consumer execution is selected. Findings distinguish confirmed wording weakness from a reported consumer failure and unverified causal attribution.
 
-Commit/push/read back this opening checkpoint before completing the focused report. Publish the report and proposed revision plan in the next checkpoint; stop before source revision. Proposed actions are not accepted or executed actions. No historical campaign compatibility review or repair is in scope.
+The initial review boundary required opening checkpoint publication, then report/proposed-plan publication before source revision. The subsequent human execution instruction accepted that plan; actual revisions and checks are recorded separately in REVISION-REPORT. No historical campaign compatibility review or repair is in scope.
 
 ## Supplied test result and provenance
 

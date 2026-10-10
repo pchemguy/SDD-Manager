@@ -2,11 +2,11 @@
 
 ## Campaign and conclusion
 
-- Campaign: `038_d6218f1`; [scope and supplied result](README.md); [proposed revision plan](REVISION-PLAN.md).
+- Campaign: `038_d6218f1`; [scope and supplied result](README.md); [revision plan](REVISION-PLAN.md).
 - Starting baseline: `d6218f1458b3805ecd27f6be6942162ec4a815ed`; exact current product source equivalent to `a6c42dd754843abf9bafca7dee2aee9e733b046a`, version `0.15.0`.
 - Working branch: `revision/038_d6218f1-tracking-fidelity`; parent/target: suspended `revision/037_a6c42dd-prerelease-review`. Opening checkpoint `739b7ec1fae754de65cbf2bd728bce546a3e64ab` was pushed and exact remote readback matched before this assessment checkpoint.
 - Reviewer: coordinating assistant, 2026-10-10 UTC; evidence mode: current source/composition inspection and human-supplied conversation excerpt. No independent consumer execution or external corroboration.
-- State: Focused review complete; two instruction-fidelity improvement findings and one evidence gap, all Open. Revision plan is Proposed, not accepted or executed.
+- Baseline state: Focused review complete; two instruction-fidelity improvement findings and one evidence gap were Open, with a Proposed plan. The later human execution instruction and actual dispositions are recorded in [REVISION-REPORT.md](REVISION-REPORT.md); baseline observations below are retained.
 
 **The requirement already exists.** An explicit request to enable and maintain tracking confirms the decision; eligible phase projection and readback precede its first task. The supplied request is sufficient and needs no repeated user reminder or more emphatic prompt. If the reported chronology is accurate and the tested source contained these instructions, beginning tasks without that projection or an actual human override breached the existing workflow.
 
@@ -90,3 +90,7 @@ Source assessment confirms the stated policy and wording weaknesses; all behavio
 The proposed plan preserves human review of newly created documents, preparation integration, optional tracking choice, credential protection, exact issue identity, eligible-phase-only projection, task/phase closure ordering, per-commit publication and scope limits. Git publication and API capability remain separate. The initial broad project request is not treated as acceptance of all preparation documents or permission to execute every phase.
 
 Publish this report and proposed plan, then stop before source changes. Campaign 037 remains suspended with its original candidate/findings. Any accepted product wording revision creates a changed candidate requiring affected prerelease reassessment when 037 resumes; this focused source review neither clears its blockers nor claims runtime acceptance.
+
+## Subsequent authorized execution
+
+The human accepted execution on 2026-10-10. All three source/scenario-preparation actions are delivered with local checks; see [REVISION-REPORT.md](REVISION-REPORT.md) for evidence and integration scope. R-001/R-002 are Revised with behavioral rechecks pending; R-003 stays Open. This changes the initial review stopping boundary for the accepted source revision, without clearing the suspended prerelease assessment or authorizing live demo operations/release.
