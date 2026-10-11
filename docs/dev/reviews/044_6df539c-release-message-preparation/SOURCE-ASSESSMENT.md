@@ -36,3 +36,16 @@ README and capability map advertise complete-message preparation with the select
 ## Limits
 
 Atomic save and owner-routing behavior are defined in skill instructions; this assessment does not establish that an installed agent follows them. No new product release, final message for SDD Manager itself or client acceptance run is performed. Existing source-only tests cannot certify human-curation quality or native failure handling.
+
+## V-005 amendment walkthrough
+
+- Release request with current local context and matching stated version: reuse notes after validating source coverage and ancillary facts.
+- Matching version with unknown/stale source: refresh coverage; version equality cannot bypass freshness.
+- Mismatched stated version: reconcile with intended tag/project authority before publication.
+- Release commit: report supplies Release <version/tag> subject and exact complete-message body; manage owns commit publication and tag.
+- Empty owned change set: explicit release request permits dedicated marker, but preparation-only and explicit existing-source-only scope do not.
+- Recovery/completed release: inspect/reuse matching effects; no duplicate marker or tag move.
+- Commit advances source: assess marker/bookkeeping increment and verify final body/source agreement before tagging; unresolved changes block publication.
+- GitHub workflow: consumes the same complete body/hash with the verified tagged commit as source. Provider success remains a separate readback claim.
+
+These eight additional checks are source reasoning, not agent execution. A disposable native Git/body handoff check is recorded separately.

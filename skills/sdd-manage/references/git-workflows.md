@@ -53,3 +53,11 @@ For a host denial, retain the commit, attempted destination/ref and actual reaso
 ## Push authentication recovery
 
 Attempt authorized pushes with existing shell authentication. For a 403 or explicit missing/invalid-credential failure, use [hosting credentials and shell recovery](credentials.md), passing sanitized destination, operation, transport, and cause. Recover the current client's access and retry the same established destination; classify rate-limit or policy restrictions before replacing a token. Keep the commit and report pending publication on an unresolved failure. Authentication recovery does not bypass push-first execution, change the target, or authorize force-pushing.
+
+## Release commit and tag
+
+For an authorized release request, forge first verifies/refreshes the retained complete message through [release-message preparation](../../sdd-forge/references/release-message.md#release-request-freshness-and-commit-gate). Local source/coverage/body context and the established version govern freshness; a matching version alone is insufficient. Manage owns Git persistence and forge owns provider publication.
+
+Prepare one release commit using report's [release commit format](../../sdd-report/references/object-drafts.md#release-commit-message), with the finalized complete Markdown body also destined for GitHub. Stage only authorized verified release/version changes. A requested release may use an empty marker when there are no owned file changes; preparation-only does not. Reuse a verified matching existing marker on recovery. Explicit existing-source-only instructions take precedence and must be reflected in the release handoff.
+
+Publish/read back the commit before further work, then verify final-source coverage, version/body agreement and actual merged/release-source checks required by the project. The pending release tag points to this exact verified commit; publish/read back its peeled target under the normal Git rules before provider upload/publication. Do not move existing tags or rewrite published commits. A failed/uncertain push stops dependent tagging/publication and resumes from readback evidence. Existing completed releases are inspected/reused, not given duplicate markers. The commit describes the release being published; it cannot claim future provider success.
