@@ -19,6 +19,8 @@ These are alternative runs. Use separate repositories or clearly recorded starti
 
 Use the repository's [Greenfield Project Prompt Template](<../../../Greenfield Project Prompt Template.md>) with this preliminary description:
 
+> [!NOTE] Prompt
+>
 > A classic browser-based Tetris game.
 
 Supply the target repository, the required authorization, and the GitHub tracking preference through that template.
@@ -69,6 +71,8 @@ Multiplayer, backend leaderboards, and mobile touch controls are outside the sel
 
 During clarification, request:
 
+> [!NOTE] Prompt
+>
 > Include the playable baseline and all five enhancements in the initial project scope. Plan delivery so that a playable baseline is completed and verified before implementing the enhancements. Start with locking on a failed downward movement attempt. Clarify the selected hard-drop policy when preparing the enhancement requirements.
 
 The governing documents should describe the complete accepted project. The plan should distinguish baseline delivery from enhancement delivery, with meaningful exit conditions.
@@ -89,12 +93,16 @@ Evaluate whether the agent:
 
 During clarification, request:
 
+> [!NOTE] Prompt
+>
 > Implement only the playable baseline initially, with locking on a failed downward movement attempt. Defer hold, ghost piece, seven-bag randomization, wall kicks, and hard drop to a later feature campaign.
 
 The initial executable scope should contain only the baseline. Deferred enhancements may be recorded as future direction without becoming initial implementation obligations.
 
 After baseline completion, request:
 
+> [!NOTE] Prompt
+>
 > Open a feature campaign to add hold, ghost piece, seven-bag randomization, wall kicks, and hard drop. Clarify the selected hard-drop policy. Preserve the accepted baseline behavior, including any completed steering amendment, except where the reviewed feature requirements explicitly amend it.
 
 Evaluate whether the agent:
@@ -122,6 +130,8 @@ Both exercises apply to either delivery variant. Pause at an implemented and ver
 
 Use this exercise once baseline locking is implemented. In Variant A, pause before advancing to enhancement work; in Variant B, pause before completing the baseline. It can also be applied later at an eligible implementation checkpoint.
 
+> [!NOTE] Prompt
+>
 > Use SDD Manager's steering workflow to replace failed-downward-attempt locking with a lock delay equal to one full gravity interval at the current level. Start the timer when a piece first becomes grounded. Horizontal movement, rotation, and unsuccessful downward attempts must not restart or bypass the timer. If the piece becomes airborne, cancel the timer; start a new delay when it becomes grounded again. Snapshot the gravity interval when the timer starts. Preserve the selected hard-drop policy: the immediate exception still locks immediately; the general delayed policy follows these timer rules.
 >
 > Reconcile the governing documents, implementation, tests, and player documentation. Verify, commit, push, and integrate the amendment into the paused implementation branch, then stop before resuming implementation.
@@ -132,14 +142,20 @@ Use this exercise after hard drop and the selected policy are implemented: durin
 
 To switch from the immediate exception to the general delayed policy:
 
+> [!NOTE] Prompt
+>
 > Use SDD Manager's steering workflow to remove hard drop's immediate-locking exception. Hard drop must move the piece to its landing position and leave it active under the current general locking policy. Its landing-position search must not trigger failed-downward-attempt locking. Under full-interval locking, newly grounding a piece starts the normal timer; hard drop must not restart an already active timer. Preserve ordinary gravity and soft-drop locking behavior.
 
 To switch from the general delayed policy to the immediate exception:
 
+> [!NOTE] Prompt
+>
 > Use SDD Manager's steering workflow to make hard drop an immediate-locking exception. Hard drop must move the piece to its landing position and lock it immediately, including when the piece is already grounded. Preserve the current general locking policy for gravity and soft drop.
 
 Append this boundary to either request:
 
+> [!NOTE] Prompt
+>
 > Reconcile the governing documents, implementation, tests, and player documentation. Verify, commit, push, and integrate the amendment into the paused implementation branch, then stop before resuming implementation.
 
 Evaluate whether the agent updates the existing requirements and tests coherently, preserves unrelated gameplay, and returns control without automatically continuing the paused work. Record which exercises ran, their order, and the policies before and after each amendment. Switching the hard-drop policy does not require first performing the full-interval amendment.

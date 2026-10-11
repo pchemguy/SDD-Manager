@@ -46,6 +46,12 @@ On 2026-10-11, the human requested a `_<slug>` suffix to identify the example's 
 
 The scoped Python check passed for byte identity against the preceding committed example, absence of obsolete active link targets and resolution of all active relative links. `git diff --check` passed. V-003 checkpoint `316ef06b35c3ef1f496bacbd404e4b88adf103b7` was pushed and exact remote identity verified before this amendment. The campaign remains open at the same publication-only stopping boundary.
 
+## V-005 — Prompt callout format
+
+On 2026-10-11, the human supplied the `> [!NOTE] Prompt` template. Applied its exact header and quoted blank line to all eight sample prompt blocks in the guide, including the seed description, delivery/feature requests, steering requests and shared stopping boundary. Prompt wording is unchanged.
+
+The scoped Python check passed: all eight blocks have the requested header; removing only the added headers reproduces the preceding guide byte-for-byte; the changed paths are confined to the guide and active campaign plan/report. `git diff --check` passed. No rendered-client result is claimed. V-004 checkpoint `aaae04fd0f0febeeeb320e011598686b10caa126` was pushed and exact remote identity verified before this amendment.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
