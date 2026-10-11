@@ -16,6 +16,7 @@
 
 | U-002 | Preparation/QC/human/branch/tracking gates assessed on both owner and coordinator sides; seven boundary scenarios inspected | R-001 |
 | U-003 | Execution/integration/reporting/release handoffs assessed; nine native Git checks passed | R-002 |
+| U-004 | 113 support and 27 publisher tests passed; catalog/module/YAML checks and two identical actual build-only outputs; nonconforming-manifest acceptance reproduced | R-003, R-004 |
 
 ## U-001 evidence and limits
 
@@ -65,6 +66,39 @@ Source scenarios assessed: incomplete phase pauses without merging; selected tas
 | Proposed correction / owner | sdd-docs with sdd-implement/manage: align the diagram and accompanying entry sentence with prerequisite inspection, outstanding publication, then bounded audit before further task work |
 | Objective recheck | A retained verified unpublished commit plus an invalid claimed task closing boundary is published/read back first; subsequent task advancement remains blocked pending scoped audit recovery |
 
+## U-004 publisher, CI and acceptance-tooling evidence
+
+- TextStats support: `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` — **113 tests passed**, 18.394 seconds; [complete log](evidence/support-tests.log).
+- Publisher: `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s .github/tests -v` — **27 tests passed**, 0.223 seconds; [complete log](evidence/publisher-tests.log).
+- Catalog CLI static validation — all 27 cases/assets/dependencies valid; explicitly not live acceptance.
+- 27 current Python modules parsed; all have module docstrings; [inventory](evidence/module-inventory.json). This is syntax/module coverage, not a claim that every API comment is complete.
+- Workflow plus 15 skill UI YAML files parsed; entry names match directories and descriptions are nonempty and within 1024 characters. [Tooling checks](evidence/tooling-checks.json), [fixture](evidence/check_tooling.py).
+- Actual publisher CLI build-only ran twice in a disposable clone checked out at the reviewed source. Both ZIP/checksum outputs matched; ZIP hash agrees with U-001. No provider calls, release or tag effects occurred.
+
+Inspected publisher validation/build/archive/provider reconciliation and real Git/ZIP plus controlled-provider tests. Coverage includes wrong source/version/tag, traversal/duplicates/tampering, build-only no writes, draft completeness, missing/direct-ID readback, pagination, matching reruns, foreign/starter/changed assets, response loss after upload and latest readback. Real adapter network/redirect behavior remains inspection rather than live HTTP execution. TextStats core source pinning/schema/ownership/assessment/recovery exports, catalog rendering, capture, variant accounting, cooperative holds, fault adapter, public API regression probe and evidence-only integration were inspected alongside corresponding tests. Support fixtures expose actual failures and preserve roles/provenance; they do not certify a fresh consumer. Case data was structurally checked across the catalog, with detailed criterion review concentrated on consequential preparation, milestone and recovery boundaries.
+
+CI reads structured event data, checks out the exact candidate, gives build read permissions and publisher write permissions, verifies rebuild hash before provider effects, and serializes the same repository/tag. The current official [checkout releases](https://github.com/actions/checkout/releases), [setup-python releases](https://github.com/actions/setup-python/releases), and [concurrency reference](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#concurrency) were checked on 2026-10-11: both v7 action majors exist and queue/max with cancellation disabled is supported. YAML parsing is not Actions lint or CI execution; no actionlint facility was present and no hosted workflow was dispatched. Local runtime was Linux/Python 3.12.14, not the declared CI 3.11.
+
+### R-003 — Release pipeline has no portable manifest conformance guard
+
+| Field | Evidence |
+| --- | --- |
+| Type / priority / confidence / status | Verification gap / Medium / High / Open; current candidate itself conforms |
+| Baseline location | `.github/scripts/release.py`, `build_package` validates handoff, checkout, inventory and manifest version; `.github/workflows/release.yml` runs support/publisher tests but no canonical manifest validation; publisher package fixtures omit `$schema` |
+| Observation and consequence | A disposable fixture missing the schema's required `$schema` was accepted and built successfully by the actual publisher, while the canonical validator rejected it. A future nonconforming manifest can therefore pass this automated release boundary |
+| Proposed correction / owner | sdd-forge/tdd: include offline pinned canonical core-schema validation in the agreed release checks and meaningful invalid-manifest cases; keep extension semantics and bundled plugin-root containment separate from standalone-skill restrictions |
+| Objective recheck | Actual build/CI rejects missing/wrong `$schema`, unknown root fields and invalid core types before provider access; current namespaced root-only manifest passes; avoid runtime schema fetching |
+
+### R-004 — Current release and installed-client behavior lacks consumer evidence
+
+| Field | Evidence |
+| --- | --- |
+| Type / priority / confidence / status | Evidence gap / Medium / High / Open; no failed runtime behavior inferred |
+| Baseline location | Current `release-message.md`, release Git/body/tag handoffs and TextStats `OBJECTIVES.md`, `cases/catalog.json`, `VARIANTS.md`; README explicitly limits installed-client claims |
+| Observation and consequence | Current catalog covers development/tracking/recovery but has no complete-release-message consumer case. This review ran mechanics/support/source checks, not an agent performing repeated notes preparation, preserving human material, stale/version-only refresh, atomic failure recovery or end-to-end publication. Root-only manifest discovery/UI and sibling handoffs were not exercised in an installed client. Local passing tests cannot establish those behaviors |
+| Proposed correction / owner | sdd-manage/verify/tdd: define and independently assess focused release-message consumer scenarios; verify target-client installation/discovery/routing separately; retain CI/provider/platform results as separate evidence classes |
+| Objective recheck | Exact-current-source consumer evidence demonstrates prepare versus highlights-only routing, preservation/no-op/atomic failure, stale notes refresh, exact commit/tag/GitHub-body agreement and retention; installed-client run demonstrates root manifest and cross-skill loading. Live publication needs separately authorized destination/effects; unexecuted facilities remain explicit |
+
 ## Findings and revision handoff
 
-Tooling and consolidation remain pending. R-001/R-002 are proposed documentation corrections; neither has been accepted for repair. No source changes have been made.
+Consolidation remains pending. Four Open findings: two documentation defects and two verification/evidence gaps. No repair has been accepted. No source changes have been made.

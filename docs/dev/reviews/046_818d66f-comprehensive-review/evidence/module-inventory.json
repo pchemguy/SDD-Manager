@@ -1,0 +1,258 @@
+[
+  {
+    "path": ".github/scripts/release.py",
+    "module_docstring": true,
+    "definitions": [
+      "validate_handoff",
+      "git",
+      "tree_inventory",
+      "inspect_archive",
+      "build_package",
+      "verify_release",
+      "reconcile_release",
+      "read_release",
+      "GitHub",
+      "read_event",
+      "main"
+    ]
+  },
+  {
+    "path": ".github/tests/test_release.py",
+    "module_docstring": true,
+    "definitions": [
+      "handoff",
+      "Contract",
+      "HandoffTests",
+      "PackageTests",
+      "Provider",
+      "LifecycleTests",
+      "AdapterTests"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/cases/assessor/capture.py",
+    "module_docstring": true,
+    "definitions": [
+      "channels",
+      "invoke",
+      "cli_observation",
+      "_capture",
+      "capture",
+      "main"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/cases/assessor/catalog_tools.py",
+    "module_docstring": true,
+    "definitions": [
+      "require",
+      "asset",
+      "validate_contract",
+      "validate_catalog",
+      "render",
+      "main"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/scripts/assess.py",
+    "module_docstring": true,
+    "definitions": []
+  },
+  {
+    "path": "acceptance/textstats/scripts/campaign.py",
+    "module_docstring": true,
+    "definitions": [
+      "variants",
+      "select",
+      "coverage",
+      "main"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/scripts/contract_probe.py",
+    "module_docstring": true,
+    "definitions": [
+      "child",
+      "probe",
+      "inject",
+      "main"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/scripts/core.py",
+    "module_docstring": true,
+    "definitions": [
+      "Stop",
+      "protected",
+      "sensitive_text",
+      "no_secret",
+      "clean_bytes",
+      "exact",
+      "validate",
+      "load",
+      "configuration",
+      "checkpoint",
+      "git",
+      "normalize",
+      "remote_read",
+      "repository",
+      "package",
+      "preflight",
+      "write_new",
+      "prepare",
+      "paths",
+      "ancestor_containment",
+      "observe_git",
+      "reconcile",
+      "export_recovery",
+      "observation",
+      "relative",
+      "task_history",
+      "validate_task_documents",
+      "task_identifier",
+      "task_lines",
+      "task_rows",
+      "ownership",
+      "assessment",
+      "main"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/scripts/evidence_merge.py",
+    "module_docstring": true,
+    "definitions": [
+      "verify",
+      "main"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/scripts/fault_adapter.py",
+    "module_docstring": true,
+    "definitions": [
+      "operation",
+      "main"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/scripts/observe.py",
+    "module_docstring": true,
+    "definitions": []
+  },
+  {
+    "path": "acceptance/textstats/scripts/preflight.py",
+    "module_docstring": true,
+    "definitions": []
+  },
+  {
+    "path": "acceptance/textstats/scripts/prepare.py",
+    "module_docstring": true,
+    "definitions": []
+  },
+  {
+    "path": "acceptance/textstats/scripts/trial_control.py",
+    "module_docstring": true,
+    "definitions": [
+      "digest",
+      "facilities",
+      "eligibility",
+      "snapshot",
+      "execute",
+      "main"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/__init__.py",
+    "module_docstring": true,
+    "definitions": []
+  },
+  {
+    "path": "acceptance/textstats/tests/support.py",
+    "module_docstring": true,
+    "definitions": [
+      "git",
+      "Sandbox"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/test_campaign.py",
+    "module_docstring": true,
+    "definitions": [
+      "VariantCatalog",
+      "CoveragePolicy"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/test_catalog.py",
+    "module_docstring": true,
+    "definitions": [
+      "module",
+      "CatalogIntegrity",
+      "HandoffIntegrity",
+      "CaptureSensitivity",
+      "FailedCaptureProvenance"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/test_checkers.py",
+    "module_docstring": true,
+    "definitions": [
+      "CheckerTests"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/test_contract_probe.py",
+    "module_docstring": true,
+    "definitions": [
+      "ContractProbe"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/test_evidence_merge.py",
+    "module_docstring": true,
+    "definitions": [
+      "EvidenceMergeTests"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/test_fault_adapter.py",
+    "module_docstring": true,
+    "definitions": [
+      "FaultAdapter"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/test_local_assessment.py",
+    "module_docstring": true,
+    "definitions": [
+      "LocalAssessment"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/test_package_docs.py",
+    "module_docstring": true,
+    "definitions": [
+      "PackageDocumentation"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/test_preflight.py",
+    "module_docstring": true,
+    "definitions": [
+      "PreflightTests"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/test_recovery.py",
+    "module_docstring": true,
+    "definitions": [
+      "RecoveryTests"
+    ]
+  },
+  {
+    "path": "acceptance/textstats/tests/test_trial_control.py",
+    "module_docstring": true,
+    "definitions": [
+      "TrialControls"
+    ]
+  }
+]
