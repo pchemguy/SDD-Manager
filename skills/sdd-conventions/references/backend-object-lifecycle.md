@@ -1,12 +1,12 @@
 # Backend object lifecycle and review boundaries
 
-Apply these shared invariants to PLAN/TASKS generation, bounded implementation, hosted reconciliation and interruption recovery. Local governing documents and verified Git/check evidence are authoritative; backend objects are projections. Hosting is optional. sdd-manage coordinates transitions; sdd-implement executes tasks and persists results; sdd-forge owns provider writes.
+Apply these shared invariants to PLAN/TASKS generation, bounded implementation, hosted reconciliation and interruption recovery. Local governing documents and verified Git/check evidence are authoritative; backend objects are projections. Hosting is optional to select; requested/confirmed tracking must satisfy its activation and lifecycle gates before dependent execution. sdd-manage coordinates transitions; sdd-implement executes tasks and persists results; sdd-forge owns provider writes.
 
 ## Phase activation
 
 Keep the complete intended hierarchy in local PLAN/TASKS. Create a phase's label, all its milestones and all its task issues only after its predecessor is complete and before its first task executes. First-phase activation has no predecessor. Completion includes the predecessor's reviews, required reports, all milestone closures when tracking is active, local exits and required target integration/publication. Starting the next phase also requires authorization within the selected range.
 
-Preparation does not activate a phase. Projection reads the complete hierarchy to resolve identity/dependencies but writes only the eligible phase. Added work in an already active phase is projected before execution. Future-phase work remains unprojected, including feature deltas. When tracking is enabled, incomplete or unverified phase projection blocks the first task unless the human explicitly authorizes local-only continuation. Preserve existing future-phase objects as historical/pre-existing state; report them rather than deleting them to enforce timing retrospectively.
+Preparation does not activate a phase. Projection reads the complete hierarchy to resolve identity/dependencies but writes only the eligible phase. Added work in an already active phase is projected before execution. Future-phase work remains unprojected, including feature deltas. When tracking is requested or confirmed for the scope, incomplete or unverified phase projection blocks affected task implementation edits/tests unless the human explicitly authorizes local-only continuation. Preserve existing future-phase objects as historical/pre-existing state; report them rather than deleting them to enforce timing retrospectively.
 
 ## Explicit review units
 
@@ -22,7 +22,7 @@ PLAN owns these milestones and exits; sdd-tasks derives executable review tasks 
 4. After all delivery milestones close, execute the phase review task: review cross-milestone interactions, phase exits and remaining findings, run required checks, repair blockers, commit/push the phase report and close its issue. Then close/read back the final review milestone.
 5. Reconcile local parent claims, verify the full phase and perform required explicit integration, merged-state verification and publication before activating an authorized next phase. A partial range pushes and pauses without inventing additional review work beyond its selected tasks.
 
-Local-only execution applies the same review/report/exit gates without hosted closure. If an enabled backend cannot complete closure, keep local verified results and report hosted reconciliation pending; dependent phase review/advancement remains blocked. Independent tasks in an already activated phase may continue within scope when dependencies permit. A phase label has no close state on GitHub: retain its historical associations. Unsupported backend state transitions need an explicit backend procedure, not deletion or an invented equivalent.
+Local-only execution applies the same review/report/exit gates without hosted closure. If an enabled backend cannot complete closure, keep local verified results and report hosted reconciliation pending; dependent phase review/advancement remains blocked. Independent tasks in an already verified activated phase may continue within scope only when their own required projection and dependencies are satisfied. Initial/added-work projection and dependent review/closure/next-phase gates are not waived by an outage. A phase label has no close state on GitHub: retain its historical associations. Unsupported backend state transitions need an explicit backend procedure, not deletion or an invented equivalent.
 
 ## Review, repairs and deferral
 

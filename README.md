@@ -6,6 +6,8 @@ SDD Manager is a learning-by-doing experiment in specification-driven developmen
 
 Start with **sdd-manage**, the central coordinator. It routes your request to the relevant skills, reuses established project decisions, and stops at the boundary you specify.
 
+Formal revisions support [nested revision campaigns and reopened campaign amendments](skills/sdd-manage/references/revision-modes.md). Nested revisions suspend an active campaign and default to its branch as source/return target; eligible human-authorized amendments reuse the last closed revision’s identity. Both verify/publish integration and return the worktree to the interrupted branch without automatically resuming its work.
+
 Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).
 
 ## Getting started
@@ -95,27 +97,32 @@ Preparation-only stops after the design-docs checkpoint. Before creating a depen
 
 ### Implementation and continuation
 
-This diagram shows bounded main-phase task execution. `sdd-implement` owns production changes, completion, commits and pushes; supporting skills supply tests, documentation, verification and report text. With hosted tracking enabled, `sdd-manage` and `sdd-forge` establish the eligible phase and task associations before its first task. The optional hosted path below shows completion reconciliation.
+This diagram shows bounded main-phase execution. Before edits or tests, inspect actual task persistence and publish outstanding commits, then establish requested tracking readiness for the eligible phase and selected tasks. A missing initial or added-task association blocks execution; an outage after verified activation can leave independent completion and hosted closure pending.
 
 ```mermaid
 flowchart TB
-    O["sdd-manage + sdd-orient<br/>Scope, actual state and task evidence"] --> I["sdd-implement<br/>Push outstanding commits<br/>Resume pending work or select within range"]
-    I -->|"task ready"| T["sdd-tdd<br/>Test and implementation cycle"]
-    T -->|"implementation ready"| D["sdd-docs<br/>Maintain affected documentation"]
-    D --> V["sdd-verify<br/>Required checks and acceptance evidence"]
-    V -->|"repair needed"| I
-    V -->|"verified"| R["sdd-report<br/>Completion evidence and commit text"]
-    R --> C["sdd-implement<br/>Complete, commit and push task"]
-    C --> H{"Hosted tracking active?"}
-    H -->|"yes"| F["sdd-forge<br/>Reconcile verified issue and milestone closures"]
-    H -->|"no"| B{"Selected range complete?"}
-    F --> B
-    B -->|"no"| I
-    B -->|"yes"| G{"Complete verified main phase?"}
+    O["Orient: actual state and task evidence"] --> A{"Task persistence audit valid?"}
+    A -->|"no"| X["Preserve work; scoped recovery; stop affected path"]
+    A -->|"yes"| I["Publish outstanding commits; resume or select range"]
+    I --> H{"Requested tracking readiness?"}
+    H -->|"pending, partial or unknown"| X
+    H -->|"verified or explicitly declined"| T["Implement: tests, code and documentation"]
+    T --> V{"Required verification passes?"}
+    V -->|"repair"| T
+    V -->|"yes"| C["One task closing commit: result, evidence and checkbox"]
+    C --> P["Leading single task ID; push and remote readback"]
+    P --> F["Reconcile active issue and milestone closures"]
+    F --> B{"Selected range complete?"}
+    B -->|"no; dependencies ready"| I
+    B -->|"yes"| G{"Complete main phase and integration audit valid?"}
     G -->|"no"| E["Report checkpoint and stop"]
-    G -->|"yes"| P["sdd-manage + sdd-verify<br/>Explicit merge, merged checks<br/>Target push and readback"]
-    P --> E
+    G -->|"yes"| M["Explicit merge; merged checks; target push and readback"]
+    M --> E
 ```
+
+The entry audit and the integration audit inspect actual selected closing commits, including relevant merge parents. Each task closes with its result, current evidence and initial completion checkbox together under one leading `[T-XXX]` imperative subject. Authorized partial checkpoints remain unchecked and are referenced at closure. An invalid audit preserves work for scoped recovery; a merge summary cannot replace valid task commits. See the [task commit contract](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract).
+
+The tracking gate distinguishes **pending**, **verified** and **explicitly declined**. Verified activation allows only work with confirmed associations; added unprojected work must pass the gate too. After an activated outage, report closures as pending and continue only independent eligible work. Pending dependent closures or unknown effects block review and next-phase progression. `sdd-manage` owns the decision/readiness gate, `sdd-forge` owns hosted writes/readback and `sdd-implement` owns atomic task closure and publication.
 
 Milestone and phase review/report tasks run through the same cycle and supply their required code review, testing and exit evidence. An incomplete phase pushes and pauses. A request covering another phase continues only after verified integration/publication, from the updated target. Feature task execution reuses the cycle, with required accepted-document incorporation through `sdd-integrate-feature` before final boundary verification; feature and revision integration use their own eligibility gates. See [implementation](skills/sdd-implement/SKILL.md) and [Git workflows](skills/sdd-manage/references/git-workflows.md).
 
@@ -188,7 +195,7 @@ For detailed entry conditions and stopping rules, see the [workflow catalog](ski
 
 A [comprehensive prerelease review](skills/sdd-manage/references/prerelease-review.md) assesses current product coherence, contracts, implementation, tests, documentation, README/AGENTS.md, diagrams and distribution evidence. Select it explicitly to open a review campaign. Release publication workflows provide an advisory reminder; this review is optional and does not block an authorized release or replace its required checks.
 
-Use [Git release highlights](skills/sdd-forge/references/release-highlights.md) to collect complete commit messages since the selected release tag, including merged work, and curate key user changes. The default ignored `.release-highlights.md` draft records the previous release commit and last analyzed commit in YAML; incremental updates preserve edits and cuts. Release preparation refreshes it through the exact source and passes only its Markdown body to the publisher. An ignored draft requires explicit CI notes transfer; cleanup follows verified published-body consumption. Local preparation works before provider selection and needs no token.
+Use [Git release highlights](skills/sdd-forge/references/release-highlights.md) to inventory the complete selected release range, read integration summaries first and curate key user changes. A reopened campaign’s latest adequate cumulative summary carries earlier outcomes forward; individual/earlier messages are targeted fallback for gaps, direct changes or contradicted claims. Reachable nested, phase and document-preparation integrations remain covered; preparation readiness is distinct from delivered functionality and current branch tips are discovery only. The default ignored `.release-highlights.md` draft records the previous release commit and last analyzed commit in YAML; incremental updates preserve edits and cuts. Release preparation refreshes it through the exact source and passes only its Markdown body to the publisher. An ignored draft requires explicit CI notes transfer; cleanup follows verified published-body consumption. Local preparation works before provider selection and needs no token.
 
 Use [package preparation](skills/sdd-forge/references/github-packaging.md) for archive contents and conventional variant names, [release workflows](skills/sdd-forge/references/github-release-workflows.md) to prepare/dispatch a build, and [release creation](skills/sdd-forge/references/github-releases.md) to publish verified assets. Filenames remain version-free, for example `project.zip` or `project-windows-x64.zip`; tags and release metadata retain version identity. Stable downloads use `https://github.com/{OWNER}/{REPO}/releases/latest/download/{ASSET_NAME}`. Each latest stable release must contain the complete advertised asset set.
 
@@ -234,14 +241,14 @@ Host review is separate from SDD Manager content review. The observed website se
 
 ## Testing with TextStats
 
-[TextStats](acceptance/textstats/README.md) exercises the plugin through fresh consumer workflows and independent assessments in a dedicated test repository. Its README describes setup, required variants, optional complex recovery, retained evidence and final integration into test main. Support tests check the harness; they do not establish live acceptance of a revised source.
+[TextStats](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/textstats/README.md) exercises the plugin through fresh consumer workflows and independent assessments in a dedicated test repository. Its README describes setup, required variants, optional complex recovery, retained evidence and final integration into test main. Support tests check the harness; they do not establish live acceptance of a revised source.
 
 Prior test repositories (retain this list when adding runs):
 
 - [Skill-Test-SDD-Manager-TextStats-20261003](https://github.com/pchemguy/Skill-Test-SDD-Manager-TextStats-20261003)
 - [Skill-Test-SDD-Manager-TextStats-20261004](https://github.com/pchemguy/Skill-Test-SDD-Manager-TextStats-20261004)
 
-Repository names are history, not default destinations or acceptance verdicts. The [20261004 diagnostic](docs/dev/reviews/021_85f2857/DIAGNOSTIC-REPORT.md) retains **20 Passed / seven Blocked** for pinned 0.14.3; its evidence was subsequently merged into test main. [Campaign 021](docs/dev/reviews/021_85f2857/REVISION-REPORT.md) implements the resulting harness/documentation amendments. Revised-source live and installed-client acceptance remain separately pending.
+Repository names are history, not default destinations or acceptance verdicts. The [20261004 diagnostic](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/021_85f2857/DIAGNOSTIC-REPORT.md) retains **20 Passed / seven Blocked** for pinned 0.14.3; its evidence was subsequently merged into test main. [Campaign 021](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/021_85f2857/REVISION-REPORT.md) implements the resulting harness/documentation amendments. Revised-source live and installed-client acceptance remain separately pending.
 
 ## Skills
 
@@ -301,15 +308,15 @@ A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, 
 
 ## Package status and references
 
-The backend lifecycle now defines phase-gated hosted creation, dedicated boundary review/report tasks, milestone closure, workflow-specific report placement and interruption reconciliation. [Campaign 010](docs/dev/reviews/010_3f56922/REVISION-REPORT.md) records source and consumer verification; later live evidence and limits are retained in the [20261004 diagnostic](docs/dev/reviews/021_85f2857/DIAGNOSTIC-REPORT.md); revised-source acceptance remains separate.
+The backend lifecycle now defines phase-gated hosted creation, dedicated boundary review/report tasks, milestone closure, workflow-specific report placement and interruption reconciliation. [Campaign 010](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/010_3f56922/REVISION-REPORT.md) records source and consumer verification; later live evidence and limits are retained in the [20261004 diagnostic](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/021_85f2857/DIAGNOSTIC-REPORT.md); revised-source acceptance remains separate.
 
-All 15 skills are included. Structural validation and independent coordination assessments have been exercised. The [runtime acceptance campaign](docs/dev/reviews/008_98a5562/REVISION-REPORT.md) records actual fresh-agent workflows through explicit skill-source loading, live GitHub tracking/publication, and controlled failure/recovery fixtures. Installed-client discovery, routing and activation remain untested; available journals are not complete native transcripts. All 27 scoped cases passed independent assessment; source integration is recorded in the campaign report.
+All 15 skills are included. Structural validation and independent coordination assessments have been exercised. The [runtime acceptance campaign](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/008_98a5562/REVISION-REPORT.md) records actual fresh-agent workflows through explicit skill-source loading, live GitHub tracking/publication, and controlled failure/recovery fixtures. Installed-client discovery, routing and activation remain untested; available journals are not complete native transcripts. All 27 scoped cases passed independent assessment; source integration is recorded in the campaign report.
 
-- [TextStats acceptance test project](acceptance/textstats/README.md): portable coordinator entry, sample contracts, case inputs, independent assessment and interruption recovery.
-- [Capability map](docs/dev/CAPABILITY-MAP.md): artifact ownership and cross-skill boundaries.
-- [Review campaigns](docs/dev/reviews/README.md): ordered review and revision records.
-- [Revision evidence](docs/dev/reviews/003_39374c8/REVISION-REPORT.md): branch workflows, failure handling, fresh-session execution, and validation limits.
-- [Plugin review](docs/dev/reviews/001_49143fa/REVIEW-REPORT.md): findings, corrections, verification evidence, and limits.
+- [TextStats acceptance test project](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/textstats/README.md): portable coordinator entry, sample contracts, case inputs, independent assessment and interruption recovery.
+- [Capability map](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md): artifact ownership and cross-skill boundaries.
+- [Review campaigns](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/README.md): ordered review and revision records.
+- [Revision evidence](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/003_39374c8/REVISION-REPORT.md): branch workflows, failure handling, fresh-session execution, and validation limits.
+- [Plugin review](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/001_49143fa/REVIEW-REPORT.md): findings, corrections, verification evidence, and limits.
 - [TDD provenance](skills/sdd-tdd/references/upstream-provenance.md): adaptation of Superpowers TDD and its test-writing companion, with the retained MIT license.
 
 

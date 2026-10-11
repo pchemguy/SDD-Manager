@@ -1,5 +1,7 @@
 # Execute one task
 
+Execute only the current task before its closing commit and verified publication. Follow the [task commit contract](completion-and-checkpoints.md#task-commit-contract); do not implement the next task early to accumulate a combined result.
+
 Read its outcome, dependencies, acceptance conditions, expected paths, and relevant SPEC, design, PLAN, and layout. For feature work, include applicable accepted feature documents. Inspect existing implementation and tests before editing; preserve useful pending work and project conventions.
 
 ## Coordinate the development cycle

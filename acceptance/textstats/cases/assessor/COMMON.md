@@ -25,3 +25,7 @@ Resolved renderer input has exactly `checkpoints` (array) and `current` (object)
 ## Document preparation readiness
 
 Apply [independent document QC assessment](DOCUMENT-QC.md) at affected preparation and dependent workflow boundaries. Compare root/child and upstream identities plus actual conformance/count/correction evidence, not filename or Ready label alone. Distinguish administrative review exclusions from mandatory execution units, scoped report writes from unrelated corrections, and current main readiness from historical feature review. Existing baseline journals predate these criteria and do not prove the new gates ran.
+
+## Requested-tracking fidelity follow-ups
+
+The [focused follow-up guide](TRACKING-FIDELITY.md) supplies separately selected comparative scenarios and an isolated ordinary broad request. Keep their results distinct from default catalog grades; preparing the guide is not execution or acceptance.

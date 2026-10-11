@@ -27,6 +27,8 @@ Campaign REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN and REVISION-REPORT belong on
 - **Overrides:** Respect explicit project/user naming and location policy; record its equivalent identity/target association. Preserve suitable legacy/in-flight branches and historical directories on continuation; never rename or delete them automatically. An occupied old phase branch needs a verified matching continuation or a distinct slug.
 - **Context:** Retain workflow, campaign or phase ID, full baseline, actual working/target branch and destinations, authoritative sources, and scope in existing campaign/task/change evidence. No separate branch registry is required.
 
+For a human-authorized eligible [reopened campaign amendment](../../sdd-manage/references/revision-modes.md#reopened-campaign-amendment), recover the original campaign identity/branch/directory rather than allocating a new sequence. Its original full baseline stays fixed; record the current reopening/source/target checkpoint separately. A nested revision allocates a new identity and records its actual parent branch/context.
+
 ## Artifact lifecycle
 
 Apply the [closed campaign record boundary](review-campaigns.md#closed-campaign-records). Complete archive moves, navigation and historical markers while the owning campaign is active; closure freezes its resulting package. Later naming, link or implementation changes do not reopen its documents or require compatibility review.
