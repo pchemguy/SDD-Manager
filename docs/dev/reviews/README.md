@@ -60,3 +60,5 @@ New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT
 | `042_58e7e15` | Manifest correction verified: portable schema conformance, preserved OpenAI interface, synchronized manifests and actual package checks; 113 support/26 publisher tests passed. Final integration/publication recorded by Git. | [Revision plan](042_58e7e15-manifest-conformance/REVISION-PLAN.md), [revision report](042_58e7e15-manifest-conformance/REVISION-REPORT.md) |
 
 | `043_6294eee` | Root-only manifests/packages verified; compatibility directory removed, tooling/guidance reconciled, 113 support/27 publisher checks and actual 132-file package passed. Final integration/publication recorded by Git. | [Revision plan](043_6294eee-root-manifest-only/REVISION-PLAN.md), [revision report](043_6294eee-root-manifest-only/REVISION-REPORT.md) |
+
+| `044_6df539c` | Prepared: complete release-message triggers, assembly and retained `.github/RELEASE.md`; narrower highlights preserved; execution pending. | [Revision plan](044_6df539c-release-message-preparation/REVISION-PLAN.md), [revision report](044_6df539c-release-message-preparation/REVISION-REPORT.md) |
