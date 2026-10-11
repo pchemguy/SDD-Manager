@@ -76,3 +76,7 @@ PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s .github/tests -v
 Also validate the catalog through its existing CLI, validate the candidate manifest offline, inspect the actual package inventory/content, and check changed current Markdown links/spacing plus `git diff --check`. Record interpreter/environment; the original 113/27 results are baseline evidence, not the new expected counts or fresh checks. Where Python 3.11, rendered diagrams or hosted CI cannot run, state the limit without claiming success.
 
 After later execution authorization, assess the complete campaign delta and required rechecks before explicit two-parent integration into refreshed `main`. Merge summary must include objective, actual review/delivery, verification/limits, original opening and branch-off provenance, the 045 rebase base, and actual parent tips. Verify and publish the merged target before closure; preserve branches and historical evidence. Deferred consumer/client observations remain explicit in the final report and release-readiness assessment.
+
+## Execution authorization and result
+
+On 2026-10-11 the human requested execution. V-001–V-006 are implemented with evidence in [REVISION-REPORT](REVISION-REPORT.md); integration follows its actual verification/publication gate. The TextStats component extension is included; consumer/client/live-provider scenario execution remains deferred as planned.

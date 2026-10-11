@@ -23,7 +23,7 @@ From repository root, run the support suite for changes affecting acceptance too
 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v
 ```
 
-Use Python 3.11 or the established supported runtime; release CI uses 3.11. Check changed Markdown links, root manifest conformance, presentation asset paths and actual package contents as applicable. State the tested source and evidence limits; passing support tests do not establish live agent/client acceptance.
+Use Python 3.11 or the established supported runtime; release CI uses 3.11. For source publisher checks or local release builds, first install `python -m pip install -r .github/requirements.txt`, then run `python -m unittest discover -s .github/tests -v`. The publisher uses the [pinned offline core schema](https://github.com/pchemguy/SDD-Manager/blob/main/.github/schemas/README.md) against committed candidate bytes; this guard does not validate client-specific presentation. Check changed Markdown links, root manifest conformance, presentation asset paths and actual package contents as applicable. State the tested source and evidence limits; passing support tests do not establish live agent/client acceptance.
 
 For task-list execution, follow the [task commit contract](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract): one executable task's closing result/evidence and initial checklist completion in the same commit, with a leading single owning task ID. Non-task campaign actions and merge commits do not invent task IDs. Use the linked audit/recovery rules for continuation and integration.
 

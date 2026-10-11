@@ -1,0 +1,18 @@
+{
+  "source": "e57d8a58db7c896cf4a5347ae13cec2a9dd2ed00",
+  "base": "f4741d709d5969772124a071d6d7ad60f8aeb697",
+  "closed_records_unchanged": true,
+  "core_manifest_valid": true,
+  "package_files": 133,
+  "reproducible_build_hashes": {
+    "sdd-manager.zip": "9d547dc0f4f8f7a6133824292c66bfddcebad66f321d39d679a40cae26d74615",
+    "sdd-manager.zip.sha256": "828a388f5c9af0049770a329d696ef0ae966ac02c547637746fa5bb66f8db1cd"
+  },
+  "current_files": 297,
+  "resolved_current_local_links": 594,
+  "confirmed_link_issues": [],
+  "python_module_syntax_and_docstrings": "pass",
+  "changed_heading_spacing": "pass",
+  "diff_whitespace": "source pass; original raw test logs excluded",
+  "limits": "Local native build/source checks only; no runtime acceptance or hosted/client execution."
+}

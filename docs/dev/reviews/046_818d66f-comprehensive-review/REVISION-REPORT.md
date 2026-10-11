@@ -2,7 +2,7 @@
 
 ## Scope and state
 
-Execution of the [revision plan](REVISION-PLAN.md) authorized on 2026-10-11. Working branch: `revision/046_818d66f-comprehensive-review`; target: `main`; product baseline: `f4741d709d5969772124a071d6d7ad60f8aeb697`. Original review source and rebase provenance remain in the [review report](REVIEW-REPORT.md). State: executing; no integration or closure claimed.
+Execution of the [revision plan](REVISION-PLAN.md) authorized on 2026-10-11. Working branch: `revision/046_818d66f-comprehensive-review`; target: `main`; product baseline: `f4741d709d5969772124a071d6d7ad60f8aeb697`. Original review source and rebase provenance remain in the [review report](REVIEW-REPORT.md). State: source/component execution complete; integration and publication pending.
 
 ## V-001 — Portable manifest release guard
 
@@ -39,3 +39,18 @@ Ten new support tests exercise exact agreement and changed note/provider bytes, 
 [Full TextStats support suite](evidence/v005-support-tests.log): 123 passed in 18.652 seconds. [Publisher suite](evidence/v005-publisher-tests.log): 29 passed. Catalog static validation: 33 cases valid; `git diff --check` passed. Runtime: Linux/Python 3.12.14; native Git fixtures and controlled readback only. Required/optional grades cannot substitute evidence classes or promote deterministic success to independent acceptance.
 
 R-004 component extension is implemented and locally verified. New consumer cases, installed-client loading and live-provider scenarios remain deferred, unexecuted evidence gaps; this does not block the explicitly selected component extension. No production release-workflow behavior was added or duplicated.
+
+## V-006 — Consolidation and integration readiness
+
+All six selected source/component actions are complete. Added the publisher dependency/offline-schema prerequisite to the source agent entry, consistent with README and CI. [Coherent revision checks](evidence/revision-checks.json) and [reproducible checker](evidence/check_revision.py) cover committed source identity, canonical validation, two identical actual builds, 133 package files, current local links, Python syntax/module docstrings, changed-heading spacing and closed-record preservation. The recorded package check source is explicit; final integration will recheck the committed candidate and merged tree. Source whitespace passes; original raw test logs are retained verbatim, including unittest's trailing progress space in the initial failing log.
+
+| Finding | Current disposition |
+| --- | --- |
+| R-001 | Corrected and source-verified: canonical feature filenames agree |
+| R-002 | Corrected and source-verified: publication/readback precedes bounded audit; rendered Mermaid remains unexecuted |
+| R-003 | Corrected and locally verified: exact candidate manifest rejects schema violations before output/provider boundary; hosted CI execution remains unexecuted |
+| R-004 | TextStats component extension implemented and locally verified; independent consumer/client/live-provider evidence deferred and still missing |
+
+123 support and 29 publisher tests pass. Thirty-three catalog cases validate. Python 3.11 is not installed in this environment; checks used 3.12.14. No new consumer campaign, installed-client run, hosted CI dispatch, release/tag or provider trial occurred. These limits do not block the explicitly authorized component extension; they remain acceptance/readiness limits.
+
+No source repairs were silently derived from the new acceptance cases. No prior closed campaign was edited. Integration target is refreshed main; explicit two-parent merge, merged-state checks, target publication/readback and final branch return remain before closure. Git establishes actual commit/merge/publication identities rather than a self-referential predicted SHA.
