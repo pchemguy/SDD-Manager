@@ -206,11 +206,15 @@ When both options are implemented, valid explicit URL parameters also update the
 
 Implement cookies and URL parameters in separate feature campaigns, in either order, or together in one campaign. Each completed and verified campaign offers a release boundary. When adding the second option, implement and verify the combined precedence and cookie-update behavior.
 
-For cookies:
+Use this template to add either mode, add both, or complete support for settings introduced by later campaigns. Replace `{FUNCTIONALITY}` with one of:
+
+- `cookies`
+- `URL query (GET) parameters`
+- `URL query (GET) parameters and cookies`
 
 > [!NOTE] Prompt
 >
-> Open a feature campaign to add cookie-based persistence to the Tetris configuration panel. Save the selected values in cookies whenever the player changes these settings:
+> Open a feature campaign to add or extend semi-persistent Tetris configuration for the following settings, limited to those currently implemented in the application:
 >
 > - Ghost piece: always hide, hide dynamically when its projected landing position is above the board's midline, or always show.
 > - Hard drop: on/off.
@@ -219,30 +223,22 @@ For cookies:
 > - General locking policy: lock on a failed downward movement attempt, or lock after one full gravity interval from becoming grounded.
 > - Hold piece: on/off.
 >
-> Restore saved settings when the page is reloaded or the game is opened again. Use sensible defaults for settings without saved values.
+> Restore saved settings or apply settings supplied through the URL when the page is reloaded or the game is opened again. Use sensible defaults for settings without a supplied or saved value. URL parameters may explicitly specify default values or omit them.
 >
-> If the game already accepts configuration values through URL query (GET) parameters, resolve each setting in this order: a value explicitly supplied by its URL parameter, a saved cookie value, then the default. Save explicit URL parameter values in the corresponding cookies, including values equal to the default. When a setting's URL parameter is omitted, retain its saved cookie value instead of replacing it with the default.
+> Inspect the application's existing support: it may implement cookies, URL query (GET) parameters, both, or neither. For each implemented mode, apply these rules:
+>
+> - Cookies: save the selected values whenever the player changes an available setting.
+> - URL query (GET) parameters: update the corresponding parameters whenever the player changes an available setting.
+>
+> When both modes are implemented, resolve each setting in this order: a value explicitly supplied by its URL parameter, a saved cookie value, then the default. Save explicit URL parameter values in the corresponding cookies, including values equal to the default. When a setting's URL parameter is omitted, retain its saved cookie value instead of replacing it with the default.
+>
+> In this campaign, implement or complete persistence based on:
+>
+> `{FUNCTIONALITY}`
 
-For URL parameters:
+During preparation, clarify parameter names and accepted values, handling of invalid or duplicate URL parameters and invalid saved values, cookie lifetime and scope, and how URL updates represent default-valued settings. Keep omitted parameters distinct from explicit default-valued parameters.
 
-> [!NOTE] Prompt
->
-> Open a feature campaign to configure the Tetris game through URL query (GET) parameters. Support these settings and choices:
->
-> - Ghost piece: always hide, hide dynamically when its projected landing position is above the board's midline, or always show.
-> - Hard drop: on/off.
-> - Next-piece preview: on/off.
-> - Hard-drop locking policy: follow the selected general locking policy, or lock immediately after hard drop.
-> - General locking policy: lock on a failed downward movement attempt, or lock after one full gravity interval from becoming grounded.
-> - Hold piece: on/off.
->
-> Apply the supplied parameter values when the game is opened. Use sensible defaults for omitted settings when no saved cookie value is available. A value equal to its default may be supplied explicitly or omitted.
->
-> If the game already saves configuration settings in cookies, resolve each setting in this order: a value explicitly supplied by its URL parameter, a saved cookie value, then the default. Save explicit URL parameter values in the corresponding cookies, including values equal to the default. When a setting's URL parameter is omitted, retain its saved cookie value instead of replacing it with the default.
-
-During preparation, clarify parameter names and accepted values, handling of invalid or duplicate URL parameters and invalid saved values, cookie lifetime and scope, and whether panel changes update the URL when URL support is available. Keep omitted parameters distinct from explicit default-valued parameters.
-
-Verify each option independently and their combined behavior. Cover partial URLs, conflicting cookie/URL values, explicit defaults, omitted values, cookie updates, reloads and the accepted invalid-value handling.
+Verify each option independently and their combined behavior. Cover partial URLs, conflicting cookie/URL values, explicit defaults, omitted values, cookie and URL updates after panel changes, reloads and the accepted invalid-value handling.
 
 ## Human review and implementation checkpoints
 

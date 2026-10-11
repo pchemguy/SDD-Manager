@@ -35,6 +35,7 @@ Maintain the accepted Tetris demo/test guide, including the short seed descripti
 | V-014 | Replace undefined configuration shorthand in persistence prompts with the actual URL query-parameter and cookie mechanisms. | Verify the prompts name the mechanisms directly and retain per-setting precedence, explicit-value cookie updates and omitted-value behavior. | Requested on 2026-10-11; verification recorded in the report. |
 | V-015 | Spell out ghost visibility and both locking-policy choices in the cookie feature prompt. | Verify all three ghost modes, both hard-drop behaviors and both general locking rules without relying on implicit labels; preserve other settings and persistence rules. | Requested on 2026-10-11; verification recorded in the report. |
 | V-016 | Rewrite the URL-parameter feature prompt as a complete request with all six settings and explicit choices, application/default behavior and cookie precedence. | Check choice-list parity with the cookie prompt, URL-only defaults, explicit defaults/omissions, combined precedence/updates and callout/list spacing. | Requested on 2026-10-11; verification recorded in the report. |
+| V-017 | Consolidate persistence prompts into the human-supplied reusable `{FUNCTIONALITY}` template for currently implemented settings. | Check three selections, existing either/both/neither support, six explicit choices, save/update-on-change rules, restore/default behavior and combined precedence. | Requested on 2026-10-11; verification recorded in the report. |
 
 ## Persistence and stopping boundary
 

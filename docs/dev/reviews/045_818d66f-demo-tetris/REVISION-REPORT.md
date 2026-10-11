@@ -128,6 +128,14 @@ On 2026-10-11, the human requested rewriting the complementary URL prompt. It no
 
 The scoped Python check passed for six-setting choice parity, URL application/default semantics, combined precedence and updates, quoted list spacing and eleven unchanged prompts. `git diff --check` passed. V-015 checkpoint `c58ba71e2841a63ac553b65a43936425521d65d4` was pushed and exact remote identity verified before this amendment. The campaign remains open; no runtime check is claimed.
 
+## V-017 — Reusable persistence campaign template
+
+On 2026-10-11, the human supplied a consolidated persistence prompt with a selectable `{FUNCTIONALITY}` field. Replaced the separate cookie and URL prompts with the polished template and its three allowed selections. The request covers all six explicit setting choices but limits scope to presently implemented settings, permits existing cookies/URL/both/neither support and defines saving cookie values and updating URL parameters on player changes.
+
+Restore/apply wording distinguishes saved cookie settings from URL-supplied settings; sensible defaults apply when no supplied or saved value exists. Explicit-default/omitted URL semantics and per-setting URL/cookie/default precedence remain explicit. Surrounding preparation guidance now treats URL updates as required and leaves their representation of defaults for clarification; verification includes both cookie and URL updates after panel changes.
+
+The scoped Python check passed for the implemented subset, three placeholder selections, existing support states, six choices, change/save/update rules, restoration/default/precedence semantics, prompt format, ten unchanged prompts, headings and links. `git diff --check` passed. V-016 checkpoint `011615f8631ecff19d71f41a443288e57f576af6` was pushed and exact remote identity verified before this amendment. The campaign remains open; no runtime check is claimed.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
