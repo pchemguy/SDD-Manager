@@ -28,6 +28,7 @@ Maintain the accepted Tetris demo/test guide, including the short seed descripti
 | V-007 | Replace Variant A's prompt with the human-supplied game-focused request, polished for initial or continuation use, with an explicit next question about hard-drop policy. | Verify the five-item list, failed-downward-attempt policy, immediate/general choice and `NOTE` format; retain delivery guidance outside the prompt. | Accepted on 2026-10-11; verification recorded in the report. |
 | V-008 | Replace Variant B's baseline and feature prompts with polished human-supplied requests. | Verify the baseline scope/locking rule, feature list and explicit next hard-drop policy question; preserve callouts, list spacing and other guide sections. | Accepted on 2026-10-11; verification recorded in the report. |
 | V-009 | Add a multi-line clearing bonus to both initial game prompts without scoring specifics. | Verify the concise bonus requirement in both prompts with no point values or formula; retain other requirements and the separate feature request. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-010 | Add conditional ghost-piece visibility as the next feature campaign candidate and release boundary for either delivery variant. | Check ghost-support prerequisite, dynamic upper/lower-half behavior, midline-overlap clarification, prompt format and visibility/gameplay verification criteria. | Accepted on 2026-10-11; verification recorded in the report. |
 
 ## Persistence and stopping boundary
 

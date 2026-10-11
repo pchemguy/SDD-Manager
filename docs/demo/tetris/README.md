@@ -140,6 +140,20 @@ Evaluate whether the agent:
 - Verifies enhancements and baseline regressions.
 - Integrates accepted feature requirements into the governing project documents.
 
+## Further feature campaigns
+
+### Conditional ghost-piece visibility
+
+The next feature campaign candidate dynamically hides the ghost piece when its projected landing position is in the upper half of the board, above the midline, and shows it when the projection returns to the lower half. This changes the display of the landing preview while retaining the ghost-piece capability.
+
+Run this campaign after ghost-piece support is implemented and verified: after the combined game in Variant A or after the modern enhancement campaign in Variant B. Completing and verifying the feature provides another natural release boundary for testing SDD Manager's release workflow. During feature preparation, clarify how visibility is determined when the projected piece spans the midline.
+
+> [!NOTE] Prompt
+>
+> Open a feature campaign to dynamically hide the ghost piece when its projected landing position is in the upper half of the board, above the midline. Show it again when its projected landing position returns to the lower half.
+
+Verify visibility changes in both directions as the projected landing position crosses the midline, including the accepted overlap rule. Check that hiding the preview does not change the landing calculation, piece movement or hard-drop behavior.
+
 ## Human review and implementation checkpoints
 
 Follow SDD Manager's document review checkpoints as each preparation artifact is produced. Review the substantive decisions, unresolved questions, and readiness for the next stage.
@@ -197,6 +211,7 @@ Combine automated checks with browser interaction. Include observable checks for
 | Full-interval locking amendment | Grounding starts a full interval; movement, rotation, and failed downward attempts do not restart or bypass it. Becoming airborne cancels it; grounding again starts a new interval. |
 | Hold | Storage, exchange, and reuse restrictions follow the specification. |
 | Ghost piece | The preview matches the landing position without changing game state. |
+| Conditional ghost visibility feature | The preview hides above the midline and reappears below it under the accepted overlap rule; landing calculation and gameplay remain unchanged. |
 | Seven-bag | Each generated bag contains all seven tetromino types exactly once. |
 | Wall kicks | Defined rotation cases succeed or fail according to the accepted rules. |
 | Hard drop | Keyboard input moves the piece to its landing position. The immediate exception locks it immediately; the general delayed policy leaves it active under the current general rule. Check both a falling piece and an already grounded piece. |

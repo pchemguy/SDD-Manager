@@ -80,6 +80,14 @@ On 2026-10-11, the human requested a concise multi-line clearing bonus in the cu
 
 The scoped Python check passed for the exact sentence in both prompts, absence of scoring specifics, preservation of the other six prompts and resolving local links. `git diff --check` passed. V-008 checkpoint `0ad03c2badda26eea9ff63768463a3f9cdaa1505` was pushed and exact remote identity verified before this amendment. The campaign remains open; no live game or trial execution is claimed.
 
+## V-010 — Conditional ghost-piece visibility candidate
+
+On 2026-10-11, the human selected dynamically hiding the ghost above the board's midline as the next feature campaign candidate. Added a further-campaign section defining hiding in the upper half and reappearance in the lower half, a direct feature prompt and verification criteria. Both delivery variants first require implemented/verified ghost support; completed feature delivery offers a natural release boundary for the requested release-workflow testing.
+
+The midline-spanning projection case is explicitly left for feature-preparation clarification rather than silently assigned a rule. Visibility checks cover transitions in both directions and unchanged landing calculations, movement and hard-drop behavior.
+
+The scoped Python check passed for candidate scope, prerequisite, release boundary, overlap clarification, prompt format, preservation of all eight existing prompts, heading spacing and resolving local links. `git diff --check` passed. No game, feature campaign or release was executed. V-009 checkpoint `b8fffa0b6ba04e9da860dfb2382b3cb32324803c` was pushed and exact remote identity verified before this amendment.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
