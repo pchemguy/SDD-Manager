@@ -1121,14 +1121,25 @@
       },
       "variants": [
         {
-          "id": "core",
+          "id": "highlights-only",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": [
+            "fresh consumer and independent assessor"
+          ]
+        },
+        {
+          "id": "complete-message",
           "requirement": "required",
           "evidence_class": "consumer",
           "facilities": [
             "fresh consumer and independent assessor"
           ]
         }
-      ]
+      ],
+      "input_bindings": {
+        "release_request": "current.release_request"
+      }
     },
     {
       "id": "A-029",

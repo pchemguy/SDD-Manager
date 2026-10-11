@@ -80,3 +80,7 @@ After later execution authorization, assess the complete campaign delta and requ
 ## Execution authorization and result
 
 On 2026-10-11 the human requested execution. V-001–V-006 are implemented with evidence in [REVISION-REPORT](REVISION-REPORT.md); integration follows its actual verification/publication gate. The TextStats component extension is included; consumer/client/live-provider scenario execution remains deferred as planned.
+
+## Human stopping override
+
+On 2026-10-11 the human explicitly instructed not to merge campaign 046. Source/component execution and publication are complete; retain the open revision branch and report. Do not integrate or close the campaign unless subsequently instructed. This overrides all planned automatic integration/closure steps above.

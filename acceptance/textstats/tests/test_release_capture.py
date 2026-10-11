@@ -122,6 +122,18 @@ class ReleaseHandoff(Sandbox):
         value['checkpoints'][0]['status']='Blocked'
         with self.assertRaises(ValueError):catalog.render('A-032',value,bindings_root=self.repo)
 
+    def test_routing_variants_render_one_request_without_combined_objectives(self):
+        value=self.bindings('A-013')
+        for variant,request,absent in [
+                ('highlights-only','Collect release highlights, then stop.','prepare a complete'),
+                ('complete-message','Prepare a complete release message, then stop.','collect release highlights')]:
+            value['current']['release_request']=request
+            text=catalog.render('A-028',value,bindings_root=self.repo,variant=variant)
+            self.assertIn(request,text)
+            self.assertNotIn(absent,text.lower())
+        value['current'].pop('release_request')
+        with self.assertRaises(ValueError):catalog.render('A-028',value,bindings_root=self.repo,variant='core')
+
     def test_new_case_inputs_and_checkpoint_ids_validate_and_unknown_id_fails(self):
         value=dict(self.inputs,scope={'cases':['A-033']})
         catalog.core.validate(value, catalog.core.load(catalog.BUNDLE/'schemas/inputs.schema.json'))

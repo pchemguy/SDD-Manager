@@ -2,7 +2,7 @@
 
 ## Scope and state
 
-Execution of the [revision plan](REVISION-PLAN.md) authorized on 2026-10-11. Working branch: `revision/046_818d66f-comprehensive-review`; target: `main`; product baseline: `f4741d709d5969772124a071d6d7ad60f8aeb697`. Original review source and rebase provenance remain in the [review report](REVIEW-REPORT.md). State: source/component execution complete; integration and publication pending.
+Execution of the [revision plan](REVISION-PLAN.md) authorized on 2026-10-11. Working branch: `revision/046_818d66f-comprehensive-review`; target: `main`; product baseline: `f4741d709d5969772124a071d6d7ad60f8aeb697`. Original review source and rebase provenance remain in the [review report](REVIEW-REPORT.md). State: source/component execution complete; campaign remains open and unmerged under the human’s explicit stopping instruction.
 
 ## V-001 — Portable manifest release guard
 
@@ -54,3 +54,13 @@ All six selected source/component actions are complete. Added the publisher depe
 123 support and 29 publisher tests pass. Thirty-three catalog cases validate. Python 3.11 is not installed in this environment; checks used 3.12.14. No new consumer campaign, installed-client run, hosted CI dispatch, release/tag or provider trial occurred. These limits do not block the explicitly authorized component extension; they remain acceptance/readiness limits.
 
 No source repairs were silently derived from the new acceptance cases. No prior closed campaign was edited. Integration target is refreshed main; explicit two-parent merge, merged-state checks, target publication/readback and final branch return remain before closure. Git establishes actual commit/merge/publication identities rather than a self-referential predicted SHA.
+
+## Final refinement and explicit unmerged boundary
+
+On 2026-10-11 the human instructed: do not merge campaign. No merge commit had been created. The owned uncommitted integration was aborted after copying its routing refinement and verification evidence to the 046 worktree; local and remote main remain at `f4741d709d5969772124a071d6d7ad60f8aeb697`. No campaign closure or target publication is performed.
+
+Final scenario review separated A-028 into `highlights-only` and `complete-message` variants using an existing current-state input binding. Each consumer receives one ordinary request; A-029 starts from the complete-message result. The partial deterministic contract checks no pending merge, while independent variant criteria establish actual output/stopping behavior. Added a sensitivity test proving the rendered requests do not combine both objectives. This is a test-design correction, not a production release change.
+
+[Final TextStats suite](evidence/final-support-tests.log): 124 passed in 18.853 seconds on the prospective working tree, retained without creating a merge commit. [Publisher suite](evidence/final-publisher-tests.log): 29 passed. [Refinement identities](evidence/retained-refinement.json) retain the tested file hashes; the subsequent assessor-prose clarification changes no tested Python behavior. [Committed candidate checks](evidence/candidate-checks.json) retain 133-file reproducible package/core-schema checks at the published source checkpoint; the routing refinement is outside the installed package. Catalog validation and changed-document/whitespace checks pass after transfer.
+
+R-001–R-003 are locally corrected/verified; R-004’s component extension is complete while consumer/client/live-provider evidence remains deferred. Preserve campaign 046 on its published revision branch and stop. A later explicit integration request is required; no previous plan integration wording overrides this boundary.

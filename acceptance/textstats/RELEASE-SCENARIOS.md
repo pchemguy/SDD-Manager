@@ -8,7 +8,7 @@ The catalog retains A-001–A-027 identities and adds A-028–A-033. A-027 remai
 
 | Case | Boundary | Evidence class |
 | --- | --- | --- |
-| A-028 | Highlights-only followed by separately requested complete-message preparation | Consumer |
+| A-028 | Separate highlights-only and complete-message request variants | Consumer |
 | A-029 | Unchanged repeat, human curation and newer delivered scope | Consumer |
 | A-030 | Matching-version stale coverage, wrong version and absent provenance | Controlled consumer trials |
 | A-031 | Actual save/replacement failure, preserved old notes and fresh continuation | Controlled |
@@ -23,7 +23,7 @@ Default case selection includes required release variants. Live GitHub publicati
 
 Coordinator/assessor setup uses isolated forks and exact retained checkpoints. Consumer requests carry ordinary user objectives, actual product state and authority. Do not expose this guide, case IDs, assessor contracts or desired routing to a fresh consumer. Capture before and after notes, internal coverage metadata, source/target identities, tracked/ignored status, applicable human sections/cuts, task/branch/index state and exact request/result provenance. Preserve existing instructions and foreign work.
 
-For A-028, dispatch highlights-only first and assess its stopping boundary before separately requesting a complete message. Verify that complete notes identify the established version and meaningful ancillary material where supported, without repeating highlights or inventing checks/downloads. No release marker, tag, provider operation or workflow dispatch is implied by preparation.
+For A-028, render each variant with `current.release_request`: “Collect release highlights for the current delivered TextStats scope, then stop.” or “Prepare a complete release message for the established release version, then stop before publication.” Supply only that single request to its consumer; never send both objectives together. Assess highlights-only first, then complete-message from an eligible isolated checkpoint. A-029 uses the assessed complete-message result, not the highlights-only fork. Verify that complete notes identify the established version and meaningful ancillary material where supported, without repeating highlights or inventing checks/downloads. No release marker, tag, provider operation or workflow dispatch is implied by preparation.
 
 For A-029, record note bytes/hash and write identity before an unchanged repeat. Supply distinctive human paragraphs and an explicit editorial cut; then introduce a documented scope change on the isolated successor. The assessor compares semantic freshness and retained applicable human content. A version string, file presence or unchanged modification time alone cannot prove coverage. Intervening human edits must not be clobbered.
 

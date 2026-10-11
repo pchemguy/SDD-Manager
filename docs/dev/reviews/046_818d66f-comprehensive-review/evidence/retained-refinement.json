@@ -1,0 +1,14 @@
+{
+  "base": "bcda0361c179667055909680c14325d695b35b0f",
+  "tested_working_changes_sha256": {
+    "acceptance/textstats/RELEASE-SCENARIOS.md": "2b2280a184281910197dd676eba467b24bb09e807bde218fb07ddf90b452c726",
+    "acceptance/textstats/VARIANTS.md": "d6d4ae3955bb8cb72988997253eede93589171a5b6f2eb7bc7295a28b202d827",
+    "acceptance/textstats/cases/assessor/A-028.json": "40c5f9a3c0632ec1fe6bfe5b5ee33c45bcd9df2e3a4f572350a2c660d2dd01bc",
+    "acceptance/textstats/cases/catalog.json": "7b801d9550972df83a905d1825f303edfa5c5c20bc5757a73a6d995c5ebb0b31",
+    "acceptance/textstats/cases/consumer/A-028.md": "5c13041d48479aa15cf818403834aae3aaea2a8eed303639873b8e8eb54714bf",
+    "acceptance/textstats/tests/test_release_capture.py": "8572126fea7d2378b9a1aaed5d875c11ac11b0236e188926a6ace043493bda81"
+  },
+  "tests": "124 support and 29 publisher passed on prospective working tree; no merge commit created",
+  "main_retained": "f4741d709d5969772124a071d6d7ad60f8aeb697",
+  "user_boundary": "Do not merge campaign; keep 046 open"
+}
