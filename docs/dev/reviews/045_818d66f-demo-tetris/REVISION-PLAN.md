@@ -25,6 +25,7 @@ Maintain the accepted Tetris demo/test guide, including the short seed descripti
 | V-004 | Rename the supplied example to `PROJECT_phased-project.md` and update active references to identify Variant A. | Verify unchanged example bytes, updated relative links, variant association and scoped rename. | Accepted on 2026-10-11; verification recorded in the report. |
 | V-005 | Format every sample prompt in the Tetris guide with the supplied `NOTE` / `Prompt` callout template. | Verify all eight prompt blocks have the exact header and retain their original text; check whitespace and scoped paths. | Accepted on 2026-10-11; verification recorded in the report. |
 | V-006 | Recompose both variant sections with target-first opening paragraphs, descriptive headings and a coherent scope-to-prompt-to-evaluation sequence. | Check Variant A's opening defines baseline plus extensions and natural multi-phase delivery; Variant B's opening defines initial baseline and later feature expansion. Preserve prompt text, scope, example and steering rules. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-007 | Replace Variant A's prompt with the human-supplied game-focused request, polished for initial or continuation use, with an explicit next question about hard-drop policy. | Verify the five-item list, failed-downward-attempt policy, immediate/general choice and `NOTE` format; retain delivery guidance outside the prompt. | Accepted on 2026-10-11; verification recorded in the report. |
 
 ## Persistence and stopping boundary
 

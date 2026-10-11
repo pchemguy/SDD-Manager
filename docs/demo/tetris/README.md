@@ -73,11 +73,19 @@ The target is a browser-based Tetris game combining the classical baseline with 
 
 The governing documents should describe the complete accepted project. The plan should distinguish baseline delivery from enhancement delivery, with meaningful exit conditions. Two phases are a natural arrangement; additional phases should have a clear delivery purpose.
 
-During clarification, request:
+Use this prompt as an initial project description in the greenfield template or as a continuation after the short seed description:
 
 > [!NOTE] Prompt
 >
-> Include the playable baseline and all five enhancements in the initial project scope. Plan delivery so that a playable baseline is completed and verified before implementing the enhancements. Start with locking on a failed downward movement attempt. Clarify the selected hard-drop policy when preparing the enhancement requirements.
+> Create a browser-based Tetris game with a playable classical baseline and these modern enhancements:
+>
+> - Hold piece.
+> - Ghost piece.
+> - 7-bag piece randomization.
+> - Wall kicks.
+> - Hard drop.
+>
+> Adopt locking on a failed downward movement attempt as the general locking policy. Next, ask me whether hard drop should lock the piece immediately or follow the general locking policy.
 
 See [examples/PROJECT_phased-project.md](examples/PROJECT_phased-project.md) for a good example of an agent-generated project brief from an earlier trial. Interactive clarification established the combined baseline and enhancement scope, which the brief presents through the target audience, goals, and non-goals. Its Canvas and vanilla JavaScript choices illustrate that trial; they are not mandatory for this demo.
 

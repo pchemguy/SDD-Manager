@@ -62,6 +62,12 @@ Manual composition review checked topic sentences and target/scope/delivery rela
 
 V-005 checkpoint `51f5e1a54e90ec7231de5bc1432fe327149d38f9` was pushed and exact remote identity verified before this amendment. V-006 changes only the guide and active campaign plan/report; the campaign remains open.
 
+## V-007 — Game-focused initial or continuation prompt
+
+On 2026-10-11, the human replaced Variant A's procedural prompt with a direct game request and required the next question to select hard-drop locking. Polished the supplied text into a browser-based classical-baseline request, a five-item modern enhancement list, failed-downward-attempt general locking and an explicit next question between immediate hard-drop locking and the general policy. The introduction now states that the prompt serves as an initial description in the greenfield template or a continuation after the short seed. Delivery guidance remains in the surrounding guide.
+
+The scoped Python check passed for prompt scope, all five enhancements, the next policy question, exact `NOTE` callout, preservation of the other seven prompt blocks and unchanged Variant B/steering/verification text. Local links resolve; `git diff --check` passed. No runtime or rendered-client check is claimed. V-006 checkpoint `02cbfb00fbd118d16e48241fea217e85e3c5ab38` was pushed and exact remote identity verified before this amendment.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
