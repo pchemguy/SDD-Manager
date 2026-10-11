@@ -62,7 +62,7 @@ class PackageTests(Contract):
             return subprocess.check_output(['git','-C',str(self.root),*args], text=True).strip()
         self.git=git
         git('init','-q'); git('config','user.name','Fixture'); git('config','user.email','fixture@example.test')
-        manifest=b'{"name":"sdd-manager","version":"0.15.0"}\n'
+        manifest=json.dumps({"$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json", "name":"sdd-manager", "version":"0.15.0"}).encode()
         for name in ('LICENSE','README.md','AGENTS.md','Greenfield Project Prompt Template.md',
                      'SDD-MANAGER.md','AI_DISCLOSURE.md','assets/icon.svg','skills/sample/SKILL.md',
                      'plugin.json','docs/excluded.md'):
@@ -80,6 +80,32 @@ class PackageTests(Contract):
             self.assertEqual(z.read('sdd-manager/README.md'),b'README.md\n')
         raw=paths['sdd-manager.zip'].read_bytes()
         self.assertEqual(paths['sdd-manager.zip.sha256'].read_text(),hashlib.sha256(raw).hexdigest()+'  sdd-manager.zip\n')
+
+    def test_invalid_manifest_stops_before_package_outputs(self):
+        original=json.loads((self.root/'plugin.json').read_text())
+        mutations=[{'$schema': None}, {'$schema': 'https://invalid.test/schema'},
+                   {'skills': './skills'}, {'name': 'Uppercase'}, {'name': 'bad--name'},
+                   {'version': 1}, {'author': {'unknown': 'value'}},
+                   {'extensions': {'com.openai': False}}]
+        for changes in mutations:
+            value=dict(original, **changes)
+            if value.get('$schema') is None: value.pop('$schema')
+            (self.root/'plugin.json').write_text(json.dumps(value))
+            self.git('add','plugin.json'); self.git('commit','-qm','invalid manifest')
+            sha=self.git('rev-parse','HEAD')
+            with self.subTest(changes=changes), self.assertRaisesRegex(ValueError, 'manifest'):
+                publisher.build_package(self.root,handoff(source=sha,notes_source=sha),self.out)
+            self.assertEqual(list(self.out.iterdir()), [])
+
+    def test_namespaced_manifest_uses_committed_candidate(self):
+        value=json.loads((self.root/'plugin.json').read_text())
+        value['extensions']={'com.openai': {'interface': {'displayName': 'Fixture'}}}
+        (self.root/'plugin.json').write_text(json.dumps(value))
+        self.git('add','plugin.json'); self.git('commit','-qm','namespaced extension')
+        sha=self.git('rev-parse','HEAD')
+        (self.root/'plugin.json').write_text('{}')
+        paths=publisher.build_package(self.root,handoff(source=sha,notes_source=sha),self.out)
+        self.assertIn('sdd-manager.zip',paths)
 
     def test_wrong_checkout_or_version_stops(self):
         for changes in ({'source':'a'*40,'notes_source':'a'*40},{'tag':'v9.9.9'}):

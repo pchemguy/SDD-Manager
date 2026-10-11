@@ -208,6 +208,8 @@ Use [Git release highlights](skills/sdd-forge/references/release-highlights.md) 
 
 Use [package preparation](skills/sdd-forge/references/github-packaging.md) for archive contents and conventional variant names, [release workflows](skills/sdd-forge/references/github-release-workflows.md) to prepare/dispatch a build, and [release creation](skills/sdd-forge/references/github-releases.md) to publish verified assets. Filenames remain version-free, for example `project.zip` or `project-windows-x64.zip`; tags and release metadata retain version identity. Stable downloads use `https://github.com/{OWNER}/{REPO}/releases/latest/download/{ASSET_NAME}`. Each latest stable release must contain the complete advertised asset set.
 
+This repository’s publisher checks the exact candidate manifest against a pinned local core schema before package output or provider access. Source contributors install its [validation dependencies](https://github.com/pchemguy/SDD-Manager/blob/main/.github/schemas/README.md) before publisher tests or local builds.
+
 Preparing a workflow does not itself publish a product release. Release requests can use the existing workflow or verified local packages through supported GitHub CLI/API operations. The references include `gh workflow run` and draft/upload/publish command recipes. No task tracking activation is required. [Release checks](skills/sdd-verify/references/release-checks.md) and [reporting](skills/sdd-report/references/releases.md) distinguish local build, CI execution, hosted metadata and downloaded-byte verification.
 
 ## Branches and integration
