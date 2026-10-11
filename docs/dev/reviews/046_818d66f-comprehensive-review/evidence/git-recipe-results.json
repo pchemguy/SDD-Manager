@@ -1,0 +1,43 @@
+[
+  {
+    "scenario": "Complete initial history uses null baseline and all identities",
+    "outcome": "Passed"
+  },
+  {
+    "scenario": "Pending tag excluded and annotated previous tag peeled",
+    "outcome": "Passed"
+  },
+  {
+    "scenario": "Side ancestry identities included",
+    "outcome": "Passed"
+  },
+  {
+    "scenario": "Earlier same-campaign merge body deferred; latest retrieved",
+    "outcome": "Passed"
+  },
+  {
+    "scenario": "Increment contains only new ancestry; original baseline retained",
+    "outcome": "Passed"
+  },
+  {
+    "scenario": "Equal watermark produces empty increment",
+    "outcome": "Passed"
+  },
+  {
+    "scenario": "Pending-tag self-baseline rejected",
+    "outcome": "Passed"
+  },
+  {
+    "scenario": "Side-history release tag requires explicit policy",
+    "outcome": "Passed"
+  },
+  {
+    "scenario": "Release commit preserves exact Markdown body and annotated tag source",
+    "outcome": "Passed"
+  },
+  {
+    "body_sha256": "ee7a14680cfd5a9ebc52eb42c929bfce74869997645f6d74ace61ba81807249e",
+    "release_source": "5a50ffa6b496e84c876b3ee4db123c644636ca91",
+    "limits": "Disposable native Git recipe/mechanics; no editorial agent, remote push, notes persistence or provider execution."
+  }
+]

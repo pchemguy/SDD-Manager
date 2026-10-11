@@ -15,6 +15,7 @@
 | U-001 | Complete current path inventory; README/AGENTS/capability map, prompt, notices, manifest, package contract and publisher inventory inspected. Actual ZIP has 133 regular files, all exact committed bytes; schema validation has zero errors; four interface asset paths exist; 15 skill entries; SVG XML parses. 567 current local inline links assessed; two apparent failures are quoted README-copy examples, manually cleared. | No confirmed package/navigation defect; client evidence tracked at consolidation |
 
 | U-002 | Preparation/QC/human/branch/tracking gates assessed on both owner and coordinator sides; seven boundary scenarios inspected | R-001 |
+| U-003 | Execution/integration/reporting/release handoffs assessed; nine native Git checks passed | R-002 |
 
 ## U-001 evidence and limits
 
@@ -46,6 +47,24 @@ Design, specification, planning, task derivation/conformance/progress, TDD entry
 | Proposed correction / owner | sdd-docs: reconcile the capability map to established design filenames; no rename of retained records |
 | Objective recheck | Current ownership and entry documentation agree on both filenames; existing feature workflow remains discoverable |
 
+## U-003 execution, integration and release assessment
+
+Inspected implementation startup/range/task/completion/recovery instructions; steering objective/execution/stop; selected feature incorporation, ownership transfer/archive; manager Git/revision modes/credential handling; report entry/object/release formats; forge highlights/message/release/projection/issue/milestone lifecycle. Scope limits, two-parent integration, stable original opening provenance, human-directed steering return, one executable task per closing commit and unchanged frozen records are explicit. Uncertain provider effects require readback before replay. Verified local work remains distinct from hosted closure/integration.
+
+Nine [native Git scenarios](evidence/git-recipe-results.json) passed using the actual shipped Python collection recipe: complete initial history, annotated baseline peeling, pending-tag exclusion, complete side-ancestry collection, latest cumulative summary retrieval/earlier-body deferral, incremental range, no-op increment, rejected self-baseline and rejected unresolved side-history tag policy. The ninth combined check preserved exact UTF-8 Markdown in a native release commit with `--cleanup=verbatim` and checked an annotated tag's peeled commit. [Fixture script](evidence/check_git_recipes.py) is retained. These are mechanical checks, not editorial or provider acceptance.
+
+Source scenarios assessed: incomplete phase pauses without merging; selected task count includes review tasks without adding out-of-range work; aggregate or split closing commits block advancement/integration without rewriting published history; steering stops before continuation; SPEC-only incorporation leaves unselected owners untouched; task transfer needs both lists; archive preserves remaining active dependencies; nested/reopened revisions preserve source/return/original-opening identities; stale/version-matching notes require coverage reconstruction; failed final-note save preserves the prior copy; preparation-only creates no release marker; retries reuse matching markers; tag source and commit/GitHub bodies must agree; internal draft cleanup requires actual published-body consumption while final notes remain. These are instruction assessments, not executed agent scenarios.
+
+### R-002 — Implementation diagram reverses startup publication and task audit
+
+| Field | Evidence |
+| --- | --- |
+| Type / priority / confidence / status | Documentation defect / Medium / High / Open; no repair accepted |
+| Baseline location | `README.md` implementation diagram routes Orient → task persistence audit → publish outstanding commits; `skills/sdd-implement/references/startup-and-continuation.md`, “Check the claimed task closing boundary”, explicitly audits after startup publication; entry procedure is push-first |
+| Observation and consequence | A failed audit in the diagram stops before publishing retained verified commits, conflicting with the execution owner's push-first/recovery order |
+| Proposed correction / owner | sdd-docs with sdd-implement/manage: align the diagram and accompanying entry sentence with prerequisite inspection, outstanding publication, then bounded audit before further task work |
+| Objective recheck | A retained verified unpublished commit plus an invalid claimed task closing boundary is published/read back first; subsequent task advancement remains blocked pending scoped audit recovery |
+
 ## Findings and revision handoff
 
-Remaining units pending. R-001 is a proposed documentation correction, not a newly accepted requirement. No source changes have been made.
+Tooling and consolidation remain pending. R-001/R-002 are proposed documentation corrections; neither has been accepted for repair. No source changes have been made.
