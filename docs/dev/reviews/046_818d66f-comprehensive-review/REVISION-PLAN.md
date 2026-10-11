@@ -84,3 +84,7 @@ On 2026-10-11 the human requested execution. V-001–V-006 are implemented with 
 ## Human stopping override
 
 On 2026-10-11 the human explicitly instructed not to merge campaign 046. Source/component execution and publication are complete; retain the open revision branch and report. Do not integrate or close the campaign unless subsequently instructed. This overrides all planned automatic integration/closure steps above.
+
+## Closure authorization
+
+On 2026-10-11 the human requested closing 046. This supersedes the unmerged stopping override and authorizes verified integration/publication into refreshed main. The source/component scope and deferred consumer/client/provider evidence limits remain as recorded in the revision report.

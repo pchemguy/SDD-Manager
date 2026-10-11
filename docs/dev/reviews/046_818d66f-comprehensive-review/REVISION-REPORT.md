@@ -2,7 +2,7 @@
 
 ## Scope and state
 
-Execution of the [revision plan](REVISION-PLAN.md) authorized on 2026-10-11. Working branch: `revision/046_818d66f-comprehensive-review`; target: `main`; product baseline: `f4741d709d5969772124a071d6d7ad60f8aeb697`. Original review source and rebase provenance remain in the [review report](REVIEW-REPORT.md). State: source/component execution complete; campaign remains open and unmerged under the human’s explicit stopping instruction.
+Execution of the [revision plan](REVISION-PLAN.md) authorized on 2026-10-11. Working branch: `revision/046_818d66f-comprehensive-review`; target: `main`; current integration baseline: `2e3083621a69a04ce2a16624db589eed87e92347`. Original review source and rebase provenance remain in the [review report](REVIEW-REPORT.md). State: source/component execution complete; closure authorized on 2026-10-11. Final integration/publication is established by Git.
 
 ## V-001 — Portable manifest release guard
 
@@ -64,3 +64,11 @@ Final scenario review separated A-028 into `highlights-only` and `complete-messa
 [Final TextStats suite](evidence/final-support-tests.log): 124 passed in 18.853 seconds on the prospective working tree, retained without creating a merge commit. [Publisher suite](evidence/final-publisher-tests.log): 29 passed. [Refinement identities](evidence/retained-refinement.json) retain the tested file hashes; the subsequent assessor-prose clarification changes no tested Python behavior. [Committed candidate checks](evidence/candidate-checks.json) retain 133-file reproducible package/core-schema checks at the published source checkpoint; the routing refinement is outside the installed package. Catalog validation and changed-document/whitespace checks pass after transfer.
 
 R-001–R-003 are locally corrected/verified; R-004’s component extension is complete while consumer/client/live-provider evidence remains deferred. Preserve campaign 046 on its published revision branch and stop. A later explicit integration request is required; no previous plan integration wording overrides this boundary.
+
+## Authorized closure and refreshed verification
+
+On 2026-10-11 the human requested closing 046, superseding the retained unmerged stopping boundary. All V-001–V-006 work and the final routing refinement are included. The original opening is `f655c9193b4aa07bd5202cef7ff25e8463ee4647`; original branch-off/review source is `818d66f6baf8e3a324d29f3430d3bac3278f0dd2`. Following the human-directed history corrections and rebases, the current opening is `2a8359a119571baf2af3a2d3842106131f266f3c`, descending from main `2e3083621a69a04ce2a16624db589eed87e92347` and its 045 source parent `e0e043e007e7385870a2b88452db55c734353d30`. Earlier SHA references and checks above retain their historical meaning.
+
+Fresh verification at `f222d43caee5e2e989575afc634878a78b89f51a`: [124 support tests passed](evidence/closure-support-tests.log), [29 publisher tests passed](evidence/closure-publisher-tests.log), and all 33 catalog cases validate. [Closure checks](evidence/closure-checks.json) confirm offline committed-manifest validation, two identical builds, 133 package files, 595 current local links without confirmed defects, Python syntax/module docstrings and unchanged closed records against the refreshed main baseline. Runtime: Linux/Python 3.12.14. The retained checker now uses this integration baseline; original evidence is unchanged.
+
+R-001–R-003 are corrected and locally verified. R-004’s TextStats component extension is complete; independent consumer, installed-client and live-provider evidence remains deferred. Rendered Mermaid, hosted CI and Python 3.11 execution remain unverified. No product release, tag or live acceptance campaign is included. This checkpoint prepares closure; the explicit two-parent merge, merged-state checks, main publication/readback and return to main establish its completion.
