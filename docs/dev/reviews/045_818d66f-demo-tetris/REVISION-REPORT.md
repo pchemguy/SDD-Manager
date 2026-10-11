@@ -52,6 +52,16 @@ On 2026-10-11, the human supplied the `> [!NOTE] Prompt` template. Applied its e
 
 The scoped Python check passed: all eight blocks have the requested header; removing only the added headers reproduces the preceding guide byte-for-byte; the changed paths are confined to the guide and active campaign plan/report. `git diff --check` passed. No rendered-client result is claimed. V-004 checkpoint `aaae04fd0f0febeeeb320e011598686b10caa126` was pushed and exact remote identity verified before this amendment.
 
+## V-006 — Target-first variant composition
+
+On 2026-10-11, the human required each variant section to define its target before presenting instructions, with Variant A's opening also explaining natural multi-phase delivery. Renamed the headings to "Classical baseline + modern extensions" and "Classical baseline + feature expansion" and aligned the overview table.
+
+Variant A now opens with the combined target, all five extensions, their inclusion in initial scope and baseline-first multi-phase delivery. The following paragraph explains full-project documents and delivery exits before the clarification prompt. The example discussion follows the prompt in two focused paragraphs: brief composition/technology choices, then the example's different locking requirement. Variant B now opens with the initial baseline target and later separately scoped expansion, then explains initial document scope before presenting the baseline and feature prompts.
+
+Manual composition review checked topic sentences and target/scope/delivery relationships. The scoped Python check passed for both opening paragraphs, preservation of all eight prompt blocks, unchanged example bytes and steering/verification sections, resolving local links and heading spacing. `git diff --check` passed. The guide's requirements and exercise behavior are unchanged; no game execution or rendered-client check is claimed.
+
+V-005 checkpoint `51f5e1a54e90ec7231de5bc1432fe327149d38f9` was pushed and exact remote identity verified before this amendment. V-006 changes only the guide and active campaign plan/report; the campaign remains open.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.

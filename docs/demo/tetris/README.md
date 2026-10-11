@@ -10,8 +10,8 @@ Two variants cover different delivery workflows:
 
 | Variant | Initial project scope | Delivery |
 | --- | --- | --- |
-| Phased project | Baseline gameplay and selected modern enhancements | Plan the full scope together; deliver a playable baseline before enhancements. |
-| Feature expansion | Baseline gameplay | Complete the baseline, then introduce enhancements through a feature campaign. |
+| A: Classical baseline + modern extensions | Baseline gameplay and selected modern enhancements | Plan the full scope together; deliver a playable baseline before enhancements. |
+| B: Classical baseline + feature expansion | Baseline gameplay | Complete the baseline, then introduce enhancements through a feature campaign. |
 
 These are alternative runs. Use separate repositories or clearly recorded starting states when comparing their results.
 
@@ -67,7 +67,11 @@ For the general delayed policy, finding the landing position during hard drop do
 
 Multiplayer, backend leaderboards, and mobile touch controls are outside the selected scope.
 
-## Variant A: Phased project
+## Variant A: Classical baseline + modern extensions
+
+The target is a browser-based Tetris game combining the classical baseline with hold, ghost piece, seven-bag randomization, wall kicks, and hard drop. Both the baseline and extensions belong to the initial project scope. This combination provides a natural multi-phase delivery option: first deliver a playable baseline, then add the modern extensions.
+
+The governing documents should describe the complete accepted project. The plan should distinguish baseline delivery from enhancement delivery, with meaningful exit conditions. Two phases are a natural arrangement; additional phases should have a clear delivery purpose.
 
 During clarification, request:
 
@@ -75,11 +79,9 @@ During clarification, request:
 >
 > Include the playable baseline and all five enhancements in the initial project scope. Plan delivery so that a playable baseline is completed and verified before implementing the enhancements. Start with locking on a failed downward movement attempt. Clarify the selected hard-drop policy when preparing the enhancement requirements.
 
-The governing documents should describe the complete accepted project. The plan should distinguish baseline delivery from enhancement delivery, with meaningful exit conditions.
+See [examples/PROJECT_phased-project.md](examples/PROJECT_phased-project.md) for a good example of an agent-generated project brief from an earlier trial. Interactive clarification established the combined baseline and enhancement scope, which the brief presents through the target audience, goals, and non-goals. Its Canvas and vanilla JavaScript choices illustrate that trial; they are not mandatory for this demo.
 
-See [examples/PROJECT_phased-project.md](examples/PROJECT_phased-project.md) for a good example of an agent-generated project brief from an earlier trial, produced after interactive clarification selected baseline gameplay plus modern enhancements. Its Canvas and vanilla JavaScript choices illustrate that trial; they are not mandatory for this demo. The example also includes full-interval lock delay. This guide starts with failed-downward-attempt locking and introduces full-interval locking as a steering amendment, so use the example for its brief structure and scope presentation rather than copying its locking requirement into the initial project.
-
-A two-phase plan is a natural arrangement, but the exercise does not require exactly two phases. Additional phases should have a clear delivery purpose.
+The example also includes full-interval lock delay. This guide starts with failed-downward-attempt locking and introduces full-interval locking as a steering amendment. Use the example for its brief structure and scope presentation, and apply this guide's initial locking rule when developing the trial project.
 
 Evaluate whether the agent:
 
@@ -89,7 +91,11 @@ Evaluate whether the agent:
 - Verifies baseline completion before advancing.
 - Reports implemented capabilities and remaining work accurately.
 
-## Variant B: Feature expansion
+## Variant B: Classical baseline + feature expansion
+
+The initial target is a playable browser-based Tetris game with the classical baseline mechanics. Hold, ghost piece, seven-bag randomization, wall kicks, and hard drop are deferred until the baseline is complete, then added through a feature campaign. This variant demonstrates preparation and delivery of a complete baseline project followed by a separately scoped expansion.
+
+The initial governing documents and executable scope should cover the baseline. Deferred enhancements may be recorded as future direction without becoming initial implementation obligations.
 
 During clarification, request:
 
@@ -97,9 +103,7 @@ During clarification, request:
 >
 > Implement only the playable baseline initially, with locking on a failed downward movement attempt. Defer hold, ghost piece, seven-bag randomization, wall kicks, and hard drop to a later feature campaign.
 
-The initial executable scope should contain only the baseline. Deferred enhancements may be recorded as future direction without becoming initial implementation obligations.
-
-After baseline completion, request:
+After completing and verifying the baseline, open the feature campaign with this request:
 
 > [!NOTE] Prompt
 >
