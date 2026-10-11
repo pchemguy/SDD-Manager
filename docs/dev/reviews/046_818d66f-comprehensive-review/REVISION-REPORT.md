@@ -11,3 +11,9 @@ Added an unmodified pinned canonical schema with source/date/hash attribution, e
 Meaningful missing/wrong schema, unknown root, invalid name/type/author/extension fixtures reject before package artifacts. A valid OpenAI namespace passes even with an invalid uncommitted working-tree manifest, proving committed-source selection. [Initial failing tests](evidence/v001-red.log) reproduced the absent guard. [Final publisher suite](evidence/v001-green.log): 29 passed, Linux/Python 3.12.14 with the declared validator available in a temporary dependency directory. `git diff --check` passed. CI wiring was inspected; hosted CI and Python 3.11 were not executed.
 
 R-003: locally verified correction, pending coherent candidate/merged-state recheck. No provider access occurred. R-001/R-002 remain Open; R-004 component work pending, consumer/client execution deferred.
+
+## V-002 — Implementation entry ordering
+
+README prose and Mermaid now show prerequisite orientation, outstanding publication/readback, an explicit publication gate, then the bounded task audit and range selection/tracking. A publication failure and an invalid closing boundary each stop the affected path while preserving work. Native task publication still precedes continuation; the integration audit remains at the full eligible boundary.
+
+Source trace checked the retained unpublished commit plus malformed closing-boundary scenario: publication/readback precedes audit rejection; no next task starts. Owner startup instructions and diagram agree. Diagram source and `git diff --check` passed; no Mermaid renderer was available, so fresh rendered readability is unverified. R-002: source recheck passed, pending coherent candidate assessment. No workflow behavior or closed record changed.

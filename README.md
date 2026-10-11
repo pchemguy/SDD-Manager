@@ -103,14 +103,17 @@ Preparation-only stops after the design-docs checkpoint. Before creating a depen
 
 ### Implementation and continuation
 
-This diagram shows bounded main-phase execution. Before edits or tests, inspect actual task persistence and publish outstanding commits, then establish requested tracking readiness for the eligible phase and selected tasks. A missing initial or added-task association blocks execution; an outage after verified activation can leave independent completion and hosted closure pending.
+This diagram shows bounded main-phase execution. Before edits, tests or task selection, orient to the actual Git worktree and publish outstanding commits with remote readback. Then audit the claimed task closing boundary before advancing and establish requested tracking readiness for the eligible phase and selected tasks. A missing initial or added-task association blocks execution; an outage after verified activation can leave independent completion and hosted closure pending.
 
 ```mermaid
 flowchart TB
-    O["Orient: actual state and task evidence"] --> A{"Task persistence audit valid?"}
-    A -->|"no"| X["Preserve work; scoped recovery; stop affected path"]
-    A -->|"yes"| I["Publish outstanding commits; resume or select range"]
-    I --> H{"Requested tracking readiness?"}
+    O["Orient: worktree, instructions and pending ownership"] --> I["Publish outstanding commits; remote readback"]
+    I --> Q{"Publication resolved?"}
+    Q -->|"no"| X["Preserve work; scoped recovery; stop affected path"]
+    Q -->|"yes"| A{"Task persistence audit valid?"}
+    A -->|"no"| X
+    A -->|"yes"| S["Resume or select eligible range"]
+    S --> H{"Requested tracking readiness?"}
     H -->|"pending, partial or unknown"| X
     H -->|"verified or explicitly declined"| T["Implement: tests, code and documentation"]
     T --> V{"Required verification passes?"}
@@ -119,14 +122,14 @@ flowchart TB
     C --> P["Leading single task ID; push and remote readback"]
     P --> F["Reconcile active issue and milestone closures"]
     F --> B{"Selected range complete?"}
-    B -->|"no; dependencies ready"| I
+    B -->|"no; dependencies ready"| S
     B -->|"yes"| G{"Complete main phase and integration audit valid?"}
     G -->|"no"| E["Report checkpoint and stop"]
     G -->|"yes"| M["Explicit merge; merged checks; target push and readback"]
     M --> E
 ```
 
-The entry audit and the integration audit inspect actual selected closing commits, including relevant merge parents. Each task closes with its result, current evidence and initial completion checkbox together under one leading `[T-XXX]` imperative subject. Authorized partial checkpoints remain unchecked and are referenced at closure. An invalid audit preserves work for scoped recovery; a merge summary cannot replace valid task commits. See the [task commit contract](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract).
+The entry audit runs after startup publication; the integration audit runs at the eligible merge boundary. Both inspect actual selected closing commits, including relevant merge parents. Each task closes with its result, current evidence and initial completion checkbox together under one leading `[T-XXX]` imperative subject. Authorized partial checkpoints remain unchecked and are referenced at closure. An invalid audit preserves work for scoped recovery; a merge summary cannot replace valid task commits. See the [task commit contract](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract).
 
 The tracking gate distinguishes **pending**, **verified** and **explicitly declined**. Verified activation allows only work with confirmed associations; added unprojected work must pass the gate too. After an activated outage, report closures as pending and continue only independent eligible work. Pending dependent closures or unknown effects block review and next-phase progression. `sdd-manage` owns the decision/readiness gate, `sdd-forge` owns hosted writes/readback and `sdd-implement` owns atomic task closure and publication.
 
