@@ -50,7 +50,7 @@ class PreflightTests(Sandbox):
     def test_pin_uses_git_object_bytes_and_complete_package_manifest(self):
         data, _ = self.ok(self.invoke('preflight'))
         self.assertEqual(data['plugin_source']['commit'], git(SOURCE, 'rev-parse', 'HEAD').stdout.strip())
-        expected=set(git(SOURCE,'ls-tree','-r','--name-only','HEAD','plugin.json','.codex-plugin','README.md','AGENTS.md','Greenfield Project Prompt Template.md','LICENSE','SDD-MANAGER.md','AI_DISCLOSURE.md','skills','assets').stdout.splitlines())
+        expected=set(git(SOURCE,'ls-tree','-r','--name-only','HEAD','plugin.json','README.md','AGENTS.md','Greenfield Project Prompt Template.md','LICENSE','SDD-MANAGER.md','AI_DISCLOSURE.md','skills','assets').stdout.splitlines())
         self.assertEqual(set(data['plugin_source']['package_hashes']), expected)
         self.assertEqual(data['plugin_source']['source_mode'], 'committed')
         self.assertEqual(data['repository']['remote'], 'origin')
@@ -146,7 +146,7 @@ class PreflightTests(Sandbox):
         git(source,'commit','-m','package')
         committed,_=self.ok(self.invoke('preflight',extra=['--source-root',source]))
         self.assertIn('plugin.json',committed['plugin_source']['package_hashes'])
-        self.assertEqual(committed['plugin_source']['package_hashes'].get('.codex-plugin/plugin.json'),committed['plugin_source']['package_hashes']['plugin.json'])
+        self.assertNotIn('.codex-plugin/plugin.json',committed['plugin_source']['package_hashes'])
         self.assertEqual(committed['plugin_source']['package_hashes']['AGENTS.md'],hashlib.sha256(b'Use package instructions.\n').hexdigest())
         self.assertEqual(committed['plugin_source']['package_hashes']['assets/logo.png'],hashlib.sha256(original).hexdigest())
         changed=original+b'dirty'
@@ -158,8 +158,8 @@ class PreflightTests(Sandbox):
         snapshot=Path(dirty['plugin_source']['snapshot_path'])
         self.assertEqual((snapshot/'assets/logo.png').read_bytes(),changed)
         self.assertTrue((snapshot/'plugin.json').is_file())
-        self.assertEqual((snapshot/'.codex-plugin/plugin.json').read_bytes(),(snapshot/'plugin.json').read_bytes())
-        self.assertIn('.codex-plugin/new.svg',dirty['plugin_source']['changed_package_paths'])
+        self.assertFalse((snapshot/'.codex-plugin').exists())
+        self.assertNotIn('.codex-plugin/new.svg',dirty['plugin_source']['changed_package_paths'])
         self.assertEqual((snapshot/'AGENTS.md').read_text(),'Use changed package instructions.\n')
         self.assertIn('AGENTS.md',dirty['plugin_source']['changed_package_paths'])
         self.assertIn('assets/logo.png',dirty['plugin_source']['changed_package_paths'])

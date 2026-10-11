@@ -5,7 +5,7 @@ SDD Manager is an Agent Plugin for specification-driven development in Git repos
 ## Source and instructions
 
 - Workflow source: `skills/<skill>/SKILL.md` and its conditionally loaded references. Start coordinated work at [sdd-manage](skills/sdd-manage/SKILL.md); inspect the selected owner before edits.
-- Metadata: root `plugin.json` is the canonical package manifest; keep `.codex-plugin/plugin.json` byte-identical for temporary legacy client compatibility. Artwork/templates live in `assets/`; package notices are `SDD-MANAGER.md` and `AI_DISCLOSURE.md`.
+- Metadata: root `plugin.json` is the sole package manifest, with OpenAI presentation metadata under `extensions.com.openai.interface`. Artwork/templates live in `assets/`; package notices are `SDD-MANAGER.md` and `AI_DISCLOSURE.md`.
 - Test tooling and fixtures: `acceptance/textstats/`. Read its [AGENTS.md](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/textstats/AGENTS.md) before touching or executing that scope. A support-suite run is distinct from a live acceptance campaign.
 - Retained development evidence: [review/revision index](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/README.md). This repository has campaign plans/reports rather than a root project TASKS owner; do not invent executable task IDs from findings. Current work/branch state is discoverable through Git and the selected campaign record.
 
@@ -23,7 +23,7 @@ From repository root, run the support suite for changes affecting acceptance too
 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v
 ```
 
-Use Python 3.11 or the established supported runtime; release CI uses 3.11. Check changed Markdown links, manifest synchronization, presentation asset paths and actual package contents as applicable. State the tested source and evidence limits; passing support tests do not establish live agent/client acceptance.
+Use Python 3.11 or the established supported runtime; release CI uses 3.11. Check changed Markdown links, root manifest conformance, presentation asset paths and actual package contents as applicable. State the tested source and evidence limits; passing support tests do not establish live agent/client acceptance.
 
 For task-list execution, follow the [task commit contract](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract): one executable task's closing result/evidence and initial checklist completion in the same commit, with a leading single owning task ID. Non-task campaign actions and merge commits do not invent task IDs. Use the linked audit/recovery rules for continuation and integration.
 

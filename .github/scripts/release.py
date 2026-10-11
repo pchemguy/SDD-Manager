@@ -35,7 +35,7 @@ def validate_handoff(data):
     return data
 
 
-PACKAGE_PATHS = ('assets', 'skills', '.codex-plugin', 'LICENSE', 'plugin.json',
+PACKAGE_PATHS = ('assets', 'skills', 'LICENSE', 'plugin.json',
                  'README.md', 'AGENTS.md', 'Greenfield Project Prompt Template.md',
                  'SDD-MANAGER.md', 'AI_DISCLOSURE.md')
 
@@ -99,12 +99,10 @@ def build_package(root, data, output):
     source = data['source']
     if git(root, 'rev-parse', 'HEAD').decode().strip() != source:
         raise ValueError('Candidate checkout differs from selected source')
+    tree_inventory(root, source)
     manifest = git(root, 'show', source + ':plugin.json')
-    if manifest != git(root, 'show', source + ':.codex-plugin/plugin.json'):
-        raise ValueError('Legacy manifest differs from canonical manifest')
     if data['tag'] != 'v' + json.loads(manifest)['version']:
         raise ValueError('Tag does not match candidate manifest version')
-    tree_inventory(root, source)
     output = Path(output); output.mkdir(parents=True, exist_ok=True)
     archive = output / 'sdd-manager.zip'
     git(root, 'archive', '--format=zip', '--prefix=sdd-manager/',
