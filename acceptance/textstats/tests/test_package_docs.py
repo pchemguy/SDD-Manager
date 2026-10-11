@@ -5,11 +5,10 @@ from .support import Sandbox, git
 
 
 class PackageDocumentation(Sandbox):
-    def test_legacy_manifest_matches_canonical_manifest(self):
+    def test_root_manifest_is_the_only_discovery_manifest(self):
         source = Path(__file__).resolve().parents[3]
-        legacy = source / '.codex-plugin/plugin.json'
-        self.assertTrue(legacy.is_file(), 'Legacy discovery manifest is missing')
-        self.assertEqual(legacy.read_bytes(), (source / 'plugin.json').read_bytes())
+        self.assertTrue((source / 'plugin.json').is_file())
+        self.assertFalse((source / '.codex-plugin').exists())
 
     def test_notice_navigation_is_retained_in_committed_and_dirty_snapshots(self):
         source=self.root/'notice-package'

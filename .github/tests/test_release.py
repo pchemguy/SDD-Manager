@@ -65,7 +65,7 @@ class PackageTests(Contract):
         manifest=b'{"name":"sdd-manager","version":"0.15.0"}\n'
         for name in ('LICENSE','README.md','AGENTS.md','Greenfield Project Prompt Template.md',
                      'SDD-MANAGER.md','AI_DISCLOSURE.md','assets/icon.svg','skills/sample/SKILL.md',
-                     '.codex-plugin/plugin.json','plugin.json','docs/excluded.md'):
+                     'plugin.json','docs/excluded.md'):
             p=self.root/name; p.parent.mkdir(parents=True,exist_ok=True)
             p.write_bytes(manifest if name.endswith('plugin.json') else (name+'\n').encode())
         git('add','.'); git('commit','-qm','fixture'); self.sha=git('rev-parse','HEAD')
@@ -86,11 +86,24 @@ class PackageTests(Contract):
             with self.subTest(changes=changes), self.assertRaises(ValueError):
                 publisher.build_package(self.root,dict(self.data,**changes),self.out)
 
-    def test_mismatched_manifest_stops(self):
-        (self.root/'.codex-plugin/plugin.json').write_text('{}')
-        self.git('add','.'); self.git('commit','-qm','mismatch')
+    def test_obsolete_manifest_is_excluded(self):
+        legacy=self.root/'.codex-plugin/plugin.json'
+        legacy.parent.mkdir(); legacy.write_text('{}')
+        self.git('add','.'); self.git('commit','-qm','obsolete file')
         sha=self.git('rev-parse','HEAD')
-        with self.assertRaises(ValueError): publisher.build_package(self.root,handoff(source=sha,notes_source=sha),self.out)
+        paths=publisher.build_package(self.root,handoff(source=sha,notes_source=sha),self.out)
+        with zipfile.ZipFile(paths['sdd-manager.zip']) as z:
+            self.assertFalse(any('/.codex-plugin/' in name for name in z.namelist()))
+            self.assertIn('sdd-manager/plugin.json',z.namelist())
+
+    def test_legacy_only_package_cannot_replace_root_manifest(self):
+        legacy=self.root/'.codex-plugin/plugin.json'
+        legacy.parent.mkdir(); legacy.write_bytes((self.root/'plugin.json').read_bytes())
+        (self.root/'plugin.json').unlink()
+        self.git('add','-A'); self.git('commit','-qm','legacy only')
+        sha=self.git('rev-parse','HEAD')
+        with self.assertRaises(ValueError):
+            publisher.build_package(self.root,handoff(source=sha,notes_source=sha),self.out)
 
     def test_actual_archive_tampering_stops(self):
         paths=publisher.build_package(self.root,self.data,self.out)
