@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This guide uses a browser-based Tetris project to demonstrate and evaluate SDD Manager's project preparation, phased implementation, and feature campaign workflows.
+This guide uses a browser-based Tetris project to demonstrate and evaluate SDD Manager's project preparation, phased implementation, feature campaign, and checkpoint steering workflows.
 
 The exercise starts with a deliberately short description. The agent should clarify the intended game, develop the governing documents with human review, and implement the accepted scope with verification and Git checkpoints.
 
@@ -40,7 +40,7 @@ The agent should clarify material ambiguities before treating them as requiremen
 
 For this demo, the baseline includes a playable keyboard-controlled game with falling tetrominoes, movement, rotation, collision detection, locking, line clearing, and game-over behavior.
 
-Include **lock delay equal to one full gravity interval** in the baseline.
+Start with **locking on a failed downward movement attempt** in both delivery variants. Reaching a supported position does not itself lock the piece: a subsequent gravity or soft-drop attempt that cannot move it down locks it. Keep the ordinary gravity schedule; landing does not start a fresh lock timer. Successful horizontal movement or rotation does not reset that schedule.
 
 The selected enhancements are:
 
@@ -50,7 +50,18 @@ The selected enhancements are:
 - Wall kicks.
 - Hard drop.
 
-During specification, resolve the details needed to implement and test these mechanics. For example, define when the lock timer starts and resets, how it responds to gravity changes, and whether hard drop locks immediately.
+During specification, resolve the details needed to implement and test these mechanics, including input handling and gravity scheduling. Full-gravity-interval locking is introduced through the steering exercise below.
+
+### Hard-drop policy choices
+
+When preparing the enhancement scope, choose one of these policies and record it in the governing documents:
+
+| Policy | Required behavior |
+| --- | --- |
+| Immediate locking exception | Hard drop moves the piece to its landing position and locks it immediately, regardless of the general locking policy. |
+| General delayed locking policy | Hard drop moves the piece to its landing position and leaves it active under the general locking policy. Initially, it waits for an ordinary failed downward movement attempt; after the locking amendment, it follows the full-interval timer rules. |
+
+For the general delayed policy, finding the landing position during hard drop does not count as a failed downward movement attempt. Hard drop itself does not force locking or restart an already active timer. The choice is a requirement for the trial; the exercise does not require a player-facing policy selector.
 
 Multiplayer, backend leaderboards, and mobile touch controls are outside the selected scope.
 
@@ -58,11 +69,11 @@ Multiplayer, backend leaderboards, and mobile touch controls are outside the sel
 
 During clarification, request:
 
-> Include the playable baseline and all five enhancements in the initial project scope. Plan delivery so that a playable baseline is completed and verified before implementing the enhancements. Keep lock delay in the baseline.
+> Include the playable baseline and all five enhancements in the initial project scope. Plan delivery so that a playable baseline is completed and verified before implementing the enhancements. Start with locking on a failed downward movement attempt. Clarify the selected hard-drop policy when preparing the enhancement requirements.
 
 The governing documents should describe the complete accepted project. The plan should distinguish baseline delivery from enhancement delivery, with meaningful exit conditions.
 
-See [examples/PROJECT.md](examples/PROJECT.md) for a good example of an agent-generated project brief from an earlier trial, produced after interactive clarification selected baseline gameplay plus modern enhancements. Its Canvas and vanilla JavaScript choices illustrate that trial; they are not mandatory for this demo. Although the example groups lock delay with the modern features, this guide includes it in the baseline for both variants.
+See [examples/PROJECT.md](examples/PROJECT.md) for a good example of an agent-generated project brief from an earlier trial, produced after interactive clarification selected baseline gameplay plus modern enhancements. Its Canvas and vanilla JavaScript choices illustrate that trial; they are not mandatory for this demo. The example also includes full-interval lock delay. This guide starts with failed-downward-attempt locking and introduces full-interval locking as a steering amendment, so use the example for its brief structure and scope presentation rather than copying its locking requirement into the initial project.
 
 A two-phase plan is a natural arrangement, but the exercise does not require exactly two phases. Additional phases should have a clear delivery purpose.
 
@@ -78,13 +89,13 @@ Evaluate whether the agent:
 
 During clarification, request:
 
-> Implement only the playable baseline initially, including lock delay. Defer hold, ghost piece, seven-bag randomization, wall kicks, and hard drop to a later feature campaign.
+> Implement only the playable baseline initially, with locking on a failed downward movement attempt. Defer hold, ghost piece, seven-bag randomization, wall kicks, and hard drop to a later feature campaign.
 
 The initial executable scope should contain only the baseline. Deferred enhancements may be recorded as future direction without becoming initial implementation obligations.
 
 After baseline completion, request:
 
-> Open a feature campaign to add hold, ghost piece, seven-bag randomization, wall kicks, and hard drop. Preserve the accepted baseline behavior except where the reviewed feature requirements explicitly amend it.
+> Open a feature campaign to add hold, ghost piece, seven-bag randomization, wall kicks, and hard drop. Clarify the selected hard-drop policy. Preserve the accepted baseline behavior, including any completed steering amendment, except where the reviewed feature requirements explicitly amend it.
 
 Evaluate whether the agent:
 
@@ -103,6 +114,36 @@ Select an implementation range and execution method after preparation is accepte
 
 During implementation, inspect whether task completion records, verification evidence, commits, and enabled GitHub tracking agree. A completed checklist alone does not demonstrate working gameplay.
 
+## Steering exercises
+
+Both exercises apply to either delivery variant. Pause at an implemented and verified task checkpoint while the owning implementation phase or feature campaign remains incomplete. Choose the initial policy before implementation, then request the change after its behavior can be observed. These are amendments to the paused work through [sdd-steer](../../../skills/sdd-steer/SKILL.md).
+
+### Option 1: Switch to full-gravity-interval locking
+
+Use this exercise once baseline locking is implemented. In Variant A, pause before advancing to enhancement work; in Variant B, pause before completing the baseline. It can also be applied later at an eligible implementation checkpoint.
+
+> Use SDD Manager's steering workflow to replace failed-downward-attempt locking with a lock delay equal to one full gravity interval at the current level. Start the timer when a piece first becomes grounded. Horizontal movement, rotation, and unsuccessful downward attempts must not restart or bypass the timer. If the piece becomes airborne, cancel the timer; start a new delay when it becomes grounded again. Snapshot the gravity interval when the timer starts. Preserve the selected hard-drop policy: the immediate exception still locks immediately; the general delayed policy follows these timer rules.
+>
+> Reconcile the governing documents, implementation, tests, and player documentation. Verify, commit, push, and integrate the amendment into the paused implementation branch, then stop before resuming implementation.
+
+### Option 2: Switch the hard-drop locking policy
+
+Use this exercise after hard drop and the selected policy are implemented: during enhancement work in Variant A or during the feature campaign in Variant B. Either direction is valid. State the target policy explicitly and retain the general locking rule currently in effect.
+
+To switch from the immediate exception to the general delayed policy:
+
+> Use SDD Manager's steering workflow to remove hard drop's immediate-locking exception. Hard drop must move the piece to its landing position and leave it active under the current general locking policy. Its landing-position search must not trigger failed-downward-attempt locking. Under full-interval locking, newly grounding a piece starts the normal timer; hard drop must not restart an already active timer. Preserve ordinary gravity and soft-drop locking behavior.
+
+To switch from the general delayed policy to the immediate exception:
+
+> Use SDD Manager's steering workflow to make hard drop an immediate-locking exception. Hard drop must move the piece to its landing position and lock it immediately, including when the piece is already grounded. Preserve the current general locking policy for gravity and soft drop.
+
+Append this boundary to either request:
+
+> Reconcile the governing documents, implementation, tests, and player documentation. Verify, commit, push, and integrate the amendment into the paused implementation branch, then stop before resuming implementation.
+
+Evaluate whether the agent updates the existing requirements and tests coherently, preserves unrelated gameplay, and returns control without automatically continuing the paused work. Record which exercises ran, their order, and the policies before and after each amendment. Switching the hard-drop policy does not require first performing the full-interval amendment.
+
 ## Gameplay verification
 
 Combine automated checks with browser interaction. Include observable checks for:
@@ -110,18 +151,20 @@ Combine automated checks with browser interaction. Include observable checks for
 | Area | Example evidence |
 | --- | --- |
 | Baseline | Movement, rotation, collision, line clearing, and game over behave as specified. |
-| Lock delay | A grounded piece remains movable for the specified interval and locks under the accepted timer rules. |
+| Initial locking | Landing alone leaves the piece active; a failed gravity or soft-drop downward attempt locks it. Movement and rotation preserve the gravity schedule. |
+| Full-interval locking amendment | Grounding starts a full interval; movement, rotation, and failed downward attempts do not restart or bypass it. Becoming airborne cancels it; grounding again starts a new interval. |
 | Hold | Storage, exchange, and reuse restrictions follow the specification. |
 | Ghost piece | The preview matches the landing position without changing game state. |
 | Seven-bag | Each generated bag contains all seven tetromino types exactly once. |
 | Wall kicks | Defined rotation cases succeed or fail according to the accepted rules. |
-| Hard drop | Keyboard input moves the piece to its landing position and applies the specified locking behavior. |
+| Hard drop | Keyboard input moves the piece to its landing position. The immediate exception locks it immediately; the general delayed policy leaves it active under the current general rule. Check both a falling piece and an already grounded piece. |
+| Hard-drop policy amendment | Before/after checks demonstrate the requested policy switch and unchanged ordinary locking. Under full-interval locking, a repeated hard drop does not extend an existing timer. |
 
 Exercise controls through the actual browser interface as well as through engine tests.
 
 ## Recording results
 
-Record the SDD Manager version, agent/model, execution environment, other active plugins or skills, relevant prior context, chosen variant, and material human interventions.
+Record the SDD Manager version, agent/model, execution environment, other active plugins or skills, relevant prior context, chosen delivery variant, hard-drop policy, steering exercises and their checkpoints, and material human interventions.
 
 Separate workflow findings from game defects and environment failures. Report verification that actually ran, including blocked or incomplete checks.
 

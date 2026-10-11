@@ -13,7 +13,7 @@
 
 ## Accepted scope
 
-Preserve the accepted Tetris demo/test guide, including the short seed description, clarification criteria, baseline lock delay, five selected enhancements, phased delivery and feature expansion variants, human checkpoints, gameplay checks, and contextual result recording. Keep the guide a draft for further development.
+Maintain the accepted Tetris demo/test guide, including the short seed description, clarification criteria, five selected enhancements, phased delivery and feature expansion variants, human checkpoints, gameplay checks, and contextual result recording. The accepted V-003 scope starts both variants with failed-downward-attempt locking, offers two hard-drop policies, and adds full-interval and hard-drop-policy steering exercises. Preserve the supplied earlier trial brief unchanged. Keep the guide a draft for further development.
 
 ## Ordered actions
 
@@ -21,6 +21,7 @@ Preserve the accepted Tetris demo/test guide, including the short seed descripti
 | --- | --- | --- | --- |
 | V-001 | Add [the guide](../../../demo/tetris/README.md), a root README navigation link, and this campaign's plan/report/index entry. | Compare with the accepted draft; inspect Markdown spacing and new local links; run `git diff --check`; confirm the owned file set and preservation of closed campaign packages. | Draft persisted; verification is recorded in the report. |
 | V-002 | Add the human-supplied [example PROJECT.md](../../../demo/tetris/examples/PROJECT.md) and reference it under Variant A as an agent-generated brief from an earlier trial. | Preserve supplied content except trailing whitespace; check relative links and Markdown structure; clarify example-specific technology and lock-delay grouping without rewriting the historical brief. | Accepted on 2026-10-11; checkpoint verification recorded in the report. |
+| V-003 | Revise the guide to start with failed-downward-attempt locking, define immediate-exception and general-delayed hard-drop policies, and supply two checkpoint steering exercises for either delivery variant. | Check all initial prompts, current-policy interactions, timing/reset rules, eligible checkpoints, verification criteria and local links; verify the supplied example is unchanged and closed campaign packages are preserved. | Accepted on 2026-10-11; verification recorded in the report. |
 
 ## Persistence and stopping boundary
 

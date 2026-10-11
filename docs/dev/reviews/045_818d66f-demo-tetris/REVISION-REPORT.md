@@ -28,6 +28,18 @@ Variant A now identifies it as a good example of an agent-generated brief after 
 
 The preceding V-001 checkpoint `e033edb09b56c802a98300be03c6e0029e8da545` was pushed and exact remote identity verified. V-002 is a separate scoped documentation checkpoint. The scoped Python assertion check passed for supplied-content fidelity, links, Markdown structure, whitespace, and the exact four-file change set; `git diff --check` passed. Exact remote readback establishes publication separately without claiming game execution.
 
+## V-003 — Initial locking and two steering exercises
+
+On 2026-10-11, the human accepted starting with locking on a failed downward movement attempt, two hard-drop policies, and two steering options. Updated the guide's baseline, both delivery prompts, feature prompt, example-context note, verification table and result recording. Added explicit hard-drop policy choices and copyable steering requests in both directions.
+
+Initial locking uses the ordinary gravity schedule and failed gravity/soft-drop attempts. Hard drop either locks immediately as an exception or leaves the piece active under the current general rule; landing-position search does not itself trigger failed-attempt locking. Full-interval steering starts a timer on grounding, snapshots the interval, does not reset it for movement/rotation/failed downward attempts, and cancels it while airborne. The immediate hard-drop exception survives that amendment unless separately changed. General delayed hard drop does not restart an existing timer.
+
+Both exercises apply to either delivery variant at an implemented/verified checkpoint while the owning phase or feature campaign remains incomplete. Hard-drop steering requires implemented hard drop and can run with either general locking rule. The supplied earlier trial PROJECT remains byte-identical; its different lock-delay scope is explained in the guide rather than rewritten.
+
+The scoped Python check passed for policy/exercise coverage, current initial prompts, relative links, Markdown structure, exact owned paths and byte preservation of the supplied example. `git diff --check` passed. Manual composition review checked both policy directions, checkpoint eligibility and the stop-before-resumption boundary. These are documentation checks, not executed steering trials or gameplay tests.
+
+V-002 checkpoint `7a4a79b0c2a887c2fc6095e7ddd7711713c24889` was pushed and verified by exact remote readback. V-003 updates only the guide and this active campaign's plan/report; no closed campaign package changed. Commit and exact remote readback establish V-003 publication separately.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
