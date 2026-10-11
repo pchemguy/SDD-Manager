@@ -109,13 +109,21 @@ During clarification, request:
 
 > [!NOTE] Prompt
 >
-> Implement only the playable baseline initially, with locking on a failed downward movement attempt. Defer hold, ghost piece, seven-bag randomization, wall kicks, and hard drop to a later feature campaign.
+> Create a browser-based Tetris game with a playable classical baseline. Modern enhancements are outside the project scope. Adopt locking on a failed downward movement attempt as the general locking policy.
 
 After completing and verifying the baseline, open the feature campaign with this request:
 
 > [!NOTE] Prompt
 >
-> Open a feature campaign to add hold, ghost piece, seven-bag randomization, wall kicks, and hard drop. Clarify the selected hard-drop policy. Preserve the accepted baseline behavior, including any completed steering amendment, except where the reviewed feature requirements explicitly amend it.
+> Open a feature campaign to add these modern enhancements:
+>
+> - Hold piece.
+> - Ghost piece.
+> - 7-bag piece randomization.
+> - Wall kicks.
+> - Hard drop.
+>
+> Next, ask me whether hard drop should lock the piece immediately or follow the general locking policy.
 
 Evaluate whether the agent:
 

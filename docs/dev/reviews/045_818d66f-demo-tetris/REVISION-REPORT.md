@@ -68,6 +68,12 @@ On 2026-10-11, the human replaced Variant A's procedural prompt with a direct ga
 
 The scoped Python check passed for prompt scope, all five enhancements, the next policy question, exact `NOTE` callout, preservation of the other seven prompt blocks and unchanged Variant B/steering/verification text. Local links resolve; `git diff --check` passed. No runtime or rendered-client check is claimed. V-006 checkpoint `02cbfb00fbd118d16e48241fea217e85e3c5ab38` was pushed and exact remote identity verified before this amendment.
 
+## V-008 — Direct baseline and feature prompts
+
+On 2026-10-11, the human supplied replacements for Variant B's baseline and feature prompts. The polished baseline request creates a playable browser-based classical Tetris game, excludes modern enhancements from the project scope and adopts failed-downward-attempt general locking. The feature request opens a campaign for the five listed modern enhancements and explicitly asks next whether hard drop locks immediately or follows the general policy.
+
+Both retain the requested `NOTE` / `Prompt` callouts; the feature list has quoted blank lines before and after it. The scoped Python check passed for replacement scope, all five list items, next-question wording, callout/list spacing, six unchanged prompt blocks and resolving local links. `git diff --check` passed. No runtime or rendered-client check is claimed. V-007 checkpoint `4fb9146dad841a4a55eef723aaf856c07b4687af` was pushed and exact remote identity verified before this amendment.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
