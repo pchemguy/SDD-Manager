@@ -14,6 +14,8 @@ Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development
 
 For a new project, copy the [Greenfield Project Prompt Template](<Greenfield Project Prompt Template.md>) and replace its project, repository and token placeholders. SDD Manager supplies the startup procedures and workflow checkpoints.
 
+The draft [Tetris demo and test guide](https://github.com/pchemguy/SDD-Manager/blob/revision/045_818d66f-demo-tetris/docs/demo/tetris/README.md) illustrates phased project delivery and a baseline followed by a feature campaign.
+
 Load the package using your agent client's supported plugin mechanism. The package uses the Agent Plugins 1.0 root `plugin.json` manifest, with OpenAI presentation metadata under `extensions.com.openai.interface`, 15 skills under `skills/` and bundled icons under `assets/`. Manifest paths resolve from the repository/package root. The workflows require an agent with access to project files and the tools needed for the requested work.
 
 - **Project changes:** Use an existing, eligible Git worktree with applicable project instructions. Repository initialization is outside the plugin's scope.
