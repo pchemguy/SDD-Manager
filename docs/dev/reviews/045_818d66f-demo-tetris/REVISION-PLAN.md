@@ -20,6 +20,7 @@ Preserve the accepted Tetris demo/test guide, including the short seed descripti
 | Action | Outcome and owners | Verification | State |
 | --- | --- | --- | --- |
 | V-001 | Add [the guide](../../../demo/tetris/README.md), a root README navigation link, and this campaign's plan/report/index entry. | Compare with the accepted draft; inspect Markdown spacing and new local links; run `git diff --check`; confirm the owned file set and preservation of closed campaign packages. | Draft persisted; verification is recorded in the report. |
+| V-002 | Add the human-supplied [example PROJECT.md](../../../demo/tetris/examples/PROJECT.md) and reference it under Variant A as an agent-generated brief from an earlier trial. | Preserve supplied content except trailing whitespace; check relative links and Markdown structure; clarify example-specific technology and lock-delay grouping without rewriting the historical brief. | Accepted on 2026-10-11; checkpoint verification recorded in the report. |
 
 ## Persistence and stopping boundary
 

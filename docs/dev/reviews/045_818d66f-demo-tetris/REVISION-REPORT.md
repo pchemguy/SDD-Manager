@@ -20,6 +20,14 @@ On 2026-10-11, inspected the accepted draft against the added guide and ran a sc
 
 The final checkpoint check additionally resolves links to this report and inspects the staged five-file set before commit. Git commit identity and exact remote readback establish publication outside this same-commit report; no self-referential commit SHA or premature push result is claimed here.
 
+## V-002 — Agent-generated project brief example
+
+On 2026-10-11, the human requested adding the supplied earlier trial brief and linking it from the corresponding scenario. Added [examples/PROJECT.md](../../../demo/tetris/examples/PROJECT.md), using the standard PROJECT filename instead of the prompt's `RPOJECT.md` transposition. Preserved the supplied wording, headings, and four-space list nesting; removed the supplied trailing space.
+
+Variant A now identifies it as a good example of an agent-generated brief after interactive clarification. The guide explains that Canvas/vanilla JavaScript are example choices and that lock delay remains in this demo's baseline despite its grouping in the supplied brief.
+
+The preceding V-001 checkpoint `e033edb09b56c802a98300be03c6e0029e8da545` was pushed and exact remote identity verified. V-002 is a separate scoped documentation checkpoint. The scoped Python assertion check passed for supplied-content fidelity, links, Markdown structure, whitespace, and the exact four-file change set; `git diff --check` passed. Exact remote readback establishes publication separately without claiming game execution.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
