@@ -116,3 +116,7 @@ Refs owner/repo#123
 
 ```
 
+
+## Release commit message
+
+Use for the release commit selected by manage's [release commit/tag boundary](../../sdd-manage/references/git-workflows.md#release-commit-and-tag). Use a concise `Release <version/tag>` subject, a blank line, then the exact finalized complete release-message Markdown as the body. Supply the message using a file/structured argument with intentional newline handling, without shell interpolation; preserve Markdown bytes rather than applying task/campaign-summary formatting. No task ID is invented. The same finalized body is passed to the GitHub publisher. Version/source identity and body agreement are verified by the workflow owners; drafting does not publish. Do not add a provider-success claim before actual publication.

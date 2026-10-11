@@ -14,7 +14,27 @@ For changes since a release, obtain the validated baseline, exact target, comple
 
 Incremental editing uses only the pending inventory/summaries and necessary gap evidence against the existing curated body. Preserve human edits and earlier cuts; do not repopulate minor bullets by replaying the full history. Remove or revise claims invalidated by later reverts. An unchanged target retains the existing body; no substantive range yields no invented highlights. Return the ready body to forge before it advances the saved coverage watermark.
 
-Assemble final notes from **only the Markdown body**, omitting YAML front matter and raw logs. Preserve accepted human installation/version/compatibility sections and insert curated highlights once; inspect existing release notes before updating, and avoid duplication with provider-generated notes. An explicit source advance requires a fresh incremental update before publication. Report draft path/baseline/coverage and pending transfer separately from publication.
+Assemble final notes from **only the Markdown body**, omitting YAML front matter and raw logs. Preserve accepted human installation/version/compatibility sections and insert curated highlights once; inspect existing release notes before updating, and avoid duplication with provider-generated notes. An explicit source advance requires a fresh incremental update before publication. Report draft path/baseline/coverage and pending transfer separately from publication. For complete-message preparation, assemble the broader body under the section below; the highlights checkpoint supplies its changes, not the entire message.
+
+## Complete release message
+
+For complete-message preparation, receive the current validated Git highlights and authoritative ancillary inputs through forge's [release-message workflow](../../sdd-forge/references/release-message.md). Assemble the complete ready-to-use Markdown body rather than returning only changes. The narrower collect-highlights request still returns curated highlights. An explicitly editing-only request stays within supplied-text scope.
+
+Use the established project template, or adapt this structure to actual content:
+
+| Section | Content |
+| --- | --- |
+| Release overview | Brief focus and significance; version/channel only when established. |
+| Compatibility and upgrade notes | Consequential breaking changes, requirements, deprecations and necessary user actions early. |
+| Highlights | Most important delivered user outcomes. |
+| Other changes | Additional worthwhile details under applicable Added, Changed, Deprecated, Removed, Fixed or Security categories. |
+| Installation and downloads | Verified package variants, installation/update guidance and asset/checksum links; distinguish intended assets from published downloads. |
+| Known issues and limitations | Relevant supported unresolved issues and evidence/support boundaries. |
+| References and acknowledgments | Optional comparison/docs/discussion links and supported contributor attribution. |
+
+Omit empty/inapplicable sections; do not duplicate highlights in other changes or impose bullet quotas. Preserve applicable accepted human sections and editorial cuts, correcting obsolete facts or reverted outcomes. Do not invent version/date/readiness, compatibility or installation guarantees, asset URLs, contributors or verification claims. A release overview is prose; GitHub's separate title does not require a repeated body heading. The section order may follow a project template, keeping consequential user actions visible.
+
+Return final UTF-8 body-only Markdown to forge/manage for validation and atomic persistence at root `RELEASE-NOTES.md` by default. YAML coverage metadata stays in the internal checkpoint. On repetition assemble a replacement from fresh coverage and verified ancillary facts; unchanged facts/body do not justify rewriting. Return source association and evidence limits separately from the public body. Preparation and editorial assembly authorize no publication. The complete-message file remains after publication; only the separately owned internal highlights checkpoint is eligible for verified-consumption cleanup.
 
 ## Release outcome
 
@@ -24,7 +44,7 @@ Assemble final notes from **only the Markdown body**, omitting YAML front matter
 | State | Draft, prerelease or published stable; actual latest selection, not assumed ordering. |
 | Execution | Direct publication or workflow ID/ref/run URL and observed conclusion. |
 | Assets | Expected and observed filenames, sizes/hashes/checksum URLs, tag-specific links and applicable stable latest links. |
-| Highlights | Baseline/tag, analyzed source, actual final-body readback, and retained/removed owned draft with its reason. |
+| Highlights | Baseline/tag, analyzed source, actual final-body readback, and retained complete-message path and retained/removed owned internal highlights checkpoint with its reason. |
 | Verification | Actual build/package checks, CI conclusions, metadata readback and downloaded-byte verification with their separate limits. |
 | Recovery | Successful effects, pending/unknown writes, conflicts and next supported action. |
 
