@@ -74,6 +74,12 @@ On 2026-10-11, the human supplied replacements for Variant B's baseline and feat
 
 Both retain the requested `NOTE` / `Prompt` callouts; the feature list has quoted blank lines before and after it. The scoped Python check passed for replacement scope, all five list items, next-question wording, callout/list spacing, six unchanged prompt blocks and resolving local links. `git diff --check` passed. No runtime or rendered-client check is claimed. V-007 checkpoint `4fb9146dad841a4a55eef723aaf856c07b4687af` was pushed and exact remote identity verified before this amendment.
 
+## V-009 — Multi-line clearing bonus
+
+On 2026-10-11, the human requested a concise multi-line clearing bonus in the current prompts, explicitly without scoring specifics. Added "Include a scoring bonus for clearing multiple lines at once." to both initial game prompts. No point values, scoring formula or level convention is supplied.
+
+The scoped Python check passed for the exact sentence in both prompts, absence of scoring specifics, preservation of the other six prompts and resolving local links. `git diff --check` passed. V-008 checkpoint `0ad03c2badda26eea9ff63768463a3f9cdaa1505` was pushed and exact remote identity verified before this amendment. The campaign remains open; no live game or trial execution is claimed.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.

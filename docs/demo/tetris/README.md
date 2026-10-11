@@ -85,6 +85,8 @@ Use this prompt as an initial project description in the greenfield template or 
 > - Wall kicks.
 > - Hard drop.
 >
+> Include a scoring bonus for clearing multiple lines at once.
+>
 > Adopt locking on a failed downward movement attempt as the general locking policy. Next, ask me whether hard drop should lock the piece immediately or follow the general locking policy.
 
 See [examples/PROJECT_phased-project.md](examples/PROJECT_phased-project.md) for a good example of an agent-generated project brief from an earlier trial. Interactive clarification established the combined baseline and enhancement scope, which the brief presents through the target audience, goals, and non-goals. Its Canvas and vanilla JavaScript choices illustrate that trial; they are not mandatory for this demo.
@@ -109,7 +111,11 @@ During clarification, request:
 
 > [!NOTE] Prompt
 >
-> Create a browser-based Tetris game with a playable classical baseline. Modern enhancements are outside the project scope. Adopt locking on a failed downward movement attempt as the general locking policy.
+> Create a browser-based Tetris game with a playable classical baseline. Modern enhancements are outside the project scope.
+>
+> Include a scoring bonus for clearing multiple lines at once.
+>
+> Adopt locking on a failed downward movement attempt as the general locking policy.
 
 After completing and verifying the baseline, open the feature campaign with this request:
 
