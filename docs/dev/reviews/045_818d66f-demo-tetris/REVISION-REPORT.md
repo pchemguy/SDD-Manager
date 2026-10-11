@@ -144,6 +144,12 @@ The cap remains explicitly proposed for preparation confirmation. Spending time,
 
 The scoped Python check passed for reward/cap, any-piece activation and locking lifetime, white rendering, valid drop/ghost/lock constraints, preparation questions, release boundary, eleven unchanged prompts, heading spacing and local links. `git diff --check` passed. V-017 checkpoint `9c944f1f8d1d96dcb1f53c67705159fe8a8d3bbc` was published and exact remote identity verified after the human's explicit push continuation. The campaign remains open; no penetrator gameplay or feature/release execution is claimed.
 
+## V-019 — Penetrator inventory symbols
+
+On 2026-10-11, the human requested side-panel symbols showing available penetrators, such as lightning bolts. Added one symbol per available bonus to the guide and feature prompt, examples for one/two/three bonuses, updates on earning/spending and inventory-count verification. The gameplay rules are unchanged.
+
+The scoped Python check passed for panel symbols, earned/spent updates, prompt coverage, count checks and preservation of earlier scenarios. `git diff --check` passed. V-018 checkpoint `d603cbe2c02237d8159fc566154e69a501816e56` was pushed and exact remote identity verified before this amendment. No runtime or rendered UI check is claimed.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
