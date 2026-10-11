@@ -17,6 +17,8 @@ The human requested preparing this plan. Publish the plan and navigation, then s
 | R-003 | Add release-boundary manifest conformance validation | Current manifest already conforms; preserve `extensions.com.openai.interface` |
 | R-004 | Extend TextStats release acceptance coverage; separately specify client verification | Existing release behavior is already defined. Add test material and evidence, not duplicated production workflow implementation |
 
+The TextStats acceptance coverage extension is a required component change in this revision scope: V-004 and V-005 implement the scenarios, consumer requests, assessor contracts, harness support, support tests and documentation. Component completion requires static validation and local support/regression checks. Running those scenarios with consumer agents, an installed client or a live provider is a separate acceptance campaign and is not a prerequisite for completing or integrating this component extension. Record that execution as deferred until selected.
+
 All findings remain Open until their objective rechecks have actual evidence. R-004 may be partially addressed by implemented scenarios while consumer or installed-client execution remains Blocked/Not run; test definitions and support-suite passes do not close the evidence gap.
 
 ## Ordered revision actions
