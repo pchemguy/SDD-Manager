@@ -136,6 +136,14 @@ Restore/apply wording distinguishes saved cookie settings from URL-supplied sett
 
 The scoped Python check passed for the implemented subset, three placeholder selections, existing support states, six choices, change/save/update rules, restoration/default/precedence semantics, prompt format, ten unchanged prompts, headings and links. `git diff --check` passed. V-016 checkpoint `011615f8631ecff19d71f41a443288e57f576af6` was pushed and exact remote identity verified before this amendment. The campaign remains open; no runtime check is claimed.
 
+## V-018 — Penetrator-bonus feature candidate
+
+On 2026-10-11, the human proposed one penetrator bonus per four-line clear, accumulation up to a suggested three, hotkey activation for any piece until locking, all-white rendering reserved from regular pieces, all-the-way hard drop, matching ghost projection and non-overlapping final placement. Added the candidate, direct prompt, release boundary and verification row. The hard-drop target is expressed as the lowest valid landing position rather than an overlapping bottom placement; existing occupied cells remain intact.
+
+The cap remains explicitly proposed for preparation confirmation. Spending time, repeated activation keys, hold interaction, temporary overlap during locking attempts, descent/rotation and selected locking-policy interaction remain preparation decisions. These must preserve legal non-overlapping final placement.
+
+The scoped Python check passed for reward/cap, any-piece activation and locking lifetime, white rendering, valid drop/ghost/lock constraints, preparation questions, release boundary, eleven unchanged prompts, heading spacing and local links. `git diff --check` passed. V-017 checkpoint `9c944f1f8d1d96dcb1f53c67705159fe8a8d3bbc` was published and exact remote identity verified after the human's explicit push continuation. The campaign remains open; no penetrator gameplay or feature/release execution is claimed.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.

@@ -240,6 +240,26 @@ During preparation, clarify parameter names and accepted values, handling of inv
 
 Verify each option independently and their combined behavior. Cover partial URLs, conflicting cookie/URL values, explicit defaults, omitted values, cookie and URL updates after panel changes, reloads and the accepted invalid-value handling.
 
+### Penetrator bonuses
+
+The next feature candidate rewards clearing four lines at once with one penetrator bonus. The player can accumulate bonuses up to a proposed maximum of three and activate a bonus for any active piece with a hotkey. The activated piece can pass through occupied cells until it locks, allowing it to reach spaces below blocking cells.
+
+Render the activated piece entirely white and keep white out of the regular piece palette. Hard drop passes through obstructions to the lowest valid landing position, and the ghost previews that same position. A valid final position must keep every cell of the piece within the board and free of overlap with occupied cells; passing through the stack does not remove existing cells.
+
+This campaign follows the playable game and can be applied with either delivery variant. Completing and verifying the bonus mechanic provides a further release boundary.
+
+> [!NOTE] Prompt
+>
+> Open a feature campaign to add penetrator bonuses to the Tetris game. Award one bonus whenever the player clears four lines at once, and allow up to three bonuses to accumulate.
+>
+> Let the player activate a bonus for any active piece by pressing a hotkey. The activated piece can pass through occupied cells until it locks. Render it entirely white; do not use white for regular pieces.
+>
+> For an activated piece, hard drop must pass through blocking cells to the lowest valid landing position, and the ghost piece must show that position. The final locked piece must remain within the board and must not overlap occupied cells. Passing through occupied cells must not destroy them.
+
+The prompt uses three as the proposed cap; confirm or adjust it during preparation. Also clarify the activation key, when activation spends a bonus, repeat-key behavior, interaction with hold, and what happens when locking is attempted while the active piece overlaps occupied cells. Define how normal descent and rotation behave during penetration and how hard drop interacts with the selected locking policy. These details must preserve the non-overlapping final-position requirement.
+
+Verify four-line awards and the cap, activation with and without an available bonus, the white palette distinction, and deactivation when the piece locks. Use boards with blocking layers and empty spaces beneath them to verify deepest valid hard-drop placement and matching ghost projection. Check that locked pieces never overlap occupied cells, the existing stack remains intact, and unactivated pieces retain ordinary collision behavior.
+
 ## Human review and implementation checkpoints
 
 Follow SDD Manager's document review checkpoints as each preparation artifact is produced. Review the substantive decisions, unresolved questions, and readiness for the next stage.
@@ -304,6 +324,7 @@ Combine automated checks with browser interaction. Include observable checks for
 | Hard-drop policy amendment | Before/after checks demonstrate the requested policy switch and unchanged ordinary locking. Under full-interval locking, a repeated hard drop does not extend an existing timer. |
 | Configuration panel feature | Controls apply the selected modes and disable the selected actions; all four locking-policy combinations work. Settings are not retained after reload. |
 | Semi-persistent configuration feature | Verify cookies-only and URL-only behavior; when combined, explicit URL values override and update cookies, saved cookies fill omitted parameters, and defaults fill settings absent from both. Explicit defaults still override cookies. |
+| Penetrator bonus feature | Four-line clears award bonuses up to the accepted cap; activated white pieces pass through the stack, hard drop and ghost agree on the lowest valid position, and locking never overlaps occupied cells. |
 
 Exercise controls through the actual browser interface as well as through engine tests.
 
