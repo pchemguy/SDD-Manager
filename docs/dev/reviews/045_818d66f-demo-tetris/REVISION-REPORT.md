@@ -88,6 +88,14 @@ The midline-spanning projection case is explicitly left for feature-preparation 
 
 The scoped Python check passed for candidate scope, prerequisite, release boundary, overlap clarification, prompt format, preservation of all eight existing prompts, heading spacing and resolving local links. `git diff --check` passed. No game, feature campaign or release was executed. V-009 checkpoint `b8fffa0b6ba04e9da860dfb2382b3cb32324803c` was pushed and exact remote identity verified before this amendment.
 
+## V-011 — Non-persistent configuration panel candidate
+
+On 2026-10-11, the human proposed a side panel with six configuration positions, possibly delivered as one feature per position. Added the candidate with ghost hide/dynamic/show, hard-drop on/off, next-preview on/off, hard-drop general/immediate locking, general failed-attempt/full-interval locking and hold on/off, preserving the requested order. The guide offers suitable choice/toggle controls and a concise six-item feature prompt with non-persistence across page reloads.
+
+Delivery can use one campaign or a campaign per setting, creating the panel with the first setting and providing a possible release boundary per completed campaign. Missing capabilities or alternate rules are introduced in the relevant setting campaign rather than assumed present. Defaults, effective timing, active-piece policy changes, in-page restart behavior, inactive hard-drop policy UI and an already held piece remain preparation clarification points. Verification covers controls, disabled actions, preview modes, four locking-policy combinations and reload behavior.
+
+The scoped Python check passed for six settings/choices, session-only scope, split delivery, dependencies, release boundaries, clarification/check criteria, numbered prompt spacing, exact `NOTE` format, preservation of the nine existing prompts, headings and local links. `git diff --check` passed. This adds guide content, not implemented settings or executed feature/release trials. V-010 checkpoint `6ccef730f33bd253aeb3add8e5414d157f7f95d5` was pushed and exact remote identity verified before this amendment.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.

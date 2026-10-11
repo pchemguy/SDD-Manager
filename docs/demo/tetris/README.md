@@ -154,6 +154,44 @@ Run this campaign after ghost-piece support is implemented and verified: after t
 
 Verify visibility changes in both directions as the projected landing position crosses the midline, including the accepted overlap rule. Check that hiding the preview does not change the landing calculation, piece movement or hard-drop behavior.
 
+### Non-persistent configuration panel
+
+The next feature candidate adds a side panel for configuring gameplay and preview features during the current page session. Settings are not saved across page reloads. The panel exposes these controls:
+
+| Setting | Choices | Suitable control |
+| --- | --- | --- |
+| Ghost piece | Hide; hide dynamically in the top half; always show | Three-way choice |
+| Hard drop | On; off | Toggle |
+| Next-piece preview | On; off | Toggle |
+| Hard-drop locking policy | General; immediate | Two-way choice |
+| General locking policy | Failed downward movement attempt; one full gravity interval | Two-way choice |
+| Hold piece | On; off | Toggle |
+
+The general hard-drop option follows the selected general locking rule; the immediate option locks on hard drop regardless of that rule. Ghost visibility choices affect its display. Turning off hard drop or hold disables the corresponding gameplay action.
+
+This can be delivered as one feature campaign or as a campaign per setting, in the order above. For separate campaigns, introduce the panel with the first setting, then extend it with each subsequent control. Each completed and verified campaign provides a possible release boundary. Implement any required capability or alternative policy that is not already available as part of its setting's campaign; this includes next-piece preview if the initial game omitted it.
+
+During preparation, clarify defaults, when changes take effect, behavior when changing a policy for an active piece, and how settings behave across an in-page game restart. Also clarify the presentation of the hard-drop locking control while hard drop is off and the treatment of an already held piece when hold is disabled.
+
+For a single campaign covering the panel:
+
+> [!NOTE] Prompt
+>
+> Open a feature campaign to add a side panel with non-persistent configuration controls:
+>
+> 1. Ghost piece: hide, hide dynamically in the top half, or always show.
+> 2. Hard drop: on or off.
+> 3. Next-piece preview: on or off.
+> 4. Hard-drop locking policy: general or immediate.
+> 5. General locking policy: on a failed downward movement attempt or after one full gravity interval.
+> 6. Hold piece: on or off.
+>
+> Keep settings within the current page session; do not persist them across page reloads.
+
+For a campaign per setting, request only the selected setting and its choices, adding it to the existing panel or creating the panel for the first setting. Retain the same non-persistence requirement.
+
+Verify each control through the browser interface and its effect on gameplay or previews. Check all four combinations of the two locking-policy controls, disabled hard-drop/hold actions, ghost visibility modes, next-piece preview visibility, and restored defaults after a reload. Apply the accepted active-piece and restart rules when checking changes during play.
+
 ## Human review and implementation checkpoints
 
 Follow SDD Manager's document review checkpoints as each preparation artifact is produced. Review the substantive decisions, unresolved questions, and readiness for the next stage.
@@ -216,6 +254,7 @@ Combine automated checks with browser interaction. Include observable checks for
 | Wall kicks | Defined rotation cases succeed or fail according to the accepted rules. |
 | Hard drop | Keyboard input moves the piece to its landing position. The immediate exception locks it immediately; the general delayed policy leaves it active under the current general rule. Check both a falling piece and an already grounded piece. |
 | Hard-drop policy amendment | Before/after checks demonstrate the requested policy switch and unchanged ordinary locking. Under full-interval locking, a repeated hard drop does not extend an existing timer. |
+| Configuration panel feature | Controls apply the selected modes and disable the selected actions; all four locking-policy combinations work. Settings are not retained after reload. |
 
 Exercise controls through the actual browser interface as well as through engine tests.
 
