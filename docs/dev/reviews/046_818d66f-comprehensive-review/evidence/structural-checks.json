@@ -1,0 +1,30 @@
+{
+  "source": "818d66f6baf8e3a324d29f3430d3bac3278f0dd2",
+  "current_files": 270,
+  "package": {
+    "files": 133,
+    "sha256": "d73bfd770f03453dff24929e392c7842d9f40ec0076d429b904634688c323005",
+    "schema_sha256": "0a4aad95ce337878ad38802ebf0daa3fde76abe3f65400c86bcbb1ec0b3ab883",
+    "schema_errors": [],
+    "assets_present": true,
+    "source_members_match": true
+  },
+  "local_links": 567,
+  "link_issues": [
+    {
+      "from": "skills/sdd-manage/references/repository-bootstrap.md",
+      "target": "SDD-MANAGER.md",
+      "issue": "missing"
+    },
+    {
+      "from": "skills/sdd-manage/references/repository-bootstrap.md",
+      "target": "AI_DISCLOSURE.md",
+      "issue": "missing"
+    }
+  ],
+  "skill_entries": 15,
+  "limits": "Inline Markdown links outside fenced examples; anchor slug checker is conservative; remote links and client loading are not executed.",
+  "manual_link_adjudication": {
+    "repository-bootstrap.md": "Both flagged paths occur inside inline-code README text to copy into the target project. They are intentional examples, not package reference links; no confirmed broken local links."
+  }
+}

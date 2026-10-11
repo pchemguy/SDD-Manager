@@ -1,0 +1,1681 @@
+{
+  "source": "818d66f6baf8e3a324d29f3430d3bac3278f0dd2",
+  "current": [
+    {
+      "path": ".github/RELEASE-HANDOFF.md",
+      "bytes": 4404,
+      "sha256": "d23364189f9e45a21ef0d0570990b8bae10aad0890285de2f6f5089dff4e591a"
+    },
+    {
+      "path": ".github/scripts/release.py",
+      "bytes": 17006,
+      "sha256": "f51f928da2b0a7f35b087c31411c4d08ef607f7de502f3dcb7368e9d4b8bd97d"
+    },
+    {
+      "path": ".github/tests/test_release.py",
+      "bytes": 15802,
+      "sha256": "f13231ea134eb9c767cd216f2e63430bfe92c13ad4d74859c9f20d54c8d2c6ca"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "bytes": 3098,
+      "sha256": "64b52d5613b5b680af06d8c4527f2b2e38c5334e7e45b36acdf1745de52dfa3c"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 23,
+      "sha256": "32096350c3adb1d2f99b10f4da22602225e3a8b21c1189ba0b4fb6467b0c4aa9"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 4590,
+      "sha256": "7943a64cb3f281ce484317c7c35c29f8252da13a84a3e81061489c7949b746e7"
+    },
+    {
+      "path": "AI_DISCLOSURE.md",
+      "bytes": 1192,
+      "sha256": "09411dc61f4966efabe8e821f2270c768baf5b96f4fd4587eb5c05233de7ffea"
+    },
+    {
+      "path": "Greenfield Project Prompt Template.md",
+      "bytes": 1599,
+      "sha256": "852c666018f223c49cc4732af5f1a1bf8db38061114721b9dc738ec702ec9617"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1065,
+      "sha256": "230ef093b2d68d0f37130d47064b1aff673c41830a15513801e0cc089e742ed2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 42355,
+      "sha256": "e2ba6fbc7ffea146821e49fec75e399e87cc60650e20cf3a200dd2caf15d7873"
+    },
+    {
+      "path": "SDD-MANAGER.md",
+      "bytes": 683,
+      "sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf"
+    },
+    {
+      "path": "acceptance/textstats/AGENTS.md",
+      "bytes": 4549,
+      "sha256": "78cabd1f4aefcd6d022541cdd93d4637bebf33f67d83ba1b02dc7cce4ee4bdc2"
+    },
+    {
+      "path": "acceptance/textstats/DIAGNOSTICS.md",
+      "bytes": 8866,
+      "sha256": "36022224709a6c947609b41a2936287d286ed85f36fbe36a2128d9c6773c6e14"
+    },
+    {
+      "path": "acceptance/textstats/EXECUTION.md",
+      "bytes": 13791,
+      "sha256": "9a451a2acd559078ecec3d30d785df35bf95b9ebbec9fed95461e96c9e81afa7"
+    },
+    {
+      "path": "acceptance/textstats/OBJECTIVES.md",
+      "bytes": 4545,
+      "sha256": "00d8bf95bce0916840433fa25a2e732f865fd9345a00933fc568630a21a70e06"
+    },
+    {
+      "path": "acceptance/textstats/README.md",
+      "bytes": 7419,
+      "sha256": "e858bbb56b0f5a29648a4c905c7a7d09c0141275c8d13a376a25e97d2152f82c"
+    },
+    {
+      "path": "acceptance/textstats/RECOVERY.md",
+      "bytes": 10045,
+      "sha256": "b7b26651f90d2d62f8e74beebc026bac765f41f6914b3fc4f5c6851c2f8a6cb4"
+    },
+    {
+      "path": "acceptance/textstats/SCENARIO.md",
+      "bytes": 8028,
+      "sha256": "95e87cd628f944b85f983a48a51385b264e5dca0e1a54e2dc183124099483c32"
+    },
+    {
+      "path": "acceptance/textstats/SETUP.md",
+      "bytes": 13242,
+      "sha256": "f14588d9137574672d7c65937dda07dbb0400db39fab94aba88bf0c2d31baf6a"
+    },
+    {
+      "path": "acceptance/textstats/TRIAL-CONTROLS.md",
+      "bytes": 3326,
+      "sha256": "b60efe5627d577e946d8a378c6b26a9e335ce2d96fb755a6e846ad70b7f4af4c"
+    },
+    {
+      "path": "acceptance/textstats/VARIANTS.md",
+      "bytes": 2271,
+      "sha256": "8107cdae703de0f6aa5fbe40842f421586e8af8e95d7e32ead8323c24d78e545"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-001.json",
+      "bytes": 1482,
+      "sha256": "5355048d16166ae2637378881a89bc43ba52498bcb71a316c02ce073f4a863d7"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-001.md",
+      "bytes": 2249,
+      "sha256": "36bc9b1a4550b8bdf30006b9c96e94e8e6e5daa566a8bcffa76077de0fd10f84"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-002.json",
+      "bytes": 556,
+      "sha256": "73ecb38f842b3150edbc04c33b6429c0222093790d90ba76aae015f6377558e1"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-002.md",
+      "bytes": 1246,
+      "sha256": "991eff0ec8d2c6d96da58dc92101ccd076d480e22b6fc9aacf9811bc9382a391"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-003.json",
+      "bytes": 1376,
+      "sha256": "345479be23483e141bb117a24e4d52d524aeb07e6ad193a577cf0378380af022"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-003.md",
+      "bytes": 2525,
+      "sha256": "b18ba9497f845fbaf89863f588f78f25b743bac499c64aa0c3cae8e10a01f5a7"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-004.json",
+      "bytes": 1319,
+      "sha256": "6edf4035a58d29384e62cb4f1dadf6055a79a6d1a3d21a9d8b1695c2fac53348"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-004.md",
+      "bytes": 2050,
+      "sha256": "8a8cf32d95f5ed69657c820461f02dcf0180fd836658e3e612d3158ec3ec551e"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-005.json",
+      "bytes": 5411,
+      "sha256": "73857ba48ea73d5654d96e4b89fa9dd8ed708b1828689307c4451e40d0261105"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-005.md",
+      "bytes": 2530,
+      "sha256": "fdacaf708d6273197120537840c83f2544ec61f218e0d2d40868bc190268a1a4"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-006.json",
+      "bytes": 6847,
+      "sha256": "cd85b2355aaaee4027b73dc049397a15ecdffa1b787f460bfcae4c34efed322a"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-006.md",
+      "bytes": 1796,
+      "sha256": "d2613c3b2dceaefcd4352fd2c9b2487158e79e1f86fd355173b05d9a66afacef"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-007.json",
+      "bytes": 3446,
+      "sha256": "dac7ee06e80d99f031007d66b2f70ed9648fd584d75f6c676106146e556c9e0b"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-007.md",
+      "bytes": 1392,
+      "sha256": "bdd041c1dca96bb0cc784c4de40ff5c03a6fcf9560545d312532026c1ab7f971"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-008.json",
+      "bytes": 1310,
+      "sha256": "a0cf85f3f2b23bd1202216aa73dcb2b59565c7fdf6d255d3ac71293fef02476b"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-008.md",
+      "bytes": 2074,
+      "sha256": "20737e2f722e19cfd6e3f3a2478839a0a31969fe8f26015a3e04b2ccd9744d0a"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-009.json",
+      "bytes": 1332,
+      "sha256": "284af8c0d3b275010b4e1ffbe8e9c9dc9f4171a0d841e1950fc591b796aabac8"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-009.md",
+      "bytes": 2118,
+      "sha256": "8e57fa578559c4dd30580644be5bab1ef7dec2b09fad0f48768da6538097045f"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-010.json",
+      "bytes": 13488,
+      "sha256": "4a1978af6507fc6952eaa69af9510f69e1ec01971000b06333a5598773f587f9"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-010.md",
+      "bytes": 2168,
+      "sha256": "76d041de3d6b71a5b4c2cd707b1d0930497e844156b1a40e51accf65aedc2966"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-011.json",
+      "bytes": 534,
+      "sha256": "abfc04bcd7c08d9ffb943d796d9de2e7019e7da3061f01489ab99777cd3550ea"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-011.md",
+      "bytes": 1227,
+      "sha256": "771d8acdedd52097e48f8b6c055b7598cebacc1b6d14e46cb497bb7bd8167808"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-012.json",
+      "bytes": 12841,
+      "sha256": "6f7abfb34e29cc19ab1ca3bf2ca560fa0693ff47e5373977cab633d9ef61447e"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-012.md",
+      "bytes": 2258,
+      "sha256": "3c5dec3b706915bcdd9bf72814804979c9aa7812a57cc50708418ce88c00e377"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-013.json",
+      "bytes": 14946,
+      "sha256": "1aaafa1e10eec44bfcce3fb5cf727deece9e7f759d29857bb162593997e790bf"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-013.md",
+      "bytes": 2201,
+      "sha256": "7716c3b270ceb4142751be870f0dbe8db24741854c12bb0fcb0e8734ff934147"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-014.json",
+      "bytes": 1063,
+      "sha256": "cf4ff146dbe14816087c95f5b87677587748d721df197670cb15a48c707e15ab"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-014.md",
+      "bytes": 2054,
+      "sha256": "3236b318496dde0f4cfb09199de4e01d1738c6743263df9f728322918c423912"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-015.json",
+      "bytes": 747,
+      "sha256": "ec780e2a829272a8819cf4751b1e63d072725a4ab250c38273572004fbc5ec98"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-015.md",
+      "bytes": 1670,
+      "sha256": "11d4f2f76f812d45bc0283df345b7f0cb9010a913b3c25b90332f64457a42d6e"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-016.json",
+      "bytes": 718,
+      "sha256": "348f67bdaae1e5f32eb99082269f92a50d47a80445eff693a650692123cc6198"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-016.md",
+      "bytes": 1615,
+      "sha256": "618142db47445f781786b271f8b4698cdb1358570b66618865bb571d30213344"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-017.json",
+      "bytes": 575,
+      "sha256": "91668b282080dd1c3f269824a4a9c162eac64f44cef78fa64cc01d195bfd19b8"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-017.md",
+      "bytes": 3123,
+      "sha256": "c3bdb4bf38d26e36792469e5ea3b24580ceebc53145f863425ec4846349d86c3"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-018.json",
+      "bytes": 676,
+      "sha256": "7e4e8db13ab5998fdb7ecdc82e6765499f2d11c5dce6ca1dc3ef89148cfc1b6e"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-018.md",
+      "bytes": 1602,
+      "sha256": "72f8ac666d1f802642c8ba1d5bfcc221ad19885104308391ee8d8e61078bbf38"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-019.json",
+      "bytes": 845,
+      "sha256": "7d430dfecb474f47259fedadd9295377389c7bc9867fce615ac543937a343b69"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-019.md",
+      "bytes": 2591,
+      "sha256": "82d8620af9e6c6cca52e1b0c527525b782a7f0bb22950d306ef2cf22d424eaa5"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-020.json",
+      "bytes": 567,
+      "sha256": "0c8304e58752a77775fd6682d4f2237d8af4de13fb65f92a1f8efc1dc02a3196"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-020.md",
+      "bytes": 1239,
+      "sha256": "e5cd9543e98720e67da5bf85c57149fa40b660675c519481c1202f94246a1dce"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-021.json",
+      "bytes": 932,
+      "sha256": "489c3b74620bdb4fda9cf0d629fbe712e3a5cccc1326508f3aad1fd513ebdfba"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-021.md",
+      "bytes": 3042,
+      "sha256": "3738e723a0871ff590bdba67a3b3d6b7cb5135d262206e2ec10e48edc7f1f4a3"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-022.json",
+      "bytes": 719,
+      "sha256": "4bb534bf94b91ae3e63c32a5c228a6d196dbc2f9d649c5dc097fc6d8dbe1da83"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-022.md",
+      "bytes": 1351,
+      "sha256": "a090f1974fc5b607074d1fe736612c3205bef82b6bf1768ae35910d983cbdb53"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-023.json",
+      "bytes": 1038,
+      "sha256": "7a463f7c8467b7881f19418fde0df1b8fab5974cc486aa1b076e4b899e96a52a"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-023.md",
+      "bytes": 4693,
+      "sha256": "3888bd8113b8adde05dbad5dd7061292e9abe1a63d54019028bd79ad27904354"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-024.json",
+      "bytes": 1337,
+      "sha256": "a914fce4e80151d8ca5a8cc2de34fc48b307fb60828c8df5d37e3755df3bd1c1"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-024.md",
+      "bytes": 2484,
+      "sha256": "3bb09952d3bd65874d8612f7531728ee6c4dbd9592b8590efe552f9dee232fa5"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-025.json",
+      "bytes": 613,
+      "sha256": "2ef61a3f9be1793a217fe12ab57ff10244ca94e04f4f2c0981bab2ebf1a9e665"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-025.md",
+      "bytes": 1391,
+      "sha256": "2e805dac55f447a00accceb66e9b1d5a7484f34ae674a8bf7d199e98be0b9a7b"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-026.json",
+      "bytes": 1009,
+      "sha256": "990f504174ae75ca811933f4f91c36920c2b91a1431bef69f1ea7ee7d6ba2e69"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-026.md",
+      "bytes": 3398,
+      "sha256": "8824e0cdf8576001c75855f239658c18b495ba46c4693401d090bbfee55c3c1d"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-027.json",
+      "bytes": 1427,
+      "sha256": "2fdf6bb368d54472a9c79fd1c56d8afeec6e7571444383e98c0bf819430511fb"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-027.md",
+      "bytes": 2433,
+      "sha256": "f7cc94019a35d39a1127fe43a009fd23627c3e0f98c5c9fa73b109ad268318cc"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/COMMON.md",
+      "bytes": 8256,
+      "sha256": "3861f34aceff1c717c56c222b8d117f1cb77ec1e381ec915b84885be50fac9ef"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/DOCUMENT-QC.md",
+      "bytes": 3408,
+      "sha256": "1f1b9fdbc8743b421572bb14c6188b79ae42cbecc6b95e55ae1ed0978f8647f9"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/INTERRUPTIONS.md",
+      "bytes": 8095,
+      "sha256": "bc01a5c14323ddad1e2e3a146e5c94959c6e476b24cbed5c27cb32e253bedd56"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/TRACKING-FIDELITY.md",
+      "bytes": 6845,
+      "sha256": "c8636c3697c41541b49a0d441a5c0d0a659f7607b432a6369ddbc3acc97429fb"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/capture.py",
+      "bytes": 8719,
+      "sha256": "bedfe314bd439a401f70155151aa520aa2fff01204e7491d1c17f1dbe2a95bdc"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/catalog_tools.py",
+      "bytes": 15408,
+      "sha256": "7f3c8c174d296d334e2f9b91e98279eb2e6874fb1d9d9b58a30257e61608d9b1"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/expected.json",
+      "bytes": 12899,
+      "sha256": "5c7646105a1c28f061ee1cf84bc41ac399d0bc90e2963c00e5754a89ac1534f7"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/inputs.json",
+      "bytes": 15940,
+      "sha256": "1caf7a7eb4738e2492dc7b6567dcda0957690e10281caf556926a40aa508af55"
+    },
+    {
+      "path": "acceptance/textstats/cases/catalog.json",
+      "bytes": 39201,
+      "sha256": "e33aa2cd484c7784c2f7594ab0e9a5e32fb37b1ce0f1be812d7b087b24701528"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-001.md",
+      "bytes": 172,
+      "sha256": "af76e76cd125981b55f20b7e43628449dbd94b40d40b868e73039eb6eb35fd44"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-002.md",
+      "bytes": 205,
+      "sha256": "d8cef6b02d5e55c2746f2df71fbda17b8f59fbc5b090be85d7d550e98a7c8021"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-003.md",
+      "bytes": 277,
+      "sha256": "dd208ec900829d9fa1e33e0b50eaf90c642400693ded4560159e5fb2d843fbdd"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-004.md",
+      "bytes": 177,
+      "sha256": "b3511fd0f3ddaf934e44c055069eeab8c90cdfe22e27b6d63c5cd656bf80c2f9"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-005.md",
+      "bytes": 120,
+      "sha256": "2eb75398ec7c137a83f6e7f2b55ba732a9123794edff8c34b9e88a78f26556d9"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-006.md",
+      "bytes": 161,
+      "sha256": "e6309a59930578cba89697176a946c9f2d83b2e85170c636fa2aba1512e10c8e"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-007.md",
+      "bytes": 161,
+      "sha256": "c1ab0742bdc0508edcc88cdffc20560b29b3399926932cbed47007f4ffb6ddc2"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-008.md",
+      "bytes": 174,
+      "sha256": "d4cf848ee90c1fba968a7c7b7852cd0dc095987c86e6bff3405e8341383a55ba"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-009.md",
+      "bytes": 214,
+      "sha256": "84a69ca5075c02c33e916c5093bbf7f87786714bd0fc6fce016b5b0a7769b24c"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-010.md",
+      "bytes": 251,
+      "sha256": "5939b0192d9eb46f4bf5bf0941036d3cd9aef75695ca96405d3e96f3d427565e"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-011.md",
+      "bytes": 214,
+      "sha256": "b07d5e0bcd0737f8ff6405f52d5844331af11ad44b81fd5a04f1d1fe6a88716f"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-012.md",
+      "bytes": 282,
+      "sha256": "2cad3ef8637eced8e6ebccf9b0af9de4193f225bb86ada2c44e505ce61cbbf86"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-013.md",
+      "bytes": 210,
+      "sha256": "03fd908ba04d0098dfd789f12b3e76a157f163c3778d38504bea14b4fd8eaad5"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-014.md",
+      "bytes": 213,
+      "sha256": "12699dfd6da3768fff16f285dfdd9ed0419c6b89f7f077a136a0dfed13df5d4c"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-015.md",
+      "bytes": 183,
+      "sha256": "cbde935d4de2ab656de3c3bb39b6f29b70c7fb1dbc5ce77bac4f317018ef2683"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-016.md",
+      "bytes": 142,
+      "sha256": "bc830b1033e69474eb412d4918bbafa4b2cc7294478e110d9c0007b3df843c46"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-017.md",
+      "bytes": 139,
+      "sha256": "16e1b17d06abb11daf95294e8319d83a631709e95c850d5c761bca05f0356a20"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-018.md",
+      "bytes": 126,
+      "sha256": "8d30528f1a54b01d809e0df9102741c916ca1e9aeef126f08f91d3fcbd90a28e"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-019.md",
+      "bytes": 162,
+      "sha256": "5d8a0712594e71c83e936f9c0a355612a1c1bcad13274f773e8d564e6815d401"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-020.md",
+      "bytes": 121,
+      "sha256": "63230758fc6a5c7ff7dc1d6717fcb032b25a2bbe6aba217deeb9bc8242991936"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-021.md",
+      "bytes": 245,
+      "sha256": "5330f3222936c9b2a2830a47ca6e8e8f94e61c772db1cfcd870712d113b1e2a0"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-022.md",
+      "bytes": 218,
+      "sha256": "4c718a9ff68c144cffd12dec81c2c09c1d8806179a964281a2c6d253f97e50aa"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-023.md",
+      "bytes": 161,
+      "sha256": "2d4768b85913c91546b5fe8ef4327f32d378d0e1efea3f149148785323ac6382"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-024.md",
+      "bytes": 145,
+      "sha256": "cf04b91e0dcf887d8ac570ea2926b1e594be9742e74f71e957b190f40778fc1b"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-025.md",
+      "bytes": 132,
+      "sha256": "93946c82da28371458fba1ada13872129934792645ec082d67618041945f847d"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-026.md",
+      "bytes": 217,
+      "sha256": "afd6279e6873460834f14fac15a741fe38c08425d44372eee90760e2318ba3f6"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-027.md",
+      "bytes": 165,
+      "sha256": "c299a88ca2a9a9f42522386939cfe809819bed0c2899b7fa7bf49429208b04fb"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/continuation.md",
+      "bytes": 319,
+      "sha256": "d89c0ce6040ae6757f747bf1696acdfa8e1bb3b68f56170bdabcb16f9a7e0bed"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/preparation.md",
+      "bytes": 4033,
+      "sha256": "54074af951298328dc8eccd166747f7939fd69de4a9e325eeee9f7dd224c4080"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/tracking-fidelity.md",
+      "bytes": 261,
+      "sha256": "7ad14d626c77262d4ac903a4eb2deca68e1c3e7e993dfc7713c77f71b6a4e069"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/uncontrolled-continuation.md",
+      "bytes": 194,
+      "sha256": "d77cba7832502356e53ecb63412d7ef4cf6745b47cfc564ce91efeec047b3058"
+    },
+    {
+      "path": "acceptance/textstats/schemas/inputs.schema.json",
+      "bytes": 3662,
+      "sha256": "5001aa7fb72c9fbb0ccc3d8dc5d33f81b3ab07aeea0850e071b733dd912d8ce3"
+    },
+    {
+      "path": "acceptance/textstats/schemas/run-state.schema.json",
+      "bytes": 9273,
+      "sha256": "40f2451a96bb36a36c97c5e39bf343b39ac75a8cc415ac9db633695b5eecaf37"
+    },
+    {
+      "path": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+      "bytes": 14739,
+      "sha256": "e1849df37e1152891e6ea066a8370e693e7fa420ee693f3c090322385dc12128"
+    },
+    {
+      "path": "acceptance/textstats/scripts/assess.py",
+      "bytes": 167,
+      "sha256": "8937bf3feec620c76859277602f2bbb73aa9532831307f8e652a1987e1bea7f4"
+    },
+    {
+      "path": "acceptance/textstats/scripts/campaign.py",
+      "bytes": 5613,
+      "sha256": "47fd15f83ab486f6ac1710f5406e3bed5f16b493ac80f32177deadfb02977a09"
+    },
+    {
+      "path": "acceptance/textstats/scripts/contract_probe.py",
+      "bytes": 5686,
+      "sha256": "37125e5e497a3043da916c0f29c1786d82a946c241d58fe2e4a8a5a2071f7724"
+    },
+    {
+      "path": "acceptance/textstats/scripts/core.py",
+      "bytes": 56752,
+      "sha256": "5024b2319ff31737fffeee25e679c7b7be94a7761210e5df04366804b9541f81"
+    },
+    {
+      "path": "acceptance/textstats/scripts/evidence_merge.py",
+      "bytes": 2567,
+      "sha256": "c20a6e7c8b6964af301bd1819f1de67d1b67bd5b76a08cde409bddf565f44960"
+    },
+    {
+      "path": "acceptance/textstats/scripts/fault_adapter.py",
+      "bytes": 3456,
+      "sha256": "75620593a8c1a7bc4bc316521b7f98aed7cbdafe318714ac4a68c84022528388"
+    },
+    {
+      "path": "acceptance/textstats/scripts/observe.py",
+      "bytes": 169,
+      "sha256": "30638404f50d8395ed5a8be0b5c1fc25ea6ac2ab486695d4a4500ae5124e1f1b"
+    },
+    {
+      "path": "acceptance/textstats/scripts/preflight.py",
+      "bytes": 173,
+      "sha256": "5f7ff7811b11559e4f4a58c59263d9e4d65c17be15e36af6ed2df05b300f3249"
+    },
+    {
+      "path": "acceptance/textstats/scripts/prepare.py",
+      "bytes": 169,
+      "sha256": "eb224be7c0ef22b4fea393b31e6abe16b7d9d4b8a069e5f81fa6ae01c18d1d27"
+    },
+    {
+      "path": "acceptance/textstats/scripts/trial_control.py",
+      "bytes": 9857,
+      "sha256": "46e8b9c0a54d7781c268e43ebe3a4f35d47d0b5e8b52eb0df7e5fbd3acb985ca"
+    },
+    {
+      "path": "acceptance/textstats/templates/inputs.example.json",
+      "bytes": 239,
+      "sha256": "eec1fdf027d2f6d1d885d52ecc6017acfa339c4a3ed587d38d60aa42c2f40e38"
+    },
+    {
+      "path": "acceptance/textstats/tests/__init__.py",
+      "bytes": 50,
+      "sha256": "dc190c6c86270325156bc6b5bfca3372e4b733966187b9ef06731c06cd19374d"
+    },
+    {
+      "path": "acceptance/textstats/tests/support.py",
+      "bytes": 2805,
+      "sha256": "faeda5656d61619e95464f1a5b7e3d5552d14e9d787a6a079cbcf492cf715bed"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_campaign.py",
+      "bytes": 3458,
+      "sha256": "2d5625012912bce85f173413e378b647732cafcc1acba9b6a5ea19a42d820647"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_catalog.py",
+      "bytes": 19295,
+      "sha256": "b677602e4b131eefb231d6f6a6519eaa5f9a015cb94d5168ba8d944360966e59"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_checkers.py",
+      "bytes": 11311,
+      "sha256": "c83124a67d767568bad79cdc3461b33d87d06e58184ccdc0c64f8e1d90c3f8c5"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_contract_probe.py",
+      "bytes": 2830,
+      "sha256": "28afaf5cadd937a6c4b01c57dae26a09afe0ebdffb819550818aeef8f84073fc"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_evidence_merge.py",
+      "bytes": 2442,
+      "sha256": "bf605f53eca8ff144c5855aef8e0ced67fe129bfe6babfbff165f2b56a38b3da"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_fault_adapter.py",
+      "bytes": 2369,
+      "sha256": "71dbbb1afd0f9365946969640fddd5461846bf6e3309f20ed95fbe8082e0aff3"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_local_assessment.py",
+      "bytes": 3386,
+      "sha256": "4c7842a780156ac58a3a9092ce56b0addb4e48ade2581a52deff4ac8fca8fdca"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_package_docs.py",
+      "bytes": 4898,
+      "sha256": "d711c13152c87de0e2c34f31ae8e83ba62db9b5a448aa832bedf0ed9e165226e"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_preflight.py",
+      "bytes": 13871,
+      "sha256": "45bb618ff415f51b9ac4d442fde63a326f13591a043d1a3ea75e4ee56e494554"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_recovery.py",
+      "bytes": 23409,
+      "sha256": "84e42ecb9b88a400330853be738cefd0fb16940b5db8226522f913e8fe6b1ec5"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_trial_control.py",
+      "bytes": 6241,
+      "sha256": "64199a604b29d117c8c591ea0488cb2cdce17394088ea235a01da48b7c93401d"
+    },
+    {
+      "path": "assets/AI_DISCLOSURE.md",
+      "bytes": 1192,
+      "sha256": "09411dc61f4966efabe8e821f2270c768baf5b96f4fd4587eb5c05233de7ffea"
+    },
+    {
+      "path": "assets/SDD-MANAGER.md",
+      "bytes": 683,
+      "sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf"
+    },
+    {
+      "path": "assets/icon.png",
+      "bytes": 14257,
+      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45"
+    },
+    {
+      "path": "assets/icon.svg",
+      "bytes": 581,
+      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f"
+    },
+    {
+      "path": "assets/logo.png",
+      "bytes": 14257,
+      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45"
+    },
+    {
+      "path": "assets/logo.svg",
+      "bytes": 581,
+      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f"
+    },
+    {
+      "path": "docs/dev/CAPABILITY-MAP.md",
+      "bytes": 24465,
+      "sha256": "3e7c1c46edada288d783bf5acfe3c1d55c459628745f80563a7fe6d207575db5"
+    },
+    {
+      "path": "plugin.json",
+      "bytes": 2059,
+      "sha256": "bbf4bc4f6901d5a79857fb1baaf7673abd04c857adf17294162b22314ce9b6db"
+    },
+    {
+      "path": "skills/sdd-conventions/SKILL.md",
+      "bytes": 3230,
+      "sha256": "fbd4b671e75b26630ee9e780e33c78b722171292949b6fa52c6b5ec998eb9bd3"
+    },
+    {
+      "path": "skills/sdd-conventions/agents/openai.yaml",
+      "bytes": 505,
+      "sha256": "3afb66258ca9ee5f7e35b0986ac130e34a4a73c4d5c41b1c7de94e19133e4cea"
+    },
+    {
+      "path": "skills/sdd-conventions/assets/icon.svg",
+      "bytes": 570,
+      "sha256": "5702cda32d79bc28857dedfe0f9811d382d8b2e4c46d1ac571d8114aabd279a4"
+    },
+    {
+      "path": "skills/sdd-conventions/references/backend-object-lifecycle.md",
+      "bytes": 8846,
+      "sha256": "e5bd2dea8aa40a45e38734155264192eb3b51b8ab5b1f79d9201dbf807981b22"
+    },
+    {
+      "path": "skills/sdd-conventions/references/design-heuristics.md",
+      "bytes": 1597,
+      "sha256": "b4ded8adbaa45a74858cff4dbed277936d52d31a91534ab303b6af018262a448"
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "bytes": 14298,
+      "sha256": "daf020bf85f9db0ddbf0c0474b5fc71477fd68557f5120957ba8438851bbee1b"
+    },
+    {
+      "path": "skills/sdd-conventions/references/hosting-tokens.md",
+      "bytes": 2971,
+      "sha256": "54f2e5949ddeae7aafcb985092309676b42b358135d8fea29481fc8071336324"
+    },
+    {
+      "path": "skills/sdd-conventions/references/markdown-style.md",
+      "bytes": 4823,
+      "sha256": "2ebba7c09f7e2c7217fa367d7fb0781ff2ca45c961f634280b29e22a41b9b1cd"
+    },
+    {
+      "path": "skills/sdd-conventions/references/modularity.md",
+      "bytes": 2201,
+      "sha256": "98d41ef9fb16f373ca2fddfe2c048775a40165823dd503d4df58c18654b11283"
+    },
+    {
+      "path": "skills/sdd-conventions/references/review-campaigns.md",
+      "bytes": 8233,
+      "sha256": "46cd6e415c44262a0e092c36eb2ca4e44c303cd01e531325c4d66236f377512f"
+    },
+    {
+      "path": "skills/sdd-conventions/references/task-hierarchy.md",
+      "bytes": 4120,
+      "sha256": "675d67a8a7487c7876e084276638a966072d177f56376d3c156eec29c9b90a75"
+    },
+    {
+      "path": "skills/sdd-conventions/references/workflow-identity.md",
+      "bytes": 8163,
+      "sha256": "f515c2e66c3287ff93f76ca2604b1f9b56367f1e19a9e6f41aa63ffe30bd0b8e"
+    },
+    {
+      "path": "skills/sdd-design/SKILL.md",
+      "bytes": 5255,
+      "sha256": "92213cde34fa410629044bbdb2fc186f1fece9e80c6cec3cf490de99ca01a774"
+    },
+    {
+      "path": "skills/sdd-design/agents/openai.yaml",
+      "bytes": 412,
+      "sha256": "102d11e8960f1f7af69bfcbacbe71defad289b9c368d11a610fb6b19e61dd3b6"
+    },
+    {
+      "path": "skills/sdd-design/assets/icon.svg",
+      "bytes": 562,
+      "sha256": "98c55eb98b3e3702037698739b96fb550da2223bf733fb576650d0a4c5504864"
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "bytes": 3789,
+      "sha256": "329327e9cadf2637289dcad8808faa0a31c7e386223accb91366b897ef64339b"
+    },
+    {
+      "path": "skills/sdd-design/references/decomposition.md",
+      "bytes": 3720,
+      "sha256": "eac648372c44883068569a13a2715cb7d7b4d84e26f7c4de20478f93bb124abf"
+    },
+    {
+      "path": "skills/sdd-design/references/exploration.md",
+      "bytes": 2997,
+      "sha256": "52a98f770a5e4745847dee060466231c8bc971d5c79c7f7dd4d745a6e675187a"
+    },
+    {
+      "path": "skills/sdd-docs/SKILL.md",
+      "bytes": 3608,
+      "sha256": "ef125969d670b75c0760ad8a7751c41ca8940ebc05a8a3a517658c6405929a7b"
+    },
+    {
+      "path": "skills/sdd-docs/agents/openai.yaml",
+      "bytes": 471,
+      "sha256": "9715602c3bdcd14d41e6e99e24edb32389499e0ec96b0aad5cdf4b30b187de15"
+    },
+    {
+      "path": "skills/sdd-docs/assets/icon.svg",
+      "bytes": 587,
+      "sha256": "69e272ee97e9957387f8ca8b51bec3d3d176c33e6bf6b20d2bff5b3536f507e2"
+    },
+    {
+      "path": "skills/sdd-docs/references/in-code-documentation.md",
+      "bytes": 2857,
+      "sha256": "40c179cf40c73ad36d76f722950eeaf33ab1c37993edd370f6fa16305d2a5465"
+    },
+    {
+      "path": "skills/sdd-docs/references/review-and-findings.md",
+      "bytes": 2719,
+      "sha256": "61bda144ac45af632307b12bb3cf9652727b83c3b3ffc57558188d0d2a6837b1"
+    },
+    {
+      "path": "skills/sdd-docs/references/standalone-documentation.md",
+      "bytes": 3329,
+      "sha256": "b2ced68b8f869efc47206261795e225b42455b513c7a2be4f091cd891c3ef951"
+    },
+    {
+      "path": "skills/sdd-forge/SKILL.md",
+      "bytes": 6794,
+      "sha256": "750f3307fac728c86723b2c85b36a664d5a61c87dd568b844c3784236ceebc39"
+    },
+    {
+      "path": "skills/sdd-forge/agents/openai.yaml",
+      "bytes": 508,
+      "sha256": "65a79f791a2285753a0e6ca9eb83e203b181c0277ada5706add85f4c86c18783"
+    },
+    {
+      "path": "skills/sdd-forge/assets/icon.svg",
+      "bytes": 579,
+      "sha256": "ca997d09da83d706126f43dc2ace19c00ee9036ae67dcce225e688a09d398d33"
+    },
+    {
+      "path": "skills/sdd-forge/references/github-issue-lifecycle.md",
+      "bytes": 4746,
+      "sha256": "73288c6f708bc36734fae4dff77c6a3dc44b4d804083b30d832441cf494ab896"
+    },
+    {
+      "path": "skills/sdd-forge/references/github-milestone-lifecycle.md",
+      "bytes": 3722,
+      "sha256": "879e7a70f56e50c9178cf0d8142d2bbbfb4710c686e3c25cae4e67e85f867fe0"
+    },
+    {
+      "path": "skills/sdd-forge/references/github-packaging.md",
+      "bytes": 5843,
+      "sha256": "bf2a71e63b75b117853097199120d628d67d2c419962aa441978c124e4c780ed"
+    },
+    {
+      "path": "skills/sdd-forge/references/github-projection.md",
+      "bytes": 6201,
+      "sha256": "073e9dd23912642308a801aba974af516b46447e6affe31afb863ca83958bf29"
+    },
+    {
+      "path": "skills/sdd-forge/references/github-release-workflows.md",
+      "bytes": 8751,
+      "sha256": "16400d26c01385e92aa4170f1d81574f79be058471f236c8916dcfe9bf5d721a"
+    },
+    {
+      "path": "skills/sdd-forge/references/github-releases.md",
+      "bytes": 9945,
+      "sha256": "27695c3741a26da6ba71a0e1985180d1fd9dcd6d560a894525360556c9811b60"
+    },
+    {
+      "path": "skills/sdd-forge/references/github.md",
+      "bytes": 11244,
+      "sha256": "d22b8d71a74ee620b7320cdab9a81b4accdbd2cd7359d5f309fea8bd15210b63"
+    },
+    {
+      "path": "skills/sdd-forge/references/release-highlights.md",
+      "bytes": 19977,
+      "sha256": "69016b326538a23316745d2a7a9937178d9f53aaa7323078dde99374b639d82f"
+    },
+    {
+      "path": "skills/sdd-forge/references/release-message.md",
+      "bytes": 8651,
+      "sha256": "8c1121075731dbdff2bc6dd88b1c035c14826709c1404184b878e63fa37f6c98"
+    },
+    {
+      "path": "skills/sdd-implement/SKILL.md",
+      "bytes": 7860,
+      "sha256": "5f8f4c756a4892d64a99e3c168c2fcbe5781b9e9490aae0f8abb664bfeab6293"
+    },
+    {
+      "path": "skills/sdd-implement/agents/openai.yaml",
+      "bytes": 620,
+      "sha256": "438f0f659f42428e943046f75e10eb5b21384802baf3ce8eb010b9598d00cb7b"
+    },
+    {
+      "path": "skills/sdd-implement/assets/icon.svg",
+      "bytes": 588,
+      "sha256": "4fd314a8f182561a13fbf6fe062e4aee5fd0e0330dccd9943ec14aa5dab34c48"
+    },
+    {
+      "path": "skills/sdd-implement/references/browser-capabilities.md",
+      "bytes": 2594,
+      "sha256": "fd64b9332dac9d5a89249968996bdcfdcd3e1211f06220af8247cd7a25309642"
+    },
+    {
+      "path": "skills/sdd-implement/references/completion-and-checkpoints.md",
+      "bytes": 16082,
+      "sha256": "d6abebf194a10b4fa5f293e473685adf0460a6f31ed6210314f6c34c49ffa258"
+    },
+    {
+      "path": "skills/sdd-implement/references/environment-recovery.md",
+      "bytes": 2247,
+      "sha256": "0254c7e5dc5477a012d6eca8c049d222f42c712b5ef1f03abc8b4270f34f9523"
+    },
+    {
+      "path": "skills/sdd-implement/references/range-selection.md",
+      "bytes": 3619,
+      "sha256": "092f930702c80eccaee732c252c1c68bbfaeaa8be78386b5f688d1509274a5e9"
+    },
+    {
+      "path": "skills/sdd-implement/references/startup-and-continuation.md",
+      "bytes": 10259,
+      "sha256": "2641bba0e1c9872784eeeb0e7134007bdb68f13056fe2af0682bfec4a3dde74c"
+    },
+    {
+      "path": "skills/sdd-implement/references/task-execution.md",
+      "bytes": 3337,
+      "sha256": "1979b2bbd64bd4b5370f607c1646b7a7fbb05f63cccd44dc907f98ce50831dfe"
+    },
+    {
+      "path": "skills/sdd-integrate-feature/SKILL.md",
+      "bytes": 3894,
+      "sha256": "3836aff7e77d749a52493f55abc878a18af0ac0ffcc6f4d6595339c471e8b30e"
+    },
+    {
+      "path": "skills/sdd-integrate-feature/agents/openai.yaml",
+      "bytes": 459,
+      "sha256": "48018ed1de138598f6be61e916b701638234e2d0e570ed42d39760e0f4de8392"
+    },
+    {
+      "path": "skills/sdd-integrate-feature/assets/icon.svg",
+      "bytes": 591,
+      "sha256": "9b68ea07e6b5916efa646ad8f639cb1872523bb40630043a317cc862440dc006"
+    },
+    {
+      "path": "skills/sdd-integrate-feature/references/feature-incorporation.md",
+      "bytes": 14410,
+      "sha256": "28505601cb9a434d8cfc9a8b071e99e64ee0750f8666ed0649c6891e2aa71baf"
+    },
+    {
+      "path": "skills/sdd-manage/SKILL.md",
+      "bytes": 10280,
+      "sha256": "7702db71890cf5a6c0a8cf7946bf056693320e7c4485b9840ae93e664cdfe7da"
+    },
+    {
+      "path": "skills/sdd-manage/agents/openai.yaml",
+      "bytes": 524,
+      "sha256": "c3d318cf2a1074db8bc3c956109b12b1a3399c3835eded7bbac57f9ee7f5a778"
+    },
+    {
+      "path": "skills/sdd-manage/assets/icon.svg",
+      "bytes": 590,
+      "sha256": "d263da0cf62afe30dec52294f51c33a0d522b25c44049224a2274037e8ace44d"
+    },
+    {
+      "path": "skills/sdd-manage/references/agent-orientation.md",
+      "bytes": 4057,
+      "sha256": "00610bd7b917d51b72d1c3c99340f70fb6a8153554d278066c5419432bf698ff"
+    },
+    {
+      "path": "skills/sdd-manage/references/branch-management.md",
+      "bytes": 12794,
+      "sha256": "c79b84fe239a6267368f2e8e122526e49ca638fedaf496fda3ae28a8770ba314"
+    },
+    {
+      "path": "skills/sdd-manage/references/coordination.md",
+      "bytes": 10928,
+      "sha256": "f02deb1435426337f584fdc7223d3d65770dd28f13bef2f7a8e596a79986c18c"
+    },
+    {
+      "path": "skills/sdd-manage/references/credentials.md",
+      "bytes": 5877,
+      "sha256": "0e148e039779c635ac148237fcf113cdbc1dce3a4ed062ac43875ed64a0bec21"
+    },
+    {
+      "path": "skills/sdd-manage/references/document-qc-gates.md",
+      "bytes": 6404,
+      "sha256": "11269e9e4a2854f0c1e4c10d6eed537c49076651951fb4d5ab7e888acd759fe7"
+    },
+    {
+      "path": "skills/sdd-manage/references/examples.md",
+      "bytes": 20851,
+      "sha256": "d3191f0c582d3820a0e67b9ae58706b1478768a3f1c9f39a7ae429ef7533a9fb"
+    },
+    {
+      "path": "skills/sdd-manage/references/git-workflows.md",
+      "bytes": 12317,
+      "sha256": "61e3fc545806be5fb2ceb8b578babd21cfb8526aef1e29f69e6ba95028601914"
+    },
+    {
+      "path": "skills/sdd-manage/references/human-document-review.md",
+      "bytes": 6069,
+      "sha256": "42ae551a42ed32f59e63fda23b233769aec7ba9d9563ba4a99a83b80a5d12cf6"
+    },
+    {
+      "path": "skills/sdd-manage/references/phase-activation.md",
+      "bytes": 4216,
+      "sha256": "48edb9f14a072382d699822f48d6cfac82d2f116b602ff1a4bae105fbb8f27d0"
+    },
+    {
+      "path": "skills/sdd-manage/references/prerelease-review.md",
+      "bytes": 9774,
+      "sha256": "0fc0a9e77dcec7d96116cebc641b823dbb0544980190f5c9a608704c991c2338"
+    },
+    {
+      "path": "skills/sdd-manage/references/repository-bootstrap.md",
+      "bytes": 8700,
+      "sha256": "ce391e9aea851dfc37828eb222405e926081fb373e1bc7e2dd7731694f2cc7e2"
+    },
+    {
+      "path": "skills/sdd-manage/references/review-and-revision.md",
+      "bytes": 10475,
+      "sha256": "2e827a54cd244ad120bd9d2eb2d15640bed5f4297b6f4a99d98d9fee06f139c8"
+    },
+    {
+      "path": "skills/sdd-manage/references/revision-modes.md",
+      "bytes": 10160,
+      "sha256": "d8e2044ce53c8ac255772499992cc13acd077faf8e1a78b96c265143d03e9395"
+    },
+    {
+      "path": "skills/sdd-manage/references/tracking-decision.md",
+      "bytes": 4640,
+      "sha256": "c3c129f58be20fad30a8b2286389ceb8c5b014dd8f9df77f0b008421f2839b65"
+    },
+    {
+      "path": "skills/sdd-manage/references/workflows.md",
+      "bytes": 19143,
+      "sha256": "486efacac98b1996b598c252a5eb848af5a2f2a5df4b676a183f1faa25d380ea"
+    },
+    {
+      "path": "skills/sdd-orient/SKILL.md",
+      "bytes": 4869,
+      "sha256": "712b883516f570cf296dfa3562add326a8a725dc002a2b3cf484c4c6fffe7446"
+    },
+    {
+      "path": "skills/sdd-orient/agents/openai.yaml",
+      "bytes": 491,
+      "sha256": "36dbb7990b7f504c1fa4b614651ad26431ab6af5a623be8250b780ce156667c9"
+    },
+    {
+      "path": "skills/sdd-orient/assets/icon.svg",
+      "bytes": 571,
+      "sha256": "ef235e59b6a56e0d21629b3b6c1b2ca9cc97cd678d02bcb31b0e2f7bc11bf1f2"
+    },
+    {
+      "path": "skills/sdd-orient/references/inspection-and-handoff.md",
+      "bytes": 10400,
+      "sha256": "6c273d45445426e853e6ee4eeee8c98685abe53b0db4eb71199547a3f94a1c73"
+    },
+    {
+      "path": "skills/sdd-plan/SKILL.md",
+      "bytes": 5229,
+      "sha256": "516709147edd8d36cc74a7416bea2d33808a6c39db7045025e9794f56588dfd4"
+    },
+    {
+      "path": "skills/sdd-plan/agents/openai.yaml",
+      "bytes": 371,
+      "sha256": "8672b642e8c5ae2114cd839af1152435c7da485b4a25c3dd62d15c78d124ac98"
+    },
+    {
+      "path": "skills/sdd-plan/assets/icon.svg",
+      "bytes": 590,
+      "sha256": "44568c513e736771f4dde159c1903c6da19a774474ce65aeb8992dd694706659"
+    },
+    {
+      "path": "skills/sdd-plan/references/delivery-plan.md",
+      "bytes": 6939,
+      "sha256": "b757fd076dc35d419a85c64fe7ea1e38c2fa78c493b5c2b19b094cf7f5b8416a"
+    },
+    {
+      "path": "skills/sdd-plan/references/physical-layout.md",
+      "bytes": 3711,
+      "sha256": "e6abc9b84068ff8def13af02360020bdd80dc4c431667cf416aa4a9953bbfc41"
+    },
+    {
+      "path": "skills/sdd-plan/references/review.md",
+      "bytes": 4434,
+      "sha256": "cf8db9dc1d9b3256cf200f5957aed93ec53aaf0e57d9d0519fd34e1430ec5aa4"
+    },
+    {
+      "path": "skills/sdd-report/SKILL.md",
+      "bytes": 3946,
+      "sha256": "2a09d48def1f845b9b6988762aaa99b62e4f5c39213033c2276f8bb0aa42e8e2"
+    },
+    {
+      "path": "skills/sdd-report/agents/openai.yaml",
+      "bytes": 454,
+      "sha256": "bfe1a84a61bf154a5cb846d41b10d73e88a596044d21e6d1f151d1dc78ae221c"
+    },
+    {
+      "path": "skills/sdd-report/assets/icon.svg",
+      "bytes": 580,
+      "sha256": "aca30e96cbe5d44d759da47cc1db33c87dce1d04bf77142feac8475eecbab074"
+    },
+    {
+      "path": "skills/sdd-report/references/campaign-artifacts.md",
+      "bytes": 12587,
+      "sha256": "da1b42bd4561e4101db858094fcb7a038f8061c641a8e5a8228065c79463a502"
+    },
+    {
+      "path": "skills/sdd-report/references/change-kinds.md",
+      "bytes": 4573,
+      "sha256": "7cc7d31e5926fab5c4778b385f282d8f536713536c1038cc63409a1734da886b"
+    },
+    {
+      "path": "skills/sdd-report/references/completion-reports.md",
+      "bytes": 6388,
+      "sha256": "c8202d5a7c23a79c90779ed14b6ab3a097a2b15fa246f5c81bee43ab6f6e8fcd"
+    },
+    {
+      "path": "skills/sdd-report/references/document-qc-reports.md",
+      "bytes": 4724,
+      "sha256": "7dcbf8e39c79b9c5032261b8976054f15e12a302e748d22456fcfdb8f2dcc8f7"
+    },
+    {
+      "path": "skills/sdd-report/references/object-drafts.md",
+      "bytes": 13935,
+      "sha256": "cd9d5c325c4858d8318736608d92b185844be913685c36cee2511c872645a50f"
+    },
+    {
+      "path": "skills/sdd-report/references/releases.md",
+      "bytes": 7869,
+      "sha256": "8cb9f5d75a27a247d21a377fca881c4fa000d4622437a36ae7c0da6bdaf34b85"
+    },
+    {
+      "path": "skills/sdd-specify/SKILL.md",
+      "bytes": 4530,
+      "sha256": "3af5712cb3e841187f0b70302dca83849014dd7e2b78478e7fbf29d8bc748bc0"
+    },
+    {
+      "path": "skills/sdd-specify/agents/openai.yaml",
+      "bytes": 387,
+      "sha256": "c61e7eb38f097029d947314b441959b17aae2303440a52022cd386d78171e6b5"
+    },
+    {
+      "path": "skills/sdd-specify/assets/icon.svg",
+      "bytes": 591,
+      "sha256": "ebeaf7c64a2fb958088765c46c48e8269625f03ddccefec9dc7b76ff7379f2ad"
+    },
+    {
+      "path": "skills/sdd-specify/references/change-specification.md",
+      "bytes": 2220,
+      "sha256": "74ad9a214189fa094c48acfd6c1daacb4eef43fe64ea18946ff5e6628a3be94c"
+    },
+    {
+      "path": "skills/sdd-specify/references/review.md",
+      "bytes": 3962,
+      "sha256": "60ef1b66449b4f40adf88f475fa4767cfd663d17ba4cd304236e8dfcb79500c9"
+    },
+    {
+      "path": "skills/sdd-specify/references/system-specification.md",
+      "bytes": 4546,
+      "sha256": "4af4ac610c2e6b020c57182e486d55124142394f9ba341db0b81339404723afd"
+    },
+    {
+      "path": "skills/sdd-steer/SKILL.md",
+      "bytes": 4952,
+      "sha256": "6598b5b4b99b13a981bc4b91deaeb4bb6c4efdbab3de214e58e849aec815cc2b"
+    },
+    {
+      "path": "skills/sdd-steer/agents/openai.yaml",
+      "bytes": 592,
+      "sha256": "421038f108a077de64e16c95011ed4f6bff87d47e16c53894bbcc0dc581cc4ae"
+    },
+    {
+      "path": "skills/sdd-steer/assets/icon.svg",
+      "bytes": 551,
+      "sha256": "b9d353ce223194b53f52a4853ed1cc9468718ed0ee57074b5988a309f54d14d1"
+    },
+    {
+      "path": "skills/sdd-steer/references/amendment-execution.md",
+      "bytes": 3900,
+      "sha256": "c185174fd72625f51a151bb6085140e9599f848e26f461d1131c87f2865d0cac"
+    },
+    {
+      "path": "skills/sdd-steer/references/objective-and-impact.md",
+      "bytes": 3139,
+      "sha256": "f1f57ab732b6c40c14260ab006377504bece4993bd7a80dac3d2adc53c9902ec"
+    },
+    {
+      "path": "skills/sdd-steer/references/verification-and-stop.md",
+      "bytes": 7111,
+      "sha256": "833b62f3807e8eb425f0fe2ad9ef4418cabbb77ae0f2ee7371435793de17398d"
+    },
+    {
+      "path": "skills/sdd-tasks/SKILL.md",
+      "bytes": 5035,
+      "sha256": "27f02d1937dbca38b03e0fc9d74a8b876710705ea8492f8ec1519ed6982d91c9"
+    },
+    {
+      "path": "skills/sdd-tasks/agents/openai.yaml",
+      "bytes": 338,
+      "sha256": "60b43614f445a40f3d52d21869962189bdfe0252461317a6712a55d176797aa2"
+    },
+    {
+      "path": "skills/sdd-tasks/assets/icon.svg",
+      "bytes": 599,
+      "sha256": "dad3203c0386ce1a697600ae82fc1e03f530111626192018df24dd7c5ac69eb0"
+    },
+    {
+      "path": "skills/sdd-tasks/references/conformance-review.md",
+      "bytes": 3731,
+      "sha256": "79e186c004f57193bf7a9ca8aaf7b6075d85fac240ae05a1ececa11ec7eea92e"
+    },
+    {
+      "path": "skills/sdd-tasks/references/progress-review.md",
+      "bytes": 2291,
+      "sha256": "32be8fbaa5e67e807d7c7f7be964c56ab7f65bd6398784606090fcdd9e40a912"
+    },
+    {
+      "path": "skills/sdd-tasks/references/task-derivation.md",
+      "bytes": 7133,
+      "sha256": "abe64f6415b946ef638d076dab1650afd5d6e154bcd94305932cd9f7ec9436c7"
+    },
+    {
+      "path": "skills/sdd-tdd/LICENSE",
+      "bytes": 1070,
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+    },
+    {
+      "path": "skills/sdd-tdd/SKILL.md",
+      "bytes": 3588,
+      "sha256": "49efacb9ed6ae3b59069e986672dc5350cc0b147c3ad960b3ffc04f105c54cda"
+    },
+    {
+      "path": "skills/sdd-tdd/agents/openai.yaml",
+      "bytes": 480,
+      "sha256": "f0049fe541cbffe331d4ccb9e903ed49bb96f1011cefecd1ced49fbd1bd19da4"
+    },
+    {
+      "path": "skills/sdd-tdd/assets/icon.svg",
+      "bytes": 574,
+      "sha256": "37e86ed29c77f13846f9c315627c5e139d1348d7eed26eef2ff94354c334239f"
+    },
+    {
+      "path": "skills/sdd-tdd/references/test-first-cycle.md",
+      "bytes": 3693,
+      "sha256": "e8d797ba50e555d53500516e85f8b624f7ed11f5a7534e39220f2a74141e3d96"
+    },
+    {
+      "path": "skills/sdd-tdd/references/testing-strategy.md",
+      "bytes": 2602,
+      "sha256": "fd834570d97f993fe270627fcedc308f0a97642ff000b8970a0b1c1bf33cab5f"
+    },
+    {
+      "path": "skills/sdd-tdd/references/upstream-provenance.md",
+      "bytes": 1278,
+      "sha256": "668d85251c25027ac1494c9bb89367fa3c1885c23424e3987d02f7fd0b02ca33"
+    },
+    {
+      "path": "skills/sdd-tdd/references/writing-good-tests.md",
+      "bytes": 4076,
+      "sha256": "c5a555443dc5cf3b78312f9939bfbe53be7b04978f4f14f3350820ed5bc5b0d8"
+    },
+    {
+      "path": "skills/sdd-verify/SKILL.md",
+      "bytes": 4789,
+      "sha256": "7b37a6253f4a925777e27a705d0429766ab8845376477c31b37b47eca3bc4b48"
+    },
+    {
+      "path": "skills/sdd-verify/agents/openai.yaml",
+      "bytes": 544,
+      "sha256": "3176532ba151974e4f6186c589a9e8ba59247367629ace97788cf70e1bdfe40a"
+    },
+    {
+      "path": "skills/sdd-verify/assets/icon.svg",
+      "bytes": 563,
+      "sha256": "60c4fbc478c5c5569c7db40ee7d2b90c061fb8e0b7a2274ec8757cbcadc6c837"
+    },
+    {
+      "path": "skills/sdd-verify/references/boundary-review.md",
+      "bytes": 2497,
+      "sha256": "53babcce80c31cefb2396f490332cdb3e0ca4e4472fdf3ba4eec189aa2f9ffc0"
+    },
+    {
+      "path": "skills/sdd-verify/references/check-selection.md",
+      "bytes": 4516,
+      "sha256": "87f9024dccf127c10b89944d83bb90d9cd9373e42ffd5c3967f47ff676cda10c"
+    },
+    {
+      "path": "skills/sdd-verify/references/execution-and-evidence.md",
+      "bytes": 4774,
+      "sha256": "bff21a3c02f8935c07b2e2f7fd16f72260659d68485f1a15164c91a53ce5a08d"
+    },
+    {
+      "path": "skills/sdd-verify/references/failure-assessment.md",
+      "bytes": 2625,
+      "sha256": "0d1297f0b6d03dfd429c9d8e0d912c841801b8207141651aca1f1a90fe9a12c6"
+    },
+    {
+      "path": "skills/sdd-verify/references/release-checks.md",
+      "bytes": 6122,
+      "sha256": "fee007dfbde60228f4119a9cebfd851c5af7051c57660d2b4139c7992a79541c"
+    }
+  ],
+  "excluded_paths": [
+    "EXPLORE_DRIVE_V1.md",
+    "EXPLORE_DRIVE_V2.md",
+    "docs/dev/reviews/001_49143fa/REVIEW-REPORT.md",
+    "docs/dev/reviews/002_81011e7/REVIEW-PLAN.md",
+    "docs/dev/reviews/002_81011e7/REVIEW-REPORT.md",
+    "docs/dev/reviews/002_81011e7/REVISION-PLAN.md",
+    "docs/dev/reviews/002_81011e7/REVISION-REPORT.md",
+    "docs/dev/reviews/003_39374c8/REVIEW-REPORT.md",
+    "docs/dev/reviews/003_39374c8/REVISION-PLAN.md",
+    "docs/dev/reviews/003_39374c8/REVISION-REPORT.md",
+    "docs/dev/reviews/004_af715bb/REVIEW-REPORT.md",
+    "docs/dev/reviews/004_af715bb/REVISION-PLAN.md",
+    "docs/dev/reviews/004_af715bb/REVISION-REPORT.md",
+    "docs/dev/reviews/005_79fab0e/REVISION-PLAN.md",
+    "docs/dev/reviews/005_79fab0e/REVISION-REPORT.md",
+    "docs/dev/reviews/006_0393fee/REVISION-PLAN.md",
+    "docs/dev/reviews/006_0393fee/REVISION-REPORT.md",
+    "docs/dev/reviews/007_df531c2/REVIEW-REPORT.md",
+    "docs/dev/reviews/007_df531c2/REVISION-PLAN.md",
+    "docs/dev/reviews/007_df531c2/REVISION-REPORT.md",
+    "docs/dev/reviews/008_98a5562/REVIEW-PLAN.md",
+    "docs/dev/reviews/008_98a5562/REVIEW-REPORT.md",
+    "docs/dev/reviews/008_98a5562/REVISION-PLAN.md",
+    "docs/dev/reviews/008_98a5562/REVISION-REPORT.md",
+    "docs/dev/reviews/008_98a5562/evidence/README.md",
+    "docs/dev/reviews/008_98a5562/evidence/V007-committed-check.json",
+    "docs/dev/reviews/008_98a5562/evidence/V007-committed-state.json",
+    "docs/dev/reviews/008_98a5562/evidence/V007-interruption-diagnosis.json",
+    "docs/dev/reviews/008_98a5562/evidence/V007-merge-publication.json",
+    "docs/dev/reviews/008_98a5562/evidence/V007-prospective-check.json",
+    "docs/dev/reviews/008_98a5562/evidence/V007-prospective-state.json",
+    "docs/dev/reviews/008_98a5562/evidence/V007-working-check.json",
+    "docs/dev/reviews/008_98a5562/evidence/environment.json",
+    "docs/dev/reviews/008_98a5562/evidence/failure-results.json",
+    "docs/dev/reviews/008_98a5562/evidence/failure_fixture.py",
+    "docs/dev/reviews/008_98a5562/evidence/integration_verify.py",
+    "docs/dev/reviews/008_98a5562/evidence/lifecycle-results.json",
+    "docs/dev/reviews/008_98a5562/evidence/lifecycle_fixture.py",
+    "docs/dev/reviews/009_384beef/REVISION-PLAN.md",
+    "docs/dev/reviews/009_384beef/REVISION-REPORT.md",
+    "docs/dev/reviews/009_384beef/evidence/directory-bootstrap.md",
+    "docs/dev/reviews/009_384beef/evidence/final-fix-full-green.log",
+    "docs/dev/reviews/009_384beef/evidence/final-fix-green.log",
+    "docs/dev/reviews/009_384beef/evidence/final-fix-red.log",
+    "docs/dev/reviews/009_384beef/evidence/final-fix-report.md",
+    "docs/dev/reviews/009_384beef/evidence/final-fix-review-repro.log",
+    "docs/dev/reviews/009_384beef/evidence/final-integration-checks.json",
+    "docs/dev/reviews/009_384beef/evidence/integration-verification.json",
+    "docs/dev/reviews/009_384beef/evidence/merge-prospective-tests.log",
+    "docs/dev/reviews/009_384beef/evidence/relocation-checks.json",
+    "docs/dev/reviews/009_384beef/evidence/relocation-final-tests.log",
+    "docs/dev/reviews/009_384beef/evidence/task-1-report.md",
+    "docs/dev/reviews/009_384beef/evidence/task-1-review.md",
+    "docs/dev/reviews/009_384beef/evidence/task-2-hardening-red.log",
+    "docs/dev/reviews/009_384beef/evidence/task-2-path-red.log",
+    "docs/dev/reviews/009_384beef/evidence/task-2-red.log",
+    "docs/dev/reviews/009_384beef/evidence/task-2-report.md",
+    "docs/dev/reviews/009_384beef/evidence/task-2-review-full-green.log",
+    "docs/dev/reviews/009_384beef/evidence/task-2-review-identity-red.log",
+    "docs/dev/reviews/009_384beef/evidence/task-2-review-red.log",
+    "docs/dev/reviews/009_384beef/evidence/task-2-review.md",
+    "docs/dev/reviews/009_384beef/evidence/task-2-sensitivity-bool-int.log",
+    "docs/dev/reviews/009_384beef/evidence/task-2-sensitivity-conflict-stages.log",
+    "docs/dev/reviews/009_384beef/evidence/task-2-sensitivity-unknown-publication.log",
+    "docs/dev/reviews/009_384beef/evidence/task-2-shallow-full-green.log",
+    "docs/dev/reviews/009_384beef/evidence/task-2-shallow-red.log",
+    "docs/dev/reviews/009_384beef/evidence/task-3-catalog-tests.log",
+    "docs/dev/reviews/009_384beef/evidence/task-3-fix-review-repro.log",
+    "docs/dev/reviews/009_384beef/evidence/task-3-fixwave1-green.log",
+    "docs/dev/reviews/009_384beef/evidence/task-3-fixwave1-red.log",
+    "docs/dev/reviews/009_384beef/evidence/task-3-fixwave1-tests.log",
+    "docs/dev/reviews/009_384beef/evidence/task-3-report.md",
+    "docs/dev/reviews/009_384beef/evidence/task-3-review-repro.log",
+    "docs/dev/reviews/009_384beef/evidence/task-3-review.md",
+    "docs/dev/reviews/009_384beef/evidence/task-3-tests.log",
+    "docs/dev/reviews/009_384beef/evidence/whole-bundle-review-repro.log",
+    "docs/dev/reviews/009_384beef/evidence/whole-bundle-review.md",
+    "docs/dev/reviews/010_3f56922/LIFECYCLE-POLICY.md",
+    "docs/dev/reviews/010_3f56922/REVIEW-REPORT.md",
+    "docs/dev/reviews/010_3f56922/REVISION-PLAN.md",
+    "docs/dev/reviews/010_3f56922/REVISION-REPORT.md",
+    "docs/dev/reviews/010_3f56922/evidence/consumer-assessments.md",
+    "docs/dev/reviews/010_3f56922/evidence/merge-verification.json",
+    "docs/dev/reviews/010_3f56922/evidence/merged-support-tests.log",
+    "docs/dev/reviews/010_3f56922/evidence/structural-verification.json",
+    "docs/dev/reviews/010_3f56922/evidence/support-tests.log",
+    "docs/dev/reviews/011_a3b2ad9/QC-POLICY.md",
+    "docs/dev/reviews/011_a3b2ad9/REVIEW-REPORT.md",
+    "docs/dev/reviews/011_a3b2ad9/REVISION-PLAN.md",
+    "docs/dev/reviews/012_21cba43/REVISION-REPORT.md",
+    "docs/dev/reviews/013_86ce4eb/REVISION-PLAN.md",
+    "docs/dev/reviews/013_86ce4eb/REVISION-REPORT.md",
+    "docs/dev/reviews/014_f7c4de6/REVISION-PLAN.md",
+    "docs/dev/reviews/014_f7c4de6/REVISION-REPORT.md",
+    "docs/dev/reviews/015_5ef0e32/REVISION-PLAN.md",
+    "docs/dev/reviews/015_5ef0e32/REVISION-REPORT.md",
+    "docs/dev/reviews/016_4d51bb4/REVISION-PLAN.md",
+    "docs/dev/reviews/016_4d51bb4/REVISION-REPORT.md",
+    "docs/dev/reviews/017_54d55ed/REVIEW-PLAN.md",
+    "docs/dev/reviews/017_54d55ed/REVIEW-REPORT.md",
+    "docs/dev/reviews/017_54d55ed/REVISION-PLAN.md",
+    "docs/dev/reviews/017_54d55ed/REVISION-REPORT.md",
+    "docs/dev/reviews/017_54d55ed/evidence/catalog-validation.json",
+    "docs/dev/reviews/017_54d55ed/evidence/documentation-verification.json",
+    "docs/dev/reviews/017_54d55ed/evidence/final-validation.json",
+    "docs/dev/reviews/017_54d55ed/evidence/module-documentation.json",
+    "docs/dev/reviews/017_54d55ed/evidence/ownership-probes-corrected.json",
+    "docs/dev/reviews/017_54d55ed/evidence/ownership-probes.json",
+    "docs/dev/reviews/017_54d55ed/evidence/ownership-probes.py",
+    "docs/dev/reviews/017_54d55ed/evidence/package-presentation.json",
+    "docs/dev/reviews/017_54d55ed/evidence/package-structure.json",
+    "docs/dev/reviews/017_54d55ed/evidence/revision-boundary-validation.json",
+    "docs/dev/reviews/017_54d55ed/evidence/revision-catalog.json",
+    "docs/dev/reviews/017_54d55ed/evidence/revision-green-focused.txt",
+    "docs/dev/reviews/017_54d55ed/evidence/revision-green-full.txt",
+    "docs/dev/reviews/017_54d55ed/evidence/revision-merged-tests.txt",
+    "docs/dev/reviews/017_54d55ed/evidence/revision-red.txt",
+    "docs/dev/reviews/017_54d55ed/evidence/source-inventory.json",
+    "docs/dev/reviews/017_54d55ed/evidence/support-tests.txt",
+    "docs/dev/reviews/018_0ea2adf/REVISION-PLAN.md",
+    "docs/dev/reviews/018_0ea2adf/REVISION-REPORT.md",
+    "docs/dev/reviews/019_609d084/REVISION-PLAN.md",
+    "docs/dev/reviews/019_609d084/REVISION-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/SHA256.json",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-one/docs/dev/ARCHITECTURE.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-one/docs/dev/DECOMPOSITION.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-one/docs/dev/PLAN-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-one/docs/dev/PLAN.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-one/docs/dev/PROJECT.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-one/docs/dev/SPEC-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-one/docs/dev/SPEC.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-one/docs/dev/TASKS-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-one/docs/dev/TASKS.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-one/docs/dev/layout.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-two/docs/dev/ARCHITECTURE.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-two/docs/dev/DECOMPOSITION.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-two/docs/dev/PLAN-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-two/docs/dev/PLAN.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-two/docs/dev/PROJECT.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-two/docs/dev/SPEC-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-two/docs/dev/SPEC.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-two/docs/dev/TASKS-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-two/docs/dev/TASKS.md",
+    "docs/dev/reviews/019_609d084/evidence/initial/case-two/docs/dev/layout.md",
+    "docs/dev/reviews/019_609d084/evidence/local-review-initial.md",
+    "docs/dev/reviews/019_609d084/evidence/local-review-recheck.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-one/docs/dev/ARCHITECTURE.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-one/docs/dev/DECOMPOSITION.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-one/docs/dev/PLAN-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-one/docs/dev/PLAN.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-one/docs/dev/PROJECT.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-one/docs/dev/SPEC-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-one/docs/dev/SPEC.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-one/docs/dev/TASKS-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-one/docs/dev/TASKS.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-one/docs/dev/layout.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-two/docs/dev/ARCHITECTURE.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-two/docs/dev/DECOMPOSITION.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-two/docs/dev/PLAN-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-two/docs/dev/PLAN.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-two/docs/dev/PROJECT.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-two/docs/dev/SPEC-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-two/docs/dev/SPEC.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-two/docs/dev/TASKS-REVIEW-REPORT.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-two/docs/dev/TASKS.md",
+    "docs/dev/reviews/019_609d084/evidence/rechecked/case-two/docs/dev/layout.md",
+    "docs/dev/reviews/019_609d084/evidence/support-tests.txt",
+    "docs/dev/reviews/020_019eb35/REVISION-PLAN.md",
+    "docs/dev/reviews/020_019eb35/REVISION-REPORT.md",
+    "docs/dev/reviews/020_019eb35/independent/ASSESSMENT.md",
+    "docs/dev/reviews/020_019eb35/independent/SOURCE-HASHES.json",
+    "docs/dev/reviews/020_019eb35/verification/CHECKS.json",
+    "docs/dev/reviews/020_019eb35/verification/INITIAL-DISCOVERY.log",
+    "docs/dev/reviews/020_019eb35/verification/MERGED-SUPPORT-TESTS.log",
+    "docs/dev/reviews/020_019eb35/verification/SUPPORT-TESTS.log",
+    "docs/dev/reviews/021_85f2857/AUTHORIZATION-AMENDMENT-SUPPLEMENT.md",
+    "docs/dev/reviews/021_85f2857/DIAGNOSTIC-REPORT.md",
+    "docs/dev/reviews/021_85f2857/FINAL-EVIDENCE-INTEGRATION.json",
+    "docs/dev/reviews/021_85f2857/FINAL-PUBLICATION.json",
+    "docs/dev/reviews/021_85f2857/IMPORT-PROVENANCE.json",
+    "docs/dev/reviews/021_85f2857/PROPOSED-AMENDMENTS.md",
+    "docs/dev/reviews/021_85f2857/README.md",
+    "docs/dev/reviews/021_85f2857/REVIEW-REPORT.md",
+    "docs/dev/reviews/021_85f2857/REVISION-PLAN.md",
+    "docs/dev/reviews/021_85f2857/REVISION-REPORT.md",
+    "docs/dev/reviews/021_85f2857/STOP-CHECKPOINT.json",
+    "docs/dev/reviews/021_85f2857/TEST-MAIN-PUBLICATION.json",
+    "docs/dev/reviews/021_85f2857/evidence/final-integration.json",
+    "docs/dev/reviews/021_85f2857/evidence/independent-consistency-review.md",
+    "docs/dev/reviews/021_85f2857/evidence/merged-support-suite.txt",
+    "docs/dev/reviews/021_85f2857/evidence/prospective-integration.json",
+    "docs/dev/reviews/021_85f2857/evidence/source-validation.json",
+    "docs/dev/reviews/021_85f2857/evidence/support-suite.txt",
+    "docs/dev/reviews/021_85f2857/runs/A-004/1/AUTHORIZATION-AMENDMENT-PROPOSAL.md",
+    "docs/dev/reviews/021_85f2857/runs/A-027/1/independent-assessment/RECONCILIATION.json",
+    "docs/dev/reviews/021_85f2857/runs/A-027/1/independent-assessment/RETAINED-ATTEMPT-ASSESSMENTS.json",
+    "docs/dev/reviews/022_4d24148/REVISION-REPORT.md",
+    "docs/dev/reviews/023_642e93d/REVISION-REPORT.md",
+    "docs/dev/reviews/023_642e93d/merged-package-tests.txt",
+    "docs/dev/reviews/023_642e93d/package-validation.json",
+    "docs/dev/reviews/023_642e93d/support-suite.txt",
+    "docs/dev/reviews/024_ed2d571/FINAL-REVISION.json",
+    "docs/dev/reviews/024_ed2d571/REVIEW-PLAN.md",
+    "docs/dev/reviews/024_ed2d571/REVIEW-REPORT.md",
+    "docs/dev/reviews/024_ed2d571/REVISION-PLAN.md",
+    "docs/dev/reviews/024_ed2d571/REVISION-REPORT.md",
+    "docs/dev/reviews/024_ed2d571/campaign-index-check.json",
+    "docs/dev/reviews/024_ed2d571/catalog-validation.json",
+    "docs/dev/reviews/024_ed2d571/defect-reproductions.json",
+    "docs/dev/reviews/024_ed2d571/final-integrity-checks.json",
+    "docs/dev/reviews/024_ed2d571/independent/REPAIR-REVIEW.md",
+    "docs/dev/reviews/024_ed2d571/independent/REVIEW-REPORT.md",
+    "docs/dev/reviews/024_ed2d571/log-format-normalization.json",
+    "docs/dev/reviews/024_ed2d571/merged-integrity.json",
+    "docs/dev/reviews/024_ed2d571/merged-repair-checks.txt",
+    "docs/dev/reviews/024_ed2d571/navigation-checks.json",
+    "docs/dev/reviews/024_ed2d571/package-checks.json",
+    "docs/dev/reviews/024_ed2d571/package-green.txt",
+    "docs/dev/reviews/024_ed2d571/package-navigation.json",
+    "docs/dev/reviews/024_ed2d571/package-red.txt",
+    "docs/dev/reviews/024_ed2d571/probe-green.txt",
+    "docs/dev/reviews/024_ed2d571/probe-red.txt",
+    "docs/dev/reviews/024_ed2d571/receipt-green.txt",
+    "docs/dev/reviews/024_ed2d571/receipt-red.txt",
+    "docs/dev/reviews/024_ed2d571/release-evidence-checks.json",
+    "docs/dev/reviews/024_ed2d571/repaired-catalog-validation.json",
+    "docs/dev/reviews/024_ed2d571/repaired-package-validation.json",
+    "docs/dev/reviews/024_ed2d571/repaired-support-suite.txt",
+    "docs/dev/reviews/024_ed2d571/support-suite.txt",
+    "docs/dev/reviews/024_ed2d571/variant-accounting-check.json",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/README.md",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/REVISION-PLAN.md",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/REVISION-REPORT.md",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/SDD-MANAGER-FINDINGS.md",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/evidence/baseline-consumer.md",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/evidence/decisions-consumer.md",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/evidence/exercise_orientation.py",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/evidence/fixture-link-check.json",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/evidence/independent-review.md",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/evidence/main-support-tests.txt",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/evidence/orientation-fixtures.zip",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/evidence/orientation-recovery-consumer.md",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/evidence/orientation-results.json",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/evidence/source-checks.json",
+    "docs/dev/reviews/025_98cbc3d-demo-findings/evidence/support-tests.txt",
+    "docs/dev/reviews/026_ad9c0c9-preimplementation-baseline/REVISION-PLAN.md",
+    "docs/dev/reviews/026_ad9c0c9-preimplementation-baseline/REVISION-REPORT.md",
+    "docs/dev/reviews/026_ad9c0c9-preimplementation-baseline/verify_git_lifecycle.py",
+    "docs/dev/reviews/028_5e2624e-remove-authorization-policy/REVISION-PLAN.md",
+    "docs/dev/reviews/028_5e2624e-remove-authorization-policy/REVISION-REPORT.md",
+    "docs/dev/reviews/029_4a93f0f-closed-campaign-records/REVISION-PLAN.md",
+    "docs/dev/reviews/029_4a93f0f-closed-campaign-records/REVISION-REPORT.md",
+    "docs/dev/reviews/030_a3f35e4-greenfield-prompt-template/REVISION-PLAN.md",
+    "docs/dev/reviews/030_a3f35e4-greenfield-prompt-template/REVISION-REPORT.md",
+    "docs/dev/reviews/031_646af89-github-release-workflow/REVISION-PLAN.md",
+    "docs/dev/reviews/031_646af89-github-release-workflow/REVISION-REPORT.md",
+    "docs/dev/reviews/032_a64f6b7-release-highlights/REVISION-PLAN.md",
+    "docs/dev/reviews/032_a64f6b7-release-highlights/REVISION-REPORT.md",
+    "docs/dev/reviews/032_a64f6b7-release-highlights/verify_fixtures.py",
+    "docs/dev/reviews/033_04f0b63-human-document-checkpoints/REVIEW-REPORT.md",
+    "docs/dev/reviews/033_04f0b63-human-document-checkpoints/REVISION-PLAN.md",
+    "docs/dev/reviews/033_04f0b63-human-document-checkpoints/REVISION-REPORT.md",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/REVIEW-REPORT.md",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/REVISION-PLAN.md",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/REVISION-REPORT.md",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/amendment-package-check.json",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/amendment-source-checks.json",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/amendment-support-tests.log",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/final-source-checks.json",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/marker-package-check.json",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/marker-source-checks.json",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/marker-support-tests.log",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/package-check.json",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/skill-validation.json",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/source-checks.json",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/support-tests.log",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/verify_markdown.mjs",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/verify_markers.mjs",
+    "docs/dev/reviews/034_c9cee3d-shared-markdown-style/evidence/verify_spacing.mjs",
+    "docs/dev/reviews/035_6ac4f0a-per-commit-publication/REVISION-PLAN.md",
+    "docs/dev/reviews/035_6ac4f0a-per-commit-publication/REVISION-REPORT.md",
+    "docs/dev/reviews/035_6ac4f0a-per-commit-publication/evidence/package-check.json",
+    "docs/dev/reviews/035_6ac4f0a-per-commit-publication/evidence/source-checks.json",
+    "docs/dev/reviews/035_6ac4f0a-per-commit-publication/evidence/support-tests.log",
+    "docs/dev/reviews/035_6ac4f0a-per-commit-publication/evidence/verify_documents.mjs",
+    "docs/dev/reviews/036_b969895-prerelease-review/REVISION-PLAN.md",
+    "docs/dev/reviews/036_b969895-prerelease-review/REVISION-REPORT.md",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/COMPATIBILITY-EVIDENCE.json",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/INTEGRATION-PREPARATION.md",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/REVIEW-PLAN.md",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/REVIEW-REPORT.md",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/REVISION-PLAN.md",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/REVISION-REPORT.md",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/SOURCE-INVENTORY.md",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/diagram-evidence/readme-1.png",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/diagram-evidence/readme-2.png",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/diagram-evidence/readme-3.png",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/diagram-evidence/readme-4.png",
+    "docs/dev/reviews/037_a6c42dd-prerelease-review/diagram-evidence/render.json",
+    "docs/dev/reviews/038_d6218f1-tracking-fidelity/README.md",
+    "docs/dev/reviews/038_d6218f1-tracking-fidelity/REVIEW-REPORT.md",
+    "docs/dev/reviews/038_d6218f1-tracking-fidelity/REVISION-PLAN.md",
+    "docs/dev/reviews/038_d6218f1-tracking-fidelity/REVISION-REPORT.md",
+    "docs/dev/reviews/039_8bb3b3d-greenfield-prompt-order/REVISION-PLAN.md",
+    "docs/dev/reviews/039_8bb3b3d-greenfield-prompt-order/REVISION-REPORT.md",
+    "docs/dev/reviews/040_a0685b5-revision-campaign-modes/REVIEW-REPORT.md",
+    "docs/dev/reviews/040_a0685b5-revision-campaign-modes/REVISION-PLAN.md",
+    "docs/dev/reviews/040_a0685b5-revision-campaign-modes/REVISION-REPORT.md",
+    "docs/dev/reviews/040_a0685b5-revision-campaign-modes/evidence/check_merge_highlights.py",
+    "docs/dev/reviews/041_ca99ca1-task-commit-contract/REVIEW-REPORT.md",
+    "docs/dev/reviews/041_ca99ca1-task-commit-contract/REVISION-PLAN.md",
+    "docs/dev/reviews/041_ca99ca1-task-commit-contract/REVISION-REPORT.md",
+    "docs/dev/reviews/041_ca99ca1-task-commit-contract/evidence/source-application-assessment.md",
+    "docs/dev/reviews/041_ca99ca1-task-commit-contract/evidence/source-checks.json",
+    "docs/dev/reviews/041_ca99ca1-task-commit-contract/evidence/support-tests.txt",
+    "docs/dev/reviews/042_58e7e15-manifest-conformance/REVISION-PLAN.md",
+    "docs/dev/reviews/042_58e7e15-manifest-conformance/REVISION-REPORT.md",
+    "docs/dev/reviews/043_6294eee-root-manifest-only/REVISION-PLAN.md",
+    "docs/dev/reviews/043_6294eee-root-manifest-only/REVISION-REPORT.md",
+    "docs/dev/reviews/044_6df539c-release-message-preparation/REVISION-PLAN.md",
+    "docs/dev/reviews/044_6df539c-release-message-preparation/REVISION-REPORT.md",
+    "docs/dev/reviews/044_6df539c-release-message-preparation/SOURCE-ASSESSMENT.md",
+    "docs/dev/reviews/README.md"
+  ],
+  "exclusions": "Closed campaign/feature/phase records and retained exploration transcripts; no current-validity assessment."
+}
