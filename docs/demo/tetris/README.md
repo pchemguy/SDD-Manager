@@ -192,6 +192,36 @@ For a campaign per setting, request only the selected setting and its choices, a
 
 Verify each control through the browser interface and its effect on gameplay or previews. Check all four combinations of the two locking-policy controls, disabled hard-drop/hold actions, ghost visibility modes, next-piece preview visibility, and restored defaults after a reload. Apply the accepted active-piece and restart rules when checking changes during play.
 
+### Semi-persistent configuration
+
+The next feature candidate extends the configuration panel with two independently implementable options: saving settings in cookies and supplying settings through URL query (GET) parameters. Either option can be used alone, and both can be used together. URL parameters use sensible defaults; a value equal to its default may be written explicitly or omitted.
+
+| Implemented options | Effective value for each setting |
+| --- | --- |
+| Cookies only | Saved cookie value, otherwise the default. |
+| URL parameters only | Explicit URL value, otherwise the default. |
+| Cookies and URL parameters | Explicit URL value, otherwise the saved cookie value, otherwise the default. |
+
+When both options are implemented, valid explicit URL parameters also update the corresponding cookie values. Resolve each setting independently: omitting a URL parameter retains its saved cookie value when available. An explicitly supplied default value overrides and updates the cookie just like any other explicit value; omitting that parameter allows the cookie value to take precedence over the default.
+
+Implement cookies and URL parameters in separate feature campaigns, in either order, or together in one campaign. Each completed and verified campaign offers a release boundary. When adding the second option, implement and verify the combined precedence and cookie-update behavior.
+
+For cookies:
+
+> [!NOTE] Prompt
+>
+> Open a feature campaign to save configuration settings in cookies and restore them when the game is opened again. Use sensible defaults for settings without saved values. If URL configuration is already supported, explicit URL parameters must override and update the corresponding cookies; omitted URL parameters must use saved cookie values before defaults.
+
+For URL parameters:
+
+> [!NOTE] Prompt
+>
+> Open a feature campaign to support configuration settings through URL query (GET) parameters with sensible defaults. Default values may be supplied explicitly or omitted. If cookie configuration is already supported, explicit URL parameters must override and update the corresponding cookies; omitted URL parameters must use saved cookie values before defaults.
+
+During preparation, clarify parameter names and accepted values, handling of invalid or duplicate URL parameters and invalid saved values, cookie lifetime and scope, and whether panel changes update the URL as well as cookies when available. Keep omitted parameters distinct from explicit default-valued parameters.
+
+Verify each option independently and their combined behavior. Cover partial URLs, conflicting cookie/URL values, explicit defaults, omitted values, cookie updates, reloads and the accepted invalid-value handling.
+
 ## Human review and implementation checkpoints
 
 Follow SDD Manager's document review checkpoints as each preparation artifact is produced. Review the substantive decisions, unresolved questions, and readiness for the next stage.
@@ -255,6 +285,7 @@ Combine automated checks with browser interaction. Include observable checks for
 | Hard drop | Keyboard input moves the piece to its landing position. The immediate exception locks it immediately; the general delayed policy leaves it active under the current general rule. Check both a falling piece and an already grounded piece. |
 | Hard-drop policy amendment | Before/after checks demonstrate the requested policy switch and unchanged ordinary locking. Under full-interval locking, a repeated hard drop does not extend an existing timer. |
 | Configuration panel feature | Controls apply the selected modes and disable the selected actions; all four locking-policy combinations work. Settings are not retained after reload. |
+| Semi-persistent configuration feature | Verify cookies-only and URL-only behavior; when combined, explicit URL values override and update cookies, saved cookies fill omitted parameters, and defaults fill settings absent from both. Explicit defaults still override cookies. |
 
 Exercise controls through the actual browser interface as well as through engine tests.
 

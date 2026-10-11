@@ -96,6 +96,14 @@ Delivery can use one campaign or a campaign per setting, creating the panel with
 
 The scoped Python check passed for six settings/choices, session-only scope, split delivery, dependencies, release boundaries, clarification/check criteria, numbered prompt spacing, exact `NOTE` format, preservation of the nine existing prompts, headings and local links. `git diff --check` passed. This adds guide content, not implemented settings or executed feature/release trials. V-010 checkpoint `6ccef730f33bd253aeb3add8e5414d157f7f95d5` was pushed and exact remote identity verified before this amendment.
 
+## V-012 — Semi-persistent configuration candidate
+
+On 2026-10-11, the human proposed cookies and URL GET parameters as independently implementable configuration options, both usable together. Added the next candidate with cookies-only, URL-only and combined per-setting resolution, separate feature prompts, either implementation order and release boundaries. The combined rule is explicit URL value, then saved cookie value, then default; valid explicit URL values update the corresponding cookies.
+
+An explicit default-valued parameter overrides/updates cookies, while omission permits a saved cookie to override the default. Parameter syntax, invalid/duplicate input behavior, cookie lifetime/scope and panel-to-URL synchronization remain feature-preparation questions. Checks cover independent options, partial URLs, conflicts, explicit defaults, omissions, cookie updates and reloads.
+
+The scoped Python check passed for independent options, exact per-setting precedence, explicit-default/omitted semantics, cookie updates, both implementation orders, two `NOTE` prompts, preservation of the ten existing prompts, headings and local links. `git diff --check` passed. This is guide content, not implemented storage or executed release trials. V-011 checkpoint `5f01a99842c9c38fa7677da22e366c31b0b3572e` was pushed and exact remote identity verified before this amendment.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
