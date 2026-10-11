@@ -13,7 +13,7 @@
 
 ## Accepted scope
 
-Maintain the accepted Tetris demo/test guide, including the short seed description, clarification criteria, five selected enhancements, phased delivery and feature expansion variants, human checkpoints, gameplay checks, and contextual result recording. The accepted V-003 scope starts both variants with failed-downward-attempt locking, offers two hard-drop policies, and adds full-interval and hard-drop-policy steering exercises. Preserve the supplied earlier trial brief unchanged. Keep the guide a draft for further development.
+Maintain the accepted Tetris demo/test guide and the requested companion calculator guide, including the short seed description, clarification criteria, five selected enhancements, phased delivery and feature expansion variants, human checkpoints, gameplay checks, and contextual result recording. The accepted V-003 scope starts both variants with failed-downward-attempt locking, offers two hard-drop policies, and adds full-interval and hard-drop-policy steering exercises. Preserve the supplied earlier trial brief unchanged. Keep the guide a draft for further development.
 
 ## Ordered actions
 
@@ -39,6 +39,8 @@ Maintain the accepted Tetris demo/test guide, including the short seed descripti
 | V-018 | Add a penetrator-bonus feature candidate with four-line rewards, proposed cap of three, hotkey activation, white rendering and deepest valid drop/ghost placement. | Check lifetime through locking, unchanged occupied cells, legal non-overlapping final positions, explicit preparation decisions, release boundary and gameplay verification criteria. | Proposed on 2026-10-11; verification recorded in the report. |
 | V-019 | Add a side-panel penetrator inventory indicator with one symbol per available bonus, exemplified by lightning bolts. | Check guide/prompt coverage and earned/spent update requirements; preserve penetrator gameplay rules. | Requested on 2026-10-11; verification recorded in the report. |
 | V-020 | Move the penetrator candidate before both configuration sections, after conditional ghost visibility. | Verify section order and byte-for-byte preservation of moved content. | Requested on 2026-10-11; verification recorded in the report. |
+
+| V-021 | Add a second calculator demo guide with a dominant three-phase project sequence, two optional steering exercises, four feature campaigns, release boundaries, and navigation. | Check Phase 1 alone is the baseline, explicit operations and mode relationships, standalone prompts, steering checkpoints, Markdown spacing and local links. | Requested on 2026-10-11; verification recorded in the report. |
 
 ## Persistence and stopping boundary
 

@@ -16,6 +16,8 @@ For a new project, copy the [Greenfield Project Prompt Template](<Greenfield Pro
 
 The draft [Tetris demo and test guide](https://github.com/pchemguy/SDD-Manager/blob/revision/045_818d66f-demo-tetris/docs/demo/tetris/README.md) illustrates phased project delivery and a baseline followed by a feature campaign.
 
+The draft [Calculator demo and test guide](https://github.com/pchemguy/SDD-Manager/blob/revision/045_818d66f-demo-tetris/docs/demo/calculator/README.md) follows three initial phases, optional steering exercises, and a proposed feature/release sequence.
+
 Load the package using your agent client's supported plugin mechanism. The package uses the Agent Plugins 1.0 root `plugin.json` manifest, with OpenAI presentation metadata under `extensions.com.openai.interface`, 15 skills under `skills/` and bundled icons under `assets/`. Manifest paths resolve from the repository/package root. The workflows require an agent with access to project files and the tools needed for the requested work.
 
 - **Project changes:** Use an existing, eligible Git worktree with applicable project instructions. Repository initialization is outside the plugin's scope.

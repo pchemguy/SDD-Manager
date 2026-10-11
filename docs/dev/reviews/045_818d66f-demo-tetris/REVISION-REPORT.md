@@ -159,3 +159,11 @@ The scoped Python check passed for the requested order, byte identity of the mov
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
+
+## V-021 — Companion calculator demo guide
+
+On 2026-10-11, the human requested a simpler second demo with a dominant proposed sequence and clarified that only Phase 1 is the baseline; the application is called a calculator. Added [the calculator guide](../../../demo/calculator/README.md) and root README navigation. Initial scope covers basic arithmetic, powers/roots/logarithms/grouping, and trigonometry in three phases. Optional checkpoint steering adds abs/inv/neg and sqr/sqrt. Subsequent campaigns add a basic/scientific toggle, programmer operations, graphing, and a four-mode selector. Graphing includes scientific functions; scientific and programmer controls are mutually hidden in their respective modes.
+
+The guide supplies seven complete NOTE prompt callouts, preparation clarifications, eligible unfinished-phase steering checkpoints, phase/feature release boundaries, browser and numerical verification criteria, and result recording. The dominant sequence remains adjustable by the human. It describes proposed trials; no calculator, live SDD workflow trial, or release was executed.
+
+Scoped Python checks passed for phase scope, all seven prompt callouts, mode relationships, heading spacing, whitespace and the local greenfield-template link. Manual composition review checked target-first introductions, explicit function lists, separation of project phases from later campaigns, and the stop-before-resumption steering boundary. `git diff --check` passed. Changes are confined to the new guide, root navigation, the active campaign plan/report, and its index summary; closed packages and workflow source remain unchanged. Commit/publication facts are established separately by Git and remote readback. The campaign remains open and unmerged.
