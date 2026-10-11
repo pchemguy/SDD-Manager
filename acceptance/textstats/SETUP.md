@@ -14,7 +14,7 @@ Use [inputs.schema.json](schemas/inputs.schema.json), schema version 1. Resolve 
 | `plugin_revision` | `HEAD`: full committed source HEAD observed at run start; supplied revision resolves to full SHA |
 | `source_mode` | `committed`; explicit `dirty` testing snapshots requested package edits and records base SHA plus hashes/diff |
 | `scope` | `{}` means full supported campaign; optional `phases`/`cases` arrays bound selection |
-| `stop_after` | `null`; optional one-shot P0–P5 or A-001–A-027 boundary; stop after its assessment/checkpoint |
+| `stop_after` | `null`; optional one-shot P0–P5 or A-001–A-033 boundary; stop after its assessment/checkpoint |
 | `profile` | `full-github`; `local-only` is partial acceptance, `installed-client` additionally requests installed execution |
 | `run_id` | Optional existing campaign identity when explicitly resuming; allocate a fresh identity otherwise |
 

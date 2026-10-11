@@ -29,3 +29,7 @@ Apply [independent document QC assessment](DOCUMENT-QC.md) at affected preparati
 ## Requested-tracking fidelity follow-ups
 
 The [focused follow-up guide](TRACKING-FIDELITY.md) supplies separately selected comparative scenarios and an isolated ordinary broad request. Keep their results distinct from default catalog grades; preparing the guide is not execution or acceptance.
+
+## Release evidence capture
+
+[Release controls](../../RELEASE-SCENARIOS.md#read-only-release-capture) define read-only note/native Git/provider-body capture and its public-safe input shape. The capture helper records literal comparisons and hashes, never expected bodies or independent grades. Supply baseline evidence from the actual pre-operation notes, and establish readback source/class separately. Missing observations, freshness and human-content judgments cannot be replaced by a helper pass.

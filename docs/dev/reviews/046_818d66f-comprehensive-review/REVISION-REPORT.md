@@ -29,3 +29,13 @@ Added A-028–A-033 with six isolated scenario groups, unique consumer requests,
 Updated catalog/harness/schema case ranges, coordinator/recovery/diagnostic/variant maps, README and developer capability map. Historical 27-case runtime results remain historical; current 33 cases inherit no passes. The DSL-consumability fixture now includes synthetic notes solely to exercise new file checks, not consumer behavior.
 
 Catalog CLI static validation passed for 33 cases. [Catalog/handoff/capture regressions](evidence/v004-catalog-tests.log): 24 passed. Initial generic DSL checks exposed missing synthetic note fixture setup; the fixture was corrected without weakening contracts. `git diff --check` passed. No consumer, installed-client or provider scenario executed. R-004: component scenarios implemented; evidence capture/support extension and coherent checks pending.
+
+## V-005 — Release capture and meaningful harness support
+
+Added read-only assessor capture for exact UTF-8 notes, pre-operation preservation, native release commit body/subject, tag peeling and normalized provider readback agreement. It emits literal evidence plus separate hashes/command provenance, screens sensitive content, rejects symlinks/partial identities/malformed readback and preserves occupied outputs. No product writes, commits/tags or provider requests are performed. Supplied provider class/origin still require independent assessment; no helper output grades an agent Passed.
+
+Ten new support tests exercise exact agreement and changed note/provider bytes, wrong tag/draft status, differing or absent preservation baseline, unsafe notes, partial/malformed evidence, occupied CLI output, missing literal/wrong evidence class, independently published predecessor gating and new/unknown input/checkpoint IDs. Seven capture tests failed before implementation; schema/handoff tests already passed. [Initial sensitivity run](evidence/v005-red.log) retained.
+
+[Full TextStats support suite](evidence/v005-support-tests.log): 123 passed in 18.652 seconds. [Publisher suite](evidence/v005-publisher-tests.log): 29 passed. Catalog static validation: 33 cases valid; `git diff --check` passed. Runtime: Linux/Python 3.12.14; native Git fixtures and controlled readback only. Required/optional grades cannot substitute evidence classes or promote deterministic success to independent acceptance.
+
+R-004 component extension is implemented and locally verified. New consumer cases, installed-client loading and live-provider scenarios remain deferred, unexecuted evidence gaps; this does not block the explicitly selected component extension. No production release-workflow behavior was added or duplicated.

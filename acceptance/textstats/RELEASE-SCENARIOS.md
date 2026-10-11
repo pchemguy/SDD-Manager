@@ -40,3 +40,14 @@ A-033 records client/version, package bytes/hash and installation mechanism. Obs
 Deterministic file/literal checks are partial facts, not independent behavioral grades. A-031 preservation literals must derive from actual before/failed-write bytes; A-032 agreement literals must derive from Git objects, retained notes and provider readback, never assessor expected text. Keep evidence classes and provenance distinct. Do not retain credentials or sensitive provider bodies; release body capture must be approved public-safe material.
 
 Extend RUN-STATE/RESUME with existing case/variant and actual cursor fields; no new production transaction journal is introduced. Preserve original attempts, interventions, local/remote objects and fault facility identity. Interrupted or uncertain writes follow [RECOVERY](RECOVERY.md); absent actual observations remain Blocked/Not run. A-027 reconciles all selected supported IDs and optional omissions, without splitting historical case grades into fabricated new passes.
+
+## Read-only release capture
+
+Use [release_capture.py](cases/assessor/release_capture.py) in the assessor context to capture exact root note bytes, an optional pre-operation baseline and optional native release/provider agreement. It never writes product files, creates commits/tags or contacts GitHub. Output is version 1 literal evidence plus separate hash/command provenance; neither carries an agent pass. Freshness, human-content quality and readback origin require independent judgment.
+
+```text
+python acceptance/textstats/cases/assessor/release_capture.py --product-root <checkout> --baseline <before-notes> --output <new-literals.json> --provenance <new-provenance.json>
+python acceptance/textstats/cases/assessor/release_capture.py --product-root <checkout> --release-commit <full-release-SHA> --tag <release-tag> --provider-readback <readback.json> --output <new-literals.json> --provenance <new-provenance.json>
+```
+
+Supplied normalized readback has exactly `body` (public-safe text), `target_commit` (independently resolved full SHA), `evidence_class` (`controlled` or `live-provider`), `state` (`draft` or `published`) and `release_id` (positive integer). Preserve actual controlled/API readback provenance separately; a declared class does not authenticate origin. Capture stores hashes and comparisons without copying provider body text into provenance. It rejects linked/protected/non-UTF-8 or recognizable sensitive inputs and occupied outputs. Missing baseline yields no preservation literal; partial commit/tag/readback arguments fail rather than invent agreement. Failed capture preserves existing evidence; any new partial output after an interrupted write belongs to that attempt and must remain visible.
