@@ -57,4 +57,4 @@ New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT
 
 | `041_ca99ca1` | Strict leading single-task subjects, atomic result/evidence/checklist closure and continuation/integration audits implemented and source/support checked; child integration/publication recorded in Git, parent 037 suspended. | [Review report](041_ca99ca1-task-commit-contract/REVIEW-REPORT.md), [revision plan](041_ca99ca1-task-commit-contract/REVISION-PLAN.md), [revision report](041_ca99ca1-task-commit-contract/REVISION-REPORT.md) |
 
-| `042_58e7e15` | Open: portable manifest conformance with preserved OpenAI interface metadata; execution pending. | [Revision plan](042_58e7e15-manifest-conformance/REVISION-PLAN.md), [revision report](042_58e7e15-manifest-conformance/REVISION-REPORT.md) |
+| `042_58e7e15` | Manifest correction verified: portable schema conformance, preserved OpenAI interface, synchronized manifests and actual package checks; 113 support/26 publisher tests passed. Final integration/publication recorded by Git. | [Revision plan](042_58e7e15-manifest-conformance/REVISION-PLAN.md), [revision report](042_58e7e15-manifest-conformance/REVISION-REPORT.md) |

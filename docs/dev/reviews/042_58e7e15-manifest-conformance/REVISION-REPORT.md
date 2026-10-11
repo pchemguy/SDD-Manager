@@ -15,3 +15,11 @@ Commit identity and publication are established by Git and exact remote readback
 Executed under the human's subsequent “Execute” instruction. Both canonical and compatibility manifests now omit root `skills` and `hooks`, declare the canonical `$schema`, and retain the complete baseline interface at `extensions.com.openai.interface`. Deep equality confirmed every interface field/value, including prompts and dark artwork. All four artwork paths resolve from the plugin root; manifest bytes remain identical. Version remains 0.15.0.
 
 Actual Python jsonschema Draft202012Validator validated the complete candidate against freshly retrieved canonical schema bytes, SHA-256 `0a4aad95ce337878ad38802ebf0daa3fde76abe3f65400c86bcbb1ec0b3ab883`; schema self-validation also passed. This validates the portable extension container, not client semantics. Publisher suite: 26 tests passed. Whitespace check passed. Full support/package checks and integration remain pending V-004.
+
+## V-004 — package and regression checks complete
+
+Manifest checkpoint `c0eb3533f27835e48795b0b794dd27dc06ea0a8c` was pushed and exactly read back before package construction. The actual committed archive passed the publisher's complete path/blob inventory inspection; extracted manifest copies passed schema validation, byte equality and baseline interface equality. ZIP SHA-256: `e75bfe37cd7ac91d8016bae2c3acf498cf235e87459546389e086199f0c4cbab`. Build-only validation used no provider release operations.
+
+Regression evidence: 113 support tests passed in 17.122 seconds; 26 publisher tests passed in 0.187 seconds. Whitespace and full campaign diff checks passed. No closed campaign path was changed. Both schemas/manifests and the package interface were checked with actual tools; installed-client discovery remains untested and shared skill references are unchanged.
+
+V-001–V-004 are verified. Campaign tip publication and explicit two-parent main integration follow this report checkpoint. The final merge records exact source parents, campaign opening `6a56932154188631245e49bf27eeb9859004d231`, baseline, actual merged-state checks and scope. Closure depends on verified target publication; Git and remote readback establish that boundary without a post-closure report edit.

@@ -5,7 +5,7 @@
 - Campaign: `042_58e7e15`; title: Manifest conformance.
 - Baseline: `58e7e15a2b0bd4f1870a24f1b566e68ceb5fd70e`.
 - Branch: `revision/042_58e7e15-manifest-conformance`; integration target: `origin/main` in `pchemguy/SDD-Manager`.
-- Authority: the human requested a new conformance revision campaign with the three changes below on 2026-10-11. This checkpoint opens and plans the campaign; execution is pending.
+- Authority: the human requested a new conformance revision campaign with the three changes below on 2026-10-11. This checkpoint opens and plans the campaign; execution was subsequently authorized by the human’s “Execute” instruction.
 - Objective: conform the root manifest to Agent Plugins 1.0.0 while retaining OpenAI presentation metadata.
 - Companion: [revision report](REVISION-REPORT.md).
 
