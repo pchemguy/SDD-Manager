@@ -22,7 +22,7 @@ The final checkpoint check additionally resolves links to this report and inspec
 
 ## V-002 — Agent-generated project brief example
 
-On 2026-10-11, the human requested adding the supplied earlier trial brief and linking it from the corresponding scenario. Added [examples/PROJECT.md](../../../demo/tetris/examples/PROJECT.md), using the standard PROJECT filename instead of the prompt's `RPOJECT.md` transposition. Preserved the supplied wording, headings, and four-space list nesting; removed the supplied trailing space.
+On 2026-10-11, the human requested adding the supplied earlier trial brief and linking it from the corresponding scenario. Added [examples/PROJECT_phased-project.md](../../../demo/tetris/examples/PROJECT_phased-project.md), using the standard PROJECT filename instead of the prompt's `RPOJECT.md` transposition. Preserved the supplied wording, headings, and four-space list nesting; removed the supplied trailing space.
 
 Variant A now identifies it as a good example of an agent-generated brief after interactive clarification. The guide explains that Canvas/vanilla JavaScript are example choices and that lock delay remains in this demo's baseline despite its grouping in the supplied brief.
 
@@ -39,6 +39,12 @@ Both exercises apply to either delivery variant at an implemented/verified check
 The scoped Python check passed for policy/exercise coverage, current initial prompts, relative links, Markdown structure, exact owned paths and byte preservation of the supplied example. `git diff --check` passed. Manual composition review checked both policy directions, checkpoint eligibility and the stop-before-resumption boundary. These are documentation checks, not executed steering trials or gameplay tests.
 
 V-002 checkpoint `7a4a79b0c2a887c2fc6095e7ddd7711713c24889` was pushed and verified by exact remote readback. V-003 updates only the guide and this active campaign's plan/report; no closed campaign package changed. Commit and exact remote readback establish V-003 publication separately.
+
+## V-004 — Variant-specific example filename
+
+On 2026-10-11, the human requested a `_<slug>` suffix to identify the example's particular variant. Renamed the supplied brief to [PROJECT_phased-project.md](../../../demo/tetris/examples/PROJECT_phased-project.md), identifying Variant A: Phased project. Updated the guide and active plan/report links; the example's bytes are unchanged.
+
+The scoped Python check passed for byte identity against the preceding committed example, absence of obsolete active link targets and resolution of all active relative links. `git diff --check` passed. V-003 checkpoint `316ef06b35c3ef1f496bacbd404e4b88adf103b7` was pushed and exact remote identity verified before this amendment. The campaign remains open at the same publication-only stopping boundary.
 
 ## Limits and return boundary
 

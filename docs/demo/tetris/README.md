@@ -73,7 +73,7 @@ During clarification, request:
 
 The governing documents should describe the complete accepted project. The plan should distinguish baseline delivery from enhancement delivery, with meaningful exit conditions.
 
-See [examples/PROJECT.md](examples/PROJECT.md) for a good example of an agent-generated project brief from an earlier trial, produced after interactive clarification selected baseline gameplay plus modern enhancements. Its Canvas and vanilla JavaScript choices illustrate that trial; they are not mandatory for this demo. The example also includes full-interval lock delay. This guide starts with failed-downward-attempt locking and introduces full-interval locking as a steering amendment, so use the example for its brief structure and scope presentation rather than copying its locking requirement into the initial project.
+See [examples/PROJECT_phased-project.md](examples/PROJECT_phased-project.md) for a good example of an agent-generated project brief from an earlier trial, produced after interactive clarification selected baseline gameplay plus modern enhancements. Its Canvas and vanilla JavaScript choices illustrate that trial; they are not mandatory for this demo. The example also includes full-interval lock delay. This guide starts with failed-downward-attempt locking and introduces full-interval locking as a steering amendment, so use the example for its brief structure and scope presentation rather than copying its locking requirement into the initial project.
 
 A two-phase plan is a natural arrangement, but the exercise does not require exactly two phases. Additional phases should have a clear delivery purpose.
 
