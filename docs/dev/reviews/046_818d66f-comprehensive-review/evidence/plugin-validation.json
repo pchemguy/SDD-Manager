@@ -1,0 +1,9 @@
+{
+  "source": "818d66f6baf8e3a324d29f3430d3bac3278f0dd2",
+  "input": "actual git archive with export-ignore applied",
+  "validator_exit": 1,
+  "errors": 1,
+  "warnings": 36,
+  "inspector_exit": 1,
+  "adjudication": "The only ERROR rejects com.openai because the tool requires at least three namespace components. The canonical schema permits this object; specification section 8 requires a reverse-domain namespace without a three-component minimum. Tool false positive, no package repair. Cross-skill warnings require separate client evidence. The inspector invokes the same validation and returns the same error."
+}

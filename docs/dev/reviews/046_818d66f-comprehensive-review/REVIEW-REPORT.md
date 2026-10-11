@@ -5,7 +5,7 @@
 - Campaign: `046_818d66f`; [plan](REVIEW-PLAN.md); original opening commit: `f655c9193b4aa07bd5202cef7ff25e8463ee4647`.
 - Reviewed source: `818d66f6baf8e3a324d29f3430d3bac3278f0dd2`, version `0.15.0`; assessment date: 2026-10-11.
 - Working branch: `revision/046_818d66f-comprehensive-review`; target: `main`. Review only; no repairs or release effects authorized.
-- State: In progress. Readiness awaits consolidation; local checks do not establish client or provider acceptance.
+- State: Complete, review only. Current source passes the recorded local checks; four Open findings remain. Local checks do not establish client or provider acceptance.
 - Inventory: [current source and exclusions](evidence/source-inventory.json), 270 current files; closed campaign/feature/phase records excluded. Retained EXPLORE_DRIVE transcripts are provenance, not current workflow authorities, and are excluded from current-validity assessment.
 
 ## Coverage
@@ -13,10 +13,10 @@
 | Unit | Outcome and evidence | Findings |
 | --- | --- | --- |
 | U-001 | Complete current path inventory; README/AGENTS/capability map, prompt, notices, manifest, package contract and publisher inventory inspected. Actual ZIP has 133 regular files, all exact committed bytes; schema validation has zero errors; four interface asset paths exist; 15 skill entries; SVG XML parses. 567 current local inline links assessed; two apparent failures are quoted README-copy examples, manually cleared. | No confirmed package/navigation defect; client evidence tracked at consolidation |
-
 | U-002 | Preparation/QC/human/branch/tracking gates assessed on both owner and coordinator sides; seven boundary scenarios inspected | R-001 |
 | U-003 | Execution/integration/reporting/release handoffs assessed; nine native Git checks passed | R-002 |
 | U-004 | 113 support and 27 publisher tests passed; catalog/module/YAML checks and two identical actual build-only outputs; nonconforming-manifest acceptance reproduced | R-003, R-004 |
+| U-005 | Evidence consolidated; packaged-source validator discrepancy adjudicated; reviewed-source and frozen-record preservation checked | Four Open findings retained |
 
 ## U-001 evidence and limits
 
@@ -52,7 +52,7 @@ Design, specification, planning, task derivation/conformance/progress, TDD entry
 
 Inspected implementation startup/range/task/completion/recovery instructions; steering objective/execution/stop; selected feature incorporation, ownership transfer/archive; manager Git/revision modes/credential handling; report entry/object/release formats; forge highlights/message/release/projection/issue/milestone lifecycle. Scope limits, two-parent integration, stable original opening provenance, human-directed steering return, one executable task per closing commit and unchanged frozen records are explicit. Uncertain provider effects require readback before replay. Verified local work remains distinct from hosted closure/integration.
 
-Nine [native Git scenarios](evidence/git-recipe-results.json) passed using the actual shipped Python collection recipe: complete initial history, annotated baseline peeling, pending-tag exclusion, complete side-ancestry collection, latest cumulative summary retrieval/earlier-body deferral, incremental range, no-op increment, rejected self-baseline and rejected unresolved side-history tag policy. The ninth combined check preserved exact UTF-8 Markdown in a native release commit with `--cleanup=verbatim` and checked an annotated tag's peeled commit. [Fixture script](evidence/check_git_recipes.py) is retained. These are mechanical checks, not editorial or provider acceptance.
+Nine [native Git scenarios](evidence/git-recipe-results.json) passed. The first eight used the actual shipped Python collection recipe: complete initial history, combined annotated-baseline peeling/pending-tag exclusion, complete side-ancestry collection, latest cumulative summary retrieval/earlier-body deferral, incremental range, no-op increment, rejected self-baseline and rejected unresolved side-history tag policy. The ninth combined check preserved exact UTF-8 Markdown in a native release commit with `--cleanup=verbatim` and checked an annotated tag's peeled commit. [Fixture script](evidence/check_git_recipes.py) is retained. These are mechanical checks, not editorial or provider acceptance.
 
 Source scenarios assessed: incomplete phase pauses without merging; selected task count includes review tasks without adding out-of-range work; aggregate or split closing commits block advancement/integration without rewriting published history; steering stops before continuation; SPEC-only incorporation leaves unselected owners untouched; task transfer needs both lists; archive preserves remaining active dependencies; nested/reopened revisions preserve source/return/original-opening identities; stale/version-matching notes require coverage reconstruction; failed final-note save preserves the prior copy; preparation-only creates no release marker; retries reuse matching markers; tag source and commit/GitHub bodies must agree; internal draft cleanup requires actual published-body consumption while final notes remain. These are instruction assessments, not executed agent scenarios.
 
@@ -101,4 +101,28 @@ CI reads structured event data, checks out the exact candidate, gives build read
 
 ## Findings and revision handoff
 
-Consolidation remains pending. Four Open findings: two documentation defects and two verification/evidence gaps. No repair has been accepted. No source changes have been made.
+The review is complete. Four Open findings remain: two documentation defects and two verification/evidence gaps. No high-priority source defect was established. No repair has been accepted and no source changes have been made. The package is locally reproducible and its current manifest conforms; these results do not establish end-to-end release or installed-client readiness.
+
+Recommended revision order: R-003 adds the missing release guard; R-002 reconciles execution ordering; R-001 corrects filename guidance. R-004 should become focused consumer/client verification with its own evidence and authorized environment, rather than a claim inferred from support-suite success. This queue is proposed, not accepted or executed.
+
+### Validator adjudication
+
+The agent-package-author offline validator and inspector ran against the actual 133-file archive. Both returned exit 1: one error and 36 cross-skill warnings. The error rejects `com.openai` because the validator's `NAMESPACE` regex requires at least three components. The canonical schema accepts the extension object; the [specification](https://agent-plugins.org/specification#8-client-extensions) requires a reverse-domain namespace without defining that minimum. This is a tool false positive, not a manifest defect or a reason to rename the OpenAI namespace. The warnings identify plugin-contained sibling references and their unverified client loading, already covered by R-004; no package escape was reported. [Validator result](evidence/plugin-validation.json), [full output](evidence/plugin-validation.log) and [inspector output](evidence/package-inspection.log) retain the failure rather than presenting the tool as passing.
+
+### Coverage depth and limits
+
+All 270 current paths were inventoried. Package bytes, current inline links, entry metadata, Python syntax/module docstrings and YAML received structural checks. Consequential workflow owners and cross-skill handoffs received substantive instruction review; publisher and TextStats control/evidence boundaries received code inspection and their complete local suites. This is a consequence-led comprehensive review, not a line-by-line certification of every reference, fixture criterion or API comment. Coverage and unavailable facilities are stated in the unit evidence above.
+
+The reviewed source remains `818d66f6baf8e3a324d29f3430d3bac3278f0dd2`. [Final consolidation checks](evidence/consolidation-checks.json) confirm campaign changes are confined to this review directory and its index; existing closed campaigns and product files remain unchanged. No hosted workflow, release, tag, live provider operation or source repair was performed.
+
+### Published checkpoints
+
+| Checkpoint | Commit |
+| --- | --- |
+| Opening | `f655c9193b4aa07bd5202cef7ff25e8463ee4647` |
+| U-001 | `da5c02237fd1440aa55d9e75082122050a5752d0` |
+| U-002 | `33c71d29b0c541593c628d38900663317100d1cc` |
+| U-003 | `3b57fd3b51a9a8d86c23d0ac809dd80eea4f933c` |
+| U-004 | `69cb5ae7caf3d02ce4dcd20399d34b42d8fa5a05` |
+
+Each checkpoint was pushed and read back before the next unit. The final consolidation commit is discoverable from this report's Git history; its remote identity must be checked before declaring publication complete.
