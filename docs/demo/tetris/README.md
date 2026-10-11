@@ -221,13 +221,13 @@ For cookies:
 >
 > Restore saved settings when the page is reloaded or the game is opened again. Use sensible defaults for settings without saved values.
 >
-> If URL configuration is also supported, resolve each setting in this order: an explicit URL parameter, a saved cookie value, then the default. Explicit URL values must update the corresponding cookies, including when an explicit value equals the default. Omitted URL parameters must not reset saved cookie values.
+> If the game already accepts configuration values through URL query (GET) parameters, resolve each setting in this order: a value explicitly supplied by its URL parameter, a saved cookie value, then the default. Save explicit URL parameter values in the corresponding cookies, including values equal to the default. When a setting's URL parameter is omitted, retain its saved cookie value instead of replacing it with the default.
 
 For URL parameters:
 
 > [!NOTE] Prompt
 >
-> Open a feature campaign to support configuration settings through URL query (GET) parameters with sensible defaults. Default values may be supplied explicitly or omitted. If cookie configuration is already supported, explicit URL parameters must override and update the corresponding cookies; omitted URL parameters must use saved cookie values before defaults.
+> Open a feature campaign to support configuration settings through URL query (GET) parameters with sensible defaults. Default values may be supplied explicitly or omitted. If the game already saves configuration settings in cookies, explicit URL parameters must override and update the corresponding cookies; omitted URL parameters must use saved cookie values before defaults.
 
 During preparation, clarify parameter names and accepted values, handling of invalid or duplicate URL parameters and invalid saved values, cookie lifetime and scope, and whether panel changes update the URL when URL support is available. Keep omitted parameters distinct from explicit default-valued parameters.
 

@@ -110,6 +110,12 @@ On 2026-10-11, the human challenged the cookie prompt's completeness. Expanded i
 
 The scoped Python check passed for six-setting scope, save-on-change, reload/reopen restoration, defaults, explicit/omitted URL semantics, callout/list spacing and eleven unchanged prompts. `git diff --check` passed. No cookie implementation or browser behavior is claimed. V-012 checkpoint `8d7b47f883183f7d2e00b9a24150984677c1e712` was pushed and exact remote identity verified before this amendment.
 
+## V-014 — Explicit persistence mechanisms in prompts
+
+On 2026-10-11, the human identified "URL configuration" as undefined shorthand in the cookie prompt. Replaced it with the explicit prerequisite that the game accepts configuration values through URL query (GET) parameters. The paragraph names per-setting resolution, saving explicit parameter values in cookies, explicit defaults and retention of saved values for omitted parameters. The complementary URL prompt now names existing cookie storage directly instead of "cookie configuration."
+
+The scoped Python check passed for removal of both shorthand phrases, explicit mechanisms, retained precedence/default/omission semantics and ten unchanged prompts. `git diff --check` passed. V-013 checkpoint `4bd5ebe9621001119853cdfadfa20a49af56f25d` was pushed and exact remote identity verified before this amendment. The campaign remains open; no runtime check is claimed.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
