@@ -6,7 +6,7 @@
 - Starting baseline and inspected source: `818d66f6baf8e3a324d29f3430d3bac3278f0dd2`.
 - Plan: [revision plan](REVISION-PLAN.md).
 - Working branch: `revision/045_818d66f-demo-tetris`; eventual target: `main`.
-- State: open campaign; accepted guide draft added. The authorized stopping boundary is committing/pushing this checkpoint, with no integration or closure.
+- State: selected documentation scope complete; closure and integration into `main` authorized on 2026-10-11. Final integration/publication is established by Git, not the earlier publication-only checkpoints.
 
 ## V-001 — Accepted guide draft
 
@@ -167,3 +167,9 @@ On 2026-10-11, the human requested a simpler second demo with a dominant propose
 The guide supplies seven complete NOTE prompt callouts, preparation clarifications, eligible unfinished-phase steering checkpoints, phase/feature release boundaries, browser and numerical verification criteria, and result recording. The dominant sequence remains adjustable by the human. It describes proposed trials; no calculator, live SDD workflow trial, or release was executed.
 
 Scoped Python checks passed for phase scope, all seven prompt callouts, mode relationships, heading spacing, whitespace and the local greenfield-template link. Manual composition review checked target-first introductions, explicit function lists, separation of project phases from later campaigns, and the stop-before-resumption steering boundary. `git diff --check` passed. Changes are confined to the new guide, root navigation, the active campaign plan/report, and its index summary; closed packages and workflow source remain unchanged. Commit/publication facts are established separately by Git and remote readback. The campaign remains open and unmerged.
+
+## Authorized closure — 2026-10-11
+
+The human requested closing 045 and rebasing 046. This supersedes the earlier publication-only stopping boundary and covers the complete V-001–V-021 documentation scope, including the companion calculator guide. Original opening: `e033edb09b56c802a98300be03c6e0029e8da545`; original source: `818d66f6baf8e3a324d29f3430d3bac3278f0dd2`; final delivered checkpoint before closure: `ea0c13a`.
+
+Updated root README demo navigation to the integration target `main`. Scoped closure checks cover current guide local links, Markdown heading spacing, whitespace and the complete changed-path boundary. Demo/example content is retained unchanged. The two-parent merge and verified target publication establish final closure; this pre-integration checkpoint does not claim those effects have already occurred. No game implementation, consumer trial, browser execution or release is included.

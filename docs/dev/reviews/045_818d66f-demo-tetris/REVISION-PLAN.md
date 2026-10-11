@@ -45,3 +45,7 @@ Maintain the accepted Tetris demo/test guide and the requested companion calcula
 ## Persistence and stopping boundary
 
 Commit the draft and campaign evidence together, push the campaign branch, and verify the exact remote checkpoint. Stop with the campaign open on its revision branch. This request does not close or merge the campaign, run a Tetris trial, implement a game, change plugin behavior or packaging, or publish a release.
+
+## Authorized closure amendment
+
+On 2026-10-11 the human requested closing 045 and rebasing 046. Complete V-001–V-021, publish this closure checkpoint, explicitly integrate into refreshed `main`, verify the documentation boundary and publish/read back the target. This supersedes the earlier open-campaign stopping instruction; no game or release execution is added.
