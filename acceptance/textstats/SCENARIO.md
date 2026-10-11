@@ -70,3 +70,7 @@ Decode the **complete** input before selecting lines: malformed bytes after END 
 Exercise singleton unterminated final lines, `01:02`, all-lines equivalence, LF/CR/CRLF blank boundaries, malformed range precedence and decode errors beyond END. Named-file range exits include extracted-source invocations and examples. Actual stdin whole-input/range empty/BOM/mixed-newline, locale independence and stream lifetime/read/decode cases are later stdin exits.
 
 The original [campaign plan](../../docs/dev/reviews/008_98a5562/REVISION-PLAN.md) is provenance only. Its fixed destination and completed identities are not inputs to this project.
+
+## Release workflow extension
+
+After actual completed TextStats delivery, isolated successor trials exercise complete-message preparation, freshness, failed-save recovery and publication reconciliation. They change test scope, not the TextStats counting API. Use [release scenario controls](RELEASE-SCENARIOS.md) with independently assessed predecessor checkpoints; no fixture may stand in for consumer development or release preparation.

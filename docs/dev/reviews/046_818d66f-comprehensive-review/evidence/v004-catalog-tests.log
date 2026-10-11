@@ -1,0 +1,29 @@
+test_all_shipped_contracts_are_consumed_by_actual_helper_dsl (acceptance.textstats.tests.test_catalog.CaptureSensitivity.test_all_shipped_contracts_are_consumed_by_actual_helper_dsl) ... ok
+test_capture_import_origin_rejects_unavailable_product (acceptance.textstats.tests.test_catalog.CaptureSensitivity.test_capture_import_origin_rejects_unavailable_product) ... ok
+test_each_literal_suite_detects_changed_actual_evidence (acceptance.textstats.tests.test_catalog.CaptureSensitivity.test_each_literal_suite_detects_changed_actual_evidence) ... ok
+test_error_facts_are_derived_from_actual_status_channels_and_fixture (acceptance.textstats.tests.test_catalog.CaptureSensitivity.test_error_facts_are_derived_from_actual_status_channels_and_fixture) ... ok
+test_raw_actual_command_status_channels_are_retained (acceptance.textstats.tests.test_catalog.CaptureSensitivity.test_raw_actual_command_status_channels_are_retained) ... ok
+test_all_supported_cases_resolve_and_have_independent_criteria (acceptance.textstats.tests.test_catalog.CatalogIntegrity.test_all_supported_cases_resolve_and_have_independent_criteria) ... ok
+test_duplicate_missing_and_invalid_ids_fail (acceptance.textstats.tests.test_catalog.CatalogIntegrity.test_duplicate_missing_and_invalid_ids_fail) ... ok
+test_empty_contract_and_invalid_dsl_fail (acceptance.textstats.tests.test_catalog.CatalogIntegrity.test_empty_contract_and_invalid_dsl_fail) ... ok
+test_historical_fixed_identity_and_expected_import_absent (acceptance.textstats.tests.test_catalog.CatalogIntegrity.test_historical_fixed_identity_and_expected_import_absent) ... ok
+test_missing_duplicate_and_escaping_assets_fail (acceptance.textstats.tests.test_catalog.CatalogIntegrity.test_missing_duplicate_and_escaping_assets_fail) ... ok
+test_optional_ownership_documents_contract_validation (acceptance.textstats.tests.test_catalog.CatalogIntegrity.test_optional_ownership_documents_contract_validation) ... ok
+test_real_dependency_cycle_and_unknown_prerequisite_fail (acceptance.textstats.tests.test_catalog.CatalogIntegrity.test_real_dependency_cycle_and_unknown_prerequisite_fail) ... ok
+test_route_answer_leakage_and_missing_trigger_fail (acceptance.textstats.tests.test_catalog.CatalogIntegrity.test_route_answer_leakage_and_missing_trigger_fail) ... ok
+test_actual_cli_import_failure_retains_first_attempt_channels (acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_actual_cli_import_failure_retains_first_attempt_channels) ... ok
+test_cli_later_timeout_retains_prior_command_and_partial_bytes (acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_cli_later_timeout_retains_prior_command_and_partial_bytes) ... ok
+test_cli_launch_failure_and_occupied_attempt_are_preserved (acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_cli_launch_failure_and_occupied_attempt_are_preserved) ... ok
+test_failed_capture_withholds_protected_partial_output (acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_failed_capture_withholds_protected_partial_output) ... ok
+test_outside_import_origin_rejection_retains_observation (acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_outside_import_origin_rejection_retains_observation) ... ok
+test_timeout_preserves_actual_partial_channels_and_not_completed_status (acceptance.textstats.tests.test_catalog.FailedCaptureProvenance.test_timeout_preserves_actual_partial_channels_and_not_completed_status) ... ok
+test_initial_empty_product_and_final_failed_campaign_do_not_require_successful_product (acceptance.textstats.tests.test_catalog.HandoffIntegrity.test_initial_empty_product_and_final_failed_campaign_do_not_require_successful_product) ... ok
+test_missing_ambiguous_and_unassessed_checkpoint_fail (acceptance.textstats.tests.test_catalog.HandoffIntegrity.test_missing_ambiguous_and_unassessed_checkpoint_fail) ... ok
+test_render_uses_only_request_and_actual_current_state (acceptance.textstats.tests.test_catalog.HandoffIntegrity.test_render_uses_only_request_and_actual_current_state) ... ok
+test_selected_placeholders_require_actual_values (acceptance.textstats.tests.test_catalog.HandoffIntegrity.test_selected_placeholders_require_actual_values) ... ok
+test_unpublished_actual_ref_and_mismatched_published_evidence_fail (acceptance.textstats.tests.test_catalog.HandoffIntegrity.test_unpublished_actual_ref_and_mismatched_published_evidence_fail) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 2.481s
+
+OK

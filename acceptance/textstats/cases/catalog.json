@@ -1092,9 +1092,265 @@
       ]
     },
     {
+      "id": "A-028",
+      "title": "Release highlights and complete-message routing",
+      "order": 27,
+      "phase": "P4",
+      "dependencies": [
+        "A-013"
+      ],
+      "mode": "isolated-trial",
+      "consumer_input": "cases/consumer/A-028.md",
+      "assessor_contract": "cases/assessor/A-028.json",
+      "assessor_guide": "cases/assessor/A-028.md",
+      "prerequisites": [
+        "Dedicated repository, immutable pinned package and actual consumer/assessor isolation.",
+        "Actual independently assessed predecessor objects; declared version, effects and facilities."
+      ],
+      "checkpoint_bindings": {
+        "start": {
+          "from_case": "A-013",
+          "checkpoint_fields": [
+            "product_commit",
+            "product_branch",
+            "integration_commit",
+            "integration_branch"
+          ]
+        },
+        "identities": "Resolve version, source, destination and current notes ownership from actual product state."
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": [
+            "fresh consumer and independent assessor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-029",
+      "title": "Repeat preparation and preserve human material",
+      "order": 28,
+      "phase": "P4",
+      "dependencies": [
+        "A-028"
+      ],
+      "mode": "isolated-trial",
+      "consumer_input": "cases/consumer/A-029.md",
+      "assessor_contract": "cases/assessor/A-029.json",
+      "assessor_guide": "cases/assessor/A-029.md",
+      "prerequisites": [
+        "Dedicated repository, immutable pinned package and actual consumer/assessor isolation.",
+        "Actual independently assessed predecessor objects; declared version, effects and facilities."
+      ],
+      "checkpoint_bindings": {
+        "start": {
+          "from_case": "A-028",
+          "checkpoint_fields": [
+            "product_commit",
+            "product_branch",
+            "integration_commit",
+            "integration_branch"
+          ]
+        },
+        "identities": "Resolve version, source, destination and current notes ownership from actual product state."
+      },
+      "variants": [
+        {
+          "id": "core",
+          "requirement": "required",
+          "evidence_class": "consumer",
+          "facilities": [
+            "fresh consumer and independent assessor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-030",
+      "title": "Freshness despite matching version",
+      "order": 29,
+      "phase": "P4",
+      "dependencies": [
+        "A-029"
+      ],
+      "mode": "isolated-trial",
+      "consumer_input": "cases/consumer/A-030.md",
+      "assessor_contract": "cases/assessor/A-030.json",
+      "assessor_guide": "cases/assessor/A-030.md",
+      "prerequisites": [
+        "Dedicated repository, immutable pinned package and actual consumer/assessor isolation.",
+        "Actual independently assessed predecessor objects; declared version, effects and facilities."
+      ],
+      "checkpoint_bindings": {
+        "start": {
+          "from_case": "A-029",
+          "checkpoint_fields": [
+            "product_commit",
+            "product_branch",
+            "integration_commit",
+            "integration_branch"
+          ]
+        },
+        "identities": "Resolve version, source, destination and current notes ownership from actual product state."
+      },
+      "variants": [
+        {
+          "id": "matching-version",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": [
+            "fresh consumer and independent assessor"
+          ]
+        },
+        {
+          "id": "version-mismatch",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": [
+            "fresh consumer and independent assessor"
+          ]
+        },
+        {
+          "id": "missing-provenance",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": [
+            "fresh consumer and independent assessor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-031",
+      "title": "Atomic notes replacement failure and continuation",
+      "order": 30,
+      "phase": "P4",
+      "dependencies": [
+        "A-030"
+      ],
+      "mode": "isolated-trial",
+      "consumer_input": "cases/consumer/A-031.md",
+      "assessor_contract": "cases/assessor/A-031.json",
+      "assessor_guide": "cases/assessor/A-031.md",
+      "prerequisites": [
+        "Dedicated repository, immutable pinned package and actual consumer/assessor isolation.",
+        "Actual independently assessed predecessor objects; declared version, effects and facilities."
+      ],
+      "checkpoint_bindings": {
+        "start": {
+          "from_case": "A-030",
+          "checkpoint_fields": [
+            "product_commit",
+            "product_branch",
+            "integration_commit",
+            "integration_branch"
+          ]
+        },
+        "identities": "Resolve version, source, destination and current notes ownership from actual product state."
+      },
+      "variants": [
+        {
+          "id": "controlled-save",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": [
+            "controlled filesystem failure and fresh continuation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-032",
+      "title": "Release commit tag body agreement and retry",
+      "order": 31,
+      "phase": "P4",
+      "dependencies": [
+        "A-030"
+      ],
+      "mode": "isolated-trial",
+      "consumer_input": "cases/consumer/A-032.md",
+      "assessor_contract": "cases/assessor/A-032.json",
+      "assessor_guide": "cases/assessor/A-032.md",
+      "prerequisites": [
+        "Dedicated repository, immutable pinned package and actual consumer/assessor isolation.",
+        "Actual independently assessed predecessor objects; declared version, effects and facilities."
+      ],
+      "checkpoint_bindings": {
+        "start": {
+          "from_case": "A-030",
+          "checkpoint_fields": [
+            "product_commit",
+            "product_branch",
+            "integration_commit",
+            "integration_branch"
+          ]
+        },
+        "identities": "Resolve version, source, destination and current notes ownership from actual product state."
+      },
+      "variants": [
+        {
+          "id": "controlled-provider",
+          "requirement": "required",
+          "evidence_class": "controlled",
+          "facilities": [
+            "controlled provider readback and native Git"
+          ]
+        },
+        {
+          "id": "live-provider",
+          "requirement": "optional",
+          "evidence_class": "live-provider",
+          "facilities": [
+            "explicitly authorized GitHub release destination and actual readback"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-033",
+      "title": "Installed-client package discovery and handoff",
+      "order": 32,
+      "phase": "P4",
+      "dependencies": [],
+      "mode": "independent-assessment",
+      "consumer_input": "cases/consumer/A-033.md",
+      "assessor_contract": "cases/assessor/A-033.json",
+      "assessor_guide": "cases/assessor/A-033.md",
+      "prerequisites": [
+        "Dedicated repository, immutable pinned package and actual consumer/assessor isolation.",
+        "Actual independently assessed predecessor objects; declared version, effects and facilities."
+      ],
+      "checkpoint_bindings": {
+        "start": {
+          "from_case": null,
+          "checkpoint_fields": [
+            "product_commit",
+            "product_branch",
+            "integration_commit",
+            "integration_branch"
+          ]
+        },
+        "identities": "Resolve version, source, destination and current notes ownership from actual product state."
+      },
+      "variants": [
+        {
+          "id": "installed-client",
+          "requirement": "optional",
+          "evidence_class": "inspection",
+          "facilities": [
+            "supported installed-client mechanism"
+          ]
+        }
+      ]
+    },
+    {
       "id": "A-027",
       "title": "Product status",
-      "order": 27,
+      "order": 33,
       "phase": "P5",
       "dependencies": [
         "A-001",
@@ -1122,7 +1378,12 @@
         "A-023",
         "A-024",
         "A-025",
-        "A-026"
+        "A-026",
+        "A-028",
+        "A-029",
+        "A-030",
+        "A-031",
+        "A-032"
       ],
       "mode": "independent-assessment",
       "consumer_input": "cases/consumer/A-027.md",

@@ -12,7 +12,7 @@ sys.path.insert(0, str(BUNDLE / 'scripts'))
 import core
 import campaign
 
-IDS = {f'A-{i:03}' for i in range(1, 28)}
+IDS = {f'A-{i:03}' for i in range(1, 34)}
 PROTOCOLS = {'staged-work', 'unpublished-commit', 'failed-required-check', 'rejected-push',
              'conflict-and-prospective-failure', 'dirty-transfer', 'uncertain-hosted-effect', 'access-classification'}
 LEAK = re.compile(r'assessor_contract|expected_ref|checkpoint_bindings|TST-\d+|A-0\d{2}|sdd-(?:steer|integrate-feature)|(?:expected|correct)\s+(?:routing|route|recovery)', re.I)
@@ -74,11 +74,11 @@ def validate_catalog(root=BUNDLE, value=None):
     value = core.load(root/'cases/catalog.json') if value is None else value
     require(isinstance(value,dict) and set(value) == {'schema_version','cases'} and type(value['schema_version']) is int and value['schema_version'] == 1, 'invalid catalog version')
     cases = value['cases']
-    require(isinstance(cases,list) and len(cases) == 27, 'exactly 27 cases required')
+    require(isinstance(cases,list) and len(cases) == len(IDS), 'complete supported catalog required')
     names = [c.get('id') for c in cases if isinstance(c,dict)]
-    require(len(names)==27 and len(set(names))==27 and set(names)==IDS, 'invalid/duplicate stable IDs')
+    require(len(names)==len(IDS) and len(set(names))==len(IDS) and set(names)==IDS, 'invalid/duplicate stable IDs')
     orders = [c.get('order') for c in cases]
-    require(all(type(n) is int for n in orders) and len(set(orders))==27 and set(orders)==set(range(1,28)), 'invalid/duplicate order')
+    require(all(type(n) is int for n in orders) and len(set(orders))==len(IDS) and set(orders)==set(range(1,len(IDS)+1)), 'invalid/duplicate order')
     by_id = {c['id']:c for c in cases}
     paths = set()
     protocols = set()

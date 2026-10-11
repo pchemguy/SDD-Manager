@@ -21,3 +21,11 @@ Source trace checked the retained unpublished commit plus malformed closing-boun
 ## V-003 — Canonical feature design filenames
 
 Corrected capability-map entries to `FEATURE_ARCHITECTURE.md` and `FEATURE_DECOMPOSITION.md`. Compared the map with README and design-owner architecture/decomposition guidance; all use the established underscore names. `git diff --check` passed. No file rename, workflow change or historical edit occurred. R-001: source recheck passed, pending coherent candidate assessment.
+
+## V-004 — Release acceptance and separate client scenarios
+
+Added A-028–A-033 with six isolated scenario groups, unique consumer requests, independent assessor contracts/guides, predecessor/variant declarations and detailed release controls. Coverage includes highlights-only versus complete preparation, no-op/human curation, matching-version stale coverage/wrong version/missing provenance, genuine failed save/fresh continuation, native release commit/tag/provider body agreement and reconciled retries. Controlled/live-provider and optional installed-client evidence remain distinct. A-031 failure does not gate A-032 positive publication. A-027 keeps its identity and runs last; optional A-033 does not gate required work.
+
+Updated catalog/harness/schema case ranges, coordinator/recovery/diagnostic/variant maps, README and developer capability map. Historical 27-case runtime results remain historical; current 33 cases inherit no passes. The DSL-consumability fixture now includes synthetic notes solely to exercise new file checks, not consumer behavior.
+
+Catalog CLI static validation passed for 33 cases. [Catalog/handoff/capture regressions](evidence/v004-catalog-tests.log): 24 passed. Initial generic DSL checks exposed missing synthetic note fixture setup; the fixture was corrected without weakening contracts. `git diff --check` passed. No consumer, installed-client or provider scenario executed. R-004: component scenarios implemented; evidence capture/support extension and coherent checks pending.

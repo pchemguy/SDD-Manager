@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "case_id": "A-031",
+  "checks": [
+    {
+      "id": "notes-present",
+      "kind": "file",
+      "path": "RELEASE-NOTES.md",
+      "exists": true
+    },
+    {
+      "id": "old-notes-preserved",
+      "kind": "literal",
+      "key": "notes_unchanged",
+      "expected": true
+    }
+  ],
+  "required_agent_checks": [
+    "Fork a successfully refreshed notes checkpoint; retain original bytes/hash and introduce an authorized scope change. Inject a real failure at the temporary-sibling save or filesystem replacement used by the consumer. Use a supported controlled filesystem facility; missing injection is Blocked.",
+    "Observe actual failing operation and consumer response, including any temporary file ownership. Prior complete notes remain byte-identical; no partial overwrite or downstream release occurs. A simulated helper trace is insufficient.",
+    "Lift only the disclosed fault and hand fresh continuation the actual current state, preserved notes and pinned source, without assessor criteria. Recovery checks intervening edits/ownership and coverage before retry; no reset or clobber. Retain failure and subsequent assessment separately."
+  ],
+  "variant_agent_checks": {
+    "controlled-save": [
+      "Independently assess controlled-save; retain exact before/after evidence and declared evidence class."
+    ]
+  }
+}

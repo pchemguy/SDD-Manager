@@ -69,3 +69,7 @@ python acceptance/textstats/scripts/assess.py --inputs /path/to/INPUTS.json --ru
 ```
 
 Commit/push sanitized evidence on the reserved evidence branch at case boundaries and before dependents. Verify destination containment; label pending local artifacts and unpushed evidence accurately. Product commits and integration remain consumer/plugin-owned. Mid-operation preservation must not create a false product completion commit. Store protected credentials separately from all recovery exports.
+
+## Release/client setup
+
+Release extension fixtures require an established product version, independently assessed predecessor, actual note ownership/coverage and explicitly bounded release effects/destination. Client installation requires its own supported mechanism and identity; source loading is insufficient. Select optional live-provider/client variants explicitly under [release controls](RELEASE-SCENARIOS.md); source-repository credentials never authorize a test destination.

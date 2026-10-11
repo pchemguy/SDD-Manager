@@ -23,7 +23,7 @@ class CatalogIntegrity(unittest.TestCase):
         shutil.copytree(ASSESSOR.parents[1],self.root)
         self.value=json.loads((self.root/'cases/catalog.json').read_text())
 
-    def test_all27_resolve_and_contracts_have_independent_criteria(self):
+    def test_all_supported_cases_resolve_and_have_independent_criteria(self):
         result=catalog.validate_catalog(self.root)
         self.assertEqual(set(result),catalog.IDS)
         for case in result.values():
@@ -159,7 +159,8 @@ class CaptureSensitivity(Sandbox):
         # Expected literals are intentionally supplied for DSL consumability only;
         # this is not execution of TextStats or independent lifecycle acceptance.
         (self.repo/'TASKS.md').write_text('- [ ] T-FIXTURE-ONE synthetic checker owner\n')
-        git(self.repo,'add','TASKS.md'); git(self.repo,'commit','-m','nonempty DSL task fixture'); git(self.repo,'push')
+        (self.repo/'RELEASE-NOTES.md').write_text('Synthetic DSL fixture; no consumer acceptance.\n')
+        git(self.repo,'add','TASKS.md','RELEASE-NOTES.md'); git(self.repo,'commit','-m','nonempty DSL task fixture'); git(self.repo,'push')
         head=git(self.repo,'rev-parse','HEAD').stdout.strip()
         self.state['checkpoint_refs']={'product_commit':head,'merge_parents':git(self.repo,'show','-s','--format=%P','HEAD').stdout.split()}
         for path in sorted(ASSESSOR.glob('A-*.json')):
