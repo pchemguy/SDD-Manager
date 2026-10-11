@@ -104,6 +104,12 @@ An explicit default-valued parameter overrides/updates cookies, while omission p
 
 The scoped Python check passed for independent options, exact per-setting precedence, explicit-default/omitted semantics, cookie updates, both implementation orders, two `NOTE` prompts, preservation of the ten existing prompts, headings and local links. `git diff --check` passed. This is guide content, not implemented storage or executed release trials. V-011 checkpoint `5f01a99842c9c38fa7677da22e366c31b0b3572e` was pushed and exact remote identity verified before this amendment.
 
+## V-013 — Complete cookie-persistence prompt
+
+On 2026-10-11, the human challenged the cookie prompt's completeness. Expanded it to name the Tetris configuration panel and all six settings, save their selected values on player changes, restore them on reload/reopening and use defaults for unsaved settings. The combined URL rule now explicitly covers per-setting precedence, cookie updates for explicit default-valued parameters and preservation of cookies when parameters are omitted. Surrounding preparation guidance retains URL synchronization as an open choice without making cookie saving optional.
+
+The scoped Python check passed for six-setting scope, save-on-change, reload/reopen restoration, defaults, explicit/omitted URL semantics, callout/list spacing and eleven unchanged prompts. `git diff --check` passed. No cookie implementation or browser behavior is claimed. V-012 checkpoint `8d7b47f883183f7d2e00b9a24150984677c1e712` was pushed and exact remote identity verified before this amendment.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.

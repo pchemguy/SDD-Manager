@@ -210,7 +210,18 @@ For cookies:
 
 > [!NOTE] Prompt
 >
-> Open a feature campaign to save configuration settings in cookies and restore them when the game is opened again. Use sensible defaults for settings without saved values. If URL configuration is already supported, explicit URL parameters must override and update the corresponding cookies; omitted URL parameters must use saved cookie values before defaults.
+> Open a feature campaign to add cookie-based persistence to the Tetris configuration panel. Save the selected values in cookies whenever the player changes these settings:
+>
+> - Ghost-piece visibility.
+> - Hard drop: on/off.
+> - Next-piece preview: on/off.
+> - Hard-drop locking policy.
+> - General locking policy.
+> - Hold piece: on/off.
+>
+> Restore saved settings when the page is reloaded or the game is opened again. Use sensible defaults for settings without saved values.
+>
+> If URL configuration is also supported, resolve each setting in this order: an explicit URL parameter, a saved cookie value, then the default. Explicit URL values must update the corresponding cookies, including when an explicit value equals the default. Omitted URL parameters must not reset saved cookie values.
 
 For URL parameters:
 
@@ -218,7 +229,7 @@ For URL parameters:
 >
 > Open a feature campaign to support configuration settings through URL query (GET) parameters with sensible defaults. Default values may be supplied explicitly or omitted. If cookie configuration is already supported, explicit URL parameters must override and update the corresponding cookies; omitted URL parameters must use saved cookie values before defaults.
 
-During preparation, clarify parameter names and accepted values, handling of invalid or duplicate URL parameters and invalid saved values, cookie lifetime and scope, and whether panel changes update the URL as well as cookies when available. Keep omitted parameters distinct from explicit default-valued parameters.
+During preparation, clarify parameter names and accepted values, handling of invalid or duplicate URL parameters and invalid saved values, cookie lifetime and scope, and whether panel changes update the URL when URL support is available. Keep omitted parameters distinct from explicit default-valued parameters.
 
 Verify each option independently and their combined behavior. Cover partial URLs, conflicting cookie/URL values, explicit defaults, omitted values, cookie updates, reloads and the accepted invalid-value handling.
 
