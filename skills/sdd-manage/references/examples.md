@@ -97,6 +97,10 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 
 | Request or state | Coordinated result |
 | --- | --- |
+| Prepare a release message; draft/update release notes | Run complete-message preparation through forge highlights and report assembly; retain body-only root `RELEASE-NOTES.md` and stop before publication. |
+| Repeat preparation with an existing complete message | Refresh source and ancillary facts, preserve applicable human edits/cuts, then atomically replace one file; preserve the old copy on failure and avoid unchanged-body writes. |
+| Publish after message preparation | Refresh through exact final source, explicitly transfer complete Markdown bytes and verify body readback; retain the message, cleaning only an eligible owned internal checkpoint. |
+| Edit only supplied release text | Perform scoped editorial work without expanding into Git collection or publication. |
 | Collect highlights locally since the last stable release | Run shared forge Git preparation without selecting a host or requesting a token; create/update the ignored YAML draft and stop before release/tag writes. |
 | Existing highlights draft has manual cuts; target advances | Validate its tag/ancestry/release line, analyze only pending commits and preserve curation; a revert can remove an old claim. Save coverage only after successful complete analysis. |
 | Supplied ZIP; prepare a building workflow only | Inspect real contents/source and resolve package layout; prepare/verify/persist the workflow through existing Git ownership. Stop before product release creation. |

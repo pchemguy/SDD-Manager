@@ -1,6 +1,6 @@
 ---
 name: sdd-forge
-description: Use when projecting software-development phases, milestones, and tasks to a hosted repository; creating or reconciling GitHub labels, milestones, and task issues; finding an issue for a task ID; or closing verified task issues and milestones, reopening invalidated milestones, or recovering interrupted hosted transitions. Also use for provider-independent Git release highlights and incremental release-note drafts, GitHub release package assessment, release workflow preparation or dispatch, release creation and interrupted release recovery. GitHub is the available backend. Ordinary local Git and SDD work does not require hosting access.
+description: Use when projecting software-development phases, milestones, and tasks to a hosted repository; creating or reconciling GitHub labels, milestones, and task issues; finding an issue for a task ID; or closing verified task issues and milestones, reopening invalidated milestones, or recovering interrupted hosted transitions. Also use for provider-independent complete release-message preparation, Git release highlights and incremental highlights drafts, GitHub release package assessment, release workflow preparation or dispatch, release creation and interrupted release recovery. GitHub is the available backend. Ordinary local Git and SDD work does not require hosting access.
 ---
 
 # Git release preparation and hosted operations
@@ -25,7 +25,9 @@ Add a backend only when it supports a concrete hosted operation with its own rep
 
 For requested release creation/completion or a publishing workflow run, apply sdd-manage's shared [advisory prerelease review reminder](../sdd-manage/references/prerelease-review.md#advisory-release-reminder), including direct calls. Reuse its handoff disposition when already covered by the coordinator.
 
-For “collect key changes since the latest release,” local note preparation or incremental highlights, load [Git release highlights](references/release-highlights.md). Pin the release-tag baseline and target, collect complete range identities/parents/subjects, read integration summaries first (latest adequate cumulative summary for reopened campaigns) and resolve direct/uncovered changes with targeted evidence, curate an ignored YAML-checkpointed draft and return body-only notes. No provider, token, tracking or TASKS is required. Release creation consumes this shared workflow; preparation alone stops before publication. Keep draft cleanup tied to verified published-body consumption.
+For requests to prepare, draft, assemble or update a release message or release notes, load [complete release-message preparation](references/release-message.md). Coordinate source/output ownership through manage, collect Git highlights, and use report to assemble the full message with applicable compatibility, installation and limitation sections. Retain root `RELEASE-NOTES.md` until refreshed/replaced or explicitly removed; preparation stops before publication. Editing-only requests remain scoped to supplied text.
+
+For “collect key changes since the latest release,” highlights-only preparation or incremental highlights, load [Git release highlights](references/release-highlights.md). Pin the release-tag baseline and target, collect complete range identities/parents/subjects, read integration summaries first (latest adequate cumulative summary for reopened campaigns) and resolve direct/uncovered changes with targeted evidence, curate an ignored YAML-checkpointed draft and return body-only notes. No provider, token, tracking or TASKS is required. Release creation consumes this shared workflow; preparation alone stops before publication. Keep draft cleanup tied to verified published-body consumption.
 
 ## Available backends
 

@@ -2,7 +2,7 @@
 
 ## Campaign and accepted objective
 
-Campaign `044_6df539c-release-message-preparation` starts at `6df539c5f66cc6cbcdd83c3f0f9ce7aaa102d5c0`, branch `revision/044_6df539c-release-message-preparation`, target `origin/main` in pchemguy/SDD-Manager. The human requested opening a revision campaign to implement complete release-message preparation, retaining the narrower collect-highlights request. This checkpoint opens/prepares the campaign and stops before source implementation. [Revision report](REVISION-REPORT.md) records reached state.
+Campaign `044_6df539c-release-message-preparation` starts at `6df539c5f66cc6cbcdd83c3f0f9ce7aaa102d5c0`, branch `revision/044_6df539c-release-message-preparation`, target `origin/main` in pchemguy/SDD-Manager. The human requested opening a revision campaign to implement complete release-message preparation, retaining the narrower collect-highlights request. Opening/preparation completed; execution was subsequently authorized by the human’s “Execute” instruction. [Revision report](REVISION-REPORT.md) records reached state.
 
 ## Design and lifecycle
 

@@ -1,6 +1,6 @@
 ---
 name: sdd-manage
-description: Coordinate Git release highlights, release package/workflow preparation and GitHub releases alongside SDD workflows for initial development, feature preparation, bounded or resumed task implementation, human-directed checkpoint amendments, accepted feature integration, focused review or maintenance, and hosted task synchronization. Use for multi-stage project requests, shared prerequisites, branch management and phase transitions, workflow transitions, stopping boundaries, recovering shell authentication, or supplying hosting credentials to sdd-forge.
+description: Coordinate complete release-message preparation, Git release highlights, release package/workflow preparation and GitHub releases alongside SDD workflows for initial development, feature preparation, bounded or resumed task implementation, human-directed checkpoint amendments, accepted feature integration, focused review or maintenance, and hosted task synchronization. Use for multi-stage project requests, shared prerequisites, branch management and phase transitions, workflow transitions, stopping boundaries, recovering shell authentication, or supplying hosting credentials to sdd-forge.
 ---
 
 # Coordinate specification-driven development
@@ -26,7 +26,7 @@ Translate the user's objective into a scoped workflow and coordinate the respons
 | Run an explicitly selected comprehensive prerelease review, or issue its advisory release reminder | [prerelease review](references/prerelease-review.md) |
 | Open a nested revision or amend the eligible last closed campaign | [revision modes](references/revision-modes.md) |
 | Plan or coordinate focused/systematic review and accepted revisions | [review and revision](references/review-and-revision.md) |
-| Prepare local Git highlights, release packages/workflows or create/finish a GitHub release | [release operations](references/workflows.md#release-operations) and sdd-forge's [shared Git highlights](../sdd-forge/references/release-highlights.md) or selected [GitHub backend](../sdd-forge/references/github.md) |
+| Prepare complete release messages, local Git highlights, release packages/workflows or create/finish a GitHub release | [release operations](references/workflows.md#release-operations) and sdd-forge's [complete release messages](../sdd-forge/references/release-message.md), [shared Git highlights](../sdd-forge/references/release-highlights.md) or selected [GitHub backend](../sdd-forge/references/github.md) |
 | Check representative requests and expected boundaries | [workflow examples](references/examples.md) |
 
 1. **Establish the request.** Identify the project, objective, requested operation, authoritative inputs, and stopping boundary. Distinguish initial preparation, feature deltas, task-list implementation, checkpoint steering, integration, and focused review. Ask only for missing decisions that materially prevent the requested work.
