@@ -154,6 +154,30 @@ Run this campaign after ghost-piece support is implemented and verified: after t
 
 Verify visibility changes in both directions as the projected landing position crosses the midline, including the accepted overlap rule. Check that hiding the preview does not change the landing calculation, piece movement or hard-drop behavior.
 
+### Penetrator bonuses
+
+The next feature candidate rewards clearing four lines at once with one penetrator bonus. The player can accumulate bonuses up to a proposed maximum of three and activate a bonus for any active piece with a hotkey. The activated piece can pass through occupied cells until it locks, allowing it to reach spaces below blocking cells.
+
+Show the available bonuses in the side panel with one symbol per bonus, for example lightning bolts: `⚡`, `⚡⚡`, or `⚡⚡⚡`. Update the indicator whenever a bonus is earned or spent.
+
+Render the activated piece entirely white and keep white out of the regular piece palette. Hard drop passes through obstructions to the lowest valid landing position, and the ghost previews that same position. A valid final position must keep every cell of the piece within the board and free of overlap with occupied cells; passing through the stack does not remove existing cells.
+
+This campaign follows the playable game and can be applied with either delivery variant. Completing and verifying the bonus mechanic provides a further release boundary.
+
+> [!NOTE] Prompt
+>
+> Open a feature campaign to add penetrator bonuses to the Tetris game. Award one bonus whenever the player clears four lines at once, and allow up to three bonuses to accumulate.
+>
+> Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
+>
+> Let the player activate a bonus for any active piece by pressing a hotkey. The activated piece can pass through occupied cells until it locks. Render it entirely white; do not use white for regular pieces.
+>
+> For an activated piece, hard drop must pass through blocking cells to the lowest valid landing position, and the ghost piece must show that position. The final locked piece must remain within the board and must not overlap occupied cells. Passing through occupied cells must not destroy them.
+
+The prompt uses three as the proposed cap; confirm or adjust it during preparation. Also clarify the activation key, when activation spends a bonus, repeat-key behavior, interaction with hold, and what happens when locking is attempted while the active piece overlaps occupied cells. Define how normal descent and rotation behave during penetration and how hard drop interacts with the selected locking policy. These details must preserve the non-overlapping final-position requirement.
+
+Verify four-line awards and the cap, the panel indicator at every available-bonus count, activation with and without an available bonus, the white palette distinction, and deactivation when the piece locks. Use boards with blocking layers and empty spaces beneath them to verify deepest valid hard-drop placement and matching ghost projection. Check that locked pieces never overlap occupied cells, the existing stack remains intact, and unactivated pieces retain ordinary collision behavior.
+
 ### Non-persistent configuration panel
 
 The next feature candidate adds a side panel for configuring gameplay and preview features during the current page session. Settings are not saved across page reloads. The panel exposes these controls:
@@ -239,30 +263,6 @@ Use this template to add either mode, add both, or complete support for settings
 During preparation, clarify parameter names and accepted values, handling of invalid or duplicate URL parameters and invalid saved values, cookie lifetime and scope, and how URL updates represent default-valued settings. Keep omitted parameters distinct from explicit default-valued parameters.
 
 Verify each option independently and their combined behavior. Cover partial URLs, conflicting cookie/URL values, explicit defaults, omitted values, cookie and URL updates after panel changes, reloads and the accepted invalid-value handling.
-
-### Penetrator bonuses
-
-The next feature candidate rewards clearing four lines at once with one penetrator bonus. The player can accumulate bonuses up to a proposed maximum of three and activate a bonus for any active piece with a hotkey. The activated piece can pass through occupied cells until it locks, allowing it to reach spaces below blocking cells.
-
-Show the available bonuses in the side panel with one symbol per bonus, for example lightning bolts: `⚡`, `⚡⚡`, or `⚡⚡⚡`. Update the indicator whenever a bonus is earned or spent.
-
-Render the activated piece entirely white and keep white out of the regular piece palette. Hard drop passes through obstructions to the lowest valid landing position, and the ghost previews that same position. A valid final position must keep every cell of the piece within the board and free of overlap with occupied cells; passing through the stack does not remove existing cells.
-
-This campaign follows the playable game and can be applied with either delivery variant. Completing and verifying the bonus mechanic provides a further release boundary.
-
-> [!NOTE] Prompt
->
-> Open a feature campaign to add penetrator bonuses to the Tetris game. Award one bonus whenever the player clears four lines at once, and allow up to three bonuses to accumulate.
->
-> Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
->
-> Let the player activate a bonus for any active piece by pressing a hotkey. The activated piece can pass through occupied cells until it locks. Render it entirely white; do not use white for regular pieces.
->
-> For an activated piece, hard drop must pass through blocking cells to the lowest valid landing position, and the ghost piece must show that position. The final locked piece must remain within the board and must not overlap occupied cells. Passing through occupied cells must not destroy them.
-
-The prompt uses three as the proposed cap; confirm or adjust it during preparation. Also clarify the activation key, when activation spends a bonus, repeat-key behavior, interaction with hold, and what happens when locking is attempted while the active piece overlaps occupied cells. Define how normal descent and rotation behave during penetration and how hard drop interacts with the selected locking policy. These details must preserve the non-overlapping final-position requirement.
-
-Verify four-line awards and the cap, the panel indicator at every available-bonus count, activation with and without an available bonus, the white palette distinction, and deactivation when the piece locks. Use boards with blocking layers and empty spaces beneath them to verify deepest valid hard-drop placement and matching ghost projection. Check that locked pieces never overlap occupied cells, the existing stack remains intact, and unactivated pieces retain ordinary collision behavior.
 
 ## Human review and implementation checkpoints
 

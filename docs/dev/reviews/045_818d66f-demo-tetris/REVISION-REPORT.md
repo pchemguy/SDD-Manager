@@ -150,6 +150,12 @@ On 2026-10-11, the human requested side-panel symbols showing available penetrat
 
 The scoped Python check passed for panel symbols, earned/spent updates, prompt coverage, count checks and preservation of earlier scenarios. `git diff --check` passed. V-018 checkpoint `d603cbe2c02237d8159fc566154e69a501816e56` was pushed and exact remote identity verified before this amendment. No runtime or rendered UI check is claimed.
 
+## V-020 — Feature candidate section order
+
+On 2026-10-11, the human requested placing the penetrator section before configuration sections. Moved it immediately after conditional ghost visibility and before non-persistent and semi-persistent configuration. No section wording changed.
+
+The scoped Python check passed for the requested order, byte identity of the moved section and identity of the remaining guide text after excluding that section. `git diff --check` passed. V-019 checkpoint `0ccf54c20b0d616e04941992a144e3514cff45c4` was pushed and exact remote identity verified before this amendment.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.

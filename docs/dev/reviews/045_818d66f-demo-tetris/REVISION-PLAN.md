@@ -38,6 +38,7 @@ Maintain the accepted Tetris demo/test guide, including the short seed descripti
 | V-017 | Consolidate persistence prompts into the human-supplied reusable `{FUNCTIONALITY}` template for currently implemented settings. | Check three selections, existing either/both/neither support, six explicit choices, save/update-on-change rules, restore/default behavior and combined precedence. | Requested on 2026-10-11; verification recorded in the report. |
 | V-018 | Add a penetrator-bonus feature candidate with four-line rewards, proposed cap of three, hotkey activation, white rendering and deepest valid drop/ghost placement. | Check lifetime through locking, unchanged occupied cells, legal non-overlapping final positions, explicit preparation decisions, release boundary and gameplay verification criteria. | Proposed on 2026-10-11; verification recorded in the report. |
 | V-019 | Add a side-panel penetrator inventory indicator with one symbol per available bonus, exemplified by lightning bolts. | Check guide/prompt coverage and earned/spent update requirements; preserve penetrator gameplay rules. | Requested on 2026-10-11; verification recorded in the report. |
+| V-020 | Move the penetrator candidate before both configuration sections, after conditional ghost visibility. | Verify section order and byte-for-byte preservation of moved content. | Requested on 2026-10-11; verification recorded in the report. |
 
 ## Persistence and stopping boundary
 
