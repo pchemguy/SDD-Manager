@@ -17,3 +17,7 @@ R-003: locally verified correction, pending coherent candidate/merged-state rech
 README prose and Mermaid now show prerequisite orientation, outstanding publication/readback, an explicit publication gate, then the bounded task audit and range selection/tracking. A publication failure and an invalid closing boundary each stop the affected path while preserving work. Native task publication still precedes continuation; the integration audit remains at the full eligible boundary.
 
 Source trace checked the retained unpublished commit plus malformed closing-boundary scenario: publication/readback precedes audit rejection; no next task starts. Owner startup instructions and diagram agree. Diagram source and `git diff --check` passed; no Mermaid renderer was available, so fresh rendered readability is unverified. R-002: source recheck passed, pending coherent candidate assessment. No workflow behavior or closed record changed.
+
+## V-003 — Canonical feature design filenames
+
+Corrected capability-map entries to `FEATURE_ARCHITECTURE.md` and `FEATURE_DECOMPOSITION.md`. Compared the map with README and design-owner architecture/decomposition guidance; all use the established underscore names. `git diff --check` passed. No file rename, workflow change or historical edit occurred. R-001: source recheck passed, pending coherent candidate assessment.

@@ -52,7 +52,7 @@ Steering is the lightweight human-directed revision variant at a paused implemen
 | `docs/dev/PROJECT.md` | Concise project brief: purpose, users, scope, outcomes, and constraints. |
 | `docs/dev/ARCHITECTURE.md` | System blocks, relationships, dependency direction, patterns, and consequential decisions. Focused children are allowed. |
 | `docs/dev/DECOMPOSITION.md` | Component responsibilities, boundaries, collaborations, and provisional interfaces. Focused children are allowed. |
-| `docs/dev/FEATURE-ARCHITECTURE.md`, `docs/dev/FEATURE-DECOMPOSITION.md` | Bounded architectural change definition and affected component breakdown when necessary. |
+| `docs/dev/FEATURE_ARCHITECTURE.md`, `docs/dev/FEATURE_DECOMPOSITION.md` | Bounded architectural change definition and affected component breakdown when necessary. |
 | `docs/dev/SPEC.md` | Intended behavior, final contracts, errors, invariants, and acceptance conditions. |
 | `docs/dev/FEATURE-SPEC.md` | Scoped change to specified behavior until reconciled into the main SPEC. |
 | `docs/dev/PLAN.md` | Meaningful end-to-end MVP and small capability increments, phases/milestones, dependencies, verification exits, and human decision evidence. |
