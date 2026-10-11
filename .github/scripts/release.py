@@ -92,6 +92,38 @@ def inspect_archive(root, source, archive):
     return expected
 
 
+def validate_manifest(raw):
+    """Validate committed manifest bytes against the pinned offline core schema.
+
+    Args:
+        raw: UTF-8 JSON bytes read from the exact candidate Git object.
+
+    Returns:
+        dict: The conforming manifest, including opaque client extensions.
+
+    Raises:
+        ValueError: Invalid JSON, manifest constraints, or changed schema bytes.
+        ImportError: The documented development validator dependency is absent.
+    """
+    from pathlib import Path
+    from jsonschema import Draft202012Validator
+    from referencing import Registry
+    schema_path = Path(__file__).resolve().parents[1] / 'schemas' / 'plugin.schema.json'
+    schema_bytes = schema_path.read_bytes()
+    if hashlib.sha256(schema_bytes).hexdigest() != '0a4aad95ce337878ad38802ebf0daa3fde76abe3f65400c86bcbb1ec0b3ab883':
+        raise ValueError('Pinned manifest schema differs from reviewed bytes')
+    try:
+        manifest = json.loads(raw)
+    except (ValueError, UnicodeDecodeError) as error:
+        raise ValueError('Candidate manifest is not valid JSON') from error
+    schema = json.loads(schema_bytes)
+    validator = Draft202012Validator(schema, registry=Registry())
+    errors = sorted(validator.iter_errors(manifest), key=lambda error: str(error.path))
+    if errors:
+        raise ValueError('Candidate manifest violates core schema: ' + errors[0].message)
+    return manifest
+
+
 def build_package(root, data, output):
     """Build and verify exact committed bytes before any publisher access."""
     from pathlib import Path
@@ -100,8 +132,8 @@ def build_package(root, data, output):
     if git(root, 'rev-parse', 'HEAD').decode().strip() != source:
         raise ValueError('Candidate checkout differs from selected source')
     tree_inventory(root, source)
-    manifest = git(root, 'show', source + ':plugin.json')
-    if data['tag'] != 'v' + json.loads(manifest)['version']:
+    manifest = validate_manifest(git(root, 'show', source + ':plugin.json'))
+    if data['tag'] != 'v' + manifest.get('version', ''):
         raise ValueError('Tag does not match candidate manifest version')
     output = Path(output); output.mkdir(parents=True, exist_ok=True)
     archive = output / 'sdd-manager.zip'

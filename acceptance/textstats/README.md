@@ -21,7 +21,7 @@ Without the repository, the coordinator asks for it before writes. No old reposi
 | [EXECUTION.md](EXECUTION.md) | Ordered execution, roles and checkpoints |
 | [RECOVERY.md](RECOVERY.md) | Planned, injected and unexpected interruptions |
 | [DIAGNOSTICS.md](DIAGNOSTICS.md) | Attribution, reproduction and final report |
-| [cases/catalog.json](cases/catalog.json) | Stable A-001–A-027 intents and dependency selection |
+| [cases/catalog.json](cases/catalog.json) | Stable A-001–A-033 intents and dependency selection |
 | [cases/consumer/](cases/consumer/) | Reusable consumer inputs, without assessor answers |
 | [cases/assessor/](cases/assessor/) | Independent oracles; coordinator/assessor access only |
 | [templates/inputs.example.json](templates/inputs.example.json) | Non-secret configuration example |
@@ -86,3 +86,7 @@ and verifying its publication, unless an explicit earlier stopping boundary appl
 ```
 
 Historical provenance: [campaign 008 plan](../../docs/dev/reviews/008_98a5562/REVISION-PLAN.md) and [report](../../docs/dev/reviews/008_98a5562/REVISION-REPORT.md). These explain derivation and limits; they are not bootstrap inputs or expected new-run results.
+
+## Release-message extension
+
+[Six additional cases](RELEASE-SCENARIOS.md) cover release-note routing, repetition and human edits, freshness, failed-save recovery, native commit/tag/provider agreement and optional installed-client loading. The catalog now has 33 cases; earlier 27-case results remain historical evidence. Extending this component and passing its support tests does not execute a consumer campaign or certify a client/GitHub release.

@@ -1,0 +1,39 @@
+{
+  "original_review_source": "818d66f6baf8e3a324d29f3430d3bac3278f0dd2",
+  "new_branch_base": "f4741d709d5969772124a071d6d7ad60f8aeb697",
+  "rebase_conflict": "review index only; both campaign rows retained",
+  "product_code_unchanged": true,
+  "added_demo_local_links": "pass",
+  "package_files": 133,
+  "changed_package_bytes": [
+    "sdd-manager/README.md"
+  ],
+  "new_package_sha256": "5b4fa7da0fde73223a93c238462a5cba1efd1253ab9ab9b97b2828512248ab10",
+  "checkpoint_mapping": [
+    {
+      "original": "f655c9193b4aa07bd5202cef7ff25e8463ee4647",
+      "rebased": "c36cb79b03eb8848c14ec9b9e0c2bd160e095e8c"
+    },
+    {
+      "original": "da5c02237fd1440aa55d9e75082122050a5752d0",
+      "rebased": "ac97e53f25535b556268af296c40a8b30080d60a"
+    },
+    {
+      "original": "33c71d29b0c541593c628d38900663317100d1cc",
+      "rebased": "9e72ad81b9c345b5a770d8ec6b65290590c3939f"
+    },
+    {
+      "original": "3b57fd3b51a9a8d86c23d0ac809dd80eea4f933c",
+      "rebased": "490865680e9946d6f8993da26c42aebc2c25a6ce"
+    },
+    {
+      "original": "69cb5ae7caf3d02ce4dcd20399d34b42d8fa5a05",
+      "rebased": "727f584411263697197b3c63571b9f26a8cb1c81"
+    },
+    {
+      "original": "eff8992264871cb6c24f8217f235f85bd25a2cc5",
+      "rebased": "488784316f593356021032681bade3198842f886"
+    }
+  ],
+  "tests": "Original suites remain unchanged-code evidence; not fresh execution against new source."
+}

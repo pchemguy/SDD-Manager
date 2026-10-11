@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "case_id": "A-028",
+  "checks": [
+    {
+      "id": "no-pending-merge",
+      "kind": "git",
+      "field": "merge_heads",
+      "expected": []
+    }
+  ],
+  "required_agent_checks": [
+    "Each selected variant receives exactly one separately rendered ordinary request, pinned source and actual authorized state; no assessor answer or combined objective enters its handoff.",
+    "Observed preparation stays within its selected scope. Inspect actual highlights baseline/watermark/source coverage and established version authority where relevant; file presence or consumer claims alone are insufficient.",
+    "No release marker, tag, provider operation or workflow dispatch is created for preparation-only. Any owned ignore-rule or tracked-note persistence is scoped and published when required."
+  ],
+  "variant_agent_checks": {
+    "highlights-only": [
+      "Supply only the ordinary highlights request; observe narrower scope and absence of a newly created complete message or release effects."
+    ],
+    "complete-message": [
+      "Supply only the ordinary complete-message request; observe root notes, meaningful ancillary sections and preparation-only stopping boundary."
+    ]
+  }
+}

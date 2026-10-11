@@ -1,0 +1,9 @@
+{
+  "baseline": "818d66f6baf8e3a324d29f3430d3bac3278f0dd2",
+  "owned_paths_only": true,
+  "product_and_closed_records_unchanged": true,
+  "campaign_markdown_links_and_heading_spacing": "pass",
+  "git_diff_check": "pass",
+  "validator_warnings": "36 plugin-contained cross-skill warnings; no escapes",
+  "runtime_tests": "113 support and 27 publisher passed in U-004; no implementation changes since"
+}

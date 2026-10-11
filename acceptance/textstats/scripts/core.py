@@ -902,7 +902,7 @@ def assessment(inputs,state,contract_path,evidence_path):
     checks=contract.get('checks')
     if not isinstance(checks,list) or not checks: raise Stop('empty_check_collection')
     if 'required_agent_checks' in contract and (not isinstance(contract['required_agent_checks'],list) or not all(isinstance(x,str) and x for x in contract['required_agent_checks'])): raise Stop('invalid_contract')
-    if 'case_id' in contract and not re.fullmatch(r'A-0(0[1-9]|1[0-9]|2[0-7])',str(contract['case_id'])): raise Stop('invalid_contract')
+    if 'case_id' in contract and not re.fullmatch(r'A-0(0[1-9]|[12][0-9]|3[0-3])',str(contract['case_id'])): raise Stop('invalid_contract')
     variant_checks=contract.get('variant_agent_checks',{})
     if not isinstance(variant_checks,dict) or any(not re.fullmatch('[a-z][a-z0-9-]*',str(k)) or not isinstance(v,list) or not v or any(not isinstance(x,str) or not x for x in v) for k,v in variant_checks.items()):raise Stop('invalid_contract')
     selected_variant=(state or {}).get('variant')

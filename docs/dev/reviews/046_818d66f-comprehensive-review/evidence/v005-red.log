@@ -1,0 +1,70 @@
+test_changed_note_or_provider_body_fails_exact_bytes (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_changed_note_or_provider_body_fails_exact_bytes) ... FAIL
+test_missing_literal_and_wrong_class_do_not_grade_acceptance (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_missing_literal_and_wrong_class_do_not_grade_acceptance) ... FAIL
+test_missing_partial_or_malformed_source_evidence_is_rejected (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_missing_partial_or_malformed_source_evidence_is_rejected) ... FAIL
+test_native_body_tag_and_controlled_readback_agree (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_native_body_tag_and_controlled_readback_agree) ... FAIL
+test_preservation_diff_and_missing_baseline_are_not_passes (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_preservation_diff_and_missing_baseline_are_not_passes) ... FAIL
+test_symlink_and_sensitive_notes_are_rejected (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_symlink_and_sensitive_notes_are_rejected) ... FAIL
+test_wrong_tag_or_unpublished_readback_fails (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_wrong_tag_or_unpublished_readback_fails) ... FAIL
+test_new_case_inputs_and_checkpoint_ids_validate_and_unknown_id_fails (acceptance.textstats.tests.test_release_capture.ReleaseHandoff.test_new_case_inputs_and_checkpoint_ids_validate_and_unknown_id_fails) ... ok
+test_new_release_predecessor_requires_published_independent_assessment (acceptance.textstats.tests.test_release_capture.ReleaseHandoff.test_new_release_predecessor_requires_published_independent_assessment) ... ok
+
+======================================================================
+FAIL: test_changed_note_or_provider_body_fails_exact_bytes (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_changed_note_or_provider_body_fails_exact_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/46b31bb4dff6/037-authorized-source-main/acceptance/textstats/tests/test_release_capture.py", line 25, in setUp
+    self.assertIsNotNone(capture, 'Release observation support is absent')
+AssertionError: unexpectedly None : Release observation support is absent
+
+======================================================================
+FAIL: test_missing_literal_and_wrong_class_do_not_grade_acceptance (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_missing_literal_and_wrong_class_do_not_grade_acceptance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/46b31bb4dff6/037-authorized-source-main/acceptance/textstats/tests/test_release_capture.py", line 25, in setUp
+    self.assertIsNotNone(capture, 'Release observation support is absent')
+AssertionError: unexpectedly None : Release observation support is absent
+
+======================================================================
+FAIL: test_missing_partial_or_malformed_source_evidence_is_rejected (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_missing_partial_or_malformed_source_evidence_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/46b31bb4dff6/037-authorized-source-main/acceptance/textstats/tests/test_release_capture.py", line 25, in setUp
+    self.assertIsNotNone(capture, 'Release observation support is absent')
+AssertionError: unexpectedly None : Release observation support is absent
+
+======================================================================
+FAIL: test_native_body_tag_and_controlled_readback_agree (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_native_body_tag_and_controlled_readback_agree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/46b31bb4dff6/037-authorized-source-main/acceptance/textstats/tests/test_release_capture.py", line 25, in setUp
+    self.assertIsNotNone(capture, 'Release observation support is absent')
+AssertionError: unexpectedly None : Release observation support is absent
+
+======================================================================
+FAIL: test_preservation_diff_and_missing_baseline_are_not_passes (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_preservation_diff_and_missing_baseline_are_not_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/46b31bb4dff6/037-authorized-source-main/acceptance/textstats/tests/test_release_capture.py", line 25, in setUp
+    self.assertIsNotNone(capture, 'Release observation support is absent')
+AssertionError: unexpectedly None : Release observation support is absent
+
+======================================================================
+FAIL: test_symlink_and_sensitive_notes_are_rejected (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_symlink_and_sensitive_notes_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/46b31bb4dff6/037-authorized-source-main/acceptance/textstats/tests/test_release_capture.py", line 25, in setUp
+    self.assertIsNotNone(capture, 'Release observation support is absent')
+AssertionError: unexpectedly None : Release observation support is absent
+
+======================================================================
+FAIL: test_wrong_tag_or_unpublished_readback_fails (acceptance.textstats.tests.test_release_capture.ReleaseCapture.test_wrong_tag_or_unpublished_readback_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/46b31bb4dff6/037-authorized-source-main/acceptance/textstats/tests/test_release_capture.py", line 25, in setUp
+    self.assertIsNotNone(capture, 'Release observation support is absent')
+AssertionError: unexpectedly None : Release observation support is absent
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.403s
+
+FAILED (failures=7)

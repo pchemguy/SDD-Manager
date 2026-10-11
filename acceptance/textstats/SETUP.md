@@ -14,7 +14,7 @@ Use [inputs.schema.json](schemas/inputs.schema.json), schema version 1. Resolve 
 | `plugin_revision` | `HEAD`: full committed source HEAD observed at run start; supplied revision resolves to full SHA |
 | `source_mode` | `committed`; explicit `dirty` testing snapshots requested package edits and records base SHA plus hashes/diff |
 | `scope` | `{}` means full supported campaign; optional `phases`/`cases` arrays bound selection |
-| `stop_after` | `null`; optional one-shot P0–P5 or A-001–A-027 boundary; stop after its assessment/checkpoint |
+| `stop_after` | `null`; optional one-shot P0–P5 or A-001–A-033 boundary; stop after its assessment/checkpoint |
 | `profile` | `full-github`; `local-only` is partial acceptance, `installed-client` additionally requests installed execution |
 | `run_id` | Optional existing campaign identity when explicitly resuming; allocate a fresh identity otherwise |
 
@@ -69,3 +69,7 @@ python acceptance/textstats/scripts/assess.py --inputs /path/to/INPUTS.json --ru
 ```
 
 Commit/push sanitized evidence on the reserved evidence branch at case boundaries and before dependents. Verify destination containment; label pending local artifacts and unpushed evidence accurately. Product commits and integration remain consumer/plugin-owned. Mid-operation preservation must not create a false product completion commit. Store protected credentials separately from all recovery exports.
+
+## Release/client setup
+
+Release extension fixtures require an established product version, independently assessed predecessor, actual note ownership/coverage and explicitly bounded release effects/destination. Client installation requires its own supported mechanism and identity; source loading is insufficient. Select optional live-provider/client variants explicitly under [release controls](RELEASE-SCENARIOS.md); source-repository credentials never authorize a test destination.

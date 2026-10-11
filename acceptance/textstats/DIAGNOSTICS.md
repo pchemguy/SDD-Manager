@@ -13,7 +13,7 @@ Maintain `DIAGNOSTIC-REPORT.md` progressively under the run campaign and finish 
 
 If no confirmed defect is established, state: **“No confirmed SDD Manager defects were identified; no test-derived plugin change is proposed.”** Separately list concrete unresolved investigations. Missing installed-client execution or other facilities are coverage gaps, not Passed cases or invented defects. This statement does not erase assisted attempts or unresolved instruction weakness.
 
-Then include source full SHA/manifest (or dirty snapshot), resolved scope/profile/runtime, run/repository/branch identity, a reconciled A-001–A-027 table, attempts and initial/eventual outcomes, source/evidence links, product commit/merge/publication/hosted state, retained pending work, verified stop checkpoint and exact next authorized action. Distinguish native transcripts from observations, injected failures from provider failures, and consumer actions from fixture scripts. Use real runtime identities/links; never pre-fill historical issue numbers/SHAs/results.
+Then include source full SHA/manifest (or dirty snapshot), resolved scope/profile/runtime, run/repository/branch identity, a reconciled A-001–A-033 table, attempts and initial/eventual outcomes, source/evidence links, product commit/merge/publication/hosted state, retained pending work, verified stop checkpoint and exact next authorized action. Distinguish native transcripts from observations, injected failures from provider failures, and consumer actions from fixture scripts. Use real runtime identities/links; never pre-fill historical issue numbers/SHAs/results.
 
 ## Finding record
 
@@ -59,3 +59,7 @@ Catalog validation, renderer provenance verification and capture sensitivity sel
 Use [VARIANTS](VARIANTS.md) to report required readiness independently from optional executed outcomes and optional Not run reasons. Never split historical unsplit grades into invented variant results. Executed optional failures remain visible; evidence of a required-contract violation still blocks readiness. Report actual evidence class, facility, trigger and independent assessor identity; helper success is not consumer acceptance.
 
 Publish the completed report and linked proposals, then follow [final evidence integration](EXECUTION.md#final-evidence-integration). Record product completion, evidence tip, two-parent evidence merge, target ref and exact publication separately, including any explicit unmerged boundary or pending push. Retain independent A-027 reconciliation before integration and verify that its evidence bytes remain unchanged afterward.
+
+## Release and installed-client attribution
+
+Report A-028–A-033 coverage separately: implemented scenarios/support tests, independently assessed release consumers, controlled provider/failure evidence, actual live release readback and installed-client observations. Attribute freshness/preservation/body/retry failures to exact requests, context and source before proposing production changes. No version match, local tag or support-test count proves publication or discovery. See [release controls](RELEASE-SCENARIOS.md).

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "case_id": "A-033",
+  "checks": [
+    {
+      "id": "installed-observed",
+      "kind": "literal",
+      "key": "installed_discovery_observed",
+      "expected": true
+    }
+  ],
+  "required_agent_checks": [
+    "This optional case requires actual supported installation and named client/version, exact package hash/source and UI/loading observations. Do not modify the installed package or substitute explicit source-file loading for discovery.",
+    "Observe root-only plugin.json recognition, discovered skill entries, OpenAI presentation where supported, a sibling-relative reference load and a named workflow handoff during the ordinary request. Distinguish client routing from source loading and unsupported presentation semantics.",
+    "Unavailable installation/session/loading facilities remain optional Not run with exact reason. Report client behavior independently of release consumer/support evidence; no tag/provider effect is implied."
+  ],
+  "variant_agent_checks": {
+    "installed-client": [
+      "Independently assess installed-client; retain exact before/after evidence and declared evidence class."
+    ]
+  }
+}

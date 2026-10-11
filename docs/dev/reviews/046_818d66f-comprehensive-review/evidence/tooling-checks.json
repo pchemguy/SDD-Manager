@@ -1,0 +1,101 @@
+{
+  "actual_build_only": {
+    "source": "818d66f6baf8e3a324d29f3430d3bac3278f0dd2",
+    "two_build_hashes_match": true,
+    "observation": {
+      "assets": {
+        "sdd-manager.zip": "d73bfd770f03453dff24929e392c7842d9f40ec0076d429b904634688c323005",
+        "sdd-manager.zip.sha256": "aef688b82a62a89642db2811a683cf8d19ac0f71e2ffe808d2255adaae2386af"
+      },
+      "published": false,
+      "release_id": null,
+      "request_id": "review-build-only",
+      "run_id": null,
+      "source": "818d66f6baf8e3a324d29f3430d3bac3278f0dd2",
+      "workflow_source": null
+    },
+    "provider_calls": 0
+  },
+  "python": "3.12.14",
+  "platform": "Linux",
+  "yaml_documents_parsed": 16,
+  "skill_entries": [
+    {
+      "skill": "sdd-conventions",
+      "description_chars": 533
+    },
+    {
+      "skill": "sdd-design",
+      "description_chars": 264
+    },
+    {
+      "skill": "sdd-docs",
+      "description_chars": 284
+    },
+    {
+      "skill": "sdd-forge",
+      "description_chars": 678
+    },
+    {
+      "skill": "sdd-implement",
+      "description_chars": 321
+    },
+    {
+      "skill": "sdd-integrate-feature",
+      "description_chars": 361
+    },
+    {
+      "skill": "sdd-manage",
+      "description_chars": 595
+    },
+    {
+      "skill": "sdd-orient",
+      "description_chars": 351
+    },
+    {
+      "skill": "sdd-plan",
+      "description_chars": 369
+    },
+    {
+      "skill": "sdd-report",
+      "description_chars": 480
+    },
+    {
+      "skill": "sdd-specify",
+      "description_chars": 260
+    },
+    {
+      "skill": "sdd-steer",
+      "description_chars": 346
+    },
+    {
+      "skill": "sdd-tasks",
+      "description_chars": 224
+    },
+    {
+      "skill": "sdd-tdd",
+      "description_chars": 233
+    },
+    {
+      "skill": "sdd-verify",
+      "description_chars": 454
+    }
+  ],
+  "publisher_conformance_probe": {
+    "fixture_manifest": {
+      "name": "sdd-manager",
+      "version": "0.15.0"
+    },
+    "canonical_schema_errors": [
+      "'$schema' is a required property"
+    ],
+    "publisher_accepted": true,
+    "outputs": [
+      "sdd-manager.zip",
+      "sdd-manager.zip.sha256"
+    ],
+    "provider_calls": 0,
+    "interpretation": "Publisher checks exact bytes/version/inventory, but does not itself enforce portable manifest or skill-entry conformance. Current real candidate independently passes manifest checks."
+  },
+  "limits": "YAML parsing is not Actions validation or CI execution; skill description/schema shape is not client activation."
+}

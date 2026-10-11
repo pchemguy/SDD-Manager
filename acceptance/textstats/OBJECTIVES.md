@@ -14,7 +14,7 @@ Every capability here is **plugin test material**. TextStats' generated design, 
 | Failure and recovery | Genuine partial work retained; fresh continuation uses actual files/index/refs/identities; no resets, duplicate hosted writes or invented successful prerequisites |
 | Diagnostic quality | Original attempts, assistance and gaps visible; causal confidence and reproducible bounded change proposals rather than automatic source repair |
 
-The catalog imports A-001–A-027 intents. Required readiness uses [selected required variants](VARIANTS.md), with optional outcomes separately visible. Full required coverage requires each required prerequisite, execution and independent assessment, actual positive-sequence Git/GitHub operations, and controlled failures in isolated fixtures. A script preparing a failure is not the consumer action being tested. Installed-client discovery, routing and activation require their own observed runtime facility; explicit skill loading proves only explicit-source execution. Recorded interpreter/tool versions bound compatibility claims.
+The catalog imports A-001–A-033 intents. Required readiness uses [selected required variants](VARIANTS.md), with optional outcomes separately visible. Full required coverage requires each required prerequisite, execution and independent assessment, actual positive-sequence Git/GitHub operations, and controlled failures in isolated fixtures. A script preparing a failure is not the consumer action being tested. Installed-client discovery, routing and activation require their own observed runtime facility; explicit skill loading proves only explicit-source execution. Recorded interpreter/tool versions bound compatibility claims.
 
 ## Outcomes
 
@@ -34,3 +34,7 @@ The source under test remains immutable throughout a campaign. A proposed plugin
 ## Boundary review lifecycle
 
 Assess explicit delivery milestone review tasks and final single-task phase review milestones, separate code review/testing evidence, committed reports at workflow-specific paths, blocker repair and admissible TODO solution-option aggregation. Local support tests validate harness behavior only; new lifecycle claims require consumer execution and live provider readback.
+
+## Release-message coverage
+
+The release extension covers narrower highlights routing, complete notes, repetition/human curation, source/version freshness, atomic save recovery, release commit/tag/provider body agreement and retained notes. [Release scenario controls](RELEASE-SCENARIOS.md) define A-028–A-033. Component validation is distinct from independent consumer execution; optional installed-client/live-provider evidence remains separate.

@@ -1,0 +1,20 @@
+PACKAGE: plugin
+STANDARD: Agent Plugins 1.0.0
+  skill: sdd-conventions
+  skill: sdd-design
+  skill: sdd-docs
+  skill: sdd-forge
+  skill: sdd-implement
+  skill: sdd-integrate-feature
+  skill: sdd-manage
+  skill: sdd-orient
+  skill: sdd-plan
+  skill: sdd-report
+  skill: sdd-specify
+  skill: sdd-steer
+  skill: sdd-tasks
+  skill: sdd-tdd
+  skill: sdd-verify
+  extension: com.openai
+VALIDATION: errors: 1, warnings: 36
+RUNTIME: not verified by inventory

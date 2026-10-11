@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "case_id": "A-032",
+  "checks": [
+    {
+      "id": "notes-present",
+      "kind": "file",
+      "path": "RELEASE-NOTES.md",
+      "exists": true
+    },
+    {
+      "id": "complete-release-agreement",
+      "kind": "literal",
+      "key": "release_agreement",
+      "expected": true
+    }
+  ],
+  "required_agent_checks": [
+    "Use an isolated refreshed-note fork, established version/tag and explicit scoped release effects. Grade controlled provider behavior separately from optional real GitHub publication. Start independent trials for initial success, repeated completed request and response loss after an applied effect.",
+    "Inspect native release commit subject and exact UTF-8 Markdown body, final notes bytes, peeled tag commit and provider body readback. Release marker adds no unassessed user change; final source and handoff body/hash agree. Notes persist; internal draft cleanup occurs only after verified body consumption.",
+    "Observe commit/tag publication where authorized and destination refs before retry. Matching markers/tags/provider objects are reused; uncertain writes require readback, not duplicate or moved tags. Retain actual provider response/readback source and IDs in sanitized evidence; controlled response data cannot establish live GitHub acceptance."
+  ],
+  "variant_agent_checks": {
+    "controlled-provider": [
+      "Actual consumer actions and native commit/tag objects agree with controlled readback; do not report live success."
+    ],
+    "live-provider": [
+      "Read back actual GitHub release body/state and destination refs after authorized publication and uncertain-response trial; controlled evidence does not satisfy this variant."
+    ]
+  }
+}

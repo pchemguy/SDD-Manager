@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "case_id": "A-029",
+  "checks": [
+    {
+      "id": "notes-present",
+      "kind": "file",
+      "path": "RELEASE-NOTES.md",
+      "exists": true
+    }
+  ],
+  "required_agent_checks": [
+    "Fork the actual prepared-message checkpoint. First repeat with unchanged source and ancillary facts; then add distinctive human text and an editorial cut as disclosed fixture changes; finally add an authorized delivered-scope commit and repeat.",
+    "Retain notes and internal checkpoint bytes/hash/timestamps before each request. Unchanged source/facts/body causes no needless rewrite. New scope is covered without restoring the cut, erasing applicable human text or duplicating highlights.",
+    "Human material must be meaningful and compatible with current facts; no absolute preservation of stale claims is required. Assessor independently checks coverage, applicable ancillary sections, cuts and complete-message quality, not just file existence. Preparation creates no release marker/tag/provider effect."
+  ],
+  "variant_agent_checks": {
+    "core": [
+      "Independently assess core; retain exact before/after evidence and declared evidence class."
+    ]
+  }
+}

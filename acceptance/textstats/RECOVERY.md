@@ -46,3 +46,7 @@ For ambiguous ownership, inaccessible remote or unavailable hosted lookup, prese
 ## Final evidence continuation
 
 A retained final report is followed by [evidence integration](EXECUTION.md#final-evidence-integration). Inspect exact main/evidence refs, merge parents, campaign-only delta and immutable source/assessment hashes before continuing. Already-integrated evidence needs verification, not a duplicate merge. A retained unpublished evidence merge needs its pending normal push and exact main readback. An earlier explicit pause/unmerged limit remains effective. Preserve product completion identity independently of evidence integration identity.
+
+## Release-message recovery
+
+For A-031 preserve original note bytes/hash, actual failed-write provenance, temporary-file ownership and intervening human edits before fresh continuation. For A-032 retain release marker, peeled tag, final message/source/hash and exact provider readback; reconcile applied or uncertain effects before retry. Final notes remain after success or failure. [Release controls](RELEASE-SCENARIOS.md) separate controlled observations from live provider evidence.
