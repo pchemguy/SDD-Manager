@@ -116,6 +116,12 @@ On 2026-10-11, the human identified "URL configuration" as undefined shorthand i
 
 The scoped Python check passed for removal of both shorthand phrases, explicit mechanisms, retained precedence/default/omission semantics and ten unchanged prompts. `git diff --check` passed. V-013 checkpoint `4bd5ebe9621001119853cdfadfa20a49af56f25d` was pushed and exact remote identity verified before this amendment. The campaign remains open; no runtime check is claimed.
 
+## V-015 — Explicit setting choices in the cookie prompt
+
+On 2026-10-11, the human identified unexplained ghost-visibility and locking-policy labels. Replaced those three cookie-prompt list items with all available choices: always hide/dynamic above-midline hide/always show; general-rule/immediate hard-drop locking; failed-downward-attempt/full-gravity-interval general locking. The full-interval choice explicitly starts from grounding.
+
+The scoped Python check passed for the three explicit choice sets, six total settings, unchanged save/restore/precedence requirements and eleven unchanged prompts. `git diff --check` passed. V-014 checkpoint `943583c09ac385537813a14cf8392b51f899c9c1` was pushed and exact remote identity verified before this amendment. The campaign remains open; no runtime check is claimed.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.

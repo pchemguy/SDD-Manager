@@ -212,11 +212,11 @@ For cookies:
 >
 > Open a feature campaign to add cookie-based persistence to the Tetris configuration panel. Save the selected values in cookies whenever the player changes these settings:
 >
-> - Ghost-piece visibility.
+> - Ghost piece: always hide, hide dynamically when its projected landing position is above the board's midline, or always show.
 > - Hard drop: on/off.
 > - Next-piece preview: on/off.
-> - Hard-drop locking policy.
-> - General locking policy.
+> - Hard-drop locking policy: follow the selected general locking policy, or lock immediately after hard drop.
+> - General locking policy: lock on a failed downward movement attempt, or lock after one full gravity interval from becoming grounded.
 > - Hold piece: on/off.
 >
 > Restore saved settings when the page is reloaded or the game is opened again. Use sensible defaults for settings without saved values.
