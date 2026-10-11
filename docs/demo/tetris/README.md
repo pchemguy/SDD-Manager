@@ -227,7 +227,18 @@ For URL parameters:
 
 > [!NOTE] Prompt
 >
-> Open a feature campaign to support configuration settings through URL query (GET) parameters with sensible defaults. Default values may be supplied explicitly or omitted. If the game already saves configuration settings in cookies, explicit URL parameters must override and update the corresponding cookies; omitted URL parameters must use saved cookie values before defaults.
+> Open a feature campaign to configure the Tetris game through URL query (GET) parameters. Support these settings and choices:
+>
+> - Ghost piece: always hide, hide dynamically when its projected landing position is above the board's midline, or always show.
+> - Hard drop: on/off.
+> - Next-piece preview: on/off.
+> - Hard-drop locking policy: follow the selected general locking policy, or lock immediately after hard drop.
+> - General locking policy: lock on a failed downward movement attempt, or lock after one full gravity interval from becoming grounded.
+> - Hold piece: on/off.
+>
+> Apply the supplied parameter values when the game is opened. Use sensible defaults for omitted settings when no saved cookie value is available. A value equal to its default may be supplied explicitly or omitted.
+>
+> If the game already saves configuration settings in cookies, resolve each setting in this order: a value explicitly supplied by its URL parameter, a saved cookie value, then the default. Save explicit URL parameter values in the corresponding cookies, including values equal to the default. When a setting's URL parameter is omitted, retain its saved cookie value instead of replacing it with the default.
 
 During preparation, clarify parameter names and accepted values, handling of invalid or duplicate URL parameters and invalid saved values, cookie lifetime and scope, and whether panel changes update the URL when URL support is available. Keep omitted parameters distinct from explicit default-valued parameters.
 

@@ -122,6 +122,12 @@ On 2026-10-11, the human identified unexplained ghost-visibility and locking-pol
 
 The scoped Python check passed for the three explicit choice sets, six total settings, unchanged save/restore/precedence requirements and eleven unchanged prompts. `git diff --check` passed. V-014 checkpoint `943583c09ac385537813a14cf8392b51f899c9c1` was pushed and exact remote identity verified before this amendment. The campaign remains open; no runtime check is claimed.
 
+## V-016 — Complete URL-parameter feature prompt
+
+On 2026-10-11, the human requested rewriting the complementary URL prompt. It now names URL query (GET) parameters, lists all six settings with the same explicit choices as the cookie prompt, applies supplied values when the game opens and explains sensible defaults and explicit-default/omission handling. A separate paragraph defines existing-cookie precedence, updates from explicit URL values and retention of cookie values when parameters are omitted.
+
+The scoped Python check passed for six-setting choice parity, URL application/default semantics, combined precedence and updates, quoted list spacing and eleven unchanged prompts. `git diff --check` passed. V-015 checkpoint `c58ba71e2841a63ac553b65a43936425521d65d4` was pushed and exact remote identity verified before this amendment. The campaign remains open; no runtime check is claimed.
+
 ## Limits and return boundary
 
 No gameplay, browser, live agent trial, installed-client check, or support-suite execution is claimed. This documentation-only draft does not alter plugin behavior or package contents. Campaign integration was not requested; remain on the open revision branch after verified publication. Further guide development and any eventual integration remain pending.
