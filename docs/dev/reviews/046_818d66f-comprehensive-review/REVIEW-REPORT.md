@@ -107,7 +107,7 @@ Recommended revision order: R-003 adds the missing release guard; R-002 reconcil
 
 ### Validator adjudication
 
-The agent-package-author offline validator and inspector ran against the actual 133-file archive. Both returned exit 1: one error and 36 cross-skill warnings. The error rejects `com.openai` because the validator's `NAMESPACE` regex requires at least three components. The canonical schema accepts the extension object; the [specification](https://agent-plugins.org/specification#8-client-extensions) requires a reverse-domain namespace without defining that minimum. This is a tool false positive, not a manifest defect or a reason to rename the OpenAI namespace. The warnings identify plugin-contained sibling references and their unverified client loading, already covered by R-004; no package escape was reported. [Validator result](evidence/plugin-validation.json), [full output](evidence/plugin-validation.log) and [inspector output](evidence/package-inspection.log) retain the failure rather than presenting the tool as passing.
+The agent-package-author offline validator and inspector ran against the original source snapshot (the separately inspected release package has 133 files). Both returned exit 1: one error and 36 cross-skill warnings. The error rejects `com.openai` because the validator's `NAMESPACE` regex requires at least three components. The canonical schema accepts the extension object; the [specification](https://agent-plugins.org/specification#8-client-extensions) requires a reverse-domain namespace without defining that minimum. This is a tool false positive, not a manifest defect or a reason to rename the OpenAI namespace. The warnings identify plugin-contained sibling references and their unverified client loading, already covered by R-004; no package escape was reported. [Validator result](evidence/plugin-validation.json), [full output](evidence/plugin-validation.log) and [inspector output](evidence/package-inspection.log) retain the failure rather than presenting the tool as passing.
 
 ### Coverage depth and limits
 
@@ -126,3 +126,11 @@ The reviewed source remains `818d66f6baf8e3a324d29f3430d3bac3278f0dd2`. [Final c
 | U-004 | `69cb5ae7caf3d02ce4dcd20399d34b42d8fa5a05` |
 
 Each checkpoint was pushed and read back before the next unit. The final consolidation commit is discoverable from this report's Git history; its remote identity must be checked before declaring publication complete.
+
+## Requested rebase after campaign 045 closure
+
+On 2026-10-11, the human requested closing 045 and rebasing 046. Campaign 045 was explicitly integrated and published as `f4741d709d5969772124a071d6d7ad60f8aeb697`, now this branch's base. Six review checkpoints were replayed; the only conflict was the review index and both campaign rows were retained. [Rebase checks and original/rebased identities](evidence/rebase-checks.json) preserve provenance. The original campaign identity and reviewed-source evidence remain unchanged; checkpoint hashes above describe pre-rebase history.
+
+The calculator guide was assessed for phase scope, eligible incomplete-phase steering, feature dependencies, mode relationships, verification and release boundaries. The Tetris guide's prompt/handoff and implemented-capability prerequisites were checked. Local links in both guides and the supplied example pass. They describe proposed exercises, not executed consumer evidence. No additional finding was established in this bounded rebase check; the four findings remain Open.
+
+Workflow source, manifest, assets, publisher and acceptance code are byte-identical to the original reviewed source. The actual release archive retains its 133-file inventory; only packaged README bytes change for demo navigation. The new package hash is in the rebase evidence. Original suite/build results retain their original source identity; no fresh runtime suite or client/provider acceptance is claimed. Closed campaign 045 records are untouched by 046. Review 046 stays on its branch without repairs or integration into main.

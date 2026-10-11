@@ -25,3 +25,7 @@ Units run in this order. After each unit commit the report/evidence, push and ve
 ## Findings and stopping
 
 Use stable R-001 onward, type, priority, confidence, baseline location, observation/consequence, bounded proposal and objective recheck. Keep observed defects separate from recommendations and evidence gaps. No recommendation is accepted by implication. Finish with a published report and proposed revision queue on this campaign branch, then stop before repairs or release operations.
+
+## Authorized branch rebase
+
+On 2026-10-11 the human requested closing 045 and rebasing 046 onto its published main integration. Preserve original review evidence and campaign identity, resolve navigation conflicts, assess added documentation and record changed-source limits. No repair or review-branch integration authority is added.
