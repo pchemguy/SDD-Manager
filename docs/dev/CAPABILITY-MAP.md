@@ -15,6 +15,28 @@ This document records the plugin's intended capabilities, ownership, and present
 - Authentication assumes a usable shell session and attempts the authorized push first. sdd-conventions defines ignored repository `*.tkn` storage; sdd-manage selects/saves tokens and recovers shell/client access after credential failures. Provider-specific permission profiles belong to the active backend, and Git transport access does not prove API access.
 - Scripts are optional for deterministic, well-defined operations. External integrations are optional capabilities with explicit inputs, effects, and reconciliation rules.
 
+## Bundled skill references
+
+Distribute SDD Manager's skills together. Use ordinary relative Markdown links between bundled skills, and name the destination skill when requesting a workflow handoff. From `skills/sdd-design/SKILL.md`, for example:
+
+```markdown
+Before modifying the repository, use **sdd-orient**:
+[repository orientation](../sdd-orient/SKILL.md).
+
+Apply the shared
+[Markdown conventions](../sdd-conventions/references/markdown-style.md).
+```
+
+| Reference | Purpose |
+| --- | --- |
+| Another skill's `SKILL.md` | Identify the capability and its entry instructions. |
+| Another skill's reference file | Load shared guidance without selecting its whole workflow. |
+| Named skill in prose | Describe routing or delegation; execution depends on the client. |
+
+[Agent Skills](https://agentskills.io/specification#file-references) documents relative file references and progressive disclosure without specifying interskill dependency resolution or explicitly prohibiting sibling-relative `../` links. [Agent Plugins §4.1](https://agent-plugins.org/specification#41-general-requirements) establishes the resolved plugin root as the package-file containment boundary; §7.1 leaves client skill exposure unspecified. Neither defines a standard interskill dependency field or invocation syntax.
+
+Validate resolved links against the plugin root, including filesystem link resolution. A sibling-relative target inside that boundary satisfies package containment; it does not establish universal client loading or routing support. The creator validator's individual-skill `resource-escape` findings apply a stricter standalone boundary and do not, by themselves, demonstrate a bundled-plugin containment defect. Independently distributed skills and installed-client behavior require their own checks.
+
 ## Core development workflows
 
 The [canonical model](../../skills/sdd-manage/references/workflows.md#core-development-workflows) defines three purposes: main/greenfield builds the complete intended system; revision corrects, simplifies, or improves defined/implemented work, typically through review/revision records; feature adds a scoped capability through the necessary feature package before implementation. Stages can be entered when their inputs are established, and operations can be requested independently. Main does not identify a Git branch.

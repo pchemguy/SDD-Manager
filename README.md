@@ -46,6 +46,8 @@ Use the milestone and task IDs from your actual task list. You can start at a la
 
 The package includes root `plugin.json`, root `README.md`, `AGENTS.md`, `Greenfield Project Prompt Template.md`, `LICENSE`, `SDD-MANAGER.md` and `AI_DISCLOSURE.md`, `skills/`, and `assets/`. Root `plugin.json` is the sole manifest and declares the Agent Plugins 1.0 schema. OpenAI interface metadata is namespaced under `extensions.com.openai`; schema validation alone does not establish installed-client compatibility.
 
+SDD Manager's skills are distributed together and use relative links for shared guidance and named workflow handoffs. These references remain inside the plugin package; client support for loading and routing is verified separately. See [bundled-skill development guidance](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md#bundled-skill-references).
+
 Artwork is provided as `assets/icon.svg`, `assets/icon.png`, `assets/logo.svg`, and `assets/logo.png`. Manifest presentation paths use `assets/icon.svg` for the composer icon and `assets/logo.svg` for the logo, including their dark variants. README is user-facing package documentation; runtime workflow instructions live in the skills. Acceptance and development material linked here belongs to the source repository and is outside the pinned skill package.
 
 ## Core development workflows
