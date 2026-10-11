@@ -1,0 +1,51 @@
+# Demo Tetris revision plan
+
+## Campaign and authority
+
+- Campaign: `045_818d66f`; slug: `demo-tetris`.
+- Starting baseline: `818d66f6baf8e3a324d29f3430d3bac3278f0dd2`.
+- Working branch: `revision/045_818d66f-demo-tetris`.
+- Source and eventual integration target: `main`, `pchemguy/SDD-Manager`.
+- Authority: on 2026-10-11, the human accepted the conversational guide draft and requested opening this revision campaign and committing/pushing the draft.
+- Mode: standalone revision. Campaign 037 has an actual published merge on main; it is not an active parent for this campaign.
+- Entry: directly accepted documentation addition; no preceding review or review findings are claimed.
+- Report: [revision report](REVISION-REPORT.md).
+
+## Accepted scope
+
+Maintain the accepted Tetris demo/test guide and the requested companion calculator guide, including the short seed description, clarification criteria, five selected enhancements, phased delivery and feature expansion variants, human checkpoints, gameplay checks, and contextual result recording. The accepted V-003 scope starts both variants with failed-downward-attempt locking, offers two hard-drop policies, and adds full-interval and hard-drop-policy steering exercises. Preserve the supplied earlier trial brief unchanged. Keep the guide a draft for further development.
+
+## Ordered actions
+
+| Action | Outcome and owners | Verification | State |
+| --- | --- | --- | --- |
+| V-001 | Add [the guide](../../../demo/tetris/README.md), a root README navigation link, and this campaign's plan/report/index entry. | Compare with the accepted draft; inspect Markdown spacing and new local links; run `git diff --check`; confirm the owned file set and preservation of closed campaign packages. | Draft persisted; verification is recorded in the report. |
+| V-002 | Add the human-supplied [example PROJECT.md](../../../demo/tetris/examples/PROJECT_phased-project.md) and reference it under Variant A as an agent-generated brief from an earlier trial. | Preserve supplied content except trailing whitespace; check relative links and Markdown structure; clarify example-specific technology and lock-delay grouping without rewriting the historical brief. | Accepted on 2026-10-11; checkpoint verification recorded in the report. |
+| V-003 | Revise the guide to start with failed-downward-attempt locking, define immediate-exception and general-delayed hard-drop policies, and supply two checkpoint steering exercises for either delivery variant. | Check all initial prompts, current-policy interactions, timing/reset rules, eligible checkpoints, verification criteria and local links; verify the supplied example is unchanged and closed campaign packages are preserved. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-004 | Rename the supplied example to `PROJECT_phased-project.md` and update active references to identify Variant A. | Verify unchanged example bytes, updated relative links, variant association and scoped rename. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-005 | Format every sample prompt in the Tetris guide with the supplied `NOTE` / `Prompt` callout template. | Verify all eight prompt blocks have the exact header and retain their original text; check whitespace and scoped paths. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-006 | Recompose both variant sections with target-first opening paragraphs, descriptive headings and a coherent scope-to-prompt-to-evaluation sequence. | Check Variant A's opening defines baseline plus extensions and natural multi-phase delivery; Variant B's opening defines initial baseline and later feature expansion. Preserve prompt text, scope, example and steering rules. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-007 | Replace Variant A's prompt with the human-supplied game-focused request, polished for initial or continuation use, with an explicit next question about hard-drop policy. | Verify the five-item list, failed-downward-attempt policy, immediate/general choice and `NOTE` format; retain delivery guidance outside the prompt. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-008 | Replace Variant B's baseline and feature prompts with polished human-supplied requests. | Verify the baseline scope/locking rule, feature list and explicit next hard-drop policy question; preserve callouts, list spacing and other guide sections. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-009 | Add a multi-line clearing bonus to both initial game prompts without scoring specifics. | Verify the concise bonus requirement in both prompts with no point values or formula; retain other requirements and the separate feature request. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-010 | Add conditional ghost-piece visibility as the next feature campaign candidate and release boundary for either delivery variant. | Check ghost-support prerequisite, dynamic upper/lower-half behavior, midline-overlap clarification, prompt format and visibility/gameplay verification criteria. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-011 | Add a non-persistent side-panel configuration candidate with six settings, deliverable together or as a campaign per setting. | Check exact choices/order, controls, session-only storage, missing-capability dependencies, clarification points, release boundaries and browser/locking-policy verification criteria. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-012 | Add semi-persistent configuration through independent cookie and URL-parameter options, usable separately or together. | Check per-setting URL/cookie/default precedence, explicit-default versus omitted semantics, cookie updates, both implementation orders, prompts and release/verification boundaries. | Accepted on 2026-10-11; verification recorded in the report. |
+| V-013 | Expand the cookie feature prompt into a complete request naming six settings, save/restore behavior and combined URL precedence. | Verify the six-setting list, save-on-change, reload/reopen restoration, defaults and explicit/omitted URL semantics; retain other prompts and callout spacing. | Requested on 2026-10-11; verification recorded in the report. |
+| V-014 | Replace undefined configuration shorthand in persistence prompts with the actual URL query-parameter and cookie mechanisms. | Verify the prompts name the mechanisms directly and retain per-setting precedence, explicit-value cookie updates and omitted-value behavior. | Requested on 2026-10-11; verification recorded in the report. |
+| V-015 | Spell out ghost visibility and both locking-policy choices in the cookie feature prompt. | Verify all three ghost modes, both hard-drop behaviors and both general locking rules without relying on implicit labels; preserve other settings and persistence rules. | Requested on 2026-10-11; verification recorded in the report. |
+| V-016 | Rewrite the URL-parameter feature prompt as a complete request with all six settings and explicit choices, application/default behavior and cookie precedence. | Check choice-list parity with the cookie prompt, URL-only defaults, explicit defaults/omissions, combined precedence/updates and callout/list spacing. | Requested on 2026-10-11; verification recorded in the report. |
+| V-017 | Consolidate persistence prompts into the human-supplied reusable `{FUNCTIONALITY}` template for currently implemented settings. | Check three selections, existing either/both/neither support, six explicit choices, save/update-on-change rules, restore/default behavior and combined precedence. | Requested on 2026-10-11; verification recorded in the report. |
+| V-018 | Add a penetrator-bonus feature candidate with four-line rewards, proposed cap of three, hotkey activation, white rendering and deepest valid drop/ghost placement. | Check lifetime through locking, unchanged occupied cells, legal non-overlapping final positions, explicit preparation decisions, release boundary and gameplay verification criteria. | Proposed on 2026-10-11; verification recorded in the report. |
+| V-019 | Add a side-panel penetrator inventory indicator with one symbol per available bonus, exemplified by lightning bolts. | Check guide/prompt coverage and earned/spent update requirements; preserve penetrator gameplay rules. | Requested on 2026-10-11; verification recorded in the report. |
+| V-020 | Move the penetrator candidate before both configuration sections, after conditional ghost visibility. | Verify section order and byte-for-byte preservation of moved content. | Requested on 2026-10-11; verification recorded in the report. |
+
+| V-021 | Add a second calculator demo guide with a dominant three-phase project sequence, two optional steering exercises, four feature campaigns, release boundaries, and navigation. | Check Phase 1 alone is the baseline, explicit operations and mode relationships, standalone prompts, steering checkpoints, Markdown spacing and local links. | Requested on 2026-10-11; verification recorded in the report. |
+
+## Persistence and stopping boundary
+
+Commit the draft and campaign evidence together, push the campaign branch, and verify the exact remote checkpoint. Stop with the campaign open on its revision branch. This request does not close or merge the campaign, run a Tetris trial, implement a game, change plugin behavior or packaging, or publish a release.
+
+## Authorized closure amendment
+
+On 2026-10-11 the human requested closing 045 and rebasing 046. Complete V-001–V-021, publish this closure checkpoint, explicitly integrate into refreshed `main`, verify the documentation boundary and publish/read back the target. This supersedes the earlier open-campaign stopping instruction; no game or release execution is added.
