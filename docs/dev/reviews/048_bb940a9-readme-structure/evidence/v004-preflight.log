@@ -1,0 +1,23 @@
+test_ambiguous_remotes_require_resolution (tests.test_preflight.PreflightTests.test_ambiguous_remotes_require_resolution) ... ok
+test_blank_repository_requests_same_input (tests.test_preflight.PreflightTests.test_blank_repository_requests_same_input) ... ok
+test_dirty_package_parent_symlink_is_not_followed (tests.test_preflight.PreflightTests.test_dirty_package_parent_symlink_is_not_followed) ... ok
+test_dirty_source_fingerprint_and_committed_default (tests.test_preflight.PreflightTests.test_dirty_source_fingerprint_and_committed_default) ... ok
+test_dirty_source_tracks_executable_mode_changes (tests.test_preflight.PreflightTests.test_dirty_source_tracks_executable_mode_changes) ... ok
+test_missing_repository_requests_input_without_any_output_write (tests.test_preflight.PreflightTests.test_missing_repository_requests_input_without_any_output_write) ... ok
+test_package_preserves_manifest_orientation_and_binary_assets_in_dirty_snapshot (tests.test_preflight.PreflightTests.test_package_preserves_manifest_orientation_and_binary_assets_in_dirty_snapshot) ... ok
+test_pin_uses_git_object_bytes_and_complete_package_manifest (tests.test_preflight.PreflightTests.test_pin_uses_git_object_bytes_and_complete_package_manifest) ... ok
+test_preflight_has_no_worktree_or_index_side_effects (tests.test_preflight.PreflightTests.test_preflight_has_no_worktree_or_index_side_effects) ... ok
+test_prepare_isolated_clone_contains_only_vendor_and_provenance (tests.test_preflight.PreflightTests.test_prepare_isolated_clone_contains_only_vendor_and_provenance) ... ok
+test_prepare_new_unborn_remote_is_bounded_and_does_not_publish (tests.test_preflight.PreflightTests.test_prepare_new_unborn_remote_is_bounded_and_does_not_publish) ... ok
+test_prepare_refuses_dangling_workspace_symlink_before_resolving (tests.test_preflight.PreflightTests.test_prepare_refuses_dangling_workspace_symlink_before_resolving) ... ok
+test_prepare_requires_new_explicit_workspace_and_preserves_existing_run (tests.test_preflight.PreflightTests.test_prepare_requires_new_explicit_workspace_and_preserves_existing_run) ... ok
+test_prepare_resume_does_not_clone (tests.test_preflight.PreflightTests.test_prepare_resume_does_not_clone) ... ok
+test_repository_identity_mismatch_fails (tests.test_preflight.PreflightTests.test_repository_identity_mismatch_fails) ... ok
+test_strict_schema_constraints_and_no_type_coercion (tests.test_preflight.PreflightTests.test_strict_schema_constraints_and_no_type_coercion) ... ok
+test_unknown_and_secret_configuration_fails_without_echo (tests.test_preflight.PreflightTests.test_unknown_and_secret_configuration_fails_without_echo) ... ok
+test_username_only_ssh_transport_is_allowed_but_embedded_credentials_rejected (tests.test_preflight.PreflightTests.test_username_only_ssh_transport_is_allowed_but_embedded_credentials_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 7.110s
+
+OK

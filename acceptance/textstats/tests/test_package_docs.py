@@ -55,6 +55,10 @@ class PackageDocumentation(Sandbox):
         committed,_=self.ok(self.invoke('preflight',extra=['--source-root',source]))
         hashes=committed['plugin_source']['package_hashes']
         self.assertNotIn('AGENTS.md',hashes)
+        (source/'AGENTS.md').write_bytes(b'Updated source development guidance\n')
+        dev_only,_=self.ok(self.invoke('preflight',dict(self.inputs,source_mode='dirty'),extra=['--source-root',source]))
+        self.assertEqual(dev_only['plugin_source']['fingerprint'],committed['plugin_source']['fingerprint'])
+        self.assertNotIn('AGENTS.md',dev_only['plugin_source']['changed_package_paths'])
         self.assertEqual(hashes.get('README.md'),hashlib.sha256(b'Human package documentation\n').hexdigest())
         self.assertEqual(hashes.get('PLUGIN.md'),hashlib.sha256(b'Agent package orientation\n').hexdigest())
         self.assertEqual(hashes.get('Greenfield Project Prompt Template.md'),hashlib.sha256(b'Project seed prompt\n').hexdigest())

@@ -448,7 +448,7 @@ def prepare(inputs, source, workspace):
         # Untracked package paths are represented exactly by the snapshot and hash manifest.
     write_new(manifest,pinned)
     if not info['repository']['head']:
-        if not (target/'AGENTS.md').exists(): (target/'AGENTS.md').write_text('This is a dedicated SDD Manager plugin test repository. Follow the pinned skills in textstats-run-resources/plugin/skills. Product documents and implementation must be generated through the authorized consumer workflows. Credentials remain protected and outside evidence.\n')
+        if not (target/'AGENTS.md').exists(): (target/'AGENTS.md').write_text('This is a dedicated SDD Manager plugin test repository. Load the pinned composition entry textstats-run-resources/plugin/PLUGIN.md and its selected skills. Product documents and implementation must be generated through the authorized consumer workflows. Credentials remain protected and outside evidence.\n')
         if not (target/'.gitignore').exists(): (target/'.gitignore').write_text('*.tkn\n.env\n.env.*\n')
     # Preserve the authorized hosted destination when the clone origin is a local checkout.
     if info['repository']['local_checkout']:
