@@ -4,7 +4,7 @@ This is the source-repository entry for agents developing, verifying or assessin
 
 ## Source orientation
 
-- Workflow source: skills/<skill>/SKILL.md and conditionally loaded references. Start coordinated work at [sdd-manage](../skills/sdd-manage/SKILL.md); inspect the selected owner before edits and read applicable nested AGENTS.md.
+- Workflow source: skills/{skill}/SKILL.md and conditionally loaded references. Start coordinated work at [sdd-manage](../skills/sdd-manage/SKILL.md); inspect the selected owner before edits and read applicable nested AGENTS.md.
 - Metadata: root plugin.json is the sole package manifest, with OpenAI presentation metadata under extensions.com.openai.interface. Artwork/templates live in assets/; package notices are SDD-MANAGER.md and AI_DISCLOSURE.md.
 - Retained development evidence: [review/revision index](../docs/dev/reviews/README.md). This repository has campaign plans/reports rather than a root project TASKS owner; do not invent executable task IDs from findings. Discover current work and branch state through Git and the selected campaign record.
 
