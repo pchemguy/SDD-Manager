@@ -38,7 +38,7 @@ Main development, feature and revision describe development purpose; stages and 
 
 ### Project preparation and bounded delivery
 
-`PROJECT.md` is the concise project brief: purpose, users, desired outcomes, principal scope/non-goals and consequential constraints derived from the seed and actual clarification, with material assumptions/questions identified. Use `sdd-design` and its [project brief contract](skills/sdd-design/references/project-brief.md) for direct drafting, revision or review before architecture. The whole file is the brief; it supplies shared context without replacing structural design or exact SPEC behavior.
+`PROJECT.md` is the concise project brief: purpose, users, desired outcomes, principal scope/non-goals and consequential constraints derived from the seed and actual clarification, with material assumptions/questions identified. Use `sdd-design` and its [project brief contract](skills/sdd-design/references/project-brief.md) for direct drafting, revision or review before architecture. The brief supplies shared context without replacing structural design or exact SPEC behavior.
 
 From a project seed, `sdd-manage` coordinates `sdd-orient` → `sdd-design` (PROJECT, architecture, decomposition) → `sdd-specify` (SPEC) → `sdd-plan` (PLAN, layout) → `sdd-tasks` (TASKS). Use `sdd-conventions` throughout as needed. Each necessary new root has its own human acceptance checkpoint before dependent authoring; PLAN and layout are separate. Apply [human review](skills/sdd-manage/references/human-document-review.md) and [document QC](skills/sdd-manage/references/document-qc-gates.md); agent QC/standing Git authority is not human acceptance.
 

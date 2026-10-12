@@ -83,7 +83,7 @@ The main documents describe the complete intended project. Roots may link to foc
 | `layout.md` | Physical ownership of source, tests, documentation, and other artifacts. |
 | `TASKS.md` | Phase → Milestone → Task hierarchy, stable IDs, and progress evidence. |
 
-The whole PROJECT.md is the brief; use Overview for an optional opening summary. It turns the seed and clarified decisions into shared project context, with material assumptions/questions identified. Its [authoring contract](skills/sdd-design/references/project-brief.md) defines adaptable content and the boundary with design/SPEC.
+PROJECT.md turns the seed and clarified decisions into shared project context, with material assumptions/questions identified. Its [authoring contract](skills/sdd-design/references/project-brief.md) defines adaptable content and the boundary with design/SPEC.
 
 ### Human review
 

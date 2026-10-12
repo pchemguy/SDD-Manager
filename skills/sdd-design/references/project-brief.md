@@ -2,7 +2,7 @@
 
 ## Purpose and ownership
 
-`docs/dev/PROJECT.md` is the concise project brief: a reviewable statement of the project's purpose, intended users, desired outcomes, principal scope, non-goals and consequential constraints, formed from the initial description and clarified decisions. Identify material assumptions and open questions where needed. The whole document is the brief; an opening subsection is its overview.
+`docs/dev/PROJECT.md` is the concise project brief: a reviewable statement of the project's purpose, intended users, desired outcomes, principal scope, non-goals and consequential constraints, formed from the initial description and clarified decisions. Identify material assumptions and open questions where needed.
 
 The brief provides shared context for architecture and later specification. Keep it proportionate to the project and clear enough for the human to confirm its direction. No fixed heading schema, word count or exhaustive feature catalogue is required. A short seed is an input, not necessarily a sufficient brief; expand it using actual clarification rather than inventing accepted decisions.
 
@@ -18,7 +18,7 @@ Resolve missing decisions that would otherwise force a material project/architec
 
 ## Adaptable content structure
 
-Use the project name as the root title. An opening paragraph can stand directly below it; use **Overview** when a separate introduction subsection helps. Because the entire file is a brief, an internal Brief heading is usually less precise.
+Use the project name as the root title. An opening paragraph can stand directly below it; use **Overview** when a separate introduction subsection helps.
 
 | Concern | Suitable content |
 | --- | --- |
