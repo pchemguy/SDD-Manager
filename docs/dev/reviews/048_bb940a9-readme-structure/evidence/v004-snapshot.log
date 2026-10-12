@@ -1,0 +1,8 @@
+test_committed_and_dirty_readme_and_license_are_packaged (tests.test_package_docs.PackageDocumentation.test_committed_and_dirty_readme_and_license_are_packaged) ... ok
+test_notice_navigation_is_retained_in_committed_and_dirty_snapshots (tests.test_package_docs.PackageDocumentation.test_notice_navigation_is_retained_in_committed_and_dirty_snapshots) ... ok
+test_root_manifest_is_the_only_discovery_manifest (tests.test_package_docs.PackageDocumentation.test_root_manifest_is_the_only_discovery_manifest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.432s
+
+OK

@@ -1,0 +1,19 @@
+{
+  "source": "10e446a13c18d13c7b131f9bcab9d4462c305d0a",
+  "base": "bb940a97bfa71a9791000fcc89557115be5861e6",
+  "core_manifest_valid": true,
+  "package_files": 133,
+  "reproducible_build_hashes": {
+    "sdd-manager.zip": "cb65f883badcd11fbb3380b3a218c785a4f2283cac0cf9f0d06aa90009286de1",
+    "sdd-manager.zip.sha256": "2722a25bd8df586dba511503ac9f7b5df40790061471e00f5cf43b3751d7ddda"
+  },
+  "publisher_snapshot_inventory_agreement": true,
+  "plugin_entry_exact": true,
+  "development_agents_and_acceptance_excluded": true,
+  "current_local_links": 634,
+  "four_diagrams_byte_identical": true,
+  "all_15_skill_routes": true,
+  "entry_heading_blank_spacing": "pass",
+  "closed_records_unchanged": true,
+  "limits": "Static/native source checks; no Mermaid render, client or consumer/provider trial."
+}

@@ -63,9 +63,9 @@ class PackageTests(Contract):
         self.git=git
         git('init','-q'); git('config','user.name','Fixture'); git('config','user.email','fixture@example.test')
         manifest=json.dumps({"$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json", "name":"sdd-manager", "version":"0.15.0"}).encode()
-        for name in ('LICENSE','README.md','AGENTS.md','Greenfield Project Prompt Template.md',
+        for name in ('LICENSE','README.md','PLUGIN.md','Greenfield Project Prompt Template.md',
                      'SDD-MANAGER.md','AI_DISCLOSURE.md','assets/icon.svg','skills/sample/SKILL.md',
-                     'plugin.json','docs/excluded.md'):
+                     'plugin.json','docs/excluded.md','AGENTS.md'):
             p=self.root/name; p.parent.mkdir(parents=True,exist_ok=True)
             p.write_bytes(manifest if name.endswith('plugin.json') else (name+'\n').encode())
         git('add','.'); git('commit','-qm','fixture'); self.sha=git('rev-parse','HEAD')
@@ -78,8 +78,18 @@ class PackageTests(Contract):
         with zipfile.ZipFile(paths['sdd-manager.zip']) as z:
             self.assertNotIn('sdd-manager/docs/excluded.md',z.namelist())
             self.assertEqual(z.read('sdd-manager/README.md'),b'README.md\n')
+            self.assertEqual(z.read('sdd-manager/PLUGIN.md'),b'PLUGIN.md\n')
+            self.assertNotIn('sdd-manager/AGENTS.md',z.namelist())
         raw=paths['sdd-manager.zip'].read_bytes()
         self.assertEqual(paths['sdd-manager.zip.sha256'].read_text(),hashlib.sha256(raw).hexdigest()+'  sdd-manager.zip\n')
+
+    def test_missing_plugin_entry_stops_before_package_outputs(self):
+        (self.root/'PLUGIN.md').unlink()
+        self.git('add','-u'); self.git('commit','-qm','missing plugin entry')
+        source=self.git('rev-parse','HEAD')
+        with self.assertRaisesRegex(ValueError, 'Required package path is absent: PLUGIN.md'):
+            publisher.build_package(self.root,dict(self.data,source=source,notes_source=source),self.out)
+        self.assertEqual(list(self.out.iterdir()),[])
 
     def test_invalid_manifest_stops_before_package_outputs(self):
         original=json.loads((self.root/'plugin.json').read_text())
