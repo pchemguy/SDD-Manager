@@ -56,7 +56,7 @@ It seems like should spell out a concise discovery plan, like
     3. Dive into each `./{PLUGIN_NAME}` plugin container:
         1. Find and read plugin manifest `plugin.json` in full by checking:
             1. Standard manifest location - plugin root. If found, SKIP next point.
-            2. Vendor-specific manifest locations.
+            2. Vendor-specific manifest locations/names.
 
     List plugin containers `{REPO_ROOT}/.agents/plugins/{PLUGIN_NAME}`. For each `{PLUGIN_NAME}` produce a plugin brief:
     4. Read any root `AGENTS.md` and `README.md` (when none is available, use child skill briefs) and derive concise plugin capabilities summary.
