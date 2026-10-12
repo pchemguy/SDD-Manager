@@ -103,25 +103,29 @@ These diagrams explain the human-visible paths. [PLUGIN.md](PLUGIN.md#composite-
 
 ### Project preparation
 
-Each necessary new document has a separate human decision, even where the diagram groups stages. Preparation is persisted on design-docs; dependent implementation starts only after accepted preparation is integrated, verified and published to the actual default branch.
+Each authoring node below creates and checks one necessary root, then commits, pushes and verifies remote containment before presenting it for human review. Design repeats this checkpoint for PROJECT, ARCHITECTURE and DECOMPOSITION; PLAN and layout have separate checkpoints. Dependent implementation starts only after accepted preparation is integrated, verified and published to the actual default branch.
 
 ```mermaid
 flowchart TB
-    M["sdd-manage + sdd-orient<br/>Establish scope and repository state"] --> D["sdd-design<br/>PROJECT, ARCHITECTURE and DECOMPOSITION"]
-    D -->|"accepted design"| S["sdd-specify<br/>Behavior and acceptance contracts"]
-    S --> SQ{"SPEC QC ready and human accepted?"}
-    SQ -->|"correction needed"| S
-    SQ -->|"ready"| P["sdd-plan<br/>Delivery strategy and layout"]
-    P --> PQ{"PLAN and layout QC ready?<br/>Separate human decisions accepted?"}
-    PQ -->|"correction needed"| P
-    PQ -->|"ready"| T["sdd-tasks<br/>Executable task hierarchy"]
-    T --> TQ{"TASKS QC ready and human accepted?"}
-    TQ -->|"correction needed"| T
-    TQ -->|"ready"| E["Preparation checkpoint<br/>Commit and push design-docs"]
-    E --> A{"Implementation authorized?"}
+    M["sdd-manage + sdd-orient: scope and repository state"] --> D["sdd-design: one design root; QC and publish"]
+    D --> DQ{"Human accepts this design root?"}
+    DQ -->|"revise or next design root"| D
+    DQ -->|"all necessary design accepted"| S["sdd-specify: SPEC; QC and publish"]
+    S --> SQ{"Human accepts SPEC?"}
+    SQ -->|"revise"| S
+    SQ -->|"accepted"| P["sdd-plan: PLAN; strategy QC and publish"]
+    P --> PQ{"Human accepts PLAN?"}
+    PQ -->|"revise"| P
+    PQ -->|"accepted"| L["sdd-plan: layout; combined QC and publish"]
+    L --> LQ{"Human accepts layout?"}
+    LQ -->|"revise"| L
+    LQ -->|"accepted"| T["sdd-tasks: TASKS; QC and publish"]
+    T --> TQ{"Human accepts TASKS?"}
+    TQ -->|"revise"| T
+    TQ -->|"accepted"| A{"Implementation authorized?"}
     A -->|"no"| R["Return preparation result"]
-    A -->|"yes"| G["Merge into actual default branch<br/>Verify and publish baseline"]
-    G --> B["Create implementation branch<br/>From published default checkpoint"]
+    A -->|"yes"| G["Merge accepted preparation; verify and publish default branch"]
+    G --> B["Create implementation branch from published checkpoint"]
 ```
 
 See [the owning workflow](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).

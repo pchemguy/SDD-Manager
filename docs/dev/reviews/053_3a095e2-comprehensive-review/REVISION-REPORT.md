@@ -10,6 +10,6 @@ State: planned. V-001–V-003 pending. Source corrections and TextStats componen
 
 | Action | State | Result and verification |
 | --- | --- | --- |
-| V-001 | Pending | Diagram/tracking guidance |
+| V-001 | Verified by source trace | README now publishes each root before its human gate; design loops per root, PLAN/layout are distinct. GitHub prerequisite uses native milestones; entry fallback requires backend lifecycle semantics. Diff check passed. Mermaid visual rendering not performed. |
 | V-002 | Pending | Assessor coverage extension |
 | V-003 | Pending | Navigation and final verification/integration |
