@@ -15,6 +15,29 @@ Identify the objective, operational mode, current stage, authorized outputs and 
 
 Reuse sufficient accepted inputs and existing workflow identities. Clarification supplies requirements; it does not accept newly created documents. Honor explicit human reviews and pending checkpoints before dependent work. A direct focused-skill request selects that owner and its prerequisites without requiring an unrelated full campaign.
 
+## Human checkpoints and Git publication
+
+**Push every workflow-owned commit and verify remote containment before further work or another commit.** This includes completed documents, tasks, review reports, revision actions and merges. A failed push blocks progression. Follow [per-commit publication](skills/sdd-manage/references/git-workflows.md#publish-each-commit); preserve explicit human-directed local-only or deferred-publication exceptions.
+
+**For each necessary new document, publish the reviewable state, present substantive results and pause for human acceptance before dependent work.** The same checkpoints apply to necessary feature documents/proposals. PLAN and layout require separate decisions; reuse sufficient existing inputs rather than creating optional documents to fill the sequence.
+
+| Human checkpoint | Hold before |
+| --- | --- |
+| PROJECT | ARCHITECTURE or other dependent use of the brief |
+| ARCHITECTURE | DECOMPOSITION or contract work |
+| DECOMPOSITION | SPEC |
+| SPEC | PLAN |
+| PLAN | New layout or TASKS |
+| layout | TASKS |
+| TASKS | Implementation or hosted task projection |
+| Requested implementation range completed | Any task beyond the requested count, milestone, phase or named checkpoint |
+| Steering amendment completed | Resuming implementation |
+| Assessment-only review completed | Repairs or revision execution |
+
+**The human defines the implementation range and decides what follows it.** Commit each task’s verified result, evidence and initial completion checkbox together, then push and verify remote containment. At the end of the requested range, report the boundary results and stop. Do not add ready tasks, review tasks or another phase beyond the selected range. The human may request continuation or steering; start neither automatically. Partial main phases push and pause without merging. A complete phase or feature integrates only when its established verification and scope gates are met.
+
+Clarification, agent QC, passing tests and commits/pushes do not constitute human acceptance. Broad development authority does not preaccept unseen documents or expand a selected implementation range. Preserve pending decisions after interruption. See [document review](skills/sdd-manage/references/human-document-review.md) and [implementation checkpoints](skills/sdd-implement/references/completion-and-checkpoints.md#parent-completion-and-stopping).
+
 ## Skill routing
 
 | Request or concern | Owner and entry | Handoff |
@@ -45,7 +68,7 @@ Main development, feature and revision describe development purpose; stages and 
 
 `PROJECT.md` is the concise project brief: purpose, users, desired outcomes, principal scope/non-goals and consequential constraints derived from the seed and actual clarification, with material assumptions/questions identified. Use `sdd-design` and its [project brief contract](skills/sdd-design/references/project-brief.md) for direct drafting, revision or review before architecture. The brief supplies shared context without replacing structural design or exact SPEC behavior.
 
-From a project seed, `sdd-manage` coordinates `sdd-orient` → `sdd-design` (PROJECT, ARCHITECTURE, DECOMPOSITION) → `sdd-specify` (SPEC) → `sdd-plan` (PLAN, layout) → `sdd-tasks` (TASKS). Use `sdd-conventions` throughout as needed. Each necessary new root has its own human acceptance checkpoint before dependent authoring; PLAN and layout are separate. Apply [human review](skills/sdd-manage/references/human-document-review.md) and [document QC](skills/sdd-manage/references/document-qc-gates.md); agent QC/standing Git authority is not human acceptance.
+From a project seed, `sdd-manage` coordinates `sdd-orient` → `sdd-design` (PROJECT, ARCHITECTURE, DECOMPOSITION) → `sdd-specify` (SPEC) → `sdd-plan` (PLAN, layout) → `sdd-tasks` (TASKS). Use `sdd-conventions` throughout as needed. Follow the [human checkpoints and publication requirements](#human-checkpoints-and-git-publication) above and apply [document QC](skills/sdd-manage/references/document-qc-gates.md).
 
 Existing or interrupted projects enter at the next eligible stage after actual-state assessment; requested interactive review comes first. Persist preparation on design-docs and stop when preparation-only. If implementation is authorized, integrate accepted preparation into the actual default branch, verify/publish it, then establish the dependent phase branch. Only then hand ready TASKS, selected range, dependencies and tracking state to `sdd-implement`. See [preparation integration](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
 
