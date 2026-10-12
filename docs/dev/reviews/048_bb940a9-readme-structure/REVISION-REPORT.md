@@ -12,3 +12,7 @@
 Compared the README with the baseline after deleting only the exact section span: all remaining text is identical. Heading absence and git diff --check pass. No other source, runtime instructions, acceptance material or closed campaign records changed. Git and remote readback establish publication; structural review follows this checkpoint. No client, browser or provider operation is claimed.
 
 The campaign remains open while recommendations await acceptance; no additional README restructuring or main integration is authorized by this review stage.
+
+## Focused structural review completed
+
+The remaining README was reviewed at the published opening checkpoint `e79375d22ebf18d5d81c41be4a3a15ea9060083e`. [Review report](REVIEW-REPORT.md) records seven proposed editorial recommendations, reverse outline, priorities and a proposed reading order. No further README edits were made during review. The report's recommendations require acceptance before restructuring; campaign remains open and unmerged.
