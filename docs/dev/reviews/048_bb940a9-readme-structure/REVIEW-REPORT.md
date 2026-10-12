@@ -116,3 +116,7 @@ These headings are a proposed architecture, not a quota. Prioritize R-001–R-00
 ## Verification and stopping
 
 Reviewed all remaining README sections and all four Mermaid source blocks. Section-length inventory was used only to locate dense areas; length alone did not establish a finding. No diagram rendering, runtime test, client/provider operation or external source verification occurred. Report Markdown, companion links, exact initial deletion and scoped Git path preservation are checked before publication. Only V-001 was executed; R-001–R-007 await acceptance. Stop on the open campaign branch after report publication; do not implement the proposed outline or merge into main yet.
+
+## Expanded-scope decision — 2026-10-12
+
+The human requested a plugin composition entry analogous in purpose to a skill entry, planning a README.md/PLUGIN.md split and integration/replacement of root AGENTS.md. This changes the proposed document architecture, not the baseline observations above. The expanded revision plan maps R-001–R-007 to human versus agent ownership, moves TextStats into a small acceptance document and includes both package/snapshot contracts. Original recommendations remain retained; the old README-only proposed order is superseded by the expanded plan. No split or package transition has yet been executed.
