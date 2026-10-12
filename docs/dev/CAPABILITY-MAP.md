@@ -53,7 +53,7 @@ Steering is the lightweight human-directed revision variant at a paused implemen
 
 | Document | Canonical responsibility |
 | --- | --- |
-| `docs/dev/PROJECT.md` | Concise project brief: purpose, users, scope, outcomes, and constraints. |
+| `docs/dev/PROJECT.md` | [Concise project brief](../../skills/sdd-design/references/project-brief.md): purpose, users, outcomes, principal scope/non-goals, consequential constraints and material assumptions/questions. |
 | `docs/dev/ARCHITECTURE.md` | System blocks, relationships, dependency direction, patterns, and consequential decisions. Focused children are allowed. |
 | `docs/dev/DECOMPOSITION.md` | Component responsibilities, boundaries, collaborations, and provisional interfaces. Focused children are allowed. |
 | `docs/dev/FEATURE_ARCHITECTURE.md`, `docs/dev/FEATURE_DECOMPOSITION.md` | Bounded architectural change definition and affected component breakdown when necessary. |

@@ -75,13 +75,15 @@ The main documents describe the complete intended project. Roots may link to foc
 
 | Document under `docs/dev/` | Owns |
 | --- | --- |
-| `PROJECT.md` | Purpose, users, scope, outcomes, and constraints. |
+| `PROJECT.md` | Concise project brief: purpose, users, outcomes, principal scope/non-goals and consequential constraints. |
 | `ARCHITECTURE.md` | Major blocks, relationships, dependency direction, and design decisions. |
 | `DECOMPOSITION.md` | Component responsibilities, collaborations, and design-level interfaces. |
 | `SPEC.md` | Required behavior, final contracts, errors, invariants, and acceptance. |
 | `PLAN.md` | Meaningful end-to-end MVP, small capability increments, phases/milestones, dependencies, and verification/decision gates. |
 | `layout.md` | Physical ownership of source, tests, documentation, and other artifacts. |
 | `TASKS.md` | Phase → Milestone → Task hierarchy, stable IDs, and progress evidence. |
+
+The whole PROJECT.md is the brief; use Overview for an optional opening summary. It turns the seed and clarified decisions into shared project context, with material assumptions/questions identified. Its [authoring contract](skills/sdd-design/references/project-brief.md) defines adaptable content and the boundary with design/SPEC.
 
 ### Human review
 

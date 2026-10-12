@@ -17,7 +17,7 @@ Reuse sufficient accepted inputs and existing workflow identities. Clarification
 | Multi-stage workflow, scope, branches, credentials or transition | [sdd-manage](skills/sdd-manage/SKILL.md) | Establish mode, authorized boundary and next owner |
 | Repository/instruction state or interruption inspection | [sdd-orient](skills/sdd-orient/SKILL.md) | Return actual context and mutation eligibility; no edits |
 | Design/modularity, task hierarchy or shared conventions | [sdd-conventions](skills/sdd-conventions/SKILL.md) | Supply applicable criteria to the selected owner |
-| Explore purpose, architecture or components | [sdd-design](skills/sdd-design/SKILL.md) | PROJECT, ARCHITECTURE and DECOMPOSITION or necessary feature deltas |
+| Explore purpose; create/revise/review the project brief; design architecture or components | [sdd-design](skills/sdd-design/SKILL.md) | [PROJECT brief contract](skills/sdd-design/references/project-brief.md), architecture and decomposition or necessary feature deltas |
 | Behavior, interfaces, contracts or acceptance requirements | [sdd-specify](skills/sdd-specify/SKILL.md) | SPEC or scoped feature contracts from accepted design |
 | Delivery strategy, milestones, dependencies or physical layout | [sdd-plan](skills/sdd-plan/SKILL.md) | PLAN and layout from accepted contracts |
 | Executable tasks and dependency/progress review | [sdd-tasks](skills/sdd-tasks/SKILL.md) | Owning TASKS/FEATURE-TASKS from ready PLAN/layout |
@@ -37,6 +37,8 @@ Name the destination skill in each handoff and link its entry where useful. Tran
 Main development, feature and revision describe development purpose; stages and supporting capabilities compose their actual paths. Composite workflows combine established stages and supporting skills within their prerequisites and authorized scope; they create no new workflow authority, branch convention or permission grant. The [canonical catalog](skills/sdd-manage/references/workflows.md) owns detailed entry and transition rules.
 
 ### Project preparation and bounded delivery
+
+`PROJECT.md` is the concise project brief: purpose, users, desired outcomes, principal scope/non-goals and consequential constraints derived from the seed and actual clarification, with material assumptions/questions identified. Use `sdd-design` and its [project brief contract](skills/sdd-design/references/project-brief.md) for direct drafting, revision or review before architecture. The whole file is the brief; it supplies shared context without replacing structural design or exact SPEC behavior.
 
 From a project seed, `sdd-manage` coordinates `sdd-orient` → `sdd-design` (PROJECT, architecture, decomposition) → `sdd-specify` (SPEC) → `sdd-plan` (PLAN, layout) → `sdd-tasks` (TASKS). Use `sdd-conventions` throughout as needed. Each necessary new root has its own human acceptance checkpoint before dependent authoring; PLAN and layout are separate. Apply [human review](skills/sdd-manage/references/human-document-review.md) and [document QC](skills/sdd-manage/references/document-qc-gates.md); agent QC/standing Git authority is not human acceptance.
 
