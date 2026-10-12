@@ -1,0 +1,43 @@
+{
+  "base": "93de2bda1207e94acd2f5447a8cdfd428da9cb65",
+  "front_matter": {
+    "name": "sdd-manager",
+    "displayName": "SDD Manager"
+  },
+  "changes": [
+    {
+      "before": "`sdd-manage`/orient",
+      "after": "`sdd-manage`/`sdd-orient`",
+      "occurrences": 3
+    },
+    {
+      "before": "`sdd-tdd`/docs/verify/report",
+      "after": "`sdd-tdd`/`sdd-docs`/`sdd-verify`/`sdd-report`",
+      "occurrences": 1
+    },
+    {
+      "before": "request, forge verifies",
+      "after": "request, `sdd-forge` verifies",
+      "occurrences": 1
+    },
+    {
+      "before": "before manage persists",
+      "after": "before `sdd-manage` persists",
+      "occurrences": 1
+    },
+    {
+      "before": "Forge owns package",
+      "after": "`sdd-forge` owns package",
+      "occurrences": 1
+    },
+    {
+      "before": "; forge projects",
+      "after": "; `sdd-forge` projects",
+      "occurrences": 1
+    }
+  ],
+  "literal_link_targets_preserved": true,
+  "all_inline_skill_identifiers_resolve": true,
+  "remaining_abbreviated_slash_skills": 0,
+  "scope": "PLUGIN.md only; generic process names unchanged"
+}

@@ -1,3 +1,8 @@
+---
+name: sdd-manager
+displayName: SDD Manager
+---
+
 # SDD Manager plugin entry
 
 SDD Manager composes focused skills into specification-driven development workflows for Git projects. Use this entry to select and connect capabilities. Each skill's SKILL.md owns its procedure; `references/*.md` supply progressively loaded sub-workflows. The human-facing [README](README.md) explains capabilities and composite workflows with examples and diagrams.
@@ -52,31 +57,31 @@ For each eligible task, compose `sdd-tdd`, implementation, `sdd-docs` and `sdd-v
 
 ### Feature preparation, execution and incorporation
 
-`sdd-manage`/orient establish the feature scope and accepted main inputs. Use design/specification/plan/layout/task owners only for necessary deltas; do not invent optional overlays. Review each necessary new document with the human and apply QC. Integrate accepted design-docs preparation before creating the dependent feature implementation branch. Pass FEATURE-TASKS and its eligible range to `sdd-implement`.
+`sdd-manage`/`sdd-orient` establish the feature scope and accepted main inputs. Use design/specification/plan/layout/task owners only for necessary deltas; do not invent optional overlays. Review each necessary new document with the human and apply QC. Integrate accepted design-docs preparation before creating the dependent feature implementation branch. Pass FEATURE-TASKS and its eligible range to `sdd-implement`.
 
 Before final feature verification, use `sdd-integrate-feature` to incorporate selected accepted deltas into main documents and reconcile/archive ownership within scope. Transferring tasks requires both lists in scope and one executable owner per task. Verify the coherent authorized boundary, explicitly integrate/publish the established target, then stop. Document-only incorporation ends without task execution. See [feature incorporation](skills/sdd-integrate-feature/SKILL.md).
 
 ### Review and accepted revision
 
-`sdd-manage`/orient pin source, concerns, evidence mode and boundary. Selected owners assess concerns; `sdd-report` retains located findings. Systematic reviews plan units; focused reviews can use prompt-defined criteria. Publish each report checkpoint. Review stops before repairs unless authorized; an accepted amendment may enter revision planning directly without invented review stages.
+`sdd-manage`/`sdd-orient` pin source, concerns, evidence mode and boundary. Selected owners assess concerns; `sdd-report` retains located findings. Systematic reviews plan units; focused reviews can use prompt-defined criteria. Publish each report checkpoint. Review stops before repairs unless authorized; an accepted amendment may enter revision planning directly without invented review stages.
 
 For execution, record accepted revisions, route bounded source/document/test changes to their owners and use `sdd-verify` for actual rechecks. Retain findings and deferred evidence; publish coherent action checkpoints. Integrate only the complete authorized verified boundary, with merged checks and target publication. [Nested and reopened revision modes](skills/sdd-manage/references/revision-modes.md) preserve parent/source/return context and original opening provenance; do not automatically resume a suspended parent.
 
 ### Checkpoint steering
 
-At a paused implementation checkpoint, `sdd-manage`/orient establish the human-defined amendment and paused target, then hand to `sdd-steer`. Assessment-only returns impact. Authorized execution amends affected existing documents, implementation and tests without feature overlays or an obligatory formal campaign, using `sdd-tdd`/docs/verify/report where needed. Commit/publish the amendment, integrate and verify/publish its paused target, then return control. Do not resume `sdd-implement` until separately instructed. See [steering](skills/sdd-steer/SKILL.md).
+At a paused implementation checkpoint, `sdd-manage`/`sdd-orient` establish the human-defined amendment and paused target, then hand to `sdd-steer`. Assessment-only returns impact. Authorized execution amends affected existing documents, implementation and tests without feature overlays or an obligatory formal campaign, using `sdd-tdd`/`sdd-docs`/`sdd-verify`/`sdd-report` where needed. Commit/publish the amendment, integrate and verify/publish its paused target, then return control. Do not resume `sdd-implement` until separately instructed. See [steering](skills/sdd-steer/SKILL.md).
 
 ### Release preparation and publication
 
 `sdd-manage` routes [highlights-only](skills/sdd-forge/references/release-highlights.md) versus [complete release-message](skills/sdd-forge/references/release-message.md) requests through `sdd-forge` and `sdd-report`. Pin the Git range/source; use integration summaries and preserve applicable human edits/cuts. Highlights-only returns curated changes, not a complete message. Full preparation atomically refreshes retained root RELEASE-NOTES.md, including applicable ancillary sections, and stops without publication. Respect explicit templates/paths and supplied-text-only scope.
 
-On an authorized release request, forge verifies source/coverage/body context and version; version match alone is insufficient. Refresh stale notes before manage persists the release commit. The commit body and GitHub body share exact finalized Markdown, with the tag targeting that verified commit. Publish/read back each Git boundary before dependent tagging/provider publication. Forge owns package/workflow/provider operations; `sdd-verify` assesses source/assets/body/download evidence and `sdd-report` describes actual outcomes. Reuse matching effects on recovery. Packaging preparation alone stops before release; an optional prerelease review requires explicit selection. See [Git release boundary](skills/sdd-manage/references/git-workflows.md#release-commit-and-tag) and [GitHub release owner](skills/sdd-forge/references/github.md).
+On an authorized release request, `sdd-forge` verifies source/coverage/body context and version; version match alone is insufficient. Refresh stale notes before `sdd-manage` persists the release commit. The commit body and GitHub body share exact finalized Markdown, with the tag targeting that verified commit. Publish/read back each Git boundary before dependent tagging/provider publication. `sdd-forge` owns package/workflow/provider operations; `sdd-verify` assesses source/assets/body/download evidence and `sdd-report` describes actual outcomes. Reuse matching effects on recovery. Packaging preparation alone stops before release; an optional prerelease review requires explicit selection. See [Git release boundary](skills/sdd-manage/references/git-workflows.md#release-commit-and-tag) and [GitHub release owner](skills/sdd-forge/references/github.md).
 
 ### Focused maintenance and optional hosting
 
 Select independent design/specification/plan/task/document/test/verification/reporting work through its owner, preserving its narrow outputs. Read-only review/checks/drafts do not authorize repairs, task completion, PR creation or publication by themselves. Combine supporting work only when the actual request needs it.
 
-When hosted tracking is selected/confirmed, `sdd-manage` carries that decision to `sdd-forge`; forge projects the eligible phase and verifies associations/closures. Git and API access are separate. Credential failures use [protected recovery](skills/sdd-manage/references/credentials.md), not policy bypass. Hosting-only requests stop after their authorized effects; local work does not require provider credentials.
+When hosted tracking is selected/confirmed, `sdd-manage` carries that decision to `sdd-forge`; `sdd-forge` projects the eligible phase and verifies associations/closures. Git and API access are separate. Credential failures use [protected recovery](skills/sdd-manage/references/credentials.md), not policy bypass. Hosting-only requests stop after their authorized effects; local work does not require provider credentials.
 
 ## Branches, integration and continuity
 
