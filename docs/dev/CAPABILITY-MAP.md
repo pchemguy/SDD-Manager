@@ -15,6 +15,10 @@ This document records the plugin's intended capabilities, ownership, and present
 - Authentication assumes a usable shell session and attempts the authorized push first. sdd-conventions defines ignored repository `*.tkn` storage; sdd-manage selects/saves tokens and recovers shell/client access after credential failures. Provider-specific permission profiles belong to the active backend, and Git transport access does not prove API access.
 - Scripts are optional for deterministic, well-defined operations. External integrations are optional capabilities with explicit inputs, effects, and reconciliation rules.
 
+## Agent entry ownership
+
+Root [AGENTS.md](../../AGENTS.md) primarily guides agents using the installed plugin: skill routing, target-project instructions, human checkpoints and workflow persistence. Source contributors explicitly load [acceptance/AGENTS.md](../../acceptance/AGENTS.md) for SDD Manager verification, publisher/package checks, development evidence and acceptance routing, including work outside its directory. [TextStats AGENTS.md](../../acceptance/textstats/AGENTS.md) retains the detailed coordinator protocol. The source-only entry is linked from README using a repository URL and is not shipped in the plugin archive.
+
 ## Bundled skill references
 
 Distribute SDD Manager's skills together. Use ordinary relative Markdown links between bundled skills, and name the destination skill when requesting a workflow handoff. From `skills/sdd-design/SKILL.md`, for example:
