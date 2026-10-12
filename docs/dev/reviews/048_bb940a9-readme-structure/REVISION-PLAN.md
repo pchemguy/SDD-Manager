@@ -87,3 +87,7 @@ Minimum rechecks: both declared support/publisher suites; positive packaged PLUG
 ## Execution steering — source-only root AGENTS.md
 
 During execution the human requested retaining root AGENTS.md solely for SDD Manager development, excluded from the package. This supersedes the planned root-file deletion and no-recreation instruction above. PLUGIN.md absorbs the former user/workflow entry content; root AGENTS.md becomes a concise contributor entry routing to acceptance/AGENTS.md. Publisher and source snapshots include PLUGIN.md and exclude development AGENTS.md. Target-project AGENTS.md behavior remains unchanged. Negative checks cover exclusion even when source AGENTS.md exists.
+
+## Execution authorization and completion
+
+On 2026-10-12 the human instructed execution. V-003–V-005 are implemented with the retained source-only AGENTS.md steering decision. The human/agent split supersedes the former README-only outline; V-001/V-002 remain completed. Final merged-state suites and verified main publication establish closure under this authorization. No further acceptance pause is pending for this selected campaign scope.

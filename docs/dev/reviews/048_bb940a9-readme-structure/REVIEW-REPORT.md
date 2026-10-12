@@ -120,3 +120,7 @@ Reviewed all remaining README sections and all four Mermaid source blocks. Secti
 ## Expanded-scope decision — 2026-10-12
 
 The human requested a plugin composition entry analogous in purpose to a skill entry, planning a README.md/PLUGIN.md split and integration/replacement of root AGENTS.md. This changes the proposed document architecture, not the baseline observations above. The expanded revision plan maps R-001–R-007 to human versus agent ownership, moves TextStats into a small acceptance document and includes both package/snapshot contracts. Original recommendations remain retained; the old README-only proposed order is superseded by the expanded plan. No split or package transition has yet been executed.
+
+## Accepted revision disposition
+
+The human authorized expanded execution and clarified a retained development-only root AGENTS.md. R-001–R-007 were revised through V-003–V-005, with source/package/composition evidence in the revision report. Baseline findings and their initial README-only outline remain historical observations in this active record; the implemented human README/agent PLUGIN/source contributor split is the final selected architecture. Local checks do not prove client discovery or runtime acceptance.
