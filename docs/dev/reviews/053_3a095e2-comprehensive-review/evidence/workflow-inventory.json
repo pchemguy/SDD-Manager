@@ -1,0 +1,2251 @@
+[
+  {
+    "path": "AGENTS.md",
+    "sha256": "64d8f67d19bfb2d8749f0256921f3a01d94496a5ad8f0b871888b9a8da3878d0",
+    "headings": [
+      "# Developing SDD Manager",
+      "## Contributor entry",
+      "## Persistence and scope"
+    ],
+    "criterion_lines": [
+      9,
+      13
+    ]
+  },
+  {
+    "path": "Greenfield Project Prompt Template.md",
+    "sha256": "852c666018f223c49cc4732af5f1a1bf8db38061114721b9dc738ec702ec9617",
+    "headings": [
+      "# Greenfield Project Prompt Template"
+    ],
+    "criterion_lines": [
+      17
+    ]
+  },
+  {
+    "path": "PLUGIN.md",
+    "sha256": "c4d4b0df8990a0f1bdc347d3f552857c624ad45eebd3e9c78aed60110ef91c59",
+    "headings": [
+      "# SDD Manager",
+      "## Establish the request and context",
+      "## Human checkpoints and Git publication",
+      "## Requested implementation tracking",
+      "## Skill routing",
+      "## Composite workflows",
+      "### Project preparation and bounded delivery",
+      "### Task implementation and continuation",
+      "### Feature preparation, execution and incorporation",
+      "### Review and accepted revision",
+      "### Checkpoint steering",
+      "### Release preparation and publication",
+      "### Focused maintenance and optional hosting",
+      "## Branches, integration and continuity",
+      "## Campaign records and shared conventions"
+    ],
+    "criterion_lines": [
+      14,
+      16,
+      20,
+      24,
+      33,
+      37,
+      45,
+      48,
+      64,
+      65,
+      69,
+      70,
+      72,
+      84,
+      90,
+      96,
+      100,
+      104,
+      106,
+      108,
+      110,
+      112,
+      116,
+      118,
+      122,
+      124,
+      126,
+      128
+    ]
+  },
+  {
+    "path": "README.md",
+    "sha256": "2632ade74ae71aafe160d12108de9cf33e2ca14495f6362ecb691c3862e91524",
+    "headings": [
+      "# SDD Manager",
+      "## Getting started",
+      "## Core development workflows",
+      "## Operations",
+      "## Project documents and checkpoints",
+      "### Human review",
+      "### Agent quality checks",
+      "## Workflow guide",
+      "### Project preparation",
+      "### Implementation and continuation",
+      "### Checkpoint steering",
+      "### Review and revision",
+      "## Release operations",
+      "### Highlights and release messages",
+      "### Packaging and publication",
+      "## Plugin package",
+      "## Skills",
+      "## Status and evidence",
+      "## Testing and contributing",
+      "## References",
+      "## License",
+      "## Related projects"
+    ],
+    "criterion_lines": [
+      22,
+      28,
+      29,
+      33,
+      35,
+      45,
+      53,
+      55,
+      56,
+      57,
+      61,
+      62,
+      63,
+      64,
+      65,
+      68,
+      83,
+      84,
+      90,
+      96,
+      120,
+      124,
+      135,
+      137,
+      146,
+      147,
+      148,
+      152,
+      153,
+      159,
+      161,
+      165,
+      171,
+      172,
+      173,
+      186,
+      188,
+      195,
+      196,
+      202,
+      204,
+      206,
+      208,
+      212,
+      214,
+      226,
+      230,
+      241
+    ]
+  },
+  {
+    "path": "acceptance/AGENTS.md",
+    "sha256": "58230fbc89c81fe85ae6207e9e897eba2e70ddb1dc229eb2f162fe919efd1320",
+    "headings": [
+      "# SDD Manager source verification and acceptance",
+      "## Source orientation",
+      "## Local verification",
+      "## TextStats acceptance coordination"
+    ],
+    "criterion_lines": [
+      21,
+      30
+    ]
+  },
+  {
+    "path": "docs/demo/calculator/README.md",
+    "sha256": "7ee175e16e7b81cbe92392f6e5b38259d499fbc29d172d71228be63c486a3fc4",
+    "headings": [
+      "# Calculator: SDD Manager Demo and Test Guide",
+      "## Purpose",
+      "## Initial project: Calculator",
+      "## Optional steering exercises",
+      "### Option 1: Absolute value, reciprocal, and negation",
+      "### Option 2: Square and square root",
+      "## Feature campaign sequence",
+      "### 1. Basic/scientific mode toggle",
+      "### 2. Programmer operations",
+      "### 3. Graphing",
+      "### 4. Four-mode selector",
+      "## Verification and releases",
+      "## Recording results"
+    ],
+    "criterion_lines": [
+      5,
+      33,
+      37,
+      47,
+      57,
+      61,
+      128
+    ]
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "sha256": "e271bdfc11205911956f92900beee016f213876536502ae65ad64535598d94c7",
+    "headings": [
+      "# Tetris: SDD Manager Demo and Test Guide",
+      "## Purpose",
+      "## Starting the exercise",
+      "## Shared gameplay scope",
+      "### Hard-drop policy choices",
+      "## Variant A: Classical baseline + modern extensions",
+      "## Variant B: Classical baseline + feature expansion",
+      "## Further feature campaigns",
+      "### Conditional ghost-piece visibility",
+      "### Penetrator bonuses",
+      "### Non-persistent configuration panel",
+      "### Semi-persistent configuration",
+      "## Human review and implementation checkpoints",
+      "## Steering exercises",
+      "### Option 1: Switch to full-gravity-interval locking",
+      "### Option 2: Switch the hard-drop locking policy",
+      "## Gameplay verification",
+      "## Recording results"
+    ],
+    "criterion_lines": [
+      5,
+      149,
+      165,
+      196,
+      231,
+      277,
+      281,
+      287,
+      309,
+      339
+    ]
+  },
+  {
+    "path": "docs/demo/tetris/examples/PROJECT_phased-project.md",
+    "sha256": "ddaa9d68c88bd3107a13ce783c43ef886e42fe6bb6b210427d9b8d91e1cdd242",
+    "headings": [
+      "# Tetris",
+      "## Brief",
+      "## Target Audience and Scope",
+      "## Goals",
+      "## Non-Goals"
+    ],
+    "criterion_lines": []
+  },
+  {
+    "path": "docs/dev/CAPABILITY-MAP.md",
+    "sha256": "6b23d3b09fa536147523caf70654d9c1542f6c4b396ab86ffd6274f8e3cf07bd",
+    "headings": [
+      "# SDD Manager capability map",
+      "## Package rules",
+      "## Agent entry ownership",
+      "## Bundled skill references",
+      "## Core development workflows",
+      "## Document ownership",
+      "## Capability ownership and status",
+      "## Execution boundaries",
+      "## Development-document preparation QC",
+      "## Preparation, tracking and task persistence gates",
+      "## Release ownership and evidence",
+      "## Acceptance coverage for release workflows"
+    ],
+    "criterion_lines": [
+      3,
+      7,
+      8,
+      10,
+      12,
+      15,
+      18,
+      20,
+      48,
+      50,
+      52,
+      64,
+      66,
+      71,
+      73,
+      77,
+      78,
+      79,
+      82,
+      83,
+      85,
+      87,
+      89,
+      90,
+      91,
+      99,
+      100,
+      102,
+      103,
+      104,
+      110,
+      118,
+      120,
+      122,
+      124,
+      126,
+      128,
+      130
+    ]
+  },
+  {
+    "path": "skills/sdd-conventions/SKILL.md",
+    "sha256": "fbd4b671e75b26630ee9e780e33c78b722171292949b6fa52c6b5ec998eb9bd3",
+    "headings": [
+      "# Shared conventions",
+      "## Available conventions"
+    ],
+    "criterion_lines": [
+      3,
+      15,
+      17
+    ]
+  },
+  {
+    "path": "skills/sdd-conventions/references/backend-object-lifecycle.md",
+    "sha256": "9c7c4aaec4aabf478d16e9de91b12eec89042283dc304509da5f50da5c3e682f",
+    "headings": [
+      "# Backend object lifecycle and review boundaries",
+      "## Phase activation",
+      "## Explicit review units",
+      "## Completion ordering",
+      "## Review, repairs and deferral",
+      "## Report locations",
+      "## Recovery and changed scope"
+    ],
+    "criterion_lines": [
+      7,
+      13,
+      15,
+      19,
+      20,
+      21,
+      22,
+      25,
+      29,
+      33,
+      40,
+      42,
+      45,
+      49,
+      51
+    ]
+  },
+  {
+    "path": "skills/sdd-conventions/references/design-heuristics.md",
+    "sha256": "b4ded8adbaa45a74858cff4dbed277936d52d31a91534ab303b6af018262a448",
+    "headings": [
+      "# Design heuristics"
+    ],
+    "criterion_lines": []
+  },
+  {
+    "path": "skills/sdd-conventions/references/development-document-qc.md",
+    "sha256": "daf020bf85f9db0ddbf0c0474b5fc71477fd68557f5120957ba8438851bbee1b",
+    "headings": [
+      "# Development-document quality and conformance",
+      "## Preparation gates",
+      "## Decomposition and count policy",
+      "## Conformance review criteria",
+      "## Review reports and correction records",
+      "## Ownership and invalidation",
+      "## Evidence currency during implementation",
+      "## Human review and staged layout"
+    ],
+    "criterion_lines": [
+      12,
+      15,
+      21,
+      23,
+      32,
+      34,
+      40,
+      42,
+      44,
+      61,
+      63,
+      65,
+      69,
+      71,
+      78,
+      82,
+      85,
+      91,
+      93,
+      97,
+      99
+    ]
+  },
+  {
+    "path": "skills/sdd-conventions/references/hosting-tokens.md",
+    "sha256": "54f2e5949ddeae7aafcb985092309676b42b358135d8fea29481fc8071336324",
+    "headings": [
+      "# Repository hosting tokens",
+      "## Files and identity",
+      "## Authentication and scope"
+    ],
+    "criterion_lines": [
+      15
+    ]
+  },
+  {
+    "path": "skills/sdd-conventions/references/markdown-style.md",
+    "sha256": "16eb402dba42bbf95708d717aa839d3684199ac2a8770ed0bca5019f8b735583",
+    "headings": [
+      "# Shared Markdown style",
+      "## Document names",
+      "## Heading separation",
+      "## List separation",
+      "## Indentation and lists",
+      "## Supported variants",
+      "## Code-block separation",
+      "## Literal content and templates",
+      "## Scoped review"
+    ],
+    "criterion_lines": [
+      3,
+      23
+    ]
+  },
+  {
+    "path": "skills/sdd-conventions/references/modularity.md",
+    "sha256": "98d41ef9fb16f373ca2fddfe2c048775a40165823dd503d4df58c18654b11283",
+    "headings": [
+      "# Modularity and unit boundaries"
+    ],
+    "criterion_lines": [
+      5,
+      7
+    ]
+  },
+  {
+    "path": "skills/sdd-conventions/references/review-campaigns.md",
+    "sha256": "46cd6e415c44262a0e092c36eb2ca4e44c303cd01e531325c4d66236f377512f",
+    "headings": [
+      "# Review and revision campaign records",
+      "## Campaign identity and storage",
+      "## Stable references",
+      "## Authority and retention",
+      "## Closed campaign records",
+      "## Authorized reopening"
+    ],
+    "criterion_lines": [
+      7,
+      10,
+      12,
+      13,
+      27,
+      37,
+      51
+    ]
+  },
+  {
+    "path": "skills/sdd-conventions/references/task-hierarchy.md",
+    "sha256": "675d67a8a7487c7876e084276638a966072d177f56376d3c156eec29c9b90a75",
+    "headings": [
+      "# Phase, milestone, and task hierarchy",
+      "## Delivery and decision boundaries",
+      "## Hosted projection"
+    ],
+    "criterion_lines": [
+      1,
+      3,
+      11,
+      13,
+      17,
+      19,
+      26,
+      29
+    ]
+  },
+  {
+    "path": "skills/sdd-conventions/references/workflow-identity.md",
+    "sha256": "f515c2e66c3287ff93f76ca2604b1f9b56367f1e19a9e6f41aa63ffe30bd0b8e",
+    "headings": [
+      "# Workflow identity, branches, and artifact locations",
+      "## Naming",
+      "## Identity and collisions",
+      "## Artifact lifecycle",
+      "## Discover descriptive and established packages"
+    ],
+    "criterion_lines": [
+      18,
+      20,
+      25,
+      30,
+      44
+    ]
+  },
+  {
+    "path": "skills/sdd-design/SKILL.md",
+    "sha256": "51bc68a3a63b1c8596312d8f882214a1f63f8e29d96cfaed0fa70ea11db25342",
+    "headings": [
+      "# Explore and design",
+      "## Document boundaries"
+    ],
+    "criterion_lines": [
+      12,
+      35,
+      42
+    ]
+  },
+  {
+    "path": "skills/sdd-design/references/architecture.md",
+    "sha256": "b55e2c0663e7057acc856eeaff6ba433e76e7e7e11c7fded817f21df6ffeb630",
+    "headings": [
+      "# Architecture",
+      "## Document ownership",
+      "## Initial and existing systems",
+      "## Review"
+    ],
+    "criterion_lines": [
+      5,
+      8,
+      11,
+      21
+    ]
+  },
+  {
+    "path": "skills/sdd-design/references/decomposition.md",
+    "sha256": "8b448e31540ec5c68e18e9a0238e50c981ad799fb39dd25f518e1aadaee3aef9",
+    "headings": [
+      "# Decomposition",
+      "## Document ownership",
+      "## Existing systems and changes",
+      "## Review"
+    ],
+    "criterion_lines": [
+      5,
+      7,
+      21
+    ]
+  },
+  {
+    "path": "skills/sdd-design/references/exploration.md",
+    "sha256": "6da655398bce206bb01d503f691f4b555c4a6a35d2ac6003a9fa0a8417154ba5",
+    "headings": [
+      "# Exploration",
+      "## Decision state",
+      "## Conversation",
+      "## Handoff",
+      "## Evidence-backed project positioning"
+    ],
+    "criterion_lines": [
+      3,
+      20,
+      21,
+      30
+    ]
+  },
+  {
+    "path": "skills/sdd-design/references/project-brief.md",
+    "sha256": "e4bd7d46ec77a11e07ef2701b1934a3c968725006dcb0b4e4cd48ffeec292d1a",
+    "headings": [
+      "# Project brief",
+      "## Purpose and ownership",
+      "## Inputs and decision state",
+      "## Adaptable content structure",
+      "## Create or revise",
+      "## Read-only review and handoff"
+    ],
+    "criterion_lines": [
+      3,
+      34,
+      38,
+      41,
+      45
+    ]
+  },
+  {
+    "path": "skills/sdd-docs/SKILL.md",
+    "sha256": "ef125969d670b75c0760ad8a7751c41ca8940ebc05a8a3a517658c6405929a7b",
+    "headings": [
+      "# Maintain project documentation"
+    ],
+    "criterion_lines": [
+      18,
+      24
+    ]
+  },
+  {
+    "path": "skills/sdd-docs/references/in-code-documentation.md",
+    "sha256": "40c179cf40c73ad36d76f722950eeaf33ab1c37993edd370f6fa16305d2a5465",
+    "headings": [
+      "# In-code documentation",
+      "## Select a style",
+      "## Module and API coverage",
+      "## Maintain and check"
+    ],
+    "criterion_lines": [
+      18,
+      21,
+      25
+    ]
+  },
+  {
+    "path": "skills/sdd-docs/references/review-and-findings.md",
+    "sha256": "61bda144ac45af632307b12bb3cf9652727b83c3b3ffc57558188d0d2a6837b1",
+    "headings": [
+      "# Documentation review and findings",
+      "## Establish coverage",
+      "## Governing-document amendments",
+      "## Review result"
+    ],
+    "criterion_lines": []
+  },
+  {
+    "path": "skills/sdd-docs/references/standalone-documentation.md",
+    "sha256": "b2ced68b8f869efc47206261795e225b42455b513c7a2be4f091cd891c3ef951",
+    "headings": [
+      "# README and standalone documentation",
+      "## Align content",
+      "## Examples and checks",
+      "## Agent orientation"
+    ],
+    "criterion_lines": [
+      14,
+      28
+    ]
+  },
+  {
+    "path": "skills/sdd-forge/SKILL.md",
+    "sha256": "750f3307fac728c86723b2c85b36a664d5a61c87dd568b844c3784236ceebc39",
+    "headings": [
+      "# Git release preparation and hosted operations",
+      "## Shared protocol",
+      "## Shared release preparation",
+      "## Available backends"
+    ],
+    "criterion_lines": [
+      3,
+      6,
+      12,
+      13,
+      14,
+      18,
+      20,
+      24,
+      26,
+      28,
+      30,
+      34
+    ]
+  },
+  {
+    "path": "skills/sdd-forge/references/github-issue-lifecycle.md",
+    "sha256": "73288c6f708bc36734fae4dff77c6a3dc44b4d804083b30d832441cf494ab896",
+    "headings": [
+      "# Task issue references and lifecycle",
+      "## Resolve for implementation",
+      "## Close or reopen",
+      "## Retired task disposition"
+    ],
+    "criterion_lines": [
+      3,
+      7,
+      9,
+      13,
+      15,
+      17,
+      21,
+      23
+    ]
+  },
+  {
+    "path": "skills/sdd-forge/references/github-milestone-lifecycle.md",
+    "sha256": "879e7a70f56e50c9178cf0d8142d2bbbfb4710c686e3c25cae4e67e85f867fe0",
+    "headings": [
+      "# GitHub milestone lifecycle",
+      "## Resolve and close",
+      "## Reopen and recover"
+    ],
+    "criterion_lines": [
+      1,
+      3,
+      7,
+      8,
+      9,
+      10,
+      12,
+      16,
+      18
+    ]
+  },
+  {
+    "path": "skills/sdd-forge/references/github-packaging.md",
+    "sha256": "bf2a71e63b75b117853097199120d628d67d2c419962aa441978c124e4c780ed",
+    "headings": [
+      "# Prepare a GitHub release package",
+      "## Establish the package contract",
+      "## Assess the actual archive",
+      "## Names and URLs",
+      "## Prepare and hand off the workflow"
+    ],
+    "criterion_lines": [
+      1,
+      3,
+      7,
+      8,
+      18,
+      22,
+      34,
+      41,
+      47
+    ]
+  },
+  {
+    "path": "skills/sdd-forge/references/github-projection.md",
+    "sha256": "073e9dd23912642308a801aba974af516b46447e6affe31afb863ca83958bf29",
+    "headings": [
+      "# GitHub TASKS projection",
+      "## Task brief <!-- sdd-forge:task-id=T-012 -->",
+      "## Document QC prerequisite",
+      "## Confirmed scope and late activation"
+    ],
+    "criterion_lines": [
+      5,
+      7,
+      12,
+      15,
+      30,
+      38
+    ]
+  },
+  {
+    "path": "skills/sdd-forge/references/github-release-workflows.md",
+    "sha256": "16400d26c01385e92aa4170f1d81574f79be058471f236c8916dcfe9bf5d721a",
+    "headings": [
+      "# Prepare and run a release workflow",
+      "## Author or extend",
+      "## Notes transfer",
+      "## Dispatch and monitor"
+    ],
+    "criterion_lines": [
+      1,
+      3,
+      7,
+      11,
+      14,
+      15,
+      16,
+      17,
+      19,
+      21,
+      25,
+      29,
+      33,
+      35,
+      40,
+      49
+    ]
+  },
+  {
+    "path": "skills/sdd-forge/references/github-releases.md",
+    "sha256": "27695c3741a26da6ba71a0e1985180d1fd9dcd6d560a894525360556c9811b60",
+    "headings": [
+      "# Create and reconcile a GitHub release",
+      "## Resolve identity and select one publisher",
+      "## Draft, upload and publish",
+      "## Recover without duplicate writes",
+      "## Read back and report"
+    ],
+    "criterion_lines": [
+      1,
+      3,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      21,
+      22,
+      25,
+      30,
+      31,
+      32,
+      33,
+      36,
+      38,
+      42,
+      44,
+      48,
+      50,
+      54
+    ]
+  },
+  {
+    "path": "skills/sdd-forge/references/github.md",
+    "sha256": "d22b8d71a74ee620b7320cdab9a81b4accdbd2cd7359d5f309fea8bd15210b63",
+    "headings": [
+      "# GitHub backend",
+      "## Operations and sources",
+      "## Repository and access",
+      "### Conventional fine-grained token",
+      "### Release and workflow access",
+      "### Access failures and tracking object ownership",
+      "## Operational failures and uncertain writes"
+    ],
+    "criterion_lines": [
+      9,
+      10,
+      11,
+      13,
+      14,
+      16,
+      18,
+      24,
+      32,
+      43,
+      47,
+      52,
+      54,
+      56,
+      58,
+      60,
+      70,
+      73,
+      74,
+      78
+    ]
+  },
+  {
+    "path": "skills/sdd-forge/references/release-highlights.md",
+    "sha256": "69016b326538a23316745d2a7a9937178d9f53aaa7323078dde99374b639d82f",
+    "headings": [
+      "# Prepare release highlights from Git",
+      "## Pin the release range",
+      "## Use integration summaries first",
+      "### Local collection recipe",
+      "## Own and save the temporary draft",
+      "## Continue incrementally",
+      "## Consume and retain or clean up"
+    ],
+    "criterion_lines": [
+      1,
+      3,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      17,
+      18,
+      19,
+      22,
+      26,
+      37,
+      38,
+      42,
+      50,
+      53,
+      54,
+      60,
+      74,
+      85,
+      90,
+      93,
+      105,
+      109,
+      113,
+      124,
+      128,
+      130,
+      132,
+      134,
+      138,
+      140,
+      142
+    ]
+  },
+  {
+    "path": "skills/sdd-forge/references/release-message.md",
+    "sha256": "8c1121075731dbdff2bc6dd88b1c035c14826709c1404184b878e63fa37f6c98",
+    "headings": [
+      "# Prepare a complete release message",
+      "## Entry and routing",
+      "## Establish inputs",
+      "## Assemble and persist",
+      "## Retention and publication handoff",
+      "## Release-request freshness and commit gate"
+    ],
+    "criterion_lines": [
+      1,
+      5,
+      7,
+      11,
+      12,
+      13,
+      17,
+      19,
+      23,
+      25,
+      29,
+      31,
+      33,
+      35,
+      37,
+      39,
+      41,
+      43
+    ]
+  },
+  {
+    "path": "skills/sdd-implement/SKILL.md",
+    "sha256": "5f8f4c756a4892d64a99e3c168c2fcbe5781b9e9490aae0f8abb664bfeab6293",
+    "headings": [
+      "# Implement a selected task range"
+    ],
+    "criterion_lines": [
+      3,
+      10,
+      14,
+      15,
+      18,
+      19,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      32,
+      34
+    ]
+  },
+  {
+    "path": "skills/sdd-implement/references/browser-capabilities.md",
+    "sha256": "fd64b9332dac9d5a89249968996bdcfdcd3e1211f06220af8247cd7a25309642",
+    "headings": [
+      "# Conditional browser capability evidence"
+    ],
+    "criterion_lines": [
+      14
+    ]
+  },
+  {
+    "path": "skills/sdd-implement/references/completion-and-checkpoints.md",
+    "sha256": "d6abebf194a10b4fa5f293e473685adf0460a6f31ed6210314f6c34c49ffa258",
+    "headings": [
+      "# Completion and checkpoints",
+      "## Task commit contract",
+      "### Task persistence audit and recovery",
+      "## Complete and commit each task",
+      "## Execute review/report tasks",
+      "## Parent completion and stopping",
+      "## Integrate the completed boundary",
+      "## Affected orientation checkpoint"
+    ],
+    "criterion_lines": [
+      3,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      15,
+      19,
+      21,
+      23,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      37,
+      39,
+      43,
+      45,
+      46,
+      47,
+      48,
+      50,
+      56,
+      58,
+      60,
+      62
+    ]
+  },
+  {
+    "path": "skills/sdd-implement/references/environment-recovery.md",
+    "sha256": "0254c7e5dc5477a012d6eca8c049d222f42c712b5ef1f03abc8b4270f34f9523",
+    "headings": [
+      "# Investigate an execution environment blocker"
+    ],
+    "criterion_lines": []
+  },
+  {
+    "path": "skills/sdd-implement/references/range-selection.md",
+    "sha256": "092f930702c80eccaee732c252c1c68bbfaeaa8be78386b5f688d1509274a5e9",
+    "headings": [
+      "# Range selection",
+      "## Phase branch segments"
+    ],
+    "criterion_lines": [
+      3,
+      7,
+      8,
+      9,
+      11,
+      15
+    ]
+  },
+  {
+    "path": "skills/sdd-implement/references/startup-and-continuation.md",
+    "sha256": "2641bba0e1c9872784eeeb0e7134007bdb68f13056fe2af0682bfec4a3dde74c",
+    "headings": [
+      "# Startup and continuation",
+      "## Push before task work",
+      "## Interpret the startup task state",
+      "## Select the authorized range",
+      "## Working branch and integration continuation",
+      "## Check the claimed task closing boundary",
+      "## Current preparation inputs",
+      "## Optional tracking decision at handoff",
+      "## Scoped authority handoff",
+      "## Environment readiness"
+    ],
+    "criterion_lines": [
+      3,
+      5,
+      7,
+      9,
+      16,
+      20,
+      22,
+      24,
+      30,
+      32,
+      36,
+      38,
+      42,
+      54,
+      58
+    ]
+  },
+  {
+    "path": "skills/sdd-implement/references/task-execution.md",
+    "sha256": "1979b2bbd64bd4b5370f607c1646b7a7fbb05f63cccd44dc907f98ce50831dfe",
+    "headings": [
+      "# Execute one task",
+      "## Coordinate the development cycle",
+      "## Scope and blockers"
+    ],
+    "criterion_lines": [
+      3,
+      10,
+      22,
+      23
+    ]
+  },
+  {
+    "path": "skills/sdd-integrate-feature/SKILL.md",
+    "sha256": "3836aff7e77d749a52493f55abc878a18af0ac0ffcc6f4d6595339c471e8b30e",
+    "headings": [
+      "# Integrate an accepted feature"
+    ],
+    "criterion_lines": [
+      10,
+      12,
+      14,
+      18
+    ]
+  },
+  {
+    "path": "skills/sdd-integrate-feature/references/feature-incorporation.md",
+    "sha256": "28505601cb9a434d8cfc9a8b071e99e64ee0750f8666ed0649c6891e2aa71baf",
+    "headings": [
+      "# Feature incorporation",
+      "## Select and incorporate",
+      "## Task-list reconciliation",
+      "## Scope and cleanup",
+      "### Archive eligibility and procedure",
+      "## Continue interrupted incorporation",
+      "## Conformance after incorporation and archive",
+      "## Orientation during incorporation"
+    ],
+    "criterion_lines": [
+      11,
+      15,
+      26,
+      32,
+      50,
+      56,
+      57,
+      58,
+      60,
+      66,
+      70,
+      76
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/SKILL.md",
+    "sha256": "7702db71890cf5a6c0a8cf7946bf056693320e7c4485b9840ae93e664cdfe7da",
+    "headings": [
+      "# Coordinate specification-driven development"
+    ],
+    "criterion_lines": [
+      3,
+      10,
+      16,
+      21,
+      22,
+      26,
+      29,
+      32,
+      33,
+      34,
+      35,
+      36,
+      38,
+      40,
+      42
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/agent-orientation.md",
+    "sha256": "1828eb292e0346ea9a19b141f4b8e373e19d885631b557829b917514d48a0595",
+    "headings": [
+      "# Maintain a concise root AGENTS.md",
+      "## Plugin source and target-project entries",
+      "## Required orientation content",
+      "## Preserve and reconcile"
+    ],
+    "criterion_lines": [
+      3,
+      15,
+      17,
+      26,
+      28,
+      29,
+      31
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/branch-management.md",
+    "sha256": "dce87320a5406a46ece10dc8dec03b51826cebcfe15c32fdde6f3389a5def2b0",
+    "headings": [
+      "# Git branch management",
+      "## Establish context and identity",
+      "## Create or reuse",
+      "## Main phase lifecycle",
+      "## Continuation",
+      "## Preparation integration gate",
+      "## Descriptive directory association"
+    ],
+    "criterion_lines": [
+      7,
+      8,
+      14,
+      17,
+      18,
+      19,
+      27,
+      29,
+      31,
+      37,
+      41,
+      43,
+      45,
+      47,
+      48,
+      49,
+      50,
+      54
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/coordination.md",
+    "sha256": "f02deb1435426337f584fdc7223d3d65770dd28f13bef2f7a8e596a79986c18c",
+    "headings": [
+      "# Coordination protocol",
+      "## Establish scope and prerequisites",
+      "## Coordinate execution",
+      "## Persist repository changes",
+      "## Return results",
+      "## Diagnostic and findings handoff",
+      "## Coordinate environment recovery",
+      "## Human document handoffs"
+    ],
+    "criterion_lines": [
+      6,
+      8,
+      11,
+      17,
+      21,
+      24,
+      26,
+      30,
+      32,
+      34,
+      35,
+      36,
+      37,
+      38,
+      42,
+      50
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/credentials.md",
+    "sha256": "0e148e039779c635ac148237fcf113cdbc1dce3a4ed062ac43875ed64a0bec21",
+    "headings": [
+      "# Hosting credentials and shell recovery",
+      "## Existing authentication first",
+      "## Find, request, and save",
+      "## Authenticate and resume",
+      "## Non-credential failures",
+      "## Scope through recovery"
+    ],
+    "criterion_lines": [
+      3,
+      7,
+      9,
+      14,
+      24,
+      25,
+      31
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/document-qc-gates.md",
+    "sha256": "11269e9e4a2854f0c1e4c10d6eed537c49076651951fb4d5ab7e888acd759fe7",
+    "headings": [
+      "# Coordinate development-document QC gates",
+      "## Stage handoff",
+      "## Amendments, scope and continuation",
+      "## Human acceptance alongside QC"
+    ],
+    "criterion_lines": [
+      10,
+      13,
+      16,
+      17,
+      18,
+      22,
+      26,
+      30,
+      34,
+      36
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/examples.md",
+    "sha256": "d3191f0c582d3820a0e67b9ae58706b1478768a3f1c9f39a7ae429ef7533a9fb",
+    "headings": [
+      "# Workflow examples",
+      "## Branch and artifact examples",
+      "## Credential recovery examples",
+      "## Blocked steering continuation",
+      "## Branch and operational boundaries",
+      "## Review and revision campaigns",
+      "## Prerelease review and reminder examples",
+      "## Proactive tracking choices",
+      "## Release preparation and publication",
+      "## Authority, diagnostics and retained notes",
+      "## Human document review examples",
+      "## Revision campaign modes"
+    ],
+    "criterion_lines": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      15,
+      16,
+      26,
+      27,
+      37,
+      38,
+      41,
+      43,
+      45,
+      47,
+      53,
+      55,
+      60,
+      61,
+      69,
+      70,
+      77,
+      78,
+      90,
+      91,
+      96,
+      100,
+      102,
+      103,
+      104,
+      105,
+      106,
+      108,
+      110,
+      113,
+      119,
+      122,
+      133,
+      140
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/git-workflows.md",
+    "sha256": "61e3fc545806be5fb2ceb8b578babd21cfb8526aef1e29f69e6ba95028601914",
+    "headings": [
+      "# Working branches and explicit integration",
+      "## Publish each commit",
+      "## Establish the working branch",
+      "## Work and prepare the boundary",
+      "## Merge, verify, and publish",
+      "## Continue a blocked workflow",
+      "## Platform authorization rejection",
+      "## Push authentication recovery",
+      "## Release commit and tag"
+    ],
+    "criterion_lines": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      15,
+      19,
+      21,
+      27,
+      29,
+      33,
+      34,
+      35,
+      37,
+      38,
+      39,
+      43,
+      45,
+      47,
+      51,
+      53,
+      55,
+      57,
+      59,
+      61,
+      63
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/human-document-review.md",
+    "sha256": "00617eda2a5d5e339aecf79796ec7bfa5d2bdeefe579fb87f5633fb8f0b82166",
+    "headings": [
+      "# Human review of development documents",
+      "## Entry and existing progress",
+      "## Created-document checkpoints",
+      "## QC, operation authority and continuation"
+    ],
+    "criterion_lines": [
+      5,
+      7,
+      13,
+      27,
+      29,
+      30,
+      31,
+      35,
+      37,
+      41
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/phase-activation.md",
+    "sha256": "48edb9f14a072382d699822f48d6cfac82d2f116b602ff1a4bae105fbb8f27d0",
+    "headings": [
+      "# Activate an eligible phase",
+      "## Preparation readiness before projection",
+      "## Optional tracking decision at handoff"
+    ],
+    "criterion_lines": [
+      6,
+      7,
+      10,
+      14
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/prerelease-review.md",
+    "sha256": "0fc0a9e77dcec7d96116cebc641b823dbb0544980190f5c9a608704c991c2338",
+    "headings": [
+      "# Comprehensive prerelease review",
+      "## Advisory release reminder",
+      "## Establish candidate and plan",
+      "## Coverage and owner routing",
+      "## Findings, readiness and rechecks",
+      "## Complete and stop"
+    ],
+    "criterion_lines": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      17,
+      18,
+      20,
+      28,
+      29,
+      30,
+      34,
+      42,
+      46,
+      48
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/repository-bootstrap.md",
+    "sha256": "ce391e9aea851dfc37828eb222405e926081fb373e1bc7e2dd7731694f2cc7e2",
+    "headings": [
+      "# Bootstrap SDD Manager in a target repository",
+      "## Greenfield startup",
+      "## Ownership and trigger",
+      "## Root artifacts and discoverability",
+      "## Scope limits, recovery and upgrades",
+      "## Human review at startup"
+    ],
+    "criterion_lines": [
+      7,
+      11,
+      13,
+      15,
+      17,
+      19,
+      23,
+      27,
+      34,
+      35,
+      39,
+      41,
+      43
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/review-and-revision.md",
+    "sha256": "2e827a54cd244ad120bd9d2eb2d15640bed5f4297b6f4a99d98d9fee06f139c8",
+    "headings": [
+      "# Coordinate review and revision campaigns",
+      "## Review",
+      "## Plan accepted revisions",
+      "## Revision execution authorization",
+      "## Revise, verify, and finish",
+      "## Diagnose an omission from evidence",
+      "## Retain requested amendment findings"
+    ],
+    "criterion_lines": [
+      5,
+      7,
+      15,
+      18,
+      19,
+      30,
+      34,
+      40,
+      42,
+      44,
+      54
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/revision-modes.md",
+    "sha256": "d8e2044ce53c8ac255772499992cc13acd077faf8e1a78b96c265143d03e9395",
+    "headings": [
+      "# Revision campaign modes",
+      "## Select the mode",
+      "## Nested revision campaign",
+      "## Reopened campaign amendment",
+      "### Eligibility and authority",
+      "### Reopen, execute and close",
+      "## Integration summaries and closure",
+      "## Return worktree safely"
+    ],
+    "criterion_lines": [
+      10,
+      16,
+      18,
+      20,
+      23,
+      27,
+      35,
+      38,
+      42,
+      43,
+      50,
+      54
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/tracking-decision.md",
+    "sha256": "c3c129f58be20fad30a8b2286389ceb8c5b014dd8f9df77f0b008421f2839b65",
+    "headings": [
+      "# Select optional hosted tracking",
+      "## Late confirmation",
+      "## Recover an omitted requested gate"
+    ],
+    "criterion_lines": [
+      3,
+      14,
+      20,
+      26
+    ]
+  },
+  {
+    "path": "skills/sdd-manage/references/workflows.md",
+    "sha256": "ab176123853b4d21e1ddc94a0d4a08638e64f0b984a20a9576b759e0f0d76a4a",
+    "headings": [
+      "# Available workflows",
+      "## Core development workflows",
+      "### Steering as lightweight revision",
+      "## Operation catalog",
+      "## Release operations",
+      "## Delivery strategy handoff",
+      "## Feature sequencing",
+      "## Cross-cutting operations",
+      "## Optional tracking decision at handoff",
+      "## Human preparation sequence"
+    ],
+    "criterion_lines": [
+      19,
+      23,
+      31,
+      34,
+      35,
+      37,
+      38,
+      40,
+      41,
+      42,
+      44,
+      46,
+      50,
+      51,
+      52,
+      53,
+      55,
+      59,
+      63,
+      68,
+      70,
+      71,
+      76,
+      77,
+      79
+    ]
+  },
+  {
+    "path": "skills/sdd-orient/SKILL.md",
+    "sha256": "712b883516f570cf296dfa3562add326a8a725dc002a2b3cf484c4c6fffe7446",
+    "headings": [
+      "# Orient in a project"
+    ],
+    "criterion_lines": [
+      3,
+      10,
+      15,
+      20,
+      22
+    ]
+  },
+  {
+    "path": "skills/sdd-orient/references/inspection-and-handoff.md",
+    "sha256": "6c273d45445426e853e6ee4eeee8c98685abe53b0db4eb71199547a3f94a1c73",
+    "headings": [
+      "# Inspection and handoff",
+      "## Project and authority",
+      "## Git evidence",
+      "## Project evidence",
+      "## Task state at startup",
+      "## Interrupted document operations",
+      "## Orientation report",
+      "## Document preparation progress"
+    ],
+    "criterion_lines": [
+      3,
+      9,
+      26,
+      28,
+      49,
+      59,
+      61,
+      62,
+      63,
+      65,
+      69,
+      77,
+      80,
+      82
+    ]
+  },
+  {
+    "path": "skills/sdd-plan/SKILL.md",
+    "sha256": "e28e6b4e6756be3396ad09841a67ad56dc686794cb0b162f96d05e32f51a0587",
+    "headings": [
+      "# Plan delivery and physical layout"
+    ],
+    "criterion_lines": [
+      3,
+      12,
+      16,
+      24,
+      29,
+      31,
+      35
+    ]
+  },
+  {
+    "path": "skills/sdd-plan/references/delivery-plan.md",
+    "sha256": "ab8c662a2542848a9a5c81dd8d468eabf687922fce256bc20c88922cef90a0f6",
+    "headings": [
+      "# Delivery plan",
+      "## Establish the strategy",
+      "## Review boundaries",
+      "## Incremental growth",
+      "## Document organization",
+      "## Preparation readiness"
+    ],
+    "criterion_lines": [
+      3,
+      8,
+      9,
+      10,
+      11,
+      15,
+      21,
+      28,
+      30,
+      32
+    ]
+  },
+  {
+    "path": "skills/sdd-plan/references/physical-layout.md",
+    "sha256": "e6abc9b84068ff8def13af02360020bdd80dc4c431667cf416aa4a9953bbfc41",
+    "headings": [
+      "# Physical layout",
+      "## Establish ownership",
+      "## Layout and preparation QC",
+      "## Instruction file ownership"
+    ],
+    "criterion_lines": [
+      3,
+      5,
+      13,
+      15,
+      19,
+      21,
+      23
+    ]
+  },
+  {
+    "path": "skills/sdd-plan/references/review.md",
+    "sha256": "cf8db9dc1d9b3256cf200f5957aed93ec53aaf0e57d9d0519fd34e1430ec5aa4",
+    "headings": [
+      "# Plan and layout review",
+      "## Required PLAN/SPEC QC gate",
+      "## Separate PLAN and layout checkpoints"
+    ],
+    "criterion_lines": [
+      3,
+      5,
+      7,
+      15
+    ]
+  },
+  {
+    "path": "skills/sdd-report/SKILL.md",
+    "sha256": "2a09d48def1f845b9b6988762aaa99b62e4f5c39213033c2276f8bb0aa42e8e2",
+    "headings": [
+      "# Report SDD work"
+    ],
+    "criterion_lines": [
+      3,
+      14,
+      15,
+      16,
+      17,
+      22,
+      26,
+      28
+    ]
+  },
+  {
+    "path": "skills/sdd-report/references/campaign-artifacts.md",
+    "sha256": "da1b42bd4561e4101db858094fcb7a038f8061c641a8e5a8228065c79463a502",
+    "headings": [
+      "# Review and revision artifacts",
+      "## Reopened amendment evidence",
+      "## Workflow context",
+      "## Review plan",
+      "# Review plan",
+      "## Campaign and scope",
+      "## Review order and criteria",
+      "## Evidence and persistence",
+      "## Consolidation and stopping",
+      "## Review report",
+      "# Review report",
+      "## Campaign and assessment",
+      "## Coverage and findings index",
+      "## Finding records",
+      "### R-001 \u2014 Actionable title",
+      "## Scenarios and limits",
+      "## Revision handoff",
+      "## Revision plan",
+      "# Revision plan",
+      "## Campaign and decisions",
+      "## Authoritative project updates",
+      "## Ordered revisions",
+      "## Execution and persistence",
+      "## Limits and stopping",
+      "## Revision report",
+      "# Revision report",
+      "## Campaign and result",
+      "## Revision evidence",
+      "## Composition and integration",
+      "## Remaining findings and limits",
+      "## Imported and conversation-only findings"
+    ],
+    "criterion_lines": [
+      3,
+      14,
+      18,
+      22,
+      28,
+      34,
+      56,
+      80,
+      82,
+      108,
+      141,
+      145,
+      158,
+      159,
+      163,
+      165,
+      173
+    ]
+  },
+  {
+    "path": "skills/sdd-report/references/change-kinds.md",
+    "sha256": "7cc7d31e5926fab5c4778b385f282d8f536713536c1038cc63409a1734da886b",
+    "headings": [
+      "# Change kinds and evidence",
+      "## Examples",
+      "### Code health",
+      "### Performance"
+    ],
+    "criterion_lines": [
+      9,
+      43
+    ]
+  },
+  {
+    "path": "skills/sdd-report/references/completion-reports.md",
+    "sha256": "c8202d5a7c23a79c90779ed14b6ab3a097a2b15fa246f5c81bee43ab6f6e8fcd",
+    "headings": [
+      "# Completion and status reports",
+      "## Task",
+      "## Milestone and phase",
+      "## Review reports and TODO aggregation",
+      "## Interrupted or limited evidence",
+      "## Evidence and test-first limits",
+      "## Branch boundary",
+      "## Optional capability state"
+    ],
+    "criterion_lines": [
+      7,
+      9,
+      11,
+      15,
+      17,
+      19,
+      23,
+      29,
+      33,
+      35,
+      39
+    ]
+  },
+  {
+    "path": "skills/sdd-report/references/document-qc-reports.md",
+    "sha256": "7dcbf8e39c79b9c5032261b8976054f15e12a302e748d22456fcfdb8f2dcc8f7",
+    "headings": [
+      "# Document QC review reports",
+      "## Placement and identity",
+      "## Compact report structure",
+      "# PLAN review report",
+      "## Current gate",
+      "## Initial review",
+      "## Revision 1",
+      "## Retained review and revisions",
+      "## Human decision evidence"
+    ],
+    "criterion_lines": [
+      3,
+      7,
+      9,
+      18,
+      31,
+      50,
+      56
+    ]
+  },
+  {
+    "path": "skills/sdd-report/references/object-drafts.md",
+    "sha256": "cd9d5c325c4858d8318736608d92b185844be913685c36cee2511c872645a50f",
+    "headings": [
+      "# Issue, commit, and PR drafts",
+      "## Task issue",
+      "## Git commit",
+      "### Task commit subjects",
+      "## Merge commit",
+      "### Campaign integration summary",
+      "## Pull request",
+      "## Examples",
+      "### Issue title",
+      "### Commit message",
+      "### Code health PR",
+      "# \ud83e\uddf9 Clarify filesystem utility ownership",
+      "## Release commit message"
+    ],
+    "criterion_lines": [
+      1,
+      3,
+      12,
+      14,
+      16,
+      20,
+      22,
+      24,
+      29,
+      30,
+      36,
+      40,
+      42,
+      44,
+      48,
+      53,
+      54,
+      56,
+      58,
+      60,
+      62,
+      64,
+      66,
+      72,
+      84,
+      88,
+      96,
+      99,
+      110,
+      113,
+      115,
+      120,
+      122
+    ]
+  },
+  {
+    "path": "skills/sdd-report/references/releases.md",
+    "sha256": "8cb9f5d75a27a247d21a377fca881c4fa000d4622437a36ae7c0da6bdaf34b85",
+    "headings": [
+      "# Package and release reporting",
+      "## Preparation result",
+      "## Release notes",
+      "## Complete release message",
+      "## Release outcome"
+    ],
+    "criterion_lines": [
+      1,
+      3,
+      7,
+      9,
+      11,
+      13,
+      17,
+      19,
+      21,
+      27,
+      35,
+      37,
+      39,
+      43,
+      47,
+      51
+    ]
+  },
+  {
+    "path": "skills/sdd-specify/SKILL.md",
+    "sha256": "576be49957c686959fae6d840e1b85ef363375c7e64d5fe4a2f3354a5b33c6de",
+    "headings": [
+      "# Specify required behavior"
+    ],
+    "criterion_lines": [
+      12,
+      26
+    ]
+  },
+  {
+    "path": "skills/sdd-specify/references/change-specification.md",
+    "sha256": "74ad9a214189fa094c48acfd6c1daacb4eef43fe64ea18946ff5e6628a3be94c",
+    "headings": [
+      "# Scoped change specification",
+      "## Review the scoped delta"
+    ],
+    "criterion_lines": []
+  },
+  {
+    "path": "skills/sdd-specify/references/review.md",
+    "sha256": "60ef1b66449b4f40adf88f475fa4767cfd663d17ba4cd304236e8dfcb79500c9",
+    "headings": [
+      "# Specification review",
+      "## End-state language",
+      "## Required SPEC/design QC gate"
+    ],
+    "criterion_lines": [
+      3
+    ]
+  },
+  {
+    "path": "skills/sdd-specify/references/system-specification.md",
+    "sha256": "4af4ac610c2e6b020c57182e486d55124142394f9ba341db0b81339404723afd",
+    "headings": [
+      "# Complete system specification",
+      "## Root",
+      "## Design traceability",
+      "## Focused children",
+      "## Acceptance and review",
+      "## Finish the preparation boundary"
+    ],
+    "criterion_lines": [
+      28
+    ]
+  },
+  {
+    "path": "skills/sdd-steer/SKILL.md",
+    "sha256": "6598b5b4b99b13a981bc4b91deaeb4bb6c4efdbab3de214e58e849aec815cc2b",
+    "headings": [
+      "# Apply a human-directed checkpoint amendment"
+    ],
+    "criterion_lines": [
+      3,
+      6,
+      10,
+      12,
+      18,
+      19,
+      21,
+      24,
+      25,
+      27
+    ]
+  },
+  {
+    "path": "skills/sdd-steer/references/amendment-execution.md",
+    "sha256": "c185174fd72625f51a151bb6085140e9599f848e26f461d1131c87f2865d0cac",
+    "headings": [
+      "# Execute the amendment",
+      "## Revise existing development documents",
+      "## Align code, tests, and user documentation",
+      "## Reassess affected preparation gates"
+    ],
+    "criterion_lines": [
+      11,
+      27,
+      31
+    ]
+  },
+  {
+    "path": "skills/sdd-steer/references/objective-and-impact.md",
+    "sha256": "f1f57ab732b6c40c14260ab006377504bece4993bd7a80dac3d2adc53c9902ec",
+    "headings": [
+      "# Objective and impact",
+      "## Establish the boundary",
+      "## Amendment branch and continuation"
+    ],
+    "criterion_lines": [
+      3,
+      11,
+      12,
+      18,
+      20,
+      24,
+      26
+    ]
+  },
+  {
+    "path": "skills/sdd-steer/references/verification-and-stop.md",
+    "sha256": "833b62f3807e8eb425f0fe2ad9ef4418cabbb77ae0f2ee7371435793de17398d",
+    "headings": [
+      "# Verify, publish the checkpoint, and stop",
+      "## Verify the amendment",
+      "## Commit and push",
+      "## Merge the amendment",
+      "## Continue after a blocker",
+      "## Return control to the human",
+      "## Affected orientation checkpoint"
+    ],
+    "criterion_lines": [
+      1,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21,
+      25,
+      29,
+      31,
+      37,
+      39,
+      41
+    ]
+  },
+  {
+    "path": "skills/sdd-tasks/SKILL.md",
+    "sha256": "2f2fbfde714800b717c33eff552fd3a24267c8be7b8cdd0d9fa9c5e657456ccc",
+    "headings": [
+      "# Create and review task lists"
+    ],
+    "criterion_lines": [
+      12,
+      24,
+      26,
+      28,
+      30
+    ]
+  },
+  {
+    "path": "skills/sdd-tasks/references/conformance-review.md",
+    "sha256": "79e186c004f57193bf7a9ca8aaf7b6075d85fac240ae05a1ececa11ec7eea92e",
+    "headings": [
+      "# Task-list conformance and decomposition review",
+      "## Inputs and review",
+      "## Corrections, evidence and gate"
+    ],
+    "criterion_lines": [
+      8,
+      9,
+      10,
+      16,
+      18
+    ]
+  },
+  {
+    "path": "skills/sdd-tasks/references/progress-review.md",
+    "sha256": "32be8fbaa5e67e807d7c7f7be964c56ab7f65bd6398784606090fcdd9e40a912",
+    "headings": [
+      "# Progress review",
+      "## Completion evidence",
+      "## Route findings",
+      "## Distinguish preparation readiness"
+    ],
+    "criterion_lines": [
+      3,
+      13
+    ]
+  },
+  {
+    "path": "skills/sdd-tasks/references/task-derivation.md",
+    "sha256": "abe64f6415b946ef638d076dab1650afd5d6e154bcd94305932cd9f7ec9436c7",
+    "headings": [
+      "# Task derivation",
+      "## Form tasks",
+      "## Checklist form",
+      "## Phase 1 \u2014 Streaming sources",
+      "## Required preparation review"
+    ],
+    "criterion_lines": [
+      3,
+      7,
+      10,
+      11,
+      12,
+      16,
+      22,
+      23,
+      29,
+      32,
+      34,
+      43
+    ]
+  },
+  {
+    "path": "skills/sdd-tdd/SKILL.md",
+    "sha256": "49efacb9ed6ae3b59069e986672dc5350cc0b147c3ad960b3ffc04f105c54cda",
+    "headings": [
+      "# Design tests and guide test-first implementation"
+    ],
+    "criterion_lines": [
+      19,
+      21
+    ]
+  },
+  {
+    "path": "skills/sdd-tdd/references/test-first-cycle.md",
+    "sha256": "e8d797ba50e555d53500516e85f8b624f7ed11f5a7534e39220f2a74141e3d96",
+    "headings": [
+      "# Test-first cycle",
+      "## RED",
+      "## GREEN",
+      "## REFACTOR and repeat",
+      "## Interrupted or non-test-first work",
+      "## Record exceptions and gaps"
+    ],
+    "criterion_lines": [
+      31
+    ]
+  },
+  {
+    "path": "skills/sdd-tdd/references/testing-strategy.md",
+    "sha256": "fd834570d97f993fe270627fcedc308f0a97642ff000b8970a0b1c1bf33cab5f",
+    "headings": [
+      "# Testing strategy",
+      "## Select scenarios and levels",
+      "## Strategy boundaries"
+    ],
+    "criterion_lines": [
+      11,
+      14
+    ]
+  },
+  {
+    "path": "skills/sdd-tdd/references/upstream-provenance.md",
+    "sha256": "668d85251c25027ac1494c9bb89367fa3c1885c23424e3987d02f7fd0b02ca33",
+    "headings": [
+      "# Upstream provenance and adaptation"
+    ],
+    "criterion_lines": [
+      5
+    ]
+  },
+  {
+    "path": "skills/sdd-tdd/references/writing-good-tests.md",
+    "sha256": "c5a555443dc5cf3b78312f9939bfbe53be7b04978f4f14f3350820ed5bc5b0d8",
+    "headings": [
+      "# Writing good tests",
+      "## Independent expectations and meaningful failures",
+      "## Real behavior and doubles",
+      "## Review sensitivity",
+      "## Examples",
+      "# Expected text is independent of the formatter under test.",
+      "# Reusing the tested formatter on both sides cannot expose its defect."
+    ],
+    "criterion_lines": [
+      23
+    ]
+  },
+  {
+    "path": "skills/sdd-verify/SKILL.md",
+    "sha256": "7b37a6253f4a925777e27a705d0429766ab8845376477c31b37b47eca3bc4b48",
+    "headings": [
+      "# Verify a selected work boundary"
+    ],
+    "criterion_lines": [
+      3,
+      10,
+      14,
+      16,
+      20,
+      27,
+      32
+    ]
+  },
+  {
+    "path": "skills/sdd-verify/references/boundary-review.md",
+    "sha256": "53babcce80c31cefb2396f490332cdb3e0ca4e4472fdf3ba4eec189aa2f9ffc0",
+    "headings": [
+      "# Review milestone and phase implementation"
+    ],
+    "criterion_lines": [
+      1,
+      3,
+      6,
+      9
+    ]
+  },
+  {
+    "path": "skills/sdd-verify/references/check-selection.md",
+    "sha256": "87f9024dccf127c10b89944d83bb90d9cd9373e42ffd5c3967f47ff676cda10c",
+    "headings": [
+      "# Select sufficient checks",
+      "## Scope and evidence",
+      "## Select checks",
+      "## Representative capability readiness"
+    ],
+    "criterion_lines": [
+      13,
+      16
+    ]
+  },
+  {
+    "path": "skills/sdd-verify/references/execution-and-evidence.md",
+    "sha256": "bff21a3c02f8935c07b2e2f7fd16f72260659d68485f1a15164c91a53ce5a08d",
+    "headings": [
+      "# Execution and evidence",
+      "## Run against an identified state",
+      "## Assess coverage",
+      "## Preserve and return evidence",
+      "## Durable evidence facts",
+      "## Environment coverage"
+    ],
+    "criterion_lines": [
+      5,
+      17,
+      28,
+      34,
+      36,
+      40
+    ]
+  },
+  {
+    "path": "skills/sdd-verify/references/failure-assessment.md",
+    "sha256": "0d1297f0b6d03dfd429c9d8e0d912c841801b8207141651aca1f1a90fe9a12c6",
+    "headings": [
+      "# Assess failures and gaps"
+    ],
+    "criterion_lines": [
+      9
+    ]
+  },
+  {
+    "path": "skills/sdd-verify/references/release-checks.md",
+    "sha256": "fee007dfbde60228f4119a9cebfd851c5af7051c57660d2b4139c7992a79541c",
+    "headings": [
+      "# Package, workflow and release checks"
+    ],
+    "criterion_lines": [
+      1,
+      3,
+      7,
+      8,
+      9,
+      10,
+      11,
+      19,
+      24
+    ]
+  }
+]

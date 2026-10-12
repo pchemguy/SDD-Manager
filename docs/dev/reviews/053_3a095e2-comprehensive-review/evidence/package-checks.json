@@ -1,0 +1,17 @@
+{
+  "source": "3a095e23bcefd341933ca2353275c5243da32a97",
+  "files": 134,
+  "reproducible": true,
+  "asset_hashes": {
+    "sdd-manager.zip": "c979374ae598d7a32d7e7865421a8c4d43b9cbf6ac01733bb0d105ea5476dd2d",
+    "sdd-manager.zip.sha256": "955aaea4c1284661d0312a10e864fa0f5d8c220364e1bd33df889f476a886487"
+  },
+  "local_package_prose_links": 473,
+  "cross_skill_links": 143,
+  "link_path_errors": [],
+  "anchor_errors": [],
+  "manifest_core_schema": "Passed; opaque OpenAI extension not client validated",
+  "source_exclusions": "Passed",
+  "hosted_writes": false,
+  "scanner_limit": "Fenced/inline literal examples excluded; initial unmasked scan produced three literal-example false positives, corrected before grading."
+}

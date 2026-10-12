@@ -35,7 +35,7 @@ Report created, matched, updated, and conflicted objects with IDs and URLs. Retu
 
 ## Document QC prerequisite
 
-Before creating/projecting task issues, phase/milestone labels or milestones, establish current owning-list and upstream preparation readiness through **sdd-manage**'s **Document QC gates** reference. A direct forge call uses the same gate; report missing/stale or blocked conformance to the coordinator without silently editing governing documents or creating objects first. Read-only mapping assessment may proceed and report blocked projection. This prerequisite does not turn report Ready into task completion or replace lifecycle verification for existing issue/milestone closure.
+Before creating/projecting task issues, phase labels, native milestones or task issues, establish current owning-list and upstream preparation readiness through **sdd-manage**'s **Document QC gates** reference. A direct forge call uses the same gate; report missing/stale or blocked conformance to the coordinator without silently editing governing documents or creating objects first. Read-only mapping assessment may proceed and report blocked projection. This prerequisite does not turn report Ready into task completion or replace lifecycle verification for existing issue/milestone closure.
 
 ## Confirmed scope and late activation
 

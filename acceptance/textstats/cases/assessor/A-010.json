@@ -545,6 +545,8 @@
     "Transferred tasks retain runtime IDs/issues, have exactly one executable owner and both task lists participate. Eligible sources archive with valid links/history; needed sources preserved.",
     "Two-parent feature integration targets paused phase 2, not integration branch.",
     "Feature review tasks produce committed reports under docs/dev/features/<actual-feature-id>/, with required review/testing, blocker repairs and issue/milestone closure consistent with the actual whole-project owner scope.",
-    "Material main-document/task incorporation receives affected QC reassessment; eligible selected feature QC reports archive beside corresponding sources with repaired in-scope links and retained original review identity. Historical feature Ready is not current main-document readiness; unselected source/report pairs remain active when required."
+    "Material main-document/task incorporation receives affected QC reassessment; eligible selected feature QC reports archive beside corresponding sources with repaired in-scope links and retained original review identity. Historical feature Ready is not current main-document readiness; unselected source/report pairs remain active when required.",
+    "Inspect each closing task commit and parent diff: exactly one owning task ID leads the subject; one verified task result, current evidence and its initial completion checkbox are together, including review/report tasks. Push and remote containment precede further task work or another commit; inspect documented partial checkpoints, repairs and parent-only follow-ups separately.",
+    "Assess the bounded persistence audit on continuation and before integration; reject bundled/split/malformed closing histories even with checked final lists and published branches. Preserve published history and require authorized recovery/exception. Stop at the human-selected range, counting review tasks without adding unselected work; apply CHECKPOINTS.md."
   ]
 }

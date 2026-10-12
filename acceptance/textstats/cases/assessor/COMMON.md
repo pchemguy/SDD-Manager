@@ -33,3 +33,7 @@ The [focused follow-up guide](TRACKING-FIDELITY.md) supplies separately selected
 ## Release evidence capture
 
 [Release controls](../../RELEASE-SCENARIOS.md#read-only-release-capture) define read-only note/native Git/provider-body capture and its public-safe input shape. The capture helper records literal comparisons and hashes, never expected bodies or independent grades. Supply baseline evidence from the actual pre-operation notes, and establish readback source/class separately. Missing observations, freshness and human-content judgments cannot be replaced by a helper pass.
+
+## Human and Git checkpoint assessment
+
+Apply [independent checkpoint assessment](CHECKPOINTS.md) to necessary new main/feature documents and task closing/continuation/integration boundaries. Retain actual human decision/order evidence and native task commit/parent diffs. Support success does not establish these consumer observations.

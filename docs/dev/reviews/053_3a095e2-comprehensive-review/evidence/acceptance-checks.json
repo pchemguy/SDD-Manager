@@ -1,0 +1,18 @@
+{
+  "reviewed_source": "3a095e23bcefd341933ca2353275c5243da32a97",
+  "executed_checkout": "9b7f62e73721b5dfd796a0b1154d8c2c60c1b1d5",
+  "python": "Python 3.12.14",
+  "support": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v",
+    "tests": 124,
+    "result": "Passed",
+    "log": "support.log"
+  },
+  "catalog": {
+    "command": "python acceptance/textstats/cases/assessor/catalog_tools.py validate",
+    "cases": 33,
+    "result": "Passed",
+    "live_acceptance": false
+  },
+  "source_package_changes_since_baseline": []
+}
