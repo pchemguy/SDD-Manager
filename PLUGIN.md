@@ -1,6 +1,6 @@
 # SDD Manager plugin entry
 
-SDD Manager composes focused skills into specification-driven development workflows for Git projects. Use this entry to select and connect capabilities. Each skill's SKILL.md owns its procedure; references/*.md supply progressively loaded sub-workflows. The human-facing [README](README.md) explains capabilities and composite workflows with examples and diagrams.
+SDD Manager composes focused skills into specification-driven development workflows for Git projects. Use this entry to select and connect capabilities. Each skill's SKILL.md owns its procedure; `references/*.md` supply progressively loaded sub-workflows. The human-facing [README](README.md) explains capabilities and composite workflows with examples and diagrams.
 
 Load this entry explicitly when the host does not expose it. PLUGIN.md is this plugin's entry convention; it has no implied standardized invocation or automatic discovery mechanism. Bundled skills use relative Markdown links and named handoffs. Do not load every skill/reference by default.
 
