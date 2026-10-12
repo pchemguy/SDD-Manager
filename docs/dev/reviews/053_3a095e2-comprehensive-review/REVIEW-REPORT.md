@@ -115,3 +115,7 @@ No revision plan or repairs have been authorized in this review request. The rev
 ## Accepted revision
 
 The human subsequently requested revision planning and execution. R-001–R-005 are accepted in [REVISION-PLAN.md](REVISION-PLAN.md); [REVISION-REPORT.md](REVISION-REPORT.md) retains implementation/recheck outcomes separately from the baseline assessment.
+
+## Revision disposition
+
+R-001/R-002/R-005: corrected and source-rechecked. R-003/R-004: assessor component extended and validated; consumer scenarios remain unexecuted. See [revision report](REVISION-REPORT.md) for current evidence/integration, preserving all baseline observations above.

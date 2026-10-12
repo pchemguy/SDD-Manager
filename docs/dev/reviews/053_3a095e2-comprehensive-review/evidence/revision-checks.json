@@ -1,0 +1,17 @@
+{
+  "source": "90afbc1c7035fa8fdcb38c76a7c836418eec05bd",
+  "files": 134,
+  "hashes": {
+    "sdd-manager.zip": "e2ced7871c80b13baaf008a8560e52e6725678fffc1c4a764c2d07c81c452de2",
+    "sdd-manager.zip.sha256": "de0d5f17d40b5ca457e037e39ea937be02692cc6d7b9aa27a862b8065db78412"
+  },
+  "identical_builds": true,
+  "package_prose_links": 473,
+  "errors": [],
+  "index_campaign_rows": 51,
+  "previous_index_rows_unchanged": true,
+  "catalog_cases": 33,
+  "support_tests": 124,
+  "consumer_requests_unchanged": true,
+  "limit": "Local component/source/build checks; no fresh consumer/client/provider or visual Mermaid execution."
+}
