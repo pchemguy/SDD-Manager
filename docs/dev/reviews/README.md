@@ -78,4 +78,4 @@ New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT
 
 | `052_7d0dd14` | Seven local document/orientation gates now explicitly require commit/push/readback; original scoped policy unchanged. 134-file package/655 links and 124 support/30 publisher tests passed; main integration/publication establishes closure. | [Review report](052_7d0dd14-explicit-publication/REVIEW-REPORT.md), [revision plan](052_7d0dd14-explicit-publication/REVISION-PLAN.md), [revision report](052_7d0dd14-explicit-publication/REVISION-REPORT.md) |
 
-| `053_3a095e2` | Comprehensive review opened; source repairs and integration excluded. | [Review plan](053_3a095e2-comprehensive-review/REVIEW-PLAN.md), [review report](053_3a095e2-comprehensive-review/REVIEW-REPORT.md) |
+| `053_3a095e2` | Comprehensive review complete: five open findings; 124 support/30 publisher tests and reproducible 134-file package passed. Review-only, no repairs or integration. | [Review plan](053_3a095e2-comprehensive-review/REVIEW-PLAN.md), [review report](053_3a095e2-comprehensive-review/REVIEW-REPORT.md) |

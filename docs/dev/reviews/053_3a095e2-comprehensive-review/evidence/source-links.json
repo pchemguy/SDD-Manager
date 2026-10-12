@@ -1,0 +1,10 @@
+{
+  "source": "3a095e23bcefd341933ca2353275c5243da32a97",
+  "current_documents_scanned": 188,
+  "local_source_prose_paths_checked": 647,
+  "historical_targets_excluded": 9,
+  "missing_paths": [],
+  "limits": "Prose link paths only; literals/closed targets excluded. No remote URL liveness or runtime link loading certified.",
+  "directory_links_checked": 4,
+  "scanner_limit": "Initial regular-file-only scan flagged four valid directory links; corrected before grading."
+}

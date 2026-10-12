@@ -4,7 +4,7 @@
 
 Campaign: **053_3a095e2**. Baseline/reviewed source: `3a095e23bcefd341933ca2353275c5243da32a97`. Date: 2026-10-12. Reviewer: Codex. Scope and criteria: [review plan](REVIEW-PLAN.md).
 
-State: U-001/U-002 assessed; U-003 pending. Four open findings; no final readiness conclusion yet. Evidence will distinguish source assessment, local execution and unavailable live/client observations. Source repairs and integration are outside this request.
+State: comprehensive review complete; five open findings (three medium, two low). Local support/package checks pass; staged human-checkpoint and task-history acceptance coverage need extension. No source repairs, merge or product release performed. Evidence will distinguish source assessment, local execution and unavailable live/client observations. Source repairs and integration are outside this request.
 
 ## Coverage
 
@@ -12,7 +12,7 @@ State: U-001/U-002 assessed; U-003 pending. Four open findings; no final readine
 | --- | --- | --- |
 | U-001 | Assessed | 99 current Markdown files inventoried/thematically scanned, 15 entries; consequential preparation/execution/tracking/release handoffs inspected. R-001/R-002. |
 | U-002 | Assessed | 124 support tests passed; 33-case catalog valid. R-003/R-004 identify assessor coverage gaps. |
-| U-003 | Pending | Distribution, publisher, package and consolidation |
+| U-003 | Assessed | 30 publisher tests passed; manifest/assets and reproducible 134-file package verified; package/source links resolve. R-005. |
 
 ## Findings
 
@@ -22,10 +22,11 @@ State: U-001/U-002 assessed; U-003 pending. Four open findings; no final readine
 | R-002 | Documentation defect | Low | Open |
 | R-003 | Acceptance component coverage gap | Medium | Open |
 | R-004 | Acceptance component coverage gap | Medium | Open |
+| R-005 | Navigation formatting defect | Low | Open |
 
 ### R-001 — Preparation diagram delays publication until the end of the document chain
 
-- **Location:** `README.md`, Project preparation diagram, lines 118–135; compare `skills/sdd-manage/references/human-document-review.md`, Created-document checkpoints step 1, and `PLUGIN.md`, Human checkpoints and Git publication. Confidence: high.
+- **Location:** `README.md`, Project preparation diagram, lines 105–124; compare `skills/sdd-manage/references/human-document-review.md`, Created-document checkpoints step 1, and `PLUGIN.md`, Human checkpoints and Git publication. Confidence: high.
 - **Observation:** The depicted path passes human acceptance and dependent design/SPEC/PLAN/layout/TASKS stages before reaching its sole “Commit and push design-docs” node. Canonical instructions require each new reviewable document to be committed, pushed and remotely verified before presentation and dependent work. Nearby prose explains separate human decisions but does not explain per-document publication in the diagram.
 - **Consequence:** The principal human-facing illustration teaches a delayed persistence boundary inconsistent with the operational contract.
 - **Correction:** Show or explicitly annotate each grouped preparation stage's publication-before-human-review checkpoint; keep PLAN/layout decisions distinct. Remove the impression of one end-of-chain publication. Owner: `sdd-docs` with `sdd-manage` gate semantics. No source behavior change required.
@@ -78,3 +79,35 @@ State: U-001/U-002 assessed; U-003 pending. Four open findings; no final readine
 Inspected source pinning/dirty snapshots, protected path/data handling, recovery/index/bundle retention, interruption controls, literal public API probe, release capture, evidence-class/variant accounting and consumer/assessor separation. Support tests exercise meaningful failure/sensitivity paths, including occupied/symlink evidence, wrong release body/tag/class, public-export regressions, incomplete prerequisites and uncertain interruption replay. No observed support failure or confirmed helper-code defect in this unit. Review depth is targeted across these seams; it is not a proof of all possible helper inputs.
 
 Fresh consumers, independent runtime assessors, installed clients, native process termination and live GitHub release/tracking writes were not executed. Historical passes were not imported as current acceptance. R-003/R-004 concern missing explicit component criteria; adding them would still require new consumer evidence. Current docs accurately distinguish support success from those runtime observations.
+
+### R-005 — Campaign index rows are split into unheaded table fragments
+
+- **Location:** Current root navigation `docs/dev/reviews/README.md:31–84`; the first table ends after campaign 024, subsequent campaign rows are separated by blank lines, with a prose paragraph also interrupting the rows. Confidence: high.
+- **Observation:** Only the initial contiguous table has a header and delimiter. Later isolated pipe rows are not continuations of that Markdown table. The active 053 navigation inherited this existing append pattern.
+- **Consequence:** Much of the human-facing campaign index lacks the intended table structure and scanability.
+- **Correction:** Make the root navigation one contiguous table, or intentional separately headed tables; place explanatory prose outside the table. Preserve existing row text/links and all closed package bytes. Owner: `sdd-docs`; this current navigation correction does not authorize historical report rewrites.
+- **Recheck:** Every campaign row belongs to a table with a header/delimiter, explanatory paragraphs do not interrupt it, links remain unchanged and the diff contains no closed-package edits. Render with a Markdown table renderer when available; source structure inspection is distinct from visual verification.
+
+## U-003 distribution and operation evidence
+
+| Check | Observed result | Limits |
+| --- | --- | --- |
+| Publisher contracts | 30 tests passed on Python 3.12.14 with declared `jsonschema==4.26.0`; [log](evidence/publisher.log). | Controlled providers/native Git fixtures, not CI/live provider execution. |
+| Exact source/native build | Two byte-identical builds from detached reviewed source `3a095e23bcefd341933ca2353275c5243da32a97`; 134 files. | Source remains version 0.15.0; no release marker/tag/publisher writes. Build used local imported `build_package`, publish false, exact source and matching manifest tag. |
+| Archive/schema/assets | Committed bytes inspected against Git tree; core pinned schema passed, presentation assets present. PLUGIN included; source AGENTS/acceptance/development/CI excluded. [Package evidence](evidence/package-checks.json). | OpenAI extension contents are opaque to the portable schema; no installed-client presentation proof. |
+| Package links/anchors | 473 local prose links resolve inside package; 143 cross-skill links, no missing paths/anchors. | Fenced/inline literal examples excluded. Initial unmasked scan's three example-link false positives corrected before grading. |
+| Current source navigation | 188 current Markdown documents scanned; 647 local prose paths resolve, including four valid directory links. Historical targets excluded. [Source link evidence](evidence/source-links.json). | No remote URL liveness or frozen-target compatibility assessment. Initial file-only scan's directory false positives corrected before grading. |
+| Source Markdown | No heading-followed-without-blank or triple-blank candidates in selected skill/root/coordinator/demo guides. R-005 affects current campaign index table structure. | This bounded scan is not complete Markdown parsing; template literals and rendered diagrams were not graded as live behavior. |
+| Release workflow/reconciliation | Inspected exact source/tooling separation, input-as-data, declared runtime/dependency, read/write job permissions, manual-only dispatch, one tag concurrency group, exact source/version/build hash, draft/assets/body/tag/latest readback, conflict refusal and uncertain-write recovery. Local contracts cover positive/repeat/partial/uncertain/negative paths. | GitHub Actions validator, actual action resolution, hosted CI, release dispatch/download and visual diagram rendering not performed; no universal runtime readiness claim. |
+| Access and package contents | Shipped inventory excludes credentials and source-only evidence; inspected protected transfer and owned-provider-field rules. No recognizable credential value exported in review evidence. | Pattern screening and structural inspection are not a general security certification. |
+| Protected historical/source boundaries | Full campaign diff contains only campaign 053 artifacts and current review-index navigation; reviewed source and earlier campaign packages unchanged. | No historical contents revalidated. |
+
+## Consolidation and proposed revision queue
+
+Five open findings: **three medium** (R-001/R-003/R-004), **two low** (R-002/R-005); three documentation/navigation defects and two acceptance component gaps. No confirmed executable-code defect or failing local suite was observed. Package structure is verified for this pinned candidate; consumer interaction, installed-client compatibility and hosted CI/provider behavior remain unverified here.
+
+1. **R-001/R-002:** Align the README preparation diagram and GitHub prerequisite wording with the pronounced PLUGIN gates and native milestone mapping. Retain only supported provider fallback semantics.
+2. **R-003/R-004:** Extend TextStats assessor contracts/scenarios for per-document HIL/publication order and atomic task closing/history audit. Validate the component independently; do not treat source extension as consumer execution or invent retrospective passes.
+3. **R-005:** Normalize current campaign-index table structure without changing historical records.
+
+No revision plan or repairs have been authorized in this review request. The review report/plan/evidence are published on `revision/053_3a095e2-comprehensive-review`; `main` remains the reviewed baseline. Proposed revision execution and any fresh client/consumer/provider campaign require their own selected scope. Stop at the completed review boundary.
