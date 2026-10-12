@@ -1,0 +1,522 @@
+{
+  "source": "3d24726abb4ca2a17f15fbb89c9c6fca2e93fe27",
+  "matching_lines": 102,
+  "matching_files": 36,
+  "exclusions": [
+    "closed review/feature/phase packages",
+    "historical exploration transcripts"
+  ],
+  "purpose": "discovery inventory; matches are not automatically defects",
+  "matches": [
+    {
+      "path": "PLUGIN.md",
+      "line": 20,
+      "text": "| Explore purpose; create/revise/review the project brief; design architecture or components | [sdd-design](skills/sdd-design/SKILL.md) | [PROJECT brief contract](skills/sdd-design/references/project-brief.md), architecture and decomposition or necessary feature deltas |"
+    },
+    {
+      "path": "PLUGIN.md",
+      "line": 41,
+      "text": "`PROJECT.md` is the concise project brief: purpose, users, desired outcomes, principal scope/non-goals and consequential constraints derived from the seed and actual clarification, with material assumptions/questions identified. Use `sdd-design` and its [project brief contract](skills/sdd-design/references/project-brief.md) for direct drafting, revision or review before architecture. The brief supplies shared context without replacing structural design or exact SPEC behavior."
+    },
+    {
+      "path": "PLUGIN.md",
+      "line": 43,
+      "text": "From a project seed, `sdd-manage` coordinates `sdd-orient` \u2192 `sdd-design` (PROJECT, architecture, decomposition) \u2192 `sdd-specify` (SPEC) \u2192 `sdd-plan` (PLAN, layout) \u2192 `sdd-tasks` (TASKS). Use `sdd-conventions` throughout as needed. Each necessary new root has its own human acceptance checkpoint before dependent authoring; PLAN and layout are separate. Apply [human review](skills/sdd-manage/references/human-document-review.md) and [document QC](skills/sdd-manage/references/document-qc-gates.md); agent QC/standing Git authority is not human acceptance."
+    },
+    {
+      "path": "README.md",
+      "line": 79,
+      "text": "| `ARCHITECTURE.md` | Major blocks, relationships, dependency direction, and design decisions. |"
+    },
+    {
+      "path": "README.md",
+      "line": 80,
+      "text": "| `DECOMPOSITION.md` | Component responsibilities, collaborations, and design-level interfaces. |"
+    },
+    {
+      "path": "README.md",
+      "line": 90,
+      "text": "Greenfield preparation walks you through PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS. Each necessary newly created document gets substantive analysis and its own human acceptance checkpoint before dependent work; PLAN and layout remain separate. Clarification answers, agent QC and standing Git authorization do not accept documents."
+    },
+    {
+      "path": "README.md",
+      "line": 96,
+      "text": "SPEC is checked against accepted PROJECT/design; PLAN/layout against SPEC; TASKS against PLAN before execution or hosted projection. Adjacent QC reports retain findings and rechecks; unresolved confirmed blockers stop dependent work. See [document quality gates](skills/sdd-manage/references/document-qc-gates.md) and [shared QC policy](skills/sdd-conventions/references/development-document-qc.md) for reports, decomposition and task-sizing guidance."
+    },
+    {
+      "path": "README.md",
+      "line": 98,
+      "text": "PLAN begins with a meaningful end-to-end MVP and grows through small testable increments. Feature documents use FEATURE_ARCHITECTURE.md, FEATURE_DECOMPOSITION.md, FEATURE-SPEC.md, FEATURE-PLAN.md and FEATURE-TASKS.md as needed; accepted deltas are incorporated through sdd-integrate-feature. Steering directly amends existing documents."
+    },
+    {
+      "path": "README.md",
+      "line": 110,
+      "text": "    M[\"sdd-manage + sdd-orient<br/>Establish scope and repository state\"] --> D[\"sdd-design<br/>PROJECT, architecture and decomposition\"]"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-004.json",
+      "line": 25,
+      "text": "    \"After pushing outstanding commits and before new task work, the consumer establishes current owning preparation readiness; routine progress-only updates are distinguished from material contract/decomposition changes and no unrequested upstream correction is executed.\""
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-004.md",
+      "line": 20,
+      "text": "- After pushing outstanding commits and before new task work, the consumer establishes current owning preparation readiness; routine progress-only updates are distinguished from material contract/decomposition changes and no unrequested upstream correction is executed."
+    },
+    {
+      "path": "docs/agents/jules/Workflow Loading.md",
+      "line": 16,
+      "text": "  *(e.g., project brief, architecture, decomposition, and so on)*"
+    },
+    {
+      "path": "docs/dev/CAPABILITY-MAP.md",
+      "line": 57,
+      "text": "| `docs/dev/ARCHITECTURE.md` | System blocks, relationships, dependency direction, patterns, and consequential decisions. Focused children are allowed. |"
+    },
+    {
+      "path": "docs/dev/CAPABILITY-MAP.md",
+      "line": 58,
+      "text": "| `docs/dev/DECOMPOSITION.md` | Component responsibilities, boundaries, collaborations, and provisional interfaces. Focused children are allowed. |"
+    },
+    {
+      "path": "docs/dev/CAPABILITY-MAP.md",
+      "line": 59,
+      "text": "| `docs/dev/FEATURE_ARCHITECTURE.md`, `docs/dev/FEATURE_DECOMPOSITION.md` | Bounded architectural change definition and affected component breakdown when necessary. |"
+    },
+    {
+      "path": "docs/dev/CAPABILITY-MAP.md",
+      "line": 69,
+      "text": "ARCHITECTURE describes major structure and rationale; DECOMPOSITION refines logical responsibility and collaboration; SPEC defines observable guarantees linked to relevant structural owners/consumers. Conflicts return to their owners for accepted decisions. PLAN stages the complete intent through an early meaningful usable slice and small testable growth, with appropriate functional/usability decisions kept human-controlled."
+    },
+    {
+      "path": "docs/dev/CAPABILITY-MAP.md",
+      "line": 80,
+      "text": "| `sdd-design` | Explore facts, assumptions, alternatives, and accepted decisions; develop project brief, architecture, and decomposition for initial work or architectural changes. | **Included** |"
+    },
+    {
+      "path": "docs/dev/CAPABILITY-MAP.md",
+      "line": 114,
+      "text": "[Human document review](../../skills/sdd-manage/references/human-document-review.md) is distinct from technical QC: necessary newly authored PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS roots, including needed feature counterparts, require real human acceptance before dependent progression. PLAN and layout have distinct checkpoints. Existing acceptable startup inputs need no retrospective interactive review; explicitly requested review or pending acceptance remains binding. Accepted preparation and adjacent QC reports follow the [preparation integration gate](../../skills/sdd-manage/references/branch-management.md#preparation-integration-gate) into the actual default branch, with merged checks and publication before a dependent implementation branch is created."
+    },
+    {
+      "path": "plugin.json",
+      "line": 15,
+      "text": "    \"architecture\","
+    },
+    {
+      "path": "skills/sdd-conventions/SKILL.md",
+      "line": 3,
+      "text": "description: \"Use when designing or reviewing a chosen architecture, design pattern, component boundary, API, module, refactor, Phase \u2192 Milestone \u2192 Task hierarchy, task breakdown, hosted task mapping, repository hosting-token storage or authentication recovery, workflow branch identities and artifact locations, review/revision campaign records, Markdown document style, or code change; also use during code review and when comparing design options. Assess cohesion, dependencies, testability, complexity, and SOLID, DRY, and KISS where relevant.\""
+    },
+    {
+      "path": "skills/sdd-conventions/SKILL.md",
+      "line": 21,
+      "text": "- **Development-document QC:** Read [development-document QC](references/development-document-qc.md) when authoring/reviewing SPEC, PLAN or TASKS, evaluating delivery decomposition, establishing stage readiness, or reassessing affected feature/steering documents."
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "line": 11,
+      "text": "| SPEC root and applicable children | Conformance to accepted PROJECT, ARCHITECTURE and DECOMPOSITION; coherent, complete and assessable contracts. | Dependent PLAN authoring. |"
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "line": 12,
+      "text": "| PLAN root and applicable children, with layout where relevant | SPEC coverage/conformance, bounded incremental delivery, phase/milestone decomposition and feasible exits/dependencies. | Dependent TASKS generation. |"
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "line": 13,
+      "text": "| TASKS or active FEATURE-TASKS | PLAN conformance, complete executable coverage, bounded task decomposition, dependencies, unique identity and review units; trace acceptance back to SPEC. | Dependent implementation or hosted projection. |"
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "line": 19,
+      "text": "## Decomposition and count policy"
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "line": 28,
+      "text": "| 3\u20135 | Preferred starting range; still inspect actual scope and cohesion. A count in range cannot establish good decomposition. |"
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "line": 40,
+      "text": "**SPEC against design:** compare structural ownership, interfaces, dependency direction and cross-component obligations with ARCHITECTURE/DECOMPOSITION; trace accepted project outcomes and non-goals into canonical behavioral contracts and objective acceptance. Assess missing/contradictory responsibilities, invented behavior, unsupported structural assumptions, error/resource/lifecycle contracts and parent-child coherence. Design may need correction rather than SPEC; resolve that conflict explicitly."
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "line": 78,
+      "text": "| sdd-plan | PLAN/SPEC conformance, phase/milestone decomposition and layout review; authorized strategy/layout corrections. |"
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "line": 79,
+      "text": "| sdd-tasks | TASKS/PLAN conformance, delivery task decomposition, hierarchy/dependency review and authorized initial task-list corrections. |"
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "line": 81,
+      "text": "| sdd-design | Accepted architectural/decomposition corrections where required; no automatic redesign by downstream owners. |"
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "line": 91,
+      "text": "Identify reviewed root/children and governing inputs by available commit plus blob identities, or exact content hashes for pending edits. Assess material changes to requirements, design, delivery strategy, task scope, dependencies, hierarchy or physical ownership. Routine task completion checkbox/evidence updates do not invalidate an unchanged decomposition or contract assessment by themselves; establish and report equivalence of the reviewed concern against the actual diff. A changed scope or upstream guarantee requires affected review even when its report says Ready. Do not infer currency from a filename or status label alone."
+    },
+    {
+      "path": "skills/sdd-conventions/references/modularity.md",
+      "line": 3,
+      "text": "Apply these checks to proposed or chosen designs and to implemented code, from architecture and component design through specification, planning, tasks, and code review. A review may assess a single existing choice; comparison with alternatives is optional."
+    },
+    {
+      "path": "skills/sdd-design/SKILL.md",
+      "line": 3,
+      "text": "description: Use when exploring a software project or feature, forming architecture decisions, developing a component decomposition, or creating, reviewing and revising docs/dev/PROJECT.md, ARCHITECTURE.md, DECOMPOSITION.md, and scoped architectural change documents before specification."
+    },
+    {
+      "path": "skills/sdd-design/SKILL.md",
+      "line": 10,
+      "text": "Apply the manager's [human document review](../sdd-manage/references/human-document-review.md) for PROJECT, ARCHITECTURE and DECOMPOSITION, including necessary feature design proposals, including direct calls. Newly created necessary documents pause for substantive human review before dependent progression. Reuse acceptable existing inputs after startup assessment without automatic interactive replay; requested interactive review comes first. Agent QC and repository-operation authority do not supply human acceptance."
+    },
+    {
+      "path": "skills/sdd-design/SKILL.md",
+      "line": 20,
+      "text": "| Define or revise major system blocks, dependency direction, and architectural decisions | [architecture](references/architecture.md) |"
+    },
+    {
+      "path": "skills/sdd-design/SKILL.md",
+      "line": 21,
+      "text": "| Define or revise component responsibilities, collaboration, and provisional interfaces | [decomposition](references/decomposition.md) |"
+    },
+    {
+      "path": "skills/sdd-design/SKILL.md",
+      "line": 27,
+      "text": "`PROJECT.md` owns the [concise project brief](references/project-brief.md), `ARCHITECTURE.md` owns high-level design, and `DECOMPOSITION.md` owns detailed logical component boundaries. Both architecture and decomposition may have focused children. Scoped feature documents express a proposed architectural delta where necessary. These documents inform SPEC; they neither replace its behavioral contracts nor authorize implementation, planning, layout authoring, or task execution."
+    },
+    {
+      "path": "skills/sdd-design/SKILL.md",
+      "line": 34,
+      "text": "| ARCHITECTURE | Major blocks, system-wide relationships and dependency direction, and consequential structural rationale. |"
+    },
+    {
+      "path": "skills/sdd-design/SKILL.md",
+      "line": 35,
+      "text": "| DECOMPOSITION | Logical components within those blocks: responsibility, collaboration, state ownership, and design-level interface and verification seams. |"
+    },
+    {
+      "path": "skills/sdd-design/SKILL.md",
+      "line": 42,
+      "text": "Use the relevant architecture or decomposition reference for read-only design review. Incorporation of accepted feature design into main PROJECT, ARCHITECTURE, or DECOMPOSITION belongs to **sdd-integrate-feature**."
+    },
+    {
+      "path": "skills/sdd-design/agents/openai.yaml",
+      "line": 3,
+      "text": "  short_description: \"Explore projects and define architecture and components\""
+    },
+    {
+      "path": "skills/sdd-design/agents/openai.yaml",
+      "line": 7,
+      "text": "  default_prompt: \"Use $sdd-design to explore this project and develop its project brief, architecture, or component decomposition as requested.\""
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "line": 1,
+      "text": "# Architecture"
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "line": 3,
+      "text": "Define the system's high-level arrangement and why it fits the project's purpose. Read the accepted PROJECT brief, exploration decisions and relevant existing project evidence. Apply the shared **sdd-conventions** modularity checks to major boundaries. Use [decomposition](decomposition.md) when responsibility analysis reaches detailed components."
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "line": 7,
+      "text": "- `docs/dev/PROJECT.md` provides the accepted project context under the canonical [project brief contract](project-brief.md). Preserve its intent/constraints without repeating the brief as architecture."
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "line": 8,
+      "text": "- `docs/dev/ARCHITECTURE.md` is a compact but substantive design entry point: a short orientation back to the brief; major blocks and their responsibilities; dependency direction and cross-block interactions; relevant external systems and data ownership; selected patterns, design principles, and consequential tradeoffs; system-wide architectural invariants; and a map of focused children when present."
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "line": 9,
+      "text": "- Focused children under `docs/dev/architecture/` may own a substantial architectural area. The root defines their scopes and system-wide relationships; each child adds detail within its area. Split for independent responsibility and navigability, not a fixed size or one child per task."
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "line": 11,
+      "text": "Keep project-specific links in ARCHITECTURE limited to useful navigation. Put detailed logical component responsibilities and collaboration in DECOMPOSITION, exact observable behavior and acceptance in SPEC, physical placement in layout, and delivery order in PLAN. Use the [document boundaries](../SKILL.md#document-boundaries) comparison to route shared interface, ownership, and invariant concerns by granularity. Record a design choice and its reason where that reason is needed to understand a durable constraint; avoid a chronological decision log in the current-state architecture."
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "line": 15,
+      "text": "For a new system, establish its intended blocks and dependency direction before expanding detailed components. For an existing system, inspect the relevant actual code and contracts; distinguish observed architecture from the intended change. Do not claim an inferred or proposed capability is already implemented. If the task is adoption of project-wide documents, describe the intended whole within the evidence available and surface gaps."
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "line": 17,
+      "text": "For a material architectural change, `docs/dev/FEATURE_ARCHITECTURE.md` may define the feature or revision's objective and scope, affected baseline blocks, proposed final arrangement, dependency or compatibility effects, and explicit non-goals. It is a scoped delta; unchanged architecture remains owned by the main document. Do not require this overlay for every feature or correction."
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "line": 21,
+      "text": "Check that every major responsibility has one owner, important interactions and dependencies are legible, architectural constraints support the desired outcomes, and remaining unknowns are explicit. Confirm PROJECT and ARCHITECTURE do not repeat one another and that any child scope is navigable from the root. Stop at architecture when the user requested only architecture; a sound architecture is not permission to author SPEC or start implementation."
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "line": 23,
+      "text": "Read PROJECT, the main ARCHITECTURE, and affected children as descriptions of the intended end state. Remove narration of earlier drafts or implementations, including \u201cformerly,\u201d \u201cnow,\u201d or \u201creplaces\u201d when those words describe an editing transition. State the settled arrangement directly; keep genuine compatibility constraints as present design constraints. A feature overlay may describe its proposed delta until **sdd-integrate-feature** incorporates the accepted change."
+    },
+    {
+      "path": "skills/sdd-design/references/decomposition.md",
+      "line": 1,
+      "text": "# Decomposition"
+    },
+    {
+      "path": "skills/sdd-design/references/decomposition.md",
+      "line": 3,
+      "text": "Refine accepted architecture into understandable component responsibilities and collaboration. ARCHITECTURE owns the major arrangement and consequential rationale; DECOMPOSITION owns logical units within it. Use the [document boundaries](../SKILL.md#document-boundaries) comparison when routing overlapping structural concerns. Read only the relevant architecture root and children, existing code or contracts where applicable, and the shared **sdd-conventions** modularity reference. Revisit architecture when decomposition reveals a weak block boundary rather than hiding the conflict in detail."
+    },
+    {
+      "path": "skills/sdd-design/references/decomposition.md",
+      "line": 7,
+      "text": "`docs/dev/DECOMPOSITION.md` is the compact entry point for the logical component model. Identify principal components within each architectural block, their responsibility and non-responsibility, provided and required interfaces at the level needed to assess the design, dependency direction, data or state ownership, lifecycle and failure boundaries when architectural, and relevant verification seams. Give each child document a precise scope and link to it from the root."
+    },
+    {
+      "path": "skills/sdd-design/references/decomposition.md",
+      "line": 9,
+      "text": "Focused children under `docs/dev/decomposition/` may detail a component or coherent area: subcomponents, collaboration, important invariants and design-level interface shape, and how it relates to its parent and peers. A parent defines relationships and shared constraints; a child owns detail. Split only when independent detail justifies it. Avoid duplicating the same normative interface in parent and child."
+    },
+    {
+      "path": "skills/sdd-design/references/decomposition.md",
+      "line": 11,
+      "text": "Interfaces here may be provisional enough to test the architecture for coherence. Link the relevant SPEC owners and consumers when established; a cross-component guarantee can span several structural units without being copied into each. Feed incompatible obligations back to the affected design or requirement owner for an accepted decision. Identify contract details that SPEC must settle; do not present undecided errors, formats, or behavior as final requirements. Do not turn component descriptions into a file inventory, implementation order, or task checklist."
+    },
+    {
+      "path": "skills/sdd-design/references/decomposition.md",
+      "line": 15,
+      "text": "Inspect actual component boundaries and dependents before proposing changes. `docs/dev/FEATURE_DECOMPOSITION.md` may describe only affected units, altered collaborations and interface boundaries, compatibility needs, and component impact for a scoped architectural revision. Reference unchanged main nodes rather than copying them. It may accompany FEATURE_ARCHITECTURE when both levels change; neither is obligatory for a change that does not affect its level."
+    },
+    {
+      "path": "skills/sdd-design/references/decomposition.md",
+      "line": 17,
+      "text": "Main architecture and decomposition describe the coherent intended system after accepted decisions are incorporated. Feature documents serve the proposed delta until **sdd-integrate-feature** incorporates the accepted change into the main documents. Do not leave both contradictory descriptions as current truth."
+    },
+    {
+      "path": "skills/sdd-design/references/decomposition.md",
+      "line": 23,
+      "text": "Read the main DECOMPOSITION and affected children as the intended component model. Remove narration of prior drafts or implementations after incorporating a feature; describe each settled boundary and responsibility directly. A feature overlay may describe the proposed change while it is active."
+    },
+    {
+      "path": "skills/sdd-design/references/exploration.md",
+      "line": 3,
+      "text": "Use conversational exploration to form decisions needed for project architecture and decomposition. Discussion, read-only inspection, small illustrative examples, and explicit tradeoffs are allowed. Do not write project files or run a project-changing prototype merely because a design appears ready."
+    },
+    {
+      "path": "skills/sdd-design/references/exploration.md",
+      "line": 30,
+      "text": "When PROJECT creation, revision or review is requested, load the [project brief](project-brief.md) contract to turn the seed and actual clarified decisions into the selected artifact. Its human checkpoint holds dependent architecture; conversational exploration alone does not authorize drafting."
+    },
+    {
+      "path": "skills/sdd-design/references/exploration.md",
+      "line": 32,
+      "text": "Architecture work is ready when the purpose and scope are understood, principal boundaries can be argued, and no unresolved question would force a material architecture choice to be invented. If the user requests architecture earlier, identify the missing decisions and distinguish blockers from deliberate design options. Read [architecture](architecture.md) only when architecture becomes the requested work. Read [decomposition](decomposition.md) only when detailed components become the requested work."
+    },
+    {
+      "path": "skills/sdd-design/references/project-brief.md",
+      "line": 7,
+      "text": "The brief provides shared context for architecture and later specification. Keep it proportionate to the project and clear enough for the human to confirm its direction. No fixed heading schema, word count or exhaustive feature catalogue is required. A short seed is an input, not necessarily a sufficient brief; expand it using actual clarification rather than inventing accepted decisions."
+    },
+    {
+      "path": "skills/sdd-design/references/project-brief.md",
+      "line": 9,
+      "text": "PROJECT owns project intent and principal scope. ARCHITECTURE owns structural arrangements and rationale; DECOMPOSITION owns logical components; SPEC owns precise observable behavior/acceptance; PLAN owns delivery order; layout owns physical paths; TASKS owns executable work. Do not turn the brief into any of those documents. Consequential accepted technical choices or distinctive requirements may appear as constraints/principal scope without copying their full downstream contracts."
+    },
+    {
+      "path": "skills/sdd-design/references/project-brief.md",
+      "line": 17,
+      "text": "Resolve missing decisions that would otherwise force a material project/architecture choice to be invented. Non-blocking details may remain explicitly delegated to later stages. Reasonable proposed defaults can be presented for human confirmation; do not label them accepted requirements. State missing clarification provenance rather than claiming the seed supplied later choices."
+    },
+    {
+      "path": "skills/sdd-design/references/project-brief.md",
+      "line": 39,
+      "text": "6. Apply the manager's [human document review](../../sdd-manage/references/human-document-review.md): present the brief and concise substantive analysis, then pause after a newly created necessary PROJECT before dependent architecture/other use. Clarification, QC and commits/pushes do not supply human acceptance. Requested interactive review or an actual pending decision remains binding on continuation."
+    },
+    {
+      "path": "skills/sdd-design/references/project-brief.md",
+      "line": 45,
+      "text": "The handoff identifies the actual PROJECT state, accepted/proposed/pending decisions, material constraints/questions and next authorized owner. Only after the necessary human checkpoint and technical readiness are satisfied may the manager hand the accepted brief to [architecture](architecture.md). If a brief-only scope was requested, stop at its review/result; acceptance alone does not authorize unrelated downstream work."
+    },
+    {
+      "path": "skills/sdd-implement/references/startup-and-continuation.md",
+      "line": 46,
+      "text": "After pushing outstanding commits and reconciling pending state, use **sdd-manage**'s **Document QC gates** reference before new task execution or hosted projection. Inspect current owning task/design/SPEC/PLAN/layout review scope and evidence; ordinary completion status updates alone do not invalidate unchanged contract/decomposition review. Do not use a stale Ready label to resume changed requirements or select a guessed repair scope. Coordinate focused missing review within existing authorization; report a correction requiring new decisions or paths as a blocker. This does not postpone publication of an already verified committed result or authorize new implementation while resolving readiness."
+    },
+    {
+      "path": "skills/sdd-integrate-feature/SKILL.md",
+      "line": 3,
+      "text": "description: Use when incorporating accepted feature or change documents into the main PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, or layout documents, or reconciling TASKS and FEATURE-TASKS from accepted feature deltas, including optional incorporation of FEATURE-TASKS into TASKS. Reconcile one selected document or a bounded set without requiring task-list changes."
+    },
+    {
+      "path": "skills/sdd-integrate-feature/SKILL.md",
+      "line": 12,
+      "text": "Identify the requested target set before editing: PROJECT, ARCHITECTURE and its children, DECOMPOSITION and its children, SPEC and its children, PLAN and its children, layout and its children, TASKS, or FEATURE-TASKS. Reconcile any subset whose accepted source delta and main owner are established. Include TASKS or FEATURE-TASKS only when task-list reconciliation is requested or explicitly included in the coordinated scope. Transferring task ownership into TASKS requires both TASKS and FEATURE-TASKS in the edit scope so each task retains exactly one executable entry. TASKS-only reconciliation may revise existing main entries but does not copy active feature tasks. A document-only reconciliation can leave FEATURE-TASKS active; report its affected links or assumptions for later work."
+    },
+    {
+      "path": "skills/sdd-integrate-feature/references/feature-incorporation.md",
+      "line": 10,
+      "text": "2. For PROJECT, integrate changes to purpose, users, scope, outcomes, or constraints into the brief. For ARCHITECTURE and DECOMPOSITION, integrate accepted block and component boundaries, dependencies, interfaces, and relevant rationale into the owning root and focused children. Preserve the difference between architectural structure and final behavioral contracts."
+    },
+    {
+      "path": "skills/sdd-manage/references/branch-management.md",
+      "line": 43,
+      "text": "Apply this gate to initial project preparation, feature preparation, and accepted project-document preparation needed by a revision, including direct calls to document owners. Preimplementation project documents include PROJECT, architecture/decomposition and children, SPEC, PLAN/layout, TASKS and feature counterparts, their required adjacent QC reports, feature navigation, and applicable root orientation/disclosure. Commit these owned artifacts on a dedicated design-docs branch before implementation. Campaign review/revision plans and reports remain on the campaign revision branch; they are outside this gate. Document amendments and task/status evidence produced during already active implementation or checkpoint steering remain with that scoped working branch; do not relocate ongoing execution or historical records."
+    },
+    {
+      "path": "skills/sdd-manage/references/document-qc-gates.md",
+      "line": 10,
+      "text": "| PLAN / FEATURE-PLAN with relevant layout | sdd-plan: SPEC conformance and phase/milestone decomposition | TASKS / dependent feature tasks |"
+    },
+    {
+      "path": "skills/sdd-manage/references/examples.md",
+      "line": 127,
+      "text": "- \u201cPrepare the whole greenfield project through TASKS\u201d: create/QC/persist PROJECT, present substantive analysis and pause. Acceptance permits the authorized ARCHITECTURE step; repeat at each necessary root, with SPEC before PLAN and separate PLAN/layout checkpoints."
+    },
+    {
+      "path": "skills/sdd-manage/references/examples.md",
+      "line": 129,
+      "text": "- \u201cReview the existing architecture with me, then continue\u201d: begin with concise structural analysis and resolve that selected interactive review before dependent work."
+    },
+    {
+      "path": "skills/sdd-manage/references/examples.md",
+      "line": 131,
+      "text": "- A small feature reuses sufficient architecture/strategy/layout: create only the necessary FEATURE-SPEC and FEATURE-TASKS deltas, reviewing each new proposal before dependent work. A larger delta reviews each needed design/PLAN/placement proposal separately."
+    },
+    {
+      "path": "skills/sdd-manage/references/human-document-review.md",
+      "line": 17,
+      "text": "| PROJECT | sdd-design | Dependent ARCHITECTURE or other use of the brief. |"
+    },
+    {
+      "path": "skills/sdd-manage/references/human-document-review.md",
+      "line": 18,
+      "text": "| ARCHITECTURE / FEATURE_ARCHITECTURE | sdd-design | Dependent DECOMPOSITION or contract work. |"
+    },
+    {
+      "path": "skills/sdd-manage/references/human-document-review.md",
+      "line": 19,
+      "text": "| DECOMPOSITION / FEATURE_DECOMPOSITION | sdd-design | Dependent SPEC. |"
+    },
+    {
+      "path": "skills/sdd-manage/references/human-document-review.md",
+      "line": 25,
+      "text": "Preserve dependency order: PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout, TASKS. PLAN and layout have distinct checkpoints even when requested together. Optional feature overlays remain optional; reuse sufficient main design, strategy and layout. Do not create documents merely to fill this table. A feature brief is established in exploration/package evidence; create PROJECT only when genuinely selected. Use existing layout/feature-plan owners for a scoped placement proposal, without inventing a FEATURE-LAYOUT filename."
+    },
+    {
+      "path": "skills/sdd-manage/references/workflows.md",
+      "line": 11,
+      "text": "| Main development | Define and deliver the complete intended project, reusing sufficient accepted inputs when available. | Exploration \u2192 architecture/decomposition \u2192 SPEC \u2192 PLAN/layout \u2192 TASKS \u2192 bounded implementation and verification. |"
+    },
+    {
+      "path": "skills/sdd-manage/references/workflows.md",
+      "line": 33,
+      "text": "| Prepare initial development | Enforce [document QC gates](document-qc-gates.md) between dependent stages, including scoped corrections/rechecks and adjacent reports. Use **sdd-design** and its [project brief contract](../../sdd-design/references/project-brief.md) for PROJECT (concise purpose/users/outcomes/scope/constraints), then architecture and decomposition; **sdd-specify** for behavior and acceptance; **sdd-plan** for delivery strategy and layout; **sdd-tasks** for TASKS. Resolve consequential decisions as they arise. | Selected preparation artifacts and open decisions. A preparation-only request stops before implementation. |"
+    },
+    {
+      "path": "skills/sdd-manage/references/workflows.md",
+      "line": 87,
+      "text": "Use [human document review](human-document-review.md) for both initial and feature preparation. Guide the human through every necessary newly created root/proposal; hold dependent progression for its acceptance. PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS each have their own boundary; PLAN/layout are separate even in a combined request. Feature campaigns review their necessary deltas and reuse sufficient existing main inputs without inventing optional overlays."
+    },
+    {
+      "path": "skills/sdd-orient/references/inspection-and-handoff.md",
+      "line": 36,
+      "text": "docs/dev/ARCHITECTURE.md   docs/dev/architecture/"
+    },
+    {
+      "path": "skills/sdd-orient/references/inspection-and-handoff.md",
+      "line": 37,
+      "text": "docs/dev/DECOMPOSITION.md  docs/dev/decomposition/"
+    },
+    {
+      "path": "skills/sdd-orient/references/inspection-and-handoff.md",
+      "line": 42,
+      "text": "docs/dev/FEATURE_ARCHITECTURE.md"
+    },
+    {
+      "path": "skills/sdd-orient/references/inspection-and-handoff.md",
+      "line": 43,
+      "text": "docs/dev/FEATURE_DECOMPOSITION.md"
+    },
+    {
+      "path": "skills/sdd-plan/SKILL.md",
+      "line": 27,
+      "text": "Before authoring, read the relevant PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, their focused children, and any existing PLAN and layout. Inspect relevant code, tests, and packaging for existing projects; distinguish observed placement from intended placement. If inputs conflict or a required behavioral or architectural decision is unresolved, identify its owner instead of silently settling it in PLAN or layout. Start at the requested operation when its inputs are established."
+    },
+    {
+      "path": "skills/sdd-plan/references/delivery-plan.md",
+      "line": 7,
+      "text": "1. Map the accepted architecture and decomposition to the behavioral contracts and end-to-end acceptance in SPEC. Identify critical dependencies and the points where components must integrate."
+    },
+    {
+      "path": "skills/sdd-plan/references/physical-layout.md",
+      "line": 9,
+      "text": "3. Define placement and dependency rules where multiple units could otherwise claim a path. Explain exceptions needed to keep the layout coherent. Avoid duplicating behavior from SPEC or interfaces from DECOMPOSITION."
+    },
+    {
+      "path": "skills/sdd-plan/references/review.md",
+      "line": 7,
+      "text": "Check that strategy belongs in PLAN, physical ownership in layout, behavior in SPEC, and executable units and status in TASKS or active FEATURE-TASKS. Check alignment with PROJECT, ARCHITECTURE, DECOMPOSITION, and SPEC. Review parent-child links and component-to-path routing in both directions, including tests, documentation, and integration. Read the main PLAN and layout nodes as standalone end-state descriptions without editing-history language; genuine compatibility and transition obligations may refer to an earlier released state."
+    },
+    {
+      "path": "skills/sdd-specify/SKILL.md",
+      "line": 24,
+      "text": "Before authoring, identify accepted decisions and the relevant PROJECT, ARCHITECTURE, DECOMPOSITION, existing SPEC, and applicable focused children. For an existing implementation, inspect only relevant code and tests to establish observed behavior; do not promote an observation into a requirement without an accepted decision. If a material architectural boundary is undecided or governing sources conflict, return that decision to design or the user rather than inventing a contract."
+    },
+    {
+      "path": "skills/sdd-specify/SKILL.md",
+      "line": 28,
+      "text": "SPEC is authoritative for intended observable behavior and acceptance. PROJECT owns the brief; ARCHITECTURE and DECOMPOSITION own structural design; PLAN owns delivery strategy; TASKS and an active FEATURE-TASKS own their respective executable units; layout owns physical paths. Use **sdd-conventions** when evaluating contract boundaries and necessary decomposition, without moving those shared checks into SPEC procedure. A feature specification states a scoped intended delta; it does not silently replace the complete main SPEC."
+    },
+    {
+      "path": "skills/sdd-specify/references/change-specification.md",
+      "line": 14,
+      "text": "Reference unaffected main SPEC nodes rather than copying them. If the change alters structural boundaries, align with applicable FEATURE_ARCHITECTURE or FEATURE_DECOMPOSITION decisions; those documents are needed only when their level actually changes. Treat implementation evidence as observed state, not automatic approval of a new requirement."
+    },
+    {
+      "path": "skills/sdd-specify/references/review.md",
+      "line": 5,
+      "text": "Check the canonical behavioral owner, relevant structural owner links, and affected consumers using [design traceability](system-specification.md#design-traceability). Ensure cross-component guarantees identify participating boundaries and design/contract conflicts are surfaced for accepted decisions. Recheck parent-child routing, public contracts, errors, formats, compatibility, and end-to-end acceptance. Compare with PROJECT, ARCHITECTURE, and DECOMPOSITION; report needed decisions to their owners. Identify impacts on PLAN, TASKS, any active FEATURE-TASKS, tests, and user documentation. A direct correction belongs to the owning SPEC node under [system specification](system-specification.md); incorporating an accepted feature delta into main documents belongs to **sdd-integrate-feature**."
+    },
+    {
+      "path": "skills/sdd-specify/references/review.md",
+      "line": 17,
+      "text": "Apply **sdd-conventions**' **Development-document QC** criteria. Review the selected SPEC root and applicable children against accepted PROJECT, ARCHITECTURE and DECOMPOSITION (feature deltas against their accepted main/feature inputs). Identify exact reviewed/governing states and group contract-to-design coverage using existing IDs/links. Check outcomes/non-goals, responsibility/interface/dependency consistency, unsupported structural assumptions, success/error/resource/lifecycle obligations, objective acceptance and parent-child coherence. Missing or contradictory significant obligations block dependent PLAN authoring."
+    },
+    {
+      "path": "skills/sdd-specify/references/system-specification.md",
+      "line": 16,
+      "text": "PROJECT owns the fuller project brief; ARCHITECTURE and DECOMPOSITION own the structural rationale. Include only the structural facts needed to make behavior intelligible. Do not copy design documents into SPEC or reduce its root to a table of contents."
+    },
+    {
+      "path": "skills/sdd-specify/references/system-specification.md",
+      "line": 20,
+      "text": "SPEC defines the observable guarantees the selected structure must satisfy. Link relevant contracts to responsible components in DECOMPOSITION and, where consequential, their consumers and architectural constraints. Cross-component guarantees have a canonical behavioral owner with links to participating boundaries; do not repeat the contract in every component description or require one specification per component."
+    },
+    {
+      "path": "skills/sdd-tasks/SKILL.md",
+      "line": 24,
+      "text": "Read the relevant accepted PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout, and their focused children or active feature documents as needed for the operation. Inspect TASKS and any active FEATURE-TASKS, Git evidence, and affected code or tests when status or existing work matters. Use **sdd-conventions** to assess task boundaries and Phase \u2192 Milestone \u2192 Task identity and parentage. Do not invent requirements, delivery strategy, or physical ownership when those inputs are unresolved."
+    },
+    {
+      "path": "skills/sdd-tasks/references/conformance-review.md",
+      "line": 1,
+      "text": "# Task-list conformance and decomposition review"
+    },
+    {
+      "path": "skills/sdd-tasks/references/progress-review.md",
+      "line": 17,
+      "text": "Use [conformance review](conformance-review.md) for task structure, PLAN alignment and preparation gates. Progress checks report missing/stale preparation evidence without automatically repairing documents. Ordinary status/evidence changes alone do not invalidate unchanged contract/decomposition review; changed scope, hierarchy, dependencies or upstream decisions require affected reassessment under the shared QC policy."
+    }
+  ]
+}

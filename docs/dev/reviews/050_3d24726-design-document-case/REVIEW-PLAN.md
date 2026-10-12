@@ -14,3 +14,7 @@
 | U-001 | Inventory current entry/README, skills/references/metadata, capability/source guides, acceptance templates/contracts/helpers/tests and current examples. Distinguish canonical document names/shorthand, conceptual activities, reference-file paths, readable headings and preserved quoted/machine syntax. Identify confirmed case inconsistencies and context-dependent recommendations; inspect shared style guidance for a usable rule. | Located findings, preservation cases and a proposed concise casing convention in REVIEW-REPORT.md. |
 
 Exclude closed campaign/feature/phase packages and historical exploration transcripts from current-validity review; preserve their paths/objects. Do not uppercase all matches or rename lowercase skill references/directories. Publish this opening then the completed unit/report with scoped links/Markdown/path checks. Stop on the open review branch before source revisions or main integration; proposed corrections require acceptance.
+
+## Review result
+
+U-001 completed in [REVIEW-REPORT.md](REVIEW-REPORT.md). Six explicit document-reference locations warrant uppercase normalization; ambiguous activity/artifact references and a concise shared convention are proposed separately. Generic terms and literal paths should retain their appropriate case. No source repair or integration performed.
