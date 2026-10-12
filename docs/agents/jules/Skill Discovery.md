@@ -2,7 +2,9 @@
 > 
 > Use this prompt at the beginning of a new Jules' **Interactive plan** session to force it discover skills (.agents/skills/) and plugins (.agents/plugins/). The prompt attempts to suppress
 > 
-> - clarifying questions submission of response as a repo PR.
+> - clarifying questions,
+> - plan approval,
+> - submission of response as a repo PR.
 
 Discover all available repository-provided skills and plugins, including nested skills. Inspect their manifests, metadata, and entry-point documentation to identify their purposes and capabilities.
 
