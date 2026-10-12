@@ -16,3 +16,7 @@ Reviewed PLUGIN.md's named skill occurrences in context. Expanded three sdd-mana
 ## Integration and limits
 
 Opening/plan publication was read back before source edits. Source/result evidence is persisted together; actual committed ZIP and final support/publisher regressions assess the complete boundary. Explicit two-parent main integration and remote readback establish closure. No manifest, packaging rule, runtime code, other skill or closed record changed. No installed-client or live consumer/provider execution is claimed.
+
+## Committed package verification
+
+[Native checks](evidence/package-checks.json) at published/read-back source `294977197a42005b15709256962ceb4c1363dd08`: canonical manifest valid, two identical 134-file builds, exact shipped PLUGIN.md bytes including the requested first-byte front matter, and unchanged other source/closed records. The added metadata is document content; it supplies no verified client loading behavior. Final merged-state regressions precede main publication.
