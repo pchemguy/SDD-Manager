@@ -2,57 +2,37 @@
 
 **Develop from explicit requirements, implement in bounded steps, and keep the human in control.**
 
-SDD Manager is a learning-by-doing experiment in specification-driven development with coding agents, packaged as an Agent Plugin for Git repositories. Practical project runs inform its refinement; source and local checks establish only their recorded coverage, and installed-client or live acceptance is reported separately. It takes a project from exploration and design through specifications, plans, executable task lists, implementation, and verification. It also supports feature changes, interruption recovery, and focused amendments at implementation checkpoints.
+SDD Manager is a learning-by-doing experiment in specification-driven development with coding agents, packaged as an Agent Plugin for Git repositories. It composes focused skills into workflows for exploration, design, specification, planning, implementation, verification and releases. Practical project runs inform its refinement; local source checks and live agent/client acceptance have distinct evidence boundaries.
 
-Start with **sdd-manage**, the central coordinator. It routes your request to the relevant skills, reuses established project decisions, and stops at the boundary you specify.
-
-Formal revisions support [nested revision campaigns and reopened campaign amendments](skills/sdd-manage/references/revision-modes.md). Nested revisions suspend an active campaign and default to its branch as source/return target; eligible human-authorized amendments reuse the last closed revision’s identity. Both verify/publish integration and return the worktree to the interrupted branch without automatically resuming its work.
+The agent entry is [PLUGIN.md](PLUGIN.md). Start with **sdd-manage** for coordinated work; it routes requests, reuses established decisions and honors your stopping boundary. PLUGIN.md describes how the skills work together, while each SKILL.md and its selected references own detailed instructions. Load the entry explicitly when your client does not expose it; automatic loading is client-dependent.
 
 Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).
 
 ## Getting started
 
-For a new project, copy the [Greenfield Project Prompt Template](<Greenfield Project Prompt Template.md>) and replace its project, repository and token placeholders. SDD Manager supplies the startup procedures and workflow checkpoints.
+Load the package using your agent client's supported plugin mechanism. Project changes require an existing eligible Git worktree, access to its files and tools, and respect for its controlling instructions. Repository initialization is outside the plugin's scope. Checks use the target project's declared tools.
 
-The draft [Tetris demo and test guide](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/README.md) illustrates phased project delivery and a baseline followed by a feature campaign.
+For a new project, copy the [Greenfield Project Prompt Template](<Greenfield Project Prompt Template.md>) and replace its project, repository and token placeholders. The [Tetris demo](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/README.md) illustrates phased delivery and feature expansion; the [Calculator demo](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/calculator/README.md) proposes a simpler phase/feature sequence.
 
-The draft [Calculator demo and test guide](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/calculator/README.md) follows three initial phases, optional steering exercises, and a proposed feature/release sequence.
-
-Load the package using your agent client's supported plugin mechanism. The package uses the Agent Plugins 1.0 root `plugin.json` manifest, with OpenAI presentation metadata under `extensions.com.openai.interface`, 15 skills under `skills/` and bundled icons under `assets/`. Manifest paths resolve from the repository/package root. The workflows require an agent with access to project files and the tools needed for the requested work.
-
-- **Project changes:** Use an existing, eligible Git worktree with applicable project instructions. Repository initialization is outside the plugin's scope.
-- **First SDD commit:** Ensure a concise root `AGENTS.md` provides current purpose, canonical owners, validated commands and instruction navigation; preserve existing human instructions. Include root `AI_DISCLOSURE.md` and `SDD-MANAGER.md` from the bundled assets, with discoverable README links. Preserve and reconcile existing disclosures. See [repository bootstrap](skills/sdd-manage/references/repository-bootstrap.md) for ownership, explicit scope limits and resumable adoption.
-- **Commits and pushes:** Establish the branch and remote destination. Implementation pushes outstanding commits before starting further task work, then commits and pushes each completed task before advancing.
-- **Checks:** Use the project's declared test, build, and documentation tools.
-- **Authentication:** Attempt pushes with the current shell session. On an access/credential failure, sdd-manage reuses a suitable ignored repository token or requests and saves one beside the root .gitignore before recovering the client session. `*.tkn` files remain untracked.
-- **Hosting:** GitHub access is needed only for remote operations. The conventional fine-grained token selects solely the target repository with read/write for Commit statuses, Contents, Issues, Pull requests, and Workflows; Metadata read access is automatic. Add Actions access when required for workflow dispatch or private run inspection. Git and API clients authenticate separately. Local development does not require a hosting token.
-
-Give the coordinator a concrete objective and stopping point. For example:
+Give the coordinator an objective and stopping point:
 
 ```text
-Use sdd-manage to inspect this repository and prepare the development
-specification, plan, layout, and task list for a line-based archive reader.
-Use the attached brief as input. Stop before implementation.
+Use sdd-manage to inspect this repository and prepare its development
+specification, plan, layout and task list. Use the attached brief as input.
+Stop before implementation.
 ```
 
-Once the task list is ready:
+Once the required documents are accepted:
 
 ```text
 Use sdd-manage to implement milestone 1.1 from TASKS.md.
-Verify, commit, and push each completed task on its phase branch.
-If the phase remains incomplete, pause without merging into main.
-Integrate only a complete verified phase, then stop at my requested boundary.
+Verify, commit and push each completed task. If its phase is incomplete,
+pause without merging. Integrate only an eligible complete boundary.
 ```
 
-Use the milestone and task IDs from your actual task list. You can start at a later stage when its inputs are already established; the coordinator does not repeat earlier stages by default.
+Use your actual task/milestone IDs. You can enter a later stage when its inputs are established. The first authorized SDD commit includes the target's AGENTS.md orientation, usage/disclosure records and README navigation under [repository bootstrap](skills/sdd-manage/references/repository-bootstrap.md).
 
-## Plugin package
-
-The package includes root `plugin.json`, root `README.md`, `AGENTS.md`, `Greenfield Project Prompt Template.md`, `LICENSE`, `SDD-MANAGER.md` and `AI_DISCLOSURE.md`, `skills/`, and `assets/`. Root `plugin.json` is the sole manifest and declares the Agent Plugins 1.0 schema. OpenAI interface metadata is namespaced under `extensions.com.openai`; schema validation alone does not establish installed-client compatibility.
-
-SDD Manager's skills are distributed together and use relative links for shared guidance and named workflow handoffs. These references remain inside the plugin package; client support for loading and routing is verified separately. See [bundled-skill development guidance](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md#bundled-skill-references).
-
-Artwork is provided as `assets/icon.svg`, `assets/icon.png`, `assets/logo.svg`, and `assets/logo.png`. Manifest presentation paths use `assets/icon.svg` for the composer icon and `assets/logo.svg` for the logo, including their dark variants. README is user-facing package documentation; runtime workflow instructions live in the skills. Acceptance and development material linked here belongs to the source repository and is outside the pinned skill package.
+Hosting is optional for local work. Use existing shell/API authentication; credential failures follow [credential recovery](skills/sdd-manage/references/credentials.md), using ignored protected token storage. Git and API access are separate. The [GitHub backend](skills/sdd-forge/references/github.md) defines the scoped permission profile; Actions access is conditional on requested workflow operations. Supplying credentials does not accept documents or widen the work scope.
 
 ## Core development workflows
 
@@ -66,19 +46,62 @@ Artwork is provided as `assets/icon.svg`, `assets/icon.png`, `assets/logo.svg`, 
 
 Main describes the development purpose, not the default Git branch. The [canonical workflow model](skills/sdd-manage/references/workflows.md#core-development-workflows) defines entry and scope; the operations below are stages or supporting work, rather than additional core workflows.
 
-## Human document review
+## Operations
 
-Greenfield preparation walks the human through each necessary new document: PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS. Each receives concise substantive analysis and its own human review pause before dependent work; PLAN and layout remain separate. Agent QC and standing Git authorization do not accept these documents.
+| Objective | Example request | Result |
+| --- | --- | --- |
+| Explore and prepare a project | “Compare approaches, then prepare the project through TASKS.” | Accepted design, behavior, delivery strategy, physical ownership, and executable tasks. |
+| Prepare a feature | “Define ZIP support and its feature task list.” | Scoped requirements and the necessary feature design, plan, and tasks. |
+| Implement a range | “Implement the next three tasks and stop.” | Verified task commits on the phase/feature branch; incomplete phases pause, while eligible complete boundaries explicitly integrate and publish. |
+| Resume interrupted work | “Resume milestone 2.2 without discarding pending work.” | Existing work inspected and continued before new tasks are selected. |
+| Amend at a checkpoint | “Remove encrypted streams from the implemented scope, including tests and documentation.” | Verified amendment explicitly merged into the paused implementation branch, published, then control returned to the human. |
+| Integrate an accepted feature | “Incorporate FEATURE-SPEC into SPEC only.” | Selected main documents reconciled without unrelated task-list changes. |
+| Review and revise a project | “Plan a systematic review,” “Review this protocol,” or “Implement accepted findings.” | Retained campaign plans/reports, stable findings, and authorized verified revisions incorporated into governing documents. |
+| Review or maintain a scope | “Review PLAN,” “Verify this phase,” or “Align README.” | Findings, evidence, or the explicitly requested maintenance. |
+| Review a release candidate | “Run a comprehensive prerelease review of this candidate.” | Complete current-product coverage, candidate-specific findings and readiness; published report, with repairs and release kept within separately authorized scope. |
+| Prepare a release message | “Prepare release message,” “Draft release notes,” or “Update the release notes.” | Complete Markdown at root `RELEASE-NOTES.md`: curated Git changes plus applicable overview, compatibility, installation and limitation sections; retained and atomically refreshed, without publication. |
+| Collect release highlights | “Summarize key changes since the latest release; update the draft incrementally.” | Provider-independent Git range, curated ignored YAML checkpoint and highlights only; no hosting access or publication required. |
+| Prepare release packaging | “Verify this ZIP and prepare a workflow that builds it.” | Assessed package contents, stable asset names, build/checksum procedure and verified workflow preparation; interactive development when needed. |
+| Create a GitHub release | “Create release v1.2.3 from the verified commit using the configured packages.” | One publisher, complete assets, release state/readback and applicable stable download URLs; actual CI/download verification limits. |
+| Synchronize GitHub tracking | “Create issues and milestones for these tasks.” | Phase labels, milestones, task issues, and verified task associations. |
 
-Existing or interrupted preparation starts with assessment of actual progress and normally continues using acceptable inputs. Explicitly requested interactive reviews come first; important startup issues can prompt an offer. Feature campaigns apply the same approach to necessary new deltas, reusing sufficient main inputs and keeping optional overlays optional. See [human document review](skills/sdd-manage/references/human-document-review.md) for decision and continuation rules.
+Preparation and review stop before implementation unless your request includes it. Steering finishes the amendment and returns control to you; you separately decide when to resume the task list. Transferring feature tasks into the main task list requires both lists in scope so each task retains one executable owner.
 
-## Workflow diagrams
+For detailed entry conditions and stopping rules, see the [workflow catalog](skills/sdd-manage/references/workflows.md).
 
-`sdd-manage` coordinates scope, prerequisites and stopping boundaries; `sdd-orient` establishes actual repository state, including retained work on continuation. The diagrams show common handoffs. Enter at the stage supported by current inputs, use `sdd-conventions` where relevant, and honor explicit user boundaries. A blocker preserves valid work and stops the affected path until resolved.
+## Project documents and checkpoints
+
+The main documents describe the complete intended project. Roots may link to focused children; executable work is derived only after the required inputs are ready.
+
+| Document under `docs/dev/` | Owns |
+| --- | --- |
+| `PROJECT.md` | Purpose, users, scope, outcomes, and constraints. |
+| `ARCHITECTURE.md` | Major blocks, relationships, dependency direction, and design decisions. |
+| `DECOMPOSITION.md` | Component responsibilities, collaborations, and design-level interfaces. |
+| `SPEC.md` | Required behavior, final contracts, errors, invariants, and acceptance. |
+| `PLAN.md` | Meaningful end-to-end MVP, small capability increments, phases/milestones, dependencies, and verification/decision gates. |
+| `layout.md` | Physical ownership of source, tests, documentation, and other artifacts. |
+| `TASKS.md` | Phase → Milestone → Task hierarchy, stable IDs, and progress evidence. |
+
+### Human review
+
+Greenfield preparation walks you through PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS. Each necessary newly created document gets substantive analysis and its own human acceptance checkpoint before dependent work; PLAN and layout remain separate. Clarification answers, agent QC and standing Git authorization do not accept documents.
+
+Existing or interrupted preparation assesses actual progress and continues using acceptable inputs. Requested interactive reviews come first; important startup issues can prompt concerns. Feature preparation reviews only necessary deltas and reuses sufficient main inputs. See [human document review](skills/sdd-manage/references/human-document-review.md).
+
+### Agent quality checks
+
+SPEC is checked against accepted PROJECT/design; PLAN/layout against SPEC; TASKS against PLAN before execution or hosted projection. Adjacent QC reports retain findings and rechecks; unresolved confirmed blockers stop dependent work. See [document quality gates](skills/sdd-manage/references/document-qc-gates.md) and [shared QC policy](skills/sdd-conventions/references/development-document-qc.md) for reports, decomposition and task-sizing guidance.
+
+PLAN begins with a meaningful end-to-end MVP and grows through small testable increments. Feature documents use FEATURE_ARCHITECTURE.md, FEATURE_DECOMPOSITION.md, FEATURE-SPEC.md, FEATURE-PLAN.md and FEATURE-TASKS.md as needed; accepted deltas are incorporated through sdd-integrate-feature. Steering directly amends existing documents.
+
+## Workflow guide
+
+These diagrams explain the human-visible paths. [PLUGIN.md](PLUGIN.md#composite-and-hybrid-workflows) defines agent selection, handoffs and operational boundaries. Enter at the stage supported by current inputs; a blocker preserves work and stops the affected path.
 
 ### Project preparation
 
-Project preparation runs on a dedicated `design-docs/main` or scoped `design-docs/<campaign>-<slug>` branch. Each document owner reviews its artifact against accepted upstream inputs and corrects findings within authorized scope before the next stage. SPEC/PLAN/TASKS QC produces adjacent review reports. Each necessary new root also has its own human checkpoint; the grouped diagram below does not combine those decisions.
+Each necessary new document has a separate human decision, even where the diagram groups stages. Preparation is persisted on design-docs; dependent implementation starts only after accepted preparation is integrated, verified and published to the actual default branch.
 
 ```mermaid
 flowchart TB
@@ -99,11 +122,11 @@ flowchart TB
     G --> B["Create implementation branch<br/>From published default checkpoint"]
 ```
 
-Preparation-only stops after the design-docs checkpoint. Before creating a dependent implementation branch, SDD Manager explicitly merges accepted project preparation into the actual default branch, verifies and publishes the merge, and confirms containment. Campaign plans and reports stay on their revision branch. See [preparation integration](skills/sdd-manage/references/branch-management.md#preparation-integration-gate) and [document QC gates](skills/sdd-manage/references/document-qc-gates.md).
+See [the owning workflow](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
 
 ### Implementation and continuation
 
-This diagram shows bounded main-phase execution. Before edits, tests or task selection, orient to the actual Git worktree and publish outstanding commits with remote readback. Then audit the claimed task closing boundary before advancing and establish requested tracking readiness for the eligible phase and selected tasks. A missing initial or added-task association blocks execution; an outage after verified activation can leave independent completion and hosted closure pending.
+Implementation publishes outstanding commits before auditing the task boundary and selecting further work. Each task closes with its result, evidence and checklist together. Requested tracking must be ready; a partial main-phase range publishes and pauses, while a complete eligible boundary integrates.
 
 ```mermaid
 flowchart TB
@@ -129,15 +152,11 @@ flowchart TB
     M --> E
 ```
 
-The entry audit runs after startup publication; the integration audit runs at the eligible merge boundary. Both inspect actual selected closing commits, including relevant merge parents. Each task closes with its result, current evidence and initial completion checkbox together under one leading `[T-XXX]` imperative subject. Authorized partial checkpoints remain unchecked and are referenced at closure. An invalid audit preserves work for scoped recovery; a merge summary cannot replace valid task commits. See the [task commit contract](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract).
-
-The tracking gate distinguishes **pending**, **verified** and **explicitly declined**. Verified activation allows only work with confirmed associations; added unprojected work must pass the gate too. After an activated outage, report closures as pending and continue only independent eligible work. Pending dependent closures or unknown effects block review and next-phase progression. `sdd-manage` owns the decision/readiness gate, `sdd-forge` owns hosted writes/readback and `sdd-implement` owns atomic task closure and publication.
-
-Milestone and phase review/report tasks run through the same cycle and supply their required code review, testing and exit evidence. An incomplete phase pushes and pauses. A request covering another phase continues only after verified integration/publication, from the updated target. Feature task execution reuses the cycle, with required accepted-document incorporation through `sdd-integrate-feature` before final boundary verification; feature and revision integration use their own eligibility gates. See [implementation](skills/sdd-implement/SKILL.md) and [Git workflows](skills/sdd-manage/references/git-workflows.md).
+See [the owning workflow](skills/sdd-implement/SKILL.md).
 
 ### Checkpoint steering
 
-The human commands an amendment at a paused implementation checkpoint. `sdd-steer` owns changes to the affected existing documents and implementation, including persistence and integration into that paused branch.
+You command an amendment at a paused implementation checkpoint. It updates existing documents, implementation and tests, integrates into the paused branch, then returns control. Assessment-only requests stop at impact; successful steering does not resume the task list.
 
 ```mermaid
 flowchart TB
@@ -152,11 +171,11 @@ flowchart TB
     G --> E["Return control to human<br/>Stop before task-list continuation"]
 ```
 
-An assessment-only request returns impact without taking the amendment path. Successful steering does not resume implementation automatically. See [steering](skills/sdd-steer/SKILL.md).
+See [the owning workflow](skills/sdd-steer/SKILL.md).
 
 ### Review and revision
 
-Focused owners assess the selected concerns; `sdd-report` composes the evidence. Source changes require revision authorization. An already accepted amendment can enter revision planning directly.
+Review produces findings; source changes require revision authorization. An accepted amendment can enter revision planning directly. Formal campaigns retain plans/reports; nested revisions and eligible reopened amendments keep their established source and return context.
 
 ```mermaid
 flowchart TB
@@ -176,156 +195,51 @@ flowchart TB
     G --> E
 ```
 
-Systematic reviews use a review plan; focused requests can supply the criteria directly. Repeat report checkpoints or revision actions as scoped, publishing each completed unit before dependent work. Reviewer assessment ends at its report commit; the encompassing workflow includes publication. Host automatic review has separate ownership and is not a skill handoff in these diagrams. See [review and revision](skills/sdd-manage/references/review-and-revision.md).
+See [the owning workflow](skills/sdd-manage/references/review-and-revision.md).
 
-## Operations
+## Release operations
 
-| Objective | Example request | Result |
-| --- | --- | --- |
-| Explore and prepare a project | “Compare approaches, then prepare the project through TASKS.” | Accepted design, behavior, delivery strategy, physical ownership, and executable tasks. |
-| Prepare a feature | “Define ZIP support and its feature task list.” | Scoped requirements and the necessary feature design, plan, and tasks. |
-| Implement a range | “Implement the next three tasks and stop.” | Verified task commits on the phase/feature branch; incomplete phases pause, while eligible complete boundaries explicitly integrate and publish. |
-| Resume interrupted work | “Resume milestone 2.2 without discarding pending work.” | Existing work inspected and continued before new tasks are selected. |
-| Amend at a checkpoint | “Remove encrypted streams from the implemented scope, including tests and documentation.” | Verified amendment explicitly merged into the paused implementation branch, published, then control returned to the human. |
-| Integrate an accepted feature | “Incorporate FEATURE-SPEC into SPEC only.” | Selected main documents reconciled without unrelated task-list changes. |
-| Review and revise a project | “Plan a systematic review,” “Review this protocol,” or “Implement accepted findings.” | Retained campaign plans/reports, stable findings, and authorized verified revisions incorporated into governing documents. |
-| Review or maintain a scope | “Review PLAN,” “Verify this phase,” or “Align README.” | Findings, evidence, or the explicitly requested maintenance. |
-| Review a release candidate | “Run a comprehensive prerelease review of this candidate.” | Complete current-product coverage, candidate-specific findings and readiness; published report, with repairs and release kept within separately authorized scope. |
-| Prepare a release message | “Prepare release message,” “Draft release notes,” or “Update the release notes.” | Complete Markdown at root `RELEASE-NOTES.md`: curated Git changes plus applicable overview, compatibility, installation and limitation sections; retained and atomically refreshed, without publication. |
-| Collect release highlights | “Summarize key changes since the latest release; update the draft incrementally.” | Provider-independent Git range, curated ignored YAML checkpoint and highlights only; no hosting access or publication required. |
-| Prepare release packaging | “Verify this ZIP and prepare a workflow that builds it.” | Assessed package contents, stable asset names, build/checksum procedure and verified workflow preparation; interactive development when needed. |
-| Create a GitHub release | “Create release v1.2.3 from the verified commit using the configured packages.” | One publisher, complete assets, release state/readback and applicable stable download URLs; actual CI/download verification limits. |
-| Synchronize GitHub tracking | “Create issues and milestones for these tasks.” | Phase labels, milestones, task issues, and verified task associations. |
+### Highlights and release messages
 
-Preparation and review stop before implementation unless your request includes it. Steering finishes the amendment and returns control to you; you separately decide when to resume the task list. Transferring feature tasks into the main task list requires both lists in scope so each task retains one executable owner.
+“Collect release highlights” produces curated Git changes only. “Prepare release message” assembles a complete message at root RELEASE-NOTES.md, adding applicable overview, compatibility, installation and limitation sections. Subsequent preparation refreshes coverage and preserves applicable human edits; the file remains until refreshed again. Explicit templates/paths and supplied-text-only editing retain their narrower scope.
 
-For detailed entry conditions and stopping rules, see the [workflow catalog](skills/sdd-manage/references/workflows.md).
+A release request checks local source coverage and the stated version; a matching version alone does not prove freshness. The finalized complete Markdown body is shared by the release commit and GitHub message, and the release tag points to that verified commit. See [release-message preparation](skills/sdd-forge/references/release-message.md) and the narrower [Git highlights workflow](skills/sdd-forge/references/release-highlights.md).
 
-### Release packages and commands
+### Packaging and publication
 
-A [comprehensive prerelease review](skills/sdd-manage/references/prerelease-review.md) assesses current product coherence, contracts, implementation, tests, documentation, README/AGENTS.md, diagrams and distribution evidence. Select it explicitly to open a review campaign. Release publication workflows provide an advisory reminder; this review is optional and does not block an authorized release or replace its required checks.
+Preparing a package/workflow does not publish a release. Publication uses verified local packages or an existing workflow, complete assets and provider readback; it does not require task tracking. Asset names are version-free, such as project.zip, while tags/metadata identify the version. Stable downloads use https://github.com/{OWNER}/{REPO}/releases/latest/download/{ASSET_NAME} and require the complete advertised latest-stable asset set.
 
-Use [complete release-message preparation](skills/sdd-forge/references/release-message.md) for requests to prepare, draft, assemble or update release messages/notes. Forge supplies Git highlights, report assembles applicable ancillary sections, and manage coordinates file ownership. Root `RELEASE-NOTES.md` is the default retained body-only output; honor a project template or explicit path. Subsequent preparation refreshes evidence and atomically replaces it, preserving applicable human content and the prior copy on failure. New generated output is ignored/untracked; existing tracked output stays tracked within authorized scope. A release request verifies current local notes coverage and stated version, refreshes stale material, and coordinates a release commit with the same complete Markdown body used for GitHub; the release tag points to that verified commit. Matching version alone does not prove freshness. The complete message remains after publication, while the internal highlights checkpoint has separate consumption cleanup. Explicit supplied-text-only editing remains narrower.
+See [packaging](skills/sdd-forge/references/github-packaging.md), [release workflows](skills/sdd-forge/references/github-release-workflows.md), [release creation](skills/sdd-forge/references/github-releases.md) and [verification](skills/sdd-verify/references/release-checks.md). An explicitly selected [comprehensive prerelease review](skills/sdd-manage/references/prerelease-review.md) provides candidate findings/readiness; its advisory reminder does not make that review mandatory for a release.
 
-Use [Git release highlights](skills/sdd-forge/references/release-highlights.md) to inventory the complete selected release range, read integration summaries first and curate key user changes. A reopened campaign’s latest adequate cumulative summary carries earlier outcomes forward; individual/earlier messages are targeted fallback for gaps, direct changes or contradicted claims. Reachable nested, phase and document-preparation integrations remain covered; preparation readiness is distinct from delivered functionality and current branch tips are discovery only. The default ignored `.release-highlights.md` draft records the previous release commit and last analyzed commit in YAML; incremental updates preserve edits and cuts. Highlights-only preparation returns the curated changes. Complete-message preparation refreshes coverage through the exact source and adds applicable ancillary sections; the publisher receives the complete final Markdown bytes/source/hash. An ignored draft requires explicit CI notes transfer; cleanup follows verified published-body consumption. Local preparation works before provider selection and needs no token.
+## Plugin package
 
-Use [package preparation](skills/sdd-forge/references/github-packaging.md) for archive contents and conventional variant names, [release workflows](skills/sdd-forge/references/github-release-workflows.md) to prepare/dispatch a build, and [release creation](skills/sdd-forge/references/github-releases.md) to publish verified assets. Filenames remain version-free, for example `project.zip` or `project-windows-x64.zip`; tags and release metadata retain version identity. Stable downloads use `https://github.com/{OWNER}/{REPO}/releases/latest/download/{ASSET_NAME}`. Each latest stable release must contain the complete advertised asset set.
+The Agent Plugins 1.0 package includes root plugin.json, README.md, PLUGIN.md, Greenfield Project Prompt Template.md, LICENSE, SDD-MANAGER.md and AI_DISCLOSURE.md, plus skills/ and assets/. Root plugin.json is the sole manifest; OpenAI presentation metadata is under extensions.com.openai.interface. PLUGIN.md is SDD Manager's explicit composition entry, not a claim of standardized automatic discovery.
 
-This repository’s publisher checks the exact candidate manifest against a pinned local core schema before package output or provider access. Source contributors install its [validation dependencies](https://github.com/pchemguy/SDD-Manager/blob/main/.github/schemas/README.md) before publisher tests or local builds.
+All 15 skills are distributed together. Their relative references stay within the plugin root; named handoffs and client loading/routing are separate concerns. See [bundled-skill guidance](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md#bundled-skill-references). Artwork includes assets/icon.svg, icon.png, logo.svg and logo.png; manifest icons use icon.svg and logo.svg, including dark variants.
 
-Preparing a workflow does not itself publish a product release. Release requests can use the existing workflow or verified local packages through supported GitHub CLI/API operations. The references include `gh workflow run` and draft/upload/publish command recipes. No task tracking activation is required. [Release checks](skills/sdd-verify/references/release-checks.md) and [reporting](skills/sdd-report/references/releases.md) distinguish local build, CI execution, hosted metadata and downloaded-byte verification.
-
-## Branches and integration
-
-Work on a scoped branch for the selected range, feature, steering amendment, or document integration. Establish its target and starting checkpoint; the target need not be the default branch. Reuse the branch when continuing the same work.
-
-- **Task checkpoints:** Commit and push each completed task before advancing.
-- **Preparation baseline:** Commit project design, SPEC, PLAN/layout, TASKS, feature counterparts and their QC reports on design-docs. Explicitly merge, verify and publish accepted preparation into the actual default branch before creating a dependent implementation branch from that checkpoint. Preparation-only stops on design-docs; a failed merge or publication blocks branch creation.
-- **Default publication:** Use the repository's actual default branch name, commonly `main` or `master`. Push the verified preparation merge there before creating implementation branches; carry the established request scope and verification through the publication handoff.
-- **Phase boundary:** Main development uses `phase/<number>-<slug>`. Task/milestone subsets push and pause; complete verified phases explicitly merge into the established main integration branch. An authorized next phase starts from the updated published main tip.
-- **Revision and feature boundaries:** Use `revision/<campaign>-<slug>` or `feature/<campaign>-<slug>`, matching the artifact identity. Eligible coherent boundaries integrate with `git merge --no-ff`, merged-state verification, and target publication.
-- **Campaign records:** Author review/revision plans and reports on the campaign revision branch. They do not need a preliminary design-docs/default merge. A revision with separate project preparation keeps these branch roles distinct and incorporates the published project baseline before dependent source work.
-- **Feature documents:** Incorporate selected accepted deltas on the feature branch before final verification and merge. A narrow request does not authorize unfinished feature work or unselected document changes.
-- **Steering:** Branch from the paused implementation checkpoint and merge back there. A blocked amendment retains its work and resumes on a human command; successful steering still does not resume the main task list.
-- **Failures:** Preserve valid work and report conflicts, required-check failures, or pending target publication. No automatic rollback or force-push. Separate worktrees can protect unrelated dirty work.
-
-General revision records live under `docs/dev/reviews/<campaign>-<slug>/`; checkpoint steering records live under `docs/dev/reports/phases/<phase-id>/revisions/<campaign>-<slug>/`; feature identity/navigation and completed incorporated sources live under `docs/dev/features/<campaign>-<slug>/`. Reviews, steering revisions and features use one repository-wide sequence and stable starting-SHA identity. Active feature files remain in docs/dev until safely incorporated and archived; historical task snapshots are not executable owners. Main governing documents remain in docs/dev. Explicit project/user overrides and suitable legacy branches are preserved.
-
-See [branch management](skills/sdd-manage/references/branch-management.md) for naming/setup/phase transitions and the [Git workflow](skills/sdd-manage/references/git-workflows.md) for branch reuse, interruption, merge verification, and publication. Git merge and feature-document incorporation have distinct owners; hosted PR operations remain outside the current backend.
-
-## Review and revision records
-
-Every workflow-owned commit is pushed to its established remote branch and read back before work advances or another commit is made. Local commits are not accumulated for later publication; unresolved pushes pause progression. Explicit user-directed local-only/deferred publication is a scoped exception. This cadence applies to documents, reviews, maintenance, task work, steering, reports and merges without changing merge eligibility. See [per-commit publication](skills/sdd-manage/references/git-workflows.md#publish-each-commit).
-
-Closed review, revision, steering and feature packages are historical artifacts within their own campaign context. They remain unchanged and need not stay valid after later changes. Routine work does not load, validate, repair or report their historical compatibility; consult only relevant records/sections when the current task specifically needs them. Finish archive/navigation/report updates before campaign closure, and maintain current main documents in later campaigns. See [closed campaign records](skills/sdd-conventions/references/review-campaigns.md#closed-campaign-records).
-
-All authored or maintained Markdown documents use blank lines after each heading and around top-level lists and code blocks, plus four-space structural indentation, including nested lists, and exactly one space after each list marker. The shared [Markdown style](skills/sdd-conventions/references/markdown-style.md) covers document owners, templates, reports and hosted drafts; literal code/data syntax and closed records are preserved.
-
-Use `docs/dev/reviews/<sequence>_<baseline-sha>-<slug>/` for a general campaign (phase-checkpoint steering uses its phase-specific revisions prefix): review plan → review → review report → revision plan → revision → revision report. A focused review can start directly from a prompt and record its scope/criteria in REVIEW-REPORT. A comprehensive review plans units and report checkpoints first.
-
-Each planned review unit ends with its report commit. The coordinating workflow publishes that checkpoint before dependent work; pushes remain part of the complete workflow. Host automatic tool review has separate ownership from plugin content review. Full revision and implementation workflows include their prescribed pushes under the existing scoped authorization. Accepted revisions update relevant governing documents; all campaign records remain retained. Directory identity stays fixed as HEAD advances. **sdd-report** supplies scalable artifact templates, and **sdd-manage** coordinates scope and execution.
-
-## Testing with TextStats
-
-Source contributors and test coordinators start at [acceptance/AGENTS.md](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/AGENTS.md) for verification commands, package checks and acceptance routing. Root [AGENTS.md](AGENTS.md) primarily guides plugin use; the contributor entry remains outside the installed package.
-
-[TextStats](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/textstats/README.md) exercises the plugin through fresh consumer workflows and independent assessments in a dedicated test repository. Its README describes setup, required variants, optional complex recovery, retained evidence and final integration into test main. Support tests check the harness; they do not establish live acceptance of a revised source.
-
-Prior test repositories (retain this list when adding runs):
-
-- [Skill-Test-SDD-Manager-TextStats-20261003](https://github.com/pchemguy/Skill-Test-SDD-Manager-TextStats-20261003)
-- [Skill-Test-SDD-Manager-TextStats-20261004](https://github.com/pchemguy/Skill-Test-SDD-Manager-TextStats-20261004)
-
-Repository names are history, not default destinations or acceptance verdicts. The [20261004 diagnostic](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/021_85f2857/DIAGNOSTIC-REPORT.md) retains **20 Passed / seven Blocked** for pinned 0.14.3; its evidence was subsequently merged into test main. [Campaign 021](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/021_85f2857/REVISION-REPORT.md) implements the resulting harness/documentation amendments. Revised-source live and installed-client acceptance remain separately pending.
+Source acceptance/development/CI files are excluded from the archive; links to them use repository URLs. The source repository retains a development-only root AGENTS.md outside the package. Projects using the plugin retain their own AGENTS.md instructions.
 
 ## Skills
 
-The coordinator handles workflow selection and shared prerequisites. Focused skills own the work within each stage.
+The [skill routing table](PLUGIN.md#skill-routing) links all 15 owners. sdd-manage coordinates; sdd-orient and sdd-conventions establish shared context/criteria. Design, specification, planning and tasks have separate owners; implementation, steering and feature incorporation own execution changes. Testing, verification, documentation, reporting and hosting/release skills supply focused supporting work.
 
-| Skill | Responsibility |
-| --- | --- |
-| [sdd-manage](skills/sdd-manage/SKILL.md) | Coordinate scope, prerequisites, branches, explicit integration, credentials, and stopping points. |
-| [sdd-orient](skills/sdd-orient/SKILL.md) | Inspect instructions, repository state, documents, tooling, and interrupted work. |
-| [sdd-conventions](skills/sdd-conventions/SKILL.md) | Apply shared design, modularity, task-hierarchy and Markdown style criteria. |
-| [sdd-design](skills/sdd-design/SKILL.md) | Explore the problem; develop the project brief, architecture, and decomposition. |
-| [sdd-specify](skills/sdd-specify/SKILL.md) | Define observable behavior, contracts, and acceptance conditions. |
-| [sdd-plan](skills/sdd-plan/SKILL.md) | Define delivery strategy, milestones, exit conditions, and physical layout. |
-| [sdd-tasks](skills/sdd-tasks/SKILL.md) | Derive task lists and review their structure, dependencies, and progress evidence. |
-| [sdd-implement](skills/sdd-implement/SKILL.md) | Select executable ranges; implement or resume tasks; verify, commit, and push. |
-| [sdd-steer](skills/sdd-steer/SKILL.md) | Apply a focused human-directed amendment at a checkpoint, then stop. |
-| [sdd-integrate-feature](skills/sdd-integrate-feature/SKILL.md) | Incorporate accepted feature deltas and reconcile selected task lists. |
-| [sdd-tdd](skills/sdd-tdd/SKILL.md) | Develop testing strategy, write meaningful tests, and guide test-first implementation. |
-| [sdd-verify](skills/sdd-verify/SKILL.md) | Run the required checks and assess acceptance evidence, failures, and gaps. |
-| [sdd-docs](skills/sdd-docs/SKILL.md) | Maintain professional module/API documentation, README, guides, and examples. |
-| [sdd-report](skills/sdd-report/SKILL.md) | Draft issues, commit messages, PR descriptions, and evidence-backed progress reports. |
-| [sdd-forge](skills/sdd-forge/SKILL.md) | Prepare complete release messages and shared Git highlights, and coordinate GitHub task tracking, packages/workflows and verified releases. |
+## Status and evidence
 
-## Development-document quality gates
+All 15 skills are included. Structural/local verification and fresh-agent workflows through explicit skill-source loading have been exercised. Historical independent acceptance covered 27 scoped cases; the current TextStats catalog supports 33 cases, including release-message and optional client scenarios. Added coverage does not inherit historical passes. Revised-source live acceptance and installed-client discovery/routing/activation remain separate evidence gaps; retained journals are not complete native transcripts.
 
-Completed SPEC is reviewed against accepted PROJECT/design before PLAN; PLAN and relevant layout are reviewed against SPEC before TASKS; TASKS is reviewed against PLAN before implementation or hosted projection. Authoring includes scoped correction/recheck and an adjacent `SPEC-REVIEW-REPORT.md`, `PLAN-REVIEW-REPORT.md` or `TASKS-REVIEW-REPORT.md` (feature counterparts beside their roots). Confirmed unresolved issues block dependent progression. Reports retain original findings and append Revision N correction/recheck evidence; read-only review does not authorize repairs.
+See the [TextStats overview and qualified historical evidence](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/TEXTSTATS.md) and source campaign records for exact tested versions and limitations. Static schema/package checks do not establish client compatibility.
 
-Prefer 3–5 delivery milestones per phase and delivery tasks per milestone when the scope supports it. Review 1–2 groups for fragmentation and 10+ for overloading/drift; assess semantic scope in every range. Exclude dedicated review units from delivery counts while retaining their mandatory execution. Justify narrow groups and avoid padding or quota-driven splits. See [shared QC policy](skills/sdd-conventions/references/development-document-qc.md) and [coordinator gates](skills/sdd-manage/references/document-qc-gates.md).
+## Testing and contributing
 
-## Development documents
+Source contributors explicitly load [acceptance/AGENTS.md](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/AGENTS.md) before work on SDD Manager, including work outside acceptance/. It owns verification commands, publisher dependencies and acceptance routing. [Testing with TextStats](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/TEXTSTATS.md) introduces the dedicated test project and its coordinator entry.
 
-The main documents describe the complete intended project. Task lists record executable work and evidence-backed progress. Roots can link to focused children when a concern needs substantial detail.
+## References
 
-| Document under `docs/dev/` | Owns |
-| --- | --- |
-| `PROJECT.md` | Purpose, users, scope, outcomes, and constraints. |
-| `ARCHITECTURE.md` | Major blocks, relationships, dependency direction, and design decisions. |
-| `DECOMPOSITION.md` | Component responsibilities, collaborations, and design-level interfaces. |
-| `SPEC.md` | Required behavior, final contracts, errors, invariants, and acceptance. |
-| `PLAN.md` | Meaningful end-to-end MVP, small capability increments, phases/milestones, dependencies, and verification/decision gates. |
-| `layout.md` | Physical ownership of source, tests, documentation, and other artifacts. |
-| `TASKS.md` | Phase → Milestone → Task hierarchy, stable IDs, and progress evidence. |
-
-Each delivery milestone ends with an explicit code review/testing/report task. Each phase ends with a dedicated milestone containing one phase review/testing/report task; it runs after delivery milestones close. Main implementation reports live at `docs/dev/reports/phases/<phase-id>/PHASE-REPORT.md` and `<milestone-id>.md` in that same directory; feature reports stay under `docs/dev/features/<feature-id>/`. With hosted tracking active, only the eligible phase is projected before its first task; verified/pushed task issues close before milestone closure. See the [backend lifecycle](skills/sdd-conventions/references/backend-object-lifecycle.md) for gates, ownership, TODO aggregation and recovery.
-
-PLAN defaults to the simplest practical meaningful end-to-end MVP, then grows it through small testable capability increments. Necessary prerequisites are justified; the complete intended design and SPEC remain authoritative. Appropriate milestone demonstrations and functional/usability feedback inform human decisions to continue, amend, simplify, or stop. TASKS supplies bounded work within these increments.
-
-A scoped feature can use `FEATURE_ARCHITECTURE.md`, `FEATURE_DECOMPOSITION.md`, `FEATURE-SPEC.md`, `FEATURE-PLAN.md`, and `FEATURE-TASKS.md` as needed. Accepted deltas are incorporated into the selected main documents through **sdd-integrate-feature**. Checkpoint steering directly amends existing documents and creates no feature-document layer.
-
-## Completion and continuity
-
-- **Evidence determines completion.** A checkbox, passing command, or closed issue alone is insufficient. Implementation checks the task's requirements, tests, documentation, and prescribed verification before recording completion.
-- **Existing work is preserved.** Orientation compares task and Git evidence with pending changes. Completed work awaiting commit is persisted without repeating its implementation; dirty state alone does not justify reset.
-- **Git provides durable checkpoints.** No transaction journal or recovery directory is required. Commits and task evidence support continuation.
-- **Changes remain scoped.** Unrelated staged and unstaged work is preserved. Documentation findings requiring governing-document amendments are returned to the human.
-- **Hosting reflects local evidence.** GitHub issues close after verified, committed task completion. Hosting failures remain pending and do not erase local results; task-branch completion is distinct from target integration and publication. Rate limits/outages remain deferred; uncertain writes are reconciled before retrying.
-
-## Package status and references
-
-The backend lifecycle now defines phase-gated hosted creation, dedicated boundary review/report tasks, milestone closure, workflow-specific report placement and interruption reconciliation. [Campaign 010](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/010_3f56922/REVISION-REPORT.md) records source and consumer verification; later live evidence and limits are retained in the [20261004 diagnostic](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/021_85f2857/DIAGNOSTIC-REPORT.md); revised-source acceptance remains separate.
-
-All 15 skills are included. Structural validation and independent coordination assessments have been exercised. The [runtime acceptance campaign](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/008_98a5562/REVISION-REPORT.md) records actual fresh-agent workflows through explicit skill-source loading, live GitHub tracking/publication, and controlled failure/recovery fixtures. Installed-client discovery, routing and activation remain untested; available journals are not complete native transcripts. All 27 scoped cases passed independent assessment; source integration is recorded in the campaign report. The current TextStats catalog adds release-message and optional installed-client scenarios, for 33 supported cases; those extensions require new consumer evidence and do not inherit the historical passes.
-
-- [TextStats acceptance test project](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/textstats/README.md): portable coordinator entry, sample contracts, case inputs, independent assessment and interruption recovery.
-- [Capability map](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md): artifact ownership and cross-skill boundaries.
-- [Review campaigns](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/README.md): ordered review and revision records.
-- [Revision evidence](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/003_39374c8/REVISION-REPORT.md): branch workflows, failure handling, fresh-session execution, and validation limits.
-- [Plugin review](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/001_49143fa/REVIEW-REPORT.md): findings, corrections, verification evidence, and limits.
-- [TDD provenance](skills/sdd-tdd/references/upstream-provenance.md): adaptation of Superpowers TDD and its test-writing companion, with the retained MIT license.
+- [Agent entry and composition](PLUGIN.md): routing, workflow handoffs and work boundaries.
+- [Capability map](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md): detailed ownership and package/reference guidance.
+- [Review campaigns](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/README.md): retained findings, revisions and exact verification provenance.
+- [Nested revisions and campaign amendments](skills/sdd-manage/references/revision-modes.md): parent suspension, eligible reopening and return boundaries.
+- [TDD provenance](skills/sdd-tdd/references/upstream-provenance.md): adaptation of Superpowers TDD and its retained MIT license.
 
 ## License
 

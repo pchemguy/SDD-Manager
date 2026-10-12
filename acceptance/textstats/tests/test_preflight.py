@@ -50,7 +50,7 @@ class PreflightTests(Sandbox):
     def test_pin_uses_git_object_bytes_and_complete_package_manifest(self):
         data, _ = self.ok(self.invoke('preflight'))
         self.assertEqual(data['plugin_source']['commit'], git(SOURCE, 'rev-parse', 'HEAD').stdout.strip())
-        expected=set(git(SOURCE,'ls-tree','-r','--name-only','HEAD','plugin.json','README.md','AGENTS.md','Greenfield Project Prompt Template.md','LICENSE','SDD-MANAGER.md','AI_DISCLOSURE.md','skills','assets').stdout.splitlines())
+        expected=set(git(SOURCE,'ls-tree','-r','--name-only','HEAD','plugin.json','README.md','PLUGIN.md','Greenfield Project Prompt Template.md','LICENSE','SDD-MANAGER.md','AI_DISCLOSURE.md','skills','assets').stdout.splitlines())
         self.assertEqual(set(data['plugin_source']['package_hashes']), expected)
         self.assertEqual(data['plugin_source']['source_mode'], 'committed')
         self.assertEqual(data['repository']['remote'], 'origin')
@@ -137,7 +137,7 @@ class PreflightTests(Sandbox):
         (source/'plugin.json').write_text('{"name":"fixture","skills":"./skills/"}\n')
         (source/'.codex-plugin').mkdir()
         (source/'.codex-plugin/plugin.json').write_bytes((source/'plugin.json').read_bytes())
-        (source/'AGENTS.md').write_text('Use package instructions.\n')
+        (source/'PLUGIN.md').write_text('Use package instructions.\n')
         (source/'assets').mkdir()
         asset=source/'assets/logo.png'
         original=b'\x89PNG\r\n\x1a\nfixture\x00'
@@ -147,11 +147,11 @@ class PreflightTests(Sandbox):
         committed,_=self.ok(self.invoke('preflight',extra=['--source-root',source]))
         self.assertIn('plugin.json',committed['plugin_source']['package_hashes'])
         self.assertNotIn('.codex-plugin/plugin.json',committed['plugin_source']['package_hashes'])
-        self.assertEqual(committed['plugin_source']['package_hashes']['AGENTS.md'],hashlib.sha256(b'Use package instructions.\n').hexdigest())
+        self.assertEqual(committed['plugin_source']['package_hashes']['PLUGIN.md'],hashlib.sha256(b'Use package instructions.\n').hexdigest())
         self.assertEqual(committed['plugin_source']['package_hashes']['assets/logo.png'],hashlib.sha256(original).hexdigest())
         changed=original+b'dirty'
         asset.write_bytes(changed)
-        (source/'AGENTS.md').write_text('Use changed package instructions.\n')
+        (source/'PLUGIN.md').write_text('Use changed package instructions.\n')
         (source/'.codex-plugin/new.svg').write_text('<svg/>')
         target=self.root/'codex-snapshot'
         dirty,_=self.ok(self.invoke('prepare',dict(self.inputs,source_mode='dirty'),extra=['--source-root',source,'--workspace',target]))
@@ -160,8 +160,8 @@ class PreflightTests(Sandbox):
         self.assertTrue((snapshot/'plugin.json').is_file())
         self.assertFalse((snapshot/'.codex-plugin').exists())
         self.assertNotIn('.codex-plugin/new.svg',dirty['plugin_source']['changed_package_paths'])
-        self.assertEqual((snapshot/'AGENTS.md').read_text(),'Use changed package instructions.\n')
-        self.assertIn('AGENTS.md',dirty['plugin_source']['changed_package_paths'])
+        self.assertEqual((snapshot/'PLUGIN.md').read_text(),'Use changed package instructions.\n')
+        self.assertIn('PLUGIN.md',dirty['plugin_source']['changed_package_paths'])
         self.assertIn('assets/logo.png',dirty['plugin_source']['changed_package_paths'])
         diff=Path(dirty['plugin_source']['dirty_diff_path']).read_bytes()
         self.assertIn(b'assets/logo.png',diff)

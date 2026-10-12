@@ -2,6 +2,10 @@
 
 During authorized SDD adoption/bootstrap, ensure root `AGENTS.md` provides accurate agent orientation. Create it if absent; otherwise read its controlling instructions and integrate required navigation without overwriting human-authored content. Coordinate maintenance when material project structure, check/setup commands, governing sources, active execution ownership or workflow constraints change, before finalizing the affected handoff/checkpoint. Respect explicit write/path limits; report a scope conflict rather than widening them. **sdd-orient** reads and reports missing/stale guidance without mutation.
 
+## Plugin source and target-project entries
+
+The SDD Manager source/package uses [PLUGIN.md](../../../PLUGIN.md) as its composition entry. Its source-only root AGENTS.md covers development and points to acceptance/AGENTS.md for contributor checks; neither contributor entry is shipped. This separation does not replace AGENTS.md in target projects: their existing controlling instructions and the adoption requirements below remain applicable.
+
 ## Required orientation content
 
 | Slot | Content from actual project evidence |

@@ -1,21 +1,15 @@
-# Using SDD Manager
+# Developing SDD Manager
 
-SDD Manager is an Agent Plugin for specification-driven development in Git repositories. This entry guides agents using the plugin in a project. Read [README.md](README.md) for capabilities, package contents and getting started.
+This entry applies to the SDD Manager source repository. It is excluded from the plugin package. Agents using SDD Manager in another project start at [PLUGIN.md](PLUGIN.md) and follow that project's own controlling instructions.
 
-## Workflow entry and instructions
+## Contributor entry
 
-Start coordinated work at [sdd-manage](skills/sdd-manage/SKILL.md). Use [sdd-orient](skills/sdd-orient/SKILL.md) to establish the target project's instructions, Git state, existing documents and interrupted work. Load the selected skill's SKILL.md and only the references needed for the requested stage. Bundled skills use relative Markdown links and named workflow handoffs; client loading and routing depend on the host.
+Before source edits, verification or campaign work, explicitly load [acceptance/AGENTS.md](acceptance/AGENTS.md), including work outside acceptance/. It owns source orientation, verification commands, publisher/package prerequisites, acceptance coordination and the closed-record boundary. Read applicable nested instructions before work on their paths; TextStats has a separate coordinator entry.
 
-Use an existing eligible Git worktree for project changes. Follow the target project's controlling instructions, accepted requirements and requested stopping boundary. Clarification answers do not accept new development documents; apply the [human document checkpoints](skills/sdd-manage/references/human-document-review.md) before dependent work. Preserve unrelated files and pending changes.
+Use current source and the selected active campaign rather than reading frozen reports as a routine work queue. Discover ownership and actual branch/pending state through Git. Preserve unrelated changes, controlling human instructions and closed campaign artifacts. This repository uses campaign plans/reports instead of a root executable TASKS owner; do not invent task IDs from findings.
 
-## Project work and persistence
+## Persistence and scope
 
-Apply the shared [Markdown style](skills/sdd-conventions/references/markdown-style.md) to authored or maintained documents: blank lines after headings and around top-level lists and code blocks, four spaces per structural indentation level and one space after each list marker. Preserve literal code/data syntax and closed records.
+Coordinate source changes through [sdd-manage](skills/sdd-manage/SKILL.md) within the accepted request and stopping boundary. Publish and read back every workflow-owned commit before further work or another commit; unresolved publication pauses progression. Follow [Git integration and recovery](skills/sdd-manage/references/git-workflows.md), using explicit verified integration only at the authorized complete boundary. Keep credentials protected and out of source/evidence.
 
-For task-list execution, follow the [task commit contract](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract): one executable task's closing result/evidence and initial checklist completion in the same commit, with a leading single owning task ID. Non-task campaign actions and merge commits do not invent task IDs. Use the linked audit/recovery rules for continuation and integration.
-
-Push every workflow-owned commit and read back the remote before further project work or another commit. Pause on unresolved publication; honor explicit local-only or deferred-publication instructions within their stated scope. Follow [Git integration and recovery](skills/sdd-manage/references/git-workflows.md) and the selected workflow's integration boundary. Preserve unrelated staged work; never force-push or reset it. Keep credentials out of source, reports and handoffs.
-
-## Source contributors
-
-For work on SDD Manager itself, load the source repository's [contributor entry](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/AGENTS.md) and applicable nested instructions. That source-only entry is outside the installed package.
+Maintain human-facing README.md, packaged agent-facing PLUGIN.md and source-only contributor/acceptance documents according to their audiences. Root AGENTS.md is development guidance, not a package workflow entry; package/snapshot contracts exclude it. Apply the shared [Markdown conventions](skills/sdd-conventions/references/markdown-style.md) and verify relevant commands/links through the contributor entry.

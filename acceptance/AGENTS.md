@@ -1,6 +1,6 @@
 # SDD Manager source verification and acceptance
 
-This is the source-repository entry for agents developing, verifying or assessing SDD Manager itself. Load it explicitly before source work, including checks owned by .github/ or development documents outside acceptance/. It supplements the root [user entry](../AGENTS.md); it is not an instruction file for an ordinary project using the plugin and is outside the installed package.
+This is the source-repository entry for agents developing, verifying or assessing SDD Manager itself. Load it explicitly before source work, including checks owned by .github/ or development documents outside acceptance/. It supplements the root [plugin entry](../PLUGIN.md); it is not an instruction file for an ordinary project using the plugin and is outside the installed package.
 
 ## Source orientation
 
@@ -25,7 +25,7 @@ python -m pip install -r .github/requirements.txt
 python -m unittest discover -s .github/tests -v
 ```
 
-The publisher validates exact committed candidate bytes against the [pinned offline core schema](../.github/schemas/README.md); it does not validate client-specific presentation. Check affected Markdown links, manifest conformance, presentation asset paths and actual package contents as applicable. Root AGENTS.md remains packaged; acceptance/ and development/CI evidence remain source-only. Verify that package links do not require excluded local files.
+The publisher validates exact committed candidate bytes against the [pinned offline core schema](../.github/schemas/README.md); it does not validate client-specific presentation. Check affected Markdown links, manifest conformance, presentation asset paths and actual package contents as applicable. Root PLUGIN.md is the packaged agent entry; acceptance/ and development/CI evidence remain source-only. Verify that package links do not require excluded local files.
 
 Record the tested source, interpreter/environment, actual outcomes and evidence limits. Passing support/publisher tests or static/package checks does not establish live agent behavior, installed-client discovery/routing or provider acceptance. Keep unrun and blocked observations explicit.
 
