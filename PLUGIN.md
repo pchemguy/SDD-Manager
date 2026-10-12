@@ -38,6 +38,17 @@ Reuse sufficient accepted inputs and existing workflow identities. Clarification
 
 Clarification, agent QC, passing tests and commits/pushes do not constitute human acceptance. Broad development authority does not preaccept unseen documents or expand a selected implementation range. Preserve pending decisions after interruption. See [document review](skills/sdd-manage/references/human-document-review.md) and [implementation checkpoints](skills/sdd-implement/references/completion-and-checkpoints.md#parent-completion-and-stopping).
 
+## Requested implementation tracking
+
+**When tracking is requested, prepare and maintain hosted objects throughout task-list-based implementation.** Use `sdd-manage` to coordinate and `sdd-forge` for GitHub issues, labels and milestones, or supported provider equivalents.
+
+- **Before execution:** create/reconcile the eligible phase's phase and milestone labels, all milestones and all task issues, including review/report tasks. Verify each issue's phase/milestone labels and milestone association. Missing or unverified objects block affected implementation. Activate later phases only when eligible.
+- **During execution:** project added tasks and update changed associations before their execution. After each task is verified, committed and pushed, close its issue with evidence. Close milestones only after all constituent issues, required reviews and exit conditions are complete.
+- **After amendments or interruption:** reconcile actual hosted state, reuse existing identities, finish pending operations and reopen affected issues/milestones when acceptance is invalidated.
+- **At each implementation checkpoint:** report tracking status and unresolved operations. Provider failures preserve local results but do not waive required projection or dependent closure gates.
+
+Follow [phase activation](skills/sdd-manage/references/phase-activation.md) and the [tracking lifecycle](skills/sdd-conventions/references/backend-object-lifecycle.md).
+
 ## Skill routing
 
 | Request or concern | Owner and entry | Handoff |
