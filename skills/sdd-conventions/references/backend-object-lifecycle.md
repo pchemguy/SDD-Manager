@@ -36,9 +36,9 @@ Keep required repairs and findings whose deferral eligibility is unestablished i
 
 | Workflow / artifact | Path or prefix |
 | --- | --- |
-| Main development phase report | `docs/dev/reports/phases/<phase-id>/PHASE-REPORT.md` |
-| Main development milestone report | `docs/dev/reports/phases/<phase-id>/<milestone-id>.md` |
-| Main development final report | `docs/dev/reports/IMPLEMENTATION-REPORT.md` |
+| Full development phase report | `docs/dev/reports/phases/<phase-id>/PHASE-REPORT.md` |
+| Full development milestone report | `docs/dev/reports/phases/<phase-id>/<milestone-id>.md` |
+| Full development final report | `docs/dev/reports/IMPLEMENTATION-REPORT.md` |
 | Phase-checkpoint steering revision records | `docs/dev/reports/phases/<phase-id>/revisions/<revision-id>/` |
 | Feature reports and records | `docs/dev/features/<feature-id>/` |
 

@@ -34,7 +34,7 @@ Name the destination skill in each handoff and link its entry where useful. Tran
 
 ## Composite workflows
 
-Main development, feature and revision describe development purpose; stages and supporting capabilities compose their actual paths. Main development does not designate Git's main branch. Composite workflows combine established stages and supporting skills within their prerequisites and authorized scope; they create no new workflow authority, branch convention or permission grant. The [canonical catalog](skills/sdd-manage/references/workflows.md) owns detailed entry and transition rules.
+Full development, feature and revision describe development purpose; stages and supporting capabilities compose their actual paths. Composite workflows combine established stages and supporting skills within their prerequisites and authorized scope; they create no new workflow authority, branch convention or permission grant. The [canonical catalog](skills/sdd-manage/references/workflows.md) owns detailed entry and transition rules.
 
 ### Project preparation and bounded delivery
 
