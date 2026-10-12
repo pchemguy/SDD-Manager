@@ -276,6 +276,8 @@
     "All phase exits including failures/docs/README/extracted-source module invocation pass at actual working and prospective merged states.",
     "Parent completion is justified by all child exits. Explicit two-parent merge reaches integration and remote containment; no phase 2 task execution.",
     "All delivery milestones close before the dedicated phase review task runs. Its committed/pushed docs/dev/reports/phases/<actual-phase-id>/PHASE-REPORT.md records phase code review, checks, repairs, exits and TODO provenance; its issue closes before the final review milestone.",
-    "Phase 2 hosted objects remain absent until phase 1 integration/publication and an authorized phase 2 activation. Uncertain milestone closure blocks advancement until readback."
+    "Phase 2 hosted objects remain absent until phase 1 integration/publication and an authorized phase 2 activation. Uncertain milestone closure blocks advancement until readback.",
+    "Inspect each closing task commit and parent diff: exactly one owning task ID leads the subject; one verified task result, current evidence and its initial completion checkbox are together, including review/report tasks. Push and remote containment precede further task work or another commit; inspect documented partial checkpoints, repairs and parent-only follow-ups separately.",
+    "Assess the bounded persistence audit on continuation and before integration; reject bundled/split/malformed closing histories even with checked final lists and published branches. Preserve published history and require authorized recovery/exception. Stop at the human-selected range, counting review tasks without adding unselected work; apply CHECKPOINTS.md."
   ]
 }

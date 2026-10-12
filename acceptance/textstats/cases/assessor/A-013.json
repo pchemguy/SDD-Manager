@@ -598,6 +598,8 @@
     "Stdin/range/BOM whole-input combinations, locale-independent bytes, errors/lifetime, named-file regressions and final docs/distribution pass.",
     "All phase exits precede explicit two-parent phase integration/publication; no invented third phase.",
     "Final phase review and its committed PHASE-REPORT.md are required even after delivery milestone reviews passed; final IMPLEMENTATION-REPORT.md aggregates admissible unresolved milestone/phase TODO findings with solution options and provenance. Review issue and milestone closure precede completed-phase integration.",
-    "Continuation checks current owning preparation evidence against material governing changes rather than trusting a Ready label; unchanged concerns can retain explained equivalent review evidence and phase completion still requires independent implementation exits."
+    "Continuation checks current owning preparation evidence against material governing changes rather than trusting a Ready label; unchanged concerns can retain explained equivalent review evidence and phase completion still requires independent implementation exits.",
+    "Inspect each closing task commit and parent diff: exactly one owning task ID leads the subject; one verified task result, current evidence and its initial completion checkbox are together, including review/report tasks. Push and remote containment precede further task work or another commit; inspect documented partial checkpoints, repairs and parent-only follow-ups separately.",
+    "Assess the bounded persistence audit on continuation and before integration; reject bundled/split/malformed closing histories even with checked final lists and published branches. Preserve published history and require authorized recovery/exception. Stop at the human-selected range, counting review tasks without adding unselected work; apply CHECKPOINTS.md."
   ]
 }

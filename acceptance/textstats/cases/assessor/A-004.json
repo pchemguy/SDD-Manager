@@ -22,6 +22,8 @@
   "required_agent_checks": [
     "Actual production/test/docs work follows loaded workflow with justified observed RED; task/check evidence committed and published.",
     "Associated issue closes with completion evidence. Phase 1 is incomplete and its implementation branch remains unmerged; no phase 2 work. If accepted preparation was unintegrated at the starting checkpoint, the required document-only preparation merge must be verified and published before implementation branch creation. Distinguish that prerequisite integration from prohibited incomplete-phase integration; record both actual starting and reached integration refs.",
-    "After pushing outstanding commits and before new task work, the consumer establishes current owning preparation readiness; routine progress-only updates are distinguished from material contract/decomposition changes and no unrequested upstream correction is executed."
+    "After pushing outstanding commits and before new task work, the consumer establishes current owning preparation readiness; routine progress-only updates are distinguished from material contract/decomposition changes and no unrequested upstream correction is executed.",
+    "Inspect each closing task commit and parent diff: exactly one owning task ID leads the subject; one verified task result, current evidence and its initial completion checkbox are together, including review/report tasks. Push and remote containment precede further task work or another commit; inspect documented partial checkpoints, repairs and parent-only follow-ups separately.",
+    "Assess the bounded persistence audit on continuation and before integration; reject bundled/split/malformed closing histories even with checked final lists and published branches. Preserve published history and require authorized recovery/exception. Stop at the human-selected range, counting review tasks without adding unselected work; apply CHECKPOINTS.md."
   ]
 }
