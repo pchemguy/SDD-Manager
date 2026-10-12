@@ -4,7 +4,7 @@ Apply these rules whenever SDD Manager authors, revises or reviews Markdown. The
 
 ## Document names
 
-Use uppercase names for development documents and normal prose case for concepts and activities. Preserve literal paths, identifiers and quotations.
+Use ARCHITECTURE and DECOMPOSITION for document references and normal prose case for concepts and activities. Preserve literal paths, identifiers and quotations.
 
 ## Heading separation
 

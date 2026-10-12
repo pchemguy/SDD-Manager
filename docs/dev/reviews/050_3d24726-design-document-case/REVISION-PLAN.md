@@ -18,3 +18,7 @@ Shared rule: Use uppercase names for development documents and normal prose case
 ## Execution and boundaries
 
 Publish the plan before edits. Persist source/action report and actual verification together; push/read back each checkpoint. Verify the complete boundary and explicit two-parent merge into refreshed main, publish/read back and stop. No global substitution, file rename, formatter/linter, explanatory examples or new behavior/approval rule. This campaign has no executable TASKS owner; V-001 is an action. Retain findings and closed records. Mermaid source changes are checked without claiming rendering if unavailable; no consumer/client/provider run is included.
+
+## Coherent rule wording
+
+The final two-sentence rule is scoped to ARCHITECTURE/DECOMPOSITION rather than all development documents, preserving declared casing such as layout.md: Use ARCHITECTURE and DECOMPOSITION for document references and normal prose case for concepts and activities. Preserve literal paths, identifiers and quotations.
