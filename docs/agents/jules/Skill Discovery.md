@@ -48,8 +48,8 @@ It seems like should spell out a concise discovery plan, like
     3. Dive into each `./{SKILL_NAME}` skill container:
         1. Read every `./SKILL.md` in full.
         2. Produce a skill brief, including:
-            1. Skill name and description from `./SKILL.md`.
-            2. Concise summary of skill capabilities derived from `./refrences/*.md` sub-workflows and associated routing instructions extracted from `./SKILL.md`.
+            1. Skill path and extracted name and description from `./SKILL.md`.
+            2. Concise summary of skill capabilities derived from `./refrences/*.md` sub-workflows and associated routing instructions extracted from `./SKILL.md`, if applicable.
 2. **Plugin  Discovery Protocol**
     1. Start from `{REPO_ROOT}/.agents/plugins/`
     2. List plugin containers `./{PLUGIN_NAME}`
