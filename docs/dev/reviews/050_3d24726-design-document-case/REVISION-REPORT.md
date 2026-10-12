@@ -18,3 +18,7 @@ R-003 is a Document names heading with only this rule: Use ARCHITECTURE and DECO
 ## Integration and limits
 
 Plan checkpoint was pushed/read back before edits. Source/action report travel together; final verification and explicit two-parent target merge/publication close the authorized scope. Closed records remain unchanged. Source/editorial checks do not establish agent/client runtime acceptance; unexecuted facilities are recorded with final evidence.
+
+## Committed candidate verification
+
+[Native checks](evidence/package-checks.json) at published/read-back source `448bad28654b73e21e9fbf663f0b3dbfd5926392`: canonical manifest valid, two identical 134-file actual builds, exact archive inventory/content, 648 current local links and unchanged closed records. The final shared rule remains exactly two sentences, scoped to the named design documents rather than changing declared names such as layout.md. Manifest/package rules and executable source are unchanged. Final merged-state support/publisher suites precede closure.
