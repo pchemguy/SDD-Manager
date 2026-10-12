@@ -4,14 +4,14 @@
 
 Campaign: **053_3a095e2**. Baseline/reviewed source: `3a095e23bcefd341933ca2353275c5243da32a97`. Date: 2026-10-12. Reviewer: Codex. Scope and criteria: [review plan](REVIEW-PLAN.md).
 
-State: U-001 assessed; U-002/U-003 pending. Two open documentation defects; no final readiness conclusion yet. Evidence will distinguish source assessment, local execution and unavailable live/client observations. Source repairs and integration are outside this request.
+State: U-001/U-002 assessed; U-003 pending. Four open findings; no final readiness conclusion yet. Evidence will distinguish source assessment, local execution and unavailable live/client observations. Source repairs and integration are outside this request.
 
 ## Coverage
 
 | Unit | State | Evidence / findings |
 | --- | --- | --- |
 | U-001 | Assessed | 99 current Markdown files inventoried/thematically scanned, 15 entries; consequential preparation/execution/tracking/release handoffs inspected. R-001/R-002. |
-| U-002 | Pending | Acceptance contracts, tooling and support execution |
+| U-002 | Assessed | 124 support tests passed; 33-case catalog valid. R-003/R-004 identify assessor coverage gaps. |
 | U-003 | Pending | Distribution, publisher, package and consolidation |
 
 ## Findings
@@ -20,6 +20,8 @@ State: U-001 assessed; U-002/U-003 pending. Two open documentation defects; no f
 | --- | --- | --- | --- |
 | R-001 | Documentation defect | Medium | Open |
 | R-002 | Documentation defect | Low | Open |
+| R-003 | Acceptance component coverage gap | Medium | Open |
+| R-004 | Acceptance component coverage gap | Medium | Open |
 
 ### R-001 — Preparation diagram delays publication until the end of the document chain
 
@@ -52,3 +54,27 @@ State: U-001 assessed; U-002/U-003 pending. Two open documentation defects; no f
 | Credentials/environment | Protected token exclusion, distinct Git/API access, cause classification, supported recovery and actual environment evidence are specified. No credential values included in evidence. |
 
 [Workflow inventory](evidence/workflow-inventory.json) retains current paths/hashes/headings and criterion line indices. Inventory and thematic scans are broad coverage; deep inspection focused on consequential handoffs, not an exhaustive sentence-level editorial review. Scenarios above are source assessments, not fresh consumer execution. Demo gameplay and rendered Mermaid layout were not executed.
+
+### R-003 — Preparation assessment does not explicitly grade the staged human checkpoints
+
+- **Location:** `acceptance/textstats/cases/assessor/A-001.md` and `.json` independent/required agent checks; corresponding A-008 feature preparation contracts; `DOCUMENT-QC.md`. Compare the pinned human-document-review protocol and PLUGIN checkpoint table. Confidence: high.
+- **Observation:** Main/feature preparation checks require produced/published artifacts, upstream QC and accepted planning, but omit explicit per-root publication-before-presentation, substantive presentation, actual human acceptance before dependent creation, distinct PLAN/layout decisions and clarification-versus-acceptance negatives. TRACKING-FIDELITY mentions real human decisions, but its selected tracking follow-ups do not replace explicit preparation case criteria.
+- **Consequence:** A consumer can reach technically coherent final documents while skipping the required staged human interaction; the current primary preparation oracle does not specifically reject that sequence.
+- **Correction:** Extend the TextStats component's main/feature preparation assessor contracts and focused scenarios with ordered transcript/Git decision evidence, nonacceptance clarification and interrupted pending-review cases. Keep expectations out of consumer prompts. This is component coverage work, not a request to execute live trials. Owners: `sdd-tdd`/`sdd-verify` with preparation owner semantics.
+- **Recheck:** Positive graded sequence records each selected root's publication, presentation and human decision; dependent creation before acceptance, bundled PLAN/layout acceptance or clarification treated as approval is independently rejected. Missing transcript/order evidence cannot pass. Asset/catalog support checks validate consistency; consumer acceptance requires separate execution.
+
+### R-004 — Task assessment lacks explicit atomic closing-commit and history-audit criteria
+
+- **Location:** `acceptance/textstats/cases/assessor/A-004.md`/`.json`, A-005/A-006 implementation/review contracts and `COMMON.md`; compare `skills/sdd-implement/references/completion-and-checkpoints.md`, Task commit contract and persistence audit. Confidence: high.
+- **Observation:** The assessor checks durable task/check/commit/push evidence, current task ownership and boundary integration, but does not explicitly inspect each task's parent diff for its verified result, evidence and initial unchecked-to-checked transition together, exactly one executable task per closing commit, exact leading single-ID subject, or bounded continuation/pre-integration history audit. Broad per-task publication wording does not establish these composition rules.
+- **Consequence:** Bundled task closures, result-first/checkbox-later commits or malformed subjects can satisfy final-state and publication checks without a targeted history assessment.
+- **Correction:** Extend relevant implementation, review-task and recovery assessor criteria with actual native commit/parent-diff evidence and negative bundled/split/malformed histories. Preserve legitimate authorized partial checkpoints and parent-only follow-ups; assess no automatic rewrite of published violations. Add deterministic capture only if it materially supports independent judgment. Owners: `sdd-tdd`/`sdd-verify`.
+- **Recheck:** Independent assessment rejects each invalid history even with a clean checked list and published branch; accepts a compliant task closure and explicitly authorized exceptions from their evidence; continuation/integration remains blocked until authorized recovery or exception. Do not infer live outcomes from helper sensitivity tests.
+
+## U-002 execution and evidence limits
+
+[Acceptance checks](evidence/acceptance-checks.json) and [support log](evidence/support.log) record 124 passing support tests and static validation of all 33 catalog cases. Python 3.12.14; Python 3.11 was not available here. Executed checkout adds only this campaign's records to the reviewed baseline; reviewed source/tooling bytes remain unchanged.
+
+Inspected source pinning/dirty snapshots, protected path/data handling, recovery/index/bundle retention, interruption controls, literal public API probe, release capture, evidence-class/variant accounting and consumer/assessor separation. Support tests exercise meaningful failure/sensitivity paths, including occupied/symlink evidence, wrong release body/tag/class, public-export regressions, incomplete prerequisites and uncertain interruption replay. No observed support failure or confirmed helper-code defect in this unit. Review depth is targeted across these seams; it is not a proof of all possible helper inputs.
+
+Fresh consumers, independent runtime assessors, installed clients, native process termination and live GitHub release/tracking writes were not executed. Historical passes were not imported as current acceptance. R-003/R-004 concern missing explicit component criteria; adding them would still require new consumer evidence. Current docs accurately distinguish support success from those runtime observations.
