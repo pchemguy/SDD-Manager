@@ -27,8 +27,6 @@ Resolve missing decisions that would otherwise force a material project/architec
 | Constraints | Accepted platform/technology/integration limits and consequential requirements |
 | Assumptions/open questions | Material unresolved choices, proposals and intentionally delegated details |
 
-Combine or omit sections when the content remains clear. Avoid repeating the same technology or feature list across overview, scope and goals. For example, a playable browser game is an outcome; an agreed rendering technology is a constraint/choice. A distinguishing lock-delay requirement can be preserved at brief level, while precise timing/state/reset behavior belongs to SPEC. Do not add speculative component boundaries, implementation phases or task lists to fill the brief.
-
 The main brief describes the complete intended project, not only its first delivery increment. PLAN can select an MVP and subsequent increments. Keep finalized project descriptions focused on the intended state rather than editing history or unsupported maturity claims; use [evidence-backed positioning](exploration.md#evidence-backed-project-positioning) where relevant.
 
 ## Create or revise
