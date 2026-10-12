@@ -1,0 +1,14 @@
+{
+  "source": "294977197a42005b15709256962ceb4c1363dd08",
+  "base": "93de2bda1207e94acd2f5447a8cdfd428da9cb65",
+  "core_manifest_valid": true,
+  "two_native_builds_identical": true,
+  "package_files": 134,
+  "hashes": {
+    "sdd-manager.zip": "c53e5c94f9f0c3f52baa77eea5797d666b2feedab529b7f69ccb9378e8b32698",
+    "sdd-manager.zip.sha256": "ded6c0b20a1434d654597b488bd4785457c0b29f0eb281628e8b337936b0e6c5"
+  },
+  "plugin_exact_committed_bytes_and_front_matter": true,
+  "closed_records_and_other_source_unchanged": true,
+  "limits": "Native/source checks only; no client/consumer/provider trial."
+}
