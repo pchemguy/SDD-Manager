@@ -97,7 +97,7 @@ PLAN begins with a meaningful end-to-end MVP and grows through small testable in
 
 ## Workflow guide
 
-These diagrams explain the human-visible paths. [PLUGIN.md](PLUGIN.md#composite-and-hybrid-workflows) defines agent selection, handoffs and operational boundaries. Enter at the stage supported by current inputs; a blocker preserves work and stops the affected path.
+These diagrams explain the human-visible paths. [PLUGIN.md](PLUGIN.md#composite-workflows) defines agent selection, handoffs and operational boundaries. Enter at the stage supported by current inputs; a blocker preserves work and stops the affected path.
 
 ### Project preparation
 

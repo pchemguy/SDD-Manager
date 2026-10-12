@@ -32,9 +32,9 @@ Reuse sufficient accepted inputs and existing workflow identities. Clarification
 
 Name the destination skill in each handoff and link its entry where useful. Transfer objective, accepted inputs, actual stage/branch/checkpoint, selected IDs, pending ownership, verification/hosting state and stop. Reading a sibling reference supplies shared guidance; it does not select that skill's entire workflow. Handoffs depend on the client's execution facilities.
 
-## Composite and hybrid workflows
+## Composite workflows
 
-Main/greenfield, feature and revision describe development purpose; stages and supporting capabilities compose their actual paths. Main does not designate Git's main branch. Hybrid requests combine established operations within their prerequisites and scope; they create no new workflow authority, branch convention or permission grant. The [canonical catalog](skills/sdd-manage/references/workflows.md) owns detailed entry and transition rules.
+Main/greenfield, feature and revision describe development purpose; stages and supporting capabilities compose their actual paths. Main does not designate Git's main branch. Composite workflows combine established stages and supporting skills within their prerequisites and authorized scope; they create no new workflow authority, branch convention or permission grant. The [canonical catalog](skills/sdd-manage/references/workflows.md) owns detailed entry and transition rules.
 
 ### Project preparation and bounded delivery
 
