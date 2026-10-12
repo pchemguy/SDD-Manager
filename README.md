@@ -245,14 +245,6 @@ Use `docs/dev/reviews/<sequence>_<baseline-sha>-<slug>/` for a general campaign 
 
 Each planned review unit ends with its report commit. The coordinating workflow publishes that checkpoint before dependent work; pushes remain part of the complete workflow. Host automatic tool review has separate ownership from plugin content review. Full revision and implementation workflows include their prescribed pushes under the existing scoped authorization. Accepted revisions update relevant governing documents; all campaign records remain retained. Directory identity stays fixed as HEAD advances. **sdd-report** supplies scalable artifact templates, and **sdd-manage** coordinates scope and execution.
 
-## ChatGPT website approvals and host automatic review
-
-In ChatGPT web, the user observed these controls in **Profile → Settings → Integrations → Cloud computer** during the October 2026 run. UI locations and labels may differ by client/version. OpenAI's [Cloud browser documentation](https://help.openai.com/en/articles/20001280-using-cloud-browser-in-chatgpt) describes **Settings → Cloud browser**, website approval modes and site-specific permissions.
-
-A narrower website-access configuration is **ChatGPT Work website approvals → Auto approve**, with **Add website → GitHub → Always allow**. A broader alternative is **Always allow** as the main website policy. The documented Auto approve mode still reviews website destinations; site-specific permissions override the general website setting. Consequential actions may have separate confirmation requirements. These options describe browser website access, not a guarantee that Git pushes or other shell/API requests will avoid sandbox automatic review.
-
-Host review is separate from SDD Manager content review. The observed website settings' effect on shell/API requests is unverified. Retain blocked work and report actual publication state through [Git recovery](skills/sdd-manage/references/git-workflows.md#platform-authorization-rejection); distinguish authentication failures through [credential recovery](skills/sdd-manage/references/credentials.md). Changing account settings is a human choice, not an acceptance-run prerequisite.
-
 ## Testing with TextStats
 
 Source contributors and test coordinators start at [acceptance/AGENTS.md](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/AGENTS.md) for verification commands, package checks and acceptance routing. Root [AGENTS.md](AGENTS.md) primarily guides plugin use; the contributor entry remains outside the installed package.
