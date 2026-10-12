@@ -75,3 +75,5 @@ New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT
 | `050_3d24726` | Named document references corrected; two-sentence shared casing rule added; concepts/literal paths preserved. 124 support/30 publisher tests, package/link checks passed; main integration/publication establishes closure. | [Review plan](050_3d24726-design-document-case/REVIEW-PLAN.md), [review report](050_3d24726-design-document-case/REVIEW-REPORT.md), [revision plan](050_3d24726-design-document-case/REVISION-PLAN.md), [revision report](050_3d24726-design-document-case/REVISION-REPORT.md) |
 
 | `051_93de2bd` | Requested PLUGIN front matter added; eight shortened skill-reference cases normalized. 134-file native package and 124 support/30 publisher tests passed; main integration/publication establishes closure. | [Revision plan](051_93de2bd-plugin-entry-metadata/REVISION-PLAN.md), [revision report](051_93de2bd-plugin-entry-metadata/REVISION-REPORT.md) |
+
+| `052_7d0dd14` | Publication clarity audit retained; three accepted local document/orientation wording findings. | [Review report](052_7d0dd14-explicit-publication/REVIEW-REPORT.md) |
