@@ -1,0 +1,17 @@
+{
+  "base": "7d0dd1422bb399f46d9ea30f5381e5e956bc1934",
+  "amended_steps": [
+    "skills/sdd-design/SKILL.md",
+    "skills/sdd-specify/SKILL.md",
+    "skills/sdd-plan/SKILL.md",
+    "skills/sdd-tasks/SKILL.md",
+    "skills/sdd-design/references/project-brief.md",
+    "skills/sdd-manage/references/human-document-review.md",
+    "skills/sdd-manage/references/agent-orientation.md"
+  ],
+  "commit_push_remote_containment_explicit": true,
+  "policy_links_resolve": true,
+  "changed_local_links": 43,
+  "shared_policy_and_task_review_draft_ownership_unchanged": true,
+  "kind": "source instruction checks; no consumer execution"
+}

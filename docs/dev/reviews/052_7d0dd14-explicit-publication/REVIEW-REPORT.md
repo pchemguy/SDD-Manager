@@ -35,3 +35,7 @@ Use one concise local instruction: commit, push and verify remote containment be
 ## Evidence and limits
 
 Inspected canonical Git publication, coordinator/PLUGIN rules, artifact owners, PROJECT/human review, orientation, task/review/steering/integration and release ownership. Text searches discovered candidates; commit metadata/code examples were not treated as commit instructions. Closed records were not current-validity targets. No files were changed by the preceding audit; this record persists its findings. Execution is separately authorized in the same current request.
+
+## Revision disposition
+
+R-001–R-003 were accepted and revised through V-001 in [REVISION-REPORT.md](REVISION-REPORT.md). The global obligation remains unchanged; local steps now name commit/push/remote containment explicitly. Baseline observations above are retained.

@@ -76,4 +76,4 @@ New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT
 
 | `051_93de2bd` | Requested PLUGIN front matter added; eight shortened skill-reference cases normalized. 134-file native package and 124 support/30 publisher tests passed; main integration/publication establishes closure. | [Revision plan](051_93de2bd-plugin-entry-metadata/REVISION-PLAN.md), [revision report](051_93de2bd-plugin-entry-metadata/REVISION-REPORT.md) |
 
-| `052_7d0dd14` | Publication clarity audit retained; local document/orientation push/readback remediation planned. | [Review report](052_7d0dd14-explicit-publication/REVIEW-REPORT.md), [revision plan](052_7d0dd14-explicit-publication/REVISION-PLAN.md) |
+| `052_7d0dd14` | Seven local document/orientation gates now explicitly require commit/push/readback; original scoped policy unchanged. Final verification/integration establishes closure. | [Review report](052_7d0dd14-explicit-publication/REVIEW-REPORT.md), [revision plan](052_7d0dd14-explicit-publication/REVISION-PLAN.md), [revision report](052_7d0dd14-explicit-publication/REVISION-REPORT.md) |
