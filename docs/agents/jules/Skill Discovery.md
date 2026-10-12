@@ -42,23 +42,30 @@ Report the results **in chat only**, organized for quick human review, with a br
 **Completion means reporting the findings in chat. No repository changes or modifying Git operations are required or authorized at this point. When you are finished, simply conclude the task to end your turn instead of making a formal submission.**
 ```
 
-It seems like should spell out a concise discovery plan, like
+It seems like I should spell out a concise discovery plan, like
 
 1. **Skill Discovery Protocol**
     1. Start from `{REPO_ROOT}/.agents/skills/`
     2. List skill containers `./{SKILL_NAME}`
     3. Dive into each `./{SKILL_NAME}` skill container:
         1. Read every `./SKILL.md` in full.
-        2. Produce a skill brief, including:
-            1. Skill path and extracted name and description from `./SKILL.md`.
-            2. Concise summary of skill capabilities derived from `./refrences/*.md` sub-workflows and associated routing instructions extracted from `./SKILL.md`, if applicable.
+        2. Produce a skill brief, incorporating:
+            1. Skill path and extracted `name` and `description` from `./SKILL.md`.
+            2. Concise summary of skill capabilities derived from
+                - `./refrences/*.md` sub-workflow names and
+                - associated scope and routing instructions extracted from `./SKILL.md`, if applicable.
 2. **Plugin  Discovery Protocol**
     1. Start from `{REPO_ROOT}/.agents/plugins/`
     2. List plugin containers `./{PLUGIN_NAME}`
     3. Dive into each `./{PLUGIN_NAME}` plugin container:
-        1. Find and read plugin manifest `plugin.json` in full by checking:
+        1. Read any root `AGENTS.md` and `README.md`, if available.
+        2. Find and read plugin manifest `plugin.json` in full by checking:
             1. Standard manifest location - plugin root. If found, SKIP next point.
             2. Vendor-specific manifest locations/names.
+        3. Apply **Skill Discovery Protocol** to `./skills`.
+        4. Produce a plugin brief, incorporating:
+            1. Plugin path and extracted `name`, `description`, and `displayName` from the plugin manifest.
+            2. Concise summary of plugin capabilities
 
     List plugin containers `{REPO_ROOT}/.agents/plugins/{PLUGIN_NAME}`. For each `{PLUGIN_NAME}` produce a plugin brief:
     4. Read any root `AGENTS.md` and `README.md` (when none is available, use child skill briefs) and derive concise plugin capabilities summary.
