@@ -255,6 +255,8 @@ Host review is separate from SDD Manager content review. The observed website se
 
 ## Testing with TextStats
 
+Source contributors and test coordinators start at [acceptance/AGENTS.md](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/AGENTS.md) for verification commands, package checks and acceptance routing. Root [AGENTS.md](AGENTS.md) primarily guides plugin use; the contributor entry remains outside the installed package.
+
 [TextStats](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/textstats/README.md) exercises the plugin through fresh consumer workflows and independent assessments in a dedicated test repository. Its README describes setup, required variants, optional complex recovery, retained evidence and final integration into test main. Support tests check the harness; they do not establish live acceptance of a revised source.
 
 Prior test repositories (retain this list when adding runs):

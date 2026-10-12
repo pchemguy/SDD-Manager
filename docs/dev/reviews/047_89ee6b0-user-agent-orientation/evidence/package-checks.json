@@ -1,0 +1,12 @@
+{
+  "source": "fb5a4b94309dc831a02d37571e58acbec40e0f12",
+  "base": "89ee6b0584b448630509bc3433f3f386aac01015",
+  "prospective_merge_matches_source": true,
+  "core_manifest_valid": true,
+  "package_files": 133,
+  "two_builds_identical": true,
+  "root_agents_exact_committed_bytes": true,
+  "acceptance_excluded": true,
+  "archive_sha256": "cde862e98cb365aab840f3daa39cd1295bf56423657901ed6176638e4e0ef12a",
+  "limits": "Native build/source only; no consumer/client/provider trial."
+}

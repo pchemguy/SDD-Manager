@@ -1,0 +1,36 @@
+# SDD Manager source verification and acceptance
+
+This is the source-repository entry for agents developing, verifying or assessing SDD Manager itself. Load it explicitly before source work, including checks owned by .github/ or development documents outside acceptance/. It supplements the root [user entry](../AGENTS.md); it is not an instruction file for an ordinary project using the plugin and is outside the installed package.
+
+## Source orientation
+
+- Workflow source: skills/<skill>/SKILL.md and conditionally loaded references. Start coordinated work at [sdd-manage](../skills/sdd-manage/SKILL.md); inspect the selected owner before edits and read applicable nested AGENTS.md.
+- Metadata: root plugin.json is the sole package manifest, with OpenAI presentation metadata under extensions.com.openai.interface. Artwork/templates live in assets/; package notices are SDD-MANAGER.md and AI_DISCLOSURE.md.
+- Retained development evidence: [review/revision index](../docs/dev/reviews/README.md). This repository has campaign plans/reports rather than a root project TASKS owner; do not invent executable task IDs from findings. Discover current work and branch state through Git and the selected campaign record.
+
+Use current source and the active campaign for routine work. Prior closed review/feature/steering records are frozen history, except a selected eligible revision explicitly reopened under [revision modes](../skills/sdd-manage/references/revision-modes.md). Do not load closed contents without a specific current need, edit them or assess their compatibility with subsequent changes. Discover identities/paths without reading contents and verify preservation through Git path/object diffs. See [closed campaign records](../skills/sdd-conventions/references/review-campaigns.md#closed-campaign-records).
+
+## Local verification
+
+Run commands from the SDD Manager repository root. For changes affecting acceptance tooling and for coherent plugin boundary integration, run the support suite:
+
+```text
+python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v
+```
+
+Use Python 3.11 or the established supported runtime; release CI uses 3.11. Before source publisher checks or local release builds, install the declared dependency, then run the publisher suite:
+
+```text
+python -m pip install -r .github/requirements.txt
+python -m unittest discover -s .github/tests -v
+```
+
+The publisher validates exact committed candidate bytes against the [pinned offline core schema](../.github/schemas/README.md); it does not validate client-specific presentation. Check affected Markdown links, manifest conformance, presentation asset paths and actual package contents as applicable. Root AGENTS.md remains packaged; acceptance/ and development/CI evidence remain source-only. Verify that package links do not require excluded local files.
+
+Record the tested source, interpreter/environment, actual outcomes and evidence limits. Passing support/publisher tests or static/package checks does not establish live agent behavior, installed-client discovery/routing or provider acceptance. Keep unrun and blocked observations explicit.
+
+## TextStats acceptance coordination
+
+[TextStats](textstats/README.md) owns the sample product, harness, fixtures, consumer requests, independent assessor contracts and run evidence protocol. Read [its coordinator entry](textstats/AGENTS.md) before touching or executing that scope; follow its ordered setup and role-isolation instructions for an actual acceptance campaign. A support-suite run is distinct from a live acceptance campaign.
+
+Use the requested dedicated test repository and pinned plugin source for live trials. Never supply coordinator/assessor expectations to a fresh consumer or promote deterministic harness success to independent acceptance. Consumer, controlled-provider, live-provider and installed-client evidence retain their distinct meanings under the TextStats instructions.
