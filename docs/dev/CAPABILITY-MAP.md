@@ -43,7 +43,7 @@ Validate resolved links against the plugin root, including filesystem link resol
 
 ## Core development workflows
 
-The [canonical model](../../skills/sdd-manage/references/workflows.md#core-development-workflows) defines three purposes: full development builds the complete intended system; revision corrects, simplifies, or improves defined/implemented work, typically through review/revision records; feature adds a scoped capability through the necessary feature package before implementation. Stages can be entered when their inputs are established, and operations can be requested independently.
+The [canonical model](../../skills/sdd-manage/references/workflows.md#core-development-workflows) defines three purposes: main development builds the complete intended system; revision corrects, simplifies, or improves defined/implemented work, typically through review/revision records; feature adds a scoped capability through the necessary feature package before implementation. Stages can be entered when their inputs are established, and operations can be requested independently.
 
 Completed incorporated feature sources are retained under `docs/dev/features/<campaign>-<slug>/` with repaired navigation and historical task status; active root sources remain until incorporation/ownership/archive gates are met.
 
