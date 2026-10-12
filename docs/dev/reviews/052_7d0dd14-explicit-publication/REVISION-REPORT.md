@@ -18,3 +18,7 @@ Each amended step links canonical per-commit publication; its existing user-dire
 ## Integration
 
 The audit report/opening and revision plan were separately pushed/read back before edits. Source and action evidence travel together; explicit two-parent main integration and target readback establish final closure. Runtime/interpreter and unexecuted facilities are recorded with final checks.
+
+## Committed candidate verification
+
+[Native checks](evidence/package-checks.json) at published/read-back source `d058bf086964e544031b1ff95dfb5afe6d85a7e8`: canonical manifest valid, two identical 134-file actual builds, exact archive inventory/content, 655 current local links and unchanged closed records. Seven policy links make the inherited exception/recovery contract directly available. Source metadata/package rules and executable helpers remain unchanged. Full merged-state support/publisher checks precede final closure.
