@@ -75,3 +75,7 @@ The Jules Workflow Loading prompt example refers to conceptual workflow stages; 
 A bounded future revision can address R-001's six confirmed locations and R-003's shared rule, then reconcile R-002's ambiguous paths/handoffs individually. Keep general lowercase terms, reference paths, headings, metadata keywords, literal examples and closed records unchanged where appropriate. If diagram label text changes, check its source/meaning; do not claim fresh rendering without a renderer.
 
 Checked scoped report headings/links, inventory source provenance, allowed Git paths and unchanged source/closed records. No runtime tests, package build, fresh diagram rendering, external research, client or provider operation was performed: this is a source/editorial review. Publish the report and stop on the open branch before revisions or main integration.
+
+## Accepted correction evidence
+
+The human authorized planning/execution with a concise shared rule. R-001–R-003 are revised through V-001 in [REVISION-REPORT.md](REVISION-REPORT.md); generic concepts, literal paths/metadata and quoted examples are preserved. Baseline findings above remain retained. No global replacement or document rename occurred.

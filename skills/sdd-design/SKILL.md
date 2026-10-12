@@ -24,7 +24,7 @@ When the request crosses stages, load the next reference as that stage becomes r
 
 Use the **sdd-conventions** modularity reference when defining or reviewing boundaries, and its design heuristics when assessing a chosen approach or comparing options. Keep these checks separate from the document-specific procedures below. Observe project instructions and existing contracts; do not overwrite unowned changes. If required project evidence conflicts, resolve the conflict before mutation.
 
-`PROJECT.md` owns the [concise project brief](references/project-brief.md), `ARCHITECTURE.md` owns high-level design, and `DECOMPOSITION.md` owns detailed logical component boundaries. Both architecture and decomposition may have focused children. Scoped feature documents express a proposed architectural delta where necessary. These documents inform SPEC; they neither replace its behavioral contracts nor authorize implementation, planning, layout authoring, or task execution.
+`PROJECT.md` owns the [concise project brief](references/project-brief.md), `ARCHITECTURE.md` owns high-level design, and `DECOMPOSITION.md` owns detailed logical component boundaries. Both ARCHITECTURE and DECOMPOSITION may have focused children. Scoped feature documents express a proposed architectural delta where necessary. These documents inform SPEC; they neither replace its behavioral contracts nor authorize implementation, planning, layout authoring, or task execution.
 
 ## Document boundaries
 

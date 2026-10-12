@@ -2,6 +2,10 @@
 
 Apply these rules whenever SDD Manager authors, revises or reviews Markdown. They cover all document types: main and feature development documents and focused children, active reports, README and guides, AGENTS.md, skill instructions and references, templates, release notes and hosted Markdown drafts. Direct skill calls use the same rules as coordinated workflows. Respect controlling human/project instructions; surface a real conflict rather than silently choosing an incompatible format.
 
+## Document names
+
+Use uppercase names for development documents and normal prose case for concepts and activities. Preserve literal paths, identifiers and quotations.
+
 ## Heading separation
 
 Place a blank line after every Markdown heading, including ATX (`#` through `######`) and Setext headings (text followed by an `=` or `-` underline). This applies before prose, another heading, a list, a table or a fenced block. Separate headings from preceding content with a blank line as well; the beginning of a document or template needs no leading blank line. A heading at the end of a file still has a following blank line.
