@@ -15,3 +15,7 @@
 | U-001 | Review remaining README section purposes, hierarchy, reader flow, repeated rules and mixed audiences; recommend bounded restructuring with located findings and a proposed outline. | Retained REVIEW-REPORT.md and concise chat findings, committed/published. |
 
 Further restructuring is proposed only and requires acceptance before execution. Do not merge this open campaign merely to publish its findings. Preserve runtime skills, acceptance material and closed records.
+
+## Immediate whitespace amendment
+
+The human additionally requested checking and fixing multiple blank lines without deferral. V-002 collapses consecutive empty lines in the remaining README outside fenced blocks, preserving all text, diagrams and code. This cleanup is authorized now; the structural recommendations remain proposed.

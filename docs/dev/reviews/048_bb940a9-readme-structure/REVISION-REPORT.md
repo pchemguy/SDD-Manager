@@ -16,3 +16,7 @@ The campaign remains open while recommendations await acceptance; no additional 
 ## Focused structural review completed
 
 The remaining README was reviewed at the published opening checkpoint `e79375d22ebf18d5d81c41be4a3a15ea9060083e`. [Review report](REVIEW-REPORT.md) records seven proposed editorial recommendations, reverse outline, priorities and a proposed reading order. No further README edits were made during review. The report's recommendations require acceptance before restructuring; campaign remains open and unmerged.
+
+## V-002 — Consecutive blank-line cleanup
+
+Inspected the complete remaining README for consecutive empty lines outside fenced blocks. Removed one redundant blank line before License. Token-sequence equality, byte-identical fenced blocks, absence of remaining outside-fence blank-line runs and git diff --check pass. No prose, links, headings or diagram content changed. This immediate whitespace amendment was executed as requested; R-001–R-007 remain unimplemented recommendations.

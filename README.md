@@ -327,7 +327,6 @@ All 15 skills are included. Structural validation and independent coordination a
 - [Plugin review](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/001_49143fa/REVIEW-REPORT.md): findings, corrections, verification evidence, and limits.
 - [TDD provenance](skills/sdd-tdd/references/upstream-provenance.md): adaptation of Superpowers TDD and its test-writing companion, with the retained MIT license.
 
-
 ## License
 
 SDD Manager is licensed under the [MIT License](LICENSE). Bundled third-party material retains its own license and attribution, including [the TDD adaptation license](skills/sdd-tdd/LICENSE).
