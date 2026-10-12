@@ -17,3 +17,7 @@
 ## Persistence and stopping
 
 Publish this opening checkpoint before the substantive review. Publish the completed review report with scoped Markdown/link/preservation checks. Review-only: do not modify plugin instructions, repair the sample project, execute its workflow, use the supplied token or merge this campaign into main. Recommendations require later acceptance/execution authority.
+
+## Review result
+
+U-001 is complete in [REVIEW-REPORT.md](REVIEW-REPORT.md). The concise project-brief role is explicit and matches the supplied artifact; initial-stage drafting/routing could be clearer. Recommendations remain proposed; no source revisions or campaign integration occurred.

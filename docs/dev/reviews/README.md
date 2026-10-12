@@ -70,4 +70,4 @@ New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT
 
 | `048_bb940a9` | README/PLUGIN human-agent split implemented; development-only AGENTS.md excluded from package, publisher/snapshot contracts and TextStats navigation aligned. 124 support/30 publisher tests and native package/link checks passed; campaign closure and main integration/publication established by Git. | [Revision plan](048_bb940a9-readme-structure/REVISION-PLAN.md), [revision report](048_bb940a9-readme-structure/REVISION-REPORT.md), [review report](048_bb940a9-readme-structure/REVIEW-REPORT.md) |
 
-| `049_d70539d` | Focused review planned: explicit PROJECT.md contract, progressive entry routing and supplied Jules brief assessment. | [Review plan](049_d70539d-project-brief-contract/REVIEW-PLAN.md) |
+| `049_d70539d` | Focused review complete: PROJECT is explicitly a concise brief; proposed authoring/routing and sample-heading/constraint improvements. Open, review-only. | [Review plan](049_d70539d-project-brief-contract/REVIEW-PLAN.md), [review report](049_d70539d-project-brief-contract/REVIEW-REPORT.md) |
