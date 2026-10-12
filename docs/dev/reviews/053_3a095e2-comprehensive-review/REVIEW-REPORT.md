@@ -111,3 +111,7 @@ Five open findings: **three medium** (R-001/R-003/R-004), **two low** (R-002/R-0
 3. **R-005:** Normalize current campaign-index table structure without changing historical records.
 
 No revision plan or repairs have been authorized in this review request. The review report/plan/evidence are published on `revision/053_3a095e2-comprehensive-review`; `main` remains the reviewed baseline. Proposed revision execution and any fresh client/consumer/provider campaign require their own selected scope. Stop at the completed review boundary.
+
+## Accepted revision
+
+The human subsequently requested revision planning and execution. R-001–R-005 are accepted in [REVISION-PLAN.md](REVISION-PLAN.md); [REVISION-REPORT.md](REVISION-REPORT.md) retains implementation/recheck outcomes separately from the baseline assessment.
