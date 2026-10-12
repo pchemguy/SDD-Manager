@@ -1,0 +1,14 @@
+{
+  "source": "d058bf086964e544031b1ff95dfb5afe6d85a7e8",
+  "base": "7d0dd1422bb399f46d9ea30f5381e5e956bc1934",
+  "core_manifest_valid": true,
+  "two_builds_identical": true,
+  "native_package_files": 134,
+  "hashes": {
+    "sdd-manager.zip": "d6c19b7ee4bcbb8e9a141d1084449ea7e3f37b4fd0d2d73cc009dc953a89c3f7",
+    "sdd-manager.zip.sha256": "d126fe6aedb76ff2fe96d97d0e66be29593e74002ac182209dbd6c1c6d1d6578"
+  },
+  "current_local_links": 655,
+  "closed_records_unchanged": true,
+  "limits": "Native/source verification only; no consumer/client/provider execution."
+}
