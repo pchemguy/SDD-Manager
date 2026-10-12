@@ -81,7 +81,7 @@ Treat repository paths as relative to {REPO_ROOT}.
 
 ### 1. Skill Discovery Protocol
 
-Start from `.agents/skills/`. Identify all skill containers by locating their `./{SKILL_NAME}/SKILL.md` files.
+Apply this protocol to a supplied skill directory; use `.agents/skills/` for standalone skills. Identify each immediate child container containing `SKILL.md`.
 
 For each skill:
 - Read and load `SKILL.md` in full.
@@ -89,7 +89,7 @@ For each skill:
 - Identify capabilities, sub-workflows, scope, and routing rules from `SKILL.md`.
 - Report the skill path, declared metadata, and a concise capability summary derived from `SKILL.md`.
 
-Do not execute bundled scripts or discovered workflows.
+Do not read referenced resources, including `references/*.md`, during this discovery task. Load them only when required by a subsequent authorized task. Do not execute bundled scripts or discovered workflows.
 
 ### 2. Plugin Discovery Protocol
 
@@ -104,18 +104,22 @@ For each plugin:
 
 ### 3. Reporting
 
-   Group standalone skills separately from plugins and their bundled skills. Avoid duplicate briefs for the same skill path.
+Group standalone skills separately from plugins and their bundled skills. Avoid duplicate briefs for the same skill path. Identify missing discovery directories, absent metadata or entry points, unreadable entry-point files, and conflicts among manifests actually inspected. Do not invent missing metadata.
 
-   Identify missing discovery directories, absent metadata or entry points, unreadable resources, and conflicting manifests concisely. Do not invent missing metadata.
+Use the following reporting guidelines:
+
+- Present the declared description and a separate concise capability summary synthesized from SKILL.md.
+- Use Markdown headings and bullets formatting.
+- Summarize PLUGIN.md’s substantive contents briefly when present; otherwise note its absence.
+- Aggregate discovery problems at the end.
 
 ### STRICT EXECUTION CONSTRAINTS:
 
 - This is a READ-ONLY discovery and reporting task.
 - Do NOT create, modify, or remove any user files.
 - Do NOT perform modifying Git operations.
-- Do NOT execute discovered workflows or bundled scripts.
-- Do NOT ask clarifying questions.
-- Make reasonable decisions about discovery and presentation, then execute immediately.
 - Do NOT attempt to formally submit the task.
+
+Do NOT ask clarifying questions or pause for confirmation about discovery or presentation choices. Use the reporting guidelines above. If an entry point is missing or unreadable, report the limitation and continue with the remaining items.
 
 Completion means reporting the findings in chat. No repository changes or modifying Git operations are required or authorized. When finished, simply conclude the task to end your turn instead of making a formal submission.
