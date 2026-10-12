@@ -1,0 +1,14 @@
+{
+  "source": "448bad28654b73e21e9fbf663f0b3dbfd5926392",
+  "base": "3d24726abb4ca2a17f15fbb89c9c6fca2e93fe27",
+  "core_manifest_valid": true,
+  "native_package_files": 134,
+  "two_builds_identical": true,
+  "reproducible_hashes": {
+    "sdd-manager.zip": "54e2c476f1e46f112e9b6f9b9508863c4eae73b61cf278b4ecb490f84371363b",
+    "sdd-manager.zip.sha256": "afa09865b5cc780f6726d3f4a30212acebe9d295bcaf336cbe5f07476fce6bd9"
+  },
+  "current_local_links": 648,
+  "closed_records_unchanged": true,
+  "limits": "Static/native checks; no fresh Mermaid rendering or live agent/client/provider trial."
+}

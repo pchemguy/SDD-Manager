@@ -107,7 +107,7 @@ Each necessary new document has a separate human decision, even where the diagra
 
 ```mermaid
 flowchart TB
-    M["sdd-manage + sdd-orient<br/>Establish scope and repository state"] --> D["sdd-design<br/>PROJECT, architecture and decomposition"]
+    M["sdd-manage + sdd-orient<br/>Establish scope and repository state"] --> D["sdd-design<br/>PROJECT, ARCHITECTURE and DECOMPOSITION"]
     D -->|"accepted design"| S["sdd-specify<br/>Behavior and acceptance contracts"]
     S --> SQ{"SPEC QC ready and human accepted?"}
     SQ -->|"correction needed"| S

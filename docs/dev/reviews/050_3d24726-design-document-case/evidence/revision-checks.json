@@ -1,0 +1,20 @@
+{
+  "kind": "scoped source/editorial checks",
+  "base": "3d24726abb4ca2a17f15fbb89c9c6fca2e93fe27",
+  "changed_source_files": [
+    "PLUGIN.md",
+    "README.md",
+    "skills/sdd-design/SKILL.md",
+    "skills/sdd-design/references/decomposition.md",
+    "skills/sdd-manage/references/branch-management.md",
+    "skills/sdd-manage/references/workflows.md",
+    "skills/sdd-plan/references/delivery-plan.md",
+    "skills/sdd-conventions/references/markdown-style.md"
+  ],
+  "changed_local_links": 114,
+  "link_paths_preserved": true,
+  "shared_rule_exactly_two_sentences": true,
+  "diagram_only_document_label_case_changed": true,
+  "representative_concepts_metadata_and_literal_examples_unchanged": true,
+  "renderer_or_live_consumer": false
+}
