@@ -100,7 +100,3 @@ Formal campaign artifacts live on their revision branch under the [shared campai
 Use current main owners and active records for routine work. Closed packages are frozen history; do not load their contents without a specific current need, edit them or assess their later compatibility. Eligible explicitly reopened revisions use the selected mode, not silent historical repair. Inspect preservation by Git path/object diffs.
 
 Apply [Markdown conventions](skills/sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists/blocks, four-space structural indentation and one space after list markers. Preserve code/data literals and closed records. Keep credentials out of source, prompts, reports and handoffs.
-
-## Source contributors
-
-PLUGIN.md replaces the package's user/workflow AGENTS.md entry. The source repository retains a separate development-only AGENTS.md outside the package; target projects retain their controlling AGENTS.md. For changes to SDD Manager itself, explicitly load the source-only [acceptance/AGENTS.md](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/AGENTS.md), including work outside acceptance/, plus applicable nested instructions. Source checks and acceptance coordination belong to that contributor entry, not ordinary plugin use.
