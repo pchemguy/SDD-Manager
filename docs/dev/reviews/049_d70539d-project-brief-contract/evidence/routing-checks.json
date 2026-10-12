@@ -1,0 +1,21 @@
+{
+  "kind": "static/source route assessment, not consumer execution",
+  "changed_document_local_links": 139,
+  "routes": [
+    "PLUGIN design request",
+    "PLUGIN preparation seed",
+    "design direct create/revise/review",
+    "exploration handoff",
+    "manager preparation",
+    "architecture accepted input"
+  ],
+  "canonical_contract": "skills/sdd-design/references/project-brief.md",
+  "boundaries": [
+    "concise complete-project intent",
+    "adaptable Overview/constraints",
+    "read-only review",
+    "separate human acceptance before architecture"
+  ],
+  "source_heading_blank_spacing": "pass",
+  "client_or_live_trial": false
+}

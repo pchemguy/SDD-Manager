@@ -85,3 +85,7 @@ No fixed document length is proposed. The sample is a reasonable small-project b
 Inspected current source definitions and both sides of the design/specification and human-review handoffs; compared the supplied artifact conceptually without executing its prompts. Checked report headings/links, allowed Git paths and unchanged closed records. No source repair, runtime suite, Mermaid render, installed-client run, provider verification or external research was performed.
 
 Publish this report and stop on the open review branch. If the recommendations are accepted, prepare a bounded revision plan principally for R-001, with R-002/R-003 as adaptable authoring/example guidance. The user-supplied test-project artifact is not authorized for edits. Keep the concise project-brief role, separate document owners and required human checkpoint.
+
+## Accepted revision evidence
+
+The human requested ready discovery from PLUGIN.md and authorized planning/execution. R-001–R-003 are addressed by V-001 in [REVISION-REPORT.md](REVISION-REPORT.md): one canonical brief reference, explicit plugin/design/workflow routes and adaptable Overview/constraint guidance. Baseline observations above remain retained. Source/static verification does not establish Jules or another consumer's actual future behavior.

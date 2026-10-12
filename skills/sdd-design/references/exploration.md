@@ -27,6 +27,8 @@ An exploratory prototype inside the governed project is project implementation. 
 
 ## Handoff
 
+When PROJECT creation, revision or review is requested, load the [project brief](project-brief.md) contract to turn the seed and actual clarified decisions into the selected artifact. Its human checkpoint holds dependent architecture; conversational exploration alone does not authorize drafting.
+
 Architecture work is ready when the purpose and scope are understood, principal boundaries can be argued, and no unresolved question would force a material architecture choice to be invented. If the user requests architecture earlier, identify the missing decisions and distinguish blockers from deliberate design options. Read [architecture](architecture.md) only when architecture becomes the requested work. Read [decomposition](decomposition.md) only when detailed components become the requested work.
 
 ## Evidence-backed project positioning

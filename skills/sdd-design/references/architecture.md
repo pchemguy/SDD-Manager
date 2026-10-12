@@ -1,10 +1,10 @@
 # Architecture
 
-Define the system's high-level arrangement and why it fits the project's purpose. Read accepted exploration decisions and relevant existing project evidence. Apply the shared **sdd-conventions** modularity checks to major boundaries. Use [decomposition](decomposition.md) when responsibility analysis reaches detailed components.
+Define the system's high-level arrangement and why it fits the project's purpose. Read the accepted PROJECT brief, exploration decisions and relevant existing project evidence. Apply the shared **sdd-conventions** modularity checks to major boundaries. Use [decomposition](decomposition.md) when responsibility analysis reaches detailed components.
 
 ## Document ownership
 
-- `docs/dev/PROJECT.md` is the concise brief: purpose, users, principal outcomes, scope and non-goals, constraints, and terms needed to orient a reader. It is not an operating-instructions file. If an existing copy contains instructions, preserve their authority and resolve its intended role before replacing content.
+- `docs/dev/PROJECT.md` provides the accepted project context under the canonical [project brief contract](project-brief.md). Preserve its intent/constraints without repeating the brief as architecture.
 - `docs/dev/ARCHITECTURE.md` is a compact but substantive design entry point: a short orientation back to the brief; major blocks and their responsibilities; dependency direction and cross-block interactions; relevant external systems and data ownership; selected patterns, design principles, and consequential tradeoffs; system-wide architectural invariants; and a map of focused children when present.
 - Focused children under `docs/dev/architecture/` may own a substantial architectural area. The root defines their scopes and system-wide relationships; each child adds detail within its area. Split for independent responsibility and navigability, not a fixed size or one child per task.
 
