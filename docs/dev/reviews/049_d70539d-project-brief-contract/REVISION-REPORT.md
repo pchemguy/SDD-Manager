@@ -18,3 +18,7 @@ Added an explicit create/revise/review route and PROJECT boundary in sdd-design;
 ## Integration and limits
 
 Plan checkpoint was pushed/read back before source revisions. This action's source and report travel together; native committed package checks and full merged-state regressions follow publication. Final two-parent merge and target readback establish campaign closure. No source manifest/package inclusion rule or runtime helper code changed. Python/client/CI facilities and unrun tests are stated with final evidence; no installed-client/live consumer/provider trial or use of the supplied credentials occurred.
+
+## Committed candidate verification
+
+[Native package checks](evidence/package-checks.json) at published/read-back action checkpoint `4b7afab7af2466cb8dc41e2663c157f09bb1b53d`: canonical manifest valid, two identical 134-file builds, exact committed canonical brief and PLUGIN.md bytes, source AGENTS.md excluded, 648 current local links resolved and prior closed records unchanged. The package grows by one bundled reference; inclusion rules remain unchanged. These are source/native checks, not agent/client discovery or live acceptance. The complete candidate is ready for the final explicit merge and required support/publisher regressions.
