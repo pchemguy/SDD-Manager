@@ -3,7 +3,7 @@ name: sdd-manager
 displayName: SDD Manager
 ---
 
-# SDD Manager plugin entry
+# SDD Manager
 
 SDD Manager composes focused skills into specification-driven development workflows for Git projects. Use this entry to select and connect capabilities. Each skill's SKILL.md owns its procedure; `references/*.md` supply progressively loaded sub-workflows. The human-facing [README](README.md) explains capabilities and composite workflows with examples and diagrams.
 
