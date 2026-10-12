@@ -18,8 +18,6 @@ Resolve missing decisions that would otherwise force a material project/architec
 
 ## Adaptable content structure
 
-Use the project name as the root title. An opening paragraph can stand directly below it; use **Overview** when a separate introduction subsection helps.
-
 | Concern | Suitable content |
 | --- | --- |
 | Overview | What is being developed, the problem/use context and principal intended outcome |
