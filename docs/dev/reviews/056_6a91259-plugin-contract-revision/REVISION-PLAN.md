@@ -33,3 +33,14 @@ Check source ownership, scenario context and expected boundaries against current
 ## Current review boundary
 
 The human requested an in-depth critical review of the contract as human context and a development tool. [Review plan](REVIEW-PLAN.md) and [review report](REVIEW-REPORT.md) retain scope, findings and proposed organization. This authorizes review records and publication, not remediation or merge; V-001 through V-003 remain completed actions.
+
+## Accepted remediation — V-004
+
+The human authorized planning and execution of the critical review's proposed revisions, with campaign closure/integration explicitly excluded. Accept R-001 through R-008. Revise only the source contract, necessary contributor navigation and active campaign records; preserve Scope and motivation verbatim and all packaged instructions.
+
+1. Assess the document name against its combined context, requirements and development/assessment role. Prefer retaining PLUGIN-CONTRACT.md if its binding coverage remains central; clarify the title/purpose rather than rename for editorial breadth alone. Record the decision.
+2. Add purpose/use, concrete canonical coverage, summary/procedure limits, recommended PLUGIN.md organization and a bounded development/review method. Retain grouped responsibilities and incorporate prominence, progressive discovery and maintenance concerns. Address R-001 through R-005 and R-008.
+3. Refine examples into identified assessment cases with decision-relevant context, entry/discovery expectations and separately stated boundaries. Add selected negative contrasts and a canonical-access check without PLUGIN.md; distinguish source checks from model trials. Address R-006/R-007.
+4. Recheck all findings, source agreement, local links/anchors, Markdown spacing, accepted-opening preservation, package/source boundaries and closed-record preservation. Update navigation and report actual outcomes.
+
+Publish this plan before source execution. Then execute the coupled document revision as one coherent action, commit/push/read back source and evidence together, and stop on the open campaign branch. No model/client trials or release effects are selected. Runtime/publisher suites are unnecessary for this source-only prose action; contract fidelity, link and Git path checks provide the relevant evidence.
