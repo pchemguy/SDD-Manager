@@ -81,7 +81,8 @@ Treat repository paths as relative to {REPO_ROOT}.
 
 ### 1. Skill Discovery Protocol
 
-Apply this protocol to a supplied skill directory; use `.agents/skills/` for standalone skills. Identify each immediate child container containing `SKILL.md`.
+Apply this protocol to a supplied skill directory; use `.agents/` for standalone skills.  
+Identify each  `./skills/<SKILL_NAME>/SKILL.md`.
 
 For each skill:
 - Read and load `SKILL.md` in full.
@@ -93,18 +94,18 @@ Do not read referenced resources, including `references/*.md`, during this disco
 
 ### 2. Plugin Discovery Protocol
 
-Start from `.agents/plugins/`. Identify all plugin containers.
+Start from `.agents/plugins/`. Identify all plugin containers `./<PLUGIN_NAME>`.
 
 For each plugin:
    - Check for `plugin.json` at the plugin root and read it in full. If found, use it as the manifest and skip vendor-specific manifest checks.
    - Otherwise, inspect vendor-specific manifest locations, such as `.claude-plugin/plugin.json` and `.codex-plugin/plugin.json`. Read discovered manifests in full and identify their paths.
    - Read `PLUGIN.md` in full, if present.
-   - Apply the  **Skill Discovery Protocol** to the plugin’s `skills/` directory.
+   - Apply the  **Skill Discovery Protocol** to the plugin’s directory.
    - Report the plugin path; declared `name`, `description`, and `displayName`, where present; a concise summary of its entry point; and its skill briefs.
 
 ### 3. Reporting
 
-Group standalone skills separately from plugins and their bundled skills. Avoid duplicate briefs for the same skill path. Identify missing discovery directories, absent metadata or entry points, unreadable entry-point files, and conflicts among manifests actually inspected. Do not invent missing metadata.
+Group standalone skills separately from plugins and their bundled skills. Avoid duplicate briefs for the same skill path. Do not invent missing metadata.
 
 Use the following reporting guidelines:
 
@@ -119,7 +120,5 @@ Use the following reporting guidelines:
 - Do NOT create, modify, or remove any user files.
 - Do NOT perform modifying Git operations.
 - Do NOT attempt to formally submit the task.
-
-Do NOT ask clarifying questions or pause for confirmation about discovery or presentation choices. Use the reporting guidelines above. If an entry point is missing or unreadable, report the limitation and continue with the remaining items.
-
-Completion means reporting the findings in chat. No repository changes or modifying Git operations are required or authorized. When finished, simply conclude the task to end your turn instead of making a formal submission.
+- Do NOT ask clarifying questions or pause for confirmation about discovery or presentation choices. Use the reporting guidelines above. 
+- Do not use any formal finalization operations. Provide the report directly in chat and then your turn.
