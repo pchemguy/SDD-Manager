@@ -66,3 +66,15 @@ Retained PLUGIN-CONTRACT.md and changed its title to “PLUGIN.md development co
 Root contributor and capability-map navigation now describe development/organization/assessment guidance. Checked 32 relevant source links/anchors, Markdown spacing, 16 case identities, accepted-section bytes and source/package path preservation. A preliminary broad link scan encountered a capability-map fenced illustration whose relative paths intentionally belong to its example context; the final scan assessed actual contract/contributor navigation, not literal example targets. No runtime suites or model/client acceptance runs performed for this source-only prose action.
 
 Commit/push/readback establishes the action boundary. Campaign remains open and unmerged as explicitly requested; source rechecks do not imply observed guidance effectiveness.
+
+## V-005 — Workflow entry, contextual requests and recovery
+
+Executed after review/plan commit `011adb8` was published/read back. The focused review confirmed that coordinator reuse/recovery and implementation range ownership already exist canonically; revised only the development contract and active records.
+
+R-009 source recheck: Purpose/use now distinguishes entry from established workflow context. Responsibilities, coverage, organization and review concerns route entry/discovery to PLUGIN.md and leave normal follow-up/range interpretation with active owners. No routine PLUGIN reload or fresh workflow selection is required.
+
+R-010 source recheck: assessment now separates nine entry cases, seven established-context cases and two recovery cases. Stable C-01 through C-16 identities retained, with starting conditions clarified. C-17 pairs the milestone request with lost context; C-18 checks unrecoverable range/authority. Contextual cases assess the entry's handoff contribution indirectly and the responsible skills' behavior directly, rather than making PLUGIN.md a universal request interpreter.
+
+R-011 source recheck: a concise coordinator fallback applies when available context cannot resolve workflow/owner interpretation. Recover discoverable state; reuse known owner/context where sufficient; ask only for consequential unrecoverable decisions. The contract does not require lower-level skill invocation or manual technical-context reconstruction by the user, and does not infer erased acceptance or authority. Detailed recovery remains canonical.
+
+Checked 26 contract links/anchors, all 18 unique case IDs, group-specific starts, Markdown spacing, accepted Scope and motivation bytes, and changed-path preservation. Packaged PLUGIN.md, canonical skills, acceptance tooling and closed campaign records unchanged. No suites, model trials or hosted effects performed. Findings R-009 through R-011 source-remediated; observed model behavior remains unrun. Commit/push/readback establishes this action boundary; campaign remains open and unmerged.

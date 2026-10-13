@@ -1,6 +1,6 @@
 # PLUGIN-CONTRACT critical review
 
-Campaign **056_6a91259**; [review plan](REVIEW-PLAN.md). Reviewed source: `9aeeb01c4ff45220421414a532259df2cb8a6a36`. Target: [PLUGIN-CONTRACT.md](../../PLUGIN-CONTRACT.md). State: **Review complete; R-001 through R-008 accepted and source-remediated**.
+Campaign **056_6a91259**; [review plan](REVIEW-PLAN.md). Reviewed source: `9aeeb01c4ff45220421414a532259df2cb8a6a36`. Target: [PLUGIN-CONTRACT.md](../../PLUGIN-CONTRACT.md). State: **Review complete; R-001 through R-011 accepted and source-remediated**.
 
 ## Assessment
 
@@ -148,3 +148,5 @@ Reviewed baseline `7df62ae0e906a7e2f7cc0c62d7ada2fe35c45959` against the human's
 **Priority: medium.** Continuity is described, but there is no clear boundary between reuse, recovery and unrecoverable human decisions. **Correction:** point to sdd-manage when available context cannot identify a reliable workflow/owner interpretation; recover context with focused orientation/skill discovery, preserving authority and stops. Ask only for consequential missing decisions. Do not require the user to learn lower-level skills or reconstruct technical context manually, and do not guess erased approvals/ranges. **Recheck:** available context is reused, recoverable state is recovered and unrecoverable authority is clarified before dependent effects.
 
 The coordinator already requires reuse of sufficient context and owns recovery/selection; implementation owns executable ranges. No canonical skill change is needed for this contract correction. Proposed remediation stays source-only; packaged PLUGIN.md compliance is outside this round.
+
+Second-round disposition: V-005 in the [revision report](REVISION-REPORT.md) records source remediation of R-009 through R-011. Entry, established-context and recovery starts are now distinguished; model trials remain unrun. Campaign stays open.
