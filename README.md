@@ -4,7 +4,7 @@
 
 SDD Manager is a learning-by-doing experiment in specification-driven development with coding agents, packaged as an Agent Plugin for Git repositories. It composes focused skills into workflows for exploration, design, specification, planning, implementation, verification and releases. Practical project runs inform its refinement; local source checks and live agent/client acceptance have distinct evidence boundaries.
 
-The agent entry is [PLUGIN.md](PLUGIN.md). Start with **sdd-manage** for coordinated work; it routes requests, reuses established decisions and honors your stopping boundary. PLUGIN.md describes how the skills work together, while each SKILL.md and its selected references own detailed instructions. Load the entry explicitly when your client does not expose it; automatic loading is client-dependent.
+The agent entry is [PLUGIN.md](PLUGIN.md). Start with **sdd-manage** for coordinated work; it routes requests, reuses established decisions and honors your stopping boundary. PLUGIN.md describes how the skills work together, while each SKILL.md and its selected references own detailed instructions. Load an available entry explicitly when needed; if it is unavailable, use the coordinator and skill entries directly. Automatic loading is client-dependent.
 
 Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).
 
@@ -99,7 +99,7 @@ PLAN begins with a meaningful end-to-end MVP and grows through small testable in
 
 ## Workflow guide
 
-These diagrams explain the human-visible paths. [PLUGIN.md](PLUGIN.md#composite-workflows) defines agent selection, handoffs and operational boundaries. Enter at the stage supported by current inputs; a blocker preserves work and stops the affected path.
+These diagrams explain the human-visible paths. [PLUGIN.md](PLUGIN.md#composite-workflows) summarizes agent selection, handoffs and operational boundaries. Enter at the stage supported by current inputs; a blocker preserves work and stops the affected path.
 
 ### Project preparation
 

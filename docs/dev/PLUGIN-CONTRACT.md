@@ -21,7 +21,7 @@ A sufficiently complex plugin may also define a dedicated coordinator skill to m
 
 This source-only contract guides human maintainers and development agents creating or reviewing SDD Manager's packaged [PLUGIN.md](../../PLUGIN.md). It explains the entry's responsibilities, content boundaries, organization and assessment. It does not supply instructions for running SDD Manager in a target project.
 
-For SDD Manager, [sdd-manage](../../skills/sdd-manage/SKILL.md) is the coordinator. `PLUGIN.md` is its front: a concise projection of capabilities, workflows and essential obligations defined in skill entries and references. It should generally lead the agent to load the coordinator before other skills. `PLUGIN.md` is a non-standard entry convention; essential operational guidance must remain reachable through the coordinator and owning skills when the host does not load it.
+For SDD Manager, [sdd-manage](../../skills/sdd-manage/SKILL.md) is the coordinator. `PLUGIN.md` is its front: a concise projection of capabilities, workflows and essential obligations defined in skill entries and references. It should generally lead the agent to load the coordinator before other skills. `PLUGIN.md` is a non-standard entry convention; essential operational guidance must remain reachable through the coordinator and owning skills when the host does not load it or the custom entry is unavailable. Explicit loading applies when the file is available and entry guidance is needed; absence does not block canonical skill entry.
 
 Use Responsibilities to check coverage, Recommended organization to compose the entry, and Development and review to assess changes. The assessment cases distinguish workflow entry, established-context requests and recovery, checking the responsible layer and its handoffs. Contributor verification remains governed by [acceptance/AGENTS.md](../../acceptance/AGENTS.md).
 
@@ -42,7 +42,7 @@ Lost context does not justify guessing approvals, task ranges or integration aut
 - **Coordinator pointer:** identify `sdd-manage`, link its entry and state when to load it alongside `PLUGIN.md`.
 - **Context:** route entry-time establishment of project state, governing instructions, active workflow, accepted inputs and pending work to the coordinator; point to recovery when the request cannot be resolved from available context.
 - **Workflow selection:** distinguish core workflows, variants and independent operations at entry. Identify the coordinator as owner of consequential stage changes or switches; preserve ordinary follow-ups within established workflow/skill context.
-- **Skill routing and progressive loading:** map workflow/capability entry triggers to owners; explain selective loading and handoff. Leave contextual range selection and execution instructions to the activated skills.
+- **Skill routing and progressive loading:** map workflow/capability entry triggers to owners; explain selective loading and handoff. A concise directory may identify all bundled capabilities, including implementation, testing and reporting. Listing an owner does not make the entry interpret every later request; contextual range selection and procedures remain with activated skills.
 
 ### Composite workflow summaries
 
@@ -140,6 +140,15 @@ Start with `PLUGIN.md` and no sufficient active workflow context. These cases as
 | C-12: Verified delivered range; version/context available; no release publication request | “Use SDD Manager to prepare a release message.” | Complete-message operation through coordinator/forge/report owners. | Prepare retained RELEASE-NOTES.md; no implicit tag or hosted release. Git persistence follows the selected owner procedure. |
 | C-13: Same delivered range; highlights only | “Use SDD Manager to collect release highlights.” | Narrow highlights operation. | Return curated changes without upgrading the request to a full message or release publication. |
 | C-16: Project directory outside Git; project-document creation requested | “Use SDD Manager to prepare this project’s documents.” | Conversation/read-only orientation may proceed; mutation requires eligible Git state. | Report mutation blocked; do not implicitly initialize Git or write project documents. |
+
+#### Broad review and revision variants
+
+Use these entry variants of C-10/C-11 without a preselected artifact set or correction list:
+
+| Variant and context | User prompt | Assess |
+| --- | --- | --- |
+| C-10a: Existing project; whole-project review requested; no repair authority | “Use SDD Manager to review this project.” | Coordinator-led orientation and review scope/units; select affected owners without making the human name skills. Clarify consequential scope/evidence choices where needed; no automatic repairs. |
+| C-11a: Existing project; improvement objective and correction scope not established | “Help me revise this project with SDD Manager.” | Discover actual context and clarify the consequential intended improvement/boundary before execution. Do not invent prior findings, a correction objective or a compulsory full document chain. |
 
 ### Requests within established workflow context
 
