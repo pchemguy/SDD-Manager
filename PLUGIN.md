@@ -5,17 +5,27 @@ displayName: SDD Manager
 
 # SDD Manager
 
-SDD Manager provides specification-driven development workflows for Git projects through a set of focused skills. Use this document to select skills and coordinate workflows. Each skill's `SKILL.md` defines its procedure, with supporting sub-workflows in `references/*.md`. The [README](README.md) describes capabilities and composite workflows through examples and diagrams.
+SDD Manager provides specification-driven development workflows for Git projects through focused skills. This entry orients the agent and routes workflow and capability requests. Each skill's `SKILL.md` owns its procedure; `references/*.md` supply selectively loaded sub-workflows. The [README](README.md) explains capabilities and workflows to humans.
 
-**`sdd-manage` is SDD Manager’s workflow coordinator. Generally load its [entry](skills/sdd-manage/SKILL.md) alongside `PLUGIN.md` before loading other skills.**
+**`sdd-manage` is SDD Manager’s workflow coordinator. Generally load its [entry](skills/sdd-manage/SKILL.md) alongside `PLUGIN.md` before other skills at workflow entry.**
 
-If the client does not load `PLUGIN.md`, read it explicitly before selecting a workflow. Bundled skills link to one another with relative Markdown links and identify handoffs by skill name. Load only the skills and references needed for the current work.
+Read an available `PLUGIN.md` explicitly when the client has not loaded it and entry guidance is needed. If it is unavailable, use the coordinator and skill entries directly. This is a non-standard entry convention, not a guarantee of automatic discovery. Bundled skills use relative Markdown links and named handoffs; load only relevant entries and references.
 
 ## Establish the request and context
 
-For project development, functionality, review or revision requests, use [sdd-manage](skills/sdd-manage/SKILL.md) to select or recover the workflow and assess whether the request continues it or requires a switch. Establish new, existing or interrupted project state through [sdd-orient](skills/sdd-orient/SKILL.md) when current context is insufficient. Select main development, feature or revision, including its steering variant, through the coordinator's [workflow selection](skills/sdd-manage/references/workflows.md#workflow-selection-and-continuity). Reuse current evidence and established identities.
+For a new development, functionality, review or revision request without sufficient workflow context, use `sdd-manage` to establish project state and select the path. Use [sdd-orient](skills/sdd-orient/SKILL.md) when current repository evidence is insufficient. Select by purpose; new, existing or interrupted state determines the eligible stage, not the workflow by itself.
 
-Before starting the selected work, report the workflow/variant, supporting request and project evidence, current stage/owner, authorized outputs and next human checkpoint or stop in chat. Clarification does not accept new documents; preserve pending decisions and unfinished work. Narrow direct-skill or standalone requests retain their scope. Read-only work may occur without Git; mutations require an eligible worktree and do not implicitly initialize Git.
+| Core workflow | Purpose |
+| --- | --- |
+| Main development | Define and deliver the whole project, reusing sufficient accepted inputs. |
+| Feature | Add a bounded capability to an existing system. |
+| Revision | Correct, simplify or improve defined or implemented work. Steering is its focused variant at a paused implementation checkpoint. |
+
+Follow the coordinator's [selection and continuity](skills/sdd-manage/references/workflows.md#workflow-selection-and-continuity). At entry or a material routing/boundary change, explain the selected workflow or standalone operation, its request/project evidence, current stage/owner, authorized outputs and next checkpoint in chat.
+
+**Established workflow and skill context normally resolves follow-ups.** A request to implement through a milestone belongs to `sdd-implement` in that context; it does not require plugin re-entry or a repeated selection brief. If context cannot identify a clear workflow/owner, use `sdd-manage` to recover it. Recover discoverable state; ask only for consequential missing decisions. Do not guess lost approvals, ranges or integration authority, or require the user to name lower-level skills.
+
+Preserve narrow direct/standalone requests, pending decisions and unfinished work. Read-only discussion/inspection may proceed without Git; repository mutations require an eligible worktree and do not implicitly initialize Git.
 
 ## Human checkpoints and Git publication
 
@@ -53,86 +63,86 @@ Follow [phase activation](skills/sdd-manage/references/phase-activation.md) and 
 
 ## Skill routing
 
-| Request or concern | Owner and entry | Handoff |
-| --- | --- | --- |
-| Multi-stage workflow, scope, branches, credentials or transition | [sdd-manage](skills/sdd-manage/SKILL.md) | Establish mode, authorized boundary and next owner |
-| Repository/instruction state or interruption inspection | [sdd-orient](skills/sdd-orient/SKILL.md) | Return actual context and mutation eligibility; no edits |
-| Design/modularity, task hierarchy or shared conventions | [sdd-conventions](skills/sdd-conventions/SKILL.md) | Supply applicable criteria to the selected owner |
-| Explore purpose; create/revise/review the project brief; design architecture or components | [sdd-design](skills/sdd-design/SKILL.md) | [PROJECT brief contract](skills/sdd-design/references/project-brief.md), ARCHITECTURE and DECOMPOSITION or necessary feature deltas |
-| Behavior, interfaces, contracts or acceptance requirements | [sdd-specify](skills/sdd-specify/SKILL.md) | SPEC or scoped feature contracts from accepted design |
-| Delivery strategy, milestones, dependencies or physical layout | [sdd-plan](skills/sdd-plan/SKILL.md) | PLAN and layout from accepted contracts |
-| Executable tasks and dependency/progress review | [sdd-tasks](skills/sdd-tasks/SKILL.md) | Owning TASKS/FEATURE-TASKS from ready PLAN/layout |
-| Select, execute or resume a bounded task range | [sdd-implement](skills/sdd-implement/SKILL.md) | Task-owned implementation, verification, closing commits and publication |
-| Human amendment at a paused task-list checkpoint | [sdd-steer](skills/sdd-steer/SKILL.md) | Amend existing inputs/implementation; return without resuming tasks |
-| Incorporate accepted feature documents or task ownership | [sdd-integrate-feature](skills/sdd-integrate-feature/SKILL.md) | Reconcile only selected main documents; no task execution |
-| Test strategy, scenarios or test changes | [sdd-tdd](skills/sdd-tdd/SKILL.md) | Tests/evidence for the active execution owner |
-| Checks, failures, acceptance coverage or boundary code review | [sdd-verify](skills/sdd-verify/SKILL.md) | Evidence and gaps; verification does not authorize repairs/status changes |
-| README, guides or module/API documentation | [sdd-docs](skills/sdd-docs/SKILL.md) | Documentation within accepted source/scope |
-| Issues, commit/merge messages or evidence-based reports | [sdd-report](skills/sdd-report/SKILL.md) | Drafts distinguish planned, executed and published effects |
-| Git highlights, release messages/packages or hosted tracking/releases | [sdd-forge](skills/sdd-forge/SKILL.md) | Provider/range evidence and authorized hosted effects |
+This capability directory identifies owners, including skills normally activated within a workflow. It does not replace their procedures or interpret every contextual follow-up.
 
-Name the destination skill in each handoff and link its entry where useful. Transfer objective, accepted inputs, actual stage/branch/checkpoint, selected IDs, pending ownership, verification/hosting state and stop. Reading a sibling reference supplies shared guidance; it does not select that skill's entire workflow. Handoffs depend on the client's execution facilities.
+| Capability | Owner and entry |
+| --- | --- |
+| Workflow selection, coordination, branches, credentials and transitions | [sdd-manage](skills/sdd-manage/SKILL.md) |
+| Read-only repository/instruction state and interruption inspection | [sdd-orient](skills/sdd-orient/SKILL.md) |
+| Modularity, design review, task hierarchy and shared conventions | [sdd-conventions](skills/sdd-conventions/SKILL.md) |
+| Project brief, architecture and component decomposition | [sdd-design](skills/sdd-design/SKILL.md) |
+| Behavior, interfaces, contracts and acceptance requirements | [sdd-specify](skills/sdd-specify/SKILL.md) |
+| Delivery strategy, milestones, dependencies and physical layout | [sdd-plan](skills/sdd-plan/SKILL.md) |
+| Executable tasks, dependencies and task-list review | [sdd-tasks](skills/sdd-tasks/SKILL.md) |
+| Bounded task-range selection, implementation and resumption | [sdd-implement](skills/sdd-implement/SKILL.md) |
+| Human-directed amendment at a paused implementation checkpoint | [sdd-steer](skills/sdd-steer/SKILL.md) |
+| Accepted feature incorporation and task-ownership reconciliation | [sdd-integrate-feature](skills/sdd-integrate-feature/SKILL.md) |
+| Test strategy, scenarios and test changes | [sdd-tdd](skills/sdd-tdd/SKILL.md) |
+| Checks, failures, acceptance coverage and boundary code review | [sdd-verify](skills/sdd-verify/SKILL.md) |
+| README, guides and module/API documentation | [sdd-docs](skills/sdd-docs/SKILL.md) |
+| Issues, commit/merge messages and evidence-backed reports | [sdd-report](skills/sdd-report/SKILL.md) |
+| Git highlights, release messages/packages and hosted tracking/releases | [sdd-forge](skills/sdd-forge/SKILL.md) |
+
+Name the next owner and preserve accepted inputs, actual context and the stopping boundary; use its handoff procedure. A sibling reference supplies shared guidance without selecting that skill's entire workflow. Execution handoffs depend on client facilities.
 
 ## Composite workflows
 
-Use the [workflow catalog](skills/sdd-manage/references/workflows.md) for core definitions and detailed transitions. The combinations below route their stages and supporting skills within established scope.
+The [canonical catalog](skills/sdd-manage/references/workflows.md) owns definitions and transitions. These summaries show principal stages, owners, outputs and stops; implementation and release operations can also be selected independently within scope.
 
 ### Project preparation and bounded delivery
 
-`PROJECT.md` is the concise project brief: purpose, users, desired outcomes, principal scope/non-goals and consequential constraints derived from the seed and actual clarification, with material assumptions/questions identified. Use `sdd-design` and its [project brief contract](skills/sdd-design/references/project-brief.md) for direct drafting, revision or review before architecture. The brief supplies shared context without replacing structural design or exact SPEC behavior.
+`PROJECT.md` is the concise project brief: purpose, users, outcomes, scope/non-goals and consequential constraints, with material assumptions/questions identified. Use `sdd-design`'s [brief contract](skills/sdd-design/references/project-brief.md); PROJECT supplies context rather than architecture or exact SPEC behavior.
 
-From a project seed, `sdd-manage` coordinates `sdd-orient` → `sdd-design` (PROJECT, ARCHITECTURE, DECOMPOSITION) → `sdd-specify` (SPEC) → `sdd-plan` (PLAN, layout) → `sdd-tasks` (TASKS). Use `sdd-conventions` throughout as needed. Follow the [human checkpoints and publication requirements](#human-checkpoints-and-git-publication) above and apply [document QC](skills/sdd-manage/references/document-qc-gates.md).
+Main preparation routes `sdd-manage`/`sdd-orient` → `sdd-design` (PROJECT, ARCHITECTURE, DECOMPOSITION) → `sdd-specify` (SPEC) → `sdd-plan` (PLAN, layout) → `sdd-tasks` (TASKS), with `sdd-conventions` as needed. Existing work enters at the next eligible stage; requested interactive review comes first. Apply the [human checkpoints](#human-checkpoints-and-git-publication) and [document QC](skills/sdd-manage/references/document-qc-gates.md).
 
-Existing or interrupted projects enter at the next eligible stage after actual-state assessment; requested interactive review comes first. Persist preparation on design-docs and stop when preparation-only. If implementation is authorized, integrate accepted preparation into the actual default branch, verify/publish it, then establish the dependent phase branch. Only then hand ready TASKS, selected range, dependencies and tracking state to `sdd-implement`. See [preparation integration](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
+Preparation-only stops before implementation. An authorized implementation handoff requires accepted preparation to be integrated, verified and published to the actual default branch before creating the dependent branch; see [preparation integration](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
 
 ### Task implementation and continuation
 
-`sdd-implement` owns range selection and execution. It first publishes outstanding commits with readback, then audits the claimed closing boundary before edits/tests/task selection. `sdd-manage` establishes [tracking decision](skills/sdd-manage/references/tracking-decision.md) and [phase activation](skills/sdd-manage/references/phase-activation.md); requested tracking needs verified eligible-phase objects/associations before execution. Missing initial or added-task associations block affected work. Carry actual confirmation/decline and provider state, not an assumed default.
+`sdd-implement` selects and executes the authorized range, composing `sdd-tdd`, `sdd-docs` and `sdd-verify`, with `sdd-report` for evidence/messages. `sdd-manage` establishes the [tracking decision](skills/sdd-manage/references/tracking-decision.md) and [phase activation](skills/sdd-manage/references/phase-activation.md); `sdd-forge` maintains confirmed hosted effects.
 
-For each eligible task, compose `sdd-tdd`, implementation, `sdd-docs` and `sdd-verify`; use `sdd-report` for evidence/message composition and `sdd-forge` for confirmed hosted lifecycle effects. Close the task with its result/evidence and initial checklist completion in one commit, then publish/read back before advancing. Finish pending work before selecting more. Partial main phases push/pause; only a complete verified phase integrates. Required milestone/phase code review, tests and reports remain part of the owning task list. Outages permit only independently eligible, already-projected work; unknown dependent effects stop transitions.
+Follow [task completion and recovery](skills/sdd-implement/references/completion-and-checkpoints.md) and the prominent [publication/range stops](#human-checkpoints-and-git-publication). Finish pending work before advancing. Requested tracking and unresolved dependent effects retain their gates; partial main phases push and pause, while complete verified phases use eligible integration.
 
 ### Feature preparation, execution and incorporation
 
-`sdd-manage`/`sdd-orient` establish the feature scope and accepted main inputs. Use design/specification/plan/layout/task owners only for necessary deltas; do not invent optional overlays. Review each necessary new document with the human and apply QC. Integrate accepted design-docs preparation before creating the dependent feature implementation branch. Pass FEATURE-TASKS and its eligible range to `sdd-implement`.
+`sdd-manage`/`sdd-orient` establish the bounded addition and accepted main inputs. Design/specification/planning/task owners produce only necessary deltas, with human checkpoints and QC. Accepted preparation integrates before the dependent implementation branch; FEATURE-TASKS drives its authorized range through `sdd-implement`.
 
-Before final feature verification, use `sdd-integrate-feature` to incorporate selected accepted deltas into main documents and reconcile/archive ownership within scope. Transferring tasks requires both lists in scope and one executable owner per task. Verify the coherent authorized boundary, explicitly integrate/publish the established target, then stop. Document-only incorporation ends without task execution. See [feature incorporation](skills/sdd-integrate-feature/SKILL.md).
+Before final feature verification, `sdd-integrate-feature` incorporates accepted deltas within the selected scope. Task transfer needs both owning lists in scope; document-only incorporation does not authorize execution. A complete coherent feature verifies/integrates/publishes its established target, then stops. Follow [feature incorporation](skills/sdd-integrate-feature/SKILL.md).
 
 ### Review and accepted revision
 
-`sdd-manage`/`sdd-orient` pin source, concerns, evidence mode and boundary. Selected owners assess concerns; `sdd-report` retains located findings. Systematic reviews plan units; focused reviews can use prompt-defined criteria. Publish each report checkpoint. Review stops before repairs unless authorized; an accepted amendment may enter revision planning directly without invented review stages.
+`sdd-manage` establishes source, concerns, evidence mode and boundary; selected owners assess, with `sdd-report` retaining located findings. Systematic reviews plan units; focused reviews may use prompt-defined criteria. Publish authorized report checkpoints and stop before repairs unless execution is included.
 
-For execution, record accepted revisions, route bounded source/document/test changes to their owners and use `sdd-verify` for actual rechecks. Retain findings and deferred evidence; publish coherent action checkpoints. Integrate only the complete authorized verified boundary, with merged checks and target publication. [Nested and reopened revision modes](skills/sdd-manage/references/revision-modes.md) preserve parent/source/return context and original opening provenance; do not automatically resume a suspended parent.
+Accepted revisions route bounded changes to owners and `sdd-verify` for rechecks. Integrate only the complete authorized verified boundary. [Review/revision](skills/sdd-manage/references/review-and-revision.md) owns the procedure; [nested/reopened modes](skills/sdd-manage/references/revision-modes.md) preserve parent/return context and opening provenance. Do not automatically resume a suspended parent.
 
 ### Checkpoint steering
 
-At a paused implementation checkpoint, `sdd-manage`/`sdd-orient` establish the human-defined amendment and paused target, then hand to `sdd-steer`. Assessment-only returns impact. Authorized execution amends affected existing documents, implementation and tests without feature overlays or an obligatory formal campaign, using `sdd-tdd`/`sdd-docs`/`sdd-verify`/`sdd-report` where needed. Commit/publish the amendment, integrate and verify/publish its paused target, then return control. Do not resume `sdd-implement` until separately instructed. See [steering](skills/sdd-steer/SKILL.md).
+At a paused implementation checkpoint, `sdd-manage` routes the human-defined amendment to [sdd-steer](skills/sdd-steer/SKILL.md). Assessment-only returns impact. Commanded execution reconciles existing documents, code, tests and documentation without feature overlays or an obligatory formal campaign; verify/commit/push and integrate/verify/publish into the paused target. Return control without resuming `sdd-implement`.
 
 ### Release preparation and publication
 
-`sdd-manage` routes [highlights-only](skills/sdd-forge/references/release-highlights.md) versus [complete release-message](skills/sdd-forge/references/release-message.md) requests through `sdd-forge` and `sdd-report`. Pin the Git range/source; use integration summaries and preserve applicable human edits/cuts. Highlights-only returns curated changes, not a complete message. Full preparation atomically refreshes retained root RELEASE-NOTES.md, including applicable ancillary sections, and stops without publication. Respect explicit templates/paths and supplied-text-only scope.
+`sdd-manage` routes [highlights-only](skills/sdd-forge/references/release-highlights.md) versus [complete messages](skills/sdd-forge/references/release-message.md) through `sdd-forge` and `sdd-report`. Complete preparation refreshes retained root RELEASE-NOTES.md, preserving applicable human curation and explicit template/path or supplied-text scope. Complete required Git persistence of owned ignore/tracked-note changes; stop before tagging or hosted release publication.
 
-On an authorized release request, `sdd-forge` verifies source/coverage/body context and version; version match alone is insufficient. Refresh stale notes before `sdd-manage` persists the release commit. The commit body and GitHub body share exact finalized Markdown, with the tag targeting that verified commit. Publish/read back each Git boundary before dependent tagging/provider publication. `sdd-forge` owns package/workflow/provider operations; `sdd-verify` assesses source/assets/body/download evidence and `sdd-report` describes actual outcomes. Reuse matching effects on recovery. Packaging preparation alone stops before release; an optional prerelease review requires explicit selection. See [Git release boundary](skills/sdd-manage/references/git-workflows.md#release-commit-and-tag) and [GitHub release owner](skills/sdd-forge/references/github.md).
+An authorized release verifies notes coverage/context and version; version match alone is insufficient. The release commit body and GitHub body use the exact finalized Markdown, and the tag targets that verified commit. Follow [release Git boundaries](skills/sdd-manage/references/git-workflows.md#release-commit-and-tag) and the [GitHub release owner](skills/sdd-forge/references/github.md). `sdd-verify` checks actual release evidence; reports distinguish prepared, Git-published and hosted-complete states. Package preparation alone does not authorize a release; prerelease review requires explicit selection.
 
 ### Focused maintenance and optional hosting
 
-Select independent design/specification/plan/task/document/test/verification/reporting work through its owner, preserving its narrow outputs. Read-only review/checks/drafts do not authorize repairs, task completion, PR creation or publication by themselves. Combine supporting work only when the actual request needs it.
+Select independent work through its owner and preserve its narrow outputs. Assessment/checks/drafts do not authorize repairs, task completion, PR creation or release publication. Persist reports or owned changes only within established repository authority; required Git publication still applies.
 
-When hosted tracking is selected/confirmed, `sdd-manage` carries that decision to `sdd-forge`; `sdd-forge` projects the eligible phase and verifies associations/closures. Git and API access are separate. Credential failures use [protected recovery](skills/sdd-manage/references/credentials.md), not policy bypass. Hosting-only requests stop after their authorized effects; local work does not require provider credentials.
+Hosted-only requests stop after their selected effects. Local work needs no provider credential. Accept supported supplied credentials through [protected handling](skills/sdd-manage/references/credentials.md); do not echo values into generated prompts, source, reports, diagnostics or normal handoffs. Authentication recovery preserves scope and does not bypass policy.
 
 ## Branches, integration and continuity
 
-Establish actual working/source/target branches and checkpoint before mutation; reuse them on continuation. Preparation uses design-docs, main execution uses phase branches, and feature/revision branches follow the [identity and branch convention](skills/sdd-manage/references/branch-management.md). Prefixes discover candidates; they do not prove acceptance or authorize a merge.
+Establish actual working/source/target identities and checkpoint; reuse them on continuation. Preparation uses `design-docs`, main execution uses phase branches, and feature/revision identities follow [branch management](skills/sdd-manage/references/branch-management.md). Prefixes do not establish acceptance or authorize a merge.
 
-Apply the [task commit contract and audit](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract). Exactly one owning task ID leads a closing task subject; non-task actions/merge commits invent none. A checkbox, passing command, issue closure or merge summary alone cannot prove completion. Preserve owned/unrelated staged and unstaged work; dirty state does not authorize a reset.
+Follow the [task commit contract and audit](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract): one executable task closes per commit with result/evidence and initial checkbox; exactly one owning task ID leads its subject. Non-task work invents no task ID. Preserve pending/unrelated work; a dirty tree does not authorize reset.
 
-Push/read back every workflow-owned commit before further work or another commit, under [per-commit publication](skills/sdd-manage/references/git-workflows.md#publish-each-commit). Honor explicit local-only/deferred-publication exceptions and stopping boundaries. Eligible integration uses an explicit two-parent merge, merged verification and target publication; partial ranges and assessment-only requests do not authorize complete integration. On conflict, denied publication or uncertain effects, preserve work and reconcile actual state. Never force-push or reset unrelated work. Git supplies checkpoints; no transaction journal is required.
-
-Hosted state reflects verified local evidence. Verified/published tasks close before milestone closure; required review/report tasks and exits gate phase progression. Provider failures remain pending without erasing local results. Use [backend lifecycle](skills/sdd-conventions/references/backend-object-lifecycle.md) and [Git recovery](skills/sdd-manage/references/git-workflows.md) for detailed ownership/order.
+Eligible integration uses an explicit two-parent merge, merged verification and target publication. Partial ranges do not imply complete integration. On conflict, denied publication or uncertain effects, preserve work and reconcile state through [Git recovery](skills/sdd-manage/references/git-workflows.md); never reset or force-push unrelated work. Hosted state follows verified local evidence and the [backend lifecycle](skills/sdd-conventions/references/backend-object-lifecycle.md).
 
 ## Campaign records and shared conventions
 
-Formal campaign artifacts live on their revision branch under the [shared campaign convention](skills/sdd-conventions/references/review-campaigns.md); they need no preliminary default/design-docs merge. Steering and feature records use their owning report/feature locations. Retain original opening and branch-off provenance, stable findings and accepted scope through amendments. [sdd-report](skills/sdd-report/SKILL.md) owns report and integration-summary composition; source owners retain persistence responsibility.
+Use the [campaign convention](skills/sdd-conventions/references/review-campaigns.md) for records and `sdd-report` for evidence/integration summaries. Preserve original opening provenance, accepted scope and return boundaries. Campaign records stay on their revision branch; no preliminary default/design-docs merge is required.
 
-Use current main owners and active records for routine work. Closed packages are frozen history; do not load their contents without a specific current need, edit them or assess their later compatibility. Eligible explicitly reopened revisions use the selected mode, not silent historical repair. Inspect preservation by Git path/object diffs.
+Current owners and active records guide routine work. Closed packages are frozen history: do not load without a specific need, edit or assess later compatibility. Eligible reopening uses the selected coordinator mode.
 
-Apply [Markdown conventions](skills/sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists/blocks, four-space structural indentation and one space after list markers. Preserve code/data literals and closed records. Keep credentials out of source, prompts, reports and handoffs.
+Apply [Markdown conventions](skills/sdd-conventions/references/markdown-style.md): heading/list/block separation, four-space indentation and one space after list markers. Preserve literals and closed records. Git provides checkpoints; no transaction journal is required.
