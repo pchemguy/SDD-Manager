@@ -1,6 +1,6 @@
 # PLUGIN.md and development-contract alignment review
 
-Campaign **057_e338c2c**; [review plan](REVIEW-PLAN.md). Reviewed baseline: `e338c2ca04f4492741f6d87780c7f7aff800f813`. Opening: `eefdb96e941477cc5445bee9d8d47ec80d3cc29a`. State: **Review complete; revisions proposed, not executed**.
+Campaign **057_e338c2c**; [review plan](REVIEW-PLAN.md). Reviewed baseline: `e338c2ca04f4492741f6d87780c7f7aff800f813`. Opening: `eefdb96e941477cc5445bee9d8d47ec80d3cc29a`. State: **Review complete; all eight findings accepted and source-remediated**.
 
 ## Assessment
 
@@ -134,3 +134,7 @@ No detailed execution plan or finding acceptance is inferred from this review re
 ## Preservation and status
 
 Only new campaign review records and its navigation row are changed. Packaged PLUGIN.md, the development contract, canonical skills and prior closed packages remain unchanged. Report links/spacing and baseline-byte preservation checked. Review is committed/pushed/read back on the campaign branch; campaign stays open and unmerged.
+
+## Accepted revision disposition
+
+The human authorized the full [revision plan](REVISION-PLAN.md), execution and closure. All R-001 through R-008 are source-remediated and rechecked in the [revision report](REVISION-REPORT.md). Original located observations retain their reviewed-baseline meaning. Support/publisher/native package checks passed; model/client effectiveness remains unobserved. Explicit verified main integration/publication establishes closure.
