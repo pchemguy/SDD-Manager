@@ -37,3 +37,7 @@ Added four review concerns: canonical ownership and level of detail; concision a
 Added ten context/prompt/assessment cases directly to the contract, using Tetris/Calculator situations plus recovery, review/revision and release-message requests. Prompts omit expected skill/workflow names; assessment distinguishes initial phased scope, existing whole-project scope, features, steering, bounded execution and standalone operations. Expectations remain reviewer material, separate from consumer inputs.
 
 Source coverage, scenario boundaries, relative links, Markdown spacing and accepted first-section preservation checked. No consumer/model run performed; these are assessment examples, not observed acceptance results. Runtime and packaged source unchanged; suites were not rerun. Campaign remains open and unmerged.
+
+## Subsequent critical review
+
+Performed the requested review at published contract baseline `9aeeb01`; [review report](REVIEW-REPORT.md) retains eight findings, proposed additions and organization. Contract and packaged source preserved. Findings are proposed revisions, without inferred acceptance or execution. Campaign remains open.

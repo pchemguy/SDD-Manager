@@ -29,3 +29,7 @@ Check coverage against the accepted responsibility list, Markdown hierarchy/spac
 Add review concerns for canonical ownership/detail, concise explicit guidance and ordinary-request routing; include continuity/scope preservation as a related concern. Put representative assessment prompts directly in PLUGIN-CONTRACT.md, drawing on Tetris/Calculator situations and common coordinator operations. Keep expected paths separate from consumer prompts and distinguish source inspection from observed model behavior. Align the responsibility introduction with PLUGIN.md's summary/routing role; preserve Scope and motivation.
 
 Check source ownership, scenario context and expected boundaries against current skill guidance, demo guides, Markdown spacing and relative links. Update active campaign navigation, commit/push/read back and stop without merging. No live consumer run is part of this contract edit.
+
+## Current review boundary
+
+The human requested an in-depth critical review of the contract as human context and a development tool. [Review plan](REVIEW-PLAN.md) and [review report](REVIEW-REPORT.md) retain scope, findings and proposed organization. This authorizes review records and publication, not remediation or merge; V-001 through V-003 remain completed actions.
