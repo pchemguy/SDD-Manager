@@ -2,9 +2,7 @@
 
 ## Scope and motivation
 
-Skills and plugins enable modular organization of agent capabilities.
-
-Within a skill, complex functionality can be decomposed into capability modules in `references/*.md`. The skill’s `SKILL.md` entry orients the agent and explains when to load each module, providing enough guidance to select relevant instructions without loading every reference at once.
+Skills and plugins enable modular organization of agent capabilities. Within a skill, complex functionality can be decomposed into capability modules in `references/*.md`. The skill’s `SKILL.md` entry orients the agent and explains when to load each module, providing enough guidance to select relevant instructions without loading every reference at once.
 
 Plugins add a further level of composition by grouping skills. The modular architecture enabled by skills and plugins provides two major benefits:
 
