@@ -2,7 +2,7 @@
 
 Campaign **056_6a91259**; [campaign scope](REVISION-PLAN.md). State: **Open**.
 
-Created the new campaign branch and records from main baseline `6a912594f7b9cb7b9ca5888947100f6a077ab48d`. Contract content remains unchanged. Substantive revision awaits the human's direction; no review findings or accepted corrections are invented.
+Created the new campaign branch and records from main baseline `6a912594f7b9cb7b9ca5888947100f6a077ab48d`. The opening left contract content unchanged; subsequent human-directed revisions are recorded below.
 
 The opening commit is published to the campaign branch and verified through Git remote readback. No merge or closure is authorized at this opening boundary.
 
@@ -29,3 +29,11 @@ V-001 naming follow-up: applied the human-supplied sentence explicitly naming `P
 Replaced Purpose and audience, prior Responsibilities, Required coverage, Organization, Content boundaries and Review criteria with one Responsibilities section containing three subsections: Orientation and routing; Composite workflow definitions; Key operational requirements. Covered coordinator pointer, context, workflow selection/reassessment, progressive skill routing, workflow stages/handoffs, authority/stop, HIL, Git publication, backend tracking, branch/integration/continuity and visible evidence. Detailed procedures remain with owners.
 
 Accepted Scope and motivation preserved verbatim. Root development AGENTS and capability-map link descriptions now match the revised contract. Source prose/links/spacing and first-section preservation checked; runtime/package source unchanged, so suites were not rerun. Campaign remains open and unmerged.
+
+## V-003 — Review concerns and guidance assessment
+
+Added four review concerns: canonical ownership and level of detail; concision and explicit guidance; ordinary-request routing; continuity and scope preservation. Selective summary duplication is intentional, while essential operational guidance must also be reachable from canonical skill entries. Changed the Responsibilities introduction to describe summary and routing rather than original workflow definition.
+
+Added ten context/prompt/assessment cases directly to the contract, using Tetris/Calculator situations plus recovery, review/revision and release-message requests. Prompts omit expected skill/workflow names; assessment distinguishes initial phased scope, existing whole-project scope, features, steering, bounded execution and standalone operations. Expectations remain reviewer material, separate from consumer inputs.
+
+Source coverage, scenario boundaries, relative links, Markdown spacing and accepted first-section preservation checked. No consumer/model run performed; these are assessment examples, not observed acceptance results. Runtime and packaged source unchanged; suites were not rerun. Campaign remains open and unmerged.

@@ -8,9 +8,9 @@ The human indicated that the current [PLUGIN-CONTRACT.md](../../PLUGIN-CONTRACT.
 
 ## Current boundary
 
-State: **Open; substantive revision direction pending**. Current authorization covers opening and publishing this campaign. No replacement content, accepted action sequence or execution criteria are inferred from “Not quite.” Record the human's subsequent direction here before dependent revision work.
+State: **Open; iterative contract revision**. The selected actions below record subsequent human direction. Publish each accepted revision on the campaign branch; integration remains outside the current boundary.
 
-[Revision report](REVISION-REPORT.md) retains actual work and publication state. Source edits, contract replacement and integration have not been performed. Stop after the opening commit is pushed and remotely verified.
+[Revision report](REVISION-REPORT.md) retains actual work and publication state. Source revisions are recorded below and in the report. Integration has not been performed.
 
 ## Selected revision — V-001
 
@@ -23,3 +23,9 @@ Recheck: compare meaning and section boundaries against the supplied draft; veri
 The human accepted “Scope and motivation” for now and requested replacing all subsequent sections with grouped core responsibilities. Scope: new Responsibilities section covering orientation/routing, composite workflow definitions and key operational requirements; update contributor navigation descriptions to match. Preserve the accepted first section verbatim. This remains iterative contract revision on the campaign branch, without integration.
 
 Check coverage against the accepted responsibility list, Markdown hierarchy/spacing, preservation of the first section and source-only navigation. Commit/push/read back, then return for human review.
+
+## Selected revision — V-003
+
+Add review concerns for canonical ownership/detail, concise explicit guidance and ordinary-request routing; include continuity/scope preservation as a related concern. Put representative assessment prompts directly in PLUGIN-CONTRACT.md, drawing on Tetris/Calculator situations and common coordinator operations. Keep expected paths separate from consumer prompts and distinguish source inspection from observed model behavior. Align the responsibility introduction with PLUGIN.md's summary/routing role; preserve Scope and motivation.
+
+Check source ownership, scenario context and expected boundaries against current skill guidance, demo guides, Markdown spacing and relative links. Update active campaign navigation, commit/push/read back and stop without merging. No live consumer run is part of this contract edit.
