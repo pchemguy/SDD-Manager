@@ -2,14 +2,16 @@
 
 ## Scope and motivation
 
-An agent plugin extends modular skill architecture with another level of composition: plugin → skill → sub-workflow/reference. This hierarchy serves two purposes:
+An agent plugin extends modular skill architecture with another level of composition: plugin → skill → sub-workflow/reference.
+
+At the skill level, complex functionality can be decomposed into capability modules in `references/*.md`. The skill's `SKILL.md` entry orients the agent and explains when to load each module. The entry must provide enough information to select the needed guidance without loading every reference at once.
+
+This two-level decomposition serves two purposes:
 
 - **Development:** partition complex functionality into maintainable units with clear responsibilities and limited coupling.
 - **Context management:** load relevant instructions progressively, limiting unnecessary context use and context pollution.
 
-At the skill level, a complex skill can implement closely related capabilities as `references/*.md` modules. Its `SKILL.md` entry orients the agent and explains when to load each module. The entry must provide enough information to select the needed guidance without loading every reference at once.
-
-A plugin can serve simply as a distribution container for unrelated skills. Each skill is loaded independently through its own entry; such a bundle does not require a shared workflow entry.
+At the plugin level, unrelated skills can be bundled for distribution. Each skill is loaded independently through its own entry; such a bundle does not require a shared workflow entry.
 
 For an integrated set of capabilities, a plugin provides a broader decomposition: relatively weakly coupled capabilities become skills, while closely related sub-workflows remain references within each skill. A plugin entry analogous to `SKILL.md` then orients the agent across the system and routes workflows that compose several skills.
 
