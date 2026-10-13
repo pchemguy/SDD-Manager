@@ -11,9 +11,9 @@ If the client does not load `PLUGIN.md`, read it explicitly before selecting a w
 
 ## Establish the request and context
 
-Identify the objective, operational mode, current stage, authorized outputs and stopping boundary. For compound work or unresolved workflow selection, use [sdd-manage](skills/sdd-manage/SKILL.md). Use [sdd-orient](skills/sdd-orient/SKILL.md) to inspect the actual target project, Git worktree, controlling root/nested AGENTS.md, governing documents, pending ownership and interrupted work. Read-only work may occur without Git; mutations require an existing eligible worktree. Do not initialize Git implicitly.
+For project development, functionality, review or revision requests, use [sdd-manage](skills/sdd-manage/SKILL.md) to select or recover the workflow and assess whether the request continues it or requires a switch. Establish new, existing or interrupted project state through [sdd-orient](skills/sdd-orient/SKILL.md) when current context is insufficient. Select main development, feature or revision, including its steering variant, through the coordinator's [workflow selection](skills/sdd-manage/references/workflows.md#workflow-selection-and-continuity). Reuse current evidence and established identities.
 
-Reuse sufficient accepted inputs and existing workflow identities. Clarification supplies requirements; it does not accept newly created documents. Honor explicit human reviews and pending checkpoints before dependent work. A direct focused-skill request selects that owner and its prerequisites without requiring an unrelated full campaign.
+Before starting the selected work, report the workflow/variant, supporting request and project evidence, current stage/owner, authorized outputs and next human checkpoint or stop in chat. Clarification does not accept new documents; preserve pending decisions and unfinished work. Narrow direct-skill or standalone requests retain their scope. Read-only work may occur without Git; mutations require an eligible worktree and do not implicitly initialize Git.
 
 ## Human checkpoints and Git publication
 
@@ -73,7 +73,7 @@ Name the destination skill in each handoff and link its entry where useful. Tran
 
 ## Composite workflows
 
-Main development, feature and revision describe development purpose; stages and supporting capabilities compose their actual paths. Composite workflows combine established stages and supporting skills within their prerequisites and authorized scope; they create no new workflow authority, branch convention or permission grant. The [canonical catalog](skills/sdd-manage/references/workflows.md) owns detailed entry and transition rules.
+Use the [workflow catalog](skills/sdd-manage/references/workflows.md) for core definitions and detailed transitions. The combinations below route their stages and supporting skills within established scope.
 
 ### Project preparation and bounded delivery
 

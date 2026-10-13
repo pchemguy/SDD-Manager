@@ -2,6 +2,17 @@
 
 Select by the user's objective, not by which documents happen to be missing. A scoped request may enter any stage whose required inputs are established. A combined request may authorize preparation and implementation together; retain its explicit implementation boundary. Do not require fresh approval for a transition already covered by that request.
 
+## Workflow selection and continuity
+
+Apply at a development/functionality/review/revision request when no sufficient workflow context exists, and when a later request may change the active objective, scope or stopping boundary. The human need not name a skill or core workflow.
+
+1. **Recover context.** Use the request and established decisions; obtain `sdd-orient` evidence only where current project state is missing or stale. Distinguish a new project from existing or interrupted work, and recover the active workflow, stage, accepted inputs, pending human decisions, task range and unfinished owned work. Greenfield/brownfield is starting context, not a compulsory workflow choice.
+2. **Select the path.** Apply the core definitions below. Whole-project definition/delivery uses main development; a bounded capability addition uses feature; review/correction/improvement uses revision. A human-directed amendment at a paused implementation checkpoint uses revision's steering variant. Preserve a narrow standalone operation or direct owner request when a full workflow is unnecessary. Treat explicit user selection as controlling within supported scope; ask only for a consequential ambiguity that prevents a sound selection.
+3. **Assess continuity.** Determine whether the request continues the workflow, changes its stage/range, or switches workflows. A correction during preparation can remain with its current owner; a bounded addition does not require restarting main development. Do not switch from filenames, branch prefixes or missing documents alone. Before a switch, preserve pending work, authority and human checkpoints; apply the relevant branch/revision-mode procedure, including parent suspension/return where applicable. A switch cannot accept pending documents, widen scope or resume paused implementation.
+4. **Report and route.** Before dependent authoring/execution, give a concise user-visible chat brief: workflow/variant (or standalone operation), continuation/stage-change/switch decision and its request/project evidence, current stage and owner, authorized outputs and next human checkpoint/stop. Cite relevant paths or observed state; distinguish facts from uncertainty. Visible progress commentary may carry the brief; hidden reasoning does not. Load only the selected owners and needed references, then act within the established boundary without another routine approval question.
+
+Reuse an applicable selection and sufficient evidence on routine continuation; repeat the brief when the routing decision or authorized boundary materially changes. No per-response preamble, new journal or mandatory selection file is required.
+
 ## Core development workflows
 
 Choose among three core workflows by the intended change. They describe purpose and overall path; focused skills and the operation catalog below supply reusable stages. A workflow name grants no authorization or branch destination. Apply **sdd-conventions**' **Workflow identity** and [branch management](branch-management.md) for actual names and target context.

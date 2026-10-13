@@ -1,0 +1,11 @@
+{
+  "baseline": "4818390aebaef921b463e58962eb82d9d0cb90e6",
+  "plugin_words": 2280,
+  "baseline_plugin_words": 2286,
+  "protected_human_publication_tracking_sections": "byte-identical",
+  "orientation_reporting_roles": "unchanged",
+  "routing_scenarios": 9,
+  "changed_document_prose_links": 121,
+  "evidence_class": "source/static",
+  "live_consumer": false
+}
