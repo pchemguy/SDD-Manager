@@ -2,6 +2,24 @@
 
 These examples illustrate routing and boundaries; repository instructions and the actual request determine the concrete work.
 
+## Workflow selection and continuity
+
+Apply [the selection procedure](workflows.md#workflow-selection-and-continuity). Each initial or materially changed decision is reported in chat with its request/project basis, stage/owner, authorized outputs and next checkpoint/stop.
+
+| Request and observed context | Decision, route and boundary |
+| --- | --- |
+| “Help develop project XYZ”; project/workflow state unknown | Orient to establish new/existing/interrupted state; choose purpose from the request and evidence, then report the selected entry. A preliminary seed does not establish greenfield or accept downstream documents. |
+| Existing project needs whole-system design/specification | Main development at the next established stage; reuse accepted inputs and hold each necessary new document for its human checkpoint. |
+| Add a bounded capability to an existing system | Feature preparation/continuation with only necessary deltas; report the established scope and next document or implementation boundary. |
+| Review/revise existing work | Revision or a scoped direct assessment/correction; report whether repairs are authorized. Review-only stops at findings. |
+| Amend implemented behavior at a paused task checkpoint | Revision's steering variant through sdd-steer; report paused target and assessment/execution scope; return without resuming tasks. |
+| Correct the PROJECT/SPEC currently under human review | Continue its current document owner/stage, preserve the pending decision and present the revised state; no unrelated campaign or feature package. |
+| Request a feature while another campaign is active | Assess switching against actual parent/pending work and target context; load applicable branch/revision-mode rules. Preserve/suspend established context; resolve only consequential ambiguity before dependent work. |
+| Resume the same established task range | Recover actual pending work and reuse sufficient workflow evidence; preserve its stop without a ceremonial selection replay or per-response preamble. |
+| Prepare release notes or perform a narrow direct check | Select the standalone operation/owner and its boundary; no compulsory core campaign, release publication or source repairs. |
+
+## Operation examples
+
 | Request and context | Coordinated result |
 | --- | --- |
 | “Prepare the project through TASKS.” An eligible Git worktree exists. | Orient; establish design-docs, prepare the necessary project design, SPEC, PLAN, layout, tasks and QC reports; commit/push them there; stop before implementation. |

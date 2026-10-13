@@ -4,7 +4,7 @@ Every capability here is **plugin test material**. TextStats' generated design, 
 
 | Capability under diagnosis | Demonstration |
 | --- | --- |
-| Orientation and preparation | Existing instructions/content preserved; full intended contracts and small end-to-end increments derived; per-root publication and human acceptance before dependent authoring; no premature implementation |
+| Orientation and preparation | Workflow selected/recovered from request/project evidence and explained in chat; existing instructions/content preserved; full intended contracts and small end-to-end increments derived; per-root publication and human acceptance before dependent authoring; no premature implementation |
 | Selection and bounded implementation | Actual owning IDs/dependencies resolved; selection only is read-only; requested task/milestone/phase boundaries respected; atomic result/evidence/initial checkbox and bounded native history audit |
 | Verification and documentation | Meaningful tests collect; literal independent expectations, failure status/channels, API docs and distribution exits checked |
 | Branch/publication lifecycle | Per-task commits pushed before advancing; incomplete phases pause; eligible complete boundaries have explicit two-parent merges, merged checks and target containment |

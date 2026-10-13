@@ -1,0 +1,7 @@
+{
+  "baseline_plugin_words": 2286,
+  "proposed_plugin_words": 2280,
+  "delta": -6,
+  "method": "Python str.split; URLs/Markdown syntax retained consistently",
+  "source": "4818390aebaef921b463e58962eb82d9d0cb90e6"
+}

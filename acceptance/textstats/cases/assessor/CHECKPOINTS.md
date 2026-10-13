@@ -2,6 +2,24 @@
 
 Assessor/coordinator only. Apply to main/feature preparation and task execution, continuation and integration. Keep these expectations out of consumer requests. Use the pinned workflow, actual human messages and native Git objects; final file presence or an agent claim cannot establish the sequence.
 
+## Workflow selection and continuity
+
+For an ordinary development/functionality/review/revision request, independently inspect the supplied request, context and actual repository state. When workflow context is missing or materially changed, observe progressive loading from PLUGIN to sdd-manage and its selection procedure. The consumer should establish new/existing/interrupted context, choose/recover the core workflow or standalone operation, assess continuation/stage change/switching and give a concise user-visible decision with its basis, stage/owner, authorized outputs and next checkpoint before dependent authoring/execution. Hidden reasoning and internal-only handoffs do not satisfy the chat requirement.
+
+| Scenario | Required routing evidence |
+| --- | --- |
+| Project seed with unknown repository progress | Actual context discovery; no unsupported greenfield assumption or preaccepted documents. |
+| Existing whole-project design/specification | Main development at an established stage; sufficient inputs reused. |
+| Bounded capability addition | Feature or its established continuation; necessary deltas and scoped authority. |
+| Review/revise existing work | Revision or narrow direct operation; assessment-only does not authorize repairs. |
+| Human amendment at paused implementation | Revision's steering variant; correct paused target, preserved range and no automatic resume. |
+| Correction to a currently reviewed document | Current owner/stage may continue; revised state retains its human acceptance checkpoint. |
+| New feature during another campaign | Explicit switch assessment; actual parent/target/pending work preserved, applicable branch rules loaded. |
+| Same established task-range continuation | Current evidence reused, pending work recovered; no compulsory per-response brief or ceremonial replay. |
+| Release notes / narrow direct checks | Standalone scope remains possible; no forced core campaign or unrequested publication. |
+
+Retain request and decision provenance, exact visible messages and their order relative to dependent actions. Require meaningful observed basis, not keyword presence. A declared workflow that conflicts with the actual objective/context fails assessment. Unknown required context or missing decision-order evidence is a gap; support checks cannot invent consumer success. These are separately assessed routing scenarios, not new catalog IDs or implicit live trials.
+
 ## Document decisions
 
 For each necessary new root/proposal, retain its exact reviewed content/commit, QC scope, push/readback, substantive presentation, actual human response and the first dependent authoring action. Establish this order: create/check → commit → push/readback → present → human acceptance → dependent authoring. Record revisions and their new presented states; earlier acceptance does not cover changed or unseen content.
