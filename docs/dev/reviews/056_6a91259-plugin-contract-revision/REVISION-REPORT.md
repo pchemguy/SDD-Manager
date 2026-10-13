@@ -15,3 +15,5 @@ Only “Scope and motivation” changed in the contract; the title and subsequen
 V-001 wording follow-up: added “At the skill level” to connect the skill decomposition paragraph to the hierarchy introduced above, as requested by the human. No other contract wording changed.
 
 V-001 composition follow-up: applied the accepted capability-module sentence and moved its paragraph directly after the opening hierarchy sentence. The two-purpose list now follows “This two-level decomposition serves two purposes”; the subsequent bundle discussion transitions to the plugin level. Remaining contract sections unchanged.
+
+V-001 opening refinement: integrated the accepted shared modular-organization opening, skill-level explanation and plugin composition sentence, followed by “The modular architecture enabled by skills and plugins provides two major benefits.” Preserved the subsequent bundle/integrated-workflow/coordinator discussion.
