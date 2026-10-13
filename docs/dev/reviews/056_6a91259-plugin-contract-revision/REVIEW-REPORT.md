@@ -130,3 +130,21 @@ Report links, Markdown spacing, reviewed-source preservation and unchanged packa
 ## Subsequent disposition
 
 The human accepted planning/execution of the proposed revisions while keeping the campaign open. V-004 in the [revision report](REVISION-REPORT.md) records all eight source rechecks and naming assessment. Original located findings above retain their reviewed-baseline meaning. Source remedies are complete; model/client effectiveness remains unobserved. Campaign closure/integration remains outside authority.
+
+## Second review — Entry versus in-workflow requests
+
+Reviewed baseline `7df62ae0e906a7e2f7cc0c62d7ada2fe35c45959` against the human's clarified entry responsibility. Inspected the contract's responsibilities/coverage/organization/assessment method and canonical workflow-selection and implementation-range ownership. This is a focused scope correction, not a new consumer trial.
+
+### R-009 — Entry responsibilities extend into routine contextual interpretation
+
+**Priority: high.** Purpose/use and Orientation and routing broadly assign ordinary request interpretation, continuation and range handling to PLUGIN.md. Normally, workflow entry routes through the coordinator and supplies appropriate skill context; a later milestone/range request belongs to that context and its owner. **Correction:** define PLUGIN.md's normal role as workflow/capability entry and high-level discovery; keep contextual requests with the active coordinator/skill. Retain prominent invariant summaries without making PLUGIN.md a per-turn dispatcher. **Recheck:** range selection routes through established sdd-implement context rather than requiring re-entry or PLUGIN reload.
+
+### R-010 — One assessment start condition conflates entry and continuation
+
+**Priority: high.** Assessment starts all sixteen cases from PLUGIN.md. C-07/C-08 range requests, C-09 continuation and C-14 pending approval are normally in-workflow requests, and paused steering relies on implementation context. **Correction:** distinguish entry cases, contextual handoff/continuity cases and exceptional recovery; supply the appropriate starting context and record what layer is assessed. Contextual cases assess the entry's handoff contribution indirectly, not independent PLUGIN interpretation of every later prompt. **Recheck:** the same range prompt is assessed once with valid workflow context and separately with lost context, without conflating the two.
+
+### R-011 — Context-loss fallback is not bounded clearly
+
+**Priority: medium.** Continuity is described, but there is no clear boundary between reuse, recovery and unrecoverable human decisions. **Correction:** point to sdd-manage when available context cannot identify a reliable workflow/owner interpretation; recover context with focused orientation/skill discovery, preserving authority and stops. Ask only for consequential missing decisions. Do not require the user to learn lower-level skills or reconstruct technical context manually, and do not guess erased approvals/ranges. **Recheck:** available context is reused, recoverable state is recovered and unrecoverable authority is clarified before dependent effects.
+
+The coordinator already requires reuse of sufficient context and owns recovery/selection; implementation owns executable ranges. No canonical skill change is needed for this contract correction. Proposed remediation stays source-only; packaged PLUGIN.md compliance is outside this round.

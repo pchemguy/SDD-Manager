@@ -44,3 +44,14 @@ The human authorized planning and execution of the critical review's proposed re
 4. Recheck all findings, source agreement, local links/anchors, Markdown spacing, accepted-opening preservation, package/source boundaries and closed-record preservation. Update navigation and report actual outcomes.
 
 Publish this plan before source execution. Then execute the coupled document revision as one coherent action, commit/push/read back source and evidence together, and stop on the open campaign branch. No model/client trials or release effects are selected. Runtime/publisher suites are unnecessary for this source-only prose action; contract fidelity, link and Git path checks provide the relevant evidence.
+
+## Accepted second-round revision — V-005
+
+The human requested another review/revision round distinguishing workflow entry from contextual requests. Address R-009 through R-011 in the source contract and active records. Preserve Scope and motivation and all packaged instructions; campaign remains open and unmerged.
+
+1. Bound entry responsibilities and review concerns: PLUGIN.md enables workflow/capability discovery and coordinator handoff; established context normally interprets follow-ups and lower-level ranges.
+2. State the exceptional context-recovery pointer to sdd-manage, reuse sufficient current context, and clarify unrecoverable consequential decisions rather than forcing lower-level user prompting or inventing authority.
+3. Divide assessment cases by entry, established-context continuity and context recovery; retain stable IDs and add paired range/recovery cases. Judge the correct layer and handoff rather than requiring PLUGIN.md to handle every request independently.
+4. Recheck canonical ownership, assessment starts, links/anchors, spacing, opening preservation and changed paths. Publish source/evidence together and stop without merge. No fresh model trial or canonical procedure revision is selected.
+
+Publish review findings and this plan before execution.
