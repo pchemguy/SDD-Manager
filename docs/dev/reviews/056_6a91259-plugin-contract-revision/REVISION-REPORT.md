@@ -21,3 +21,5 @@ V-001 opening refinement: integrated the accepted shared modular-organization op
 V-001 paragraph refinement: combined the shared opening and skill-level explanation into the single paragraph supplied by the human; wording unchanged.
 
 V-001 supplied-scope follow-up: pulled human update `dd9ffe9`; clarified common workflow capabilities as shared skills reusable by other bundled skills, preserving the software-library analogy. Corrected the integrated-entry sentence and separated it from the optional coordinator paragraph. Opening/benefits/bundle text and later contract sections remain unchanged. Meaning and section-boundary checks passed.
+
+V-001 naming follow-up: applied the human-supplied sentence explicitly naming `PLUGIN.md` as the integrated plugin’s shared entry.

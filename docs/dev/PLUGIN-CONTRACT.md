@@ -13,7 +13,7 @@ At the plugin level, unrelated skills can be bundled for distribution. Each skil
 
 For an integrated set of capabilities, a plugin provides a broader decomposition: relatively weakly coupled capabilities become skills, while closely related sub-workflows remain references within each skill. Shared workflow capabilities can be factored into dedicated skills that other bundled skills reuse, much as software libraries support reuse across components.
 
-An integrated plugin should have a shared entry analogous to `SKILL.md` to orient the agent across the system and route workflows that compose several skills.
+An integrated plugin should have a shared entry, `PLUGIN.md`, analogous to `SKILL.md` to orient the agent across the system and route workflows that compose several skills.
 
 A sufficiently complex plugin may also define a dedicated coordinator skill to manage composite workflows. The loading path becomes `PLUGIN.md` → coordinator `SKILL.md` → selected skill entries and references. Other skills can link primarily to the coordinator and a small set of shared capabilities, forming a star-like dependency structure.
 
