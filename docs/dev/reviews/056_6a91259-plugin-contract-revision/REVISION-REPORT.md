@@ -19,3 +19,5 @@ V-001 composition follow-up: applied the accepted capability-module sentence and
 V-001 opening refinement: integrated the accepted shared modular-organization opening, skill-level explanation and plugin composition sentence, followed by “The modular architecture enabled by skills and plugins provides two major benefits.” Preserved the subsequent bundle/integrated-workflow/coordinator discussion.
 
 V-001 paragraph refinement: combined the shared opening and skill-level explanation into the single paragraph supplied by the human; wording unchanged.
+
+V-001 supplied-scope follow-up: pulled human update `dd9ffe9`; clarified common workflow capabilities as shared skills reusable by other bundled skills, preserving the software-library analogy. Corrected the integrated-entry sentence and separated it from the optional coordinator paragraph. Opening/benefits/bundle text and later contract sections remain unchanged. Meaning and section-boundary checks passed.

@@ -11,9 +11,11 @@ Plugins add a further level of composition by grouping skills. The modular archi
 
 At the plugin level, unrelated skills can be bundled for distribution. Each skill is loaded independently through its own entry; such a bundle does not require a shared workflow entry.
 
-For an integrated set of capabilities, a plugin provides a broader decomposition: relatively weakly coupled capabilities become skills, while closely related sub-workflows remain references within each skill. For example, common workflow motives can be refactored as dedicated skills, forming analogs of software libraries and used by other member skills in different scenarios.
+For an integrated set of capabilities, a plugin provides a broader decomposition: relatively weakly coupled capabilities become skills, while closely related sub-workflows remain references within each skill. Shared workflow capabilities can be factored into dedicated skills that other bundled skills reuse, much as software libraries support reuse across components.
 
-For a plugin representing an integrated system, a plugin entry analogous to `SKILL.md` should be introduced to orient the agent across the system and routes workflows that compose several skills. Further, a sufficiently complex plugin may also define a dedicated coordinator skill to manage composite workflows. The loading path becomes `PLUGIN.md` → coordinator `SKILL.md` → selected skill entries and references. Other skills can link primarily to the coordinator and a small set of shared capabilities, forming a star-like dependency structure.
+An integrated plugin should have a shared entry analogous to `SKILL.md` to orient the agent across the system and route workflows that compose several skills.
+
+A sufficiently complex plugin may also define a dedicated coordinator skill to manage composite workflows. The loading path becomes `PLUGIN.md` → coordinator `SKILL.md` → selected skill entries and references. Other skills can link primarily to the coordinator and a small set of shared capabilities, forming a star-like dependency structure.
 
 ## Purpose and audience
 
