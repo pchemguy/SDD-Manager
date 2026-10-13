@@ -19,7 +19,7 @@ This document records the plugin's intended capabilities, ownership, and present
 
 Root [PLUGIN.md](../../PLUGIN.md) composes the installed plugin: skill routing, composite workflows, target-project instructions, human checkpoints and operational handoffs. README explains these workflows to humans; PLUGIN.md replaces the user/workflow package entry; a development-only root AGENTS.md remains source-only, without changing target-project AGENTS.md ownership. The source [development entry](../../AGENTS.md) routes contributors to source checks; [TextStats overview](../../acceptance/TEXTSTATS.md) owns human test/evidence navigation. Source contributors explicitly load [acceptance/AGENTS.md](../../acceptance/AGENTS.md) for SDD Manager verification, publisher/package checks, development evidence and acceptance routing, including work outside its directory. [TextStats AGENTS.md](../../acceptance/textstats/AGENTS.md) retains the detailed coordinator protocol. The source-only entry is linked from README using a repository URL and is not shipped in the plugin archive.
 
-The source-only [plugin entry contract](PLUGIN-CONTRACT.md) defines PLUGIN.md architectural scope, grouped responsibilities and content boundaries.
+The source-only [plugin entry development contract](PLUGIN-CONTRACT.md) defines PLUGIN.md architectural scope, grouped responsibilities, organization and assessment guidance.
 
 ## Bundled skill references
 

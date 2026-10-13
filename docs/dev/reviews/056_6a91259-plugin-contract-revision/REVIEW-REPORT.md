@@ -1,6 +1,6 @@
 # PLUGIN-CONTRACT critical review
 
-Campaign **056_6a91259**; [review plan](REVIEW-PLAN.md). Reviewed source: `9aeeb01c4ff45220421414a532259df2cb8a6a36`. Target: [PLUGIN-CONTRACT.md](../../PLUGIN-CONTRACT.md). State: **Review complete; proposed revisions await acceptance**.
+Campaign **056_6a91259**; [review plan](REVIEW-PLAN.md). Reviewed source: `9aeeb01c4ff45220421414a532259df2cb8a6a36`. Target: [PLUGIN-CONTRACT.md](../../PLUGIN-CONTRACT.md). State: **Review complete; R-001 through R-008 accepted and source-remediated**.
 
 ## Assessment
 
@@ -126,3 +126,7 @@ These complement the existing four concerns. Group them under existing headings 
 First resolve purpose/ownership/depth (R-001/R-002), then add concrete coverage and composition guidance (R-003/R-004), then the bounded development method (R-005), and finally refine assessment contexts/variants (R-006/R-007). Correct R-008 with the same wording revision. Preserve Scope and motivation throughout. No execution plan or accepted finding disposition is inferred from this review request.
 
 Report links, Markdown spacing, reviewed-source preservation and unchanged packaged instructions checked. No runtime suites rerun for review-only records. No model trial, client discovery test or hosted effect performed. Review records are committed/pushed under campaign policy; the contract remains unchanged and campaign remains open and unmerged.
+
+## Subsequent disposition
+
+The human accepted planning/execution of the proposed revisions while keeping the campaign open. V-004 in the [revision report](REVISION-REPORT.md) records all eight source rechecks and naming assessment. Original located findings above retain their reviewed-baseline meaning. Source remedies are complete; model/client effectiveness remains unobserved. Campaign closure/integration remains outside authority.

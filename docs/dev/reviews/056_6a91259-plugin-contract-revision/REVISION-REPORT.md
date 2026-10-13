@@ -41,3 +41,28 @@ Source coverage, scenario boundaries, relative links, Markdown spacing and accep
 ## Subsequent critical review
 
 Performed the requested review at published contract baseline `9aeeb01`; [review report](REVIEW-REPORT.md) retains eight findings, proposed additions and organization. Contract and packaged source preserved. Findings are proposed revisions, without inferred acceptance or execution. Campaign remains open.
+
+## V-004 — Critical review remediation
+
+Executed the accepted plan for R-001 through R-008 after plan commit `5b69891` was published/read back. Preserved Scope and motivation verbatim; packaged PLUGIN.md, skills, acceptance tooling and publisher remain unchanged.
+
+### Name assessment
+
+Retained PLUGIN-CONTRACT.md and changed its title to “PLUGIN.md development contract.” The document still sets responsibilities, coverage and assessment criteria; its explanation and editing method support that contract. PLUGIN-GUIDE.md would understate the requirements, while PLUGIN-SPEC.md would suggest a detailed execution specification. A filename change would add navigation churn without clarifying the role more than the revised title and purpose do.
+
+### Finding rechecks
+
+| Finding | Changed coverage and result |
+| --- | --- |
+| R-001 | Purpose/use identifies source-only status, human/development readers, packaged subject and concrete coordinator. Source recheck passed. |
+| R-002 | Composite summaries replace full-definition wording; visible obligations and deferred procedures have an explicit depth boundary. Source recheck passed. |
+| R-003 | Nine-row concrete coverage/source map includes core workflows, artifacts/PROJECT, independent operations and operational gates. Source recheck passed. |
+| R-004 | Six adaptable organization groups explain order and section jobs; prominence and merging rules supplied. Source recheck passed. |
+| R-005 | Five-step bounded change/review method establishes canonical guidance before projection and checks affected cases/links. Source recheck passed. |
+| R-006 | Sixteen identified cases state decision-relevant context, separate entry/discovery from execution boundaries and define evidence/outcome recording. Source recheck passed; consumer behavior unrun. |
+| R-007 | Contrasts cover assessment/execution, tracking requested/declined, unpushed recovery, pending acceptance, highlights/full message, unavailable owner and non-Git mutation; separate canonical-access check included. Source recheck passed; trials unrun. |
+| R-008 | Stopping rule explicitly names tagging/hosted release publication and preserves required Git publication. Source recheck passed. |
+
+Root contributor and capability-map navigation now describe development/organization/assessment guidance. Checked 32 relevant source links/anchors, Markdown spacing, 16 case identities, accepted-section bytes and source/package path preservation. A preliminary broad link scan encountered a capability-map fenced illustration whose relative paths intentionally belong to its example context; the final scan assessed actual contract/contributor navigation, not literal example targets. No runtime suites or model/client acceptance runs performed for this source-only prose action.
+
+Commit/push/readback establishes the action boundary. Campaign remains open and unmerged as explicitly requested; source rechecks do not imply observed guidance effectiveness.

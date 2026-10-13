@@ -1,4 +1,4 @@
-# PLUGIN.md contract
+# PLUGIN.md development contract
 
 ## Scope and motivation
 
@@ -17,71 +17,129 @@ An integrated plugin should have a shared entry, `PLUGIN.md`, analogous to `SKIL
 
 A sufficiently complex plugin may also define a dedicated coordinator skill to manage composite workflows. The loading path becomes `PLUGIN.md` → coordinator `SKILL.md` → selected skill entries and references. Other skills can link primarily to the coordinator and a small set of shared capabilities, forming a star-like dependency structure.
 
+## Purpose and use
+
+This source-only contract guides human maintainers and development agents creating or reviewing SDD Manager's packaged [PLUGIN.md](../../PLUGIN.md). It explains the entry's responsibilities, content boundaries, organization and assessment. It does not supply instructions for running SDD Manager in a target project.
+
+For SDD Manager, [sdd-manage](../../skills/sdd-manage/SKILL.md) is the coordinator. `PLUGIN.md` is its front: a concise projection of capabilities, workflows and essential obligations defined in skill entries and references. It should generally lead the agent to load the coordinator before other skills. `PLUGIN.md` is a non-standard entry convention; essential operational guidance must remain reachable through the coordinator and owning skills when the host does not load it.
+
+Use Responsibilities to check coverage, Recommended organization to compose the entry, and Development and review to assess changes. The assessment cases check whether ordinary requests lead to appropriate discovery, decisions and boundaries. Contributor verification remains governed by [acceptance/AGENTS.md](../../acceptance/AGENTS.md).
+
 ## Responsibilities
 
 `PLUGIN.md` summarizes how bundled skills work together and routes the agent to their instructions. Its responsibilities fall into three groups.
 
 ### Orientation and routing
 
-- **Coordinator pointer:** identify the coordinator skill, link its entry and state when it should be loaded alongside `PLUGIN.md`.
-- **Context:** identify the project and its new/existing/interrupted state, governing instructions, active workflow, accepted inputs and pending work needed for a sound routing decision.
-- **Workflow selection:** explain how to choose a core workflow or variant and assess whether a request continues it, changes its stage or requires a switch. Preserve narrow standalone operations.
-- **Skill routing and progressive loading:** map capabilities and request triggers to their owning skills and entry points; explain when to load supporting references without loading the whole bundle.
+- **Coordinator pointer:** identify `sdd-manage`, link its entry and state when to load it alongside `PLUGIN.md`.
+- **Context:** prompt establishment of project state, governing instructions, active workflow, accepted inputs and pending work needed for a sound routing decision.
+- **Workflow selection:** distinguish core workflows, variants and independent operations; assess continuation, stage changes and switches while preserving narrow requests.
+- **Skill routing and progressive loading:** map capabilities and request triggers to owning skills and entry points; identify when to load supporting references without loading the whole bundle.
 
-### Composite workflow definitions
+### Composite workflow summaries
 
-- Define each workflow's purpose, entry conditions, stages, dependencies, participating skills, outputs and completion boundary.
-- Identify stage ownership and cross-skill handoffs, including accepted inputs, actual state, pending work, verification/tracking evidence and the next permitted action.
-- Distinguish core workflows and variants from reusable stages and supporting operations. Show how skills compose the path while retaining their individual responsibilities.
+- Summarize canonical workflows through purpose/trigger, principal stages and owners, important outputs, human checkpoints and stopping boundaries.
+- Identify consequential handoffs and the owner of the next action. Link the coordinator's workflow definition and the selected skills' procedures.
+- Distinguish core workflows and variants from reusable stages and independent operations; show how skills compose a path without reproducing their execution instructions.
 
 ### Key operational requirements
 
 - **Authority and stopping boundaries:** distinguish assessment from execution, preserve the requested scope and identify when control returns to the human.
 - **Human checkpoints:** make required document approvals and human-requested implementation range boundaries prominent. Distinguish clarification and agent checks from human acceptance; preserve pending decisions through interruption.
-- **Git publication:** emphasize committing completed work, pushing each workflow-owned commit and verifying remote containment before advancing. Identify task-closure and eligible integration requirements, with links to their procedures.
-- **Backend implementation tracking:** establish when requested tracking must be prepared and verified; maintain task/parent associations, evidence-based closures, reopening and pending reconciliation throughout implementation.
-- **Branches, integration and continuity:** establish working/target identities, preserve unfinished work and define eligible integration, publication, interruption recovery and return boundaries.
+- **Git publication:** emphasize verified task closure, committing completed work, pushing each workflow-owned commit and remote readback before advancing, with explicit human exceptions preserved.
+- **Backend implementation tracking:** establish when requested tracking gates execution and emphasize maintaining actual task/parent associations and evidence-based lifecycle transitions throughout implementation.
+- **Branches, integration and continuity:** establish actual working/target identities, preserve unfinished work and distinguish partial checkpoints from eligible integration and recovery.
 - **Visible decisions and evidence:** require a chat explanation of the selected workflow and its basis, authorized work and next checkpoint. Reports distinguish performed, verified, published, blocked and unobserved states.
 
-State the essential obligations and triggers in `PLUGIN.md`; link their canonical procedures. Detailed execution remains with the owning skills and their references.
+Keep obligations needed before a handoff visible in `PLUGIN.md`. Defer detailed eligibility tests, handoff payloads, branch procedures, recovery algorithms and provider reconciliation to their owners. Repeat a rule where it prevents a consequential routing or stopping error; collapse repetition that merely retells a procedure. No substantial operational rule should exist only in `PLUGIN.md`.
 
-## Review concerns
+### SDD Manager coverage and canonical sources
 
-### Canonical ownership and level of detail
+This map identifies the coverage baseline and principal sources. It is not a second skill catalog or an exhaustive procedure index.
 
-`PLUGIN.md` is the front of the coordinator: a concise projection of capabilities, workflows and essential obligations defined in skill entries and references. Selective repetition is expected. Review whether each summary helps the agent select, load or respect a workflow, and whether procedural detail belongs with its owner instead. Composite workflow definitions should summarize the coordinator's definitions.
-
-No substantial operational rule should exist only in `PLUGIN.md`. It is a non-standard entry convention; essential guidance must remain reachable through the coordinator and owning skills when the host does not load it. Check summaries against their canonical sources for omissions, contradictions and drift.
-
-### Concision and explicit guidance
-
-Judge concision by what the agent needs to act correctly, rather than a word limit. Keep triggers, the coordinator loading path, workflow distinctions, mandatory checkpoints and stopping boundaries explicit enough for less capable or local models. Do not replace these with vague instructions to “use the appropriate skill.” Detailed procedures can remain behind a clearly identified handoff.
-
-### Routing from ordinary requests
-
-A user should be able to ask SDD Manager to develop, extend, review or revise a project without knowing skill names or sequences. Starting with `PLUGIN.md`, the agent should discover the coordinator, establish relevant context, select the workflow or standalone operation and load its owners progressively. It should explain its choice and supporting evidence in chat, asking only for consequential missing information.
-
-### Continuity and scope preservation
-
-Check routing against existing state as well as wording. A new request may continue a workflow, change its stage or require a switch. The selected path must preserve pending approvals, unfinished work and human-requested implementation ranges. Review must not silently become revision; steering must not silently resume implementation; preparation must not silently become publication.
-
-## Guidance assessment prompts
-
-These examples assess `PLUGIN.md` guidance; they are not additional plugin requirements or consumer instructions. The [Tetris](../demo/tetris/README.md) and [Calculator](../demo/calculator/README.md) guides supply representative project situations. Release and recovery cases extend the set with common coordinator requests.
-
-For each case, supply the stated repository/session context and start the agent with `PLUGIN.md`, allowing progressive discovery. Do not supply the assessment column to the agent or name the expected workflow in the prompt. Record the selected path, loaded owners, chat explanation and stopping boundary. Static inspection establishes source coverage; model runs establish observed routing for the tested model and context. Record which was performed.
-
-| Context | User prompt | Assess |
+| Coverage | Essential distinction | Canonical source |
 | --- | --- | --- |
-| New repository; preliminary description only | “Help me develop a classic browser-based Tetris game using SDD Manager.” | Main development; orientation and material clarification before governing documents; document review checkpoints. No invented gameplay decisions. |
-| New calculator project; three phases requested from the outset | “Use SDD Manager to develop a calculator: basic arithmetic first, then powers and logarithms, then trigonometry.” | All three phases remain initial main scope; later phases are not automatically feature campaigns. |
-| Existing calculator; initial scope complete | “Use SDD Manager to add a basic/scientific mode toggle.” | Bounded feature preparation from existing accepted behavior; clarify mode-switch behavior and affected documents. |
-| Existing Tetris; original whole-project scope lacks accepted governing documents | “Use SDD Manager to organize and complete this project.” | Inspect existing work; consider main development for whole-project scope. Existing code alone does not dictate a feature workflow or a fresh restart. |
-| Tetris implementation paused at a verified task checkpoint; phase incomplete | “Use SDD Manager to change hard drop so it leaves the piece active under the normal locking policy.” | Steering variant; assess and reconcile affected artifacts, preserve paused work, then return control without resuming implementation. |
-| Accepted calculator task list; implementation not started | “Use SDD Manager to implement through the first milestone, then stop.” | Bounded implementation; requested tracking prerequisites, verified task commits and pushes; stop at the milestone without completing or integrating an unfinished phase. |
-| Interrupted implementation; pending work and publication state available | “Continue with SDD Manager.” | Recover actual task, branch, publication and checkpoint state; continue only within retained authority or clarify a missing range. |
-| Existing project; no correction authorization | “Use SDD Manager to review the architecture and decomposition.” | Scoped review of ARCHITECTURE and DECOMPOSITION; evidence-backed findings, without automatic remediation. |
-| Review findings available; accepted correction scope supplied | “Use SDD Manager to plan and fix these findings.” | Revision planning and execution within the accepted scope; verify and publish changes, preserving pending decisions. |
-| Verified delivered changes; no release publication requested | “Use SDD Manager to prepare a release message.” | Complete retained RELEASE-NOTES.md through release-message owners; no implicit tag or hosted release. “Collect release highlights” remains a narrower operation. |
+| Coordinator and selection | Ordinary requests select or recover a path through `sdd-manage`; explain the decision in chat. | [Coordinator entry](../../skills/sdd-manage/SKILL.md), [selection and continuity](../../skills/sdd-manage/references/workflows.md#workflow-selection-and-continuity) |
+| Core workflows | Main covers whole-project scope; feature adds a bounded capability; revision corrects or improves work. Steering is a revision variant at paused implementation. New/existing state informs entry, not compulsory routing. | [Core workflows](../../skills/sdd-manage/references/workflows.md#core-development-workflows) |
+| Preparation | PROJECT is the project brief; ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS have distinct owners and dependencies. Enter at an established stage; use only necessary feature deltas. | [Preparation catalog](../../skills/sdd-manage/references/workflows.md#operation-catalog), [PROJECT brief](../../skills/sdd-design/references/project-brief.md) |
+| Human checkpoints | Necessary new documents require separate human acceptance; requested implementation ranges define stops. | [Document review](../../skills/sdd-manage/references/human-document-review.md), [implementation checkpoints](../../skills/sdd-implement/references/completion-and-checkpoints.md) |
+| Implementation and persistence | Bounded execution; one task's result, evidence and initial checkbox close together; publish each commit before progression. | [Implementation entry](../../skills/sdd-implement/SKILL.md), [per-commit publication](../../skills/sdd-manage/references/git-workflows.md#publish-each-commit) |
+| Requested backend tracking | Establish the tracking decision, project eligible work before execution and maintain associations/closures. GitHub uses native milestones; label fallback depends on provider support. | [Tracking decision](../../skills/sdd-manage/references/tracking-decision.md), [phase activation](../../skills/sdd-manage/references/phase-activation.md), [backend lifecycle](../../skills/sdd-conventions/references/backend-object-lifecycle.md) |
+| Branches, integration and continuity | Recover actual identities and unfinished work; partial ranges preserve their branch, while complete boundaries use their eligible integration path. | [Branch management](../../skills/sdd-manage/references/branch-management.md), [Git workflows](../../skills/sdd-manage/references/git-workflows.md) |
+| Independent operations | Preserve narrow review, verification, documentation, planning, task selection, accepted feature incorporation or hosted synchronization requests. | [Operation catalog](../../skills/sdd-manage/references/workflows.md#operation-catalog), [feature incorporation](../../skills/sdd-integrate-feature/SKILL.md), [hosting owner](../../skills/sdd-forge/SKILL.md) |
+| Release operations | Highlights, complete retained release messages, package preparation and release publication have different outputs and authority. | [Release operations](../../skills/sdd-manage/references/workflows.md#release-operations), [release messages](../../skills/sdd-forge/references/release-message.md) |
 
-Across applicable cases, also assess prominent human checkpoints, commit/push obligations, requested backend tracking and accurate evidence reporting. Test paraphrases and changed project state rather than treating these prompts as fixed invocation syntax.
+## Recommended PLUGIN.md organization
+
+Order information by when the agent needs it. The following groups describe section jobs, not mandatory headings or a fixed section count.
+
+| Order | Group | Job |
+| --- | --- | --- |
+| 1 | Identity, coordinator and loading | Identify the plugin, coordinator entry and selective loading path. |
+| 2 | Request, context and selection | Establish intent/state, distinguish paths and explain the decision before dependent work. |
+| 3 | Prominent obligations | Surface human checkpoints, commit/push requirements and requested tracking gates before execution. |
+| 4 | Skill routing | Map common concerns to owners and identify the next entry or reference. |
+| 5 | Composite summaries | Explain how owners form the principal paths, with outputs and consequential stops. |
+| 6 | Continuity and shared conventions | Summarize branch/integration/recovery boundaries and route record/style conventions to their owners. |
+
+Merge groups when they serve the same decision point. Cross-reference a shared obligation from a composite instead of repeating its entire explanation. Keep human-oriented examples and diagrams in README; `PLUGIN.md` needs enough workflow structure to route an agent. Source-development commands and acceptance coordination remain outside the packaged entry.
+
+## Development and review
+
+### Change method
+
+1. Identify the affected canonical owner and the accepted scope. Establish substantive operational guidance there before projecting it into `PLUGIN.md`; unresolved behavior or ownership requires a decision, not a PLUGIN-only rule.
+2. Update affected routing, workflow summaries and prominent obligations. Preserve unrelated paths and narrow-operation boundaries.
+3. Check agreement with canonical sources, correct owner links and progressive loading. Ensure packaged guidance does not require source-only files and resolved bundled references remain inside the plugin root.
+4. Assess relevant cases below, adding a contrast when the change introduces a new routing or stopping distinction. Source inspection and model trials provide different evidence; a prose change does not automatically require a full acceptance campaign.
+5. Report actual checks, unresolved decisions and evidence limits through the active development record. Follow contributor instructions for verification, publication and integration.
+
+### Review concerns
+
+- **Source fidelity and maintenance:** summaries agree with canonical owners; no essential operational rule exists only in `PLUGIN.md`. Changed source behavior has its affected projections and cases rechecked.
+- **Concision and explicit guidance:** every passage supports selection, loading or respecting a workflow. Triggers, distinctions and boundaries remain explicit enough for less capable or local models; detailed procedures stay with owners. Evaluate useful guidance rather than a word quota.
+- **Ordinary-request routing:** the human need not know skill names or sequences. The entry leads to context establishment, the appropriate coordinator/owners and a visible evidence-backed decision; only consequential missing information requires clarification.
+- **Prominence:** obligations are visible before the decision or action they constrain. Correct instructions buried inside a later workflow description are insufficient.
+- **Progressive-discovery completeness:** linked owners and modules are accessible and identifiable. Required unavailable skills or source-only package dependencies are gaps; relative links do not guarantee every client supports execution handoffs.
+- **Continuity and scope:** selection preserves accepted inputs, pending approvals, unfinished work and requested ranges. Review does not silently authorize repairs; steering does not resume implementation. Release-message/package preparation does not authorize tagging or hosted release publication; required Git publication still applies.
+
+These concerns assess how effectively Responsibilities are communicated. They do not create additional target-project workflows or require another capability registry.
+
+## Guidance assessment cases
+
+The [Tetris](../demo/tetris/README.md) and [Calculator](../demo/calculator/README.md) guides supply representative project situations. Cases below are reviewer material, not additional plugin requirements or fixed invocation syntax. Expected behavior derives from the canonical sources above and the coordinator's [examples](../../skills/sdd-manage/references/examples.md).
+
+### Assessment method
+
+Supply the case's project/session facts through normal context or discoverable repository state. Unless a case says otherwise, use an eligible Git repository with required skills available, working publication access, applicable instructions satisfied and no unrelated pending changes. Explicitly record tracking choice and any established execution range; do not infer either from a project name. Do not supply expected behavior to the consumer or name its expected workflow in the prompt.
+
+For entry assessment, start with `PLUGIN.md` and allow progressive discovery. Observe selection, requested context, loaded owners, chat explanation and proposed checkpoint. Downstream effects require a separately selected execution trial and evidence; merely naming a correct owner does not prove its procedure was followed. Accept a justified alternative or clarification when supplied state does not settle a consequential choice.
+
+Record the case ID, source/model revisions, actual context/prompt, scope of the trial, observed behavior and result in existing development evidence. Use pass, gap, blocked or unrun with a reason. Static inspection establishes source coverage; model trials establish behavior only for the tested model and context. Starting with an explicitly supplied PLUGIN.md does not establish automatic host discovery. Test relevant paraphrases and contrasting state rather than matching literal prompt wording.
+
+### Representative requests and contrasts
+
+| Case and context | User prompt | Entry decision and discovery | Execution boundary to assess when selected |
+| --- | --- | --- | --- |
+| C-01: New Tetris repository; seed only; no accepted documents | “Help me develop a classic browser-based Tetris game using SDD Manager.” | Main development; coordinator/orientation/design; clarify material gameplay choices. | Publish each necessary new document for human review; do not invent accepted mechanics or advance through pending approvals. |
+| C-02: New calculator; all three phases requested initially | “Use SDD Manager to develop a calculator: arithmetic first, then powers and logarithms, then trigonometry.” | Main scope includes all three phases; preparation owners. | Later phases do not become feature campaigns merely because they extend the baseline. |
+| C-03: Calculator's initial scope complete; no paused implementation | “Use SDD Manager to add a basic/scientific mode toggle.” | Feature; inspect accepted behavior and discover necessary delta owners. | Clarify switching behavior; preserve feature document checkpoints and the authorized preparation/execution scope. |
+| C-04: Existing Tetris code; whole-project completion requested; governing inputs missing | “Use SDD Manager to organize and complete this project.” | Inspect actual work; main development may fit whole-project scope. | Reuse sufficient existing work; do not force feature routing from existing code or restart everything from missing documents. |
+| C-05: Tetris phase paused, incomplete; verified task; hard drop currently locks immediately | “Use SDD Manager to change hard drop so it leaves the piece active under the normal locking policy.” | Steering variant; coordinator/orientation/steering owners. | Reconcile affected documents/code/tests, verify/publish/integrate into the paused branch, then stop without resuming tasks. |
+| C-06: Same state as C-05; impact assessment only | “Use SDD Manager to assess changing hard drop to follow the normal locking policy.” | Steering assessment; preserve assessment-only authority. | Return impact and proposed scope without implementing the amendment. |
+| C-07: Accepted calculator TASKS; first milestone is a strict subset of its phase; tracking declined | “Use SDD Manager to implement through the first milestone, then stop.” | Bounded implementation and relevant supporting owners. | Verified task commits/pushes; stop on the incomplete phase branch, without hosted objects or phase integration. |
+| C-08: Same range as C-07; GitHub tracking requested; task associations missing | “Use SDD Manager to implement through the first milestone, then stop.” | Coordinator discovers tracking/phase activation and hosting owner before execution. | Create/reconcile native milestones and issue associations; unresolved required projection blocks affected tasks. |
+| C-09: Retained implementation range; last task committed but unpushed; clean worktree | “Continue with SDD Manager.” | Recover actual owner/task/publication state and retained boundary. | Publish/read back outstanding commit before new work; push failure blocks progression. Do not repeat completed implementation. |
+| C-10: Existing ARCHITECTURE and DECOMPOSITION; review only | “Use SDD Manager to review the architecture and decomposition.” | Scoped design review with coordinator/conventions as needed. | Evidence-backed findings; no automatic remediation or implementation. |
+| C-11: Findings and accepted correction scope supplied; no paused task implementation | “Use SDD Manager to plan and fix these findings.” | Revision; discover affected owners and verification/reporting support. | Execute accepted corrections and publish coherent results; preserve pending decisions and the requested integration boundary. |
+| C-12: Verified delivered range; version/context available; no release publication request | “Use SDD Manager to prepare a release message.” | Complete-message operation through coordinator/forge/report owners. | Prepare retained RELEASE-NOTES.md; no implicit tag or hosted release. Git persistence follows the selected owner procedure. |
+| C-13: Same delivered range; highlights only | “Use SDD Manager to collect release highlights.” | Narrow highlights operation. | Return curated changes without upgrading the request to a full message or release publication. |
+| C-14: PROJECT published; human acceptance pending; no override | “Continue preparing the project with SDD Manager.” | Recover the pending document checkpoint before selecting dependent design work. | Present/resolve the pending acceptance; do not treat continuation as approval or author dependent documents. |
+| C-15: Accepted task range; required implementation skill unavailable | “Use SDD Manager to implement the first task.” | Identify the required unavailable owner and report the blocked capability. | Do not claim it ran or silently substitute instructions from an unrelated skill. |
+| C-16: Project directory outside Git; read-only discussion first, mutation then requested | “Help me explore this project with SDD Manager.” Then: “Create its project documents.” | Conversation/read-only orientation may proceed; mutation requires eligible Git state. | Report mutation blocked; do not implicitly initialize Git or write project documents. |
+
+### Canonical access without PLUGIN.md
+
+Separately start through `sdd-manage` without loading `PLUGIN.md`. Check that selection/context, human checkpoints, publication, requested tracking and stopping obligations remain reachable through skill entries and references. For an observed trial, record this different starting condition explicitly. This checks independence from the non-standard entry; it does not prove host discovery or availability of every skill.
+
+Across execution trials, retain actual evidence for HIL, task closure, commit/push, tracking and stopping behavior. Unperformed downstream checks remain unrun even when entry routing passes.
