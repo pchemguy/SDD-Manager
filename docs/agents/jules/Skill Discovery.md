@@ -121,4 +121,4 @@ Use the following reporting guidelines:
 - Do NOT perform modifying Git operations.
 - Do NOT attempt to formally submit the task.
 - Do NOT ask clarifying questions or pause for confirmation about discovery or presentation choices. Use the reporting guidelines above. 
-- Do not use any formal finalization operations. Provide the report directly in chat and then your turn.
+- Do not use any formal finalization operations. Provide the report directly in chat and then end your turn.
