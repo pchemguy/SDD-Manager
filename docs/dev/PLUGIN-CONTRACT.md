@@ -2,14 +2,18 @@
 
 ## Scope and motivation
 
-Agent plugin is a natural extension of the modular skill architecture with support for progressive discovery. Conceptually, plugin architecture provides a second hierarchy level (plugin->skill->workflow/reference) for modeling more complex functionalities. Modular hierarchical architecture serves at least two purposes:
+An agent plugin extends modular skill architecture with another level of composition: plugin → skill → sub-workflow/reference. This hierarchy serves two purposes:
 
-- enabling scalable/maintainable development similar to development of software
-- AI context use/polution management
+- **Development:** partition complex functionality into maintainable units with clear responsibilities and limited coupling.
+- **Context management:** load relevant instructions progressively, limiting unnecessary context use and context pollution.
 
-For a complex skill, individual capabilities are conventionally implemented as `references/*.md` modules, while the main entry, `SKILL.md`, provides agent orientation and guidance: by loading `SKILL.md` into context agent should get sufficient information necessary to decide when a particular `references/*.md` module should be loaded without dumping all `references/*.md` into context at once.
+Within a complex skill, closely related capabilities can be implemented as `references/*.md` modules. Its `SKILL.md` entry orients the agent and explains when to load each module. The entry must provide enough information to select the needed guidance without loading every reference at once.
 
-While skills within a bundle may be completely unrelated, using a plugin simply as a container (convenience), the plugin feature provides a considerable advantage to implementing complex integrated set of capabilities, where target scope can be first partitioned into a relatively loosely coupled major blocks to be modeled as skills, while more closely related capabilities within a skill are modeled and implemented as `references/*.md` modules. When a plugin is simply used like a package, each bundled skill needs to be loaded into AI context independently, and no `SKILL.md` analog is necessary. However, when a plugin represents an integrated complex, modeling a system of related workflows composing multiple bundled skills,  a `SKILL.md` analog becomes important for orienting an agent. For a sufficiently complex system, it may also be appropriate to define a dedicated coordinator skill, managing composite workflows (representing something like `PLUGIN.md-><coordinator skill SKILL.md>-><bundled skills (possibly start-like architechure with bundled skills primarily linking to the coordinator and, possibly, say, 1-2 other skills)>` .
+A plugin can serve simply as a distribution container for unrelated skills. Each skill is loaded independently through its own entry; such a bundle does not require a shared workflow entry.
+
+For an integrated set of capabilities, a plugin provides a broader decomposition: relatively weakly coupled capabilities become skills, while closely related sub-workflows remain references within each skill. A plugin entry analogous to `SKILL.md` then orients the agent across the system and routes workflows that compose several skills.
+
+A sufficiently complex plugin may also define a dedicated coordinator skill to manage composite workflows. The loading path becomes `PLUGIN.md` → coordinator `SKILL.md` → selected skill entries and references. Other skills can link primarily to the coordinator and a small set of shared capabilities, forming a star-like dependency structure.
 
 ## Purpose and audience
 
