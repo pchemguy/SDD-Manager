@@ -7,6 +7,8 @@ displayName: SDD Manager
 
 SDD Manager provides specification-driven development workflows for Git projects through a set of focused skills. Use this document to select skills and coordinate workflows. Each skill's `SKILL.md` defines its procedure, with supporting sub-workflows in `references/*.md`. The [README](README.md) describes capabilities and composite workflows through examples and diagrams.
 
+**`sdd-manage` is SDD Manager’s workflow coordinator. Generally load its [entry](skills/sdd-manage/SKILL.md) alongside `PLUGIN.md` before loading other skills.**
+
 If the client does not load `PLUGIN.md`, read it explicitly before selecting a workflow. Bundled skills link to one another with relative Markdown links and identify handoffs by skill name. Load only the skills and references needed for the current work.
 
 ## Establish the request and context
