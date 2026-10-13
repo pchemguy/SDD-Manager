@@ -75,50 +75,53 @@ It seems like I should spell out a concise discovery plan, like
 ---
 ---
 
-Discover repository-provided skills and plugins using the protocol below. Report the results in chat only, organized for quick human review.
+Discover repository-provided skills and plugins. Inspect their manifests, metadata, and entry-point documentation to identify their purposes and capabilities. Treat repository paths as relative to `<REPO_ROOT>` and use the discovery protocol below.
 
-Treat repository paths as relative to {REPO_ROOT}.
+### Discovery Protocol
 
-### 1. Skill Discovery Protocol
+1. **Skill Discovery Protocol**
+    Apply this protocol to a supplied skill directory; use `.agents/` for standalone skills.  
+    Identify each  `./skills/<SKILL_NAME>/SKILL.md`.
+    For each skill:
+    - Read and load `SKILL.md` in full and extract declared `name` and `description`.
+    - Identify capabilities, sub-workflows, scope, and routing rules from `SKILL.md`.
+    - Produce a skill brief, including in your report
+        - skill name,
+        - skill path,
+        - declared metadata,
+        - concise capability summary derived from `SKILL.md`.
+2. **Plugin Discovery Protocol**
+    Start from `.agents/plugins/`.
+    Identify each `./<PLUGIN_NAME>/plugin.json` manifest. When not available, inspect vendor-specific locations.
+    For each plugin:
+    - Read `plugin.json` in full and extract declared `name`, `description`, and, if available, `displayName`.
+    - Read `PLUGIN.md` in full, if present.
+    - Apply the  **Skill Discovery Protocol** to the plugin’s directory.
+    - Produce a plugin brief, including in your report
+        - plugin name,
+        - plugin path,
+        - declared metadata,
+        - concise summary of `PLUGIN.md`, if present,
+        - skill briefs.
 
-Apply this protocol to a supplied skill directory; use `.agents/` for standalone skills.  
-Identify each  `./skills/<SKILL_NAME>/SKILL.md`.
+### Approved Plan
 
-For each skill:
-- Read and load `SKILL.md` in full.
-- Extract its declared `name` and `description`.
-- Identify capabilities, sub-workflows, scope, and routing rules from `SKILL.md`.
-- Report the skill path, declared metadata, and a concise capability summary derived from `SKILL.md`.
+1. Explore standalone skills: Discover skills in `.agents/skills/`. For each skill, read `SKILL.md` to extract metadata and produce a skill brief.
+2. Explore plugins: Discover plugins in `.agents/plugins/`. For each plugin, read `plugin.json`, `PLUGIN.md`, and apply the skill discovery protocol. Produce a plugin brief.
+3. Generate report: Output the discovery report in the chat.
+4. Perform required pre-commit steps only. Committing is NOT allowed.
+5. Conclude: Call `done` with a summary of the task.
 
-Do not read referenced resources, including `references/*.md`, during this discovery task. Load them only when required by a subsequent authorized task. Do not execute bundled scripts or discovered workflows.
+### STRICT EXECUTION CONSTRAINTS
 
-### 2. Plugin Discovery Protocol
-
-Start from `.agents/plugins/`. Identify all plugin containers `./<PLUGIN_NAME>`.
-
-For each plugin:
-   - Check for `plugin.json` at the plugin root and read it in full. If found, use it as the manifest and skip vendor-specific manifest checks.
-   - Otherwise, inspect vendor-specific manifest locations, such as `.claude-plugin/plugin.json` and `.codex-plugin/plugin.json`. Read discovered manifests in full and identify their paths.
-   - Read `PLUGIN.md` in full, if present.
-   - Apply the  **Skill Discovery Protocol** to the plugin’s directory.
-   - Report the plugin path; declared `name`, `description`, and `displayName`, where present; a concise summary of its entry point; and its skill briefs.
-
-### 3. Reporting
-
-Group standalone skills separately from plugins and their bundled skills. Avoid duplicate briefs for the same skill path. Do not invent missing metadata.
-
-Use the following reporting guidelines:
-
-- Present the declared description and a separate concise capability summary synthesized from SKILL.md.
-- Use Markdown headings and bullets formatting.
-- Summarize PLUGIN.md’s substantive contents briefly when present; otherwise note its absence.
-- Aggregate discovery problems at the end.
-
-### STRICT EXECUTION CONSTRAINTS:
+Report the results **in chat only**, organized for quick human review, using Markdown headings, bullets, and table formatting as appropriate. Group standalone skills separately from plugins and their bundled skills.
 
 - This is a READ-ONLY discovery and reporting task.
-- Do NOT create, modify, or remove any user files.
-- Do NOT perform modifying Git operations.
-- Do NOT attempt to formally submit the task.
-- Do NOT ask clarifying questions or pause for confirmation about discovery or presentation choices. Use the reporting guidelines above. 
-- Do not use any formal finalization operations. Provide the report directly in chat and then end your turn.
+- Do NOT
+    - create, modify, or remove any user files
+    - perform any modifying git operations
+    - ask clarifying questions. Make reasonable decisions about discovery and presentation, then execute immediately.
+    - invent / infer / assume any missing metadata.
+    - attempt to formally submit the task.
+
+**Completion means reporting the findings in chat. No repository changes or modifying Git operations are required or authorized at this point. When you are finished, conclude the task to end your turn without a formal submission.**
