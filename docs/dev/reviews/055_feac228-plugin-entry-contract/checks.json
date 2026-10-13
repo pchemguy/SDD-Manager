@@ -1,0 +1,16 @@
+{
+  "source": "031ab802133cf3a1c30ae8ee9a942d98e65c477f",
+  "baseline": "feac228a11bc9610422fa3389c442146f62b2114",
+  "contract_words": 636,
+  "changed_document_links": 34,
+  "package_files": 134,
+  "source_contract_and_agents_excluded": true,
+  "shipped_blob_inventory_unchanged": true,
+  "two_builds_identical": true,
+  "asset_hashes": {
+    "sdd-manager.zip": "24d53a9403ae0576fe368a2683b012cd9323fc9a6751899b87e05d9a1b008c62",
+    "sdd-manager.zip.sha256": "559e1dc9a1c4bcca39f09f8c16529fc6a0438045fd37e8d39cb70c7d96c354c8"
+  },
+  "entry_assessment": "Current PLUGIN matches required concern order and eight coverage areas; all 15 skill owners routed. No entry rewrite needed.",
+  "live_behavior_assessed": false
+}
