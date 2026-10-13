@@ -55,3 +55,7 @@ The human requested another review/revision round distinguishing workflow entry 
 4. Recheck canonical ownership, assessment starts, links/anchors, spacing, opening preservation and changed paths. Publish source/evidence together and stop without merge. No fresh model trial or canonical procedure revision is selected.
 
 Publish review findings and this plan before execution.
+
+## Authorized closure
+
+The human now requests campaign closure and a separate PLUGIN.md/contract alignment review. V-001 through V-005 are complete. Finalize this package, publish the campaign tip, explicitly merge into main, verify merged state and publish/read back main before opening the next campaign. Prior “keep open” boundaries are superseded for this completed campaign only.

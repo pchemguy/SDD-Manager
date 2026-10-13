@@ -1,6 +1,6 @@
 # PLUGIN-CONTRACT revision report
 
-Campaign **056_6a91259**; [campaign scope](REVISION-PLAN.md). State: **Open**.
+Campaign **056_6a91259**; [campaign scope](REVISION-PLAN.md). State: **Accepted scope complete; closure authorized**.
 
 Created the new campaign branch and records from main baseline `6a912594f7b9cb7b9ca5888947100f6a077ab48d`. The opening left contract content unchanged; subsequent human-directed revisions are recorded below.
 
@@ -78,3 +78,11 @@ R-010 source recheck: assessment now separates nine entry cases, seven establish
 R-011 source recheck: a concise coordinator fallback applies when available context cannot resolve workflow/owner interpretation. Recover discoverable state; reuse known owner/context where sufficient; ask only for consequential unrecoverable decisions. The contract does not require lower-level skill invocation or manual technical-context reconstruction by the user, and does not infer erased acceptance or authority. Detailed recovery remains canonical.
 
 Checked 26 contract links/anchors, all 18 unique case IDs, group-specific starts, Markdown spacing, accepted Scope and motivation bytes, and changed-path preservation. Packaged PLUGIN.md, canonical skills, acceptance tooling and closed campaign records unchanged. No suites, model trials or hosted effects performed. Findings R-009 through R-011 source-remediated; observed model behavior remains unrun. Commit/push/readback establishes this action boundary; campaign remains open and unmerged.
+
+## Closure boundary
+
+The human requested closure after V-001 through V-005. All eleven review findings are source-remediated; accepted architecture, grouped responsibilities, canonical coverage/depth, composition/development guidance and entry/context/recovery assessment are complete. Retained PLUGIN-CONTRACT.md with title “PLUGIN.md development contract.” Packaged instructions remain unchanged.
+
+At source `414f65421ef04399acb3c4919e033c22b8e88300`, Python 3.12.14 passed 124 support tests and 30 publisher tests with declared jsonschema dependencies. Contract links/anchors and 18 case identities passed; the 134-file shipped Git inventory is byte-identical to the main baseline. Full campaign diff preserves prior closed packages. Fresh model/client trials remain unrun.
+
+Original opening: `2335d1720eb47085a2614217975d285ba09cf530`; branch-off/main baseline: `6a912594f7b9cb7b9ca5888947100f6a077ab48d`. Integrate the complete campaign explicitly into main, verify the merged state and publish/read back the target. Those Git results establish closure and freeze this package; no post-closure report amendment is required. The next review belongs to a new campaign.
