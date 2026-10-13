@@ -1,6 +1,6 @@
 # Comprehensive SDD Manager review
 
-Campaign **058_fb673e8**; [review plan](REVIEW-PLAN.md). Reviewed workflow/package baseline: `fb673e8eaaa0249b966b53bf0d4d723e9090625f`. Original opening/check source: `24cd08ec13a9e14e831923027e1e3eeb5c8795e2`; only campaign records differ from baseline. State: **In progress**. Live acceptance explicitly excluded.
+Campaign **058_fb673e8**; [review plan](REVIEW-PLAN.md). Reviewed workflow/package baseline: `fb673e8eaaa0249b966b53bf0d4d723e9090625f`. Original opening/check source: `24cd08ec13a9e14e831923027e1e3eeb5c8795e2`; only campaign records differ from baseline. State: **Review complete; revisions proposed, not executed**. Live acceptance explicitly excluded.
 
 ## U-001 — Entry, ownership, metadata and package
 
@@ -59,3 +59,42 @@ This is a reproducible tool-behavior gap in the procedure, not evidence that a p
 **Objective recheck:** disposable real Git cases with Markdown hard breaks, blank lines and Unicode demonstrate exact canonical body equality under the documented procedure; a default-cleanup negative case detects the mismatch. Cover newline handling explicitly. Link/refine release-body assessment coverage without claiming a simulated provider proves Git message preservation. Source/publisher consumers still enforce their respective authority and release gates.
 
 U-003 complete with R-002 added. No source remediation, CI dispatch or hosted effects performed. U-004 remains pending.
+
+## U-004 — Documentation, acceptance component and consolidation
+
+Reviewed current contributor/acceptance entries, TextStats objectives/diagnostic/release controls and qualified overview, README workflow diagrams/status/navigation, representative Tetris/Calculator preparation/steering/release guidance, catalog/renderer constraints, independent A-011/A-032 contracts and guides, release capture implementation and its native Git sensitivity tests. Inspected harness module/test inventory and selected capture/catalog/package evidence boundaries; this is not an exhaustive security proof or line-by-line review of every helper. Historical linked campaign contents remained excluded.
+
+Python 3.12.14 support suite passed 124 tests at published source `502ae76f729fe21820e91e2a113345659fbd28dd`; only review records differ from workflow baseline. Catalog validation passed all 33 supported cases with separate consumer/assessor assets and required/optional variants. Fresh renderer bindings reject assessor/case routing leakage and require actual predecessor evidence rather than deterministic helper success as independent acceptance. Supplied provider evidence is explicitly distinguished from authenticated live readback. Source/dirty package pinning, recovery, controlled trials and evidence integration have deterministic coverage; actual live consumer/client/hosting behavior was not selected.
+
+No additional confirmed documentation/component defect found. README and overview qualify 27 historical cases separately from the current 33-case catalog and do not inherit historical passes. Main versus feature, paused steering, human range stops, task evidence/publication and release outcomes are represented in the demo guidance without asserting those demos ran here. Contributor/acceptance instructions remain outside the shipped plugin.
+
+### Finding coverage refinement
+
+- **R-001:** A-011 already requires no revision branch or governing/source/test edits for assessment-only and complete before/after comparison. The expected behavior is present in the component; correct the steering entry rather than weaken the oracle or coach its consumer.
+- **R-002:** A-032 already checks exact native commit/body/tag/provider agreement, including final newlines. release_capture.py reads raw Git commit bytes, and test_release_capture.py uses `--cleanup=verbatim`. Existing tests cover Unicode and note/provider mismatches; they do not explicitly demonstrate default Git cleanup destroying hard-break/trailing-blank bytes. The reproduced Git 2.51.1 fixture establishes that distinction. A bounded extension of the existing native capture sensitivity tests would make the operational recipe's whitespace behavior explicit; no new framework or live acceptance run is needed.
+
+## Consolidated outcome
+
+All four planned units complete. **Two medium findings; zero high/critical findings.** No source/package conformance failure, broken actual package prose link or deterministic suite failure observed. No-finding coverage is retained above; it is not a proof of all unexecuted client/provider/model behavior or every reference line.
+
+| Evidence | Outcome and qualification |
+| --- | --- |
+| Skill entries | All fifteen entries read semantically; selected consequential references reviewed on both sides of handoffs. |
+| Package/metadata | Offline pinned manifest and presentation paths pass; native reproducible 134-file package, 97 Markdown files. Client extension semantics remain untested. |
+| Package links | 477 actual local prose references resolve within package; literal template candidates excluded after inspection. |
+| Publisher contracts | 30 tests passed; local deterministic/mock evidence only. |
+| Support/catalog | 124 tests and 33-case catalog validation passed; no consumer acceptance claim. |
+| Release Git behavior | Disposable native Git: default file-message cleanup changes 46-byte body to 43 and removes a Markdown hard break; verbatim path preserves it. |
+| Current vendor configuration | Read-only primary documentation supports the selected action majors and concurrency queue setting; no CI run dispatched. |
+| Live acceptance | Explicitly out of scope, not selected; no fresh model/client/product/provider trial. |
+
+## Proposed revision queue
+
+1. **R-001 — Steering dispatch:** make assessment-only return before mutating branch/report setup; scope the implementation procedure explicitly. Preserve execution branch/report/publication/integration and human return. Recheck against A-011 and contract C-06; current assessor criteria need no replacement.
+2. **R-002 — Release message persistence:** document the byte-preserving Git message/readback path in report/manager owners, then extend existing disposable native Git sensitivity coverage for hard breaks, trailing blank lines and intentional newline handling. Reuse A-032/release_capture expectations; preserve exact shared notes/commit/provider body and release scope exceptions. Do not add a coached consumer answer or call helper tests live acceptance.
+
+Both proposals are bounded source/component changes. No finding is accepted for remediation by this review request. Execution and final campaign integration require the human's subsequent revision scope; no repair, merge or closure inferred.
+
+## Final preservation and publication
+
+Only campaign 058's records and its index row change. Current plugin/contract/tooling/acceptance sources and all closed packages retain baseline bytes. Report/plan links, heading spacing and Git path preservation checked. The final report is committed/pushed/read back on its review branch. Campaign remains open and unmerged.
