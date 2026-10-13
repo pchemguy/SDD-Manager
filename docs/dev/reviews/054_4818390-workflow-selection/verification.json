@@ -1,0 +1,19 @@
+{
+  "python": "Python 3.12.14",
+  "support": {
+    "tests": 124,
+    "outcome": "Passed",
+    "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v"
+  },
+  "publisher": {
+    "tests": 30,
+    "outcome": "Passed after installing declared jsonschema==4.26.0 into /tmp/sdd-manifest-validation",
+    "initial": "13 errors: missing jsonschema environment dependency",
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/sdd-manifest-validation python -m unittest discover -s .github/tests -v"
+  },
+  "catalog_cases": 33,
+  "assessor_pairs": 6,
+  "routing_scenarios": 9,
+  "consumer_requests_unchanged": true,
+  "observed_agent_selection": false
+}

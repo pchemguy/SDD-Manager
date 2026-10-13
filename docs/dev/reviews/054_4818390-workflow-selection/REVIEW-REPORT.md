@@ -46,3 +46,7 @@ Replace PLUGIN's existing context paragraphs and shorten its composite introduct
 This review used current source inspection and composition/word-count analysis, not a fresh consumer trial. Only report/proposal links and diff/closed-path preservation need checking now; no product source changed, so support/publisher suites were not rerun. Proposed scenarios are not executed outcomes.
 
 State: review/proposal complete; source revision awaits human instruction. Publication of these artifacts does not accept or implement the proposal. Stop after campaign-branch push/readback, without integration.
+
+## Accepted execution
+
+The human subsequently requested execution. R-001–R-003 are accepted in [revision plan](REVISION-PLAN.md) and corrected/source-rechecked in [revision report](REVISION-REPORT.md). Original review/proposal observations remain above; source/component verification does not establish consumer behavior.

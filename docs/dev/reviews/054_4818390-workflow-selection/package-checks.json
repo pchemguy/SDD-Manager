@@ -1,0 +1,15 @@
+{
+  "source": "16fa04e011f8f51ba9a3045bceed6c20912a8f68",
+  "files": 134,
+  "identical_builds": true,
+  "asset_hashes": {
+    "sdd-manager.zip": "1c6b9e626cac475b6c9eff34edaa1d1c7213579bcb4071c05e56a002df20da2a",
+    "sdd-manager.zip.sha256": "6c21c024105588848a52b63b0ed75131b99be7a8a35648956ef4c3f3c2d8de83"
+  },
+  "package_prose_links": 477,
+  "link_errors": [],
+  "plugin_words": 2280,
+  "schema": "Pinned offline core passed; OpenAI extension opaque",
+  "live_consumer_client_provider": false,
+  "limits": "Local package/source checks; no agent selection behavior grade."
+}

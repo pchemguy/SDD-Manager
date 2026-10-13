@@ -15,6 +15,7 @@
   ],
   "required_agent_checks": [
     "Assessment describes retained contracts and impacts, using actual amended candidate scope.",
-    "No revision branch, governing/source/test edits or resumed task execution. Compare complete before/after state."
+    "No revision branch, governing/source/test edits or resumed task execution. Compare complete before/after state.",
+    "When workflow context is absent or materially changed, the consumer establishes new/existing/interrupted project state, selects/recovers the core workflow/steering variant or scoped standalone operation, and assesses continuation/stage change/switching. Before dependent work, a user-visible chat brief gives the decision, request/project basis, stage/owner, authorized outputs and next checkpoint; internal-only reasoning cannot substitute. Reuse applicable context on routine continuation and preserve pending work/decisions under CHECKPOINTS.md."
   ]
 }
