@@ -7,7 +7,7 @@ An agent plugin extends modular skill architecture with another level of composi
 - **Development:** partition complex functionality into maintainable units with clear responsibilities and limited coupling.
 - **Context management:** load relevant instructions progressively, limiting unnecessary context use and context pollution.
 
-Within a complex skill, closely related capabilities can be implemented as `references/*.md` modules. Its `SKILL.md` entry orients the agent and explains when to load each module. The entry must provide enough information to select the needed guidance without loading every reference at once.
+At the skill level, a complex skill can implement closely related capabilities as `references/*.md` modules. Its `SKILL.md` entry orients the agent and explains when to load each module. The entry must provide enough information to select the needed guidance without loading every reference at once.
 
 A plugin can serve simply as a distribution container for unrelated skills. Each skill is loaded independently through its own entry; such a bundle does not require a shared workflow entry.
 

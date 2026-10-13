@@ -11,3 +11,5 @@ The opening commit is published to the campaign branch and verified through Git 
 Pulled human draft `0be161c` by fast-forward. Rewrote the first section into the composition hierarchy, two parallel purposes, skill-level progressive loading, distribution-only bundles, integrated skill composition and optional coordinator routing. Preserved the general architectural scope and conditional coordinator model.
 
 Only “Scope and motivation” changed in the contract; the title and subsequent sections retain the supplied draft bytes. Meaning/section-boundary and Markdown spacing checks passed. No runtime or package behavior changed; suites were not rerun for this prose-only action. Commit/push/readback is the action boundary; campaign remains open, without integration.
+
+V-001 wording follow-up: added “At the skill level” to connect the skill decomposition paragraph to the hierarchy introduced above, as requested by the human. No other contract wording changed.
