@@ -17,55 +17,30 @@ An integrated plugin should have a shared entry, `PLUGIN.md`, analogous to `SKIL
 
 A sufficiently complex plugin may also define a dedicated coordinator skill to manage composite workflows. The loading path becomes `PLUGIN.md` → coordinator `SKILL.md` → selected skill entries and references. Other skills can link primarily to the coordinator and a small set of shared capabilities, forming a star-like dependency structure.
 
-## Purpose and audience
-
-While not covered by the standard, PLUGIN.md is aimed to provide the same functionality for a plugin as SKILL.md for a skill.
-
-is SDD Manager's agent entry for selecting and coordinating bundled skills. Starting there, an agent must discover the coordinator, select the appropriate workflow and find its authorized next procedure.
-
 ## Responsibilities
 
-PLUGIN.md states cross-skill obligations, identifies owners and connects workflow stages. Handoffs preserve scope, authority, human decisions, verification, publication and stopping. Skill entries and references own procedural detail.
+`PLUGIN.md` defines how bundled skills work together. Its responsibilities fall into three groups.
 
-## Required coverage
+### Orientation and routing
 
-| Concern | What the entry must make discoverable |
-| --- | --- |
-| Coordinator and loading | `sdd-manage` is the coordinator; generally load its entry with PLUGIN.md before other skills. Load further skills/references as needed. |
-| Context and workflow selection | Recover new/existing/interrupted project state; select main development, feature or revision, including steering; assess continuation, stage/range changes and workflow switches. Preserve scoped standalone/direct operations. Route to [canonical selection](../../skills/sdd-manage/references/workflows.md#workflow-selection-and-continuity). |
-| Visible decision | Report the workflow/variant and request/project basis, current stage/owner, authorized outputs and next human checkpoint/stop in chat before dependent work. Reuse sufficient context; reassess material changes. |
-| Human control | Necessary new main/feature documents have individual human acceptance checkpoints; PLAN/layout are separate. Clarification/QC/Git authority cannot supply acceptance. Requested implementation ranges stop for human continuation or steering. |
-| Git and integration | Mutations require an eligible Git worktree. Preserve controlling instructions and pending ownership. Push/read back each owned commit before advancing; task closure is atomic. Integrate only eligible verified boundaries and publish the target; preserve scoped exceptions. |
-| Requested tracking | Prepare/read back eligible phase objects before implementation; maintain associations, evidence-based closures, reopening and recovery. GitHub uses native milestones; equivalents require supported backend lifecycle semantics. |
-| Skill routing and handoffs | Route every bundled capability to its entry. Distinguish shared-reference loading from workflow selection; named handoffs carry inputs, state, scope, authority, evidence and stop. |
-| Composite paths and continuity | Connect preparation/delivery, continuation, feature incorporation, review/revision, steering, releases and focused operations. Identify dependencies, integration/publication boundaries, recovery owners and return points; preserve active ownership and closed records. |
+- **Coordinator pointer:** identify the coordinator skill, link its entry and state when it should be loaded alongside `PLUGIN.md`.
+- **Context:** identify the project and its new/existing/interrupted state, governing instructions, active workflow, accepted inputs and pending work needed for a sound routing decision.
+- **Workflow selection:** explain how to choose a core workflow or variant and assess whether a request continues it, changes its stage or requires a switch. Preserve narrow standalone operations.
+- **Skill routing and progressive loading:** map capabilities and request triggers to their owning skills and entry points; explain when to load supporting references without loading the whole bundle.
 
-## Organization
+### Composite workflow definitions
 
-Put coordinator loading and selection first, followed by these concerns:
+- Define each workflow's purpose, entry conditions, stages, dependencies, participating skills, outputs and completion boundary.
+- Identify stage ownership and cross-skill handoffs, including accepted inputs, actual state, pending work, verification/tracking evidence and the next permitted action.
+- Distinguish core workflows and variants from reusable stages and supporting operations. Show how skills compose the path while retaining their individual responsibilities.
 
-| Position | Content |
-| --- | --- |
-| Opening | Plugin identity/purpose, coordinator-first loading and progressive discovery. |
-| Request and context | Selection/recovery, continuity/switch assessment and visible decision. |
-| Operational checkpoints | Pronounced human acceptance, commit/push/readback and requested tracking requirements. |
-| Skill routing | Compact owner/entry/handoff map covering bundled capabilities. |
-| Composite workflows | Stage/skill connections with necessary prerequisites and stopping boundaries. |
-| Integration and continuity | Branch/target identity, eligible integration, pending-work preservation and recovery routing. |
-| Shared conventions | Active/closed record boundaries, applicable style and protected credential handling, with owner links. |
+### Key operational requirements
 
-## Content boundaries
+- **Authority and stopping boundaries:** distinguish assessment from execution, preserve the requested scope and identify when control returns to the human.
+- **Human checkpoints:** make required document approvals and human-requested implementation range boundaries prominent. Distinguish clarification and agent checks from human acceptance; preserve pending decisions through interruption.
+- **Git publication:** emphasize committing completed work, pushing each workflow-owned commit and verifying remote containment before advancing. Identify task-closure and eligible integration requirements, with links to their procedures.
+- **Backend implementation tracking:** establish when requested tracking must be prepared and verified; maintain task/parent associations, evidence-based closures, reopening and pending reconciliation throughout implementation.
+- **Branches, integration and continuity:** establish working/target identities, preserve unfinished work and define eligible integration, publication, interruption recovery and return boundaries.
+- **Visible decisions and evidence:** require a chat explanation of the selected workflow and its basis, authorized work and next checkpoint. Reports distinguish performed, verified, published, blocked and unobserved states.
 
-- State entry-level obligations and triggers directly; link their canonical procedures.
-- Composite sections connect stages and handoffs. Owners retain algorithms, templates, command recipes and sub-workflows.
-- README serves humans with examples and diagrams; contributor entries own source development/acceptance guidance. Local links resolve within shipped files; source navigation uses repository URLs.
-- Preserve human/project authority and skill ownership; metadata/loading claims require evidence.
-
-## Review criteria
-
-1. **Entry-only discovery:** The agent can discover the coordinator, select/recover the workflow without human skill-naming guidance and load the next procedure progressively.
-2. **Boundary clarity:** Human decisions, range stops, publication and requested tracking are prominent and consistent with canonical prerequisites/exceptions.
-3. **Composition:** Owner links, handoff inputs and stage/return boundaries cover main, feature, revision/steering and standalone paths.
-4. **Concision:** Replace/consolidate existing prose where possible. Repetition serves discovery or a consequential checkpoint; growth must justify an entry responsibility, without a fixed word quota.
-5. **Verification:** Check package links and trace affected routing/transitions. Distinguish source/static checks from consumer/client/provider observations; structural success does not establish agent behavior.
-
+State the essential obligations and triggers in `PLUGIN.md`; link their canonical procedures. Detailed execution remains with the owning skills and their references.

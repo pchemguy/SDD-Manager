@@ -23,3 +23,9 @@ V-001 paragraph refinement: combined the shared opening and skill-level explanat
 V-001 supplied-scope follow-up: pulled human update `dd9ffe9`; clarified common workflow capabilities as shared skills reusable by other bundled skills, preserving the software-library analogy. Corrected the integrated-entry sentence and separated it from the optional coordinator paragraph. Opening/benefits/bundle text and later contract sections remain unchanged. Meaning and section-boundary checks passed.
 
 V-001 naming follow-up: applied the human-supplied sentence explicitly naming `PLUGIN.md` as the integrated plugin’s shared entry.
+
+## V-002 — Grouped responsibilities
+
+Replaced Purpose and audience, prior Responsibilities, Required coverage, Organization, Content boundaries and Review criteria with one Responsibilities section containing three subsections: Orientation and routing; Composite workflow definitions; Key operational requirements. Covered coordinator pointer, context, workflow selection/reassessment, progressive skill routing, workflow stages/handoffs, authority/stop, HIL, Git publication, backend tracking, branch/integration/continuity and visible evidence. Detailed procedures remain with owners.
+
+Accepted Scope and motivation preserved verbatim. Root development AGENTS and capability-map link descriptions now match the revised contract. Source prose/links/spacing and first-section preservation checked; runtime/package source unchanged, so suites were not rerun. Campaign remains open and unmerged.

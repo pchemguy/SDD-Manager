@@ -17,3 +17,9 @@ State: **Open; substantive revision direction pending**. Current authorization c
 The human supplied contract edits at `0be161c` and requested pulling the branch and revising the new first section. Authorized scope: language/composition revision of “Scope and motivation,” preserving its hierarchy, development/context goals, bundle-versus-integrated-system distinction and optional coordinator/star-like architecture. Other contract sections remain outside this action; no campaign merge requested.
 
 Recheck: compare meaning and section boundaries against the supplied draft; verify Markdown spacing and preservation of remaining content. Commit/push/read back the revised section and this action record, then stop on the campaign branch.
+
+## Selected revision — V-002
+
+The human accepted “Scope and motivation” for now and requested replacing all subsequent sections with grouped core responsibilities. Scope: new Responsibilities section covering orientation/routing, composite workflow definitions and key operational requirements; update contributor navigation descriptions to match. Preserve the accepted first section verbatim. This remains iterative contract revision on the campaign branch, without integration.
+
+Check coverage against the accepted responsibility list, Markdown hierarchy/spacing, preservation of the first section and source-only navigation. Commit/push/read back, then return for human review.
