@@ -17,3 +17,23 @@ Entry and contract agree on three core purposes, steering as revision variant, c
 - Python 3.12.14 publisher suite: 30 tests passed using the declared temporary dependency path. This is deterministic publisher evidence, not hosted execution or client compatibility.
 
 No canonical findings allocated in this unit. Release/publisher semantics and failure paths remain U-003; deterministic support and acceptance-coverage review remain U-004. Review-only source preservation and closed-package boundaries maintained.
+
+## U-002 — Preparation, execution and integration
+
+Read the complete entries for sdd-manage, sdd-orient, sdd-conventions, sdd-design, sdd-specify, sdd-plan, sdd-tasks, sdd-implement, sdd-steer, sdd-integrate-feature, sdd-tdd, sdd-verify, sdd-docs and sdd-report. Deepened selected consequential references: PROJECT brief, preparation QC/human review, task derivation, range/startup/completion/audit, branch/preparation integration, Git gates/recovery, revision modes, feature incorporation, steering impact/amendment, environment recovery and boundary review. Some large references were inspected through relevant sections/discovery rather than exhaustively line by line; package-wide static coverage remains distinct. Hosting owner's entry/references follow U-003.
+
+No confirmed defect found in document concern ownership, PROJECT brief definition, optional feature overlays, uppercase artifact naming, heuristic decomposition counts, separate PLAN/layout human gates, report-source currency, atomic task completion, push-first/per-commit publication, incomplete-phase stops, scoped task transfer, safe dirty-work preservation or phase/feature integration boundaries. Selection-only remains read-only; runtime/TDD/documentation/verification/persistence roles are distinguished. Canonical coordinator reuse and context recovery match the current entry. Nested/reopened review rules preserve authority, first-parent eligibility, opening provenance, frozen history and parent return/stop boundaries.
+
+### R-001 — Steering entry unconditionally enters mutating setup for assessment
+
+**Priority:** medium. **Confidence:** high in source inconsistency; consumer consequence unobserved. **Owner:** skills/sdd-steer/SKILL.md. **Locations:** paragraph at line 12 and numbered step 1 at line 21; contrast references/objective-and-impact.md lines 20–24.
+
+The skill advertises both impact assessment and implementation and says discussion does not authorize repository changes. Its numbered procedure nevertheless starts with unconditional allocation/recovery of a campaign identity/revision branch and retention of a minimal REVISION-REPORT. The loaded impact reference explicitly says assessment returns its boundary/evidence and stops, and that assessment-only creates no branch.
+
+A literal entry-first consumer can allocate a branch or write records before applying the assessment stop. The later reference can prevent this; no live failure is claimed. This is an internal entry/procedure disagreement, not permission to weaken the execution report or remove commanded-amendment persistence.
+
+**Proposed correction:** explicitly dispatch assessment-only to impact inspection/reporting and stop before branch allocation or required record creation; scope the numbered mutation/persistence procedure to commanded execution. Preserve legitimate explicitly authorized assessment-record persistence where separately selected, without inferring it from the plain assessment request.
+
+**Objective recheck:** assessment-only with valid paused context makes no Git/file mutation and returns impact; commanded execution still establishes/reuses the amendment branch/report, verifies/publishes/integrates and stops without implementation resumption. Check both entry and impact reference; add/refine the relevant assessment oracle if coverage omits the setup effect. Live trial remains outside current scope.
+
+U-002 complete with one medium source finding; no source remediation performed. U-003/U-004 remain pending.
