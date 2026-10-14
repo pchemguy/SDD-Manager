@@ -174,3 +174,39 @@ The candidate is proposed as general APA plugin review and its responsibility ma
 ### U-001 evidence and checkpoint
 
 This unit is source/text review; no model trial, live acceptance, APA implementation or runtime repair. All generic source files and the combined contract are unchanged. The report is the only owned change. Git whitespace and active report link checks precede publication. Further unit work starts only after this checkpoint is pushed and read back.
+
+## Full-set U-002 — combined SDD contract
+
+Read PLUGIN-CONTRACT.md in full at the full-set baseline: all layer responsibilities, gates, source maps, organization guidance, development checks, twenty C cases/variants and ten K contrasts. This assesses the contract as development/review guidance, not whether the packaged entries currently satisfy it. Runtime repair remains in 059.
+
+### Composition and coverage
+
+| Baseline lines | Section job and assessment |
+| --- | --- |
+| 3–13 | Defines source-only scope and three ownership layers. Coordinator canonical authority and plugin projection are distinguished; essential behavior remains reachable without PLUGIN.md. No general review-module dependency was reintroduced. |
+| 15–32 | Defines plugin entry responsibility, orientation/routing and composite summaries. Established-context interpretation is explicitly assigned to active owners. The directory does not acquire responsibility for every contextual implementation request. |
+| 34–41 | Defines coordinator selection, continuity, delegation and completion. Whole-project main scope is distinguished from new/existing state; steering remains a paused-checkpoint revision variant. Consequential decisions have a chat-reporting obligation. |
+| 43–55 | Prominent HIL, publication, task closure, requested tracking, integration, steering and campaign gates. Short invariants and detailed owner links have distinct jobs. No automatic parent continuation or silent tracking downgrade is introduced. |
+| 57–71 | Maps the expected SDD coverage to canonical owners. This partly repeats gates, but adds coverage domains and source destinations; keeping it separate is justified. |
+| 73–89 | Communicates different entry organizations, conditional domains and baseline-before-selection order. Domain coverage is useful, but the coordinator's exact per-reference routing obligation is underspecified (R-009). |
+| 91–95 | Preserves canonical-source-first projection and affected handoff rechecks. The pending parent-derived clause-relocation recommendation remains necessary; no runtime shortening is accepted here. |
+| 97–157 | C cases separate plugin-entry requests, contextual requests and missing-context recovery. Expected owners are kept out of consumer inputs; supported discovery is separate from downstream execution. Case identities, partial range stops and unavailable-owner behavior are preserved. |
+| 159–176 | K contrasts assess direct coordinator access and shared gates. Their overlap with C cases is justified by the different entry condition. The complete-phase integration and nested/reopening contrasts add coverage, rather than merely duplicating prompts. |
+
+The combined document's size follows its two entry-layer responsibilities, SDD gates and retained assessment cases. No evidence supports a word quota, another standalone coordinator contract or a wholesale split. The strongest structural improvement is to preserve the section jobs while tightening the missing routing requirement and the already identified relocation check. Case tables belong here as assessment material, not in runtime entries.
+
+### R-009 — Independent contract does not specify complete coordinator-reference routing
+
+**Type:** contract completeness / routing criterion. **Priority:** medium. **Confidence:** high for the difference between the two documents; no consumer failure asserted. **Locations:** PLUGIN-CONTRACT.md 78–87 and 91–95; compare skill-review.md 40–52.
+
+The contract requires routing to expose conditional coordination domains and groups known modules under those domains. It does not explicitly require sdd-manage/SKILL.md to name/link every `references/*.md` file or state each file's purpose, boundary and use conditions before its contents are loaded. Domain names and “above” references in this source map are not acceptance criteria for the runtime entry's routing section. The generic skill module contains that requirement, but this SDD contract is intentionally independent of it. An entry exposing all named domains could therefore satisfy the contract while omitting a file or leaving its selection to reference inspection.
+
+**Proposed correction:** Add a concise coordinator-entry requirement for a clearly identified reference-routing section, preferably a table, individually naming/linking every `references/*.md` file with its scope/boundary and loading conditions. Require inventory comparison and selection from entry guidance before loading reference contents. Keep the existing source/domain map as development navigation; do not turn it into another procedure catalog, impose recursive scope or link/import skill-review.md as contract authority. **Owner:** PLUGIN-CONTRACT Entry organization and coordinator modules / Development checks. **Recheck:** a missing reference or vague domain-only selection fails the independent contract; all-file coverage, relative links and selective loading coexist without loading every module at startup.
+
+### Case maintenance recommendation
+
+When revising this contract, consider a small K-to-C correspondence note so assessors can reuse project facts while recording the different starting layer. This is optional navigation, not a defect or a reason to remove cases. Preserve the K contrasts that add complete-phase and campaign-mode coverage; do not collapse fresh entry, established context and recovery into one trial or feed expected answers to a consumer.
+
+### U-002 evidence and checkpoint
+
+Source review only; the three reviewed documents and runtime owners remain unchanged. No acceptance case was executed and no live/model, support or publisher suite was selected. Only the active review report changes. Validate its links/Markdown, publish and read back before cross-document consolidation. Campaign 060 remains open/unmerged, 059 suspended.
