@@ -48,6 +48,69 @@ class ReleaseCapture(Sandbox):
         self.assertFalse(provenance['agent_behavior_assessed'])
         self.assertNotIn('Human material',json.dumps(provenance))
 
+    def observe_git_message_cleanup(self, body, cleanup):
+        """Commit literal fixture bytes and compare them through the existing capture.
+
+        Each call establishes a new fixture-owned notes/commit/tag/readback set;
+        it performs no hosted effect or consumer workflow.
+
+        Args:
+            body: Canonical UTF-8 release-body bytes, including newline endings.
+            cleanup: Git's selected whitespace or verbatim message-cleanup mode.
+
+        Returns:
+            Tuple of raw committed body, captured literals and provenance.
+        """
+        self.body = body
+        (self.repo/'RELEASE-NOTES.md').write_bytes(body)
+        self.before.write_bytes(body)
+        message = self.root/'whitespace-message.txt'
+        message.write_bytes(b'Release v1.0.0\n\n'+body)
+        git(self.repo,'add','RELEASE-NOTES.md')
+        git(self.repo,'commit','--allow-empty','--cleanup='+cleanup,'-F',str(message))
+        self.sha = git(self.repo,'rev-parse','HEAD').stdout.strip()
+        git(self.repo,'tag','-d','v1.0.0')
+        git(self.repo,'tag','v1.0.0',self.sha)
+        self.readback.update(body=body.decode('utf-8'),target_commit=self.sha)
+        self.provider.write_text(json.dumps(self.readback))
+        raw = subprocess.check_output(['git','-C',str(self.repo),'cat-file','commit',self.sha])
+        committed_body = raw.split(b'\n\n',1)[1].partition(b'\n\n')[2]
+        evidence, provenance = self.observe()
+        return committed_body, evidence, provenance
+
+    def test_whitespace_cleanup_loses_markdown_and_capture_rejects_it(self):
+        body = '# Release\n\nHuman material — retained.  \nNext line.\n\n'.encode('utf-8')
+        committed, evidence, _ = self.observe_git_message_cleanup(body,'whitespace')
+        self.assertNotEqual(committed,body)
+        self.assertNotIn(b'  \n',committed)
+        self.assertFalse(committed.endswith(b'\n\n'))
+        self.assertFalse(evidence['literals']['commit_body_matches_notes'])
+        self.assertFalse(evidence['literals']['release_agreement'])
+        self.assertTrue(evidence['literals']['provider_body_matches_notes'])
+        self.assertTrue(evidence['literals']['tag_matches_commit'])
+
+    def test_verbatim_preserves_canonical_markdown_and_newline_bytes(self):
+        bodies = [
+            b'# Release\n\nFirst line  \nSecond line.\n\n',
+            '# Release\n\nUnicode — café.\n'.encode('utf-8'),
+            b'# Release\r\n\r\nFirst line  \r\nSecond line.\r\n\r\n',
+        ]
+        for body in bodies:
+            with self.subTest(body=body):
+                committed, evidence, provenance = self.observe_git_message_cleanup(body,'verbatim')
+                self.assertEqual(committed,body)
+                self.assertTrue(evidence['literals']['release_agreement'])
+                self.assertFalse(provenance['agent_behavior_assessed'])
+
+    def test_nonterminated_body_whitespace_cleanup_adds_newline(self):
+        body = b'# Release\n\nNo final newline.'
+        committed, evidence, _ = self.observe_git_message_cleanup(body,'whitespace')
+        self.assertEqual(committed,body+b'\n')
+        self.assertFalse(evidence['literals']['release_agreement'])
+        committed, evidence, _ = self.observe_git_message_cleanup(body,'verbatim')
+        self.assertEqual(committed,body)
+        self.assertTrue(evidence['literals']['release_agreement'])
+
     def test_changed_note_or_provider_body_fails_exact_bytes(self):
         for changed in ('notes','provider'):
             with self.subTest(changed=changed):

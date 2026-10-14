@@ -58,6 +58,21 @@ Attempt authorized pushes with existing shell authentication. For a 403 or expli
 
 For an authorized release request, forge first verifies/refreshes the retained complete message through [release-message preparation](../../sdd-forge/references/release-message.md#release-request-freshness-and-commit-gate). Local source/coverage/body context and the established version govern freshness; a matching version alone is insufficient. Manage owns Git persistence and forge owns provider publication.
 
-Prepare one release commit using report's [release commit format](../../sdd-report/references/object-drafts.md#release-commit-message), with the finalized complete Markdown body also destined for GitHub. Stage only authorized verified release/version changes. A requested release may use an empty marker when there are no owned file changes; preparation-only does not. Reuse a verified matching existing marker on recovery. Explicit existing-source-only instructions take precedence and must be reflected in the release handoff.
+Prepare one release commit using report's [release commit format](../../sdd-report/references/object-drafts.md#release-commit-message): assemble the UTF-8 message bytes without normalization and use `git commit --cleanup=verbatim -F <message-file>`, with the finalized complete Markdown body also destined for GitHub. Stage only authorized verified release/version changes. A requested release may use an empty marker when there are no owned file changes; preparation-only does not. Reuse a verified matching existing marker on recovery. Explicit existing-source-only instructions take precedence and must be reflected in the release handoff.
 
-Publish/read back the commit before further work, then verify final-source coverage, version/body agreement and actual merged/release-source checks required by the project. The pending release tag points to this exact verified commit; publish/read back its peeled target under the normal Git rules before provider upload/publication. Do not move existing tags or rewrite published commits. A failed/uncertain push stops dependent tagging/publication and resumes from readback evidence. Existing completed releases are inspected/reused, not given duplicate markers. The commit describes the release being published; it cannot claim future provider success.
+Immediately after committing, inspect the raw stored message rather than pretty-printed Git output, which may add formatting. Compare the subject and body with the prepared subject and finalized body bytes, including Markdown spaces and exact newline endings. For example, the Git owner can extract them without decoding or normalization:
+
+```python
+import subprocess
+
+raw = subprocess.check_output(["git", "cat-file", "commit", "HEAD"])
+message = raw.split(b"\n\n", 1)[1]
+actual_subject, separator, actual_body = message.partition(b"\n\n")
+if (not separator or actual_subject != expected_subject_bytes
+        or actual_body != finalized_body_bytes):
+    raise SystemExit("Release commit message differs from finalized bytes")
+```
+
+Use `expected_subject_bytes` and `finalized_body_bytes` from the owned prepared message and finalized notes, not reconstructed display text. If a hook/client changed them, block publication/tagging and return the mismatch for scoped correction, preserving notes and commit state. Do not rewrite published history or silently normalize accepted Markdown.
+
+Publish/read back the verified commit before further work, then verify final-source coverage, version/body agreement and actual merged/release-source checks required by the project. The pending release tag points to this exact verified commit; publish/read back its peeled target under the normal Git rules before provider upload/publication. Do not move existing tags or rewrite published commits. A failed/uncertain push stops dependent tagging/publication and resumes from readback evidence. Existing completed releases are inspected/reused, not given duplicate markers. The commit describes the release being published; it cannot claim future provider success.

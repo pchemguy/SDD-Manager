@@ -116,7 +116,8 @@ Refs owner/repo#123
 
 ```
 
-
 ## Release commit message
 
-Use for the release commit selected by manage's [release commit/tag boundary](../../sdd-manage/references/git-workflows.md#release-commit-and-tag). Use a concise `Release <version/tag>` subject, a blank line, then the exact finalized complete release-message Markdown as the body. Supply the message using a file/structured argument with intentional newline handling, without shell interpolation; preserve Markdown bytes rather than applying task/campaign-summary formatting. No task ID is invented. The same finalized body is passed to the GitHub publisher. Version/source identity and body agreement are verified by the workflow owners; drafting does not publish. Do not add a provider-success claim before actual publication.
+Use for the release commit selected by manage's [release commit/tag boundary](../../sdd-manage/references/git-workflows.md#release-commit-and-tag). Compose a concise `Release <version/tag>` subject, a blank line, then the exact finalized release-message Markdown body. Assemble the UTF-8 message file as subject bytes + `b"\n\n"` + body bytes, without shell interpolation, reflow or newline normalization. Preserve hard-break spaces, CRLF when present, trailing blank lines and the presence or absence of a final newline. The same body bytes remain in the notes and publisher handoff; no task ID is invented.
+
+The Git owner commits the prepared file with `git commit --cleanup=verbatim -F <message-file>`; ordinary file-message cleanup can strip Markdown spaces/blank lines or append a newline. Add `--allow-empty` only when the authorized release marker requires it. If a client or hook alters the text, actual raw-body comparison must catch the mismatch before publication; do not silently change finalized notes to match cleaned Git output. No task/campaign-summary formatting or premature provider-success claim is added. This skill supplies the draft; manage owns the commit, comparison and publication.
