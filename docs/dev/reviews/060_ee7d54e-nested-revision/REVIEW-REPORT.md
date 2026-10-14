@@ -27,12 +27,12 @@ Keep this overall organization. A wholesale rewrite or more sections is unnecess
 
 | Finding | Type | Priority | Disposition |
 | --- | --- | --- | --- |
-| R-001 | Table composition / semantics | Medium | Open |
-| R-002 | Scope inconsistency | Medium | Open |
-| R-003 | Assessment-case composition | Medium | Open |
-| R-004 | Procedure/evidence clarity | Low | Open |
-| R-005 | Duplication / proportion | Low | Open |
-| R-006 | Review voice / precision | Low | Open |
+| R-001 | Table composition / semantics | Medium | Verified (source) |
+| R-002 | Scope inconsistency | Medium | Verified (source) |
+| R-003 | Assessment-case composition | Medium | Verified (source) |
+| R-004 | Procedure/evidence clarity | Low | Verified (source) |
+| R-005 | Duplication / proportion | Low | Verified (source) |
+| R-006 | Review voice / precision | Low | Verified (source) |
 
 ## Finding records
 
@@ -92,3 +92,18 @@ Questions addressed to a reviewer are interspersed with “Use headings” and �
 4. Recheck all dimensions and contrasts against the revised source; verify that no generic SDD policy, coordinator dependency, obligatory behavioral trial or standard-format tutorial has been introduced.
 
 All six findings are proposals, not accepted repairs. Review covers the entire module and its current requested role, not the APA repository or all campaign documents. No external research, model trial, source suite or publisher suite was run. The module, independent coordinator contract and preserved draft remain unchanged by this review. Active report/navigation links, heading separation, Git whitespace and owned-path preservation were checked before publication. Retain campaign 060 open/unmerged after this report commit is pushed/read back.
+
+## Subsequent accepted revision and recheck
+
+The human authorized planning/execution of all six findings. The [V-011 plan](REVISION-PLAN.md#v-011--accepted-critical-text-revisions-r-001-through-r-006) was published at `ad21a55e1f65f9cb0492245a8762f44aa9b0642c` before editing. Original review observations and source locations above retain their baseline meaning; current dispositions reflect the rechecks below, not a behavioral acceptance claim.
+
+| Finding | Actual correction and objective recheck | Result |
+| --- | --- | --- |
+| R-001 | Entry table now uses concern/review-criterion columns; every cell is an assessment and no supporting-module requirement is implied | Verified by source inspection |
+| R-002 | Removed the unbounded child-reference sentence; selected inventory remains `references/*.md`; local onward dependencies have their own bounded review | Verified by source inspection |
+| R-003 | Reference contrasts now compare supplied/missing prerequisites, distinct/overlapping scope and suitable/forced procedural organization | Verified by source inspection |
+| R-004 | Routing subsection distinguishes entry evidence/target agreement from an optional consumer trial before reference exposure; no trial required or performed | Verified by source inspection |
+| R-005 | Full routing policy stays in its subsection; procedure invokes that check briefly, local loading row assesses caller agreement/dependencies, scenario retains its contrast | Verified by source inspection |
+| R-006 | Shared criteria ask assessment questions; abstract terms clarified and dependency inspection moved into verification; accepted editing remains separately scoped | Verified by source inspection |
+
+The approved opening and routing paragraph are byte-identical to their reviewed paragraphs. Shared/entry/reference sections and applicable role distinctions remain. No standard-format tutorial, generic SDD policy or coordinator/general-module dependency introduced. Campaign link/anchor, heading/blank-line and Git whitespace checks pass; all 134 runtime package files, coordinator contract and preserved draft are unchanged. Full suites, live acceptance and APA implementation remain unrun/unselected. [Revision report](REVISION-REPORT.md) retains execution and publication scope. Campaign 060 remains open/unmerged, parent 059 suspended.

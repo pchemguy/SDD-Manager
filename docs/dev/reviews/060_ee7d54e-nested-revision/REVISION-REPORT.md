@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001 through V-010 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001 through V-011 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -121,3 +121,11 @@ Completed the requested [critical review](REVIEW-REPORT.md) of skill-review.md a
 ## Accepted critical-text revision scope
 
 The human authorized the [V-011 plan](REVISION-PLAN.md#v-011--accepted-critical-text-revisions-r-001-through-r-006) accepting R-001 through R-006 from the critical review. Planning checkpoint precedes source editing; execution and source recheck follow. The approved purpose/routing text and open/unmerged boundary remain controlling.
+
+## V-011 — Six accepted text corrections
+
+Executed the published plan at `ad21a55e1f65f9cb0492245a8762f44aa9b0642c`. Corrected the entry table and routing scope; made reference contrasts comparable; separated analytical entry coverage from optional pre-exposure consumer assessment; consolidated repeated routing instructions; and revised review voice/terms while relocating dependency inspection to verification. Updated the APA proposal’s review status. All R-001 through R-006 now have [source recheck evidence](REVIEW-REPORT.md#subsequent-accepted-revision-and-recheck).
+
+Inspected the full revised module against each objective recheck and the accepted constraints. Exact comparison confirms the approved opening and routing paragraph unchanged. Coordinator contract/draft and all 134 packaged runtime files retain their starting bytes. Active campaign links/anchors, headings, blank lines, Git whitespace and owned paths pass. No behavioral trial, APA integration, support/publisher suite or runtime skill edit was needed/performed for this campaign-only text revision.
+
+Commit source and evidence together, push/read back and stop on the child branch. Campaign 060 remains open/unmerged; parent 059 suspended.
