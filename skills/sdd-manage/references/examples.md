@@ -18,6 +18,17 @@ Apply [the selection procedure](workflows.md#workflow-selection-and-continuity).
 | Resume the same established task range | Recover actual pending work and reuse sufficient workflow evidence; preserve its stop without a ceremonial selection replay or per-response preamble. |
 | Prepare release notes or perform a narrow direct check | Select the standalone operation/owner and its boundary; no compulsory core campaign, release publication or source repairs. |
 
+## Workflow loading and reporting
+
+| Request and context | Result and boundary |
+| --- | --- |
+| “Read and explain the greenfield workflow; development starts later.” No target repository is supplied. | Load selected main-development instructions; report actual sources, stages/checkpoints, scope and next step in chat. Stop without project writes, bootstrap, branches or hosted objects. |
+| PROJECT awaits acceptance; the human answers a mechanics question. | Use the answer as a scoped requirement, revise the brief when requested and return to its pending checkpoint. Do not treat the answer as acceptance or begin ARCHITECTURE. |
+| “Keep updates minimal.” The active range and authority are unchanged. | Check scope before work; report new progress without repeating the whole brief. A blocker, verification result or required human decision remains visible. |
+| The human then asks “Explain this choice and list the sources you read.” | Provide the requested rationale and actual sources despite the earlier brevity preference; do not claim unread instructions were loaded. |
+| A proposed edit is in an allowed file but adds behavior outside the task. | Withhold the unrelated change. Path ownership does not expand authorized behavior. |
+| A new feature is requested while implementation is paused. | Preserve the paused context; load the selected procedure/dependencies before definitive reporting and dependent work, establish its scope/return and do not resume the parent by implication. |
+
 ## Operation examples
 
 | Request and context | Coordinated result |
