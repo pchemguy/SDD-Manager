@@ -1,6 +1,6 @@
 # Revision campaign opening
 
-Campaign **061_90d1294**. State: **Open; revision plan prepared; execution pending**.
+Campaign **061_90d1294**. State: **Open; Executing accepted revision plan**.
 
 ## Baseline and branch
 
@@ -27,3 +27,9 @@ The human requested focused comparison of `docs/agents/jules/Workflow Loading.md
 The assessment was source-only: scope and human checkpoints are largely covered; read-only workflow loading, sources-read reporting, explicit per-write checks and reporting adaptation need targeted integration. The prompt's every-response brief differs from the current event-based reporting policy. Preserve event-based reporting and allow user-requested reduced detail without weakening operational obligations. No behavioral trial was run and no source repair is claimed.
 
 Planning changed this active report, created the revision plan and updated the campaign index only. Verify links, spacing, whitespace and owned diff scope; commit, push/read back this planning checkpoint and stop. Runtime changes, campaign merge/closure, live acceptance, hosted operations and APA work remain outside this turn.
+
+## Execution authority and A-001
+
+The human subsequently commanded execution of the published plan. Execute its scoped revisions, verification and established final integration/closure on the retained campaign branch; live acceptance, hosted tracking, releases and APA changes remain excluded.
+
+A-001 adds the read-only workflow-loading operation and procedure to `workflows.md` and requires selected instructions/dependencies before definitive reporting or dependent work. Source rechecks S-01/S-02/S-08/S-12 locate chat-only results, no implicit mutations, selective loading, unavailable-source limits and existing uncertain-context recovery. These are source checks, not consumer trials. Checked the diff and Git whitespace; publish/read back this checkpoint before A-002.
