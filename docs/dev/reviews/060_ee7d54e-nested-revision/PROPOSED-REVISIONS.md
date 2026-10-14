@@ -2,7 +2,7 @@
 
 ## Objective and package status
 
-Extend Agent Package Author with a dedicated review procedure for skill entries and instruction modules: composition, organization, progressive loading, ownership, duplication, authority/context and evidence-backed assessment. Its current skill-design and validation guidance already covers parts of this subject; integrate the proposed material with those owners instead of maintaining parallel instructions.
+Extend Agent Package Author with a dedicated review procedure for skill entries and reference modules: role-sensitive composition, organization, progressive loading, ownership, duplication, authority/context and evidence-backed assessment. Its current skill-design and validation guidance already covers parts of this subject; integrate the proposed material with those owners instead of maintaining parallel instructions.
 
 This is a developing proposal package in SDD Manager campaign 060. It has not been integrated into Agent Package Author, installed or behaviorally accepted. All supplied files remain here until the human selects transfer/integration. This document records the proposed downstream scope; the receiving agent must establish its actual repository, instructions and authorized effects before execution.
 
@@ -10,7 +10,7 @@ This is a developing proposal package in SDD Manager campaign 060. It has not be
 
 | File | Role in the downstream revision |
 | --- | --- |
-| [skill-review.md](skill-review.md) | Primary general module proposed for APA's references; read after this proposal |
+| [skill-review.md](skill-review.md) | General review of skill entries and references, proposed for APA's references; read after this proposal |
 | [COORDINATOR-CONTRACT.md](COORDINATOR-CONTRACT.md) | Independent SDD Manager coordinator contract demonstrating domain gates/owner cases; context for abstraction, not general APA policy |
 | [COORDINATOR-CONTRACT-DRAFT.md](COORDINATOR-CONTRACT-DRAFT.md) | Preserved mixed source used for the split; provenance and comparison, not the integration candidate |
 | [REVISION-PLAN.md](REVISION-PLAN.md), [REVISION-REPORT.md](REVISION-REPORT.md) | Campaign authority, change/check evidence and current limitations |
@@ -20,7 +20,7 @@ This is a developing proposal package in SDD Manager campaign 060. It has not be
 | APA owner | Proposed change |
 | --- | --- |
 | `references/skill-review.md` | Add the general module, adapting only to established APA terminology, routing and packaging conventions |
-| `SKILL.md` | Make skill-entry/module review discoverable through activation/routing and a clear conditional link to the new module; preserve creation, revision, inspection and structural-validation paths |
+| `SKILL.md` | Make skill-entry/reference review discoverable through activation/routing and a clear conditional link to the new module; preserve creation, revision, inspection and structural-validation paths |
 | `references/skill-design.md` | Keep design principles under this owner; link the review procedure where useful and consolidate overlapping review detail |
 | `references/validation-policy.md` | Distinguish structural conformance, content/ownership review and observed workflow behavior; route to the review module without duplicating its checklist |
 | `references/authoring-workflow.md` | Include proportionate content review before reporting an accepted authoring/revision result; a focused review need not force complete reauthoring or every behavioral trial |
@@ -38,7 +38,7 @@ Inspect the current target sources before adopting these proposed integration po
 
 ## Downstream verification and acceptance
 
-Verify conditional discovery of the new procedure, links/anchors and actual package contents with existing APA tooling. Review agreement between the new module and its design/validation/workflow owners, including simple entries, branched instructions, repeated gates, unavailable dependencies and requested assessment-only work. Check that shortening or relocation preserves conditions, qualifiers and independently loaded context.
+Verify conditional discovery of the new procedure, links/anchors and actual package contents with existing APA tooling. Review agreement between the new module and its design/validation/workflow owners, including simple entries, procedure/guidance/contract/example references, branched instructions, repeated gates, unavailable dependencies and requested assessment-only work. Check that shortening or relocation preserves conditions, qualifiers and the documented reading context. References must not inherit skill-root activation, metadata or whole-workflow responsibilities by default.
 
 Choose representative successful, negative, variant and recovery cases appropriate to the changed instructions. For behavioral assessment, record source/model/context, actual actions and output; do not give reviewer expectations to the consumer. Structural validation and source review must not be reported as behavioral acceptance. Do not add tests that merely assert prose wording.
 

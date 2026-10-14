@@ -25,3 +25,7 @@ Preserve the draft's exact bytes under the new name. General guidance covers pur
 ## V-004 — Independent coordinator contract
 
 The human rejected the coordinator contract's dependency on skill-review.md. Remove its link and assumed prerequisite; make coordinator-specific review instructions and evidence limits sufficient within COORDINATOR-CONTRACT.md. Preserve the general module as an independent APA candidate and the exact draft snapshot. Keep all changes in this campaign, verify links and independent use, commit/push/read back, and remain open/unmerged.
+
+## V-005 — Explicit reference-module review
+
+The human requested extending skill-review.md to assess references without treating them as compositional roots. Apply shared composition/language/ownership criteria to both entries and references; add role-sensitive module purpose, cohesion, scope, context, inbound/child loading and result/return checks. Distinguish procedures from guidance/contracts/examples, and inherited context from independent use. Update APA proposal coverage, verify links and retained boundaries, commit/push/read back, and keep all files in the open campaign.
