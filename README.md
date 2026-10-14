@@ -68,7 +68,15 @@ The [canonical workflow model](skills/sdd-manage/references/workflows.md#core-de
 
 Preparation and review stop before implementation unless your request includes it. Steering finishes the amendment and returns control to you; you separately decide when to resume the task list. Transferring feature tasks into the main task list requires both lists in scope so each task retains one executable owner.
 
-You can ask for concise updates or fuller explanations. The agent reports scope at entry or material changes and preserves decisions, blockers, verification results and human checkpoints without repeating unchanged context on every response. Reduced reporting detail does not change workflow requirements.
+Choose a [reporting profile](skills/sdd-manage/references/coordination.md#reporting-profiles) in your initial prompt or switch during work. Profiles change presentation, while scope checks, approval gates, verification and publication remain the same.
+
+| Profile | What to expect |
+| --- | --- |
+| **Minimal** | Brief scope changes, results, blockers and required decisions; little routine narration |
+| **Standard** (default) | Concise scope briefs, useful progress and rationale for consequential decisions |
+| **Explicit** | Clearly identified scope/checkpoints, fuller rationale, relevant sources and verification evidence |
+
+For example: “Use SDD Manager with minimal reporting,” “Switch to explicit reporting,” or “Return to standard reporting.” The selection continues through the current conversation/workflow and handoffs while context is available. “Explain this decision fully, then resume minimal reporting” overrides one response. None of the profiles requires repeating unchanged context every response.
 
 For detailed entry conditions and stopping rules, see the [workflow catalog](skills/sdd-manage/references/workflows.md).
 

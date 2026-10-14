@@ -26,6 +26,9 @@ Apply [the selection procedure](workflows.md#workflow-selection-and-continuity).
 | PROJECT awaits acceptance; the human answers a mechanics question. | Use the answer as a scoped requirement, revise the brief when requested and return to its pending checkpoint. Do not treat the answer as acceptance or begin ARCHITECTURE. |
 | “Keep updates minimal.” The active range and authority are unchanged. | Check scope before work; report new progress without repeating the whole brief. A blocker, verification result or required human decision remains visible. |
 | The human then asks “Explain this choice and list the sources you read.” | Provide the requested rationale and actual sources despite the earlier brevity preference; do not claim unread instructions were loaded. |
+| “Switch to explicit reporting.” Later: “Return to standard reporting.” | Apply the selected profile to subsequent reports and handoffs. Explicit supplies relevant detail at reporting triggers, not an unchanged full preamble on every reply. |
+| “Explain this decision fully, then resume minimal reporting.” | Give the requested explanation for this response; retain Minimal afterward. An explanation/source request alone does not change the ongoing profile. |
+| Handoff retains the selected profile / reporting preference is lost with context. | Carry the known preference; otherwise use Standard without claiming to recover a lost choice. Preserve operational scope and human decisions separately. |
 | A proposed edit is in an allowed file but adds behavior outside the task. | Withhold the unrelated change. Path ownership does not expand authorized behavior. |
 | A new feature is requested while implementation is paused. | Preserve the paused context; load the selected procedure/dependencies before definitive reporting and dependent work, establish its scope/return and do not resume the parent by implication. |
 

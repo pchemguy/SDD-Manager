@@ -53,7 +53,7 @@ Steering is the lightweight human-directed revision variant at a paused implemen
 
 ## Workflow loading and reporting
 
-`sdd-manage` owns [read-only workflow loading](../../skills/sdd-manage/references/workflows.md#workflow-loading): explain selected sources actually read, stages/checkpoints, authorized scope and next step in chat without project preparation or mutation. Its [scope/reporting protocol](../../skills/sdd-manage/references/coordination.md#scope-checks-and-reporting-detail) checks current authority before work and both path/change before writes. Event-based briefs and requested reporting detail preserve consequential decisions, evidence and human checkpoints; clarification does not accept an artifact. PLUGIN.md projects these instructions, while direct coordinator entry remains sufficient.
+`sdd-manage` owns [read-only workflow loading](../../skills/sdd-manage/references/workflows.md#workflow-loading): explain selected sources actually read, stages/checkpoints, authorized scope and next step in chat without project preparation or mutation. Its [scope/reporting protocol](../../skills/sdd-manage/references/coordination.md#scope-checks-and-reporting-detail) checks current authority before work and both path/change before writes. Event-based briefs and requested reporting detail preserve consequential decisions, evidence and human checkpoints; clarification does not accept an artifact. The [reporting profiles](../../skills/sdd-manage/references/coordination.md#reporting-profiles) provide Minimal, Standard (default) and Explicit shortcuts, retained in available workflow context/handoffs with scoped response overrides. PLUGIN.md projects these instructions, while direct coordinator entry remains sufficient.
 
 ## Document ownership
 

@@ -85,3 +85,9 @@ A-001 through A-006 are complete within the authorized source revision. The fina
 ## Reopened reporting-profile amendment
 
 State: **Amendment active**. The human requested reopening the last campaign and defining Minimal, Standard and Explicit reporting profiles. Verified the latest main first-parent merge is campaign 061's published explicit two-parent merge `ed3099a229b59d4786fcd74bf6761dc7ac94e394`, with source tip `60a6697ba142cb015157479dfe3f69f842e28a99` contained. Main/origin agree, the worktree was clean, and the existing campaign branch advanced by fast-forward to that reopening checkpoint. Preserve original identity/opening/baseline and historical closure evidence. Accepted actions A-007/A-008 are appended to the revision plan; no new campaign or history rewrite. Other closed records remain frozen.
+
+### A-007 — Reporting profiles implemented
+
+Defined Minimal, Standard (default) and Explicit in coordination.md, with natural-language selection/switching, available-context/handoff continuity, response overrides and default recovery. All retain operational checks, consequential reporting and human decisions; no model-strength inference, settings file, extra approval gate or every-response template. Reconciled PLUGIN/coordinator projections, README comparison/commands, capability map, contract assessment, examples and Jules prompt.
+
+Source contrasts locate default/three profiles/switching and context loss in the profile section; a specific output request overrides presentation without changing the ongoing selection. Minimal retains substantive checkpoints/blockers/evidence and requested sources; Explicit avoids unchanged repetition. Direct coordinator entry reaches the definition without PLUGIN.md. Checked affected document links/spacing and Git whitespace; live behavior remains unrun. Publish/read back before fresh package/regression checks.

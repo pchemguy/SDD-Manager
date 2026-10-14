@@ -26,9 +26,23 @@ Honor the human's requested reporting detail, including later adjustments. Reduc
 
 At a human checkpoint, present substantive review results, the dependent work held and what acceptance would clear, following [human document review](human-document-review.md). During clarification, restate the pending boundary when omitting it could imply acceptance or advancement; do not repeat an unchanged full brief on every response.
 
+### Reporting profiles
+
+Use **Standard** unless the human selects another profile or gives a more specific reporting preference. Profiles control presentation; all retain the scope checks, reporting triggers, consequential information and workflow obligations above.
+
+| Profile | Reporting detail |
+| --- | --- |
+| **Minimal** | Compress entry/scope-change briefs, results, blockers and required human decisions. Omit routine narration, unchanged context and unrequested explanations. |
+| **Standard** | Give concise briefs at entry/material changes, useful progress updates and rationale for consequential decisions. |
+| **Explicit** | Clearly identify workflow/operation, stage/owner, authorized outputs and next checkpoint at entry/material changes. Give fuller consequential decision rationale, relevant sources and verification evidence without repeating unchanged information on every response. |
+
+Accept ordinary requests such as “Use SDD Manager with minimal reporting,” “Switch to explicit reporting” and “Return to standard reporting.” Retain the selected profile in available conversation/workflow context until changed and carry it through existing handoffs. Do not create a settings file or infer a profile from model strength. If no preference is recoverable, use Standard; do not pretend a lost selection was restored.
+
+A specific request controls its affected output: “Explain this decision fully, then resume minimal reporting” supplies a one-response override and returns to Minimal afterward. A request for an explanation or sources alone does not switch the ongoing profile. Required human checkpoints remain substantive under Minimal; Explicit adds detail rather than approval gates or repeated preambles.
+
 ## Coordinate execution
 
-1. Give each responsible skill the objective, scope, authoritative inputs, decisions, relevant task IDs, branch/HEAD, dirty-path ownership, permitted effects, required evidence, and stopping point. Carry the actual human grant, destination/ref, payload scope and explicit limits through handoffs; do not ask each worker to obtain the same approval again. Keep credentials out of ordinary handoff text.
+1. Give each responsible skill the objective, scope, authoritative inputs, decisions, relevant task IDs, branch/HEAD, dirty-path ownership, permitted effects, required evidence, stopping point and selected reporting profile or more specific preference. Carry the actual human grant, destination/ref, payload scope and explicit limits through handoffs; do not ask each worker to obtain the same approval again. Keep credentials out of ordinary handoff text.
 2. Let the skill perform its owned procedure. Collect its changed paths, observed evidence, findings, and remaining differences before the next dependent stage.
 3. Refresh the material baseline when HEAD, instructions, project, target scope, or relevant pending changes change. Do not repeatedly run orientation or checks when the current evidence remains applicable.
 4. Resolve missing human decisions and out-of-scope requirements without guessing or silently expanding work. Continue independent authorized work where possible. Once a commit awaits publication, the per-commit rule takes precedence: finish its inspection/publication/recovery without advancing independent work or making another commit. State the blocked operation and decision needed.
