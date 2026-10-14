@@ -197,3 +197,19 @@ Current stage is review complete, proposed revisions pending. Exact source/path 
 ## Accepted full-set revision scope
 
 The human accepted planning/execution of the latest full-set revision and will review the final documents before finalization. [V-020](REVISION-PLAN.md#v-020--accepted-full-set-revision-human-review-before-finalization) accepts R-007–R-009 and the three pending parent-derived document recommendations. The applicability decision is to support advertised skill/non-skill components under conditional criteria, not narrow APA review to skill-only packages. Optional K/C navigation is deferred. Publish/read back the plan before edits; retain 060 open/unmerged, 059 suspended and runtime coordinator changes deferred.
+
+## V-020 — Full-set revisions executed; human review pending
+
+Executed the accepted plan after `b205041258d3b0bbb85dc53380783024d770207d` was pushed/read back. Updated skill-review.md, plugin-review.md, PLUGIN-CONTRACT.md and PROPOSED-REVISIONS.md as one coupled unit. R-007–R-009 and all three parent-derived documentation recommendations are source-verified in REVIEW-REPORT.md; original baseline observations remain intact. No runtime coordinator remediation or APA integration was performed.
+
+Comprehensive reviews now account for requested artifacts/components and review depth/evidence, exclusions and unassessed material. Focused scope stays bounded. Plugin review applies skill-entry checks to skill workflows and accounts for advertised non-skill components through their interfaces and owning checks. Explicit text-composition criteria and evidence-before-selection order preserve existing context and consequential reporting. The independent SDD contract now requires every-reference coordinator routing and qualifier-preserving clause relocation. The APA handoff carries the same scope and verification distinctions.
+
+### Actual verification
+
+- Read the complete resulting three-document set and handoff, comparing the diff with accepted outcomes. Rechecked each new finding and parent recommendation, full/focused scope, skill-only/mixed/no-skill applicability, independent contract use and pre-action routing/gate preservation. This is source assessment, not a consumer trial.
+- Exact comparison preserves the approved skill opening/routing paragraph, the plugin rationale except the accepted skill-workflow qualification, and all thirty C/K case rows and case protocol. No extra case map, recursive reference inventory, obligatory coordinator/component, SDD policy in the generic modules or general-module contract dependency introduced.
+- Current campaign scan passed 125 local prose links/anchors, heading separation, consecutive blank lines and Git whitespace. Templates/code excluded from prose links. No external URL retrieval or host-loading validation claimed.
+- Exact Git path comparison against `1589cb2486c75ff31076d1bf11968d2b72551b62` allows only the four revised documents and three active records. Preserved drafts, runtime package, parent and all closed tracked files retain their bytes. Coordinator entry blob remains `37b73018ca90a5b571bb9c05b54d039e1952389e`; no untracked files introduced.
+- Final sizes: contract 28,612 UTF-8 bytes / 3,504 words; plugin-review 13,265 / 1,820; skill-review 12,923 / 1,847. Changes add the accepted criteria within existing sections; counts are descriptive and establish no token-cost or behavioral improvement.
+
+Live/model acceptance, full support/publisher suites, package installation, APA repository/cache changes and runtime revisions remain unselected/unrun. Commit source and evidence together, push/read back, then stop for human document review. Campaign 060 remains open/unmerged; parent 059 suspended. Finalization/integration requires the subsequent human decision.

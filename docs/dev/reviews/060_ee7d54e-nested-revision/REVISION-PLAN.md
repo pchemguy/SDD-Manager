@@ -128,3 +128,7 @@ The optional K/C correspondence note is deferred: distinct starting layers and a
 3. Recheck each finding and parent recommendation against actual source. Inspect full/focused and skill-only/mixed/no-skill applicability, entry-only reference selection, independent contract use and qualifier-preserving relocation. These are source assessments, not consumer trials.
 4. Check current campaign links/anchors, heading/blank-line and Git whitespace, approved paragraphs, case identities, exact unchanged drafts/runtime/parent/closed bytes and owned paths. Proportionate source-document checks suffice; live/model acceptance, full support/publisher suites and APA integration are unselected.
 5. Update retained findings/dispositions and execution evidence; commit source and reports together, push/read back and stop for human review. Campaign 060 remains open/unmerged; parent 059 stays suspended. Finalization, integration and parent resumption are not authorized by this execution request.
+
+### V-020 execution status
+
+Executed as the planned coherent document unit. All accepted findings and parent-derived documentation recommendations have source rechecks; optional K/C navigation remains deferred. Static/preservation checks pass and are recorded in REVISION-REPORT.md. Publish/read back source and evidence before returning the final documents. Human review/finalization is pending; 060 remains open/unmerged, 059 suspended.

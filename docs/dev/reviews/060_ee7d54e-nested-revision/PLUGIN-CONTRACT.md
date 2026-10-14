@@ -79,7 +79,9 @@ This map identifies the coverage baseline and principal sources. It is not a sec
 
 A different arrangement is acceptable if each required decision and gate remains clear before its dependent action. Human examples/diagrams belong in README; package entry summaries and coordinator procedures address agent use. Source-development commands and acceptance coordination stay outside runtime guidance.
 
-Routing must expose all conditional coordination domains without requiring every module to be loaded:
+The coordinator's `SKILL.md` must have a clearly identified routing section, preferably a table, individually naming and linking every `references/*.md` file. For each file, state its purpose, scope, boundary and loading conditions, including unconditional use where applicable, so selection is possible from the entry before reading the reference. Compare the file inventory with that section; domain labels alone do not establish complete routing. This does not require every module to be loaded at startup.
+
+The domain map below identifies canonical coverage for development review:
 
 - **Context/path:** [workflows](../../../../skills/sdd-manage/references/workflows.md), [coordination](../../../../skills/sdd-manage/references/coordination.md) and [examples](../../../../skills/sdd-manage/references/examples.md).
 - **Preparation/adoption:** [agent orientation](../../../../skills/sdd-manage/references/agent-orientation.md), [repository bootstrap](../../../../skills/sdd-manage/references/repository-bootstrap.md), human review and document QC above.
@@ -91,6 +93,8 @@ The coordinator cycle establishes/reuses evidence before selecting and reporting
 ## Development checks
 
 Establish affected operational guidance in its canonical owner before projecting it into PLUGIN.md. Recheck selection, readiness, visible decisions and stops on both sides of the changed handoff. Preserve narrow operations, accepted inputs, pending human decisions and unfinished work; a changed summary cannot widen authority or accept a pending document.
+
+Before shortening the coordinator entry, map every removed clause to its canonical destination and actual loading condition. Check that the destination preserves the clause's qualifications; establish missing detail there first. Keep a concise consequential invariant in the entry when needed before loading or handoff. Recheck selective routing and pre-action gates after relocation.
 
 Check current packaged owner links and the actual source/package boundary. Updating either entry requires rechecking affected README/capability projections, not automatically enlarging them. The independent SDD obligations and case protocol are retained here so this contract can assess both entry layers without depending on general review modules.
 

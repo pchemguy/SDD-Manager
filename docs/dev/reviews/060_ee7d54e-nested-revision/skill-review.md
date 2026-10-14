@@ -76,12 +76,14 @@ Inspect the relevant caller and neighboring modules when a local change affects 
 
 ## Review procedure
 
+For a full/comprehensive skill review, inventory `SKILL.md`, its `references/*.md` modules and supporting files needed to assess their instruction claims. Record each item's review depth and evidence, reason for exclusion or unassessed status. A review confined to an entry or reference records that narrower target. Representative cases supplement content coverage; they do not replace it.
+
 1. **Pin the brief and source.** Record the capability, selected files, required prior context, review scope, actual source and permitted effects. Identify applicable instructions, source owners and evidence limits. Respect project rules for retained history and protected material.
 2. **Reverse-outline the text.** Identify the job of each section, paragraph and major step. Check the overall trajectory and selected dimensions above before proposing local edits.
 3. **Trace consequential instructions.** Apply Reference routing coverage when reviewing an entry with references. Inspect relevant routes and handoffs on both sides; compare repeated or relocated clauses with their owners, use conditions and required prior instructions. Verify destinations preserve removed qualifiers before shortening either the entry or a reference.
 4. **Assess representative contrasts.** Select cases that exercise the reviewed entry or module's important branches, boundaries and intended use. Reuse established cases when suitable; avoid tests that merely search for the revised wording.
 5. **Verify supported properties.** Check required metadata, resource paths, links/anchors and the containment rules for the standalone or bundled package with the owning structural tooling. Inspect scripts, assets or external dependencies when an instruction claim depends on them; identify uninspected behavior. Observe actual output or execution only when selected and authorized. Link validity does not establish client invocation or runtime support.
-6. **Return actionable findings.** Give location/source, observation, consequence, confidence, priority, correction destination and objective recheck. Distinguish defects, recommendations and evidence gaps. Retain no-finding coverage, unresolved choices and unrun checks; do not present proposals as implemented repairs.
+6. **Return actionable findings.** Give location/source, observation, consequence, confidence, priority, correction destination and objective recheck. Distinguish defects, recommendations and evidence gaps. Retain the coverage record, no-finding results, unresolved choices and unrun checks; do not present proposals as implemented repairs.
 
 For an accepted revision, preserve technical meaning and scope, recheck affected owners/routes and review the resulting composition. Update affected navigation or projections without automatically enlarging every entry. Use the project's actual persistence and integration policy; this procedure introduces no Git, hosting or approval requirement of its own.
 

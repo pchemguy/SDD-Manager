@@ -13,7 +13,7 @@ The [Agent Plugins specification v1.0.0](https://agent-plugins.org/specification
 
 A complex plugin may also define a coordinator skill to manage composite workflows. The loading path becomes `PLUGIN.md` → coordinator `SKILL.md` → selected skill entries and references. Other skills can depend primarily on the coordinator and a small set of shared capabilities, reducing connections between individual skills.
 
-Because `PLUGIN.md` is non-standard, automatic loading cannot be assumed; agents may need explicit instructions to read it. The plugin should remain fully functional through its skill entries when `PLUGIN.md` is not loaded. When a coordinator is present, `PLUGIN.md` should serve as a convenience front for its `SKILL.md`, summarizing capabilities, routing and essential obligations already defined by the coordinator and focused skills.
+Because `PLUGIN.md` is non-standard, automatic loading cannot be assumed; agents may need explicit instructions to read it. The plugin's skill workflows should remain fully functional through their skill entries when `PLUGIN.md` is not loaded. When a coordinator is present, `PLUGIN.md` should serve as a convenience front for its `SKILL.md`, summarizing capabilities, routing and essential obligations already defined by the coordinator and focused skills.
 
 ## Scope and output
 
@@ -21,24 +21,27 @@ Review plugin-level capability boundaries, shared entry guidance, composite work
 
 Assess the accepted plugin design and its actual responsibilities using the distinction above. A review does not introduce new components or authorize additional effects by implication.
 
+Apply skill-entry criteria to skill workflows. Apply shared-entry and coordinator criteria only when those components are present. Assess other advertised components, such as MCP servers, through their supported discovery paths, interfaces, dependencies and owners. A package without skills does not acquire a skill-entry requirement.
+
 Format conformance, content review and observed behavior provide different evidence. Use the owning format/structural tooling for metadata and package validity; this procedure assesses how capabilities form a usable system. Source review does not establish installation, host discovery or runtime invocation.
 
 ## Plugin composition and ownership
 
 | Concern | Assess |
 | --- | --- |
-| Capability boundaries | Do skills have distinct responsibilities, useful outputs and understandable activation conditions? Are overlapping triggers resolved without requiring the user to know internal names? |
+| Capability boundaries | Do advertised skills and other components have distinct responsibilities, useful outputs and clear entry and use conditions? Are overlaps resolved without requiring the user to know internal names? |
 | Workflow decomposition | Do composite paths connect focused capabilities through meaningful handoffs? Are closely related internal branches kept together where independent capability boundaries add no value? |
 | Shared ownership | Do common conventions, prerequisites and reporting rules have identifiable owners? Are summaries consistent with them, with justified short reminders rather than competing procedure copies? |
-| Coupling and loading | Can the selected path load only the relevant skills/modules? Are dependencies explicit and available, without requiring the entire plugin context for every request? |
+| Coupling and loading | Can the selected path use only the relevant skills/modules and other components? Are dependencies explicit and available, without requiring the entire plugin context for every request? |
 | Package and client boundary | Are advertised capabilities actually supplied and referenced files within the applicable package boundary? Are client extensions and unverified invocation behavior distinguished from portable structure? |
 | Human and agent documentation | Do user-facing examples explain supported behavior while agent guidance supplies selection and execution boundaries? Are source-only development instructions kept out of runtime dependencies? |
+| Instruction composition | Do sections visibly distinguish responsibilities, shared gates, the principal procedure and conditional routing where applicable? Does each paragraph or step have one controlling concern, with prerequisites and exceptions grouped with their action? |
 
 For repeated guidance, identify its canonical owner and the decision protected by each summary. A shared entry or coordinator can highlight a consequential rule at a handoff; a full second procedure increases maintenance risk. Judge concision by sufficient explicit guidance for the intended models, not a byte/word quota or speculative token savings.
 
 ## Integrated plugin entry review
 
-Apply this section when the plugin uses `PLUGIN.md` as its shared workflow entry. Assess its stated purpose, loading path and fallback. Essential operations must remain reachable through supported skill entries and their owners when `PLUGIN.md` is unavailable.
+Apply this section when the plugin uses `PLUGIN.md` as its shared workflow entry. Assess its stated purpose, loading path and fallback. Essential operations must remain reachable through their supported entries or interfaces and operational owners when `PLUGIN.md` is unavailable.
 
 | Entry concern | Review criterion |
 | --- | --- |
@@ -57,7 +60,7 @@ Apply this section when the plugin includes coordination. Assess the coordinator
 
 | Coordinator concern | Review criterion |
 | --- | --- |
-| Selection and continuity | Does it establish enough context to select a path, reuse an applicable workflow or recognize a material change? Are the decision and its basis communicated at consequential boundaries? |
+| Selection and continuity | Does it establish or reuse sufficient evidence before selecting a path and communicating the decision and its basis at consequential boundaries? Can it reuse an applicable workflow or recognize a material change without duplicate orientation or routine restart? |
 | Shared readiness | Does it establish the prerequisites and human decisions needed by the next owner, keeping authority, readiness and performed state distinct? |
 | Delegation | Are responsible skills and handoff inputs/effects/expected results clear? Does the coordinator preserve focused ownership instead of reimplementing each skill? |
 | Boundaries across handoffs | Do scope, unresolved acceptance, requested stops and actual authorization survive transitions and recovery? Can a child operation finish without automatically resuming its parent? |
@@ -68,12 +71,14 @@ The shared plugin entry may project coordinator behavior; the coordinator may ow
 
 ## Review procedure
 
+For a full/comprehensive plugin review, inventory the requested package's entries, included skills, their references and other advertised components. Record each item's review depth and evidence, reason for exclusion or unassessed status. Inspect supporting configuration and resources when a capability claim depends on them. Representative workflows supplement content coverage; focused reviews retain their selected scope and interfaces.
+
 1. **Establish scope and source.** Pin the inspected package, intended capability model, requested outputs/effects and evidence limits. Identify actual installed/package contents and development exclusions where relevant.
 2. **Map responsibilities.** Identify entry, coordinator, focused skills, shared guidance and optional tools/extensions. Trace ordinary request routing and selected composites; do not infer missing components from a preferred template.
-3. **Assess composition and duplication.** Inspect section purposes, information order, loading conditions, repeated procedures and ownership against the criteria above. Distinguish necessary prominence from repeated detail.
+3. **Assess composition and duplication.** Inspect visible section responsibilities, paragraph/step cohesion, information order, loading conditions, repeated procedures and ownership against the criteria above. Distinguish necessary prominence from repeated detail.
 4. **Trace affected transitions.** Check prerequisites, carried context, authority, human decisions, result evidence and stop on both sides. Include contextual follow-ups and recovery, not only fresh entry.
-5. **Verify claims and cases.** Check actual links, containment, package inclusion and source agreement. If a behavioral trial is selected, supply only the intended initial context before observing discovery or routing; assess target agreement separately.
-6. **Report and hand off.** Give located findings, consequences, confidence, bounded correction owners and objective rechecks. Preserve no-finding coverage and unresolved choices. Accepted revisions require affected entry/owner/projection rechecks under the project's actual persistence policy.
+5. **Verify claims and cases.** Check actual links, containment, package inclusion and source agreement. Use owning configuration and runtime guidance for non-skill components; report uninspected or unavailable behavior. If a behavioral trial is selected, supply only the intended initial context before observing discovery or routing; assess target agreement separately.
+6. **Report and hand off.** Give located findings, consequences, confidence, bounded correction owners and objective rechecks. Preserve the coverage record, no-finding results and unresolved choices. Accepted revisions require affected entry/owner/projection rechecks under the project's actual persistence policy.
 
 ## Assessment contrasts and evidence
 
