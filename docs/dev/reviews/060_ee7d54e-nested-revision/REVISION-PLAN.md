@@ -90,3 +90,7 @@ Polish and replace the full supplied Shared plugin entries and coordination sect
 ## V-017 — Custom-entry loading and convenience front
 
 Append the proposed explanation: automatic PLUGIN.md loading cannot be assumed, skill entries retain full functionality without it, and an available coordinator’s SKILL.md remains the operational entry behind the convenience front. Preserve optional coordination, publish/read back and remain open/unmerged.
+
+## V-018 — Name the defined plugin entry directly
+
+Replace example/alternative filename wording with PLUGIN.md as the shared entry defined by this module. Align availability, canonical-ownership and recovery criteria without making unrelated skill bundles require an entry. Publish/read back and remain open/unmerged.

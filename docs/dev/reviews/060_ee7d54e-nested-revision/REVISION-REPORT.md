@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001 through V-017 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001 through V-018 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -173,3 +173,7 @@ Replaced the section with a polished version of the human’s draft. Kept the sh
 ## V-017 — Loading and convenience-front explanation
 
 Appended the human-proposed rationale, phrasing automatic discovery as unavailable to assume rather than an unsupported frequency claim. The plugin remains functional through skill entries without PLUGIN.md; the convenience-front relationship applies when a coordinator is present. The paragraph preserves canonical coordinator/skill ownership. Checked placement, wording and Git spacing. Publish/read back; 060 remains open/unmerged.
+
+## V-018 — Defined entry filename
+
+Removed “A custom file such as PLUGIN.md” and named `PLUGIN.md` directly in integrated-entry review, canonical-source, recovery and availability criteria. The section assesses its purpose/loading/fallback without retelling the earlier non-standard rationale. Checked wording and Git whitespace; publish/read back, retain 060 open/unmerged.

@@ -38,7 +38,7 @@ For repeated guidance, identify its canonical owner and the decision protected b
 
 ## Integrated plugin entry review
 
-Apply this section when the plugin defines a shared workflow entry. A custom file such as PLUGIN.md needs an explicit purpose, loading path and availability fallback: it is not a standardized discovery or invocation guarantee. Essential operations must remain reachable through supported skill entries and their owners when that custom entry is unavailable.
+Apply this section when the plugin uses `PLUGIN.md` as its shared workflow entry. Assess its stated purpose, loading path and fallback. Essential operations must remain reachable through supported skill entries and their owners when `PLUGIN.md` is unavailable.
 
 | Entry concern | Review criterion |
 | --- | --- |
@@ -46,7 +46,7 @@ Apply this section when the plugin defines a shared workflow entry. A custom fil
 | Request-to-capability routing | Can an agent resolve ordinary requests to a supported owner or path from entry guidance, without opening all skill procedures or asking the user to name internals? |
 | Composite summaries | Are purpose/trigger, principal owners, outputs, consequential handoffs and stops clear, without repeating every execution procedure? |
 | Prominent obligations | Are shared authority, acceptance, persistence or other domain constraints visible before the actions they govern? Are detailed gates linked to their owners? |
-| Projection and source fidelity | Do summaries agree with operational owners? Does any essential rule exist only in an optional custom entry? |
+| Projection and source fidelity | Do summaries agree with operational owners? Does any essential rule exist only in `PLUGIN.md`? |
 | Established context | Can follow-ups remain with an already active owner? Does unclear interpretation route to appropriate recovery rather than restart discovery or guess missing decisions? |
 
 Keep workflow entry, established-context use and missing-context recovery distinct. A plugin entry can establish the owner needed for subsequent requests without interpreting every later task itself. A capability directory and a workflow summary serve different selection questions; neither should silently become a second full procedure catalog.
@@ -64,7 +64,7 @@ Apply this section when the plugin includes coordination. Assess the coordinator
 | Results and blockers | Does it collect actual evidence, reconcile blockers and return the correct completion boundary? Are unavailable capabilities and uncertain external effects reported rather than assumed complete? |
 | Entry/module structure | Are general coordination decisions visible in the coordinator entry, with conditional detail under accessible owners? Does moving procedure out of the entry preserve required pre-action guidance? |
 
-The shared plugin entry may project coordinator behavior; the coordinator may own canonical orchestration instructions. Do not impose the projection-only rule on that canonical owner. Inspect both sides of a consequential handoff and identify which layer selects, establishes readiness, executes, verifies and returns control. Ordinary context reuse and recovery must not depend on a custom plugin entry being loaded again.
+The shared plugin entry may project coordinator behavior; the coordinator may own canonical orchestration instructions. Do not impose the projection-only rule on that canonical owner. Inspect both sides of a consequential handoff and identify which layer selects, establishes readiness, executes, verifies and returns control. Ordinary context reuse and recovery must not depend on `PLUGIN.md` being loaded again.
 
 ## Review procedure
 
@@ -82,7 +82,7 @@ Use contrasts appropriate to the accepted design; do not make every trial compul
 | Contrast | Inspect or observe |
 | --- | --- |
 | Independent capability request versus composite workflow request | Direct owner use or appropriate coordination, without unnecessary full-system activation |
-| Integrated entry available versus unavailable | Supported loading/fallback; no claim of automatic host discovery or dependence on an unavailable custom entry |
+| `PLUGIN.md` available versus unavailable | Supported loading/fallback; no claim of automatic host discovery or dependence on an unavailable custom entry |
 | Ordinary request versus request outside advertised scope | Clear owner/path or bounded clarification; no invented capability |
 | Fresh workflow entry versus established owner/context | Needed discovery versus context reuse; no repeated selection ceremony |
 | Recoverable context versus a consequential missing decision | Evidence-based recovery or targeted clarification; no guessed authority, acceptance or range |
