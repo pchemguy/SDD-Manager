@@ -11,7 +11,7 @@ This is a developing proposal package in SDD Manager campaign 060. It has not be
 | File | Role in the downstream revision |
 | --- | --- |
 | [skill-review.md](skill-review.md) | Shared criteria plus distinct entry/reference review sections, proposed for APA's references; read after this proposal |
-| [plugin-review.md](plugin-review.md) | General plugin composition, shared-entry and coordinator review; second APA integration candidate |
+| [plugin-review.md](plugin-review.md) | General plugin composition, PLUGIN.md rationale, shared-entry and coordinator review; second APA integration candidate |
 | [PLUGIN-CONTRACT.md](PLUGIN-CONTRACT.md) | Independent SDD Manager contract integrating plugin-entry and coordinator responsibilities/cases; domain example, not APA policy |
 | [PLUGIN-CONTRACT-DRAFT.md](PLUGIN-CONTRACT-DRAFT.md) | Relocated original plugin contract; provenance and abstraction source, not an integration candidate |
 | [COORDINATOR-CONTRACT-DRAFT.md](COORDINATOR-CONTRACT-DRAFT.md) | Preserved mixed source used for the split; provenance and comparison, not the integration candidate |

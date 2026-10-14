@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001 through V-012 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001 through V-013 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -151,3 +151,9 @@ Updated PROPOSED-REVISIONS.md with both generic integration candidates, plugin-d
 - Compared all 134 packaged files with the campaign starting source: unchanged. No runtime skill/metadata/test, unrelated closed package, APA repository/cache, release or provider changes. Full suites and live acceptance were not run for source-development documentation only.
 
 Publish/read back source and evidence together. Campaign 060 remains open/unmerged under the human's instruction; parent 059 stays suspended.
+
+## V-013 — Restored plugin-entry motivation
+
+Corrected V-012's omission: plugin-review.md now begins with the accepted Scope and motivation section copied verbatim from the relocated plugin draft. It explains the non-standard plugin entry and coordinator rationale, including modularity benefits and the bundle/integrated distinction. Shortened the now-redundant bundle explanation in Scope and output. skill-review.md retains its assessment-only opening; the standard skill architecture is not taught there.
+
+Exact section comparison passed. Updated the proposal’s module description and checked headings/blank lines, Git whitespace and campaign-only scope. No contract/draft/runtime changes or behavioral trial. Publish/read back; 060 remains open/unmerged and 059 suspended.

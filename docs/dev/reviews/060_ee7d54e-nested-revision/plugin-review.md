@@ -1,10 +1,27 @@
 # Review plugin composition and coordination
 
+## Scope and motivation
+
+Skills and plugins enable modular organization of agent capabilities. Within a skill, complex functionality can be decomposed into capability modules in `references/*.md`. The skill’s `SKILL.md` entry orients the agent and explains when to load each module, providing enough guidance to select relevant instructions without loading every reference at once.
+
+Plugins add a further level of composition by grouping skills. The modular architecture enabled by skills and plugins provides two major benefits:
+
+- **Development:** maintainable units with clear responsibilities and limited coupling.
+- **Context management:** progressive loading that limits unnecessary context use and context pollution.
+
+At the plugin level, unrelated skills can be bundled for distribution. Each skill is loaded independently through its own entry; such a bundle does not require a shared workflow entry.
+
+For an integrated set of capabilities, a plugin provides a broader decomposition: relatively weakly coupled capabilities become skills, while closely related sub-workflows remain references within each skill. Shared workflow capabilities can be factored into dedicated skills that other bundled skills reuse, much as software libraries support reuse across components.
+
+An integrated plugin should have a shared entry, `PLUGIN.md`, analogous to `SKILL.md` to orient the agent across the system and route workflows that compose several skills.
+
+A sufficiently complex plugin may also define a dedicated coordinator skill to manage composite workflows. The loading path becomes `PLUGIN.md` → coordinator `SKILL.md` → selected skill entries and references. Other skills can link primarily to the coordinator and a small set of shared capabilities, forming a star-like dependency structure.
+
 ## Scope and output
 
 Review plugin-level capability boundaries, shared entry guidance, composite workflows, coordination and ownership. Assess the current supported package and report actionable findings. Inspect individual skills and references where a plugin claim or handoff depends on them; keep the review bounded by the requested scope.
 
-A collection of independently used capabilities does not need the same entry or coordination structure as an integrated workflow system. Identify the accepted plugin design and assess its actual responsibilities. A review does not introduce a coordinator, common workflow entry or additional effects by implication.
+Assess the accepted plugin design and its actual responsibilities using the distinction above. A review does not introduce new components or authorize additional effects by implication.
 
 Format conformance, content review and observed behavior provide different evidence. Use the owning format/structural tooling for metadata and package validity; this procedure assesses how capabilities form a usable system. Source review does not establish installation, host discovery or runtime invocation.
 
