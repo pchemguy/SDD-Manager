@@ -20,7 +20,7 @@ This is a developing proposal package in SDD Manager campaign 060. It has not be
 | APA owner | Proposed change |
 | --- | --- |
 | `references/skill-review.md` | Add the general module, adapting only to established APA terminology, routing and packaging conventions |
-| `SKILL.md` | Make skill-entry/reference review discoverable through activation/routing and a clear conditional link to the new module; where APA supplies references, its entry routing must individually name/link every reference with scope/boundary and use conditions; preserve creation, revision, inspection and structural-validation paths |
+| `SKILL.md` | Make skill-entry/reference review discoverable through activation/routing and a clear conditional link to the new module; where APA supplies `references/*.md`, its entry routing must individually name/link every such file with scope/boundary and use conditions; preserve creation, revision, inspection and structural-validation paths |
 | `references/skill-design.md` | Keep design principles under this owner; link the review procedure where useful and consolidate overlapping review detail |
 | `references/validation-policy.md` | Distinguish structural conformance, content/ownership review and observed workflow behavior; route to the review module without duplicating its checklist |
 | `references/authoring-workflow.md` | Include proportionate content review before reporting an accepted authoring/revision result; a focused review need not force complete reauthoring or every behavioral trial |
@@ -30,7 +30,7 @@ Inspect the current target sources before adopting these proposed integration po
 
 ## Boundaries to preserve
 
-- Keep the module vendor-neutral and applicable to simple and composite skills. Optional references, scripts and assets remain optional; no fixed total section count, byte/token quota or new skill dependency is introduced. A dedicated routing section is required when references are present.
+- Keep the module vendor-neutral and applicable to simple and composite skills. Optional references, scripts and assets remain optional; no fixed total section count, byte/token quota or new skill dependency is introduced. A dedicated routing section is required when `references/*.md` files are present.
 - Keep SDD-specific document approvals, task/commit rules, Git pushes, hosted phase/milestone projection and campaign lifecycle out of general APA guidance. The coordinator contract demonstrates how a domain specializes general criteria.
 - Preserve APA's standalone-versus-bundled resource containment and structural validation rules. The review module complements those checks; it does not redefine the Agent Skills/Plugins specifications or guarantee client invocation.
 - Preserve explicit scope and editing authority. A review returns findings; accepted repairs follow the receiving workflow's actual authorization and persistence policy. Do not add approval gates or Git publication rules from the source example.
@@ -38,7 +38,7 @@ Inspect the current target sources before adopting these proposed integration po
 
 ## Downstream verification and acceptance
 
-Verify conditional discovery of the new procedure, links/anchors and actual package contents with existing APA tooling. Compare every supplied reference with the entry routing section; evaluate request-to-reference selection from SKILL.md without opening references first. Treat this as proposed authoring/review policy, not a claim of a new specification requirement. Review agreement between the new module and its design/validation/workflow owners, including simple entries, procedure/guidance/contract/example references, branched instructions, repeated gates, unavailable dependencies and requested assessment-only work. Check that shortening or relocation preserves conditions, qualifiers and the documented reading context. References must not inherit skill-root activation, metadata or whole-workflow responsibilities by default.
+Verify conditional discovery of the new procedure, links/anchors and actual package contents with existing APA tooling. Compare the supplied `references/*.md` inventory with the entry routing section; evaluate request-to-reference selection from SKILL.md without opening references first. Treat this as proposed authoring/review policy, not a claim of a new specification requirement. Review agreement between the new module and its design/validation/workflow owners, including simple entries, procedure/guidance/contract/example references, branched instructions, repeated gates, unavailable dependencies and requested assessment-only work. Check that shortening or relocation preserves conditions, qualifiers and the documented reading context. References must not inherit skill-root activation, metadata or whole-workflow responsibilities by default.
 
 Choose representative successful, negative, variant and recovery cases appropriate to the changed instructions. For behavioral assessment, record source/model/context, actual actions and output; do not give reviewer expectations to the consumer. Structural validation and source review must not be reported as behavioral acceptance. Do not add tests that merely assert prose wording.
 

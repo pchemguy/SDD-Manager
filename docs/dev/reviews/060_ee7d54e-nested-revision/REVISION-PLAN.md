@@ -45,3 +45,7 @@ The human requires an explicit routing section, preferably a table, identifying 
 ## V-009 — Remove nested-module qualification
 
 Remove “, including nested reference modules,” from the routing criterion and the corresponding qualification in the APA proposal, as requested. Retain other routing criteria and the open/unmerged boundary.
+
+## V-010 — Explicit reference-file pattern
+
+Make the routing requirement and inventory checks explicitly identify `references/*.md`, and align the APA proposal wording. Retain the campaign’s open/unmerged boundary.

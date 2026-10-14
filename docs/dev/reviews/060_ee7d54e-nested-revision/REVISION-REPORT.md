@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001 through V-009 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001 through V-010 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -101,3 +101,7 @@ Updated the APA handoff integration and verification scope, preserving the disti
 ## V-009 — Routing wording correction
 
 Removed the requested nested-reference phrase from skill-review.md and the corresponding proposal wording. Other routing criteria remain unchanged. Checked the two resulting sentences and Git whitespace; publish/read back and retain campaign 060 open/unmerged.
+
+## V-010 — Explicit reference-file pattern
+
+Routing coverage and inventory checks now explicitly use `references/*.md`; APA proposal wording agrees. Checked the affected sentences and Git whitespace. Publish/read back; campaign 060 remains open/unmerged.

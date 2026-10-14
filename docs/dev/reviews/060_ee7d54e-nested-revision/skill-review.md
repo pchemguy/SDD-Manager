@@ -39,7 +39,7 @@ Check that information required to choose the next module or respect an immediat
 
 ### Reference routing coverage
 
-When a skill includes references, require a clearly identified routing section in `SKILL.md`, preferably a table. It must name and link every reference file and provide the following selection information for each:
+When a skill includes `references/*.md`, require a clearly identified routing section in `SKILL.md`, preferably a table. It must name and link every `references/*.md` file and provide the following selection information for each:
 
 | Routing element | Review requirement |
 | --- | --- |
@@ -49,7 +49,7 @@ When a skill includes references, require a clearly identified routing section i
 
 An agent must be able to determine which references are relevant to a request from `SKILL.md` alone, before reading their contents. A filename list, vague topic labels or instructions to inspect references to discover their applicability do not satisfy this criterion. A child reference’s local link does not replace its entry-level route.
 
-Compare the complete reference inventory with the routing section to detect omissions. Then inspect each description against its target and assess representative requests using only the entry: selection should be justified by the stated scope and conditions, not guessed from filenames. Route completeness and selection clarity are separate from link validity and execution success.
+Compare the `references/*.md` inventory with the routing section to detect omissions. Then inspect each description against its target and assess representative requests using only the entry: selection should be justified by the stated scope and conditions, not guessed from filenames. Route completeness and selection clarity are separate from link validity and execution success.
 
 ## Reference module review
 
@@ -78,7 +78,7 @@ Inspect the relevant caller and neighboring modules when a local change affects 
 
 1. **Pin the brief and source.** Record the capability, selected entry/reference role, expected reading context, requested coverage, actual source and permitted effects. Identify applicable instructions, source owners and evidence limits. Respect project rules for retained history and protected material.
 2. **Reverse-outline the text.** Identify the job of each section, paragraph and major step. Check the overall trajectory and selected dimensions above before proposing local edits.
-3. **Trace consequential instructions.** For an entry with references, compare its routing section against the complete reference inventory and assess selection from the entry alone. Follow relevant routes and handoffs on both sides. Compare a repeated or relocated clause with its owner, loading condition and independently loaded context. Verify destinations preserve removed qualifiers before shortening either the entry or a reference.
+3. **Trace consequential instructions.** For an entry with references, compare its routing section against the `references/*.md` inventory and assess selection from the entry alone. Follow relevant routes and handoffs on both sides. Compare a repeated or relocated clause with its owner, loading condition and independently loaded context. Verify destinations preserve removed qualifiers before shortening either the entry or a reference.
 4. **Assess representative contrasts.** Select cases that exercise the reviewed entry or module's important branches, boundaries and intended use. Reuse established cases when suitable; avoid tests that merely search for the revised wording.
 5. **Verify supported properties.** Check metadata where required by the artifact format, resource paths, links/anchors and the applicable standalone or bundled distribution boundary with the owning structural tooling. Inspect actual output or behavior only when selected and authorized. Link validity does not establish client invocation or runtime support.
 6. **Return actionable findings.** Give location/source, observation, consequence, confidence, priority, correction destination and objective recheck. Distinguish defects, recommendations and evidence gaps. Retain no-finding coverage, unresolved choices and unrun checks; do not present proposals as implemented repairs.
