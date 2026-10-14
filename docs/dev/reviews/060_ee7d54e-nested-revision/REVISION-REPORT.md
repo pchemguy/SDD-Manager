@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001 through V-005 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001 through V-006 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -81,3 +81,9 @@ Checked current campaign links/anchors and Markdown spacing, and confirmed no ge
 Extended skill-review.md with a distinct reference-boundary section and adjusted shared dimensions, procedure and assessment contrasts. Composition, language, cohesion, duplication, ownership and fidelity remain shared; module-specific criteria now cover local purpose/scope, required parent context, inbound/child loading, shared owners and result/return. Procedures, explanatory guidance, contracts and examples are assessed according to role; references do not inherit skill-root activation, whole-workflow orchestration or entry metadata requirements. Missing context is judged against the documented reading boundary rather than a universal self-containment rule.
 
 Updated PROPOSED-REVISIONS.md to carry explicit reference-review coverage and these boundaries into the APA handoff. The coordinator contract remains independent; preserved draft and runtime package are unchanged. Inspected the abstraction and role contrasts, checked campaign links/headings/spacing and the owned diff. No live trial, full source suite or APA implementation performed for this campaign-document extension. Commit/push/read back and stop with 060 open/unmerged and 059 suspended.
+
+## V-006 — Structural separation of entry and reference review
+
+Reorganized skill-review.md into shared review criteria, a dedicated Skill entry review section and a dedicated Reference module review section, followed by common procedure/evidence. Entry purpose/activation/metadata and root loading remain in entry review; local module purpose, scope, context, interfaces and procedure/guidance distinctions remain in reference review. Reference-specific assessment contrasts now sit within that section rather than the shared case table. Updated the APA handoff file-role description.
+
+Reverse-outline recheck confirms distinct section jobs and common criteria available to both artifact types. V-005 criteria and exceptions remain: references are not compositional roots, do not acquire entry metadata/whole-workflow duties, and need not be independently self-contained when their documented parent context is required. Checked campaign links/anchors/spacing and owned diff; no runtime source, coordinator contract or preserved-draft edits. Both V-005 and V-006 checkpoints follow the publication/readback rule. No live trial or APA integration claimed. Campaign 060 stays open/unmerged; parent 059 suspended.

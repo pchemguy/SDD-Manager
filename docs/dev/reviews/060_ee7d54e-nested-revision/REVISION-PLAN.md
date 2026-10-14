@@ -29,3 +29,7 @@ The human rejected the coordinator contract's dependency on skill-review.md. Rem
 ## V-005 — Explicit reference-module review
 
 The human requested extending skill-review.md to assess references without treating them as compositional roots. Apply shared composition/language/ownership criteria to both entries and references; add role-sensitive module purpose, cohesion, scope, context, inbound/child loading and result/return checks. Distinguish procedures from guidance/contracts/examples, and inherited context from independent use. Update APA proposal coverage, verify links and retained boundaries, commit/push/read back, and keep all files in the open campaign.
+
+## V-006 — Structural boundary within the general review module
+
+The human requested clear dedicated reference sections in skill-review itself. Separate shared composition criteria, skill-entry review and reference-module review at the top level; keep reference-specific boundary/context/genre contrasts in the reference section and common procedure/evidence outside both. Preserve V-005's criteria without mixing root activation/metadata responsibilities into reference review. Update handoff description, inspect the reverse outline and retained coverage, check links/spacing, commit/push/read back and remain open/unmerged.
