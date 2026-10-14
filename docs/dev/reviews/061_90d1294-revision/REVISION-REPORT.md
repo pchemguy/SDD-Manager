@@ -41,3 +41,9 @@ Added the canonical operational check and reporting policy in `coordination.md`,
 ## A-003 — Pending acceptance semantics
 
 Sharpened `human-document-review.md`: clarification supplies scoped requirements/decisions, not artifact acceptance or downstream authority; questions/current-stage revisions retain the same checkpoint and block dependent authoring/implementation. S-07/S-09/S-11 source rechecks preserve presented-state acceptance, explicit checkpoint changes, separate PLAN/layout decisions and existing-input reuse. Git whitespace checked. Publish/read back before A-004.
+
+## A-004 — Entry projections and development guidance
+
+Updated coordinator gates/cycle/reference conditions, PLUGIN.md, development contract, capability map and README with bounded projections of canonical loading/scope/reporting instructions. Added a shared-protocol pointer to direct `sdd-implement`/`sdd-steer` entries because their execution procedures can start without coordinator/PLUGIN entry; design already requires manager coordination and retains its human-review link. No procedural template was copied across skills and no reference module added.
+
+All twelve scenarios were source-mapped across entry and owner layers: workflow loading and switch order use workflows; operational scope/reporting use coordination; pending acceptance uses human review; uncertain recovery uses existing selection; task/steering stops remain with their owners. Existing document checkpoints, push-first/per-commit publication, requested tracking and integration stops are preserved. Rechecked the fifteen coordinator references against routing and Git whitespace. Publish/read back before A-005.
