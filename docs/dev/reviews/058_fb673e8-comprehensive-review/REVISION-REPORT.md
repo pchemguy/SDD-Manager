@@ -1,6 +1,6 @@
 # Comprehensive-review remediation report
 
-Campaign **058_fb673e8**; [accepted plan](REVISION-PLAN.md), [findings](REVIEW-REPORT.md). State: **V-001/V-002/V-003 complete; open and unmerged**. Live acceptance excluded; campaign remains open and unmerged.
+Campaign **058_fb673e8**; [accepted plan](REVISION-PLAN.md), [findings](REVIEW-REPORT.md). State: **Revision complete; final integration authorized and pending**. Live acceptance excluded.
 
 ## V-001 — Read-only steering assessment dispatch
 
@@ -31,3 +31,9 @@ R-001 and R-002 are source-remediated and rechecked. Native Git tests extend the
 ## Current boundary
 
 All accepted revision actions complete, with source and final evidence committed/pushed/read back on the campaign branch. Campaign remains open and unmerged; main unchanged. Final integration/closure is not part of this request.
+
+## Author-validator recheck and closure authorization
+
+The earlier namespace rejection was a false positive caused by the author validator requiring three namespace components, not a manifest defect or a compatibility decision. The updated installed Agent Package Author validator (`skill-6aceff4151808191b658dafa825436b7`) was rerun against unchanged SDD Manager source: validate_plugin.py and inspect_package.py both exit 0, with zero errors and 40 intentional plugin-contained sibling-reference warnings. The inspector identifies all 15 skills and `com.openai`. This supersedes the earlier author-tool result; its original observation remains above. No validator repair was made in this repository, and no client behavior was tested.
+
+The human subsequently requested campaign finalization. This authorizes closing the completed campaign through verified two-parent integration into main and target publication. Refreshed main remains `fb673e8eaaa0249b966b53bf0d4d723e9090625f`; campaign source before final records is `3032dea08b836ef7f3882d304c31209d15b50d96`. Final merged-state verification and parent provenance will be retained at integration.

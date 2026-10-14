@@ -102,3 +102,7 @@ Only campaign 058's records and its index row change. Current plugin/contract/to
 ## Subsequent accepted revision
 
 The human authorized the [revision plan](REVISION-PLAN.md) and execution. [Revision report](REVISION-REPORT.md) records V-001 through V-003, source rechecks, three additional native Git tests, 127 support/30 publisher passes, exact-source package/link evidence and the separate unchanged-namespace author-tool diagnostic. Original reviewed observations above retain their baseline meaning. No live acceptance or integration selected; campaign remains open.
+
+## Finalization follow-up
+
+The updated author validator accepts unchanged `com.openai`: both structural validator and inspector pass with zero errors and 40 intentional bundled-reference warnings. The previous namespace rejection was a validator bug, not a plugin incompatibility. The human has now authorized campaign closure; final merged-state evidence is retained in the revision report and integration commit.

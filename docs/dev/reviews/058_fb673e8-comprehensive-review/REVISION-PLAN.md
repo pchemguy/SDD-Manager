@@ -23,3 +23,7 @@ Extend the existing native Git release-capture tests with whitespace-cleanup rej
 Run support and publisher suites under Python 3.12.14 with declared dependencies. Build the exact committed candidate twice using the native publisher; inspect archive paths/bytes/reproducibility and intended changed package blobs. Run available author plugin validator/inspector, interpret sibling-reference warnings under plugin-root containment and distinguish client semantics. Check affected Markdown links/anchors/spacing, manifest/assets, catalog integrity and source-versus-package boundaries. No /pyenv modifications or execution, provider writes, release or fresh consumer/client test.
 
 Inspect the full campaign diff for closed-record or unrelated source changes. Update finding dispositions, actual checks/limits and the current index row. Commit/push/read back final verification records and return the result without merging or closing. No README/PLUGIN/capability-map edit is expected: owner capabilities and entry invariants remain unchanged; revise them only if a real affected claim is found.
+
+## Finalization authorization
+
+After the completed open/unmerged execution boundary and successful updated author-validator recheck, the human requested finalization. Publish the updated evidence, explicitly merge the full campaign into refreshed main, rerun support/publisher checks on the merged state, verify package source preservation and closed-record boundaries, record actual evidence, then publish/read back the merge and return on main. Live acceptance remains excluded.
