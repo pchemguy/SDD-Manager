@@ -44,3 +44,7 @@ The human explicitly instructed **not to close the campaign**. Publish/read back
 At the human's request, moved the contract from docs/dev/ into this campaign directory. Rebased its relative owner links and repaired this report's link; prose is unchanged. Removed V-001's permanent AGENTS.md/CAPABILITY-MAP pointers while the contract remains a campaign draft, and added direct active-campaign navigation. The original V-001 creation and verification remain historical evidence.
 
 Checked all moved-contract and active-record links/anchors, heading spacing, Git whitespace and the full owned diff. Content comparison against `e6bad47c19c88671767598e10f4f483786094b5a` confirms only relative link destinations changed in the contract. Packaged source/tests and older closed records remain unchanged; no full suites or live acceptance required for this relocation. Publish/read back the relocation commit; campaign 060 stays open and unmerged, parent 059 suspended.
+
+## Accepted V-003 scope
+
+The human selected the general/specific split and Agent Package Author handoff preparation described in the [extended plan](REVISION-PLAN.md#v-003--general-skill-review-and-coordinator-specialization). Execution pending; all deliverables remain inside campaign 060. No APA repository/cache edit, coordinator source repair or integration/closure is selected.
