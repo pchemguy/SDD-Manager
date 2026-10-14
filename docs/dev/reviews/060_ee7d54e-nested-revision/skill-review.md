@@ -2,7 +2,7 @@
 
 ## Scope and output
 
-Review composition, organization, scope, ownership and instruction quality in `SKILL.md` and reference modules. Apply the criteria to the selected material and report actionable findings.
+Review composition, organization, scope, ownership and instruction quality in `SKILL.md` and reference modules (`references/*.md`). Apply the criteria to the selected material and report actionable findings.
 
 Establish the requested output and editing authority first. A review-only request produces findings and proposed revisions; it does not authorize repairs, installation or external operations. A focused review need not become a full-package audit. Inspect scripts, assets and external dependencies when an instruction claim depends on them; report uninspected behavior separately.
 

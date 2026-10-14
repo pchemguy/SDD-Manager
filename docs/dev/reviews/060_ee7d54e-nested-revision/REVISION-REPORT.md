@@ -105,3 +105,7 @@ Removed the requested nested-reference phrase from skill-review.md and the corre
 ## V-010 — Explicit reference-file pattern
 
 Routing coverage and inventory checks now explicitly use `references/*.md`; APA proposal wording agrees. Checked the affected sentences and Git whitespace. Publish/read back; campaign 060 remains open/unmerged.
+
+## Opening sentence amendment
+
+Applied the human-approved opening sentence explicitly identifying reference modules as `references/*.md`. Checked the exact replacement and Git whitespace; publish/read back and retain campaign 060 open/unmerged.
