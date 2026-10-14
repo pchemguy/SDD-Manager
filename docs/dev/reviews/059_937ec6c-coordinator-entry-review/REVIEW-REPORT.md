@@ -1,6 +1,6 @@
 # Coordinator entry composition review
 
-Campaign **059_937ec6c**; [review plan](REVIEW-PLAN.md). Starting/reviewed source: `937ec6cc74545a7b3555b368ce86c4f4ff42c6c4`. Branch: `revision/059_937ec6c-coordinator-entry-review`; target: main. State: **Review complete; R-001–R-004 accepted for resumed execution; open pending verification/integration**.
+Campaign **059_937ec6c**; [review plan](REVIEW-PLAN.md). Starting/reviewed source: `937ec6cc74545a7b3555b368ce86c4f4ff42c6c4`. Branch: `revision/059_937ec6c-coordinator-entry-review`; target: main. State: **R-001–R-004 source-verified; final main integration/publication pending**.
 
 Review covers the coordinator entry's composition, progressive-discovery boundary and a proposed source-only development contract. Evidence is source inspection and bounded local measurements; no live acceptance or model trial. Source repair and contract implementation are not selected.
 
@@ -162,3 +162,7 @@ The human accepted resuming/executing/finishing 059 after child closure. Resumed
 ## Accepted source revision and recheck
 
 V-001 source-rechecks R-001–R-004 against the resumed entry and canonical owners. Original observations/locations and review-only outcome above retain their baseline meaning. REVISION-REPORT.md records the section/owner map, source K contrasts and qualified check results. The separate-contract proposal was fulfilled and superseded by closed 060's accepted combined contract, now at docs/dev/PLUGIN-CONTRACT.md. No model/client trial supports a behavioral claim; final candidate verification and integration remain in V-002.
+
+## Final source verification
+
+All four findings have their objective source rechecks and retained canonical owners. Final committed candidate 219038a9aefd09d3270ea15733226b1a27df442a passes 127 support/30 publisher tests, pinned core manifest, 134-file exact archive and 479 package link/anchor checks. Source limits and intentional bundled-reference warnings remain in REVISION-REPORT.md. No behavioral/live acceptance; closure awaits verified main integration/publication.

@@ -1,6 +1,6 @@
 # Coordinator entry revision execution
 
-Campaign 059_937ec6c. State: V-001 source revision complete; V-002 final candidate verification/integration pending. Human authority: execute/finish after closing nested 060. Parent remote/source verified at e3623feb0a6beaf0f00abd5a23a7f0a46b5d5aad. Child 060 closed through that explicit two-parent merge and publication; worktree returned to 059. Its records are frozen.
+Campaign 059_937ec6c. State: V-001/V-002 source verification complete; final main integration/publication pending. Human authority: execute/finish after closing nested 060. Parent remote/source verified at e3623feb0a6beaf0f00abd5a23a7f0a46b5d5aad. Child 060 closed through that explicit two-parent merge and publication; worktree returned to 059. Its records are frozen.
 
 The accepted plugin/coordinator contract is restored to docs/dev/PLUGIN-CONTRACT.md. Child review modules and APA handoff remain retained there for later retrieval; no APA integration. Runtime coordinator entry still has its original blob 37b73018ca90a5b571bb9c05b54d039e1952389e at resumption; R-001–R-004 require the accepted source revision. Original review evidence remains historical, not overwritten by child work. Live acceptance remains excluded.
 
@@ -28,3 +28,13 @@ These are source checks, not consumer execution or model performance. All four o
 Preliminary local suites passed (127 support, 30 publisher, Python 3.12.14). Author validation initially interpreted an unnecessary inline reference glob as a missing filename; replaced that preamble with the selection instruction while retaining every actual file link. Recheck: zero errors, 37 intentional plugin-contained sibling-dependency warnings. Final committed candidate/package checks belong to V-002; no client handoff or live acceptance is established by these results.
 
 Entry measures 11222 UTF-8 bytes / 1253 whitespace words versus 10,541 / 1,206 at review. Added filename/scope/condition routing accounts for the modest increase; size is not an acceptance ceiling or evidence of model/token improvement.
+
+## V-002 — Exact candidate verification and integration readiness
+
+Verified committed runtime candidate 219038a9aefd09d3270ea15733226b1a27df442a after its branch publication/readback. Final suites: 127 support tests and 30 publisher tests passed on Python 3.12.14 with declared jsonschema 4.26.0. Core manifest validation passed. Native builder/inspector verified all 134 exact archive members and source-only exclusions; only the coordinator entry, coordination.md and review-and-revision.md differ among package blobs from resumed source. All 479 committed package prose links/anchors resolve within shipped contents; angle-bracket Markdown destinations are interpreted correctly. Current contributor/contract/059/affected-owner scan: 11 documents, 299 links/anchors and heading/blank-line checks passed.
+
+All fifteen reference routes and 550-character metadata description meet their source requirements. Author validator: zero errors, 37 intentional package-contained sibling-reference warnings; these do not establish client handoff. Root AGENTS.md, the development contract, acceptance and campaign evidence remain outside the archive. Exact diff confirms frozen 060 unchanged from its closure; all earlier closed packages remain preserved.
+
+R-001–R-004 are source-verified; contract proposal fulfilled by accepted 060. Final entry organization retains role, pre-action gates, one baseline/selection/handoff/result cycle and grouped file/scope/load routing. Current size remains diagnostic, with no model/token or performance claim. No live/model/provider acceptance, APA integration, release/tag or new implementation tasks.
+
+Refreshed main target is 937ec6cc74545a7b3555b368ce86c4f4ff42c6c4. Publish/read back this readiness checkpoint, explicitly merge the whole 059 boundary including closed nested 060, verify merged suites/package/navigation and publish/read back main. Original 059 opening is 9e15a53f5d78e19dd84e06e3990535d6185bfecb, confirmed from Git; original branch-off is 937ec6cc74545a7b3555b368ce86c4f4ff42c6c4. Closure/return follows the verified target publication; no branch deletion.
