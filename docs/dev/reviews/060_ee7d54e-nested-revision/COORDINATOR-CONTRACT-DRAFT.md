@@ -6,7 +6,7 @@
 
 This source-only document guides maintainers reviewing or changing that entry and its module boundaries. It defines responsibilities, composition criteria and a targeted assessment program. Target-project agents use the packaged skill instructions; this contract is not a runtime dependency. Contributor verification follows [acceptance/AGENTS.md](../../../../acceptance/AGENTS.md).
 
-The [plugin entry contract](../../PLUGIN-CONTRACT.md) governs the plugin's capability projection and entry routing. The coordinator is a standard skill entry and can define canonical orchestration guidance. Its entry and references must remain sufficient when `PLUGIN.md` is unavailable. Development contracts describe the architecture and its assessment; operational instructions remain in packaged owners.
+The [plugin entry contract](PLUGIN-CONTRACT-DRAFT.md) governs the plugin's capability projection and entry routing. The coordinator is a standard skill entry and can define canonical orchestration guidance. Its entry and references must remain sufficient when `PLUGIN.md` is unavailable. Development contracts describe the architecture and its assessment; operational instructions remain in packaged owners.
 
 ## Coordinator responsibilities
 
@@ -91,6 +91,6 @@ Start through `sdd-manage`, without requiring `PLUGIN.md`. Use ordinary project/
 | K-09 | Verified task/result committed but unpushed, including a clean worktree | Push/readback or scoped recovery precedes another work unit or commit |
 | K-10 | Ordinary revision versus nested child versus selected eligible reopening | Correct identity, parent suspension/return and closed-record preservation; child completion does not resume its parent |
 
-Use the [plugin contract cases](../../PLUGIN-CONTRACT.md#guidance-assessment-cases) and coordinator [examples](../../../../skills/sdd-manage/references/examples.md) for existing project situations. Add coordinator-specific facts or a new contrast only when the change introduces a distinction; avoid another complete prompt catalog.
+Use the [plugin contract cases](PLUGIN-CONTRACT-DRAFT.md#guidance-assessment-cases) and coordinator [examples](../../../../skills/sdd-manage/references/examples.md) for existing project situations. Add coordinator-specific facts or a new contrast only when the change introduces a distinction; avoid another complete prompt catalog.
 
 For source review, record inspected instructions and gaps. A selected consumer trial separately records exact source/model, initial context, prompt, loaded instructions, visible decisions and observed boundary. Do not supply reviewer expectations to the consumer. Correct routing alone does not prove HIL, task closure, tracking, Git publication or stopping behavior; those require observed execution evidence. Passing deterministic source checks does not establish live acceptance or universal client support.

@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001 through V-011 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001 through V-012 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -57,7 +57,7 @@ Executed after plan amendment `60aabd0bb23fd5595cc92f348ac2de6de17a9131` was pus
 | --- | --- |
 | [COORDINATOR-CONTRACT-DRAFT.md](COORDINATOR-CONTRACT-DRAFT.md) | Original mixed contract preserved byte-for-byte for provenance |
 | [skill-review.md](skill-review.md) | General entry/module responsibilities, composition/language/ownership/progressive-loading review, scope/context and assessment/evidence method; no SDD-specific rules or repository links |
-| [COORDINATOR-CONTRACT.md](COORDINATOR-CONTRACT.md) | SDD workflow selection/delegation, human document gates, task/push/tracking/integration/campaign boundaries, module coverage and K-01–K-10 specializations; applies general review by reference |
+| [COORDINATOR-CONTRACT.md](PLUGIN-CONTRACT.md#coordinator-responsibilities) | SDD workflow selection/delegation, human document gates, task/push/tracking/integration/campaign boundaries, module coverage and K-01–K-10 specializations; applies general review by reference |
 | [PROPOSED-REVISIONS.md](PROPOSED-REVISIONS.md) | Developing handoff: reading order, APA owner integration proposals, general-versus-domain boundaries and downstream verification; no claim of downstream implementation |
 
 The new contract repeats selected general concerns only to specify the coordinator's concrete obligations and handoff contrasts. It explains that rationale, while general composition, review procedure and evidence assessment remain in skill-review.md. The preserved draft is comparison material, not the APA integration candidate. All new files and record updates are within campaign 060; permanent contributor pointers remain absent.
@@ -133,3 +133,21 @@ Commit source and evidence together, push/read back and stop on the child branch
 ## Accepted plugin-review split and coordinator integration
 
 The human selected [V-012](REVISION-PLAN.md#v-012--plugin-review-abstraction-and-integrated-sdd-contract). Plan covers the relocated plugin draft, general plugin module, independently usable combined SDD contract and APA handoff/navigation. Publish/read back planning before source changes; no campaign closure or runtime revision selected.
+
+## V-012 — Plugin abstraction and integrated SDD contract
+
+Executed after plan checkpoint `84e1f254d1faa17134feb1a284fbda11a4b4ca80` was pushed/read back. Moved docs/dev/PLUGIN-CONTRACT.md into this campaign as PLUGIN-CONTRACT-DRAFT.md, preserving its full prose/structure while rebasing relative links. Created plugin-review.md for general plugin composition, integrated entry, optional coordination, cross-skill ownership/handoffs, context and evidence assessment. It has no SDD policy, project paths or external document dependency.
+
+The new PLUGIN-CONTRACT.md integrates SDD plugin-entry responsibilities and coordinator responsibilities, shared gates, canonical ownership, module coverage, entry organization and both C/K case sets. It remains usable without skill-review.md or plugin-review.md. Retired the redundant standalone COORDINATOR-CONTRACT.md; active links now route to the integrated coordinator section. The preserved coordinator draft retains its prose/structure with only its moved plugin links rebased. Original creation/abstraction evidence above remains historical; the current combined contract is the active domain document.
+
+Updated PROPOSED-REVISIONS.md with both generic integration candidates, plugin-design ownership, conditional routing and plugin/coordinator verification scope. APA remains unchanged. Updated contributor/capability-map and active index pointers because the current plugin contract moved; all new substantive documents stay in campaign 060.
+
+### Verification
+
+- Compared the plugin draft and coordinator draft with source `72ba2e3a5bec628f2a26826c24e88455d3cf2620`: only Markdown link destinations differ. Preserved all other prose and structure.
+- Checked every C-01–C-18 identity, C-10a/C-11a variant and K-01–K-10 contrast in the combined contract. All coordinator packaged-owner links are carried forward. Plugin entry, established-context and recovery groups retain separate starting conditions; coordinator cases retain direct entry without PLUGIN.md.
+- Inspected general/specific separation: optional coordinator responsibilities and plugin handoff criteria are abstracted; SDD HIL/task/Git/tracking/phase/campaign rules remain domain-specific. The general plugin module and combined contract are independently usable; neither requires the other.
+- Current campaign/contributor/capability-map link/anchor and spacing scan passed 146 local prose links; template/code examples excluded. Rechecked the final records after adding this evidence. Git whitespace and owned-path checks pass. Source navigation no longer targets the moved root contract or retired standalone coordinator file.
+- Compared all 134 packaged files with the campaign starting source: unchanged. No runtime skill/metadata/test, unrelated closed package, APA repository/cache, release or provider changes. Full suites and live acceptance were not run for source-development documentation only.
+
+Publish/read back source and evidence together. Campaign 060 remains open/unmerged under the human's instruction; parent 059 stays suspended.
