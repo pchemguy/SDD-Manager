@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001 through V-014 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001 through V-015 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -161,3 +161,7 @@ Exact section comparison passed. Updated the proposal’s module description and
 ## V-014 — Adapted plugin-entry rationale
 
 At the human’s instruction, retitled the restored section “Shared plugin entries and coordination” and adapted its wording to plugin-review.md. Preserved development/context benefits, bundle/integrated distinction, the shared PLUGIN.md entry and its non-standard loading requirement, optional coordination and reduced cross-skill coupling. The original rationale remains in PLUGIN-CONTRACT-DRAFT.md. Checked fidelity and heading/blank-line/Git spacing; no contract/runtime change. Publish/read back and retain 060 open/unmerged.
+
+## V-015 — Verified standard boundary and integrated paragraph
+
+Checked the English [Agent Plugins specification](https://agent-plugins.org/specification), published version 1.0.0, on 2026-10-14. Sections 6/7 define skill and MCP component discovery; the complete page has no PLUGIN.md match. The standard does not define that entry. Combined the three bundle/decomposition/shared-entry paragraphs into one, citing the standard and preserving the proposed integrated-plugin rationale without presenting it as a specification requirement. The optional coordinator paragraph remains separate. Checked resulting paragraph flow and Git whitespace. No runtime/contract changes. Publish/read back; 060 stays open/unmerged.

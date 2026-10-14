@@ -78,3 +78,7 @@ The human identified omission of the accepted Scope and motivation section. Rest
 ## V-014 — Adapt plugin-entry rationale wording
 
 The human authorized adapting the restored section’s title and wording. Use “Shared plugin entries and coordination” and revise for the general review module while preserving modularity benefits, independent versus integrated plugins, the shared-entry requirement/convention and optional coordinator path. Keep the original wording in the draft; publish/read back without closure.
+
+## V-015 — Verified standards point and integrated rationale paragraph
+
+Verify whether the published Agent Plugins specification defines PLUGIN.md, then combine the bundle/integrated decomposition/shared-entry paragraphs as requested. Separate the verified standards fact from the proposed architecture; preserve modularity benefits and optional coordinator paragraph. Publish/read back and retain open/unmerged scope.
