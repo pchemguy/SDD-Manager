@@ -117,3 +117,7 @@ Applied the human-supplied routing paragraph verbatim. Checked the exact replace
 ## Subsequent full-file critical text review
 
 Completed the requested [critical review](REVIEW-REPORT.md) of skill-review.md at `a485934fcb7eb9a52b6b4c4391b8941076e43eaa`: six located proposals (three medium, three low), whole-document coverage and bounded revision order. No module repairs or changes to the coordinator contract/draft were made. Checked active record links/spacing and owned diff; publish/read back and retain 060 open/unmerged with 059 suspended.
+
+## Accepted critical-text revision scope
+
+The human authorized the [V-011 plan](REVISION-PLAN.md#v-011--accepted-critical-text-revisions-r-001-through-r-006) accepting R-001 through R-006 from the critical review. Planning checkpoint precedes source editing; execution and source recheck follow. The approved purpose/routing text and open/unmerged boundary remain controlling.

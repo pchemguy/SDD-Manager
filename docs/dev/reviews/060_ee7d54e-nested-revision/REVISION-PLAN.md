@@ -53,3 +53,12 @@ Make the routing requirement and inventory checks explicitly identify `reference
 ## Focused critical text review
 
 The human requested another full-file critical review of skill-review.md. Assess the complete current text at `a485934fcb7eb9a52b6b4c4391b8941076e43eaa` for composition, organization, flow, duplication, wording and internal consistency. Record findings and bounded correction proposals in REVIEW-REPORT.md; do not infer remediation authority. Publish/read back the report and retain the open/unmerged boundary.
+
+## V-011 — Accepted critical-text revisions (R-001 through R-006)
+
+The human authorized planning and executing the six findings in [REVIEW-REPORT.md](REVIEW-REPORT.md), published at `009f8f20cc08860f5a2493d416983570dce63cce`. Accept all six for a coherent editorial revision of skill-review.md. Preserve the approved opening/routing paragraph, existing section hierarchy, `references/*.md` inventory scope and complete entry-only routing requirement. No runtime skills, coordinator contract/draft, APA repository or integration/closure changes.
+
+1. **Table and scope (R-001/R-002):** replace the inconsistent entry table with concern/review-criterion columns; remove the unbounded child-reference sentence. Retain local onward dependency review without introducing recursive entry inventory.
+2. **Cases and evidence method (R-003/R-004):** express comparable successful/deficient reference conditions, and distinguish analytical entry coverage from a selected entry-only consumer trial before reference exposure. No trial becomes mandatory.
+3. **Composition and voice (R-005/R-006):** keep full routing criteria in their dedicated subsection, shorten procedural repetition and local loading wording, phrase review criteria as assessments, and move dependency-inspection detail into verification. Preserve meaningful gate reminders and technical precision.
+4. **Recheck and handoff:** inspect all six objective rechecks, approved sentences, role/authority boundaries, section flow and absence of standard-teaching or SDD-only policy. Check campaign links/headings/spacing, exact unchanged coordinator/draft/package bytes and owned paths. Update report dispositions and APA proposal status, commit/push/read back source plus evidence and stop open/unmerged. Support/publisher suites and live acceptance are unnecessary for campaign-only text changes.
