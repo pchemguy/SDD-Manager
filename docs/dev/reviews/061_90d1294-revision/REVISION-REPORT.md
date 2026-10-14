@@ -1,6 +1,6 @@
 # Revision campaign opening
 
-Campaign **061_90d1294**. State: **Open; Executing accepted revision plan**.
+Campaign **061_90d1294**. State: **Revision verified; final main integration/publication establishes closure**.
 
 ## Baseline and branch
 
@@ -55,3 +55,29 @@ Aligned the source-only Jules prompt with read-only workflow loading and event-b
 ## A-006 — Combined source checks
 
 On candidate `dc6cdede3b25debd969521b9e0e0bd4169f2e1d4`, Python 3.12.14 ran 127 TextStats support tests and 30 publisher tests successfully, using the declared `jsonschema==4.26.0` from `/tmp/sdd-manifest-validation`. These deterministic tests do not establish live acceptance. The active-document scanner found one pre-existing consecutive blank separator in the changed coordinator examples; removed it within this action and rechecked affected current documents. No frozen record was altered. Native exact-committed package verification follows publication of this source correction; its outcome is not yet claimed here.
+
+## Final source scenario assessment
+
+Checked all twelve planned cases against the changed instructions and their consequential owners. These outcomes establish located source coverage, not observed agent execution.
+
+| Cases | Located instruction evidence | Source result |
+| --- | --- | --- |
+| S-01/S-02 | workflows.md: Workflow loading, steps 1–4; coordinator/PLUGIN routing; read-only Jules request | Generic loading returns actual sources, applicable stages/checkpoints and scope/next step without implicit project or hosted mutations |
+| S-03/S-04 | coordination.md: Scope checks and reporting detail; workflows.md continuity; examples.md loading/reporting | Current scope is checked while unchanged context and routine preambles need not be repeated; ordinary questions can receive direct answers |
+| S-05 | coordination.md scope paragraph; direct implementation/steering entry pointers | Both target path and proposed change must be in scope; unrelated behavior in an allowed path is withheld |
+| S-06/S-10 | coordination.md reporting paragraph; workflows.md loading step 3; examples.md minimal/explanation contrast | Reduced detail preserves consequential decisions, blockers, verification and checkpoints; explicit explanation/source requests remain mandatory |
+| S-07/S-09/S-11 | human-document-review.md steps 3–5; existing presented-state decision and dependency gates | Clarification/revision retains pending review; actual acceptance clears only presented scope and its authorized next step |
+| S-08 | workflows.md continuity step 3 and load/report step 4; existing revision/steering return gates | Preserve pending work, load applicable procedure before definitive reporting/action and do not resume a parent by implication |
+| S-12 | workflows.md recover/select steps; coordinator baseline cycle; PLUGIN context recovery | Recover discoverable evidence and ask only for the missing consequential authority/stop; never guess lost acceptance or range |
+
+## Verification and final boundary
+
+- Runtime/package candidate: `ea49546fef78c0dd2fb7b388ecde7233c6ed2923`. Native pinned offline core manifest and exact committed archive passed with 134 regular package files; only nine intended runtime files differ from the starting package. Source contract, capability map, Jules prompt and campaign records remain excluded.
+- All fifteen coordinator reference files have explicit entry links/loading conditions; no new module was introduced.
+- Fourteen affected current documents passed 254 local link/anchor and heading/consecutive-blank checks; the exact committed package passed 485 links/anchors across 92 entry/reference/README documents. Checks exclude closed campaign compatibility.
+- Regression evidence: 127 support tests and 30 publisher tests passed on Python 3.12.14 with declared pinned jsonschema 4.26.0. The subsequent source correction removes only one extra blank line; package/link evidence uses its committed state.
+- Entire campaign diff is confined to fifteen selected current/campaign paths. Closed campaign objects are untouched, and Git whitespace checks passed. No manifest/version, publisher, acceptance tooling or installed-package change occurred.
+- Every action checkpoint was pushed and remotely read back before subsequent work. Final plan/report/navigation persistence and integration still require their own publication.
+- Live acceptance, Jules/client trials, stronger/weaker-model comparisons, hosted tracking and releases were not run. Static consistency and deterministic tests do not establish their behavior.
+
+A-001 through A-006 are complete within the authorized source revision. The final two-parent merge into main must verify the actual merged package tree and regression/document checks, publish/read back the target and return a clean main worktree. This record's closure statement takes effect only at that verified integration/publication boundary; no post-closure historical repair is required.

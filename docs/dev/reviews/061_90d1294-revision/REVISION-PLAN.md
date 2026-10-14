@@ -6,7 +6,7 @@
 - Starting baseline: `90d1294639c665b7a134a0326dda48fc6e24812e`.
 - Inspected planning source: `95709ad3ecf85b703bc1346bf92ca4fc2f8b0fad`; runtime content is unchanged from the starting baseline.
 - Working branch: `revision/061_90d1294-revision`; eventual integration target: `main`.
-- State: **Prepared; execution not authorized by this planning request**.
+- State: **Executed after subsequent human authorization; final integration/publication establishes closure**.
 - Companion: [revision report](REVISION-REPORT.md).
 - Input: the human requested assessment of `docs/agents/jules/Workflow Loading.md`, accepted the integration direction, refined reporting requirements and requested this full plan.
 
@@ -146,3 +146,7 @@ These are planned source-assessment cases, not executed model trials. Evaluate b
 During later execution, commit each coherent revision action with its actual evidence/report update, push and verify remote containment before the next action or any other work. Use ordinary action IDs in campaign records; do not invent executable task IDs. Record any justified combined or split action boundaries while preserving publication cadence.
 
 Do not alter Git history, force-push, edit installed skills/plugins, revise APA, redesign acceptance tooling, generate a tracking registry/journal, add project TASKS, create a release, access hosted tracking or repair closed campaign records. Integration, if subsequently authorized, uses the established explicit two-parent merge, merged verification, target push/readback and campaign closure evidence.
+
+## Execution disposition
+
+The later human command authorized execution. A-001 through A-006 are implemented and source-checked in the [revision report](REVISION-REPORT.md); the original planning-only boundary above retains its historical meaning. Final campaign closure requires verified explicit integration into main and target publication. No live acceptance or model-strength comparison was performed.
