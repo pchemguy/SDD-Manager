@@ -11,7 +11,7 @@ This is a developing proposal package in SDD Manager campaign 060. It has not be
 | File | Role in the downstream revision |
 | --- | --- |
 | [skill-review.md](skill-review.md) | Primary general module proposed for APA's references; read after this proposal |
-| [COORDINATOR-CONTRACT.md](COORDINATOR-CONTRACT.md) | SDD Manager specialization demonstrating domain gates/owner cases; context for abstraction, not general APA policy |
+| [COORDINATOR-CONTRACT.md](COORDINATOR-CONTRACT.md) | Independent SDD Manager coordinator contract demonstrating domain gates/owner cases; context for abstraction, not general APA policy |
 | [COORDINATOR-CONTRACT-DRAFT.md](COORDINATOR-CONTRACT-DRAFT.md) | Preserved mixed source used for the split; provenance and comparison, not the integration candidate |
 | [REVISION-PLAN.md](REVISION-PLAN.md), [REVISION-REPORT.md](REVISION-REPORT.md) | Campaign authority, change/check evidence and current limitations |
 

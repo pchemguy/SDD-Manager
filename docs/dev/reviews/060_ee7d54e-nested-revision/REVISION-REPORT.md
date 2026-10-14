@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001/V-002/V-003 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001/V-002/V-003/V-004 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -69,3 +69,9 @@ Verified the draft against the prior committed contract: exact SHA-256 `e0bf3d30
 Compared all 134 packaged files with campaign starting Git blobs: unchanged. Runtime coordinator entry/references, tests and closed packages are untouched. The proposal distinguishes inspected installed APA structure from its unreviewed current repository and leaves downstream conformance/runtime checks to the receiving revision workflow. Full support/publisher suites, live acceptance and APA behavioral trials were not run for this campaign-only document action.
 
 Publish/read back this action and stop. Campaign **060 remains open and unmerged** under the explicit human instruction; parent 059 remains suspended.
+
+## V-004 — Independent coordinator contract
+
+Corrected V-003's dependency on the extracted general module after the human rejected that link. COORDINATOR-CONTRACT.md now defines its own coordinator scope, gate/owner review path and evidence requirements, with no link to or prerequisite on skill-review.md. Updated the proposal's file-role description to identify the independent coordinator contract. General composition guidance remains in skill-review.md; bounded coordinator-specific review instructions are sufficient for this contract's intended use.
+
+Checked current campaign links/anchors and Markdown spacing, and confirmed no general-module dependency remains in the coordinator contract. skill-review.md and the preserved draft retain their previous bytes; packaged source/tests and closed records are unchanged. No suites or behavioral trial required for this campaign-document correction. Publish/read back and stop with campaign 060 open/unmerged and parent 059 suspended.

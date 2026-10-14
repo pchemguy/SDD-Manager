@@ -2,7 +2,7 @@
 
 ## Scope
 
-This contract specializes [general skill review](skill-review.md) for [sdd-manage](../../../../skills/sdd-manage/SKILL.md). It defines the coordination responsibilities and SDD-specific boundaries that its entry must communicate and route to detailed owners. Apply the general module for composition, language, duplication, progressive loading, review method and evidence assessment.
+This contract defines the responsibilities, instruction boundaries and assessment cases for [sdd-manage](../../../../skills/sdd-manage/SKILL.md). Its entry must establish the next coordination decision, make shared SDD gates visible and route detailed procedures to their owners.
 
 These are campaign development documents. Runtime agents use packaged skill entries and references; contributor verification follows [acceptance/AGENTS.md](../../../../acceptance/AGENTS.md). The [plugin contract](../../PLUGIN-CONTRACT.md) governs PLUGIN.md's capability projection. The coordinator may own canonical orchestration guidance and must remain usable without that non-standard entry.
 
@@ -27,7 +27,7 @@ The coordinator establishes the development context and eligible stage, selects 
 | Assessment and steering stops | Review or impact assessment does not authorize repairs. A commanded steering amendment returns without resuming tasks; the human defines implementation ranges and what follows them. | [Review/revision](../../../../skills/sdd-manage/references/review-and-revision.md), `sdd-steer`, `sdd-implement` |
 | Campaign preservation | Nested children preserve parent suspension/source/return; closure does not resume the parent. Closed records remain frozen except a selected eligible reopening. | [Revision modes](../../../../skills/sdd-manage/references/revision-modes.md), [closed records](../../../../skills/sdd-conventions/references/review-campaigns.md#closed-campaign-records) |
 
-The general review module requires consequential gates to be visible; this table specifies which gates matter for SDD Manager. Repeating a short gate at a relevant handoff is justified because it constrains delegated work. Exact commit syntax, provider reconciliation, branch algorithms and eligibility/recovery procedures stay with their owners.
+These gates constrain delegated SDD work and must be visible before the dependent handoff. Repeating a short gate at that handoff is justified when it prevents a consequential coordination error. Exact commit syntax, provider reconciliation, branch algorithms and eligibility/recovery procedures stay with their owners.
 
 ## Coordinator module coverage and organization
 
@@ -42,7 +42,7 @@ A suitable entry progression is role → prominent coordination gates → baseli
 
 ## Coordinator assessment contrasts
 
-Apply the general review method with these SDD-specific cases, starting through `sdd-manage` without requiring PLUGIN.md. Use the [plugin cases](../../PLUGIN-CONTRACT.md#guidance-assessment-cases) and coordinator examples for project situations; add only the relevant coordinator context. Cases specify source-review concerns, not claims of live acceptance.
+Start through `sdd-manage` without requiring PLUGIN.md. For each affected path, inspect the entry and responsible owners together: establish what evidence and human decision select the path, which shared gates precede the handoff, and which result or blocker returns control. Check that the selected module becomes available before its dependent action. Use the [plugin cases](../../PLUGIN-CONTRACT.md#guidance-assessment-cases) and coordinator examples for project situations; add the relevant coordinator context. Cases specify source-review concerns, not claims of live acceptance.
 
 | Case | Contrast | Coordinator consequence |
 | --- | --- | --- |
@@ -57,4 +57,4 @@ Apply the general review method with these SDD-specific cases, starting through 
 | K-09 | Verified closing commit unpushed / published checkpoint | Publication/recovery before any new work, even with a clean tree |
 | K-10 | Ordinary revision / nested child / eligible reopening | Identity, suspended parent return and frozen-record boundary |
 
-These cases specialize generic authority, continuity and completion contrasts with SDD stage/owner evidence. This limited overlap keeps the coordinator obligations assessable without reproducing the general composition checklist or every workflow procedure. Entry revisions should also recheck affected PLUGIN.md/capability projections; this contract does not require enlarging them automatically.
+For each assessed case, retain the actual source and starting context, selected stage/owner, gate evidence, visible decision and reached boundary. Source consistency does not prove observed HIL, task publication, tracking or stopping behavior; report unexecuted behavior separately. Entry revisions should also recheck affected PLUGIN.md/capability projections without automatically enlarging them.
