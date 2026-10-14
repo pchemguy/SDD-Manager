@@ -19,3 +19,7 @@ Live acceptance remains excluded. Prior closed records and packaged source remai
 ## Opening verification
 
 The highest prior repository-wide reservation was 059. Source and published parent SHA agree; worktree was clean. New active record links/heading spacing and the owned opening diff were checked. Publish/read back this opening before dependent work. No support suite or live trial is needed for campaign setup only.
+
+## Accepted contract scope
+
+The human subsequently requested creation of COORDINATOR-CONTRACT.md. [Revision plan](REVISION-PLAN.md) defines V-001: source-only contract and contributor navigation, with bounded documentation checks. Earlier scope-pending opening evidence remains historical. Current state: planned; child open, parent suspended. Coordinator source repair and final integration remain unselected.
