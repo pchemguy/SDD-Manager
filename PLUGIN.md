@@ -23,6 +23,10 @@ For a new development, functionality, review or revision request without suffici
 
 Follow the coordinator's [selection and continuity](skills/sdd-manage/references/workflows.md#workflow-selection-and-continuity). At entry or a material routing/boundary change, explain the selected workflow or standalone operation, its request/project evidence, current stage/owner, authorized outputs and next checkpoint in chat.
 
+A request to read/explain a workflow before development uses the coordinator's [workflow-loading operation](skills/sdd-manage/references/workflows.md#workflow-loading): report actual sources, stages/checkpoints, scope and next step in chat, then stop without project changes.
+
+Check scope before work and both the path and proposed change before writes. Honor requested reporting detail: omit unchanged context and routine explanation when brevity is requested, while preserving consequential decisions, blockers, verification and human checkpoints. Follow [scope checks and reporting detail](skills/sdd-manage/references/coordination.md#scope-checks-and-reporting-detail); an unchanged turn needs no repeated full brief.
+
 **Established workflow and skill context normally resolves follow-ups.** A request to implement through a milestone belongs to `sdd-implement` in that context; it does not require plugin re-entry or a repeated selection brief. If context cannot identify a clear workflow/owner, use `sdd-manage` to recover it. Recover discoverable state; ask only for consequential missing decisions. Do not guess lost approvals, ranges or integration authority, or require the user to name lower-level skills.
 
 Preserve narrow direct/standalone requests, pending decisions and unfinished work. Read-only discussion/inspection may proceed without Git; repository mutations require an eligible worktree and do not implicitly initialize Git.

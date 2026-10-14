@@ -51,6 +51,10 @@ Completed incorporated feature sources are retained under `docs/dev/features/<ca
 
 Steering is the lightweight human-directed revision variant at a paused implementation checkpoint. It directly amends existing documents and implemented behavior without feature overlays or a mandatory formal campaign, integrates into the paused branch, and returns control without resuming the task list. Shared verification/persistence/integration rules remain applicable; taxonomy alone grants no extra scope.
 
+## Workflow loading and reporting
+
+`sdd-manage` owns [read-only workflow loading](../../skills/sdd-manage/references/workflows.md#workflow-loading): explain selected sources actually read, stages/checkpoints, authorized scope and next step in chat without project preparation or mutation. Its [scope/reporting protocol](../../skills/sdd-manage/references/coordination.md#scope-checks-and-reporting-detail) checks current authority before work and both path/change before writes. Event-based briefs and requested reporting detail preserve consequential decisions, evidence and human checkpoints; clarification does not accept an artifact. PLUGIN.md projects these instructions, while direct coordinator entry remains sufficient.
+
 ## Document ownership
 
 | Document | Canonical responsibility |

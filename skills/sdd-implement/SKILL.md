@@ -9,6 +9,8 @@ For Markdown output or document work within this skill's scope, apply the shared
 
 Execute the user's requested task-list boundary. **sdd-manage** coordinates authorization, prerequisites, and focused capabilities; an implementation request authorizes work within its established scope without repeated confirmation for routine steps. Use a current **sdd-orient** handoff at startup for repository instructions, Git and task state, dirty-path ownership, and environment. Read the relevant references: Load [environment recovery](references/environment-recovery.md) when installation/runtime facilities block selected work; load its browser guidance only for relevant browser checks.
 
+Apply the coordinator's [scope checks and reporting detail](../sdd-manage/references/coordination.md#scope-checks-and-reporting-detail), including direct calls: check scope/pending decisions before work and both path/change before writes; requested brevity preserves consequential evidence and checkpoints.
+
 | Work | Load |
 | --- | --- |
 | Push outstanding commits, resume pending work, and select the range | [startup and continuation](references/startup-and-continuation.md) |

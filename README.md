@@ -50,6 +50,7 @@ The [canonical workflow model](skills/sdd-manage/references/workflows.md#core-de
 
 | Objective | Example request | Result |
 | --- | --- | --- |
+| Read a workflow before development | “Explain the greenfield workflow and its approval checkpoints; do not start development.” | Sources read, applicable stages/checkpoints, scope and next step in chat; no project changes. |
 | Explore and prepare a project | “Compare approaches, then prepare the project through TASKS.” | Accepted design, behavior, delivery strategy, physical ownership, and executable tasks. |
 | Prepare a feature | “Define ZIP support and its feature task list.” | Scoped requirements and the necessary feature design, plan, and tasks. |
 | Implement a range | “Implement the next three tasks and stop.” | Verified task commits on the phase/feature branch; incomplete phases pause, while eligible complete boundaries explicitly integrate and publish. |
@@ -66,6 +67,8 @@ The [canonical workflow model](skills/sdd-manage/references/workflows.md#core-de
 | Synchronize GitHub tracking | “Create issues and milestones for these tasks.” | Phase labels, milestones, task issues, and verified task associations. |
 
 Preparation and review stop before implementation unless your request includes it. Steering finishes the amendment and returns control to you; you separately decide when to resume the task list. Transferring feature tasks into the main task list requires both lists in scope so each task retains one executable owner.
+
+You can ask for concise updates or fuller explanations. The agent reports scope at entry or material changes and preserves decisions, blockers, verification results and human checkpoints without repeating unchanged context on every response. Reduced reporting detail does not change workflow requirements.
 
 For detailed entry conditions and stopping rules, see the [workflow catalog](skills/sdd-manage/references/workflows.md).
 
