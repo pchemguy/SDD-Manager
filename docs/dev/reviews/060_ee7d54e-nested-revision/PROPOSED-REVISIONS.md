@@ -4,7 +4,7 @@
 
 Extend Agent Package Author with review modules for skills/references and plugin-level composition, routing, composite workflows and optional coordination. Its current skill-design and validation guidance already covers parts of this subject; integrate the proposed material with those owners instead of maintaining parallel instructions. Use existing APA format guidance for conformance; skill-review.md and plugin-review.md supply assessment criteria. The plugin module explains the custom-entry boundary where relevant without turning the skill module into a standard-format introduction.
 
-This is a developing proposal package in SDD Manager campaign 060. It has not been integrated into Agent Package Author, installed or behaviorally accepted. All supplied files remain here until the human selects transfer/integration. This document records the proposed downstream scope; the receiving agent must establish its actual repository, instructions and authorized effects before execution.
+This is a developing proposal package in SDD Manager campaign 060. It has not been integrated into Agent Package Author, installed or behaviorally accepted. The review modules, proposal and provenance remain in this campaign; the accepted SDD contract is maintained at docs/dev/PLUGIN-CONTRACT.md. APA transfer/integration remains unselected. This document records the proposed downstream scope; the receiving agent must establish its actual repository, instructions and authorized effects before execution.
 
 ## Package contents and reading order
 
@@ -12,7 +12,7 @@ This is a developing proposal package in SDD Manager campaign 060. It has not be
 | --- | --- |
 | [skill-review.md](skill-review.md) | Shared criteria plus distinct entry/reference review sections, proposed for APA's references; read after this proposal |
 | [plugin-review.md](plugin-review.md) | General plugin composition, PLUGIN.md rationale, shared-entry and coordinator review; second APA integration candidate |
-| [PLUGIN-CONTRACT.md](PLUGIN-CONTRACT.md) | Independent SDD Manager contract integrating plugin-entry and coordinator responsibilities/cases; domain example, not APA policy |
+| [PLUGIN-CONTRACT.md](../../PLUGIN-CONTRACT.md) | Independent SDD Manager contract integrating plugin-entry and coordinator responsibilities/cases; domain example, not APA policy |
 | [PLUGIN-CONTRACT-DRAFT.md](PLUGIN-CONTRACT-DRAFT.md) | Relocated original plugin contract; provenance and abstraction source, not an integration candidate |
 | [COORDINATOR-CONTRACT-DRAFT.md](COORDINATOR-CONTRACT-DRAFT.md) | Preserved mixed source used for the split; provenance and comparison, not the integration candidate |
 | [REVISION-PLAN.md](REVISION-PLAN.md), [REVISION-REPORT.md](REVISION-REPORT.md) | Campaign authority, change/check evidence and current limitations |

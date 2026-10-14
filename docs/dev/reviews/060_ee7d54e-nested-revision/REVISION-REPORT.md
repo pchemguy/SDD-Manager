@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001 through V-019 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001 through V-027 complete; child integration/publication pending**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -57,7 +57,7 @@ Executed after plan amendment `60aabd0bb23fd5595cc92f348ac2de6de17a9131` was pus
 | --- | --- |
 | [COORDINATOR-CONTRACT-DRAFT.md](COORDINATOR-CONTRACT-DRAFT.md) | Original mixed contract preserved byte-for-byte for provenance |
 | [skill-review.md](skill-review.md) | General entry/module responsibilities, composition/language/ownership/progressive-loading review, scope/context and assessment/evidence method; no SDD-specific rules or repository links |
-| [COORDINATOR-CONTRACT.md](PLUGIN-CONTRACT.md#coordinator-responsibilities) | SDD workflow selection/delegation, human document gates, task/push/tracking/integration/campaign boundaries, module coverage and K-01–K-10 specializations; applies general review by reference |
+| [COORDINATOR-CONTRACT.md](../../PLUGIN-CONTRACT.md#coordinator-responsibilities) | SDD workflow selection/delegation, human document gates, task/push/tracking/integration/campaign boundaries, module coverage and K-01–K-10 specializations; applies general review by reference |
 | [PROPOSED-REVISIONS.md](PROPOSED-REVISIONS.md) | Developing handoff: reading order, APA owner integration proposals, general-versus-domain boundaries and downstream verification; no claim of downstream implementation |
 
 The new contract repeats selected general concerns only to specify the coordinator's concrete obligations and handoff contrasts. It explains that rationale, while general composition, review procedure and evidence assessment remain in skill-review.md. The preserved draft is comparison material, not the APA integration candidate. All new files and record updates are within campaign 060; permanent contributor pointers remain absent.
@@ -254,3 +254,13 @@ Assessed the quoted paragraph at `0811c4e45e2bfc202cee97d515b77eb8747e6edf` agai
 | Consequential obligations before dependent work, without competing procedure copies | Prominent obligations/composite questions; coordinator Entry/module structure, Delegation and closing handoff-owner instructions; shared ownership/concision review |
 
 Source inspection confirms coverage in the operative review sections without relying on the introduction. The SDD contract remains independent through its layer table, actual shared gates, canonical-source-first/relocation checks and direct-coordinator cases; no general-module dependency introduced. Exact scoped removal preserves all other contract text and C/K cases. General rationale, optional coordination and non-skill applicability remain unchanged. Scoped Markdown/link and four-file preservation checks pass. Publish/read back; 060 remains open/unmerged for human review, 059 suspended. No runtime or behavioral validation claimed.
+
+## V-027 — Permanent contract and accepted closure boundary
+
+The human accepted final review and authorized closure into 059 followed by parent resumption/completion. Restored the accepted contract to docs/dev/PLUGIN-CONTRACT.md, rebasing only links; repaired current campaign/contributor/capability navigation and proposal location status. Review modules, handoff and preserved drafts remain in 060 for later APA work. No APA integration or runtime coordinator repair occurs in this child.
+
+Contract prose/structure and accepted review modules are preserved. Check active links/spacing, unchanged package and prior closed files, and the support/publisher suites before final child publication/integration. Final two-parent closure targets revision/059_937ec6c-coordinator-entry-review; parent baseline is the published ee7d54ef5f8516cfcf6232366929e3eb64e5e3ab. Child opening remains 1499773494f91f7504b1e974516b35e2b3737d91. Closure requires target checks/publication/readback; then parent resumption uses its own retained evidence.
+
+### V-027 final child checks
+
+Contract relocation preserves all prose/structure; only owner/self links are rebased. Active contributor/capability/index/campaign checks pass: 13 documents, 315 local prose links/anchors, heading/blank-line and Git whitespace. All 134 package blobs match the parent starting source; earlier closed files remain unchanged. Support suite: 127 tests passed on Python 3.12.14. Publisher first attempt stopped with missing jsonschema; installed declared jsonschema 4.26.0 and dependencies under /tmp/sdd-manifest-validation, then the 30-test publisher suite passed. No source repair was needed for that environment prerequisite. No live/model/provider acceptance or APA integration.
