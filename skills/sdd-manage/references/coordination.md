@@ -3,7 +3,7 @@
 ## Establish scope and prerequisites
 
 - **Request:** Capture the objective, inspection or mutation mode, target paths or documents, owning task list, selected boundary and allowed external effects. Carry the selected core workflow/variant or standalone operation, decision basis and continuation/stage-change/switch disposition under [workflow selection and continuity](workflows.md#workflow-selection-and-continuity). Reuse session authorization and decisions.
-- **Orientation:** Start with **sdd-orient**. Use its observed repository, applicable instructions, baseline, pending changes, tooling, and task evidence. Do not mistake an unchecked task or latest maintenance commit for a proven execution boundary.
+- **Orientation:** Reuse a sufficient current **sdd-orient** handoff; obtain scoped observations where relevant evidence is missing or stale. Establish the repository, applicable instructions, baseline, pending changes, tooling and task evidence before selecting/reporting the path. Do not mistake an unchecked task or latest maintenance commit for a proven execution boundary.
 - **Git:** Require an eligible worktree for repository mutations. Outside Git, continue discussion or inspection and report the mutation blocker; do not initialize a repository implicitly.
 - **Pending work:** Establish ownership of dirty paths. Preserve unrelated staged and unstaged changes. Do not reset because the tree is dirty. Pass interrupted task implementation to **sdd-implement**, document incorporation to **sdd-integrate-feature**, and commanded amendment continuation to **sdd-steer**; if it lies outside the requested new scope, resolve that conflict before overlapping mutations.
 - **Inputs:** Confirm the authoritative requirements, design, strategy, and layout needed by the selected stage. File presence alone does not establish acceptance or consistency.
@@ -39,7 +39,7 @@ Use this procedure for document preparation, accepted integration, and standalon
 
 ## Return results
 
-Use **sdd-report** for the result format. Include the fulfilled objective and affected artifacts or task IDs, observed verification and gaps, commits and push status when applicable, hosted changes or pending reconciliation, unresolved decisions, and the boundary reached. Keep planned work distinct from implemented functionality. No extra workflow-state artifact is required: current documents, task evidence, Git, and applicable session decisions supply continuation context.
+Use **sdd-report** for the result format. Include the fulfilled objective and affected artifacts or task IDs, observed verification and gaps, commits and push status when applicable, hosted changes or pending reconciliation, unresolved decisions, and the boundary reached. Keep planned work distinct from implemented functionality. No extra workflow-state artifact is required: current documents, task evidence, Git, and applicable session decisions supply continuation context. Do not require a transaction journal, recovery directory, extra issue map or a new skill for interruption recovery.
 
 ## Diagnostic and findings handoff
 
