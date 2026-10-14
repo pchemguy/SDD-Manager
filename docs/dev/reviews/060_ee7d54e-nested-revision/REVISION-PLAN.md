@@ -136,3 +136,7 @@ Executed as the planned coherent document unit. All accepted findings and parent
 ## V-021 — Composition-review questions as a nested list
 
 Address the human's format feedback on plugin-review.md, Plugin composition and ownership. The section groups questions by concern rather than comparing values; replace its table with bold category bullets and one nested bullet per question. Preserve all seven categories and fourteen question strings, their order, qualifications and following ownership/concision paragraph. Four-space nesting follows the Markdown convention. This is a local presentation revision within the open human-review stage, not another full review or policy change. Check exact content preservation, surrounding structure/spacing and three-file owned scope; commit source and evidence, push/read back and remain open/unmerged for human review.
+
+## V-022 — Entry and coordinator questions as nested lists
+
+The human accepted the proposed matching list format for Integrated plugin entry review and Coordinator review in plugin-review.md. Convert each category to a bold top-level bullet and each question to a four-space-indented child; preserve all twelve categories, twenty questions, order and surrounding applicability/ownership/continuity prose. Verify exact source fidelity, Markdown spacing and three-file scope, then commit/push/read back. Retain 060 open/unmerged for human review, 059 suspended; no broader rewrite or finalization.

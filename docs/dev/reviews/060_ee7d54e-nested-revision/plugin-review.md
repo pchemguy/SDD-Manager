@@ -55,14 +55,21 @@ For repeated guidance, identify its canonical owner and the decision protected b
 
 Apply this section when the plugin uses `PLUGIN.md` as its shared workflow entry. Assess its stated purpose, loading path and fallback. Essential operations must remain reachable through their supported entries or interfaces and operational owners when `PLUGIN.md` is unavailable.
 
-| Entry concern | Review criterion |
-| --- | --- |
-| Orientation and coordinator pointer | Does the entry identify the plugin's capability system, relevant common prerequisites and any coordinator, with a clear condition for loading it? |
-| Request-to-capability routing | Can an agent resolve ordinary requests to a supported owner or path from entry guidance, without opening all skill procedures or asking the user to name internals? |
-| Composite summaries | Are purpose/trigger, principal owners, outputs, consequential handoffs and stops clear, without repeating every execution procedure? |
-| Prominent obligations | Are shared authority, acceptance, persistence or other domain constraints visible before the actions they govern? Are detailed gates linked to their owners? |
-| Projection and source fidelity | Do summaries agree with operational owners? Does any essential rule exist only in `PLUGIN.md`? |
-| Established context | Can follow-ups remain with an already active owner? Does unclear interpretation route to appropriate recovery rather than restart discovery or guess missing decisions? |
+- **Orientation and coordinator pointer**
+    - Does the entry identify the plugin's capability system, relevant common prerequisites and any coordinator, with a clear condition for loading it?
+- **Request-to-capability routing**
+    - Can an agent resolve ordinary requests to a supported owner or path from entry guidance, without opening all skill procedures or asking the user to name internals?
+- **Composite summaries**
+    - Are purpose/trigger, principal owners, outputs, consequential handoffs and stops clear, without repeating every execution procedure?
+- **Prominent obligations**
+    - Are shared authority, acceptance, persistence or other domain constraints visible before the actions they govern?
+    - Are detailed gates linked to their owners?
+- **Projection and source fidelity**
+    - Do summaries agree with operational owners?
+    - Does any essential rule exist only in `PLUGIN.md`?
+- **Established context**
+    - Can follow-ups remain with an already active owner?
+    - Does unclear interpretation route to appropriate recovery rather than restart discovery or guess missing decisions?
 
 Keep workflow entry, established-context use and missing-context recovery distinct. A plugin entry can establish the owner needed for subsequent requests without interpreting every later task itself. A capability directory and a workflow summary serve different selection questions; neither should silently become a second full procedure catalog.
 
@@ -70,14 +77,23 @@ Keep workflow entry, established-context use and missing-context recovery distin
 
 Apply this section when the plugin includes coordination. Assess the coordinator as part of the plugin's architecture and inspect its relevant entry/modules; do not presume a particular name, branch model, backend or mandatory approval sequence.
 
-| Coordinator concern | Review criterion |
-| --- | --- |
-| Selection and continuity | Does it establish or reuse sufficient evidence before selecting a path and communicating the decision and its basis at consequential boundaries? Can it reuse an applicable workflow or recognize a material change without duplicate orientation or routine restart? |
-| Shared readiness | Does it establish the prerequisites and human decisions needed by the next owner, keeping authority, readiness and performed state distinct? |
-| Delegation | Are responsible skills and handoff inputs/effects/expected results clear? Does the coordinator preserve focused ownership instead of reimplementing each skill? |
-| Boundaries across handoffs | Do scope, unresolved acceptance, requested stops and actual authorization survive transitions and recovery? Can a child operation finish without automatically resuming its parent? |
-| Results and blockers | Does it collect actual evidence, reconcile blockers and return the correct completion boundary? Are unavailable capabilities and uncertain external effects reported rather than assumed complete? |
-| Entry/module structure | Are general coordination decisions visible in the coordinator entry, with conditional detail under accessible owners? Does moving procedure out of the entry preserve required pre-action guidance? |
+- **Selection and continuity**
+    - Does it establish or reuse sufficient evidence before selecting a path and communicating the decision and its basis at consequential boundaries?
+    - Can it reuse an applicable workflow or recognize a material change without duplicate orientation or routine restart?
+- **Shared readiness**
+    - Does it establish the prerequisites and human decisions needed by the next owner, keeping authority, readiness and performed state distinct?
+- **Delegation**
+    - Are responsible skills and handoff inputs/effects/expected results clear?
+    - Does the coordinator preserve focused ownership instead of reimplementing each skill?
+- **Boundaries across handoffs**
+    - Do scope, unresolved acceptance, requested stops and actual authorization survive transitions and recovery?
+    - Can a child operation finish without automatically resuming its parent?
+- **Results and blockers**
+    - Does it collect actual evidence, reconcile blockers and return the correct completion boundary?
+    - Are unavailable capabilities and uncertain external effects reported rather than assumed complete?
+- **Entry/module structure**
+    - Are general coordination decisions visible in the coordinator entry, with conditional detail under accessible owners?
+    - Does moving procedure out of the entry preserve required pre-action guidance?
 
 The shared plugin entry may project coordinator behavior; the coordinator may own canonical orchestration instructions. Do not impose the projection-only rule on that canonical owner. Inspect both sides of a consequential handoff and identify which layer selects, establishes readiness, executes, verifies and returns control. Ordinary context reuse and recovery must not depend on `PLUGIN.md` being loaded again.
 
