@@ -116,3 +116,19 @@ State: **Amendment active**. The human authorized proactive profile announcement
 ### A-009 — Explicit composite bootstrap implemented
 
 Coordination now owns temporary Explicit reporting during composite entry, material switching and context reconstruction, proactive level/profile discovery and declaration of subsequent Standard or an established human selection before dependent work. Known preferences are preserved; unknown preferences use an announced fallback. Scope-specific human limits remain controlling. Blocked recovery preserves approval/range uncertainty; routine continuation/minor refresh/task handoffs do not restart bootstrap. Reconciled selected routing/projections, human/developer guidance, examples and the source-only prompt without introducing a new module or state file. Checked affected links/spacing and Git whitespace; source checks do not establish live model behavior. Publish/read back before A-010.
+
+### A-010 — Fresh bootstrap amendment verification
+
+Candidate `50c416c21df2ad3984c1ed9d2ffe7938f796e811` passed 127 support and 30 publisher tests on Python 3.12.14 with pinned jsonschema 4.26.0. Native manifest/exact committed archive passed with 134 files and all fifteen coordinator references routed. Packaged Markdown passed 491 local link/anchor checks across 92 documents; eleven affected current documents passed 243 links/anchors and heading/consecutive-blank checks. Source-only prompt, contract and campaign remain outside the package. Git whitespace passed; the amendment changes no other closed campaign.
+
+Source-assessed contrasts in coordination.md's composite bootstrap section and its entry/workflow/example projections:
+
+- Initial composite entry: proactively announce Explicit, explain the three levels and switching, then state Standard for dependent work.
+- Known Minimal or Explicit preference: temporary setup detail preserves the selected subsequent profile and announces the return.
+- Material workflow switch: use the bootstrap disclosure while preserving pending work, authority and return boundaries.
+- Context reconstruction: known preference is retained; unrecoverable preference uses an announced Standard fallback without guessing lost approvals/ranges.
+- Routine continuation, task handoff or minor refresh: no restarted bootstrap/profile introduction.
+- Blocked recovery: state known context and missing consequential decision; no dependent work is implied.
+- Specific human bootstrap-reporting limit: honor its actual scope without relaxing operational requirements.
+
+A-009/A-010 are source-verified; observed model/client compliance remains unrun. These fresh checks are separate from earlier closures and their historical evidence. **Renewed closure requires the verified explicit amended-tip merge into main, merged checks, target push/readback and clean return.** Preserve original opening/baseline, both prior integrations and reopening checkpoint `c29eb70de301da68a4fa9d28cd3d29d4e71e05a4` in the cumulative summary.
