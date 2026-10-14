@@ -10,16 +10,34 @@ Apply Shared review criteria to both artifact types, then the relevant Skill ent
 
 ## Shared review criteria
 
-| Dimension | Assess |
-| --- | --- |
-| Purpose and scope | Does the artifact serve its stated capability or local responsibility? Do contents, assumptions and boundaries agree with that purpose? |
-| Document structure | Do sections have clear purposes and a useful order? Does the organization fit a procedure, explanation, contract or example? Do headings improve navigation without fragmenting short material? |
-| Paragraphs and steps | Does each paragraph or step have one controlling concern? Are prerequisites, explanations and exceptions grouped with the action they govern? Are overload, topic drift or unexplained scope changes present? |
-| Language and precision | Are conditions, actors, pronouns and terms unambiguous? Does redundant wording obscure the meaning? Are identifiers, evidence, quantities, uncertainty and technical distinctions stated accurately? |
-| Duplication and ownership | Does repetition support lookup, sequence or a boundary, or reproduce another owner's procedure? Are shared rules maintained consistently and needed details at a clear destination? |
-| Progressive discovery | Can the agent identify what to load next and why? Are necessary modules directly discoverable, available within the applicable package and sufficient when loaded under their stated prerequisites? |
-| Authority and continuity | Are assessment and execution distinguished where relevant? Can sufficient existing context be reused? Are missing decisions, interrupted work and request changes handled without guessing authority? |
-| Completion and evidence | Do instructions define observable outputs and the requested stop? Are planned, performed, verified, persisted and externally observed states distinguished where applicable? |
+- **Purpose and scope**
+    - Does the artifact serve its stated capability or local responsibility?
+    - Do contents, assumptions and boundaries agree with that purpose?
+- **Document structure**
+    - Do sections have clear purposes and a useful order?
+    - Does the organization fit a procedure, explanation, contract or example?
+    - Do headings improve navigation without fragmenting short material?
+- **Paragraphs and steps**
+    - Does each paragraph or step have one controlling concern?
+    - Are prerequisites, explanations and exceptions grouped with the action they govern?
+    - Are overload, topic drift or unexplained scope changes present?
+- **Language and precision**
+    - Are conditions, actors, pronouns and terms unambiguous?
+    - Does redundant wording obscure the meaning?
+    - Are identifiers, evidence, quantities, uncertainty and technical distinctions stated accurately?
+- **Duplication and ownership**
+    - Does repetition support lookup, sequence or a boundary, or reproduce another owner's procedure?
+    - Are shared rules maintained consistently and needed details at a clear destination?
+- **Progressive discovery**
+    - Can the agent identify what to load next and why?
+    - Are necessary modules directly discoverable, available within the applicable package and sufficient when loaded under their stated prerequisites?
+- **Authority and continuity**
+    - Are assessment and execution distinguished where relevant?
+    - Can sufficient existing context be reused?
+    - Are missing decisions, interrupted work and request changes handled without guessing authority?
+- **Completion and evidence**
+    - Do instructions define observable outputs and the requested stop?
+    - Are planned, performed, verified, persisted and externally observed states distinguished where applicable?
 
 Length is a diagnostic signal, not a defect or an acceptance ceiling. Assess information needed by the intended models, including less capable or local models. A shorter entry or reference can lose necessary context or decision guidance. Report byte/word measures as such; token, cost or behavioral improvement claims require an identified method and evidence.
 
@@ -29,13 +47,11 @@ For repeated guidance, identify the canonical owner and the reason for each copy
 
 Check that information required to choose the next module or respect an immediate constraint is available before that choice or action. A correct instruction discovered only after its dependent action is insufficient. Do not require every reference to be loaded at startup or make essential instructions depend on an unavailable custom entry.
 
-| Concern | Review criterion |
-| --- | --- |
-| Purpose and activation | Do metadata and entry agree on the supported capability, triggers, outputs and scope exclusions? |
-| Inputs and starting state | Are required inputs and readiness conditions clear, with a usable path for missing information? |
-| Paths and variants | Are selection conditions, principal paths and the next instructions clear? |
-| Authority and completion | Are permitted effects, applicable acceptance gates and the stopping point explicit? |
-| Dependencies | Are necessary facilities identified, with appropriate handling of an unavailable tool or owner? |
+- **Purpose and activation:** Do metadata and entry agree on the supported capability, triggers, outputs and scope exclusions?
+- **Inputs and starting state:** Are required inputs and readiness conditions clear, with a usable path for missing information?
+- **Paths and variants:** Are selection conditions, principal paths and the next instructions clear?
+- **Authority and completion:** Are permitted effects, applicable acceptance gates and the stopping point explicit?
+- **Dependencies:** Are necessary facilities identified, with appropriate handling of an unavailable tool or owner?
 
 ### Reference routing coverage
 
@@ -55,14 +71,25 @@ Compare the `references/*.md` inventory with the routing section to detect omiss
 
 Review a reference’s local responsibility, required context and relationships with other modules. Apply scope, continuity, output and stopping criteria according to its role: an executable sub-workflow needs operational boundaries; a terminology guide needs consistent definitions and useful coverage. Do not impose an execution sequence on explanatory material.
 
-| Module concern | Assess |
-| --- | --- |
-| Local purpose and cohesion | Does the module cover a coherent procedure or subject? Do sections develop that purpose rather than accumulate unrelated instructions? Is a split justified by independent use or loading conditions, rather than length alone? |
-| Scope and ownership | Are the module's decisions, effects or subject boundaries clear? Does it overlap or conflict with neighboring owners, or introduce a skill-wide rule without an appropriate entry/owner route? |
-| Required context | Can it be understood with its required prior instructions and inputs? Are consequential assumptions or prerequisites available before use? Identify missing context without requiring every module to be independently self-contained. |
-| Loading and onward routing | Does the module agree with its caller’s stated purpose and use conditions? Are its onward dependencies discoverable before use, without unnecessary chains or unrelated loading? |
-| Result and return | For a procedure, are its result, stop and return/next owner clear? For guidance, contracts or examples, is the information sufficient for its intended decision or use, with illustrative content distinguished from operative instructions? |
-| Shared content | Is reused guidance maintained by a clear owner? Does a local reminder protect a prerequisite or boundary, or copy a substantial procedure whose versions can diverge? |
+- **Local purpose and cohesion**
+    - Does the module cover a coherent procedure or subject?
+    - Do sections develop that purpose rather than accumulate unrelated instructions?
+    - Is a split justified by independent use or loading conditions, rather than length alone?
+- **Scope and ownership**
+    - Are the module's decisions, effects or subject boundaries clear?
+    - Does it overlap or conflict with neighboring owners, or introduce a skill-wide rule without an appropriate entry/owner route?
+- **Required context**
+    - Can it be understood with its required prior instructions and inputs?
+    - Are consequential assumptions or prerequisites available before use? Identify missing context without requiring every module to be independently self-contained.
+- **Loading and onward routing**
+    - Does the module agree with its caller’s stated purpose and use conditions?
+    - Are its onward dependencies discoverable before use, without unnecessary chains or unrelated loading?
+- **Result and return**
+    - For a procedure, are its result, stop and return/next owner clear?
+    - For guidance, contracts or examples, is the information sufficient for its intended decision or use, with illustrative content distinguished from operative instructions?
+- **Shared content**
+    - Is reused guidance maintained by a clear owner?
+    - Does a local reminder protect a prerequisite or boundary, or copy a substantial procedure whose versions can diverge?
 
 Inspect the relevant caller and neighboring modules when a local change affects loading, shared state, scope or a handoff. Keep the review bounded: tracing that interface does not require auditing every reference or restarting the whole skill.
 
