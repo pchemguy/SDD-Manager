@@ -14,6 +14,7 @@ This is a developing proposal package in SDD Manager campaign 060. It has not be
 | [COORDINATOR-CONTRACT.md](COORDINATOR-CONTRACT.md) | Independent SDD Manager coordinator contract demonstrating domain gates/owner cases; context for abstraction, not general APA policy |
 | [COORDINATOR-CONTRACT-DRAFT.md](COORDINATOR-CONTRACT-DRAFT.md) | Preserved mixed source used for the split; provenance and comparison, not the integration candidate |
 | [REVISION-PLAN.md](REVISION-PLAN.md), [REVISION-REPORT.md](REVISION-REPORT.md) | Campaign authority, change/check evidence and current limitations |
+| [REVIEW-REPORT.md](REVIEW-REPORT.md) | Latest critical text review of the general module; six proposed corrections remain unaccepted/unimplemented |
 
 ## Proposed integration
 
