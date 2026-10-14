@@ -187,3 +187,9 @@ Fetched published parent checkpoint `ee7d54ef5f8516cfcf6232366929e3eb64e5e3ab` a
 Added APA handoff activation policy and aligned its proposed SKILL.md integration row: full/comprehensive skill review loads skill-review.md; full/comprehensive plugin review loads plugin-review.md and relevant skill review. Ordinary/focused review does not activate these programs automatically; explicit module selection remains possible within a narrower scope. Review activation does not authorize repair or unrelated project review.
 
 Recorded the human’s boundary: runtime sdd-manage/SKILL.md changes wait for campaign 059 resumption. Parent remains suspended; the three assessed document additions remain recommendations. Checked wording, headings/blank lines and Git whitespace; publish/read back with 060 open/unmerged.
+
+## Full-set critical review
+
+Completed [REVIEW-PLAN.md](REVIEW-PLAN.md) units U-001–U-003 for PLUGIN-CONTRACT.md, plugin-review.md and skill-review.md at `cd7ab3309e23c35f4ed6b91227466336a100766e`. The [review conclusion](REVIEW-REPORT.md#full-set-u-003--alignment-conclusion-and-revision-queue) retains the sound role split, three new medium findings/recommendations (R-007–R-009), three pending parent-derived document recommendations and a bounded proposed revision queue. U-001/U-002 checkpoints were published/read back before progression. No target-document or handoff repair was inferred from the review request.
+
+Current stage is review complete, proposed revisions pending. Exact source/path comparisons preserve reviewed documents, drafts, runtime package and all parent/closed records. Final checks passed for 122 active local links/anchors, heading/blank-line spacing, Git whitespace and exact three-record-file scope. Live/model acceptance, source suites, APA integration and runtime coordinator revisions are unselected/unrun. Publish/read back review evidence; retain 060 open/unmerged and 059 suspended.

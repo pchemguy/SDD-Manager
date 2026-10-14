@@ -1,6 +1,8 @@
 # Critical reviews of campaign 060 development documents
 
-## Scope and result
+Latest review: the full three-document set at `cd7ab3309e23c35f4ed6b91227466336a100766e`. **Three new medium-priority findings/recommendations; no high/critical finding.** Three previously recorded documentation recommendations remain pending. The split and principal organization are sound; proposed corrections are bounded. See [full-set conclusion and revision queue](#full-set-u-003--alignment-conclusion-and-revision-queue). All new findings await accepted revision. Earlier R-001–R-006 retain their source-verified dispositions.
+
+## Earlier skill-review text review — scope and result
 
 Campaign **060_ee7d54e**. Reviewed source: `a485934fcb7eb9a52b6b4c4391b8941076e43eaa`; [reviewed module](skill-review.md). Full text reviewed for composition, hierarchy, flow, duplication, terminology, wording and internal consistency. All locations below refer to that baseline, not future edited lines.
 
@@ -135,7 +137,7 @@ Fetch succeeded; parent report checkpoint and entry blob were read back. Compare
 
 ## Full-set critical review — scope and baseline
 
-The human requested a new critical review of PLUGIN-CONTRACT.md, plugin-review.md and skill-review.md at `cd7ab3309e23c35f4ed6b91227466336a100766e`. [Full-set plan](REVIEW-PLAN.md) defines three units. Current state: planned; no new finding is accepted for repair. Earlier R-001 through R-006 remain source-rechecked for their earlier revision, while parent-059 recommendations retain their pending status. Runtime coordinator work remains deferred to resumed 059.
+The human requested a new critical review of PLUGIN-CONTRACT.md, plugin-review.md and skill-review.md at `cd7ab3309e23c35f4ed6b91227466336a100766e`. [Full-set plan](REVIEW-PLAN.md) defines three units. Current state: U-001, U-002 and U-003 complete; no new finding is accepted for repair. Earlier R-001 through R-006 remain source-rechecked for their earlier revision, while parent-059 recommendations retain their pending status. Runtime coordinator work remains deferred to resumed 059.
 
 ## Full-set U-001 — general review modules
 
@@ -210,3 +212,45 @@ When revising this contract, consider a small K-to-C correspondence note so asse
 ### U-002 evidence and checkpoint
 
 Source review only; the three reviewed documents and runtime owners remain unchanged. No acceptance case was executed and no live/model, support or publisher suite was selected. Only the active review report changes. Validate its links/Markdown, publish and read back before cross-document consolidation. Campaign 060 remains open/unmerged, 059 suspended.
+
+## Full-set U-003 — alignment, conclusion and revision queue
+
+The three documents form a workable development/review set. Keep their roles and section boundaries; do not replace them with one checklist. The general modules provide reusable review criteria, while the independent SDD contract defines the two entry layers, actual gates/owners and domain assessment cases. PLUGIN-CONTRACT.md is a contract and assessment program, not another packaged entry or an APA dependency.
+
+### Cross-document assessment
+
+| Relationship | Assessment and disposition |
+| --- | --- |
+| General versus SDD-specific policy | Sound: generic modules impose no SDD Git pushes, document approvals, hosted-object hierarchy or campaign lifecycle. The contract supplies those actual constraints and owners. No policy leakage found in the reviewed set. |
+| Entry versus reference composition | Sound: skill-review.md has separate shared, entry and local-reference criteria. Explanatory modules are not forced into executable-workflow rules. PLUGIN-CONTRACT needs the independent coordinator routing criterion in R-009. |
+| Plugin front versus canonical coordinator | Sound: both plugin-review and the contract distinguish projection from canonical orchestration. The coordinator may own original operational instructions; PLUGIN.md must not be their sole source. No general-module dependency is present in the SDD contract. |
+| Fresh requests, follow-ups and recovery | Sound: all three allow sufficient context reuse and bounded recovery. The contract cases no longer require PLUGIN.md to interpret ordinary implementation follow-ups. Parent-derived baseline-before-selection wording remains pending in plugin-review. |
+| Duplication | Mostly justified: lookup criteria, ordered procedure and assessment contrasts serve different uses; gates and canonical maps likewise protect different decisions. Paragraph-level trimming should preserve qualifiers and ownership, not remove all repeated reminders. Parent-derived clause-relocation checks remain pending. |
+| Full versus focused activation | Handoff policy preserves the requested distinction. A review of a project using SDD Manager is not automatically a comprehensive review of the plugin itself. R-007 concerns complete target accounting after activation, not broader activation or compulsory trials. |
+| Evidence and authority | Sound: review does not authorize repair; source consistency, structural checks and observed behavior remain separate. Expected owners are withheld from consumer inputs. No model trial or downstream APA acceptance is claimed. |
+| APA handoff readiness | The two generic candidates and SDD-only example are correctly distinguished; installed cache edits are excluded. The contents row describing six completed corrections records the earlier stage, but should be updated in a subsequent accepted revision to point to this review and its pending queue. The proposal is still developing, not transfer-ready acceptance evidence. |
+
+### New findings index
+
+| Finding | Priority / type | Correction destination | Disposition |
+| --- | --- | --- | --- |
+| R-007 | Medium completeness gap | Both generic review procedures; aligned handoff policy | Proposed; not accepted or repaired |
+| R-008 | Medium applicability recommendation | plugin-review scope/fallback; handoff applicability | Proposed; requires applicability decision |
+| R-009 | Medium contract completeness gap | PLUGIN-CONTRACT coordinator routing/development checks | Proposed; not accepted or repaired |
+
+No new high/critical issue found. The absence of a source finding does not establish live agent correctness, host discovery or downstream APA compatibility. The earlier six text findings remain source-verified; no behavioral disposition is added. All four runtime findings from parent 059 remain deferred there.
+
+### Bounded revision queue
+
+1. **Applicability and completeness:** resolve R-008's scope choice; add R-007's full-target coverage accounting without widening focused reviews. Align the handoff and its current review-status navigation.
+2. **Plugin text composition and selection:** apply the already recorded parent-derived section/paragraph-cohesion recommendation and explicit evidence-before-selection/reporting order. No mandatory heading template or new selection ceremony for routine follow-ups.
+3. **Independent SDD checks:** add R-009's every-reference routing acceptance criterion and the pending parent-derived clause-to-owner/use-condition mapping before coordinator shortening. Do not import the generic modules as contract requirements or remediate the runtime entry in this child campaign.
+4. **Recheck the revised set:** preserve approved rationale/opening/routing text, general/domain separation, independent contract use, current case identities and source/behavior limits. Check full versus focused scope and skill-only versus any broader selected plugin applicability. The optional K/C correspondence note can remain a navigation preference.
+
+This is a proposed revision order, not an accepted execution plan. No new source repair has been made. Parent 059 stays suspended; campaign 060 stays open/unmerged.
+
+### Evidence and final boundary
+
+U-001 was published/read back at `cb7bcbee4c904db148a78072bb8c01ef68a012c8`; U-002 at `a7559e9ed741af3584dbf529309b9eec424d1ec1`. Reviewed source for all locations is the full-set baseline, not these later record-only commits. All sections, tables and case/evidence paragraphs in the three target files were read; PROPOSED-REVISIONS.md was inspected for activation, applicability and transfer status. The current installed APA entry/plugin-standard informed R-008's target-scope comparison; this is not an APA repository audit.
+
+Final checks passed: 122 active-campaign local prose links/anchors, heading separation, consecutive blank lines and Git whitespace. Exact Git path comparison permits only REVIEW-PLAN.md, REVIEW-REPORT.md and REVISION-REPORT.md; all other tracked bytes are unchanged. The coordinator entry retains blob `37b73018ca90a5b571bb9c05b54d039e1952389e`. The target files measure 27,742 / 11,880 / 12,511 UTF-8 bytes respectively (contract / plugin review / skill review); these are descriptive measurements, not acceptance limits or model-cost evidence. The three reviewed documents, handoff, drafts, runtime package, parent and closed records retain their starting bytes. No external research, live acceptance, consumer/model trial, full support/publisher suite, installation, APA integration or campaign merge/closure was performed in this review.
