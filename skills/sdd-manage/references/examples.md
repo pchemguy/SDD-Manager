@@ -161,7 +161,6 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 - Human requests revisions or the conversation is interrupted at PLAN review: preserve the pending decision, revise/recheck the same owner and present its actual state. No assumed acceptance and no regenerated chain.
 - Standing Git/token authority: persist the checkpoint without another repository-operation permission question; still pause for document acceptance.
 
-
 ## Revision campaign modes
 
 - “Open a focused revision while this feature campaign is active”: use a new nested revision identity from the feature’s published branch, suspend its execution, and default the child merge to that same branch. A review-only request publishes findings and stops; accepted repairs verify/publish the child and parent merge, then return the worktree to the feature branch without automatically resuming feature tasks.

@@ -51,3 +51,7 @@ All twelve scenarios were source-mapped across entry and owner layers: workflow 
 ## A-005 — Jules prompt and examples
 
 Aligned the source-only Jules prompt with read-only workflow loading and event-based, adjustable reporting; retained explicit checkpoint and switching safeguards. Added six short coordinator examples for loading, clarification, brevity/explanation, path/change ownership and switches. S-01/S-03/S-07/S-08/S-10 source comparisons find consistent scope/loading/reporting boundaries, with no unconditional every-response preamble or new model-specific policy. The Jules prompt remains outside the package; no client trial is claimed. Git whitespace checked; publish/read back before final verification.
+
+## A-006 — Combined source checks
+
+On candidate `dc6cdede3b25debd969521b9e0e0bd4169f2e1d4`, Python 3.12.14 ran 127 TextStats support tests and 30 publisher tests successfully, using the declared `jsonschema==4.26.0` from `/tmp/sdd-manifest-validation`. These deterministic tests do not establish live acceptance. The active-document scanner found one pre-existing consecutive blank separator in the changed coordinator examples; removed it within this action and rechecked affected current documents. No frozen record was altered. Native exact-committed package verification follows publication of this source correction; its outcome is not yet claimed here.
