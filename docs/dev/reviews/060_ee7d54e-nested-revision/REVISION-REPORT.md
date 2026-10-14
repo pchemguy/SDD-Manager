@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001/V-002 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001/V-002/V-003 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -22,11 +22,11 @@ The highest prior repository-wide reservation was 059. Source and published pare
 
 ## Accepted contract scope
 
-The human subsequently requested creation of COORDINATOR-CONTRACT.md. [Revision plan](REVISION-PLAN.md) defines V-001: source-only contract and contributor navigation, with bounded documentation checks. Earlier scope-pending opening evidence remains historical. Current state: planned; child open, parent suspended. Coordinator source repair and final integration remain unselected.
+The human subsequently requested creation of COORDINATOR-CONTRACT.md. [Revision plan](REVISION-PLAN.md) defines V-001: source-only contract and contributor navigation, with bounded documentation checks. Earlier scope-pending opening evidence remains historical. At scope acceptance: planned; child open, parent suspended. Coordinator source repair and final integration remain unselected.
 
 ## V-001 — Coordinator development contract
 
-Executed after planning checkpoint `4af32d3376bfb9b68c5adbeade133d5eddfa9d87` was pushed/read back. Created [COORDINATOR-CONTRACT.md](COORDINATOR-CONTRACT.md), titled “sdd-manage development contract”: source-only purpose, coordinator responsibilities, essential entry gates, conditional ownership across all fifteen coordinator modules, recommended section jobs, composition/duplication review method and ten assessment contrasts. It distinguishes the coordinator's canonical orchestration role from PLUGIN.md's capability projection and keeps runtime instructions with packaged owners. No size quota, new workflow gate, runtime dependency or full procedure copy was introduced.
+Executed after planning checkpoint `4af32d3376bfb9b68c5adbeade133d5eddfa9d87` was pushed/read back. Created the mixed contract, now preserved as [COORDINATOR-CONTRACT-DRAFT.md](COORDINATOR-CONTRACT-DRAFT.md), titled “sdd-manage development contract”: source-only purpose, coordinator responsibilities, essential entry gates, conditional ownership across all fifteen coordinator modules, recommended section jobs, composition/duplication review method and ten assessment contrasts. It distinguishes the coordinator's canonical orchestration role from PLUGIN.md's capability projection and keeps runtime instructions with packaged owners. No size quota, new workflow gate, runtime dependency or full procedure copy was introduced.
 
 Linked the contract from CAPABILITY-MAP.md and root development AGENTS.md for future entry/module-boundary edits. README already routes source contributors through the capability map; no packaged user-facing claim changed. The parent entry findings remain unimplemented; contract creation does not mark those findings verified or resume parent execution.
 
@@ -47,4 +47,25 @@ Checked all moved-contract and active-record links/anchors, heading spacing, Git
 
 ## Accepted V-003 scope
 
-The human selected the general/specific split and Agent Package Author handoff preparation described in the [extended plan](REVISION-PLAN.md#v-003--general-skill-review-and-coordinator-specialization). Execution pending; all deliverables remain inside campaign 060. No APA repository/cache edit, coordinator source repair or integration/closure is selected.
+The human selected the general/specific split and Agent Package Author handoff preparation described in the [extended plan](REVISION-PLAN.md#v-003--general-skill-review-and-coordinator-specialization). The execution result follows below; all deliverables remain inside campaign 060. No APA repository/cache edit, coordinator source repair or integration/closure is selected.
+
+## V-003 — General skill review and coordinator specialization
+
+Executed after plan amendment `60aabd0bb23fd5595cc92f348ac2de6de17a9131` was pushed/read back. Preserved the prior mixed contract as COORDINATOR-CONTRACT-DRAFT.md, extracted a self-contained general review module and replaced COORDINATOR-CONTRACT.md with the SDD-specific specialization. Began the proposed APA revision handoff, using the installed APA entry/design/validation/authoring sources to identify tentative integration points. No APA repository, installed skill/cache or validator was edited.
+
+| Current artifact | Role / actual change |
+| --- | --- |
+| [COORDINATOR-CONTRACT-DRAFT.md](COORDINATOR-CONTRACT-DRAFT.md) | Original mixed contract preserved byte-for-byte for provenance |
+| [skill-review.md](skill-review.md) | General entry/module responsibilities, composition/language/ownership/progressive-loading review, scope/context and assessment/evidence method; no SDD-specific rules or repository links |
+| [COORDINATOR-CONTRACT.md](COORDINATOR-CONTRACT.md) | SDD workflow selection/delegation, human document gates, task/push/tracking/integration/campaign boundaries, module coverage and K-01–K-10 specializations; applies general review by reference |
+| [PROPOSED-REVISIONS.md](PROPOSED-REVISIONS.md) | Developing handoff: reading order, APA owner integration proposals, general-versus-domain boundaries and downstream verification; no claim of downstream implementation |
+
+The new contract repeats selected general concerns only to specify the coordinator's concrete obligations and handoff contrasts. It explains that rationale, while general composition, review procedure and evidence assessment remain in skill-review.md. The preserved draft is comparison material, not the APA integration candidate. All new files and record updates are within campaign 060; permanent contributor pointers remain absent.
+
+### Verification and limits
+
+Verified the draft against the prior committed contract: exact SHA-256 `e0bf3d30dcd763dbacdc7dde58a3b9eef73bd9557898c532a930c3ce07ecc139`. Checked campaign Markdown links/anchors, heading separation, repeated blank lines and Git whitespace. Inspected abstraction coverage against the draft and current owners: general skill/module concerns are retained; SDD-specific Git/HIL/tracking/phase/campaign requirements stay in the specialization. The general module has no SDD identifiers, source-repository paths or external file dependencies. These mechanical checks support portability of its text, not actual model/client acceptance.
+
+Compared all 134 packaged files with campaign starting Git blobs: unchanged. Runtime coordinator entry/references, tests and closed packages are untouched. The proposal distinguishes inspected installed APA structure from its unreviewed current repository and leaves downstream conformance/runtime checks to the receiving revision workflow. Full support/publisher suites, live acceptance and APA behavioral trials were not run for this campaign-only document action.
+
+Publish/read back this action and stop. Campaign **060 remains open and unmerged** under the explicit human instruction; parent 059 remains suspended.
