@@ -31,7 +31,7 @@ For a directly accepted prompt-defined revision, record its objective, affected 
 
 ## Revision execution authorization
 
-Review ends at its report commit; the coordinating workflow publishes the report and integrates eligible verified revisions within the accepted request and stopping boundary. Carry that scope through handoffs and use [Git recovery](git-workflows.md#platform-authorization-rejection) for a host denial.
+Review ends at its report commit; the coordinating workflow publishes the report and integrates eligible verified revisions within the accepted request and stopping boundary. Carry that scope through handoffs and use [Git recovery](git-workflows.md#platform-authorization-rejection) for a host denial. Host automatic review is a separate platform control, not a plugin review skill.
 
 ## Revise, verify, and finish
 

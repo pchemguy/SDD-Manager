@@ -29,7 +29,7 @@ An opening paragraph, an seventeen-row table, numbered steps and four policy par
 
 **Proposal:** Give purpose, coordination gates, lifecycle and conditional routing distinct visible section jobs. Put short consequential invariants before their dependent actions and keep only one principal lifecycle. Group routing by decision or lifecycle concern; do not require a fixed heading count or remove all rows merely to shorten the file.
 
-**Recheck:** A reverse outline assigns a distinct job to each section; an agent arriving through this entry can identify baseline/selection, next owner/module, prerequisites and stop without searching trailing unheaded prose. Preserve direct links for every required conditional procedure. **Disposition:** open; no repair accepted.
+**Recheck:** A reverse outline assigns a distinct job to each section; an agent arriving through this entry can identify baseline/selection, next owner/module, prerequisites and stop without searching trailing unheaded prose. Preserve direct links for every required conditional procedure. **Disposition:** source-verified in V-001; behavior untested.
 
 ### R-002 — Paragraph and step overload obscures controlling actions
 
@@ -39,7 +39,7 @@ The opening's purpose sentence is followed by proactive handoffs, routine author
 
 **Proposal:** Keep the purpose paragraph focused on coordinator responsibility. Give lifecycle actions concise controlling sentences. Place universal authority/HIL/stop reminders together, move conditional review/platform distinctions to the review owner, keep preparation and tracking gates identified with their destination modules, and route handoff/recovery details to coordination.md. Preserve explicit gate-before-action wording and owner availability; a link with no condition is insufficient.
 
-**Recheck:** Each paragraph/step has one principal action or coherent concern; qualifiers remain adjacent to their rule. A handoff can still identify tracking readiness, accepted preparation, actual scope and blockers before dependent execution. **Disposition:** open; owner destinations to be checked in U-002.
+**Recheck:** Each paragraph/step has one principal action or coherent concern; qualifiers remain adjacent to their rule. A handoff can still identify tracking readiness, accepted preparation, actual scope and blockers before dependent execution. **Disposition:** source-verified in V-001; behavior untested.
 
 ### No-finding coverage and cautions
 
@@ -72,7 +72,7 @@ This is different from useful repetition between a conditional link table and th
 
 **Proposal:** Use these existing destinations; a new miscellaneous “entry details” module is unnecessary. If a removed qualifier is not fully expressed in its destination, establish it there before shortening the entry. Keep owner responsibilities and consequential entry gates explicit enough for less capable models; the target is maintainable distribution, not minimum words.
 
-**Recheck:** Map every changed/removal clause to a canonical owner and an accessible loading condition. Inspect resulting entry and owner together against HIL, task closure, publication, tracking and stopping contrasts. No obligation disappears or becomes a source-only dependency. **Disposition:** open; no source changes.
+**Recheck:** Map every changed/removal clause to a canonical owner and an accessible loading condition. Inspect resulting entry and owner together against HIL, task closure, publication, tracking and stopping contrasts. No obligation disappears or becomes a source-only dependency. **Disposition:** source-verified in V-001; behavior untested.
 
 ### R-004 — Baseline acquisition and workflow selection read as two passes
 
@@ -82,7 +82,7 @@ Step 1 applies selection/recovery and reports its evidence-backed decision. Its 
 
 **Proposal:** Distinguish initial request interpretation from evidence-backed selection. Establish/reuse a sufficient scoped baseline, recover missing/stale state through sdd-orient, then select/assess continuity and report the decision before dependent work. Reuse still-applicable evidence on routine continuation. Do not require full repository inspection for every request, a new chat preamble on every response, or Git for conversation-only work.
 
-**Recheck:** Fresh entry, unchanged continuation and missing-context recovery each have one clear baseline/selection order consistent with workflows.md. A consequential workflow switch still produces the required visible decision and preserves unfinished work. **Disposition:** open; no observed consumer failure.
+**Recheck:** Fresh entry, unchanged continuation and missing-context recovery each have one clear baseline/selection order consistent with workflows.md. A consequential workflow switch still produces the required visible decision and preserves unfinished work. **Disposition:** source-verified in V-001; behavior untested.
 
 ### Metadata and routing assessment
 
@@ -158,3 +158,7 @@ The review ends with published campaign records and proposed revision scope. Cam
 ## Accepted resumption after nested 060
 
 The human accepted resuming/executing/finishing 059 after child closure. Resumed source e3623feb0a6beaf0f00abd5a23a7f0a46b5d5aad includes the accepted permanent plugin/coordinator contract, replacing the earlier separate-contract proposal. Runtime entry is unchanged at resumption. REVISION-PLAN.md accepts all four findings with owner/loading and source-verification scope; original observations, source locations and unrun behavioral claims remain intact. Closed 060 is not a current edit/validation target.
+
+## Accepted source revision and recheck
+
+V-001 source-rechecks R-001–R-004 against the resumed entry and canonical owners. Original observations/locations and review-only outcome above retain their baseline meaning. REVISION-REPORT.md records the section/owner map, source K contrasts and qualified check results. The separate-contract proposal was fulfilled and superseded by closed 060's accepted combined contract, now at docs/dev/PLUGIN-CONTRACT.md. No model/client trial supports a behavioral claim; final candidate verification and integration remain in V-002.
