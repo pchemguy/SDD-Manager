@@ -108,3 +108,7 @@ Fresh candidate `d6b7f9a37f09223a7484190e13f88b19163a8ff9` passed 127 support an
 A-007/A-008 are source-verified. These contrasts and deterministic checks do not prove profile adherence by any model or client. No live acceptance, provider write or release was performed. Original source outcomes and closure facts remain historical, separate from these fresh amendment checks.
 
 State: **Amendment verified; explicit main integration, merged checks, remote publication/readback and clean target return establish renewed closure**. Finish navigation and publish this evidence before integration; retain original opening `95709ad3ecf85b703bc1346bf92ca4fc2f8b0fad`, branch-off `90d1294639c665b7a134a0326dda48fc6e24812e`, prior integration/reopening checkpoint `ed3099a229b59d4786fcd74bf6761dc7ac94e394` and actual merge parents in the cumulative integration summary.
+
+## Reopened explicit-bootstrap amendment
+
+State: **Amendment active**. The human authorized proactive profile announcement/explanation at composite-workflow bootstrap and recovery. Latest published main first-parent merge/reopening checkpoint is `c29eb70de301da68a4fa9d28cd3d29d4e71e05a4`; verified both parents and contained source `cc41ce9d894079db37685eec4b07fb344750c083`. Refreshed main matched origin and the worktree was clean. Advanced the retained campaign branch to this checkpoint by fast-forward, preserving history and original identity. Added A-009/A-010; earlier closure/check facts remain historical.
