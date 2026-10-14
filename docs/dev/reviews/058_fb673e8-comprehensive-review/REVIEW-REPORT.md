@@ -1,6 +1,6 @@
 # Comprehensive SDD Manager review
 
-Campaign **058_fb673e8**; [review plan](REVIEW-PLAN.md). Reviewed workflow/package baseline: `fb673e8eaaa0249b966b53bf0d4d723e9090625f`. Original opening/check source: `24cd08ec13a9e14e831923027e1e3eeb5c8795e2`; only campaign records differ from baseline. State: **Review complete; revisions proposed, not executed**. Live acceptance explicitly excluded.
+Campaign **058_fb673e8**; [review plan](REVIEW-PLAN.md). Reviewed workflow/package baseline: `fb673e8eaaa0249b966b53bf0d4d723e9090625f`. Original opening/check source: `24cd08ec13a9e14e831923027e1e3eeb5c8795e2`; only campaign records differ from baseline. State: **Review complete; R-001/R-002 accepted and source-remediated**. Live acceptance explicitly excluded.
 
 ## U-001 — Entry, ownership, metadata and package
 
@@ -98,3 +98,7 @@ Both proposals are bounded source/component changes. No finding is accepted for 
 ## Final preservation and publication
 
 Only campaign 058's records and its index row change. Current plugin/contract/tooling/acceptance sources and all closed packages retain baseline bytes. Report/plan links, heading spacing and Git path preservation checked. The final report is committed/pushed/read back on its review branch. Campaign remains open and unmerged.
+
+## Subsequent accepted revision
+
+The human authorized the [revision plan](REVISION-PLAN.md) and execution. [Revision report](REVISION-REPORT.md) records V-001 through V-003, source rechecks, three additional native Git tests, 127 support/30 publisher passes, exact-source package/link evidence and the separate unchanged-namespace author-tool diagnostic. Original reviewed observations above retain their baseline meaning. No live acceptance or integration selected; campaign remains open.

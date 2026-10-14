@@ -1,6 +1,6 @@
 # Comprehensive-review remediation report
 
-Campaign **058_fb673e8**; [accepted plan](REVISION-PLAN.md), [findings](REVIEW-REPORT.md). State: **V-001/V-002 complete; boundary verification pending**. Live acceptance excluded; campaign remains open and unmerged.
+Campaign **058_fb673e8**; [accepted plan](REVISION-PLAN.md), [findings](REVIEW-REPORT.md). State: **V-001/V-002/V-003 complete; open and unmerged**. Live acceptance excluded; campaign remains open and unmerged.
 
 ## V-001 — Read-only steering assessment dispatch
 
@@ -15,3 +15,19 @@ Report's release format now assembles exact UTF-8 subject/separator/body bytes a
 Added three native Git sensitivity tests to existing release capture: whitespace cleanup loses Markdown hard breaks/trailing blank lines; verbatim preserves canonical Unicode, LF/CRLF and blank-line bytes; whitespace cleanup adds a final newline to a nonterminated body while verbatim preserves its absence. The existing detector rejects mismatched Git bodies while tag/provider facts remain independently true. This extends the component rather than running live acceptance or modifying consumer/assessor answers.
 
 First focused run: 14 tests, one failure in the new fixture assertion that verbatim would append a newline. Actual raw Git bytes disproved that assumption; corrected the expectation and retained both cleanup-mode cases. Final focused run: 14 passed. No production capture defect or fabricated RED behavior claimed. R-002 source/native recheck passed; support/publisher/package verification follows publication of this action.
+
+## V-003 — Boundary verification
+
+At committed source `f280a621114bd014c917e9a0a1fbb2d9c0d2b2a4`, Python 3.12.14 passed 127 support tests (three new native Git cases) and 30 publisher tests. Commands retained: `python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v`; `python -m unittest discover -s .github/tests -v` with declared publisher dependencies at /tmp/sdd-manifest-validation. The focused release module passed 14 tests. No /pyenv files modified or executed.
+
+Native publisher built the exact committed source twice and inspected every member against Git blobs. Archives were identical: SHA-256 `204292e3a84de506b29d7e864b8a659217d3f0130406db0919ae7e5134caec44`. Inventory remains 134 files; only steering SKILL, manager Git workflow and report object-drafts package blobs changed from workflow baseline. Offline pinned manifest passed; metadata/presentation, entry/README and source-only exclusions unchanged. Package prose scan passed 478 local references with no missing/excluded/escaping target or checked-anchor error. Closed package paths preserved. Current README/PLUGIN/capability statements remain accurate, so no projection/navigation source edits needed.
+
+### Additional author-tool diagnostics
+
+Ran available agent-package-author validate_plugin.py and inspect_package.py against the plugin root. Both exited 1: one unchanged-manifest namespace diagnostic and 40 plugin-contained sibling-reference warnings. The tool's NAMESPACE regex requires at least three dotted segments and rejects `com.openai`; the pinned schema's extensions field requires object values and imposes no corresponding key pattern. Current manifest is byte-identical to the baseline and conforms to that pinned schema. Retained the explicitly chosen OpenAI namespace rather than changing it to satisfy the extra creator restriction. These author-tool results are not reported as passes or as new defects introduced by R-001/R-002. Warnings identify intentional bundle dependency/client-handoff limits, not containment escapes. No author-tool or client behavior repaired in this campaign.
+
+R-001 and R-002 are source-remediated and rechecked. Native Git tests extend the acceptance component; they do not execute a consumer or prove live steering/release behavior. A-011/A-032 and consumer inputs remain unchanged. No model/client/provider trial or real release performed.
+
+## Current boundary
+
+All accepted revision actions complete, with source and final evidence committed/pushed/read back on the campaign branch. Campaign remains open and unmerged; main unchanged. Final integration/closure is not part of this request.
