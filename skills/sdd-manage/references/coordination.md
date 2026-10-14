@@ -28,7 +28,7 @@ At a human checkpoint, present substantive review results, the dependent work he
 
 ### Reporting profiles
 
-Use **Standard** unless the human selects another profile or gives a more specific reporting preference. Profiles control presentation; all retain the scope checks, reporting triggers, consequential information and workflow obligations above.
+Use **Standard** for established work unless the human selects another profile or gives a more specific reporting preference. Composite-workflow bootstrap uses the temporary Explicit reporting below. Profiles control presentation; all retain the scope checks, reporting triggers, consequential information and workflow obligations above.
 
 | Profile | Reporting detail |
 | --- | --- |
@@ -39,6 +39,14 @@ Use **Standard** unless the human selects another profile or gives a more specif
 Accept ordinary requests such as “Use SDD Manager with minimal reporting,” “Switch to explicit reporting” and “Return to standard reporting.” Retain the selected profile in available conversation/workflow context until changed and carry it through existing handoffs. Do not create a settings file or infer a profile from model strength. If no preference is recoverable, use Standard; do not pretend a lost selection was restored.
 
 A specific request controls its affected output: “Explain this decision fully, then resume minimal reporting” supplies a one-response override and returns to Minimal afterward. A request for an explanation or sources alone does not switch the ongoing profile. Required human checkpoints remain substantive under Minimal; Explicit adds detail rather than approval gates or repeated preambles.
+
+### Composite-workflow bootstrap reporting
+
+Use **Explicit** reporting while establishing a composite workflow at initial entry, a material workflow switch, or recovery that must reconstruct its context. This is workflow-context bootstrap, distinct from repository disclosure/file setup. Routine continuation, task handoffs and minor evidence refresh do not restart it. Honor more specific human limits on bootstrap reporting within their stated scope.
+
+1. Proactively announce the active bootstrap level and briefly explain the choices: **Minimal** reports essentials; **Standard** adds useful progress and consequential rationale; **Explicit** adds fuller scope, sources and evidence. Mention that “Switch to minimal/standard/explicit reporting” changes subsequent detail. Give this explanation once during each applicable bootstrap, not on every response.
+2. Establish and report the workflow, stage/owner, authorized work, next checkpoint and consequential evidence or uncertainty under the selection/scope protocols. Explicit reporting is not exposed reasoning or permission to guess missing approvals, task ranges or project readiness. Blocked recovery reports its known state and missing decision without beginning dependent work.
+3. Before the dependent handoff/work, announce the subsequent level: **Standard** by default, or the human's established selected profile. The temporary bootstrap level does not replace that selection. If a preference was lost and cannot be recovered, identify the Standard fallback rather than claim restoration. Carry the subsequent level through existing handoffs; no new confirmation or reporting-state file is required.
 
 ## Coordinate execution
 

@@ -76,7 +76,7 @@ Choose a [reporting profile](skills/sdd-manage/references/coordination.md#report
 | **Standard** (default) | Concise scope briefs, useful progress and rationale for consequential decisions |
 | **Explicit** | Clearly identified scope/checkpoints, fuller rationale, relevant sources and verification evidence |
 
-For example: “Use SDD Manager with minimal reporting,” “Switch to explicit reporting,” or “Return to standard reporting.” The selection continues through the current conversation/workflow and handoffs while context is available. “Explain this decision fully, then resume minimal reporting” overrides one response. None of the profiles requires repeating unchanged context every response.
+For example: “Use SDD Manager with minimal reporting,” “Switch to explicit reporting,” or “Return to standard reporting.” The selection continues through the current conversation/workflow and handoffs while context is available. “Explain this decision fully, then resume minimal reporting” overrides one response. None of the profiles requires repeating unchanged context every response. At composite-workflow entry, material switching or context recovery, the agent uses Explicit reporting, announces it and briefly explains the three choices. Before dependent work it declares the following level: Standard by default, or your established selection. This introduction does not repeat during routine continuation.
 
 For detailed entry conditions and stopping rules, see the [workflow catalog](skills/sdd-manage/references/workflows.md).
 

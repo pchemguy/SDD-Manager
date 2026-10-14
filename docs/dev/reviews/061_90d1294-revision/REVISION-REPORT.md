@@ -108,3 +108,27 @@ Fresh candidate `d6b7f9a37f09223a7484190e13f88b19163a8ff9` passed 127 support an
 A-007/A-008 are source-verified. These contrasts and deterministic checks do not prove profile adherence by any model or client. No live acceptance, provider write or release was performed. Original source outcomes and closure facts remain historical, separate from these fresh amendment checks.
 
 State: **Amendment verified; explicit main integration, merged checks, remote publication/readback and clean target return establish renewed closure**. Finish navigation and publish this evidence before integration; retain original opening `95709ad3ecf85b703bc1346bf92ca4fc2f8b0fad`, branch-off `90d1294639c665b7a134a0326dda48fc6e24812e`, prior integration/reopening checkpoint `ed3099a229b59d4786fcd74bf6761dc7ac94e394` and actual merge parents in the cumulative integration summary.
+
+## Reopened explicit-bootstrap amendment
+
+State: **Amendment active**. The human authorized proactive profile announcement/explanation at composite-workflow bootstrap and recovery. Latest published main first-parent merge/reopening checkpoint is `c29eb70de301da68a4fa9d28cd3d29d4e71e05a4`; verified both parents and contained source `cc41ce9d894079db37685eec4b07fb344750c083`. Refreshed main matched origin and the worktree was clean. Advanced the retained campaign branch to this checkpoint by fast-forward, preserving history and original identity. Added A-009/A-010; earlier closure/check facts remain historical.
+
+### A-009 — Explicit composite bootstrap implemented
+
+Coordination now owns temporary Explicit reporting during composite entry, material switching and context reconstruction, proactive level/profile discovery and declaration of subsequent Standard or an established human selection before dependent work. Known preferences are preserved; unknown preferences use an announced fallback. Scope-specific human limits remain controlling. Blocked recovery preserves approval/range uncertainty; routine continuation/minor refresh/task handoffs do not restart bootstrap. Reconciled selected routing/projections, human/developer guidance, examples and the source-only prompt without introducing a new module or state file. Checked affected links/spacing and Git whitespace; source checks do not establish live model behavior. Publish/read back before A-010.
+
+### A-010 — Fresh bootstrap amendment verification
+
+Candidate `50c416c21df2ad3984c1ed9d2ffe7938f796e811` passed 127 support and 30 publisher tests on Python 3.12.14 with pinned jsonschema 4.26.0. Native manifest/exact committed archive passed with 134 files and all fifteen coordinator references routed. Packaged Markdown passed 491 local link/anchor checks across 92 documents; eleven affected current documents passed 243 links/anchors and heading/consecutive-blank checks. Source-only prompt, contract and campaign remain outside the package. Git whitespace passed; the amendment changes no other closed campaign.
+
+Source-assessed contrasts in coordination.md's composite bootstrap section and its entry/workflow/example projections:
+
+- Initial composite entry: proactively announce Explicit, explain the three levels and switching, then state Standard for dependent work.
+- Known Minimal or Explicit preference: temporary setup detail preserves the selected subsequent profile and announces the return.
+- Material workflow switch: use the bootstrap disclosure while preserving pending work, authority and return boundaries.
+- Context reconstruction: known preference is retained; unrecoverable preference uses an announced Standard fallback without guessing lost approvals/ranges.
+- Routine continuation, task handoff or minor refresh: no restarted bootstrap/profile introduction.
+- Blocked recovery: state known context and missing consequential decision; no dependent work is implied.
+- Specific human bootstrap-reporting limit: honor its actual scope without relaxing operational requirements.
+
+A-009/A-010 are source-verified; observed model/client compliance remains unrun. These fresh checks are separate from earlier closures and their historical evidence. **Renewed closure requires the verified explicit amended-tip merge into main, merged checks, target push/readback and clean return.** Preserve original opening/baseline, both prior integrations and reopening checkpoint `c29eb70de301da68a4fa9d28cd3d29d4e71e05a4` in the cumulative summary.
