@@ -82,3 +82,7 @@ The human authorized adapting the restored section’s title and wording. Use �
 ## V-015 — Verified standards point and integrated rationale paragraph
 
 Verify whether the published Agent Plugins specification defines PLUGIN.md, then combine the bundle/integrated decomposition/shared-entry paragraphs as requested. Separate the verified standards fact from the proposed architecture; preserve modularity benefits and optional coordinator paragraph. Publish/read back and retain open/unmerged scope.
+
+## V-016 — Revise the human-supplied rationale section
+
+Polish and replace the full supplied Shared plugin entries and coordination section. Preserve modularity benefits, the verified standards statement, bundle/integrated distinction, desired shared entry and SKILL/reference routing analogy, plus optional coordinator loading. Check fidelity and spacing, commit/push/read back and retain open/unmerged scope.

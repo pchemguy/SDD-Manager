@@ -2,16 +2,16 @@
 
 ## Shared plugin entries and coordination
 
-Skills and plugins support modular organization of agent capabilities. Within a skill, complex functionality can be divided into capability modules in `references/*.md`. `SKILL.md` orients the agent and supplies enough routing information to select the relevant modules without loading every reference.
+Skills and plugins support modular organization of agent capabilities. Within a skill, complex functionality can be divided into capability modules in `references/*.md`. `SKILL.md` orients the agent and provides enough routing information to select the relevant modules without loading every reference.
 
-Plugins group skills into a further level of composition. This modular architecture supports two purposes:
+Plugins group skills into a further level of composition. This modular architecture serves two purposes:
 
 - **Development:** clear responsibilities, maintainable units and limited coupling.
 - **Context management:** progressive loading that avoids unnecessary instructions and context pollution.
 
-The [Agent Plugins specification v1.0.0](https://agent-plugins.org/specification) does not define `PLUGIN.md`, a plugin entry analogous to `SKILL.md`. Such an entry may be unnecessary when a plugin merely bundles unrelated skills for distribution, each used through its own entry. An integrated plugin composes relatively independent capabilities as skills and keeps closely related sub-workflows within their references, with shared capabilities reused across workflows. It should provide `PLUGIN.md` to orient the agent across this system and route workflows involving several skills. Because this entry is non-standard, the plugin must explain its role and loading path rather than assume automatic discovery.
+The [Agent Plugins specification v1.0.0](https://agent-plugins.org/specification) does not define `PLUGIN.md`, a plugin entry analogous to `SKILL.md`. Such an entry may be unnecessary when a plugin merely bundles unrelated skills for distribution, each used through its own entry. An integrated plugin composes relatively independent capabilities as skills and keeps closely related sub-workflows within their references, with shared capabilities reused across workflows. In that case, a shared `PLUGIN.md` entry is desirable: it orients the agent across the system and routes workflows involving several skills, much as `SKILL.md` orients the agent within a skill and routes it to reference modules.
 
-A complex plugin may also use a coordinator skill to manage composite workflows. The loading path becomes `PLUGIN.md` → coordinator `SKILL.md` → selected skill entries and references. Other skills can depend primarily on the coordinator and a small set of shared capabilities, reducing connections between individual skills.
+A complex plugin may also define a coordinator skill to manage composite workflows. The loading path becomes `PLUGIN.md` → coordinator `SKILL.md` → selected skill entries and references. Other skills can depend primarily on the coordinator and a small set of shared capabilities, reducing connections between individual skills.
 
 ## Scope and output
 
