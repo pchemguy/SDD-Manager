@@ -102,3 +102,29 @@ The human requested pulling campaign 059’s report and assessing which findings
 ## V-019 — APA review activation policy and parent deferral
 
 The human specified that sdd-manage/SKILL.md remediation belongs to resumed campaign 059. Add APA handoff routing for full/comprehensive skill/plugin reviews; ordinary/focused reviews should not automatically activate the proposed review programs. Preserve explicit module selection and scoped review effects. Commit/push/read back; leave the three parent-derived document recommendations pending and retain 060 open/unmerged, 059 suspended.
+
+## V-020 — Accepted full-set revision; human review before finalization
+
+The human authorized planning and executing the [full-set revision queue](REVIEW-REPORT.md#full-set-u-003--alignment-conclusion-and-revision-queue), then reviewing the final documents before finalization. Starting source: `1589cb2486c75ff31076d1bf11968d2b72551b62`. Accept R-007–R-009 and the three pending parent-derived documentation recommendations as one coupled revision of skill-review.md, plugin-review.md, PLUGIN-CONTRACT.md and PROPOSED-REVISIONS.md.
+
+### Scope decisions and outcomes
+
+| Work | Accepted revision and objective recheck |
+| --- | --- |
+| R-007: comprehensive coverage | Both procedures require an inventory/disposition of the requested target, recording depth/evidence, reasoned exclusions and unassessed items. Representative cases do not substitute for content coverage; focused requests and dependency inspection stay bounded. Align handoff activation and reporting. |
+| R-008: plugin applicability | Retain general APA applicability rather than limit the module to skill-only plugins. Qualify skill-entry fallback as applying to skill workflows; account for advertised non-skill components through their supported discovery/interfaces, dependencies and owning configuration/runtime checks. Keep shared entry/coordinator criteria conditional; introduce no mandatory component or MCP manual. |
+| Parent 059/R-001/R-002: plugin composition | Add concise review criteria for visible section responsibilities and coherent paragraphs/steps. Assess central constraints before dependent actions without imposing fixed headings or copying the full skill checklist. |
+| Parent 059/R-004: selection order | State evidence reuse/recovery before selection and its consequential announcement; avoid duplicate orientation and routine context restart or announcement ceremonies. |
+| R-009: independent coordinator routing | Require an identified sdd-manage entry routing section, preferably a table, individually naming/linking every `references/*.md` file with scope/boundary and loading conditions. Compare inventory and entry-only selection; retain domain map as navigation without recursive scope or dependence on generic modules. |
+| Parent 059/R-003: relocation fidelity | Require every removed coordinator clause to have a canonical destination and actual loading condition. Establish absent qualifications there before shortening; retain consequential pre-action invariants in the entry. No runtime coordinator edit in 060. |
+| Handoff status | Update proposed APA integration/verification scope and current review status to reflect actual accepted source revisions. Preserve full/comprehensive versus ordinary/focused activation and vendor/domain boundaries; no APA repository/cache edit or acceptance claim. |
+
+The optional K/C correspondence note is deferred: distinct starting layers and additional K coverage are already explicit; adding another case map is not necessary to address the accepted findings. Preserve all C/K identities, approved skill opening/routing paragraph, accepted plugin rationale except the scoped fallback qualification, and all other essential duties/qualifiers. Keep both generic modules and the SDD contract independently usable. No runtime package, preserved drafts, parent/closed records, publication workflow, release, backend or test changes.
+
+### Execution and verification
+
+1. Publish/read back this accepted plan before source edits.
+2. Revise the four affected documents together so scope, criteria and handoff stay aligned. Inspect their complete resulting composition and compare the diff with the accepted outcomes.
+3. Recheck each finding and parent recommendation against actual source. Inspect full/focused and skill-only/mixed/no-skill applicability, entry-only reference selection, independent contract use and qualifier-preserving relocation. These are source assessments, not consumer trials.
+4. Check current campaign links/anchors, heading/blank-line and Git whitespace, approved paragraphs, case identities, exact unchanged drafts/runtime/parent/closed bytes and owned paths. Proportionate source-document checks suffice; live/model acceptance, full support/publisher suites and APA integration are unselected.
+5. Update retained findings/dispositions and execution evidence; commit source and reports together, push/read back and stop for human review. Campaign 060 remains open/unmerged; parent 059 stays suspended. Finalization, integration and parent resumption are not authorized by this execution request.
