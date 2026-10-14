@@ -37,3 +37,7 @@ The human requested clear dedicated reference sections in skill-review itself. S
 ## V-007 — Review criteria without format instruction
 
 The human rejected architecture-teaching prose in skill-review.md. Remove the introductory format explanation and similar standard-design exposition, retaining actionable shared/entry/reference review criteria. Keep the APA handoff explicit about format guidance ownership; check meaning/coverage, links and spacing, then commit/push/read back without closing.
+
+## V-008 — Complete entry-level reference routing
+
+The human requires an explicit routing section, preferably a table, identifying every reference and its purpose/scope/boundary and trigger/use conditions so relevance is determinable from SKILL.md alone. Add inventory-completeness and unopened-reference selection checks, including nested modules; carry the proposed policy into the APA handoff without presenting it as a standard requirement. Verify campaign links/spacing, commit/push/read back and keep the campaign open/unmerged.
