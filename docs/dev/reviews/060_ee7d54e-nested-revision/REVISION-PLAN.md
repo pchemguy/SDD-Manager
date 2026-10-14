@@ -41,3 +41,7 @@ The human rejected architecture-teaching prose in skill-review.md. Remove the in
 ## V-008 — Complete entry-level reference routing
 
 The human requires an explicit routing section, preferably a table, identifying every reference and its purpose/scope/boundary and trigger/use conditions so relevance is determinable from SKILL.md alone. Add inventory-completeness and unopened-reference selection checks, including nested modules; carry the proposed policy into the APA handoff without presenting it as a standard requirement. Verify campaign links/spacing, commit/push/read back and keep the campaign open/unmerged.
+
+## V-009 — Remove nested-module qualification
+
+Remove “, including nested reference modules,” from the routing criterion and the corresponding qualification in the APA proposal, as requested. Retain other routing criteria and the open/unmerged boundary.

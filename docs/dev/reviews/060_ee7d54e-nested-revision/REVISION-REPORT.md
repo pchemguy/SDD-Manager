@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001 through V-008 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001 through V-009 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -97,3 +97,7 @@ Removed the architecture explanation from the opening and similar standard-desig
 Added a dedicated entry-review routing subsection: every reference, including nested modules, is individually named/linked with purpose, scope/boundary and triggering/use conditions. The reviewer compares the complete inventory with routes, checks descriptions against targets and assesses request selection from SKILL.md before reference contents are loaded. File lists, vague labels, local child links and valid paths alone cannot satisfy the selection criterion. Reference-review onward routes and common assessment procedure/cases were aligned.
 
 Updated the APA handoff integration and verification scope, preserving the distinction between this selected authoring/review policy and specification conformance. Checked campaign links/anchors/spacing and owned diff; runtime skills, independent coordinator contract and preserved draft remain unchanged. No APA implementation or live behavior claimed. Publish/read back; 060 stays open/unmerged and 059 suspended.
+
+## V-009 — Routing wording correction
+
+Removed the requested nested-reference phrase from skill-review.md and the corresponding proposal wording. Other routing criteria remain unchanged. Checked the two resulting sentences and Git whitespace; publish/read back and retain campaign 060 open/unmerged.
