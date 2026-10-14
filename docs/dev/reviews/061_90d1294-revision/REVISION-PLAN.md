@@ -150,3 +150,21 @@ Do not alter Git history, force-push, edit installed skills/plugins, revise APA,
 ## Execution disposition
 
 The later human command authorized execution. A-001 through A-006 are implemented and source-checked in the [revision report](REVISION-REPORT.md); the original planning-only boundary above retains its historical meaning. Final campaign closure requires verified explicit integration into main and target publication. No live acceptance or model-strength comparison was performed.
+
+## Reopened amendment — Reporting profiles
+
+The human authorized reopening campaign 061 to define the proposed Minimal, Standard and Explicit reporting shortcuts. Qualifying prior published first-parent merge and reopening checkpoint: `ed3099a229b59d4786fcd74bf6761dc7ac94e394` on main, parents `90d1294639c665b7a134a0326dda48fc6e24812e` and `60a6697ba142cb015157479dfe3f69f842e28a99`. Original identity, opening and baseline remain unchanged. Bring the existing campaign branch forward to this target without rewriting history. Execute only this related delta and verify/integrate/publish it back into main; original closure/check evidence above remains historical.
+
+### A-007 — Define profiles and reconcile guidance
+
+In coordination.md, define Minimal, Standard (default) and Explicit reporting with the previously proposed differences. Every profile retains the same operational checks, consequential reporting and human checkpoints; Explicit does not require unchanged per-response preambles. Support ordinary natural-language profile selection and switches, and one-response detail overrides that then return to the selected profile. Retain selected preferences in available conversation/workflow context and pass them through existing handoffs; no new setting file, registry, or inferred model-strength selection. More specific human instructions control the affected output. When no preference is recoverable, use Standard without inferring lost choices.
+
+Project the shortcuts concisely into PLUGIN.md and the coordinator routing description. Give humans a profile comparison and command examples in README; reconcile capability map, developer contract, coordinator examples and Jules prompt where useful. No new module, profile-specific workflow gates or full reporting template across skills.
+
+Recheck default behavior, each profile, mid-workflow switches, one-response override/reversion, specific instructions, requested source lists, consequential blockers/checkpoints under Minimal, Explicit without repetition, handoff/context recovery and independence from PLUGIN.md. Publish/read back the source/evidence action before further work.
+
+### A-008 — Verify and close the amendment
+
+Check affected current Markdown links/anchors/spacing and Git whitespace, direct coordinator discovery and unchanged operational obligations. Run support and pinned publisher suites for coherent plugin integration; verify the exact committed native manifest/package and excluded source-only files. Source scenario assessment is distinct from live model behavior; no live trial is selected. Preserve all other closed campaign packages. Finish records/navigation, publish/read back, explicitly merge the amended tip into main, verify merged state/package, publish/read back and return clean main. The new integration summary carries forward original outcomes and provenance while distinguishing A-007/A-008 and fresh verification from historical checks.
+
+Amendment disposition: A-007/A-008 implemented and source-verified; fresh evidence is recorded in the revision report. Verified target integration/publication and return establish renewed closure. Original A-001 through A-006 remain delivered; no prior evidence was promoted to fresh acceptance.
