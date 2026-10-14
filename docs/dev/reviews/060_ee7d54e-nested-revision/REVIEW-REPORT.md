@@ -132,3 +132,7 @@ These are recommendations for a subsequent accepted document revision, not newly
 ### Evidence and boundary
 
 Fetch succeeded; parent report checkpoint and entry blob were read back. Compared actual criteria, owner maps and case starting conditions in the current documents. No live behavior, runtime remediation or APA repository verification is claimed. Assessment/navigation links, headings and Git whitespace checked. Only this active assessment and its campaign evidence change; parent report/guidance documents, runtime package and closed records are preserved. Publish/read back this report and retain 060 open/unmerged, 059 suspended.
+
+## Full-set critical review — scope and baseline
+
+The human requested a new critical review of PLUGIN-CONTRACT.md, plugin-review.md and skill-review.md at `cd7ab3309e23c35f4ed6b91227466336a100766e`. [Full-set plan](REVIEW-PLAN.md) defines three units. Current state: planned; no new finding is accepted for repair. Earlier R-001 through R-006 remain source-rechecked for their earlier revision, while parent-059 recommendations retain their pending status. Runtime coordinator work remains deferred to resumed 059.
