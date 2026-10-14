@@ -39,7 +39,7 @@ Check that information required to choose the next module or respect an immediat
 
 ### Reference routing coverage
 
-When a skill includes `references/*.md`, require a clearly identified routing section in `SKILL.md`, preferably a table. It must name and link every `references/*.md` file and provide the following selection information for each:
+When a skill includes `references/*.md` references, require a clearly identified routing section in `SKILL.md`, preferably a table. It must name and link every reference file and provide the following selection information for each:
 
 | Routing element | Review requirement |
 | --- | --- |

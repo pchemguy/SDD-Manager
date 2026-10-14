@@ -109,3 +109,7 @@ Routing coverage and inventory checks now explicitly use `references/*.md`; APA 
 ## Opening sentence amendment
 
 Applied the human-approved opening sentence explicitly identifying reference modules as `references/*.md`. Checked the exact replacement and Git whitespace; publish/read back and retain campaign 060 open/unmerged.
+
+## Routing paragraph wording amendment
+
+Applied the human-supplied routing paragraph verbatim. Checked the exact replacement and Git whitespace; publish/read back and retain campaign 060 open/unmerged.
