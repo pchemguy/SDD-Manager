@@ -91,3 +91,20 @@ State: **Amendment active**. The human requested reopening the last campaign and
 Defined Minimal, Standard (default) and Explicit in coordination.md, with natural-language selection/switching, available-context/handoff continuity, response overrides and default recovery. All retain operational checks, consequential reporting and human decisions; no model-strength inference, settings file, extra approval gate or every-response template. Reconciled PLUGIN/coordinator projections, README comparison/commands, capability map, contract assessment, examples and Jules prompt.
 
 Source contrasts locate default/three profiles/switching and context loss in the profile section; a specific output request overrides presentation without changing the ongoing selection. Minimal retains substantive checkpoints/blockers/evidence and requested sources; Explicit avoids unchanged repetition. Direct coordinator entry reaches the definition without PLUGIN.md. Checked affected document links/spacing and Git whitespace; live behavior remains unrun. Publish/read back before fresh package/regression checks.
+
+### A-008 — Amendment verification and closure boundary
+
+Fresh candidate `d6b7f9a37f09223a7484190e13f88b19163a8ff9` passed 127 support and 30 publisher tests on Python 3.12.14 with pinned jsonschema 4.26.0. Native exact committed manifest/archive passed with 134 package files, fifteen coordinator references routed and 488 packaged local links/anchors across 92 documents. Ten affected current documents passed 214 local link/anchor/spacing checks. The source-only prompt/contract/campaign remain excluded; other closed records are unchanged.
+
+| Amendment source contrast | Located result |
+| --- | --- |
+| No preference / explicit Minimal, Standard or Explicit | Canonical profile table and default establish the selected level without changing operational obligations |
+| Switch mid-workflow / handoff to another owner | Profile selection persists in available context and the existing handoff payload carries the preference |
+| One-response explanation / subsequent routine response | Specific output request overrides that response and retains the ongoing selection |
+| Requested sources or consequential blocker/checkpoint under Minimal | Explicit source requests and mandatory consequential reporting remain required; checkpoints remain substantive |
+| Explicit reporting / unchanged clarification | Fuller relevant explanation, without compulsory unchanged preambles or added approval gates |
+| Lost reporting preference / direct coordinator entry | Standard fallback does not claim lost-state recovery; definition is reachable without PLUGIN.md |
+
+A-007/A-008 are source-verified. These contrasts and deterministic checks do not prove profile adherence by any model or client. No live acceptance, provider write or release was performed. Original source outcomes and closure facts remain historical, separate from these fresh amendment checks.
+
+State: **Amendment verified; explicit main integration, merged checks, remote publication/readback and clean target return establish renewed closure**. Finish navigation and publish this evidence before integration; retain original opening `95709ad3ecf85b703bc1346bf92ca4fc2f8b0fad`, branch-off `90d1294639c665b7a134a0326dda48fc6e24812e`, prior integration/reopening checkpoint `ed3099a229b59d4786fcd74bf6761dc7ac94e394` and actual merge parents in the cumulative integration summary.

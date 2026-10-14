@@ -166,3 +166,5 @@ Recheck default behavior, each profile, mid-workflow switches, one-response over
 ### A-008 — Verify and close the amendment
 
 Check affected current Markdown links/anchors/spacing and Git whitespace, direct coordinator discovery and unchanged operational obligations. Run support and pinned publisher suites for coherent plugin integration; verify the exact committed native manifest/package and excluded source-only files. Source scenario assessment is distinct from live model behavior; no live trial is selected. Preserve all other closed campaign packages. Finish records/navigation, publish/read back, explicitly merge the amended tip into main, verify merged state/package, publish/read back and return clean main. The new integration summary carries forward original outcomes and provenance while distinguishing A-007/A-008 and fresh verification from historical checks.
+
+Amendment disposition: A-007/A-008 implemented and source-verified; fresh evidence is recorded in the revision report. Verified target integration/publication and return establish renewed closure. Original A-001 through A-006 remain delivered; no prior evidence was promoted to fresh acceptance.
