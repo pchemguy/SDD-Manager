@@ -18,13 +18,21 @@ This is a developing proposal package in SDD Manager campaign 060. It has not be
 | [REVISION-PLAN.md](REVISION-PLAN.md), [REVISION-REPORT.md](REVISION-REPORT.md) | Campaign authority, change/check evidence and current limitations |
 | [REVIEW-REPORT.md](REVIEW-REPORT.md) | Critical text review and subsequent source rechecks; all six corrections accepted and implemented, with behavioral trials unrun |
 
+## Review activation policy
+
+A **full or comprehensive review of a skill** should load and apply skill-review.md. A **full or comprehensive review of a plugin** should load and apply plugin-review.md, with skill-review.md covering included skills/references as required by that scope.
+
+Ordinary or focused review requests should **not automatically trigger these review programs**. Preserve the narrower requested workflow and existing review guidance. An explicit request to use either proposed module can select it at a narrower scope; full/comprehensive activation does not authorize repairs or unrelated effects.
+
+Make these distinctions explicit in APA’s entry routing and activation guidance. Apply the trigger to the reviewed skill/plugin, not to an unrelated project merely using a plugin. Record actual review scope and unassessed areas rather than calling a focused check comprehensive.
+
 ## Proposed integration
 
 | APA owner | Proposed change |
 | --- | --- |
 | `references/skill-review.md` | Add the general skill/reference module, adapting only to established APA terminology, routing and packaging conventions |
 | `references/plugin-review.md` | Add plugin composition, integrated-entry and optional coordinator review, preserving independence from SDD policies |
-| `SKILL.md` | Make skill/reference and plugin review discoverable through activation/routing and clear conditional links to the appropriate modules; where APA supplies `references/*.md`, its entry routing must individually name/link every such file with scope/boundary and use conditions; preserve creation, revision, inspection and structural-validation paths |
+| `SKILL.md` | Route full/comprehensive skill or plugin review to the appropriate module under Review activation policy, with clear conditional links; ordinary/focused reviews retain their narrower workflow; where APA supplies `references/*.md`, its entry routing must individually name/link every such file with scope/boundary and use conditions; preserve creation, revision, inspection and structural-validation paths |
 | `references/skill-design.md` | Keep skill design principles under this owner; link the review procedure where useful and consolidate overlapping review detail |
 | `references/plugin-design.md` | Keep plugin design guidance under this owner; route composition/coordinator review to plugin-review.md and consolidate overlapping assessment guidance |
 | `references/validation-policy.md` | Distinguish structural conformance, content/ownership review and observed workflow behavior; route to the appropriate review module without duplicating its checklist |

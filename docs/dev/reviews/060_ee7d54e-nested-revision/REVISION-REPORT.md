@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001 through V-018 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001 through V-019 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -181,3 +181,9 @@ Removed “A custom file such as PLUGIN.md” and named `PLUGIN.md` directly in 
 ## Parent 059 relevance assessment
 
 Fetched published parent checkpoint `ee7d54ef5f8516cfcf6232366929e3eb64e5e3ab` and assessed its four findings against current documents. The coordinator entry blob is unchanged on parent/child, so all four runtime findings remain applicable. Existing guidance covers most concerns; [assessment](REVIEW-REPORT.md#campaign-059-findings-versus-current-development-documents) recommends three bounded additions for explicit plugin/coordinator composition, baseline-before-selection and coordinator clause relocation. No guidance/runtime repair or parent resumption was inferred. Checked report links/spacing and publish/read back; retain 060 open/unmerged.
+
+## V-019 — Full/comprehensive review triggers
+
+Added APA handoff activation policy and aligned its proposed SKILL.md integration row: full/comprehensive skill review loads skill-review.md; full/comprehensive plugin review loads plugin-review.md and relevant skill review. Ordinary/focused review does not activate these programs automatically; explicit module selection remains possible within a narrower scope. Review activation does not authorize repair or unrelated project review.
+
+Recorded the human’s boundary: runtime sdd-manage/SKILL.md changes wait for campaign 059 resumption. Parent remains suspended; the three assessed document additions remain recommendations. Checked wording, headings/blank lines and Git whitespace; publish/read back with 060 open/unmerged.

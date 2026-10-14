@@ -98,3 +98,7 @@ Replace example/alternative filename wording with PLUGIN.md as the shared entry 
 ## Parent-report relevance assessment
 
 The human requested pulling campaign 059’s report and assessing which findings remain relevant to current development documents. Fetch/read the published parent checkpoint, compare all four findings with current modules/contract and distinguish still-unremediated runtime source from already covered criteria and proposed document additions. Record the assessment only; retain parent suspension and open/unmerged scope.
+
+## V-019 — APA review activation policy and parent deferral
+
+The human specified that sdd-manage/SKILL.md remediation belongs to resumed campaign 059. Add APA handoff routing for full/comprehensive skill/plugin reviews; ordinary/focused reviews should not automatically activate the proposed review programs. Preserve explicit module selection and scoped review effects. Commit/push/read back; leave the three parent-derived document recommendations pending and retain 060 open/unmerged, 059 suspended.
