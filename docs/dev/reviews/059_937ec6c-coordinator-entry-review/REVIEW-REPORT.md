@@ -1,6 +1,6 @@
 # Coordinator entry composition review
 
-Campaign **059_937ec6c**; [review plan](REVIEW-PLAN.md). Starting/reviewed source: `937ec6cc74545a7b3555b368ce86c4f4ff42c6c4`. Branch: `revision/059_937ec6c-coordinator-entry-review`; target: main. State: **Review complete; proposed revisions awaiting acceptance; open and unmerged**.
+Campaign **059_937ec6c**; [review plan](REVIEW-PLAN.md). Starting/reviewed source: `937ec6cc74545a7b3555b368ce86c4f4ff42c6c4`. Branch: `revision/059_937ec6c-coordinator-entry-review`; target: main. State: **Review complete; R-001–R-004 accepted for resumed execution; open pending verification/integration**.
 
 Review covers the coordinator entry's composition, progressive-discovery boundary and a proposed source-only development contract. Evidence is source inspection and bounded local measurements; no live acceptance or model trial. Source repair and contract implementation are not selected.
 
@@ -154,3 +154,7 @@ Proposed revision order:
 U-001 checkpoint `5d2ddf26bf4ba97626cf87eabf9d0a38ccbc68b0` was pushed/read back before U-002. Coordinator source, package content, tests and prior closed campaign files remain byte-identical to starting baseline. Active campaign/index links and heading spacing were checked; new index navigation belongs to its existing table. Full support/publisher suites were not rerun for report-only work. No live trial, token measurement, external research or provider operation supports this review. Source inspection supports the stated composition/ownership findings, not quantified reliability or model-performance improvements.
 
 The review ends with published campaign records and proposed revision scope. Campaign **059 remains open and unmerged**; no contract or coordinator source changes have been implemented.
+
+## Accepted resumption after nested 060
+
+The human accepted resuming/executing/finishing 059 after child closure. Resumed source e3623feb0a6beaf0f00abd5a23a7f0a46b5d5aad includes the accepted permanent plugin/coordinator contract, replacing the earlier separate-contract proposal. Runtime entry is unchanged at resumption. REVISION-PLAN.md accepts all four findings with owner/loading and source-verification scope; original observations, source locations and unrun behavioral claims remain intact. Closed 060 is not a current edit/validation target.
