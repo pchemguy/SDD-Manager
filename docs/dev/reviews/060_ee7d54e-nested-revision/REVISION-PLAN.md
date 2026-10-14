@@ -74,3 +74,7 @@ Keep new modules/contracts/proposal material within campaign 060. Repoint the ro
 ## V-013 — Restore the plugin-entry rationale
 
 The human identified omission of the accepted Scope and motivation section. Restore it verbatim from PLUGIN-CONTRACT-DRAFT.md into plugin-review.md: modular organization, development/context benefits, independent bundles versus integrated workflows, the non-standard PLUGIN.md rationale and optional coordinator/star-like decomposition. Preserve the distinction from skill-review, which does not teach the standard architecture. Check exact restoration, links/spacing and owned scope; publish/read back and remain open/unmerged.
+
+## V-014 — Adapt plugin-entry rationale wording
+
+The human authorized adapting the restored section’s title and wording. Use “Shared plugin entries and coordination” and revise for the general review module while preserving modularity benefits, independent versus integrated plugins, the shared-entry requirement/convention and optional coordinator path. Keep the original wording in the draft; publish/read back without closure.
