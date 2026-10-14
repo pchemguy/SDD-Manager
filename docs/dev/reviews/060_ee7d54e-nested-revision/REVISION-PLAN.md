@@ -140,3 +140,7 @@ Address the human's format feedback on plugin-review.md, Plugin composition and 
 ## V-022 — Entry and coordinator questions as nested lists
 
 The human accepted the proposed matching list format for Integrated plugin entry review and Coordinator review in plugin-review.md. Convert each category to a bold top-level bullet and each question to a four-space-indented child; preserve all twelve categories, twenty questions, order and surrounding applicability/ownership/continuity prose. Verify exact source fidelity, Markdown spacing and three-file scope, then commit/push/read back. Retain 060 open/unmerged for human review, 059 suspended; no broader rewrite or finalization.
+
+## V-023 — Explicit coordinator assessment contrasts
+
+Address the human's coverage concern in plugin-review.md, Assessment contrasts and evidence. Existing shared rows cover several coordination boundaries indirectly; add a conditional coordinator block for direct entry, workflow continuity/switching, successful versus blocked/failed delegation, and relevant versus unrelated coordination modules. Preserve the nine shared contrasts, source/behavior evidence paragraph and optional/proportionate trial policy. Distinguish shared contrasts, coordinator contrasts and their common evidence requirements with local headings. Recheck agreement with Coordinator review, exact preservation outside the selected section, Markdown/links and three-file scope; commit/push/read back, retaining human review/open campaign and parent suspension.

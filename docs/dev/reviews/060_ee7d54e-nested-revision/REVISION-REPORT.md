@@ -223,3 +223,9 @@ Converted the seven categories to bold top-level bullets with each of the fourte
 ## V-022 — Entry and coordinator question lists
 
 Converted the two selected tables at source `a5326df5308bf1612926688f745708539af0d857` to the same nested-list format as Plugin composition and ownership. Entry review retains six categories/nine questions; coordinator review retains six categories/eleven questions. Exact reconstruction verifies every category/question and all surrounding prose unchanged. Four-space nesting, Markdown/Git spacing and exact three-file scope checked. Only plugin-review.md and current revision plan/report change; no runtime, contract, handoff, draft or historical edits. Commit/push/read back; 060 remains open/unmerged with human review pending and 059 suspended.
+
+## V-023 — Coordinator contrasts made explicit
+
+Reviewed the assessment section at `53c49cbea29e08c0c19395edde1fbef4d225a0ae`. Its nine shared contrasts already cover readiness, recovery and parent/child boundaries, but do not explicitly exercise direct coordinator access, material workflow switching, failed delegation or conditional coordination-module loading. Added four coordinator contrasts applicable only when a coordinator is present; retained the shared rows and optional-trial policy. Shared, coordinator and evidence subsections now distinguish their roles; the evidence paragraph applies to both contrast groups.
+
+Source recheck aligns the additions with Coordinator review's selection, delegation, results and entry/module criteria. Shared table and evidence paragraph are unchanged; no SDD backend/branch/checkpoint rules, compulsory coordinator or behavioral trial introduced. Scoped Markdown/link and exact three-file preservation checks pass. Only plugin-review.md and current revision plan/report change. Publish/read back; 060 remains open/unmerged for human review, 059 suspended. No live acceptance or observed coordinator behavior claimed.

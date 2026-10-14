@@ -112,6 +112,8 @@ For a full/comprehensive plugin review, inventory the requested package's entrie
 
 Use contrasts appropriate to the accepted design; do not make every trial compulsory. Keep domain-specific sample prompts and expected behavior in the plugin's own review material rather than importing its policies here.
 
+### Shared contrasts
+
 | Contrast | Inspect or observe |
 | --- | --- |
 | Independent capability request versus composite workflow request | Direct owner use or appropriate coordination, without unnecessary full-system activation |
@@ -123,5 +125,18 @@ Use contrasts appropriate to the accepted design; do not make every trial compul
 | Shared prerequisite satisfied versus unresolved | Dependent work proceeds or remains blocked; delegation does not erase the gate |
 | Child operation complete versus unfinished parent scope | Correct return and retained parent context; no implicit continuation |
 | Narrow preparation result versus external publication | Requested outputs and permitted effects remain distinct |
+
+### Coordinator contrasts
+
+Apply these when a coordinator is present, alongside the relevant shared contrasts.
+
+| Contrast | Inspect or observe |
+| --- | --- |
+| Entry through `PLUGIN.md` versus direct coordinator entry | Canonical coordination duties remain reachable from the coordinator; loading the plugin front is optional |
+| Current workflow still applicable versus request requiring a stage or path switch | Sufficient evidence precedes reuse or switching and its consequential announcement; scope, accepted inputs and requested stops survive |
+| Successful delegation versus blocked or failed delegation | Actual result/evidence or a concrete blocker; retained parent scope and correct return/stop, with no claim of unperformed work |
+| Coordination module relevant versus unrelated to the selected path | Entry guidance identifies the required module and use conditions before its dependent action; unrelated modules need not be loaded |
+
+### Evidence
 
 For source review, record the actual instruction evidence and coverage. For a selected consumer trial, record source/model, initial context/request, loaded instructions, visible decisions, actual actions/output and reached boundary. Do not supply expected owners or reviewer answers to the consumer. A correct route does not prove downstream behavior, and structural validation does not prove universal client support. Report unrun or unavailable checks explicitly.
