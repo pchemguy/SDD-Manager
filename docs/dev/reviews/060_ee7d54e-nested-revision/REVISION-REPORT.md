@@ -177,3 +177,7 @@ Appended the human-proposed rationale, phrasing automatic discovery as unavailab
 ## V-018 — Defined entry filename
 
 Removed “A custom file such as PLUGIN.md” and named `PLUGIN.md` directly in integrated-entry review, canonical-source, recovery and availability criteria. The section assesses its purpose/loading/fallback without retelling the earlier non-standard rationale. Checked wording and Git whitespace; publish/read back, retain 060 open/unmerged.
+
+## Parent 059 relevance assessment
+
+Fetched published parent checkpoint `ee7d54ef5f8516cfcf6232366929e3eb64e5e3ab` and assessed its four findings against current documents. The coordinator entry blob is unchanged on parent/child, so all four runtime findings remain applicable. Existing guidance covers most concerns; [assessment](REVIEW-REPORT.md#campaign-059-findings-versus-current-development-documents) recommends three bounded additions for explicit plugin/coordinator composition, baseline-before-selection and coordinator clause relocation. No guidance/runtime repair or parent resumption was inferred. Checked report links/spacing and publish/read back; retain 060 open/unmerged.
