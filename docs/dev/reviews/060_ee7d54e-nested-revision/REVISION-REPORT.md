@@ -1,6 +1,6 @@
 # Nested revision campaign opening
 
-Campaign **060_ee7d54e**. State: **V-001 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
+Campaign **060_ee7d54e**. State: **V-001/V-002 complete; open and unmerged**. Opening scope was pending; subsequent accepted scope and execution are recorded below.
 
 ## Identity and parent context
 
@@ -26,7 +26,7 @@ The human subsequently requested creation of COORDINATOR-CONTRACT.md. [Revision 
 
 ## V-001 — Coordinator development contract
 
-Executed after planning checkpoint `4af32d3376bfb9b68c5adbeade133d5eddfa9d87` was pushed/read back. Created [COORDINATOR-CONTRACT.md](../../COORDINATOR-CONTRACT.md), titled “sdd-manage development contract”: source-only purpose, coordinator responsibilities, essential entry gates, conditional ownership across all fifteen coordinator modules, recommended section jobs, composition/duplication review method and ten assessment contrasts. It distinguishes the coordinator's canonical orchestration role from PLUGIN.md's capability projection and keeps runtime instructions with packaged owners. No size quota, new workflow gate, runtime dependency or full procedure copy was introduced.
+Executed after planning checkpoint `4af32d3376bfb9b68c5adbeade133d5eddfa9d87` was pushed/read back. Created [COORDINATOR-CONTRACT.md](COORDINATOR-CONTRACT.md), titled “sdd-manage development contract”: source-only purpose, coordinator responsibilities, essential entry gates, conditional ownership across all fifteen coordinator modules, recommended section jobs, composition/duplication review method and ten assessment contrasts. It distinguishes the coordinator's canonical orchestration role from PLUGIN.md's capability projection and keeps runtime instructions with packaged owners. No size quota, new workflow gate, runtime dependency or full procedure copy was introduced.
 
 Linked the contract from CAPABILITY-MAP.md and root development AGENTS.md for future entry/module-boundary edits. README already routes source contributors through the capability map; no packaged user-facing claim changed. The parent entry findings remain unimplemented; contract creation does not mark those findings verified or resume parent execution.
 
@@ -38,3 +38,9 @@ Linked the contract from CAPABILITY-MAP.md and root development AGENTS.md for fu
 - Full support/publisher suites and live acceptance were not run: this action changes only source-development documents and active campaign evidence/navigation. No release or provider operation performed.
 
 The human explicitly instructed **not to close the campaign**. Publish/read back this action commit and stop on `revision/060_ee7d54e-nested-revision`; campaign 060 remains open and unmerged, with parent 059 suspended. Future accepted work retains the parent revision branch as integration/return target.
+
+## V-002 — Temporary campaign placement
+
+At the human's request, moved the contract from docs/dev/ into this campaign directory. Rebased its relative owner links and repaired this report's link; prose is unchanged. Removed V-001's permanent AGENTS.md/CAPABILITY-MAP pointers while the contract remains a campaign draft, and added direct active-campaign navigation. The original V-001 creation and verification remain historical evidence.
+
+Checked all moved-contract and active-record links/anchors, heading spacing, Git whitespace and the full owned diff. Content comparison against `e6bad47c19c88671767598e10f4f483786094b5a` confirms only relative link destinations changed in the contract. Packaged source/tests and older closed records remain unchanged; no full suites or live acceptance required for this relocation. Publish/read back the relocation commit; campaign 060 stays open and unmerged, parent 059 suspended.

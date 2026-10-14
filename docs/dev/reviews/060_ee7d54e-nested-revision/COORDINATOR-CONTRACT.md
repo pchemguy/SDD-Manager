@@ -2,11 +2,11 @@
 
 ## Purpose and scope
 
-[sdd-manage](../../skills/sdd-manage/SKILL.md) coordinates SDD Manager workflows: it establishes context, selects the path, checks shared prerequisites, delegates to focused skills and preserves the authorized completion boundary. Its `SKILL.md` entry must make the next coordination decision clear and route conditional procedures to `references/*.md` or their owning skills.
+[sdd-manage](../../../../skills/sdd-manage/SKILL.md) coordinates SDD Manager workflows: it establishes context, selects the path, checks shared prerequisites, delegates to focused skills and preserves the authorized completion boundary. Its `SKILL.md` entry must make the next coordination decision clear and route conditional procedures to `references/*.md` or their owning skills.
 
-This source-only document guides maintainers reviewing or changing that entry and its module boundaries. It defines responsibilities, composition criteria and a targeted assessment program. Target-project agents use the packaged skill instructions; this contract is not a runtime dependency. Contributor verification follows [acceptance/AGENTS.md](../../acceptance/AGENTS.md).
+This source-only document guides maintainers reviewing or changing that entry and its module boundaries. It defines responsibilities, composition criteria and a targeted assessment program. Target-project agents use the packaged skill instructions; this contract is not a runtime dependency. Contributor verification follows [acceptance/AGENTS.md](../../../../acceptance/AGENTS.md).
 
-The [plugin entry contract](PLUGIN-CONTRACT.md) governs the plugin's capability projection and entry routing. The coordinator is a standard skill entry and can define canonical orchestration guidance. Its entry and references must remain sufficient when `PLUGIN.md` is unavailable. Development contracts describe the architecture and its assessment; operational instructions remain in packaged owners.
+The [plugin entry contract](../../PLUGIN-CONTRACT.md) governs the plugin's capability projection and entry routing. The coordinator is a standard skill entry and can define canonical orchestration guidance. Its entry and references must remain sufficient when `PLUGIN.md` is unavailable. Development contracts describe the architecture and its assessment; operational instructions remain in packaged owners.
 
 ## Coordinator responsibilities
 
@@ -40,14 +40,14 @@ A concise reminder and loading condition may repeat an owner's rule where they p
 
 | Coordination need | Load / owner |
 | --- | --- |
-| Workflow selection, continuity and operation boundaries | [workflows.md](../../skills/sdd-manage/references/workflows.md), including its selection, core-workflow and release-operation sections |
-| Shared prerequisites, handoff payloads, persistence, results and environment recovery | [coordination.md](../../skills/sdd-manage/references/coordination.md) |
-| Repository guidance and first SDD adoption records | [agent-orientation.md](../../skills/sdd-manage/references/agent-orientation.md), [repository-bootstrap.md](../../skills/sdd-manage/references/repository-bootstrap.md) |
-| Human acceptance and technical document readiness | [human-document-review.md](../../skills/sdd-manage/references/human-document-review.md), [document-qc-gates.md](../../skills/sdd-manage/references/document-qc-gates.md) |
-| Branch identity, preparation integration, publication and Git recovery | [branch-management.md](../../skills/sdd-manage/references/branch-management.md), [git-workflows.md](../../skills/sdd-manage/references/git-workflows.md) |
-| Tracking selection, eligible-phase readiness and credential recovery | [tracking-decision.md](../../skills/sdd-manage/references/tracking-decision.md), [phase-activation.md](../../skills/sdd-manage/references/phase-activation.md), [credentials.md](../../skills/sdd-manage/references/credentials.md) |
-| Formal reviews, accepted revisions, nested/reopened campaigns and selected prerelease review | [review-and-revision.md](../../skills/sdd-manage/references/review-and-revision.md), [revision-modes.md](../../skills/sdd-manage/references/revision-modes.md), [prerelease-review.md](../../skills/sdd-manage/references/prerelease-review.md) |
-| Representative requests and scope contrasts | [examples.md](../../skills/sdd-manage/references/examples.md) |
+| Workflow selection, continuity and operation boundaries | [workflows.md](../../../../skills/sdd-manage/references/workflows.md), including its selection, core-workflow and release-operation sections |
+| Shared prerequisites, handoff payloads, persistence, results and environment recovery | [coordination.md](../../../../skills/sdd-manage/references/coordination.md) |
+| Repository guidance and first SDD adoption records | [agent-orientation.md](../../../../skills/sdd-manage/references/agent-orientation.md), [repository-bootstrap.md](../../../../skills/sdd-manage/references/repository-bootstrap.md) |
+| Human acceptance and technical document readiness | [human-document-review.md](../../../../skills/sdd-manage/references/human-document-review.md), [document-qc-gates.md](../../../../skills/sdd-manage/references/document-qc-gates.md) |
+| Branch identity, preparation integration, publication and Git recovery | [branch-management.md](../../../../skills/sdd-manage/references/branch-management.md), [git-workflows.md](../../../../skills/sdd-manage/references/git-workflows.md) |
+| Tracking selection, eligible-phase readiness and credential recovery | [tracking-decision.md](../../../../skills/sdd-manage/references/tracking-decision.md), [phase-activation.md](../../../../skills/sdd-manage/references/phase-activation.md), [credentials.md](../../../../skills/sdd-manage/references/credentials.md) |
+| Formal reviews, accepted revisions, nested/reopened campaigns and selected prerelease review | [review-and-revision.md](../../../../skills/sdd-manage/references/review-and-revision.md), [revision-modes.md](../../../../skills/sdd-manage/references/revision-modes.md), [prerelease-review.md](../../../../skills/sdd-manage/references/prerelease-review.md) |
+| Representative requests and scope contrasts | [examples.md](../../../../skills/sdd-manage/references/examples.md) |
 
 The entry's routing should identify when these procedures are needed; their presence in a table does not require loading them all. Provider execution belongs to `sdd-forge`; task execution and commit syntax/audits belong to `sdd-implement` and `sdd-report`; amendments at implementation checkpoints belong to `sdd-steer`. Design, specification, planning, tasks, documentation, verification and accepted feature incorporation retain their existing owners.
 
@@ -91,6 +91,6 @@ Start through `sdd-manage`, without requiring `PLUGIN.md`. Use ordinary project/
 | K-09 | Verified task/result committed but unpushed, including a clean worktree | Push/readback or scoped recovery precedes another work unit or commit |
 | K-10 | Ordinary revision versus nested child versus selected eligible reopening | Correct identity, parent suspension/return and closed-record preservation; child completion does not resume its parent |
 
-Use the [plugin contract cases](PLUGIN-CONTRACT.md#guidance-assessment-cases) and coordinator [examples](../../skills/sdd-manage/references/examples.md) for existing project situations. Add coordinator-specific facts or a new contrast only when the change introduces a distinction; avoid another complete prompt catalog.
+Use the [plugin contract cases](../../PLUGIN-CONTRACT.md#guidance-assessment-cases) and coordinator [examples](../../../../skills/sdd-manage/references/examples.md) for existing project situations. Add coordinator-specific facts or a new contrast only when the change introduces a distinction; avoid another complete prompt catalog.
 
 For source review, record inspected instructions and gaps. A selected consumer trial separately records exact source/model, initial context, prompt, loaded instructions, visible decisions and observed boundary. Do not supply reviewer expectations to the consumer. Correct routing alone does not prove HIL, task closure, tracking, Git publication or stopping behavior; those require observed execution evidence. Passing deterministic source checks does not establish live acceptance or universal client support.
