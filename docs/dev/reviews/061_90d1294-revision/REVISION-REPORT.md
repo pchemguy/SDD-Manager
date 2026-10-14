@@ -37,3 +37,7 @@ A-001 adds the read-only workflow-loading operation and procedure to `workflows.
 ## A-002 — Scope checks and reporting detail
 
 Added the canonical operational check and reporting policy in `coordination.md`, linked from workflow continuity. Each coherent unit checks current scope/instructions/pending decisions; each write checks both path and change. Reporting remains event-based, preserves consequential information at reduced detail and honors explicit source/explanation requests without inferring model strength. S-03 through S-06/S-10 source rechecks identify direct answers, unchanged-context reuse, out-of-scope withholding and invariant operational gates. Git whitespace checked; no live model behavior claimed. Publish/read back before A-003.
+
+## A-003 — Pending acceptance semantics
+
+Sharpened `human-document-review.md`: clarification supplies scoped requirements/decisions, not artifact acceptance or downstream authority; questions/current-stage revisions retain the same checkpoint and block dependent authoring/implementation. S-07/S-09/S-11 source rechecks preserve presented-state acceptance, explicit checkpoint changes, separate PLAN/layout decisions and existing-input reuse. Git whitespace checked. Publish/read back before A-004.
