@@ -2,7 +2,7 @@
 
 ## Scope and output
 
-Use for focused or comprehensive review of a skill's `SKILL.md` entry and reference modules. The entry organizes the capability and its loading paths; a reference supplies a bounded procedure, shared guidance, contract, example or other supporting material. Identify the artifact's role and expected reading context before assessing it. Review composition, organization, boundaries and technical meaning at both levels.
+Review composition, organization, scope, ownership and instruction quality in `SKILL.md` and reference modules. Apply the criteria to the selected material and report actionable findings.
 
 Establish the requested output and editing authority first. A review-only request produces findings and proposed revisions; it does not authorize repairs, installation or external operations. A focused review need not become a full-package audit. Inspect scripts, assets and external dependencies when an instruction claim depends on them; report uninspected behavior separately.
 
@@ -23,13 +23,11 @@ Apply Shared review criteria to both artifact types, then the relevant Skill ent
 
 Length is a diagnostic signal, not a defect or an acceptance ceiling. Assess information needed by the intended models, including less capable or local models. A shorter entry or reference can lose necessary context or decision guidance. Report byte/word measures as such; token, cost or behavioral improvement claims require an identified method and evidence.
 
-The entry may own canonical instructions. References can own their detailed procedures or shared guidance. A reference can repeat a short prerequisite or boundary when its expected reading context needs it, or when it prevents a consequential handoff error. Explain the role of such reinforcement; consolidate repeated procedure that adds no condition, decision or protection. A relocation must preserve meaning, qualifications and discoverability.
+Identify the canonical owner of repeated guidance. Retain a short prerequisite or boundary when the expected reading context needs it or it prevents a consequential handoff error; consolidate repeated procedure that adds no condition, decision or protection. A relocation must preserve meaning, qualifications and discoverability.
 
 ## Skill entry review
 
-The entry identifies purpose, activation conditions, required inputs, the principal path, consequential boundaries and when to load supporting material. Detailed procedures and reusable guidance belong in the relevant reference modules; scripts suit repeated deterministic operations, and assets hold reusable input/output material. These facilities are optional: a simple skill may need only its entry.
-
-Keep the information required to choose the next module or respect an immediate constraint available before that choice or action. A correct instruction discovered only after its dependent action is insufficient. Do not require every reference to be loaded at startup or make essential instructions depend on an unavailable custom entry.
+Check that information required to choose the next module or respect an immediate constraint is available before that choice or action. A correct instruction discovered only after its dependent action is insufficient. Do not require every reference to be loaded at startup or make essential instructions depend on an unavailable custom entry.
 
 | Material | Entry-level need | Supporting owner |
 | --- | --- | --- |
@@ -39,13 +37,9 @@ Keep the information required to choose the next module or respect an immediate 
 | Authority and completion | Consequential allowed effects, acceptance gates and stopping conditions | Detailed execution, verification and reporting procedures |
 | Dependencies | Necessary facilities and what to do when an owner or tool is unavailable | Dependency-specific instructions; actual packaging and client evidence |
 
-Metadata describes the skill’s capability and when it activates. Check its agreement with the body and supported procedures. The entry is the skill’s compositional root: it must make principal paths, conditional loading and consequential shared boundaries discoverable without requiring every module at startup.
-
 ## Reference module review
 
 Review a reference’s local responsibility, reading context and module interfaces. Apply scope, continuity, output and stopping criteria according to its role: an executable sub-workflow needs operational boundaries; a terminology guide needs consistent definitions and useful coverage. Do not impose an execution sequence on explanatory material.
-
-A reference does not normally act as the skill's compositional root. It need not advertise the entire capability, choose the whole workflow, repeat all shared gates or carry `SKILL.md` metadata. Assess its local responsibility and its relationship to the entry or calling module.
 
 | Module concern | Assess |
 | --- | --- |
@@ -72,7 +66,7 @@ Inspect the relevant caller and neighboring modules when a local change affects 
 2. **Reverse-outline the text.** Identify the job of each section, paragraph and major step. Check the overall trajectory and selected dimensions above before proposing local edits.
 3. **Trace consequential instructions.** Follow relevant routes and handoffs on both sides. Compare a repeated or relocated clause with its owner, loading condition and independently loaded context. Verify destinations preserve removed qualifiers before shortening either the entry or a reference.
 4. **Assess representative contrasts.** Select cases that exercise the reviewed entry or module's important branches, boundaries and intended use. Reuse established cases when suitable; avoid tests that merely search for the revised wording.
-5. **Verify supported properties.** Check metadata where required by the artifact format, resource paths, links/anchors and the applicable standalone or bundled distribution boundary with the owning structural tooling. Reference modules do not acquire frontmatter requirements merely because entries have them. Inspect actual output or behavior only when selected and authorized. Link validity does not establish client invocation or runtime support.
+5. **Verify supported properties.** Check metadata where required by the artifact format, resource paths, links/anchors and the applicable standalone or bundled distribution boundary with the owning structural tooling. Inspect actual output or behavior only when selected and authorized. Link validity does not establish client invocation or runtime support.
 6. **Return actionable findings.** Give location/source, observation, consequence, confidence, priority, correction destination and objective recheck. Distinguish defects, recommendations and evidence gaps. Retain no-finding coverage, unresolved choices and unrun checks; do not present proposals as implemented repairs.
 
 For an accepted revision, preserve technical meaning and scope, recheck affected owners/routes and review the resulting composition. Update affected navigation or projections without automatically enlarging every entry. Use the project's actual persistence and integration policy; this procedure introduces no Git, hosting or approval requirement of its own.

@@ -33,3 +33,7 @@ The human requested extending skill-review.md to assess references without treat
 ## V-006 — Structural boundary within the general review module
 
 The human requested clear dedicated reference sections in skill-review itself. Separate shared composition criteria, skill-entry review and reference-module review at the top level; keep reference-specific boundary/context/genre contrasts in the reference section and common procedure/evidence outside both. Preserve V-005's criteria without mixing root activation/metadata responsibilities into reference review. Update handoff description, inspect the reverse outline and retained coverage, check links/spacing, commit/push/read back and remain open/unmerged.
+
+## V-007 — Review criteria without format instruction
+
+The human rejected architecture-teaching prose in skill-review.md. Remove the introductory format explanation and similar standard-design exposition, retaining actionable shared/entry/reference review criteria. Keep the APA handoff explicit about format guidance ownership; check meaning/coverage, links and spacing, then commit/push/read back without closing.

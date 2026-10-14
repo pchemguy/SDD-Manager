@@ -2,7 +2,7 @@
 
 ## Objective and package status
 
-Extend Agent Package Author with a dedicated review procedure for skill entries and reference modules: role-sensitive composition, organization, progressive loading, ownership, duplication, authority/context and evidence-backed assessment. Its current skill-design and validation guidance already covers parts of this subject; integrate the proposed material with those owners instead of maintaining parallel instructions.
+Extend Agent Package Author with a dedicated review procedure for skill entries and reference modules: role-sensitive composition, organization, progressive loading, ownership, duplication, authority/context and evidence-backed assessment. Its current skill-design and validation guidance already covers parts of this subject; integrate the proposed material with those owners instead of maintaining parallel instructions. Use existing APA format guidance for conformance; skill-review.md supplies assessment criteria, not an introduction to the standard architecture.
 
 This is a developing proposal package in SDD Manager campaign 060. It has not been integrated into Agent Package Author, installed or behaviorally accepted. All supplied files remain here until the human selects transfer/integration. This document records the proposed downstream scope; the receiving agent must establish its actual repository, instructions and authorized effects before execution.
 
