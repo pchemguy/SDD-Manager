@@ -57,6 +57,7 @@ Apply this section when the plugin uses `PLUGIN.md` as its shared workflow entry
 
 - **Orientation and coordinator pointer**
     - Does the entry identify the plugin's capability system, relevant common prerequisites and any coordinator, with a clear condition for loading it?
+    - Is `PLUGIN.md`'s loading path explicit, without assuming automatic discovery of this non-standard entry?
 - **Request-to-capability routing**
     - Can an agent resolve ordinary requests to a supported owner or path from entry guidance, without opening all skill procedures or asking the user to name internals?
 - **Composite summaries**
@@ -66,7 +67,8 @@ Apply this section when the plugin uses `PLUGIN.md` as its shared workflow entry
     - Are detailed gates linked to their owners?
 - **Projection and source fidelity**
     - Do summaries agree with operational owners?
-    - Does any essential rule exist only in `PLUGIN.md`?
+    - Is each substantial operational rule defined in its canonical coordinator, skill or component owner?
+    - Are those operational instructions sufficient for supported workflows when `PLUGIN.md` is unavailable?
 - **Established context**
     - Can follow-ups remain with an already active owner?
     - Does unclear interpretation route to appropriate recovery rather than restart discovery or guess missing decisions?
@@ -92,7 +94,7 @@ Apply this section when the plugin includes coordination. Assess the coordinator
     - Does it collect actual evidence, reconcile blockers and return the correct completion boundary?
     - Are unavailable capabilities and uncertain external effects reported rather than assumed complete?
 - **Entry/module structure**
-    - Are general coordination decisions visible in the coordinator entry, with conditional detail under accessible owners?
+    - Are coordination decisions and consequential obligations visible in the coordinator entry before dependent work, with conditional detail under accessible owners?
     - Does moving procedure out of the entry preserve required pre-action guidance?
 
 The shared plugin entry may project coordinator behavior; the coordinator may own canonical orchestration instructions. Do not impose the projection-only rule on that canonical owner. Inspect both sides of a consequential handoff and identify which layer selects, establishes readiness, executes, verifies and returns control. Ordinary context reuse and recovery must not depend on `PLUGIN.md` being loaded again.

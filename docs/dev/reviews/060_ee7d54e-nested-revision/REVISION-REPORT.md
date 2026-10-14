@@ -239,3 +239,18 @@ Four-space nesting, Markdown/Git spacing, unchanged link destinations and exact 
 ## V-025 — Removed campaign framing from the contract
 
 Revised the opening at `2061eeab88f717d140d1a1e150409202209e5421` to directly instruct development/review of PLUGIN.md and the coordinator against the responsibilities, organization and assessment criteria. “This document” explicitly identifies the source-only artifact after the new imperative. Exact replacement preserves all owner links, target-project/contributor guidance and remaining contract bytes. Git whitespace and three-file scope pass. Publish/read back; 060 remains open/unmerged for human review, 059 suspended.
+
+## V-026 — Generic rules assigned to plugin-review instructions
+
+Assessed the quoted paragraph at `0811c4e45e2bfc202cee97d515b77eb8747e6edf` against operative plugin-review sections, excluding the rationale from coverage evidence. The integrated-entry questions already covered summary agreement, essential-rule uniqueness and prominent obligations; the coordinator section already permits canonical orchestration ownership and protects focused procedures. Strengthened the explicit loading, substantial-rule ownership, sufficient-without-PLUGIN and coordinator pre-action questions, then removed the generic paragraph from the SDD contract.
+
+### Operative clause coverage
+
+| General rule | Current review instruction |
+| --- | --- |
+| Non-standard entry/loading | Integrated plugin entry review, Orientation and coordinator pointer: check explicit loading without assuming automatic discovery |
+| No substantial operational rule solely in PLUGIN.md; operational sufficiency without it | Projection and source fidelity: trace rules to canonical coordinator/skill/component owners and assess their sufficient instructions without PLUGIN.md |
+| Coordinator can own canonical orchestration; plugin entry summarizes it | Integrated-entry source-fidelity/composite questions plus Coordinator review's closing instruction permitting canonical orchestration and rejecting a projection-only constraint on that owner |
+| Consequential obligations before dependent work, without competing procedure copies | Prominent obligations/composite questions; coordinator Entry/module structure, Delegation and closing handoff-owner instructions; shared ownership/concision review |
+
+Source inspection confirms coverage in the operative review sections without relying on the introduction. The SDD contract remains independent through its layer table, actual shared gates, canonical-source-first/relocation checks and direct-coordinator cases; no general-module dependency introduced. Exact scoped removal preserves all other contract text and C/K cases. General rationale, optional coordination and non-skill applicability remain unchanged. Scoped Markdown/link and four-file preservation checks pass. Publish/read back; 060 remains open/unmerged for human review, 059 suspended. No runtime or behavioral validation claimed.

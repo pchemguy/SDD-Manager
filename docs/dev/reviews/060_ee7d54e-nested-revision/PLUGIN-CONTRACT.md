@@ -10,8 +10,6 @@ Develop and review SDD Manager's packaged [PLUGIN.md](../../../../PLUGIN.md) and
 | `sdd-manage` | Own coordination decisions, context recovery, shared readiness, handoffs, eligible integration and completion boundaries |
 | Focused skills | Own document, task, steering, verification, reporting, incorporation and provider procedures |
 
-`PLUGIN.md` is a non-standard entry convention. No substantial operational rule should exist only there: coordinator and skill instructions remain sufficient when it is unavailable. The coordinator may define canonical orchestration guidance; the plugin entry summarizes that guidance. Both entries must keep consequential obligations visible before dependent work without copying detailed procedures.
-
 ## Plugin entry responsibilities
 
 The entry generally leads the agent to load `sdd-manage` alongside it before other skills at workflow entry. It must identify supported paths through ordinary requests without making the human name skills or sequences. A directory can identify all fifteen capabilities, while activated owners interpret subsequent contextual requests.
