@@ -86,3 +86,7 @@ Verify whether the published Agent Plugins specification defines PLUGIN.md, then
 ## V-016 — Revise the human-supplied rationale section
 
 Polish and replace the full supplied Shared plugin entries and coordination section. Preserve modularity benefits, the verified standards statement, bundle/integrated distinction, desired shared entry and SKILL/reference routing analogy, plus optional coordinator loading. Check fidelity and spacing, commit/push/read back and retain open/unmerged scope.
+
+## V-017 — Custom-entry loading and convenience front
+
+Append the proposed explanation: automatic PLUGIN.md loading cannot be assumed, skill entries retain full functionality without it, and an available coordinator’s SKILL.md remains the operational entry behind the convenience front. Preserve optional coordination, publish/read back and remain open/unmerged.

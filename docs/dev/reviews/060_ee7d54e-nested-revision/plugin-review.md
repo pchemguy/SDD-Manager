@@ -13,6 +13,8 @@ The [Agent Plugins specification v1.0.0](https://agent-plugins.org/specification
 
 A complex plugin may also define a coordinator skill to manage composite workflows. The loading path becomes `PLUGIN.md` → coordinator `SKILL.md` → selected skill entries and references. Other skills can depend primarily on the coordinator and a small set of shared capabilities, reducing connections between individual skills.
 
+Because `PLUGIN.md` is non-standard, automatic loading cannot be assumed; agents may need explicit instructions to read it. The plugin should remain fully functional through its skill entries when `PLUGIN.md` is not loaded. When a coordinator is present, `PLUGIN.md` should serve as a convenience front for its `SKILL.md`, summarizing capabilities, routing and essential obligations already defined by the coordinator and focused skills.
+
 ## Scope and output
 
 Review plugin-level capability boundaries, shared entry guidance, composite workflows, coordination and ownership. Assess the current supported package and report actionable findings. Inspect individual skills and references where a plugin claim or handoff depends on them; keep the review bounded by the requested scope.
