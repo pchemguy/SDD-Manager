@@ -29,6 +29,9 @@ Apply [the selection procedure](workflows.md#workflow-selection-and-continuity).
 | “Switch to explicit reporting.” Later: “Return to standard reporting.” | Apply the selected profile to subsequent reports and handoffs. Explicit supplies relevant detail at reporting triggers, not an unchanged full preamble on every reply. |
 | “Explain this decision fully, then resume minimal reporting.” | Give the requested explanation for this response; retain Minimal afterward. An explanation/source request alone does not change the ongoing profile. |
 | Handoff retains the selected profile / reporting preference is lost with context. | Carry the known preference; otherwise use Standard without claiming to recover a lost choice. Preserve operational scope and human decisions separately. |
+| Composite-workflow entry with no selected profile | Announce “Explicit during workflow setup; then Standard,” briefly explain Minimal/Standard/Explicit and how to switch, and report scope/checkpoint before dependent work. |
+| Recover composite context with known Minimal preference / unrecoverable preference | Use Explicit for reconstruction and announce return to Minimal when known; otherwise declare Standard fallback. Do not guess lost approval/range. |
+| Established workflow; next task or minor evidence refresh | Continue with the selected level; no repeated bootstrap/profile introduction. |
 | A proposed edit is in an allowed file but adds behavior outside the task. | Withhold the unrelated change. Path ownership does not expand authorized behavior. |
 | A new feature is requested while implementation is paused. | Preserve the paused context; load the selected procedure/dependencies before definitive reporting and dependent work, establish its scope/return and do not resume the parent by implication. |
 

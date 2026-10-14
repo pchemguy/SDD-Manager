@@ -112,3 +112,7 @@ State: **Amendment verified; explicit main integration, merged checks, remote pu
 ## Reopened explicit-bootstrap amendment
 
 State: **Amendment active**. The human authorized proactive profile announcement/explanation at composite-workflow bootstrap and recovery. Latest published main first-parent merge/reopening checkpoint is `c29eb70de301da68a4fa9d28cd3d29d4e71e05a4`; verified both parents and contained source `cc41ce9d894079db37685eec4b07fb344750c083`. Refreshed main matched origin and the worktree was clean. Advanced the retained campaign branch to this checkpoint by fast-forward, preserving history and original identity. Added A-009/A-010; earlier closure/check facts remain historical.
+
+### A-009 — Explicit composite bootstrap implemented
+
+Coordination now owns temporary Explicit reporting during composite entry, material switching and context reconstruction, proactive level/profile discovery and declaration of subsequent Standard or an established human selection before dependent work. Known preferences are preserved; unknown preferences use an announced fallback. Scope-specific human limits remain controlling. Blocked recovery preserves approval/range uncertainty; routine continuation/minor refresh/task handoffs do not restart bootstrap. Reconciled selected routing/projections, human/developer guidance, examples and the source-only prompt without introducing a new module or state file. Checked affected links/spacing and Git whitespace; source checks do not establish live model behavior. Publish/read back before A-010.
