@@ -235,3 +235,7 @@ Source recheck aligns the additions with Coordinator review's selection, delegat
 Converted the three accepted tables at source `fb6b842d2ad412e9f3c61054d7e7ff238c0cd763`. Shared review retains eight categories/twenty questions; entry review retains five labelled questions; reference review retains six categories/thirteen questions. The required-context qualification stays with its second question. Exact reconstruction verifies all text/order and every byte outside the selected tables unchanged, including the approved opening/routing paragraph, routing table and both contrast tables.
 
 Four-space nesting, Markdown/Git spacing, unchanged link destinations and exact three-file scope pass. Only skill-review.md and current revision plan/report change; plugin review, contract, handoff, drafts, runtime and historical records are unchanged. No behavioral claim or live acceptance. Commit/push/read back; 060 remains open/unmerged for human review, 059 suspended.
+
+## V-025 — Removed campaign framing from the contract
+
+Revised the opening at `2061eeab88f717d140d1a1e150409202209e5421` to directly instruct development/review of PLUGIN.md and the coordinator against the responsibilities, organization and assessment criteria. “This document” explicitly identifies the source-only artifact after the new imperative. Exact replacement preserves all owner links, target-project/contributor guidance and remaining contract bytes. Git whitespace and three-file scope pass. Publish/read back; 060 remains open/unmerged for human review, 059 suspended.

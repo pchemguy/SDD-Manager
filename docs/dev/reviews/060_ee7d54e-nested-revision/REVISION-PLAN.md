@@ -148,3 +148,7 @@ Address the human's coverage concern in plugin-review.md, Assessment contrasts a
 ## V-024 — Skill-review question lists
 
 The human accepted converting Shared review criteria and Reference module review to bold category bullets with nested questions, and Skill entry review to simple labelled bullets. Preserve all nineteen categories, thirty-eight questions and the required-context qualification beside its relevant question. Keep Reference routing coverage and both contrast tables, approved opening/routing paragraph, procedure and other prose unchanged. Recheck exact content and outside-section fidelity, four-space nesting, Markdown/link preservation and three-file scope; commit/push/read back. Keep 060 open/unmerged for human review, 059 suspended; no general rewrite or finalization.
+
+## V-025 — Direct contract opening
+
+Replace the human-rejected “This campaign contract defines…” opening in PLUGIN-CONTRACT.md with a direct instruction to develop/review the packaged entry and coordinator using the contract's responsibilities, organization and assessment criteria. Clarify that the document is source-only; preserve target-project/contributor boundaries, owner links and all remaining content. Check exact scoped replacement, whitespace and three-file ownership, then commit/push/read back; retain open human review and parent suspension.

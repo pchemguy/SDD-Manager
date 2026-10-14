@@ -2,7 +2,7 @@
 
 ## Scope and ownership
 
-This campaign contract defines development and assessment of SDD Manager's packaged [PLUGIN.md](../../../../PLUGIN.md) and its [sdd-manage](../../../../skills/sdd-manage/SKILL.md) coordinator. It is source-only; target-project agents use packaged entries and references. Contributor verification follows [acceptance/AGENTS.md](../../../../acceptance/AGENTS.md).
+Develop and review SDD Manager's packaged [PLUGIN.md](../../../../PLUGIN.md) and its [sdd-manage](../../../../skills/sdd-manage/SKILL.md) coordinator using the responsibilities, organization and assessment criteria below. This document is source-only; target-project agents use packaged entries and references. Contributor verification follows [acceptance/AGENTS.md](../../../../acceptance/AGENTS.md).
 
 | Layer | SDD Manager responsibility |
 | --- | --- |
