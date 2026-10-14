@@ -1,4 +1,4 @@
-# Critical text review of skill-review.md
+# Critical reviews of campaign 060 development documents
 
 ## Scope and result
 
@@ -136,3 +136,41 @@ Fetch succeeded; parent report checkpoint and entry blob were read back. Compare
 ## Full-set critical review — scope and baseline
 
 The human requested a new critical review of PLUGIN-CONTRACT.md, plugin-review.md and skill-review.md at `cd7ab3309e23c35f4ed6b91227466336a100766e`. [Full-set plan](REVIEW-PLAN.md) defines three units. Current state: planned; no new finding is accepted for repair. Earlier R-001 through R-006 remain source-rechecked for their earlier revision, while parent-059 recommendations retain their pending status. Runtime coordinator work remains deferred to resumed 059.
+
+## Full-set U-001 — general review modules
+
+Reviewed both complete files at the full-set baseline above, including all tables, procedure steps and evidence paragraphs. Inspected PROPOSED-REVISIONS.md for intended APA scope, not as authority to edit it. Two new findings are recorded below. The three pending document recommendations from the parent assessment remain separate.
+
+### Composition and coverage
+
+| Material / baseline lines | Assessment |
+| --- | --- |
+| skill-review.md: scope and shared criteria, 3–26 | Clear review-only boundary and useful composition/precision criteria. Length and intended-model qualifications prevent unjustified shortening. Shared criteria appropriately precede artifact-specific checks. |
+| skill-review.md: entry and reference routing, 28–52 | Approved every-file policy is explicit, selection evidence is separate from target inspection and optional trials, and the table's fields have consistent roles. Earlier corrections hold. |
+| skill-review.md: reference review and contrasts, 54–75 | Local context and ownership are assessed without imposing metadata, whole-workflow activation or procedural steps on every reference. The three contrasts now compare meaningful conditions. |
+| skill-review.md: procedure and evidence, 77–102 | Ordered source inspection, qualified behavioral evidence and accepted-revision boundaries are coherent. Comprehensive target accounting is the remaining gap identified in R-007. |
+| plugin-review.md: rationale and scope, 3–24 | Keep the accepted explanation of modular composition, non-standard PLUGIN.md, optional coordination and fallback. It supplies needed context rather than teaching the skill standard. The skill-based applicability of that explanation needs qualification for the broader APA target (R-008). |
+| plugin-review.md: composition, shared entry and coordinator, 26–67 | Distinct responsibilities, conditional coordinator review, projection versus canonical ownership, context reuse and child/parent boundaries are useful. Source-only development guidance remains outside runtime dependencies. Parent-derived structure/cohesion and baseline-before-selection recommendations remain pending. |
+| plugin-review.md: procedure, contrasts and evidence, 69–94 | Cases cover fresh/contextual/recovery and effect boundaries without requiring every trial. The procedure leaves review breadth to scope, but lacks a full-review inventory disposition (R-007). |
+
+The generic modules overlap intentionally on ownership, progressive loading, authority and qualified evidence: either may be selected without loading the other. Their distinct jobs are preserved. skill-review.md examines entry/reference text and local interfaces; plugin-review.md examines capability composition, shared entry and optional coordination. Do not merge them, copy the full shared checklist into plugin-review.md or move the plugin rationale into skill-review.md. No additional standard tutorial, fixed template or generic SDD policy is needed.
+
+### R-007 — Comprehensive activation has no explicit coverage accounting
+
+**Type:** review-completeness gap. **Priority:** medium. **Confidence:** high for the missing requirement; no demonstrated downstream review failure. **Locations:** skill-review.md 79–84; plugin-review.md 71–76; PROPOSED-REVISIONS.md Review activation policy.
+
+The handoff activates these modules for full/comprehensive review and asks for actual scope and unassessed areas. The modules themselves allow selected files, representative contrasts and relevant dependency inspection without requiring an inventory of the requested target and a disposition for each scoped artifact. skill-review.md inventories references for routing completeness, which does not establish that their contents were reviewed. plugin-review.md maps owners but does not account for included skill entries/references or other components as reviewed, excluded or unassessed. A reviewer could satisfy the stated procedure with selected examples while presenting the result as comprehensive.
+
+**Proposed correction:** In scope establishment/reporting, require comprehensive reviews to account for the requested target's relevant artifacts/components: reviewed depth and evidence, explicit exclusions with reasons, and unassessed material. Preserve bounded focused reviews and proportionate dependency/tool inspection. Full target coverage does not require every behavioral trial, a recursive audit of external dependencies or a fixed report template. **Owners:** both generic procedures, with aligned handoff activation wording. **Recheck:** an omitted in-scope reference/component cannot disappear behind representative cases; exclusions and source-versus-behavior limits remain visible. A focused request still selects a narrower review.
+
+### R-008 — General plugin review leaves non-skill applicability implicit
+
+**Type:** applicability clarification. **Priority:** medium recommendation. **Confidence:** high for scope mismatch, moderate for downstream impact. **Locations:** plugin-review.md 16, 20–24, 30–35, 41 and 71–72; PROPOSED-REVISIONS.md Objective and Boundaries to preserve.
+
+The candidate is proposed as general APA plugin review and its responsibility map mentions optional tools/extensions. Yet the fallback requirements say the plugin remains fully functional through skill entries and the capability criteria ask only about skills. APA's current plugin-standard.md permits an absent skill component and an optional MCP component. For a tool-only or mixed package, an unqualified skill-entry fallback could flag valid architecture as incomplete or leave non-skill capability ownership unexamined. The accepted skill/plugin composition rationale is appropriate to skill-based integrated plugins; the problem is its unstated applicability to the wider target.
+
+**Proposed correction:** State which criteria apply to skill-based bundles, integrated workflows and non-skill components. Keep skill-entry fallback for skill workflows; account for other advertised components through their supported discovery/interface owners and owning validation guidance. Alternatively, explicitly limit this module's remit to skill-based composition and name the separate owner for remaining plugin review. Do not add MCP, a coordinator or a shared entry to packages that do not need them, and do not expand this text into an MCP implementation manual. **Owners:** plugin-review scope/fallback and APA handoff applicability. **Recheck:** skill-only, mixed and no-skill packages receive an explicit applicable review scope, with no invented skill requirement or universal host-loading claim.
+
+### U-001 evidence and checkpoint
+
+This unit is source/text review; no model trial, live acceptance, APA implementation or runtime repair. All generic source files and the combined contract are unchanged. The report is the only owned change. Git whitespace and active report link checks precede publication. Further unit work starts only after this checkpoint is pushed and read back.
