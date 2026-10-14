@@ -27,15 +27,27 @@ Format conformance, content review and observed behavior provide different evide
 
 ## Plugin composition and ownership
 
-| Concern | Assess |
-| --- | --- |
-| Capability boundaries | Do advertised skills and other components have distinct responsibilities, useful outputs and clear entry and use conditions? Are overlaps resolved without requiring the user to know internal names? |
-| Workflow decomposition | Do composite paths connect focused capabilities through meaningful handoffs? Are closely related internal branches kept together where independent capability boundaries add no value? |
-| Shared ownership | Do common conventions, prerequisites and reporting rules have identifiable owners? Are summaries consistent with them, with justified short reminders rather than competing procedure copies? |
-| Coupling and loading | Can the selected path use only the relevant skills/modules and other components? Are dependencies explicit and available, without requiring the entire plugin context for every request? |
-| Package and client boundary | Are advertised capabilities actually supplied and referenced files within the applicable package boundary? Are client extensions and unverified invocation behavior distinguished from portable structure? |
-| Human and agent documentation | Do user-facing examples explain supported behavior while agent guidance supplies selection and execution boundaries? Are source-only development instructions kept out of runtime dependencies? |
-| Instruction composition | Do sections visibly distinguish responsibilities, shared gates, the principal procedure and conditional routing where applicable? Does each paragraph or step have one controlling concern, with prerequisites and exceptions grouped with their action? |
+- **Capability boundaries**
+    - Do advertised skills and other components have distinct responsibilities, useful outputs and clear entry and use conditions?
+    - Are overlaps resolved without requiring the user to know internal names?
+- **Workflow decomposition**
+    - Do composite paths connect focused capabilities through meaningful handoffs?
+    - Are closely related internal branches kept together where independent capability boundaries add no value?
+- **Shared ownership**
+    - Do common conventions, prerequisites and reporting rules have identifiable owners?
+    - Are summaries consistent with them, with justified short reminders rather than competing procedure copies?
+- **Coupling and loading**
+    - Can the selected path use only the relevant skills/modules and other components?
+    - Are dependencies explicit and available, without requiring the entire plugin context for every request?
+- **Package and client boundary**
+    - Are advertised capabilities actually supplied and referenced files within the applicable package boundary?
+    - Are client extensions and unverified invocation behavior distinguished from portable structure?
+- **Human and agent documentation**
+    - Do user-facing examples explain supported behavior while agent guidance supplies selection and execution boundaries?
+    - Are source-only development instructions kept out of runtime dependencies?
+- **Instruction composition**
+    - Do sections visibly distinguish responsibilities, shared gates, the principal procedure and conditional routing where applicable?
+    - Does each paragraph or step have one controlling concern, with prerequisites and exceptions grouped with their action?
 
 For repeated guidance, identify its canonical owner and the decision protected by each summary. A shared entry or coordinator can highlight a consequential rule at a handoff; a full second procedure increases maintenance risk. Judge concision by sufficient explicit guidance for the intended models, not a byte/word quota or speculative token savings.
 

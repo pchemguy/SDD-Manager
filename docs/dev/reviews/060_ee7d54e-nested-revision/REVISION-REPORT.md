@@ -213,3 +213,9 @@ Comprehensive reviews now account for requested artifacts/components and review 
 - Final sizes: contract 28,612 UTF-8 bytes / 3,504 words; plugin-review 13,265 / 1,820; skill-review 12,923 / 1,847. Changes add the accepted criteria within existing sections; counts are descriptive and establish no token-cost or behavioral improvement.
 
 Live/model acceptance, full support/publisher suites, package installation, APA repository/cache changes and runtime revisions remain unselected/unrun. Commit source and evidence together, push/read back, then stop for human document review. Campaign 060 remains open/unmerged; parent 059 suspended. Finalization/integration requires the subsequent human decision.
+
+## V-021 — Nested composition-review questions
+
+Assessed the human's suggestion against the section at `30cd0f5ba804a8cefa962b32377d2e66d9a492f1`. The Concern/Assess table organizes categories with two questions per cell and supplies no cross-column comparison. A nested list makes each question individually visible and removes the need to scan wrapping table cells, at the cost of more vertical space. Selected that format for this section only.
+
+Converted the seven categories to bold top-level bullets with each of the fourteen original questions as its own four-space-indented child. Exact comparison preserves category/question text and order; everything outside that table in plugin-review.md is unchanged. Markdown/Git spacing and owned-path checks pass. Only the module and current revision plan/report change; other modules, contract, handoff, drafts, runtime and historical records remain unchanged. No behavioral benefit or live acceptance is claimed. Publish/read back and retain 060 open/unmerged, 059 suspended; human review/finalization remains pending.

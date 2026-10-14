@@ -132,3 +132,7 @@ The optional K/C correspondence note is deferred: distinct starting layers and a
 ### V-020 execution status
 
 Executed as the planned coherent document unit. All accepted findings and parent-derived documentation recommendations have source rechecks; optional K/C navigation remains deferred. Static/preservation checks pass and are recorded in REVISION-REPORT.md. Publish/read back source and evidence before returning the final documents. Human review/finalization is pending; 060 remains open/unmerged, 059 suspended.
+
+## V-021 — Composition-review questions as a nested list
+
+Address the human's format feedback on plugin-review.md, Plugin composition and ownership. The section groups questions by concern rather than comparing values; replace its table with bold category bullets and one nested bullet per question. Preserve all seven categories and fourteen question strings, their order, qualifications and following ownership/concision paragraph. Four-space nesting follows the Markdown convention. This is a local presentation revision within the open human-review stage, not another full review or policy change. Check exact content preservation, surrounding structure/spacing and three-file owned scope; commit source and evidence, push/read back and remain open/unmerged for human review.
