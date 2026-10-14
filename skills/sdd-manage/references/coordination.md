@@ -16,6 +16,16 @@
 
 For branch workflows, use [branch management](branch-management.md) for setup and [Git workflows](git-workflows.md) for final integration. Preserve implementation's push-first prerequisite; a direct focused invocation uses the same protocol.
 
+## Scope checks and reporting detail
+
+Before each coherent work unit, check the active objective, authorized outputs/effects, applicable instructions and pending human decisions against current evidence. Reuse sufficient context; refresh missing or materially changed evidence rather than repeating orientation for every command. Before creating or editing any user file, verify both the target path and the proposed change belong to the authorized scope. Withhold out-of-scope changes and report a consequential conflict; an allowed path does not authorize unrelated changes within it. These checks require neither narrated reasoning nor new permission for routine authorized work.
+
+At workflow entry, uncertain-context recovery or a material operation/stage/scope change, give a concise chat brief identifying the workflow or operation, current stage/owner, authorized work/outputs and next human checkpoint or stop. Explain consequential selection with its request/project evidence under [workflow selection](workflows.md#workflow-selection-and-continuity). During unchanged work, report new results, decisions or blockers; repeat only scope information needed to understand a change. Routine questions can receive direct answers.
+
+Honor the human's requested reporting detail, including later adjustments. Reduced detail may compress briefs and omit unchanged context, routine explanations and unrequested exhaustive source inventories. Continue to report consequential decisions, scope changes, blockers, verification results and required human checkpoints; fulfill explicit requests for sources or explanation. Reporting detail changes neither authorization nor approval, verification, publication, tracking or stopping requirements. Do not choose detail from presumed model strength or create a separate verbosity-state artifact.
+
+At a human checkpoint, present substantive review results, the dependent work held and what acceptance would clear, following [human document review](human-document-review.md). During clarification, restate the pending boundary when omitting it could imply acceptance or advancement; do not repeat an unchanged full brief on every response.
+
 ## Coordinate execution
 
 1. Give each responsible skill the objective, scope, authoritative inputs, decisions, relevant task IDs, branch/HEAD, dirty-path ownership, permitted effects, required evidence, and stopping point. Carry the actual human grant, destination/ref, payload scope and explicit limits through handoffs; do not ask each worker to obtain the same approval again. Keep credentials out of ordinary handoff text.

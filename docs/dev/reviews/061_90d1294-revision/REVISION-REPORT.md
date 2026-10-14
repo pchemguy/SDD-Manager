@@ -33,3 +33,7 @@ Planning changed this active report, created the revision plan and updated the c
 The human subsequently commanded execution of the published plan. Execute its scoped revisions, verification and established final integration/closure on the retained campaign branch; live acceptance, hosted tracking, releases and APA changes remain excluded.
 
 A-001 adds the read-only workflow-loading operation and procedure to `workflows.md` and requires selected instructions/dependencies before definitive reporting or dependent work. Source rechecks S-01/S-02/S-08/S-12 locate chat-only results, no implicit mutations, selective loading, unavailable-source limits and existing uncertain-context recovery. These are source checks, not consumer trials. Checked the diff and Git whitespace; publish/read back this checkpoint before A-002.
+
+## A-002 — Scope checks and reporting detail
+
+Added the canonical operational check and reporting policy in `coordination.md`, linked from workflow continuity. Each coherent unit checks current scope/instructions/pending decisions; each write checks both path and change. Reporting remains event-based, preserves consequential information at reduced detail and honors explicit source/explanation requests without inferring model strength. S-03 through S-06/S-10 source rechecks identify direct answers, unchanged-context reuse, out-of-scope withholding and invariant operational gates. Git whitespace checked; no live model behavior claimed. Publish/read back before A-003.
