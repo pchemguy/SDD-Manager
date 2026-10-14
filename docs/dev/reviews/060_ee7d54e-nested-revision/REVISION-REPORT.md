@@ -129,3 +129,7 @@ Executed the published plan at `ad21a55e1f65f9cb0492245a8762f44aa9b0642c`. Corre
 Inspected the full revised module against each objective recheck and the accepted constraints. Exact comparison confirms the approved opening and routing paragraph unchanged. Coordinator contract/draft and all 134 packaged runtime files retain their starting bytes. Active campaign links/anchors, headings, blank lines, Git whitespace and owned paths pass. No behavioral trial, APA integration, support/publisher suite or runtime skill edit was needed/performed for this campaign-only text revision.
 
 Commit source and evidence together, push/read back and stop on the child branch. Campaign 060 remains open/unmerged; parent 059 suspended.
+
+## Accepted plugin-review split and coordinator integration
+
+The human selected [V-012](REVISION-PLAN.md#v-012--plugin-review-abstraction-and-integrated-sdd-contract). Plan covers the relocated plugin draft, general plugin module, independently usable combined SDD contract and APA handoff/navigation. Publish/read back planning before source changes; no campaign closure or runtime revision selected.
