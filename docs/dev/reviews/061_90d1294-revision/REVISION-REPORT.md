@@ -81,3 +81,7 @@ Checked all twelve planned cases against the changed instructions and their cons
 - Live acceptance, Jules/client trials, stronger/weaker-model comparisons, hosted tracking and releases were not run. Static consistency and deterministic tests do not establish their behavior.
 
 A-001 through A-006 are complete within the authorized source revision. The final two-parent merge into main must verify the actual merged package tree and regression/document checks, publish/read back the target and return a clean main worktree. This record's closure statement takes effect only at that verified integration/publication boundary; no post-closure historical repair is required.
+
+## Reopened reporting-profile amendment
+
+State: **Amendment active**. The human requested reopening the last campaign and defining Minimal, Standard and Explicit reporting profiles. Verified the latest main first-parent merge is campaign 061's published explicit two-parent merge `ed3099a229b59d4786fcd74bf6761dc7ac94e394`, with source tip `60a6697ba142cb015157479dfe3f69f842e28a99` contained. Main/origin agree, the worktree was clean, and the existing campaign branch advanced by fast-forward to that reopening checkpoint. Preserve original identity/opening/baseline and historical closure evidence. Accepted actions A-007/A-008 are appended to the revision plan; no new campaign or history rewrite. Other closed records remain frozen.
