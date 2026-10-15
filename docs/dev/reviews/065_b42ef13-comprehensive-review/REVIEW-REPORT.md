@@ -13,7 +13,7 @@ Authorized source change: `_agents` added to root .gitignore. Findings repairs a
 | U-001 | Assessed | 132 package files; 95 Markdown files; 505 local links/anchors contained and valid; licenses identical; source/package documentation inspected |
 | U-002 | Assessed with stated depth | All 15 entries and 75 reference routes/structure; selected consequential handoffs inspected; R-001 |
 | U-003 | Assessed; release blocked | All seven .github files inspected; 30 publisher tests pass; delayed native rebuild and CLI hash gate reproduce R-002 |
-| U-004 | Pending | TextStats and support suite |
+| U-004 | Assessed; two gaps | 134 support tests pass; native/snapshot parity and clean dirty identity pass; malformed-ancestor probe exposes R-003; R-004 documentation |
 | U-005 | Pending | Documentation and consolidation |
 
 No finding disposition or successful check is claimed before assessment.
@@ -63,3 +63,28 @@ Executed `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/062-validator-deps python -m
 - **Objective recheck:** unchanged exact source produces byte-identical ZIP and checksum across separated build times, output directories and the build/publish invocation pattern; the actual expected-sha256 gate succeeds. Changed candidate bytes still change the archive and stale hashes still stop before provider writes. Run all publisher/support regressions.
 
 U-002 checkpoint `1d3b402ada566ae05cf861b31c583eb643b6df5a` was pushed/read back before this unit. Existing tests lack delayed rebuild coverage; no source repair was made.
+
+## U-004 — TextStats, snapshots and acceptance infrastructure
+
+Inspected helper source selection/snapshot/preparation, schema provenance, nested-package and documentation/preflight test fixtures, setup/execution/helper instructions, and the support suite's declared case boundaries. Reviewed helper ownership/isolation interfaces and catalog/assessor inventory; product consumer execution and independent behavior grading did not run. Existing root-layout fixtures intentionally exercise standalone compatibility; their root paths are not stale source-package locations.
+
+Executed `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v`: 134 tests passed in 22.253s on Python 3.12.14. The seven nested-package tests cover nested selection, dirty edit/add/delete/mode mapping, leaf/root symlinks, missing nested manifest, patch paths and historical root notices. Native committed inventory/member bytes agree with the TextStats snapshot for all 132 files; current clean dirty and committed snapshots have identical bytes, modes and fingerprints, with no changed package paths.
+
+### R-003 — Malformed committed package ancestors silently select a root decoy
+
+- **Type/priority/status:** snapshot source-selection defect; medium; Open. High confidence from four disposable-repository probes. Not an observed external-file disclosure.
+- **Locations:** acceptance/textstats/scripts/core.py:312–334, especially unconditional fallback at 328–330; scripts/HELPER-INTERFACES.md, source selection paragraph; tests/test_nested_package.py.
+- **Cause/evidence:** package_subdirectory checks only the complete nested path. With committed `.agents` or `.agents/plugins` as a symlink, git ls-tree returns no entry for the complete descendant. The helper treats this as historical root layout and accepts root plugin.json instead of rejecting the malformed ancestor. Both committed and dirty modes selected `.` and emitted only the decoy manifest. See [reproducer](evidence/ancestor-probe.py) and [results](evidence/ancestor-result.jsonl). This contradicts the documented malformed-path/no-fallback and symlinked-parent rejection contract. Existing tests cover the package leaf symlink, not these ancestors.
+- **Consequence:** malformed source can be recorded as a different root package, undermining candidate identity and the intended native/snapshot parity. Current valid checkout passes; the finding concerns rejection of malformed candidates. No external target bytes were read in the probe.
+- **Correction owner:** TextStats package root selection. Inspect committed path components before legacy fallback; reject unsupported occupied ancestors while retaining genuinely absent nested layout and standalone/root compatibility. Add focused fixtures for both parent components and both source modes.
+- **Objective recheck/reproduction:** from repository root run `python docs/dev/reviews/065_b42ef13-comprehensive-review/evidence/ancestor-probe.py`. All four currently print accepted-root-fallback; corrected behavior rejects unsupported parents. Valid nested and genuinely root-layout sources must still select their intended package. Run full support tests and parity checks.
+
+### R-004 — Helper support-suite command still names package root as its working directory
+
+- **Type/priority/status:** refactor documentation defect; low; Open. High confidence from path inspection.
+- **Location:** acceptance/textstats/scripts/HELPER-INTERFACES.md, immediately after the deterministic assessment shape: “Run the complete nonempty support suite from the package root”.
+- **Consequence:** the shown acceptance/textstats/tests command resolves from the Git repository root. The new package root has no acceptance/ directory, so following this instruction from .agents/plugins/sdd-manager fails discovery. Root and acceptance AGENTS instructions correctly say repository root.
+- **Correction owner:** helper interface documentation. Say SDD Manager source repository/Git root and keep the package distinction explicit; simplify the adjacent doubled source-inventory parenthetical while touching that paragraph only if authorized.
+- **Objective recheck:** following the documented working directory runs all 134 tests; no acceptance tooling is implied to ship inside the plugin package.
+
+U-003 checkpoint `fbc12deb1da7c53475b5bf69b3b324219c75de3f` was pushed/read back before this unit. No helper, fixture, schema or workflow repair was made.
