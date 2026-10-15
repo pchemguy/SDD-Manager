@@ -68,3 +68,5 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `064_1a35f14` | Closed at verified main integration/publication: complete package nested under .agents/plugins/sdd-manager, abbreviated root/full package READMEs, assets-only notice templates and normalized publisher/snapshots. 134 support/30 publisher tests passed; loading/reload excluded. | [Revision plan](064_1a35f14-self-hosted-layout/REVISION-PLAN.md), [revision report](064_1a35f14-self-hosted-layout/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
+
+| `065_b42ef13` | Comprehensive current-source review after nested package refactor; open. | [Review plan](065_b42ef13-comprehensive-review/REVIEW-PLAN.md), [review report](065_b42ef13-comprehensive-review/REVIEW-REPORT.md) |
