@@ -63,9 +63,9 @@ class PackageTests(Contract):
         self.git=git
         git('init','-q'); git('config','user.name','Fixture'); git('config','user.email','fixture@example.test')
         manifest=json.dumps({"$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json", "name":"sdd-manager", "version":"0.15.0"}).encode()
-        for name in ('LICENSE','README.md','PLUGIN.md','Greenfield Project Prompt Template.md',
+        for name in ('LICENSE','README.md','PLUGIN.md','assets/Greenfield Project Prompt Template.md',
                      'SDD-MANAGER.md','AI_DISCLOSURE.md','assets/icon.svg','skills/sample/SKILL.md',
-                     'plugin.json','docs/excluded.md','AGENTS.md'):
+                     'plugin.json','docs/excluded.md','docs/ai-logs/EXPLORE_DRIVE_V1.md','AGENTS.md'):
             p=self.root/name; p.parent.mkdir(parents=True,exist_ok=True)
             p.write_bytes(manifest if name.endswith('plugin.json') else (name+'\n').encode())
         git('add','.'); git('commit','-qm','fixture'); self.sha=git('rev-parse','HEAD')
@@ -77,6 +77,9 @@ class PackageTests(Contract):
         self.assertEqual(set(paths),{'sdd-manager.zip','sdd-manager.zip.sha256'})
         with zipfile.ZipFile(paths['sdd-manager.zip']) as z:
             self.assertNotIn('sdd-manager/docs/excluded.md',z.namelist())
+            self.assertNotIn('sdd-manager/docs/ai-logs/EXPLORE_DRIVE_V1.md',z.namelist())
+            self.assertNotIn('sdd-manager/Greenfield Project Prompt Template.md',z.namelist())
+            self.assertEqual(z.read('sdd-manager/assets/Greenfield Project Prompt Template.md'),b'assets/Greenfield Project Prompt Template.md\n')
             self.assertEqual(z.read('sdd-manager/README.md'),b'README.md\n')
             self.assertEqual(z.read('sdd-manager/PLUGIN.md'),b'PLUGIN.md\n')
             self.assertNotIn('sdd-manager/AGENTS.md',z.namelist())

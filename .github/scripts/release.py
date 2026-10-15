@@ -36,7 +36,7 @@ def validate_handoff(data):
 
 
 PACKAGE_PATHS = ('assets', 'skills', 'LICENSE', 'plugin.json',
-                 'README.md', 'PLUGIN.md', 'Greenfield Project Prompt Template.md',
+                 'README.md', 'PLUGIN.md', 'assets/Greenfield Project Prompt Template.md',
                  'SDD-MANAGER.md', 'AI_DISCLOSURE.md')
 
 
