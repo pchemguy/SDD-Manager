@@ -1,6 +1,6 @@
 # Skill discovery revision results
 
-Campaign `066_d536dd7`; baseline `d536dd7b29ca8a28ae733782c8c1ce95aedb50b9`. [Revision plan](REVISION-PLAN.md). Branch `revision/066_d536dd7-skill-discovery`; target `main`. State: V-001 and V-002 implemented; campaign remains open for human review. No integration/closure selected.
+Campaign `066_d536dd7`; baseline `d536dd7b29ca8a28ae733782c8c1ce95aedb50b9`. [Revision plan](REVISION-PLAN.md). Branch `revision/066_d536dd7-skill-discovery`; target `main`. State: all revisions and human amendments complete; merge/closure now explicitly authorized. Closes after verified main integration and publication.
 
 The selected source was inspected at docs/agents/jules/Skill Discovery.md. No maintained reference to that path was found outside the file itself; closed campaign contents and AI logs were excluded from search. The current manifest supplies its optional display name under extensions.com.openai.interface.displayName. Root discovery guidance will remain source-only, with no plugin loading/configuration change.
 
@@ -41,3 +41,11 @@ Placed protocol execution alone under Startup in root AGENTS.md. General source 
 ## Human review amendment — Initialization heading
 
 Renamed the dedicated Startup section to Initialization, as accepted by the human. Its direct instruction to execute SKILL_DISCOVERY_PROTOCOL.md is unchanged. Markdown/link checks pass; campaign remains open.
+
+## Final result and integration
+
+The human requested merge after accepting the Initialization heading. The final root protocol performs complete skill/plugin entry discovery, reports compact metadata/capability summaries in chat and continues the requested task. There is no discovery-only mode or forced turn ending. Root AGENTS.md contains a dedicated Initialization section with a direct protocol-execution instruction, separated from general contributor guidance. The rejected consumer-project routing, optional-loading commentary and license synchronization instruction are removed. Earlier amendment observations above describe their own intermediate states.
+
+Checked the complete candidate at 11699e30119526fec96bfb0e9a86ec135916a33c: Markdown targets/anchors/spacing, actual entry/manifest fields, root relocation, current references and the full change boundary. Package, publisher, acceptance tooling, both licenses and prior closed campaign contents are unchanged. No executable suite or consumer/client trial is claimed for these source-only documentation changes.
+
+Integration uses an explicit two-parent merge of the complete published campaign tip into refreshed main. Recheck the merged documentation, campaign containment and protected-path identities, then push/read back main. Successful publication closes the campaign; final merge and parent identities are retained in Git and the completion response. No post-closure edit or branch deletion is required. Original opening: 989542cabedb6218f40ec728840aa95ffbbce151; full branch-off baseline: d536dd7b29ca8a28ae733782c8c1ce95aedb50b9.

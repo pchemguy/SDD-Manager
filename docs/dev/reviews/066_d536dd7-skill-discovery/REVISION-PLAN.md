@@ -28,3 +28,7 @@ Record the actual adaptation and checks in REVISION-REPORT.md. Publish/read back
 ## Accepted entry amendment
 
 The human requires root AGENTS.md to instruct execution of SKILL_DISCOVERY_PROTOCOL.md, replacing the optional discovery wording and surrounding source-root commentary. Direct agents to execute the protocol in AGENTS.md, without adding timing, repository-work or stopping qualifications. The human explicitly rejected discovery-only modes and forced turn endings. This supersedes the earlier optional entry-link treatment.
+
+## Authorized integration
+
+After review and amendments, the human explicitly requested merge. Finalize the existing report/index, publish the campaign checkpoint, explicitly merge into refreshed main, verify the merged documentation and unchanged source/package boundaries, publish/read back main and close. This supersedes the opening turn’s keep-open boundary.
