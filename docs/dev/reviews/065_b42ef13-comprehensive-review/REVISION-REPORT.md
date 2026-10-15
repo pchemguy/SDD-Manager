@@ -20,6 +20,10 @@ Source selection now checks each occupied component of .agents/plugins/sdd-manag
 
 Added two support tests covering 12 malformed-ancestor combinations (two parents, three kinds, both capture modes) and four positive ordinary-parent/root-layout combinations. After correcting fixture parent-directory setup, all 12 negative combinations failed against the prior helper as expected. With the fix, the full support suite passed: **136 tests in 26.860s**, Python 3.12.14. The retained four-case probe now rejects every malformed candidate: [corrected results](evidence/ancestors-corrected.jsonl). R-003 locally verified. V-001 commit c4e8f4be4e3019b825c0617142a90dd39572d522 was published/read back before this action.
 
+### V-003 — Correct helper source-root instructions (R-004)
+
+The helper guide now explicitly runs the support command from the SDD Manager source repository’s Git root, clarifies committed-component rejection and combines the doubled assets parenthetical. The acceptance/textstats/tests path exists there and is excluded from the distributable root. Markdown links/spacing passed. Reused V-002’s full **136-test** pass because helper/test executable bytes are unchanged by this wording action; no redundant suite run. R-004 verified. V-002 commit 360f746fd13fb28d1e2435c9c1cf45167ff3963a was published/read back before this action.
+
 ### Remaining actions
 
-V-003/R-004 and V-004/R-001 remain pending. Original failed evidence remains unchanged. No live acceptance or provider operations are selected.
+V-004/R-001 remains pending. Original failed evidence remains unchanged. No live acceptance or provider operations are selected.
