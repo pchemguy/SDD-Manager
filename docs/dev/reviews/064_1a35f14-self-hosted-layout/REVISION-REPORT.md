@@ -11,3 +11,11 @@ Check opening/plan/index links, spacing, owned paths and Git whitespace; commit/
 ## README scope refinement
 
 The human requested an explicit README statement that the plugin source package lives at `.agents/plugins/sdd-manager/` and is intended for agents to load when developing SDD Manager, with separate agent installation remaining optional. The earlier dual-full-README/generated-root proposal is superseded: the plan now selects an abbreviated root introduction linking to the full package README and contributor guidance. No README generation/link-rewriting helper or sync-specific CI is selected. Distinguish checkout source paths from installed package layout and do not claim automatic loading. Source restructuring remains pending.
+
+## Execution authority and A-001
+
+The human commanded execution after the README refinement. Establish `.agents/plugins/sdd-manager` as this repository's package root and retain the Git checkout root for provenance, development files and target-project operations. Full README belongs to the package; the root entry is abbreviated. Root repository notices and license remain; only assets templates and a package-root LICENSE ship. Intended package inventory is 132 files (the prior 134 minus two package-root notices).
+
+TextStats will retain support for a portable package at an explicitly supplied checkout root, including historical committed layouts, while preferring the nested package when present in the selected Git tree. Record the selected package subdirectory in provenance, normalize emitted names to package-relative paths and use that same mapping for dirty capture. The native publisher targets this repository's fixed nested layout. No automatic loading or instruction reload policy is added.
+
+A-002/A-003/A-004 will form one coupled source checkpoint: moving the tree without adapting publishers, snapshots and navigation would leave a deliberately broken intermediate layout. Inspect/test independent fixture paths before publishing that checkpoint; committed-candidate and full regression checks follow it. Record any failed checks truthfully and do not claim completion until final verification.
