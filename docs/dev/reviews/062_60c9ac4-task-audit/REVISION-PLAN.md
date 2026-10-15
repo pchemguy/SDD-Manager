@@ -43,3 +43,7 @@ These are source-assessment cases unless a separately selected trial establishes
 Use Python 3.11 or the established supported runtime and record the actual version; do not touch `/pyenv`. For coherent plugin integration run the TextStats support suite and `.github/tests` publisher suite with `.github/requirements.txt` pinned dependencies. Validate native committed manifest/archive, exact regular-file package contents and package-contained links, including source-only exclusions. No new tests that merely restate the prose are planned.
 
 Check changed current documents/active campaign only for links/anchors, Markdown spacing/consecutive blanks and Git whitespace; exclude closed record compatibility. Inspect the full campaign diff, canonical loading and direct owner paths. Final integration carries actual source/target tips, original opening and starting baseline, changed actions, current verification/limits and final target publication evidence in the established two-parent merge summary. An unresolved check retains the campaign open with its concrete blocker.
+
+## Execution disposition
+
+A-001 through A-004 executed. All three findings are source-verified; current checks and limits are recorded in the revision report. Final verified main integration/publication and return establish closure. Automatic-review denial and actual product-repository/live acceptance work remained excluded.

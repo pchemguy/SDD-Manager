@@ -30,7 +30,7 @@ These are attributed claims, not verified test results or a confirmed denial dia
 
 ### R-001 — Recovery authorization wording leaves the decision owner and reusable authority unclear
 
-**Type:** instruction ambiguity. **Priority:** high. **Confidence:** high for source ambiguity; incident causation unverified. **Status:** Revised under [A-001–A-003](REVISION-REPORT.md); verification pending.
+**Type:** instruction ambiguity. **Priority:** high. **Confidence:** high for source ambiguity; incident causation unverified. **Status:** Verified by [source recheck](REVISION-REPORT.md#a-004--verification-and-disposition); incident behavior unverified.
 
 The task persistence audit says to block affected advancement/integration until the manager resolves an “authorized scoped recovery or explicit exception.” Git integration additionally calls for an “explicit scoped recovery decision or exception.” Neither defines when the manager can resolve recovery under an existing implementation grant, the minimum evidence/decision needed, or when the human must approve an exception. Nearby scope guidance allows in-scope repairs and reuse of actual authority.
 
@@ -42,7 +42,7 @@ This can turn a sound temporary audit hold into a request for blanket reauthoriz
 
 ### R-002 — Premature verification failure is insufficiently distinguished from commit-composition violations
 
-**Type:** recovery-procedure gap. **Priority:** high. **Confidence:** high for source distinction; T-022 classification unverified. **Status:** Revised under [A-001–A-003](REVISION-REPORT.md); verification pending.
+**Type:** recovery-procedure gap. **Priority:** high. **Confidence:** high for source distinction; T-022 classification unverified. **Status:** Verified by [source recheck](REVISION-REPORT.md#a-004--verification-and-disposition); incident behavior unverified.
 
 The named audit violation branch enumerates malformed subjects, bundled results, split result/status and uncertain ownership. The quoted incident instead reports premature publication with a failed production test. A commit might contain the correct single task/result/evidence/checkbox structure yet falsely claim verified completion; it might also violate both contracts. The quote establishes neither composition nor precise evidence history.
 
@@ -54,7 +54,7 @@ Current task execution already requires repairing incomplete work and correcting
 
 ### R-003 — Push-first continuation does not expressly handle a known-invalid unpushed completion
 
-**Type:** adjacent instruction conflict risk. **Priority:** medium. **Confidence:** high for source ordering; not established as the cause of this already-published incident. **Status:** Revised under [A-001–A-003](REVISION-REPORT.md); verification pending.
+**Type:** adjacent instruction conflict risk. **Priority:** medium. **Confidence:** high for source ordering; not established as the cause of this already-published incident. **Status:** Verified by [source recheck](REVISION-REPORT.md#a-004--verification-and-disposition); incident behavior unverified.
 
 Startup requires all outstanding commits to be pushed before selection/tests/edits. Audit/completion requires actual commit inspection before publication and blocks unsupported completion. Startup mentions contradictory evidence later, after pushing. It does not expressly state how to handle a resumed, unpushed closing commit already known to contain failed required acceptance or unsafe/unowned contents.
 
