@@ -1,6 +1,6 @@
 # Skill and plugin discovery protocol
 
-Discover and load repository-provided skill and plugin entries using protocol below. Report their purposes and capabilities in chat according to the report template.
+During `AGENTS.md` initialization, discover and load repository-provided skill and plugin entries using the protocol below. Retain their instructions for subsequent work and report their purposes and capabilities in chat according to the report template.
 
 ## Strict execution constraints
 
@@ -8,37 +8,39 @@ These constraints apply during discovery.
 
 - **Read-only discovery and chat reporting only.** Do not create, modify or delete files.
 - **No Git operations**, commits, pull requests or hosted-object changes.
-- Read complete entries as discovery material:
-    - Do not execute their workflows or treat reading an entry as authorization to act.
+- Load complete entries as instructions for subsequent work:
+    - Do not execute their workflows during discovery or treat loading an entry as authorization to act.
     - Do not install packages.
     - Do not follow `references/*.md`.
-- **Report discovery in chat, then continue the requested task.** Do not create a report file, commit or formal submission for discovery.
+- **Report discovery in chat, then return to the remaining `AGENTS.md` instructions and the requested task.** Do not create a report file, commit or formal submission for discovery. At that handoff, the discovery restrictions end; subsequent work follows its applicable instructions and authorization, including reference loading and Git operations.
 
 ## Discovery procedure
 
+All discovery paths below are relative to the repository root.
+
 ### Skill Discovery
 
-Enumerate skill directories. For each SKILL.md:
+Enumerate skill directories. For each `SKILL.md`:
 
-- Read the complete entry and extract its declared `name` and `description`.
+- Load the complete entry and extract its declared `name` and `description`.
 - Identify its capabilities and scope from that entry.
 
-Apply to
+Apply to:
 
 - Standalone skills
-    - **Discovery root**: `.agents/skills/` 
+    - **Discovery root**: `.agents/skills/`
     - **Pattern**: `.agents/skills/{skill}/SKILL.md`
 - Bundled skills for each plugin `{plugin}` during **Plugin Discovery**
-    - **Discovery root**: `.agents/plugins/{plugin}/skills/` 
+    - **Discovery root**: `.agents/plugins/{plugin}/skills/`
     - **Pattern**: `.agents/plugins/{plugin}/skills/{skill}/SKILL.md`
 
 ### Plugin Discovery
 
 Enumerate plugin directories `.agents/plugins/{plugin}/`. For each plugin:
 
-- Read its manifest in full (`plugin}/plugin.json` or vendor-specific) and extract declared `name`, `description`, and `displayName`, where present.
-- Read `PLUGIN.md` in full when present. If it defines coordinator skill, read its `SKILL.md` entry before other bundled skills.
-- Apply the **Skill Discovery Protocol** to `plugin}/skills/`
+- Read its manifest in full (`.agents/plugins/{plugin}/plugin.json` or vendor-specific) and extract declared `name`, `description`, and `displayName`, where present.
+- Load `PLUGIN.md` in full when present. If it defines a coordinator skill, load its `SKILL.md` entry before other bundled skills.
+- Apply the **Skill Discovery** procedure to `.agents/plugins/{plugin}/skills/`.
 
 ## Report template
 
