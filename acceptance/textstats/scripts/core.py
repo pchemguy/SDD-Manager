@@ -313,7 +313,8 @@ def package_subdirectory(source, commit):
     """Select the nested source tree, or a standalone/historical root package.
 
     Selection uses committed Git trees, not a dirty manifest or a nearby install.
-    A present nested path must be a tree; it cannot fall back to a root decoy.
+    Each occupied nested component must be a tree; malformed ancestors cannot
+    select a root decoy. Absent components preserve standalone compatibility.
 
     Args:
         source: Git checkout used for object lookup.
@@ -323,14 +324,17 @@ def package_subdirectory(source, commit):
         The nested repository-relative directory or '.' for a root package.
 
     Raises:
-        Stop: The selected nested path is not a committed Git tree.
+        Stop: An occupied nested path component is not a committed Git tree.
     """
-    record = git(source, 'ls-tree', commit, '--', PACKAGE_SUBDIR).stdout.strip()
-    if not record:
-        return '.'
-    metadata = record.split('\t', 1)[0].split()
-    if metadata[:2] != ['040000', 'tree']:
-        raise Stop('package_mode_unsupported')
+    parts = PurePosixPath(PACKAGE_SUBDIR).parts
+    for depth in range(1, len(parts) + 1):
+        component = PurePosixPath(*parts[:depth]).as_posix()
+        record = git(source, 'ls-tree', commit, '--', component).stdout.strip()
+        if not record:
+            return '.'
+        metadata = record.split('\t', 1)[0].split()
+        if metadata[:2] != ['040000', 'tree']:
+            raise Stop('package_mode_unsupported')
     return PACKAGE_SUBDIR
 
 

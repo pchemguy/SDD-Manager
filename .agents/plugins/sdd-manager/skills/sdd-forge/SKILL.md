@@ -34,3 +34,16 @@ For “collect key changes since the latest release,” highlights-only preparat
 - **GitHub:** Read [GitHub backend](references/github.md) when the requested operation targets a GitHub repository. It resolves repository identity and access, then routes tracking, package/workflow preparation and release lifecycle operations. Apply the shared backend object lifecycle for tracking; standalone release requests need no task hierarchy or tracking activation. Package preparation does not implicitly publish a release.
 
 For hosted operations, carry the confirmed request scope, destination/object identity and explicit limits through the [coordination handoff](../sdd-manage/references/coordination.md#coordinate-execution). Keep credentials protected and optional tracking activation separate from access capability.
+
+## Supporting modules
+
+Load the [GitHub backend](references/github.md) first for these operations; it supplies identity/access prerequisites and routes the selected module. Load only the relevant support module and its stated dependencies, including for a direct request. Shared local highlights and release-message preparation keep their routes above.
+
+| Module | Purpose and boundary | Route through | Load when |
+| --- | --- | --- | --- |
+| [github-packaging.md](references/github-packaging.md) | Package contents, archive assessment and names; preparation only | [github.md](references/github.md) | Assessing or developing GitHub release packaging |
+| [github-release-workflows.md](references/github-release-workflows.md) | Workflow authoring, dispatch and monitoring within requested effects | [github.md](references/github.md); package contract as required | Preparing, inspecting or running a release workflow |
+| [github-releases.md](references/github-releases.md) | Release reconciliation, upload, publication and readback | [github.md](references/github.md); accepted package contract | Creating, completing, inspecting or recovering a release |
+| [github-projection.md](references/github-projection.md) | Eligible-phase labels, native milestones and task issues | [github.md](references/github.md) | Creating or reconciling the selected task hierarchy |
+| [github-milestone-lifecycle.md](references/github-milestone-lifecycle.md) | Milestone closure, reopening and backlog reconciliation | [github.md](references/github.md) | Reconciling milestone completion or invalidation |
+| [github-issue-lifecycle.md](references/github-issue-lifecycle.md) | Exact task/issue identity and verified issue-state changes | [github.md](references/github.md) | Resolving a task issue or closing/reopening it |

@@ -42,8 +42,11 @@ PACKAGE_PATHS = ('assets', 'skills', 'LICENSE', 'plugin.json', 'README.md',
 
 
 def git(root, *args):
+    import os
     import subprocess
-    return subprocess.check_output(['git', '-C', str(root), *args])
+    # ZIP's DOS timestamps use local time; fix it across build environments.
+    return subprocess.check_output(['git', '-C', str(root), *args],
+                                   env=dict(os.environ, TZ='UTC'))
 
 
 def tree_inventory(root, source):
@@ -129,6 +132,44 @@ def validate_manifest(raw):
     return manifest
 
 
+def write_package_archive(root, source, archive):
+    """Archive committed package bytes with source timestamps and portable names.
+
+    Args:
+        root: Candidate Git checkout, whose HEAD is already verified.
+        source: Exact candidate commit; retaining the commit object makes Git's
+            timestamps and archive comment independent of the build clock.
+        archive: Owned output ZIP path beneath the selected build directory.
+
+    The temporary Git archive includes repository-relative parent directories.
+    Rebase only members below PACKAGE_SUBDIR into sdd-manager/, preserving ZIP
+    metadata, compression, permissions and the source commit comment. No working
+    tree files or provider APIs participate. Git/ZIP failures propagate to the
+    caller; temporary intermediate files are removed on either outcome.
+    """
+    import copy
+    from pathlib import Path
+    import tempfile
+    import zipfile
+    prefix = PACKAGE_SUBDIR + '/'
+    with tempfile.TemporaryDirectory() as directory:
+        original = Path(directory) / 'source.zip'
+        git(root, 'archive', '--format=zip', '--output=' + str(original),
+            source, '--', *(prefix + path for path in PACKAGE_PATHS))
+        with zipfile.ZipFile(original) as incoming, zipfile.ZipFile(archive, 'w') as outgoing:
+            outgoing.comment = incoming.comment
+            for item in incoming.infolist():
+                if not item.filename.startswith(prefix):
+                    continue
+                content = incoming.read(item)
+                rebased = copy.copy(item)
+                rebased.filename = 'sdd-manager/' + item.filename[len(prefix):]
+                outgoing.writestr(rebased, content)
+                # ZipFile supplies defaults for zero attributes; retain Git's
+                # original attributes in the emitted central directory.
+                rebased.external_attr = item.external_attr
+
+
 def build_package(root, data, output):
     """Build and verify exact committed bytes before any publisher access."""
     from pathlib import Path
@@ -142,8 +183,7 @@ def build_package(root, data, output):
         raise ValueError('Tag does not match candidate manifest version')
     output = Path(output); output.mkdir(parents=True, exist_ok=True)
     archive = output / 'sdd-manager.zip'
-    git(root, 'archive', '--format=zip', '--prefix=sdd-manager/',
-        '--output=' + str(archive.resolve()), source + ':' + PACKAGE_SUBDIR, '--', *PACKAGE_PATHS)
+    write_package_archive(root, source, archive)
     inspect_archive(root, source, archive)
     if not archive.stat().st_size: raise ValueError('Package archive is empty')
     checksum = output / 'sdd-manager.zip.sha256'

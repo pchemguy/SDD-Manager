@@ -1,0 +1,4 @@
+{"ancestor": ".agents", "mode": "committed", "outcome": "accepted-root-fallback", "selected": ".", "files": ["plugin.json"]}
+{"ancestor": ".agents", "mode": "dirty", "outcome": "accepted-root-fallback", "selected": ".", "files": ["plugin.json"]}
+{"ancestor": ".agents/plugins", "mode": "committed", "outcome": "accepted-root-fallback", "selected": ".", "files": ["plugin.json"]}
+{"ancestor": ".agents/plugins", "mode": "dirty", "outcome": "accepted-root-fallback", "selected": ".", "files": ["plugin.json"]}
