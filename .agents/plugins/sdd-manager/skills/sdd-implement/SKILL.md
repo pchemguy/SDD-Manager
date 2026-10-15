@@ -7,18 +7,31 @@ description: Use when selecting an executable task range, or executing or resumi
 
 For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists and code blocks, plus four-space structural indentation, including nested lists, with exactly one space after each list marker. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
 
-Execute the user's requested task-list boundary. **sdd-manage** coordinates authorization, prerequisites, and focused capabilities; an implementation request authorizes work within its established scope without repeated confirmation for routine steps. Use a current **sdd-orient** handoff at startup for repository instructions, Git and task state, dirty-path ownership, and environment. Read the relevant references: Load [environment recovery](references/environment-recovery.md) when installation/runtime facilities block selected work; load its browser guidance only for relevant browser checks.
+Execute the user's requested task-list boundary. **sdd-manage** coordinates authorization, prerequisites, and focused capabilities; an implementation request authorizes work within its established scope without repeated confirmation for routine steps. Use a current **sdd-orient** handoff at startup for repository instructions, Git and task state, dirty-path ownership, and environment.
 
 Apply the coordinator's [scope checks and reporting detail](../sdd-manage/references/coordination.md#scope-checks-and-reporting-detail), including direct calls: check scope/pending decisions before work and both path/change before writes; requested brevity preserves consequential evidence and checkpoints.
+
+## Reference routing
 
 | Work | Load |
 | --- | --- |
 | Inspect publication eligibility, push retained commits, resume pending work, and select the range | [startup and continuation](references/startup-and-continuation.md) |
 | Resolve next task, next N tasks, milestone, or phase requests | [range selection](references/range-selection.md) |
 | Establish tracking decision and phase readiness before task execution, including direct calls/resume | **sdd-manage**: [tracking decision](../sdd-manage/references/tracking-decision.md) and [phase activation](../sdd-manage/references/phase-activation.md) |
+| Investigate installation, provisioning or runtime blockers within the selected scope | [environment recovery](references/environment-recovery.md) |
 | Execute tasks with tests, documentation, and verification | [task execution](references/task-execution.md) |
 | Bootstrap disclosure and usage records before the first SDD commit | **sdd-manage**: `skills/sdd-manage/references/repository-bootstrap.md` (bundled dependency) |
 | Mark completion, commit and push, reconcile issues, and stop | [completion and checkpoints](references/completion-and-checkpoints.md) |
+
+### Supporting modules
+
+For browser environment investigation, load the parent below before its support module; the parent supplies scope and recovery prerequisites. Load only relevant guidance. Ordinary browser check selection remains with `sdd-verify`; CLI/engine-only tasks acquire no browser prerequisites.
+
+| Module | Purpose and boundary | Route through | Load when |
+| --- | --- | --- | --- |
+| [browser-capabilities.md](references/browser-capabilities.md) | Capability evidence for browser provisioning, sessions and rendering; conditional environment support | [environment-recovery.md](references/environment-recovery.md) | Investigating browser installation, session or rendering blockers, or insufficient capability evidence |
+
+## Implementation protocol
 
 For a selection-only request, use the range-selection reference and return the IDs, dependencies, and stopping point without mutations. For an implementation request, follow this protocol:
 

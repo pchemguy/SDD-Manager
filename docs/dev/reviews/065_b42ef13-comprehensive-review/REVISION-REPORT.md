@@ -24,6 +24,12 @@ Added two support tests covering 12 malformed-ancestor combinations (two parents
 
 The helper guide now explicitly runs the support command from the SDD Manager source repository’s Git root, clarifies committed-component rejection and combines the doubled assets parenthetical. The acceptance/textstats/tests path exists there and is excluded from the distributable root. Markdown links/spacing passed. Reused V-002’s full **136-test** pass because helper/test executable bytes are unchanged by this wording action; no redundant suite run. R-004 verified. V-002 commit 360f746fd13fb28d1e2435c9c1cf45167ff3963a was published/read back before this action.
 
-### Remaining actions
+### V-004 — Entry discovery for supporting modules (R-001)
 
-V-004/R-001 remains pending. Original failed evidence remains unchanged. No live acceptance or provider operations are selected.
+Forge now lists its six GitHub support modules with purpose/boundary, parent route and loading condition. The backend remains the prerequisite owner; shared local highlights/message routes remain separate. Implementation has identified reference routing, an explicit environment-recovery row and a conditional browser-support table. Ordinary verification and browser-free work retain their owners and scope. Existing reference procedures and presentation metadata remain unchanged.
+
+All **75 references across 15 skills** are individually linked from their entries. The two changed entries passed 35 local link/anchor and Markdown spacing checks. APA plugin validation passed with zero errors and the same 39 sibling-reference warnings. Source inspection contrasts local versus hosted release work, issue lookup versus milestone closure, dispatch versus package preparation, and browser-free execution versus environment investigation: parent prerequisites and effects/stops are retained. R-001 verified at source/structure level; no consumer routing trial claimed. README, PLUGIN and capability-map coverage remains accurate because this action changes discovery, not capabilities or user commands. V-003 commit f6c180d98f194d6237d263fabd9da17def8e1d66 was published/read back before this action.
+
+### Integration readiness
+
+All four planned source actions are implemented and locally checked. Exact committed candidate, final regression/package checks and verified target integration remain pending. Original failed evidence remains unchanged. No live acceptance or provider release/tracking operations are selected.
