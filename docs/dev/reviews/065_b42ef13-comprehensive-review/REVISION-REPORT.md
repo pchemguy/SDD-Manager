@@ -14,6 +14,12 @@ Added three publisher tests: separated build-clock simulation and distinct timez
 
 `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/062-validator-deps python -m unittest discover -s .github/tests -v`: **33 passed**, Python 3.12.14. The retained real probe builds twice three seconds apart: all 132 member contents/names match and archive SHA-256 is identical. [Corrected result](evidence/rebuild-corrected.json), tested candidate e3df0eba7660311bee082d0ce4deb5a3550e65cc with the V-001 working-tree publisher. Full committed-candidate/merged-state checks follow completion of the coupled revisions. R-002 locally verified; no hosted release/CI run claimed.
 
+### V-002 — Validate every committed package component (R-003)
+
+Source selection now checks each occupied component of .agents/plugins/sdd-manager before choosing the nested root or standalone fallback. Symlink, regular-file and Git-link components reject with package_mode_unsupported. Genuinely absent nested layout and ordinary parent directories still allow standalone selection. No external symlink content is read.
+
+Added two support tests covering 12 malformed-ancestor combinations (two parents, three kinds, both capture modes) and four positive ordinary-parent/root-layout combinations. After correcting fixture parent-directory setup, all 12 negative combinations failed against the prior helper as expected. With the fix, the full support suite passed: **136 tests in 26.860s**, Python 3.12.14. The retained four-case probe now rejects every malformed candidate: [corrected results](evidence/ancestors-corrected.jsonl). R-003 locally verified. V-001 commit c4e8f4be4e3019b825c0617142a90dd39572d522 was published/read back before this action.
+
 ### Remaining actions
 
-V-002/R-003, V-003/R-004 and V-004/R-001 remain pending. Original failed evidence remains unchanged. No live acceptance or provider operations are selected.
+V-003/R-004 and V-004/R-001 remain pending. Original failed evidence remains unchanged. No live acceptance or provider operations are selected.

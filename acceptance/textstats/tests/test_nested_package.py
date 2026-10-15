@@ -35,6 +35,50 @@ class NestedPackage(Sandbox):
         nested,_=core.package(self.package,self.options)
         self.assertEqual(nested,provenance)
 
+    def test_committed_ancestors_reject_symlink_file_and_gitlink_without_root_fallback(self):
+        for number, ancestor in enumerate(('.agents', '.agents/plugins')):
+            for kind in ('symlink', 'file', 'gitlink'):
+                with self.subTest(ancestor=ancestor, kind=kind):
+                    source = self.root / ('ancestor-' + str(number) + '-' + kind)
+                    git(self.root, 'clone', '--no-hardlinks', str(self.repo), str(source))
+                    git(source, 'config', 'user.name', 'Fixture')
+                    git(source, 'config', 'user.email', 'fixture@example.invalid')
+                    path = source / ancestor
+                    git(source, 'rm', '-r', '--', ancestor)
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    if kind == 'symlink':
+                        foreign = self.root / ('foreign-' + str(number))
+                        foreign.mkdir(exist_ok=True)
+                        (foreign / 'plugin.json').write_text('EXTERNAL_SENTINEL')
+                        path.symlink_to(foreign, target_is_directory=True)
+                        git(source, 'add', ancestor)
+                    elif kind == 'file':
+                        path.write_text('Unsupported ancestor')
+                        git(source, 'add', ancestor)
+                    else:
+                        git(source, 'update-index', '--add', '--cacheinfo', '160000,' + self.head + ',' + ancestor)
+                    git(source, 'commit', '-m', 'unsupported ancestor')
+                    for mode in ('committed', 'dirty'):
+                        with self.subTest(mode=mode), self.assertRaisesRegex(core.Stop, 'package_mode_unsupported'):
+                            core.package(source, dict(plugin_revision='HEAD', source_mode=mode))
+
+    def test_ordinary_parent_directories_without_nested_package_preserve_root_layout(self):
+        for number, parent in enumerate(('.agents', '.agents/plugins')):
+            with self.subTest(parent=parent):
+                source = self.root / ('standalone-' + str(number))
+                git(self.root, 'clone', '--no-hardlinks', str(self.repo), str(source))
+                git(source, 'config', 'user.name', 'Fixture')
+                git(source, 'config', 'user.email', 'fixture@example.invalid')
+                git(source, 'rm', '-r', '--', core.PACKAGE_SUBDIR)
+                path = source / parent
+                path.mkdir(parents=True, exist_ok=True)
+                (path / 'unrelated.txt').write_text('Other agent configuration')
+                git(source, 'add', '.'); git(source, 'commit', '-m', 'standalone package with ordinary parents')
+                for mode in ('committed', 'dirty'):
+                    info, files = core.package(source, dict(plugin_revision='HEAD', source_mode=mode))
+                    self.assertEqual(info['package_subdirectory'], '.')
+                    self.assertEqual(files['plugin.json'], b'{"name":"root-decoy"}\n')
+
     def test_dirty_edits_additions_deletions_and_modes_use_package_keys(self):
         committed,_=core.package(self.repo,self.options)
         (self.package/'skills/demo/SKILL.md').write_text('Changed skill\n')

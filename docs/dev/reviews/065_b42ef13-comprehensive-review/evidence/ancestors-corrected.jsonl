@@ -1,0 +1,4 @@
+{"ancestor": ".agents", "mode": "committed", "outcome": "package_mode_unsupported"}
+{"ancestor": ".agents", "mode": "dirty", "outcome": "package_mode_unsupported"}
+{"ancestor": ".agents/plugins", "mode": "committed", "outcome": "package_mode_unsupported"}
+{"ancestor": ".agents/plugins", "mode": "dirty", "outcome": "package_mode_unsupported"}
