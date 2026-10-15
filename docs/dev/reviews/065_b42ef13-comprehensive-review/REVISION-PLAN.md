@@ -4,7 +4,7 @@
 
 Campaign `065_b42ef13`; original baseline `b42ef135345b5f0376e8f6f484592e1ac5b38df2`; planning checkpoint `b10193fb63fdae85017ee325cf250c827e8f694a`. Original opening commit `10a69811be8c7a8e3badc0724b4bd875f4df4a24`. Working branch `revision/065_b42ef13-comprehensive-review`; target `main`.
 
-[Review report](REVIEW-REPORT.md); [coverage](COVERAGE.md). State: Proposed; planning authorized, implementation and closure pending. All four findings are proposed for correction below; none is marked repaired or Verified. Preserve the reviewed observations and literal failed-probe evidence. The `_agents` ignore rule is already implemented and remains in this campaign.
+[Review report](REVIEW-REPORT.md); [coverage](COVERAGE.md). State: Execution authorized by the human’s “Execute” instruction after plan publication. All four corrections and the plan’s verified integration/closure steps are accepted. Preserve the reviewed observations and literal failed-probe evidence. The `_agents` ignore rule is already implemented and remains in this campaign.
 
 Scope is the native publisher, TextStats package selection/helper instructions, and forge/implementation entry discovery. No product design/SPEC/PLAN/TASKS change or preparation branch is needed. No new task IDs, registry or runtime state file. Installed-client loading/reload, live acceptance, hosted tracking/release operations, unrelated workflows and closed campaign contents remain excluded.
 

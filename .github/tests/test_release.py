@@ -3,6 +3,9 @@ import copy
 import hashlib
 import importlib.util
 import json
+import os
+import sys
+from unittest import mock
 from pathlib import Path
 import subprocess
 import tempfile
@@ -93,6 +96,63 @@ class PackageTests(Contract):
             self.assertFalse(any('/.agents/' in name for name in z.namelist()))
         raw=paths['sdd-manager.zip'].read_bytes()
         self.assertEqual(paths['sdd-manager.zip.sha256'].read_text(),hashlib.sha256(raw).hexdigest()+'  sdd-manager.zip\n')
+
+    def test_rebuild_preserves_commit_metadata_across_archive_times(self):
+        executable = self.package / 'skills/sample/run.sh'
+        executable.write_text('echo fixture\n'); executable.chmod(0o755)
+        self.git('add', '.'); self.git('commit', '-qm', 'executable package member')
+        self.sha = self.git('rev-parse', 'HEAD')
+        self.data = dict(self.data, source=self.sha, notes_source=self.sha)
+        real_git = publisher.git
+        archive_times = iter(('2001-01-01T00:00:00Z', '2031-01-01T00:00:00Z'))
+
+        def clocked_git(root, *args):
+            # Only tree-object archives use the build clock. Model two builds
+            # without sleeping; commit-object archives keep their own timestamp.
+            if args[0] == 'archive' and self.sha + ':' + publisher.PACKAGE_SUBDIR in args:
+                args = (args[0], '--mtime=' + next(archive_times), *args[1:])
+            return real_git(root, *args)
+
+        with mock.patch.object(publisher, 'git', side_effect=clocked_git):
+            with mock.patch.dict(os.environ, TZ='Pacific/Honolulu'):
+                first = publisher.build_package(self.root, self.data, self.out / 'first')
+            with mock.patch.dict(os.environ, TZ='Asia/Tokyo'):
+                second = publisher.build_package(self.root, self.data, self.out / 'second')
+        self.assertEqual(first['sdd-manager.zip'].read_bytes(), second['sdd-manager.zip'].read_bytes())
+        self.assertEqual(first['sdd-manager.zip.sha256'].read_bytes(), second['sdd-manager.zip.sha256'].read_bytes())
+        from datetime import datetime, timezone
+        stamp = int(self.git('show', '-s', '--format=%ct', self.sha))
+        expected = datetime.fromtimestamp(stamp, timezone.utc).timetuple()[:6]
+        with zipfile.ZipFile(first['sdd-manager.zip']) as zipped:
+            for item in zipped.infolist():
+                self.assertEqual(item.date_time[:5], expected[:5])
+                self.assertEqual(item.date_time[5], expected[5] // 2 * 2)
+            self.assertEqual(zipped.comment.decode(), self.sha)
+            self.assertTrue(zipped.getinfo('sdd-manager/skills/sample/run.sh').external_attr >> 16 & 0o111)
+
+    def test_cli_rebuild_hash_guard_accepts_same_source_and_rejects_stale_hash(self):
+        paths = publisher.build_package(self.root, self.data, self.out / 'build')
+        digest = hashlib.sha256(paths['sdd-manager.zip'].read_bytes()).hexdigest()
+        event = self.out / 'event.json'
+        event.write_text(json.dumps({'inputs': {'handoff': json.dumps(self.data)}}))
+        command = [sys.executable, str(SCRIPT.resolve()), '--event', str(event),
+                   '--root', str(self.root), '--output', str(self.out / 'publish'),
+                   '--expected-sha256']
+        env = dict(os.environ, GITHUB_REPOSITORY='fixture/repo', GITHUB_TOKEN='')
+        same = subprocess.run([*command, digest], capture_output=True, text=True, env=env)
+        self.assertEqual(same.returncode, 0, same.stderr)
+        stale = subprocess.run([*command, '0' * 64], capture_output=True, text=True, env=env)
+        self.assertNotEqual(stale.returncode, 0)
+        self.assertIn('Publisher rebuild differs from verified build job', stale.stderr)
+
+    def test_package_content_change_changes_archive_hash(self):
+        first = publisher.build_package(self.root, self.data, self.out / 'first')
+        before = hashlib.sha256(first['sdd-manager.zip'].read_bytes()).hexdigest()
+        (self.package / 'README.md').write_text('Changed package content\n')
+        self.git('add', '.'); self.git('commit', '-qm', 'changed content')
+        source = self.git('rev-parse', 'HEAD')
+        second = publisher.build_package(self.root, dict(self.data, source=source, notes_source=source), self.out / 'second')
+        self.assertNotEqual(before, hashlib.sha256(second['sdd-manager.zip'].read_bytes()).hexdigest())
 
     def test_missing_plugin_entry_stops_before_package_outputs(self):
         (self.package/'PLUGIN.md').unlink()
