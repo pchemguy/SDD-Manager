@@ -29,3 +29,7 @@ Removed “Keep root and package LICENSE copies identical” from source AGENTS.
 ## Human review amendment — Direct protocol execution
 
 AGENTS.md directly instructs agents to execute the skill and plugin discovery protocol. There are no timing, session or repository-work qualifications on this instruction. Removed the rejected source-root commentary. Discovery-only modes and forced turn endings are removed from the protocol; discovery reports in chat and continues the task. The superseded unpublished variants were blocked after human rejection; remote state was checked before replacing them. Markdown/link checks pass; campaign remains open.
+
+## Human review amendment — Contributor scope
+
+Removed the opening sentence directing agents in other projects to packaged PLUGIN.md. Root AGENTS.md addresses this source repository and directs execution of the discovery protocol. Markdown/link checks pass; campaign remains open.

@@ -1,6 +1,6 @@
 # Developing SDD Manager
 
-This entry applies to the SDD Manager source repository. It is excluded from the plugin package. Agents using SDD Manager in another project start at [PLUGIN.md](.agents/plugins/sdd-manager/PLUGIN.md) and follow that project's own controlling instructions.
+This entry applies to the SDD Manager source repository. It is excluded from the plugin package.
 
 ## Contributor entry
 
