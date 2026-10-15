@@ -2,7 +2,7 @@
 
 This entry applies to the SDD Manager source repository. It is excluded from the plugin package.
 
-## Startup
+## Initialization
 
 Execute the [skill and plugin discovery protocol](SKILL_DISCOVERY_PROTOCOL.md).
 

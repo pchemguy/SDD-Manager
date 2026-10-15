@@ -37,3 +37,7 @@ Removed the opening sentence directing agents in other projects to packaged PLUG
 ## Human review amendment — Separate startup section
 
 Placed protocol execution alone under Startup in root AGENTS.md. General source guidance follows under Contributor instructions; persistence/scope and source/package locations retain their own sections. Markdown/link checks pass; campaign remains open.
+
+## Human review amendment — Initialization heading
+
+Renamed the dedicated Startup section to Initialization, as accepted by the human. Its direct instruction to execute SKILL_DISCOVERY_PROTOCOL.md is unchanged. Markdown/link checks pass; campaign remains open.
