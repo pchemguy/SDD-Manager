@@ -10,7 +10,7 @@ Read its outcome, dependencies, acceptance conditions, expected paths, and relev
 2. Apply production changes within the task scope. Satisfy the accepted contract rather than merely weakening an assertion or hardcoding a passing fixture. Keep component ownership and physical placement consistent with governing design and layout.
 3. Use **sdd-docs** after substantive changes to review affected module and API documentation, README, guides, and examples. It reports amendments needed in governing documents to the user; independent work may continue, but a disputed acceptance condition remains unresolved.
 4. Use **sdd-verify** for the required checks and acceptance assessment. Inspect actual evidence, failures, warnings, skips, coverage limitations, and declared project or boundary checks.
-5. Repair implementation failures within scope. Coordinate test repairs with **sdd-tdd** and documentation repairs with **sdd-docs**. Repeat affected verification after relevant changes; existing evidence may be reused only when still applicable.
+5. Repair implementation failures within scope. If a claimed completion was premature or later invalidated, apply [task recovery](completion-and-checkpoints.md#resolve-a-task-recovery), separating acceptance from commit-composition and authority issues. Coordinate test repairs with **sdd-tdd** and documentation repairs with **sdd-docs**. Repeat affected verification after relevant changes; existing evidence may be reused only when still applicable.
 
 Development-cycle test runs do not replace the verification campaign. Verification does not mark the task complete or repair code itself. Read the evidence and decide completion under [completion and checkpoints](completion-and-checkpoints.md).
 
