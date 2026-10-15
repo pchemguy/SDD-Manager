@@ -50,9 +50,13 @@ class PreflightTests(Sandbox):
     def test_pin_uses_git_object_bytes_and_complete_package_manifest(self):
         data, _ = self.ok(self.invoke('preflight'))
         self.assertEqual(data['plugin_source']['commit'], git(SOURCE, 'rev-parse', 'HEAD').stdout.strip())
-        prefix='.agents/plugins/sdd-manager/'
-        expected={name[len(prefix):] for name in git(SOURCE,'ls-tree','-r','--name-only','HEAD','--',prefix).stdout.splitlines()}
-        self.assertEqual(data['plugin_source']['package_subdirectory'],prefix.rstrip('/'))
+        names=git(SOURCE,'ls-tree','-r','--name-only','HEAD').stdout.splitlines()
+        prefix='.agents/plugins/sdd-manager/' if '.agents/plugins/sdd-manager/plugin.json' in names else ''
+        roots={'plugin.json','README.md','PLUGIN.md','LICENSE'}
+        if not prefix: roots.update({'SDD-MANAGER.md','AI_DISCLOSURE.md'})
+        expected={name[len(prefix):] for name in names if name.startswith(prefix)
+                  and (name[len(prefix):] in roots or name[len(prefix):].startswith(('skills/','assets/')))}
+        self.assertEqual(data['plugin_source']['package_subdirectory'],prefix.rstrip('/') or '.')
         self.assertEqual(set(data['plugin_source']['package_hashes']), expected)
         self.assertEqual(data['plugin_source']['source_mode'], 'committed')
         self.assertEqual(data['repository']['remote'], 'origin')
