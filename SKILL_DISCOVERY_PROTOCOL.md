@@ -29,10 +29,10 @@ Apply to:
 
 - Standalone skills
     - **Discovery root**: `.agents/skills/`
-    - **Pattern**: `.agents/skills/{skill}/SKILL.md`
+    - **Entry pattern**: `.agents/skills/{skill}/SKILL.md`
 - Bundled skills for each plugin `{plugin}` during **Plugin Discovery**
     - **Discovery root**: `.agents/plugins/{plugin}/skills/`
-    - **Pattern**: `.agents/plugins/{plugin}/skills/{skill}/SKILL.md`
+    - **Entry pattern**: `.agents/plugins/{plugin}/skills/{skill}/SKILL.md`
 
 ### Plugin Discovery
 
