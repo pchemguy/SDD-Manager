@@ -65,6 +65,7 @@ The report should be generated in **chat only** using the following template. Us
 - **Manifest:** {actual repository-relative manifest path}
 - **Description:** {declared description}
 - **Shared entry:** {actual PLUGIN.md path or absence}
+- **Coordintator skill:** {if defined in PLUGIN.md}
 - **Capabilities and scope:** {concise PLUGIN.md-derived summary, when available}
 
 #### Bundled skills
