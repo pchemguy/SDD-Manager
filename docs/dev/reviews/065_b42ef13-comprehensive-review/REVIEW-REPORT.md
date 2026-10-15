@@ -120,3 +120,7 @@ Final change-scope inspection: only .gitignore, this campaign's records/evidence
 4. **R-004:** correct the helper command's source-root instruction.
 
 Recheck native/support suites and archive/snapshot parity after accepted coupled repairs. Review findings are proposals, not accepted corrections. The requested `_agents` ignore rule is implemented; no reported finding is repaired, merged or marked Verified. Campaign remains open on its published revision branch for human review.
+
+## Revision planning handoff
+
+The human requested a revision plan and suggested a separate table for indirectly reached support references. [REVISION-PLAN.md](REVISION-PLAN.md) proposes all four corrections and uses **Supporting modules** tables that expose each file's purpose, parent route and load condition while preserving staged loading. Original findings remain open; planning does not claim implementation authorization or verification. Campaign remains open.
