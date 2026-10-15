@@ -2,7 +2,7 @@
 
 ## Campaign and assessment
 
-Campaign `065_b42ef13`; baseline and reviewed source `b42ef135345b5f0376e8f6f484592e1ac5b38df2`; reviewer Codex, 2026-10-15. [Review plan](REVIEW-PLAN.md). Branch `revision/065_b42ef13-comprehensive-review`; target `main`. State: review in progress; campaign open.
+Campaign `065_b42ef13`; baseline and reviewed source `b42ef135345b5f0376e8f6f484592e1ac5b38df2`; reviewer Codex, 2026-10-15. [Review plan](REVIEW-PLAN.md). Branch `revision/065_b42ef13-comprehensive-review`; target `main`. State: review complete; campaign open awaiting revision decisions. Release readiness is blocked by R-002.
 
 Authorized source change: `_agents` added to root .gitignore. Findings repairs and integration are not authorized by this review request. Evidence comprises source inspection and local deterministic checks; live client/provider/consumer acceptance is unrun. Frozen prior campaigns and AI logs are excluded.
 
@@ -14,9 +14,16 @@ Authorized source change: `_agents` added to root .gitignore. Findings repairs a
 | U-002 | Assessed with stated depth | All 15 entries and 75 reference routes/structure; selected consequential handoffs inspected; R-001 |
 | U-003 | Assessed; release blocked | All seven .github files inspected; 30 publisher tests pass; delayed native rebuild and CLI hash gate reproduce R-002 |
 | U-004 | Assessed; two gaps | 134 support tests pass; native/snapshot parity and clean dirty identity pass; malformed-ancestor probe exposes R-003; R-004 documentation |
-| U-005 | Pending | Documentation and consolidation |
+| U-005 | Assessed | Current documentation/link/path scan and final diff; consolidated four findings and revision queue |
 
-No finding disposition or successful check is claimed before assessment.
+| Finding | Priority | Classification | Status |
+| --- | --- | --- | --- |
+| R-001 | Medium | Entry routing improvement | Open |
+| R-002 | High | Release archive reproducibility regression | Open |
+| R-003 | Medium | Malformed package ancestor fallback defect | Open |
+| R-004 | Low | Source-test working-directory documentation defect | Open |
+
+Detailed package inventory and review depth: [COVERAGE.md](COVERAGE.md).
 
 ## U-001 — Refactor and package boundaries
 
@@ -88,3 +95,28 @@ Executed `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/te
 - **Objective recheck:** following the documented working directory runs all 134 tests; no acceptance tooling is implied to ship inside the plugin package.
 
 U-003 checkpoint `fbc12deb1da7c53475b5bf69b3b324219c75de3f` was pushed/read back before this unit. No helper, fixture, schema or workflow repair was made.
+
+## U-005 — Current documentation and consolidation
+
+Checked all tracked current Markdown outside frozen review packages and AI logs, plus this campaign's three Markdown artifacts: 201 documents. Local links/directories/anchors and eight repository-source URLs were checked against the current checkout, not live HTTP. No broken target/anchor, heading-spacing or consecutive-blank-line error was found. The source URL check establishes current checkout paths only; external availability remains untested. Retained [scan results](evidence/document-check.json).
+
+Inspected source package statements in the capability map, PLUGIN contract, source instructions, release handoff and acceptance setup/execution/helper documents; reviewed demo and Jules prompt boundaries relevant to loading/refactor. Package-relative `skills/`, `assets/` and target-project root artifact references remain valid uses; they must not all be rewritten to source checkout paths. Root/package READMEs have separate intended audiences. The current native publisher and snapshots normalize package names consistently on valid input. R-004 is the confirmed stale working-directory instruction. Review index navigation includes this campaign without changing prior campaign rows or their artifacts.
+
+Final change-scope inspection: only .gitignore, this campaign's records/evidence and its index row differ from baseline. Package, .github, acceptance source and all prior closed campaign artifacts remain unchanged. U-004 checkpoint `368855aa41b9a76328bae40616dffcd6b8164741` was pushed/read back before this unit. Each earlier unit's checkpoint was likewise published before progression.
+
+## Verification and evidence limits
+
+- **Passed:** 134 TextStats support tests; 30 publisher tests; APA structural validation (37 documented sibling-reference warnings, zero errors); pinned offline core manifest validation; 132-file native archive inventory/content and TextStats parity; clean dirty snapshot identity; 505 packaged local links; current-document target/anchor/spacing checks; root/package license equality; requested ignore pattern and preservation of tracked package paths.
+- **Failed adversarial checks:** delayed exact-source archive rebuild and actual CLI hash gate (R-002); four committed/dirty malformed-ancestor source-selection probes (R-003). Passing suites do not override these failures.
+- **Inspection depth:** all 132 packaged files inventoried/contained; all 15 skill entries assessed; all 75 references receive structural/routing/link review, with detailed content review concentrated on consequential handoffs and refactor interfaces. No claim of exhaustive sentence editing or independent execution of every workflow. Acceptance helpers/fixtures are reviewed against source/pinning/evidence contracts and exercised by the full suite; no TextStats product run took place.
+- **Unrun/excluded:** live consumer/independent acceptance, installed-client discovery/loading/reload, GitHub Actions execution and action-ref availability, hosted tracking/release writes, actual external URL availability, source-only archived campaign/log compatibility and visual artwork redesign. No provider/model behavior is established by deterministic checks.
+- **Environment:** Python 3.12.14; Git 2.51.1; declared jsonschema 4.26.0 supplied from /tmp/062-validator-deps for native checks. Reviewed source is the full baseline above; later tested campaign commits change only review records/.gitignore, with package and tooling bytes unchanged.
+
+## Proposed revision queue and stopping boundary
+
+1. **R-002:** repair deterministic archive metadata and add separated-build/real hash-gate regression coverage. This blocks release publication.
+2. **R-003:** reject malformed committed ancestors before standalone fallback; add both-parent/both-mode fixtures while preserving genuine root-layout support.
+3. **R-001:** complete concise forge/implementation entry routing without duplicating backend procedures or requiring irrelevant browser loading.
+4. **R-004:** correct the helper command's source-root instruction.
+
+Recheck native/support suites and archive/snapshot parity after accepted coupled repairs. Review findings are proposals, not accepted corrections. The requested `_agents` ignore rule is implemented; no reported finding is repaired, merged or marked Verified. Campaign remains open on its published revision branch for human review.
