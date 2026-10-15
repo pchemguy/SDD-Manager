@@ -35,7 +35,7 @@ Preserve narrow direct/standalone requests, pending decisions and unfinished wor
 
 ## Human checkpoints and Git publication
 
-**Push every workflow-owned commit and verify remote containment before further work or another commit.** This includes completed documents, tasks, review reports, revision actions and merges. A failed push blocks progression. Follow [per-commit publication](skills/sdd-manage/references/git-workflows.md#publish-each-commit); preserve explicit human-directed local-only or deferred-publication exceptions.
+**Push every workflow-owned commit and verify remote containment before further work or another commit.** This includes completed documents, tasks, review reports, revision actions and merges. A failed push blocks progression. A retained task completion with known failure or uncertain eligibility first follows [publication preflight](skills/sdd-implement/references/startup-and-continuation.md#push-before-task-work); only bounded authorized recovery/corrective persistence may precede its safe publication. Follow [per-commit publication](skills/sdd-manage/references/git-workflows.md#publish-each-commit); preserve explicit human-directed local-only or deferred-publication exceptions.
 
 **For each necessary new document, publish the reviewable state, present substantive results and pause for human acceptance before dependent work.** The same checkpoints apply to necessary feature documents/proposals. PLAN and layout require separate decisions; reuse sufficient existing inputs rather than creating optional documents to fill the sequence.
 
@@ -141,7 +141,7 @@ Hosted-only requests stop after their selected effects. Local work needs no prov
 
 Establish actual working/source/target identities and checkpoint; reuse them on continuation. Preparation uses `design-docs`, main execution uses phase branches, and feature/revision identities follow [branch management](skills/sdd-manage/references/branch-management.md). Prefixes do not establish acceptance or authorize a merge.
 
-Follow the [task commit contract and audit](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract): one executable task closes per commit with result/evidence and initial checkbox; exactly one owning task ID leads its subject. Non-task work invents no task ID. Preserve pending/unrelated work; a dirty tree does not authorize reset.
+For invalid task completions, the manager resolves [forward recovery](skills/sdd-implement/references/completion-and-checkpoints.md#resolve-a-task-recovery) under existing authority; a repaired verification failure alone does not require renewed approval of the original range. Historical composition exceptions remain human decisions. Follow the [task commit contract and audit](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract): one executable task closes per commit with result/evidence and initial checkbox; exactly one owning task ID leads its subject. Non-task work invents no task ID. Preserve pending/unrelated work; a dirty tree does not authorize reset.
 
 Eligible integration uses an explicit two-parent merge, merged verification and target publication. Partial ranges do not imply complete integration. On conflict, denied publication or uncertain effects, preserve work and reconcile state through [Git recovery](skills/sdd-manage/references/git-workflows.md); never reset or force-push unrelated work. Hosted state follows verified local evidence and the [backend lifecycle](skills/sdd-conventions/references/backend-object-lifecycle.md).
 
