@@ -314,6 +314,16 @@ def package_subdirectory(source, commit):
 
     Selection uses committed Git trees, not a dirty manifest or a nearby install.
     A present nested path must be a tree; it cannot fall back to a root decoy.
+
+    Args:
+        source: Git checkout used for object lookup.
+        commit: Resolved source commit identity.
+
+    Returns:
+        The nested repository-relative directory or '.' for a root package.
+
+    Raises:
+        Stop: The selected nested path is not a committed Git tree.
     """
     record = git(source, 'ls-tree', commit, '--', PACKAGE_SUBDIR).stdout.strip()
     if not record:
@@ -325,7 +335,14 @@ def package_subdirectory(source, commit):
 
 
 def package_selectors(subdirectory):
-    """Map package files to Git paths, retaining historical root notices."""
+    """Map package files to Git paths, retaining historical root notices.
+
+    Args:
+        subdirectory: Package root selected from the committed source tree.
+
+    Returns:
+        Repository-relative Git path selectors for the selected layout.
+    """
     prefix='' if subdirectory=='.' else subdirectory+'/'
     names=PACKAGE_PATHS+(('SDD-MANAGER.md','AI_DISCLOSURE.md') if subdirectory=='.' else ())
     return tuple(prefix+name for name in names)
@@ -339,6 +356,19 @@ def package(source, inputs):
     Dirty capture uses repository paths for Git and package-relative output keys;
     symlinks/unsupported modes and sensitive bytes block export before reading
     external files. Historical root snapshots retain their own path semantics.
+
+    Args:
+        source: Source checkout or a directory within that checkout.
+        inputs: Resolved plugin_revision and explicit committed/dirty source_mode.
+
+    Returns:
+        A provenance dictionary and package-relative binary file map. Provenance
+        includes Git commit, selected subdirectory, hashes, modes, fingerprint
+        and changed package-relative paths.
+
+    Raises:
+        Stop: Source identity, manifest, mode, containment or sensitive-byte
+            checks prevent safe pinning, including dirty non-current sources.
     """
     source=Path(source).resolve()
     source=Path(git(source,'rev-parse','--show-toplevel').stdout.strip())
