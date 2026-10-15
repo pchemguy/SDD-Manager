@@ -21,3 +21,7 @@ Removed both skill Routing fields and the plugin Composition and routing field a
 ## Human review amendment — Plugin capability summary
 
 Added Capabilities and scope to the plugin brief, explicitly derived from PLUGIN.md. When that entry is unavailable, report its absence and omit the summary. Routing fields remain removed. Markdown/link checks pass; campaign remains open.
+
+## Human review amendment — Remove license synchronization instruction
+
+Removed “Keep root and package LICENSE copies identical” from source AGENTS.md at the human’s request. Ordinary SDD development does not include editing either license. No license file changed. Markdown/link checks pass; campaign remains open.
