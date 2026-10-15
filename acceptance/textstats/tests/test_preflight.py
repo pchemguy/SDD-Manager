@@ -50,7 +50,9 @@ class PreflightTests(Sandbox):
     def test_pin_uses_git_object_bytes_and_complete_package_manifest(self):
         data, _ = self.ok(self.invoke('preflight'))
         self.assertEqual(data['plugin_source']['commit'], git(SOURCE, 'rev-parse', 'HEAD').stdout.strip())
-        expected=set(git(SOURCE,'ls-tree','-r','--name-only','HEAD','plugin.json','README.md','PLUGIN.md','assets/Greenfield Project Prompt Template.md','LICENSE','SDD-MANAGER.md','AI_DISCLOSURE.md','skills','assets').stdout.splitlines())
+        prefix='.agents/plugins/sdd-manager/'
+        expected={name[len(prefix):] for name in git(SOURCE,'ls-tree','-r','--name-only','HEAD','--',prefix).stdout.splitlines()}
+        self.assertEqual(data['plugin_source']['package_subdirectory'],prefix.rstrip('/'))
         self.assertEqual(set(data['plugin_source']['package_hashes']), expected)
         self.assertEqual(data['plugin_source']['source_mode'], 'committed')
         self.assertEqual(data['repository']['remote'], 'origin')

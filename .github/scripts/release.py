@@ -35,9 +35,10 @@ def validate_handoff(data):
     return data
 
 
-PACKAGE_PATHS = ('assets', 'skills', 'LICENSE', 'plugin.json',
-                 'README.md', 'PLUGIN.md', 'assets/Greenfield Project Prompt Template.md',
-                 'SDD-MANAGER.md', 'AI_DISCLOSURE.md')
+PACKAGE_SUBDIR = '.agents/plugins/sdd-manager'
+PACKAGE_PATHS = ('assets', 'skills', 'LICENSE', 'plugin.json', 'README.md',
+                 'PLUGIN.md', 'assets/Greenfield Project Prompt Template.md',
+                 'assets/SDD-MANAGER.md', 'assets/AI_DISCLOSURE.md')
 
 
 def git(root, *args):
@@ -46,8 +47,12 @@ def git(root, *args):
 
 
 def tree_inventory(root, source):
-    """Enumerate only shipped committed regular files, retaining blob identities."""
-    records = git(root, 'ls-tree', '-rz', source, '--', *PACKAGE_PATHS).split(b'\0')
+    """Enumerate package-relative files from the committed nested source tree."""
+    import subprocess
+    try:
+        records = git(root, 'ls-tree', '-rz', source + ':' + PACKAGE_SUBDIR, '--', *PACKAGE_PATHS).split(b'\0')
+    except subprocess.CalledProcessError as error:
+        raise ValueError('Required package source tree is absent') from error
     files = {}
     for record in filter(None, records):
         metadata, name = record.split(b'\t', 1)
@@ -132,13 +137,13 @@ def build_package(root, data, output):
     if git(root, 'rev-parse', 'HEAD').decode().strip() != source:
         raise ValueError('Candidate checkout differs from selected source')
     tree_inventory(root, source)
-    manifest = validate_manifest(git(root, 'show', source + ':plugin.json'))
+    manifest = validate_manifest(git(root, 'show', source + ':' + PACKAGE_SUBDIR + '/plugin.json'))
     if data['tag'] != 'v' + manifest.get('version', ''):
         raise ValueError('Tag does not match candidate manifest version')
     output = Path(output); output.mkdir(parents=True, exist_ok=True)
     archive = output / 'sdd-manager.zip'
     git(root, 'archive', '--format=zip', '--prefix=sdd-manager/',
-        '--output=' + str(archive.resolve()), source, '--', *PACKAGE_PATHS)
+        '--output=' + str(archive.resolve()), source + ':' + PACKAGE_SUBDIR, '--', *PACKAGE_PATHS)
     inspect_archive(root, source, archive)
     if not archive.stat().st_size: raise ValueError('Package archive is empty')
     checksum = output / 'sdd-manager.zip.sha256'

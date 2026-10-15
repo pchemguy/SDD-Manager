@@ -22,7 +22,8 @@ from urllib.parse import parse_qsl, urlsplit
 
 BUNDLE = Path(__file__).resolve().parents[1]
 SOURCE = Path(__file__).resolve().parents[3]
-PACKAGE_PATHS = ('plugin.json', 'README.md', 'PLUGIN.md', 'assets/Greenfield Project Prompt Template.md', 'LICENSE', 'SDD-MANAGER.md', 'AI_DISCLOSURE.md', 'skills', 'assets')
+PACKAGE_SUBDIR = '.agents/plugins/sdd-manager'
+PACKAGE_PATHS = ('plugin.json', 'README.md', 'PLUGIN.md', 'assets/Greenfield Project Prompt Template.md', 'LICENSE', 'skills', 'assets')
 MISSING = 'Which dedicated test repository should this run use? Supply its URL or local checkout path.'
 SECRET = re.compile(r'(?:github_pat_|gh[pousr]_|Bearer\s+)[A-Za-z0-9_\-]+', re.I)
 
@@ -308,61 +309,80 @@ def repository(inputs, observe_remote=True):
     return {'identity':identified,'local_checkout':str(checkout),'remote':name,'remote_url':url,'integration_branch':integration,'remote_observation':read,'head':head,'existing_runs':runs}
 
 
+def package_subdirectory(source, commit):
+    """Select the nested source tree, or a standalone/historical root package.
+
+    Selection uses committed Git trees, not a dirty manifest or a nearby install.
+    A present nested path must be a tree; it cannot fall back to a root decoy.
+    """
+    record = git(source, 'ls-tree', commit, '--', PACKAGE_SUBDIR).stdout.strip()
+    if not record:
+        return '.'
+    metadata = record.split('\t', 1)[0].split()
+    if metadata[:2] != ['040000', 'tree']:
+        raise Stop('package_mode_unsupported')
+    return PACKAGE_SUBDIR
+
+
+def package_selectors(subdirectory):
+    """Map package files to Git paths, retaining historical root notices."""
+    prefix='' if subdirectory=='.' else subdirectory+'/'
+    names=PACKAGE_PATHS+(('SDD-MANAGER.md','AI_DISCLOSURE.md') if subdirectory=='.' else ())
+    return tuple(prefix+name for name in names)
+
+
 def package(source, inputs):
-    """Pin supported package files to Git objects or an explicit dirty snapshot.
+    """Pin a checkout's package to exact Git bytes or an explicit dirty snapshot.
 
-    Args:
-        source: Eligible source Git checkout.
-        inputs: Resolved plugin_revision and committed/dirty source_mode.
-
-    Returns:
-        A (provenance, files) pair. Provenance records full commit, exact hashes,
-        modes, changed paths and mode-sensitive fingerprint; files maps relative
-        package paths to exact binary bytes.
-
-    Raises:
-        Stop: Missing manifest/revision, unsupported modes/symlinks, protected
-            paths/content, or dirty mode requested against a non-current HEAD.
-
-    Reads source only. Dirty snapshots include nonignored untracked package
-    files; default committed snapshots ignore pending source edits."""
+    The checkout root supplies commit provenance. The selected nested or
+    standalone package root supplies normalized file names, hashes and modes.
+    Dirty capture uses repository paths for Git and package-relative output keys;
+    symlinks/unsupported modes and sensitive bytes block export before reading
+    external files. Historical root snapshots retain their own path semantics.
+    """
     source=Path(source).resolve()
+    source=Path(git(source,'rev-parse','--show-toplevel').stdout.strip())
     commit=git(source,'rev-parse','--verify',inputs['plugin_revision']+'^{commit}').stdout.strip()
     if not re.fullmatch('[0-9a-f]{40}',commit): raise Stop('source_revision_unavailable')
-    names=git(source,'ls-tree','-rz','--name-only',commit,*PACKAGE_PATHS,binary=True).stdout.decode().split('\x00')
-    files={}
-    modes={}
-    for row in git(source,'ls-tree','-rz',commit,*PACKAGE_PATHS,binary=True).stdout.decode().split('\x00'):
-        if row:
-            metadata,name=row.split('\t',1)
-            modes[name]=metadata.split()[0]
-    for name in filter(None,names):
+    subdir=package_subdirectory(source,commit)
+    prefix='' if subdir=='.' else subdir+'/'
+    selectors=package_selectors(subdir)
+    files={}; modes={}
+    for row in git(source,'ls-tree','-rz',commit,*selectors,binary=True).stdout.decode().split('\x00'):
+        if not row: continue
+        metadata,repo_name=row.split('\t',1)
+        mode,kind,_=metadata.split()
+        name=repo_name[len(prefix):]
         if protected(name): raise Stop('protected_package_path')
-        if modes[name] not in {'100644','100755'}: raise Stop('package_mode_unsupported')
-        files[name]=clean_bytes(git(source,'show',commit+':'+name,binary=True).stdout)
+        if mode not in {'100644','100755'} or kind!='blob': raise Stop('package_mode_unsupported')
+        modes[name]=mode
+        files[name]=clean_bytes(git(source,'show',commit+':'+repo_name,binary=True).stdout)
     changed=[]
     committed_modes=dict(modes)
     if inputs['source_mode']=='dirty':
         if commit != git(source,'rev-parse','HEAD').stdout.strip(): raise Stop('dirty_source_requires_current_head')
-        candidates=git(source,'ls-files','-z','--cached','--others','--exclude-standard',*PACKAGE_PATHS,binary=True).stdout.decode().split('\x00')
-        dirty={}
-        dirty_modes={}
-        for name in set(filter(None,candidates)):
+        package_root=source/subdir
+        if any(parent.is_symlink() for parent in (package_root,*package_root.parents) if parent.is_relative_to(source)):
+            raise Stop('package_symlink_unsupported')
+        candidates=git(source,'ls-files','-z','--cached','--others','--exclude-standard',*selectors,binary=True).stdout.decode().split('\x00')
+        dirty={}; dirty_modes={}
+        for repo_name in set(filter(None,candidates)):
+            name=repo_name[len(prefix):]
             if protected(name): raise Stop('protected_package_path')
-            path=Path(source)/name
-            if any(parent.is_symlink() for parent in path.parents if parent != Path(source).resolve() and parent.is_relative_to(Path(source).resolve())): raise Stop('package_symlink_unsupported')
-            if not path.parent.resolve().is_relative_to(Path(source).resolve()): raise Stop('unsafe_package_path')
+            path=source/repo_name
+            if any(parent.is_symlink() for parent in path.parents if parent.is_relative_to(source)):
+                raise Stop('package_symlink_unsupported')
+            if not path.parent.resolve().is_relative_to(package_root.resolve()): raise Stop('unsafe_package_path')
             if path.is_symlink(): raise Stop('package_symlink_unsupported')
             if path.is_file():
                 dirty[name]=clean_bytes(path.read_bytes())
                 dirty_modes[name]='100755' if path.stat().st_mode & 0o111 else '100644'
         changed=sorted(name for name in set(files)|set(dirty) if files.get(name)!=dirty.get(name) or committed_modes.get(name)!=dirty_modes.get(name))
-        files=dirty
-        modes=dirty_modes
+        files=dirty; modes=dirty_modes
     if 'plugin.json' not in files: raise Stop('package_unavailable')
     hashes={name:hashlib.sha256(data).hexdigest() for name,data in sorted(files.items())}
     fingerprint=hashlib.sha256(json.dumps({'hashes':hashes,'modes':modes},sort_keys=True,separators=(',',':')).encode()).hexdigest()
-    return {'revision':inputs['plugin_revision'],'commit':commit,'source_mode':inputs['source_mode'],'package_hashes':hashes,'package_file_modes':modes,'fingerprint':fingerprint,'changed_package_paths':changed},files
+    return {'revision':inputs['plugin_revision'],'commit':commit,'package_subdirectory':subdir,'source_mode':inputs['source_mode'],'package_hashes':hashes,'package_file_modes':modes,'fingerprint':fingerprint,'changed_package_paths':changed},files
 
 
 def preflight(inputs, source):
@@ -441,7 +461,8 @@ def prepare(inputs, source, workspace):
     manifest=vendor.parent/'PLUGIN-SOURCE.json'
     pinned['manifest_path']=str(manifest)
     if inputs['source_mode']=='dirty':
-        diff=git(source,'diff','--binary',pinned['commit'],'--',*PACKAGE_PATHS,binary=True).stdout
+        source=Path(git(source,'rev-parse','--show-toplevel').stdout.strip())
+        diff=git(source,'diff','--binary',pinned['commit'],'--',*package_selectors(pinned['package_subdirectory']),binary=True).stdout
         clean_bytes(diff)
         (vendor.parent/'DIRTY-DIFF.patch').write_bytes(diff)
         pinned['dirty_diff_path']=str(vendor.parent/'DIRTY-DIFF.patch')

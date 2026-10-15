@@ -4,7 +4,7 @@ The caller of “Run the test project in acceptance/textstats/” is the **test 
 
 ## Read and act
 
-Read in order: [OBJECTIVES](OBJECTIVES.md), [SETUP](SETUP.md), [SCENARIO](SCENARIO.md), [EXECUTION](EXECUTION.md), [RECOVERY](RECOVERY.md), [DIAGNOSTICS](DIAGNOSTICS.md), then selected entries in [the catalog](cases/catalog.json). Read consumer requests and assessor contracts only in their appropriate roles. [README](README.md) is the human map. Source-relative skill paths resolve two directories above this bundle; load them from the pinned package, not whichever checkout happens to be current.
+Read in order: [OBJECTIVES](OBJECTIVES.md), [SETUP](SETUP.md), [SCENARIO](SCENARIO.md), [EXECUTION](EXECUTION.md), [RECOVERY](RECOVERY.md), [DIAGNOSTICS](DIAGNOSTICS.md), then selected entries in [the catalog](cases/catalog.json). Read consumer requests and assessor contracts only in their appropriate roles. [README](README.md) is the human map. The source checkout is two directories above this bundle; its package is under `.agents/plugins/sdd-manager/`. Skill paths are package-relative; load them from the pinned package, not whichever checkout happens to be current.
 
 Resolve non-secret configuration in this order: explicit current invocation; explicitly supplied [input file](templates/inputs.example.json); existing checkpoint for a requested continuation; documented defaults. Conflicting repository, source, destination, run identity or scope requires resolution before affected writes. Default scope is the full required campaign, continuing through authorized phases. [Optional extensions](VARIANTS.md) require explicit selection and facilities; their unavailability is Not run/non-blocking. A requested boundary limits it.
 

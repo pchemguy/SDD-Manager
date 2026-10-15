@@ -17,7 +17,7 @@ These are alternative runs. Use separate repositories or clearly recorded starti
 
 ## Starting the exercise
 
-Use the repository's [Greenfield Project Prompt Template](<../../../assets/Greenfield Project Prompt Template.md>) with this preliminary description:
+Use the repository's [Greenfield Project Prompt Template](<../../../.agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md>) with this preliminary description:
 
 > [!NOTE] Prompt
 >
@@ -274,7 +274,7 @@ During implementation, inspect whether task completion records, verification evi
 
 ## Steering exercises
 
-Both exercises apply to either delivery variant. Pause at an implemented and verified task checkpoint while the owning implementation phase or feature campaign remains incomplete. Choose the initial policy before implementation, then request the change after its behavior can be observed. These are amendments to the paused work through [sdd-steer](../../../skills/sdd-steer/SKILL.md).
+Both exercises apply to either delivery variant. Pause at an implemented and verified task checkpoint while the owning implementation phase or feature campaign remains incomplete. Choose the initial policy before implementation, then request the change after its behavior can be observed. These are amendments to the paused work through [sdd-steer](../../../.agents/plugins/sdd-manager/skills/sdd-steer/SKILL.md).
 
 ### Option 1: Switch to full-gravity-interval locking
 

@@ -58,16 +58,20 @@ class PackageTests(Contract):
         super().setUp()
         self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)/'repo'; self.root.mkdir()
+        self.package=self.root/publisher.PACKAGE_SUBDIR; self.package.mkdir(parents=True)
         def git(*args):
             return subprocess.check_output(['git','-C',str(self.root),*args], text=True).strip()
         self.git=git
         git('init','-q'); git('config','user.name','Fixture'); git('config','user.email','fixture@example.test')
         manifest=json.dumps({"$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json", "name":"sdd-manager", "version":"0.15.0"}).encode()
         for name in ('LICENSE','README.md','PLUGIN.md','assets/Greenfield Project Prompt Template.md',
-                     'SDD-MANAGER.md','AI_DISCLOSURE.md','assets/icon.svg','skills/sample/SKILL.md',
+                     'assets/SDD-MANAGER.md','assets/AI_DISCLOSURE.md','assets/icon.svg','skills/sample/SKILL.md',
                      'plugin.json','docs/excluded.md','docs/ai-logs/EXPLORE_DRIVE_V1.md','AGENTS.md'):
-            p=self.root/name; p.parent.mkdir(parents=True,exist_ok=True)
+            p=(self.root if name.startswith('docs/') or name=='AGENTS.md' else self.package)/name; p.parent.mkdir(parents=True,exist_ok=True)
             p.write_bytes(manifest if name.endswith('plugin.json') else (name+'\n').encode())
+        (self.root/'README.md').write_text('Repository introduction must not ship\n')
+        (self.root/'AI_DISCLOSURE.md').write_text('Repository disclosure\n')
+        (self.root/'SDD-MANAGER.md').write_text('Repository notice\n')
         git('add','.'); git('commit','-qm','fixture'); self.sha=git('rev-parse','HEAD')
         self.data=handoff(source=self.sha,notes_source=self.sha)
         self.out=Path(self.tmp.name)/'output'; self.out.mkdir()
@@ -83,11 +87,15 @@ class PackageTests(Contract):
             self.assertEqual(z.read('sdd-manager/README.md'),b'README.md\n')
             self.assertEqual(z.read('sdd-manager/PLUGIN.md'),b'PLUGIN.md\n')
             self.assertNotIn('sdd-manager/AGENTS.md',z.namelist())
+            self.assertNotIn('sdd-manager/AI_DISCLOSURE.md',z.namelist())
+            self.assertNotIn('sdd-manager/SDD-MANAGER.md',z.namelist())
+            self.assertIn('sdd-manager/assets/AI_DISCLOSURE.md',z.namelist())
+            self.assertFalse(any('/.agents/' in name for name in z.namelist()))
         raw=paths['sdd-manager.zip'].read_bytes()
         self.assertEqual(paths['sdd-manager.zip.sha256'].read_text(),hashlib.sha256(raw).hexdigest()+'  sdd-manager.zip\n')
 
     def test_missing_plugin_entry_stops_before_package_outputs(self):
-        (self.root/'PLUGIN.md').unlink()
+        (self.package/'PLUGIN.md').unlink()
         self.git('add','-u'); self.git('commit','-qm','missing plugin entry')
         source=self.git('rev-parse','HEAD')
         with self.assertRaisesRegex(ValueError, 'Required package path is absent: PLUGIN.md'):
@@ -95,7 +103,7 @@ class PackageTests(Contract):
         self.assertEqual(list(self.out.iterdir()),[])
 
     def test_invalid_manifest_stops_before_package_outputs(self):
-        original=json.loads((self.root/'plugin.json').read_text())
+        original=json.loads((self.package/'plugin.json').read_text())
         mutations=[{'$schema': None}, {'$schema': 'https://invalid.test/schema'},
                    {'skills': './skills'}, {'name': 'Uppercase'}, {'name': 'bad--name'},
                    {'version': 1}, {'author': {'unknown': 'value'}},
@@ -103,20 +111,20 @@ class PackageTests(Contract):
         for changes in mutations:
             value=dict(original, **changes)
             if value.get('$schema') is None: value.pop('$schema')
-            (self.root/'plugin.json').write_text(json.dumps(value))
-            self.git('add','plugin.json'); self.git('commit','-qm','invalid manifest')
+            (self.package/'plugin.json').write_text(json.dumps(value))
+            self.git('add',publisher.PACKAGE_SUBDIR+'/plugin.json'); self.git('commit','-qm','invalid manifest')
             sha=self.git('rev-parse','HEAD')
             with self.subTest(changes=changes), self.assertRaisesRegex(ValueError, 'manifest'):
                 publisher.build_package(self.root,handoff(source=sha,notes_source=sha),self.out)
             self.assertEqual(list(self.out.iterdir()), [])
 
     def test_namespaced_manifest_uses_committed_candidate(self):
-        value=json.loads((self.root/'plugin.json').read_text())
+        value=json.loads((self.package/'plugin.json').read_text())
         value['extensions']={'com.openai': {'interface': {'displayName': 'Fixture'}}}
-        (self.root/'plugin.json').write_text(json.dumps(value))
-        self.git('add','plugin.json'); self.git('commit','-qm','namespaced extension')
+        (self.package/'plugin.json').write_text(json.dumps(value))
+        self.git('add',publisher.PACKAGE_SUBDIR+'/plugin.json'); self.git('commit','-qm','namespaced extension')
         sha=self.git('rev-parse','HEAD')
-        (self.root/'plugin.json').write_text('{}')
+        (self.package/'plugin.json').write_text('{}')
         paths=publisher.build_package(self.root,handoff(source=sha,notes_source=sha),self.out)
         self.assertIn('sdd-manager.zip',paths)
 
@@ -137,8 +145,8 @@ class PackageTests(Contract):
 
     def test_legacy_only_package_cannot_replace_root_manifest(self):
         legacy=self.root/'.codex-plugin/plugin.json'
-        legacy.parent.mkdir(); legacy.write_bytes((self.root/'plugin.json').read_bytes())
-        (self.root/'plugin.json').unlink()
+        legacy.parent.mkdir(); legacy.write_bytes((self.package/'plugin.json').read_bytes())
+        (self.package/'plugin.json').unlink()
         self.git('add','-A'); self.git('commit','-qm','legacy only')
         sha=self.git('rev-parse','HEAD')
         with self.assertRaises(ValueError):
