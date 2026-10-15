@@ -33,3 +33,7 @@ AGENTS.md directly instructs agents to execute the skill and plugin discovery pr
 ## Human review amendment — Contributor scope
 
 Removed the opening sentence directing agents in other projects to packaged PLUGIN.md. Root AGENTS.md addresses this source repository and directs execution of the discovery protocol. Markdown/link checks pass; campaign remains open.
+
+## Human review amendment — Separate startup section
+
+Placed protocol execution alone under Startup in root AGENTS.md. General source guidance follows under Contributor instructions; persistence/scope and source/package locations retain their own sections. Markdown/link checks pass; campaign remains open.

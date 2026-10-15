@@ -2,9 +2,11 @@
 
 This entry applies to the SDD Manager source repository. It is excluded from the plugin package.
 
-## Contributor entry
+## Startup
 
 Execute the [skill and plugin discovery protocol](SKILL_DISCOVERY_PROTOCOL.md).
+
+## Contributor instructions
 
 Before source edits, verification or campaign work, explicitly load [acceptance/AGENTS.md](acceptance/AGENTS.md), including work outside acceptance/. It owns source orientation, verification commands, publisher/package prerequisites, acceptance coordination and the closed-record boundary. Read applicable nested instructions before work on their paths; TextStats has a separate coordinator entry.
 
