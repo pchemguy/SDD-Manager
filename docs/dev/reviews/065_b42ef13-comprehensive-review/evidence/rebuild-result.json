@@ -1,0 +1,26 @@
+{
+  "source": "1d3b402ada566ae05cf861b31c583eb643b6df5a",
+  "files": 132,
+  "sha_a": "60bbf7fc21a4a8819077d490706f34d524d25100fa26752918e07555dd5cba83",
+  "sha_b": "ebc1341912198db6ffff3c5fed922fbdd51fe1d02e56112ae0bcc601809bb784",
+  "same_archive_bytes": false,
+  "same_member_names": true,
+  "same_member_contents": true,
+  "first_member_time_a": [
+    2026,
+    10,
+    15,
+    15,
+    36,
+    34
+  ],
+  "first_member_time_b": [
+    2026,
+    10,
+    15,
+    15,
+    36,
+    38
+  ],
+  "git_version": "git version 2.51.1"
+}

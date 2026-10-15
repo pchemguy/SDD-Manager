@@ -12,7 +12,7 @@ Authorized source change: `_agents` added to root .gitignore. Findings repairs a
 | --- | --- | --- |
 | U-001 | Assessed | 132 package files; 95 Markdown files; 505 local links/anchors contained and valid; licenses identical; source/package documentation inspected |
 | U-002 | Assessed with stated depth | All 15 entries and 75 reference routes/structure; selected consequential handoffs inspected; R-001 |
-| U-003 | Pending | Publisher and CI |
+| U-003 | Assessed; release blocked | All seven .github files inspected; 30 publisher tests pass; delayed native rebuild and CLI hash gate reproduce R-002 |
 | U-004 | Pending | TextStats and support suite |
 | U-005 | Pending | Documentation and consolidation |
 
@@ -44,3 +44,22 @@ No new handoff defect was established in main/feature/revision selection, separa
 - **Objective recheck:** compare every actual references/*.md filename with its entry's identified routing section; each has a link, purpose/boundary and load condition. Assess GitHub-only operations, shared local notes/highlights and browser-free tasks separately; no unnecessary backend/browser loading.
 
 U-001 checkpoint `62b2c051f716c79575d746bf487629fffc3c5e5d` was pushed and read back before U-002. No package source was edited.
+
+## U-003 — Native publisher and CI
+
+Inspected all seven current .github files: workflow, publisher, tests, dependency pin, schema and its guide, and release handoff. Nested source selection, required assets/notices, exact committed member content, version validation, core schema hash/offline resolution, structured handoff and candidate/tooling checkout separation are implemented. The workflow remains source-only at Git root, as intended; it should not be moved into the distributable package.
+
+Executed `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/062-validator-deps python -m unittest discover -s .github/tests -v`: 30 tests passed on Python 3.12.14. Native exact-candidate packages contain 132 files and validate core manifest/inventory/member bytes. However the delayed rebuild probe and actual CLI hash gate fail reproducibility. This is a confirmed release blocker despite the passing suite. No GitHub workflow dispatch or release call ran.
+
+### R-002 — Nested tree archives are not reproducible and block release publication
+
+- **Type/priority/status:** refactor regression; high/release blocker; Open. High confidence from two native builds and the actual CLI guard.
+- **Locations:** .github/scripts/release.py:145–146 and 349–352; .github/workflows/release.yml:62–67 and 91–97; .github/tests/test_release.py, PackageTests.
+- **Cause:** the refactor passes `source + ':' + PACKAGE_SUBDIR` to git archive. That expression resolves to a tree, so archive member timestamps come from the build time rather than the source commit. No explicit deterministic timestamp is supplied.
+- **Observed:** tested source `1d3b402ada566ae05cf861b31c583eb643b6df5a` has the same .github and package bytes as the reviewed baseline (Git diff empty for both). Two builds three seconds apart have identical member names/content but different timestamps and SHA-256. See [probe](evidence/rebuild-probe.py) and [literal results](evidence/rebuild-result.json). The actual release.py CLI, supplied the first archive hash, exited 1 with `ValueError: Publisher rebuild differs from verified build job` before provider access.
+- **Consequence:** the publishing job independently rebuilds and compares its hash with the build job. Builds in different ZIP timestamp intervals fail that prerequisite even for an unchanged candidate; retry/reconciliation cannot reproduce a prior archive reliably.
+- **Reproduction:** from an eligible checkout with declared publisher dependencies, run `python docs/dev/reviews/065_b42ef13-comprehensive-review/evidence/rebuild-probe.py`. It builds twice into /tmp, waits three seconds and prints both hashes/timestamps without provider writes. Different hashes with equal file contents reproduce the defect. The script uses the current exact HEAD and v0.15.0, matching this baseline; later version changes require updating that input.
+- **Correction owner:** native publisher. Retain nested subtree extraction while fixing ZIP timestamps to a deterministic source-derived value supported by the declared Git environment, or normalize archive metadata deterministically. Add a regression exercising two build times and the real expected-hash guard; keep member content/inventory checks.
+- **Objective recheck:** unchanged exact source produces byte-identical ZIP and checksum across separated build times, output directories and the build/publish invocation pattern; the actual expected-sha256 gate succeeds. Changed candidate bytes still change the archive and stale hashes still stop before provider writes. Run all publisher/support regressions.
+
+U-002 checkpoint `1d3b402ada566ae05cf861b31c583eb643b6df5a` was pushed/read back before this unit. Existing tests lack delayed rebuild coverage; no source repair was made.
