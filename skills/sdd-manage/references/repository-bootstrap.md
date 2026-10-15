@@ -16,7 +16,7 @@ Before the **first authorized SDD commit** in a target repository, include the d
 
 **sdd-manage** owns this shared policy and coordinates bootstrap for preparation, maintenance and feature incorporation. **sdd-implement** and **sdd-steer** apply it in their own commit procedures, including direct invocations. **sdd-report** checks bootstrap evidence when composing a commit but does not write or commit files. Load this reference at greenfield entry and before the first persistence operation in other adoption workflows; it is an ordinary agent procedure, not a hidden hook or client installer.
 
-For implementation, push outstanding commits first under the existing startup protocol, then perform bootstrap before staging the first new result. Do not make a separate bootstrap commit ahead of the requested result. A preparation-only request can bootstrap with its preparation commit and still stop before implementation.
+For implementation, push eligible outstanding commits first under the existing startup protocol, then perform bootstrap before staging the first new result. Do not make a separate bootstrap commit ahead of the requested result. A preparation-only request can bootstrap with its preparation commit and still stop before implementation.
 
 ## Root artifacts and discoverability
 
