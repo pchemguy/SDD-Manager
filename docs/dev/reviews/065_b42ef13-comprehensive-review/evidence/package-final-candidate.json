@@ -1,0 +1,11 @@
+{
+  "source": "fe1a2297b7c5745343e729bf9994a50e736ce07f",
+  "package_files": 132,
+  "archive_sha256": "f3cbcb953c90b439dc1d0d1b3563181a5b16aa31d202392c0a80ab5c78b39aa0",
+  "snapshot_fingerprint": "dd2355af60ed10db3d11eb84b39e24eaf32b61580b718644e871287e8b28ac3b",
+  "normalized_subdirectory": ".agents/plugins/sdd-manager",
+  "native_snapshot_bytes_equal": true,
+  "clean_dirty_equal": true,
+  "root_license_equal": true,
+  "all_75_reference_links_present": true
+}

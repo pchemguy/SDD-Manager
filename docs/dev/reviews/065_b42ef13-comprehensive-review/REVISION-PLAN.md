@@ -72,3 +72,7 @@ The final report must distinguish deterministic tests/static source assessment f
 ## Present stopping boundary
 
 Persist and publish this proposed plan, then stop with the campaign open for human review. No runtime source repair, merge or closure is part of this planning turn.
+
+## Execution handoff
+
+All four actions are implemented and verified in [REVISION-REPORT.md](REVISION-REPORT.md). The original planning-only stopping boundary above applied to the plan-preparation turn; the subsequent execution instruction authorized the plan’s implementation and verified integration/closure. Preserve source evidence limits through completion.

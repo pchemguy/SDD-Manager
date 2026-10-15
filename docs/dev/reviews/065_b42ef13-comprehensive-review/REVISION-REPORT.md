@@ -2,7 +2,7 @@
 
 ## Campaign and scope
 
-Campaign `065_b42ef13`; baseline `b42ef135345b5f0376e8f6f484592e1ac5b38df2`; original opening `10a69811be8c7a8e3badc0724b4bd875f4df4a24`. [Accepted plan](REVISION-PLAN.md); [baseline review](REVIEW-REPORT.md). Branch `revision/065_b42ef13-comprehensive-review`; target `main`. Execution authorized after plan checkpoint `e3df0eba7660311bee082d0ce4deb5a3550e65cc`. State: executing; integration pending.
+Campaign `065_b42ef13`; baseline `b42ef135345b5f0376e8f6f484592e1ac5b38df2`; original opening `10a69811be8c7a8e3badc0724b4bd875f4df4a24`. [Accepted plan](REVISION-PLAN.md); [baseline review](REVIEW-REPORT.md). Branch `revision/065_b42ef13-comprehensive-review`; target `main`. Execution authorized after plan checkpoint `e3df0eba7660311bee082d0ce4deb5a3550e65cc`. State: all four revisions verified; ready for explicit main integration and merged-state checks. Closure occurs only after successful target publication/readback.
 
 ## Action evidence
 
@@ -32,4 +32,27 @@ All **75 references across 15 skills** are individually linked from their entrie
 
 ### Integration readiness
 
-All four planned source actions are implemented and locally checked. Exact committed candidate, final regression/package checks and verified target integration remain pending. Original failed evidence remains unchanged. No live acceptance or provider release/tracking operations are selected.
+All four planned source actions are implemented and verified on committed source fe1a2297b7c5745343e729bf9994a50e736ce07f. Target integration remains subject to merged-state checks and publication. Original failed evidence remains unchanged. No live acceptance or provider release/tracking operations are selected.
+
+## Final candidate verification and finding disposition
+
+Tested committed source `fe1a2297b7c5745343e729bf9994a50e736ce07f`, Python 3.12.14, Git 2.51.1, declared jsonschema 4.26.0. Final suites: **136 support tests passed in 24.818s; 33 publisher tests passed in 1.323s**. The native publisher validates the pinned core manifest and exact 132-file archive; committed and clean dirty TextStats snapshots have identical package-relative bytes/modes/fingerprints and agree with native member content. Package/root LICENSE match, assets-only templates and exclusions remain correct, all 75 references are linked from their entries, and `_agents` remains ignored without ignoring .agents.
+
+[Exact candidate package result](evidence/package-final-candidate.json); [delayed candidate rebuild](evidence/rebuild-final-candidate.json). Rebuilding the same committed candidate three seconds apart yields identical ZIP/checksum bytes. The full CLI matching/stale hash guards pass in publisher tests; malformed-ancestor probes reject every original bad case. APA structural validation has zero errors and 39 expected cross-skill warnings. [Final current-document checks](evidence/documents-final.json) cover current source/package documentation and this campaign, excluding frozen campaign contents and AI logs; no broken target/anchor, heading-spacing or consecutive-blank issue was observed. Source URL checks resolve against the checkout, not external HTTP.
+
+| Finding | Action | Final source disposition |
+| --- | --- | --- |
+| R-001 | V-004 | Verified: explicit supporting-module discovery and parent loading paths |
+| R-002 | V-001 | Verified: deterministic source metadata; delayed rebuild and real hash guard |
+| R-003 | V-002 | Verified: all committed components checked, negative and standalone-positive fixtures |
+| R-004 | V-003 | Verified: source Git-root command and preserved package/source distinction |
+
+The initial failed observations/results remain retained. The action commits were each pushed and remotely read back before subsequent work. V-004 checkpoint is fe1a2297b7c5745343e729bf9994a50e736ce07f. README, PLUGIN and capability-map semantics remain accurate; their source/package ownership did not require changes for these repairs.
+
+## Integration and closure boundary
+
+The refreshed main target is `b42ef135345b5f0376e8f6f484592e1ac5b38df2`, matching the campaign baseline. Source changes are confined to the accepted publisher, TextStats helper/tests/guide and two skill entries, plus the requested ignore rule; campaign records/index retain their own scope. Prior closed review/feature/steering packages are unchanged by path/object comparison.
+
+Integrate the complete published campaign tip with an explicit two-parent merge. Run merged-state support/publisher checks, exact merged-source archive/snapshot/rebuild verification, documentation/diff and containment checks; publish/read back main only after those pass. The merge commit records its two parents, full original baseline/opening and final delivered/verified scope. Successful target publication closes this campaign and leaves the worktree on main; a failed check or push retains an active integration blocker rather than a false closure. No post-closure report mutation is needed: final merge/source/publication identities are retained in Git and the completion response.
+
+Live consumer/independent acceptance, installed-client discovery/loading/reload, GitHub Actions execution, external URL availability and provider release/tracking operations remain unrun. These corrections establish local deterministic/source results, without claiming those external outcomes.

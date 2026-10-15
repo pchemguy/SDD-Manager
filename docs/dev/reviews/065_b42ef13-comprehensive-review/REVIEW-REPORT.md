@@ -2,7 +2,7 @@
 
 ## Campaign and assessment
 
-Campaign `065_b42ef13`; baseline and reviewed source `b42ef135345b5f0376e8f6f484592e1ac5b38df2`; reviewer Codex, 2026-10-15. [Review plan](REVIEW-PLAN.md). Branch `revision/065_b42ef13-comprehensive-review`; target `main`. State: review complete; campaign open awaiting revision decisions. Release readiness is blocked by R-002.
+Campaign `065_b42ef13`; baseline and reviewed source `b42ef135345b5f0376e8f6f484592e1ac5b38df2`; reviewer Codex, 2026-10-15. [Review plan](REVIEW-PLAN.md). Branch `revision/065_b42ef13-comprehensive-review`; target `main`. State: baseline review complete; accepted revisions verified in [REVISION-REPORT.md](REVISION-REPORT.md). Baseline observations below remain unchanged; closure follows verified integration/publication.
 
 Authorized source change: `_agents` added to root .gitignore. Findings repairs and integration are not authorized by this review request. Evidence comprises source inspection and local deterministic checks; live client/provider/consumer acceptance is unrun. Frozen prior campaigns and AI logs are excluded.
 
@@ -18,10 +18,10 @@ Authorized source change: `_agents` added to root .gitignore. Findings repairs a
 
 | Finding | Priority | Classification | Status |
 | --- | --- | --- | --- |
-| R-001 | Medium | Entry routing improvement | Open |
-| R-002 | High | Release archive reproducibility regression | Open |
-| R-003 | Medium | Malformed package ancestor fallback defect | Open |
-| R-004 | Low | Source-test working-directory documentation defect | Open |
+| R-001 | Medium | Entry routing improvement | Verified; see revision report |
+| R-002 | High | Release archive reproducibility regression | Verified; see revision report |
+| R-003 | Medium | Malformed package ancestor fallback defect | Verified; see revision report |
+| R-004 | Low | Source-test working-directory documentation defect | Verified; see revision report |
 
 Detailed package inventory and review depth: [COVERAGE.md](COVERAGE.md).
 
@@ -124,3 +124,7 @@ Recheck native/support suites and archive/snapshot parity after accepted coupled
 ## Revision planning handoff
 
 The human requested a revision plan and suggested a separate table for indirectly reached support references. [REVISION-PLAN.md](REVISION-PLAN.md) proposes all four corrections and uses **Supporting modules** tables that expose each file's purpose, parent route and load condition while preserving staged loading. Original findings remain open; planning does not claim implementation authorization or verification. Campaign remains open.
+
+## Accepted revision outcome
+
+The subsequent execution instruction accepted all four planned corrections. [REVISION-REPORT.md](REVISION-REPORT.md) records source changes, actual passing rechecks, final finding disposition and integration conditions. Original failed reproduction evidence and the baseline review’s historical scope/limits remain intact.
