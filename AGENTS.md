@@ -1,8 +1,12 @@
 # Developing SDD Manager
 
-This entry applies to the SDD Manager source repository. It is excluded from the plugin package. Agents using SDD Manager in another project start at [PLUGIN.md](.agents/plugins/sdd-manager/PLUGIN.md) and follow that project's own controlling instructions.
+This entry applies to the SDD Manager source repository. It is excluded from the plugin package.
 
-## Contributor entry
+## Initialization
+
+Execute the [skill and plugin discovery protocol](SKILL_DISCOVERY_PROTOCOL.md).
+
+## Contributor instructions
 
 Before source edits, verification or campaign work, explicitly load [acceptance/AGENTS.md](acceptance/AGENTS.md), including work outside acceptance/. It owns source orientation, verification commands, publisher/package prerequisites, acceptance coordination and the closed-record boundary. Read applicable nested instructions before work on their paths; TextStats has a separate coordinator entry.
 
@@ -16,4 +20,4 @@ Maintain abbreviated repository README.md, full packaged README.md and packaged 
 
 ## Source and package roots
 
-The Git repository root owns development documents, acceptance and CI. The complete plugin source is `.agents/plugins/sdd-manager/`; its manifest, entries, skills and assets are relative to that package root. Repository agents may load this local source when developing SDD Manager; separate installation remains optional. Loading configuration and instruction reload are user-controlled. Keep target-project root paths distinct from package-source paths. Root usage/disclosure notices remain repository records; packaged templates live only in package assets/. Keep root and package LICENSE copies identical.
+The Git repository root owns development documents, acceptance and CI. The complete plugin source is `.agents/plugins/sdd-manager/`; its manifest, entries, skills and assets are relative to that package root.

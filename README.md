@@ -2,7 +2,7 @@
 
 SDD Manager composes focused skills into specification-driven development workflows for Git projects, from project exploration and design through bounded implementation, verification and releases.
 
-The plugin source package is in [`.agents/plugins/sdd-manager/`](.agents/plugins/sdd-manager/README.md). It is intended to be available for agents to load from this checkout when working on SDD Manager itself. A separate agent installation remains an option; this layout does not configure automatic loading. Instruction reload is controlled by the user.
+The plugin source package is in [`.agents/plugins/sdd-manager/`](.agents/plugins/sdd-manager/README.md). It is intended to be available for agents to load from this checkout when working on SDD Manager itself. A separate agent installation remains an option; this layout does not configure automatic loading. Instruction reload is controlled by the user. See the [skill and plugin discovery protocol](SKILL_DISCOVERY_PROTOCOL.md) for repository-provided skills and plugins.
 
 See the **[full README](.agents/plugins/sdd-manager/README.md)** for capabilities, workflow diagrams, human checkpoints, reporting profiles, usage examples and packaging information. The [plugin entry](.agents/plugins/sdd-manager/PLUGIN.md) routes agent workflows.
 
