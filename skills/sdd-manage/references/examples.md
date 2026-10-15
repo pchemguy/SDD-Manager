@@ -41,7 +41,7 @@ Apply [the selection procedure](workflows.md#workflow-selection-and-continuity).
 | --- | --- |
 | “Prepare the project through TASKS.” An eligible Git worktree exists. | Orient; establish design-docs, prepare the necessary project design, SPEC, PLAN, layout, tasks and QC reports; commit/push them there; stop before implementation. |
 | “Review this SPEC.” The files are outside Git. | Perform read-only behavioral review and return findings. Do not initialize Git or rewrite files. |
-| “Implement milestone 2.2.” TASKS contains its accepted requirements. | Orient; pass the boundary to **sdd-implement**; it pushes outstanding commits first, executes/persists tasks on the owning phase branch, and pauses if the phase remains incomplete. A fully verified phase explicitly merges and publishes before stopping. |
+| “Implement milestone 2.2.” TASKS contains its accepted requirements. | Orient; pass the boundary to **sdd-implement**; it preflights and pushes eligible outstanding commits first, executes/persists tasks on the owning phase branch, and pauses if the phase remains incomplete. A fully verified phase explicitly merges and publishes before stopping. |
 | “Resume milestone 2.2.” The last checked task is ahead of its last task commit. | Pass pending changes and evidence to **sdd-implement**. It verifies and commits the completed result without repeating implementation, then continues only within the selected boundary. |
 | “Continue.” The tree is clean but task commits are unpushed. | Orient; **sdd-implement** pushes those commits before selecting tasks, testing, or editing. A push blocker prevents further implementation. |
 | “Assess removing encrypted streams.” Implementation is paused at a checkpoint. | Route impact assessment to **sdd-steer**; return the proposed scope without mutation. |
@@ -53,6 +53,15 @@ Apply [the selection procedure](workflows.md#workflow-selection-and-continuity).
 | “Create task issues on GitHub.” No suitable token is available. | Try the available authenticated API client for the requested scope. If credential recovery is needed, find a suitable ignored token or ensure `*.tkn` exclusion and request/save `gh.tkn` with the GitHub backend profile. Local work needs no token. |
 | Resume active hosted tracking after an outage left several completed tasks open. | Reconcile verified completed tasks in the maintained tracking scope, including older pending issues; do not inspect only the latest task or add a recovery journal. |
 | Active hosted tracking returns 403 during issue closure. | Receive sanitized operation context; check suitable ignored repository tokens and escalate when necessary; recheck access before retrying. Report pending hosted closure separately from verified local completion. |
+
+## Task audit recovery examples
+
+| Observed context | Recovery and boundary |
+| --- | --- |
+| Published T-022 missed a required production failure; full-P1 repair/publication authority remains established | Classify acceptance separately from composition, inspect the failure, verify the correction and reconcile affected claims. Publish a task-specific forward correction under existing authority, then continue only eligible remaining P1 work; no blanket reapproval or false historical compliance. |
+| Current code passes, but T-022's result and initial checkbox were split across commits | Preserve history. Tests do not repair composition; obtain a specific human exception for the blocked integration rather than treating the code fix as that exception. |
+| Retained unpushed completion is known-invalid | Hold its publication, resolve bounded authorized recovery and inspect corrective persistence before publishing the coherent tip/retained history. No next-task batching, reset or automatic replay. |
+| Required range/repair authority is missing, or the human paused work | Preserve work and ask only for the actual missing decision. Recovery does not authorize expanding or resuming the range. |
 
 ## Branch and artifact examples
 

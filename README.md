@@ -143,11 +143,11 @@ See [the owning workflow](skills/sdd-manage/references/branch-management.md#prep
 
 ### Implementation and continuation
 
-Implementation publishes outstanding commits before auditing the task boundary and selecting further work. Each task closes with its result, evidence and checklist together. Requested tracking must be ready; a partial main-phase range publishes and pauses, while a complete eligible boundary integrates.
+Implementation inspects retained commits for publication eligibility, publishes verified eligible work, then resumes the selected range. A known-invalid completion enters bounded recovery before publication. Forward repairs within established authority do not require blanket reapproval; historical commit-composition exceptions remain human decisions. Each task closes with its result, evidence and checklist together. Requested tracking must be ready; a partial main-phase range publishes and pauses, while a complete eligible boundary integrates.
 
 ```mermaid
 flowchart TB
-    O["Orient: worktree, instructions and pending ownership"] --> I["Publish outstanding commits; remote readback"]
+    O["Orient: worktree, instructions and pending ownership"] --> I["Preflight and publish eligible commits; readback"]
     I --> Q{"Publication resolved?"}
     Q -->|"no"| X["Preserve work; scoped recovery; stop affected path"]
     Q -->|"yes"| A{"Task persistence audit valid?"}
