@@ -7,3 +7,7 @@ Verified refreshed main and a clean worktree. Sequence 064 follows maximum direc
 Proposed README ownership: full canonical packaged README with a deterministic checked root projection that rebases relative links, retaining complete content at both locations. No source files moved or tooling changed in this opening. Loading/registration and active instruction updates are explicitly excluded; user controls reload. Closed records remain frozen.
 
 Check opening/plan/index links, spacing, owned paths and Git whitespace; commit/push/read back the opening before further work. No support/publisher execution or live trial is needed for record-only setup.
+
+## README scope refinement
+
+The human requested an explicit README statement that the plugin source package lives at `.agents/plugins/sdd-manager/` and is intended for agents to load when developing SDD Manager, with separate agent installation remaining optional. The earlier dual-full-README/generated-root proposal is superseded: the plan now selects an abbreviated root introduction linking to the full package README and contributor guidance. No README generation/link-rewriting helper or sync-specific CI is selected. Distinguish checkout source paths from installed package layout and do not claim automatic loading. Source restructuring remains pending.
