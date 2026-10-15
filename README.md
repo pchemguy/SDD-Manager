@@ -12,7 +12,7 @@ Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development
 
 Load the package using your agent client's supported plugin mechanism. Project changes require an existing eligible Git worktree, access to its files and tools, and respect for its controlling instructions. Repository initialization is outside the plugin's scope. Checks use the target project's declared tools.
 
-For a new project, copy the [Greenfield Project Prompt Template](<Greenfield Project Prompt Template.md>) and replace its project, repository and token placeholders. The [Tetris demo](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/README.md) illustrates phased delivery and feature expansion; the [Calculator demo](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/calculator/README.md) proposes a simpler phase/feature sequence.
+For a new project, copy the [Greenfield Project Prompt Template](<assets/Greenfield Project Prompt Template.md>) and replace its project, repository and token placeholders. The [Tetris demo](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/README.md) illustrates phased delivery and feature expansion; the [Calculator demo](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/calculator/README.md) proposes a simpler phase/feature sequence.
 
 Give the coordinator an objective and stopping point:
 
@@ -230,7 +230,7 @@ See [packaging](skills/sdd-forge/references/github-packaging.md), [release workf
 
 ## Plugin package
 
-The Agent Plugins 1.0 package includes root plugin.json, README.md, PLUGIN.md, Greenfield Project Prompt Template.md, LICENSE, SDD-MANAGER.md and AI_DISCLOSURE.md, plus skills/ and assets/. Root plugin.json is the sole manifest; OpenAI presentation metadata is under extensions.com.openai.interface. PLUGIN.md is SDD Manager's explicit composition entry, not a claim of standardized automatic discovery.
+The Agent Plugins 1.0 package includes root plugin.json, README.md, PLUGIN.md, LICENSE, SDD-MANAGER.md and AI_DISCLOSURE.md, plus skills/ and assets/ (including `assets/Greenfield Project Prompt Template.md`). Root plugin.json is the sole manifest; OpenAI presentation metadata is under extensions.com.openai.interface. PLUGIN.md is SDD Manager's explicit composition entry, not a claim of standardized automatic discovery.
 
 All 15 skills are distributed together. Their relative references stay within the plugin root; named handoffs and client loading/routing are separate concerns. See [bundled-skill guidance](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md#bundled-skill-references). Artwork includes assets/icon.svg, icon.png, logo.svg and logo.png; manifest icons use icon.svg and logo.svg, including dark variants.
 

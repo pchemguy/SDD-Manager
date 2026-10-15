@@ -17,7 +17,7 @@ These are alternative runs. Use separate repositories or clearly recorded starti
 
 ## Starting the exercise
 
-Use the repository's [Greenfield Project Prompt Template](<../../../Greenfield Project Prompt Template.md>) with this preliminary description:
+Use the repository's [Greenfield Project Prompt Template](<../../../assets/Greenfield Project Prompt Template.md>) with this preliminary description:
 
 > [!NOTE] Prompt
 >

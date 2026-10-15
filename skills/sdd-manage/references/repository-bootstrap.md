@@ -8,7 +8,7 @@ Carry the supplied repository, project scope, stopping boundary and explicit rep
 
 Treat an explicit request for GitHub phase labels, milestones and task issues as tracking confirmation under [tracking decision](tracking-decision.md); carry that choice without asking again. Delegate projection, associations and verified state updates to **sdd-forge** and [phase activation](phase-activation.md) at their eligible boundaries. Protect a supplied token through [hosting credentials](credentials.md); its technical permissions neither define project scope nor require unrelated operations.
 
-The root [Greenfield Project Prompt Template](<../../../Greenfield Project Prompt Template.md>) supplies the user's project seed, repository/token inputs, standing authorization and tracking selection. The plugin owns startup and subsequent procedures. Continue through the requested stages and checkpoints; preserve preparation-only, local-only and explicit stop instructions. The disclosure/adoption trigger below remains the first authorized SDD commit, not the start of conversational exploration.
+The bundled [Greenfield Project Prompt Template](<../../../assets/Greenfield Project Prompt Template.md>) supplies the user's project seed, repository/token inputs, standing authorization and tracking selection. The plugin owns startup and subsequent procedures. Continue through the requested stages and checkpoints; preserve preparation-only, local-only and explicit stop instructions. The disclosure/adoption trigger below remains the first authorized SDD commit, not the start of conversational exploration.
 
 ## Ownership and trigger
 
