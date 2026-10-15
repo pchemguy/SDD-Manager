@@ -16,7 +16,7 @@ The target is a browser-based calculator. Phase 1 delivers the basic arithmetic 
 | 2: Powers and logarithms | `pow`, `root`, `exp`, `ln`, `lg`, and parentheses | Powers, roots, logarithms, and grouped expressions. |
 | 3: Trigonometry | `sin`, `cos`, `tan`, `asin`, `acos`, and `atan` | A scientific calculator with trigonometric and inverse trigonometric functions. |
 
-Use the [Greenfield Project Prompt Template](<../../../assets/Greenfield Project Prompt Template.md>) to supply the repository, authorization, and GitHub tracking preference. Use this as the project description, or as a continuation when clarifying the project:
+Use the [Greenfield Project Prompt Template](<../../../.agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md>) to supply the repository, authorization, and GitHub tracking preference. Use this as the project description, or as a continuation when clarifying the project:
 
 > [!NOTE] Prompt
 >

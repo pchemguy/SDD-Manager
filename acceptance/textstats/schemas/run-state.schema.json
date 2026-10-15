@@ -241,6 +241,13 @@
         "dirty_diff_path": {
           "type": "string",
           "minLength": 1
+        },
+        "package_subdirectory": {
+          "type": "string",
+          "enum": [
+            ".",
+            ".agents/plugins/sdd-manager"
+          ]
         }
       },
       "required": [

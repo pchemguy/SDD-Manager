@@ -27,14 +27,14 @@ A-003/API unavailable makes its dependent tracking claims Blocked. A local-only 
 
 ## Skill handoff map
 
-Load entries/references from the pinned package; the links identify source-relative originals. Coordinator setup uses [sdd-manage](../../skills/sdd-manage/SKILL.md) and [sdd-orient](../../skills/sdd-orient/SKILL.md); load shared [sdd-conventions](../../skills/sdd-conventions/SKILL.md) when directed. Consumer dispatch follows the real request and pinned instructions, not this map as an assessor answer.
+Load entries/references from the pinned package; the links identify source-relative originals. Coordinator setup uses [sdd-manage](../../.agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md) and [sdd-orient](../../.agents/plugins/sdd-manager/skills/sdd-orient/SKILL.md); load shared [sdd-conventions](../../.agents/plugins/sdd-manager/skills/sdd-conventions/SKILL.md) when directed. Consumer dispatch follows the real request and pinned instructions, not this map as an assessor answer.
 
 | Work | Available pinned skill references |
 | --- | --- |
-| Preparation | [sdd-design](../../skills/sdd-design/SKILL.md), [sdd-specify](../../skills/sdd-specify/SKILL.md), [sdd-plan](../../skills/sdd-plan/SKILL.md), [sdd-tasks](../../skills/sdd-tasks/SKILL.md) |
-| Implementation/checks/docs | [sdd-implement](../../skills/sdd-implement/SKILL.md), [sdd-tdd](../../skills/sdd-tdd/SKILL.md), [sdd-verify](../../skills/sdd-verify/SKILL.md), [sdd-docs](../../skills/sdd-docs/SKILL.md) |
-| Feature/steering | [sdd-integrate-feature](../../skills/sdd-integrate-feature/SKILL.md), [sdd-steer](../../skills/sdd-steer/SKILL.md) |
-| Tracking/reports | [sdd-forge](../../skills/sdd-forge/SKILL.md), [sdd-report](../../skills/sdd-report/SKILL.md) |
+| Preparation | [sdd-design](../../.agents/plugins/sdd-manager/skills/sdd-design/SKILL.md), [sdd-specify](../../.agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md), [sdd-plan](../../.agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md), [sdd-tasks](../../.agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md) |
+| Implementation/checks/docs | [sdd-implement](../../.agents/plugins/sdd-manager/skills/sdd-implement/SKILL.md), [sdd-tdd](../../.agents/plugins/sdd-manager/skills/sdd-tdd/SKILL.md), [sdd-verify](../../.agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md), [sdd-docs](../../.agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md) |
+| Feature/steering | [sdd-integrate-feature](../../.agents/plugins/sdd-manager/skills/sdd-integrate-feature/SKILL.md), [sdd-steer](../../.agents/plugins/sdd-manager/skills/sdd-steer/SKILL.md) |
+| Tracking/reports | [sdd-forge](../../.agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md), [sdd-report](../../.agents/plugins/sdd-manager/skills/sdd-report/SKILL.md) |
 
 ## Stops and evidence ownership
 

@@ -5,22 +5,30 @@ from .support import Sandbox, git
 
 
 class PackageDocumentation(Sandbox):
-    def test_root_manifest_is_the_only_discovery_manifest(self):
+    def test_nested_package_boundary_and_repository_license_copy(self):
         source = Path(__file__).resolve().parents[3]
-        self.assertTrue((source / 'plugin.json').is_file())
-        self.assertFalse((source / '.codex-plugin').exists())
+        self.assertTrue((source / '.agents/plugins/sdd-manager/plugin.json').is_file())
+        self.assertFalse((source / 'plugin.json').exists())
+        self.assertFalse((source / '.agents/plugins/sdd-manager/.codex-plugin').exists())
+        package=source/'.agents/plugins/sdd-manager'
+        self.assertEqual((source/'LICENSE').read_bytes(),(package/'LICENSE').read_bytes())
+        for notice in ['AI_DISCLOSURE.md','SDD-MANAGER.md']:
+            self.assertTrue((source/notice).is_file())
+            self.assertTrue((package/'assets'/notice).is_file())
+            self.assertFalse((package/notice).exists())
 
     def test_notice_navigation_is_retained_in_committed_and_dirty_snapshots(self):
         source=self.root/'notice-package'
         git(self.root,'init','-b','main',str(source))
         git(source,'config','user.name','Fixture');git(source,'config','user.email','fixture@example.invalid')
         (source/'plugin.json').write_text('{"name":"fixture"}\n')
-        readme=b'Development uses [SDD Manager](SDD-MANAGER.md). See [disclosure](AI_DISCLOSURE.md).\n'
+        readme=b'Development uses [SDD Manager](assets/SDD-MANAGER.md). See [disclosure](assets/AI_DISCLOSURE.md).\n'
         notice=b'# Usage\n\nSee [disclosure](AI_DISCLOSURE.md).\n'
         disclosure=b'# Disclosure\n\nMaintainer owns the published work.\n'
         (source/'README.md').write_bytes(readme)
-        (source/'SDD-MANAGER.md').write_bytes(notice)
-        (source/'AI_DISCLOSURE.md').write_bytes(disclosure)
+        (source/'assets').mkdir()
+        (source/'assets/SDD-MANAGER.md').write_bytes(notice)
+        (source/'assets/AI_DISCLOSURE.md').write_bytes(disclosure)
         git(source,'add','.');git(source,'commit','-m','notice links')
         import sys
         from pathlib import Path
@@ -29,15 +37,15 @@ class PackageDocumentation(Sandbox):
         inputs={'plugin_revision':git(source,'rev-parse','HEAD').stdout.strip(),'source_mode':'committed'}
         committed,files=core.package(source,inputs)
         import re
-        for owner in ['README.md','SDD-MANAGER.md']:
+        for owner in ['README.md','assets/SDD-MANAGER.md']:
             self.assertIn(owner,files)
             for target in re.findall(r'\]\(([^)]+)\)',files[owner].decode()):
                 self.assertIn(str(PurePosixPath(owner).parent/target),files)
-        self.assertEqual(files.get('AI_DISCLOSURE.md'),disclosure)
-        (source/'AI_DISCLOSURE.md').write_bytes(disclosure+b'Updated notice.\n')
+        self.assertEqual(files.get('assets/AI_DISCLOSURE.md'),disclosure)
+        (source/'assets/AI_DISCLOSURE.md').write_bytes(disclosure+b'Updated notice.\n')
         dirty,files=core.package(source,dict(inputs,source_mode='dirty'))
-        self.assertIn('AI_DISCLOSURE.md',dirty['changed_package_paths'])
-        self.assertEqual(files['AI_DISCLOSURE.md'],disclosure+b'Updated notice.\n')
+        self.assertIn('assets/AI_DISCLOSURE.md',dirty['changed_package_paths'])
+        self.assertEqual(files['assets/AI_DISCLOSURE.md'],disclosure+b'Updated notice.\n')
         self.assertNotEqual(dirty['fingerprint'],committed['fingerprint'])
 
     def test_committed_and_dirty_readme_and_license_are_packaged(self):
