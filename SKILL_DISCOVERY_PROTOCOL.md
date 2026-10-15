@@ -1,6 +1,6 @@
 # Skill and plugin discovery protocol
 
-Discover and load repository-provided skill and plugin entries using the protocol below. Retain their instructions for subsequent work and report their purposes and capabilities in chat according to the report template.
+Discover and load repository-provided skill and plugin entries using the protocol below. Report their purposes and capabilities in chat according to the report template.
 
 ## Strict execution constraints
 
@@ -8,11 +8,11 @@ These constraints apply during discovery.
 
 - **Read-only discovery and chat reporting only.** Do not create, modify or delete files.
 - **No Git operations**, commits, pull requests or hosted-object changes.
-- Load complete entries as instructions for subsequent work:
+- Load complete entry instructions:
     - Do not execute their workflows during discovery or treat loading an entry as authorization to act.
     - Do not install packages.
     - Do not follow `references/*.md`.
-- **Report discovery in chat, then continue the requested task.** Do not create a report file, commit or formal submission for discovery. At that handoff, the discovery restrictions end; subsequent work follows its applicable instructions and authorization, including reference loading and Git operations.
+- **Report discovery in chat.** Do not create a report file, commit or formal submission for discovery.
 
 ## Discovery procedure
 
