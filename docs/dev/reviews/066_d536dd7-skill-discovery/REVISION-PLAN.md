@@ -10,7 +10,7 @@ The human requested turning docs/agents/jules/Skill Discovery.md into a root pro
 
 The source deliberately loads every discovered SKILL.md and optional PLUGIN.md and reports only in chat, forbidding file changes, Git operations and formal submission. Preserve that intent. Correct its mixed standalone/bundled path template, ambiguous backend discovery recursion, root-level displayName assumption, malformed nesting, HTML table formatting and spelling. Remove the Jules Start-session commentary and conversation-specific front matter. These are adaptation choices, not claims about changed standards or client behavior.
 
-Keep entry reading distinct from executing discovered procedures. List actual inspected paths, declared metadata, capability/routing summaries and unavailable sources. References stay selectively unloaded during entry discovery. Include explicitly documented alternate repository locations without speculative installation/session probing. Missing roots or optional entries must be reported truthfully; do not invent display names, capabilities or successful activation.
+Keep entry reading distinct from executing discovered procedures. List actual inspected paths, declared metadata, brief capability summaries and unavailable sources. References stay selectively unloaded during entry discovery. Include explicitly documented alternate repository locations without speculative installation/session probing. Missing roots or optional entries must be reported truthfully; do not invent display names, capabilities or successful activation.
 
 ## Ordered actions
 

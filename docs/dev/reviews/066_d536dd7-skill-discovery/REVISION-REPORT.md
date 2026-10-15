@@ -13,3 +13,7 @@ The revised location table and report use actual standalone/bundled entry paths.
 Verification: compared source intent and strict constraints with the revised protocol; checked actual local manifest/entry locations and optional display-name field; checked Markdown links/anchors/spacing; inspected current-reference search, package/tooling identity and prior closed-path preservation. No executable tests or live discovery consumer trial were run for this documentation-only revision. No loading/installation or packaged workflow files changed. The opening checkpoint 989542cabedb6218f40ec728840aa95ffbbce151 was pushed/read back before source adaptation.
 
 The current protocol and all navigation are on revision/066_d536dd7-skill-discovery for human review. Keep the campaign open; original source remains in Git history rather than a second maintained copy.
+
+## Human review amendment — Compact discovery reports
+
+Removed both skill Routing fields and the plugin Composition and routing field at the human’s request. Removed corresponding routing-summary instructions and the input/output inventory request. Briefs retain declared metadata, actual paths and a short skill capability/scope summary. Complete entry reading and the discovery-only stop are unchanged. The plan’s reporting scope is aligned; Markdown/link checks pass. Campaign remains open.
