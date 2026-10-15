@@ -29,7 +29,7 @@ Detailed package inventory and review depth: [COVERAGE.md](COVERAGE.md).
 
 Inspected root and packaged README, PLUGIN.md, manifest, source/acceptance AGENTS entries, source PLUGIN contract, bootstrap module and notice templates. Inventory contains 132 package files, including 15 skills and 75 reference modules. Local Markdown target/anchor inspection covered 505 links in all 95 packaged Markdown files: no missing, escaping or invalid-anchor target found. Package and repository LICENSE bytes match. Root notices remain separate from assets-only packaged templates. Presentation icon/logo paths resolve inside assets/.
 
-Agent Package Author validate_plugin.py returned exit 0, no errors and 37 cross-skill-reference warnings. These warnings describe client handoff uncertainty for plugin-contained sibling references; they are not containment violations. No loading or client behavior was inferred.
+Agent Package Author validate_plugin.py returned exit 0, no errors and 39 cross-skill-reference warnings. These warnings describe client handoff uncertainty for plugin-contained sibling references; they are not containment violations. No loading or client behavior was inferred.
 
 The requested `_agents` pattern matches `_agents/test`; `.agents/plugins/sdd-manager/plugin.json` remains unignored. Opening checkpoint `10a69811be8c7a8e3badc0724b4bd875f4df4a24` was pushed and read back from origin before this unit.
 
@@ -106,7 +106,7 @@ Final change-scope inspection: only .gitignore, this campaign's records/evidence
 
 ## Verification and evidence limits
 
-- **Passed:** 134 TextStats support tests; 30 publisher tests; APA structural validation (37 documented sibling-reference warnings, zero errors); pinned offline core manifest validation; 132-file native archive inventory/content and TextStats parity; clean dirty snapshot identity; 505 packaged local links; current-document target/anchor/spacing checks; root/package license equality; requested ignore pattern and preservation of tracked package paths.
+- **Passed:** 134 TextStats support tests; 30 publisher tests; APA structural validation (39 documented sibling-reference warnings, zero errors); pinned offline core manifest validation; 132-file native archive inventory/content and TextStats parity; clean dirty snapshot identity; 505 packaged local links; current-document target/anchor/spacing checks; root/package license equality; requested ignore pattern and preservation of tracked package paths.
 - **Failed adversarial checks:** delayed exact-source archive rebuild and actual CLI hash gate (R-002); four committed/dirty malformed-ancestor source-selection probes (R-003). Passing suites do not override these failures.
 - **Inspection depth:** all 132 packaged files inventoried/contained; all 15 skill entries assessed; all 75 references receive structural/routing/link review, with detailed content review concentrated on consequential handoffs and refactor interfaces. No claim of exhaustive sentence editing or independent execution of every workflow. Acceptance helpers/fixtures are reviewed against source/pinning/evidence contracts and exercised by the full suite; no TextStats product run took place.
 - **Unrun/excluded:** live consumer/independent acceptance, installed-client discovery/loading/reload, GitHub Actions execution and action-ref availability, hosted tracking/release writes, actual external URL availability, source-only archived campaign/log compatibility and visual artwork redesign. No provider/model behavior is established by deterministic checks.
