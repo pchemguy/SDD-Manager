@@ -34,7 +34,7 @@ Also inspect alternate discovery or manifest locations explicitly identified by 
     - Record an optional display name with its actual field path. SDD Manager uses `extensions.com.openai.interface.displayName`; other manifests may organize presentation differently. Do not infer a declared display name from a directory or title.
     - Read PLUGIN.md in full when present. This repository uses it as a shared entry convention; its absence does not prevent skill discovery.
     - Enumerate that plugin's `skills/` directory and apply the same complete-entry inspection to each bundled skill. Record the bundled paths rather than substituting standalone paths.
-    - Prepare a plugin brief and its bundled skill briefs; report an absent shared entry explicitly.
+    - Prepare a plugin brief and its bundled skill briefs. Summarize plugin capabilities and scope from PLUGIN.md when available; otherwise report its absence and omit that summary.
 3. **Reconcile coverage.** Account for every entry found in the selected locations. Report missing metadata, unreadable/malformed entries, duplicate declared names and unavailable optional entries without inventing values or claiming successful activation. Continue independent readable entries.
 4. **Report and stop.** Output the discovery report in chat using the structure below. List the sources actually read and any unresolved locations or entries. End the turn without starting a development workflow or formal submission.
 
@@ -63,6 +63,7 @@ Use declared names for headings when available and actual paths to distinguish d
 - **Display name:** {declared value and field path, when present}
 - **Description:** {declared description}
 - **Shared entry:** {actual PLUGIN.md path or absence}
+- **Capabilities and scope:** {concise PLUGIN.md-derived summary, when available}
 
 #### Bundled skills
 

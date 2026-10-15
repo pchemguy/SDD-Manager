@@ -17,3 +17,7 @@ The current protocol and all navigation are on revision/066_d536dd7-skill-discov
 ## Human review amendment — Compact discovery reports
 
 Removed both skill Routing fields and the plugin Composition and routing field at the human’s request. Removed corresponding routing-summary instructions and the input/output inventory request. Briefs retain declared metadata, actual paths and a short skill capability/scope summary. Complete entry reading and the discovery-only stop are unchanged. The plan’s reporting scope is aligned; Markdown/link checks pass. Campaign remains open.
+
+## Human review amendment — Plugin capability summary
+
+Added Capabilities and scope to the plugin brief, explicitly derived from PLUGIN.md. When that entry is unavailable, report its absence and omit the summary. Routing fields remain removed. Markdown/link checks pass; campaign remains open.
