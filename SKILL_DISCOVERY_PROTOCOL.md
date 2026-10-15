@@ -1,14 +1,16 @@
 # Skill and plugin discovery protocol
 
-Discover and load repository-provided skill and plugin entries, then report their purposes and capabilities in chat. Use this protocol for a discovery-only turn before selecting subsequent work.
+Discover and load repository-provided skill and plugin entries as required by AGENTS.md. Report their purposes and capabilities in chat, then continue with the requested task.
 
 ## Strict execution constraints
+
+These constraints apply during discovery.
 
 - **Read-only discovery and chat reporting only.** Do not create, modify or delete files.
 - **No Git operations**, commits, pull requests or hosted-object changes.
 - Read entries as discovery material; do not execute their workflows or treat reading an entry as authorization to act.
 - Do not install packages or load every reference module. Read the complete entries specified below without following their references.
-- **Finish by reporting in chat. Do not formally submit the task.** Discovery produces no repository artifact.
+- **Report discovery in chat, then continue the requested task.** Do not create a report file, commit or formal submission for discovery.
 
 ## Discovery locations
 
@@ -36,7 +38,7 @@ Also inspect alternate discovery or manifest locations explicitly identified by 
     - Enumerate that plugin's `skills/` directory and apply the same complete-entry inspection to each bundled skill. Record the bundled paths rather than substituting standalone paths.
     - Prepare a plugin brief and its bundled skill briefs. Summarize plugin capabilities and scope from PLUGIN.md when available; otherwise report its absence and omit that summary.
 3. **Reconcile coverage.** Account for every entry found in the selected locations. Report missing metadata, unreadable/malformed entries, duplicate declared names and unavailable optional entries without inventing values or claiming successful activation. Continue independent readable entries.
-4. **Report and stop.** Output the discovery report in chat using the structure below. List the sources actually read and any unresolved locations or entries. End the turn without starting a development workflow or formal submission.
+4. **Report and continue.** Output the discovery report in chat using the structure below. List the sources actually read and any unresolved locations or entries, then continue with the requested task.
 
 ## Report structure
 

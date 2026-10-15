@@ -4,6 +4,8 @@ This entry applies to the SDD Manager source repository. It is excluded from the
 
 ## Contributor entry
 
+Execute the [skill and plugin discovery protocol](SKILL_DISCOVERY_PROTOCOL.md).
+
 Before source edits, verification or campaign work, explicitly load [acceptance/AGENTS.md](acceptance/AGENTS.md), including work outside acceptance/. It owns source orientation, verification commands, publisher/package prerequisites, acceptance coordination and the closed-record boundary. Read applicable nested instructions before work on their paths; TextStats has a separate coordinator entry.
 
 Use current source and the selected active campaign rather than reading frozen reports as a routine work queue. Discover ownership and actual branch/pending state through Git. Preserve unrelated changes, controlling human instructions and closed campaign artifacts. This repository uses campaign plans/reports instead of a root executable TASKS owner; do not invent task IDs from findings.
@@ -16,4 +18,4 @@ Maintain abbreviated repository README.md, full packaged README.md and packaged 
 
 ## Source and package roots
 
-The Git repository root owns development documents, acceptance and CI. The complete plugin source is `.agents/plugins/sdd-manager/`; its manifest, entries, skills and assets are relative to that package root. Repository agents may load this local source when developing SDD Manager; separate installation remains optional. Loading configuration and instruction reload are user-controlled. For an explicitly requested discovery-only turn, use [SKILL_DISCOVERY_PROTOCOL.md](SKILL_DISCOVERY_PROTOCOL.md); its complete entry inventory is separate from selective loading during development. Keep target-project root paths distinct from package-source paths. Root usage/disclosure notices remain repository records; packaged templates live only in package assets/.
+The Git repository root owns development documents, acceptance and CI. The complete plugin source is `.agents/plugins/sdd-manager/`; its manifest, entries, skills and assets are relative to that package root.

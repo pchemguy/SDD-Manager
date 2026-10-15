@@ -25,3 +25,7 @@ Added Capabilities and scope to the plugin brief, explicitly derived from PLUGIN
 ## Human review amendment — Remove license synchronization instruction
 
 Removed “Keep root and package LICENSE copies identical” from source AGENTS.md at the human’s request. Ordinary SDD development does not include editing either license. No license file changed. Markdown/link checks pass; campaign remains open.
+
+## Human review amendment — Direct protocol execution
+
+AGENTS.md directly instructs agents to execute the skill and plugin discovery protocol. There are no timing, session or repository-work qualifications on this instruction. Removed the rejected source-root commentary. Discovery-only modes and forced turn endings are removed from the protocol; discovery reports in chat and continues the task. The superseded unpublished variants were blocked after human rejection; remote state was checked before replacing them. Markdown/link checks pass; campaign remains open.

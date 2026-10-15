@@ -10,7 +10,7 @@ The human requested turning docs/agents/jules/Skill Discovery.md into a root pro
 
 The source deliberately loads every discovered SKILL.md and optional PLUGIN.md and reports only in chat, forbidding file changes, Git operations and formal submission. Preserve that intent. Correct its mixed standalone/bundled path template, ambiguous backend discovery recursion, root-level displayName assumption, malformed nesting, HTML table formatting and spelling. Remove the Jules Start-session commentary and conversation-specific front matter. These are adaptation choices, not claims about changed standards or client behavior.
 
-Keep entry reading distinct from executing discovered procedures. List actual inspected paths, declared metadata, brief capability summaries and unavailable sources. References stay selectively unloaded during entry discovery. Include explicitly documented alternate repository locations without speculative installation/session probing. Missing roots or optional entries must be reported truthfully; do not invent display names, capabilities or successful activation.
+AGENTS.md directly instructs execution of SKILL_DISCOVERY_PROTOCOL.md. Keep entry reading distinct from executing discovered procedures. List actual inspected paths, declared metadata, brief capability summaries and unavailable sources. References stay selectively unloaded during entry discovery. Include explicitly documented alternate repository locations without speculative installation/session probing. Missing roots or optional entries must be reported truthfully; do not invent display names, capabilities or successful activation.
 
 ## Ordered actions
 
@@ -24,3 +24,7 @@ Deliver both tightly coupled actions in one source/evidence checkpoint after the
 ## Persistence and stopping
 
 Record the actual adaptation and checks in REVISION-REPORT.md. Publish/read back each owned commit before further work. Return the reviewable root document on the campaign branch, keeping the campaign open. Do not execute the discovery protocol as an instruction to discover this repository during its authoring task.
+
+## Accepted entry amendment
+
+The human requires root AGENTS.md to instruct execution of SKILL_DISCOVERY_PROTOCOL.md, replacing the optional discovery wording and surrounding source-root commentary. Direct agents to execute the protocol in AGENTS.md, without adding timing, repository-work or stopping qualifications. The human explicitly rejected discovery-only modes and forced turn endings. This supersedes the earlier optional entry-link treatment.
