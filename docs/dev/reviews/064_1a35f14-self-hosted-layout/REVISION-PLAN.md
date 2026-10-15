@@ -2,7 +2,7 @@
 
 ## Campaign and scope
 
-Campaign **064_1a35f14**, starting baseline `1a35f14682050297d5a4a9f97eb4921ea35be048`; branch `revision/064_1a35f14-self-hosted-layout`, target main. The human requested opening this restructuring campaign. State: **Plan prepared; source restructuring not yet executed**. Companion: [revision report](REVISION-REPORT.md).
+Campaign **064_1a35f14**, starting baseline `1a35f14682050297d5a4a9f97eb4921ea35be048`; branch `revision/064_1a35f14-self-hosted-layout`, target main. The human requested opening this restructuring campaign. State: **Executed and source-verified; final integration/publication establishes closure**. Companion: [revision report](REVISION-REPORT.md).
 
 Move the distributable source into `.agents/plugins/sdd-manager/` while retaining source development, acceptance, CI, campaign records and root repository documents outside it. This is a source/package refactor, not a change in SDD workflow obligations.
 
@@ -17,7 +17,7 @@ Explicit exclusions: plugin registration, installation, discovery automation, ma
 | `.agents/plugins/sdd-manager/skills/` | Canonical bundled skills and references; preserve internal relative structure |
 | `.agents/plugins/sdd-manager/assets/` | Canonical package assets, project prompt, AI_DISCLOSURE.md and SDD-MANAGER.md templates |
 | `.agents/plugins/sdd-manager/LICENSE` | Complete package license copy; repository-root LICENSE remains available |
-| `.agents/plugins/sdd-manager/README.md` | Full package README, proposed canonical authored copy |
+| `.agents/plugins/sdd-manager/README.md` | Full package README, canonical authored copy |
 | Root README.md | Abbreviated repository introduction, explicit package-source location/intended use and links to full package README and contributor guidance |
 | Root AGENTS.md, acceptance/, docs/, .github/ | Source-only development, verification, evidence and publishing tools |
 | Root AI_DISCLOSURE.md and SDD-MANAGER.md | Retained repository copies; absent from package root |
@@ -53,3 +53,7 @@ Use a working relative link to `.agents/plugins/sdd-manager/README.md` in the ro
 - Live loading and instruction refresh are not tested or claimed. Test success establishes only the exercised source/tooling contracts.
 
 This plan records the revised README approach and bounded revision queue. The opening request does not mean these changes or their checks have already executed. Publish this opening/plan and stop on the campaign branch for review of the restructuring approach.
+
+## Execution disposition
+
+The human subsequently commanded execution. A-001 established root/ownership contracts; A-002/A-003/A-004 were delivered as the justified coupled source checkpoint recorded in the revision report; A-005 source, fixture, archive and snapshot checks passed. Final verified main integration/publication and clean return establish closure. No registration/loading or automatic instruction-update mechanism was added. The opening-only stopping instruction above retains its historical context.

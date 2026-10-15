@@ -1,6 +1,6 @@
 # Nested package restructuring opening
 
-Campaign **064_1a35f14**, baseline `1a35f14682050297d5a4a9f97eb4921ea35be048`; branch `revision/064_1a35f14-self-hosted-layout`, target main. State: **Open; plan prepared**. The human requested the nested package layout, assets-only packaged notices with root repository copies, package license copy and complete READMEs at both levels. See the [revision plan](REVISION-PLAN.md).
+Campaign **064_1a35f14**, baseline `1a35f14682050297d5a4a9f97eb4921ea35be048`; branch `revision/064_1a35f14-self-hosted-layout`, target main. State: **Source verified; final main integration/publication establishes closure**. The human requested the nested package layout, assets-only packaged notices with root repository copies, package license copy and complete READMEs at both levels. See the [revision plan](REVISION-PLAN.md).
 
 Verified refreshed main and a clean worktree. Sequence 064 follows maximum directory/ref reservation 063; no parent campaign is associated. Existing root/assets notices are byte-identical and bootstrap already selects assets templates. The package publisher and TextStats source selectors currently assume repository-root package paths and require explicit remapping. Internal sibling-relative links should retain their topology.
 
@@ -35,3 +35,9 @@ Committed candidate `776be7ba87a76318d9708b4a561d4e8da7b42135` passed all 134 su
 Native pinned manifest/exact archive and TextStats committed snapshot agree on 132 package files; package names omit the repository prefix. All 505 local links/anchors across 95 packaged Markdown documents pass. All 675 local links/anchors across 109 affected current/active documents pass. Skills/assets are byte-identical to baseline, package/root license bytes match and root repository notices remain unchanged. All fifteen coordinator references retain their routing. Closed campaign and transcript contents are untouched. No client loading/installation/reload, live acceptance, hosted tracking or release operation was performed.
 
 Final source review retained these results and clarified the new helper docstrings for checkout/package roots, normalized outputs and error boundaries; no behavior changed. Publish/read back this qualification before exact final candidate/merged rechecks. Remaining work is final records, verified explicit integration/publication and clean main return.
+
+## Final source boundary
+
+Final runtime/package tooling candidate `85f907eb6307af8cc193d036d73bcd7345eadd1a` again passed native manifest/exact archive/TextStats inventory agreement (132 files). The actual clean checkout's committed and explicit dirty snapshots have identical bytes, modes and fingerprints with no changed package paths. All skills/assets remain baseline-identical; fifteen coordinator reference routes remain intact. Root/plugin READMEs have distinct audiences and working navigation; no generated README or settings/loader file exists.
+
+A-001 through A-005 are complete within the selected source scope. Original opening: `b4b5605cfd2e5139afce51f5401fe848f4dedd3e`; starting baseline: `1a35f14682050297d5a4a9f97eb4921ea35be048`. Final merge summary must retain actual parent tips and fresh merged regression/package outcomes. Explicit integration into refreshed main, target push/readback and clean main return establish closure; no post-closure record repair is needed. Live agent/client behavior and user-controlled loading/reload were not exercised.
