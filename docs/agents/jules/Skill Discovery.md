@@ -8,11 +8,6 @@ url: https://chatgpt.com/c/6acbd77f-a90c-83e9-9161-aafa5f1c6b0d
 
 Discover and load repository-provided skills and plugins using the protocol below. Inspect their manifests, metadata, and entry-point documentation to identify their purposes and capabilities. Follow the execution plan and constraints bellow.
 
-**Repository**:
-
-GitHub repository: https://github.com/{OWNER}/{REPO}
-GitHub token: {FINE_GRAINED_GH_TOKEN}
-
 ### Discovery Protocol
 
 Use the following directories for discovery relative to `<REPO_ROOT>/.agents/`:
