@@ -19,3 +19,7 @@ S-05–S-07 source rechecks locate eligibility, safe ownership, narrow correctiv
 ## A-003 — Entry and documentation reconciliation
 
 Reconciled PLUGIN.md's publication/recovery summaries, README text/diagram, capability map, developer contract and coordinator examples. Detailed recovery/preflight remains with implementation and Git owners. Source-checked the ten plan contrasts across direct implementation entry, coordinator and plugin projections; existing approvals, selected stops, tracking prerequisites and frozen-record boundary remain intact. No automatic-review-denial content was revised. Finding dispositions are Revised pending full verification; no product T-022 evidence or execution is claimed.
+
+## A-004 — Combined source recheck
+
+Combined review found two residual startup qualifications: the reassessment row still said to push first even for disputed acceptance, and the narrative called the last task commit a completed boundary despite a potentially false claim. Reconciled both with publication preflight/bounded recovery and separate current acceptance. This is a source consistency correction within A-004, not an additional workflow or broader review. Remaining regression/package checks follow its committed checkpoint.

@@ -14,14 +14,14 @@ Attempt the required push with existing shell authentication; do not discover/re
 
 | Observed state | Action |
 | --- | --- |
-| Checked task or parent has a pending completion reassessment | After startup pushing, assess its current acceptance within the authorized range; correct unsupported status, preserve historical evidence, and retain the note until reassessment is resolved. Report out-of-range work as a scope conflict. |
+| Checked task or parent has a pending completion reassessment | Resolve publication preflight/bounded recovery, then assess current acceptance within the authorized range; correct unsupported status, preserve historical evidence, and retain the note until reassessment is resolved. Report out-of-range work as a scope conflict. |
 | Last checked task is ahead of the last completed task commit | Confirm task ownership and existing completion evidence, finish its commit and push, and coordinate its issue closure. Do not reimplement completed work. |
 | Current task is unchecked with task-owned pending changes | Inspect existing work and resume the remaining implementation and verification. |
 | Clean tree and checklist agrees with committed task boundary | Select eligible work within the requested range; do not treat cleanliness as proof that required issue closure has occurred. |
 | Missing or contradictory completion evidence | Obtain the missing checks or repair incomplete work within scope before treating the task as complete. |
 | Ambiguous task identity, ownership, or conflicting changes | Preserve changes and report the ambiguity before mutating the affected work. |
 
-Use the last task commit as the historical completed boundary; later maintenance, reconciliation, or steering-amendment commits do not establish another completed task. A pending reassessment disputes current acceptance without erasing that history. Preserve stable IDs in the owning TASKS or FEATURE-TASKS. If no task has been committed, use the established preimplementation baseline.
+Use the last claimed task commit as the historical boundary, with current acceptance established separately; later maintenance, reconciliation, or steering-amendment commits do not establish another completed task. A pending reassessment disputes current acceptance without erasing that history. Preserve stable IDs in the owning TASKS or FEATURE-TASKS. If no task has been committed, use the established preimplementation baseline.
 
 Continuation finishes the interrupted task before new task selection. If it falls outside the newly requested range or the user directs a conflicting action, report the scope conflict rather than silently expanding or discarding work. Apply the shared [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md): inspect pending milestone closures, report persistence, local parent reconciliation and phase integration before replaying transitions. Recover exact object/report identities, verify uncertain effects and finish the earliest unmet authorized transition. Do not repeat a completed review or activate a new phase while predecessor closure/publication is pending.
 
