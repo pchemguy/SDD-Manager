@@ -15,7 +15,7 @@
 | U-001 | Reviewed | None | Templates/bootstrap/discovery |
 | U-002 | Reviewed | R-001 | Authoring/acceptance/QC |
 | U-003 | Reviewed | R-002 | Tracking/backend |
-| U-004 | Pending | None allocated | Git/recovery |
+| U-004 | Reviewed | R-003, R-004 | Git/recovery |
 | U-005 | Pending | None allocated | Entry/README/composition |
 | U-006 | Pending | None allocated | Package/tooling/acceptance coverage |
 
@@ -33,7 +33,7 @@ Fresh/partial/all-present, existing list and interrupted-copy contrasts were sou
 
 ## U-002 — First approval, owner handoffs and QC
 
-Read all selected owner entries, human-document review, document-QC gates, shared QC policy and reporting procedures. First-approval semantics are consistent across the main procedure, templates and composer: proposals leave DOCS tasks unchecked; first approval/explicit preapproval enables the approved-state/checked-task commit; publication precedes issue closure; later revisions retain the historical completion while current readiness is assessed separately. No implementation T-task audit is imposed on DOCS tasks. PLAN and layout remain separate with strategy-scoped versus combined QC; final package review has its own output and coordinator persistence owner.
+Read all selected owner entries, human-document review, document-QC gates, shared QC policy and reporting procedures. First-approval semantics are consistent across the main procedure, templates and composer: proposals leave DOCS tasks unchecked; first approval/explicit preapproval enables the approved-state/checked-task commit; publication precedes issue closure; later revisions retain the historical completion while current readiness is assessed separately. These first-approval procedures explicitly exclude the implementation T-task audit; the generic coordinator/Git callers are assessed separately in U-004. PLAN and layout remain separate with strategy-scoped versus combined QC; final package review has its own output and coordinator persistence owner.
 
 ### R-001 — Remaining checkpoint reminders omit the preapproval exception
 
@@ -62,3 +62,27 @@ Read all nine selected tracking/backend artifacts and the consequential credenti
 The AGENTS template's GitHub default is a **project instruction**, not a new plugin-wide default. Existing user choices remain controlling. Before AGENTS exists, canonical selection still uses the request/current project context; do not interpret the README note as authority to bypass that selection or retrospectively claim pre-write projection. This timing distinction is recorded as a review consideration, not a proposal to restore the rejected global default.
 
 No further finding allocated for native milestones, nine-issue cardinality, marker uniqueness, phase isolation, completion ordering or idempotent replay. Those claims remain source-assessed; actual GitHub/consumer effects are unrun.
+
+## U-004 — Git integration and continuity
+
+Read the coordinator entry, branch-management, Git protocol, coordination, workflow catalog/examples and shared identity convention. Added the implementation task-contract/audit/recovery interface to verify the generic caller's effect. Explicit merge/publication, actual default-branch selection, already-integrated containment, pending merge/push recovery and the distinction between original initialization evidence and current presence are preserved. No additional Git automation or history rewriting is needed.
+
+### R-003 — Generic task gates still route DOCS work to implementation audits
+
+- **Type/priority/status:** Instruction-consistency issue; Medium; Open. High confidence in the text; no observed consumer failure.
+- **Locations:** `skills/sdd-manage/SKILL.md`, “Shared gates / Task closure”; `references/git-workflows.md`, “Work and prepare the boundary”; compared with `references/main-preparation.md`, “Document tasks through first approval”, and the linked `sdd-implement/references/completion-and-checkpoints.md` task contract/audit.
+- **Observation:** The coordinator orders implementation-owned closure/audit for “task-list work”; the Git gate requires that audit whenever executable tasks govern integration. DOCS_TASKS is now a real task list. The specific main-preparation procedure explicitly forbids routing DOCS tasks through the T-task audit, but neither generic caller identifies that separate owner. The implementation audit targets TASKS/FEATURE-TASKS and its own partial-checkpoint/composition rules; it does not implement the DOCS first-approval protocol.
+- **Source contrast:** A document proposal is published before human review; approval later produces the required checked DOCS task and decision evidence while retaining unchanged accepted document bytes. The DOCS owner permits this. Applying the generic implementation audit can demand implementation ownership or misclassify the earlier proposal as result-first persistence requiring a historical exception. The specific exception can resolve the conflict, but the caller currently leaves that reconciliation to the agent.
+- **Bounded proposal/owner:** Qualify the coordinator and Git callers by owning list/workflow. Route DOCS first approvals and package QC to main-preparation; keep implementation audit enforcement for its actual owning TASKS/FEATURE-TASKS. Do not remove either persistence contract or add fabricated T IDs to documentation.
+- **Objective recheck:** Trace fresh and resumed DOCS completion, unchanged approved proposals, DOCS-009 integration and ordinary implementation task integration through the same coordinator/Git gates. Each reaches its correct owner; implementation composition violations remain blocked.
+
+### R-004 — Delivery handoff retains the old preparation-only stop
+
+- **Type/priority/status:** Workflow-boundary inconsistency; Medium; Open. High source confidence; live effect untested.
+- **Locations:** `skills/sdd-manage/references/workflows.md`, “Delivery strategy handoff”, first paragraph; contrast the same module's “Prepare initial development” row, `branch-management.md`, “Preparation integration gate”, step 2, and main-preparation's completion sequence.
+- **Observation:** The delivery handoff still says unconditionally, “Preparation-only stops on design-docs.” Completed main preparation now includes DOCS-009, published explicit docs integration and docs-main closure before its final preimplementation checkpoint, even without implementation authority. Other preparation-only paths and explicitly earlier/unmerged stops retain their existing boundaries. The handoff omits this main-specific distinction.
+- **Source contrast:** Human requests complete main documentation preparation without implementation. Following the new main operation completes published integration and milestone closure; following the later delivery-handoff instruction can leave both unfinished on design-docs.
+- **Bounded proposal/owner:** Align this coordinator handoff with the established main exception and other preparation-only boundaries; link the canonical completion procedure rather than reproduce its steps. Preserve explicit earlier/no-merge/local-only instructions and the separate implementation grant.
+- **Objective recheck:** Compare completed main preparation-only, an early document stop, feature preparation-only, an explicit unmerged stop and preparation plus an authorized implementation range. All loaded summaries agree on the actual integration and human stop.
+
+Generic implementation, feature and campaign examples remain valid within their stated scope. The updated dedicated main-preparation examples correctly include first approvals, mixed-state stopping, package QC and integration. No repair has been made under review authority.

@@ -2,7 +2,7 @@
 
 - Reviewed baseline: `1b74644cb0b97e074cc407086be13b5597620b80`.
 - Method: campaign-067 affected paths discovered by Git path diff from `80e175a`, without reading closed campaign contents; current source and necessary adjacent owners selected below.
-- Coverage: 44 changed artifacts plus 11 adjacent inputs; 55 selected files.
+- Coverage: 44 changed artifacts plus 12 adjacent inputs; 56 selected files.
 - Depth: full text for selected Markdown/JSON; changed function and consequential caller/fixture inspection for executable helpers. Formal schema/publisher tests assess manifest conformance.
 - Inventory is a review scope, not a claim that any unit has already passed.
 
@@ -35,13 +35,13 @@
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/tracking-decision.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/phase-activation.md` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/backend-object-lifecycle.md` | Changed | Reviewed: full selected text / consequential interfaces |
-| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md` | Changed | Pending |
-| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/branch-management.md` | Changed | Pending |
-| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md` | Adjacent owner/tooling | Pending |
-| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md` | Changed | Pending |
-| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/workflows.md` | Changed | Pending |
-| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/examples.md` | Changed | Pending |
-| U-004 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/workflow-identity.md` | Changed | Pending |
+| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/branch-management.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
+| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/workflows.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/examples.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-004 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/workflow-identity.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-005 | `.agents/plugins/sdd-manager/PLUGIN.md` | Changed | Pending |
 | U-005 | `.agents/plugins/sdd-manager/README.md` | Changed | Pending |
 | U-005 | `docs/dev/CAPABILITY-MAP.md` | Changed | Pending |
@@ -61,9 +61,10 @@
 | U-006 | `acceptance/textstats/cases/assessor/A-001.md` | Changed | Pending |
 | U-006 | `acceptance/textstats/cases/assessor/CHECKPOINTS.md` | Changed | Pending |
 | U-006 | `acceptance/textstats/cases/assessor/MAIN-PREPARATION.md` | Changed | Pending |
-
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/credentials.md` | Adjacent pre-write authentication interface | Reviewed: full text |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/hosting-tokens.md` | Adjacent pre-write authentication interface | Reviewed: full text |
+
+| U-004 | `.agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md` | Adjacent implementation audit target | Reviewed: task contract, bounded audit and recovery interface |
 
 ## Exclusions
 
