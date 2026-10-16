@@ -8,6 +8,14 @@ Assume the shell is authenticated and attempt the authorized push to its establi
 
 On a 403 or another explicit missing/invalid-credential failure, receive sanitized provider/repository, destination or endpoint, attempted operation, client/transport, and indicated cause. Classify rate limits, policy restrictions, and transport failures before choosing a remedy. Credential recovery must not bypass implementation's outstanding-push prerequisite or change its destination.
 
+## Authentication before main preparation writes
+
+While enabled [main-preparation projection](main-preparation.md#establish-preparation-before-repository-writes) remains unverified, defer the storage procedure below. Use existing authenticated access first. Reuse a repository token only if read-only checks already establish its required exclusion, untracked status and protection; do not modify ignore rules to make it reusable before projection.
+
+For an actual authentication failure, use a suitable supplied token or request one with the active backend's permission profile. Consume it through a supported protected transient client channel, with any helper outside the target repository. Keep values out of helper source, arguments, URLs, logs and evidence. Do not write a token, ignore rule or repository authentication configuration before the projection gate clears. An unavailable protected transfer mechanism is a concrete blocker, not permission to write early or claim access.
+
+After complete docs projection/readback and documentation branch setup, resume **Find, request, and save** using the accepted credential without requesting it again. Complete required exclusion/storage and persist owned ignore changes through ordinary scoped Git publication before dependent preparation continues. A temporary authenticated session does not establish durable storage. After interruption, reconcile actual projection and pending storage before replay; preserve the token convention and report unavailable continuity accurately.
+
 ## Find, request, and save
 
 1. Resolve the eligible repository root and active backend. Prefer its conventional file beside the root `.gitignore`: `gh.tkn` for GitHub. Check other suitable `*.tkn` candidates only within this repository, excluding nested Git worktrees and unrelated repositories. Resolve ambiguous suitability rather than guessing; file presence does not prove identity or access.
