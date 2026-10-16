@@ -13,11 +13,11 @@
 
 | Action | Findings | Current result |
 | --- | --- | --- |
-| V-001 | R-003 | Revised; source rechecks pass; combined verification pending |
-| V-002 | R-004 | Revised; source rechecks pass; combined verification pending |
-| V-003 | R-002 | Revised; source rechecks pass; combined verification pending |
-| V-004 | R-001 | Revised; source rechecks pass; combined verification pending |
-| V-005 | R-001–R-004 | Pending |
+| V-001 | R-003 | Complete; source rechecks and combined local verification pass |
+| V-002 | R-004 | Complete; source rechecks and combined local verification pass |
+| V-003 | R-002 | Complete; source rechecks and combined local verification pass |
+| V-004 | R-001 | Complete; source rechecks and combined local verification pass |
+| V-005 | R-001–R-004 | Complete; execution stops open and unmerged |
 
 ## V-001 — Documentation and implementation persistence
 
@@ -89,3 +89,62 @@ Source walkthroughs followed bootstrap → focused document-owner prerequisites 
 Cross-read canonical preapproval rules preserve QC, substantive reporting, Git publication, requested tracking and authorized implementation ranges in every case. These are source walkthroughs, not live HIL observations. Diff and Markdown/local-link checks precede the action commit.
 
 Prior action publication verified by remote readback: V-003 `d3fe855d060b1b58f1ff6f90f25c034bd05c4d5c`. V-004 publication follows this checkpoint before combined verification.
+
+## V-005 — Combined verification and retained boundary
+
+Tested source: `0bb6cd35e184a2c8b6b5f35e74cbd282bfd3c6f6` (published V-004). Python 3.12.14, Git 2.51.1, declared publisher dependency jsonschema 4.26.0. Later edits in this checkpoint update campaign records/index only; runtime/package bytes are the tested source. No merged-state checks were run because the human expressly excluded closure/integration.
+
+### Combined source scenarios
+
+| Selected context | Inspected sequence and reached instruction boundary |
+| --- | --- |
+| Fresh main preparation; tracking requested; supplied token needed; remaining document checkpoints explicitly preapproved | Coordinator/PLUGIN select main-preparation. Protected transient API consumption → full native docs projection/readback → docs branch and durable exclusion/storage → DOCS-001 → each root’s QC/result/first-approval persistence. Preapproval removes only covered human pauses; implementation audit is not selected for DOCS. |
+| Resumed main preparation; unchanged SPEC proposal published; human acceptance still pending | Preserve exact proposal/state and pending review. Approval then records decision/checked DOCS-005 while retaining its blob; publish/read back before issue closure and PLAN. No T-audit exception or repeated completed-document generation is introduced. |
+| Partial original initialization or conditional/revoked preapproval | Retain original presence/decision evidence. Finish authorized pending persistence/closure and preserve the actual continuation stop; present file presence and broad Git/continue authority cannot erase it. |
+| Whole package ready; main preparation only; tracking enabled or disabled | DOCS-009 report/checked task publish before enabled final issue closure; explicit verified/published docs integration precedes enabled native milestone closure and final preimplementation checkpoint. Tracking disabled omits provider effects, not local gates. No range means no implementation; explicit earlier/unmerged/local-only limits control instead. |
+| Feature preparation-only or ordinary TASKS/FEATURE-TASKS implementation | Feature preparation retains its design-docs stop. Product implementation still selects the unchanged one-task commit/audit/recovery contract; valid commits proceed only within range and invalid split/bundled/history composition remains blocked. |
+
+These are source-level rechecks against actual callers and canonical procedures. They establish resolution of the four recorded instruction inconsistencies, not observed agent/HIL/GitHub behavior. No new fixed-string prose tests or consumer trials were added.
+
+### Executed local checks
+
+| Check / command | Observed result | Evidence limit |
+| --- | --- | --- |
+| `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` | 137 passed in 36.056 s | Support/harness fixtures, not live acceptance |
+| `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/067-validator-deps python -m unittest discover -s .github/tests -v` | 34 passed in 1.891 s | Local publisher/provider fixtures, no release writes |
+| `python acceptance/textstats/cases/assessor/catalog_tools.py validate` | All 33 catalog cases validate | Static asset/graph/contract check |
+| Native local publisher build and pinned offline schema | Exact 137 package files and checksum pass; required assets only under assets/; source-only files excluded | No tag, release or installation |
+| Native archive versus committed/dirty TextStats snapshot | Identical package-relative file inventory and bytes; clean snapshot parity | Current tested source; fixture suite separately covers dirty sensitivity |
+| Reference inventory | 15 skills; all 77 reference files named in their entries | Reachability, not live routing behavior |
+| Current Markdown link/anchor/format scan and diff checks | 210 documents, 1,062 local links after final record updates; zero errors | Frozen campaigns/AI logs excluded; no external URL checks |
+| Agent Package Author `validate_plugin.py` | Exit 0; zero errors; 46 cross-skill warnings | Bundled references depend on client loading; no client pass claimed |
+| Whole campaign path/object checks | Exactly nine planned source/instruction files plus campaign 068/index; protected paths and closed records unchanged | Git diff/object evidence; closed contents not reloaded |
+
+Actual local package SHA-256: `7fa06e5a6f04f9fbc8c072e8af10c314e72d8fdcc1dd4710f7a0ae9ad577dfb4`. The archive’s source comment is the exact tested commit above; the unchanged manifest version is v0.15.0. Temporary check scripts, logs, ZIP and checksum remain outside the repository; the durable result/provenance is recorded here. No release/tag was created.
+
+Protected unchanged scope includes all root/template AGENTS files, discovery protocols, all assets, root/full README, manifest/version, publisher code/schema/dependency/tests, acceptance code/guides/tests and the plugin development contract. The AGENTS-level tracking default/shared paragraphs and user overrides are preserved. No plugin-wide default, new task hierarchy or workflow redesign was introduced.
+
+### Finding disposition
+
+| Finding | Action | Current disposition |
+| --- | --- | --- |
+| R-001 | V-004 | Resolved in source; covered/uncovered/conditional/revoked checkpoint rechecks pass |
+| R-002 | V-003 | Resolved in source; pre-write protected consumption and post-gate storage sequencing rechecks pass |
+| R-003 | V-001 | Resolved in source; DOCS and product implementation reach their own persistence owners |
+| R-004 | V-002 | Resolved in source; main/other preparation-only and explicit-limit boundaries agree |
+| R-005 | None | Not confirmed; no remediation performed |
+
+Live consumer, controlled-provider behavior of these instructions, live GitHub and installed-client outcomes remain unrun. Local verification does not close those evidence gaps.
+
+### Publication and stop
+
+Each prior action was pushed and its exact remote branch tip read back before the next action:
+
+| Action | Published checkpoint |
+| --- | --- |
+| V-001 | `9c76fbad334f81b1f2a9c0d965bd369ff1bd84ad` |
+| V-002 | `ea44cc833189a6149daf79153f9a9705860a0136` |
+| V-003 | `d3fe855d060b1b58f1ff6f90f25c034bd05c4d5c` |
+| V-004 | `0bb6cd35e184a2c8b6b5f35e74cbd282bfd3c6f6` |
+
+V-005 contains the final records and finding dispositions; its ordinary push/readback follows this commit. No merge or campaign closure is performed. Execution is complete; campaign 068 remains open on its published revision branch for human review. No other workflow resumes.

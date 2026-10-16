@@ -7,7 +7,7 @@
 - Planning source: `f208280946548d0b60b047ec335865dd088bbb86`; runtime source remains identical to the reviewed baseline.
 - Working branch: `revision/068_1b74644-docs-workflow-review`; eventual integration target: `main`.
 - Canonical findings: [review report](REVIEW-REPORT.md). Coverage: [inventory](SOURCE-INVENTORY.md).
-- State: Execution authorized by “Run, do not close”, starting from published plan commit `25df9832b8859a1117a45a31d195b754f988dfc2`. Keep the campaign open and unmerged.
+- State: V-001–V-005 complete under “Run, do not close”, starting from published plan commit `25df9832b8859a1117a45a31d195b754f988dfc2`. Campaign remains open and unmerged.
 - Execution evidence: [revision report](REVISION-REPORT.md).
 
 | Finding | Execution disposition | Intended outcome |

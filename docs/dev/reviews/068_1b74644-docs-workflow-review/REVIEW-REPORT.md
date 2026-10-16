@@ -5,7 +5,7 @@
 - Campaign: `068_1b74644`.
 - Starting/reviewed source: `1b74644cb0b97e074cc407086be13b5597620b80`.
 - [Review plan](REVIEW-PLAN.md); [source inventory](SOURCE-INVENTORY.md).
-- State: Review complete; [revision execution](REVISION-REPORT.md) authorized under the [plan](REVISION-PLAN.md). Campaign remains open; integration/closure excluded.
+- State: Review and [planned revision execution](REVISION-REPORT.md) complete. R-001–R-004 resolved in source with local checks; campaign remains open and unmerged.
 - Evidence boundary: current source inspection and local structural/support/publisher execution; no live acceptance, source repairs or workflow deployment.
 
 ## Coverage
@@ -21,7 +21,7 @@
 
 ## Findings
 
-Four open findings, all Medium priority, concern conflicting or incomplete instruction handoffs. No High/Critical defect was established. The findings are source-based and do not claim observed consumer failures.
+The review identified four Medium instruction-handoff findings. All four are now resolved in source under the [revision plan](REVISION-PLAN.md), with the scenario rechecks and local verification recorded in the [revision report](REVISION-REPORT.md). No High/Critical defect was established; live behavior remains unrun.
 
 | ID | Concern | Correction owner |
 | --- | --- | --- |
@@ -46,7 +46,7 @@ Read all selected owner entries, human-document review, document-QC gates, share
 
 ### R-001 — Remaining checkpoint reminders omit the preapproval exception
 
-- **Type/priority/status:** Instruction-consistency issue; Medium; Revised, source recheck passed; combined verification pending. Confidence high from the located text; actual model behavior is untested.
+- **Type/priority/status:** Instruction-consistency issue; Medium; Resolved in source; planned source recheck and combined local checks passed. Live behavior unrun. Confidence high from the located text; actual model behavior is untested.
 - **Locations:** `skills/sdd-manage/references/document-qc-gates.md`, “Human acceptance alongside QC”; `repository-bootstrap.md`, “Human review at startup”. Canonical `human-document-review.md`, “Future-checkpoint preapproval”, and direct document-owner entries explicitly support covered checkpoints without another pause.
 - **Observation:** The former reminder still says each necessary new proposal pauses; the bootstrap reminder still says to pause at every created root. The linked canonical policy provides the exception, but these locally unconditional imperatives require the reader to reconcile it rather than state the applicable condition. A model following the last-loaded reminder can solicit approval despite explicit scoped preapproval.
 - **Source contrast:** Human explicitly preapproves remaining PLAN/layout checkpoints; owner loads shared QC at the strategy/layout handoff. Canonical policy permits progression after QC/reporting, while the local reminder independently orders a pause. This is a source ambiguity, not an observed failed consumer run.
@@ -61,7 +61,7 @@ Read all nine selected tracking/backend artifacts and the consequential credenti
 
 ### R-002 — Define credential recovery before the hosted pre-write gate
 
-- **Type/priority/status:** Procedure-interface gap; Medium; Revised, source recheck passed; combined verification pending. Confidence high in the conflicting sequence; an actual failed consumer run is not claimed.
+- **Type/priority/status:** Procedure-interface gap; Medium; Resolved in source; planned source recheck and combined local checks passed. Live behavior unrun. Confidence high in the conflicting sequence; an actual failed consumer run is not claimed.
 - **Locations:** `skills/sdd-manage/references/main-preparation.md`, “Establish preparation before repository writes”, step 3; `credentials.md`, “Find, request, and save”, steps 2–4; `skills/sdd-conventions/references/hosting-tokens.md`, “Exclusion/Persistence”.
 - **Observation:** Enabled docs projection must finish before any repository modification, explicitly including credential/ignore-file writes. The general recovery path first requires creating/updating root .gitignore and saving/reusing the conventional local token. Main preparation permits an external temporary helper but does not explicitly join that exception to the numbered save/recovery protocol or say when required durable persistence resumes. Direct forge use separately permits transient protected consumption, so this is a missing coordinated path, not proof authentication is technically impossible.
 - **Source contrast:** Fresh repository, enabled docs tracking, unavailable API authentication and a newly supplied suitable token; no root ignore/token file exists. Following the recovery sequence writes before projection; obeying only the pre-write gate can appear to block the very authentication needed for projection.
@@ -78,7 +78,7 @@ Read the coordinator entry, branch-management, Git protocol, coordination, workf
 
 ### R-003 — Generic task gates still route DOCS work to implementation audits
 
-- **Type/priority/status:** Instruction-consistency issue; Medium; Revised, source recheck passed; combined verification pending. High confidence in the text; no observed consumer failure.
+- **Type/priority/status:** Instruction-consistency issue; Medium; Resolved in source; planned source recheck and combined local checks passed. Live behavior unrun. High confidence in the text; no observed consumer failure.
 - **Locations:** `skills/sdd-manage/SKILL.md`, “Shared gates / Task closure”; `references/git-workflows.md`, “Work and prepare the boundary”; also projected in `PLUGIN.md`, “Branches, integration and continuity”, and the capability map’s generic task-contract paragraph; compared with `references/main-preparation.md`, “Document tasks through first approval”, and the linked `sdd-implement/references/completion-and-checkpoints.md` task contract/audit.
 - **Observation:** The coordinator orders implementation-owned closure/audit for “task-list work”; the Git gate requires that audit whenever executable tasks govern integration. DOCS_TASKS is now a real task list. The specific main-preparation procedure explicitly forbids routing DOCS tasks through the T-task audit, but neither generic caller identifies that separate owner. The implementation audit targets TASKS/FEATURE-TASKS and its own partial-checkpoint/composition rules; it does not implement the DOCS first-approval protocol.
 - **Source contrast:** A document proposal is published before human review; approval later produces the required checked DOCS task and decision evidence while retaining unchanged accepted document bytes. The DOCS owner permits this. Applying the generic implementation audit can demand implementation ownership or misclassify the earlier proposal as result-first persistence requiring a historical exception. The specific exception can resolve the conflict, but the caller currently leaves that reconciliation to the agent.
@@ -87,7 +87,7 @@ Read the coordinator entry, branch-management, Git protocol, coordination, workf
 
 ### R-004 — Delivery handoff retains the old preparation-only stop
 
-- **Type/priority/status:** Workflow-boundary inconsistency; Medium; Revised, source recheck passed; combined verification pending. High source confidence; live effect untested.
+- **Type/priority/status:** Workflow-boundary inconsistency; Medium; Resolved in source; planned source recheck and combined local checks passed. Live behavior unrun. High source confidence; live effect untested.
 - **Locations:** `skills/sdd-manage/references/workflows.md`, “Delivery strategy handoff”, first paragraph; contrast the same module's “Prepare initial development” row, `branch-management.md`, “Preparation integration gate”, step 2, and main-preparation's completion sequence.
 - **Observation:** The delivery handoff still says unconditionally, “Preparation-only stops on design-docs.” Completed main preparation now includes DOCS-009, published explicit docs integration and docs-main closure before its final preimplementation checkpoint, even without implementation authority. Other preparation-only paths and explicitly earlier/unmerged stops retain their existing boundaries. The handoff omits this main-specific distinction.
 - **Source contrast:** Human requests complete main documentation preparation without implementation. Following the new main operation completes published integration and milestone closure; following the later delivery-handoff instruction can leave both unfinished on design-docs.
@@ -138,10 +138,10 @@ The actual locally built archive source is the review checkpoint above, whose ru
 
 No finding allocated for missing required package assets, exact-byte retention, missing-asset rejection, source-only exclusions, pinned schema conformance or broken local links. Defined main-preparation scenarios are substantial coverage extension, but their consumer/provider outcomes remain unrun. Passing tooling does not disprove R-001–R-004 instruction issues. R-005 is not an open defect. Live acceptance is outside this campaign.
 
-## Review conclusion and revision handoff
+## Review conclusion and current disposition
 
-All six units are complete: 57 selected artifacts (44 changed and 13 necessary adjacent inputs), with the inventory’s stated depth and no pending review rows. Main-preparation, hosted docs projection, first-approval tasks and acceptance scenarios are implemented and discoverable. Remaining work is targeted instruction alignment, not another workflow redesign.
+All six units are complete: 57 selected artifacts (44 changed and 13 necessary adjacent inputs), with the inventory’s stated depth and no pending review rows. Main-preparation, hosted docs projection, first-approval tasks and acceptance scenarios are implemented and discoverable. At the reviewed baseline, the required revision was targeted instruction alignment, not another workflow redesign. That revision is now complete in source; see the revision report for the tested candidate and limits.
 
-For an accepted revision, prioritize R-003 and R-004 at the common integration handoff, then R-002’s first-use credential sequence and R-001’s checkpoint reminders. The four can be corrected independently, but recheck them together through fresh/resumed main preparation, an already-published unchanged proposal, explicit scoped preapproval, preparation-only completion and a normal implementation task boundary. Preserve the intended AGENTS-level tracking default, user overrides, shared tracking/recovery paragraphs, strict pre-write/readback ordering and separate documentation/implementation ownership. No finding authorizes expanding the default into PLUGIN or generic workflow policy.
+The accepted revision addressed R-003 and R-004 at the common integration handoff, then R-002’s first-use credential sequence and R-001’s checkpoint reminders. The four can be corrected independently, but recheck them together through fresh/resumed main preparation, an already-published unchanged proposal, explicit scoped preapproval, preparation-only completion and a normal implementation task boundary. Preserve the intended AGENTS-level tracking default, user overrides, shared tracking/recovery paragraphs, strict pre-write/readback ordering and separate documentation/implementation ownership. No finding authorizes expanding the default into PLUGIN or generic workflow policy.
 
-Do not treat this source review as live acceptance or automatic permission for repairs. Consumer/provider/client trials, the 16 presence variants and interruption sequences remain unrun. No release, tag, hosted tracking mutation or runtime source edit was performed. Campaign 067 is closed at published main merge `1b74644cb0b97e074cc407086be13b5597620b80`; campaign 068 stops at its published review records and remains open for the human’s next decision.
+Do not treat this source review as live acceptance or automatic permission for repairs. Consumer/provider/client trials, the 16 presence variants and interruption sequences remain unrun. The review itself performed no release, tag, hosted tracking mutation or runtime source edit; subsequent authorized source changes and checks are recorded in the revision report. Campaign 067 is closed at published main merge `1b74644cb0b97e074cc407086be13b5597620b80`; campaign 068 now stops after published revision execution, open and unmerged at the human’s explicit boundary.
