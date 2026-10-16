@@ -13,7 +13,7 @@
 | --- | --- | --- |
 | U-001 | Reviewed | None |
 | U-002 | Reviewed | R-001 |
-| U-003 | Pending | None allocated |
+| U-003 | Reviewed | R-002 |
 | U-004 | Pending | None allocated |
 | U-005 | Pending | None allocated |
 | U-006 | Pending | None allocated |
@@ -50,3 +50,20 @@ No new finding for the recently revised DOCS audit, preparation-only stop, pre-w
 - **Objective recheck:** Trace preparation QC with authorized routine corrections, a genuinely new requirement decision, implementation acceptance recovery, sdd-docs proposing an upstream amendment and standalone verification. Each returns to the correct owner/decision without invented implementation or waived approval.
 
 No source repair performed. Local link/format checks remain separate from these source scenarios; hosted and HIL outcomes are unrun.
+
+## U-003 — Governing documents, decomposition and task derivation
+
+Assessed the four owner entries, thirteen document-specific references and four shared structural/QC conventions. Read operative generation/review/handoff sections; checked responsibility routing and entry/reference agreement. PROJECT is a concise brief rather than a SPEC or plan; design separates architecture/component ownership; SPEC owns behavioral guarantees; PLAN owns delivery strategy; layout owns paths; TASKS derives executable work. Optional feature deltas and focused children retain bounded canonical ownership.
+
+No finding for count heuristics, document split thresholds, or mandatory review-unit identity. Shared QC explicitly distinguishes numerical diagnostics from defects, excludes review-only units from delivery counts without excluding them from execution, prohibits padding, and preserves semantic scope. Task-list generation, conformance review and progress review remain separate; stable IDs, one executable owner, parentage and report/exit evidence are explicit. Earlier useful behavior and meaningful MVP growth are preserved without requiring every task to deliver a standalone feature.
+
+### R-002 — Detailed PROJECT and PLAN procedures still mandate an uncovered pause
+
+- **Type / priority / status:** Instruction-consistency issue; Medium; Open. High source confidence; model effect untested.
+- **Baseline locations:** `skills/sdd-design/references/project-brief.md`, Create or revise, step 6; `skills/sdd-plan/references/review.md`, Separate PLAN and layout checkpoints. Compare the two skill entries and `sdd-manage/references/human-document-review.md`, Future-checkpoint preapproval.
+- **Observation:** Both entries explicitly honor applicable future preapproval, but the detailed brief procedure says to present then pause at a new PROJECT, and PLAN review says present/pause and await human PLAN acceptance before layout. Neither local imperative states the preapproval alternative. The linked canonical policy can resolve it; the latest loaded detailed procedure still presents an unconditional stop.
+- **Source reproduction / consequence:** Human preapproves PROJECT through layout and stops before implementation. After selecting the relevant reference, an agent follows its explicit pause/acceptance wording and asks again rather than performing the covered checkpoint’s analysis/QC/publication. This is source ambiguity, not a claim of an observed failed trial; ordinary uncovered checkpoints must still pause.
+- **Bounded proposal / owner:** Align these two detailed owner reminders with the existing scoped preapproval policy, including separate PLAN/layout clearance. Preserve technical checks, substantive presentation, publication and real conditions/revocation; do not broaden blanket authority or rewrite already-correct entries.
+- **Objective recheck:** Trace ordinary acceptance, covered PROJECT, covered PLAN/layout, unrelated or conditional coverage and revoked preapproval through entry → reference → shared human/QC policy. Each checkpoint has one consistent pause decision while all dependent technical/publication gates remain.
+
+No repairs made. The findings concern explicit local imperatives, not every mention of a human checkpoint or a demand to repeat the full policy at every link.
