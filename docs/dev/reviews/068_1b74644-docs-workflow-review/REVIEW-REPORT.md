@@ -61,7 +61,7 @@ Read all nine selected tracking/backend artifacts and the consequential credenti
 
 ### R-002 — Define credential recovery before the hosted pre-write gate
 
-- **Type/priority/status:** Procedure-interface gap; Medium; Open. Confidence high in the conflicting sequence; an actual failed consumer run is not claimed.
+- **Type/priority/status:** Procedure-interface gap; Medium; Revised, source recheck passed; combined verification pending. Confidence high in the conflicting sequence; an actual failed consumer run is not claimed.
 - **Locations:** `skills/sdd-manage/references/main-preparation.md`, “Establish preparation before repository writes”, step 3; `credentials.md`, “Find, request, and save”, steps 2–4; `skills/sdd-conventions/references/hosting-tokens.md`, “Exclusion/Persistence”.
 - **Observation:** Enabled docs projection must finish before any repository modification, explicitly including credential/ignore-file writes. The general recovery path first requires creating/updating root .gitignore and saving/reusing the conventional local token. Main preparation permits an external temporary helper but does not explicitly join that exception to the numbered save/recovery protocol or say when required durable persistence resumes. Direct forge use separately permits transient protected consumption, so this is a missing coordinated path, not proof authentication is technically impossible.
 - **Source contrast:** Fresh repository, enabled docs tracking, unavailable API authentication and a newly supplied suitable token; no root ignore/token file exists. Following the recovery sequence writes before projection; obeying only the pre-write gate can appear to block the very authentication needed for projection.

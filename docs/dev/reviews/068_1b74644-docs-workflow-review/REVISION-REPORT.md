@@ -15,7 +15,7 @@
 | --- | --- | --- |
 | V-001 | R-003 | Revised; source rechecks pass; combined verification pending |
 | V-002 | R-004 | Revised; source rechecks pass; combined verification pending |
-| V-003 | R-002 | Pending |
+| V-003 | R-002 | Revised; source rechecks pass; combined verification pending |
 | V-004 | R-001 | Pending |
 | V-005 | R-001–R-004 | Pending |
 
@@ -53,3 +53,21 @@ Source rechecks compared that paragraph with the Prepare initial development ope
 All five source traces agree across the loaded summaries. These are instruction walkthroughs, not consumer runs. Diff and Markdown/link checks precede the action commit.
 
 Prior action publication verified by remote readback: V-001 `9c76fbad334f81b1f2a9c0d965bd369ff1bd84ad`. V-002 publication follows this checkpoint before V-003.
+
+## V-003 — Credential recovery before the projection gate
+
+Added a narrowly scoped pre-write authentication section to credentials.md and linked it from main-preparation’s existing pre-write step. Existing safe access/token consumption is read-only; otherwise actual credential recovery uses a supported protected transient channel outside the target repository. Ignore/token/configuration writes wait for complete hosted projection/readback and docs branch setup, then the ordinary conventional storage/exclusion/publication protocol resumes with the accepted token. Unsupported protection remains a blocker. Shared token policy, provider permission profiles and tracking selection are unchanged.
+
+Source walkthroughs inspected the two edited procedures against the unchanged token exclusion/persistence invariants and GitHub backend’s protected API-consumption boundary:
+
+| Input / observed context | Instruction sequence and result |
+| --- | --- |
+| Authenticated API already available | Use it for full docs projection/readback; no token hunt or repository credential write precedes the gate. Ordinary branch/task initialization follows. |
+| Suitable repository token already safely ignored/untracked/protected | Read-only checks permit reuse through the protected client; no ignore repair is allowed before projection. No second token is requested merely to satisfy storage. |
+| Authentication failure; suitable supplied token; no ignore file | Use transient protected consumption outside target; verify all native milestone/issues/associations; establish docs branch; then ensure effective exclusion, save protected conventional token and persist owned ignore changes before dependent preparation. |
+| Client lacks a supported protected token mechanism | Report the concrete access/transfer blocker. Projection remains unverified and target writes stay blocked; no cleartext helper source, argument or early token/ignore write substitutes for the missing facility. |
+| Interruption after projection but before storage | Reconcile actual projection, branch and pending storage; reuse accepted input when available, finish exclusion/storage/publication and report any lost continuity. Do not replay hosted creation or claim a transient session was saved. |
+
+These are source traces only; no token, external provider object or target repository was created for them. Diff and Markdown/local-link checks precede the action commit.
+
+Prior action publication verified by remote readback: V-002 `ea44cc833189a6149daf79153f9a9705860a0136`. V-003 publication follows this checkpoint before V-004.
