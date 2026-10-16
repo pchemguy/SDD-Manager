@@ -5,7 +5,7 @@
 - Campaign: `068_1b74644`.
 - Starting/reviewed source: `1b74644cb0b97e074cc407086be13b5597620b80`.
 - [Review plan](REVIEW-PLAN.md); [source inventory](SOURCE-INVENTORY.md).
-- State: Review and [planned revision execution](REVISION-REPORT.md) complete. R-001–R-004 resolved in source with local checks; campaign remains open and unmerged.
+- State: Review and [planned revision execution](REVISION-REPORT.md) complete. R-001–R-004 resolved in source with local checks; subsequent closure authorized, effective after verified main integration/publication.
 - Evidence boundary: current source inspection and local structural/support/publisher execution; no live acceptance, source repairs or workflow deployment.
 
 ## Coverage

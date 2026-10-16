@@ -7,7 +7,7 @@
 - Planning source: `f208280946548d0b60b047ec335865dd088bbb86`; runtime source remains identical to the reviewed baseline.
 - Working branch: `revision/068_1b74644-docs-workflow-review`; eventual integration target: `main`.
 - Canonical findings: [review report](REVIEW-REPORT.md). Coverage: [inventory](SOURCE-INVENTORY.md).
-- State: V-001–V-005 complete under “Run, do not close”, starting from published plan commit `25df9832b8859a1117a45a31d195b754f988dfc2`. Campaign remains open and unmerged.
+- State: V-001–V-005 complete from published plan commit `25df9832b8859a1117a45a31d195b754f988dfc2`. The subsequent “Close it” authorizes final verified integration/publication; closure takes effect at that boundary.
 - Execution evidence: [revision report](REVISION-REPORT.md).
 
 | Finding | Execution disposition | Intended outcome |
@@ -118,8 +118,8 @@ Record interpreter/dependency versions, exact tested commit and observed results
 
 ## Execution, publication and stopping
 
-The current stopping point is completed V-001–V-005 with published execution evidence, campaign 068 open and no merge.
+The original execution stopped after V-001–V-005 with published evidence, open and unmerged. The subsequent closure request authorizes final integration and publication.
 
 Retain this campaign identity/branch and baseline, establish the actual current source/target state, then perform V-001 through V-005. Source changes belong on this revision branch; campaign records do not need a design-docs branch or a preliminary main merge. Commit each action with its updated evidence, push and verify remote containment before further work or another commit. Preserve unrelated work and stop affected progression on unresolved publication.
 
-The current request excludes integration and closure. Leave the verified changes and retained records on the published revision branch; do not merge into main, close the campaign or resume other work.
+Finalize records, explicitly merge the complete verified campaign tip into refreshed main, verify the merged state and publish/read back the merge with campaign-summary provenance. Closure freezes the resulting records; only afterward open the separately requested broad review.

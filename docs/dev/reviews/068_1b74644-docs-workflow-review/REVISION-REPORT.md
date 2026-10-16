@@ -5,8 +5,8 @@
 - Campaign: `068_1b74644`; starting/reviewed baseline: `1b74644cb0b97e074cc407086be13b5597620b80`.
 - Execution starts at published plan commit `25df9832b8859a1117a45a31d195b754f988dfc2`.
 - [Revision plan](REVISION-PLAN.md); [canonical findings](REVIEW-REPORT.md).
-- Request: “Run, do not close.” Execute V-001–V-005, publish/read back each checkpoint, leave the campaign open and unmerged.
-- Branch: `revision/068_1b74644-docs-workflow-review`; eventual target `main` is unchanged by this execution.
+- Execution request: “Run, do not close.” V-001–V-005 completed at that open/unmerged boundary. Subsequent “Close it” authorizes final integration and closure.
+- Branch: `revision/068_1b74644-docs-workflow-review`; integration target: `main`. Closure takes effect after verified merge/publication.
 - Evidence: source scenario walkthroughs and local structural/support/package checks. Live consumer/provider/client acceptance remains out of scope.
 
 ## Progress
@@ -148,3 +148,11 @@ Each prior action was pushed and its exact remote branch tip read back before th
 | V-004 | `0bb6cd35e184a2c8b6b5f35e74cbd282bfd3c6f6` |
 
 V-005 contains the final records and finding dispositions; its ordinary push/readback follows this commit. No merge or campaign closure is performed. Execution is complete; campaign 068 remains open on its published revision branch for human review. No other workflow resumes.
+
+## Authorized closure
+
+The subsequent request to close this campaign supersedes its earlier keep-open boundary. Execution was already complete and published at `9339477f33e087b53f6c26560ed4046423aadbf6`. Refreshed target `main` remains `1b74644cb0b97e074cc407086be13b5597620b80`; no new target divergence or unrelated source is present. The complete campaign diff retains only its nine planned source/instruction paths plus campaign 068/index. Closed prior campaigns and protected project/template/tooling paths remain unchanged.
+
+Finalize these records on the revision branch, publish/read back, then explicitly merge the pinned final campaign tip into refreshed main. Verify the prospective merged state and exact committed package, inspect both parents, publish/read back main and confirm campaign-tip containment. The merge message records actual working/target tips, original campaign opening `895cd41864fa6ad8eb1601950c305c1179cef65c`, original baseline and merged verification. Closure is established by that verified published integration; these records then freeze without a later status-only edit.
+
+Four source findings are resolved with the recorded evidence limits; R-005 remains not confirmed. Live acceptance stays unrun. No release/tag or provider tracking operation is part of closure. The new broad review is a separate campaign opened only after main publication is verified.
