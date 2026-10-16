@@ -164,3 +164,7 @@ Restore PLUGIN, coordinator/backend policy, capability-map and acceptance-assess
 Reopened by explicit user direction at published correction checkpoint `e8d8124835f2ff9d115e4c466333600a80e54766`. Undo every package/source change introduced by the tracking-default amendment, including its packaged AGENTS template and README changes. Retain the proposed AGENTS text only as this campaign's draft. The accepted original V-001–V-006 implementation at `1a0bab5421409d6c11454242a5c85e803dfe5eb2` remains the package baseline.
 
 Publish the complete rollback checkpoint to main and verify exact package/source equality to that baseline outside this campaign and its navigation. Keep campaign 067 open for human review; this rollback is not approval to package drafts, revise plugin policy or close the campaign.
+
+## Final authorized closure
+
+The user subsequently restored the packaged AGENTS instructions, requested the editable-policy README note, and required both original shared tracking/recovery paragraphs to remain. These accepted changes were published as b87dab0, 5dfafa0, 9d6fdcc and 597a9a2. The user now explicitly requests campaign closure, followed by a new comprehensive review campaign. No plugin-wide default change is part of this final accepted amendment. Close at verified publication of the complete final tip into main.
