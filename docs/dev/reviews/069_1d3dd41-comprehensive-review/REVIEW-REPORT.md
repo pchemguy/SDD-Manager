@@ -152,3 +152,7 @@ No live acceptance, fresh isolated model trial, installed-client/UI discovery, n
 ## Disposition
 
 Campaign 068 was closed and its two-parent merge published at the reviewed main baseline. Campaign 069's broad review is complete; findings remain Open. Keep 069 open/unmerged for the user's review. Revision execution, source repairs and campaign closure are separate next actions and were not performed under this review request.
+
+## Accepted revision execution
+
+The user authorized preparation and execution of the [revision plan](REVISION-PLAN.md). R-001 and R-002 are Accepted; original baseline observations above remain intact. Current changes, rechecks and dispositions are recorded in the [revision report](REVISION-REPORT.md). Campaign remains open and unmerged.
