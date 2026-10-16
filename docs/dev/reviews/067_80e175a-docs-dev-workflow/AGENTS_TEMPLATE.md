@@ -30,6 +30,8 @@ Enable and maintain GitHub tracking for documentation preparation and implementa
 
 When backend tracking is enabled, establish and verify the required objects before dependent repository work. Keep each task's issue associated with its actual milestone and close it only after verified completion is committed and published.
 
+On interruption or backend failure, reconcile actual state and report pending operations. Preserve completed work without claiming unverified hosted effects or bypassing required gates.
+
 ### Documentation preparation
 
 Use `sdd-manage`’s main preparation workflow to create or reconcile the native `docs-main` milestone and all nine DOCS task issues, verifying their associations by readback **before repository modifications**. Each document issue tracks development through first approval and closes only after its approved-document/checked-task commit is published and verified. Later revisions leave it closed. After final package QC and issue closure, merge, verify and publish the docs branch; then close and verify the `docs-main` milestone.
