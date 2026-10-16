@@ -1,5 +1,7 @@
 # Task issue references and lifecycle
 
+Main documentation preparation uses [its separate lifecycle](github-docs-preparation.md), including pre-write projection without product PLAN/TASKS, first-approval issues and milestone closure after published integration. The implementation lifecycle below does not reopen completed DOCS issues for later document revisions.
+
 Apply the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md); issue completion requires the task result/status commit to be pushed with verified remote containment before closure. Milestone closure is a separate subsequent operation.
 
 ## Resolve for implementation

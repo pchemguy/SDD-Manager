@@ -1,6 +1,6 @@
 # Maintain a concise root AGENTS.md
 
-During authorized SDD adoption/bootstrap, ensure root `AGENTS.md` provides accurate agent orientation. Create it if absent; otherwise read its controlling instructions and integrate required navigation without overwriting human-authored content. Coordinate maintenance when material project structure, check/setup commands, governing sources, active execution ownership or workflow constraints change, before finalizing the affected handoff/checkpoint. Respect explicit write/path limits; report a scope conflict rather than widening them. **sdd-orient** reads and reports missing/stale guidance without mutation.
+During authorized SDD adoption/bootstrap, ensure root `AGENTS.md` provides accurate agent orientation. For main preparation, apply [DOCS-001](main-preparation.md#docs-001-initialize-root-guidance): copy the initial AGENTS template only when absent and preserve existing files unchanged at that checkpoint. Outside that initialization, create it if absent; otherwise read its controlling instructions and integrate required navigation without overwriting human-authored content. Coordinate maintenance when material project structure, check/setup commands, governing sources, active execution ownership or workflow constraints change, before finalizing the affected handoff/checkpoint. Respect explicit write/path limits; report a scope conflict rather than widening them. **sdd-orient** reads and reports missing/stale guidance without mutation.
 
 ## Plugin source and target-project entries
 

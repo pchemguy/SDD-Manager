@@ -2,6 +2,10 @@
 
 Apply these shared invariants to PLAN/TASKS generation, bounded implementation, hosted reconciliation and interruption recovery. Local governing documents and verified Git/check evidence are authoritative; backend objects are projections. Hosting is optional to select; requested/confirmed tracking must satisfy its activation and lifecycle gates before dependent execution. sdd-manage coordinates transitions; sdd-implement executes tasks and persists results; sdd-forge owns provider writes.
 
+## Main documentation preparation
+
+Fresh/resumed main preparation uses [main preparation](../../sdd-manage/references/main-preparation.md) and [its hosted lifecycle](../../sdd-forge/references/github-docs-preparation.md): verify native `docs-main` and nine DOCS issues before target-repository writes; local DOCS_TASKS owns initialization, seven first approvals and final package QC. Publish the approved-document/checked-task commit before issue closure. Later document revisions keep first-approval tasks/issues complete. After final QC issue closure, explicitly merge/verify/publish documentation, then close the milestone and confirm the preimplementation checkpoint. This is not Phase 0 and needs no product PLAN/TASKS, phase label or implementation review milestone. The phase rules below apply to implementation; preparation creates no future implementation objects.
+
 ## Phase activation
 
 Keep the complete intended hierarchy in local PLAN/TASKS. Create a phase's label, all its milestones and all its task issues only after its predecessor is complete and before its first task executes. First-phase activation has no predecessor. Completion includes the predecessor's reviews, required reports, all milestone closures when tracking is active, local exits and required target integration/publication. Starting the next phase also requires authorization within the selected range.

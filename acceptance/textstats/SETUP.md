@@ -42,9 +42,9 @@ Record interpreter, Git, available API/client versions, client loading mode and 
 
 ## Consumer repository disclosure
 
-The pinned package must contain `assets/AI_DISCLOSURE.md` and `assets/SDD-MANAGER.md`. Preparation vendors those assets; the harness must not create the target root copies or README links on the consumer's behalf. Inspect the first consumer-owned SDD commit (normally A-001 preparation): root disclosure matches the pinned asset bytes when newly added, root usage notice names/links SDD Manager and links the disclosure, and the root README links both. With existing records, verify truthful preservation/reconciliation and the reported retention reason. If the repository already has an SDD checkpoint, assess idempotent reuse or scoped backfill instead of claiming first-commit bootstrap.
+The pinned package must contain the disclosure/usage assets plus AGENTS_TEMPLATE.md, DOCS_TASKS_TEMPLATE.md and SKILL_DISCOVERY_PROTOCOL.md under assets/. Vendor the exact package; the harness must not create target root copies or DOCS_TASKS on the consumer’s behalf. For A-001 main preparation, independently inspect DOCS-001’s original four-file presence, preserved/copied bytes, task-list initialization, commit/push and enabled issue closure. Partial presence requires its report/continuation stop unless explicitly preapproved. README notice links follow with PROJECT, rather than the initialization commit.
 
-For isolated follow-up fixtures, cover read-only no-write, explicit selected-path conflict, differing existing disclosure preservation, interrupted pending copies/index, and committed-but-unpushed continuation. These are live follow-up checks, not established outcomes of this source revision.
+Use [main preparation assessment](cases/assessor/MAIN-PREPARATION.md) for fresh/resumed, 16 presence combinations, preapproval, tracking/unknown effects, first-approval atomic completion, package QC and final merge/milestone ordering. Non-main adoption retains the pinned bootstrap rules. These are defined acceptance scenarios, not outcomes of source/support checks.
 
 ## Protected authentication
 

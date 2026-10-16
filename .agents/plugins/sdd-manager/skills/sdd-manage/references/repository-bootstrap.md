@@ -1,5 +1,7 @@
 # Bootstrap SDD Manager in a target repository
 
+For fresh or resumed **main documentation preparation**, load [main preparation](main-preparation.md) before any target-repository write. Its early tracking gate, separate DOCS-001 four-file initialization, preservation/pause rules and PROJECT-stage README links take precedence over the combined-first-result procedure below. Other adoption paths retain that procedure.
+
 ## Greenfield startup
 
 Load this section at greenfield entry, before the first persistence operation. Treat a preliminary project description as a seed for exploration, not an accepted specification. Use the current **sdd-orient** handoff to establish the eligible Git repository, controlling instructions and actual state; route problem framing, alternatives and consequential choices to **sdd-design**'s [exploration](../../sdd-design/references/exploration.md). Retain established decisions and identify assumptions without imposing an unrequested product, stack or feature set.
@@ -16,7 +18,7 @@ Before the **first authorized SDD commit** in a target repository, include the d
 
 **sdd-manage** owns this shared policy and coordinates bootstrap for preparation, maintenance and feature incorporation. **sdd-implement** and **sdd-steer** apply it in their own commit procedures, including direct invocations. **sdd-report** checks bootstrap evidence when composing a commit but does not write or commit files. Load this reference at greenfield entry and before the first persistence operation in other adoption workflows; it is an ordinary agent procedure, not a hidden hook or client installer.
 
-For implementation, push eligible outstanding commits first under the existing startup protocol, then perform bootstrap before staging the first new result. Do not make a separate bootstrap commit ahead of the requested result. A preparation-only request can bootstrap with its preparation commit and still stop before implementation.
+For implementation, push eligible outstanding commits first under the existing startup protocol, then perform bootstrap before staging the first new result. Outside main documentation preparation, do not make a separate bootstrap commit ahead of the requested result. A preparation-only request can bootstrap with its preparation commit and still stop before implementation.
 
 ## Root artifacts and discoverability
 

@@ -37,7 +37,7 @@ Preserve narrow direct/standalone requests, pending decisions and unfinished wor
 
 **Push every workflow-owned commit and verify remote containment before further work or another commit.** This includes completed documents, tasks, review reports, revision actions and merges. A failed push blocks progression. A retained task completion with known failure or uncertain eligibility first follows [publication preflight](skills/sdd-implement/references/startup-and-continuation.md#push-before-task-work); only bounded authorized recovery/corrective persistence may precede its safe publication. Follow [per-commit publication](skills/sdd-manage/references/git-workflows.md#publish-each-commit); preserve explicit human-directed local-only or deferred-publication exceptions.
 
-**For each necessary new document, publish the reviewable state, present substantive results and pause for human acceptance before dependent work.** The same checkpoints apply to necessary feature documents/proposals. PLAN and layout require separate decisions; reuse sufficient existing inputs rather than creating optional documents to fill the sequence.
+**For each necessary new document, publish the reviewable state, present substantive results and pause for human acceptance before dependent work unless explicit applicable preapproval covers that checkpoint.** The same checkpoints apply to necessary feature documents/proposals. PLAN and layout require separate decisions; reuse sufficient existing inputs rather than creating optional documents to fill the sequence.
 
 | Human checkpoint | Hold before |
 | --- | --- |
@@ -54,9 +54,15 @@ Preserve narrow direct/standalone requests, pending decisions and unfinished wor
 
 **The human defines the implementation range and decides what follows it.** Commit each task’s verified result, evidence and initial completion checkbox together, then push and verify remote containment. At the end of the requested range, report the boundary results and stop. Do not add ready tasks, review tasks or another phase beyond the selected range. The human may request continuation or steering; start neither automatically. Partial main phases push and pause without merging. A complete phase or feature integrates only when its established verification and scope gates are met.
 
+**The human may preapprove future checkpoints at any point, individually or as a scoped set.** Retain that decision through interruptions; report covered results without repeated approval pauses. Preapproval preserves QC, publication/tracking gates and the authorized implementation range. See [future-checkpoint preapproval](skills/sdd-manage/references/human-document-review.md#future-checkpoint-preapproval).
+
 Clarification, agent QC, passing tests and commits/pushes do not constitute human acceptance. Broad development authority does not preaccept unseen documents or expand a selected implementation range. Preserve pending decisions after interruption. See [document review](skills/sdd-manage/references/human-document-review.md) and [implementation checkpoints](skills/sdd-implement/references/completion-and-checkpoints.md#parent-completion-and-stopping).
 
-## Requested implementation tracking
+## Requested backend tracking
+
+**For fresh/resumed main preparation, enabled tracking precedes repository modifications:** use [main preparation](skills/sdd-manage/references/main-preparation.md) for the native `docs-main` milestone and all nine template issues before writes. DOCS_TASKS tracks initialization, seven documents through first approval and final package QC. Publish each approved-document/checked-task commit before issue closure; later document revisions leave those tasks/issues complete. Final QC issue closure → verified/published docs merge → milestone closure → final preimplementation checkpoint. This is separate from implementation phase activation.
+
+### Implementation tracking
 
 **When tracking is requested, prepare and maintain hosted objects throughout task-list-based implementation.** Use `sdd-manage` to coordinate and `sdd-forge` for GitHub issues, labels and milestones, or supported provider equivalents.
 
@@ -99,9 +105,11 @@ The [canonical catalog](skills/sdd-manage/references/workflows.md) owns definiti
 
 `PROJECT.md` is the concise project brief: purpose, users, outcomes, scope/non-goals and consequential constraints, with material assumptions/questions identified. Use `sdd-design`'s [brief contract](skills/sdd-design/references/project-brief.md); PROJECT supplies context rather than architecture or exact SPEC behavior.
 
+[Main preparation](skills/sdd-manage/references/main-preparation.md) starts with DOCS-001: preserve existing root guidance/disclosure/discovery files, copy missing ones and publish initialization. Mixed initial presence requires a named retained/copied warning and a continuation pause unless explicitly preapproved; none/all present adds no pause.
+
 Main preparation routes `sdd-manage`/`sdd-orient` → `sdd-design` (PROJECT, ARCHITECTURE, DECOMPOSITION) → `sdd-specify` (SPEC) → `sdd-plan` (PLAN, layout) → `sdd-tasks` (TASKS), with `sdd-conventions` as needed. Existing work enters at the next eligible stage; requested interactive review comes first. Apply the [human checkpoints](#human-checkpoints-and-git-publication) and [document QC](skills/sdd-manage/references/document-qc-gates.md).
 
-Preparation-only stops before implementation. An authorized implementation handoff requires accepted preparation to be integrated, verified and published to the actual default branch before creating the dependent branch; see [preparation integration](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
+Completed main preparation includes DOCS-009 whole-package QC and published documentation integration, then `docs-main` milestone closure and the final implementation checkpoint. Preparation-only stops there; an authorized implementation handoff requires accepted preparation to be integrated, verified and published to the actual default branch before creating the dependent branch; see [preparation integration](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
 
 ### Task implementation and continuation
 

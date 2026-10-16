@@ -1,6 +1,6 @@
 # Issue, commit, and PR drafts
 
-Keep the same task identity across all outputs. Use the project-wide ID from its owning TASKS or FEATURE-TASKS entry; include a resolved issue reference only when **sdd-forge** supplies a unique repository and number. Match the requested object's time perspective: an issue describes intended work, while a commit or PR describes actual changes and available evidence.
+Keep the same task identity across all outputs. Use the ID from its owning TASKS or FEATURE-TASKS entry, or the predefined DOCS ID from DOCS_TASKS for main preparation; include a resolved issue reference only when **sdd-forge** supplies a unique repository and number. Match the requested object's time perspective: an issue describes intended work, while a commit or PR describes actual changes and available evidence.
 
 ## Task issue
 
@@ -13,13 +13,13 @@ Return `title` and `body` separately. Format the title as `[<task-id>] <task tit
 
 ## Git commit
 
-For a first SDD commit or adoption backfill, load **sdd-manage**'s [repository bootstrap](../../sdd-manage/references/repository-bootstrap.md). Confirm the commit owner has included or validly retained root disclosure/usage records and README links within scope. Return missing bootstrap evidence to that owner; drafting does not perform bootstrap or establish a committed result.
+For a first SDD commit or adoption backfill, load **sdd-manage**'s [repository bootstrap](../../sdd-manage/references/repository-bootstrap.md). For main preparation use [its initialization exception](../../sdd-manage/references/main-preparation.md): DOCS-001 has four preserved/copied root files and the task list; README links follow at PROJECT. Otherwise confirm the commit owner has included or validly retained root disclosure/usage records and README links within scope. Return missing bootstrap evidence to that owner; drafting does not perform bootstrap or establish a committed result.
 
 Draft a short imperative subject naming the actual change, based on the inspected diff and checks rather than merely the task brief. Use a body when the reason, verification, migration implications or verified issue references need explanation.
 
 ### Task commit subjects
 
-For every task-associated commit, use exactly `[<owning-task-id>] <imperative description>`. The single owning task marker must be the first content of the subject, followed by one space and the description. Preserve the exact project-wide ID from TASKS or FEATURE-TASKS. Do not prepend a conventional-commit type/scope, put the ID only at the end, or use multiple task IDs or a task range in the subject. Apply this format to production, tests, documentation and explicit milestone/phase review/report tasks, as well as authorized partial checkpoints and later task-specific repairs or parent-status follow-ups. Describe partial or follow-up work accurately; a subject does not establish completion.
+For every task-associated commit, use exactly `[<owning-task-id>] <imperative description>`. The single owning task marker must be the first content of the subject, followed by one space and the description. Preserve the exact ID from TASKS/FEATURE-TASKS or main DOCS_TASKS. DOCS subjects use the same single-ID shape, but document task completion means first approval under [main preparation](../../sdd-manage/references/main-preparation.md), not implementation task completion. Proposal commits leave the DOCS task unchecked; approval commits include its checked task and the accepted document state. Later revisions retain completed first-approval tasks/issues. Do not prepend a conventional-commit type/scope, put the ID only at the end, or use multiple task IDs or a task range in the subject. Apply this format to production, tests, documentation and explicit milestone/phase review/report tasks, as well as authorized partial checkpoints and later task-specific repairs or parent-status follow-ups. Describe partial or follow-up work accurately; a subject does not establish completion.
 
 For numeric `T-` IDs padded to at least three digits, `^\[T-[0-9]{3,}\] [^\r\n]+$` checks the basic subject shape. Also check that the ID is the exact owning entry, the subject has no second task identity, and the description is concise, imperative and truthful. A regex alone cannot establish ownership, single-task composition or completion.
 
@@ -33,9 +33,11 @@ For numeric `T-` IDs padded to at least three digits, `^\[T-[0-9]{3,}\] [^\r\n]+
 | `[T-028, T-029] Implement lock delay and wall kicks` | Invalid: multiple owning tasks. |
 | `[T-028] Implement lock delay and close T-029` | Invalid: second task identity, despite passing the shape regex. |
 
-Task closing composition follows **sdd-implement**'s [task commit contract](../../sdd-implement/references/completion-and-checkpoints.md#task-commit-contract): one executable task's result, required evidence and initial completion checkbox together. Return a detected composition conflict to the commit owner; do not merely improve the subject of a bundled or split closing commit.
+For implementation tasks, closing composition follows **sdd-implement**'s [task commit contract](../../sdd-implement/references/completion-and-checkpoints.md#task-commit-contract): one executable task's result, required evidence and initial completion checkbox together. Return a detected composition conflict to the commit owner; do not merely improve the subject of a bundled or split closing commit.
 
-For preparation, campaign actions or maintenance without an assigned executable task, do not invent a task ID. Merge commits use their integration-summary format and may summarize several completed tasks; they do not close those tasks for the first time.
+For DOCS tasks, use [main preparation](../../sdd-manage/references/main-preparation.md): verified initialization or package QC, or first human approval for a document, with the checked DOCS task in its completion commit. The implementation history audit does not govern DOCS tasks.
+
+For other preparation, campaign actions or maintenance without an assigned executable task, do not invent a task ID. Merge commits use their integration-summary format and may summarize several completed tasks; they do not close those tasks for the first time.
 
 Use `Refs owner/repo#123` when the commit advances an issue without completing it. Use `Fixes owner/repo#123`, `Resolves owner/repo#123`, or `Closes owner/repo#123` when the commit fully resolves that issue and the evidence supports completion. One task may have multiple verified issue associations, with a separate appropriate reference for each; these references do not permit bundling multiple executable tasks in one closing commit. Omit issue references when no verified association exists. On GitHub, closing keywords may close an issue when the commit reaches the default branch. **sdd-forge** still reconciles issue closure after verified task completion, without waiting for that automation. If verification has not been run, say so in a proposed body rather than claiming it passed. The active implementation workflow makes and checks its commits; **sdd-manage** coordinates persistence for other authorized repository changes.
 

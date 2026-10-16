@@ -38,7 +38,9 @@ def validate_handoff(data):
 PACKAGE_SUBDIR = '.agents/plugins/sdd-manager'
 PACKAGE_PATHS = ('assets', 'skills', 'LICENSE', 'plugin.json', 'README.md',
                  'PLUGIN.md', 'assets/Greenfield Project Prompt Template.md',
-                 'assets/SDD-MANAGER.md', 'assets/AI_DISCLOSURE.md')
+                 'assets/SDD-MANAGER.md', 'assets/AI_DISCLOSURE.md',
+                 'assets/AGENTS_TEMPLATE.md', 'assets/DOCS_TASKS_TEMPLATE.md',
+                 'assets/SKILL_DISCOVERY_PROTOCOL.md')
 
 
 def git(root, *args):

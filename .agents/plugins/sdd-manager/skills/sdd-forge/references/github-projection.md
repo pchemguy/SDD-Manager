@@ -1,5 +1,7 @@
 # GitHub TASKS projection
 
+Main documentation preparation uses [its separate lifecycle](github-docs-preparation.md), including pre-write projection without product PLAN/TASKS, first-approval issues and milestone closure after published integration. The implementation lifecycle below does not reopen completed DOCS issues for later document revisions.
+
 Apply the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md): read the full hierarchy but project only the eligible phase identified by sdd-manage. Do not create future-phase objects before predecessor completion/integration/publication. First-phase bootstrap needs no predecessor. Create and verify all phase objects, including dedicated review milestones/tasks, before its first task. Preparation or a complete local backlog does not activate every phase.
 
 For that phase in the requested TASKS or active FEATURE-TASKS projection, create one GitHub issue per task, one GitHub milestone per SDD milestone, and one phase label per SDD phase. Assign each task issue its parent milestone and phase label when creating it. Do not duplicate an issue already projected from the other list. After a task is implemented, verified, committed, and reconciled in its owning task list, close its issue as completed under [issue lifecycle](github-issue-lifecycle.md).

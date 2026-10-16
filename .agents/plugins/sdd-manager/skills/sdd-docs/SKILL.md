@@ -21,6 +21,8 @@ Follow the documentation style specified by governing project documents. Otherwi
 
 Maintain documentation against both accepted requirements and observed implementation. Clearly distinguish supported behavior from planned capabilities. If a discrepancy requires an amendment to SPEC, PLAN, design, layout, or another authoritative requirement, identify its location, issue, impact, and proposed amendment and report it to the user. Defer the decision to the user; do not amend the governing document or invoke its owning skill automatically. Continue independent documentation work and report anything dependent on that decision as unresolved.
 
+For main preparation, [main preparation](../sdd-manage/references/main-preparation.md) owns template-based initialization and its preservation/partial-state stop. Maintain later project-specific guidance only within the selected scope; do not reconcile existing root files during DOCS-001. Its coordinator owns non-implementation preparation commits and issue progression.
+
 Keep code edits confined to documentation unless additional work is authorized. Do not mark tasks complete, create commits, push, or change hosted objects here; the active implementation workflow owns those operations.
 
 Return the reviewed scope, chosen style and source, documentation changed, checks and observed outcomes, unreviewed or excluded areas, and unresolved findings or user decisions. Use **sdd-report** for a completion summary when requested.

@@ -32,7 +32,7 @@ Verify, commit and push each completed task. If its phase is incomplete,
 pause without merging. Integrate only an eligible complete boundary.
 ```
 
-Use your actual task/milestone IDs. You can enter a later stage when its inputs are established. The first authorized SDD commit includes the target's AGENTS.md orientation, usage/disclosure records and README navigation under [repository bootstrap](skills/sdd-manage/references/repository-bootstrap.md).
+Use your actual task/milestone IDs. You can enter a later stage when its inputs are established. Fresh/resumed main preparation starts with the [tracked documentation procedure](skills/sdd-manage/references/main-preparation.md) below. Other adoption follows [repository bootstrap](skills/sdd-manage/references/repository-bootstrap.md).
 
 Hosting is optional for local work. Use existing shell/API authentication; credential failures follow [credential recovery](skills/sdd-manage/references/credentials.md), using ignored protected token storage. Git and API access are separate. The [GitHub backend](skills/sdd-forge/references/github.md) defines the scoped permission profile; Actions access is conditional on requested workflow operations. Supplying credentials does not accept documents or widen the work scope.
 
@@ -95,6 +95,8 @@ The main documents describe the complete intended project. Roots may link to foc
 | `PLAN.md` | Meaningful end-to-end MVP, small capability increments, phases/milestones, dependencies, and verification/decision gates. |
 | `layout.md` | Physical ownership of source, tests, documentation, and other artifacts. |
 | `TASKS.md` | Phase → Milestone → Task hierarchy, stable IDs, and progress evidence. |
+| `DOCS_TASKS.md` | Predefined main preparation: initialization, seven document first approvals and final package QC. |
+| `DOCS-QC-REPORT.md` | Whole documentation package readiness, checked sources, findings and evidence limits. |
 
 PROJECT.md turns the seed and clarified decisions into shared project context, with material assumptions/questions identified. Its [authoring contract](skills/sdd-design/references/project-brief.md) defines adaptable content and the boundary with design/SPEC.
 
@@ -103,6 +105,14 @@ PROJECT.md turns the seed and clarified decisions into shared project context, w
 Greenfield preparation walks you through PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS. Each necessary newly created document gets substantive analysis and its own human acceptance checkpoint before dependent work; PLAN and layout remain separate. Clarification answers, agent QC and standing Git authorization do not accept documents.
 
 Existing or interrupted preparation assesses actual progress and continues using acceptable inputs. Requested interactive reviews come first; important startup issues can prompt concerns. Feature preparation reviews only necessary deltas and reuses sufficient main inputs. See [human document review](skills/sdd-manage/references/human-document-review.md).
+
+You may **preapprove future human checkpoints at any time**, individually or as a scoped set—for example, “Preapprove the remaining document checkpoints; stop before implementation.” The agent still reports each result and performs required QC, commits, pushes and tracking operations. Preapproval does not expand your implementation range.
+
+### Main preparation tracking
+
+When enabled, tracking creates/verifies the native `docs-main` milestone and all nine preparation issues **before repository modifications**. Initialization preserves existing root AGENTS/disclosure/usage/discovery files and copies missing ones. If only some existed, the agent reports both groups and pauses after publishing initialization; none/all present adds no approval stop. Existing preparation resumes without replacing files or replaying first approvals.
+
+`docs/dev/DOCS_TASKS.md` comes from the bundled template. Each document task completes at first approval: its approved state and checked task share one commit, followed by push/readback and issue closure. Later document revisions keep that task complete and issue closed. The last task/issue checks the whole package; then the docs branch merges, the verified merge is published, the milestone closes and the agent confirms the final checkpoint before implementation. See [main preparation](skills/sdd-manage/references/main-preparation.md).
 
 ### Agent quality checks
 
@@ -116,11 +126,16 @@ These diagrams explain the human-visible paths. [PLUGIN.md](PLUGIN.md#composite-
 
 ### Project preparation
 
-Each authoring node below creates and checks one necessary root, then commits, pushes and verifies remote containment before presenting it for human review. Design repeats this checkpoint for PROJECT, ARCHITECTURE and DECOMPOSITION; PLAN and layout have separate checkpoints. Dependent implementation starts only after accepted preparation is integrated, verified and published to the actual default branch.
+Each authoring node below creates/checks and publishes one necessary proposal before human review (or follows explicit preapproval). First approval is then recorded with the completed DOCS task in its published acceptance commit, followed by issue closure when enabled. Design repeats this checkpoint for PROJECT, ARCHITECTURE and DECOMPOSITION; PLAN and layout have separate checkpoints. Dependent implementation starts only after accepted preparation is integrated, verified and published to the actual default branch.
 
 ```mermaid
 flowchart TB
-    M["sdd-manage + sdd-orient: scope and repository state"] --> D["sdd-design: one design root; QC and publish"]
+    M["Scope and repository state"] --> H["Enabled docs-main projection before writes"]
+    H --> I["DOCS-001: initialize; publish and close issue"]
+    I --> IQ{"Partial initial files and no preapproval?"}
+    IQ -->|"yes"| STOP["Report retained/copied files; pause"]
+    STOP -->|"human continues"| D["sdd-design: one design root; QC and publish"]
+    IQ -->|"no"| D
     D --> DQ{"Human accepts this design root?"}
     DQ -->|"revise or next design root"| D
     DQ -->|"all necessary design accepted"| S["sdd-specify: SPEC; QC and publish"]
@@ -135,10 +150,12 @@ flowchart TB
     LQ -->|"accepted"| T["sdd-tasks: TASKS; QC and publish"]
     T --> TQ{"Human accepts TASKS?"}
     TQ -->|"revise"| T
-    TQ -->|"accepted"| A{"Implementation authorized?"}
-    A -->|"no"| R["Return preparation result"]
-    A -->|"yes"| G["Merge accepted preparation; verify and publish default branch"]
-    G --> B["Create implementation branch from published checkpoint"]
+    TQ -->|"accepted"| Q["DOCS-009: package QC; publish and close final issue"]
+    Q --> G["Explicit docs merge; verify and publish default branch"]
+    G --> MC["Close docs-main milestone when enabled"]
+    MC --> A{"Final checkpoint cleared and implementation range authorized?"}
+    A -->|"no"| R["Report preparation result; stop"]
+    A -->|"yes"| B["Activate eligible phase and branch from published checkpoint"]
 ```
 
 See [the owning workflow](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
@@ -232,7 +249,7 @@ See [packaging](skills/sdd-forge/references/github-packaging.md), [release workf
 
 ## Plugin package
 
-The Agent Plugins 1.0 package includes package-root plugin.json, README.md, PLUGIN.md and LICENSE, plus skills/ and assets/ (including the disclosure and usage-notice templates) (including `assets/Greenfield Project Prompt Template.md`). Root plugin.json is the sole manifest; OpenAI presentation metadata is under extensions.com.openai.interface. PLUGIN.md is SDD Manager's explicit composition entry, not a claim of standardized automatic discovery.
+The Agent Plugins 1.0 package includes package-root plugin.json, README.md, PLUGIN.md and LICENSE, plus skills/ and assets/. Assets include disclosure/usage notices, [AGENTS_TEMPLATE.md](assets/AGENTS_TEMPLATE.md), [DOCS_TASKS_TEMPLATE.md](assets/DOCS_TASKS_TEMPLATE.md), [SKILL_DISCOVERY_PROTOCOL.md](assets/SKILL_DISCOVERY_PROTOCOL.md) and the [Greenfield Project Prompt Template](<assets/Greenfield Project Prompt Template.md>). Root plugin.json is the sole manifest; OpenAI presentation metadata is under extensions.com.openai.interface. PLUGIN.md is SDD Manager's explicit composition entry, not a claim of standardized automatic discovery.
 
 All 15 skills are distributed together. Their relative references stay within the plugin root; named handoffs and client loading/routing are separate concerns. See [bundled-skill guidance](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md#bundled-skill-references). Artwork includes assets/icon.svg, icon.png, logo.svg and logo.png; manifest icons use icon.svg and logo.svg, including dark variants.
 

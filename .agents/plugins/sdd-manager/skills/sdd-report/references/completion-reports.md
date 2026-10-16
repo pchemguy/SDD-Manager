@@ -1,6 +1,8 @@
 # Completion and status reports
 
-Use the requested boundary from the owning TASKS or FEATURE-TASKS list. A checked box is a claim to compare with actual artifacts, verification output, and Git commits. Inspect the current implementation and relevant acceptance or exit conditions; distinguish task commits, working-branch acceptance, integration into the established target, target publication, and hosted issue state. The target need not be the default branch.
+For main preparation, report DOCS_TASKS first-approval progress separately from current document validity, DOCS-009 package QC, documentation integration, `docs-main` milestone closure and the final preimplementation checkpoint under [main preparation](../../sdd-manage/references/main-preparation.md). Do not reopen first-approval tasks for later revisions.
+
+For implementation, use the requested boundary from the owning TASKS or FEATURE-TASKS list. A checked box is a claim to compare with actual artifacts, verification output, and Git commits. Inspect the current implementation and relevant acceptance or exit conditions; distinguish task commits, working-branch acceptance, integration into the established target, target publication, and hosted issue state. The target need not be the default branch.
 
 ## Task
 
