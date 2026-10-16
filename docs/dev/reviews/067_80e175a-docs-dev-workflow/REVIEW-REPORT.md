@@ -7,13 +7,13 @@
 - Focus: the user's AGENTS template revision since `6a32568`, checked against the campaign task template, discovery protocol and current coordinator instructions.
 - Criteria: clear entry/loading instructions, correct terminology, section ownership, visible workflow obligations and concise reuse of canonical procedures.
 - Evidence: source inspection only. No live agent trial, package validation or workflow execution.
-- State: Review complete; recommendations proposed, draft repairs not executed.
+- State: Review complete; R-001–R-004 accepted by the subsequent “Update AGENTS” instruction and verified in the revised campaign draft.
 
 ## Findings
 
 ### R-001 — Correct the workflow name
 
-**Location:** AGENTS_TEMPLATE.md, “Software-driven development” heading and opening sentence. **Priority:** Medium. **Status:** Open.
+**Location:** AGENTS_TEMPLATE.md, “Software-driven development” heading and opening sentence. **Priority:** Medium. **Status:** Verified in the campaign draft.
 
 “Software-driven development” does not name the method provided by SDD Manager. Use “Specification-driven development” and describe the plugin as providing those workflows. Correct the opening grammar at the same time.
 
@@ -21,7 +21,7 @@
 
 ### R-002 — Require coordinator loading for both plugin sources
 
-**Location:** AGENTS_TEMPLATE.md, opening paragraph. **Priority:** Medium. **Status:** Open.
+**Location:** AGENTS_TEMPLATE.md, opening paragraph. **Priority:** Medium. **Status:** Verified in the campaign draft.
 
 The paragraph instructs loading PLUGIN/coordinator only for the repository-local alternative. An installed plugin can be available without its coordinator instructions being loaded. Direct agents to load `sdd-manage` for coordinated work regardless of source, then identify the installed-plugin and repository-local loading alternatives. The local PLUGIN path should be explicit. If neither source is available, report that prerequisite rather than assume the workflow has been loaded.
 
@@ -33,7 +33,7 @@ The paragraph instructs loading PLUGIN/coordinator only for the repository-local
 
 ### R-003 — Place the continuing obligation outside Initialization
 
-**Location:** AGENTS_TEMPLATE.md, bold instruction under Initialization. **Priority:** Medium. **Status:** Open.
+**Location:** AGENTS_TEMPLATE.md, bold instruction under Initialization. **Priority:** Medium. **Status:** Verified in the campaign draft.
 
 Human checkpoints, Git publication/integration and requested hosted operations apply throughout the workflow. Placing their general obligation under Initialization blurs that section's boundary. “All other workflows” also leaves applicability unclear: the requirement is to follow the selected workflow's obligations, rather than activate every capability.
 
@@ -47,7 +47,7 @@ Initialization can then remain solely the direct discovery-protocol instruction.
 
 ### R-004 — Give project-specific maintenance its own location
 
-**Location:** AGENTS_TEMPLATE.md, second paragraph of the opening section. **Priority:** Low; editorial. **Status:** Open.
+**Location:** AGENTS_TEMPLATE.md, second paragraph of the opening section. **Priority:** Low; editorial. **Status:** Verified in the campaign draft.
 
 The instruction to maintain navigation and validated setup/check commands interrupts plugin loading guidance. Move it to a short final “Project guidance” section, where project-specific instructions can later accumulate without expanding the plugin entry paragraph. Preserve its requirement to use established facts.
 
@@ -67,3 +67,7 @@ Do not expand the template into a second plugin entry or a copy of the preparati
 - Checked that the discovery instruction still links the supplied protocol and that the document-task draft still states first-approval completion and merge-before-milestone closure.
 - No changes were supplied to DOCS_TASKS_TEMPLATE.md or SKILL_DISCOVERY_PROTOCOL.md in the pulled revision. They were checked as context, not subjected to a new comprehensive review.
 - Four proposed findings: three clarity/terminology corrections and one editorial recommendation. No source repair or template replacement is included in this review checkpoint.
+
+## Accepted draft revision
+
+Applied R-001–R-004 to AGENTS_TEMPLATE.md: corrected terminology; required coordinator loading across both sources; moved the emphasized applicable-workflow obligation into the opening; kept Initialization solely the discovery directive; moved maintenance guidance to its own final section. Split general publication and documentation-first-approval guidance into separate paragraphs. Source inspection confirms each stated recheck; heading separation, local discovery link and Git whitespace checks passed. This verifies the draft text, not live agent behavior. Package installation and the broader campaign implementation remain pending.

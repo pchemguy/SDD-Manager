@@ -45,3 +45,7 @@ Pulled published campaign commit `54930ba`, which adds the supplied SKILL_DISCOV
 ## User template revision review
 
 Pulled `57551e6` and reviewed the updated AGENTS template. The [focused review report](REVIEW-REPORT.md) proposes four improvements to terminology, coordinator loading, section ownership and project-specific maintenance placement. The user’s draft is preserved unchanged; revisions await selection.
+
+## Accepted AGENTS draft improvements
+
+The user authorized updating the AGENTS draft. Applied and source-rechecked all four focused review findings, retaining checkpoint, first-approval, publication and tracking emphasis. Only the campaign draft and its review evidence changed; the repository’s controlling AGENTS.md and packaged source remain unchanged.
