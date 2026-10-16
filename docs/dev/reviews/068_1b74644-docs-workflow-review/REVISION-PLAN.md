@@ -7,18 +7,18 @@
 - Planning source: `f208280946548d0b60b047ec335865dd088bbb86`; runtime source remains identical to the reviewed baseline.
 - Working branch: `revision/068_1b74644-docs-workflow-review`; eventual integration target: `main`.
 - Canonical findings: [review report](REVIEW-REPORT.md). Coverage: [inventory](SOURCE-INVENTORY.md).
-- State: Planned. This request authorizes preparing and publishing the plan, not source revisions, integration or campaign closure.
-- Execution evidence will be recorded in `REVISION-REPORT.md` when execution is requested.
+- State: Execution authorized by “Run, do not close”, starting from published plan commit `25df9832b8859a1117a45a31d195b754f988dfc2`. Keep the campaign open and unmerged.
+- Execution evidence: [revision report](REVISION-REPORT.md).
 
-| Finding | Planning disposition | Intended outcome |
+| Finding | Execution disposition | Intended outcome |
 | --- | --- | --- |
-| R-001 | Include | Checkpoint reminders preserve explicit scoped future preapproval. |
-| R-002 | Include | Credential recovery can satisfy the hosted pre-write gate before durable repository storage. |
-| R-003 | Include | DOCS and implementation task persistence reach their respective owners. |
-| R-004 | Include | Preparation-only summaries agree on the main workflow's completion boundary. |
+| R-001 | Accepted | Checkpoint reminders preserve explicit scoped future preapproval. |
+| R-002 | Accepted | Credential recovery can satisfy the hosted pre-write gate before durable repository storage. |
+| R-003 | Accepted | DOCS and implementation task persistence reach their respective owners. |
+| R-004 | Accepted | Preparation-only summaries agree on the main workflow's completion boundary. |
 | R-005 | Exclude: not confirmed | Preserve the report's fixture/consumer distinction; no harness redesign or repair. |
 
-No open finding is deferred. Inclusion defines the proposed remediation scope; it does not claim implementation or verification.
+No open finding is deferred. Acceptance defines the remediation scope; it does not claim implementation or verification.
 
 ## Scope and preserved decisions
 
@@ -118,8 +118,8 @@ Record interpreter/dependency versions, exact tested commit and observed results
 
 ## Execution, publication and stopping
 
-The current stopping point is the published plan with campaign 068 open. Do not begin V-001 or create a revision-completion claim during planning.
+The current stopping point is completed V-001–V-005 with published execution evidence, campaign 068 open and no merge.
 
-When execution is requested, retain this campaign identity/branch and baseline, establish the actual current source/target state, then perform V-001 through V-005. Source changes belong on this revision branch; campaign records do not need a design-docs branch or a preliminary main merge. Commit each action with its updated evidence, push and verify remote containment before further work or another commit. Preserve unrelated work and stop affected progression on unresolved publication.
+Retain this campaign identity/branch and baseline, establish the actual current source/target state, then perform V-001 through V-005. Source changes belong on this revision branch; campaign records do not need a design-docs branch or a preliminary main merge. Commit each action with its updated evidence, push and verify remote containment before further work or another commit. Preserve unrelated work and stop affected progression on unresolved publication.
 
-If the later execution request includes normal campaign completion, finalize the records, explicitly merge the complete verified campaign tip into refreshed `main`, verify the merged state, compose the campaign integration summary with its original opening/baseline provenance, publish/read back the merge and close. An explicit keep-open/no-merge/local-only boundary controls instead. This planning request performs none of those integration or closure operations.
+The current request excludes integration and closure. Leave the verified changes and retained records on the published revision branch; do not merge into main, close the campaign or resume other work.

@@ -5,7 +5,7 @@
 - Campaign: `068_1b74644`.
 - Starting/reviewed source: `1b74644cb0b97e074cc407086be13b5597620b80`.
 - [Review plan](REVIEW-PLAN.md); [source inventory](SOURCE-INVENTORY.md).
-- State: Review complete; campaign open with a [revision plan](REVISION-PLAN.md). No revision execution or integration authorized.
+- State: Review complete; [revision execution](REVISION-REPORT.md) authorized under the [plan](REVISION-PLAN.md). Campaign remains open; integration/closure excluded.
 - Evidence boundary: current source inspection and local structural/support/publisher execution; no live acceptance, source repairs or workflow deployment.
 
 ## Coverage
@@ -78,7 +78,7 @@ Read the coordinator entry, branch-management, Git protocol, coordination, workf
 
 ### R-003 — Generic task gates still route DOCS work to implementation audits
 
-- **Type/priority/status:** Instruction-consistency issue; Medium; Open. High confidence in the text; no observed consumer failure.
+- **Type/priority/status:** Instruction-consistency issue; Medium; Revised, source recheck passed; combined verification pending. High confidence in the text; no observed consumer failure.
 - **Locations:** `skills/sdd-manage/SKILL.md`, “Shared gates / Task closure”; `references/git-workflows.md`, “Work and prepare the boundary”; also projected in `PLUGIN.md`, “Branches, integration and continuity”, and the capability map’s generic task-contract paragraph; compared with `references/main-preparation.md`, “Document tasks through first approval”, and the linked `sdd-implement/references/completion-and-checkpoints.md` task contract/audit.
 - **Observation:** The coordinator orders implementation-owned closure/audit for “task-list work”; the Git gate requires that audit whenever executable tasks govern integration. DOCS_TASKS is now a real task list. The specific main-preparation procedure explicitly forbids routing DOCS tasks through the T-task audit, but neither generic caller identifies that separate owner. The implementation audit targets TASKS/FEATURE-TASKS and its own partial-checkpoint/composition rules; it does not implement the DOCS first-approval protocol.
 - **Source contrast:** A document proposal is published before human review; approval later produces the required checked DOCS task and decision evidence while retaining unchanged accepted document bytes. The DOCS owner permits this. Applying the generic implementation audit can demand implementation ownership or misclassify the earlier proposal as result-first persistence requiring a historical exception. The specific exception can resolve the conflict, but the caller currently leaves that reconciliation to the agent.
