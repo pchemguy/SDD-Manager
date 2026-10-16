@@ -2,7 +2,7 @@
 
 - Reviewed baseline: `1b74644cb0b97e074cc407086be13b5597620b80`.
 - Method: campaign-067 affected paths discovered by Git path diff from `80e175a`, without reading closed campaign contents; current source and necessary adjacent owners selected below.
-- Coverage: 44 changed artifacts plus 12 adjacent inputs; 56 selected files.
+- Coverage: 44 changed artifacts plus 13 adjacent inputs; 57 selected files.
 - Depth: full text for selected Markdown/JSON; changed function and consequential caller/fixture inspection for executable helpers. Formal schema/publisher tests assess manifest conformance.
 - Inventory is a review scope, not a claim that any unit has already passed.
 
@@ -47,24 +47,26 @@
 | U-005 | `docs/dev/CAPABILITY-MAP.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-005 | `docs/dev/PLUGIN-CONTRACT.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-005 | `README.md` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
-| U-006 | `.github/scripts/release.py` | Changed | Pending |
-| U-006 | `.github/tests/test_release.py` | Changed | Pending |
-| U-006 | `.github/schemas/plugin.schema.json` | Adjacent owner/tooling | Pending |
-| U-006 | `.github/requirements.txt` | Adjacent owner/tooling | Pending |
-| U-006 | `acceptance/textstats/tests/test_package_docs.py` | Changed | Pending |
-| U-006 | `acceptance/textstats/tests/test_catalog.py` | Adjacent owner/tooling | Pending |
-| U-006 | `acceptance/textstats/scripts/core.py` | Adjacent owner/tooling | Pending |
-| U-006 | `acceptance/textstats/EXECUTION.md` | Changed | Pending |
-| U-006 | `acceptance/textstats/README.md` | Changed | Pending |
-| U-006 | `acceptance/textstats/SETUP.md` | Changed | Pending |
-| U-006 | `acceptance/textstats/cases/assessor/A-001.json` | Changed | Pending |
-| U-006 | `acceptance/textstats/cases/assessor/A-001.md` | Changed | Pending |
-| U-006 | `acceptance/textstats/cases/assessor/CHECKPOINTS.md` | Changed | Pending |
-| U-006 | `acceptance/textstats/cases/assessor/MAIN-PREPARATION.md` | Changed | Pending |
+| U-006 | `.github/scripts/release.py` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-006 | `.github/tests/test_release.py` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-006 | `.github/schemas/plugin.schema.json` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
+| U-006 | `.github/requirements.txt` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
+| U-006 | `acceptance/textstats/tests/test_package_docs.py` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-006 | `acceptance/textstats/tests/test_catalog.py` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
+| U-006 | `acceptance/textstats/scripts/core.py` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
+| U-006 | `acceptance/textstats/EXECUTION.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-006 | `acceptance/textstats/README.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-006 | `acceptance/textstats/SETUP.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-006 | `acceptance/textstats/cases/assessor/A-001.json` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-006 | `acceptance/textstats/cases/assessor/A-001.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-006 | `acceptance/textstats/cases/assessor/CHECKPOINTS.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-006 | `acceptance/textstats/cases/assessor/MAIN-PREPARATION.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/credentials.md` | Adjacent pre-write authentication interface | Reviewed: full text |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/hosting-tokens.md` | Adjacent pre-write authentication interface | Reviewed: full text |
 
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md` | Adjacent implementation audit target | Reviewed: task contract, bounded audit and recovery interface |
+
+| U-006 | `acceptance/textstats/tests/test_preflight.py` | Adjacent empty-repository setup behavior | Reviewed: preparation fixtures and unborn-repository assertion |
 
 ## Exclusions
 

@@ -17,7 +17,7 @@
 | U-003 | Reviewed | R-002 | Tracking/backend |
 | U-004 | Reviewed | R-003, R-004 | Git/recovery |
 | U-005 | Reviewed | R-003 projection; no new ID | Entry/README/composition |
-| U-006 | Pending | None allocated | Package/tooling/acceptance coverage |
+| U-006 | Reviewed | R-005 | Package/tooling/acceptance coverage |
 
 ## Findings
 
@@ -96,3 +96,36 @@ No new independent finding allocated. Added PLUGIN’s generic audit paragraph a
 Organization remains serviceable: the human README supplies examples/diagrams, project document meanings and an explicit workflow narrative; the agent entry puts coordinator loading, context and consequential HIL/publication/tracking gates before routing and composites. Short repeated main summaries serve discovery, gates and composition; their presence or byte count alone does not justify deleting obligations. A future revision can correct the located distinctions in place; no broad reorganization is needed for these findings. The abbreviated root README remains navigation rather than a duplicated full manual.
 
 The development contract retains generic C/K routing/continuity assessments. Their existence is not new-docs behavioral coverage; the concrete A-001 assessor/scenario reachability and automated checks are assessed in U-006. No external specification or client-discovery behavior was validated by reading these documents.
+
+## U-006 — Publisher, snapshots and acceptance coverage
+
+Inspected the changed publisher selectors and their tree/archive/build callers, asset tests, snapshot pinning/dirty capture, catalog contract validation and affected acceptance guides/contracts. Added the existing empty-repository preparation test as a consequential interface. The new assessor module is reachable from A-001 JSON/Markdown and execution/setup guidance; it defines all 16 presence combinations, first approval, scoped preapproval, later revision, resume, hosted uncertainty, package QC and final ordering. No live consumer/provider execution occurred.
+
+### R-005 — Empty-repository harness setup conflicts with the new root-file restriction
+
+- **Type/priority/status:** Acceptance setup/instruction inconsistency; Medium; Open. The local helper behavior is covered by an executed support test; consumer behavior remains unrun.
+- **Locations:** `acceptance/textstats/SETUP.md`, “Consumer repository disclosure”; `scripts/core.py`, `prepare()` empty-head block; `tests/test_preflight.py`, `test_prepare_new_unborn_remote_is_bounded_and_does_not_publish`; `cases/assessor/MAIN-PREPARATION.md`, four-file matrix.
+- **Observation:** Setup now says the harness must not create target root copies, after naming all four initialization assets. The helper still creates a root AGENTS.md operating file for an unborn destination, and the existing test positively requires it. Consequently the normal empty-repository setup is already an existing-AGENTS fixture, not a none-present DOCS-001 fixture. Preserving it is legitimate consumer behavior, but that run cannot demonstrate copying AGENTS_TEMPLATE or adopting its generated policy. No recorded distinction resolves the new blanket restriction against this retained setup behavior.
+- **Reproduction:** Run `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=acceptance/textstats python -m unittest tests.test_preflight.PreflightTests.test_prepare_new_unborn_remote_is_bounded_and_does_not_publish -v` from the source root. The test creates an empty local bare remote, calls the actual prepare helper and asserts AGENTS.md exists while HEAD and remote refs remain unborn. The complete support suite executed this test successfully during this review. Compare that explicit creation with SETUP’s prohibition; no GitHub destination or credentials are needed.
+- **Bounded proposal/owner:** Reconcile the acceptance coordinator’s operating-instruction setup with the DOCS initialization fixtures. Either explicitly classify the existing operating AGENTS as harness-authored fixture input, with a separate authorized none-present/template-copy fixture, or supply operating instructions outside those four target paths. State what each setup can prove; do not count harness-authored content as consumer copying or remove instructions from an actual consumer repository automatically. Align guide, helper and affected test according to the chosen setup contract.
+- **Objective recheck:** An empty-repository trial and an existing-instructions trial have explicit pre-consumer presence/provenance; the none-present scenario is genuinely absent at consumer start, existing bytes remain preserved, and generated-AGENTS policy/copy claims require the matching actual scenario. The selected setup guide and helper no longer contradict one another.
+
+### Executed local verification
+
+Tested at `156218be2d784da6db373ed121ce9da46e203041`; package, publisher, acceptance and root instruction/navigation bytes are unchanged from reviewed baseline `1b74644cb0b97e074cc407086be13b5597620b80`. Python 3.12.14, Git 2.51.1; publisher uses its declared jsonschema 4.26.0 dependency. The review branch adds records only.
+
+| Check | Observed result | Limit |
+| --- | --- | --- |
+| `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` | 137 passed | Harness/support sensitivity; no consumer trial |
+| `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/067-validator-deps python -m unittest discover -s .github/tests -v` | 34 passed | Local publisher/adapter fixtures; no release/provider writes |
+| `python acceptance/textstats/cases/assessor/catalog_tools.py validate` | 33 catalog cases validate | Static graph/assets/contracts; not 33 behavioral passes |
+| Native `build_package`, pinned offline schema and exact ZIP inspection | 137 files; all three new assets present only under assets/; exact Git bytes/checksum; source-only files excluded | Local package, no publication or installation |
+| Native publisher versus committed/dirty TextStats snapshot | Exact file/byte parity; unchanged source snapshot; package-relative paths | Current clean package only; dirty sensitivity also covered by support tests |
+| Skill reference inventory | 15 skills; all 77 bundled reference files named in their entries | Inventory reachability, not proof every routing decision is correct |
+| Current Markdown scan, excluding frozen campaigns and AI logs | 208 documents, 1,042 local links; no missing targets/anchors, package escapes, heading-separation or consecutive-blank errors | Local links outside code; external URLs untested |
+| Agent Package Author plugin validator | Exit 0; zero errors, 46 bundled cross-skill warnings | Warnings identify client-dependent handoff; core schema passed separately |
+| Baseline/path protection | Only campaign 068 records and review index differ; previous closed campaigns unchanged | Git path/object comparison, without reopening their contents |
+
+The actual locally built archive source is the review checkpoint above, whose runtime package equals the reviewed baseline. ZIP SHA-256: `ad36d17f2dbf9c45137739368cf29be282230853822741cb35b5e2030001f122`. Build used the manifest's unchanged v0.15.0 solely for local validation; no release/tag was created. The Markdown and archive checks used disposable verification scripts outside the repository.
+
+No finding allocated for missing required package assets, exact-byte retention, missing-asset rejection, source-only exclusions, pinned schema conformance or broken local links. Defined main-preparation scenarios are substantial coverage extension, but their consumer/provider outcomes remain unrun. Passing tooling does not disprove R-001–R-004 instruction issues or resolve R-005’s setup-contract choice. Live acceptance is outside this campaign.
