@@ -148,3 +148,11 @@ The user identified that the AGENTS/optional-README request did not authorize ch
 Restored all ten V-007 policy/capability/assessment files outside AGENTS and README exactly to pre-amendment `1a0bab5421409d6c11454242a5c85e803dfe5eb2`. This includes PLUGIN, coordinator entry/selection/startup/phase activation, backend lifecycle/projection, capability map and the two acceptance-assessment files. Retained campaign/packaged AGENTS tracking instructions and the README template-default note; removed its unsupported plugin-wide pre-copy default claim. Root source-development AGENTS remains untouched.
 
 Verified exact restored bytes and template/draft equality. Current links/spacing, catalog and package validation are checked for this correction; no executable tooling changed, so prior support-suite outcomes are retained as historical evidence rather than claimed as a new run. Final correction integration/publication is recorded by Git; other closed campaign records remain unchanged.
+
+## V-009 — Full tracking-amendment rollback; campaign open
+
+The user explicitly required undoing every change to SDD Manager files associated with the AGENTS amendment and reopening this campaign. Reopened from verified published correction merge `e8d8124835f2ff9d115e4c466333600a80e54766`, preserving the original identity/opening and all earlier evidence. The preceding partial scope correction retained two package changes and therefore did not meet this clarified boundary.
+
+Restored packaged README and AGENTS_TEMPLATE to their exact pre-amendment `1a0bab5421409d6c11454242a5c85e803dfe5eb2` bytes. Combined with the prior policy rollback, the entire package and all non-campaign source now match that baseline. The proposed GitHub-default AGENTS text exists only in this campaign draft. No new plugin policy, template deployment, acceptance revision or root AGENTS edit is authorized here.
+
+State: **Open**. Publish and verify this rollback on main, then return to the reopened campaign branch. The campaign remains open for human review; no further draft execution or closure is included. Current source/link checks and exact Git tree comparison verify the rollback; this does not rerun or claim live acceptance.
