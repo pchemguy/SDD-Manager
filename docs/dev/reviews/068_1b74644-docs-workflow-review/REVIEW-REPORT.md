@@ -14,7 +14,7 @@
 | --- | --- | --- | --- |
 | U-001 | Reviewed | None | Templates/bootstrap/discovery |
 | U-002 | Reviewed | R-001 | Authoring/acceptance/QC |
-| U-003 | Pending | None allocated | Tracking/backend |
+| U-003 | Reviewed | R-002 | Tracking/backend |
 | U-004 | Pending | None allocated | Git/recovery |
 | U-005 | Pending | None allocated | Entry/README/composition |
 | U-006 | Pending | None allocated | Package/tooling/acceptance coverage |
@@ -45,3 +45,20 @@ Read all selected owner entries, human-document review, document-QC gates, share
 - **Objective recheck:** Trace covered, absent, conditional and revoked preapproval through bootstrap, owner entry and QC handoff. The reminders agree on when to pause while all technical/publication gates remain.
 
 No additional finding allocated for report identity, one-root/child scope, document versus implementation task ownership or authoring/review authority. Minor repeated reminders are justified at consequential handoffs; the preserved shared AGENTS tracking/recovery paragraphs are intentional requirements, not proposed deletions.
+
+## U-003 — Tracking and hosted lifecycle
+
+Read all nine selected tracking/backend artifacts and the consequential credential-save and hosting-token procedures (two adjacent inputs added to the inventory). Main preparation is explicitly routed separately from implementation projection: no product PLAN/TASKS or Phase 0 is required; native milestone and exact issue/task/scope markers have complete lookup/readback and uncertain-write handling. First-approval issues remain closed through later revisions. Final QC issue publication precedes explicit docs integration, which precedes native milestone closure. Foreign objects and ambiguous identities are preserved.
+
+### R-002 — Define credential recovery before the hosted pre-write gate
+
+- **Type/priority/status:** Procedure-interface gap; Medium; Open. Confidence high in the conflicting sequence; an actual failed consumer run is not claimed.
+- **Locations:** `skills/sdd-manage/references/main-preparation.md`, “Establish preparation before repository writes”, step 3; `credentials.md`, “Find, request, and save”, steps 2–4; `skills/sdd-conventions/references/hosting-tokens.md`, “Exclusion/Persistence”.
+- **Observation:** Enabled docs projection must finish before any repository modification, explicitly including credential/ignore-file writes. The general recovery path first requires creating/updating root .gitignore and saving/reusing the conventional local token. Main preparation permits an external temporary helper but does not explicitly join that exception to the numbered save/recovery protocol or say when required durable persistence resumes. Direct forge use separately permits transient protected consumption, so this is a missing coordinated path, not proof authentication is technically impossible.
+- **Source contrast:** Fresh repository, enabled docs tracking, unavailable API authentication and a newly supplied suitable token; no root ignore/token file exists. Following the recovery sequence writes before projection; obeying only the pre-write gate can appear to block the very authentication needed for projection.
+- **Bounded proposal/owner:** Document the narrowly scoped main-preparation handoff: consume a suitable supplied token through an existing protected transient client channel (or return its actual facility blocker), finish/read back projection, then perform permitted durable storage/ignore updates. Keep credential values out of helper source/arguments/evidence and retain the existing no-write gate. No global tracking default or unrelated credential redesign is proposed.
+- **Objective recheck:** Source trace or controlled isolated trial covers existing authenticated access, supplied token with absent ignore file, unsupported protected transfer and interrupted storage. No target file/ref is modified before full docs projection; actual persistence is neither skipped silently nor claimed early.
+
+The AGENTS template's GitHub default is a **project instruction**, not a new plugin-wide default. Existing user choices remain controlling. Before AGENTS exists, canonical selection still uses the request/current project context; do not interpret the README note as authority to bypass that selection or retrospectively claim pre-write projection. This timing distinction is recorded as a review consideration, not a proposal to restore the rejected global default.
+
+No further finding allocated for native milestones, nine-issue cardinality, marker uniqueness, phase isolation, completion ordering or idempotent replay. Those claims remain source-assessed; actual GitHub/consumer effects are unrun.

@@ -2,7 +2,7 @@
 
 - Reviewed baseline: `1b74644cb0b97e074cc407086be13b5597620b80`.
 - Method: campaign-067 affected paths discovered by Git path diff from `80e175a`, without reading closed campaign contents; current source and necessary adjacent owners selected below.
-- Coverage: 44 changed artifacts plus 9 adjacent inputs; 53 selected files.
+- Coverage: 44 changed artifacts plus 11 adjacent inputs; 55 selected files.
 - Depth: full text for selected Markdown/JSON; changed function and consequential caller/fixture inspection for executable helpers. Formal schema/publisher tests assess manifest conformance.
 - Inventory is a review scope, not a claim that any unit has already passed.
 
@@ -26,15 +26,15 @@
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/development-document-qc.md` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-report/references/completion-reports.md` | Changed | Reviewed: full selected text / consequential interfaces |
-| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md` | Changed | Pending |
-| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github.md` | Changed | Pending |
-| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-docs-preparation.md` | Changed | Pending |
-| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-projection.md` | Changed | Pending |
-| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-issue-lifecycle.md` | Changed | Pending |
-| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-milestone-lifecycle.md` | Changed | Pending |
-| U-003 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/tracking-decision.md` | Changed | Pending |
-| U-003 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/phase-activation.md` | Adjacent owner/tooling | Pending |
-| U-003 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/backend-object-lifecycle.md` | Changed | Pending |
+| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-docs-preparation.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-projection.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-issue-lifecycle.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-milestone-lifecycle.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-003 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/tracking-decision.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-003 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/phase-activation.md` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
+| U-003 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/backend-object-lifecycle.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md` | Changed | Pending |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/branch-management.md` | Changed | Pending |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md` | Adjacent owner/tooling | Pending |
@@ -61,6 +61,9 @@
 | U-006 | `acceptance/textstats/cases/assessor/A-001.md` | Changed | Pending |
 | U-006 | `acceptance/textstats/cases/assessor/CHECKPOINTS.md` | Changed | Pending |
 | U-006 | `acceptance/textstats/cases/assessor/MAIN-PREPARATION.md` | Changed | Pending |
+
+| U-003 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/credentials.md` | Adjacent pre-write authentication interface | Reviewed: full text |
+| U-003 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/hosting-tokens.md` | Adjacent pre-write authentication interface | Reviewed: full text |
 
 ## Exclusions
 
