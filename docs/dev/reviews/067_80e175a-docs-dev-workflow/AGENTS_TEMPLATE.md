@@ -10,6 +10,8 @@ Maintain project-specific navigation and validated setup/check commands here as 
 
 Execute the [skill and plugin discovery protocol](SKILL_DISCOVERY_PROTOCOL.md).
 
+**YOU MUST STRICTLY FOLLOW: human checkpoints, git and GitHub workflows, and all other SDD Manager workflows.**
+
 ## Human checkpoints
 
 Present each necessary new development document with concise substantive analysis and pause for acceptance before dependent work. Honor the user's requested implementation range and stop when it is complete.
