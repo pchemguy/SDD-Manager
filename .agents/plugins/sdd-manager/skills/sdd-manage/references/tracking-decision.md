@@ -15,6 +15,10 @@ The confirmation proposal identifies the established repository, eligible phase 
 
 Record the actual user decision and its source, repository/scope, eligible phase, and observed projection/associations in existing project/handoff evidence. Distinguish requested/confirmed tracking from pending, verified or unknown projection; authenticated access and object existence establish neither the decision nor execution readiness. An agent-authored PLAN statement that tracking is inactive describes performed state, not proof of a user decline. Do not create another state registry.
 
+## Main documentation preparation
+
+An explicit request to maintain tracking throughout project development covers main preparation; preserve an explicit implementation-only scope or decline. Before any fresh/resumed main-preparation repository modification, use [main preparation](main-preparation.md) and sdd-forge to verify `docs-main` and its nine preparation issues from the bundled template, without waiting for product PLAN/TASKS. Pending projection blocks those writes unless explicitly overridden. This is separate from implementation [phase activation](phase-activation.md); the table above’s permission for independent preparation while an implementation tracking choice is pending does not waive an enabled preparation gate.
+
 ## Late confirmation
 
 When confirmed after local execution begins, discover existing eligible-phase objects and reconcile missing identities/associations idempotently. Attach retained commit/check evidence and close only verified tasks/milestones; leave incomplete work open. Do not repeat product tasks, create future-phase objects or rewrite historical reports to imply earlier projection. Apply phase activation, document readiness and backend lifecycle rules to the actual continuation state.

@@ -7,7 +7,7 @@
 - Working branch: `revision/067_80e175a-docs-dev-workflow`.
 - Integration target: `main`.
 - Objective: revise the documentation development workflow.
-- State: Open; extension plan proposed, execution pending.
+- State: Open; plan accepted by “Execute campaign revisions”; execution underway.
 
 ## Scope and authority
 
@@ -49,3 +49,7 @@ Pulled `57551e6` and reviewed the updated AGENTS template. The [focused review r
 ## Accepted AGENTS draft improvements
 
 The user authorized updating the AGENTS draft. Applied and source-rechecked all four focused review findings, retaining checkpoint, first-approval, publication and tracking emphasis. Only the campaign draft and its review evidence changed; the repository’s controlling AGENTS.md and packaged source remain unchanged.
+
+## V-001 — Main preparation coordination
+
+Implemented the main-preparation module and direct coordinator routing, early preparation tracking selection, four-file initialization/preservation/partial-state stop, first-approval completion, package QC and merge/milestone/final-checkpoint ordering. Bootstrap and agent-orientation instructions now distinguish this main-only path from other adoption. Added shared future-checkpoint preapproval and removed the contradictory downstream-preacceptance prohibition. Source inspection and whitespace checks passed; asset/backend links and coupled verification finish in V-002–V-006.
