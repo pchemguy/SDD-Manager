@@ -158,3 +158,9 @@ Extend TextStats assessor scenarios for default selection and explicit opt-out/n
 The user rejected the plugin-wide changes and directed correction. Reopened at published amendment merge `adcb264abecf3219dcc8e2997cb0d05676174005`, the latest first-parent merge on main, with verified parents and source containment. Retain campaign identity, original opening/baseline and prior evidence.
 
 Restore PLUGIN, coordinator/backend policy, capability-map and acceptance-assessment files changed by V-007 to their pre-amendment `1a0bab5421409d6c11454242a5c85e803dfe5eb2` bytes. Retain the requested campaign/packaged AGENTS template and a README note describing that template policy; remove the README claim that the plugin applies the default before copying AGENTS. Keep the default as a project instruction, not a plugin-wide selection rule. Verify exact restoration, template parity, current links/catalog/package and scoped diff, then publish/integrate the correction. No runtime behavior change or live acceptance is claimed.
+
+## V-009 — Restore all package changes from the tracking amendment
+
+Reopened by explicit user direction at published correction checkpoint `e8d8124835f2ff9d115e4c466333600a80e54766`. Undo every package/source change introduced by the tracking-default amendment, including its packaged AGENTS template and README changes. Retain the proposed AGENTS text only as this campaign's draft. The accepted original V-001–V-006 implementation at `1a0bab5421409d6c11454242a5c85e803dfe5eb2` remains the package baseline.
+
+Publish the complete rollback checkpoint to main and verify exact package/source equality to that baseline outside this campaign and its navigation. Keep campaign 067 open for human review; this rollback is not approval to package drafts, revise plugin policy or close the campaign.
