@@ -14,7 +14,7 @@ When tracking is enabled, each `DOCS-*` task maps to one issue in the `docs-main
 
 - [ ] DOCS-001 — Initialize the repository for SDD Manager.
     - Inspect root `AI_DISCLOSURE.md`, `SDD-MANAGER.md` and `AGENTS.md` before copying. Preserve existing files and copy only missing files from the bundled templates.
-    - Create or reconcile `docs/dev/DOCS_TASKS.md`. Record which root files existed and which were copied; verify copied bytes and preserved content.
+    - Record which root files existed and which were copied; verify copied bytes and preserved content.
     - Commit this task's completion with the initialization result, push and verify; then close and verify its issue when tracking is enabled.
     - Report initialization. If one or two of the three root files existed initially, warn with the retained/copied filenames and end the turn before document work, unless the user explicitly preapproved continuation through this checkpoint. If none or all existed, continue without an additional approval pause.
 - [ ] DOCS-002 — Prepare and accept PROJECT.
