@@ -155,13 +155,13 @@
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-verify/references/execution-and-evidence.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-verify/references/failure-assessment.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-verify/references/release-checks.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
-| U-007 | `.github/RELEASE-HANDOFF.md` | Composition, operative guidance and handoffs | Pending |
-| U-007 | `.github/requirements.txt` | Composition, operative guidance and handoffs | Pending |
-| U-007 | `.github/schemas/README.md` | Composition, operative guidance and handoffs | Pending |
-| U-007 | `.github/schemas/plugin.schema.json` | Metadata/schema/configuration fields and consumers | Pending |
-| U-007 | `.github/scripts/release.py` | Functions/control flow and consequential failure paths | Pending |
-| U-007 | `.github/tests/test_release.py` | Functions/control flow and consequential failure paths | Pending |
-| U-007 | `.github/workflows/release.yml` | Metadata/schema/configuration fields and consumers | Pending |
+| U-007 | `.github/RELEASE-HANDOFF.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-007 | `.github/requirements.txt` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-007 | `.github/schemas/README.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-007 | `.github/schemas/plugin.schema.json` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-007 | `.github/scripts/release.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-007 | `.github/tests/test_release.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-007 | `.github/workflows/release.yml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
 | U-001 | `.gitignore` | Composition, operative guidance and handoffs | Reviewed at stated depth |
 | U-001 | `AGENTS.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
 | U-001 | `AI_DISCLOSURE.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |

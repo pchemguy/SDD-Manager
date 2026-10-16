@@ -17,7 +17,7 @@
 | U-004 | Reviewed | None |
 | U-005 | Reviewed | R-001 corroborating interface; no new ID |
 | U-006 | Reviewed | None |
-| U-007 | Pending | None allocated |
+| U-007 | Reviewed | None |
 | U-008 | Pending | None allocated |
 
 Pending coverage is not passing coverage. Structural checks and source scenarios do not establish live behavior. No finding is allocated before inspection.
@@ -99,3 +99,11 @@ Release routing preserves highlights-only and supplied-text scope. First-parent 
 Report modules retain What/Why/Verification/Result as adaptable concerns, not mandatory empty headings. Task subjects identify one owner; DOCS and implementation composition contracts are distinct. Campaign summaries provide cumulative user outcomes plus opening/baseline/parent provenance without claiming future push/closure; QC reports preserve original findings and append actual correction cycles. No competing progress journal or invented task is required for taskless maintenance/release work.
 
 Source scenarios covered normal/late/missed tracking, missing/duplicate/renamed/retired objects, native versus unsupported milestone semantics, draft/published conflicts, failed uploads, unknown dispatch/body/latest state, backports, human-curated notes and ancillary refresh at unchanged Git source. Actual publisher enforcement and fixture sensitivity are assessed next; external endpoint currency and live/client behavior remain unverified.
+
+## U-007 — Publisher implementation, CI and schema
+
+Assessed all seven selected CI/publisher/schema files. Read actual input validation, committed-tree inventory/archive construction, offline schema resolution, remote adapter, draft/upload/publication reconciliation and CLI/build guard; mapped all 34 fixture tests and inspected consequential assertions. The adapter uses exact acknowledged release IDs, paginates inventories/assets, checks downloaded bytes and distinguishes missing objects from transport failure. Uncertain writes are not blindly replayed. Exact committed source, manifest version, archive membership/modes, checksum and build/publish byte agreement are enforced.
+
+No new confirmed finding allocated. Workflow separates read-only build from contents-write publication and passes event input as data rather than interpolated shell. The committed handoff guide retains agent-owned release authorization, notes freshness/curation and commit-body checks; the helper is not a semantic notes author or general authorization engine. Controlled provider fixtures establish local implementation behavior, not live endpoint/client success. Arbitrary release-conflict reconciliation remains deliberately blocking.
+
+Checked current official upstream documentation on 2026-10-16: [checkout](https://github.com/actions/checkout) and [setup-python](https://github.com/actions/setup-python) document v7; GitHub documents [concurrency queue: max](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency), compatible with cancel-in-progress: false. These are supported current declarations, not obsolete-version findings. This did not execute hosted CI. Pinned local schema/dependency validation, native build and support suites are reported with their actual provenance in final verification.
