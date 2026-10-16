@@ -57,3 +57,7 @@ Implemented the main-preparation module and direct coordinator routing, early pr
 ## V-002 — Hosted preparation lifecycle
 
 Implemented a separate routed GitHub preparation module with exact milestone/task/scope markers, all-nine projection/readback before repository writes, first-approval issue closure, idempotent/uncertain-write recovery and merge-before-milestone closure. Existing implementation projection/issue/milestone procedures explicitly route DOCS work to that owner. Shared lifecycle distinguishes preparation from phase activation. Inspected the fresh, partial/unknown projection, first-approval and final-merge handoffs; whitespace checks passed. No hosted target-project operation was performed.
+
+## Publication recovery and V-003 — Packaged templates
+
+The V-002 push and read-only GitHub checks returned HTTP 502. A later exact-ref readback recovered at V-001, then the retained `2101ec7` commit was pushed normally and read back before further work. Added all three campaign drafts under package assets byte-for-byte, including the user-edited AGENTS template and supplied discovery protocol. Linked the task/agent/discovery assets from the main procedure; target repository files were not copied or modified. Verified asset/draft byte identity and whitespace. Source root discovery and development AGENTS remain unchanged.
