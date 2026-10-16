@@ -169,163 +169,163 @@
 | U-001 | `README.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
 | U-001 | `SDD-MANAGER.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
 | U-001 | `SKILL_DISCOVERY_PROTOCOL.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
-| U-008 | `acceptance/AGENTS.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/TEXTSTATS.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/AGENTS.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/DIAGNOSTICS.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/EXECUTION.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/OBJECTIVES.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/README.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/RECOVERY.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/RELEASE-SCENARIOS.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/SCENARIO.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/SETUP.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/TRIAL-CONTROLS.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/VARIANTS.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-001.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-001.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-002.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-002.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-003.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-003.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-004.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-004.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-005.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-005.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-006.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-006.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-007.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-007.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-008.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-008.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-009.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-009.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-010.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-010.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-011.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-011.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-012.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-012.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-013.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-013.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-014.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-014.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-015.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-015.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-016.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-016.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-017.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-017.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-018.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-018.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-019.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-019.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-020.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-020.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-021.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-021.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-022.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-022.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-023.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-023.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-024.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-024.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-025.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-025.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-026.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-026.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-027.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-027.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-028.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-028.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-029.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-029.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-030.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-030.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-031.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-031.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-032.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-032.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-033.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/A-033.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/CHECKPOINTS.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/COMMON.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/DOCUMENT-QC.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/INTERRUPTIONS.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/MAIN-PREPARATION.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/TRACKING-FIDELITY.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/capture.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/catalog_tools.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/expected.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/inputs.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/assessor/release_capture.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/cases/catalog.json` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-001.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-002.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-003.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-004.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-005.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-006.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-007.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-008.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-009.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-010.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-011.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-012.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-013.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-014.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-015.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-016.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-017.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-018.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-019.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-020.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-021.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-022.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-023.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-024.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-025.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-026.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-027.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-028.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-029.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-030.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-031.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-032.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/A-033.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/continuation.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/preparation.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/tracking-fidelity.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/cases/consumer/uncontrolled-continuation.md` | Consumer/contract/protocol semantics and dependencies | Pending |
-| U-008 | `acceptance/textstats/schemas/inputs.schema.json` | Metadata/schema/configuration fields and consumers | Pending |
-| U-008 | `acceptance/textstats/schemas/run-state.schema.json` | Metadata/schema/configuration fields and consumers | Pending |
-| U-008 | `acceptance/textstats/scripts/HELPER-INTERFACES.md` | Composition, operative guidance and handoffs | Pending |
-| U-008 | `acceptance/textstats/scripts/assess.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/scripts/campaign.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/scripts/contract_probe.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/scripts/core.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/scripts/evidence_merge.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/scripts/fault_adapter.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/scripts/observe.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/scripts/preflight.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/scripts/prepare.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/scripts/trial_control.py` | Functions/control flow and consequential failure paths | Pending |
-| U-008 | `acceptance/textstats/templates/inputs.example.json` | Metadata/schema/configuration fields and consumers | Pending |
-| U-008 | `acceptance/textstats/tests/__init__.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/support.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_campaign.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_catalog.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_checkers.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_contract_probe.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_evidence_merge.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_fault_adapter.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_local_assessment.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_nested_package.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_package_docs.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_preflight.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_recovery.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_release_capture.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-008 | `acceptance/textstats/tests/test_trial_control.py` | Fixture/method map; consequential assertions; suite | Pending |
+| U-008 | `acceptance/AGENTS.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/TEXTSTATS.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/AGENTS.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/DIAGNOSTICS.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/EXECUTION.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/OBJECTIVES.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/README.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/RECOVERY.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/RELEASE-SCENARIOS.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/SCENARIO.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/SETUP.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/TRIAL-CONTROLS.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/VARIANTS.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-001.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-001.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-002.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-002.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-003.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-003.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-004.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-004.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-005.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-005.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-006.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-006.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-007.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-007.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-008.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-008.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-009.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-009.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-010.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-010.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-011.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-011.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-012.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-012.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-013.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-013.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-014.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-014.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-015.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-015.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-016.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-016.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-017.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-017.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-018.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-018.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-019.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-019.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-020.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-020.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-021.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-021.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-022.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-022.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-023.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-023.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-024.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-024.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-025.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-025.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-026.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-026.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-027.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-027.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-028.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-028.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-029.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-029.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-030.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-030.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-031.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-031.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-032.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-032.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-033.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/A-033.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/CHECKPOINTS.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/COMMON.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/DOCUMENT-QC.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/INTERRUPTIONS.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/MAIN-PREPARATION.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/TRACKING-FIDELITY.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/capture.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/catalog_tools.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/expected.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/inputs.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/assessor/release_capture.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/catalog.json` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-001.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-002.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-003.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-004.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-005.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-006.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-007.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-008.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-009.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-010.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-011.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-012.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-013.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-014.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-015.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-016.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-017.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-018.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-019.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-020.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-021.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-022.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-023.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-024.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-025.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-026.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-027.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-028.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-029.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-030.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-031.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-032.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/A-033.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/continuation.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/preparation.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/tracking-fidelity.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/cases/consumer/uncontrolled-continuation.md` | Consumer/contract/protocol semantics and dependencies | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/schemas/inputs.schema.json` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/schemas/run-state.schema.json` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/scripts/HELPER-INTERFACES.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/scripts/assess.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/scripts/campaign.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/scripts/contract_probe.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/scripts/core.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/scripts/evidence_merge.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/scripts/fault_adapter.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/scripts/observe.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/scripts/preflight.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/scripts/prepare.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/scripts/trial_control.py` | Functions/control flow and consequential failure paths | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/templates/inputs.example.json` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/__init__.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/support.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_campaign.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_catalog.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_checkers.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_contract_probe.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_evidence_merge.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_fault_adapter.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_local_assessment.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_nested_package.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_package_docs.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_preflight.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_recovery.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_release_capture.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
+| U-008 | `acceptance/textstats/tests/test_trial_control.py` | Fixture/method map; consequential assertions; suite | Reviewed at stated depth |
 | U-001 | `docs/demo/calculator/README.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
 | U-001 | `docs/demo/tetris/README.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
 | U-001 | `docs/demo/tetris/examples/PROJECT_phased-project.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
