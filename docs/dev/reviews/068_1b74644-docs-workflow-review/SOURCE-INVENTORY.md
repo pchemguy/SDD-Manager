@@ -15,17 +15,17 @@
 | U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/repository-bootstrap.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/agent-orientation.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-001 | `.agents/plugins/sdd-manager/skills/sdd-orient/SKILL.md` | Changed | Reviewed: full selected text / consequential interfaces |
-| U-002 | `.agents/plugins/sdd-manager/skills/sdd-design/SKILL.md` | Changed | Pending |
-| U-002 | `.agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md` | Changed | Pending |
-| U-002 | `.agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md` | Changed | Pending |
-| U-002 | `.agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md` | Changed | Pending |
-| U-002 | `.agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md` | Changed | Pending |
-| U-002 | `.agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md` | Changed | Pending |
-| U-002 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/human-document-review.md` | Changed | Pending |
-| U-002 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/document-qc-gates.md` | Adjacent owner/tooling | Pending |
-| U-002 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/development-document-qc.md` | Adjacent owner/tooling | Pending |
-| U-002 | `.agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md` | Changed | Pending |
-| U-002 | `.agents/plugins/sdd-manager/skills/sdd-report/references/completion-reports.md` | Changed | Pending |
+| U-002 | `.agents/plugins/sdd-manager/skills/sdd-design/SKILL.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-002 | `.agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-002 | `.agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-002 | `.agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-002 | `.agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-002 | `.agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-002 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/human-document-review.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-002 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/document-qc-gates.md` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
+| U-002 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/development-document-qc.md` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
+| U-002 | `.agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-002 | `.agents/plugins/sdd-manager/skills/sdd-report/references/completion-reports.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md` | Changed | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github.md` | Changed | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-docs-preparation.md` | Changed | Pending |
