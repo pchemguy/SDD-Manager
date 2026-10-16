@@ -41,3 +41,7 @@ Clarified both drafts and the plan: document tasks/issues track development thro
 ## Discovery protocol asset amendment
 
 Pulled published campaign commit `54930ba`, which adds the supplied SKILL_DISCOVERY_PROTOCOL.md draft. Updated the plan and DOCS-001 draft to include it as a fourth root initialization file, copied unchanged from the future assets location when absent and preserved when present. The partial-presence pause now covers any mixed state among the four files. Added a dedicated Initialization link to the AGENTS template. The supplied protocol remains unchanged in the campaign; package deployment is still pending.
+
+## User template revision review
+
+Pulled `57551e6` and reviewed the updated AGENTS template. The [focused review report](REVIEW-REPORT.md) proposes four improvements to terminology, coordinator loading, section ownership and project-specific maintenance placement. The user’s draft is preserved unchanged; revisions await selection.
