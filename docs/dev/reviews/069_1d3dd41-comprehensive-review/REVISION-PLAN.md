@@ -45,3 +45,14 @@ User feedback requests the actual existing checkpoint points. Replace the overlo
 ## V-005 — Related wording review
 
 The user requested review for similar overcomplicated wording elsewhere. Review related checkpoint, preparation-QC and handoff passages against their existing owners; record concrete located recommendations without additional source repairs. Preserve previous source corrections and keep 069 open/unmerged. See [focused text review](FOCUSED-TEXT-REVIEW.md).
+
+## V-006 — Apply the wording corrections
+
+Implement R-003–R-005 from the [focused review](FOCUSED-TEXT-REVIEW.md) following the user's correction that these remained unapplied. Starting source: `951499c518ba3e79f4a9a98e47914b707512c246`.
+
+1. R-003: remove the duplicate PLAN QC paragraph from human-document-review; state actual technical checks in document-qc-gates; simplify DOCS-006/007 actions in DOCS_TASKS_TEMPLATE. Preserve distinct approvals and report/publication requirements.
+2. R-004: replace the copied opening checkpoint paragraphs in design/specify/plan/tasks entries with their concrete artifact-to-next-stage checkpoints, applicable preapproval and the common procedure link. Preserve direct calls, necessary feature proposals, existing-input reuse and requested interactive review.
+3. R-005: separate coordination step 5's ordinary repair handoff from named conditional cases, retaining the task-recovery and sdd-docs referral owners.
+4. Compare against the original obligations and direct-call/feature/existing/preapproval/recovery contrasts. Run source/link/style/author checks, the existing support suite and native package/schema/snapshot checks; report actual evidence limits and publish. No new wording-mirroring tests, capabilities or model trials.
+
+These eight source targets and active campaign records/index are the full amendment scope. The already simplified sdd-plan review section stays unchanged. Keep 069 open/unmerged.

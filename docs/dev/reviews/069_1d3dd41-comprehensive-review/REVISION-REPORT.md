@@ -82,3 +82,7 @@ Compared both points with the current sdd-plan entry and shared human-review/doc
 ## V-005 — Related wording review complete
 
 [Focused text review](FOCUSED-TEXT-REVIEW.md) records three Open editorial recommendations at source d5735a6: repeated PLAN/layout bookkeeping, copied entry checkpoint boilerplate and an overloaded verification handoff. R-001/R-002 retain their functional source dispositions; the follow-up identifies further composition improvements, including within the recent correction. No further source changes were made under this review request. Current/active local link/format checks passed; prior runtime/package results remain source-qualified. Campaign remains open/unmerged.
+
+## V-006 — Wording corrections selected for execution
+
+R-003–R-005 are selected for implementation under the plan amendment after the user's follow-up that they were not fixed. Source changes and verification follow this published checkpoint; this entry does not claim they are already applied. Keep the campaign open/unmerged.
