@@ -84,3 +84,7 @@ Publisher inventory now requires all three preparation assets. A new publisher r
 - Campaign draft assets and package asset bytes match. Full campaign diff changes no prior closed campaign contents.
 
 Exact committed package and final merged-state checks follow this action checkpoint. Native consumer, controlled/live provider, installed-client discovery and actual human interaction acceptance are not run.
+
+## Coupled source recheck
+
+A final handoff read found the commit composer’s generic closing-composition paragraph could still send DOCS tasks to the implementation audit. Restricted that paragraph and the forge hierarchy rule explicitly to implementation, and linked DOCS completion to its separate main procedure. This removes an instruction ambiguity without changing executable tooling. Markdown/link and author validation are rechecked on the final candidate.
