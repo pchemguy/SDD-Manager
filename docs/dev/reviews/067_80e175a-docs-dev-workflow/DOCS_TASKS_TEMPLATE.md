@@ -4,9 +4,9 @@ This list owns main documentation preparation. Product implementation tasks belo
 
 ## Completion and tracking
 
-For each document task, finish applicable QC and obtain human acceptance before marking it complete. An explicit preapproval may satisfy the human checkpoint within its stated scope; it does not waive QC or publication. The user may preapprove future checkpoints at any time.
+Each document task and its issue track development through the document’s first human approval. After that approval, mark the task complete. Later document revisions leave this task complete and its issue closed. An explicit preapproval may satisfy the human checkpoint within its stated scope; it does not waive QC or publication. The user may preapprove future checkpoints at any time.
 
-Include the initial checkbox transition in the commit submitting the accepted document state and its acceptance evidence. If the reviewed document was already published unchanged, retain that exact document state in the acceptance commit; do not rewrite it merely to create a diff. Push and verify remote containment before closing the corresponding issue or advancing.
+Include the checked task in `DOCS_TASKS.md` in the same commit that submits the approved document and records its first approval. If the reviewed document was already published unchanged, retain that exact document state in the acceptance commit; do not rewrite it merely to create a diff. Push and verify remote containment before closing the corresponding issue or advancing.
 
 When tracking is enabled, each `DOCS-*` task maps to one issue in the `docs-main` milestone. Verify the milestone, all nine issues and their associations before modifying the repository. Reuse their stable identities on resume. Close issues only after the corresponding completion commit is published and verified. With tracking disabled, apply the same local task and checkpoint requirements.
 
@@ -42,7 +42,7 @@ When tracking is enabled, each `DOCS-*` task maps to one issue in the `docs-main
     - Require all preceding tasks complete and their issue closures verified when tracking is enabled.
     - Review the entire document set, necessary children and QC reports for consistency, traceability, delivery readiness and unresolved blockers. Check initialization, orientation, human acceptance and publication evidence.
     - Resolve blockers through their owning documents and recheck affected readiness and acceptance. Retain the package QC report with the preparation documents.
-    - Commit the passing report and this task's initial completion together, push and verify; then close and verify the final QC issue.
+    - Commit the passing report and this task marked complete together, push and verify; then close and verify the final QC issue.
 
 ## Integration and final checkpoint
 

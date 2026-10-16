@@ -20,7 +20,7 @@ The user may explicitly preapprove future checkpoints at any time. Retain the sc
 
 ## Commits and publication
 
-Keep each task's verified result, required evidence and initial completion checkbox in the same commit. For documentation tasks, complete that checkpoint after initial human acceptance or applicable preapproval. Push every owned commit and verify remote containment before further work or another commit, unless the user explicitly directs local-only or deferred publication.
+Keep each task's verified result, required evidence and completion checkbox in the same commit. Documentation tasks and their issues track development through first approval: mark the task complete in the commit submitting the approved document, then close its issue after verified publication. Later document revisions leave that task complete and its issue closed. Honor applicable checkpoint preapproval. Push every owned commit and verify remote containment before further work or another commit, unless the user explicitly directs local-only or deferred publication.
 
 Use SDD Manager's integration procedure at the authorized complete boundary. For main preparation, pass package QC, publish the documentation merge, close the preparation milestone when tracking is enabled and confirm the final checkpoint before implementation.
 

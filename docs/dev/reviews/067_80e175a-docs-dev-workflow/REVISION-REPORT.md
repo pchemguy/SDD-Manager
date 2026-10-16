@@ -33,3 +33,7 @@ The user additionally requested predefined DOCS_TASKS, task/issue progression, i
 ## Template draft checkpoint
 
 Created [DOCS_TASKS_TEMPLATE.md](DOCS_TASKS_TEMPLATE.md) and [AGENTS_TEMPLATE.md](AGENTS_TEMPLATE.md) in this campaign for review. The task template defines nine preparation units, atomic acceptance completion, issue progression, package QC and integration/milestone ordering. The initial agent template supplies concise workflow, document, human checkpoint, publication and tracking instructions. Normalized the proposed asset names in the plan. Package assets and operational skills remain unchanged.
+
+## First-approval tracking clarification
+
+Clarified both drafts and the plan: document tasks/issues track development through first approval. Mark the task complete in the commit submitting the approved document, publish and verify, then close the issue. Later revisions leave that task complete and its issue closed; current document readiness remains subject to applicable review and QC. Removed the proposed reopening behavior and the unclear “initial checkbox transition” wording.
