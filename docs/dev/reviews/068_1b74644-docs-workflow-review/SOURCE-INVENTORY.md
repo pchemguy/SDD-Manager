@@ -8,13 +8,13 @@
 
 | Unit | Artifact | Basis | Depth/state |
 | --- | --- | --- | --- |
-| U-001 | `.agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md` | Changed | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md` | Changed | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/SKILL_DISCOVERY_PROTOCOL.md` | Changed | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/main-preparation.md` | Changed | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/repository-bootstrap.md` | Changed | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/agent-orientation.md` | Changed | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-orient/SKILL.md` | Changed | Pending |
+| U-001 | `.agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-001 | `.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-001 | `.agents/plugins/sdd-manager/assets/SKILL_DISCOVERY_PROTOCOL.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/main-preparation.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/repository-bootstrap.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/agent-orientation.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-orient/SKILL.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-design/SKILL.md` | Changed | Pending |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md` | Changed | Pending |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md` | Changed | Pending |
