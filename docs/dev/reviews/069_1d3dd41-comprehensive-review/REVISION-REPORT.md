@@ -5,15 +5,15 @@
 - Campaign: `069_1d3dd41`; [revision plan](REVISION-PLAN.md); [baseline review](REVIEW-REPORT.md).
 - Reviewed baseline: `1d3dd41c29c4534fc84490b78b534017ef0af4a8`; revision starting source: `880e4d490efe3302c8b2b8e72275a1b7aa5f9960`.
 - Branch: `revision/069_1d3dd41-comprehensive-review`; eventual target: `main`.
-- State: Executing; V-001 and V-002 source corrections and focused rechecks complete. R-001 and R-002 are Revised pending final regression/package checks. Campaign stays open and unmerged.
+- State: Revision executed; V-001–V-003 complete. Both findings Verified at the source/structural/regression level; live behavior remains unrun. Campaign stays open and unmerged.
 
 ## Action evidence
 
 | Action | Findings | State | Evidence |
 | --- | --- | --- | --- |
-| V-001 | R-001 | Revised; source recheck passed | Four affected caller/verification files; detailed contrasts below. |
-| V-002 | R-002 | Revised; source recheck passed | PROJECT/PLAN/layout reminders and matching feature-assessor criterion. |
-| V-003 | Both | Planned | Final source/structural/regression verification and publication. |
+| V-001 | R-001 | Verified: source and regressions | Four affected caller/verification files; detailed contrasts below. |
+| V-002 | R-002 | Verified: source and regressions | PROJECT/PLAN/layout reminders and matching feature-assessor criterion. |
+| V-003 | Both | Complete | Final local verification below; campaign open/unmerged. |
 
 ## Limits
 
@@ -49,3 +49,26 @@ V-001 was committed/published as `4565dc8ed643313dca4dfef895bb60a5352de315`; exa
 | Feature preparation | A-008's guide and contract carry the same criterion as A-001 and reference the shared independent checkpoint assessment. Normal uncovered human gates remain required. |
 
 Performed manual entry/reference/shared-policy comparisons for these contrasts. A direct JSON/text comparison confirmed A-008 guide/contract agreement with A-001 and unchanged deterministic checks. Static catalog validation passed all 33 cases; local Markdown/link/containment checks and git diff --check passed. No consumer/model interaction or preapproval trial was executed. No template, README, PLUGIN, discovery or controlling AGENTS change was needed.
+
+## V-003 — Final verification and disposition
+
+V-002 was published and exact origin readback verified before checks. Tested source: `01ce8b608f2b556cc15afbc53e2ae96b660d6e9f`; subsequent changes are campaign/index reporting only. [Revision verification](REVISION-VERIFICATION.json) retains commands, exact source, package identity and outcomes; the original review VERIFICATION.json remains unchanged.
+
+| Check | Actual result |
+| --- | --- |
+| TextStats support suite | 137 tests passed on Python 3.12.14. |
+| Publisher suite | 34 tests passed with declared jsonschema 4.26.0 available. |
+| Catalog | All 33 cases validated; A-008 guide/contract agree with the main criterion and retain their deterministic checks. |
+| Native package and core schema | Passed: 137 files, 15 skills, 77 referenced modules; exact archive/tree/committed and dirty-clean snapshot byte parity, required assets and exclusions. |
+| Archive | Source `01ce8b608f2b556cc15afbc53e2ae96b660d6e9f`; SHA-256 `b0b5e49804b2e80961672239059a3efdb9ba623cf107679b3d2d2d993528efc9`. Archive source comment/timestamps identify this check, not a later reporting commit. |
+| Author validator | Exit 0; zero errors, 46 unchanged plugin-contained cross-skill advisories. No core namespace error or resource escape. |
+| Source contrasts and composition | Caller/verifier/preparation/document-owner boundaries and all V-001/V-002 contrasts checked; no verification-owned repair, automatic approval, extra workflow or new runtime dependency introduced. |
+| Markdown and scope | Current/active links, anchors, containment, spacing and diff checks passed. Exactly eight source/assessment files plus active campaign/index records changed; other source and closed campaign objects are preserved. |
+
+R-001 and R-002 are Verified for their diagnosed instruction consistency and the actual local checks. No High/Critical or other open formal finding remains from this review. The minor discovery-template spelling observation was outside these accepted fixes and is unchanged. Projections and the development contract were assessed for impact and need no update: the edits restore their existing ownership/preapproval model rather than introduce capabilities.
+
+Local suites and source checks do not establish fresh agent compliance, live human-checkpoint behavior, GitHub tracking/release, installed discovery or native interruption recovery. Those remain unrun/out of scope; no acceptance grade is inferred. No source changes were required after the successful candidate checks.
+
+## Publication and return
+
+Each plan/action commit was normally pushed and verified before the next work unit. Final report/verification records stay on the same campaign branch; native Git and exact remote readback establish their final publication checkpoint. No merge was attempted, main remains at `1d3dd41c29c4534fc84490b78b534017ef0af4a8`, and campaign 069 remains open and unmerged for human review.

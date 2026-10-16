@@ -5,7 +5,7 @@
 - Campaign: `069_1d3dd41`.
 - Reviewed baseline: `1d3dd41c29c4534fc84490b78b534017ef0af4a8`.
 - [Plan](REVIEW-PLAN.md); [inventory](SOURCE-INVENTORY.md).
-- State: Review complete; campaign open and unmerged. No source repairs or live acceptance performed.
+- State: Baseline review complete; authorized revision executed separately in the [revision report](REVISION-REPORT.md). Campaign open and unmerged; live acceptance unrun.
 - Skill paths below are relative to `.agents/plugins/sdd-manager/`; acceptance/CI paths are repository-relative.
 
 ## Findings and recommended revision scope
@@ -156,3 +156,14 @@ Campaign 068 was closed and its two-parent merge published at the reviewed main 
 ## Accepted revision execution
 
 The user authorized preparation and execution of the [revision plan](REVISION-PLAN.md). R-001 and R-002 are Accepted; original baseline observations above remain intact. Current changes, rechecks and dispositions are recorded in the [revision report](REVISION-REPORT.md). Campaign remains open and unmerged.
+
+## Current finding dispositions
+
+Baseline observations and original review verification above are retained. Subsequent authorized corrections are complete:
+
+| Finding | Current status | Revision evidence |
+| --- | --- | --- |
+| R-001 | Verified: source/structural/regression; live behavior unrun | [V-001 routing correction](REVISION-REPORT.md#v-001--active-owner-repair-and-evidence-routing) |
+| R-002 | Verified: source/structural/regression; live behavior unrun | [V-002 checkpoint correction](REVISION-REPORT.md#v-002--applicable-checkpoint-preapproval) |
+
+Campaign remains open/unmerged; these dispositions do not close it or retroactively change the reviewed baseline.

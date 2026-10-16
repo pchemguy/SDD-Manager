@@ -1,0 +1,118 @@
+{
+  "campaign": "069_1d3dd41",
+  "reviewed_baseline": "1d3dd41c29c4534fc84490b78b534017ef0af4a8",
+  "revision_start": "880e4d490efe3302c8b2b8e72275a1b7aa5f9960",
+  "checked_source": "01ce8b608f2b556cc15afbc53e2ae96b660d6e9f",
+  "runtime": {
+    "python": "3.12.14",
+    "git": "git version 2.51.1",
+    "jsonschema": "4.26.0"
+  },
+  "published_actions": {
+    "plan": "5854fc5cd6dc99bc5dbb0718b1c8436cf7ee43d8",
+    "V-001": "4565dc8ed643313dca4dfef895bb60a5352de315",
+    "V-002": "01ce8b608f2b556cc15afbc53e2ae96b660d6e9f"
+  },
+  "findings": {
+    "R-001": {
+      "status": "Verified",
+      "level": "Manual source/handoff consistency; structural/package and regression checks",
+      "live_behavior": "Not run"
+    },
+    "R-002": {
+      "status": "Verified",
+      "level": "Manual source/checkpoint consistency; guide-contract comparison and regression checks",
+      "live_behavior": "Not run"
+    }
+  },
+  "checks": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v",
+      "exit_code": 0,
+      "tests": 137,
+      "result": "Passed"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/067-validator-deps python -m unittest discover -s .github/tests -v",
+      "exit_code": 0,
+      "tests": 34,
+      "result": "Passed",
+      "dependency_source": ".github/requirements.txt"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python acceptance/textstats/cases/assessor/catalog_tools.py validate",
+      "exit_code": 0,
+      "cases": 33,
+      "result": "Passed"
+    },
+    {
+      "method": "Compare A-008 guide/JSON criterion with A-001 and shared CHECKPOINTS; confirm deterministic check array unchanged",
+      "result": "Passed; source/structure only"
+    },
+    {
+      "method": "Invoke actual publisher.build_package and TextStats core.package at exact committed source; compare archive/tree/committed and dirty-clean snapshot bytes, required assets, reference inventory and scope",
+      "result": {
+        "source": "01ce8b608f2b556cc15afbc53e2ae96b660d6e9f",
+        "reviewed_baseline": "1d3dd41c29c4534fc84490b78b534017ef0af4a8",
+        "package_files": 137,
+        "skills": 15,
+        "routed_references": 77,
+        "sha256": "b0b5e49804b2e80961672239059a3efdb9ba623cf107679b3d2d2d993528efc9",
+        "native_snapshot_parity": true,
+        "preparation_assets_exact": true,
+        "protected_paths_unchanged": true,
+        "closed_campaigns_unchanged": true,
+        "changed_source_paths": [
+          ".agents/plugins/sdd-manager/skills/sdd-design/references/project-brief.md",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md",
+          ".agents/plugins/sdd-manager/skills/sdd-plan/references/review.md",
+          ".agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md",
+          ".agents/plugins/sdd-manager/skills/sdd-verify/references/execution-and-evidence.md",
+          ".agents/plugins/sdd-manager/skills/sdd-verify/references/failure-assessment.md",
+          "acceptance/textstats/cases/assessor/A-008.json",
+          "acceptance/textstats/cases/assessor/A-008.md"
+        ]
+      }
+    },
+    {
+      "command": "python <agent-package-author>/scripts/validate_plugin.py .agents/plugins/sdd-manager",
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 46,
+      "warning_kind": "resource-cross-skill; plugin-contained client handoff advisory"
+    },
+    {
+      "method": "Active/current Markdown targets/anchors, package containment, heading and blank-line checks; fenced/inline code, unresolved placeholder targets and frozen contents excluded",
+      "result": "Passed",
+      "documents": 210,
+      "local_links": 1075,
+      "errors": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": {
+    "source_files": 8,
+    "source_paths": [
+      ".agents/plugins/sdd-manager/skills/sdd-design/references/project-brief.md",
+      ".agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md",
+      ".agents/plugins/sdd-manager/skills/sdd-plan/references/review.md",
+      ".agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md",
+      ".agents/plugins/sdd-manager/skills/sdd-verify/references/execution-and-evidence.md",
+      ".agents/plugins/sdd-manager/skills/sdd-verify/references/failure-assessment.md",
+      "acceptance/textstats/cases/assessor/A-008.json",
+      "acceptance/textstats/cases/assessor/A-008.md"
+    ],
+    "other_changes": "Active campaign records and its index row only",
+    "closed_campaigns": "Unchanged",
+    "projections_contract_templates_AGENTS_metadata": "Unchanged"
+  },
+  "limits": [
+    "No fresh isolated consumer/model, live acceptance, GitHub tracking/release, installed-client or native interruption trial",
+    "Local Python 3.12.14 execution does not independently test CI Python 3.11",
+    "No merge, main publication or campaign closure"
+  ],
+  "campaign_state": "Open; revision executed; unmerged"
+}
