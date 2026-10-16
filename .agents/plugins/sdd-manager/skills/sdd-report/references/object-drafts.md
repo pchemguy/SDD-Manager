@@ -1,6 +1,6 @@
 # Issue, commit, and PR drafts
 
-Keep the same task identity across all outputs. Use the project-wide ID from its owning TASKS or FEATURE-TASKS entry; include a resolved issue reference only when **sdd-forge** supplies a unique repository and number. Match the requested object's time perspective: an issue describes intended work, while a commit or PR describes actual changes and available evidence.
+Keep the same task identity across all outputs. Use the ID from its owning TASKS or FEATURE-TASKS entry, or the predefined DOCS ID from DOCS_TASKS for main preparation; include a resolved issue reference only when **sdd-forge** supplies a unique repository and number. Match the requested object's time perspective: an issue describes intended work, while a commit or PR describes actual changes and available evidence.
 
 ## Task issue
 
@@ -13,13 +13,13 @@ Return `title` and `body` separately. Format the title as `[<task-id>] <task tit
 
 ## Git commit
 
-For a first SDD commit or adoption backfill, load **sdd-manage**'s [repository bootstrap](../../sdd-manage/references/repository-bootstrap.md). Confirm the commit owner has included or validly retained root disclosure/usage records and README links within scope. Return missing bootstrap evidence to that owner; drafting does not perform bootstrap or establish a committed result.
+For a first SDD commit or adoption backfill, load **sdd-manage**'s [repository bootstrap](../../sdd-manage/references/repository-bootstrap.md). For main preparation use [its initialization exception](../../sdd-manage/references/main-preparation.md): DOCS-001 has four preserved/copied root files and the task list; README links follow at PROJECT. Otherwise confirm the commit owner has included or validly retained root disclosure/usage records and README links within scope. Return missing bootstrap evidence to that owner; drafting does not perform bootstrap or establish a committed result.
 
 Draft a short imperative subject naming the actual change, based on the inspected diff and checks rather than merely the task brief. Use a body when the reason, verification, migration implications or verified issue references need explanation.
 
 ### Task commit subjects
 
-For every task-associated commit, use exactly `[<owning-task-id>] <imperative description>`. The single owning task marker must be the first content of the subject, followed by one space and the description. Preserve the exact project-wide ID from TASKS or FEATURE-TASKS. Do not prepend a conventional-commit type/scope, put the ID only at the end, or use multiple task IDs or a task range in the subject. Apply this format to production, tests, documentation and explicit milestone/phase review/report tasks, as well as authorized partial checkpoints and later task-specific repairs or parent-status follow-ups. Describe partial or follow-up work accurately; a subject does not establish completion.
+For every task-associated commit, use exactly `[<owning-task-id>] <imperative description>`. The single owning task marker must be the first content of the subject, followed by one space and the description. Preserve the exact ID from TASKS/FEATURE-TASKS or main DOCS_TASKS. DOCS subjects use the same single-ID shape, but document task completion means first approval under [main preparation](../../sdd-manage/references/main-preparation.md), not implementation task completion. Proposal commits leave the DOCS task unchecked; approval commits include its checked task and the accepted document state. Later revisions retain completed first-approval tasks/issues. Do not prepend a conventional-commit type/scope, put the ID only at the end, or use multiple task IDs or a task range in the subject. Apply this format to production, tests, documentation and explicit milestone/phase review/report tasks, as well as authorized partial checkpoints and later task-specific repairs or parent-status follow-ups. Describe partial or follow-up work accurately; a subject does not establish completion.
 
 For numeric `T-` IDs padded to at least three digits, `^\[T-[0-9]{3,}\] [^\r\n]+$` checks the basic subject shape. Also check that the ID is the exact owning entry, the subject has no second task identity, and the description is concise, imperative and truthful. A regex alone cannot establish ownership, single-task composition or completion.
 

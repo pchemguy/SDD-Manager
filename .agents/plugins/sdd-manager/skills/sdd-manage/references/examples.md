@@ -184,3 +184,14 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 - If readily available context suggests a qualifying amendment, propose the campaign and relation to the human. Do not reopen or edit frozen records until actual authority is established. Unrelated work uses a new campaign, and incomplete integration/publication resumes the existing active operation.
 
 Use [revision modes](revision-modes.md) for the controlling eligibility, authority, preservation and worktree-return rules. Neither mode silently resumes an interrupted parent or bypasses required project-preparation/phase gates.
+
+## Main documentation preparation
+
+| Request / observed state | Required boundary |
+| --- | --- |
+| Fresh main preparation with requested GitHub tracking | Verify native docs-main and all nine template issues before target writes; then create/reuse docs branch, copy the task template and perform DOCS-001. No product PLAN/TASKS prerequisite or implementation phase objects. |
+| Two of the four root setup files existed | Preserve them, copy the missing files, publish initialization with DOCS-001 complete, close/read back its issue, warn with both file groups and stop unless that continuation was explicitly preapproved. |
+| SPEC is approved after its proposal was published | Commit the approved SPEC state, approval evidence and checked DOCS-005 together; push/read back, then close its issue before PLAN. No rewrite of unchanged SPEC bytes. |
+| Later SPEC correction or resumed incomplete preparation | Retain first-approval task/issue completion; reassess current readiness and continue the earliest unmet operation without duplicate objects or guessed approvals. |
+| Main preparation through TASKS is complete | Pass whole-package DOCS-009 QC, publish its report/checked task, close final issue, explicitly merge/verify/publish docs, close/read back docs-main, then confirm final checkpoint. Implementation still needs its authorized range. |
+| Explicit preapproval covers remaining document and final checkpoints | Retain its actual scope; report/check/persist each result without repeated acceptance pauses. Technical, tracking and publication gates remain required; do not guess an implementation range. |

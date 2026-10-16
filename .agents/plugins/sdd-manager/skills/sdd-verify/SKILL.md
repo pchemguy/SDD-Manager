@@ -19,6 +19,8 @@ Establish the requested task, change, milestone, phase, or project scope. Load t
 
 Use a current **sdd-orient** handoff for governing instructions, Git state, dirty-path ownership, relevant documents, and declared commands. **sdd-manage** coordinates the requested scope and execution prerequisites; the active implementation workflow, **sdd-implement** for main task work or **sdd-steer** for a checkpoint amendment, requests verification within its boundary. For standalone package/release work, use accepted source/build/package inputs without inventing TASKS; load release checks. Otherwise read the owning TASKS or FEATURE-TASKS, relevant SPEC contracts, PLAN exit conditions, design and layout, actual changes, tests, and existing evidence as needed. Read-only check planning can precede execution; commands with side effects require the established eligible Git worktree and authorized environment.
 
+For main documentation package QC, use [main preparation](../sdd-manage/references/main-preparation.md#final-package-qc-integration-and-checkpoint) and DOCS-009 in DOCS_TASKS, not the implementation task/audit lifecycle. Assess the current whole document set and evidence; return the passing/blocked DOCS-QC-REPORT to the coordinator for repairs, checked-task persistence, publication and hosted closure. Completed first-approval tasks remain complete during later document revisions.
+
 For an explicit boundary review task, load boundary review and assess implementation code separately from test execution. Neither activity substitutes for the other. Return findings and recheck evidence without repairs or task/hosted state changes.
 
 1. Identify the acceptance and exit conditions to verify and the implementation state being checked.

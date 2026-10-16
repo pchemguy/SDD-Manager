@@ -61,3 +61,7 @@ Implemented a separate routed GitHub preparation module with exact milestone/tas
 ## Publication recovery and V-003 — Packaged templates
 
 The V-002 push and read-only GitHub checks returned HTTP 502. A later exact-ref readback recovered at V-001, then the retained `2101ec7` commit was pushed normally and read back before further work. Added all three campaign drafts under package assets byte-for-byte, including the user-edited AGENTS template and supplied discovery protocol. Linked the task/agent/discovery assets from the main procedure; target repository files were not copied or modified. Verified asset/draft byte identity and whitespace. Source root discovery and development AGENTS remain unchanged.
+
+## V-004 — Owner and integration handoffs
+
+Aligned direct document-owner entry with the main pre-write/first-approval lifecycle and explicit future preapproval. Main preparation-only now includes package QC, verified published documentation integration and milestone closure before the final implementation checkpoint; explicit narrower stops remain controlling. Updated orientation, documentation, verification/reporting owners, workflow routing and six source scenarios. Checked that DOCS completion is not delegated to the implementation T-task audit and later revisions retain first-approval completion. Source/whitespace rechecks passed; full coupled checks follow V-006.
