@@ -65,3 +65,7 @@ The V-002 push and read-only GitHub checks returned HTTP 502. A later exact-ref 
 ## V-004 — Owner and integration handoffs
 
 Aligned direct document-owner entry with the main pre-write/first-approval lifecycle and explicit future preapproval. Main preparation-only now includes package QC, verified published documentation integration and milestone closure before the final implementation checkpoint; explicit narrower stops remain controlling. Updated orientation, documentation, verification/reporting owners, workflow routing and six source scenarios. Checked that DOCS completion is not delegated to the implementation T-task audit and later revisions retain first-approval completion. Source/whitespace rechecks passed; full coupled checks follow V-006.
+
+## V-005 — Entry and human documentation
+
+Updated PLUGIN highlights, full README including preparation diagram/assets, capability map and plugin contract. Canonical procedures remain in coordinator/backend modules; entries now expose pre-write preparation tracking, four-file initialization pause, first-approval scope, final QC/merge/milestone ordering and scoped future preapproval. Removed the full README’s superseded first-commit/merge-only-if-implementation framing. The abbreviated root README already points to the full documentation and needs no duplicated procedure. Whitespace and source walkthrough checks passed; package/link/support verification follows.
