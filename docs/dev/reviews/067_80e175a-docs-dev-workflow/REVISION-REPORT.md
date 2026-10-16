@@ -124,3 +124,13 @@ Final target is the refreshed `main`. The integration owner explicitly merges th
 ## Reopening — Tracking default amendment
 
 Original campaign closed at the published two-parent main merge `1a0bab5421409d6c11454242a5c85e803dfe5eb2`. Verified current main/remote equality, latest first-parent merge, both parent identities and original campaign-tip containment. The human explicitly reopened for default GitHub tracking in the AGENTS template, split documentation/implementation obligations and corresponding README guidance. Fast-forwarded the retained campaign branch to that target checkpoint, preserving all original provenance. V-007 is accepted and pending; no source changes are included in this reopening checkpoint. Target remains main; other closed records stay frozen.
+
+## V-007 — GitHub default and separate tracking gates
+
+Updated both campaign and packaged AGENTS templates: GitHub tracking is enabled by default for documentation preparation and implementation, with an explicit user-changeable mode and separate documentation/implementation subsections. The docs rule names native docs-main and all nine issues before repository writes, first-approval closure and merge-before-milestone completion. Implementation names phase activation, labels, all milestone/task objects including reviews, readback and ongoing lifecycle maintenance. Missing tracking prerequisites report a blocker and stop affected work; access failure does not silently disable tracking.
+
+Aligned coordinator selection/main startup, phase handoff, backend lifecycle/projection, PLUGIN, full README and capability map. Fresh main preparation applies the bundled default before copying AGENTS, while explicit choices and existing controlling project policy take precedence. Other workflows without a default/choice retain optional selection. No unsupported provider is advertised or alternate repository guessed. Source development AGENTS.md is unchanged.
+
+Extended independent A-001 assessment with default, disabled/local-only/narrower-policy, interruption/token-supply and non-GitHub mismatch scenarios. Source walkthroughs confirm the default is selected before the docs gate, an established opt-out wins and survives recovery, implementation waits for readback, and docs retain their separate merge/closure order. No live consumer/provider execution is claimed.
+
+Python 3.12.14: 137 support tests and 34 publisher tests pass; all 33 catalog cases validate. Current/active Markdown checks pass across 211 documents and 1,045 local links; author inventory reports zero errors and 46 cross-skill warnings. Template/draft parity is preserved. Exact committed package verification follows this action checkpoint.

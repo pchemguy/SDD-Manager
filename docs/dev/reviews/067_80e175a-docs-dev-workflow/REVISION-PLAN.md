@@ -143,7 +143,7 @@ Deterministic support checks establish tooling behavior; source walkthroughs est
 - Reopening source/target checkpoint and qualifying prior merge: `1a0bab5421409d6c11454242a5c85e803dfe5eb2`, published on main, parents `80e175adb3b7a797fedea85e9f69046bfe05298d` and `1cb2b9a01c64ef7146c2cd51bbc5b1a964d99306`.
 - Human authority: reopen the campaign and adapt/integrate default GitHub tracking into AGENTS, clarifying documentation and implementation, with user override and a README note.
 - Original identity, baseline and opening remain unchanged. Working branch remains `revision/067_80e175a-docs-dev-workflow`; target remains `main`.
-- State: Amendment accepted; V-007 planned. Earlier execution and closure evidence above remains historical.
+- State: V-007 implemented and verified; final amendment integration/publication pending. Earlier execution and closure evidence above remains historical.
 
 ### V-007 — Default tracking and separate lifecycle reminders
 

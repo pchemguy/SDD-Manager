@@ -110,7 +110,9 @@ You may **preapprove future human checkpoints at any time**, individually or as 
 
 ### Main preparation tracking
 
-When enabled, tracking creates/verifies the native `docs-main` milestone and all nine preparation issues **before repository modifications**. Initialization preserves existing root AGENTS/disclosure/usage/discovery files and copies missing ones. If only some existed, the agent reports both groups and pauses after publishing initialization; none/all present adds no approval stop. Existing preparation resumes without replacing files or replaying first approvals.
+The initial AGENTS template enables GitHub tracking for **both documentation preparation and implementation by default**. You may disable it, request local-only work or select another supported backend; existing controlling project policy and explicit choices take precedence. The coordinator applies this default before initialization writes, rather than waiting for the template to be copied. Access failure is a blocker, not an automatic opt-out.
+
+When enabled, documentation tracking creates/verifies the native `docs-main` milestone and all nine preparation issues **before repository modifications**. Initialization preserves existing root AGENTS/disclosure/usage/discovery files and copies missing ones. If only some existed, the agent reports both groups and pauses after publishing initialization; none/all present adds no approval stop. Existing preparation resumes without replacing files or replaying first approvals.
 
 `docs/dev/DOCS_TASKS.md` comes from the bundled template. Each document task completes at first approval: its approved state and checked task share one commit, followed by push/readback and issue closure. Later document revisions keep that task complete and issue closed. The last task/issue checks the whole package; then the docs branch merges, the verified merge is published, the milestone closes and the agent confirms the final checkpoint before implementation. See [main preparation](skills/sdd-manage/references/main-preparation.md).
 
