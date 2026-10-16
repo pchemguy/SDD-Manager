@@ -5,7 +5,7 @@
 - Campaign: `068_1b74644`.
 - Starting/reviewed source: `1b74644cb0b97e074cc407086be13b5597620b80`.
 - [Review plan](REVIEW-PLAN.md); [source inventory](SOURCE-INVENTORY.md).
-- State: Review complete; campaign open. No revision execution or integration authorized.
+- State: Review complete; campaign open with a [revision plan](REVISION-PLAN.md). No revision execution or integration authorized.
 - Evidence boundary: current source inspection and local structural/support/publisher execution; no live acceptance, source repairs or workflow deployment.
 
 ## Coverage
