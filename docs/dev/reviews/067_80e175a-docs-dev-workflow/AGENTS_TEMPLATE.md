@@ -2,7 +2,7 @@
 
 ## Specification-driven development
 
-This project uses the SDD Manager plugin for specification-driven development. Load its `sdd-manage` coordinator entry before coordinated work. Use the installed plugin when available; otherwise load `.agents/plugins/sdd-manager/PLUGIN.md` and the coordinator entry it references. If neither source is available, report the missing plugin before dependent workflow work.
+This project uses the SDD Manager plugin for specification-driven development. If not already in the context, load `PLUGIN.md` from installed location or from `.agents/plugins/sdd-manager/PLUGIN.md` and the coordinator skill entry it references. If neither source is available, report the missing plugin before dependent workflow work.
 
 **Follow the applicable SDD Manager workflows, including human checkpoints, Git publication and integration, and requested GitHub or equivalent backend tracking.**
 
