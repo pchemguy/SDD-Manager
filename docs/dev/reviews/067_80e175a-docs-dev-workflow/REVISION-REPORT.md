@@ -53,3 +53,7 @@ The user authorized updating the AGENTS draft. Applied and source-rechecked all 
 ## V-001 — Main preparation coordination
 
 Implemented the main-preparation module and direct coordinator routing, early preparation tracking selection, four-file initialization/preservation/partial-state stop, first-approval completion, package QC and merge/milestone/final-checkpoint ordering. Bootstrap and agent-orientation instructions now distinguish this main-only path from other adoption. Added shared future-checkpoint preapproval and removed the contradictory downstream-preacceptance prohibition. Source inspection and whitespace checks passed; asset/backend links and coupled verification finish in V-002–V-006.
+
+## V-002 — Hosted preparation lifecycle
+
+Implemented a separate routed GitHub preparation module with exact milestone/task/scope markers, all-nine projection/readback before repository writes, first-approval issue closure, idempotent/uncertain-write recovery and merge-before-milestone closure. Existing implementation projection/issue/milestone procedures explicitly route DOCS work to that owner. Shared lifecycle distinguishes preparation from phase activation. Inspected the fresh, partial/unknown projection, first-approval and final-merge handoffs; whitespace checks passed. No hosted target-project operation was performed.
