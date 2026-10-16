@@ -7,13 +7,13 @@
 - Working branch: `revision/067_80e175a-docs-dev-workflow`.
 - Integration target: `main`.
 - Objective: revise the documentation development workflow.
-- State: Open; campaign setup only.
+- State: Open; extension plan proposed, execution pending.
 
 ## Scope and authority
 
-The user requested a new revision campaign for the documentation development workflow. This opening establishes its identity, branch and retained record. Detailed concerns, review criteria and proposed changes have not yet been established.
+The user requested a new revision campaign for the documentation development workflow. This opening establishes its identity, branch and retained record. The subsequent request authorizes planning earlier artifact tracking and a three-file initialization checkpoint for fresh or resumed main preparation.
 
-No workflow source changes, review findings or remediation plan are included in this opening. Review, revision execution and campaign integration remain pending further direction.
+The opening made no workflow source changes. The [revision plan](REVISION-PLAN.md) now records the requested initialization behavior, proposed preparation lifecycle, affected owners and verification scenarios. Source implementation and campaign integration remain pending plan acceptance.
 
 ## Opening evidence
 
@@ -22,3 +22,7 @@ No workflow source changes, review findings or remediation plan are included in 
 - Changes are limited to this opening record and the review/revision index.
 - Publication of the opening commit is verified through remote branch readback; its actual identity is retained in Git.
 
+
+## Planning checkpoint
+
+Inspected current bootstrap, agent orientation, document-review checkpoints, tracking selection, phase activation and hosted lifecycle routing. Current bootstrap combines setup with the first result and may reconcile existing files; current hosted preparation stops short of object creation until PLAN/TASKS-driven activation. The proposal separates main preparation tracking and initialization while preserving implementation and non-main adoption behavior. No target-project operations or live acceptance were performed.
