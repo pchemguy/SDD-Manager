@@ -152,3 +152,9 @@ Revise the campaign and packaged AGENTS template with an explicit GitHub default
 Align coordinator tracking selection, main entry and entry/README summaries so a newly adopted default applies before DOCS-001, rather than after its copied AGENTS is first loaded. Respect existing decisions/project policy and unsupported hosting without guessing another destination or silently choosing local-only. Other workflows without an adopted/default/requested tracking policy retain optional selection.
 
 Extend TextStats assessor scenarios for default selection and explicit opt-out/narrower scope; verify template parity, links, source handoffs, package contents and relevant support/publisher regressions. Live consumer/provider acceptance remains unrun. Publish each checkpoint, explicitly remerge the completed amendment, verify/publish main and close the campaign again without resuming unrelated work.
+
+## V-008 — Correct the amendment scope
+
+The user rejected the plugin-wide changes and directed correction. Reopened at published amendment merge `adcb264abecf3219dcc8e2997cb0d05676174005`, the latest first-parent merge on main, with verified parents and source containment. Retain campaign identity, original opening/baseline and prior evidence.
+
+Restore PLUGIN, coordinator/backend policy, capability-map and acceptance-assessment files changed by V-007 to their pre-amendment `1a0bab5421409d6c11454242a5c85e803dfe5eb2` bytes. Retain the requested campaign/packaged AGENTS template and a README note describing that template policy; remove the README claim that the plugin applies the default before copying AGENTS. Keep the default as a project instruction, not a plugin-wide selection rule. Verify exact restoration, template parity, current links/catalog/package and scoped diff, then publish/integrate the correction. No runtime behavior change or live acceptance is claimed.
