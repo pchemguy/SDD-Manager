@@ -1,6 +1,6 @@
 # SDD Manager 0.15.0 release preparation
 
-The initial candidate and complete message are prepared for 0.15.0. This record retains that preparation in campaign `070_891a0ad`, open for human review on `revision/070_891a0ad-prerelease-preparation`.
+The initial candidate and complete message are prepared for 0.15.0. This record retains that preparation in campaign `070_891a0ad`. The subsequent human release/closure request authorizes verified main integration followed by product publication.
 
 ## Candidate and coverage
 
@@ -52,7 +52,7 @@ Confirm the requested publication state and latest policy, then use the single e
 
 Hosted CI, local Python 3.11, installed-client discovery/routing, fresh live consumer/provider behavior and cross-platform installation were not executed in this preparation. Local checks do not establish these outcomes.
 
-Initial preparation was local-only: no commit, push, release marker, tag, dispatch or hosted write occurred. The subsequent user request selects campaign persistence: root RELEASE-NOTES.md and these records are tracked and published on the revision branch. Generated package/checksum, build handoff and internal highlights remain ignored/untracked. The campaign stays open and unmerged; the current commit and remote publication are established through Git.
+Initial preparation was local-only: no commit, push, release marker, tag, dispatch or hosted write occurred. The subsequent user request selected campaign persistence: root RELEASE-NOTES.md and these records were committed/pushed as `925ae9533f0fe30de67dd9a49dd727733920b5a1`. Generated package/checksum, build handoff and internal highlights remain ignored/untracked. The later release/closure request authorizes verified main integration, then an exact release commit/tag and the established publisher. The hashes above retain their original candidate association; rebuild final assets from the actual release commit.
 
 Complete notes SHA-256: `6704b9db800112aa411087c1936d42bc03f804a0d19255442e05f042e812d101`.
 
