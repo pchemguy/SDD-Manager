@@ -29,3 +29,7 @@ Inspected current bootstrap, agent orientation, document-review checkpoints, tra
 ## Task-list and completion amendment
 
 The user additionally requested predefined DOCS_TASKS, task/issue progression, initial acceptance recorded atomically with document submission, final package QC as the last task/issue, documentation merge before milestone closure, a final preimplementation checkpoint and future-checkpoint preapproval. The plan incorporates these requirements and supersedes its earlier eight-issue, no-local-list and milestone-before-integration proposals. Implementation remains pending.
+
+## Template draft checkpoint
+
+Created [DOCS_TASKS_TEMPLATE.md](DOCS_TASKS_TEMPLATE.md) and [AGENTS_TEMPLATE.md](AGENTS_TEMPLATE.md) in this campaign for review. The task template defines nine preparation units, atomic acceptance completion, issue progression, package QC and integration/milestone ordering. The initial agent template supplies concise workflow, document, human checkpoint, publication and tracking instructions. Normalized the proposed asset names in the plan. Package assets and operational skills remain unchanged.

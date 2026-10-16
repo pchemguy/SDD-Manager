@@ -39,7 +39,7 @@ Close `docs-main` only after all nine tasks and issues are complete, the documen
 
 ## Documentation task owner and acceptance commits
 
-Add packaged `assets/DOCS_TASKS.md` as the predefined source for target `docs/dev/DOCS_TASKS.md`. Use nine stable preparation IDs, proposed as `DOCS-001` through `DOCS-009`, matching the initialization, seven documents and final package QC units above. Each task states its artifact, dependencies, completion criteria and corresponding issue identity when tracking is enabled. This list exists independently of implementation TASKS and remains useful when tracking is disabled.
+Add packaged `assets/DOCS_TASKS_TEMPLATE.md` as the predefined source for target `docs/dev/DOCS_TASKS.md`. Use nine stable preparation IDs, proposed as `DOCS-001` through `DOCS-009`, matching the initialization, seven documents and final package QC units above. Each task states its artifact, dependencies, completion criteria and corresponding issue identity when tracking is enabled. This list exists independently of implementation TASKS and remains useful when tracking is disabled.
 
 Create or reconcile the local list only after the enabled backend pre-write gate. Include its creation and initialization completion in the initialization commit, including when all three root setup files already exist. Do not overwrite a resumed list or recreate checked tasks. No empty commit is required when both the list and initialization evidence are already complete.
 
@@ -76,7 +76,7 @@ When a covered checkpoint is reached, still perform its authoring, QC, evidence,
 
 ## Initialization contract
 
-Introduce packaged `assets/agents_template.md` and copy it unchanged to target-root `AGENTS.md` when absent. Copy the existing packaged `assets/AI_DISCLOSURE.md` and `assets/SDD-MANAGER.md` to their same-named target-root files when absent.
+Introduce packaged `assets/AGENTS_TEMPLATE.md` and copy it unchanged to target-root `AGENTS.md` when absent. Copy the existing packaged `assets/AI_DISCLOSURE.md` and `assets/SDD-MANAGER.md` to their same-named target-root files when absent.
 
 Before copying anything, inspect all three destination paths and record the complete presence classification. Read applicable existing instructions. Preserve every existing file unchanged during this initialization unit; do not reconcile it with a template merely because contents differ. Resolve unsafe path types, ownership conflicts or incompatible controlling instructions before affected writes; an occupied symlink or directory is not permission to overwrite or follow it.
 
@@ -91,6 +91,10 @@ When files were copied, verify their bytes and staged ownership, commit the init
 The mixed-state pause is a decision about proceeding, not permission to copy the missing files: those copies are already part of the requested initialization. No PROJECT or other dependent authoring occurs before the human chooses to continue. A later explicit continuation clears that pause; do not repeatedly stop merely because the completed initialization now has all three files. On interruption recover pending copies, publication, issue closure and any unsatisfied pause from actual evidence rather than reclassifying only the final filesystem state.
 
 README notice links remain an existing discoverability obligation, but are outside this three-file classification and must not be added before the mixed-state pause. Specify their later eligible preparation checkpoint when revising bootstrap instructions.
+
+## Template drafts
+
+Campaign drafts: [AGENTS_TEMPLATE.md](AGENTS_TEMPLATE.md) and [DOCS_TASKS_TEMPLATE.md](DOCS_TASKS_TEMPLATE.md). These are proposed package assets retained here for human review; neither is installed or applied to a target project.
 
 ## Initial AGENTS template
 
