@@ -18,23 +18,23 @@
 
 | Unit | Artifact | Intended/assessed depth | State |
 | --- | --- | --- | --- |
-| U-001 | `.agents/plugins/sdd-manager/LICENSE` | Metadata/inclusion/attribution | Pending |
-| U-001 | `.agents/plugins/sdd-manager/PLUGIN.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/README.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/AI_DISCLOSURE.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/SDD-MANAGER.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/SKILL_DISCOVERY_PROTOCOL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/icon.png` | Metadata/inclusion/attribution | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/logo.png` | Metadata/inclusion/attribution | Pending |
-| U-001 | `.agents/plugins/sdd-manager/assets/logo.svg` | Metadata/inclusion/attribution | Pending |
-| U-001 | `.agents/plugins/sdd-manager/plugin.json` | Metadata/schema/configuration fields and consumers | Pending |
+| U-001 | `.agents/plugins/sdd-manager/LICENSE` | Metadata/inclusion/attribution | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/PLUGIN.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/README.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/assets/AI_DISCLOSURE.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/assets/SDD-MANAGER.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/assets/SKILL_DISCOVERY_PROTOCOL.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/assets/icon.png` | Metadata/inclusion/attribution | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/assets/logo.png` | Metadata/inclusion/attribution | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/assets/logo.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/plugin.json` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-conventions/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-conventions/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-conventions/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-conventions/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-conventions/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/backend-object-lifecycle.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/design-heuristics.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/development-document-qc.md` | Composition, operative guidance and handoffs | Pending |
@@ -45,21 +45,21 @@
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/task-hierarchy.md` | Composition, operative guidance and handoffs | Pending |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/workflow-identity.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-design/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-design/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-design/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-design/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-design/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-design/references/architecture.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-design/references/decomposition.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-design/references/exploration.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-design/references/project-brief.md` | Composition, operative guidance and handoffs | Pending |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-docs/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-docs/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-docs/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-docs/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-docs/references/in-code-documentation.md` | Composition, operative guidance and handoffs | Pending |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-docs/references/review-and-findings.md` | Composition, operative guidance and handoffs | Pending |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-docs/references/standalone-documentation.md` | Composition, operative guidance and handoffs | Pending |
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-forge/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-forge/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-forge/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-forge/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-docs-preparation.md` | Composition, operative guidance and handoffs | Pending |
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-issue-lifecycle.md` | Composition, operative guidance and handoffs | Pending |
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/github-milestone-lifecycle.md` | Composition, operative guidance and handoffs | Pending |
@@ -71,8 +71,8 @@
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/release-highlights.md` | Composition, operative guidance and handoffs | Pending |
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-forge/references/release-message.md` | Composition, operative guidance and handoffs | Pending |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-implement/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-implement/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-implement/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-implement/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-implement/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-implement/references/browser-capabilities.md` | Composition, operative guidance and handoffs | Pending |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md` | Composition, operative guidance and handoffs | Pending |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-implement/references/environment-recovery.md` | Composition, operative guidance and handoffs | Pending |
@@ -80,12 +80,12 @@
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-implement/references/startup-and-continuation.md` | Composition, operative guidance and handoffs | Pending |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-implement/references/task-execution.md` | Composition, operative guidance and handoffs | Pending |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-integrate-feature/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-integrate-feature/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-integrate-feature/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-integrate-feature/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-integrate-feature/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-integrate-feature/references/feature-incorporation.md` | Composition, operative guidance and handoffs | Pending |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-manage/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/agent-orientation.md` | Composition, operative guidance and handoffs | Pending |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/branch-management.md` | Composition, operative guidance and handoffs | Pending |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md` | Composition, operative guidance and handoffs | Pending |
@@ -103,18 +103,18 @@
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/tracking-decision.md` | Composition, operative guidance and handoffs | Pending |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/workflows.md` | Composition, operative guidance and handoffs | Pending |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-orient/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-orient/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-orient/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-orient/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-orient/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-002 | `.agents/plugins/sdd-manager/skills/sdd-orient/references/inspection-and-handoff.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-plan/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-plan/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-plan/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-plan/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-plan/references/delivery-plan.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-plan/references/physical-layout.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-plan/references/review.md` | Composition, operative guidance and handoffs | Pending |
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-report/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-report/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-report/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-report/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-report/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-report/references/campaign-artifacts.md` | Composition, operative guidance and handoffs | Pending |
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-report/references/change-kinds.md` | Composition, operative guidance and handoffs | Pending |
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-report/references/completion-reports.md` | Composition, operative guidance and handoffs | Pending |
@@ -122,34 +122,34 @@
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md` | Composition, operative guidance and handoffs | Pending |
 | U-006 | `.agents/plugins/sdd-manager/skills/sdd-report/references/releases.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-specify/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-specify/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-specify/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-specify/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-specify/references/change-specification.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-specify/references/review.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-specify/references/system-specification.md` | Composition, operative guidance and handoffs | Pending |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-steer/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-steer/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-steer/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-steer/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-steer/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-steer/references/amendment-execution.md` | Composition, operative guidance and handoffs | Pending |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-steer/references/objective-and-impact.md` | Composition, operative guidance and handoffs | Pending |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-steer/references/verification-and-stop.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-tasks/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-tasks/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-tasks/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-tasks/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-tasks/references/conformance-review.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-tasks/references/progress-review.md` | Composition, operative guidance and handoffs | Pending |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-tasks/references/task-derivation.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-tdd/LICENSE` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-tdd/LICENSE` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-tdd/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-tdd/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-tdd/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-tdd/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-tdd/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-tdd/references/test-first-cycle.md` | Composition, operative guidance and handoffs | Pending |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-tdd/references/testing-strategy.md` | Composition, operative guidance and handoffs | Pending |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-tdd/references/upstream-provenance.md` | Composition, operative guidance and handoffs | Pending |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-tdd/references/writing-good-tests.md` | Composition, operative guidance and handoffs | Pending |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-verify/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.agents/plugins/sdd-manager/skills/sdd-verify/assets/icon.svg` | Metadata/inclusion/attribution | Pending |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-verify/agents/openai.yaml` | Metadata/schema/configuration fields and consumers | Reviewed at stated depth |
+| U-001 | `.agents/plugins/sdd-manager/skills/sdd-verify/assets/icon.svg` | Metadata/inclusion/attribution | Reviewed at stated depth |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-verify/references/boundary-review.md` | Composition, operative guidance and handoffs | Pending |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-verify/references/check-selection.md` | Composition, operative guidance and handoffs | Pending |
 | U-005 | `.agents/plugins/sdd-manager/skills/sdd-verify/references/execution-and-evidence.md` | Composition, operative guidance and handoffs | Pending |
@@ -162,13 +162,13 @@
 | U-007 | `.github/scripts/release.py` | Functions/control flow and consequential failure paths | Pending |
 | U-007 | `.github/tests/test_release.py` | Functions/control flow and consequential failure paths | Pending |
 | U-007 | `.github/workflows/release.yml` | Metadata/schema/configuration fields and consumers | Pending |
-| U-001 | `.gitignore` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `AGENTS.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `AI_DISCLOSURE.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `LICENSE` | Metadata/inclusion/attribution | Pending |
-| U-001 | `README.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `SDD-MANAGER.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `SKILL_DISCOVERY_PROTOCOL.md` | Composition, operative guidance and handoffs | Pending |
+| U-001 | `.gitignore` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `AGENTS.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `AI_DISCLOSURE.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `LICENSE` | Metadata/inclusion/attribution | Reviewed at stated depth |
+| U-001 | `README.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `SDD-MANAGER.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `SKILL_DISCOVERY_PROTOCOL.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
 | U-008 | `acceptance/AGENTS.md` | Composition, operative guidance and handoffs | Pending |
 | U-008 | `acceptance/TEXTSTATS.md` | Composition, operative guidance and handoffs | Pending |
 | U-008 | `acceptance/textstats/AGENTS.md` | Composition, operative guidance and handoffs | Pending |
@@ -326,8 +326,8 @@
 | U-008 | `acceptance/textstats/tests/test_recovery.py` | Fixture/method map; consequential assertions; suite | Pending |
 | U-008 | `acceptance/textstats/tests/test_release_capture.py` | Fixture/method map; consequential assertions; suite | Pending |
 | U-008 | `acceptance/textstats/tests/test_trial_control.py` | Fixture/method map; consequential assertions; suite | Pending |
-| U-001 | `docs/demo/calculator/README.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `docs/demo/tetris/README.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `docs/demo/tetris/examples/PROJECT_phased-project.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `docs/dev/CAPABILITY-MAP.md` | Composition, operative guidance and handoffs | Pending |
-| U-001 | `docs/dev/PLUGIN-CONTRACT.md` | Composition, operative guidance and handoffs | Pending |
+| U-001 | `docs/demo/calculator/README.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `docs/demo/tetris/README.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `docs/demo/tetris/examples/PROJECT_phased-project.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `docs/dev/CAPABILITY-MAP.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
+| U-001 | `docs/dev/PLUGIN-CONTRACT.md` | Composition, operative guidance and handoffs | Reviewed at stated depth |
