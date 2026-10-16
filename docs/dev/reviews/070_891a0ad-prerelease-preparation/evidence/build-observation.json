@@ -1,0 +1,12 @@
+{
+  "source": "891a0ad69dce859e3622750c51201d6c26127499",
+  "request_id": "prepare-0_15_0-891a0ad",
+  "workflow_source": null,
+  "run_id": null,
+  "published": false,
+  "release_id": null,
+  "assets": {
+    "sdd-manager.zip": "cef1e54796ec0b8581213ebc3d7f816c391798be54ef916ea0f70386052def2c",
+    "sdd-manager.zip.sha256": "78edecfd5b3313daa649f98f81c8240b51ef3181cfac28374d6e347062f14522"
+  }
+}
