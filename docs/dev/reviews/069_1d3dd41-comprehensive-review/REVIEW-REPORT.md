@@ -16,7 +16,7 @@
 | U-003 | Reviewed | R-002 |
 | U-004 | Reviewed | None |
 | U-005 | Reviewed | R-001 corroborating interface; no new ID |
-| U-006 | Pending | None allocated |
+| U-006 | Reviewed | None |
 | U-007 | Pending | None allocated |
 | U-008 | Pending | None allocated |
 
@@ -87,3 +87,15 @@ No new independent finding allocated. Extended R-001 with verification’s gener
 Source contrasts covered behavior change versus preservation/refactor, immediate-green or collection failure versus actual RED, independent fixtures versus mirrored expectations, failed/blocked/skipped evidence, read-only review versus test/document edits, governing-document discrepancies and taskless package verification. Clear accepted-requirement changes remain human/owner decisions; independent documentation work may continue without claiming the unresolved dependency is ready. Professional in-code/standalone documentation criteria are proportionate to role, not a docstring-field quota.
 
 Release checks separate local package, actual CI, downloaded remote bytes and installed-client behavior; they require exact source/notes/body/tag agreement and do not promote dispatch acceptance to release success. Provider procedure agreement and actual tooling are checked in U-006/U-007. Upstream MIT attribution is retained, and dependency/reference links remain within the package; no legal or visual/client-acceptance opinion is claimed.
+
+## U-006 — Reports, hosted lifecycle and release instructions
+
+Assessed all 18 selected report/forge entries and references at their operative procedure/contract depth, with coordinator Git boundaries and verification’s release checks. Traced issue drafting/identity, DOCS versus product projection/closure, native milestones, retirement/reopening, report/evidence formats, highlights collection/curation, complete-message persistence, source/tag/body transfer, packaging, one publisher and uncertain-operation recovery. No actual provider request, tag or release was made.
+
+No new confirmed instruction finding allocated. Hosting separates actual user selection from authenticated capability and verified projection; native milestone objects and exact issue markers prevent label substitution/substring guessing. Complete lookup/pagination and readback precede uncertain replay, foreign fields are preserved, and provider state cannot establish local acceptance. DOCS first-approval issues retain their distinct later-revision semantics and milestone-after-published-integration gate. Product review/report and retirement gates remain separate from doc preparation.
+
+Release routing preserves highlights-only and supplied-text scope. First-parent baseline policy is distinct from complete reachable commit coverage; pending tags, initial/null baselines, shallow/tag uncertainty, cumulative/nested summaries, direct changes/reverts and pending-only updates are covered. The collection recipe is evidence collection, not semantic analysis or a successful consumer. Draft/checkpoint ownership and complete-message retention differ explicitly; atomic saves preserve prior copies/intervening human edits. Release commit body, tag target and publisher body use the same exact verified source/Markdown, with explicit existing-source-only/recovery exceptions. Tag push, dispatch, draft upload and publication are separate states.
+
+Report modules retain What/Why/Verification/Result as adaptable concerns, not mandatory empty headings. Task subjects identify one owner; DOCS and implementation composition contracts are distinct. Campaign summaries provide cumulative user outcomes plus opening/baseline/parent provenance without claiming future push/closure; QC reports preserve original findings and append actual correction cycles. No competing progress journal or invented task is required for taskless maintenance/release work.
+
+Source scenarios covered normal/late/missed tracking, missing/duplicate/renamed/retired objects, native versus unsupported milestone semantics, draft/published conflicts, failed uploads, unknown dispatch/body/latest state, backports, human-curated notes and ancillary refresh at unchanged Git source. Actual publisher enforcement and fixture sensitivity are assessed next; external endpoint currency and live/client behavior remain unverified.
