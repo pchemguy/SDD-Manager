@@ -72,3 +72,9 @@ Local suites and source checks do not establish fresh agent compliance, live hum
 ## Publication and return
 
 Each plan/action commit was normally pushed and verified before the next work unit. Final report/verification records stay on the same campaign branch; native Git and exact remote readback establish their final publication checkpoint. No merge was attempted, main remains at `1d3dd41c29c4534fc84490b78b534017ef0af4a8`, and campaign 069 remains open and unmerged for human review.
+
+## V-004 — Direct checkpoint points
+
+Following user feedback, replaced the overloaded PLAN/layout checkpoint paragraph with two explicit existing points: present the published PLAN before dependent layout, and present the published layout before TASKS. Acceptance and applicable preapproval remain with the shared human-document-review procedure already loaded by the skill entry. The earlier V-002 paragraph rewrite is superseded by this concise wording; its other corrections remain.
+
+Compared both points with the current sdd-plan entry and shared human-review/document-QC owners. No new gates, QC-report procedure, source ownership or permission rule was added. No current in-scope link targets the removed heading anchor. Local Markdown/link/containment checks and git diff --check passed. Prior 137 support/34 publisher tests and package verification refer to source 01ce8b6; they were not rerun for this focused instruction edit. Live acceptance remains unrun. Only this source section and active plan/report records changed; campaign remains open/unmerged.

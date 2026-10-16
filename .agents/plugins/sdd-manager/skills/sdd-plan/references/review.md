@@ -16,6 +16,9 @@ For each phase, report delivery milestone count separately from its final dedica
 
 Authoring includes authorized bounded PLAN/layout correction, recheck and `PLAN-REVIEW-REPORT.md` adjacent to PLAN (FEATURE-PLAN counterpart beside its root); the report covers applicable children and relevant layout. Use sdd-report's **Document QC reports** format and append Revision N cycles. Route changed behavioral/design decisions upstream; never rewrite SPEC to fit PLAN. Persist the corrected strategy and review together before TASKS generation. Pure review does not amend strategy. Missing/stale evidence or confirmed unresolved issues blocks dependent generation; explicit exceptions remain recorded as exceptions, not Ready.
 
-## Separate PLAN and layout checkpoints
+## Human checkpoints
 
-Follow [human document review](../../sdd-manage/references/human-document-review.md). When new layout depends on newly created PLAN, first assess/persist strategy-scoped QC and its pending-layout limitation, then present PLAN and pause unless explicit applicable future-checkpoint preapproval covers it. After PLAN's checkpoint is cleared by human acceptance or that preapproval, prepare layout, complete combined QC in the adjacent PLAN report and present layout separately. Clear layout's distinct checkpoint by human acceptance or preapproval covering layout before TASKS. Do not author future layout before PLAN's checkpoint is cleared to satisfy the combined report. Existing adequate layout can be reused without interactive replay.
+- **PLAN:** Present the completed and published PLAN for human review before preparing a dependent layout.
+- **layout:** Present the completed and published layout for human review before generating TASKS.
+
+Apply [human document review](../../sdd-manage/references/human-document-review.md) for acceptance and applicable preapproval.

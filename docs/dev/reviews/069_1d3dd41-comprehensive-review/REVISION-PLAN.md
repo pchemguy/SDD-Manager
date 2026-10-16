@@ -37,3 +37,7 @@ Use existing nonempty support/publisher suites and native package checks; add no
 ## Stop
 
 Publish the execution report, finding dispositions and verification evidence on the campaign branch. Leave 069 open and unmerged for human review; do not start closure or another campaign.
+
+## V-004 — Focused human-checkpoint wording
+
+User feedback requests the actual existing checkpoint points. Replace the overloaded final section of sdd-plan/references/review.md with two direct points: published PLAN before dependent layout; published layout before TASKS. Keep acceptance/preapproval with the linked shared procedure. No new workflow or checkpoint is introduced. Check source agreement, local links/spacing and the exact diff; retain prior suite/package results as prior-source evidence rather than rerunning unrelated tests. Keep the campaign open/unmerged.
