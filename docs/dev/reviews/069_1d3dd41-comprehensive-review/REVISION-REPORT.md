@@ -5,14 +5,14 @@
 - Campaign: `069_1d3dd41`; [revision plan](REVISION-PLAN.md); [baseline review](REVIEW-REPORT.md).
 - Reviewed baseline: `1d3dd41c29c4534fc84490b78b534017ef0af4a8`; revision starting source: `880e4d490efe3302c8b2b8e72275a1b7aa5f9960`.
 - Branch: `revision/069_1d3dd41-comprehensive-review`; eventual target: `main`.
-- State: Executing; V-001 source correction and focused recheck complete. R-001 is Revised pending final regression/package checks; R-002 remains Accepted. Campaign stays open and unmerged.
+- State: Executing; V-001 and V-002 source corrections and focused rechecks complete. R-001 and R-002 are Revised pending final regression/package checks. Campaign stays open and unmerged.
 
 ## Action evidence
 
 | Action | Findings | State | Evidence |
 | --- | --- | --- | --- |
 | V-001 | R-001 | Revised; source recheck passed | Four affected caller/verification files; detailed contrasts below. |
-| V-002 | R-002 | Planned | Checkpoint preapproval and feature-assessor consistency. |
+| V-002 | R-002 | Revised; source recheck passed | PROJECT/PLAN/layout reminders and matching feature-assessor criterion. |
 | V-003 | Both | Planned | Final source/structural/regression verification and publication. |
 
 ## Limits
@@ -34,3 +34,18 @@ The entry footer correction was added to the plan after its consequential interf
 | Standalone verification | Coordination and verifier references return findings without starting repair; the verifier entry still leaves source/tests/documents/status unchanged. |
 
 These are manual source/handoff consistency checks against the actual current owner procedures, not executed model trials. Checked both caller and verifier with main preparation, document QC and sdd-docs referral; retained approval/range, publication and hosting gates. Local Markdown/link/containment checks and git diff --check passed before persistence. Full regression/package verification follows V-002.
+
+## V-002 — Applicable checkpoint preapproval
+
+V-001 was committed/published as `4565dc8ed643313dca4dfef895bb60a5352de315`; exact origin branch readback preceded this action. PROJECT's detailed procedure now states its preapproval alternative. PLAN/layout review clears PLAN before dependent layout and retains a separate layout decision before TASKS; any layout preapproval must cover layout itself. Both still present substantive results and perform/publish their required QC. A-008's guide and JSON criterion now match A-001's explicit preapproval alternative and the shared checkpoint protocol.
+
+| Source contrast | Observed current guidance |
+| --- | --- |
+| Newly created PROJECT with no preapproval | Present and pause before dependent use; clarification, QC and publication do not supply acceptance. |
+| Explicit preapproval covers PROJECT | Presentation/publication/QC remain; the repeated acceptance pause is excluded for that covered checkpoint. |
+| Preapproval covers PLAN only | PLAN may clear without another acceptance pause; layout remains a distinct checkpoint requiring acceptance or its own coverage before TASKS. |
+| Explicit coverage includes PLAN and layout | Dependency order, separate presentations and strategy/combined QC remain without repeated covered pauses. |
+| Conditional, unrelated or revoked preapproval | The unchanged canonical policy retains real scope/conditions/revocation; inapplicable coverage cannot clear either local checkpoint. |
+| Feature preparation | A-008's guide and contract carry the same criterion as A-001 and reference the shared independent checkpoint assessment. Normal uncovered human gates remain required. |
+
+Performed manual entry/reference/shared-policy comparisons for these contrasts. A direct JSON/text comparison confirmed A-008 guide/contract agreement with A-001 and unchanged deterministic checks. Static catalog validation passed all 33 cases; local Markdown/link/containment checks and git diff --check passed. No consumer/model interaction or preapproval trial was executed. No template, README, PLUGIN, discovery or controlling AGENTS change was needed.
