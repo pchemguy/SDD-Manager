@@ -5,7 +5,7 @@
 - Campaign: `069_1d3dd41`; [revision plan](REVISION-PLAN.md); [baseline review](REVIEW-REPORT.md).
 - Reviewed baseline: `1d3dd41c29c4534fc84490b78b534017ef0af4a8`; revision starting source: `880e4d490efe3302c8b2b8e72275a1b7aa5f9960`.
 - Branch: `revision/069_1d3dd41-comprehensive-review`; eventual target: `main`.
-- State: Revision and wording follow-up executed; R-001–R-005 Verified at the source/local-check level. Live behavior remains unrun. Campaign stays open and unmerged.
+- State: Closure authorized; R-001–R-005 Verified at the source/local-check level. Live behavior remains unrun. Main integration/publication pending.
 
 ## Action evidence
 
@@ -107,3 +107,11 @@ Applied source `135fec465a4c14109a0d77b0b0b14961ffafdfe2` was pushed and exact o
 - Manual source/fidelity contrasts, current/active links/anchors/containment/spacing and git diff --check passed. Exactly the eight planned source files changed from the wording-review baseline; other source/closed records and the concise two-point planning section are preserved.
 
 No new tests that merely assert replacement wording were added. The suites validate package/harness behavior, not natural-language compliance; live acceptance remains unrun. No source changes followed the successful candidate checks. Final records remain on the campaign branch, with publication established by native Git and remote readback. Campaign stays open/unmerged.
+
+## Closure preparation
+
+The user's “Close it” authorizes final integration and supersedes the earlier open/unmerged stopping boundary. Accepted campaign tip before closure records: `95c9a37f8c07fcd7d5709042203c07a2a95c793b`. Refreshed main target: `1d3dd41c29c4534fc84490b78b534017ef0af4a8`; original opening: `34f2c9c69a7a8628c090c03d719b7fb242b999a4`; original branch-off is that same main baseline.
+
+All five findings are verified at the recorded source/local-check level. The complete integration delta contains fifteen authorized source/assessment files and this campaign's records/index; prior closed objects and other index rows are preserved. Package, acceptance and publisher bytes at the accepted tip equal the freshly tested source `135fec465a4c14109a0d77b0b0b14961ffafdfe2`: 137 support tests, 34 publisher tests, catalog/package/core-schema/snapshot checks and author validation passed there. Current/active Markdown checks pass. Those results are reused as working-branch evidence, not described as a fresh run.
+
+Final merge verification follows on the actual prospective main tree. This checkpoint prepares closure; it does not claim completed merge or publication. Preserve the campaign branch and all earlier source-qualified evidence. Live consumer/provider/client acceptance remains out of scope.

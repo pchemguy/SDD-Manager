@@ -175,3 +175,7 @@ At the user's request, a [focused text review](FOCUSED-TEXT-REVIEW.md) of relate
 ## Wording revisions completed
 
 The follow-up R-003–R-005 corrections were applied and verified in V-006; see the [current wording-review dispositions](FOCUSED-TEXT-REVIEW.md#execution-and-current-dispositions). Their earlier Open states describe the review handoff, not outstanding work. R-001–R-005 are Verified at the source/local-check level. Live behavior remains unrun, and 069 remains open/unmerged.
+
+## Closure authorized
+
+The user authorized closing this campaign. All five findings are verified at the recorded source/local-check level; final integration and merged-state verification are tracked in the [revision report](REVISION-REPORT.md#closure-preparation) and native Git. This later decision supersedes earlier open/unmerged limits.
