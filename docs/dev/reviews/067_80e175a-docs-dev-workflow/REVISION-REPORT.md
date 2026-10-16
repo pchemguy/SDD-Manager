@@ -25,3 +25,7 @@ The opening made no workflow source changes. The [revision plan](REVISION-PLAN.m
 ## Planning checkpoint
 
 Inspected current bootstrap, agent orientation, document-review checkpoints, tracking selection, phase activation and hosted lifecycle routing. Current bootstrap combines setup with the first result and may reconcile existing files; current hosted preparation stops short of object creation until PLAN/TASKS-driven activation. The proposal separates main preparation tracking and initialization while preserving implementation and non-main adoption behavior. No target-project operations or live acceptance were performed.
+
+## Task-list and completion amendment
+
+The user additionally requested predefined DOCS_TASKS, task/issue progression, initial acceptance recorded atomically with document submission, final package QC as the last task/issue, documentation merge before milestone closure, a final preimplementation checkpoint and future-checkpoint preapproval. The plan incorporates these requirements and supersedes its earlier eight-issue, no-local-list and milestone-before-integration proposals. Implementation remains pending.
