@@ -22,7 +22,6 @@ The opening made no workflow source changes. The [revision plan](REVISION-PLAN.m
 - Changes are limited to this opening record and the review/revision index.
 - Publication of the opening commit is verified through remote branch readback; its actual identity is retained in Git.
 
-
 ## Planning checkpoint
 
 Inspected current bootstrap, agent orientation, document-review checkpoints, tracking selection, phase activation and hosted lifecycle routing. Current bootstrap combines setup with the first result and may reconcile existing files; current hosted preparation stops short of object creation until PLAN/TASKS-driven activation. The proposal separates main preparation tracking and initialization while preserving implementation and non-main adoption behavior. No target-project operations or live acceptance were performed.
