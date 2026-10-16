@@ -171,3 +171,7 @@ Campaign remains open/unmerged; these dispositions do not close it or retroactiv
 ## Focused wording follow-up
 
 At the user's request, a [focused text review](FOCUSED-TEXT-REVIEW.md) of related checkpoint/preparation/handoff wording identified R-003 (Medium editorial), R-004 and R-005 (Low editorial). These three recommendations are Open; no additional source repairs were performed by that review. The previously verified functional corrections and their baseline evidence remain distinct.
+
+## Wording revisions completed
+
+The follow-up R-003–R-005 corrections were applied and verified in V-006; see the [current wording-review dispositions](FOCUSED-TEXT-REVIEW.md#execution-and-current-dispositions). Their earlier Open states describe the review handoff, not outstanding work. R-001–R-005 are Verified at the source/local-check level. Live behavior remains unrun, and 069 remains open/unmerged.

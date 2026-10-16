@@ -5,7 +5,7 @@
 - Campaign: `069_1d3dd41`; [revision plan](REVISION-PLAN.md); [baseline review](REVIEW-REPORT.md).
 - Reviewed baseline: `1d3dd41c29c4534fc84490b78b534017ef0af4a8`; revision starting source: `880e4d490efe3302c8b2b8e72275a1b7aa5f9960`.
 - Branch: `revision/069_1d3dd41-comprehensive-review`; eventual target: `main`.
-- State: Revision executed; V-001–V-003 complete. Both findings Verified at the source/structural/regression level; live behavior remains unrun. Campaign stays open and unmerged.
+- State: Revision and wording follow-up executed; R-001–R-005 Verified at the source/local-check level. Live behavior remains unrun. Campaign stays open and unmerged.
 
 ## Action evidence
 
@@ -96,3 +96,14 @@ The amendment plan was published as `4263676099ddcaae84c454af7aa27fd35f91185d`; 
 - R-005: coordination step 5 now separates its ordinary active-owner handoff from invalid implementation completion, standalone verification and sdd-docs governing amendment. Existing authority/range and historical-exception distinctions stay linked to the canonical recovery owner.
 
 Manually compared the revised passages with the original obligations and their current owners. Checked normal versus preapproved document checkpoints, existing inputs, necessary feature deltas and direct calls; DOCS first-approval/QC/publication rules; and all five R-001 repair/authority contrasts. The two-point sdd-plan review section, PLUGIN/README, AGENTS, metadata and closed records are unchanged. Local links/anchors/containment, heading/blank-line checks and git diff --check passed. Finding state: Revised, pending final candidate regression/package checks; no live/model behavior claimed.
+
+## V-006 — Verification complete
+
+Applied source `135fec465a4c14109a0d77b0b0b14961ffafdfe2` was pushed and exact origin readback verified before the final checks. R-003–R-005 are now Verified at the source/local-check level; they are no longer unapplied proposals. [Wording verification](WORDING-VERIFICATION.json) retains the fresh source identity, commands and results:
+
+- 137 support tests and 34 publisher tests passed; all 33 catalog cases validated.
+- Native package/core schema and snapshot checks passed: 137 files, 15 skills, 77 reference modules. Archive SHA-256: `ab02d8181da239b760b328e78b571255dea6e41ec3bf6833056e062acd009b03`.
+- Author validator: zero errors and 46 unchanged plugin-contained cross-skill advisories.
+- Manual source/fidelity contrasts, current/active links/anchors/containment/spacing and git diff --check passed. Exactly the eight planned source files changed from the wording-review baseline; other source/closed records and the concise two-point planning section are preserved.
+
+No new tests that merely assert replacement wording were added. The suites validate package/harness behavior, not natural-language compliance; live acceptance remains unrun. No source changes followed the successful candidate checks. Final records remain on the campaign branch, with publication established by native Git and remote readback. Campaign stays open/unmerged.

@@ -2,16 +2,16 @@
 
 ## Scope and result
 
-- Campaign: `069_1d3dd41`; current source: `d5735a6d042f1e50a2aeddf94c46d46292bce1a7`.
+- Campaign: `069_1d3dd41`; reviewed source: `d5735a6d042f1e50a2aeddf94c46d46292bce1a7`.
 - Request: check elsewhere for wording like the overloaded PLAN/layout checkpoint paragraph. This follow-up reviews composition and instruction clarity, not a new comprehensive functional audit.
 - Reviewed passages: PLUGIN's checkpoint section; design/specify/plan/tasks entries; PROJECT brief and planning references; coordinator human-review, document-QC, main-preparation and execution handoffs; shared development-document QC; DOCS_TASKS_TEMPLATE. Current surrounding owner context was inspected/reused. No closed contents or live acceptance.
-- Three editorial recommendations remain Open below. The requested sdd-plan checkpoint correction is already published in `d5735a6`; this review makes no further source edits.
+- The three editorial recommendations below were subsequently applied and verified under V-006. The review stage made no source edits; execution and current evidence are recorded at the end of this report.
 
 The issue is presenting a straightforward action or already-defined checkpoint through repeated procedural qualifications and abstract status language. Retain conditions that change the actual next action. Keep human acceptance, technical QC, publication and hosted effects distinct; brevity does not justify removing their obligations.
 
 ## R-003 — PLAN/layout bookkeeping is repeated in three other places
 
-**Priority:** Medium editorial/composition recommendation. **Status:** Open. High source confidence; no model failure claimed.
+**Priority:** Medium editorial/composition recommendation. **Status:** Verified by source/local checks; live behavior unrun. High source confidence; no model failure claimed.
 
 Locations:
 
@@ -31,7 +31,7 @@ Recheck new versus existing layout, PLAN-only and PLAN-plus-layout preapproval, 
 
 ## R-004 — Four document entries repeat generic checkpoint boilerplate
 
-**Priority:** Low editorial recommendation. **Status:** Open. High source confidence.
+**Priority:** Low editorial recommendation. **Status:** Verified by source/local checks; live behavior unrun. High source confidence.
 
 Location: the opening human-review paragraph in `sdd-design/SKILL.md`, `sdd-specify/SKILL.md`, `sdd-plan/SKILL.md` and `sdd-tasks/SKILL.md`.
 
@@ -43,7 +43,7 @@ Recheck direct skill entry, necessary feature deltas, acceptable existing inputs
 
 ## R-005 — Coordination's verification step combines five separate concerns
 
-**Priority:** Low composition recommendation. **Status:** Open. High source confidence.
+**Priority:** Low composition recommendation. **Status:** Verified by source/local checks; live behavior unrun. High source confidence.
 
 Location: `sdd-manage/references/coordination.md`, Coordinate execution, step 5, including the recent R-001 correction.
 
@@ -59,6 +59,18 @@ No similar revision is proposed for PLUGIN's explicit artifact/checkpoint table,
 
 This was focused source/composition review, not a universal style pass over every plugin file. No defect is inferred merely from paragraph length, a repeated safety condition or use of a technical term. Source/Markdown checks cannot establish agent compliance. No new behavioral tests or live acceptance were run; prior suite results retain their original source identity.
 
-## Next revision scope
+## Original revision handoff
 
 Address R-003 first, then compact the entry reminders and the generic verification handoff under R-004/R-005. Preserve the published two-point sdd-plan section. These are proposed changes; this follow-up stops at its report with campaign 069 open and unmerged.
+
+## Execution and current dispositions
+
+All three recommendations were applied in `135fec465a4c14109a0d77b0b0b14961ffafdfe2` after published plan `4263676099ddcaae84c454af7aa27fd35f91185d`. Original observations/proposals above are retained as the reviewed-source record.
+
+| Finding | Applied correction | Current status |
+| --- | --- | --- |
+| R-003 | Removed the duplicate human-review paragraph; stated actual QC checks and direct DOCS task actions. | Verified: source/local checks |
+| R-004 | Replaced the four generic entry paragraphs with concrete document/stage checkpoints and their applicable shared-policy conditions. | Verified: source/local checks |
+| R-005 | Separated ordinary verification routing from three named conditional handoff cases. | Verified: source/local checks |
+
+[Wording verification](WORDING-VERIFICATION.json): 137 support tests and 34 publisher tests passed; all 33 catalog cases validated; native package/core schema/snapshot and local Markdown checks passed. Author validation has zero errors and 46 unchanged cross-skill advisories. The tests validate infrastructure and package boundaries; the wording itself received manual source/contract review. Live model/provider/client acceptance remains unrun. No source correction remains pending from this focused review; campaign 069 stays open and unmerged.

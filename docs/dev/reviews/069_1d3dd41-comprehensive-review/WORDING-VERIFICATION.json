@@ -1,0 +1,116 @@
+{
+  "campaign": "069_1d3dd41",
+  "reviewed_source": "951499c518ba3e79f4a9a98e47914b707512c246",
+  "checked_source": "135fec465a4c14109a0d77b0b0b14961ffafdfe2",
+  "plan_commit": "4263676099ddcaae84c454af7aa27fd35f91185d",
+  "source_commit": "135fec465a4c14109a0d77b0b0b14961ffafdfe2",
+  "publication": "Plan and source commits normally pushed; exact origin branch readback verified before subsequent work",
+  "runtime": {
+    "python": "3.12.14",
+    "git": "git version 2.51.1",
+    "jsonschema": "4.26.0"
+  },
+  "findings": {
+    "R-003": {
+      "status": "Verified",
+      "level": "Source consistency, local structural/package and regression checks",
+      "live_behavior": "Not run"
+    },
+    "R-004": {
+      "status": "Verified",
+      "level": "Source consistency, local structural/package and regression checks",
+      "live_behavior": "Not run"
+    },
+    "R-005": {
+      "status": "Verified",
+      "level": "Source consistency, local structural/package and regression checks",
+      "live_behavior": "Not run"
+    }
+  },
+  "checks": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v",
+      "exit_code": 0,
+      "tests": 137
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/067-validator-deps python -m unittest discover -s .github/tests -v",
+      "exit_code": 0,
+      "tests": 34
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python acceptance/textstats/cases/assessor/catalog_tools.py validate",
+      "exit_code": 0,
+      "cases": 33
+    },
+    {
+      "method": "Native publisher build/core schema and exact committed/dirty-clean TextStats snapshot/tree/archive checks",
+      "result": {
+        "source": "135fec465a4c14109a0d77b0b0b14961ffafdfe2",
+        "reviewed_baseline": "951499c518ba3e79f4a9a98e47914b707512c246",
+        "package_files": 137,
+        "skills": 15,
+        "routed_references": 77,
+        "sha256": "ab02d8181da239b760b328e78b571255dea6e41ec3bf6833056e062acd009b03",
+        "native_snapshot_parity": true,
+        "preparation_assets_exact": true,
+        "protected_paths_unchanged": true,
+        "closed_campaigns_unchanged": true,
+        "changed_source_paths": [
+          ".agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md",
+          ".agents/plugins/sdd-manager/skills/sdd-design/SKILL.md",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/references/document-qc-gates.md",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/references/human-document-review.md",
+          ".agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md",
+          ".agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md",
+          ".agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md"
+        ]
+      }
+    },
+    {
+      "command": "python <agent-package-author>/scripts/validate_plugin.py .agents/plugins/sdd-manager",
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 46,
+      "warning_kind": "resource-cross-skill; plugin-contained client handoff advisory"
+    },
+    {
+      "method": "Manual fidelity/ownership comparison: concrete checkpoint order and preapproval; existing/direct/feature/requested-review cases; DOCS QC/first approval/publication; all five R-001 routing/authority contrasts",
+      "result": "Passed at source level; no model trial"
+    },
+    {
+      "method": "Current/active Markdown targets/anchors, containment and spacing checks; code/placeholder/frozen-content exclusions as in prior checks",
+      "result": "Passed",
+      "documents": 211,
+      "local_links": 1083,
+      "errors": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": {
+    "source_paths": [
+      ".agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md",
+      ".agents/plugins/sdd-manager/skills/sdd-design/SKILL.md",
+      ".agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md",
+      ".agents/plugins/sdd-manager/skills/sdd-manage/references/document-qc-gates.md",
+      ".agents/plugins/sdd-manager/skills/sdd-manage/references/human-document-review.md",
+      ".agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md",
+      ".agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md",
+      ".agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md"
+    ],
+    "source_files": 8,
+    "other_changes": "Active campaign records and its index row only",
+    "two_point_plan_checkpoint_section": "Unchanged",
+    "projections_AGENTS_metadata_other_assets_closed_records": "Unchanged"
+  },
+  "limits": [
+    "Local support tests do not test natural-language agent compliance",
+    "Live human/provider/client/interruption acceptance not run",
+    "Python 3.12.14 local run does not independently test CI Python 3.11"
+  ],
+  "campaign_state": "Open; wording corrections applied; unmerged"
+}
