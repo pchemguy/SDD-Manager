@@ -1,5 +1,9 @@
 # Agent instructions
 
+## Initialization
+
+Execute the [skill and plugin discovery protocol](SKILL_DISCOVERY_PROTOCOL.md).
+
 ## Workflow context
 
 This project uses SDD Manager. Load the available `sdd-manage` entry to establish or recover the workflow before coordinated development. Use the plugin's `PLUGIN.md` when available for capability and skill routing; the coordinator remains usable without it.

@@ -37,3 +37,7 @@ Created [DOCS_TASKS_TEMPLATE.md](DOCS_TASKS_TEMPLATE.md) and [AGENTS_TEMPLATE.md
 ## First-approval tracking clarification
 
 Clarified both drafts and the plan: document tasks/issues track development through first approval. Mark the task complete in the commit submitting the approved document, publish and verify, then close the issue. Later revisions leave that task complete and its issue closed; current document readiness remains subject to applicable review and QC. Removed the proposed reopening behavior and the unclear “initial checkbox transition” wording.
+
+## Discovery protocol asset amendment
+
+Pulled published campaign commit `54930ba`, which adds the supplied SKILL_DISCOVERY_PROTOCOL.md draft. Updated the plan and DOCS-001 draft to include it as a fourth root initialization file, copied unchanged from the future assets location when absent and preserved when present. The partial-presence pause now covers any mixed state among the four files. Added a dedicated Initialization link to the AGENTS template. The supplied protocol remains unchanged in the campaign; package deployment is still pending.

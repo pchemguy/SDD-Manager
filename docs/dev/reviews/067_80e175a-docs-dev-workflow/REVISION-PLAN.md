@@ -23,7 +23,7 @@ Create or reconcile these nine issues, all associated with `docs-main`:
 
 | Preparation unit | Scope | Completion evidence |
 | --- | --- | --- |
-| Repository initialization | Preserve or copy the three root files below and report the initial state | Verified file outcomes, published commit when files were added, initialization report and verified issue closure |
+| Repository initialization | Preserve or copy the four root files below and report the initial state | Verified file outcomes, published commit when files were added, initialization report and verified issue closure |
 | PROJECT | Project brief and necessary focused children | Applicable QC, published reviewable state and human acceptance |
 | ARCHITECTURE | Architecture and necessary focused children | Applicable QC, published reviewable state and human acceptance |
 | DECOMPOSITION | Component decomposition and necessary focused children | Applicable QC, published reviewable state and human acceptance |
@@ -41,7 +41,7 @@ Close `docs-main` only after all nine tasks and issues are complete, the documen
 
 Add packaged `assets/DOCS_TASKS_TEMPLATE.md` as the predefined source for target `docs/dev/DOCS_TASKS.md`. Use nine stable preparation IDs, proposed as `DOCS-001` through `DOCS-009`, matching the initialization, seven documents and final package QC units above. Each task states its artifact, dependencies, completion criteria and corresponding issue identity when tracking is enabled. This list exists independently of implementation TASKS and remains useful when tracking is disabled.
 
-Create or reconcile the local list only after the enabled backend pre-write gate. Include its creation and initialization completion in the initialization commit, including when all three root setup files already exist. Do not overwrite a resumed list or recreate checked tasks. No empty commit is required when both the list and initialization evidence are already complete.
+Create or reconcile the local list only after the enabled backend pre-write gate. Include its creation and initialization completion in the initialization commit, including when all four root setup files already exist. Do not overwrite a resumed list or recreate checked tasks. No empty commit is required when both the list and initialization evidence are already complete.
 
 Mark a document task complete after its initial human acceptance, including an applicable explicit preapproval. The same commit that submits the accepted document state must contain that task's task marked complete in `DOCS_TASKS.md` and identify the accepted artifact state and decision. Do not defer the checkbox to a later bookkeeping commit. Publish and verify that commit before closing/readback of the corresponding issue or dependent authoring.
 
@@ -76,29 +76,29 @@ When a covered checkpoint is reached, still perform its authoring, QC, evidence,
 
 ## Initialization contract
 
-Introduce packaged `assets/AGENTS_TEMPLATE.md` and copy it unchanged to target-root `AGENTS.md` when absent. Copy the existing packaged `assets/AI_DISCLOSURE.md` and `assets/SDD-MANAGER.md` to their same-named target-root files when absent.
+Introduce packaged `assets/AGENTS_TEMPLATE.md` and copy it unchanged to target-root `AGENTS.md` when absent. Copy the existing packaged `assets/AI_DISCLOSURE.md` and `assets/SDD-MANAGER.md` to their same-named target-root files when absent. Add `assets/SKILL_DISCOVERY_PROTOCOL.md` from the campaign draft and copy it unchanged to target-root `SKILL_DISCOVERY_PROTOCOL.md` when absent. Preserve any existing target copy under the same initialization rule.
 
-Before copying anything, inspect all three destination paths and record the complete presence classification. Read applicable existing instructions. Preserve every existing file unchanged during this initialization unit; do not reconcile it with a template merely because contents differ. Resolve unsafe path types, ownership conflicts or incompatible controlling instructions before affected writes; an occupied symlink or directory is not permission to overwrite or follow it.
+Before copying anything, inspect all four destination paths and record the complete presence classification. Read applicable existing instructions. Preserve every existing file unchanged during this initialization unit; do not reconcile it with a template merely because contents differ. Resolve unsafe path types, ownership conflicts or incompatible controlling instructions before affected writes; an occupied symlink or directory is not permission to overwrite or follow it.
 
-| Initial presence among the three files | File action | Report and continuation |
+| Initial presence among the four files | File action | Report and continuation |
 | --- | --- | --- |
-| None present | Copy all three | Report initialization and continue without a new approval pause |
-| All present | Preserve all three; create/update the documentation task list only as needed | Report reuse and continue without a new approval pause |
-| One or two present | Preserve existing files and copy only missing files | Warn with exact retained/copied filenames, finish initialization persistence and issue closure, then end the turn before document work |
+| None present | Copy all four | Report initialization and continue without a new approval pause |
+| All present | Preserve all four; create/update the documentation task list only as needed | Report reuse and continue without a new approval pause |
+| Some but not all present | Preserve existing files and copy only missing files | Warn with exact retained/copied filenames, finish initialization persistence and issue closure, then end the turn before document work |
 
 When files were copied, verify their bytes and staged ownership, commit the initialization result, push and verify remote containment. Close/read back the initialization issue with the actual retained/copied outcomes and commit evidence; if all files already existed, use inspected-state evidence and publish any necessary task-list creation/completion, without inventing changes to those files. Report repository initialization separately from completion of main preparation.
 
-The mixed-state pause is a decision about proceeding, not permission to copy the missing files: those copies are already part of the requested initialization. No PROJECT or other dependent authoring occurs before the human chooses to continue. A later explicit continuation clears that pause; do not repeatedly stop merely because the completed initialization now has all three files. On interruption recover pending copies, publication, issue closure and any unsatisfied pause from actual evidence rather than reclassifying only the final filesystem state.
+The mixed-state pause is a decision about proceeding, not permission to copy the missing files: those copies are already part of the requested initialization. No PROJECT or other dependent authoring occurs before the human chooses to continue. A later explicit continuation clears that pause; do not repeatedly stop merely because the completed initialization now has all four files. On interruption recover pending copies, publication, issue closure and any unsatisfied pause from actual evidence rather than reclassifying only the final filesystem state.
 
-README notice links remain an existing discoverability obligation, but are outside this three-file classification and must not be added before the mixed-state pause. Specify their later eligible preparation checkpoint when revising bootstrap instructions.
+README notice links remain an existing discoverability obligation, but are outside this four-file classification and must not be added before the mixed-state pause. Specify their later eligible preparation checkpoint when revising bootstrap instructions.
 
 ## Template drafts
 
-Campaign drafts: [AGENTS_TEMPLATE.md](AGENTS_TEMPLATE.md) and [DOCS_TASKS_TEMPLATE.md](DOCS_TASKS_TEMPLATE.md). These are proposed package assets retained here for human review; neither is installed or applied to a target project.
+Campaign drafts: [AGENTS_TEMPLATE.md](AGENTS_TEMPLATE.md) and [DOCS_TASKS_TEMPLATE.md](DOCS_TASKS_TEMPLATE.md). The supplied [SKILL_DISCOVERY_PROTOCOL.md](SKILL_DISCOVERY_PROTOCOL.md) is also retained here for packaging under assets. None of these campaign drafts is installed or applied to a target project.
 
 ## Initial AGENTS template
 
-Keep the template useful before project documents exist: direct agents to establish current repository/instruction/workflow context, find applicable SDD Manager instructions, preserve existing work and obey human checkpoints and publication boundaries. Do not embed installation paths, credentials, invented commands, nonexistent document links, task/status snapshots or another discovery protocol. Detailed procedures remain owned by the installed skills.
+Keep the template useful before project documents exist: direct agents to establish current repository/instruction/workflow context, find applicable SDD Manager instructions, preserve existing work and obey human checkpoints and publication boundaries. Do not embed installation paths, credentials, invented commands, nonexistent document links, task/status snapshots or duplicate the discovery protocol. Include a dedicated Initialization section directing agents to execute root `SKILL_DISCOVERY_PROTOCOL.md`. Detailed procedures remain owned by the installed skills.
 
 The copy is an initial template, not a completed project-specific orientation document. Later authorized maintenance may add verified project navigation and commands. Existing AGENTS.md is preserved at initialization; any necessary later changes require their own established scope and cannot bypass the mixed-state stop.
 
@@ -108,7 +108,7 @@ The copy is an initial template, not a completed project-specific orientation do
 | --- | --- | --- |
 | V-001 | `sdd-manage`: bootstrap, human-document review, tracking selection and preparation routing | Define the early tracking gate, initialization unit, presence matrix and recovery. Remove contradictory combined-first-result requirements for this main preparation path; preserve non-main adoption rules. Trace fresh and resumed entry to the same procedure. |
 | V-002 | `sdd-forge` and shared backend lifecycle | Define nine-task preparation identity, object creation/readback and issue closure from DOCS_TASKS, plus milestone closure after verified published integration, without requiring product PLAN/TASKS or phase activation. Distinguish preparation milestone semantics from implementation review milestones; preserve implementation lifecycle gates. |
-| V-003 | Package assets and agent orientation | Add initial AGENTS and predefined DOCS_TASKS templates and reconcile copy-versus-later-maintenance ownership. Verify no overwrite of existing files, byte copies and truthful initial guidance. |
+| V-003 | Package assets and agent orientation | Add initial AGENTS and predefined DOCS_TASKS templates plus the supplied discovery protocol asset and reconcile copy-versus-later-maintenance ownership. Verify no overwrite of existing files, byte copies and truthful initial guidance. |
 | V-004 | Document owners and coordinator handoffs | Define atomic document acceptance/task commits and subsequent issue closure, final package QC, preparation-only integration and the preimplementation checkpoint. Honor scoped future preapprovals across affected human-review instructions. Reconcile resumed accepted artifacts from evidence, preserve pending reviews, and keep first-approval tasks complete and their issues closed during later revisions. No automatic replay or acceptance based on presence alone. |
 | V-005 | PLUGIN, full README, capability map and affected source documentation | Expose preparation tracking and the initialization pause concisely, with canonical procedures linked. Load the plugin contract before entry edits; avoid duplicating the complete procedure across entries. |
 | V-006 | Package verification and TextStats acceptance coverage | Include the template in package/snapshot contracts as needed; add preparation scenarios to the component's acceptance coverage. Run appropriate static, package, support and publisher checks; retain live behavior as unrun unless separately authorized. |
@@ -117,8 +117,8 @@ Execute actions only after plan acceptance. Publish and read back each action co
 
 ## Verification scenarios
 
-- Fresh repository: all tracking objects/associations verified before the first repository write; three files copied; initialization published/closed; no extra human pause.
-- All three files present: root bytes unchanged; create/publish DOCS_TASKS if absent, otherwise reuse valid completion without an empty commit; close the issue with actual evidence and continue.
+- Fresh repository: all tracking objects/associations verified before the first repository write; four files copied; initialization published/closed; no extra human pause.
+- All four files present: root bytes unchanged; create/publish DOCS_TASKS if absent, otherwise reuse valid completion without an empty commit; close the issue with actual evidence and continue.
 - Every partial-presence combination: preserve existing bytes, copy missing files, publish/close initialization, name both groups and stop before document work.
 - Tracking disabled: same file matrix and stops; no hosted calls or objects.
 - Backend partial creation, outage or unknown write: reconcile exact identities; no duplicate objects or repository writes past an unmet gate.
@@ -132,6 +132,7 @@ Execute actions only after plan acceptance. Publish and read back each action co
 - Merge or milestone closure failure: preserve completed tasks/issues, retain the outstanding transition and do not start implementation.
 - Future preapproval: honor individual, set-wide, conditional and revoked approvals; preserve QC/publication/tracking gates and implementation-range limits.
 - Preparation-only: perform the authorized main documentation merge and milestone closure, then report/hold the final implementation boundary unless already covered by explicit preapproval and execution scope.
+- Discovery protocol: copied unchanged from assets when absent; existing content preserved; AGENTS template has a dedicated Initialization link to its target-root path.
 - New package templates: present in native package and snapshots, source-only files still excluded, documentation links resolve.
 - Non-main adoption and implementation tracking: existing first-result/bootstrap and phase/task semantics remain intact outside the selected main-preparation extension.
 
