@@ -137,3 +137,18 @@ Execute actions only after plan acceptance. Publish and read back each action co
 - Non-main adoption and implementation tracking: existing first-result/bootstrap and phase/task semantics remain intact outside the selected main-preparation extension.
 
 Deterministic support checks establish tooling behavior; source walkthroughs establish instruction coverage. Neither establishes live agent compliance. Adding acceptance scenarios extends the acceptance component; executing live consumer trials is a separate operation.
+
+## Reopened amendment — GitHub tracking default
+
+- Reopening source/target checkpoint and qualifying prior merge: `1a0bab5421409d6c11454242a5c85e803dfe5eb2`, published on main, parents `80e175adb3b7a797fedea85e9f69046bfe05298d` and `1cb2b9a01c64ef7146c2cd51bbc5b1a964d99306`.
+- Human authority: reopen the campaign and adapt/integrate default GitHub tracking into AGENTS, clarifying documentation and implementation, with user override and a README note.
+- Original identity, baseline and opening remain unchanged. Working branch remains `revision/067_80e175a-docs-dev-workflow`; target remains `main`.
+- State: Amendment accepted; V-007 planned. Earlier execution and closure evidence above remains historical.
+
+### V-007 — Default tracking and separate lifecycle reminders
+
+Revise the campaign and packaged AGENTS template with an explicit GitHub default for documentation and implementation, subject to user/project overrides. Separate main documentation projection/closure from eligible implementation phase activation. Each names its required objects, readback gate, failure stop and ongoing maintenance. Preserve native milestones, first-approval task semantics and final docs merge-before-milestone closure.
+
+Align coordinator tracking selection, main entry and entry/README summaries so a newly adopted default applies before DOCS-001, rather than after its copied AGENTS is first loaded. Respect existing decisions/project policy and unsupported hosting without guessing another destination or silently choosing local-only. Other workflows without an adopted/default/requested tracking policy retain optional selection.
+
+Extend TextStats assessor scenarios for default selection and explicit opt-out/narrower scope; verify template parity, links, source handoffs, package contents and relevant support/publisher regressions. Live consumer/provider acceptance remains unrun. Publish each checkpoint, explicitly remerge the completed amendment, verify/publish main and close the campaign again without resuming unrelated work.
