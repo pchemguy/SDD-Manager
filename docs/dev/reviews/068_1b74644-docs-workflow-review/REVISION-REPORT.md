@@ -16,7 +16,7 @@
 | V-001 | R-003 | Revised; source rechecks pass; combined verification pending |
 | V-002 | R-004 | Revised; source rechecks pass; combined verification pending |
 | V-003 | R-002 | Revised; source rechecks pass; combined verification pending |
-| V-004 | R-001 | Pending |
+| V-004 | R-001 | Revised; source rechecks pass; combined verification pending |
 | V-005 | R-001–R-004 | Pending |
 
 ## V-001 — Documentation and implementation persistence
@@ -71,3 +71,21 @@ Source walkthroughs inspected the two edited procedures against the unchanged to
 These are source traces only; no token, external provider object or target repository was created for them. Diff and Markdown/local-link checks precede the action commit.
 
 Prior action publication verified by remote readback: V-002 `ea44cc833189a6149daf79153f9a9705860a0136`. V-003 publication follows this checkpoint before V-004.
+
+## V-004 — Scoped preapproval in checkpoint reminders
+
+Updated the bootstrap and QC reminders to name explicit applicable future-checkpoint preapproval and link the canonical policy. PLAN and layout remain distinct gates, each cleared by its actual acceptance or applicable preapproval. Strategy-only QC still cannot claim combined layout/TASKS readiness. No AGENTS/template, document-owner entry or canonical human-policy change was needed.
+
+Source walkthroughs followed bootstrap → focused document-owner prerequisites → human-document-review → shared QC reminder:
+
+| Actual human decision / state | Observed instruction consequence |
+| --- | --- |
+| No preapproval or only broad continue/Git authority | Publish/present the necessary proposal and pause; technical Ready and standing operation authority do not accept it. |
+| Explicit preapproval for remaining PLAN/layout checkpoints | Both are independently covered; report their results and satisfy each technical/persistence gate without repeated acceptance pauses. |
+| Preapproval covers another document or range | Preserve its scope; the uncovered checkpoint still pauses before dependent authoring. |
+| Conditional preapproval; condition unmet | It is not applicable, so the checkpoint remains pending. QC or inference cannot satisfy the missing human condition. |
+| Revoked preapproval or interruption with a pending decision | Recover the actual latest decision, retain the human boundary and hold dependent work. A prior grant or missing context cannot erase revocation/pending acceptance. |
+
+Cross-read canonical preapproval rules preserve QC, substantive reporting, Git publication, requested tracking and authorized implementation ranges in every case. These are source walkthroughs, not live HIL observations. Diff and Markdown/local-link checks precede the action commit.
+
+Prior action publication verified by remote readback: V-003 `d3fe855d060b1b58f1ff6f90f25c034bd05c4d5c`. V-004 publication follows this checkpoint before combined verification.

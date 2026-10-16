@@ -46,7 +46,7 @@ Read all selected owner entries, human-document review, document-QC gates, share
 
 ### R-001 — Remaining checkpoint reminders omit the preapproval exception
 
-- **Type/priority/status:** Instruction-consistency issue; Medium; Open. Confidence high from the located text; actual model behavior is untested.
+- **Type/priority/status:** Instruction-consistency issue; Medium; Revised, source recheck passed; combined verification pending. Confidence high from the located text; actual model behavior is untested.
 - **Locations:** `skills/sdd-manage/references/document-qc-gates.md`, “Human acceptance alongside QC”; `repository-bootstrap.md`, “Human review at startup”. Canonical `human-document-review.md`, “Future-checkpoint preapproval”, and direct document-owner entries explicitly support covered checkpoints without another pause.
 - **Observation:** The former reminder still says each necessary new proposal pauses; the bootstrap reminder still says to pause at every created root. The linked canonical policy provides the exception, but these locally unconditional imperatives require the reader to reconcile it rather than state the applicable condition. A model following the last-loaded reminder can solicit approval despite explicit scoped preapproval.
 - **Source contrast:** Human explicitly preapproves remaining PLAN/layout checkpoints; owner loads shared QC at the strategy/layout handoff. Canonical policy permits progression after QC/reporting, while the local reminder independently orders a pause. This is a source ambiguity, not an observed failed consumer run.
