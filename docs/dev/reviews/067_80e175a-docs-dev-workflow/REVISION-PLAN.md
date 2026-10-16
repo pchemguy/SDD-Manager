@@ -7,7 +7,7 @@
 - Planning source: `ca177e27418be46fbda054888a8a0653badf5e51`.
 - Branch: `revision/067_80e175a-docs-dev-workflow`; eventual integration target: `main`.
 - Companion: [revision report](REVISION-REPORT.md).
-- State: Proposed; planning authorized, implementation and closure pending.
+- State: Accepted by “Execute campaign revisions”; V-001–V-006 implemented and locally verified. Final campaign integration/publication is recorded by Git.
 
 ## Objective and boundaries
 

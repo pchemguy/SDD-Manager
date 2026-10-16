@@ -7,7 +7,7 @@
 - Working branch: `revision/067_80e175a-docs-dev-workflow`.
 - Integration target: `main`.
 - Objective: revise the documentation development workflow.
-- State: Open; plan accepted by “Execute campaign revisions”; execution underway.
+- State: V-001–V-006 complete and source/package verified; campaign closes at verified explicit main integration/publication. Git retains the actual final merge and publication identity.
 
 ## Scope and authority
 
@@ -88,3 +88,35 @@ Exact committed package and final merged-state checks follow this action checkpo
 ## Coupled source recheck
 
 A final handoff read found the commit composer’s generic closing-composition paragraph could still send DOCS tasks to the implementation audit. Restricted that paragraph and the forge hierarchy rule explicitly to implementation, and linked DOCS completion to its separate main procedure. This removes an instruction ambiguity without changing executable tooling. Markdown/link and author validation are rechecked on the final candidate.
+
+## Final verification and integration boundary
+
+Verified committed source `61a64e1efb61cd68807eb3c15e3bb307d7855bee` using Python 3.12.14 and the pinned offline manifest schema/jsonschema 4.26.0. Native archive bytes match committed TextStats snapshot bytes for all 137 package files; dirty/committed package snapshots agree. All 15 skill entries route their 77 reference modules. The three shipped assets match the campaign drafts, remain assets-only and do not include source development/acceptance records. Native package SHA-256 for that exact source: `f35653dd04d1191b24d1c768c4f2c05c03daf6d10642ab0f36e4cb2310f4f2ad`. Later report-only commits/merge carry their own archive metadata identity; this digest is not reused as their artifact hash.
+
+| Action | Published source checkpoint | Result |
+| --- | --- | --- |
+| V-001 | `705a4ca` | Coordinator/main preparation, initialization, preapproval and bootstrap ownership |
+| V-002 | `2101ec7` | Separate hosted preparation creation/readback and completion lifecycle |
+| V-003 | `a0f8a18` | Exact AGENTS, DOCS_TASKS and discovery assets |
+| V-004 | `70d04d5` | Direct owner, acceptance commit and final integration handoffs |
+| V-005 | `b7f2b43` | PLUGIN, full README/diagram, capability map and contract |
+| V-006 | `3f9c621` | Acceptance scenarios and native package/snapshot regressions |
+| Coupled correction | `61a64e1` | DOCS completion separated from implementation history audit |
+
+All checkpoints above were pushed and read back before subsequent work. The temporary V-002 HTTP 502 publication blocker was recovered without rewriting history. The full branch difference modifies no earlier closed campaign contents; the root development AGENTS and root discovery protocol are unchanged.
+
+### Source scenario assessment
+
+| Concern | Inspected owners and result |
+| --- | --- |
+| Pre-write tracking and missing PLAN/TASKS | Coordinator main preparation and GitHub preparation module explicitly verify nine template-derived issues/native milestone before target writes; implementation activation remains separate. |
+| None/all/partial four-file presence and recovery | Main procedure and task asset preserve/copy by original classification; all partial subsets share the same stop; original evidence survives copies/push/closure and interruption. |
+| First approval, later revision and resume | Owner entries, approval procedure and issue lifecycle keep completed first-approval tasks/issues closed while checking current document/package validity separately. |
+| Preapproval and explicit limits | Human review, entries and templates retain scoped future preapproval and revocation, QC/publication/tracking requirements and execution-range boundaries. |
+| Atomic approval task commit and publication | Coordinator owns the accepted-document/checked-DOCS result, allows unchanged approved blobs and requires push/readback before issue closure or dependent work. |
+| Final QC and integration/closure | DOCS-009 passes whole-package review; final issue closes after publication; explicit verified/published docs merge precedes native milestone closure and final implementation checkpoint. |
+| Other workflows and source/package separation | Implementation/feature/revision adoption retain their own gates; new main rules are explicitly scoped and no implementation task IDs are fabricated. |
+
+These are source walkthroughs, not consumer executions. Relevant tooling suites passed (137 support, 34 publisher), all 33 catalog contracts validate, current/active links and spacing pass, and author validation/inventory reports zero errors/46 cross-skill warnings. No live consumer, provider, installed-client or end-to-end interaction run was performed. No confirmed source finding remains open from this execution; the focused AGENTS findings were already verified in the accepted draft.
+
+Final target is the refreshed `main`. The integration owner explicitly merges the complete campaign tip, checks merged package identity/links/closed-record preservation, commits the two-parent result and publishes/readbacks main. The merge message records the original opening `ca177e27418be46fbda054888a8a0653badf5e51`, baseline `80e175adb3b7a797fedea85e9f69046bfe05298d`, actual parent tips and merged checks. Closure follows that publication, without a later unintegrated report edit.
