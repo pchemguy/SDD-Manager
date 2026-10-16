@@ -1,0 +1,69 @@
+{
+  "campaign": "069_1d3dd41",
+  "reviewed_baseline": "1d3dd41c29c4534fc84490b78b534017ef0af4a8",
+  "checked_source": "7a6351182fe5a8d48090d431a3cbce284973f539",
+  "runtime": {
+    "python": "3.12.14",
+    "git": "git version 2.51.1",
+    "jsonschema": "4.26.0"
+  },
+  "checks": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v",
+      "exit_code": 0,
+      "tests": 137,
+      "result": "Passed"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/067-validator-deps python -m unittest discover -s .github/tests -v",
+      "exit_code": 0,
+      "tests": 34,
+      "result": "Passed",
+      "dependency_source": ".github/requirements.txt"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python acceptance/textstats/cases/assessor/catalog_tools.py validate",
+      "exit_code": 0,
+      "cases": 33,
+      "result": "Passed"
+    },
+    {
+      "method": "Invoke actual publisher.build_package and TextStats core.package at exact committed source; compare every archive/snapshot/tree byte, mode, inventory and required template; check source/closed path preservation",
+      "result": {
+        "source": "7a6351182fe5a8d48090d431a3cbce284973f539",
+        "reviewed_baseline": "1d3dd41c29c4534fc84490b78b534017ef0af4a8",
+        "package_files": 137,
+        "skills": 15,
+        "routed_references": 77,
+        "sha256": "f5d25aa6afe3ecd663e301bc0441b76ca5809f1aee2ee78e7b2d251a8ba208ea",
+        "native_snapshot_parity": true,
+        "preparation_assets_exact": true,
+        "protected_paths_unchanged": true,
+        "closed_campaigns_unchanged": true,
+        "changed_source_paths": []
+      }
+    },
+    {
+      "command": "python <agent-package-author>/scripts/validate_plugin.py .agents/plugins/sdd-manager",
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 46,
+      "warning_kind": "resource-cross-skill; plugin-contained client handoff advisory"
+    },
+    {
+      "method": "Current/active Markdown target/anchor, package containment, heading separation and consecutive blank checks; fenced/inline code, unresolved placeholder link targets and frozen closed contents excluded",
+      "result": "Passed",
+      "documents": 208,
+      "local_links": 1060,
+      "errors": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "review_only": true,
+  "live_acceptance": "Not run; out of scope",
+  "source_repairs": false,
+  "campaign_state": "Open; review complete; unmerged"
+}

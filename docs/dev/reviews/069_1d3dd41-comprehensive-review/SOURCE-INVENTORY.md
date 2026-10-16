@@ -2,7 +2,7 @@
 
 - Pinned baseline: `1d3dd41c29c4534fc84490b78b534017ef0af4a8`.
 - 313 selected tracked artifacts; complete plugin and current supporting scope.
-- Assessed depth follows the review plan; pending rows are not assessed.
+- All 313 selected artifacts were reviewed at the stated depths; no selected artifact remains pending.
 - Excluded: closed campaigns/AI logs, generated evidence, unrelated checkouts/external projects, live acceptance, artwork redesign.
 
 | Unit | Selected artifacts |

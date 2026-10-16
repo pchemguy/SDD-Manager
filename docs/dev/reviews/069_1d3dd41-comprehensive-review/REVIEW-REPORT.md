@@ -5,7 +5,19 @@
 - Campaign: `069_1d3dd41`.
 - Reviewed baseline: `1d3dd41c29c4534fc84490b78b534017ef0af4a8`.
 - [Plan](REVIEW-PLAN.md); [inventory](SOURCE-INVENTORY.md).
-- State: Open; review in progress. No source changes or live acceptance authorized.
+- State: Review complete; campaign open and unmerged. No source repairs or live acceptance performed.
+- Skill paths below are relative to `.agents/plugins/sdd-manager/`; acceptance/CI paths are repository-relative.
+
+## Findings and recommended revision scope
+
+Two Medium instruction-consistency findings; no High/Critical findings established within the reviewed scope. They are source contradictions/ambiguities, not observed consumer failures.
+
+| Finding | Consequence | Bounded correction |
+| --- | --- | --- |
+| [R-001](#r-001--generic-verification-repair-routing-excludes-preparation-owners) | Generic repair/evidence handoffs can select an implementation owner during preparation or request a fresh decision for already-authorized routine correction. | Qualify routing by the active workflow/authorized owner in management and verification references; preserve genuine requirement and scope decisions. |
+| [R-002](#r-002--detailed-procedures-and-a-feature-assessor-omit-applicable-preapproval) | Detailed PROJECT/PLAN instructions and feature-preparation assessment can demand a repeated human decision despite explicit applicable preapproval. | Align the two owner references and A-008 guide/contract with existing scoped preapproval policy. |
+
+The corrections are independently reviewable; neither requires restructuring PLUGIN, replacing the coordinator, introducing a tracking default or changing publisher implementation. R-001 spans caller and verifier interfaces; R-002 spans runtime reminders and their assessor criterion. Recheck those interfaces together. Any future revision should retain all existing branch/range, QC, publication, hosting and uncovered human-decision gates.
 
 ## Coverage
 
@@ -20,7 +32,7 @@
 | U-007 | Reviewed | None |
 | U-008 | Reviewed | R-002 corroborating assessor criterion; no new ID |
 
-Pending coverage is not passing coverage. Structural checks and source scenarios do not establish live behavior. No finding is allocated before inspection.
+All eight units and 313 selected artifacts are assessed at their recorded depths. Structural checks and source scenarios do not establish live behavior; test fixture/method review does not claim independent line-by-line review of every fixture. See unit evidence and the inventory for scope and exclusions.
 
 ## U-001 — Composition, entry projections and source/package boundaries
 
@@ -119,3 +131,24 @@ Coverage contrasts included absent/ambiguous destination, committed versus expli
 All catalog contracts were checked against their selected requests, predecessor/variant/protocol semantics and governing workflow boundaries. Literal vectors cover API/BOM/newlines, named-file/error channels, JSON, range precedence/decode/EOF, subtraction, stdin and extracted-source entry. Expected constants remain separate from observation; non-sampled lifetime/unreadability/docs/coverage and semantic lifecycle judgments remain independent assessor duties. Source-defined sixteen initialization combinations and added checkpoint/routing/tracking scenarios are not observed passes.
 
 Fresh local runs at source 7a6351182fe5a8d48090d431a3cbce284973f539 passed 137 support tests and 34 publisher tests; all tested non-review files equal the reviewed baseline. Catalog integrity passed all 33 cases. Actual release/installed-client, live provider, human decision and interruption behavior remain unrun. Current guides state those limits; support or structural success cannot complete live acceptance.
+
+## Verification and limitations
+
+[Verification record](VERIFICATION.json) retains exact commands, identities and results. Fresh support/publisher execution used review commit `7a6351182fe5a8d48090d431a3cbce284973f539`; every tested non-review file is identical to baseline `1d3dd41c29c4534fc84490b78b534017ef0af4a8`. Subsequent changes are this campaign's records/index only. Runtime: Python 3.12.14, Git 2.51.1, declared jsonschema 4.26.0. CI declares Python 3.11; this local run does not independently test 3.11 or execute hosted CI.
+
+| Check | Observed result / limit |
+| --- | --- |
+| TextStats support suite | 137 tests passed; disposable local fixtures, not consumer acceptance. |
+| Publisher suite | 34 tests passed; controlled adapter/build behavior, not live GitHub release. |
+| Catalog integrity | All 33 cases validated; no case or initialization-variant pass inferred. |
+| Native package/schema/snapshot | 137 exact files, 15 skills, 77 named reference files; offline core manifest validation, native ZIP versus committed/dirty-clean snapshot byte parity and required assets passed. |
+| Package identity | Archive built from `7a6351182fe5a8d48090d431a3cbce284973f539`; SHA-256 `f5d25aa6afe3ecd663e301bc0441b76ca5809f1aee2ee78e7b2d251a8ba208ea`. Its Git source comment/timestamps identify that build, rather than a later report commit. |
+| Optional author validator | Exit 0; zero errors and 46 plugin-contained cross-skill advisories. These are client-handoff caveats, not core-schema failures, resource escapes or proved broken links. |
+| Markdown/local links | 208 current/active documents and 1,060 local links; anchors, package containment and blank-line/heading checks passed. Fenced code, inline-code examples, unresolved placeholder link targets and frozen closed contents are excluded from link checks. External URL reachability and diagram rendering are not generally certified. |
+| Preservation | All package/source/acceptance/CI files and closed campaign objects remain unchanged; only active 069 records and the review index differ from baseline. |
+
+No live acceptance, fresh isolated model trial, installed-client/UI discovery, native browser test, actual GitHub tracking/release or interruption control was run. Prior campaign evidence remains historical; no closed contents were reviewed for compatibility with new source. Missing live/model evidence limits confidence in behavioral impact, not the directly located source mismatches. No source fix was performed.
+
+## Disposition
+
+Campaign 068 was closed and its two-parent merge published at the reviewed main baseline. Campaign 069's broad review is complete; findings remain Open. Keep 069 open/unmerged for the user's review. Revision execution, source repairs and campaign closure are separate next actions and were not performed under this review request.
