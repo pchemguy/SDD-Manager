@@ -41,3 +41,7 @@ Publish the execution report, finding dispositions and verification evidence on 
 ## V-004 — Focused human-checkpoint wording
 
 User feedback requests the actual existing checkpoint points. Replace the overloaded final section of sdd-plan/references/review.md with two direct points: published PLAN before dependent layout; published layout before TASKS. Keep acceptance/preapproval with the linked shared procedure. No new workflow or checkpoint is introduced. Check source agreement, local links/spacing and the exact diff; retain prior suite/package results as prior-source evidence rather than rerunning unrelated tests. Keep the campaign open/unmerged.
+
+## V-005 — Related wording review
+
+The user requested review for similar overcomplicated wording elsewhere. Review related checkpoint, preparation-QC and handoff passages against their existing owners; record concrete located recommendations without additional source repairs. Preserve previous source corrections and keep 069 open/unmerged. See [focused text review](FOCUSED-TEXT-REVIEW.md).

@@ -167,3 +167,7 @@ Baseline observations and original review verification above are retained. Subse
 | R-002 | Verified: source/structural/regression; live behavior unrun | [V-002 checkpoint correction](REVISION-REPORT.md#v-002--applicable-checkpoint-preapproval) |
 
 Campaign remains open/unmerged; these dispositions do not close it or retroactively change the reviewed baseline.
+
+## Focused wording follow-up
+
+At the user's request, a [focused text review](FOCUSED-TEXT-REVIEW.md) of related checkpoint/preparation/handoff wording identified R-003 (Medium editorial), R-004 and R-005 (Low editorial). These three recommendations are Open; no additional source repairs were performed by that review. The previously verified functional corrections and their baseline evidence remain distinct.
