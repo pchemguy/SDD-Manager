@@ -60,6 +60,8 @@ Clarification, agent QC, passing tests and commits/pushes do not constitute huma
 
 ## Requested backend tracking
 
+Fresh main preparation uses the AGENTS template’s GitHub tracking default for documentation and implementation unless explicit user choices or existing controlling project policy override it. Preserve that mode through interruptions; access failure does not silently disable it. See [tracking policy](skills/sdd-manage/references/tracking-decision.md).
+
 **For fresh/resumed main preparation, enabled tracking precedes repository modifications:** use [main preparation](skills/sdd-manage/references/main-preparation.md) for the native `docs-main` milestone and all nine template issues before writes. DOCS_TASKS tracks initialization, seven documents through first approval and final package QC. Publish each approved-document/checked-task commit before issue closure; later document revisions leave those tasks/issues complete. Final QC issue closure → verified/published docs merge → milestone closure → final preimplementation checkpoint. This is separate from implementation phase activation.
 
 ### Implementation tracking

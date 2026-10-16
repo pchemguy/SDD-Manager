@@ -8,6 +8,7 @@ Retain before/after target files and hashes, original four-file presence, staged
 
 | Scenario | Setup and independent acceptance |
 | --- | --- |
+| Default and user override | Fresh main preparation selects the bundled AGENTS GitHub default for docs and implementation before writes without asking to enable it again. Existing controlling project policy, explicit opt-out/local-only or narrower scope wins and survives interruption/token supply. Non-GitHub targets require resolving supported mode; access failure cannot silently disable tracking. |
 | Fresh enabled preparation | Observe native docs-main and all nine issue associations verified before any target file/ref modification, including credential/ignore files. Product PLAN/TASKS are not required for that projection; no implementation phase objects are created. |
 | Four-file presence matrix | Use all 16 subsets of AI_DISCLOSURE, SDD-MANAGER, AGENTS and SKILL_DISCOVERY_PROTOCOL in isolated forks. Missing files match pinned assets; existing bytes remain unchanged. Empty/full subsets continue without an added pause; the 14 partial subsets report exact retained/copied filenames, publish/close DOCS-001 and stop before document work unless explicitly preapproved. |
 | Task-list bootstrap | Consumer copies the pinned task template after the enabled pre-write gate, or preserves/resumes an existing list. No overwritten checked progress, circular self-creation operation or implementation ID reuse. |

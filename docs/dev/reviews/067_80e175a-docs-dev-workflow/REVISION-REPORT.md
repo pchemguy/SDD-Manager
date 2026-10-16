@@ -120,3 +120,23 @@ All checkpoints above were pushed and read back before subsequent work. The temp
 These are source walkthroughs, not consumer executions. Relevant tooling suites passed (137 support, 34 publisher), all 33 catalog contracts validate, current/active links and spacing pass, and author validation/inventory reports zero errors/46 cross-skill warnings. No live consumer, provider, installed-client or end-to-end interaction run was performed. No confirmed source finding remains open from this execution; the focused AGENTS findings were already verified in the accepted draft.
 
 Final target is the refreshed `main`. The integration owner explicitly merges the complete campaign tip, checks merged package identity/links/closed-record preservation, commits the two-parent result and publishes/readbacks main. The merge message records the original opening `ca177e27418be46fbda054888a8a0653badf5e51`, baseline `80e175adb3b7a797fedea85e9f69046bfe05298d`, actual parent tips and merged checks. Closure follows that publication, without a later unintegrated report edit.
+
+## Reopening — Tracking default amendment
+
+Original campaign closed at the published two-parent main merge `1a0bab5421409d6c11454242a5c85e803dfe5eb2`. Verified current main/remote equality, latest first-parent merge, both parent identities and original campaign-tip containment. The human explicitly reopened for default GitHub tracking in the AGENTS template, split documentation/implementation obligations and corresponding README guidance. Fast-forwarded the retained campaign branch to that target checkpoint, preserving all original provenance. V-007 is accepted and pending; no source changes are included in this reopening checkpoint. Target remains main; other closed records stay frozen.
+
+## V-007 — GitHub default and separate tracking gates
+
+Updated both campaign and packaged AGENTS templates: GitHub tracking is enabled by default for documentation preparation and implementation, with an explicit user-changeable mode and separate documentation/implementation subsections. The docs rule names native docs-main and all nine issues before repository writes, first-approval closure and merge-before-milestone completion. Implementation names phase activation, labels, all milestone/task objects including reviews, readback and ongoing lifecycle maintenance. Missing tracking prerequisites report a blocker and stop affected work; access failure does not silently disable tracking.
+
+Aligned coordinator selection/main startup, phase handoff, backend lifecycle/projection, PLUGIN, full README and capability map. Fresh main preparation applies the bundled default before copying AGENTS, while explicit choices and existing controlling project policy take precedence. Other workflows without a default/choice retain optional selection. No unsupported provider is advertised or alternate repository guessed. Source development AGENTS.md is unchanged.
+
+Extended independent A-001 assessment with default, disabled/local-only/narrower-policy, interruption/token-supply and non-GitHub mismatch scenarios. Source walkthroughs confirm the default is selected before the docs gate, an established opt-out wins and survives recovery, implementation waits for readback, and docs retain their separate merge/closure order. No live consumer/provider execution is claimed.
+
+Python 3.12.14: 137 support tests and 34 publisher tests pass; all 33 catalog cases validate. Current/active Markdown checks pass across 211 documents and 1,045 local links; author inventory reports zero errors and 46 cross-skill warnings. Template/draft parity is preserved. Exact committed package verification follows this action checkpoint.
+
+## Amendment final boundary
+
+Verified exact source `e23734ea283c1c83d4ec441e71d8b55424964806`: native package and committed/dirty TextStats snapshots agree for all 137 files; all three assets match campaign drafts; 15 entries route all 77 modules; source-only artifacts stay excluded. Package SHA-256 at this source is `58110c3fb8ba76ae53fe8328d1a8224154fcdd95980ecace3951b90db2603a60`. Prior closed packages remain unchanged; only the explicitly reopened campaign records are maintained. V-007 was pushed and read back before this final evidence checkpoint.
+
+Reclose by explicitly merging the complete amended campaign tip into refreshed main from reopening checkpoint `1a0bab5421409d6c11454242a5c85e803dfe5eb2`, verifying the merged tree/package and current documentation, then publishing and reading back main. Carry the original opening/baseline and cumulative V-001–V-007 outcomes in the amendment merge message. No subsequent unintegrated report edit is needed. Live acceptance remains unrun; source/support/package success is not live workflow proof.
