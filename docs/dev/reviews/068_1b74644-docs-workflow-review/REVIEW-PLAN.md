@@ -26,3 +26,7 @@ Use Agent Package Author skill/plugin review criteria and Technical Writing Assi
 ## Persistence and stopping
 
 After each unit, update its inventory state and the canonical report with located findings/no-finding coverage, stable IDs, consequence, confidence, correction owner and objective recheck. Commit, push and verify remote readback before the next unit. Consolidate priorities and dependencies after all units. Stop at the published review report with this campaign open; revisions require a later request. Frozen campaign records are excluded from current checks and edits.
+
+## Review completion
+
+All six units completed and their checkpoints published. The consolidated report retains four open Medium findings and the reason one candidate was not confirmed. Runtime source is unchanged from the pinned baseline; local checks are recorded separately from unrun live acceptance. The campaign remains open at the review boundary, without revisions or integration.

@@ -63,9 +63,7 @@
 | U-006 | `acceptance/textstats/cases/assessor/MAIN-PREPARATION.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/credentials.md` | Adjacent pre-write authentication interface | Reviewed: full text |
 | U-003 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/hosting-tokens.md` | Adjacent pre-write authentication interface | Reviewed: full text |
-
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md` | Adjacent implementation audit target | Reviewed: task contract, bounded audit and recovery interface |
-
 | U-006 | `acceptance/textstats/tests/test_preflight.py` | Adjacent empty-repository setup behavior | Reviewed: preparation fixtures and unborn-repository assertion |
 
 ## Exclusions

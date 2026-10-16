@@ -5,7 +5,7 @@
 - Campaign: `068_1b74644`.
 - Starting/reviewed source: `1b74644cb0b97e074cc407086be13b5597620b80`.
 - [Review plan](REVIEW-PLAN.md); [source inventory](SOURCE-INVENTORY.md).
-- State: Open; review units pending.
+- State: Review complete; campaign open. No revision execution or integration authorized.
 - Evidence boundary: current source inspection and local structural/support/publisher execution; no live acceptance, source repairs or workflow deployment.
 
 ## Coverage
@@ -17,11 +17,20 @@
 | U-003 | Reviewed | R-002 | Tracking/backend |
 | U-004 | Reviewed | R-003, R-004 | Git/recovery |
 | U-005 | Reviewed | R-003 projection; no new ID | Entry/README/composition |
-| U-006 | Reviewed | R-005 | Package/tooling/acceptance coverage |
+| U-006 | Reviewed | No open finding; R-005 not confirmed | Package/tooling/acceptance coverage |
 
 ## Findings
 
-No findings allocated before inspection. Pending units are not passing coverage.
+Four open findings, all Medium priority, concern conflicting or incomplete instruction handoffs. No High/Critical defect was established. The findings are source-based and do not claim observed consumer failures.
+
+| ID | Concern | Correction owner |
+| --- | --- | --- |
+| R-001 | Local checkpoint reminders omit explicit scoped preapproval | Coordinator bootstrap/QC reminders |
+| R-002 | Credential recovery lacks an explicit route through the docs pre-write gate | Main-preparation/credential handoff |
+| R-003 | Generic task gates and projections can apply implementation audits to DOCS tasks | Coordinator/Git callers and entry/capability projections |
+| R-004 | Delivery handoff still says preparation-only stops on design-docs | Coordinator workflow summary |
+
+R-005, initially recorded at the U-006 checkpoint, was not confirmed on final cross-read; its disposition is retained below. The new assets, package boundaries and local checks otherwise passed the assessed structural/tooling criteria. These passes do not establish live workflow behavior.
 
 ## U-001 — Templates, bootstrap and discovery
 
@@ -101,14 +110,13 @@ The development contract retains generic C/K routing/continuity assessments. The
 
 Inspected the changed publisher selectors and their tree/archive/build callers, asset tests, snapshot pinning/dirty capture, catalog contract validation and affected acceptance guides/contracts. Added the existing empty-repository preparation test as a consequential interface. The new assessor module is reachable from A-001 JSON/Markdown and execution/setup guidance; it defines all 16 presence combinations, first approval, scoped preapproval, later revision, resume, hosted uncertainty, package QC and final ordering. No live consumer/provider execution occurred.
 
-### R-005 — Empty-repository harness setup conflicts with the new root-file restriction
+### R-005 — Not confirmed: harness operating AGENTS versus template copying
 
-- **Type/priority/status:** Acceptance setup/instruction inconsistency; Medium; Open. The local helper behavior is covered by an executed support test; consumer behavior remains unrun.
-- **Locations:** `acceptance/textstats/SETUP.md`, “Consumer repository disclosure”; `scripts/core.py`, `prepare()` empty-head block; `tests/test_preflight.py`, `test_prepare_new_unborn_remote_is_bounded_and_does_not_publish`; `cases/assessor/MAIN-PREPARATION.md`, four-file matrix.
-- **Observation:** Setup now says the harness must not create target root copies, after naming all four initialization assets. The helper still creates a root AGENTS.md operating file for an unborn destination, and the existing test positively requires it. Consequently the normal empty-repository setup is already an existing-AGENTS fixture, not a none-present DOCS-001 fixture. Preserving it is legitimate consumer behavior, but that run cannot demonstrate copying AGENTS_TEMPLATE or adopting its generated policy. No recorded distinction resolves the new blanket restriction against this retained setup behavior.
-- **Reproduction:** Run `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=acceptance/textstats python -m unittest tests.test_preflight.PreflightTests.test_prepare_new_unborn_remote_is_bounded_and_does_not_publish -v` from the source root. The test creates an empty local bare remote, calls the actual prepare helper and asserts AGENTS.md exists while HEAD and remote refs remain unborn. The complete support suite executed this test successfully during this review. Compare that explicit creation with SETUP’s prohibition; no GitHub destination or credentials are needed.
-- **Bounded proposal/owner:** Reconcile the acceptance coordinator’s operating-instruction setup with the DOCS initialization fixtures. Either explicitly classify the existing operating AGENTS as harness-authored fixture input, with a separate authorized none-present/template-copy fixture, or supply operating instructions outside those four target paths. State what each setup can prove; do not count harness-authored content as consumer copying or remove instructions from an actual consumer repository automatically. Align guide, helper and affected test according to the chosen setup contract.
-- **Objective recheck:** An empty-repository trial and an existing-instructions trial have explicit pre-consumer presence/provenance; the none-present scenario is genuinely absent at consumer start, existing bytes remain preserved, and generated-AGENTS policy/copy claims require the matching actual scenario. The selected setup guide and helper no longer contradict one another.
+Final disposition: **Not confirmed; no required correction**. The U-006 checkpoint initially treated the empty-repository operating AGENTS.md as conflicting with the new root-copy restriction. Full cross-read distinguishes them: SETUP’s “Fresh or resume” explicitly permits bounded operating instructions, while “Consumer repository disclosure” prohibits preparing the target asset copies on the consumer’s behalf. The helper writes different operating text, not AGENTS_TEMPLATE bytes. The existing test intentionally verifies that bounded setup and no publication. This does not establish a helper defect or justify removing the operating entry.
+
+Retain the coverage distinction: that ordinary empty-remote setup reaches the consumer as an existing-AGENTS fixture. Its consumer can demonstrate preservation and the partial-presence stop, but cannot demonstrate copying AGENTS_TEMPLATE or receiving its generated tracking policy. The assessor’s separately defined none-present/template-copy scenarios need genuinely corresponding initial state and actual observations. They remain unrun, not failed. No acceptance redesign or runtime repair is proposed on this basis.
+
+Evidence locations: `acceptance/textstats/SETUP.md`, “Fresh or resume” and “Consumer repository disclosure”; `scripts/core.py`, `prepare()` empty-head block; `tests/test_preflight.py`, `test_prepare_new_unborn_remote_is_bounded_and_does_not_publish`; main-preparation assessor matrix. The complete support suite executed that helper test; it proves bounded helper behavior, not consumer copying.
 
 ### Executed local verification
 
@@ -128,4 +136,12 @@ Tested at `156218be2d784da6db373ed121ce9da46e203041`; package, publisher, accept
 
 The actual locally built archive source is the review checkpoint above, whose runtime package equals the reviewed baseline. ZIP SHA-256: `ad36d17f2dbf9c45137739368cf29be282230853822741cb35b5e2030001f122`. Build used the manifest's unchanged v0.15.0 solely for local validation; no release/tag was created. The Markdown and archive checks used disposable verification scripts outside the repository.
 
-No finding allocated for missing required package assets, exact-byte retention, missing-asset rejection, source-only exclusions, pinned schema conformance or broken local links. Defined main-preparation scenarios are substantial coverage extension, but their consumer/provider outcomes remain unrun. Passing tooling does not disprove R-001–R-004 instruction issues or resolve R-005’s setup-contract choice. Live acceptance is outside this campaign.
+No finding allocated for missing required package assets, exact-byte retention, missing-asset rejection, source-only exclusions, pinned schema conformance or broken local links. Defined main-preparation scenarios are substantial coverage extension, but their consumer/provider outcomes remain unrun. Passing tooling does not disprove R-001–R-004 instruction issues. R-005 is not an open defect. Live acceptance is outside this campaign.
+
+## Review conclusion and revision handoff
+
+All six units are complete: 57 selected artifacts (44 changed and 13 necessary adjacent inputs), with the inventory’s stated depth and no pending review rows. Main-preparation, hosted docs projection, first-approval tasks and acceptance scenarios are implemented and discoverable. Remaining work is targeted instruction alignment, not another workflow redesign.
+
+For an accepted revision, prioritize R-003 and R-004 at the common integration handoff, then R-002’s first-use credential sequence and R-001’s checkpoint reminders. The four can be corrected independently, but recheck them together through fresh/resumed main preparation, an already-published unchanged proposal, explicit scoped preapproval, preparation-only completion and a normal implementation task boundary. Preserve the intended AGENTS-level tracking default, user overrides, shared tracking/recovery paragraphs, strict pre-write/readback ordering and separate documentation/implementation ownership. No finding authorizes expanding the default into PLUGIN or generic workflow policy.
+
+Do not treat this source review as live acceptance or automatic permission for repairs. Consumer/provider/client trials, the 16 presence variants and interruption sequences remain unrun. No release, tag, hosted tracking mutation or runtime source edit was performed. Campaign 067 is closed at published main merge `1b74644cb0b97e074cc407086be13b5597620b80`; campaign 068 stops at its published review records and remains open for the human’s next decision.
