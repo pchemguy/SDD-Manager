@@ -31,10 +31,10 @@ When tracking is enabled, each `DOCS-*` task maps to one issue in the `docs-main
     - Complete required SPEC QC and its human acceptance checkpoint.
 - [ ] DOCS-006 — Prepare and accept PLAN.
     - Define delivery phases, milestones, dependencies and exit conditions against SPEC.
-    - Complete strategy-scoped PLAN QC and its human acceptance checkpoint. Identify pending layout coverage; do not treat PLAN acceptance as layout acceptance.
+    - Complete PLAN QC, then present PLAN for human approval.
 - [ ] DOCS-007 — Prepare and accept layout.
     - Allocate source, tests, documentation and artifacts to physical paths consistently with the accepted design and PLAN.
-    - Complete layout and combined PLAN/layout QC, then the separate layout acceptance checkpoint.
+    - Review layout against the design and PLAN, update the PLAN review report, then present layout for human approval.
 - [ ] DOCS-008 — Prepare and accept TASKS.
     - Derive executable tasks, dependencies and required milestone/phase review units from accepted SPEC, PLAN and layout.
     - Complete required task-list QC and its human acceptance checkpoint. Do not start implementation or project implementation-phase objects yet.
