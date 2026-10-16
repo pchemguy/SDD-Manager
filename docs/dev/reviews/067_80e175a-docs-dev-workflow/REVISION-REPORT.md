@@ -69,3 +69,18 @@ Aligned direct document-owner entry with the main pre-write/first-approval lifec
 ## V-005 — Entry and human documentation
 
 Updated PLUGIN highlights, full README including preparation diagram/assets, capability map and plugin contract. Canonical procedures remain in coordinator/backend modules; entries now expose pre-write preparation tracking, four-file initialization pause, first-approval scope, final QC/merge/milestone ordering and scoped future preapproval. Removed the full README’s superseded first-commit/merge-only-if-implementation framing. The abbreviated root README already points to the full documentation and needs no duplicated procedure. Whitespace and source walkthrough checks passed; package/link/support verification follows.
+
+## V-006 — Acceptance coverage and verification
+
+Extended A-001 assessment with a dedicated main-preparation scenario module, including all 16 four-file presence combinations, first approval/later revisions, explicit preapproval, fresh/resumed/unknown effects, final package QC and merge-before-milestone closure. Updated setup/checkpoint assessment to preserve main bootstrap timing and distinguish DOCS completion from product implementation. These are acceptance component extensions; no live trial or 16-case pass is claimed.
+
+Publisher inventory now requires all three preparation assets. A new publisher regression checks their exact ZIP bytes, assets-only placement and rejection of each missing asset. A support regression checks exact committed snapshots versus changed dirty template bytes. Corrected the new DOCS-001 anchor found during link checks.
+
+- Python 3.12.14: 137 support tests passed.
+- Publisher: initial run could not import jsonschema; installed the declared jsonschema 4.26.0 dependency into a temporary tooling path, then all 34 publisher tests passed.
+- Catalog: all 33 case assets/contracts validate; live acceptance false.
+- Current Markdown plus active campaign: 211 documents, 1,043 local links; heading separation, consecutive blank lines, package containment and local anchors passed. Closed campaign contents excluded.
+- Agent Package Author plugin validation/inventory: zero errors, 46 bundle cross-skill warnings; client loading/runtime is not verified.
+- Campaign draft assets and package asset bytes match. Full campaign diff changes no prior closed campaign contents.
+
+Exact committed package and final merged-state checks follow this action checkpoint. Native consumer, controlled/live provider, installed-client discovery and actual human interaction acceptance are not run.

@@ -27,7 +27,7 @@ The predefined `DOCS-*` IDs are separate from product implementation `T-*` IDs. 
 
 Necessary focused children travel with their root; they do not acquire extra preparation issues. Existing valid documents are reusable inputs, not a reason to regenerate them. On resume, assess readiness and real decisions under [human document review](human-document-review.md); preserve pending reviews without demanding retrospective interactive replay solely for missing historical records. If introducing the list into an older incomplete preparation, record the actual evidence supporting recognized first approvals without claiming historical commits had this new atomic format.
 
-## DOCS-001 — Initialize root guidance
+## DOCS-001: Initialize root guidance
 
 Inspect **all four** target-root destinations before copying anything. Read existing controlling instructions and establish owned changes independently of unrelated files/index contents.
 

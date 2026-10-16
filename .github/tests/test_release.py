@@ -68,7 +68,9 @@ class PackageTests(Contract):
         git('init','-q'); git('config','user.name','Fixture'); git('config','user.email','fixture@example.test')
         manifest=json.dumps({"$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json", "name":"sdd-manager", "version":"0.15.0"}).encode()
         for name in ('LICENSE','README.md','PLUGIN.md','assets/Greenfield Project Prompt Template.md',
-                     'assets/SDD-MANAGER.md','assets/AI_DISCLOSURE.md','assets/icon.svg','skills/sample/SKILL.md',
+                     'assets/SDD-MANAGER.md','assets/AI_DISCLOSURE.md',
+                     'assets/AGENTS_TEMPLATE.md','assets/DOCS_TASKS_TEMPLATE.md','assets/SKILL_DISCOVERY_PROTOCOL.md',
+                     'assets/icon.svg','skills/sample/SKILL.md',
                      'plugin.json','docs/excluded.md','docs/ai-logs/EXPLORE_DRIVE_V1.md','AGENTS.md'):
             p=(self.root if name.startswith('docs/') or name=='AGENTS.md' else self.package)/name; p.parent.mkdir(parents=True,exist_ok=True)
             p.write_bytes(manifest if name.endswith('plugin.json') else (name+'\n').encode())
@@ -96,6 +98,27 @@ class PackageTests(Contract):
             self.assertFalse(any('/.agents/' in name for name in z.namelist()))
         raw=paths['sdd-manager.zip'].read_bytes()
         self.assertEqual(paths['sdd-manager.zip.sha256'].read_text(),hashlib.sha256(raw).hexdigest()+'  sdd-manager.zip\n')
+
+    def test_preparation_assets_are_exact_and_missing_assets_block_build(self):
+        assets = ('AGENTS_TEMPLATE.md', 'DOCS_TASKS_TEMPLATE.md', 'SKILL_DISCOVERY_PROTOCOL.md')
+        paths = publisher.build_package(self.root, self.data, self.out)
+        with zipfile.ZipFile(paths['sdd-manager.zip']) as zipped:
+            for name in assets:
+                self.assertEqual(zipped.read('sdd-manager/assets/' + name),
+                                 (self.package / 'assets' / name).read_bytes())
+                self.assertNotIn('sdd-manager/' + name, zipped.namelist())
+        for name in assets:
+            with self.subTest(missing=name):
+                path = self.package / 'assets' / name
+                original = path.read_bytes()
+                path.unlink()
+                self.git('add', '-u'); self.git('commit', '-qm', 'missing preparation asset')
+                source = self.git('rev-parse', 'HEAD')
+                with self.assertRaisesRegex(ValueError, 'Required package path is absent: assets/' + name):
+                    publisher.build_package(self.root, dict(self.data, source=source, notes_source=source),
+                                            self.out / name)
+                path.write_bytes(original)
+                self.git('add', '.'); self.git('commit', '-qm', 'restore preparation asset')
 
     def test_rebuild_preserves_commit_metadata_across_archive_times(self):
         executable = self.package / 'skills/sample/run.sh'

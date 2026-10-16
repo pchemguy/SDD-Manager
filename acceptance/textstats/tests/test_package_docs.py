@@ -87,3 +87,35 @@ class PackageDocumentation(Sandbox):
         self.assertIn('PLUGIN.md',dirty['plugin_source']['changed_package_paths'])
         self.assertIn('assets/Greenfield Project Prompt Template.md',dirty['plugin_source']['changed_package_paths'])
         self.assertNotEqual(dirty['plugin_source']['fingerprint'],committed['plugin_source']['fingerprint'])
+
+    def test_preparation_templates_pin_exact_bytes_and_dirty_changes(self):
+        import sys
+        sys.path.insert(0, str(Path(__file__).parents[1] / 'scripts'))
+        import core
+        source = self.root / 'preparation-assets'
+        git(self.root, 'init', '-b', 'main', str(source))
+        git(source, 'config', 'user.name', 'Fixture')
+        git(source, 'config', 'user.email', 'fixture@example.invalid')
+        (source / 'plugin.json').write_text('{"name":"fixture"}\n')
+        (source / 'assets').mkdir()
+        names = ('AGENTS_TEMPLATE.md', 'DOCS_TASKS_TEMPLATE.md', 'SKILL_DISCOVERY_PROTOCOL.md')
+        original = {name: ('Pinned ' + name + '\n').encode() for name in names}
+        for name, data in original.items():
+            (source / 'assets' / name).write_bytes(data)
+        git(source, 'add', '.'); git(source, 'commit', '-m', 'preparation asset fixture')
+        inputs = {'plugin_revision': git(source, 'rev-parse', 'HEAD').stdout.strip(),
+                  'source_mode': 'committed'}
+        pinned, files = core.package(source, inputs)
+        for name, data in original.items():
+            self.assertEqual(files['assets/' + name], data)
+            self.assertNotIn(name, files)
+            (source / 'assets' / name).write_bytes(data + b'Changed locally\n')
+        still_pinned, files = core.package(source, inputs)
+        self.assertEqual(pinned['fingerprint'], still_pinned['fingerprint'])
+        for name, data in original.items():
+            self.assertEqual(files['assets/' + name], data)
+        dirty, files = core.package(source, dict(inputs, source_mode='dirty'))
+        self.assertEqual(set(dirty['changed_package_paths']), {'assets/' + name for name in names})
+        for name, data in original.items():
+            self.assertEqual(files['assets/' + name], data + b'Changed locally\n')
+        self.assertNotEqual(pinned['fingerprint'], dirty['fingerprint'])

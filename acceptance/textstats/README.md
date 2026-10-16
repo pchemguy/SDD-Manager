@@ -90,3 +90,7 @@ Historical provenance: [campaign 008 plan](../../docs/dev/reviews/008_98a5562/RE
 ## Release-message extension
 
 [Six additional cases](RELEASE-SCENARIOS.md) cover release-note routing, repetition and human edits, freshness, failed-save recovery, native commit/tag/provider agreement and optional installed-client loading. The catalog now has 33 cases; earlier 27-case results remain historical evidence. Extending this component and passing its support tests does not execute a consumer campaign or certify a client/GitHub release.
+
+## Main preparation coverage
+
+A-001 includes [main preparation assessment](cases/assessor/MAIN-PREPARATION.md): early native milestone/issue projection, four-file preserve/copy matrix and pause, first-approval task persistence, explicit preapproval, resume/unknown-effect recovery and final package QC/integration/milestone order. Component and package tests verify retained assets and harness behavior; live consumer/provider outcomes require separate observations.

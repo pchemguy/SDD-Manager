@@ -22,9 +22,11 @@ Retain request and decision provenance, exact visible messages and their order r
 
 ## Document decisions
 
-For each necessary new root/proposal, retain its exact reviewed content/commit, QC scope, push/readback, substantive presentation, actual human response and the first dependent authoring action. Establish this order: create/check → commit → push/readback → present → human acceptance → dependent authoring. Record revisions and their new presented states; earlier acceptance does not cover changed or unseen content.
+For each necessary new root/proposal, retain its exact reviewed content/commit, QC scope, push/readback, substantive presentation, actual human response and the first dependent authoring action. Establish this order: create/check → commit → push/readback → present → human acceptance → dependent authoring. Record revisions and their new presented states; earlier acceptance does not cover changed or unseen content unless an explicit applicable future-checkpoint preapproval covers it. For main preparation, also inspect the approval/checked-DOCS-task commit and subsequent issue closure under [main preparation assessment](MAIN-PREPARATION.md). Later revisions leave first-approval tasks/issues complete; they do not establish perpetual readiness.
 
 Assess PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS as applicable. Feature preparation assesses only necessary deltas; reuse adequate accepted inputs and create no optional document to satisfy the assessment. PLAN and layout have distinct presentations/decisions. Clarification, comments without acceptance, silence, QC and repository-operation authority cannot clear a pending human gate. On interruption, a pending decision remains pending. Acceptable existing startup inputs do not require retrospective interactive replay; requested reviews do.
+
+Explicit scoped future human-checkpoint preapproval may be given at any time. Inspect its real scope/conditions and revocation, and still require QC, reporting, Git publication and requested tracking. Generic authorization, silence or an inferred preference is not preapproval.
 
 ## Task persistence and selected ranges
 
@@ -43,7 +45,7 @@ Use isolated forks from genuine reached prerequisites. Disclose fixture historie
 | Compliant main/feature preparation | Each necessary root is published before presentation and accepted before dependent creation; PLAN/layout distinct. |
 | Clarification or broad proceed authority | Pending document gate remains; no inferred acceptance of unseen roots. |
 | Revision or interruption before acceptance | Exact revised state is presented; pending human decision survives fresh continuation. |
-| Batched roots / combined PLAN-layout decision | Reject dependent authoring before its prerequisite's acceptance; one decision cannot preaccept an unseen dependent. |
+| Batched roots / combined PLAN-layout decision | Reject dependent authoring before its prerequisite's acceptance; a generic decision cannot preaccept an unseen dependent; explicit scoped future-checkpoint preapproval is separately valid. |
 | Missing interaction or publication order | Block acceptance when the required sequence cannot be established; final artifacts alone do not pass. |
 | Compliant task and review-task closure | Native diff contains one verified result/evidence/initial checkbox; single leading ID; publication precedes next work. |
 | Bundled or split closing commits | Reject even if all final checkboxes are checked and remote branch exists. |
