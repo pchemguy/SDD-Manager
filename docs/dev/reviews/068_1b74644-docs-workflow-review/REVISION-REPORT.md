@@ -14,7 +14,7 @@
 | Action | Findings | Current result |
 | --- | --- | --- |
 | V-001 | R-003 | Revised; source rechecks pass; combined verification pending |
-| V-002 | R-004 | Pending |
+| V-002 | R-004 | Revised; source rechecks pass; combined verification pending |
 | V-003 | R-002 | Pending |
 | V-004 | R-001 | Pending |
 | V-005 | R-001–R-004 | Pending |
@@ -35,3 +35,21 @@ Source rechecks used the changed callers and the existing main-preparation first
 | Valid or malformed/split/bundled implementation closure | TASKS/FEATURE-TASKS still reaches the unchanged implementation audit. Exact single task/result/evidence/initial checkbox requirements and historical-composition recovery gate remain intact. |
 
 These are source consistency observations, not observed agent executions. `git diff --check` and current-document link/anchor/format checks are run before the action commit. The checkpoint commit contains this action and its evidence; push/readback follows before V-002. Exact published action SHAs are recorded at subsequent checkpoints/final verification rather than predicting a commit’s own identity.
+
+## V-002 — Preparation-only delivery handoff
+
+Updated only workflows.md’s Delivery strategy handoff. It now names completed main preparation’s published integration/milestone/final-checkpoint path, preserves other preparation-only design-docs stops and explicit limits, and links the established completion owner. Campaign records remain on revision; implementation range authority remains separate.
+
+Source rechecks compared that paragraph with the Prepare initial development operation, branch-management’s preparation gate, main-preparation’s final sequence and PLUGIN’s project-preparation summary:
+
+| Input / scope | Observed instruction consequence |
+| --- | --- |
+| Complete main preparation; no implementation | Finish DOCS-009 and final issue, explicit verified/published docs merge, enabled milestone closure and final checkpoint; stop before implementation. |
+| Stop at SPEC or another earlier document | The selected earlier stop remains controlling; completing that document does not authorize the final integration sequence. |
+| Feature preparation only | Documents remain committed/pushed on design-docs; no main-preparation completion exception is applied. |
+| Explicit no-merge or local-only limit | Honor it, report pending integration/publication/hosted operations and block a dependent implementation baseline when required evidence is absent. |
+| Main preparation and an authorized implementation range | Complete the published default preparation baseline and clear the applicable final human checkpoint before phase activation/branching; no inferred extra range. |
+
+All five source traces agree across the loaded summaries. These are instruction walkthroughs, not consumer runs. Diff and Markdown/link checks precede the action commit.
+
+Prior action publication verified by remote readback: V-001 `9c76fbad334f81b1f2a9c0d965bd369ff1bd84ad`. V-002 publication follows this checkpoint before V-003.

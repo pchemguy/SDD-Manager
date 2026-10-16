@@ -87,7 +87,7 @@ Read the coordinator entry, branch-management, Git protocol, coordination, workf
 
 ### R-004 — Delivery handoff retains the old preparation-only stop
 
-- **Type/priority/status:** Workflow-boundary inconsistency; Medium; Open. High source confidence; live effect untested.
+- **Type/priority/status:** Workflow-boundary inconsistency; Medium; Revised, source recheck passed; combined verification pending. High source confidence; live effect untested.
 - **Locations:** `skills/sdd-manage/references/workflows.md`, “Delivery strategy handoff”, first paragraph; contrast the same module's “Prepare initial development” row, `branch-management.md`, “Preparation integration gate”, step 2, and main-preparation's completion sequence.
 - **Observation:** The delivery handoff still says unconditionally, “Preparation-only stops on design-docs.” Completed main preparation now includes DOCS-009, published explicit docs integration and docs-main closure before its final preimplementation checkpoint, even without implementation authority. Other preparation-only paths and explicitly earlier/unmerged stops retain their existing boundaries. The handoff omits this main-specific distinction.
 - **Source contrast:** Human requests complete main documentation preparation without implementation. Following the new main operation completes published integration and milestone closure; following the later delivery-handoff instruction can leave both unfinished on design-docs.
