@@ -42,11 +42,11 @@
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/workflows.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-manage/references/examples.md` | Changed | Reviewed: full selected text / consequential interfaces |
 | U-004 | `.agents/plugins/sdd-manager/skills/sdd-conventions/references/workflow-identity.md` | Changed | Reviewed: full selected text / consequential interfaces |
-| U-005 | `.agents/plugins/sdd-manager/PLUGIN.md` | Changed | Pending |
-| U-005 | `.agents/plugins/sdd-manager/README.md` | Changed | Pending |
-| U-005 | `docs/dev/CAPABILITY-MAP.md` | Changed | Pending |
-| U-005 | `docs/dev/PLUGIN-CONTRACT.md` | Changed | Pending |
-| U-005 | `README.md` | Adjacent owner/tooling | Pending |
+| U-005 | `.agents/plugins/sdd-manager/PLUGIN.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-005 | `.agents/plugins/sdd-manager/README.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-005 | `docs/dev/CAPABILITY-MAP.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-005 | `docs/dev/PLUGIN-CONTRACT.md` | Changed | Reviewed: full selected text / consequential interfaces |
+| U-005 | `README.md` | Adjacent owner/tooling | Reviewed: full selected text / consequential interfaces |
 | U-006 | `.github/scripts/release.py` | Changed | Pending |
 | U-006 | `.github/tests/test_release.py` | Changed | Pending |
 | U-006 | `.github/schemas/plugin.schema.json` | Adjacent owner/tooling | Pending |

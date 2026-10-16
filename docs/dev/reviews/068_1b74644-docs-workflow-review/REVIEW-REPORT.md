@@ -16,7 +16,7 @@
 | U-002 | Reviewed | R-001 | Authoring/acceptance/QC |
 | U-003 | Reviewed | R-002 | Tracking/backend |
 | U-004 | Reviewed | R-003, R-004 | Git/recovery |
-| U-005 | Pending | None allocated | Entry/README/composition |
+| U-005 | Reviewed | R-003 projection; no new ID | Entry/README/composition |
 | U-006 | Pending | None allocated | Package/tooling/acceptance coverage |
 
 ## Findings
@@ -70,10 +70,10 @@ Read the coordinator entry, branch-management, Git protocol, coordination, workf
 ### R-003 — Generic task gates still route DOCS work to implementation audits
 
 - **Type/priority/status:** Instruction-consistency issue; Medium; Open. High confidence in the text; no observed consumer failure.
-- **Locations:** `skills/sdd-manage/SKILL.md`, “Shared gates / Task closure”; `references/git-workflows.md`, “Work and prepare the boundary”; compared with `references/main-preparation.md`, “Document tasks through first approval”, and the linked `sdd-implement/references/completion-and-checkpoints.md` task contract/audit.
+- **Locations:** `skills/sdd-manage/SKILL.md`, “Shared gates / Task closure”; `references/git-workflows.md`, “Work and prepare the boundary”; also projected in `PLUGIN.md`, “Branches, integration and continuity”, and the capability map’s generic task-contract paragraph; compared with `references/main-preparation.md`, “Document tasks through first approval”, and the linked `sdd-implement/references/completion-and-checkpoints.md` task contract/audit.
 - **Observation:** The coordinator orders implementation-owned closure/audit for “task-list work”; the Git gate requires that audit whenever executable tasks govern integration. DOCS_TASKS is now a real task list. The specific main-preparation procedure explicitly forbids routing DOCS tasks through the T-task audit, but neither generic caller identifies that separate owner. The implementation audit targets TASKS/FEATURE-TASKS and its own partial-checkpoint/composition rules; it does not implement the DOCS first-approval protocol.
 - **Source contrast:** A document proposal is published before human review; approval later produces the required checked DOCS task and decision evidence while retaining unchanged accepted document bytes. The DOCS owner permits this. Applying the generic implementation audit can demand implementation ownership or misclassify the earlier proposal as result-first persistence requiring a historical exception. The specific exception can resolve the conflict, but the caller currently leaves that reconciliation to the agent.
-- **Bounded proposal/owner:** Qualify the coordinator and Git callers by owning list/workflow. Route DOCS first approvals and package QC to main-preparation; keep implementation audit enforcement for its actual owning TASKS/FEATURE-TASKS. Do not remove either persistence contract or add fabricated T IDs to documentation.
+- **Bounded proposal/owner:** Qualify the coordinator and Git callers and affected entry/capability projections by owning list/workflow. Route DOCS first approvals and package QC to main-preparation; keep implementation audit enforcement for its actual owning TASKS/FEATURE-TASKS. Do not remove either persistence contract or add fabricated T IDs to documentation.
 - **Objective recheck:** Trace fresh and resumed DOCS completion, unchanged approved proposals, DOCS-009 integration and ordinary implementation task integration through the same coordinator/Git gates. Each reaches its correct owner; implementation composition violations remain blocked.
 
 ### R-004 — Delivery handoff retains the old preparation-only stop
@@ -86,3 +86,13 @@ Read the coordinator entry, branch-management, Git protocol, coordination, workf
 - **Objective recheck:** Compare completed main preparation-only, an early document stop, feature preparation-only, an explicit unmerged stop and preparation plus an authorized implementation range. All loaded summaries agree on the actual integration and human stop.
 
 Generic implementation, feature and campaign examples remain valid within their stated scope. The updated dedicated main-preparation examples correctly include first approvals, mixed-state stopping, package QC and integration. No repair has been made under review authority.
+
+## U-005 — Entry projections and composition
+
+Read packaged PLUGIN/README, root README, capability map and plugin development contract. The new main path is discoverable from both entry layers and ordinary preparation requests. Main-preparation and hosted docs procedures own the substantial new rules; entry/README/capability summaries link them. Dedicated initialization, task-list, first-approval, package-QC and final integration boundaries are described without making PLUGIN the sole source. The README distinguishes its AGENTS project default and user override from optional plugin-wide selection; no restoration of a global default is proposed.
+
+No new independent finding allocated. Added PLUGIN’s generic audit paragraph and the capability map’s generic T-subject/task-contract paragraph as affected projections of R-003, rather than duplicate findings. Their main-specific summaries are correct, but a revision should make both projections agree with their narrowed canonical callers. R-004 remains a coordinator delivery-handoff defect; the entry’s main preparation-only summary already states the new completion boundary correctly.
+
+Organization remains serviceable: the human README supplies examples/diagrams, project document meanings and an explicit workflow narrative; the agent entry puts coordinator loading, context and consequential HIL/publication/tracking gates before routing and composites. Short repeated main summaries serve discovery, gates and composition; their presence or byte count alone does not justify deleting obligations. A future revision can correct the located distinctions in place; no broad reorganization is needed for these findings. The abbreviated root README remains navigation rather than a duplicated full manual.
+
+The development contract retains generic C/K routing/continuity assessments. Their existence is not new-docs behavioral coverage; the concrete A-001 assessor/scenario reachability and automated checks are assessed in U-006. No external specification or client-discovery behavior was validated by reading these documents.
