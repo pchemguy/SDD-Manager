@@ -86,3 +86,13 @@ Compared both points with the current sdd-plan entry and shared human-review/doc
 ## V-006 — Wording corrections selected for execution
 
 R-003–R-005 are selected for implementation under the plan amendment after the user's follow-up that they were not fixed. Source changes and verification follow this published checkpoint; this entry does not claim they are already applied. Keep the campaign open/unmerged.
+
+## V-006 — R-003–R-005 source corrections applied
+
+The amendment plan was published as `4263676099ddcaae84c454af7aa27fd35f91185d`; exact origin readback preceded source work. Applied all three corrections across the eight planned files:
+
+- R-003: removed the PLAN-specific technical-QC paragraph from human-document-review. Document-QC now states the actual PLAN/SPEC and layout/design/PLAN checks and report update. DOCS-006/007 state their QC and presentation actions directly.
+- R-004: shortened design/specify/plan/tasks entry reminders to name the document and dependent stage, explicit preapproval and the common procedure. Direct calls, necessary feature proposals, reusable existing inputs and requested interactive review remain visible.
+- R-005: coordination step 5 now separates its ordinary active-owner handoff from invalid implementation completion, standalone verification and sdd-docs governing amendment. Existing authority/range and historical-exception distinctions stay linked to the canonical recovery owner.
+
+Manually compared the revised passages with the original obligations and their current owners. Checked normal versus preapproved document checkpoints, existing inputs, necessary feature deltas and direct calls; DOCS first-approval/QC/publication rules; and all five R-001 repair/authority contrasts. The two-point sdd-plan review section, PLUGIN/README, AGENTS, metadata and closed records are unchanged. Local links/anchors/containment, heading/blank-line checks and git diff --check passed. Finding state: Revised, pending final candidate regression/package checks; no live/model behavior claimed.
