@@ -14,7 +14,7 @@
 | U-001 | Reviewed | None |
 | U-002 | Reviewed | R-001 |
 | U-003 | Reviewed | R-002 |
-| U-004 | Pending | None allocated |
+| U-004 | Reviewed | None |
 | U-005 | Pending | None allocated |
 | U-006 | Pending | None allocated |
 | U-007 | Pending | None allocated |
@@ -67,3 +67,13 @@ No finding for count heuristics, document split thresholds, or mandatory review-
 - **Objective recheck:** Trace ordinary acceptance, covered PROJECT, covered PLAN/layout, unrelated or conditional coverage and revoked preapproval through entry → reference → shared human/QC policy. Each checkpoint has one consistent pause decision while all dependent technical/publication gates remain.
 
 No repairs made. The findings concern explicit local imperatives, not every mention of a human checkpoint or a demand to repeat the full policy at every link.
+
+## U-004 — Implementation, steering and feature incorporation
+
+Assessed all 13 selected entries/references: range/startup/execution/completion, environment/browser support, steering impact/execution/verification and feature incorporation. Read their operative procedures and cross-checked manager branch/Git/tracking gates and actual document/task owners.
+
+No new finding allocated. Selection-only stays read-only; next-N counts tasks including reviews, does not mix owning lists or silently expand dependencies, and partial main phases pause rather than merge. Startup checks retained-commit eligibility before publication, permits only bounded authorized forward recovery for known-invalid completion, preserves existing work and never rewrites history to reconstruct RED or task composition. Task result/evidence/initial checkbox is atomic, while separately justified partial checkpoints, repairs and parent-only updates retain their distinct scope. Current acceptance and historical composition are not conflated.
+
+Source scenarios covered clean-but-unpushed, checked-but-uncommitted, uncertain task ownership, out-of-range dependencies, invalid verification versus split/bundled history, missing initial projection versus post-activation outage and partial/full phases. Steering assessment creates no amendment branch; commanded steering owns affected documents/code/tests, publishes and integrates only into the paused target, then returns without task resumption. Feature incorporation requires selected owners, both lists for transfer, one executable entry, retained evidence and pending reassessment; SPEC-only work cannot archive or mutate unselected lists. Archive/QC/navigation changes finish before closure and preserve active consumers and frozen prior records.
+
+Browser/environment guidance is conditional on actual capability requirements, distinguishes a smoke launch from rendering/native evidence, preserves unrelated toolchains/caches and reports genuine unsupported facilities. No arbitrary universal browser prerequisites or new approval per routine task was found. Source traces do not establish real agent, native browser, GitHub or installed-client behavior.
