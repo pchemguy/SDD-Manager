@@ -1,0 +1,54 @@
+{
+  "scenarios": [
+    {
+      "purpose": "synchronize preparation into unfinished phase",
+      "receiving": "phase/1",
+      "incoming": "712b4b938d13b7af17841860f6bf81503ed09fe0",
+      "commit": "3b633ab52dbefdfd5b8746cb75188c2c8162c8f7",
+      "retained_context": true,
+      "two_parents": true
+    },
+    {
+      "purpose": "complete feature into its phase parent",
+      "receiving": "phase/1",
+      "incoming": "47eff663e4f83392bbfa2014e919f97c95340a8d",
+      "commit": "86b58f82ad83de1bf33c71b73fe812ff63d1e984",
+      "retained_context": true,
+      "two_parents": true
+    },
+    {
+      "purpose": "synchronize default into existing revision",
+      "receiving": "revision/one",
+      "incoming": "712b4b938d13b7af17841860f6bf81503ed09fe0",
+      "commit": "e2d36c486b193877f6cf17bc74c40b3bc5eab955",
+      "retained_context": true,
+      "two_parents": true
+    },
+    {
+      "purpose": "complete revision into main",
+      "receiving": "main",
+      "incoming": "e2d36c486b193877f6cf17bc74c40b3bc5eab955",
+      "commit": "e2bddf17b5b4fec4f2bcb2af64724afb95b5d2c9",
+      "retained_context": true,
+      "two_parents": true
+    },
+    {
+      "purpose": "synchronize refreshed target into reopened campaign",
+      "receiving": "revision/one",
+      "incoming": "74436ed50b0ceba5aa71bc01b5cc676a9ce19d81",
+      "commit": "1f496c72080138bc33372db0fc5a2bd69777aa45",
+      "retained_context": true,
+      "two_parents": true
+    },
+    {
+      "purpose": "complete reopened amendment into original parent",
+      "receiving": "main",
+      "incoming": "0154a3e1134cbf017563aa7968c6243cd1e59de1",
+      "commit": "91b4d673dfe28f6c0827df3a55c8f0854d8bc365",
+      "retained_context": true,
+      "two_parents": true
+    }
+  ],
+  "incomplete_phase_stayed_unmerged": true,
+  "limit": "Native Git/explicit fixture reconciliation only; no consumer or remote publication"
+}
