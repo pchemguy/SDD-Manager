@@ -22,6 +22,8 @@ For implementation, push eligible outstanding commits first under the existing s
 
 ## Root artifacts and discoverability
 
+Establish/reconcile `docs/dev/HANDOFF.md` from the [continuity template and procedure](continuity.md) with the same first authorized workflow result, preserving existing records and write limits. Keep its branch-parent and scope facts discoverable; do not add a separate administrative commit.
+
 Ensure root AGENTS.md through [agent orientation](agent-orientation.md) during authorized adoption. Read existing controlling instructions first; preserve manual content and explicit path limits. Include affected orientation with the same first result checkpoint, not a separate administrative commit. Its ownership and subsequent maintenance are independent of disclosure byte-copy requirements.
 
 Resolve assets relative to the loaded plugin root: this reference is at `skills/sdd-manage/references/repository-bootstrap.md`; bundled files are at `assets/AI_DISCLOSURE.md` and `assets/SDD-MANAGER.md`. Use the same installed or pinned source as the running skills, including an acceptance vendor snapshot. Do not fetch a newer template silently or fabricate a missing asset.
