@@ -5,7 +5,7 @@
 - Campaign: `071_03b8d6c`; [review plan](REVIEW-PLAN.md).
 - Reviewed baseline: `03b8d6c9e06f22bad62a00f53190e99f90386295`.
 - Working branch: `revision/071_03b8d6c-portability-review`; target: main.
-- State: U-001/U-002 assessed; review complete, campaign open. No plugin/source fixes or live acceptance performed.
+- State: U-001/U-002 assessed; handoff discussion integrated and [revision plan](REVISION-PLAN.md) prepared. Campaign open; source execution, integration and live acceptance not performed.
 
 The required outcome is repository-based recovery by a different agent following AGENTS.md, without relying on the former agent's conversation or private notes. The review distinguishes the same-worktree and fresh-clone cases, and separates persistent project decisions from current external state and execution facilities.
 
@@ -49,7 +49,7 @@ Existing decision producers can use preparation, handoff or campaign evidence, b
 
 **Consequence:** A fresh agent cannot be guaranteed to recover the requested workflow/range, pending checkpoint, scoped policy choices or next permitted action from AGENTS-led repository discovery. Existing instructions often produce a safe ambiguity stop; this review does not establish an actual unsafe continuation.
 
-**Proposed correction:** The coordinator should own one concise current-context contract, exposed through a stable AGENTS pointer and supported without PLUGIN.md. A tracked `docs/dev/HANDOFF.md` is a suitable proposed default; an established project equivalent can satisfy the same contract. Store current request/scope, workflow/owner, exact range/stop, material human decisions and evidence pointers. Keep TASKS, governing documents and their reports authoritative.
+**Selected correction for planning:** The coordinator owns checkpoint-based continuity through tracked `docs/dev/HANDOFF.md`, exposed by AGENTS and usable without PLUGIN.md. Record checkpoint context and evidence pointers; recover later changes through current task/campaign records and Git. Existing owners retain detailed results and subsequent decisions. See [consolidated decisions](#consolidated-handoff-decisions); no source correction has been implemented.
 
 **Owners:** sdd-manage, sdd-orient and target AGENTS template; affected workflow owners supply their scoped facts. **Objective recheck:** Remove the sender conversation, supply only the repository and a continuation request, and verify recovery of two distinct recorded scopes without guessing or loading unrelated historical campaigns.
 
@@ -61,7 +61,7 @@ Existing decision producers can use preparation, handoff or campaign evidence, b
 
 **Consequence:** A handoff file added without producer/receiver rules could remain stale after a changed range, revoked preapproval, steering return or completed workflow. A same-worktree handover can expose unsaved/local files that a fresh clone lacks. Repeating a completed hosted effect from an old handoff would also conflict with the existing readback-first lifecycle.
 
-**Proposed correction:** Define material update points, responsible owner and checkpoint persistence; an explicit handover verifies publication and necessary file availability. The receiver loads the record, compares it with actual Git/current instructions and relevant evidence, rechecks uncertain hosted effects, then resumes the earliest eligible operation or reports a specific unresolved decision. Superseded/completed work must lose its active-execution status. Preserve existing atomic task/document commits and scope-safe recovery; do not add a per-message journal or a second checklist.
+**Selected correction for planning:** Establish the handoff at entry and refresh automatically at completed implementation milestones and revision finalization, with workflow transitions and an explicit transfer check covered by the same coordinator subworkflow. Do not require per-commit refresh or repeat task evidence. The receiver reconstructs changes since the checkpoint, including later decisions and hosted effects requiring readback. Distinguish an intentionally older checkpoint from contradictory or unusable evidence. Preserve task/document atomicity and existing scope-safe recovery.
 
 **Owners:** sdd-manage lifecycle; sdd-orient observation; implementation/preparation/steering/feature/campaign/reporting owners update their own handoffs. **Objective recheck:** Assess changed/revoked scope, stale records, interrupted publication, dirty ownership and completion/steering return across a clean active-branch clone. A stale green summary must not waive a current gate.
 
@@ -75,9 +75,9 @@ An active handoff committed only to a design-docs/phase/feature/revision branch 
 
 **Executed evidence:** A disposable local Git experiment passed six transport checks: a default clone checked out main and its main handoff; the published active branch was discoverable; explicitly cloning that branch obtained its committed handoff; unpublished work and ignored evidence were absent. See [probe](evidence/git-transfer-probe.py) and [result](evidence/git-transfer-result.json). This tests Git transport, not SDD instructions or agent decisions.
 
-**Proposed correction:** State the supported transfer modes. A prepared handover of the same worktree or selected published branch needs no default-branch selector. To support a fresh default-branch clone with no branch hint, define a stable discoverable locator on default or an explicit fixed published ref; it must identify the selected active context without merging unfinished work. Multiple eligible workflows need an explicit selection rule or a targeted question. Record the intended plugin source/version and access/install prerequisites; provide the package in-repository or establish its availability separately.
+**Selected correction for planning:** Keep the handoff on the actual main/default integration branch, with branch-local copies maintained until integration. On startup, inspect local and remote workflow branches for work not integrated into their recorded parents. If no continuation branch is already explicitly selected, present candidates and request the branch even when there is only one candidate. No additional branch registry or default-branch locator is selected. Record the creation parent and branch-off checkpoint; Git history corroborates them but may not uniquely identify the original branch. Complete eligible work into that same parent, reconcile the handoff and return to its context without inventing continuation authority. Package/access prerequisites remain explicit. See [branch selection and return](#branch-selection-and-return).
 
-**Owners:** sdd-manage branch/startup policy, sdd-orient and target AGENTS guidance; user selects the intended fresh-clone guarantee. **Objective recheck:** Start on default with active unmerged work elsewhere, then test one versus several active contexts, missing plugin and unavailable required inputs. Do not silently select another branch/version or describe a partial clone as a complete handoff.
+**Owners:** sdd-manage branch/startup policy, sdd-orient and target AGENTS guidance. The branch-selection design decision is now resolved for planning; implementation and rechecks remain pending. **Objective recheck:** Start on default with active unmerged work elsewhere, then test one versus several active contexts, missing plugin and unavailable required inputs. Do not silently select another branch/version or describe a partial clone as a complete handoff.
 
 ### R-004 — Fresh-context coverage does not establish repository-only continuation
 
@@ -91,45 +91,52 @@ These are valuable existing recovery tests. They do not explicitly require the r
 
 **Owners:** TextStats coordinator/assessor contracts, with sdd-manage/sdd-orient acceptance criteria. **Objective recheck:** Demonstrate recovery of the exact authorized scope and stopping point, preservation of pending HIL and no duplicate hosted effects; fail hidden-context dependence. Report model/client/source and genuine isolation limits.
 
-## U-002: Handoff recommendation
+## Consolidated handoff decisions
 
-Use a small tracked **`docs/dev/HANDOFF.md`** as the proposed default current-context record, with an established equivalent allowed. Link it from a dedicated continuity section in target AGENTS.md. The coordinator owns the protocol; orientation reads/validates it, and active workflow owners maintain their facts. PLUGIN.md can expose that capability but must not own its only definition.
+The discussion after U-002 selects the following design for revision planning. The final checkpoint cadence supersedes the earlier proposal to refresh at every commit. These are selected requirements and planned corrections, not implemented behavior.
 
-Keep capability discovery unchanged. Its read-only inventory is a separate operation; a continuation request routes through the coordinator after discovery. Loading AGENTS or a handoff must not itself turn a discovery-only request into implementation.
+### Ownership and record
 
-### Proposed record contents
+Add `skills/sdd-manage/references/continuity.md` as the canonical subworkflow, routed through the coordinator for all composite workflows and focused calls affecting them. Orientation observes and reconstructs state; each active owner supplies its facts and persistence. Keep PLUGIN concise, with a pointer to this capability rather than an independent procedure. AGENTS directs agents to the handoff and coordinator; capability discovery remains read-only and does not select or execute continuation.
 
-| Information | Store or point to |
-| --- | --- |
-| Active work | Workflow/variant, stage, owner, campaign/phase and current governing documents/task list/report paths. |
-| Current request and stop | The accepted objective, selected task IDs or preparation/revision range, exclusions, allowed next operation and exact human stopping boundary. Distinguish active, paused, blocked, awaiting decision and complete. |
-| Human decisions | Pending reviews; accepted state/evidence links; applicable preapproval and conditions/revocations; tracking/local-only choices and other material overrides, with human source/provenance. Preserve existing decision records rather than duplicating their full histories. |
-| Branch and return identities | Selected working/target branches, relevant starting checkpoint and suspended parent/return boundary. Do not mirror every Git status or embed a commit's own SHA. |
-| Evidence and pending effects | Links to tested source/results and limits; unresolved verification, publication, integration and specific hosted operations/identities needing readback. A stored claim does not replace actual external state. |
-| Preserved work and prerequisites | Necessary dirty-work ownership/disposition and blockers; required package source/version, setup commands and transferable input locations. Record availability limits without secrets or transient helper paths. |
-| Next action | The earliest unfinished eligible operation, or the concrete human decision/facility needed. An optional selected reporting profile can be retained here without a separate settings file. |
+Use tracked `docs/dev/HANDOFF.md` as a durable project checkpoint. Keep it on the actual main/default integration branch and inherit it on workflow branches. The branch-local copy advances at its own checkpoints until integration. Initial creation must respect main preparation's pre-write gate and existing integration rules; it does not add a fifth file to DOCS-001's four-file presence test or justify an early merge of unfinished documents.
 
-TASKS/DOCS_TASKS, governing documents, current review reports and Git remain their canonical owners. The handoff points to them and supplies the current intent/decisions that cannot be inferred from them. It is not a second checklist, a copy of the conversation, an issue inventory or a chronological journal; Git retains its changes.
+The checkpoint identifies its workflow and evidence boundary, with these four groups:
 
-### Producer and receiver lifecycle
+1. Active workflow/stage and links to governing documents, tasks and evidence.
+2. Authorized range, exact stop, pending approvals and scoped preapprovals/overrides, with decision sources.
+3. Working/target branches, recorded creation parent and branch-off checkpoint, suspended parent and return boundary.
+4. Pending work or hosted operations, blockers and the next eligible action as of that checkpoint.
 
-1. **Establish:** Create/reconcile the current record during authorized adoption or entry to an active workflow, preserving controlling instructions and existing project records. For main preparation, its creation is subject to the existing pre-write tracking gate. Do not silently change the four-file DOCS-001 preservation/mixed-presence checkpoint to add another member.
-2. **Maintain:** Update after a material request/range/decision change, stage or branch transition, interruption/blocker, steering/child return and completion. Include needed updates in the owning verified task/document/campaign checkpoint where possible. Do not add a commit per response or detach task completion from its required atomic commit.
-3. **Prepare a transfer:** Check that the selected context and all necessary non-secret inputs are actually available in the destination mode. Publish eligible owned records/commits and verify remote containment. Do not fake task completion, force-push or overwrite unrelated work to make a handoff look clean. Unpublished/ignored/index state requires explicit safe transfer or a qualified local-only handover; an ordinary clone cannot reconstruct absent bytes.
-4. **Receive:** Follow AGENTS, load the current record and only its relevant owners/evidence, establish actual branch/worktree and compare current source, decisions and readiness. Finish existing pending work before selecting another task. Treat absent, stale, conflicting or foreign-scope data as a bounded recovery/decision problem; do not infer acceptance, select a broader range or blindly replay a hosted mutation.
-5. **Return or finish:** Restore the proper parent/owner context without auto-resuming it. Mark completion/pause and remove stale active-work instructions; retain useful evidence links and required human stops. A later workflow supersedes current context explicitly while Git preserves history.
+Keep only a brief progress summary and links to completed phase/campaign evidence. Necessary package/version/setup availability, dirty-work limitations and reporting preference can be recorded or linked within those groups. Do not duplicate full task lists, verification logs, issue inventories or conversation history. No additional incremental handoff files or stored patch series are selected.
 
-Credentials, host permissions and installed capabilities must be provisioned separately where the repository does not supply them. Preserve the scoped human project decision; the file cannot grant a permission that the receiving environment lacks. Read back hosted state when required instead of treating a saved issue/release summary as current truth.
+### Refresh cadence and recovery
 
-### Choosing the storage approach
+- **Establish at entry:** create or reconcile the active workflow checkpoint with its actual scope and parent. First adoption uses current evidence; it does not manufacture past approvals.
+- **Main/feature implementation:** refresh automatically on completed milestones; phase/workflow completion and integration reconcile the final checkpoint. A completed milestone inside an incomplete main phase does not authorize a merge.
+- **Revision:** refresh automatically at finalization, including the parent return context. Incremental revision progress stays in existing campaign records. Nested entry/return preserves the suspended parent even before finalization.
+- **Preparation and other operations:** use the existing workflow entry and completed preparation/operation boundary; intermediate document approvals and progress remain in DOCS_TASKS and existing evidence. Do not create a second per-document handoff checklist.
+- **Between checkpoints:** ordinary task commits do not require a handoff edit or a new handoff review procedure. Persist changed grants, revocations, stops and pending effects in their existing owning records when they arise. Refresh earlier only when those records cannot adequately preserve a consequential change, or an explicit transfer is requested.
 
-| Approach | Assessment |
-| --- | --- |
-| Put all live state in AGENTS.md | Easy initial discovery, but mixes durable instructions with changing execution state and conflicts with its existing concise-navigation role. Not recommended. |
-| Use existing reports only | Can satisfy the objective if current context is complete and uniformly discoverable, but stage-specific report locations and update timing need a common contract. A new filename alone is not mandatory. |
-| One current handoff linked from AGENTS | Recommended: a stable read path and a bounded current-state owner, with references to existing evidence. It still needs update/validation rules and the selected checkout guarantee. |
+On continuation, find the checkpoint, inspect the relevant current owners and Git changes since it, then reconstruct the reached state and actual remaining authority. An older handoff is expected between milestones; do not label it broken solely because later task commits exist. Missing, contradictory or unresolvable checkpoint/decision evidence is a separate recovery problem. Do not infer acceptance or a larger range from ready tasks.
 
-For the strongest interpretation—fresh clone on default, no branch hint—the stable locator is an additional design requirement. Choose its location/publication policy before implementation. Do not claim that placing a handoff on an arbitrary unmerged branch alone achieves that goal, and do not merge unfinished project work to expose it.
+Identify checkpoints through a stable workflow/milestone identity and the containing handoff commit, with explicit baseline/end commits in completion evidence where useful. Do not embed a commit's own SHA in its file or create a follow-up commit just to record it. Git provides milestone/phase diffs on demand; no exported patches are required.
+
+### Branch selection and return
+
+At coordinator startup, discover local and remote workflow branches and establish whether their work is integrated into their recorded parents. Include preparation and phase branches where they carry unfinished work. Orientation inspects available refs without fetching or switching; the coordinator owns any permitted refresh and selected checkout. Distinguish stale refs, unknown remote state, completed integration awaiting push, suspended parents and unfinished children.
+
+When continuation is not already explicitly selected, present candidate branches and request the choice, including when there is only one candidate. Do not silently pick a branch because it is newest or uniquely named. An explicitly selected branch or sufficient established continuation context does not need the same question repeated. With no unfinished candidate, report the reached main/default checkpoint without resurrecting a completed range.
+
+New workflow branches record their actual creation parent, branch-off commit and return target; completion returns to that same parent. History is corroboration, not a reliable way to recover a branch name in every case. Existing preparation rules that permit a default-based branch with a different phase target need revision before claiming this invariant. Preserve eligible existing workflows and resolve ambiguous legacy provenance rather than rewriting history.
+
+During a child merge, deliberately reconcile HANDOFF to restore the parent's suspended stage and stop, retaining a concise child outcome/evidence link. A child already merged into its unfinished parent must not appear as an independently pending campaign merely because neither branch is in main yet. Return the worktree/context to the parent, without automatically resuming its tasks. Explicit no-merge, local-only or narrower human boundaries continue to apply.
+
+### Transfer and external state
+
+An explicit handoff command checks the checkpoint and intervening records, necessary transferable files, publication and receiving prerequisites. It is optional convenience, not a prerequisite for ordinary cross-agent recovery. Mid-milestone work remains recoverable without that command. Existing preservation rules apply; discarding incomplete work requires actual authority and is not a new automatic recovery policy.
+
+Record operations that occur after a checkpoint commit as requiring confirmation, rather than claiming its own push, later issue closure or eventual merge already succeeded. The receiver reads actual hosted/Git state before retrying; no chain of bookkeeping commits is needed. Credentials, host permissions and required package availability are provisioned separately. A fresh clone cannot recover unpublished, ignored or missing bytes merely because the handoff names them.
 
 ## Scenario assessment
 
@@ -145,19 +152,16 @@ These are source walkthroughs and proposed objective rechecks, not executed cons
 | Child revision or steering completed | Existing return-without-resumption rule is explicit; the current record must point to the parent pause instead of a stale execution instruction. |
 | Partial feature incorporation | Existing unique-owner, source-retention and acceptance-reassessment rules apply; retain the selected target set and deferred owners. |
 | Hosted request has unknown outcome | Preserve the specific identity and inspect actual state before retry; an old local result does not prove completion. |
-| Fresh clone starts on default | The native probe shows the selected branch is not automatically its working checkout. Define a discoverable active-context selector. |
+| Fresh clone starts on default | Inspect unmerged workflow branches against their recorded parents; present candidates and ask which to continue unless already selected. No extra branch registry is selected. |
+| Tasks committed after the last milestone handoff | Recover the delta from the owning list, decisions/evidence and Git. Do not require a handoff edit for each task. |
+| Completed child is absent from main but contained in its parent | Recognize integration into its recorded parent; restore the parent context without listing the child as unfinished. |
 | Two active branches or missing plugin | Preserve ambiguity/missing-facility handling. Do not guess which workflow or replacement package the human intended. |
 | Handoff missing or inconsistent with source | Recover derivable facts and ask only for consequential missing decisions; never treat stale readiness or scope as a new grant. |
 | Workflow complete | Leave an accurate completed/paused next boundary; a new agent must not resurrect the old range automatically. |
 
-## Proposed revision scope
+## Revision planning disposition
 
-1. Decide the supported checkout guarantee and concurrent-work selection rule (R-003).
-2. Define the canonical coordinator continuity contract and a small record/template, plus AGENTS startup/navigation and orientation loading (R-001/R-002). Keep PLUGIN concise and preserve discovery-only behavior.
-3. Join the existing preparation, execution, steering, feature/campaign return, tracking and evidence producers to that contract. Retain existing first-approval/task atomicity, actual decision provenance and frozen-record boundaries.
-4. Add the selected repository-only variants to existing TextStats contracts, including omissions/staleness and correct stops (R-004). Actual live execution remains separately selected.
-
-This is a proposed correction queue, not an accepted revision plan or implemented artifact. No HANDOFF.md, package template or workflow instruction was added by this review.
+The [detailed revision plan](REVISION-PLAN.md) integrates R-001–R-004 and the selected handoff design. R-003's branch-selection decision is resolved for planning; its instruction and coverage changes remain outstanding. All four findings remain open pending execution and their stated rechecks. No HANDOFF.md, package template or workflow instruction was added by this review/planning work. The current request stops at published planning, with the campaign open and unmerged.
 
 ## Coverage, verification and disposition
 
@@ -165,4 +169,6 @@ U-001 covered entry/context and durable evidence. U-002 covered branch/campaign/
 
 The disposable native Git probe ran on Linux/Python 3.12.14 and passed its six transport assertions. New/updated campaign Markdown and local links were checked, note/source scope was inspected and prior closed packages were preserved through path diffs. No support/publisher suite or structural package validator was rerun: this campaign changes only review records, and those checks do not establish the requested receiver behavior. No live agent/client/provider trial was run.
 
-Four findings remain **Open**: two High capability gaps (R-001/R-002), one Medium design boundary (R-003) and one Medium acceptance gap (R-004). Existing recovery can support many transfers when its evidence is present; it does not currently guarantee AGENTS-led repository-only continuation across the full requested boundary. The recommended change is a discoverable current-context contract with maintained producer/receiver rules, ordinarily represented by one tracked handoff file. The campaign remains open and unmerged for the human's revision decision.
+Planning verification on 2026-10-17 checked the three active records and this campaign's shared-index row: all 22 local links/anchors resolved; heading/list separation, blank-line and indentation checks passed; nine unique ordered actions and 22 scenario criteria were present. The exact four changed paths are those three records and the shared index. Package/source instructions, acceptance, the original Git evidence and all closed campaign contents remain unchanged. This verifies the planning delivery, not the proposed continuity behavior.
+
+Four findings remain **Open**: two High capability gaps (R-001/R-002), one Medium transfer-policy change with its design choice now selected (R-003) and one Medium acceptance gap (R-004). Existing recovery can support many transfers when its evidence is present; it does not currently guarantee AGENTS-led repository-only continuation across the full requested boundary. The selected correction is a coordinator-owned checkpoint/recovery protocol using one tracked handoff, milestone/finalization refresh and Git/document recovery between checkpoints. The campaign remains open and unmerged at the detailed revision plan; live acceptance and source execution have not occurred.
