@@ -1,12 +1,12 @@
 # SDD Manager handoff
 
-Checkpoint: campaign `072_8a534b2`, revision execution entry. The human selected planning and execution after the completed review; recover subsequent action progress and decisions from the revision report/Git. Its containing commit identifies the checkpoint.
+Checkpoint: campaign `072_8a534b2`, revision finalization, candidate verified. Recover final integration/publication and later decisions from current records/Git. Its containing commit identifies the checkpoint.
 
-Outcome: comprehensive review retained; all four bounded corrections selected. Revision plan defines V-001–V-005, including local verification and published integration/closure. Prior review checks are baseline evidence, not new revision results.
+Outcome: four corrections implemented and locally rechecked. Combined candidate passes 139 support and 36 publisher tests, catalog/package/schema/routing and current-link checks. Source/interface and native checks establish the recorded finding dispositions; live acceptance did not run. Final verified main integration/publication remains.
 
 ## Workflow and sources
 
-- Workflow/stage/owner: revision core workflow, planning/execution; `sdd-manage` coordinates selected correction owners.
+- Workflow/stage/owner: revision core workflow, finalization/integration; `sdd-manage` owns the selected return to main.
 - Governing scope/progress: [review plan](reviews/072_8a534b2-comprehensive-review/REVIEW-PLAN.md), [review report](reviews/072_8a534b2-comprehensive-review/REVIEW-REPORT.md) and [coverage inventory](reviews/072_8a534b2-comprehensive-review/SOURCE-INVENTORY.md). Baseline review evidence remains there. [Revision plan](reviews/072_8a534b2-comprehensive-review/REVISION-PLAN.md) and [revision report](reviews/072_8a534b2-comprehensive-review/REVISION-REPORT.md) own current decisions/progress.
 - Source instructions/checks: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md) and [plugin contract](PLUGIN-CONTRACT.md). Use the source package at `.agents/plugins/sdd-manager/`; instruction reload remains user-controlled.
 
@@ -26,5 +26,5 @@ Outcome: comprehensive review retained; all four bounded corrections selected. R
 
 ## Pending work and next action
 
-- Pending: publish/read back the plan-entry checkpoint, then V-001–V-005. Original review findings remain until their objective rechecks support revision disposition.
-- Next eligible action: finish any pending plan publication, then execute V-001. Publish each action before the next; do not load closed records, change unrelated owners or claim live acceptance.
+- Pending: publish/read back this finalization checkpoint, then merge the verified campaign tip into refreshed main, reconcile the parent HANDOFF, verify the actual merged state and publish/read back the target. No external product tracking/release effect is pending.
+- Next eligible action: complete that retained integration and close/return to main. Do not start another task, campaign or release. If this checkpoint is already integrated/published, reconcile Git and stop instead of merging again.

@@ -1,0 +1,10 @@
+{
+  "source": "c326394b696a4bd40e9ef64d4e871883681d0f4c",
+  "version": "0.15.0",
+  "files": 139,
+  "bytes": 369443,
+  "sha256": "863f7413b0775d8cc2296344c6b42e6e1bdf76c56e5856e1b4228ba480aca628",
+  "archive_source": "c326394b696a4bd40e9ef64d4e871883681d0f4c",
+  "exact_members_verified": true,
+  "scope": "Local build-only; no installation/provider/release operation"
+}

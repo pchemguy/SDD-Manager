@@ -26,3 +26,7 @@ V-001–V-004 can be technically independent but execute sequentially with a com
 Publish this plan before source changes. Use Codex author/committer identity. Keep action results, source/test identities, actual commands, RED/GREEN observations and limitations in [REVISION-REPORT.md](REVISION-REPORT.md); store bounded reproducible evidence under this campaign. Keep review evidence at its original baseline. Each action includes its source and result record in one coherent commit, followed immediately by push/exact remote readback before the next unit. A failure retains work and blocks dependent progression.
 
 Instruction revisions receive source/interface scenario review and native Git fixtures where applicable; those checks do not demonstrate a fresh agent following the instructions. TextStats case extension is component development, not live execution. Run meaningful code regression tests without redundant source-text tests. Final integration uses the campaign summary contract and records original opening/branch-off, delivered scope, actual checks and limits without claiming future hosted success.
+
+## Execution checkpoint
+
+V-001–V-004 are complete and published; combined V-005 candidate checks pass. Finding dispositions, exact source and raw results are retained in REVISION-REPORT.md. Final closure depends on the selected explicit main merge, merged-state verification/publication and worktree return; no release or live acceptance was added.

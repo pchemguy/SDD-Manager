@@ -1,0 +1,48 @@
+{
+  "candidate": "c326394b696a4bd40e9ef64d4e871883681d0f4c",
+  "reviewed_baseline": "8a534b21f6318f0b76b11a19783f7d40ca94d698",
+  "support": {
+    "tests": 139,
+    "seconds": 43.495,
+    "result": "passed"
+  },
+  "publisher": {
+    "tests": 36,
+    "seconds": 2.693,
+    "result": "passed"
+  },
+  "runtime": "Python 3.12.14; jsonschema 4.26.0",
+  "catalog": {
+    "cases": 33,
+    "variants": 48,
+    "result": "static validation passed"
+  },
+  "author_validator": {
+    "errors": 0,
+    "warnings": 48,
+    "exit": 0
+  },
+  "markdown": {
+    "files": 213,
+    "links": 938,
+    "result": "bounded local links/anchors and heading separation passed"
+  },
+  "routing": {
+    "entries": 15,
+    "references": 78,
+    "all_linked": true
+  },
+  "package": {
+    "source": "c326394b696a4bd40e9ef64d4e871883681d0f4c",
+    "version": "0.15.0",
+    "files": 139,
+    "bytes": 369443,
+    "sha256": "863f7413b0775d8cc2296344c6b42e6e1bdf76c56e5856e1b4228ba480aca628",
+    "archive_source": "c326394b696a4bd40e9ef64d4e871883681d0f4c",
+    "exact_members_verified": true,
+    "scope": "Local build-only; no installation/provider/release operation"
+  },
+  "prior_closed_records_changed": [],
+  "live_acceptance": false,
+  "hosted_CI": false
+}

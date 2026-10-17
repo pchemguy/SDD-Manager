@@ -1,5 +1,7 @@
 # Comprehensive SDD Manager review
 
+> Revision continuation: the human selected corrections after this assessment. R-001–R-004 are rechecked in the [revision report](REVISION-REPORT.md); baseline observations and review-only decisions below retain their original scope.
+
 ## Campaign and evidence boundary
 
 - Campaign: `072_8a534b2`; [review plan](REVIEW-PLAN.md), [coverage inventory](SOURCE-INVENTORY.md).
