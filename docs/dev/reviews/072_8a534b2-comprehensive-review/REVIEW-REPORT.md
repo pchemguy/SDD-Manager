@@ -5,7 +5,7 @@
 - Campaign: `072_8a534b2`; [review plan](REVIEW-PLAN.md), [coverage inventory](SOURCE-INVENTORY.md).
 - Exact reviewed baseline: `8a534b21f6318f0b76b11a19783f7d40ca94d698`.
 - Working branch/parent: `revision/072_8a534b2-comprehensive-review` / `main`.
-- State: U-001 assessed; U-002–U-005 pending. Review remains open; no remediation is selected.
+- State: U-001–U-002 assessed; U-003–U-005 pending. Review remains open; no remediation is selected.
 - Source/code inspection and bounded local verification only. No live agent/client/provider trial or source repair is selected. Package/acceptance/publisher bytes remain pinned to the baseline.
 
 ## Coverage
@@ -13,7 +13,7 @@
 | Unit | Assessment | Findings / evidence |
 | --- | --- | --- |
 | U-001 | Assessed: core procedures in full; long projections/examples/source guides targeted; package metadata structurally checked | R-001. All 78 reference modules are linked by their own entries. All 102 package Markdown files pass the bounded local-link/heading check (613 links). |
-| U-002 | Pending | Conventions and preparation/document/task owners. |
+| U-002 | Assessed: design/specification/strategy/task procedures and cross-owner gates; shared QC targeted where noted | R-002. Distinct document owners, first-approval versus current-readiness gates and explicit delivery/phase review units are coherent in inspected paths. |
 | U-003 | Pending | Execution, integration, reporting and tracking. |
 | U-004 | Pending | Release and publisher. |
 | U-005 | Pending | Acceptance component and consolidated verification. |
@@ -36,6 +36,21 @@
 Core workflow selection distinguishes purpose from greenfield/brownfield starting state, supports direct coordinator entry and keeps established contextual follow-ups with their owner. Document HIL, scoped future preapproval, range stops and per-commit publication are prominent and have canonical routes. Continuity deliberately uses checkpoint-plus-delta recovery rather than per-commit handoff maintenance; its scheduled review-task atomicity and parent-return restrictions are explicit. Main initialization keeps its four-file presence test separate from generated HANDOFF metadata. Existing tracking decisions, credentials and hosted outcomes are not inferred from file presence. The manifest keeps the pinned schema first and presentation under `extensions.com.openai.interface`; metadata/assets stay inside the package. These are source/structural observations, not installed-client or consumer acceptance.
 
 Long README/entry/catalog/contract/example/demo content received targeted composition, navigation and cross-owner checks; a complete line-by-line audit of every long example is not claimed. The spelling `Coordintator` in the discovery report template is a minor editorial follow-up, not a separate operational finding.
+
+### R-002 — Resolve tracking policy before installing its default
+
+- **Type / priority / confidence:** bootstrap policy gap; Medium; medium-high (documented paths conflict; no live startup trial).
+- **Baseline locations:** `assets/AGENTS_TEMPLATE.md`, GitHub tracking and Documentation preparation; `skills/sdd-manage/references/main-preparation.md:8–10`; `tracking-decision.md`, decision table rows for token/no choice, no choice and confirmation pending; packaged README, Main preparation tracking. Paths are package-relative.
+- **Observation:** generated AGENTS enables GitHub tracking for preparation and implementation by default and requires docs-main/nine issue readback before repository modifications. Fresh preparation first consults optional selection; token/no-choice asks for confirmation and pending choice permits independent preparation. No step resolves the prospective template's policy before the DOCS-001 writes that install it. README presents the generated policy as the preparation default. Explicit enable/decline and existing controlling AGENTS paths are clear; this finding concerns a fresh repository with no decision or AGENTS.
+- **Consequence:** one permitted reading initializes without projection and only then acquires an instruction requiring projection before those writes; another pauses for a confirmation despite the advertised project default. Agents can produce different bootstrap boundaries from the same inputs.
+- **Reproduce:** start source tracing with an eligible fresh Git repository, no root AGENTS and no tracking selection. Follow the pending-choice row into main preparation, then DOCS-001's unchanged AGENTS copy. Compare the resulting tracking policy and pre-write gate with the operations just allowed. Repeat with explicit decline as the preserving contrast; do not infer a grant from a supplied token.
+- **Bounded correction / owner:** establish when the selected AGENTS template's project-level default is adopted and resolve it at preparation tracking selection, before dependent writes. Alternatively state a deliberately prospective-only policy consistently. Preserve explicit decisions, existing controlling instructions and optional tracking outside this project-template policy; do not turn it into a plugin-wide default. Keep README/template/canonical procedure aligned.
+- **Dependencies / decision:** confirm intended effective time of the project-template default during revision planning. Proposed only; no text or tracking behavior changed here.
+- **Objective recheck:** fresh/no choice, fresh/explicit enable, fresh/explicit decline, existing AGENTS policy and interrupted initialization each yield one stated policy before writes. Required preparation projection precedes writes whenever that policy enables it; a later copy neither invents consent nor retroactively claims a satisfied gate. Add the no-choice bootstrap contrast to acceptance without claiming a source trace proves consumer behavior.
+
+### No-finding observations from U-002
+
+PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS have distinct semantic ownership and bidirectional conflict routing. The main brief is discoverable without a mandatory fixed heading schema. PLAN defines meaningful delivery increments and review exits; TASKS derives project-wide stable IDs and mandatory review tasks without padding the 3–5 heuristics. Dedicated review units are excluded from delivery counts but remain executable tasks. PLAN/layout technical and human checkpoints are distinct. QC currency distinguishes material contract/decomposition changes from ordinary checkbox/evidence edits. Read-only review, direct author calls, scope limits and accepted feature incorporation retain separate authorities. No additional finding established in these inspected paths.
 
 ## Verification and limits
 

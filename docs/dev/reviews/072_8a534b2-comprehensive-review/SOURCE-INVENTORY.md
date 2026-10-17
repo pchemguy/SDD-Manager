@@ -5,7 +5,7 @@ Baseline: `8a534b21f6318f0b76b11a19783f7d40ca94d698`. The [per-file inventory](S
 | Unit | Files in inventory | State |
 | --- | ---: | --- |
 | U-001 | 50 | Assessed; full/targeted/structural depth per file |
-| U-002 | 37 | Pending |
+| U-002 | 37 | Assessed; full/targeted/structural depth per file |
 | U-003 | 50 | Pending |
 | U-004 | 20 | Pending |
 | U-005 | 158 | Pending |

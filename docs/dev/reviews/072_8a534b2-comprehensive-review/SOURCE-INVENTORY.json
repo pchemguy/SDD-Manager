@@ -155,153 +155,191 @@
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/SKILL.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3230,
-      "sha256": "fbd4b671e75b26630ee9e780e33c78b722171292949b6fa52c6b5ec998eb9bd3"
+      "sha256": "fbd4b671e75b26630ee9e780e33c78b722171292949b6fa52c6b5ec998eb9bd3",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/agents/openai.yaml",
       "unit": "U-002",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 505,
-      "sha256": "3afb66258ca9ee5f7e35b0986ac130e34a4a73c4d5c41b1c7de94e19133e4cea"
+      "sha256": "3afb66258ca9ee5f7e35b0986ac130e34a4a73c4d5c41b1c7de94e19133e4cea",
+      "performed_depth": "structural",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/assets/icon.svg",
       "unit": "U-002",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 570,
-      "sha256": "5702cda32d79bc28857dedfe0f9811d382d8b2e4c46d1ac571d8114aabd279a4"
+      "sha256": "5702cda32d79bc28857dedfe0f9811d382d8b2e4c46d1ac571d8114aabd279a4",
+      "performed_depth": "structural",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/backend-object-lifecycle.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 9973,
-      "sha256": "9e51f61f7d0b4ea40564dfce5285c52027d4e2c16178b52437543bc51a68b295"
+      "sha256": "9e51f61f7d0b4ea40564dfce5285c52027d4e2c16178b52437543bc51a68b295",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/design-heuristics.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 1597,
-      "sha256": "b4ded8adbaa45a74858cff4dbed277936d52d31a91534ab303b6af018262a448"
+      "sha256": "b4ded8adbaa45a74858cff4dbed277936d52d31a91534ab303b6af018262a448",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/development-document-qc.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 14298,
-      "sha256": "daf020bf85f9db0ddbf0c0474b5fc71477fd68557f5120957ba8438851bbee1b"
+      "sha256": "daf020bf85f9db0ddbf0c0474b5fc71477fd68557f5120957ba8438851bbee1b",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/hosting-tokens.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2971,
-      "sha256": "54f2e5949ddeae7aafcb985092309676b42b358135d8fea29481fc8071336324"
+      "sha256": "54f2e5949ddeae7aafcb985092309676b42b358135d8fea29481fc8071336324",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/markdown-style.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 5005,
-      "sha256": "16eb402dba42bbf95708d717aa839d3684199ac2a8770ed0bca5019f8b735583"
+      "sha256": "16eb402dba42bbf95708d717aa839d3684199ac2a8770ed0bca5019f8b735583",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/modularity.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2201,
-      "sha256": "98d41ef9fb16f373ca2fddfe2c048775a40165823dd503d4df58c18654b11283"
+      "sha256": "98d41ef9fb16f373ca2fddfe2c048775a40165823dd503d4df58c18654b11283",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/review-campaigns.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 8233,
-      "sha256": "46cd6e415c44262a0e092c36eb2ca4e44c303cd01e531325c4d66236f377512f"
+      "sha256": "46cd6e415c44262a0e092c36eb2ca4e44c303cd01e531325c4d66236f377512f",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/task-hierarchy.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4120,
-      "sha256": "675d67a8a7487c7876e084276638a966072d177f56376d3c156eec29c9b90a75"
+      "sha256": "675d67a8a7487c7876e084276638a966072d177f56376d3c156eec29c9b90a75",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/workflow-identity.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 8764,
-      "sha256": "60734b804ac10979fb81ee91788d2ba7175f190e9f9090cedd78bf7a15483704"
+      "sha256": "60734b804ac10979fb81ee91788d2ba7175f190e9f9090cedd78bf7a15483704",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/SKILL.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 6128,
-      "sha256": "9560a58b78cf5ced76ad55a8a5168b98f2d892680730cbadd9e6a6356d7fa3a0"
+      "sha256": "9560a58b78cf5ced76ad55a8a5168b98f2d892680730cbadd9e6a6356d7fa3a0",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/agents/openai.yaml",
       "unit": "U-002",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 412,
-      "sha256": "102d11e8960f1f7af69bfcbacbe71defad289b9c368d11a610fb6b19e61dd3b6"
+      "sha256": "102d11e8960f1f7af69bfcbacbe71defad289b9c368d11a610fb6b19e61dd3b6",
+      "performed_depth": "structural",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/assets/icon.svg",
       "unit": "U-002",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 562,
-      "sha256": "98c55eb98b3e3702037698739b96fb550da2223bf733fb576650d0a4c5504864"
+      "sha256": "98c55eb98b3e3702037698739b96fb550da2223bf733fb576650d0a4c5504864",
+      "performed_depth": "structural",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/architecture.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3692,
-      "sha256": "b55e2c0663e7057acc856eeaff6ba433e76e7e7e11c7fded817f21df6ffeb630"
+      "sha256": "b55e2c0663e7057acc856eeaff6ba433e76e7e7e11c7fded817f21df6ffeb630",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/decomposition.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3720,
-      "sha256": "8b448e31540ec5c68e18e9a0238e50c981ad799fb39dd25f518e1aadaee3aef9"
+      "sha256": "8b448e31540ec5c68e18e9a0238e50c981ad799fb39dd25f518e1aadaee3aef9",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/exploration.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3295,
-      "sha256": "6da655398bce206bb01d503f691f4b555c4a6a35d2ac6003a9fa0a8417154ba5"
+      "sha256": "6da655398bce206bb01d503f691f4b555c4a6a35d2ac6003a9fa0a8417154ba5",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/project-brief.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 6245,
-      "sha256": "03f1bf0727394c16518e55f815d6bc1d6ecfccfa34fcb1dd80b6c1f6f395645f"
+      "sha256": "03f1bf0727394c16518e55f815d6bc1d6ecfccfa34fcb1dd80b6c1f6f395645f",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md",
@@ -803,49 +841,61 @@
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 5789,
-      "sha256": "e453435a9e360597a8829d7792774242722d26db69abc5d4852156d78e1d8ccc"
+      "sha256": "e453435a9e360597a8829d7792774242722d26db69abc5d4852156d78e1d8ccc",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/agents/openai.yaml",
       "unit": "U-002",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 371,
-      "sha256": "8672b642e8c5ae2114cd839af1152435c7da485b4a25c3dd62d15c78d124ac98"
+      "sha256": "8672b642e8c5ae2114cd839af1152435c7da485b4a25c3dd62d15c78d124ac98",
+      "performed_depth": "structural",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/assets/icon.svg",
       "unit": "U-002",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 590,
-      "sha256": "44568c513e736771f4dde159c1903c6da19a774474ce65aeb8992dd694706659"
+      "sha256": "44568c513e736771f4dde159c1903c6da19a774474ce65aeb8992dd694706659",
+      "performed_depth": "structural",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/delivery-plan.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 6939,
-      "sha256": "ab8c662a2542848a9a5c81dd8d468eabf687922fce256bc20c88922cef90a0f6"
+      "sha256": "ab8c662a2542848a9a5c81dd8d468eabf687922fce256bc20c88922cef90a0f6",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/physical-layout.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3711,
-      "sha256": "e6abc9b84068ff8def13af02360020bdd80dc4c431667cf416aa4a9953bbfc41"
+      "sha256": "e6abc9b84068ff8def13af02360020bdd80dc4c431667cf416aa4a9953bbfc41",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/review.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4224,
-      "sha256": "85883334f1c22e8de544ae94500103be40005189daba780f258b4f0554dcbdfd"
+      "sha256": "85883334f1c22e8de544ae94500103be40005189daba780f258b4f0554dcbdfd",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/SKILL.md",
@@ -923,49 +973,61 @@
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 5119,
-      "sha256": "6abe4a618760bf79ba8c7a6508f0670c4736de3791f127f6061043c6755ba828"
+      "sha256": "6abe4a618760bf79ba8c7a6508f0670c4736de3791f127f6061043c6755ba828",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/agents/openai.yaml",
       "unit": "U-002",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 387,
-      "sha256": "c61e7eb38f097029d947314b441959b17aae2303440a52022cd386d78171e6b5"
+      "sha256": "c61e7eb38f097029d947314b441959b17aae2303440a52022cd386d78171e6b5",
+      "performed_depth": "structural",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/assets/icon.svg",
       "unit": "U-002",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 591,
-      "sha256": "ebeaf7c64a2fb958088765c46c48e8269625f03ddccefec9dc7b76ff7379f2ad"
+      "sha256": "ebeaf7c64a2fb958088765c46c48e8269625f03ddccefec9dc7b76ff7379f2ad",
+      "performed_depth": "structural",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/change-specification.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2220,
-      "sha256": "74ad9a214189fa094c48acfd6c1daacb4eef43fe64ea18946ff5e6628a3be94c"
+      "sha256": "74ad9a214189fa094c48acfd6c1daacb4eef43fe64ea18946ff5e6628a3be94c",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/review.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3962,
-      "sha256": "60ef1b66449b4f40adf88f475fa4767cfd663d17ba4cd304236e8dfcb79500c9"
+      "sha256": "60ef1b66449b4f40adf88f475fa4767cfd663d17ba4cd304236e8dfcb79500c9",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/system-specification.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4546,
-      "sha256": "4af4ac610c2e6b020c57182e486d55124142394f9ba341db0b81339404723afd"
+      "sha256": "4af4ac610c2e6b020c57182e486d55124142394f9ba341db0b81339404723afd",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/SKILL.md",
@@ -1019,49 +1081,61 @@
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 5646,
-      "sha256": "0e083124bf1282cb57952490f1292f5b358c69f818959623b65274a5530733cc"
+      "sha256": "0e083124bf1282cb57952490f1292f5b358c69f818959623b65274a5530733cc",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/agents/openai.yaml",
       "unit": "U-002",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 338,
-      "sha256": "60b43614f445a40f3d52d21869962189bdfe0252461317a6712a55d176797aa2"
+      "sha256": "60b43614f445a40f3d52d21869962189bdfe0252461317a6712a55d176797aa2",
+      "performed_depth": "structural",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/assets/icon.svg",
       "unit": "U-002",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 599,
-      "sha256": "dad3203c0386ce1a697600ae82fc1e03f530111626192018df24dd7c5ac69eb0"
+      "sha256": "dad3203c0386ce1a697600ae82fc1e03f530111626192018df24dd7c5ac69eb0",
+      "performed_depth": "structural",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/conformance-review.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3731,
-      "sha256": "79e186c004f57193bf7a9ca8aaf7b6075d85fac240ae05a1ececa11ec7eea92e"
+      "sha256": "79e186c004f57193bf7a9ca8aaf7b6075d85fac240ae05a1ececa11ec7eea92e",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/progress-review.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2291,
-      "sha256": "32be8fbaa5e67e807d7c7f7be964c56ab7f65bd6398784606090fcdd9e40a912"
+      "sha256": "32be8fbaa5e67e807d7c7f7be964c56ab7f65bd6398784606090fcdd9e40a912",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/task-derivation.md",
       "unit": "U-002",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 7133,
-      "sha256": "abe64f6415b946ef638d076dab1650afd5d6e154bcd94305932cd9f7ec9436c7"
+      "sha256": "abe64f6415b946ef638d076dab1650afd5d6e154bcd94305932cd9f7ec9436c7",
+      "performed_depth": "full-content",
+      "notes": "U-002: document ownership, HIL/QC dependency order, preparation integration, meaningful increments/counts, task hierarchy/review derivation and hosted lifecycle. Shared QC assessed at consequential gates/currency/report interfaces; supporting metadata checked structurally."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/LICENSE",
