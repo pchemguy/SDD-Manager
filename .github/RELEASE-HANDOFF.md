@@ -9,7 +9,7 @@ Dispatch one string input named `handoff`, containing this JSON object. Pass it 
 | Field | Contract |
 | --- | --- |
 | `source` | Full lowercase 40-character candidate commit SHA. |
-| `tag` | `v` followed by that source’s manifest version. |
+| `tag` | `v` followed by that source’s exact manifest version, including any build metadata. Publisher versions use numeric MAJOR.MINOR.PATCH with optional `-prerelease` and `+build.metadata`; build identifiers are nonempty ASCII letters/digits/hyphens separated by dots. |
 | `notes_source` | Same SHA as `source`; editorial coverage must actually reach it. |
 | `notes` | Nonempty curated multiline Markdown body, without YAML front matter. |
 | `notes_sha256` | SHA-256 of the exact UTF-8 `notes` bytes. |

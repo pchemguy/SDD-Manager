@@ -23,7 +23,7 @@ def validate_handoff(data):
             raise ValueError('Publication policies must be Boolean')
     if data['prerelease'] and data['make_latest']:
         raise ValueError('A prerelease cannot be selected as latest')
-    if not isinstance(data['tag'], str) or not re.fullmatch(r'v[0-9]+\.[0-9]+\.[0-9]+(?:-[0-9A-Za-z.-]+)?', data['tag']):
+    if not isinstance(data['tag'], str) or not re.fullmatch(r'v[0-9]+\.[0-9]+\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?', data['tag']):
         raise ValueError('Tag must be a version tag')
     if not isinstance(data['request_id'], str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,80}', data['request_id']):
         raise ValueError('Invalid request correlation ID')

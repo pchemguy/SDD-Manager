@@ -4,7 +4,7 @@
 
 The human requested planning and execution after the comprehensive review. [Revision plan](REVISION-PLAN.md) accepts R-001–R-004 within their bounded corrections. Original review remains evidence for `8a534b21f6318f0b76b11a19783f7d40ca94d698`; revision starts at `9279a389e3b06034c6fe04f433fc00fcc5f65365` on `revision/072_8a534b2-comprehensive-review`, returning to `main`.
 
-State: V-001–V-003 complete; V-004–V-005 pending. Live acceptance and release operations are excluded.
+State: V-001–V-004 complete; V-005 pending. Live acceptance and release operations are excluded.
 
 ## Actions and finding disposition
 
@@ -13,7 +13,7 @@ State: V-001–V-003 complete; V-004–V-005 pending. Live acceptance and releas
 | V-001 | R-004 | Verified: local checker correction | Native version/tag subject regression plus retained body/tag/publication sensitivity; 15 focused tests pass. |
 | V-002 | R-001 | Verified: source/native directions | Explicit merge-purpose dispatch, receiving context and completion-only exits; six native two-parent contrasts pass. |
 | V-003 | R-002 | Verified: source/interfaces and component extension | Eight policy traces; five package/template tests pass; catalog validates. Live behavior unrun. |
-| V-004 | R-003 | Pending | Build-metadata tag support and exact version equality. |
+| V-004 | R-003 | Verified: publisher contracts | Stable/prerelease metadata accepted, malformed metadata and mismatched committed version rejected; 36 tests pass. |
 | V-005 | All | Pending | Coupled verification, explicit integration/publication and closure. |
 
 The selected R-002/R-003 policy decisions are recorded in the plan. Existing review probes and failures remain unchanged. No prior closed record is reopened.
@@ -39,3 +39,9 @@ Main preparation now resolves prospective AGENTS policy before its projection/br
 Aligned AGENTS_TEMPLATE and the full README, current source contract/map and K-15; PLUGIN.md and the coordinator entry retain their existing route to canonical preparation/selection without a plugin-wide default. Extended MAIN-PREPARATION/A-001 assessment and qualified the token-only fidelity control so it does not assume away an adopted policy. These are acceptance-component extensions, not executed consumer scenarios.
 
 [Eight source/interface contrasts](evidence/V-003-policy-scenarios.md) cover no-choice adoption, explicit enable/decline, existing policy, no policy, resume, copied-template override and unavailable access/projection. The current catalog validates all 33 cases; five native package/document pinning tests pass in 1.895s ([log](evidence/V-003-package-tests.log)). Command: `PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -p test_package_docs.py -v`. Template pinning checks bytes/source boundaries, not whether a consumer follows the revised policy. No source-text tests were added as substitutes for that behavior.
+
+## V-004 — Support build metadata without weakening version equality
+
+The publisher accepts an optional `+build.metadata` suffix with nonempty dot-separated ASCII alphanumeric/hyphen identifiers. Stable/prerelease behavior and exact tag-to-committed-manifest equality remain. The handoff guide documents this publisher subset, including metadata in exact equality; the core schema and package version are unchanged.
+
+New handoff and actual Git/ZIP package tests reproduced four baseline errors for valid stable/prerelease metadata ([RED](evidence/V-004-red.log)). After correction all 36 publisher tests pass in 2.765s ([GREEN](evidence/V-004-green.log)). The contrasts reject empty/repeated/invalid metadata and a different otherwise-valid metadata suffix, while archive manifests retain the exact committed version. Command: `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=<declared-jsonschema-environment> python -m unittest discover -s .github/tests -v`. Python 3.12.14/jsonschema 4.26.0; no provider or release operation.

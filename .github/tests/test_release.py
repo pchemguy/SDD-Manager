@@ -51,6 +51,16 @@ class HandoffTests(Contract):
             with self.subTest(changes=list(changes)), self.assertRaises(ValueError):
                 publisher.validate_handoff(handoff(**changes))
 
+    def test_build_metadata_tags_and_malformed_metadata(self):
+        for tag in ('v0.15.0+build.1', 'v0.15.0-rc.1+build.001'):
+            with self.subTest(tag=tag):
+                data = handoff(tag=tag)
+                self.assertEqual(publisher.validate_handoff(data), data)
+        for tag in ('v0.15.0+', 'v0.15.0+build..1', 'v0.15.0+build.',
+                    'v0.15.0+build_1', 'v0.15.0+build+1', 'v0.15.0+build 1'):
+            with self.subTest(invalid_tag=tag), self.assertRaises(ValueError):
+                publisher.validate_handoff(handoff(tag=tag))
+
     def test_missing_field_stops(self):
         data=handoff(); del data['notes_source']
         with self.assertRaises(ValueError): publisher.validate_handoff(data)
@@ -80,6 +90,23 @@ class PackageTests(Contract):
         git('add','.'); git('commit','-qm','fixture'); self.sha=git('rev-parse','HEAD')
         self.data=handoff(source=self.sha,notes_source=self.sha)
         self.out=Path(self.tmp.name)/'output'; self.out.mkdir()
+
+    def test_build_metadata_requires_exact_committed_version(self):
+        path = self.package / 'plugin.json'
+        manifest = json.loads(path.read_text())
+        for version in ('0.15.0+build.1', '0.15.0-rc.1+build.2'):
+            with self.subTest(version=version):
+                manifest['version'] = version
+                path.write_text(json.dumps(manifest))
+                self.git('add', str(path.relative_to(self.root)))
+                self.git('commit', '-qm', 'fixture build metadata version')
+                source = self.git('rev-parse', 'HEAD')
+                data = handoff(source=source, notes_source=source, tag='v' + version)
+                files = publisher.build_package(self.root, data, self.out)
+                with zipfile.ZipFile(files['sdd-manager.zip']) as archive:
+                    self.assertEqual(json.loads(archive.read('sdd-manager/plugin.json'))['version'], version)
+                with self.assertRaisesRegex(ValueError, 'Tag does not match candidate manifest version'):
+                    publisher.build_package(self.root, dict(data, tag='v' + version + '.different'), self.out)
 
     def test_archive_matches_exact_tree_and_exclusions(self):
         paths=publisher.build_package(self.root,self.data,self.out)
