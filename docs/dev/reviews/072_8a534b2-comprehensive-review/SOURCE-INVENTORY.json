@@ -1,0 +1,2533 @@
+{
+  "baseline": "8a534b21f6318f0b76b11a19783f7d40ca94d698",
+  "files": [
+    {
+      "path": ".agents/plugins/sdd-manager/LICENSE",
+      "unit": "U-001",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 1065,
+      "sha256": "230ef093b2d68d0f37130d47064b1aff673c41830a15513801e0cc089e742ed2"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/PLUGIN.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 21418,
+      "sha256": "a8912c71135698b8ff30622fb7e52e5f99cd27dc358993a1fe5d1c12d398fa4f"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/README.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 28624,
+      "sha256": "856e2fc246cfa2a2bb69701062a62fdb1fc64e9088fb9e088b76218746f0ae84"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4652,
+      "sha256": "77bd8ac34590f1678e0418c514efd4ebdd8f27bd0991afba8aca1533f84a1d0d"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/AI_DISCLOSURE.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 1192,
+      "sha256": "09411dc61f4966efabe8e821f2270c768baf5b96f4fd4587eb5c05233de7ffea"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 6171,
+      "sha256": "2ddbcfe9c26d3e27ac3ad42ca36eaed6d069dcbf8fd9e073a73a9c8f56312d01"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 1599,
+      "sha256": "852c666018f223c49cc4732af5f1a1bf8db38061114721b9dc738ec702ec9617"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/HANDOFF_TEMPLATE.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 1891,
+      "sha256": "081b447518cea784d8a0e9a5e5226986e4cc264979622e3f3bc48eb4e4525067"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/SDD-MANAGER.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 683,
+      "sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/SKILL_DISCOVERY_PROTOCOL.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2952,
+      "sha256": "73d78200b290c487674c9c7e16e9805571cc09b375f9ce1abecfc0378181e665"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/icon.png",
+      "unit": "U-001",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 14257,
+      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/icon.svg",
+      "unit": "U-001",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 581,
+      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/logo.png",
+      "unit": "U-001",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 14257,
+      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/logo.svg",
+      "unit": "U-001",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 581,
+      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/plugin.json",
+      "unit": "U-001",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 2059,
+      "sha256": "bbf4bc4f6901d5a79857fb1baaf7673abd04c857adf17294162b22314ce9b6db"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/SKILL.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3230,
+      "sha256": "fbd4b671e75b26630ee9e780e33c78b722171292949b6fa52c6b5ec998eb9bd3"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/agents/openai.yaml",
+      "unit": "U-002",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 505,
+      "sha256": "3afb66258ca9ee5f7e35b0986ac130e34a4a73c4d5c41b1c7de94e19133e4cea"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/assets/icon.svg",
+      "unit": "U-002",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 570,
+      "sha256": "5702cda32d79bc28857dedfe0f9811d382d8b2e4c46d1ac571d8114aabd279a4"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/backend-object-lifecycle.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 9973,
+      "sha256": "9e51f61f7d0b4ea40564dfce5285c52027d4e2c16178b52437543bc51a68b295"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/design-heuristics.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 1597,
+      "sha256": "b4ded8adbaa45a74858cff4dbed277936d52d31a91534ab303b6af018262a448"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/development-document-qc.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 14298,
+      "sha256": "daf020bf85f9db0ddbf0c0474b5fc71477fd68557f5120957ba8438851bbee1b"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/hosting-tokens.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2971,
+      "sha256": "54f2e5949ddeae7aafcb985092309676b42b358135d8fea29481fc8071336324"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/markdown-style.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 5005,
+      "sha256": "16eb402dba42bbf95708d717aa839d3684199ac2a8770ed0bca5019f8b735583"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/modularity.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2201,
+      "sha256": "98d41ef9fb16f373ca2fddfe2c048775a40165823dd503d4df58c18654b11283"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/review-campaigns.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 8233,
+      "sha256": "46cd6e415c44262a0e092c36eb2ca4e44c303cd01e531325c4d66236f377512f"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/task-hierarchy.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4120,
+      "sha256": "675d67a8a7487c7876e084276638a966072d177f56376d3c156eec29c9b90a75"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/workflow-identity.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 8764,
+      "sha256": "60734b804ac10979fb81ee91788d2ba7175f190e9f9090cedd78bf7a15483704"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/SKILL.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 6128,
+      "sha256": "9560a58b78cf5ced76ad55a8a5168b98f2d892680730cbadd9e6a6356d7fa3a0"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/agents/openai.yaml",
+      "unit": "U-002",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 412,
+      "sha256": "102d11e8960f1f7af69bfcbacbe71defad289b9c368d11a610fb6b19e61dd3b6"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/assets/icon.svg",
+      "unit": "U-002",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 562,
+      "sha256": "98c55eb98b3e3702037698739b96fb550da2223bf733fb576650d0a4c5504864"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/architecture.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3692,
+      "sha256": "b55e2c0663e7057acc856eeaff6ba433e76e7e7e11c7fded817f21df6ffeb630"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/decomposition.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3720,
+      "sha256": "8b448e31540ec5c68e18e9a0238e50c981ad799fb39dd25f518e1aadaee3aef9"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/exploration.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3295,
+      "sha256": "6da655398bce206bb01d503f691f4b555c4a6a35d2ac6003a9fa0a8417154ba5"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/project-brief.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 6245,
+      "sha256": "03f1bf0727394c16518e55f815d6bc1d6ecfccfa34fcb1dd80b6c1f6f395645f"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3982,
+      "sha256": "90a407f7e9c48ccdc4eb0f687dcca567f1a2323c692743115230a2299720cdf5"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/agents/openai.yaml",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 471,
+      "sha256": "9715602c3bdcd14d41e6e99e24edb32389499e0ec96b0aad5cdf4b30b187de15"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/assets/icon.svg",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 587,
+      "sha256": "69e272ee97e9957387f8ca8b51bec3d3d176c33e6bf6b20d2bff5b3536f507e2"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/in-code-documentation.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2857,
+      "sha256": "40c179cf40c73ad36d76f722950eeaf33ab1c37993edd370f6fa16305d2a5465"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/review-and-findings.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2719,
+      "sha256": "61bda144ac45af632307b12bb3cf9652727b83c3b3ffc57558188d0d2a6837b1"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/standalone-documentation.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3329,
+      "sha256": "b2ced68b8f869efc47206261795e225b42455b513c7a2be4f091cd891c3ef951"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md",
+      "unit": "U-004",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 9387,
+      "sha256": "b66d531a72c997e8b8805822afe774a94a0e608cd4a45bb07bd5f28b46bfee34"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/agents/openai.yaml",
+      "unit": "U-004",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 508,
+      "sha256": "65a79f791a2285753a0e6ca9eb83e203b181c0277ada5706add85f4c86c18783"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/assets/icon.svg",
+      "unit": "U-004",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 579,
+      "sha256": "ca997d09da83d706126f43dc2ace19c00ee9036ae67dcce225e688a09d398d33"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-docs-preparation.md",
+      "unit": "U-004",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 6806,
+      "sha256": "70ae8f8b0dbd5f2a2a36173bca468275f25b4b407d78b454584bedcce40772c1"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-issue-lifecycle.md",
+      "unit": "U-004",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 5072,
+      "sha256": "86c7d50e8b77969693cccb5cab51b9a8d39242363be7e2d08bcfa3babef6d171"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-milestone-lifecycle.md",
+      "unit": "U-004",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4048,
+      "sha256": "3b61e310b8a996a716c860fd6039f83dc83936821e466e09d1ae53fd27dca090"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-packaging.md",
+      "unit": "U-004",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 5843,
+      "sha256": "bf2a71e63b75b117853097199120d628d67d2c419962aa441978c124e4c780ed"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-projection.md",
+      "unit": "U-004",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 6537,
+      "sha256": "c879494bd117e79e7efdcc95ddced3b24b799d96af44cf3116143be09a09fb0e"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-release-workflows.md",
+      "unit": "U-004",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 8751,
+      "sha256": "16400d26c01385e92aa4170f1d81574f79be058471f236c8916dcfe9bf5d721a"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-releases.md",
+      "unit": "U-004",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 9945,
+      "sha256": "27695c3741a26da6ba71a0e1985180d1fd9dcd6d560a894525360556c9811b60"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github.md",
+      "unit": "U-004",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 11768,
+      "sha256": "e564590a2c706b1b78d473f4dc54c70893682e541be6e4e827418fd6a0f87e82"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/release-highlights.md",
+      "unit": "U-004",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 19977,
+      "sha256": "69016b326538a23316745d2a7a9937178d9f53aaa7323078dde99374b639d82f"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/release-message.md",
+      "unit": "U-004",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 8651,
+      "sha256": "8c1121075731dbdff2bc6dd88b1c035c14826709c1404184b878e63fa37f6c98"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/SKILL.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 9464,
+      "sha256": "ba50e20c2096814ccaa5dc5c0ea7b97068fbcf8cecd5f474c0cbfb0687208fdc"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/agents/openai.yaml",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 662,
+      "sha256": "fbaa03bfe7cc660089090feeac5914b31c667901fa49e4c1fb95f991f99ddb15"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/assets/icon.svg",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 588,
+      "sha256": "4fd314a8f182561a13fbf6fe062e4aee5fd0e0330dccd9943ec14aa5dab34c48"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/browser-capabilities.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2594,
+      "sha256": "fd64b9332dac9d5a89249968996bdcfdcd3e1211f06220af8247cd7a25309642"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 20280,
+      "sha256": "f401d0c01f836127182d20000535d252f2abcee3ebba0815ca76edc160b5ab30"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/environment-recovery.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2247,
+      "sha256": "0254c7e5dc5477a012d6eca8c049d222f42c712b5ef1f03abc8b4270f34f9523"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/range-selection.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3971,
+      "sha256": "9b21f74549bf82f30a7b2108e3e3e3d7b3ac090b5a2b85907e0cf47c4965bbf5"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/startup-and-continuation.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 12189,
+      "sha256": "0fbfdf05bb93d3dbaf506ab461285063732f62f012a5da3b3b957ed2c654c68c"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/task-execution.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3543,
+      "sha256": "904f3f51f5fbaa59ba1782d7748b61b79c7e8ca4584c2203c5aca30f46bbcdc8"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/SKILL.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4209,
+      "sha256": "baf246c581fb81e48099905a8a0e4fc1ec917257e57a73736d99fde772a89d58"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/agents/openai.yaml",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 459,
+      "sha256": "48018ed1de138598f6be61e916b701638234e2d0e570ed42d39760e0f4de8392"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/assets/icon.svg",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 591,
+      "sha256": "9b68ea07e6b5916efa646ad8f639cb1872523bb40630043a317cc862440dc006"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/references/feature-incorporation.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 14742,
+      "sha256": "b06a7268c4b43fe8f994625c21aa129ffb57a7568d7e69452aaa9fd7eba038ca"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 13825,
+      "sha256": "35203fbed5c480beddad9f03d18bca2be0ac34f25afd3ffe8a851d3dc6689c51"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/agents/openai.yaml",
+      "unit": "U-001",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 524,
+      "sha256": "c3d318cf2a1074db8bc3c956109b12b1a3399c3835eded7bbac57f9ee7f5a778"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/assets/icon.svg",
+      "unit": "U-001",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 590,
+      "sha256": "d263da0cf62afe30dec52294f51c33a0d522b25c44049224a2274037e8ace44d"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/agent-orientation.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4994,
+      "sha256": "eb2b006824da0312323777b61459c1094ccef847075b6250448c2161bc48dc57"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/branch-management.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 14481,
+      "sha256": "0cc981a4a37a0095803fd746998e8bf921991014e07897f861b4120635b6112c"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/continuity.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 10261,
+      "sha256": "481a4a3a7ea277b0b83015cf7530754bbe5a65f7f97e535ec22cb30db63acbdd"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 18229,
+      "sha256": "385f58bb181888436250017efc39f3d864a9c286d7a96c0ddacf0a5697af7cf1"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/credentials.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 7412,
+      "sha256": "f1e0ca1f4bd5b93a9bebf895ec48b5a721745f120809c890d89478e704a8d3b7"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/document-qc-gates.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 6358,
+      "sha256": "c9609bf09f408c7266256e5b16676e58f67fea80186790069e48dd3c210fca33"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/examples.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 28881,
+      "sha256": "64112e46663f98db22daf1dfb9930c2ff5cc1e8f8b0cb7fee489445500e7fd9b"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 15523,
+      "sha256": "abfc1db2a54d8d3e14b639ad1ef6be71e77637e1575558f15df7b864692e949c"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/human-document-review.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 7583,
+      "sha256": "3ea6fc1d67011d4b6df70d34302c543a32b72fd5c599565f153fd10d54b1b433"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/main-preparation.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 11562,
+      "sha256": "32754d18bd18e70367c9339dd60c1553c436da22fb68d8cd0a939275fe871fe9"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/phase-activation.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4216,
+      "sha256": "48edb9f14a072382d699822f48d6cfac82d2f116b602ff1a4bae105fbb8f27d0"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/prerelease-review.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 9774,
+      "sha256": "0fc0a9e77dcec7d96116cebc641b823dbb0544980190f5c9a608704c991c2338"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/repository-bootstrap.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 9551,
+      "sha256": "a29543a74507cc52efc5f76649871b1d4ce4117ec0d72b029f805fd8f75d4435"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/review-and-revision.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 11034,
+      "sha256": "b8be2c6e04ad5cdd66986250b8d1b95e5035cfabe48e8927d835cb9081cae583"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/revision-modes.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 10386,
+      "sha256": "007ac61eb9b7c7bc557149824725ceda07b5d08666c94f491e9a1d7fde0af32c"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/tracking-decision.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 5379,
+      "sha256": "5d7d4ccf1cd2b8afb2093cbb52d1c68e7c067613df6bef027019d08d1cd91ff6"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/workflows.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 27168,
+      "sha256": "0a2d8c10a109ec5666dbc759480255433fa9e069e52f0aa5039f92cf70051e58"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-orient/SKILL.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 5480,
+      "sha256": "e141595a8bac4b19eb0515b386f83f461b8b011ff899fc14f491215ab39897de"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-orient/agents/openai.yaml",
+      "unit": "U-001",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 491,
+      "sha256": "36dbb7990b7f504c1fa4b614651ad26431ab6af5a623be8250b780ce156667c9"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-orient/assets/icon.svg",
+      "unit": "U-001",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 571,
+      "sha256": "ef235e59b6a56e0d21629b3b6c1b2ca9cc97cd678d02bcb31b0e2f7bc11bf1f2"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-orient/references/inspection-and-handoff.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 12021,
+      "sha256": "53b873604feabc97d21113ff403d23e343c6ca76469e2614fcc681f9030455af"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 5789,
+      "sha256": "e453435a9e360597a8829d7792774242722d26db69abc5d4852156d78e1d8ccc"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/agents/openai.yaml",
+      "unit": "U-002",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 371,
+      "sha256": "8672b642e8c5ae2114cd839af1152435c7da485b4a25c3dd62d15c78d124ac98"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/assets/icon.svg",
+      "unit": "U-002",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 590,
+      "sha256": "44568c513e736771f4dde159c1903c6da19a774474ce65aeb8992dd694706659"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/delivery-plan.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 6939,
+      "sha256": "ab8c662a2542848a9a5c81dd8d468eabf687922fce256bc20c88922cef90a0f6"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/physical-layout.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3711,
+      "sha256": "e6abc9b84068ff8def13af02360020bdd80dc4c431667cf416aa4a9953bbfc41"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/review.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4224,
+      "sha256": "85883334f1c22e8de544ae94500103be40005189daba780f258b4f0554dcbdfd"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/SKILL.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3946,
+      "sha256": "2a09d48def1f845b9b6988762aaa99b62e4f5c39213033c2276f8bb0aa42e8e2"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/agents/openai.yaml",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 454,
+      "sha256": "bfe1a84a61bf154a5cb846d41b10d73e88a596044d21e6d1f151d1dc78ae221c"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/assets/icon.svg",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 580,
+      "sha256": "aca30e96cbe5d44d759da47cc1db33c87dce1d04bf77142feac8475eecbab074"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/campaign-artifacts.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 12730,
+      "sha256": "e7b0af517c481306cc7a397ae404aa98656d1f2d25a9c6c5489e2e18c4b1f124"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/change-kinds.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4573,
+      "sha256": "7cc7d31e5926fab5c4778b385f282d8f536713536c1038cc63409a1734da886b"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/completion-reports.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 7263,
+      "sha256": "c9c99455d289eda11e513b896c49471f039c02eee1aa00c3aa483ac69550bb96"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/document-qc-reports.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4724,
+      "sha256": "7dcbf8e39c79b9c5032261b8976054f15e12a302e748d22456fcfdb8f2dcc8f7"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 15406,
+      "sha256": "e102f6157720a323080a16c2d086e7eac676ac36a4821b63a9f5c302a6e24270"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/releases.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 7869,
+      "sha256": "8cb9f5d75a27a247d21a377fca881c4fa000d4622437a36ae7c0da6bdaf34b85"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 5119,
+      "sha256": "6abe4a618760bf79ba8c7a6508f0670c4736de3791f127f6061043c6755ba828"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/agents/openai.yaml",
+      "unit": "U-002",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 387,
+      "sha256": "c61e7eb38f097029d947314b441959b17aae2303440a52022cd386d78171e6b5"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/assets/icon.svg",
+      "unit": "U-002",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 591,
+      "sha256": "ebeaf7c64a2fb958088765c46c48e8269625f03ddccefec9dc7b76ff7379f2ad"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/change-specification.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2220,
+      "sha256": "74ad9a214189fa094c48acfd6c1daacb4eef43fe64ea18946ff5e6628a3be94c"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/review.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3962,
+      "sha256": "60ef1b66449b4f40adf88f475fa4767cfd663d17ba4cd304236e8dfcb79500c9"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/system-specification.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4546,
+      "sha256": "4af4ac610c2e6b020c57182e486d55124142394f9ba341db0b81339404723afd"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/SKILL.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 5603,
+      "sha256": "33c91d50a828549508ad6e7955625cb8af1574651d19ce36db70013b2601f4a2"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/agents/openai.yaml",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 592,
+      "sha256": "421038f108a077de64e16c95011ed4f6bff87d47e16c53894bbcc0dc581cc4ae"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/assets/icon.svg",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 551,
+      "sha256": "b9d353ce223194b53f52a4853ed1cc9468718ed0ee57074b5988a309f54d14d1"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/amendment-execution.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3900,
+      "sha256": "c185174fd72625f51a151bb6085140e9599f848e26f461d1131c87f2865d0cac"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/objective-and-impact.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3264,
+      "sha256": "7f2bd87c0b689221ffb24b5ae7915ee8d00134a9bce5433f05d5f8472f61f58d"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/verification-and-stop.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 7390,
+      "sha256": "47e09faa69535e9e4c229a820b919a22bad0663dd67e89d2ec3cd398620edb55"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 5646,
+      "sha256": "0e083124bf1282cb57952490f1292f5b358c69f818959623b65274a5530733cc"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/agents/openai.yaml",
+      "unit": "U-002",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 338,
+      "sha256": "60b43614f445a40f3d52d21869962189bdfe0252461317a6712a55d176797aa2"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/assets/icon.svg",
+      "unit": "U-002",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 599,
+      "sha256": "dad3203c0386ce1a697600ae82fc1e03f530111626192018df24dd7c5ac69eb0"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/conformance-review.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3731,
+      "sha256": "79e186c004f57193bf7a9ca8aaf7b6075d85fac240ae05a1ececa11ec7eea92e"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/progress-review.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2291,
+      "sha256": "32be8fbaa5e67e807d7c7f7be964c56ab7f65bd6398784606090fcdd9e40a912"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/task-derivation.md",
+      "unit": "U-002",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 7133,
+      "sha256": "abe64f6415b946ef638d076dab1650afd5d6e154bcd94305932cd9f7ec9436c7"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/LICENSE",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 1070,
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/SKILL.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3588,
+      "sha256": "49efacb9ed6ae3b59069e986672dc5350cc0b147c3ad960b3ffc04f105c54cda"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/agents/openai.yaml",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 480,
+      "sha256": "f0049fe541cbffe331d4ccb9e903ed49bb96f1011cefecd1ced49fbd1bd19da4"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/assets/icon.svg",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 574,
+      "sha256": "37e86ed29c77f13846f9c315627c5e139d1348d7eed26eef2ff94354c334239f"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/test-first-cycle.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3693,
+      "sha256": "e8d797ba50e555d53500516e85f8b624f7ed11f5a7534e39220f2a74141e3d96"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/testing-strategy.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2602,
+      "sha256": "fd834570d97f993fe270627fcedc308f0a97642ff000b8970a0b1c1bf33cab5f"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/upstream-provenance.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 1278,
+      "sha256": "668d85251c25027ac1494c9bb89367fa3c1885c23424e3987d02f7fd0b02ca33"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/writing-good-tests.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4076,
+      "sha256": "c5a555443dc5cf3b78312f9939bfbe53be7b04978f4f14f3350820ed5bc5b0d8"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 5336,
+      "sha256": "a23d8d5ad5c2322389f6c1c34a267ba2802e4bfb6a510befaae9ef856b7feaff"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/agents/openai.yaml",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 544,
+      "sha256": "3176532ba151974e4f6186c589a9e8ba59247367629ace97788cf70e1bdfe40a"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/assets/icon.svg",
+      "unit": "U-003",
+      "planned_depth": "structural",
+      "assessment": "Pending",
+      "bytes": 563,
+      "sha256": "60c4fbc478c5c5569c7db40ee7d2b90c061fb8e0b7a2274ec8757cbcadc6c837"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/boundary-review.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2497,
+      "sha256": "53babcce80c31cefb2396f490332cdb3e0ca4e4472fdf3ba4eec189aa2f9ffc0"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/check-selection.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4516,
+      "sha256": "87f9024dccf127c10b89944d83bb90d9cd9373e42ffd5c3967f47ff676cda10c"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/execution-and-evidence.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 4797,
+      "sha256": "35bac91769a15ae00dc2620222f85bbadd9e1f8c478676544b8c682f7cb36672"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/failure-assessment.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2950,
+      "sha256": "4522617b15dc791ad3e695022180ed757459c6fa539cfa593592bb858c1cbbdc"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/release-checks.md",
+      "unit": "U-003",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 6122,
+      "sha256": "fee007dfbde60228f4119a9cebfd851c5af7051c57660d2b4139c7992a79541c"
+    },
+    {
+      "path": ".github/RELEASE-HANDOFF.md",
+      "unit": "U-004",
+      "planned_depth": "code/configuration",
+      "assessment": "Pending",
+      "bytes": 4971,
+      "sha256": "f2b58caf0f8396db06ba21dc39243990f2a594660523f71275a4a37d55aadc60"
+    },
+    {
+      "path": ".github/requirements.txt",
+      "unit": "U-004",
+      "planned_depth": "code/configuration",
+      "assessment": "Pending",
+      "bytes": 19,
+      "sha256": "756cc9e506ae4ee1a6f6c0507088b5cfc0dc8ba350fb2d2d46f1ffa72033adb6"
+    },
+    {
+      "path": ".github/schemas/README.md",
+      "unit": "U-004",
+      "planned_depth": "code/configuration",
+      "assessment": "Pending",
+      "bytes": 1177,
+      "sha256": "3def3824b27d744716ccc86f1694c0cf358c8d35a1437cb1a713c7b57881cc7c"
+    },
+    {
+      "path": ".github/schemas/plugin.schema.json",
+      "unit": "U-004",
+      "planned_depth": "code/configuration",
+      "assessment": "Pending",
+      "bytes": 1805,
+      "sha256": "0a4aad95ce337878ad38802ebf0daa3fde76abe3f65400c86bcbb1ec0b3ab883"
+    },
+    {
+      "path": ".github/scripts/release.py",
+      "unit": "U-004",
+      "planned_depth": "code/configuration",
+      "assessment": "Pending",
+      "bytes": 20840,
+      "sha256": "a651a798f8c782e4a854b043f0f2063992134f5e9cf17445ec689fbc0b440b28"
+    },
+    {
+      "path": ".github/tests/test_release.py",
+      "unit": "U-004",
+      "planned_depth": "code/configuration",
+      "assessment": "Pending",
+      "bytes": 24782,
+      "sha256": "83d812427d10fa0df12b390b0bece723a12f751afba5eff7d0960b2bf5cd7c47"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "unit": "U-004",
+      "planned_depth": "code/configuration",
+      "assessment": "Pending",
+      "bytes": 3352,
+      "sha256": "8073f5d9851a2e72fae1f06d96555f852a77e948eaf50c25f1eb5dbeb17b9eb1"
+    },
+    {
+      "path": "AGENTS.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2907,
+      "sha256": "f6436413158f60aa2047bef4432e069601a6762fca1da835125f8d051d512989"
+    },
+    {
+      "path": "AI_DISCLOSURE.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 1192,
+      "sha256": "09411dc61f4966efabe8e821f2270c768baf5b96f4fd4587eb5c05233de7ffea"
+    },
+    {
+      "path": "README.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 1365,
+      "sha256": "cd9025a1344ddb1827a979e9b42ddb5f904dacecfb116e7ba76761f402b7d868"
+    },
+    {
+      "path": "SDD-MANAGER.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 683,
+      "sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf"
+    },
+    {
+      "path": "SKILL_DISCOVERY_PROTOCOL.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 2952,
+      "sha256": "73d78200b290c487674c9c7e16e9805571cc09b375f9ce1abecfc0378181e665"
+    },
+    {
+      "path": "acceptance/AGENTS.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 4338,
+      "sha256": "6c1c80dbca28726959001fa9f11fd094ab95f0bf28da42c993a01acb4ca96d37"
+    },
+    {
+      "path": "acceptance/TEXTSTATS.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2267,
+      "sha256": "92e6f4ecb99383cd6a7b2ee11bfcc9a55c240d3b7e8fad1e34dbc2d53d885bab"
+    },
+    {
+      "path": "acceptance/textstats/AGENTS.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 4853,
+      "sha256": "fa0a0a80b6f5566a2a6e8a5d631ae3f06367888b0a044e58e4137e3cd90f398d"
+    },
+    {
+      "path": "acceptance/textstats/DIAGNOSTICS.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 9392,
+      "sha256": "967f87c82d3490d510b2ae8e17fe8e11d0a792bdc9300b6a53c979beb053fd1d"
+    },
+    {
+      "path": "acceptance/textstats/EXECUTION.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 15145,
+      "sha256": "dd7b737ebdfd640026d9f8bb173e171933e7d8a5c0610db6fbb6fe070260d4d0"
+    },
+    {
+      "path": "acceptance/textstats/OBJECTIVES.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 5221,
+      "sha256": "198ea3266465bf4b94f40e7456d16742a0b51997fe49ade7b253e1802bbfce03"
+    },
+    {
+      "path": "acceptance/textstats/README.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 8338,
+      "sha256": "0b72620087df6596d5881549dd4dafe0f62914fa7a6df1aa211945ca22d5f313"
+    },
+    {
+      "path": "acceptance/textstats/RECOVERY.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 11180,
+      "sha256": "505bb3a09bac05d0f8959719ae574e442afd687fa70a05557237abe7da1ae24c"
+    },
+    {
+      "path": "acceptance/textstats/RELEASE-SCENARIOS.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 9196,
+      "sha256": "2b2280a184281910197dd676eba467b24bb09e807bde218fb07ddf90b452c726"
+    },
+    {
+      "path": "acceptance/textstats/SCENARIO.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 8468,
+      "sha256": "512c40a2421f5457774756a4def83c6ce0d28e4c1ab4f570a018e7b4f623f4b9"
+    },
+    {
+      "path": "acceptance/textstats/SETUP.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 14298,
+      "sha256": "7fbccf4c9cade6470ad9eef009844f1f0ee5bd73f157b6f26ee16c01179e503c"
+    },
+    {
+      "path": "acceptance/textstats/TRIAL-CONTROLS.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3326,
+      "sha256": "b60efe5627d577e946d8a378c6b26a9e335ce2d96fb755a6e846ad70b7f4af4c"
+    },
+    {
+      "path": "acceptance/textstats/VARIANTS.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3669,
+      "sha256": "0efad1640228c6ed680957fe466424863cbf255d7042911ad08a87dad623ce93"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-001.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3298,
+      "sha256": "e50fecdffa3fa76a7ebb7c5a5bd20135058a15edee814e1d062c6bd0c3907169"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-001.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 4112,
+      "sha256": "91afb212ba0eedf185d1caf8f556a336d72c2998c3340aa922356ca6c50d2809"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-002.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1112,
+      "sha256": "01f668b634cc6dc766140e78de7eeaf3c899ee18df77a812542653fb103861b0"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-002.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1918,
+      "sha256": "a8c110dd46f474f14b24db0520541887b8bf84277f9c3c2dedec11850be7dc4a"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-003.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1376,
+      "sha256": "345479be23483e141bb117a24e4d52d524aeb07e6ad193a577cf0378380af022"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-003.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2525,
+      "sha256": "b18ba9497f845fbaf89863f588f78f25b743bac499c64aa0c3cae8e10a01f5a7"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-004.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2073,
+      "sha256": "b272dea6e7779030b7d252df8e84cf3b928a9ccb26c32305786be890dca34fa8"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-004.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2895,
+      "sha256": "5e71f9116760e04c6730fdd08947704164bc93c31d026bc50be1e297fb38896e"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-005.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 6165,
+      "sha256": "9488a92d8e0b602f77336b2e2f42b7699749bcd669f20ac7f8872975f738d2fa"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-005.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3375,
+      "sha256": "d716527fcf36be1bebc4e88098d9820cd3c5d42be0b05b8259a23cbcd6dc2a8c"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-006.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 7601,
+      "sha256": "3b146ac9ed0beb817b53cc18757c2c08e7849e1d7efc4fd8299f1589169319e1"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-006.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2641,
+      "sha256": "4fe58b7edbf63f084175b4a34af69716982a42dff5dc5b5ac280d41901a88d80"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-007.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 4200,
+      "sha256": "78c2a1f50d5aaf62bc4957f137045fc79b6f2015e56b855ef59f2385b9bc3d19"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-007.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2237,
+      "sha256": "4dacc41159ad17ea0ea6d050f4598ad8d97e29d6b264d03526e416bc7ddebc62"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-008.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2580,
+      "sha256": "50bed14f1e0318bc78b6816a4b7ae684249d65386f3e79285d68607b7dfccad8"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-008.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3550,
+      "sha256": "32d1615adb5a9e5bb95ab526cce4fd49caa8de6b34e43c841a334af0e03f687c"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-009.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1332,
+      "sha256": "284af8c0d3b275010b4e1ffbe8e9c9dc9f4171a0d841e1950fc591b796aabac8"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-009.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2118,
+      "sha256": "8e57fa578559c4dd30580644be5bab1ef7dec2b09fad0f48768da6538097045f"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-010.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 14242,
+      "sha256": "dcfddd10c9740374cc3e0250c22c2fca40d857ee53e6c495e1de2d957194a641"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-010.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3013,
+      "sha256": "2299739d9576bc94bb0c8475eca4eba6dd121b571ed08075428d774a4c105fe4"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-011.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1090,
+      "sha256": "07bbd3281dcd510424ef8394837eb2a75efb1a8481464c029abc96f948f53f3c"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-011.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1899,
+      "sha256": "07f9f785ce3fdd305ba463504d73885458da60b7a058cf414619ec4a8de2bea6"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-012.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 13397,
+      "sha256": "b62251c7cfda49c797a792fbd33f0da1e452f5d59b0fbed5958bff1438981b9d"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-012.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2930,
+      "sha256": "64432f667ffa82892d22f5ae0350c6c307b6571b47d1699aa9d6554e453fe72a"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-013.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 15700,
+      "sha256": "1891b89d7bce61d759ce33b317102e255abf08483c3ad4a37df2e4a4bb8e6b72"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-013.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3046,
+      "sha256": "f5d22d215804a0ae944752026278714c3783fe97be93c4a3fc9e3691aba7afec"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-014.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1063,
+      "sha256": "cf4ff146dbe14816087c95f5b87677587748d721df197670cb15a48c707e15ab"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-014.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2054,
+      "sha256": "3236b318496dde0f4cfb09199de4e01d1738c6743263df9f728322918c423912"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-015.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1395,
+      "sha256": "4d5fcaad1133ef415f8713006e1d5992b6ae2c79f618e93bc02b5c3420c450f6"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-015.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1670,
+      "sha256": "11d4f2f76f812d45bc0283df345b7f0cb9010a913b3c25b90332f64457a42d6e"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-016.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2125,
+      "sha256": "ab9e709d10168d1a6954b26bd6604c7a24da69fc373e086f095b21ff01542ff6"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-016.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2460,
+      "sha256": "15b568b375b4c2e40f4cc4b573250fb70f8cc5e292a714ddc0e6964beb67cac2"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-017.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1885,
+      "sha256": "bac6056ca9f1a0384debffd34022cca36bbd303549bc91694a0c9bb1fcae1c3f"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-017.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 4640,
+      "sha256": "23a1a6e5588d5465831ff03a2e22c9c803a98d27f6a1ef3a1dcd2935eb65ea7c"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-018.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1430,
+      "sha256": "e83280d70103a1c7f19309c045651153c5c83f8df5769545c0f71c4313b4e967"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-018.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2447,
+      "sha256": "6fe003faa47b1778c63271b3b8f8333f989aa5da1dc4286e0e8d45f2cf598c7c"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-019.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2246,
+      "sha256": "ffadd302c7f30457aeb524757f4ec177b3d05fce90f4b03e0343d35fdd666053"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-019.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3436,
+      "sha256": "2af748aad29445c7e5028993578e7d2a355076b8c4bab5f0982c3ad3b13e70ed"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-020.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1321,
+      "sha256": "4836da1b14fe7ffd7024f8666550b07f988f8611307814f394c812661157623a"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-020.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2084,
+      "sha256": "fee275ca1cf3cfdc8c01d8e5509d72ed0a7b39ce03cc57a5bd3d1c6cbeced9f6"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-021.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 932,
+      "sha256": "489c3b74620bdb4fda9cf0d629fbe712e3a5cccc1326508f3aad1fd513ebdfba"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-021.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3042,
+      "sha256": "3738e723a0871ff590bdba67a3b3d6b7cb5135d262206e2ec10e48edc7f1f4a3"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-022.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 719,
+      "sha256": "4bb534bf94b91ae3e63c32a5c228a6d196dbc2f9d649c5dc097fc6d8dbe1da83"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-022.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1351,
+      "sha256": "a090f1974fc5b607074d1fe736612c3205bef82b6bf1768ae35910d983cbdb53"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-023.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1495,
+      "sha256": "bc9995a811b79168b238507a51cdf365cdfdb9e8a2aa4958dc7346a869716215"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-023.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 4693,
+      "sha256": "3888bd8113b8adde05dbad5dd7061292e9abe1a63d54019028bd79ad27904354"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-024.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1337,
+      "sha256": "a914fce4e80151d8ca5a8cc2de34fc48b307fb60828c8df5d37e3755df3bd1c1"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-024.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2484,
+      "sha256": "3bb09952d3bd65874d8612f7531728ee6c4dbd9592b8590efe552f9dee232fa5"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-025.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 613,
+      "sha256": "2ef61a3f9be1793a217fe12ab57ff10244ca94e04f4f2c0981bab2ebf1a9e665"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-025.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1391,
+      "sha256": "2e805dac55f447a00accceb66e9b1d5a7484f34ae674a8bf7d199e98be0b9a7b"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-026.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1009,
+      "sha256": "990f504174ae75ca811933f4f91c36920c2b91a1431bef69f1ea7ee7d6ba2e69"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-026.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3398,
+      "sha256": "8824e0cdf8576001c75855f239658c18b495ba46c4693401d090bbfee55c3c1d"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-027.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1491,
+      "sha256": "e395982f3468437f3d15e2b51880786b0383c7bfb7ab06c20719b1e8ff1d7d8a"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-027.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2497,
+      "sha256": "d65220b9ee5878a22170a1ab495352d9f2f3a9d00226b2e8b84503c4c2bb2ff0"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-028.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1220,
+      "sha256": "573ff4c3e5ce1edda51f6b591b46082bc11a32bc6c626cb6d2652b74feb8f9ae"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-028.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1801,
+      "sha256": "eee2e249e2b5e948e02882bcaac0ede79803b16d4a96abac76124bc6d9286582"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-029.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1190,
+      "sha256": "7bbc0b882ae0b12d73c9645c499cae96ae8cac7387cd0d88475bc2c024ed70ea"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-029.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1466,
+      "sha256": "60e635fc71c5adae5830b5d13f8f711ea824fdef14121e7741dbdffeafc895b8"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-030.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1489,
+      "sha256": "5521b89ddc6a7c5f090cffa6db05b26be08e80e71e1cec765f10775c123544e7"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-030.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1520,
+      "sha256": "342018beefad6ad1e34e452dffb2a5de6608ca2457e520eded44d62445e6718f"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-031.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1360,
+      "sha256": "eef8ed758131b39f0f09ed1780983671905b3912855fa62dd0b16ffd3788c0ed"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-031.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1489,
+      "sha256": "3439fc73fc6d46f4e51d7828a4c9e5502305486eecf6651246fb7b88be9e8610"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-032.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1726,
+      "sha256": "40a22ff6e90c3d580440d5edd129555aec780b519a462665aad843e5ed5a4385"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-032.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1612,
+      "sha256": "8fba1dc255b2c655457d6f5b87e429f2df63662603f320f6d53e4109b8390c5c"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-033.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1159,
+      "sha256": "4c9bdf6292dc9dcf0fd0670efa682e40f095013ae8308c22310d020cf5fbe084"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-033.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 1390,
+      "sha256": "5be70ef0d5dd842a4ecffcd3fb50564a60dc6d8b8df1e6b77dcfa8fc181172f9"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/CHECKPOINTS.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 8099,
+      "sha256": "8bab150b13906845d11979cbcc47bf809452ff5b34e92ae0d43e6216babdb874"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/COMMON.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 9096,
+      "sha256": "3b62234d7cd03444de25fc629c0f95cd5de114ccfb44ec76079538263e830d44"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/DOCUMENT-QC.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3408,
+      "sha256": "1f1b9fdbc8743b421572bb14c6188b79ae42cbecc6b95e55ae1ed0978f8647f9"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/INTERRUPTIONS.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 11272,
+      "sha256": "1773ea901ab2aee678112d7c5098c8908560b5ecb4a89c5a8fe009a9438058e9"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/MAIN-PREPARATION.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 5459,
+      "sha256": "7e4a78fdf4dd76b5570d09ff7b5cd36429be11337ec047387dffe1eef08afc26"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/TRACKING-FIDELITY.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 6845,
+      "sha256": "c8636c3697c41541b49a0d441a5c0d0a659f7607b432a6369ddbc3acc97429fb"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/capture.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 8719,
+      "sha256": "bedfe314bd439a401f70155151aa520aa2fff01204e7491d1c17f1dbe2a95bdc"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/catalog_tools.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 15450,
+      "sha256": "c09306a11683bd75f077949a321d6270bd457e9a52be47b8ce0bea7ed9576234"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/expected.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 12899,
+      "sha256": "5c7646105a1c28f061ee1cf84bc41ac399d0bc90e2963c00e5754a89ac1534f7"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/inputs.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 15940,
+      "sha256": "1caf7a7eb4738e2492dc7b6567dcda0957690e10281caf556926a40aa508af55"
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/release_capture.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 7710,
+      "sha256": "3c4786f689abddf2030176a9464234da803ceb45a2f985738206cfe15a5b78ef"
+    },
+    {
+      "path": "acceptance/textstats/cases/catalog.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 48823,
+      "sha256": "15b30aba9f2c6633b35c2dae97e4133e09b847cf5e12f1842992090e10ee1117"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-001.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 172,
+      "sha256": "af76e76cd125981b55f20b7e43628449dbd94b40d40b868e73039eb6eb35fd44"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-002.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 205,
+      "sha256": "d8cef6b02d5e55c2746f2df71fbda17b8f59fbc5b090be85d7d550e98a7c8021"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-003.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 277,
+      "sha256": "dd208ec900829d9fa1e33e0b50eaf90c642400693ded4560159e5fb2d843fbdd"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-004.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 177,
+      "sha256": "b3511fd0f3ddaf934e44c055069eeab8c90cdfe22e27b6d63c5cd656bf80c2f9"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-005.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 120,
+      "sha256": "2eb75398ec7c137a83f6e7f2b55ba732a9123794edff8c34b9e88a78f26556d9"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-006.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 161,
+      "sha256": "e6309a59930578cba89697176a946c9f2d83b2e85170c636fa2aba1512e10c8e"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-007.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 161,
+      "sha256": "c1ab0742bdc0508edcc88cdffc20560b29b3399926932cbed47007f4ffb6ddc2"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-008.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 174,
+      "sha256": "d4cf848ee90c1fba968a7c7b7852cd0dc095987c86e6bff3405e8341383a55ba"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-009.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 214,
+      "sha256": "84a69ca5075c02c33e916c5093bbf7f87786714bd0fc6fce016b5b0a7769b24c"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-010.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 251,
+      "sha256": "5939b0192d9eb46f4bf5bf0941036d3cd9aef75695ca96405d3e96f3d427565e"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-011.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 214,
+      "sha256": "b07d5e0bcd0737f8ff6405f52d5844331af11ad44b81fd5a04f1d1fe6a88716f"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-012.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 282,
+      "sha256": "2cad3ef8637eced8e6ebccf9b0af9de4193f225bb86ada2c44e505ce61cbbf86"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-013.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 210,
+      "sha256": "03fd908ba04d0098dfd789f12b3e76a157f163c3778d38504bea14b4fd8eaad5"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-014.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 213,
+      "sha256": "12699dfd6da3768fff16f285dfdd9ed0419c6b89f7f077a136a0dfed13df5d4c"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-015.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 183,
+      "sha256": "cbde935d4de2ab656de3c3bb39b6f29b70c7fb1dbc5ce77bac4f317018ef2683"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-016.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 142,
+      "sha256": "bc830b1033e69474eb412d4918bbafa4b2cc7294478e110d9c0007b3df843c46"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-017.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 139,
+      "sha256": "16e1b17d06abb11daf95294e8319d83a631709e95c850d5c761bca05f0356a20"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-018.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 126,
+      "sha256": "8d30528f1a54b01d809e0df9102741c916ca1e9aeef126f08f91d3fcbd90a28e"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-019.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 162,
+      "sha256": "5d8a0712594e71c83e936f9c0a355612a1c1bcad13274f773e8d564e6815d401"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-020.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 121,
+      "sha256": "63230758fc6a5c7ff7dc1d6717fcb032b25a2bbe6aba217deeb9bc8242991936"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-021.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 245,
+      "sha256": "5330f3222936c9b2a2830a47ca6e8e8f94e61c772db1cfcd870712d113b1e2a0"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-022.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 218,
+      "sha256": "4c718a9ff68c144cffd12dec81c2c09c1d8806179a964281a2c6d253f97e50aa"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-023.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 161,
+      "sha256": "2d4768b85913c91546b5fe8ef4327f32d378d0e1efea3f149148785323ac6382"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-024.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 145,
+      "sha256": "cf04b91e0dcf887d8ac570ea2926b1e594be9742e74f71e957b190f40778fc1b"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-025.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 132,
+      "sha256": "93946c82da28371458fba1ada13872129934792645ec082d67618041945f847d"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-026.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 217,
+      "sha256": "afd6279e6873460834f14fac15a741fe38c08425d44372eee90760e2318ba3f6"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-027.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 165,
+      "sha256": "c299a88ca2a9a9f42522386939cfe809819bed0c2899b7fa7bf49429208b04fb"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-028.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 43,
+      "sha256": "5c13041d48479aa15cf818403834aae3aaea2a8eed303639873b8e8eb54714bf"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-029.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 182,
+      "sha256": "d2929da2205912f444362f4930e27caa38039f1b316b062e1a09a2be479e1c2b"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-030.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 193,
+      "sha256": "92fc4e34f1d47f0b2dc693328a1dc3515121641390f4506fff5dc54325b7d050"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-031.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 249,
+      "sha256": "6ffd673a29b759c8d668f4ad707eb707c5257c26c0206576c6c877a32b5d556b"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-032.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 254,
+      "sha256": "e20ffc3109ca9749e406c22364e3f377985704e621b98423150480b7b7bd4931"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-033.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 252,
+      "sha256": "3043ed2a299d196aa37aca29f920fd092d1b9e6e3b703042ad8dfb1a1da856b1"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/continuation.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 319,
+      "sha256": "d89c0ce6040ae6757f747bf1696acdfa8e1bb3b68f56170bdabcb16f9a7e0bed"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/preparation.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 4033,
+      "sha256": "54074af951298328dc8eccd166747f7939fd69de4a9e325eeee9f7dd224c4080"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/repository-continuation.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 65,
+      "sha256": "45ea49ddc50f03ee9c02835a1acf67c2176a22d68f8543ef367253f53cb5d921"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/tracking-fidelity.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 261,
+      "sha256": "7ad14d626c77262d4ac903a4eb2deca68e1c3e7e993dfc7713c77f71b6a4e069"
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/uncontrolled-continuation.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 194,
+      "sha256": "d77cba7832502356e53ecb63412d7ef4cf6745b47cfc564ce91efeec047b3058"
+    },
+    {
+      "path": "acceptance/textstats/schemas/inputs.schema.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3671,
+      "sha256": "fed9061dba73e17a58f5b8664132b8e58de4e9aaf466870d51606c68ede01a6d"
+    },
+    {
+      "path": "acceptance/textstats/schemas/run-state.schema.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 9443,
+      "sha256": "dc311bda4977f8b2f6a6065895c95dd9027803e136cc59ea1634bd9661ee9d07"
+    },
+    {
+      "path": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 15458,
+      "sha256": "90e9c364d4304eacfcdcca384c23cb48b6c02484bd3c6ecf3a961bc2042ecff9"
+    },
+    {
+      "path": "acceptance/textstats/scripts/assess.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 167,
+      "sha256": "8937bf3feec620c76859277602f2bbb73aa9532831307f8e652a1987e1bea7f4"
+    },
+    {
+      "path": "acceptance/textstats/scripts/campaign.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 5613,
+      "sha256": "47fd15f83ab486f6ac1710f5406e3bed5f16b493ac80f32177deadfb02977a09"
+    },
+    {
+      "path": "acceptance/textstats/scripts/contract_probe.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 5686,
+      "sha256": "37125e5e497a3043da916c0f29c1786d82a946c241d58fe2e4a8a5a2071f7724"
+    },
+    {
+      "path": "acceptance/textstats/scripts/core.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 59165,
+      "sha256": "46dd502006e17f853849f5b72673a49c14776f71bef9f62a30543b7f7c23df4e"
+    },
+    {
+      "path": "acceptance/textstats/scripts/evidence_merge.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2567,
+      "sha256": "c20a6e7c8b6964af301bd1819f1de67d1b67bd5b76a08cde409bddf565f44960"
+    },
+    {
+      "path": "acceptance/textstats/scripts/fault_adapter.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3456,
+      "sha256": "75620593a8c1a7bc4bc316521b7f98aed7cbdafe318714ac4a68c84022528388"
+    },
+    {
+      "path": "acceptance/textstats/scripts/observe.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 169,
+      "sha256": "30638404f50d8395ed5a8be0b5c1fc25ea6ac2ab486695d4a4500ae5124e1f1b"
+    },
+    {
+      "path": "acceptance/textstats/scripts/preflight.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 173,
+      "sha256": "5f7ff7811b11559e4f4a58c59263d9e4d65c17be15e36af6ed2df05b300f3249"
+    },
+    {
+      "path": "acceptance/textstats/scripts/prepare.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 169,
+      "sha256": "eb224be7c0ef22b4fea393b31e6abe16b7d9d4b8a069e5f81fa6ae01c18d1d27"
+    },
+    {
+      "path": "acceptance/textstats/scripts/trial_control.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 9857,
+      "sha256": "46e8b9c0a54d7781c268e43ebe3a4f35d47d0b5e8b52eb0df7e5fbd3acb985ca"
+    },
+    {
+      "path": "acceptance/textstats/templates/inputs.example.json",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 239,
+      "sha256": "eec1fdf027d2f6d1d885d52ecc6017acfa339c4a3ed587d38d60aa42c2f40e38"
+    },
+    {
+      "path": "acceptance/textstats/tests/__init__.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 50,
+      "sha256": "dc190c6c86270325156bc6b5bfca3372e4b733966187b9ef06731c06cd19374d"
+    },
+    {
+      "path": "acceptance/textstats/tests/support.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2805,
+      "sha256": "faeda5656d61619e95464f1a5b7e3d5552d14e9d787a6a079cbcf492cf715bed"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_campaign.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3458,
+      "sha256": "2d5625012912bce85f173413e378b647732cafcc1acba9b6a5ea19a42d820647"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_catalog.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 19420,
+      "sha256": "9acfff2cdfae4c4005df0f87966cf028f71fd54468f39a1f869111a1898ada30"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_checkers.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 11311,
+      "sha256": "c83124a67d767568bad79cdc3461b33d87d06e58184ccdc0c64f8e1d90c3f8c5"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_contract_probe.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2830,
+      "sha256": "28afaf5cadd937a6c4b01c57dae26a09afe0ebdffb819550818aeef8f84073fc"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_evidence_merge.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2442,
+      "sha256": "bf605f53eca8ff144c5855aef8e0ced67fe129bfe6babfbff165f2b56a38b3da"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_fault_adapter.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 2369,
+      "sha256": "71dbbb1afd0f9365946969640fddd5461846bf6e3309f20ed95fbe8082e0aff3"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_local_assessment.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 3386,
+      "sha256": "4c7842a780156ac58a3a9092ce56b0addb4e48ade2581a52deff4ac8fca8fdca"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_nested_package.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 8784,
+      "sha256": "e1344e2718ae147876bfefa573530c48e2edf364a095b8d6c9de6b4e0b5c2658"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_package_docs.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 9075,
+      "sha256": "1a7b64e6725cd0b11058802ebf9ad2dd8eef8b1f85ce733171c946fee98b544e"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_preflight.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 14257,
+      "sha256": "0fd36925f5650ff50dbabb4300c0ad191d21084b5263cb0655742e19b3600f52"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_recovery.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 23409,
+      "sha256": "84e42ecb9b88a400330853be738cefd0fb16940b5db8226522f913e8fe6b1ec5"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_release_capture.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 11378,
+      "sha256": "3f5664a12d77394a1e072c7d2c2db0d7a1d5984d2ee546bde0d2e09e5fdd9f05"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_trial_control.py",
+      "unit": "U-005",
+      "planned_depth": "targeted/inventory",
+      "assessment": "Pending",
+      "bytes": 6241,
+      "sha256": "64199a604b29d117c8c591ea0488cb2cdce17394088ea235a01da48b7c93401d"
+    },
+    {
+      "path": "docs/demo/calculator/README.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 10443,
+      "sha256": "9828d88a108e8be970bdc63e61db79b11a5c05bea2f085d7c18048bff16b00ab"
+    },
+    {
+      "path": "docs/demo/tetris/README.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 26227,
+      "sha256": "e99fdcbe096224dc68ba2461db3be3e60bd7b847e8fdcc960caad6689d115374"
+    },
+    {
+      "path": "docs/demo/tetris/examples/PROJECT_phased-project.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 841,
+      "sha256": "ddaa9d68c88bd3107a13ce783c43ef886e42fe6bb6b210427d9b8d91e1cdd242"
+    },
+    {
+      "path": "docs/dev/CAPABILITY-MAP.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 31611,
+      "sha256": "6f8c707ef86f729fc8b33aed950ce25004fbf6588b20183f728abfa9f26c9777"
+    },
+    {
+      "path": "docs/dev/HANDOFF.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 3480,
+      "sha256": "101c5ad788ddbfa8bdda08f6cddc64f966424064fca8b94eef16d6a8f2c81011"
+    },
+    {
+      "path": "docs/dev/PLUGIN-CONTRACT.md",
+      "unit": "U-001",
+      "planned_depth": "content",
+      "assessment": "Pending",
+      "bytes": 34639,
+      "sha256": "58040af7aaad68c5f0f81ae4ae61d18af9a7e716a6c0f5608923a591e6a098ed"
+    }
+  ],
+  "excluded": [
+    "closed review/feature/steering contents",
+    "AI logs",
+    "ignored/local runtime and release preparations",
+    "credentials",
+    "prior run evidence",
+    "external research/live acceptance"
+  ]
+}
