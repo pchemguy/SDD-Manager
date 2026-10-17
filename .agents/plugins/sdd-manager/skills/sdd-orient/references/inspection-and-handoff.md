@@ -32,6 +32,7 @@ For branch workflows, identify the working and target branches, starting checkpo
 Look for present roots and referenced children; absence is a finding, not automatically a defect:
 
 ```text
+docs/dev/HANDOFF.md
 docs/dev/PROJECT.md
 docs/dev/ARCHITECTURE.md   docs/dev/architecture/
 docs/dev/DECOMPOSITION.md  docs/dev/decomposition/
@@ -51,6 +52,14 @@ Inspect the active reviews/features package navigation for branch identity and s
 Also identify project-specific equivalents and other execution evidence when present. Do not modify or restore such state during orientation. Feature documents describe an intended delta; FEATURE-TASKS holds only scoped feature work and is not the complete task baseline. Inspect it with TASKS when establishing active work and progress.
 
 Inspect relevant source, tests, manifests, and declared commands for building, focused checks, integration checks, documentation checks, and packaging. Note unavailable tools without installing dependencies or executing commands with side effects. Use project instructions over guessed defaults.
+
+## Continuity checkpoint
+
+For continuation, read `docs/dev/HANDOFF.md` as a checkpoint under the coordinator's [continuity procedure](../../sdd-manage/references/continuity.md). Locate its containing commit and compare relevant later commits/diffs, current task/campaign evidence, grants/revocations and pending effects. An older checkpoint followed by valid task commits is expected; do not require a per-commit update or rewrite it during orientation. Report missing or contradictory evidence separately from normal checkpoint age.
+
+Inspect available local/remote workflow refs, their recorded creation parents and source-tip containment relative to those parents. Include unfinished preparation/phase branches. A child integrated into its unfinished parent is not independently pending solely because main lacks it. Read only relevant current provenance, not unrelated closed campaign contents. Report freshness/unknown remote state, suspended parent/child relationships and pending integration/publication. Do not fetch, choose the continuation branch or switch; the coordinator obtains the human's branch selection unless already established.
+
+Carry the checkpoint identity, later evidence, exact recovered scope/stop and consequential unknowns in the orientation handoff. Preserve normal task audit/publication prerequisites; a saved next action does not override newer decisions or authorize replaying a hosted effect.
 
 ## Task state at startup
 
@@ -77,6 +86,7 @@ Target: project root; Git root; contemplated paths or workflow
 Git: worktree eligibility; branch/detached/unborn; HEAD; relevant status and ownership; working/target branches, checkpoint, and merge/publication state
 Instructions: applicable sources, scope, and conflicts
 Documents: main roots and relevant children; active feature/change documents
+Continuity: HANDOFF checkpoint/commit; later task/decision evidence; candidate branches and recorded parents; parent containment, remote uncertainty and recovered scope/stop
 Execution evidence: owning TASKS or FEATURE-TASKS; last committed task and commit; current task and status; pending changes; existing verification evidence; remaining work or ambiguity
 Tooling: relevant declared commands and environment limitations
 Readiness: read-only possible; repository mutation eligible or blocked; reasons
