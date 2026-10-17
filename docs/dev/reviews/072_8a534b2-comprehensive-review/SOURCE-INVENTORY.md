@@ -8,7 +8,7 @@ Baseline: `8a534b21f6318f0b76b11a19783f7d40ca94d698`. The [per-file inventory](S
 | U-002 | 37 | Assessed; full/targeted/structural depth per file |
 | U-003 | 50 | Assessed; full/targeted/structural depth per file |
 | U-004 | 22 | Assessed; full/targeted/structural depth per file |
-| U-005 | 158 | Pending |
+| U-005 | 158 | Assessed; full/targeted/structural depth per file |
 
 All 139 packaged files are included. Markdown content is assessed across the package, with full readings of critical procedures and targeted composition/interface readings of long projections and examples; icons/presentation/manifest receive structural checks. Supporting source includes seven .github files and the acceptance component; its code/contract review depth is recorded per file as performed, while suites provide separate execution evidence. No previous closed campaign content is loaded.
 

@@ -1,0 +1,1 @@
+PASS: 207 current Markdown files, 904 local links/anchors and heading separation.
