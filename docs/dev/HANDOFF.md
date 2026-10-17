@@ -1,13 +1,13 @@
 # SDD Manager handoff
 
-Checkpoint: campaign `072_8a534b2`, comprehensive review entry. This snapshot describes entry context; recover subsequent unit progress and decisions from the current report and Git. Its containing commit identifies the checkpoint.
+Checkpoint: campaign `072_8a534b2`, comprehensive review complete, campaign open and unmerged. This snapshot describes the review report boundary; recover later decisions and work from current records/Git. Its containing commit identifies the checkpoint.
 
-Outcome: campaign 071's main merge/publication was verified through actual refs. The human then requested a new comprehensive review; no continuation of 071 or source repair is selected.
+Outcome: U-001–U-005 assessed; four proposed findings (three Medium, one Low). 138 support and 34 publisher tests pass; package/schema/catalog/current-link checks complete. A native fixture reproduces the release-subject checker false negative. No plugin, acceptance or publisher source was repaired; no live acceptance ran.
 
 ## Workflow and sources
 
-- Workflow/stage/owner: revision core workflow, comprehensive review stage; `sdd-manage` coordinates U-001–U-005.
-- Governing scope/progress: [review plan](reviews/072_8a534b2-comprehensive-review/REVIEW-PLAN.md), [review report](reviews/072_8a534b2-comprehensive-review/REVIEW-REPORT.md) and [coverage inventory](reviews/072_8a534b2-comprehensive-review/SOURCE-INVENTORY.md). Incremental unit results belong there, not in per-commit handoff updates.
+- Workflow/stage/owner: revision core workflow, assessment complete; `sdd-manage` returns the report/proposed correction queue.
+- Governing scope/progress: [review plan](reviews/072_8a534b2-comprehensive-review/REVIEW-PLAN.md), [review report](reviews/072_8a534b2-comprehensive-review/REVIEW-REPORT.md) and [coverage inventory](reviews/072_8a534b2-comprehensive-review/SOURCE-INVENTORY.md). Unit results, exact coverage depth, finding IDs and reproducible checks are retained there.
 - Source instructions/checks: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md) and [plugin contract](PLUGIN-CONTRACT.md). Use the source package at `.agents/plugins/sdd-manager/`; instruction reload remains user-controlled.
 
 ## Scope and human decisions
@@ -26,5 +26,5 @@ Outcome: campaign 071's main merge/publication was verified through actual refs.
 
 ## Pending work and next action
 
-- Pending: opening publication requires readback; U-001–U-005 review and new verification results remain. The preceding campaign's checks are not this review's results.
-- Next eligible action: verify this opening's publication, then assess units in order, publishing each report checkpoint. On recovery, inspect actual report/Git progress before repeating a completed unit. Do not load closed reports as a work queue or repair reviewed source.
+- Pending: the containing final report/HANDOFF commit requires ordinary publication/readback; reconcile it from actual remote refs before retrying. All five unit checkpoints were already published and verified. Findings R-001–R-004 await an actual revision decision; none is accepted or implemented.
+- Next eligible action: finish any pending publication of this retained checkpoint, then return the completed review and stop. Do not start remediation planning/execution, merge or close the campaign without a subsequent request. Preserve R-002/R-003 policy decisions as unresolved; do not load closed reports as a work queue.

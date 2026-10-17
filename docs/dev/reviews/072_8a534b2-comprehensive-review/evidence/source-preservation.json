@@ -1,0 +1,19 @@
+{
+  "reviewed_baseline": "8a534b21f6318f0b76b11a19783f7d40ca94d698",
+  "baseline_inventory_files": 317,
+  "package_files": 139,
+  "inventory_bytes_and_sha256_match_baseline": true,
+  "reviewed_source_unchanged": true,
+  "closed_record_contents_unchanged": true,
+  "performed_depth": {
+    "structural": 40,
+    "targeted-content/interface": 23,
+    "full-content": 151,
+    "full-code": 13,
+    "targeted-code/interface": 17,
+    "full-configuration": 1,
+    "structural/targeted-contract": 39,
+    "structural/targeted-interface": 33
+  },
+  "limits": "Identity/content preservation check only; not behavioral acceptance or complete line-by-line audit."
+}

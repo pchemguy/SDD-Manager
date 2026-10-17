@@ -15,3 +15,5 @@ All 139 packaged files are included. Markdown content is assessed across the pac
 The review is comprehensive in component coverage and consequential handoffs, with risk-based depth. Inventory coverage is not a claim that every supporting paragraph, test body or rendered asset received an independent line-by-line/visual audit. Per-file performed depth controls that interpretation.
 
 U-004 adds source-root LICENSE and retained RELEASE-NOTES.md to the baseline inventory (317 total paths). The package count remains 139. Root notice identities and retained version context are structural/targeted observations, not an instruction to maintain license contents or regenerate released notes.
+
+Final depth counts: 151 full-content, 13 full-code, one full configuration, 23 targeted-content/interface, 17 targeted-code/interface, 33 structural/targeted interfaces, 39 structural/targeted contracts and 40 structural-only paths. These categories describe this assessment, not behavioral passes. All inventory digests/sizes were checked against the exact baseline; see [source preservation](evidence/source-preservation.json).

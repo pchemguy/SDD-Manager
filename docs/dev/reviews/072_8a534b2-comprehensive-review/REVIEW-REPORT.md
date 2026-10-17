@@ -5,8 +5,21 @@
 - Campaign: `072_8a534b2`; [review plan](REVIEW-PLAN.md), [coverage inventory](SOURCE-INVENTORY.md).
 - Exact reviewed baseline: `8a534b21f6318f0b76b11a19783f7d40ca94d698`.
 - Working branch/parent: `revision/072_8a534b2-comprehensive-review` / `main`.
-- State: U-001–U-005 assessed; consolidation pending. Review remains open; no remediation is selected.
+- State: review complete; campaign open and unmerged for the human’s revision decision. Review remains open; no remediation is selected.
 - Source/code inspection and bounded local verification only. No live agent/client/provider trial or source repair is selected. Package/acceptance/publisher bytes remain pinned to the baseline.
+
+## Review result
+
+Four proposed findings: **three Medium and one Low**. R-004 is a reproduced checker false negative; R-001/R-002 are instruction/policy gaps established by source tracing; R-003 is a nonblocking version-policy clarification. No Critical/High finding was established within this review's scope and depth. No finding is repaired or accepted by this assessment.
+
+| ID | Priority / type | Needed revision |
+| --- | --- | --- |
+| R-001 | Medium — instruction ambiguity | Separate incoming baseline synchronization from final integration into the creation parent. |
+| R-002 | Medium — bootstrap policy gap | Resolve when the generated AGENTS tracking default takes effect, before its dependent writes. |
+| R-004 | Medium — checker defect | Accept the permitted release subject contract instead of requiring a hidden exact tag spelling. |
+| R-003 | Low — compatibility policy | Document the publisher version subset or support the intended build-metadata form consistently. |
+
+All 139 package files, 15 skill entries and 78 references are accounted for, alongside 178 source/support paths: 317 baseline paths total. Per-file performed depth distinguishes full-content/code readings, targeted interfaces and structural checks; no full line-by-line audit of every supporting guide/test is claimed. The review does not establish production release readiness or fresh-consumer/client acceptance.
 
 ## Coverage
 
@@ -96,6 +109,48 @@ Current helpers use committed/explicit dirty package pinning, mode-sensitive has
 
 The optional repository-only receiver route is documented separately from the normal producer/current-state renderer; default assisted-core results must not be graded as receiver-only portability. This review establishes no failure of that documented receiver protocol. Required facilities and actual selected consumer trials remain separate from component validation.
 
+## Proposed correction queue
+
+This is a review handoff, not an accepted revision plan.
+
+| Order | Finding / owner | Bounded work and recheck |
+| --- | --- | --- |
+| 1 | R-004 — TextStats release capture/contracts/tests | Remove the hidden subject overconstraint; add native positive version/tag subject contrasts and retain negative body/source/publication sensitivity. Independent of plugin changes. |
+| 2 | R-001 — coordinator Git/branch/revision-mode procedures | Distinguish inward synchronization from workflow completion and reconcile HANDOFF by direction. Trace default → active phase/revision, child → creation parent and reopened catch-up/return. |
+| 3 | R-002 — template/main-preparation/tracking/README owners | First choose the project-template default's effective point. Align prospective policy selection and pre-write projection without imposing a plugin-wide default or overriding existing decisions; extend no-choice and explicit-decline contrasts. |
+| 4 | R-003 — repository publisher/handoff/tests | Choose/document version syntax or support selected build metadata while preserving exact version/tag equality. Current 0.15.0 needs no version change. |
+
+Reassess coupled projections and acceptance contracts after the selected corrections, run relevant local suites, and retain behavioral evidence as a separate scope. All findings remain Open/proposed; none has an inferred human acceptance, deferral or waiver. Live acceptance remains outside this campaign's selected review.
+
 ## Verification and limits
 
-Current checks: 138 support tests passed in 49.647s on Python 3.12.14; [raw output](evidence/support-suite.log). Catalog validation: exit 0, 33 supported cases and 48 declared variants, static assets/graph/DSL only. Across current inventoried Markdown, the bounded checker passed 207 files/904 local links and heading separation ([output](evidence/current-markdown-check.txt)); it does not prove full Markdown rendering/list attachment or external-link availability. Also: 34 publisher tests passed in 2.755s on Python 3.12.14 with jsonschema 4.26.0. An initial run without the declared dependency ended with 17 subtest errors (`ModuleNotFoundError: jsonschema`); the configured rerun passed without source changes. Raw final output is retained in [publisher-suite.log](evidence/publisher-suite.log). Exact baseline build: 139 files, 367,679 bytes; SHA-256 `828cc6b323f86cf70d3e9a8220ada58417826ec1326fcc88cf33935d2eeb3970`, archive source comment and every member verified. [Author validation](evidence/author-validator.txt): exit 0, zero errors, 48 plugin-contained cross-skill warnings; those warnings qualify client handoff support, not package-root escapes. Also: baseline/worktree identity; 139-file package and 15-entry/78-module routing inventory; package Markdown local links/heading separation (102 files, 613 links). The first link-check shell invocation split a filename containing spaces and did not run successfully; rerunning with a structured Python argument list passed. No reviewed source was changed. Prior campaign checks are not results of this campaign. Coverage depths and remaining checks are retained with the unit reports. The final output is a review and proposed correction queue, with the campaign open for the human's revision decision.
+Tested source: baseline `8a534b21f6318f0b76b11a19783f7d40ca94d698`; reviewed package/acceptance/publisher source stayed unchanged on the campaign branch. Python 3.12.14, jsonschema 4.26.0. This runtime result does not demonstrate Python 3.11 or hosted CI.
+
+| Check | Actual outcome / evidence | Limit |
+| --- | --- | --- |
+| TextStats support suite | 138 passed, 49.647s; [raw log](evidence/support-suite.log) | Harness/component fixtures, not independent consumers. |
+| Publisher suite | 34 passed, 2.755s; [raw log](evidence/publisher-suite.log) | Native Git/ZIP and controlled provider contracts; no GitHub call. |
+| Catalog | Exit 0; 33 supported cases, 48 declared variants | Asset/graph/DSL validity, not runtime grades. |
+| Exact baseline package build | 139 files, 367,679 bytes; every member and source comment verified; [result/probe](evidence/publisher-probes.json) | No installation, publication or client loading. |
+| Offline author validator | Exit 0; 0 errors, 48 cross-skill warnings; [output](evidence/author-validator.txt) | Plugin-contained sibling links qualify client handoff support, not package-root escapes. Core schema does not assess OpenAI presentation semantics. |
+| Current Markdown | 207 files, 904 local links/anchors and heading separation passed; [output](evidence/current-markdown-check.txt) | Bounded parser; no complete rendering/list-attachment or external-link check. Earlier package-only check: 102 files/613 links. |
+| Routing/assets | 15 entries link all 78 references; 19 SVG/PNG structures/headers checked | Reachability and structure do not prove selective loading, appearance or behavior. |
+| Release subject counterexample | Permitted version subject falsely rejected; tag subject control passes; [native contrast](evidence/release-subject-probe.json) | Demonstrates checker behavior, not consumer or provider execution. |
+| Source/preservation inventory | 317 baseline sizes/digests verified; package/acceptance/publisher and prior closed contents unchanged; [check](evidence/source-preservation.json) | Performed review depth remains explicit in the inventory. |
+
+Exact package SHA-256: `828cc6b323f86cf70d3e9a8220ada58417826ec1326fcc88cf33935d2eeb3970`. The archive was built in a disposable clone at the baseline; its source-commit comment accounts for a different archive hash from builds at other commits with the same package tree. No new release was prepared or published.
+
+Two local invocation failures were resolved without changing reviewed source: the first link-check shell invocation split a filename with spaces; a structured argument list passed. The first publisher run lacked the declared jsonschema dependency and ended with 17 subtest errors; loading the declared 4.26.0 dependency produced the passing run above. Owned generated bytecode was removed. Prior campaign test results are not this campaign's evidence.
+
+Reproduce the two diagnostic contrasts from repository root with the declared publisher dependency available:
+
+```text
+python docs/dev/reviews/072_8a534b2-comprehensive-review/evidence/publisher-probes.py
+python docs/dev/reviews/072_8a534b2-comprehensive-review/evidence/release-subject-probe.py
+```
+
+The normal suites remain the commands in acceptance/AGENTS.md. Catalog command: `python acceptance/textstats/cases/assessor/catalog_tools.py validate`. Existing tests pass despite the newly reproduced subject counterexample; they do not clear R-004. Renderer/current-state producer tooling was not used as a repository-only receiver handoff.
+
+Unit checkpoints were committed, pushed and exact-tip read back before advancing: U-001 `ffc381bc1e70f2cc73968229cfeba3fd4c33c4d6`; U-002 `4a42f67824d2013bde39caefe12b6bb341a67776`; U-003 `3c7742e9e1dd8463ea865615952fa9e5dc2f543e`; U-004 `2a8f89ef4e239db74c4adb96b2af4eff5cbe08c2`; U-005 `2c1516205481db9dcf53130085fe597acb9f7cf9`. This consolidated checkpoint's containing commit/publication are discoverable through Git; no self-SHA is embedded.
+
+Unrun: live agent/client/provider acceptance, actual Actions execution/remote workflow validation, external-source fact-checking, full diagram/UI rendering and independent compatibility testing on other runtimes/platforms. Closed reports were not loaded as a work queue or assessed for current compatibility. The completed output is the published review and proposed queue; campaign remains open/unmerged, with no source repairs, remediation execution or release selected.
