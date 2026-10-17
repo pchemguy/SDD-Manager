@@ -345,49 +345,61 @@
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3982,
-      "sha256": "90a407f7e9c48ccdc4eb0f687dcca567f1a2323c692743115230a2299720cdf5"
+      "sha256": "90a407f7e9c48ccdc4eb0f687dcca567f1a2323c692743115230a2299720cdf5",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/agents/openai.yaml",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 471,
-      "sha256": "9715602c3bdcd14d41e6e99e24edb32389499e0ec96b0aad5cdf4b30b187de15"
+      "sha256": "9715602c3bdcd14d41e6e99e24edb32389499e0ec96b0aad5cdf4b30b187de15",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/assets/icon.svg",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 587,
-      "sha256": "69e272ee97e9957387f8ca8b51bec3d3d176c33e6bf6b20d2bff5b3536f507e2"
+      "sha256": "69e272ee97e9957387f8ca8b51bec3d3d176c33e6bf6b20d2bff5b3536f507e2",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/in-code-documentation.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2857,
-      "sha256": "40c179cf40c73ad36d76f722950eeaf33ab1c37993edd370f6fa16305d2a5465"
+      "sha256": "40c179cf40c73ad36d76f722950eeaf33ab1c37993edd370f6fa16305d2a5465",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/review-and-findings.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2719,
-      "sha256": "61bda144ac45af632307b12bb3cf9652727b83c3b3ffc57558188d0d2a6837b1"
+      "sha256": "61bda144ac45af632307b12bb3cf9652727b83c3b3ffc57558188d0d2a6837b1",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/standalone-documentation.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3329,
-      "sha256": "b2ced68b8f869efc47206261795e225b42455b513c7a2be4f091cd891c3ef951"
+      "sha256": "b2ced68b8f869efc47206261795e225b42455b513c7a2be4f091cd891c3ef951",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md",
@@ -497,105 +509,131 @@
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/SKILL.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 9464,
-      "sha256": "ba50e20c2096814ccaa5dc5c0ea7b97068fbcf8cecd5f474c0cbfb0687208fdc"
+      "sha256": "ba50e20c2096814ccaa5dc5c0ea7b97068fbcf8cecd5f474c0cbfb0687208fdc",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/agents/openai.yaml",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 662,
-      "sha256": "fbaa03bfe7cc660089090feeac5914b31c667901fa49e4c1fb95f991f99ddb15"
+      "sha256": "fbaa03bfe7cc660089090feeac5914b31c667901fa49e4c1fb95f991f99ddb15",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/assets/icon.svg",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 588,
-      "sha256": "4fd314a8f182561a13fbf6fe062e4aee5fd0e0330dccd9943ec14aa5dab34c48"
+      "sha256": "4fd314a8f182561a13fbf6fe062e4aee5fd0e0330dccd9943ec14aa5dab34c48",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/browser-capabilities.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2594,
-      "sha256": "fd64b9332dac9d5a89249968996bdcfdcd3e1211f06220af8247cd7a25309642"
+      "sha256": "fd64b9332dac9d5a89249968996bdcfdcd3e1211f06220af8247cd7a25309642",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 20280,
-      "sha256": "f401d0c01f836127182d20000535d252f2abcee3ebba0815ca76edc160b5ab30"
+      "sha256": "f401d0c01f836127182d20000535d252f2abcee3ebba0815ca76edc160b5ab30",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/environment-recovery.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2247,
-      "sha256": "0254c7e5dc5477a012d6eca8c049d222f42c712b5ef1f03abc8b4270f34f9523"
+      "sha256": "0254c7e5dc5477a012d6eca8c049d222f42c712b5ef1f03abc8b4270f34f9523",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/range-selection.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3971,
-      "sha256": "9b21f74549bf82f30a7b2108e3e3e3d7b3ac090b5a2b85907e0cf47c4965bbf5"
+      "sha256": "9b21f74549bf82f30a7b2108e3e3e3d7b3ac090b5a2b85907e0cf47c4965bbf5",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/startup-and-continuation.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 12189,
-      "sha256": "0fbfdf05bb93d3dbaf506ab461285063732f62f012a5da3b3b957ed2c654c68c"
+      "sha256": "0fbfdf05bb93d3dbaf506ab461285063732f62f012a5da3b3b957ed2c654c68c",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/task-execution.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3543,
-      "sha256": "904f3f51f5fbaa59ba1782d7748b61b79c7e8ca4584c2203c5aca30f46bbcdc8"
+      "sha256": "904f3f51f5fbaa59ba1782d7748b61b79c7e8ca4584c2203c5aca30f46bbcdc8",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/SKILL.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4209,
-      "sha256": "baf246c581fb81e48099905a8a0e4fc1ec917257e57a73736d99fde772a89d58"
+      "sha256": "baf246c581fb81e48099905a8a0e4fc1ec917257e57a73736d99fde772a89d58",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/agents/openai.yaml",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 459,
-      "sha256": "48018ed1de138598f6be61e916b701638234e2d0e570ed42d39760e0f4de8392"
+      "sha256": "48018ed1de138598f6be61e916b701638234e2d0e570ed42d39760e0f4de8392",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/assets/icon.svg",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 591,
-      "sha256": "9b68ea07e6b5916efa646ad8f639cb1872523bb40630043a317cc862440dc006"
+      "sha256": "9b68ea07e6b5916efa646ad8f639cb1872523bb40630043a317cc862440dc006",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/references/feature-incorporation.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 14742,
-      "sha256": "b06a7268c4b43fe8f994625c21aa129ffb57a7568d7e69452aaa9fd7eba038ca"
+      "sha256": "b06a7268c4b43fe8f994625c21aa129ffb57a7568d7e69452aaa9fd7eba038ca",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md",
@@ -901,73 +939,91 @@
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/SKILL.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3946,
-      "sha256": "2a09d48def1f845b9b6988762aaa99b62e4f5c39213033c2276f8bb0aa42e8e2"
+      "sha256": "2a09d48def1f845b9b6988762aaa99b62e4f5c39213033c2276f8bb0aa42e8e2",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/agents/openai.yaml",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 454,
-      "sha256": "bfe1a84a61bf154a5cb846d41b10d73e88a596044d21e6d1f151d1dc78ae221c"
+      "sha256": "bfe1a84a61bf154a5cb846d41b10d73e88a596044d21e6d1f151d1dc78ae221c",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/assets/icon.svg",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 580,
-      "sha256": "aca30e96cbe5d44d759da47cc1db33c87dce1d04bf77142feac8475eecbab074"
+      "sha256": "aca30e96cbe5d44d759da47cc1db33c87dce1d04bf77142feac8475eecbab074",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/campaign-artifacts.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 12730,
-      "sha256": "e7b0af517c481306cc7a397ae404aa98656d1f2d25a9c6c5489e2e18c4b1f124"
+      "sha256": "e7b0af517c481306cc7a397ae404aa98656d1f2d25a9c6c5489e2e18c4b1f124",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/change-kinds.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4573,
-      "sha256": "7cc7d31e5926fab5c4778b385f282d8f536713536c1038cc63409a1734da886b"
+      "sha256": "7cc7d31e5926fab5c4778b385f282d8f536713536c1038cc63409a1734da886b",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/completion-reports.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 7263,
-      "sha256": "c9c99455d289eda11e513b896c49471f039c02eee1aa00c3aa483ac69550bb96"
+      "sha256": "c9c99455d289eda11e513b896c49471f039c02eee1aa00c3aa483ac69550bb96",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/document-qc-reports.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4724,
-      "sha256": "7dcbf8e39c79b9c5032261b8976054f15e12a302e748d22456fcfdb8f2dcc8f7"
+      "sha256": "7dcbf8e39c79b9c5032261b8976054f15e12a302e748d22456fcfdb8f2dcc8f7",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 15406,
-      "sha256": "e102f6157720a323080a16c2d086e7eac676ac36a4821b63a9f5c302a6e24270"
+      "sha256": "e102f6157720a323080a16c2d086e7eac676ac36a4821b63a9f5c302a6e24270",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/releases.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 7869,
-      "sha256": "8cb9f5d75a27a247d21a377fca881c4fa000d4622437a36ae7c0da6bdaf34b85"
+      "sha256": "8cb9f5d75a27a247d21a377fca881c4fa000d4622437a36ae7c0da6bdaf34b85",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md",
@@ -1033,49 +1089,61 @@
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/SKILL.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 5603,
-      "sha256": "33c91d50a828549508ad6e7955625cb8af1574651d19ce36db70013b2601f4a2"
+      "sha256": "33c91d50a828549508ad6e7955625cb8af1574651d19ce36db70013b2601f4a2",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/agents/openai.yaml",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 592,
-      "sha256": "421038f108a077de64e16c95011ed4f6bff87d47e16c53894bbcc0dc581cc4ae"
+      "sha256": "421038f108a077de64e16c95011ed4f6bff87d47e16c53894bbcc0dc581cc4ae",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/assets/icon.svg",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 551,
-      "sha256": "b9d353ce223194b53f52a4853ed1cc9468718ed0ee57074b5988a309f54d14d1"
+      "sha256": "b9d353ce223194b53f52a4853ed1cc9468718ed0ee57074b5988a309f54d14d1",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/amendment-execution.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3900,
-      "sha256": "c185174fd72625f51a151bb6085140e9599f848e26f461d1131c87f2865d0cac"
+      "sha256": "c185174fd72625f51a151bb6085140e9599f848e26f461d1131c87f2865d0cac",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/objective-and-impact.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3264,
-      "sha256": "7f2bd87c0b689221ffb24b5ae7915ee8d00134a9bce5433f05d5f8472f61f58d"
+      "sha256": "7f2bd87c0b689221ffb24b5ae7915ee8d00134a9bce5433f05d5f8472f61f58d",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/verification-and-stop.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 7390,
-      "sha256": "47e09faa69535e9e4c229a820b919a22bad0663dd67e89d2ec3cd398620edb55"
+      "sha256": "47e09faa69535e9e4c229a820b919a22bad0663dd67e89d2ec3cd398620edb55",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md",
@@ -1141,129 +1209,161 @@
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/LICENSE",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 1070,
-      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/SKILL.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3588,
-      "sha256": "49efacb9ed6ae3b59069e986672dc5350cc0b147c3ad960b3ffc04f105c54cda"
+      "sha256": "49efacb9ed6ae3b59069e986672dc5350cc0b147c3ad960b3ffc04f105c54cda",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/agents/openai.yaml",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 480,
-      "sha256": "f0049fe541cbffe331d4ccb9e903ed49bb96f1011cefecd1ced49fbd1bd19da4"
+      "sha256": "f0049fe541cbffe331d4ccb9e903ed49bb96f1011cefecd1ced49fbd1bd19da4",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/assets/icon.svg",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 574,
-      "sha256": "37e86ed29c77f13846f9c315627c5e139d1348d7eed26eef2ff94354c334239f"
+      "sha256": "37e86ed29c77f13846f9c315627c5e139d1348d7eed26eef2ff94354c334239f",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/test-first-cycle.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3693,
-      "sha256": "e8d797ba50e555d53500516e85f8b624f7ed11f5a7534e39220f2a74141e3d96"
+      "sha256": "e8d797ba50e555d53500516e85f8b624f7ed11f5a7534e39220f2a74141e3d96",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/testing-strategy.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2602,
-      "sha256": "fd834570d97f993fe270627fcedc308f0a97642ff000b8970a0b1c1bf33cab5f"
+      "sha256": "fd834570d97f993fe270627fcedc308f0a97642ff000b8970a0b1c1bf33cab5f",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/upstream-provenance.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 1278,
-      "sha256": "668d85251c25027ac1494c9bb89367fa3c1885c23424e3987d02f7fd0b02ca33"
+      "sha256": "668d85251c25027ac1494c9bb89367fa3c1885c23424e3987d02f7fd0b02ca33",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/writing-good-tests.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4076,
-      "sha256": "c5a555443dc5cf3b78312f9939bfbe53be7b04978f4f14f3350820ed5bc5b0d8"
+      "sha256": "c5a555443dc5cf3b78312f9939bfbe53be7b04978f4f14f3350820ed5bc5b0d8",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 5336,
-      "sha256": "a23d8d5ad5c2322389f6c1c34a267ba2802e4bfb6a510befaae9ef856b7feaff"
+      "sha256": "a23d8d5ad5c2322389f6c1c34a267ba2802e4bfb6a510befaae9ef856b7feaff",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/agents/openai.yaml",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 544,
-      "sha256": "3176532ba151974e4f6186c589a9e8ba59247367629ace97788cf70e1bdfe40a"
+      "sha256": "3176532ba151974e4f6186c589a9e8ba59247367629ace97788cf70e1bdfe40a",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/assets/icon.svg",
       "unit": "U-003",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 563,
-      "sha256": "60c4fbc478c5c5569c7db40ee7d2b90c061fb8e0b7a2274ec8757cbcadc6c837"
+      "sha256": "60c4fbc478c5c5569c7db40ee7d2b90c061fb8e0b7a2274ec8757cbcadc6c837",
+      "performed_depth": "structural",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/boundary-review.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2497,
-      "sha256": "53babcce80c31cefb2396f490332cdb3e0ca4e4472fdf3ba4eec189aa2f9ffc0"
+      "sha256": "53babcce80c31cefb2396f490332cdb3e0ca4e4472fdf3ba4eec189aa2f9ffc0",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/check-selection.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4516,
-      "sha256": "87f9024dccf127c10b89944d83bb90d9cd9373e42ffd5c3967f47ff676cda10c"
+      "sha256": "87f9024dccf127c10b89944d83bb90d9cd9373e42ffd5c3967f47ff676cda10c",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/execution-and-evidence.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4797,
-      "sha256": "35bac91769a15ae00dc2620222f85bbadd9e1f8c478676544b8c682f7cb36672"
+      "sha256": "35bac91769a15ae00dc2620222f85bbadd9e1f8c478676544b8c682f7cb36672",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/failure-assessment.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2950,
-      "sha256": "4522617b15dc791ad3e695022180ed757459c6fa539cfa593592bb858c1cbbdc"
+      "sha256": "4522617b15dc791ad3e695022180ed757459c6fa539cfa593592bb858c1cbbdc",
+      "performed_depth": "full-content",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/release-checks.md",
       "unit": "U-003",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 6122,
-      "sha256": "fee007dfbde60228f4119a9cebfd851c5af7051c57660d2b4139c7992a79541c"
+      "sha256": "fee007dfbde60228f4119a9cebfd851c5af7051c57660d2b4139c7992a79541c",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-003: bounded range, task/review persistence, recovery authority, feature unique ownership/archive, steering return, test evidence and verification/docs/report handoffs. Long reporting templates/examples targeted; release-specific checks cross-assessed in U-004."
     },
     {
       "path": ".github/RELEASE-HANDOFF.md",

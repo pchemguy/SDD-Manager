@@ -5,7 +5,7 @@
 - Campaign: `072_8a534b2`; [review plan](REVIEW-PLAN.md), [coverage inventory](SOURCE-INVENTORY.md).
 - Exact reviewed baseline: `8a534b21f6318f0b76b11a19783f7d40ca94d698`.
 - Working branch/parent: `revision/072_8a534b2-comprehensive-review` / `main`.
-- State: U-001–U-002 assessed; U-003–U-005 pending. Review remains open; no remediation is selected.
+- State: U-001–U-003 assessed; U-004–U-005 pending. Review remains open; no remediation is selected.
 - Source/code inspection and bounded local verification only. No live agent/client/provider trial or source repair is selected. Package/acceptance/publisher bytes remain pinned to the baseline.
 
 ## Coverage
@@ -14,7 +14,7 @@
 | --- | --- | --- |
 | U-001 | Assessed: core procedures in full; long projections/examples/source guides targeted; package metadata structurally checked | R-001. All 78 reference modules are linked by their own entries. All 102 package Markdown files pass the bounded local-link/heading check (613 links). |
 | U-002 | Assessed: design/specification/strategy/task procedures and cross-owner gates; shared QC targeted where noted | R-002. Distinct document owners, first-approval versus current-readiness gates and explicit delivery/phase review units are coherent in inspected paths. |
-| U-003 | Pending | Execution, integration, reporting and tracking. |
+| U-003 | Assessed: implementation/recovery, feature/steering, test/docs/verification and reporting interfaces | No additional finding; R-001 affects shared Git integration. Release-specific verification continues with U-004. |
 | U-004 | Pending | Release and publisher. |
 | U-005 | Pending | Acceptance component and consolidated verification. |
 
@@ -51,6 +51,14 @@ Long README/entry/catalog/contract/example/demo content received targeted compos
 ### No-finding observations from U-002
 
 PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS have distinct semantic ownership and bidirectional conflict routing. The main brief is discoverable without a mandatory fixed heading schema. PLAN defines meaningful delivery increments and review exits; TASKS derives project-wide stable IDs and mandatory review tasks without padding the 3–5 heuristics. Dedicated review units are excluded from delivery counts but remain executable tasks. PLAN/layout technical and human checkpoints are distinct. QC currency distinguishes material contract/decomposition changes from ordinary checkbox/evidence edits. Read-only review, direct author calls, scope limits and accepted feature incorporation retain separate authorities. No additional finding established in these inspected paths.
+
+### No-finding observations from U-003
+
+The implementation entry and task completion owner both require HANDOFF in milestone/phase review-task closing commits, with the substantive report, evidence and initial checkbox; no additional handoff task or per-commit audit is imposed. Selected next-N ranges include review tasks and cannot append an extra review outside the range. Startup distinguishes eligible retained publication from known-invalid completion, with bounded forward recovery and explicit separation of acceptance, historical composition and authority. This does not require blanket reapproval of an unchanged grant or automatic history rewriting.
+
+Feature incorporation keeps source retention/archive eligibility, current versus historical owners and scope-limited QC distinct. Transferring a task requires both lists in scope and retires its second executable entry; archived feature reports retain provenance rather than becoming main-phase reports. Steering has direct amendment ownership and restores the paused target without resuming tasks. Test design requires independent expectations and observed failure evidence; verification classifies failed/blocked/not-checked conditions and stays read-only. Documentation findings refer governing changes to the human. Report formats distinguish actual evidence, hosting, working-branch acceptance and target integration. These source interfaces align in the inspected paths; they have not been exercised by a fresh consumer here.
+
+Reporting templates/examples received targeted presentation/interface inspection rather than execution of their illustrative examples. Release verification contracts are cross-checked with forge/publisher in U-004.
 
 ## Verification and limits
 
