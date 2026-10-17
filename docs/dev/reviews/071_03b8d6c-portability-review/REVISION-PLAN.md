@@ -48,8 +48,9 @@ Retain selected reporting preferences without another settings file. Compress ol
 | Event | Required continuity action |
 | --- | --- |
 | Authorized workflow entry/adoption | Establish or reconcile its handoff, scope, source records and parent relationship. Preserve existing controlling/manual content. |
-| Completed main/feature implementation milestone | Automatically refresh HANDOFF with the verified milestone boundary and current remaining scope, in the owning boundary commit. |
-| Phase/workflow completion or eligible integration | Reconcile the completed outcome and target/return context through existing completion and merge procedures. |
+| Final review/report task in each main/feature implementation milestone | Automatically refresh HANDOFF with the verified milestone outcome, evidence, remaining scope and next boundary in the same commit as the review report and task-completion checkbox. |
+| Phase review/report task | Automatically refresh HANDOFF with the overall phase outcome, evidence and integration readiness in that task's completion commit. |
+| Workflow completion or eligible integration | Reconcile the completed outcome and target/return context through existing completion and merge procedures. |
 | Revision finalization | Automatically refresh the completed revision checkpoint; restore parent context during integration. Incremental work remains in the campaign records. |
 | Nested campaign entry/return or steering return | Preserve suspension and restore the actual parent boundary without authorizing resumption. |
 | Main/feature preparation completion | Refresh at the completed preparation/integration boundary. Intermediate approvals remain in existing preparation records. |
@@ -58,6 +59,8 @@ Retain selected reporting preferences without another settings file. Compress ol
 | Explicit request to prepare a handoff | Reconstruct current state, optionally refresh the checkpoint and verify transfer/publication prerequisites without claiming incomplete work is complete. |
 
 Publication remains required after every owned commit. Handoff cadence does not change task atomicity, DOCS first-approval semantics, technical checks, hosted gates or the human's requested stop. A milestone inside an incomplete main phase remains on its phase branch.
+
+Use the existing review/report tasks as the refresh owners; do not create separate handoff tasks or routine follow-up commits. If one task closes both the final review milestone and the phase, one combined update covers both boundaries. A failed or blocked review retains its actual findings and pending boundary; neither the task nor the handoff may present the milestone/phase as successfully complete.
 
 ### Recovery and branch policy
 
@@ -130,11 +133,12 @@ Each action below is **Planned**. Complete the named dependencies, inspect both 
 
 - Findings: R-001/R-002; dependencies: V-001–V-004.
 - Targets: `sdd-implement/references/startup-and-continuation.md`, `range-selection.md`, `completion-and-checkpoints.md`, its SKILL entry only for a necessary pre-action route, and `sdd-report/references/completion-reports.md`.
-- At a completed main/feature milestone, automatically refresh HANDOFF with the existing final-task/parent-boundary evidence when available, preserving one task's result/evidence/initial checkbox in its atomic commit. Existing parent-only follow-up persistence remains available when boundary evidence genuinely arrives later; do not require an additional handoff-only commit for every task.
+- Make each milestone's final review/report task and each phase review/report task explicit automatic HANDOFF refresh triggers. Include the handoff update, verified review report, task-owned result and initial completion checkbox in the same task-completion commit. Preserve existing task ownership and subject rules; do not add separate handoff tasks or routine maintenance commits.
+- The milestone update retains the demonstrated outcome, evidence, unresolved findings/operations, remaining authorized scope and next boundary; the phase update also establishes overall exit evidence and integration readiness. One task closing both boundaries produces one combined update. Failed or blocked review remains incomplete and cannot produce a successful-completion snapshot. During the later integration, reconcile HANDOFF to the resulting parent context.
 - Give phase/feature completion reports useful baseline/end references for on-demand diffs. Retain bounded recent outcomes and summarize older completed phases; do not store every task description again.
 - On resume, recover task state and later decisions since the handoff checkpoint before using its next action. Preserve the existing push-first prerequisite, task audit, unsafe-completion recovery and exact selected range. A mid-milestone stop remains recoverable without a freshly rewritten HANDOFF.
 - Route changed tracking choices, pending host operations and human grants to their existing evidence owners. Do not invent a new audit requiring HANDOFF to change in every task commit.
-- Recheck: last handoff at M1 followed by valid M2 task commits; changed/revoked scope recorded later; clean or dirty interruption; retained unpublished commit; exact mid-milestone stop; feature subset versus whole-project parent status; milestone complete within incomplete phase. Resume valid work; do not discard incomplete milestones automatically.
+- Recheck: milestone/phase review closing commits contain their HANDOFF updates; one review task covering both boundaries needs no second update; failed/blocked review does not claim completion; last handoff at M1 followed by valid M2 task commits; changed/revoked scope recorded later; clean or dirty interruption; retained unpublished commit; exact mid-milestone stop; feature subset versus whole-project parent status; milestone complete within incomplete phase. Resume valid work; do not discard incomplete milestones automatically.
 
 ### V-006 — Cover campaign, steering, feature and supporting-operation returns
 
@@ -181,8 +185,8 @@ These are planned checks, not passed results. Source walkthroughs establish inst
 | P-02 | Several task commits after a completed milestone | Recover results/range from later records and Git without requiring HANDOFF edits. |
 | P-03 | Human stop/preapproval revoked after that checkpoint | Apply the newer persisted decision; do not execute from superseded scope. |
 | P-04 | Pending document approval; technical QC passed | Retain the human pause; no guessed acceptance or unnecessary replay of other approvals. |
-| P-05 | Milestone complete; containing main phase incomplete | Automatically refresh and publish checkpoint; remain on phase branch. |
-| P-06 | Complete eligible phase or feature | Reconcile final checkpoint and integrate only into its recorded creation parent. |
+| P-05 | Milestone final review task; containing main phase incomplete | Its successful closing commit contains the report, checked task and HANDOFF update; remain on phase branch. Failed/blocked review does not claim milestone completion. |
+| P-06 | Phase review task and complete eligible phase/feature | Its successful closing commit contains the HANDOFF update; one task closing both milestone and phase needs one combined update. Reconcile parent context during eligible integration into the recorded creation parent. |
 | P-07 | Fresh default clone; one unfinished branch | Present and request the continuation branch; do not choose automatically. |
 | P-08 | Several branches; one suspended parent with active child | Identify the relationship and request selection without implying both may run. |
 | P-09 | Branch explicitly selected in request/current context | Reuse selection, reconstruct state and avoid repeated selection prompts. |
