@@ -1,0 +1,10 @@
+test_committed_and_dirty_readme_and_license_are_packaged (tests.test_package_docs.PackageDocumentation.test_committed_and_dirty_readme_and_license_are_packaged) ... ok
+test_nested_package_boundary_and_repository_license_copy (tests.test_package_docs.PackageDocumentation.test_nested_package_boundary_and_repository_license_copy) ... ok
+test_notice_navigation_is_retained_in_committed_and_dirty_snapshots (tests.test_package_docs.PackageDocumentation.test_notice_navigation_is_retained_in_committed_and_dirty_snapshots) ... ok
+test_preparation_templates_pin_exact_bytes_and_dirty_changes (tests.test_package_docs.PackageDocumentation.test_preparation_templates_pin_exact_bytes_and_dirty_changes) ... ok
+test_real_snapshot_transfers_continuity_resources_without_source_state (tests.test_package_docs.PackageDocumentation.test_real_snapshot_transfers_continuity_resources_without_source_state) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.895s
+
+OK

@@ -32,7 +32,7 @@ The [focused follow-up guide](TRACKING-FIDELITY.md) supplies separately selected
 
 ## Release evidence capture
 
-[Release controls](../../RELEASE-SCENARIOS.md#read-only-release-capture) define read-only note/native Git/provider-body capture and its public-safe input shape. The capture helper records literal comparisons and hashes, never expected bodies or independent grades. Supply baseline evidence from the actual pre-operation notes, and establish readback source/class separately. Missing observations, freshness and human-content judgments cannot be replaced by a helper pass.
+[Release controls](../../RELEASE-SCENARIOS.md#read-only-release-capture) define read-only note/native Git/provider-body capture and its public-safe input shape. The capture helper records literal comparisons, hashes and the observed release subject, never expected bodies or independent grades. Mechanical release agreement covers bodies/tag/source/publication; independent assessment checks the subject against the selected contract. Supply baseline evidence from the actual pre-operation notes, and establish readback source/class separately. Missing observations, freshness and human-content judgments cannot be replaced by a helper pass.
 
 ## Human and Git checkpoint assessment
 

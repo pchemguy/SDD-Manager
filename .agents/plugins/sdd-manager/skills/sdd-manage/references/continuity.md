@@ -53,7 +53,9 @@ After selection, follow [branch management](branch-management.md) for safe check
 
 ## Integrate and return
 
-New workflow branches record their creation parent and branch-off commit at setup and integrate their completed eligible scope into that same parent under [Git workflows](git-workflows.md). Preserve explicit target overrides and established legacy associations; corroborate history rather than guessing an original branch name. Partial ranges and explicit no-merge boundaries remain unmerged.
+For workflow completion, new branches record their creation parent and branch-off commit at setup and integrate their completed eligible scope into that same parent under [Git workflows](git-workflows.md). Preserve explicit target overrides and established legacy associations; corroborate history rather than guessing an original branch name. Partial ranges and explicit no-merge boundaries remain unmerged.
+
+For [incoming synchronization](git-workflows.md#merge-purpose), retain the receiving workflow's identity, original creation parent, scope, pending human decisions and stop; record the incorporated baseline and resulting readiness. Do not replace its HANDOFF with the incoming baseline's context or treat catch-up as child completion/parent return.
 
 Before nesting, retain the immediate parent's unfinished stage, scope, pending decision and return boundary in active campaign evidence and the child checkpoint. At the child's finalization, record its actual result and pending integration. During the prospective merge, deliberately reconcile HANDOFF to the parent's resulting context, retaining a concise child outcome/evidence link. Do not choose the entire child or parent file mechanically or edit a closed child report afterward.
 

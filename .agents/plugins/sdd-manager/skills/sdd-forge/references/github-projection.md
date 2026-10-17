@@ -41,4 +41,4 @@ Before creating/projecting task issues, phase labels, native milestones or task 
 
 ## Confirmed scope and late activation
 
-Require the manager's [tracking decision](../../sdd-manage/references/tracking-decision.md) handoff to identify confirmed/requested repository and lifecycle scope before projection. Authentication or an inactive-state statement is not activation confirmation. Late confirmed projection discovers existing objects first and reconciles eligible completed work from retained commits/checks without replaying tasks. Return pending/unknown effects separately from recommendation and confirmation.
+Require the manager's [tracking decision](../../sdd-manage/references/tracking-decision.md) handoff to identify the established repository/lifecycle selection and its request or project-policy source before projection. Authentication or an inactive-state statement is not activation confirmation. Late confirmed projection discovers existing objects first and reconciles eligible completed work from retained commits/checks without replaying tasks. Return pending/unknown effects separately from recommendation and confirmation.

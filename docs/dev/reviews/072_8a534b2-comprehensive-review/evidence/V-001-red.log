@@ -1,0 +1,39 @@
+test_changed_note_or_provider_body_fails_exact_bytes (tests.test_release_capture.ReleaseCapture.test_changed_note_or_provider_body_fails_exact_bytes) ... ok
+test_cli_preserves_occupied_evidence_without_new_output (tests.test_release_capture.ReleaseCapture.test_cli_preserves_occupied_evidence_without_new_output) ... ok
+test_missing_literal_and_wrong_class_do_not_grade_acceptance (tests.test_release_capture.ReleaseCapture.test_missing_literal_and_wrong_class_do_not_grade_acceptance) ... ok
+test_missing_partial_or_malformed_source_evidence_is_rejected (tests.test_release_capture.ReleaseCapture.test_missing_partial_or_malformed_source_evidence_is_rejected) ... ok
+test_native_body_tag_and_controlled_readback_agree (tests.test_release_capture.ReleaseCapture.test_native_body_tag_and_controlled_readback_agree) ... ok
+test_nonterminated_body_whitespace_cleanup_adds_newline (tests.test_release_capture.ReleaseCapture.test_nonterminated_body_whitespace_cleanup_adds_newline) ... ok
+test_preservation_diff_and_missing_baseline_are_not_passes (tests.test_release_capture.ReleaseCapture.test_preservation_diff_and_missing_baseline_are_not_passes) ... ok
+test_symlink_and_sensitive_notes_are_rejected (tests.test_release_capture.ReleaseCapture.test_symlink_and_sensitive_notes_are_rejected) ... ok
+test_verbatim_preserves_canonical_markdown_and_newline_bytes (tests.test_release_capture.ReleaseCapture.test_verbatim_preserves_canonical_markdown_and_newline_bytes) ... ok
+test_version_and_tag_subjects_are_observed_without_hidden_policy (tests.test_release_capture.ReleaseCapture.test_version_and_tag_subjects_are_observed_without_hidden_policy) ... 
+  test_version_and_tag_subjects_are_observed_without_hidden_policy (tests.test_release_capture.ReleaseCapture.test_version_and_tag_subjects_are_observed_without_hidden_policy) (subject='Release 1.0.0') ... FAIL
+  test_version_and_tag_subjects_are_observed_without_hidden_policy (tests.test_release_capture.ReleaseCapture.test_version_and_tag_subjects_are_observed_without_hidden_policy) (subject='Release v1.0.0') ... ERROR
+test_whitespace_cleanup_loses_markdown_and_capture_rejects_it (tests.test_release_capture.ReleaseCapture.test_whitespace_cleanup_loses_markdown_and_capture_rejects_it) ... ok
+test_wrong_tag_or_unpublished_readback_fails (tests.test_release_capture.ReleaseCapture.test_wrong_tag_or_unpublished_readback_fails) ... ok
+test_new_case_inputs_and_checkpoint_ids_validate_and_unknown_id_fails (tests.test_release_capture.ReleaseHandoff.test_new_case_inputs_and_checkpoint_ids_validate_and_unknown_id_fails) ... ok
+test_new_release_predecessor_requires_published_independent_assessment (tests.test_release_capture.ReleaseHandoff.test_new_release_predecessor_requires_published_independent_assessment) ... ok
+test_routing_variants_render_one_request_without_combined_objectives (tests.test_release_capture.ReleaseHandoff.test_routing_variants_render_one_request_without_combined_objectives) ... ok
+
+======================================================================
+ERROR: test_version_and_tag_subjects_are_observed_without_hidden_policy (tests.test_release_capture.ReleaseCapture.test_version_and_tag_subjects_are_observed_without_hidden_policy) (subject='Release v1.0.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/46b31bb4dff6/045-main/acceptance/textstats/tests/test_release_capture.py", line 64, in test_version_and_tag_subjects_are_observed_without_hidden_policy
+    self.assertEqual(provenance['release_subject'], subject)
+                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'release_subject'
+
+======================================================================
+FAIL: test_version_and_tag_subjects_are_observed_without_hidden_policy (tests.test_release_capture.ReleaseCapture.test_version_and_tag_subjects_are_observed_without_hidden_policy) (subject='Release 1.0.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/46b31bb4dff6/045-main/acceptance/textstats/tests/test_release_capture.py", line 63, in test_version_and_tag_subjects_are_observed_without_hidden_policy
+    self.assertTrue(evidence['literals']['release_agreement'])
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 15 tests in 2.680s
+
+FAILED (failures=1, errors=1)

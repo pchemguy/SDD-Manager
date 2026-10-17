@@ -43,7 +43,7 @@ Extend RUN-STATE/RESUME with existing case/variant and actual cursor fields; no 
 
 ## Read-only release capture
 
-Use [release_capture.py](cases/assessor/release_capture.py) in the assessor context to capture exact root note bytes, an optional pre-operation baseline and optional native release/provider agreement. It never writes product files, creates commits/tags or contacts GitHub. Output is version 1 literal evidence plus separate hash/command provenance; neither carries an agent pass. Freshness, human-content quality and readback origin require independent judgment.
+Use [release_capture.py](cases/assessor/release_capture.py) in the assessor context to capture exact root note bytes, an optional pre-operation baseline and optional native release/provider agreement. It never writes product files, creates commits/tags or contacts GitHub. Output is version 1 literal evidence plus separate hash/command provenance; neither carries an agent pass. `release_agreement` compares bodies, tag/source and published readback. Provenance retains the actual release subject; assess it against the established version/tag or project-specific subject contract, without imposing an exact tag spelling. Freshness, human-content quality and readback origin also require independent judgment.
 
 ```text
 python acceptance/textstats/cases/assessor/release_capture.py --product-root <checkout> --baseline <before-notes> --output <new-literals.json> --provenance <new-provenance.json>

@@ -8,6 +8,7 @@ Retain before/after target files and hashes, original four-file presence, staged
 
 | Scenario | Setup and independent acceptance |
 | --- | --- |
+| Policy before initialization | With no root AGENTS and no explicit choice, authorized adoption of the bundled template selects its project tracking default before any write. Contrast explicit enable, explicit decline/local-only, existing AGENTS policy and resumed choice. Report the real basis; a token alone is not selection. Copying the unchanged template does not reactivate tracking over a retained decline or prove earlier projection. |
 | Fresh enabled preparation | Observe native docs-main and all nine issue associations verified before any target file/ref modification, including credential/ignore files. Product PLAN/TASKS are not required for that projection; no implementation phase objects are created. |
 | Four-file presence matrix | Use all 16 subsets of AI_DISCLOSURE, SDD-MANAGER, AGENTS and SKILL_DISCOVERY_PROTOCOL in isolated forks. Missing files match pinned assets; existing bytes remain unchanged. Empty/full subsets continue without an added pause; the 14 partial subsets report exact retained/copied filenames, publish/close DOCS-001 and stop before document work unless explicitly preapproved. |
 | Task-list bootstrap | Consumer copies the pinned task template after the enabled pre-write gate, or preserves/resumes an existing list. No overwritten checked progress, circular self-creation operation or implementation ID reuse. |

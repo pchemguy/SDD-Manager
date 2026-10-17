@@ -17,7 +17,7 @@
   ],
   "required_agent_checks": [
     "Use an isolated refreshed-note fork, established version/tag and explicit scoped release effects. Grade controlled provider behavior separately from optional real GitHub publication. Start independent trials for initial success, repeated completed request and response loss after an applied effect.",
-    "Inspect native release commit subject and exact UTF-8 Markdown body, final notes bytes, peeled tag commit and provider body readback. Release marker adds no unassessed user change; final source and handoff body/hash agree. Notes persist; internal draft cleanup occurs only after verified body consumption.",
+    "Inspect native release commit subject and exact UTF-8 Markdown body, final notes bytes, peeled tag commit and provider body readback. Release marker adds no unassessed user change; final source and handoff body/hash agree. Notes persist; internal draft cleanup occurs only after verified body consumption. Assess the observed subject against the established version/tag or project-specific subject contract separately; the mechanical release_agreement literal covers bodies/source/publication, not subject acceptability.",
     "Observe commit/tag publication where authorized and destination refs before retry. Matching markers/tags/provider objects are reused; uncertain writes require readback, not duplicate or moved tags. Retain actual provider response/readback source and IDs in sanitized evidence; controlled response data cannot establish live GitHub acceptance."
   ],
   "variant_agent_checks": {

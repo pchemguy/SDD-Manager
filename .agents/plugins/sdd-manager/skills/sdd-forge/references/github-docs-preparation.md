@@ -4,7 +4,7 @@ Use for `docs-main` creation/readback, preparation issue lookup/closure and fina
 
 ## Identity and pre-write projection
 
-Require the actual repository and confirmed preparation-tracking scope from **sdd-manage**. Before target files or branches are modified, read `assets/DOCS_TASKS_TEMPLATE.md` from the running/pinned package; it supplies the nine predefined tasks without requiring target PLAN/TASKS or a local list yet. On resume also inspect existing `docs/dev/DOCS_TASKS.md`, actual decisions and retained hosted identities. Conflicting task identity/scope blocks projection; do not replace an existing list to make it match a newer template.
+Require the actual repository, selected preparation-tracking scope and its request/project-policy source from **sdd-manage**. Before target files or branches are modified, read `assets/DOCS_TASKS_TEMPLATE.md` from the running/pinned package; it supplies the nine predefined tasks without requiring target PLAN/TASKS or a local list yet. On resume also inspect existing `docs/dev/DOCS_TASKS.md`, actual decisions and retained hosted identities. Conflicting task identity/scope blocks projection; do not replace an existing list to make it match a newer template.
 
 | Object | Identity and content |
 | --- | --- |

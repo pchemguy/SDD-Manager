@@ -1,0 +1,32 @@
+{
+  "baseline": "8a534b21f6318f0b76b11a19783f7d40ca94d698",
+  "results": [
+    {
+      "subject": "Release 0.15.0",
+      "literals": {
+        "notes_readable": true,
+        "commit_body_matches_notes": true,
+        "release_subject_matches": false,
+        "tag_matches_commit": true,
+        "provider_body_matches_notes": true,
+        "provider_source_matches": true,
+        "provider_published": true,
+        "release_agreement": false
+      }
+    },
+    {
+      "subject": "Release v0.15.0",
+      "literals": {
+        "notes_readable": true,
+        "commit_body_matches_notes": true,
+        "release_subject_matches": true,
+        "tag_matches_commit": true,
+        "provider_body_matches_notes": true,
+        "provider_source_matches": true,
+        "provider_published": true,
+        "release_agreement": true
+      }
+    }
+  ],
+  "limit": "Native Git and supplied controlled readback only; no agent/provider execution"
+}

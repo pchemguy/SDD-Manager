@@ -1,0 +1,38 @@
+{
+  "purpose": "workflow completion into recorded creation parent",
+  "receiving_branch": "main",
+  "receiving_parent": "8a534b21f6318f0b76b11a19783f7d40ca94d698",
+  "incoming_branch": "revision/072_8a534b2-comprehensive-review",
+  "incoming_parent": "6b7301367a01d96dbf763d01894f03b4319cfe43",
+  "merge": "--no-ff --no-commit; conflict-free",
+  "source_payload": "same as published incoming tip; parent HANDOFF deliberately reconciled and final evidence added",
+  "support": {
+    "command": "python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v",
+    "tests": 139,
+    "seconds": 49.653,
+    "exit": 0
+  },
+  "publisher": {
+    "command": "python -m unittest discover -s .github/tests -v",
+    "tests": 36,
+    "seconds": 3.244,
+    "exit": 0
+  },
+  "runtime": "Python 3.12.14; jsonschema 4.26.0",
+  "catalog": {
+    "command": "python acceptance/textstats/cases/assessor/catalog_tools.py validate",
+    "cases": 33,
+    "exit": 0
+  },
+  "preservation": "prior closed records unchanged; root AGENTS, LICENSE files, manifest and PLUGIN unchanged",
+  "package_schema_routing": "candidate checks retained; package source exactly unchanged in prospective merge",
+  "publication": "must be established from actual merge commit and remote refs after commit",
+  "live_acceptance": false,
+  "hosted_CI": false,
+  "markdown": {
+    "files": 27,
+    "links": 454,
+    "result": "affected Markdown links/anchors and heading separation passed"
+  },
+  "whitespace": "Source/document diff passes; original raw RED logs retain three unittest-generated trailing spaces."
+}
