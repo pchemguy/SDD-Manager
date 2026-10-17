@@ -48,6 +48,22 @@ class ReleaseCapture(Sandbox):
         self.assertFalse(provenance['agent_behavior_assessed'])
         self.assertNotIn('Human material',json.dumps(provenance))
 
+    def test_version_and_tag_subjects_are_observed_without_hidden_policy(self):
+        for subject in ('Release 1.0.0', 'Release v1.0.0'):
+            with self.subTest(subject=subject):
+                message = self.root / 'subject-message.txt'
+                message.write_bytes(subject.encode('utf-8') + b'\n\n' + self.body)
+                git(self.repo, 'commit', '--allow-empty', '--cleanup=verbatim', '-F', str(message))
+                self.sha = git(self.repo, 'rev-parse', 'HEAD').stdout.strip()
+                git(self.repo, 'tag', '-d', 'v1.0.0')
+                git(self.repo, 'tag', 'v1.0.0', self.sha)
+                self.readback['target_commit'] = self.sha
+                self.provider.write_text(json.dumps(self.readback))
+                evidence, provenance = self.observe()
+                self.assertTrue(evidence['literals']['release_agreement'])
+                self.assertEqual(provenance['release_subject'], subject)
+                self.assertFalse(provenance['agent_behavior_assessed'])
+
     def observe_git_message_cleanup(self, body, cleanup):
         """Commit literal fixture bytes and compare them through the existing capture.
 

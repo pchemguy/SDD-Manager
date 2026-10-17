@@ -55,6 +55,7 @@ def capture(product_root, *, baseline=None, release_commit=None, tag=None,
 
     Returns:
         tuple: Version 1 literal evidence and separate command/hash provenance.
+        The observed subject is provenance, not a fixed spelling requirement.
         Neither result establishes independent consumer or provider acceptance.
 
     Raises:
@@ -103,15 +104,16 @@ def capture(product_root, *, baseline=None, release_commit=None, tag=None,
             raise ValueError('Invalid normalized provider readback')
         provider_body = readback['body'].encode('utf-8')
         literals.update(commit_body_matches_notes=bool(separator) and body == notes,
-                        release_subject_matches=subject == ('Release ' + tag).encode(),
                         tag_matches_commit=target == release_commit,
                         provider_body_matches_notes=provider_body == notes,
                         provider_source_matches=readback['target_commit'] == release_commit,
                         provider_published=readback['state'] == 'published')
         literals['release_agreement'] = all(literals[key] for key in (
-            'commit_body_matches_notes', 'release_subject_matches', 'tag_matches_commit',
+            'commit_body_matches_notes', 'tag_matches_commit',
             'provider_body_matches_notes', 'provider_source_matches', 'provider_published'))
         provenance.update(release_commit=release_commit, peeled_tag_commit=target,
+                          release_subject=subject.decode('utf-8'),
+                          subject_limit='Observed only; assess against the selected release subject contract',
                           commit_body_sha256=hashlib.sha256(body).hexdigest(),
                           provider_body_sha256=hashlib.sha256(provider_body).hexdigest(),
                           provider_readback_sha256=hashlib.sha256(raw_readback).hexdigest(),
