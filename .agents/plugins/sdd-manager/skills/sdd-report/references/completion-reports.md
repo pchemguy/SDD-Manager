@@ -12,6 +12,8 @@ State task ID, outcome, status, and an implemented-feature summary. Then give th
 
 Summarize the actual capabilities delivered across constituent tasks, rather than a list of checkboxes. Name task IDs and relevant commits, aggregate verification and integration evidence, the PLAN or FEATURE-PLAN exit conditions checked, unresolved defects, and the next stopping boundary. In FEATURE-TASKS, a checked parent covers only that feature's listed work and exits; it does not assert completion of the whole-project parent in TASKS. If some tasks or exits remain, report **partial** or **blocked** with the specific cause.
 
+Name known baseline/end commits or stable boundary identities so changes can be retrieved from Git on demand; do not export patch files or embed the report's own future SHA. The owning milestone/phase review task refreshes HANDOFF with this report's checkpoint in the same closing commit under [continuity](../../sdd-manage/references/continuity.md#establish-and-refresh). Summarize older completed phases with links and keep detail in the report; no per-task handoff progress log is required.
+
 ## Review reports and TODO aggregation
 
 Use the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md) for report placement and deferral rules. Main phase reports use `docs/dev/reports/phases/<phase-id>/PHASE-REPORT.md`; milestone reports share that directory as `<milestone-id>.md`. Steering records use its nested `revisions/<revision-id>/`; feature reports remain under their feature directory. Link from the owning review task; draft reports before its commit, without requiring the report to contain its own commit SHA.

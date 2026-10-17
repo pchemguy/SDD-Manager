@@ -5,6 +5,19 @@ from .support import Sandbox, git
 
 
 class PackageDocumentation(Sandbox):
+    def test_real_snapshot_transfers_continuity_resources_without_source_state(self):
+        import sys
+        sys.path.insert(0, str(Path(__file__).parents[1] / 'scripts'))
+        import core
+        source = Path(__file__).resolve().parents[3]
+        pin, files = core.package(source, {'plugin_revision': 'HEAD', 'source_mode': 'dirty'})
+        package = source / pin['package_subdirectory']
+        for name in ('assets/HANDOFF_TEMPLATE.md', 'skills/sdd-manage/references/continuity.md'):
+            self.assertEqual(files[name], (package / name).read_bytes())
+            self.assertEqual(pin['package_hashes'][name], hashlib.sha256(files[name]).hexdigest())
+        self.assertNotIn('docs/dev/HANDOFF.md', files)
+        self.assertNotIn('AGENTS.md', files)
+
     def test_nested_package_boundary_and_repository_license_copy(self):
         source = Path(__file__).resolve().parents[3]
         self.assertTrue((source / '.agents/plugins/sdd-manager/plugin.json').is_file())

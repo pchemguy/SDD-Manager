@@ -10,6 +10,10 @@ Before source edits, verification or campaign work, explicitly load [acceptance/
 
 Use current source and the selected active campaign rather than reading frozen reports as a routine work queue. Discover ownership and actual branch/pending state through Git. Preserve unrelated changes, controlling human instructions and closed campaign artifacts. This repository uses campaign plans/reports instead of a root executable TASKS owner; do not invent task IDs from findings.
 
+## Workflow continuity
+
+For continuation, read [HANDOFF.md](docs/dev/HANDOFF.md) and use the coordinator's [continuity subworkflow](.agents/plugins/sdd-manager/skills/sdd-manage/references/continuity.md) to recover later campaign decisions and Git changes. Treat the handoff as a checkpoint. Inspect unfinished branches against their recorded parents and request the continuation branch unless already selected; preserve the actual scope and stopping boundary.
+
 ## Persistence and scope
 
 Coordinate source changes through [sdd-manage](.agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md) within the accepted request and stopping boundary. Publish and read back every workflow-owned commit before further work or another commit; unresolved publication pauses progression. Follow [Git integration and recovery](.agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md), using explicit verified integration only at the authorized complete boundary. Keep credentials protected and out of source/evidence.

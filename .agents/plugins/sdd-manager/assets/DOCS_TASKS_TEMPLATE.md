@@ -15,7 +15,7 @@ When tracking is enabled, each `DOCS-*` task maps to one issue in the `docs-main
 - [ ] DOCS-001 — Initialize the repository for SDD Manager.
     - Inspect root `AI_DISCLOSURE.md`, `SDD-MANAGER.md`, `AGENTS.md` and `SKILL_DISCOVERY_PROTOCOL.md` before copying. Preserve existing files and copy only missing files from the bundled templates.
     - Record which root files existed and which were copied; verify copied bytes and preserved content.
-    - Commit this task's completion with the initialization result, push and verify; then close and verify its issue when tracking is enabled.
+    - Establish/reconcile `docs/dev/HANDOFF.md` as generated checkpoint metadata, outside the four-file presence/copy test. Include it with this task's completion and initialization result, push and verify; then close and verify its issue when tracking is enabled.
     - Report initialization. If some but not all of the four root files existed initially, warn with the retained/copied filenames and end the turn before document work, unless the user explicitly preapproved continuation through this checkpoint. If none or all existed, continue without an additional approval pause.
 - [ ] DOCS-002 — Prepare and accept PROJECT.
     - Establish the project brief: purpose, users, outcomes, scope, non-goals and consequential constraints; identify material assumptions and unresolved decisions.
@@ -42,7 +42,7 @@ When tracking is enabled, each `DOCS-*` task maps to one issue in the `docs-main
     - Require all preceding tasks complete and their issue closures verified when tracking is enabled.
     - Review the entire document set, necessary children and QC reports for consistency, traceability, delivery readiness and unresolved blockers. Check initialization, orientation, human acceptance and publication evidence.
     - Resolve blockers through their owning documents and recheck affected readiness and acceptance. Retain the package QC report with the preparation documents.
-    - Commit the passing report and this task marked complete together, push and verify; then close and verify the final QC issue.
+    - Refresh `docs/dev/HANDOFF.md` with the package outcome, evidence and next boundary, retaining later integration/milestone effects as requiring confirmation. Commit the handoff, passing report and this task marked complete together, push and verify; then close and verify the final QC issue.
 
 ## Integration and final checkpoint
 

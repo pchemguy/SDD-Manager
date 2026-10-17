@@ -10,6 +10,10 @@ Missing required evidence is Blocked and prevents required readiness. Optional f
 
 A-023 separates controlled reconciliation from optional actual GitHub response loss. A-024 separates required denial, rate-limit and unavailable-access handling from optional protected native credential/session recovery. Reports must identify what actually ran and state each optional variant's full-execution requirements. Optional status never grants a fabricated pass or waives important ordinary core checks.
 
+## Repository-only continuation
+
+A-015/A-016/A-019/A-023 offer optional `repository-only` variants under [the receiver protocol](cases/assessor/INTERRUPTIONS.md#repository-only-receiver-variants). They retain each case's interruption intent while removing the coordinator-supplied state/authorization summary from the fresh receiver. Prepared-worktree, published-branch and default-clone outcomes remain distinct, including branch-choice interactions and missing-input limits. Select and grade them explicitly; ordinary assisted-core results do not imply repository-only portability. Component/native Git checks do not count as observed receiver execution.
+
 ## Release and installed-client variants
 
 A-028 has separately supplied highlights-only and complete-message consumer variants; A-029 requires ordinary consumer observations. A-030 has separate matching-version, version-mismatch and missing-provenance controlled variants. A-031 requires controlled-save evidence from an actual failed operation and fresh continuation. A-032 separates required controlled-provider consumer assessment from optional live-provider execution. A-033 is optional installed-client observation and never gates required dependencies. [Release controls](RELEASE-SCENARIOS.md) specify facilities and literal provenance. Missing selected required evidence remains Blocked; unselected optional facilities are Not run.

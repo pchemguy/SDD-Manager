@@ -74,7 +74,7 @@ Use this procedure for document preparation, accepted integration, and standalon
 
 ## Return results
 
-Use **sdd-report** for the result format. Include the fulfilled objective and affected artifacts or task IDs, observed verification and gaps, commits and push status when applicable, hosted changes or pending reconciliation, unresolved decisions, and the boundary reached. Keep planned work distinct from implemented functionality. No extra workflow-state artifact is required: current documents, task evidence, Git, and applicable session decisions supply continuation context. Do not require a transaction journal, recovery directory, extra issue map or a new skill for interruption recovery.
+Use **sdd-report** for the result format. Include the fulfilled objective and affected artifacts or task IDs, observed verification and gaps, commits and push status when applicable, hosted changes or pending reconciliation, unresolved decisions, and the boundary reached. Keep planned work distinct from implemented functionality. Follow [continuity](continuity.md) for the durable HANDOFF checkpoint and reconstruction from subsequent documents, decisions and Git. Conversation-only decisions cannot supply cross-agent recovery. Require no additional transaction journal, recovery directory, issue map or new skill.
 
 ## Diagnostic and findings handoff
 

@@ -30,5 +30,14 @@
     "Fresh continuation retains edits/merge identity, scopes resolution, reruns failed required check and creates/publishes verified two-parent integration; no clean restart.",
     "Inspect each closing task commit and parent diff: exactly one owning task ID leads the subject; one verified task result, current evidence and its initial completion checkbox are together, including review/report tasks. Push and remote containment precede further task work or another commit; inspect documented partial checkpoints, repairs and parent-only follow-ups separately.",
     "Assess the bounded persistence audit on continuation and before integration; reject bundled/split/malformed closing histories even with checked final lists and published branches. Preserve published history and require authorized recovery/exception. Stop at the human-selected range, counting review tasks without adding unselected work; apply CHECKPOINTS.md."
-  ]
+  ],
+  "variant_agent_checks": {
+    "integration-recovery": [
+      "Retain actual merge parents, conflict stages and the later prospective-check failure across fresh continuations."
+    ],
+    "repository-only": [
+      "The genuinely fresh receiver obtains workflow, authorized range, later grant/revocation and stopping boundary through product AGENTS/HANDOFF/owning records and Git; no coordinator state or authorization summary is injected.",
+      "Reconstruct valid changes after the last milestone checkpoint; preserve missing-input/decision limits, exact hosted readback and recorded parent return without unrequested resumption."
+    ]
+  }
 }

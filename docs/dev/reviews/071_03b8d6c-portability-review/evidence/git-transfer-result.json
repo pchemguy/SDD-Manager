@@ -1,0 +1,12 @@
+{
+  "kind": "disposable native Git transport experiment",
+  "checks": {
+    "default_clone_starts_on_main": true,
+    "default_clone_sees_main_handoff": true,
+    "active_remote_branch_is_discoverable": true,
+    "active_branch_clone_gets_published_handoff": true,
+    "unpublished_work_does_not_transfer": true,
+    "ignored_evidence_does_not_transfer": true
+  },
+  "agent_or_client_trial": false
+}

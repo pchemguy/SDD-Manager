@@ -12,7 +12,7 @@ The SDD Manager source/package uses [PLUGIN.md](../../../PLUGIN.md) as its compo
 | --- | --- |
 | Purpose and locations | Established project purpose and real source, test and document entry points. |
 | Governing inputs | Links to present PROJECT/design/SPEC/PLAN/layout/TASKS owners; state missing inputs only where relevant, without fabricating files or requirements. |
-| Active ownership | Discoverable current task/feature owner and archive transfer navigation. Use canonical owners; no duplicated executable checklist, status journal or branch/HEAD snapshot. |
+| Active ownership | A dedicated continuity section pointing to `docs/dev/HANDOFF.md` and coordinator recovery, plus current task/feature owner and archive transfer navigation. The handoff is a checkpoint; later owning records/Git supply the delta. No duplicated checklist or branch/HEAD snapshot in AGENTS. |
 | Setup and checks | Declared and validated commands, working directory, supported environment/shell constraints and concrete evidence limits. Do not invent a command or claim an unrun setup is validated. |
 | Workflow constraints | Durable verification, the [task commit contract](../../sdd-implement/references/completion-and-checkpoints.md#task-commit-contract) for task-list execution, scoped commit/publication and user stopping-boundary expectations under established authority; link detailed policy. |
 | Instruction discovery | Read applicable nested instructions for selected paths. Explicitly load this file when the host does not discover it; promise no universal host-discovery mechanism. |

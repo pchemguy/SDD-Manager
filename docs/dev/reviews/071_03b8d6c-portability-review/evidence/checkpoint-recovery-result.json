@@ -1,0 +1,24 @@
+{
+  "evidence_class": "native",
+  "agent_or_client_trial": false,
+  "git_version": "git version 2.51.1",
+  "checks": {
+    "default_clone_keeps_main_checkpoint": true,
+    "unfinished_phase_and_feature_refs_are_discoverable": true,
+    "phase_clone_keeps_older_milestone_handoff": true,
+    "path_history_recovers_checkpoint_commit": true,
+    "git_diff_recovers_intervening_results_and_decisions": true,
+    "later_revocation_is_available_in_clone": true,
+    "child_is_integrated_in_its_recorded_parent": true,
+    "child_is_not_integrated_in_main_or_phase": true,
+    "explicit_child_merge_retains_two_expected_parents": true,
+    "merged_handoff_restores_parent_pause_and_child_result": true,
+    "parent_and_branch_off_evidence_survive_transfer": true,
+    "two_named_legacy_parents_can_share_a_branch_off_commit": true
+  },
+  "passed": 12,
+  "checkpoint": "aed177bb12bfdca41ca94a8a28d5afd40e5767f4",
+  "phase_tip": "0bb233a66e4820427588da771235ceff71289ce3",
+  "feature_tip": "09db042d3803fc0fa070e71e3e2ea1844f70f268",
+  "child_tip": "72c1cb22be764df550f93fc7be98c43ea1b6428a"
+}

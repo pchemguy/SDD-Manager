@@ -43,6 +43,10 @@ Commit/push sanitized recovery exports and coordinator checkpoint on the evidenc
 
 For ambiguous ownership, inaccessible remote or unavailable hosted lookup, preserve state and state the needed decision/facility. Do not guess effect success/failure. A failed recovery attempt remains retained even if a later authorized restoration passes.
 
+## Repository-only product continuation
+
+For explicitly selected [repository-only receiver variants](cases/assessor/INTERRUPTIONS.md#repository-only-receiver-variants), keep coordinator restoration evidence separate from the fresh product receiver's instructions. Dispatch only its ordinary continuation request and genuine repository/package facilities; recover scope/approvals through the producer's own AGENTS/HANDOFF/decision records and Git. A milestone checkpoint may validly predate later task commits. Missing unpublished bytes or a missing decision must remain an explicit limit rather than be silently supplied as a coordinator answer.
+
 ## Final evidence continuation
 
 A retained final report is followed by [evidence integration](EXECUTION.md#final-evidence-integration). Inspect exact main/evidence refs, merge parents, campaign-only delta and immutable source/assessment hashes before continuing. Already-integrated evidence needs verification, not a duplicate merge. A retained unpublished evidence merge needs its pending normal push and exact main readback. An earlier explicit pause/unmerged limit remains effective. Preserve product completion identity independently of evidence integration identity.

@@ -23,7 +23,7 @@ Only an authorized eligible [reopened campaign amendment](../../sdd-manage/refer
 
 ## Workflow context
 
-Apply **sdd-conventions**' **Workflow identity** for branch/directory association. Record campaign or phase ID, full baseline, actual working/target branches, current authoritative sources and relevant artifact status. A lightweight steering revision report may contain only objective/context, actual changes, verification, and publication; omit absent review/plan links.
+Apply **sdd-conventions**' **Workflow identity** for branch/directory association. Record campaign or phase ID, full baseline, creation parent and full branch-off commit, actual working/target branches, current authoritative sources and relevant artifact status. The entry HANDOFF links this provenance and the suspended parent/return boundary where applicable. A lightweight steering revision report may contain only objective/context, actual changes, verification, and publication; omit absent review/plan links.
 
 Use the convention's workflow-specific report prefix: general campaigns under reviews, checkpoint steering under its phase's nested revisions, and feature records/reports under the feature directory. Retain stable identity and stage filenames; no implicit migration of historical records.
 
