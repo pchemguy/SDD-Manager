@@ -30,7 +30,7 @@ Use SDD Manager's integration procedure at the authorized complete boundary. For
 
 ## GitHub tracking
 
-Enable and maintain GitHub tracking for documentation preparation and implementation **by default**. The user may disable tracking, select local-only work or choose another supported backend. Preserve that choice through interruptions; do not silently change it after an access failure.
+Enable and maintain GitHub tracking for documentation preparation and implementation **by default**. The user may disable tracking, select local-only work or choose another supported backend. Resolve this project default before initialization writes when main preparation will install this template. Copying it does not reset an established choice. Preserve that choice through interruptions; do not silently change it after an access failure.
 
 When backend tracking is enabled, establish and verify the required objects before dependent repository work. Keep each task's issue associated with its actual milestone and close it only after verified completion is committed and published.
 

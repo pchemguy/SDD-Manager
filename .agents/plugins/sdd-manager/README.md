@@ -111,7 +111,7 @@ You may **preapprove future human checkpoints at any time**, individually or as 
 
 ### Main preparation tracking
 
-The generated AGENTS.md enables GitHub tracking for documentation preparation and implementation by default. You can change this project-level policy by instructing the agent or editing AGENTS.md, including choosing local-only work.
+The generated AGENTS.md enables GitHub tracking for documentation preparation and implementation by default. When initialization will install this template, the coordinator resolves its default before the first repository write. Explicit choices and existing project policy take precedence; copying the file does not reset them. You can change this project-level policy by instructing the agent or editing AGENTS.md, including choosing local-only work.
 
 When enabled, tracking creates/verifies the native `docs-main` milestone and all nine preparation issues **before repository modifications**. Initialization preserves existing root AGENTS/disclosure/usage/discovery files and copies missing ones. If only some existed, the agent reports both groups and pauses after publishing initialization; none/all present adds no approval stop. Existing preparation resumes without replacing files or replaying first approvals.
 
