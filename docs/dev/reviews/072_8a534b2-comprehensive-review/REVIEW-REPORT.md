@@ -5,7 +5,7 @@
 - Campaign: `072_8a534b2`; [review plan](REVIEW-PLAN.md), [coverage inventory](SOURCE-INVENTORY.md).
 - Exact reviewed baseline: `8a534b21f6318f0b76b11a19783f7d40ca94d698`.
 - Working branch/parent: `revision/072_8a534b2-comprehensive-review` / `main`.
-- State: U-001–U-003 assessed; U-004–U-005 pending. Review remains open; no remediation is selected.
+- State: U-001–U-004 assessed; U-005 pending. Review remains open; no remediation is selected.
 - Source/code inspection and bounded local verification only. No live agent/client/provider trial or source repair is selected. Package/acceptance/publisher bytes remain pinned to the baseline.
 
 ## Coverage
@@ -15,7 +15,7 @@
 | U-001 | Assessed: core procedures in full; long projections/examples/source guides targeted; package metadata structurally checked | R-001. All 78 reference modules are linked by their own entries. All 102 package Markdown files pass the bounded local-link/heading check (613 links). |
 | U-002 | Assessed: design/specification/strategy/task procedures and cross-owner gates; shared QC targeted where noted | R-002. Distinct document owners, first-approval versus current-readiness gates and explicit delivery/phase review units are coherent in inspected paths. |
 | U-003 | Assessed: implementation/recovery, feature/steering, test/docs/verification and reporting interfaces | No additional finding; R-001 affects shared Git integration. Release-specific verification continues with U-004. |
-| U-004 | Pending | Release and publisher. |
+| U-004 | Assessed: release/tracking contracts, publisher implementation, workflow/schema and targeted test bodies | R-003 (Low compatibility-policy clarification). 34 publisher tests pass; exact baseline 139-file archive verified; offline author validator: 0 errors, 48 cross-skill warnings. |
 | U-005 | Pending | Acceptance component and consolidated verification. |
 
 ## Findings
@@ -60,6 +60,23 @@ Feature incorporation keeps source retention/archive eligibility, current versus
 
 Reporting templates/examples received targeted presentation/interface inspection rather than execution of their illustrative examples. Release verification contracts are cross-checked with forge/publisher in U-004.
 
+### R-003 — State the publisher's version subset or accept build metadata
+
+- **Type / priority / confidence:** compatibility-policy clarification; Low; high confidence in reproduced validation mismatch. Nonblocking for current `0.15.0`.
+- **Baseline locations:** `.github/scripts/release.py:26–27, 183–185`; `.github/RELEASE-HANDOFF.md`, `tag` field; `.github/schemas/plugin.schema.json`, version property. Reproduction: [publisher probes](evidence/publisher-probes.py), [observed result](evidence/publisher-probes.json).
+- **Observation:** the handoff documents `tag` as `v` followed by the source manifest version. The pinned core schema accepts a string version such as `0.15.0+build.1`; publisher manifest validation accepts it too, but handoff validation rejects its matching `v0.15.0+build.1` because the tag regex has no build-metadata suffix. This is not a current package schema failure or evidence of a failed hosted release.
+- **Consequence:** a future manifest using SemVer build metadata can conform to the core schema and the documented equality rule yet fail the release/build-only entry. The supported publisher subset is not stated in the handoff guide.
+- **Reproduce:** run the campaign probe with the declared jsonschema dependency available. It validates the altered manifest in memory, then submits an otherwise valid build-only handoff; observed `ValueError: Tag must be a version tag`. No release/tag/provider operation is attempted.
+- **Bounded correction / owner:** decide whether the repository intentionally restricts version syntax. Document and consistently check that subset, or allow the intended build-metadata form while preserving exact tag/manifest equality and invalid-input rejection. Add a positive/negative contract contrast in publisher tests. No version change is proposed for this review.
+- **Dependencies / decision:** project version policy decision; proposed only.
+- **Objective recheck:** current stable and prerelease forms retain behavior; selected metadata support either passes both gates or fails at a clearly documented version-policy boundary. Arbitrary tag strings and source/version mismatch still stop before provider writes.
+
+### No-finding observations from U-004
+
+The publisher enumerates committed nested package bytes, rejects nonregular content, checks required preparation/HANDOFF assets, validates the pinned offline schema, rebases archive names and compares every emitted file with its Git object. Build-only avoids provider mutation. Controlled lifecycle tests exercise draft reuse, missing-only uploads, asset conflicts, uncertain effects, direct acknowledged-ID readback, pagination, peeled tags and latest policy. The workflow separates tooling and exact candidate, passes handoff as data and compares the publication rebuild hash with the build result. Tests do not establish GitHub's runtime acceptance of the workflow.
+
+Tracking modules use native milestones, exact issue markers and complete readback; DOCS issues retain first-approval semantics and docs-main closes after published integration. Release-message/highlights contracts distinguish source coverage, curated complete body, retained final notes, ignored internal checkpoint and verified-consumption cleanup. Release body/tag equality and version checks remain explicit agent-side gates; no fresh semantic-curation, installed-client, actual CI or live-provider trial was run.
+
 ## Verification and limits
 
-Current checks: baseline/worktree identity; 139-file package and 15-entry/78-module routing inventory; package Markdown local links/heading separation (102 files, 613 links). The first link-check shell invocation split a filename containing spaces and did not run successfully; rerunning with a structured Python argument list passed. No reviewed source was changed. Prior campaign checks are not results of this campaign. Coverage depths and remaining checks are retained with the unit reports. The final output is a review and proposed correction queue, with the campaign open for the human's revision decision.
+Current checks: 34 publisher tests passed in 2.755s on Python 3.12.14 with jsonschema 4.26.0. An initial run without the declared dependency ended with 17 subtest errors (`ModuleNotFoundError: jsonschema`); the configured rerun passed without source changes. Raw final output is retained in [publisher-suite.log](evidence/publisher-suite.log). Exact baseline build: 139 files, 367,679 bytes; SHA-256 `828cc6b323f86cf70d3e9a8220ada58417826ec1326fcc88cf33935d2eeb3970`, archive source comment and every member verified. [Author validation](evidence/author-validator.txt): exit 0, zero errors, 48 plugin-contained cross-skill warnings; those warnings qualify client handoff support, not package-root escapes. Also: baseline/worktree identity; 139-file package and 15-entry/78-module routing inventory; package Markdown local links/heading separation (102 files, 613 links). The first link-check shell invocation split a filename containing spaces and did not run successfully; rerunning with a structured Python argument list passed. No reviewed source was changed. Prior campaign checks are not results of this campaign. Coverage depths and remaining checks are retained with the unit reports. The final output is a review and proposed correction queue, with the campaign open for the human's revision decision.

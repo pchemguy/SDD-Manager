@@ -1,0 +1,16 @@
+{
+  "baseline": "8a534b21f6318f0b76b11a19783f7d40ca94d698",
+  "package": {
+    "version": "0.15.0",
+    "files": 139,
+    "bytes": 367679,
+    "sha256": "828cc6b323f86cf70d3e9a8220ada58417826ec1326fcc88cf33935d2eeb3970",
+    "comment": "8a534b21f6318f0b76b11a19783f7d40ca94d698",
+    "exact_members_verified": true
+  },
+  "build_metadata_contrast": {
+    "core_schema": "accepted",
+    "handoff": "rejected",
+    "reason": "Tag must be a version tag"
+  }
+}

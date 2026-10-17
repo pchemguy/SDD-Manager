@@ -405,105 +405,131 @@
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md",
       "unit": "U-004",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 9387,
-      "sha256": "b66d531a72c997e8b8805822afe774a94a0e608cd4a45bb07bd5f28b46bfee34"
+      "sha256": "b66d531a72c997e8b8805822afe774a94a0e608cd4a45bb07bd5f28b46bfee34",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/agents/openai.yaml",
       "unit": "U-004",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 508,
-      "sha256": "65a79f791a2285753a0e6ca9eb83e203b181c0277ada5706add85f4c86c18783"
+      "sha256": "65a79f791a2285753a0e6ca9eb83e203b181c0277ada5706add85f4c86c18783",
+      "performed_depth": "structural",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/assets/icon.svg",
       "unit": "U-004",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 579,
-      "sha256": "ca997d09da83d706126f43dc2ace19c00ee9036ae67dcce225e688a09d398d33"
+      "sha256": "ca997d09da83d706126f43dc2ace19c00ee9036ae67dcce225e688a09d398d33",
+      "performed_depth": "structural",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-docs-preparation.md",
       "unit": "U-004",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 6806,
-      "sha256": "70ae8f8b0dbd5f2a2a36173bca468275f25b4b407d78b454584bedcce40772c1"
+      "sha256": "70ae8f8b0dbd5f2a2a36173bca468275f25b4b407d78b454584bedcce40772c1",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-issue-lifecycle.md",
       "unit": "U-004",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 5072,
-      "sha256": "86c7d50e8b77969693cccb5cab51b9a8d39242363be7e2d08bcfa3babef6d171"
+      "sha256": "86c7d50e8b77969693cccb5cab51b9a8d39242363be7e2d08bcfa3babef6d171",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-milestone-lifecycle.md",
       "unit": "U-004",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4048,
-      "sha256": "3b61e310b8a996a716c860fd6039f83dc83936821e466e09d1ae53fd27dca090"
+      "sha256": "3b61e310b8a996a716c860fd6039f83dc83936821e466e09d1ae53fd27dca090",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-packaging.md",
       "unit": "U-004",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 5843,
-      "sha256": "bf2a71e63b75b117853097199120d628d67d2c419962aa441978c124e4c780ed"
+      "sha256": "bf2a71e63b75b117853097199120d628d67d2c419962aa441978c124e4c780ed",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-projection.md",
       "unit": "U-004",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 6537,
-      "sha256": "c879494bd117e79e7efdcc95ddced3b24b799d96af44cf3116143be09a09fb0e"
+      "sha256": "c879494bd117e79e7efdcc95ddced3b24b799d96af44cf3116143be09a09fb0e",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-release-workflows.md",
       "unit": "U-004",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 8751,
-      "sha256": "16400d26c01385e92aa4170f1d81574f79be058471f236c8916dcfe9bf5d721a"
+      "sha256": "16400d26c01385e92aa4170f1d81574f79be058471f236c8916dcfe9bf5d721a",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-releases.md",
       "unit": "U-004",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 9945,
-      "sha256": "27695c3741a26da6ba71a0e1985180d1fd9dcd6d560a894525360556c9811b60"
+      "sha256": "27695c3741a26da6ba71a0e1985180d1fd9dcd6d560a894525360556c9811b60",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github.md",
       "unit": "U-004",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 11768,
-      "sha256": "e564590a2c706b1b78d473f4dc54c70893682e541be6e4e827418fd6a0f87e82"
+      "sha256": "e564590a2c706b1b78d473f4dc54c70893682e541be6e4e827418fd6a0f87e82",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/release-highlights.md",
       "unit": "U-004",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 19977,
-      "sha256": "69016b326538a23316745d2a7a9937178d9f53aaa7323078dde99374b639d82f"
+      "sha256": "69016b326538a23316745d2a7a9937178d9f53aaa7323078dde99374b639d82f",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/release-message.md",
       "unit": "U-004",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 8651,
-      "sha256": "8c1121075731dbdff2bc6dd88b1c035c14826709c1404184b878e63fa37f6c98"
+      "sha256": "8c1121075731dbdff2bc6dd88b1c035c14826709c1404184b878e63fa37f6c98",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/SKILL.md",
@@ -1369,57 +1395,71 @@
       "path": ".github/RELEASE-HANDOFF.md",
       "unit": "U-004",
       "planned_depth": "code/configuration",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4971,
-      "sha256": "f2b58caf0f8396db06ba21dc39243990f2a594660523f71275a4a37d55aadc60"
+      "sha256": "f2b58caf0f8396db06ba21dc39243990f2a594660523f71275a4a37d55aadc60",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".github/requirements.txt",
       "unit": "U-004",
       "planned_depth": "code/configuration",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 19,
-      "sha256": "756cc9e506ae4ee1a6f6c0507088b5cfc0dc8ba350fb2d2d46f1ffa72033adb6"
+      "sha256": "756cc9e506ae4ee1a6f6c0507088b5cfc0dc8ba350fb2d2d46f1ffa72033adb6",
+      "performed_depth": "structural",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".github/schemas/README.md",
       "unit": "U-004",
       "planned_depth": "code/configuration",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 1177,
-      "sha256": "3def3824b27d744716ccc86f1694c0cf358c8d35a1437cb1a713c7b57881cc7c"
+      "sha256": "3def3824b27d744716ccc86f1694c0cf358c8d35a1437cb1a713c7b57881cc7c",
+      "performed_depth": "full-content",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".github/schemas/plugin.schema.json",
       "unit": "U-004",
       "planned_depth": "code/configuration",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 1805,
-      "sha256": "0a4aad95ce337878ad38802ebf0daa3fde76abe3f65400c86bcbb1ec0b3ab883"
+      "sha256": "0a4aad95ce337878ad38802ebf0daa3fde76abe3f65400c86bcbb1ec0b3ab883",
+      "performed_depth": "structural",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".github/scripts/release.py",
       "unit": "U-004",
       "planned_depth": "code/configuration",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 20840,
-      "sha256": "a651a798f8c782e4a854b043f0f2063992134f5e9cf17445ec689fbc0b440b28"
+      "sha256": "a651a798f8c782e4a854b043f0f2063992134f5e9cf17445ec689fbc0b440b28",
+      "performed_depth": "full-code",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".github/tests/test_release.py",
       "unit": "U-004",
       "planned_depth": "code/configuration",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 24782,
-      "sha256": "83d812427d10fa0df12b390b0bece723a12f751afba5eff7d0960b2bf5cd7c47"
+      "sha256": "83d812427d10fa0df12b390b0bece723a12f751afba5eff7d0960b2bf5cd7c47",
+      "performed_depth": "targeted-code/interface",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": ".github/workflows/release.yml",
       "unit": "U-004",
       "planned_depth": "code/configuration",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3352,
-      "sha256": "8073f5d9851a2e72fae1f06d96555f852a77e948eaf50c25f1eb5dbeb17b9eb1"
+      "sha256": "8073f5d9851a2e72fae1f06d96555f852a77e948eaf50c25f1eb5dbeb17b9eb1",
+      "performed_depth": "full-configuration",
+      "notes": "U-004: release/message/highlights and tracking contract review; publisher exact-candidate/build/readback/idempotence; workflow/schema/source boundary. Test execution is separate from targeted test-body inspection; no CI/provider behavior certified."
     },
     {
       "path": "AGENTS.md",
@@ -1442,6 +1482,16 @@
       "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
+      "path": "LICENSE",
+      "unit": "U-004",
+      "planned_depth": "structural",
+      "assessment": "Assessed",
+      "performed_depth": "structural",
+      "notes": "Source-only artifact: package/source notice identity or retained release message/version context; no release freshness or new-release approval claim.",
+      "bytes": 1065,
+      "sha256": "230ef093b2d68d0f37130d47064b1aff673c41830a15513801e0cc089e742ed2"
+    },
+    {
       "path": "README.md",
       "unit": "U-001",
       "planned_depth": "content",
@@ -1450,6 +1500,16 @@
       "sha256": "cd9025a1344ddb1827a979e9b42ddb5f904dacecfb116e7ba76761f402b7d868",
       "performed_depth": "full-content",
       "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
+    },
+    {
+      "path": "RELEASE-NOTES.md",
+      "unit": "U-004",
+      "planned_depth": "targeted-content/interface",
+      "assessment": "Assessed",
+      "performed_depth": "targeted-content/interface",
+      "notes": "Source-only artifact: package/source notice identity or retained release message/version context; no release freshness or new-release approval claim.",
+      "bytes": 5547,
+      "sha256": "6704b9db800112aa411087c1936d42bc03f804a0d19255442e05f042e812d101"
     },
     {
       "path": "SDD-MANAGER.md",
