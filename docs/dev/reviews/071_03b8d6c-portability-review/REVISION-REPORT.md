@@ -1,0 +1,29 @@
+# Cross-agent continuity revision results
+
+## Campaign and scope
+
+- Campaign: `071_03b8d6c`; [accepted plan](REVISION-PLAN.md), [baseline findings](REVIEW-REPORT.md).
+- Reviewed baseline: `03b8d6c9e06f22bad62a00f53190e99f90386295`; execution starts from published plan tip `66c8f64cf8442a104036ad6afed97e35b850e075`.
+- Branch/parent: `revision/071_03b8d6c-portability-review` / `main`; original opening `97a99be31334664a552a23a07d3aefb61d3ac841`.
+- Authority: execute the accepted revision and its eligible final integration/publication. Live agent/client/provider acceptance is excluded.
+- State: execution in progress. Findings remain open until their coupled changes and rechecks are complete.
+
+## Action results
+
+| Action | Actual result and evidence | State |
+| --- | --- | --- |
+| V-001 | Added canonical continuity module and four-group handoff template; routed coordinator entry and replaced session-only recovery assumption. Contract adds checkpoint/delta, branch-selection and child-return contrasts. Five source Markdown files / 115 local links and anchors passed the scoped checker; manual entry/template ownership review passed. | Revised; coupled interfaces pending. |
+| V-002 | Branch provenance, same-parent setup and merge return. | Pending. |
+| V-003 | AGENTS startup and orientation. | Pending. |
+| V-004 | Adoption/preparation checkpoints. | Pending. |
+| V-005 | Milestone/phase review-task completion. | Pending. |
+| V-006 | Campaign/steering/feature and operation returns. | Pending. |
+| V-007 | Projections and source-project handoff. | Pending. |
+| V-008 | Repository-only acceptance extension and native fixtures. | Pending. |
+| V-009 | Combined verification and eligible finalization. | Pending. |
+
+## Verification and limits
+
+The scoped checker resolves local paths/anchors and heading separation in selected current files. Source walkthroughs check ownership, routing, cadence and recovery boundaries; they do not establish model behavior. Required support/publisher suites and final package inspection will run after coupled changes. No live receiver, client installation or hosted product trial has run.
+
+Each action's source and evidence share its commit, followed by push and remote containment readback before further work. Git records exact action commits; do not embed a commit's own SHA or claim its later push from inside it. The original six-check Git probe and prior closed records remain unchanged.

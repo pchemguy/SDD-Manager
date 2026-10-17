@@ -6,8 +6,8 @@
 - Planning source: `39e40d6a96e5ee6fa1f3eee6b181317bc1712081`; subsequent changes in this planning commit are campaign records only.
 - Working branch: `revision/071_03b8d6c-portability-review`; creation parent and integration target: `main`. Original campaign-opening commit: `97a99be31334664a552a23a07d3aefb61d3ac841`.
 - Sources: [review plan](REVIEW-PLAN.md), [review report](REVIEW-REPORT.md) and its [consolidated handoff decisions](REVIEW-REPORT.md#consolidated-handoff-decisions).
-- State: **Planned; execution not started.** A future execution maintains `REVISION-REPORT.md` in this directory. Do not create a report claiming unperformed actions.
-- Current authority: integrate the discussion and prepare, verify, commit and publish this plan. Stop before source revision, adoption, live acceptance, integration or closure. Continue using this campaign when execution is selected.
+- State: **Execution selected** after published plan amendment `66c8f64cf8442a104036ad6afed97e35b850e075`; see [revision report](REVISION-REPORT.md) for actual action results.
+- Current authority: execute the accepted revision, verify/publish action checkpoints and finalize the eligible campaign into its main parent. Live acceptance remains excluded. The earlier planning-only stopping boundary is superseded by the human's execution request.
 
 The objective is for a receiving agent to recover an SDD workflow through repository AGENTS guidance, a durable checkpoint, current development records and Git, without the former conversation. Preserve actual scope, human decisions, work ownership and hosted-operation identity while keeping record maintenance proportionate.
 
@@ -91,7 +91,7 @@ The full package root is `.agents/plugins/sdd-manager/`; package paths below are
 
 ## Ordered revisions
 
-Each action below is **Planned**. Complete the named dependencies, inspect both sides of changed handoffs, retain actual results in the future revision report, then commit/push/read back before advancing to another action. Closely coupled edits within one action may share its commit; do not certify downstream behavior before its own integration/recheck.
+The actions below define the accepted work; the revision report records their actual state. Complete the named dependencies, inspect both sides of changed handoffs, retain actual results, then commit/push/read back before advancing to another action. Closely coupled edits within one action may share its commit; do not certify downstream behavior before its own integration/recheck.
 
 ### V-001 — Define the continuity module and template
 
@@ -208,7 +208,7 @@ These are planned checks, not passed results. Source walkthroughs establish inst
 
 For this planning delivery, check only the changed active records and shared index: internal consistency, local links/anchors, Markdown separation, accepted cadence/branch decisions and allowed diff paths. Preserve all closed records and the original Git probe/result. No runtime package change has occurred, so support-suite success would not verify this plan.
 
-During future execution, run focused useful checks after each action and the combined suites at the coherent integration boundary, rather than repeating full suites after prose-only units. From the repository root, with the declared publisher dependency available:
+During execution, run focused useful checks after each action and the combined suites at the coherent integration boundary, rather than repeating full suites after prose-only units. From the repository root, with the declared publisher dependency available:
 
 ```text
 PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v
@@ -217,4 +217,4 @@ PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s .github/tests -v
 
 Honor the current source instructions, relevant nested acceptance instructions and their actual runtime/dependency requirements. A changed package, failure or unresolved concern justifies the appropriate additional check. Report structural/source, native Git, support-suite and consumer/provider evidence separately.
 
-Commit the integrated discussion and this plan, push the campaign branch and verify remote containment before any further work. The present deliverable stops there: **campaign open, source revision unexecuted, no merge or live acceptance**. No repeated permission is needed for the already authorized planning publication; later execution follows the user's selected scope and stop.
+The planning deliverable was committed and published before execution. The subsequent execution request selects these actions and eligible campaign finalization; publish/read back each action before further work, then verify/integrate the complete boundary under V-009. Live acceptance remains excluded. Explicit later scope/stop instructions control the remaining execution.
