@@ -13,7 +13,7 @@
 | Action | Actual result and evidence | State |
 | --- | --- | --- |
 | V-001 | Added canonical continuity module and four-group handoff template; routed coordinator entry and replaced session-only recovery assumption. Contract adds checkpoint/delta, branch-selection and child-return contrasts. Five source Markdown files / 115 local links and anchors passed the scoped checker; manual entry/template ownership review passed. | Revised; coupled interfaces pending. |
-| V-002 | Branch provenance, same-parent setup and merge return. | Pending. |
+| V-002 | Recorded creation-parent/branch-off provenance and aligned new execution branches with their integration parent. Required preparation propagates to an active phase before child creation; prospective merges restore parent HANDOFF and return context. Seven changed source Markdown files / 80 local links and anchors passed; reviewed nested, legacy and incomplete-phase exceptions. V-001 publication was read back at `69c01bf955eafe640387c93551f2cc7fd09236c0`. | Revised; startup/producer integration pending. |
 | V-003 | AGENTS startup and orientation. | Pending. |
 | V-004 | Adoption/preparation checkpoints. | Pending. |
 | V-005 | Milestone/phase review-task completion. | Pending. |
