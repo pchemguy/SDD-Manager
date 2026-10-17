@@ -1,12 +1,12 @@
 # SDD Manager handoff
 
-Checkpoint: campaign `071_03b8d6c`, V-007 source-project adoption; execution in progress. This snapshot describes that boundary; recover later actions and decisions from the linked records and Git. Its containing commit identifies the checkpoint.
+Checkpoint: campaign `071_03b8d6c`, V-009 revision finalization; source/coverage verified, integration/publication requiring confirmation. Recover later operations and decisions from the linked records and Git. Its containing commit identifies the checkpoint.
 
-Outcome: V-001–V-006 revised coordinator continuity, parent/branch rules, startup, preparation, review-task checkpoints and campaign/feature returns. Their scoped source checks passed; combined verification and live behavior are not established by those checks.
+Outcome: V-001–V-009 revised checkpoint continuity, parent/branch rules, startup, preparation, review-task completion, returns and repository-only coverage. Working checks passed: 138 support tests, 34 publisher tests, 12 new native Git contrasts and package-author validation without errors. None establishes live receiver behavior.
 
 ## Workflow and sources
 
-- Workflow/stage/owner: revision campaign 071; accepted source revision through V-009, coordinated by `sdd-manage`.
+- Workflow/stage/owner: revision campaign 071; final source persistence and eligible main integration, coordinated by `sdd-manage`.
 - Governing scope/progress: [revision plan](reviews/071_03b8d6c-portability-review/REVISION-PLAN.md), [revision results](reviews/071_03b8d6c-portability-review/REVISION-REPORT.md) and [baseline findings](reviews/071_03b8d6c-portability-review/REVIEW-REPORT.md). Read current campaign decisions/results and Git changes after this checkpoint before continuing.
 - Source instructions/checks: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md) and [plugin development contract](PLUGIN-CONTRACT.md). The complete local package is `.agents/plugins/sdd-manager/`; no automatic instruction reload is assumed.
 
@@ -26,5 +26,5 @@ Outcome: V-001–V-006 revised coordinator continuity, parent/branch rules, star
 
 ## Pending work and next action
 
-- Pending: V-007 publication requires confirmation; V-008 acceptance-component/native Git coverage and V-009 combined verification/finalization remain. Use the revision report and actual refs for subsequent state. No live receiver/provider trial has run.
-- Next eligible action: finish/read back this checkpoint's publication, then execute remaining planned actions. Preserve closed campaign bytes and original probe evidence. Required access/tool failures must retain actual pending state, not invent completion or discard work.
+- Pending: this final checkpoint's publication, exact committed package check and verified main integration/publication require confirmation. Use the revision report and actual refs for subsequent state. No live receiver/provider trial has run.
+- Next eligible action: publish/read back this checkpoint, finish the eligible verified main merge and return control. If actual refs already establish that completion, wait for the next human request; do not repeat the merge or start another range. Preserve closed campaign bytes and original probe evidence.

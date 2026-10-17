@@ -69,7 +69,7 @@ class PackageTests(Contract):
         manifest=json.dumps({"$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json", "name":"sdd-manager", "version":"0.15.0"}).encode()
         for name in ('LICENSE','README.md','PLUGIN.md','assets/Greenfield Project Prompt Template.md',
                      'assets/SDD-MANAGER.md','assets/AI_DISCLOSURE.md',
-                     'assets/AGENTS_TEMPLATE.md','assets/DOCS_TASKS_TEMPLATE.md','assets/SKILL_DISCOVERY_PROTOCOL.md',
+                     'assets/AGENTS_TEMPLATE.md','assets/DOCS_TASKS_TEMPLATE.md','assets/HANDOFF_TEMPLATE.md','assets/SKILL_DISCOVERY_PROTOCOL.md',
                      'assets/icon.svg','skills/sample/SKILL.md',
                      'plugin.json','docs/excluded.md','docs/ai-logs/EXPLORE_DRIVE_V1.md','AGENTS.md'):
             p=(self.root if name.startswith('docs/') or name=='AGENTS.md' else self.package)/name; p.parent.mkdir(parents=True,exist_ok=True)
@@ -100,7 +100,7 @@ class PackageTests(Contract):
         self.assertEqual(paths['sdd-manager.zip.sha256'].read_text(),hashlib.sha256(raw).hexdigest()+'  sdd-manager.zip\n')
 
     def test_preparation_assets_are_exact_and_missing_assets_block_build(self):
-        assets = ('AGENTS_TEMPLATE.md', 'DOCS_TASKS_TEMPLATE.md', 'SKILL_DISCOVERY_PROTOCOL.md')
+        assets = ('AGENTS_TEMPLATE.md', 'DOCS_TASKS_TEMPLATE.md', 'HANDOFF_TEMPLATE.md', 'SKILL_DISCOVERY_PROTOCOL.md')
         paths = publisher.build_package(self.root, self.data, self.out)
         with zipfile.ZipFile(paths['sdd-manager.zip']) as zipped:
             for name in assets:

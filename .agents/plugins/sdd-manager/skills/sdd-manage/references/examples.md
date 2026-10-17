@@ -94,7 +94,7 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 
 | Context | Result |
 | --- | --- |
-| Feature preparation through implementation is requested. | Prepare/commit/push project documents on design-docs; explicitly merge, verify and publish them into the actual default branch; then create the feature implementation branch from that checkpoint. Incorporate selected accepted deltas before final implementation verification and integration. |
+| Feature preparation through implementation is requested. | Prepare/commit/push project documents on design-docs; explicitly merge, verify and publish them into the actual default branch; then create the feature implementation branch from its recorded parent containing that checkpoint (propagating accepted preparation to an active phase first when required). Incorporate selected accepted deltas before final implementation verification and integration. |
 | Initial preparation is accepted and implementation is requested. | Explicitly merge the design-docs tip into the actual default branch, verify/publish the merge and confirm containment; only then create the first phase branch from that baseline. |
 | Preparation merge is committed but default publication fails. | Preserve the merge and stop before creating the implementation branch; finish publication on continuation without repeating the merge. |
 | Accepted preparation is already merged and published. | Verify the exact preparation tip is contained; reuse that default baseline without another merge. |

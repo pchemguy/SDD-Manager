@@ -13,7 +13,7 @@
 
 The human subsequently selected a coordinator-owned continuity subworkflow, a branch-local `docs/dev/HANDOFF.md`, startup discovery of unfinished workflow branches, integration into the recorded creation parent and checkpoint-based refresh. The final cadence supersedes the earlier per-commit refresh proposal: establish the handoff at workflow entry, refresh at completed implementation milestones and revision finalization, and recover intervening work from existing documents, decision records and Git. See the report's [consolidated decisions](REVIEW-REPORT.md#consolidated-handoff-decisions).
 
-The current request authorizes integrating those decisions and preparing/publishing a detailed [revision plan](REVISION-PLAN.md). It does not authorize executing the proposed source changes, creating a project handoff, running live acceptance, closing the campaign or merging it. The original source assessment and Git probe remain baseline evidence; planning is not a verified correction.
+The planning request authorized integrating those decisions and publishing a detailed [revision plan](REVISION-PLAN.md), stopping before source changes. The subsequent execution request selected the accepted actions and eligible finalization; [revision results](REVISION-REPORT.md) distinguish source/component verification from unrun live acceptance. The original source assessment and Git probe remain baseline evidence.
 
 ## Review questions
 

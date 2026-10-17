@@ -5,7 +5,7 @@
 - Campaign: `071_03b8d6c`; [review plan](REVIEW-PLAN.md).
 - Reviewed baseline: `03b8d6c9e06f22bad62a00f53190e99f90386295`.
 - Working branch: `revision/071_03b8d6c-portability-review`; target: main.
-- State: U-001/U-002 assessed; handoff discussion integrated and [revision plan](REVISION-PLAN.md) prepared. Campaign open; source execution, integration and live acceptance not performed.
+- State: U-001/U-002 assessed; discussion integrated and accepted [revision plan](REVISION-PLAN.md) executed. See [revision results](REVISION-REPORT.md) for source/component rechecks and integration boundary. Live acceptance remains unrun.
 
 The required outcome is repository-based recovery by a different agent following AGENTS.md, without relying on the former agent's conversation or private notes. The review distinguishes the same-worktree and fresh-clone cases, and separates persistent project decisions from current external state and execution facilities.
 
@@ -93,7 +93,7 @@ These are valuable existing recovery tests. They do not explicitly require the r
 
 ## Consolidated handoff decisions
 
-The discussion after U-002 selects the following design for revision planning. The final checkpoint cadence supersedes the earlier proposal to refresh at every commit. These are selected requirements and planned corrections, not implemented behavior.
+The discussion after U-002 selects the following design for revision planning. The final checkpoint cadence supersedes the earlier proposal to refresh at every commit. These decisions record the accepted design before execution; the revision report owns actual implementation and verification claims.
 
 ### Ownership and record
 
@@ -161,7 +161,7 @@ These are source walkthroughs and proposed objective rechecks, not executed cons
 
 ## Revision planning disposition
 
-The [detailed revision plan](REVISION-PLAN.md) integrates R-001–R-004 and the selected handoff design. R-003's branch-selection decision is resolved for planning; its instruction and coverage changes remain outstanding. All four findings remain open pending execution and their stated rechecks. No HANDOFF.md, package template or workflow instruction was added by this review/planning work. The current request stops at published planning, with the campaign open and unmerged.
+The [detailed revision plan](REVISION-PLAN.md) integrated R-001–R-004 and the selected handoff design. Planning itself changed no runtime instructions. The subsequent execution implemented HANDOFF/template, coordinator and owner routes, branch policy, coverage and package checks; the [revision report](REVISION-REPORT.md#finding-disposition) records final source/coverage dispositions without attributing live receiver behavior to those checks.
 
 ## Coverage, verification and disposition
 
@@ -171,4 +171,4 @@ The disposable native Git probe ran on Linux/Python 3.12.14 and passed its six t
 
 Planning verification on 2026-10-17 checked the three active records and this campaign's shared-index row: all 22 local links/anchors resolved; heading/list separation, blank-line and indentation checks passed; nine unique ordered actions and 22 scenario criteria were present. The exact four changed paths are those three records and the shared index. Package/source instructions, acceptance, the original Git evidence and all closed campaign contents remain unchanged. This verifies the planning delivery, not the proposed continuity behavior.
 
-Four findings remain **Open**: two High capability gaps (R-001/R-002), one Medium transfer-policy change with its design choice now selected (R-003) and one Medium acceptance gap (R-004). Existing recovery can support many transfers when its evidence is present; it does not currently guarantee AGENTS-led repository-only continuation across the full requested boundary. The selected correction is a coordinator-owned checkpoint/recovery protocol using one tracked handoff, milestone/finalization refresh and Git/document recovery between checkpoints. The campaign remains open and unmerged at the detailed revision plan; live acceptance and source execution have not occurred.
+The baseline assessment identified two High capability gaps (R-001/R-002), a Medium transfer-policy decision (R-003) and a Medium acceptance coverage/evidence gap (R-004). Execution resolved the source and coverage changes through coordinator-owned checkpoint recovery, milestone/finalization refresh, branch selection and parent return. Source/native/support checks do not guarantee successful receiver behavior: live agent/client/provider acceptance remains Not run. Final persistence and campaign closure follow the revision report and verified Git integration, without changing baseline observations into runtime results.

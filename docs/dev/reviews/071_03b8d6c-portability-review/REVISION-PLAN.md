@@ -6,7 +6,7 @@
 - Planning source: `39e40d6a96e5ee6fa1f3eee6b181317bc1712081`; subsequent changes in this planning commit are campaign records only.
 - Working branch: `revision/071_03b8d6c-portability-review`; creation parent and integration target: `main`. Original campaign-opening commit: `97a99be31334664a552a23a07d3aefb61d3ac841`.
 - Sources: [review plan](REVIEW-PLAN.md), [review report](REVIEW-REPORT.md) and its [consolidated handoff decisions](REVIEW-REPORT.md#consolidated-handoff-decisions).
-- State: **Execution selected** after published plan amendment `66c8f64cf8442a104036ad6afed97e35b850e075`; see [revision report](REVISION-REPORT.md) for actual action results.
+- State: accepted execution through V-009; see [revision report](REVISION-REPORT.md) for source/component results and final integration/publication. Execution followed published plan amendment `66c8f64cf8442a104036ad6afed97e35b850e075`; live acceptance remains excluded.
 - Current authority: execute the accepted revision, verify/publish action checkpoints and finalize the eligible campaign into its main parent. Live acceptance remains excluded. The earlier planning-only stopping boundary is superseded by the human's execution request.
 
 The objective is for a receiving agent to recover an SDD workflow through repository AGENTS guidance, a durable checkpoint, current development records and Git, without the former conversation. Preserve actual scope, human decisions, work ownership and hosted-operation identity while keeping record maintenance proportionate.
