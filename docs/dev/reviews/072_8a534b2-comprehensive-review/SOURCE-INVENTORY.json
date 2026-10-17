@@ -5,121 +5,151 @@
       "path": ".agents/plugins/sdd-manager/LICENSE",
       "unit": "U-001",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 1065,
-      "sha256": "230ef093b2d68d0f37130d47064b1aff673c41830a15513801e0cc089e742ed2"
+      "sha256": "230ef093b2d68d0f37130d47064b1aff673c41830a15513801e0cc089e742ed2",
+      "performed_depth": "structural",
+      "notes": "Package path, identity and asset/reference inclusion; no raster visual-design or client-rendering claim."
     },
     {
       "path": ".agents/plugins/sdd-manager/PLUGIN.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 21418,
-      "sha256": "a8912c71135698b8ff30622fb7e52e5f99cd27dc358993a1fe5d1c12d398fa4f"
+      "sha256": "a8912c71135698b8ff30622fb7e52e5f99cd27dc358993a1fe5d1c12d398fa4f",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/README.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 28624,
-      "sha256": "856e2fc246cfa2a2bb69701062a62fdb1fc64e9088fb9e088b76218746f0ae84"
+      "sha256": "856e2fc246cfa2a2bb69701062a62fdb1fc64e9088fb9e088b76218746f0ae84",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4652,
-      "sha256": "77bd8ac34590f1678e0418c514efd4ebdd8f27bd0991afba8aca1533f84a1d0d"
+      "sha256": "77bd8ac34590f1678e0418c514efd4ebdd8f27bd0991afba8aca1533f84a1d0d",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/AI_DISCLOSURE.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 1192,
-      "sha256": "09411dc61f4966efabe8e821f2270c768baf5b96f4fd4587eb5c05233de7ffea"
+      "sha256": "09411dc61f4966efabe8e821f2270c768baf5b96f4fd4587eb5c05233de7ffea",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 6171,
-      "sha256": "2ddbcfe9c26d3e27ac3ad42ca36eaed6d069dcbf8fd9e073a73a9c8f56312d01"
+      "sha256": "2ddbcfe9c26d3e27ac3ad42ca36eaed6d069dcbf8fd9e073a73a9c8f56312d01",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 1599,
-      "sha256": "852c666018f223c49cc4732af5f1a1bf8db38061114721b9dc738ec702ec9617"
+      "sha256": "852c666018f223c49cc4732af5f1a1bf8db38061114721b9dc738ec702ec9617",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/HANDOFF_TEMPLATE.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 1891,
-      "sha256": "081b447518cea784d8a0e9a5e5226986e4cc264979622e3f3bc48eb4e4525067"
+      "sha256": "081b447518cea784d8a0e9a5e5226986e4cc264979622e3f3bc48eb4e4525067",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/SDD-MANAGER.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 683,
-      "sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf"
+      "sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/SKILL_DISCOVERY_PROTOCOL.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2952,
-      "sha256": "73d78200b290c487674c9c7e16e9805571cc09b375f9ce1abecfc0378181e665"
+      "sha256": "73d78200b290c487674c9c7e16e9805571cc09b375f9ce1abecfc0378181e665",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/icon.png",
       "unit": "U-001",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 14257,
-      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45"
+      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45",
+      "performed_depth": "structural",
+      "notes": "Package path, identity and asset/reference inclusion; no raster visual-design or client-rendering claim."
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/icon.svg",
       "unit": "U-001",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 581,
-      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f"
+      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f",
+      "performed_depth": "structural",
+      "notes": "Package path, identity and asset/reference inclusion; no raster visual-design or client-rendering claim."
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/logo.png",
       "unit": "U-001",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 14257,
-      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45"
+      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45",
+      "performed_depth": "structural",
+      "notes": "Package path, identity and asset/reference inclusion; no raster visual-design or client-rendering claim."
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/logo.svg",
       "unit": "U-001",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 581,
-      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f"
+      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f",
+      "performed_depth": "structural",
+      "notes": "Package path, identity and asset/reference inclusion; no raster visual-design or client-rendering claim."
     },
     {
       "path": ".agents/plugins/sdd-manager/plugin.json",
       "unit": "U-001",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2059,
-      "sha256": "bbf4bc4f6901d5a79857fb1baaf7673abd04c857adf17294162b22314ce9b6db"
+      "sha256": "bbf4bc4f6901d5a79857fb1baaf7673abd04c857adf17294162b22314ce9b6db",
+      "performed_depth": "structural",
+      "notes": "Package path, identity and asset/reference inclusion; no raster visual-design or client-rendering claim."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/SKILL.md",
@@ -533,193 +563,241 @@
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 13825,
-      "sha256": "35203fbed5c480beddad9f03d18bca2be0ac34f25afd3ffe8a851d3dc6689c51"
+      "sha256": "35203fbed5c480beddad9f03d18bca2be0ac34f25afd3ffe8a851d3dc6689c51",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/agents/openai.yaml",
       "unit": "U-001",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 524,
-      "sha256": "c3d318cf2a1074db8bc3c956109b12b1a3399c3835eded7bbac57f9ee7f5a778"
+      "sha256": "c3d318cf2a1074db8bc3c956109b12b1a3399c3835eded7bbac57f9ee7f5a778",
+      "performed_depth": "structural",
+      "notes": "Package path, identity and asset/reference inclusion; no raster visual-design or client-rendering claim."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/assets/icon.svg",
       "unit": "U-001",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 590,
-      "sha256": "d263da0cf62afe30dec52294f51c33a0d522b25c44049224a2274037e8ace44d"
+      "sha256": "d263da0cf62afe30dec52294f51c33a0d522b25c44049224a2274037e8ace44d",
+      "performed_depth": "structural",
+      "notes": "Package path, identity and asset/reference inclusion; no raster visual-design or client-rendering claim."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/agent-orientation.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4994,
-      "sha256": "eb2b006824da0312323777b61459c1094ccef847075b6250448c2161bc48dc57"
+      "sha256": "eb2b006824da0312323777b61459c1094ccef847075b6250448c2161bc48dc57",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/branch-management.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 14481,
-      "sha256": "0cc981a4a37a0095803fd746998e8bf921991014e07897f861b4120635b6112c"
+      "sha256": "0cc981a4a37a0095803fd746998e8bf921991014e07897f861b4120635b6112c",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/continuity.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 10261,
-      "sha256": "481a4a3a7ea277b0b83015cf7530754bbe5a65f7f97e535ec22cb30db63acbdd"
+      "sha256": "481a4a3a7ea277b0b83015cf7530754bbe5a65f7f97e535ec22cb30db63acbdd",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 18229,
-      "sha256": "385f58bb181888436250017efc39f3d864a9c286d7a96c0ddacf0a5697af7cf1"
+      "sha256": "385f58bb181888436250017efc39f3d864a9c286d7a96c0ddacf0a5697af7cf1",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/credentials.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 7412,
-      "sha256": "f1e0ca1f4bd5b93a9bebf895ec48b5a721745f120809c890d89478e704a8d3b7"
+      "sha256": "f1e0ca1f4bd5b93a9bebf895ec48b5a721745f120809c890d89478e704a8d3b7",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/document-qc-gates.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 6358,
-      "sha256": "c9609bf09f408c7266256e5b16676e58f67fea80186790069e48dd3c210fca33"
+      "sha256": "c9609bf09f408c7266256e5b16676e58f67fea80186790069e48dd3c210fca33",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/examples.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 28881,
-      "sha256": "64112e46663f98db22daf1dfb9930c2ff5cc1e8f8b0cb7fee489445500e7fd9b"
+      "sha256": "64112e46663f98db22daf1dfb9930c2ff5cc1e8f8b0cb7fee489445500e7fd9b",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 15523,
-      "sha256": "abfc1db2a54d8d3e14b639ad1ef6be71e77637e1575558f15df7b864692e949c"
+      "sha256": "abfc1db2a54d8d3e14b639ad1ef6be71e77637e1575558f15df7b864692e949c",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/human-document-review.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 7583,
-      "sha256": "3ea6fc1d67011d4b6df70d34302c543a32b72fd5c599565f153fd10d54b1b433"
+      "sha256": "3ea6fc1d67011d4b6df70d34302c543a32b72fd5c599565f153fd10d54b1b433",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/main-preparation.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 11562,
-      "sha256": "32754d18bd18e70367c9339dd60c1553c436da22fb68d8cd0a939275fe871fe9"
+      "sha256": "32754d18bd18e70367c9339dd60c1553c436da22fb68d8cd0a939275fe871fe9",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/phase-activation.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 4216,
-      "sha256": "48edb9f14a072382d699822f48d6cfac82d2f116b602ff1a4bae105fbb8f27d0"
+      "sha256": "48edb9f14a072382d699822f48d6cfac82d2f116b602ff1a4bae105fbb8f27d0",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/prerelease-review.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 9774,
-      "sha256": "0fc0a9e77dcec7d96116cebc641b823dbb0544980190f5c9a608704c991c2338"
+      "sha256": "0fc0a9e77dcec7d96116cebc641b823dbb0544980190f5c9a608704c991c2338",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/repository-bootstrap.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 9551,
-      "sha256": "a29543a74507cc52efc5f76649871b1d4ce4117ec0d72b029f805fd8f75d4435"
+      "sha256": "a29543a74507cc52efc5f76649871b1d4ce4117ec0d72b029f805fd8f75d4435",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/review-and-revision.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 11034,
-      "sha256": "b8be2c6e04ad5cdd66986250b8d1b95e5035cfabe48e8927d835cb9081cae583"
+      "sha256": "b8be2c6e04ad5cdd66986250b8d1b95e5035cfabe48e8927d835cb9081cae583",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/revision-modes.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 10386,
-      "sha256": "007ac61eb9b7c7bc557149824725ceda07b5d08666c94f491e9a1d7fde0af32c"
+      "sha256": "007ac61eb9b7c7bc557149824725ceda07b5d08666c94f491e9a1d7fde0af32c",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/tracking-decision.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 5379,
-      "sha256": "5d7d4ccf1cd2b8afb2093cbb52d1c68e7c067613df6bef027019d08d1cd91ff6"
+      "sha256": "5d7d4ccf1cd2b8afb2093cbb52d1c68e7c067613df6bef027019d08d1cd91ff6",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/workflows.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 27168,
-      "sha256": "0a2d8c10a109ec5666dbc759480255433fa9e069e52f0aa5039f92cf70051e58"
+      "sha256": "0a2d8c10a109ec5666dbc759480255433fa9e069e52f0aa5039f92cf70051e58",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-orient/SKILL.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 5480,
-      "sha256": "e141595a8bac4b19eb0515b386f83f461b8b011ff899fc14f491215ab39897de"
+      "sha256": "e141595a8bac4b19eb0515b386f83f461b8b011ff899fc14f491215ab39897de",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-orient/agents/openai.yaml",
       "unit": "U-001",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 491,
-      "sha256": "36dbb7990b7f504c1fa4b614651ad26431ab6af5a623be8250b780ce156667c9"
+      "sha256": "36dbb7990b7f504c1fa4b614651ad26431ab6af5a623be8250b780ce156667c9",
+      "performed_depth": "structural",
+      "notes": "Package path, identity and asset/reference inclusion; no raster visual-design or client-rendering claim."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-orient/assets/icon.svg",
       "unit": "U-001",
       "planned_depth": "structural",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 571,
-      "sha256": "ef235e59b6a56e0d21629b3b6c1b2ca9cc97cd678d02bcb31b0e2f7bc11bf1f2"
+      "sha256": "ef235e59b6a56e0d21629b3b6c1b2ca9cc97cd678d02bcb31b0e2f7bc11bf1f2",
+      "performed_depth": "structural",
+      "notes": "Package path, identity and asset/reference inclusion; no raster visual-design or client-rendering claim."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-orient/references/inspection-and-handoff.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 12021,
-      "sha256": "53b873604feabc97d21113ff403d23e343c6ca76469e2614fcc681f9030455af"
+      "sha256": "53b873604feabc97d21113ff403d23e343c6ca76469e2614fcc681f9030455af",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md",
@@ -1173,41 +1251,51 @@
       "path": "AGENTS.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2907,
-      "sha256": "f6436413158f60aa2047bef4432e069601a6762fca1da835125f8d051d512989"
+      "sha256": "f6436413158f60aa2047bef4432e069601a6762fca1da835125f8d051d512989",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": "AI_DISCLOSURE.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 1192,
-      "sha256": "09411dc61f4966efabe8e821f2270c768baf5b96f4fd4587eb5c05233de7ffea"
+      "sha256": "09411dc61f4966efabe8e821f2270c768baf5b96f4fd4587eb5c05233de7ffea",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": "README.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 1365,
-      "sha256": "cd9025a1344ddb1827a979e9b42ddb5f904dacecfb116e7ba76761f402b7d868"
+      "sha256": "cd9025a1344ddb1827a979e9b42ddb5f904dacecfb116e7ba76761f402b7d868",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": "SDD-MANAGER.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 683,
-      "sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf"
+      "sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": "SKILL_DISCOVERY_PROTOCOL.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 2952,
-      "sha256": "73d78200b290c487674c9c7e16e9805571cc09b375f9ce1abecfc0378181e665"
+      "sha256": "73d78200b290c487674c9c7e16e9805571cc09b375f9ce1abecfc0378181e665",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": "acceptance/AGENTS.md",
@@ -2477,49 +2565,61 @@
       "path": "docs/demo/calculator/README.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 10443,
-      "sha256": "9828d88a108e8be970bdc63e61db79b11a5c05bea2f085d7c18048bff16b00ab"
+      "sha256": "9828d88a108e8be970bdc63e61db79b11a5c05bea2f085d7c18048bff16b00ab",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": "docs/demo/tetris/README.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 26227,
-      "sha256": "e99fdcbe096224dc68ba2461db3be3e60bd7b847e8fdcc960caad6689d115374"
+      "sha256": "e99fdcbe096224dc68ba2461db3be3e60bd7b847e8fdcc960caad6689d115374",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": "docs/demo/tetris/examples/PROJECT_phased-project.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 841,
-      "sha256": "ddaa9d68c88bd3107a13ce783c43ef886e42fe6bb6b210427d9b8d91e1cdd242"
+      "sha256": "ddaa9d68c88bd3107a13ce783c43ef886e42fe6bb6b210427d9b8d91e1cdd242",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": "docs/dev/CAPABILITY-MAP.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 31611,
-      "sha256": "6f8c707ef86f729fc8b33aed950ce25004fbf6588b20183f728abfa9f26c9777"
+      "sha256": "6f8c707ef86f729fc8b33aed950ce25004fbf6588b20183f728abfa9f26c9777",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": "docs/dev/HANDOFF.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 3480,
-      "sha256": "101c5ad788ddbfa8bdda08f6cddc64f966424064fca8b94eef16d6a8f2c81011"
+      "sha256": "101c5ad788ddbfa8bdda08f6cddc64f966424064fca8b94eef16d6a8f2c81011",
+      "performed_depth": "full-content",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     },
     {
       "path": "docs/dev/PLUGIN-CONTRACT.md",
       "unit": "U-001",
       "planned_depth": "content",
-      "assessment": "Pending",
+      "assessment": "Assessed",
       "bytes": 34639,
-      "sha256": "58040af7aaad68c5f0f81ae4ae61d18af9a7e716a6c0f5608923a591e6a098ed"
+      "sha256": "58040af7aaad68c5f0f81ae4ae61d18af9a7e716a6c0f5608923a591e6a098ed",
+      "performed_depth": "targeted-content/interface",
+      "notes": "U-001: role/routing, consequential gates, context/authority, branch/parent continuity and package/source projection. Long examples/source maps reviewed selectively; not every example independently executed."
     }
   ],
   "excluded": [
