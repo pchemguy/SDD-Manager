@@ -22,5 +22,14 @@
   "required_agent_checks": [
     "Before interruption actual task checks and checklist completion are observed, with staged owned bytes but no task commit.",
     "Fresh continuation identifies same completed pending work, preserves task/test identity, avoids reimplementation, scopes commit/check evidence and publishes before any next task."
-  ]
+  ],
+  "variant_agent_checks": {
+    "core": [
+      "Use the staged-work interruption and accompanying current-state handoff; retain observed work/index and publish before advancing."
+    ],
+    "repository-only": [
+      "The genuinely fresh receiver obtains workflow, authorized range, later grant/revocation and stopping boundary through product AGENTS/HANDOFF/owning records and Git; no coordinator state or authorization summary is injected.",
+      "Reconstruct valid changes after the last milestone checkpoint; preserve missing-input/decision limits, exact hosted readback and recorded parent return without unrequested resumption."
+    ]
+  }
 }
