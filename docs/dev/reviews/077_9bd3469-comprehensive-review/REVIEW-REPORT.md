@@ -16,10 +16,10 @@ Initial inventory: 151 package files, 106 Markdown resources and 15 skill entrie
 | U-004 | Assessed | Reviews/tracking/credentials | No additional findings |
 | U-005 | Assessed | Design/contracts/plans/tasks | No additional findings |
 | U-006 | Assessed | Execution/incorporation/testing/docs/reports | No additional findings |
-| U-007 | Assessed | Hosted tracking and executable helpers | No additional findings |
-| U-008 | Planned | Release/package/source support and consolidation | Not yet assessed |
+| U-007 | Assessed | Hosted tracking and executable helpers | R-003, R-004 |
+| U-008 | Assessed | Release/package/source support and consolidation | No additional findings |
 
-Remaining units are planned, not assessed. Source-only historical campaign packages are excluded and preserved; no live-provider, installed-client, independent consumer or TextStats product run is selected.
+All eight units are assessed at the declared content/interface or structural/asset depth. Source-only historical campaign packages are excluded and preserved; no live-provider, installed-client, independent consumer or TextStats product run is selected.
 
 ## U-001 — Entries, package boundaries and source contract
 
@@ -54,6 +54,10 @@ Reviewed all 28 selected references in full across implementation, steering, fea
 ## U-007 — Hosted tracking helpers and boundaries
 
 Reviewed the five backend lifecycle references in full and checked executable/guidance interfaces against their callers. Reused the immediately preceding source review and native Windows CMD/Linux Node 22/24 evidence for unchanged auth/transport/runtime code, with fresh focused inspection of completion/projection matching, source parsing, capability separation and error/readback paths. All 89 runtime tests pass freshly on Linux Node 24.19.0; this baseline suite misses the new conflicts. Controlled probes retained under evidence/ use synthetic credentials/provider fixtures only and establish R-003/R-004. No live tracking write, installed-client test or historical campaign content review occurred. Draft extraction, AI-authored semantics, outgoing-content review and manager-owned eligibility remain correctly separate.
+
+## U-008 — Release, packaging and review consolidation
+
+Reviewed all five release/highlights/package/workflow references in full against reporting and verification owners. Inspected the complete source publisher, release and utility workflow triggers/permissions/runtime/source handoff, pinned schema and package-snapshot ownership interfaces; source-only support tooling was reviewed at its selected interface depth, not as a new full acceptance-harness audit. Exact-source building, body preservation, single-publisher draft recovery and current package exclusion checks align. Fresh support suite: 139 passed; publisher suite: 37 passed; catalog: 33 static cases valid. Source package has all 151 resources; presentation/manifest/source checks and known-link finding remain as recorded. No additional finding; no publication dispatch, release, visual/client rendering or consumer product trial was performed.
 
 ## Findings
 
@@ -91,3 +95,11 @@ Baseline location: forge-project.mjs reconcileProjection uses metadata.private t
 GitHub's [repository endpoint](https://docs.github.com/en/rest/repos/repos#get-a-repository) exposes visibility; its [API visibility field explanation](https://developer.github.com/changes/3/#repository-visibility-fields) includes public, private and internal. Current enterprise [visibility guidance](https://docs.github.com/en/enterprise-cloud@latest/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility) confirms internal remains a distinct audience. These official sources were checked during review; no old preview-header instructions are adopted.
 
 Correction: preserve valid explicit public/private/internal metadata, conservatively reject malformed/contradictory public/private metadata, retain documented compatibility with boolean-only responses, and compare resolved visibility at final readback. Document the observed/fallback boundary and content-review ownership. Recheck all three audiences, missing visibility fallback, invalid metadata and audience drift without claiming that readback prevents a concurrent external visibility change.
+
+## Consolidated revision handoff
+
+Four findings remain Open on unchanged reviewed source: one Low navigation defect, two Medium code/interface defects, and one Medium source-composition recommendation. All are within the human-authorized revision; none needs a new product requirement or live-provider experiment. R-003 and R-004 require independent failing regression assertions before production corrections. R-001/R-002 use source/link/content-preservation checks rather than artificial behavioral tests. No confirmed finding is deferred or rejected.
+
+Fresh baseline checks: 89 Node runtime contracts, 139 Python support tests, 37 publisher tests and all 33 static catalog cases pass. Manifest/entry/resource/asset checks pass; one known broken fragment remains. Existing support tests are insufficient for the two demonstrated edge cases. Structural/current-source coherence does not certify actual agent judgment, consumer execution, installed-client discovery, live GitHub permission or arbitrary Windows environments. Previously observed native matrices apply only to unchanged code until the revisions receive their own checks.
+
+Source and all closed campaign packages remain unchanged at the end of review. Revision planning/execution and final integration/closure remain pending under the existing request. A complete revision plan is the next output; this report does not itself claim repairs.
