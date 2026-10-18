@@ -2,7 +2,7 @@
 
 ## Campaign and entry
 
-- Campaign: `075_89fdf79`; state: open, intake/exploration before candidate evaluation.
+- Campaign: `075_89fdf79`; state: open, first candidate assessed; further candidates and integration decisions pending.
 - Full starting baseline/branch-off commit: `89fdf79637e59c558b3a265d5e458c22e58d49b7`.
 - Working branch: `revision/075_89fdf79-scripting`.
 - Creation parent/eventual integration target: `main`; no suspended parent campaign.
@@ -13,9 +13,9 @@
 
 Assess supplied scripts for useful integration into SDD Manager, including adaptation, consolidation, replacement by existing capabilities or rejection. Consider other potential scripting candidates where concrete recurring work or failure evidence justifies investigation. Do not assume every agent-created script should become a shipped dependency.
 
-Candidate files, their original tasks and observed results have not yet been supplied in this campaign. Identify exact sources/provenance and inspect them before attributing behavior or selecting repairs. Do not infer that scripts mentioned in unrelated earlier discussions are the intended candidates.
+Candidate C-001, git-auth-recover.mjs, was supplied in chat and assessed in the [review report](REVIEW-REPORT.md). Its original execution results were not supplied; additional candidates remain pending. Identify exact sources/provenance and inspect them before attributing behavior or selecting repairs. Do not infer that scripts mentioned in unrelated earlier discussions are the intended candidates.
 
-The opening checkpoint establishes campaign records/navigation and HANDOFF only. Stop after publication/readback, pending candidate input. Evaluation can then be scoped to the actual material; source repairs, candidate execution with project/host effects, package integration, release and merge are not authorized by opening alone.
+The human subsequently requested evaluation of C-001, including behavior, SDD fit and Windows/Linux portability. Publish that assessment and retain the supplied source; source repairs, candidate execution with project/host effects, package integration, release and merge are not authorized by opening alone.
 
 ## Intended assessment concerns
 
@@ -32,8 +32,8 @@ Where an abstract illustration improves reasoning, label it illustrative and non
 
 ## Evidence and next boundary
 
-No candidate review, execution, finding or integration-readiness result exists yet. No script is accepted, rejected or promised for publication. Potential additional candidates should be supported by current workflow evidence and prioritized against actual benefit and maintenance cost.
+C-001 is assessed as Adapt, not ready to ship unchanged; seven source findings and a cross-platform direction are recorded. Only Node syntax validation was performed, without executing its top-level effects. No implementation or helper strategy is accepted for integration. Potential additional candidates should be supported by current workflow evidence and prioritized against actual benefit and maintenance cost.
 
 Opening checks cover branch/baseline identity, owned paths, whitespace and current links; no product/support suite or live acceptance is needed for this metadata-only checkpoint. Preserve previous closed campaign objects unchanged.
 
-Next eligible action: receive the scripts or exact paths and their intended purposes, then establish the bounded candidate assessment and evidence plan. A later revision plan follows actual findings/accepted directions; do not manufacture repairs in advance.
+Next eligible action: discuss C-001 findings or receive further candidates. A later revision plan follows accepted integration directions; do not execute the retained candidate or implement repairs merely from this review.
