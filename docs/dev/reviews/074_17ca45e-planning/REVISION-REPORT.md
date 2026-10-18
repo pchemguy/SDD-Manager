@@ -16,4 +16,6 @@
 
 | V-002 / R-001, R-002 | Hierarchy and coordinator handoff now route bounded phase semantics and version coverage to the delivery owner. Existing-system/feature context stays scoped. | SC-01–02, 09–12, 14–20 source/handoff assessment passes; no Git, tracking or human-checkpoint procedure changed. `git diff --check` passes. |
 
+| V-003 / R-003 | PLAN review now tests every phase's functional cohesion/necessity, first-phase core usefulness and true override provenance. Shared QC applies semantic boundaries before counts; TASKS returns inadequate phase strategy upstream. | SC-01–20 source/interface assessment passes. Count heuristics, required review units and Ready/Blocked correction gates retained; no fixed phase count or extra QC artifact introduced. `git diff --check` passes. |
+
 The commit containing each action row identifies its source/evidence checkpoint. Publish and remotely verify it before the next action. Final Git evidence will list those checkpoints.
