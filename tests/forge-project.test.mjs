@@ -393,3 +393,70 @@ test('native source failure cannot erase an unresolved hosted effect', async t =
   assert.equal(result.ok, false); assert.equal(result.code, 'source_changed');
   assert.equal(result.effects[0].status, 'unknown'); assert.equal(result.remote_state, 'unknown');
 });
+
+test('malformed, duplicate and foreign phase labels block projection before missing-object writes', async () => {
+  for (const extra of [{ name: 'sdd-phase-2-Other' }, { name: 'SDD-PHASE-2-Other' },
+    { name: 'sdd-phase-1-Bounded-outcome' }, null, { name: '' }]) {
+    const state = fixture(); assert.equal((await project(state)).ok, true);
+    state.issues[0].labels.push(extra); state.issues.pop(); state.calls = [];
+    const result = await project(state);
+    assert.equal(result.code, 'issue_content_or_parent_conflict'); assert.equal(writes(state).length, 0);
+  }
+});
+
+test('docs-main permits unrelated labels but rejects case-variant managed phase labels', async () => {
+  const { request, owner } = docsRequest(), state = fixture();
+  const apply = () => reconcileProjection(request, owner, state.client());
+  assert.equal((await apply()).ok, true); state.calls = [];
+  state.issues[0].labels.push({ name: 'team-context' });
+  assert.equal((await apply()).ok, true); assert.equal(writes(state).length, 0);
+  state.issues[0].labels.push({ name: 'SDD-PHASE-2-Other' }); state.calls = [];
+  assert.equal((await apply()).code, 'issue_content_or_parent_conflict'); assert.equal(writes(state).length, 0);
+});
+
+test('final projection readback detects phase drift while retaining earlier created effects', async () => {
+  const state = fixture();
+  state.hook = ({ method, route }) => {
+    if (method === 'GET' && route === '/issues' && writes(state).length === 6)
+      state.issues[0].labels.push({ name: 'SDD-PHASE-2-Other' });
+  };
+  const result = await project(state);
+  assert.equal(result.code, 'issue_content_or_parent_conflict'); assert.equal(result.ok, false);
+  assert.equal(result.effects.filter(item => item.status === 'created').length, 6);
+  assert.equal(writes(state).length, 6);
+});
+
+test('projection reports explicit public, private and internal visibility without collapsing audiences', async () => {
+  for (const [visibility, privateValue] of [['public', false], ['private', true], ['internal', true], ['internal', false]]) {
+    const state = fixture();
+    state.hook = ({ route }) => route === '' ? Response.json({ id: 123, full_name: 'example-owner/example-project',
+      private: privateValue, visibility }) : undefined;
+    const result = await project(state);
+    assert.equal(result.ok, true, JSON.stringify(result)); assert.equal(result.visibility, visibility);
+  }
+});
+
+test('Boolean-only visibility fallback is retained and malformed explicit metadata blocks before writes', async () => {
+  for (const privateValue of [false, true]) {
+    const state = fixture();
+    state.hook = ({ route }) => route === '' ? Response.json({ id: 123, full_name: 'example-owner/example-project', private: privateValue }) : undefined;
+    const result = await project(state); assert.equal(result.ok, true);
+    assert.equal(result.visibility, privateValue ? 'private' : 'public');
+  }
+  for (const metadata of [{ private: true, visibility: 'public' }, { private: false, visibility: 'private' },
+    { private: true, visibility: 'unsupported' }, { private: true, visibility: null }, { visibility: 'internal' }]) {
+    const state = fixture();
+    state.hook = ({ route }) => route === '' ? Response.json({ id: 123, full_name: 'example-owner/example-project', ...metadata }) : undefined;
+    const result = await project(state);
+    assert.equal(result.code, 'invalid_response'); assert.equal(writes(state).length, 0);
+  }
+});
+
+test('final metadata detects private/internal audience drift despite an unchanged private Boolean', async () => {
+  const state = fixture(); let observations = 0;
+  state.hook = ({ route }) => route === '' ? Response.json({ id: 123, full_name: 'example-owner/example-project',
+    private: true, visibility: ++observations === 1 ? 'private' : 'internal' }) : undefined;
+  const result = await project(state);
+  assert.equal(result.ok, false); assert.equal(result.code, 'repository_identity_or_visibility_changed');
+  assert.equal(result.visibility, 'private'); assert.equal(result.effects.filter(item => item.status === 'created').length, 6);
+});

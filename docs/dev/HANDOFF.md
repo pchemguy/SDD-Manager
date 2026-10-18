@@ -1,30 +1,17 @@
 # SDD Manager handoff
 
-Campaign 076_af2703c has completed both accepted GitHub scripting revisions and is being integrated into main at this explicit merge checkpoint. Merged-state verification precedes the commit; target publication/readback then establishes closure. The next authorized operation is a new comprehensive review/revision campaign.
+Campaign 077_9bd3469 has completed all eight review units, four accepted revisions and prospective merged-state verification. This checkpoint accompanies its explicit main integration; confirm that merge publication/readback in Git before treating closure as established. The human authorized the complete review → plan → execute → close sequence; no additional source work or product release follows automatically.
 
-## Workflow and sources
+## Scope and evidence
 
-- Mode/stage: revision V-001–V-012 complete; V-013 explicit main integration verified before this commit, target publication/readback pending.
-- Objective: bounded optional completion and tracking projection utilities, shared protected/native/transport support, source-bound JSON drafting, professional docs, workflow/package/CI integration.
-- Sources: [scope](reviews/076_af2703c-scripting/EXPLORATION.md), [review/dispositions](reviews/076_af2703c-scripting/REVIEW-REPORT.md), [complete plan](reviews/076_af2703c-scripting/REVISION-PLAN.md), [execution evidence](reviews/076_af2703c-scripting/REVISION-REPORT.md), [index](reviews/README.md), [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md).
-- Reporting: Standard; Minimal and Explicit remain available.
+- Full branch-off/reviewed baseline: 9bd3469351e75883fa510ff38708fc4f2982be3a; original opening: 40042e78af25f63cb5ca5292d42ec9b6e4084bca.
+- [Review findings](reviews/077_9bd3469-comprehensive-review/REVIEW-REPORT.md), [revision plan](reviews/077_9bd3469-comprehensive-review/REVISION-PLAN.md), [execution/checks](reviews/077_9bd3469-comprehensive-review/REVISION-REPORT.md), [index](reviews/README.md).
+- Result: corrected exploration link, bounded source assessment companion preserving all 49 cases, strict shared phase-label association checks and accurate explicit internal visibility/final drift detection. Source contract remains substantive; no package/client dependency on source-only assessment.
+- Evidence: 99 local runtime contracts, 139 Python support and 37 publisher tests; both changed forge matrices pass all four native Windows CMD/Linux Node 22/24 jobs on 8ee9c4ad48672cc38a706d47b2850a5fb36aa0a5. Current source links/resources, 33 static catalog cases and exact 151-file reproducible package/snapshot pass. Reports retain RED/GREEN, source/hashes and limits.
+- Source/consumer/client/provider evidence remain distinct. No installed-client/independent agent trial, live tracking mutation, release/tag/version change or external demo work occurred. All other closed records remain frozen and unchanged.
 
-## Verified result
+## Authority and return
 
-- Original baseline/full branch-off: af2703c57fb0222c9f36e7cd34b8503f7c659cf2; opening: ea77dde34d8d65c6258b401412dcf7ee353c3c84. C-002 amendment checkpoint: e55d6ac707d66f5451eb2cf08ac58ad90c6a90f6. Final tested correction: 3778b7c520064618240b324a1be1f1914eaab0f8. Every owned checkpoint is published/read back before further work.
-- All 15 accepted findings across C-001/C-002 are addressed. The forge scripts/guides live with their owner; shared protected input stays with sdd-manage. Generator extraction leaves semantic dependencies/briefs/eligibility to the agent/coordinator. Existing lifecycle policy and completion authority remain authoritative.
-- Runtime: projection 27/27, completion 35/35, Git recovery 27/27; full support 139/139 and publisher 37/37. Final projection [39163312852](https://github.com/pchemguy/SDD-Manager/actions/runs/39163312852) passes Windows CMD/Linux Node 22/24 at the correction source. Completion [39163050417](https://github.com/pchemguy/SDD-Manager/actions/runs/39163050417) passes all four at b8af3d5726e8132940b80c78bd61c21dfb508170; its executable/shared bytes are unchanged afterward. Existing Git native evidence remains applicable to unchanged code.
-- Two exact-source offline archives at the final correction are byte-identical with 151 matching files. Structure has zero errors/48 retained advisories; 33 static catalog cases validate. Current local targets resolve, with one recorded preexisting sdd-design fragment exception. The report pins actual archive/navigation checks and limits.
-- Original candidate/probes/review observations and all other closed packages/index rows, manifest/license/assets are preserved. The integration parents are main af2703c57fb0222c9f36e7cd34b8503f7c659cf2 and completed source 9dc010712a606f1e8584bf4339111388bebb348f; the package/source implementation remains the verified candidate.
+Completed working branch revision/077_9bd3469-comprehensive-review, retained on origin at 5414201f92617810d73ea146ab2ae477c7394567; recorded creation parent/integration/return target main at the full baseline above. This checkpoint restores main context and preserves the campaign outcome without selecting new work. Reporting remains Standard. This repository has taskless campaign actions, not a product TASKS owner.
 
-## Authority and limits
-
-- The latest human request supersedes the earlier open/unmerged stop: complete C-002 analysis/plan/revision/docs/workflow integration, close this campaign, then open/run a comprehensive SDD Manager review campaign, prepare/execute its revision plan and close it. These future checkpoints are explicitly covered; do not ask again for the same scope.
-- No real-token utility or live issue/milestone/comment mutation, independent installed-client trial, external demo repair or release is selected. Native/synthetic results do not establish a user's completion evidence or live permissions.
-- Caller ownership of real authorization/QC/acceptance/publication, cross-list semantic dependencies, content disclosure and remote exclusivity remains explicit. Unknown effects require read-only reconciliation. Unsupported edits/layouts use the existing backend, not falsified input.
-
-## Branch and next boundary
-
-- Current branch/return target: main, integrating revision/076_af2703c-scripting from its original creation parent association. Stable records: docs/dev/reviews/076_af2703c-scripting/.
-- Final records/source 9dc010712a606f1e8584bf4339111388bebb348f are published/read back. Main was refreshed and the full delta inspected; no conflicts. Verify the identical package tree, current navigation/preservation and affected runtime/package checks before committing this two-parent merge, then publish/read back main. Git parents/remote containment establish actual integration/publication; do not repeat the merge on recovery.
-- Closure then freezes campaign 076. Allocate a fresh identity from actual paths/refs and open the separately authorized comprehensive whole-package/source-interface review. Preserve closed records and do not start a release or live tracking test.
+Finalization was published/read back. The conflict-free two-parent main merge uses target parent 9bd3469351e75883fa510ff38708fc4f2982be3a and incoming tip 5414201f92617810d73ea146ab2ae477c7394567; merged runtime/support/publisher suites pass 99/139/37, current links/whitespace pass and package bytes match the verified incoming source. The commit/remote readback confirms its own SHA and publication after this snapshot. Retain the campaign branch and all frozen records. Main has no active product range or further authorized campaign; stop awaiting a new request.

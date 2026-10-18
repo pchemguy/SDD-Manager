@@ -7,7 +7,7 @@
  * See forge-project.md and forge-project-input.md for contracts and limits.
  */
 import { createHash } from 'node:crypto';
-import { ForgeError, GitHubTransport, fail, text, positive } from './github-client.mjs';
+import { ForgeError, GitHubTransport, fail, text, positive, phaseLabelsMatch } from './github-client.mjs';
 import { createContext, inspectSource, requestFile, acquireLock, protectedToken, containsCredential, failure, isMain } from './forge-runtime.mjs';
 import { parseOwner, validateProjection, renderProjection } from './projection-input.mjs';
 
@@ -44,6 +44,22 @@ export function parseCli(args) {
 
 const lf = value => typeof value === 'string' ? value.replace(/\r\n/g, '\n') : value;
 
+/**
+ * Resolve observed audience without collapsing explicit internal visibility.
+ * @param {{private:boolean,visibility?:string}} metadata Repository response.
+ * @param {string} [stage='lookup'] Error stage for initial/final metadata.
+ * @returns {'public'|'private'|'internal'} Explicit audience or absence fallback.
+ * @throws {ForgeError} Malformed or contradictory public/private metadata.
+ */
+function repositoryVisibility(metadata, stage = 'lookup') {
+  if (typeof metadata.private !== 'boolean') fail('invalid_response', stage);
+  if (!Object.hasOwn(metadata, 'visibility')) return metadata.private ? 'private' : 'public';
+  if (!['public', 'private', 'internal'].includes(metadata.visibility)
+      || (metadata.visibility === 'public' && metadata.private)
+      || (metadata.visibility === 'private' && !metadata.private)) fail('invalid_response', stage);
+  return metadata.visibility;
+}
+
 async function collection(client, type) {
   const all = await client.list('/' + type, type === 'labels' ? {} : { state: 'all' });
   for (const item of all) {
@@ -75,13 +91,11 @@ function select(all, type, expected, parents, label) {
     const markers = typeof body === 'string' ? [...body.matchAll(/<!--\s*(\/?)sdd-forge:task-id=([^>]*?)\s*-->/g)] : [];
     const scopes = typeof body === 'string' ? [...body.matchAll(/<!--\s*sdd-forge:docs-scope=/g)] : [];
     const expectedParent = parents.get(expected.milestone_id);
-    const phaseLabels = Array.isArray(item.labels) ? item.labels.filter(value => /^sdd-phase-[1-9]\d*-/.test(value?.name || '')) : [];
     if (item.title !== expected.title || typeof body !== 'string' || !body.startsWith(expected.body)
         || (tail && !tail.startsWith('\n')) || markers.length !== 2
         || markers.some(value => value[2] !== expected.key) || markers[0][1] || markers[1][1] !== '/'
         || scopes.length !== (label ? 0 : 1) || !expectedParent || item.milestone?.number !== expectedParent.number
-        || !Array.isArray(item.labels) || item.labels.some(value => typeof value?.name !== 'string')
-        || (label ? phaseLabels.length !== 1 || phaseLabels[0].name !== label.name : phaseLabels.length !== 0)) fail('issue_content_or_parent_conflict', 'identity');
+        || !phaseLabelsMatch(item.labels, label ? label.name : null)) fail('issue_content_or_parent_conflict', 'identity');
   }
   return item;
 }
@@ -128,8 +142,7 @@ export async function reconcileProjection(input, inventory, client, { reconcileO
     if (request.repository !== client.repository || client.capability !== 'projection') fail('repository_or_capability_mismatch');
     if (containsCredential(request, client.token)) fail('credential_in_request');
     const metadata = await client.identify();
-    if (typeof metadata.private !== 'boolean') fail('invalid_response', 'lookup');
-    visibility = metadata.private ? 'private' : 'public';
+    visibility = repositoryVisibility(metadata);
     const rendered = renderProjection(request), initial = inspectAll(await snapshot(client, rendered), rendered);
     const parents = initial.parents;
     const objects = [
@@ -179,7 +192,8 @@ export async function reconcileProjection(input, inventory, client, { reconcileO
       }
     }
     const after = await client.identify();
-    if (after.id !== metadata.id || after.private !== metadata.private) fail('repository_identity_or_visibility_changed', 'readback');
+    if (after.id !== metadata.id || after.private !== metadata.private || repositoryVisibility(after, 'readback') !== visibility)
+      fail('repository_identity_or_visibility_changed', 'readback');
     return audited({ schema_version: 1, ok: true, code: 'projection_verified', stage: 'readback', remote_state: 'verified' });
   } catch (error) {
     const result = failure(error);
