@@ -1,6 +1,6 @@
 # SDD Manager handoff
 
-Checkpoint: reopened campaign `075_89fdf79`, amendment A-001, V-007–V-011 completed. The containing commit identifies the final amendment checkpoint; verify its remote containment before treating publication as complete. Remain open/unmerged and await the human's next request.
+Checkpoint: reopened campaign `075_89fdf79`, amendment A-001, V-007–V-011 completed and published at 27046fa12d129721dc58452ec04c56423fc2f39d. The human subsequently requested closure; this checkpoint prepares explicit integration into main, verification, publication and return. Closure remains pending those effects.
 
 ## Workflow and sources
 
@@ -13,7 +13,7 @@ Checkpoint: reopened campaign `075_89fdf79`, amendment A-001, V-007–V-011 comp
 
 - Human requested reopening and analysis, then clarified that the credential operation had hung until they requested diagnostics. The primary finding R-008 concerns automatic bounded stall detection/diagnosis of the original operation; persistent fix details and source-version limits are assessed in the review.
 - Human subsequently requested a revision plan and its execution. Authorized: R-008 workflow/caller/guide corrections and related scoped recovery clarifications, verification, existing campaign evidence and per-commit publication under the [accepted amendment plan](reviews/075_89fdf79-scripting/REVISION-PLAN.md#a-001-accepted-revision-plan--automatic-diagnosis-of-pending-git-operations).
-- Stop: publish/read back the completed amendment execution checkpoint, open/unmerged. External demo/config/store writes, live-token/provider tests, release and amendment reclosure remain unselected; utility runtime/API changes are not planned.
+- Latest authority: the human requested “Close it” after completed execution publication. Integrate the complete verified amendment into recorded parent main, verify/publish/read back and return to main, then stop. External demo/config/store writes, live-token/provider tests and release remain unselected; utility runtime/API is unchanged.
 - Reporting: Standard; Minimal and Explicit remain available. Preserve protected inputs and all other closed campaign packages.
 
 ## Branch and return
@@ -21,7 +21,7 @@ Checkpoint: reopened campaign `075_89fdf79`, amendment A-001, V-007–V-011 comp
 - Working branch: `revision/075_89fdf79-scripting`; original creation parent/eventual return: `main`.
 - Original baseline: `89fdf79637e59c558b3a265d5e458c22e58d49b7`; original opening: `fc381bd8b0ec46ccbf4f1e5dc78d5095cfd80bbb`.
 - Qualifying prior merge/reopening source/target: `115a51d5116da344f63d1475c7f8acbf19f97c25`; retained campaign tip before catch-up: `706c1970b52f5df9db2e06bfebecb5d1a82201e5`.
-- Synchronization direction is main into campaign, not campaign completion. Main remains waiting; no suspended task continuation is selected.
+- Earlier synchronization brought main into the campaign. Selected completion now integrates the published campaign tip into refreshed main; no suspended task continuation is selected.
 
 ## Verified result and evidence limits
 
@@ -32,4 +32,4 @@ Checkpoint: reopened campaign `075_89fdf79`, amendment A-001, V-007–V-011 comp
 
 ## Pending work and next action
 
-- Publish/read back this final record checkpoint, then stop on revision/075_89fdf79-scripting, open/unmerged. Main remains 115a51d5116da344f63d1475c7f8acbf19f97c25. No task resumption, additional candidate, live trial, merge, reclosure or release is selected.
+- Publish/read back this closure-preparation checkpoint, then merge explicitly into main at refreshed 115a51d5116da344f63d1475c7f8acbf19f97c25. Verify the prospective merged state, reconcile HANDOFF to main's completed/waiting context, commit the two-parent integration and publish/read back main. Retain the campaign branch and stop on main; no task resumption, additional candidate, live trial or release is selected.

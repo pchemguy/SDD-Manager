@@ -64,3 +64,7 @@ Human clarification: the credential operation had hung until they explicitly req
 ### A-001 executed revision checkpoint
 
 The subsequent human request authorized a full revision plan followed by execution. V-007–V-011 are complete under the [accepted plan](REVISION-PLAN.md#a-001-accepted-revision-plan--automatic-diagnosis-of-pending-git-operations). Final workflow source a2d985f is published and verified; the [execution report](REVISION-REPORT.md#v-011-final-amendment-outcome) records bounded initial-operation monitoring, automatic diagnosis, helper recovery and direct caller alignment. Utility runtime/API and the supplied candidate remain unchanged. Source/interface assessment and regression/package checks pass within their recorded limits; autonomous consumer and installed-client trials are Not run. Publish/read back the final record checkpoint and stop open/unmerged; no amendment closure or external credential repair is selected.
+
+### A-001 closure selected
+
+After verified publication of 27046fa12d129721dc58452ec04c56423fc2f39d, the human requested “Close it.” This authorizes explicit completion into recorded parent main, merged-state verification, target publication/readback and return to main. Refreshed receiving target is 115a51d5116da344f63d1475c7f8acbf19f97c25. Original campaign identity/opening/baseline and earlier closure remain unchanged. Closure is pending those integration effects; no new implementation, live credential test or release is selected.

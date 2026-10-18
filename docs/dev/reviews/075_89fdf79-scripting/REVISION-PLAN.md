@@ -131,3 +131,7 @@ The accepted interface review found three direct publication callers still requi
 ### A-001 execution status
 
 V-007–V-011 are complete. Planning was published before implementation; source a2d985f and verification evidence b64646c were published/read back before final reporting. The [revision report](REVISION-REPORT.md#v-010-completed-source-and-interface-assessment) records the seven source contrasts, actual regression/package checks and unrun consumer/client behavior. Final records carry R-008's source-level disposition and refreshed HANDOFF/index. Publish/read back their containing checkpoint and stop open/unmerged; no amendment closure is selected.
+
+### Subsequent authorized closure
+
+The human's “Close it” after published 27046fa selects completion of A-001 into main. Publish closure preparation, explicitly merge the complete verified campaign tip into refreshed main 115a51d5116da344f63d1475c7f8acbf19f97c25, verify the prospective merged state and reconcile main's HANDOFF, then commit/publish/read back the two-parent integration and stop on main. Retain branch/history and all recorded verification limits; no additional implementation or release is selected.
