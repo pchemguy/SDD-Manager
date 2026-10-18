@@ -22,7 +22,9 @@ class PackageDocumentation(Sandbox):
                      'skills/sdd-forge/scripts/forge-runtime.mjs',
                  'skills/sdd-forge/scripts/projection-input.mjs',
                  'skills/sdd-forge/scripts/forge-project.mjs',
-                 'skills/sdd-forge/scripts/forge-project-draft.mjs'):
+                 'skills/sdd-forge/scripts/forge-project-draft.mjs',
+                 'skills/sdd-forge/scripts/forge-project.md',
+                 'skills/sdd-forge/scripts/forge-project-input.md'):
             self.assertEqual(files[name], (package / name).read_bytes())
             self.assertEqual(pin['package_hashes'][name], hashlib.sha256(files[name]).hexdigest())
         self.assertNotIn('docs/dev/HANDOFF.md', files)

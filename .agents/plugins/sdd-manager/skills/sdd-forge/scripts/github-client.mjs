@@ -55,6 +55,7 @@ export class GitHubTransport {
    * @param {object} options Explicit scope and protected in-memory credential.
    * @param {string} options.repository GitHub owner/repository, never a URL.
    * @param {string} options.token Eligible credential; never print this client.
+   * @param {'completion'|'projection'} [options.capability='completion'] Immutable route/mutation boundary.
    * @param {number} [options.timeoutMs=60000] Overall monotonic elapsed budget.
    * @param {number} [options.requestTimeoutMs=15000] Per-request/body budget.
    * @param {Function} [options.fetchImpl] Native-compatible HTTP dependency.
@@ -208,7 +209,7 @@ export class GitHubTransport {
   }
   /**
    * Issue an allowed exact request; only safe reads have bounded retries.
-   * @param {'GET'|'POST'|'PATCH'} method Read or supported completion mutation.
+   * @param {'GET'|'POST'|'PATCH'} method Read or capability-permitted mutation.
    * @param {string} raw Repository-relative route or validated pagination URL.
    * @param {object} [body] Exact permitted mutation shape; omitted for GET.
    * @returns {Promise<{data: object|Array, link: string|null}>} Decoded response.

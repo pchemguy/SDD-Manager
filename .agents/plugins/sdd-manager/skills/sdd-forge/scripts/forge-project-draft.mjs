@@ -13,7 +13,12 @@ import { parseOwner, draftProjection } from './projection-input.mjs';
 
 const USAGE = 'phase|docs-main --repo PATH --remote NAME [--tasks FILE] [--phase ID] [--output FILE]';
 
-/** Parse the local authoring scope without reading a file or credential. */
+/**
+ * Parse explicit local authoring scope without I/O.
+ * @param {string[]} args CLI arguments without executable/script.
+ * @returns {object} Draft scope or standalone help.
+ * @throws {Error} Safe invalid/missing scope classification.
+ */
 export function parseCli(args) {
   if (args.length === 1 && ['--help', '-h'].includes(args[0])) return { help: true };
   if (!['phase', 'docs-main'].includes(args[0])) fail('invalid_operation');
@@ -30,7 +35,12 @@ export function parseCli(args) {
   return result;
 }
 
-/** Produce an unapproved template; native root/remote identify the destination. */
+/**
+ * Produce an unapproved template; native root/remote identify the destination.
+ * @param {object} options Parsed kind/root/remote/source and optional new output.
+ * @returns {object} Draft JSON; semantic fields remain unresolved.
+ * @throws {Error} Native source/output failures; no hosted effects occur.
+ */
 export function run(options) {
   if (Number(process.versions.node.split('.')[0]) < 22) fail('node_22_required');
   const parsed = parseCli([options.kind, '--repo', options.repo, '--remote', options.remote,

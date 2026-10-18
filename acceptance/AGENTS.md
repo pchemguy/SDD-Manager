@@ -45,6 +45,14 @@ node --test tests/forge-close.test.mjs
 
 Its separate CI matrix uses native Windows CMD/Linux Node 22/24 and synthetic provider data, including native local Git/filesystem/protection/locking and bounded-response checks. Changes to shared protected-token.mjs require both utility suites and affected native jobs. Keep caller eligibility/source review, synthetic/local runtime, live-provider and installed-client evidence distinct; no real-token hosted mutation is needed for these contracts.
 
+For the optional forge-owned [projection and input workflow](../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.md), run:
+
+~~~text
+node --test tests/forge-project.test.mjs
+~~~
+
+Its Windows CMD/Linux Node 22/24 matrix covers synthetic hosted projection plus actual local draft/source/root/protection/output/locking behavior. Shared github-client.mjs or forge-runtime.mjs changes require completion and projection suites/matrices; shared protected-token.mjs also requires Git recovery. The draft generator must not infer dependencies or certify readiness. Input/route/content source review remains distinct from native runtime, live-provider and installed-agent behavior.
+
 ## TextStats acceptance coordination
 
 The [TextStats overview](TEXTSTATS.md) maps qualified evidence and prior test repositories. [TextStats](textstats/README.md) owns the sample product, harness, fixtures, consumer requests, independent assessor contracts and run evidence protocol. Read [its coordinator entry](textstats/AGENTS.md) before touching or executing that scope; follow its ordered setup and role-isolation instructions for an actual acceptance campaign. A support-suite run is distinct from a live acceptance campaign.

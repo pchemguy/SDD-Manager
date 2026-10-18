@@ -82,7 +82,9 @@ After any uncertain write, re-read the affected repository objects before replay
 
 Return repository, endpoint, attempted operation, sanitized cause/status, known successful effects, unknown effects, retry count and next eligible time where applicable, and remaining task associations or state differences. On restored access, reconcile the maintained scope including older pending task issues. Hosted failure never erases local completion or establishes successful synchronization.
 
-## Optional local completion mechanism
+## Optional local tracking mechanisms
+
+For eligible phase/docs-main creation/readback, [forge-project](../scripts/forge-project.md) consumes the [source-bound JSON contract](../scripts/forge-project-input.md). Its local draft generator extracts structure only; the agent supplies dependencies/briefs, reviews outgoing content and the manager establishes actual readiness. Use credential-free --check before authenticated apply, and read-only reconciliation for uncertain creates. Exact-reuse conflicts or unsupported scopes use existing authorized backend procedures. The utility's result verifies projection, not activation or completion.
 
 Use available authenticated clients normally. For completed implementation issue/milestone closure with eligible local protected-token/runtime facilities, [forge-close](../scripts/forge-close.md) implements the bounded lookup/evidence/close/readback sequence. Establish the selected issue/milestone lifecycle gates before preparing its versioned handoff; its positive eligibility fields assert the caller's verified facts rather than proving them. Resolve exact repository/root/remote, expected managed objects, report/commit evidence and exclusive operation ownership without discovering a token as routine preflight.
 

@@ -362,3 +362,30 @@ test('source drift after hosted effects retains those effects and blocks final s
   assert.equal(result.ok, false); assert.equal(result.code, 'source_changed'); assert.equal(result.effects.length, 6);
   assert.ok(!fs.existsSync(path.join(local.root, '.git/sdd-forge-close.lock')));
 });
+
+test('source titles retain meaningful terminal punctuation and multiline list text stays attached', () => {
+  const changed = ownerText.replace('T-101 — Deliver bounded work', 'T-101 — Use .NET.');
+  assert.equal(parseOwner(changed, 'phase', '1').tasks[0].name, 'Use .NET.');
+  const value = projectionRequest(); value.tasks[0].scope = 'First line\nSecond line'; value.tasks[0].prerequisites = 'First gate\nSecond gate';
+  const rendered = renderProjection(validateProjection(value, inventory(), true));
+  assert.match(rendered.issues[0].body, /- \*\*Scope:\*\* First line\n {4}Second line/);
+  assert.match(rendered.issues[0].body, /First gate\n {4}Second gate/);
+});
+
+test('documented illustrative task object fits the actual request contract', () => {
+  const guide = fs.readFileSync(new URL('../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-input.md', import.meta.url), 'utf8');
+  const example = JSON.parse(guide.match(/~~~json\n([\s\S]*?)\n~~~/)[1]);
+  assert.equal(example.id, 'T-101');
+  const request = projectionRequest(); request.tasks[0] = example;
+  assert.doesNotThrow(() => validateProjection(request, inventory(), true));
+});
+
+test('native source failure cannot erase an unresolved hosted effect', async t => {
+  const local = localRepo(t), state = fixture();
+  state.hook = ({ method }) => {
+    if (method === 'POST') { fs.appendFileSync(path.join(local.root, 'docs/dev/TASKS.md'), '\nChanged during uncertain send.\n'); throw new Error('synthetic disconnect'); }
+  };
+  const result = await runProject(local.options, { fetchImpl: state.fetch });
+  assert.equal(result.ok, false); assert.equal(result.code, 'source_changed');
+  assert.equal(result.effects[0].status, 'unknown'); assert.equal(result.remote_state, 'unknown');
+});

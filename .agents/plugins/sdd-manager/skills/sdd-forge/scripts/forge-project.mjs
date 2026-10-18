@@ -14,7 +14,12 @@ import { parseOwner, validateProjection, renderProjection } from './projection-i
 const USAGE = 'phase|docs-main --repo PATH --remote NAME --request FILE (--check|--apply|--reconcile-only) [--token-file gh.tkn] [--timeout-ms 120000] [--request-timeout-ms 15000]';
 export { ForgeError };
 
-/** Validate the full explicit scope/mode before filesystem or credential work. */
+/**
+ * Validate full scope/mode without I/O.
+ * @param {string[]} args CLI arguments without executable/script.
+ * @returns {object} Parsed scope or harmless help.
+ * @throws {ForgeError} Missing, ambiguous or unsupported arguments.
+ */
 export function parseCli(args) {
   if (args.length === 1 && ['--help', '-h'].includes(args[0])) return { help: true };
   if (!['phase', 'docs-main'].includes(args[0])) fail('invalid_operation');
@@ -108,6 +113,11 @@ function effect(type, expected, item, status) {
  * Reconcile a source-bound handoff; caller owns eligibility/content/ownership.
  * The lower-level API requires an inspected inventory and authorized transport;
  * normal callers use run for native source/protection/locking checks.
+ * @param {object} input Complete schema-v1 caller handoff.
+ * @param {object} inventory parseOwner result from the actual selected source.
+ * @param {GitHubTransport} client Repository-bound projection capability.
+ * @param {{reconcileOnly?:boolean}} options Read-only hosted inspection when true.
+ * @returns {Promise<object>} Safe observed effects, associations and outcome.
  */
 export async function reconcileProjection(input, inventory, client, { reconcileOnly = false } = {}) {
   const effects = [], associations = []; let visibility = 'not_checked';
@@ -177,7 +187,12 @@ export async function reconcileProjection(input, inventory, client, { reconcileO
   }
 }
 
-/** Run native local binding/locking/protection, or a credential-free preview. */
+/**
+ * Run native binding/locking/protection or a credential-free local preview.
+ * @param {object} options parseCli fields; scope is validated again.
+ * @param {{fetchImpl?:Function}} dependencies Optional controlled HTTP boundary.
+ * @returns {Promise<object>} Safe result; pre-lock local errors may throw.
+ */
 export async function run(options, { fetchImpl } = {}) {
   if (Number(process.versions.node.split('.')[0]) < 22) fail('node_22_required');
   const started = performance.now();
@@ -207,7 +222,9 @@ export async function run(options, { fetchImpl } = {}) {
     result = await reconcileProjection(request, inventory, client, { reconcileOnly: parsed.mode === 'reconcile-only' });
     inspectSource(context, request.source, { committed: true });
   } catch (error) {
-    result = { ...result, ...failure(error), effects: result?.effects || [] };
+    const effects = result?.effects || [];
+    result = { ...result, ...failure(error), effects };
+    if (effects.some(item => item.status === 'unknown')) result.remote_state = 'unknown';
   } finally {
     try { release(); } catch { result = { ...result, ok: false, code: 'lock_cleanup_failed', stage: 'lock', lock: 'retained' }; }
   }

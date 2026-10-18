@@ -8,7 +8,7 @@ import { fail, keys, repositoryName, text } from './github-client.mjs';
 
 const ID = /^(?:T-\d{3,}|DOCS-\d{3})$/;
 const FLAGS = ['tracking', 'ready', 'accepted', 'published', 'eligible', 'exclusive', 'content_reviewed'];
-const nameOf = value => value.trim().replace(/\.$/, '');
+const nameOf = value => value.trim();
 const authored = (value, max = 16000, multiline = false) => text(value, max, multiline) && !/<!--\s*\/?sdd-forge:/.test(value);
 const nameValid = value => authored(value, 200);
 const list = (value, max = 1000) => Array.isArray(value) && value.length <= max;
@@ -24,6 +24,9 @@ export function hostName(value) {
 /**
  * Read the supported canonical checkbox grammar, ignoring fenced examples.
  * This extracts structure, never prose dependencies or acceptance decisions.
+ * @param {string} content Strict UTF-8 source content, already bounded.
+ * @param {'phase'|'docs-main'} kind Selected projection kind.
+ * @param {string} [phaseId] Exact selected implementation phase.
  * @returns {object} Selected hierarchy and complete owning-list task IDs.
  */
 export function parseOwner(content, kind, phaseId) {
@@ -77,7 +80,13 @@ export function parseOwner(content, kind, phaseId) {
     tasks: selected.milestones.flatMap(item => item.tasks), all_task_ids: all.map(item => item.id) };
 }
 
-/** Generate an incomplete JSON template; no dependency/role inference or approval. */
+/**
+ * Generate an incomplete template without dependency/role inference or approval.
+ * @param {string} repository Explicit normalized GitHub owner/name.
+ * @param {object} source Root/path/raw-byte SHA-256 identity.
+ * @param {object} inventory parseOwner structural result.
+ * @returns {object} Schema-v1 draft with null semantics and false eligibility.
+ */
 export function draftProjection(repository, source, inventory) {
   return {
     schema_version: 1, repository: repositoryName(repository), kind: inventory.kind, source: { ...source },
@@ -102,6 +111,11 @@ function normalize(value) {
  * Validate the exact request, source structure, dependencies and review roles.
  * Source bytes/hash/publication and actual semantic eligibility are separate
  * caller/runtime checks; true flags alone are not evidence of those facts.
+ * @param {object} input Parsed JSON, not an authorization grant.
+ * @param {object} inventory Structural result from the actual selected source.
+ * @param {boolean} [requireEligibility=false] Require caller assertions for apply.
+ * @returns {object} Independent LF-normalized complete request.
+ * @throws {Error} Safe schema/source/dependency/review/content classification.
  */
 export function validateProjection(input, inventory, requireEligibility = false) {
   if (!inventory || Buffer.byteLength(JSON.stringify(input)) > 1048576) fail('invalid_projection');
@@ -172,9 +186,15 @@ export function validateProjection(input, inventory, requireEligibility = false)
   return value;
 }
 
-/** Render only reviewed fields; local source bytes/hash/eligibility never upload. */
+/**
+ * Render only validated authored fields; no filesystem or network effects.
+ * @param {object} value Complete normalized validateProjection result.
+ * @returns {object} Label/milestone/issue payload content and stable references.
+ * @throws {Error} Rendered provider field/body bounds are exceeded.
+ */
 export function renderProjection(value) {
   const phase = value.phase;
+  const continuation = value => value.replace(/\n/g, '\n    ');
   const label = phase ? { name: 'sdd-phase-' + phase.id + '-' + hostName(phase.name), color: phase.color, description: phase.description } : null;
   const milestones = value.milestones.map(item => ({ key: item.id,
     title: item.kind === 'docs-main' ? 'docs-main' : 'sdd-' + item.id + '-' + hostName(item.name),
@@ -183,11 +203,11 @@ export function renderProjection(value) {
     const body = [
       ...(phase ? [] : ['<!-- sdd-forge:docs-scope=main -->']),
       '## Task brief <!-- sdd-forge:task-id=' + item.id + ' -->', '',
-      '**Outcome:** ' + item.name + '.', '',
+      '**Outcome:** ' + item.name + (/[.!?]$/.test(item.name) ? '' : '.'), '',
       '**Context:** ' + (phase ? 'Phase ' + phase.id + ' — ' + phase.name + ', milestone ' + item.milestone_id : 'Main documentation preparation, docs-main') + '.', '',
       '**Scope and dependencies:**', '',
-      '- **Depends on:** ' + (item.depends_on.length ? item.depends_on.join(', ') : 'None') + '. ' + item.prerequisites,
-      '- **Scope:** ' + item.scope, '',
+      '- **Depends on:** ' + (item.depends_on.length ? item.depends_on.join(', ') : 'None') + '. ' + continuation(item.prerequisites),
+      '- **Scope:** ' + continuation(item.scope), '',
       '**Acceptance and verification:** ' + item.acceptance, '',
       '**Sources:** ' + item.sources.join('; '),
       '<!-- /sdd-forge:task-id=' + item.id + ' -->',
