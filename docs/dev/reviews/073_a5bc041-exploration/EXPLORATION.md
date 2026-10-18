@@ -27,7 +27,7 @@ The human accepted the exploration and requested the [revision plan](REVISION-PL
 
 The opening changes only this record and the branch-local [handoff](../../HANDOFF.md). Prior closed campaign records remain unchanged. Opening checks cover branch identity, baseline, owned diff, Markdown links and whitespace; they do not establish product or live-agent behavior. No source test suite is needed for this metadata-only opening.
 
-Execution checkpoint: [revision report](REVISION-REPORT.md) records completed actions and local verification. Next eligible action: await human review or further direction; campaign remains unmerged.
+Execution checkpoint: [revision report](REVISION-REPORT.md) records completed actions and local verification. The human subsequently authorized finalization; next eligible action is verified integration into recorded parent main.
 
 
 ## User requirements established during exploration

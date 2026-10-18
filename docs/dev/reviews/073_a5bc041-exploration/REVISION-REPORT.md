@@ -61,3 +61,10 @@ Action checkpoints were pushed and matched by remote branch readback before subs
 - V-004: `c41358397d28092750570a0d91089c9cef71170e`.
 
 The commit containing this final report is V-005. Confirm its publication through Git; its package subtree is unchanged from the tested V-004 source. HANDOFF describes this review-ready campaign checkpoint. Await the human's next request; no merge or parent continuation is selected.
+
+
+## Authorized finalization
+
+The human requested “Finalize it” after the verified revision result. Integration into the recorded creation parent `main` is now authorized. Refreshed local/remote main both resolve to original baseline `a5bc0410f726162397f53e3462e2915d7fa24f07`; no incoming parent delta changes the assessed package. Full campaign scope is the accepted exploration amendment and its source assessment/records; earlier closed campaign objects are unchanged. No separate comprehensive review was performed.
+
+Finalization commits this boundary before integration. The prospective merge must restore main's waiting context, rerun support/publisher checks and preserve the verified package tree. Closure becomes effective only after the explicit two-parent merge passes checks and its publication is verified. Live agent/client acceptance remains unrun. No release is selected.
