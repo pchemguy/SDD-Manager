@@ -78,3 +78,11 @@ Implemented source: 61a7798c10ad6355003a5997b72b446141d5c4db, published/read bac
 V-001–V-006 are complete for this accepted revision. Final records refresh exploration, finding dispositions, index and HANDOFF, with no additional source behavior. Publish/read back the records checkpoint and stop on the campaign branch, open/unmerged for human review. There is no selected next script or parent implementation continuation.
 
 Native/synthetic results do not certify live permissions, installed-agent routing or a user's actual completion evidence. Real-token utility execution, live comment/issue/milestone mutation, independent installed-client/agent trial, external demo repair and release remain **Not run**. Caller assertions, exclusive remote ownership and trusted regular local filesystem inputs retain their documented limits. No unverified required check is silently waived; the preexisting unrelated fragment/advisories remain visible.
+
+## C-002 amendment execution
+
+The latest human request supersedes the earlier open/unmerged stop: analyze the related tracking projection candidate, complete its plan, implement/document/integrate it, then close this campaign and run a new comprehensive review/revision campaign. Original C-001 outcomes and source/evidence remain retained.
+
+V-007 analysis 5cfd067ed751fe47b81da5836ff7b7076a741bfc was published/read back before V-008 planning. Seven synthetic mechanics observations pass as characterizations; three independently corrected behavior expectations fail as intended. Full chat provenance and the explicitly transcribed abstract fixture boundary are documented in the review. R-009–R-015 are accepted; no production changes occur in these analysis/planning checkpoints.
+
+V-008 publishes the complete [C-002 plan](REVISION-PLAN.md#c-002-revision--tracking-projection), covering naming, explicit JSON/template/data flow, deterministic extraction versus agent semantics, native/shared modules, hosted effects/recovery, docs/package/workflow/CI and final closure/next-campaign boundaries. Execution V-009–V-013 follows only after publication/readback.
