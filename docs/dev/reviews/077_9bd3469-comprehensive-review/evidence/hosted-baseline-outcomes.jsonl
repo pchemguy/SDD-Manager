@@ -1,0 +1,3 @@
+{"scenario":"contradictory phase labels","ok":true,"code":"closed_verified","writes":[{"method":"POST","suffix":"/issues/10/comments","query":""},{"method":"PATCH","suffix":"/issues/10","query":""}],"final_state":"closed"}
+{"scenario":"internal visibility","ok":true,"visibility":"private","code":"projection_verified"}
+{"scenario":"case-variant foreign phase label","ok":true,"code":"projection_verified","writes":0}

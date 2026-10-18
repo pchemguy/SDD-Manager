@@ -16,7 +16,7 @@ Initial inventory: 151 package files, 106 Markdown resources and 15 skill entrie
 | U-004 | Assessed | Reviews/tracking/credentials | No additional findings |
 | U-005 | Assessed | Design/contracts/plans/tasks | No additional findings |
 | U-006 | Assessed | Execution/incorporation/testing/docs/reports | No additional findings |
-| U-007 | Planned | Hosted tracking and executable helpers | Not yet assessed |
+| U-007 | Assessed | Hosted tracking and executable helpers | No additional findings |
 | U-008 | Planned | Release/package/source support and consolidation | Not yet assessed |
 
 Remaining units are planned, not assessed. Source-only historical campaign packages are excluded and preserved; no live-provider, installed-client, independent consumer or TextStats product run is selected.
@@ -51,12 +51,18 @@ Reviewed all 18 selected references in full, including exploration, brief, archi
 
 Reviewed all 28 selected references in full across implementation, steering, feature incorporation, TDD, verification, documentation and reporting. Both sides preserve single executable ownership, changed-acceptance reassessment, task result/status atomicity, phase and feature integration boundaries, scoped production repairs and explicit steering return. Test strategy derives independent expectations and distinguishes characterization from past RED; verification separates inspection, execution, native capability and provider evidence. Documentation cannot silently redefine governing contracts. Reports retain original observations, actual source and limits, with meaningful module/API coverage and bounded links. No additional finding; reading examples and source contracts is not a live agent/client trial.
 
+## U-007 — Hosted tracking helpers and boundaries
+
+Reviewed the five backend lifecycle references in full and checked executable/guidance interfaces against their callers. Reused the immediately preceding source review and native Windows CMD/Linux Node 22/24 evidence for unchanged auth/transport/runtime code, with fresh focused inspection of completion/projection matching, source parsing, capability separation and error/readback paths. All 89 runtime tests pass freshly on Linux Node 24.19.0; this baseline suite misses the new conflicts. Controlled probes retained under evidence/ use synthetic credentials/provider fixtures only and establish R-003/R-004. No live tracking write, installed-client test or historical campaign content review occurred. Draft extraction, AI-authored semantics, outgoing-content review and manager-owned eligibility remain correctly separate.
+
 ## Findings
 
 | ID | Priority / type | State | Owner / unit |
 | --- | --- | --- | --- |
 | R-001 | Low / navigation defect | Open | sdd-design / U-001, recheck with U-005 |
 | R-002 | Medium / composition recommendation | Open | Source plugin contract / U-001 |
+| R-003 | Medium / identity defect | Open | Forge completion/projection / U-007 |
+| R-004 | Medium / audience-reporting defect | Open | Forge projection / U-007 |
 
 ### R-001 — Brief-to-exploration decision-state anchor is absent
 
@@ -71,3 +77,17 @@ Baseline locations: root AGENTS.md's prerequisite for entry/coordinator-boundary
 Correction: retain the complete normative contract, source-package boundary and a shallow explicit assessment route; move the substantial scenario/protocol material into one cohesive source-only assessment owner with a clear load trigger. Preserve C/K/E/D IDs, case intent, qualifications, source/consumer distinction and current caller anchors. Do not create one file per case, shorten useful qualifications or change packaged runtime policy. Confidence: high for the distinct responsibility; the split remains a bounded editorial design choice under the authorized revision.
 
 Recheck: all original case identities/substance retained once, parent/child loading conditions and current links intact, root contributor prerequisite still points to the normative contract and no package/runtime dependency on source-only material appears.
+
+### R-003 — Contradictory managed phase labels do not consistently block helpers
+
+Baseline locations: forge-close.mjs managedTask checks only presence of the expected label; forge-project.mjs select detects managed phase labels with a case-sensitive pattern although label candidate lookup is case-insensitive. Synthetic probes on unchanged 9bd3469 source show completion adds evidence and closes an issue bearing both the expected phase label and another managed phase label. Projection accepts a reused issue with a case-variant foreign managed phase label. These conflict with one-phase parentage and the helpers' exact-association/conflict contract. Confidence: high; controlled execution, not a live-provider incident.
+
+Correction: validate label records, require exactly one expected association and reject any additional managed phase label, recognizing the managed namespace case-insensitively while requiring the expected spelling exactly. Preserve unrelated labels and established explicitly supplied custom phase-label conventions. Recheck task and milestone completion plus phase/docs-main projection, malformed/duplicate/case-variant labels and a conflict appearing on fresh readback; no new write may start after a conflict is observed. Retain effects already applied before later drift.
+
+### R-004 — Projection collapses internal visibility into private
+
+Baseline location: forge-project.mjs reconcileProjection uses metadata.private to report only public/private and compares only that boolean on final metadata readback. A controlled metadata response with visibility=internal/private=true returns projection_verified with visibility=private. This misstates the reported audience and cannot distinguish a private/internal change with an unchanged boolean. It does not establish an actual disclosure incident. Confidence: high for source and controlled result.
+
+GitHub's [repository endpoint](https://docs.github.com/en/rest/repos/repos#get-a-repository) exposes visibility; its [API visibility field explanation](https://developer.github.com/changes/3/#repository-visibility-fields) includes public, private and internal. Current enterprise [visibility guidance](https://docs.github.com/en/enterprise-cloud@latest/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility) confirms internal remains a distinct audience. These official sources were checked during review; no old preview-header instructions are adopted.
+
+Correction: preserve valid explicit public/private/internal metadata, conservatively reject malformed/contradictory public/private metadata, retain documented compatibility with boolean-only responses, and compare resolved visibility at final readback. Document the observed/fallback boundary and content-review ownership. Recheck all three audiences, missing visibility fallback, invalid metadata and audience drift without claiming that readback prevents a concurrent external visibility change.
