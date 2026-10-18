@@ -215,6 +215,17 @@ test('foreign/cyclic/filter-changing pagination and duplicate page objects block
   }
 });
 
+test('pagination compares decoded query entries without delimiter collisions', async () => {
+  const state = fixture();
+  state.hook = ({ url }) => url.searchParams.has('page')
+    ? Response.json([{ id: 2 }])
+    : Response.json([{ id: 1 }], { headers: {
+      Link: '<https://api.github.com/repos/' + repository + '/issues?per_page=100%26state%3Dall&page=2>; rel="next"',
+    } });
+  await assert.rejects(state.client().list('/issues', { state: 'all' }), { code: 'invalid_pagination' });
+  assert.equal(state.calls.length, 1);
+});
+
 test('duplicate/conflicting evidence blocks; ordinary unrelated comments are preserved', async () => {
   for (const bodies of [[expectedEvidence(), expectedEvidence()], [expectedEvidence() + '\nChanged']]) {
     const state = fixture(); state.comments.set(10, bodies.map((body, index) => ({ id: index + 1, body })));

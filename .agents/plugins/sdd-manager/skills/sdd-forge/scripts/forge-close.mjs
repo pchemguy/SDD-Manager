@@ -339,7 +339,7 @@ export class GitHubClient {
       const candidate = this.target(next[0]); page++;
       const strip = value => {
         const copy = new URL(value); copy.searchParams.delete('page');
-        return [...copy.searchParams].sort().map(pair => pair.join('=')).join('&');
+        return JSON.stringify([...copy.searchParams].sort());
       };
       const suffixOf = value => value.pathname.replace(/^\/(?:repos\/[^/]+\/[^/]+|repositories\/\d+)/, '');
       if (candidate.searchParams.getAll('page').length !== 1 || candidate.searchParams.get('page') !== String(page)
