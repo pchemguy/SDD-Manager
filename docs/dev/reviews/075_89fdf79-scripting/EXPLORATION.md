@@ -45,3 +45,30 @@ The human requested a full revision plan followed by execution for C-001, adding
 ## Closure boundary
 
 The human subsequently requested closure after publication of a7e8fec. Complete the verified two-parent integration into recorded parent main, publish/read back and return to main's waiting context. The [closure record](REVISION-REPORT.md#authorized-closure) retains provenance and remaining confirmation. No additional scripting objective or release is selected.
+
+
+## Reopened amendment A-001 — Reported background push recovery
+
+- Human explicitly requested reopening and analysis of a supplied Push Diagnosis and Recovery excerpt.
+- Qualifying prior published closure/latest first-parent merge on main: `115a51d5116da344f63d1475c7f8acbf19f97c25`, parents `89fdf79637e59c558b3a265d5e458c22e58d49b7` and `706c1970b52f5df9db2e06bfebecb5d1a82201e5`.
+- Reopening/target checkpoint: `115a51d5116da344f63d1475c7f8acbf19f97c25`. Original campaign ID, opening fc381bd8b0ec46ccbf4f1e5dc78d5095cfd80bbb, baseline 89fdf79637e59c558b3a265d5e458c22e58d49b7, directory, branch and parent remain unchanged.
+- Scope: assess the reported cause and applied recovery, actual Git helper/configuration semantics, current utility/workflow coverage and evidence limits. Use primary documentation and disposable synthetic local fixtures where useful. Supplied Windows paths are evidence text, not files accessible here.
+- Authorized outputs: reopening/catch-up checkpoint, analysis appended to the existing review report, current amendment handoff/navigation and per-commit publication. Source repairs, credential/configuration changes in the reported demo, live-provider tests, release and reclosure are unselected.
+- Return context: main is waiting for the next human request; no unfinished parent task is resumed. Stop after publishing the analysis on the reopened campaign branch.
+
+
+### A-001 assessment checkpoint
+
+Human clarification: the credential operation had hung until they explicitly requested diagnostics. [V-006 analysis](REVIEW-REPORT.md#reopened-amendment-a-001--background-credential-operation-stall) identifies R-008, the missing explicit bounded-stall/automatic-diagnosis transition for the initial Git operation. Existing helper reset/timeout behavior is retained and four local synthetic probes support the technical analysis. Corrections remain proposed; publication of this analysis leaves the amendment open/unmerged.
+
+### A-001 executed revision checkpoint
+
+The subsequent human request authorized a full revision plan followed by execution. V-007–V-011 are complete under the [accepted plan](REVISION-PLAN.md#a-001-accepted-revision-plan--automatic-diagnosis-of-pending-git-operations). Final workflow source a2d985f is published and verified; the [execution report](REVISION-REPORT.md#v-011-final-amendment-outcome) records bounded initial-operation monitoring, automatic diagnosis, helper recovery and direct caller alignment. Utility runtime/API and the supplied candidate remain unchanged. Source/interface assessment and regression/package checks pass within their recorded limits; autonomous consumer and installed-client trials are Not run. Publish/read back the final record checkpoint and stop open/unmerged; no amendment closure or external credential repair is selected.
+
+### A-001 closure selected
+
+After verified publication of 27046fa12d129721dc58452ec04c56423fc2f39d, the human requested “Close it.” This authorizes explicit completion into recorded parent main, merged-state verification, target publication/readback and return to main. Refreshed receiving target is 115a51d5116da344f63d1475c7f8acbf19f97c25. Original campaign identity/opening/baseline and earlier closure remain unchanged. Closure is pending those integration effects; no new implementation, live credential test or release is selected.
+
+### A-001 final integration boundary
+
+The containing explicit merge integrates published beb763a97cb5191cedef4b3da5a16548e7945523 into main 115a51d5116da344f63d1475c7f8acbf19f97c25 without conflicts, retaining the original utility result and separately reviewed A-001 workflow delta. Merged-state checks and limits are retained in the [closure verification](REVISION-REPORT.md#a-001-merged-state-closure-verification). HANDOFF restores main's completed/waiting context. Verified origin/main publication and actual return to main complete closure; retain branch/history and freeze campaign records after that boundary. Await the next human request.

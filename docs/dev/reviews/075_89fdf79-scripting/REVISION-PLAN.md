@@ -60,3 +60,80 @@ V-001–V-005 are complete under the selected scope. The [revision report](REVIS
 ## Subsequent closure instruction
 
 After completed execution was published as a7e8fec, the human requested campaign closure. The [revision report](REVISION-REPORT.md#authorized-closure) records that extension of the stopping boundary to explicit verified integration into main. The accepted implementation scope and original execution evidence remain unchanged; release/live-provider testing and additional candidates remain unselected.
+
+
+## Reopened amendment A-001
+
+Reopening source and qualifying prior closure: `115a51d5116da344f63d1475c7f8acbf19f97c25`; original opening and baseline remain unchanged. The human requested analysis only; prior V-001–V-005 execution and closure remain historical facts.
+
+| Action | Accepted scope | Recheck and stop |
+| --- | --- | --- |
+| V-006 | Analyze the supplied background-push diagnosis/recovery against current Git semantics, coordinator instructions and utility. Preserve the excerpt and distinguish reported environment observations, verified general behavior, current source gaps and proposed corrections. | Primary English sources and bounded synthetic local experiments; no real token, external demo/config/store writes or source implementation. Publish the appended review and amendment checkpoint, then remain open/unmerged. |
+
+Potential corrections are recommendations until selected. This amendment does not silently authorize implementation or reuse earlier execution authority for new findings.
+
+
+### V-006 result and human clarification
+
+The human clarified that the credential operation had remained hung until they instructed the agent to diagnose it. The [A-001 analysis](REVIEW-REPORT.md#reopened-amendment-a-001--background-credential-operation-stall) therefore centers automatic stall detection and the outer Git-operation lifecycle. V-006 is complete: four synthetic protocol probes and 27 existing utility tests pass; R-008 identifies the current workflow gap. Its bounded correction and additional persistent-recovery/reporting recommendations remain proposed, without source execution authority. Stop after published analysis, open/unmerged.
+
+
+## A-001 accepted revision plan — Automatic diagnosis of pending Git operations
+
+### Authority, objective and source
+
+The human requested a revision plan followed by execution after V-006 analysis. Accept R-008 and the directly related recovery-selection/reporting clarifications from the [focused review](REVIEW-REPORT.md#reopened-amendment-a-001--background-credential-operation-stall). Planning source: `96f1997f43745e90e52d2ea2e976fabdf69257bc`. Reopening baseline/prior closure: `115a51d5116da344f63d1475c7f8acbf19f97c25`; original campaign identity, opening fc381bd8b0ec46ccbf4f1e5dc78d5095cfd80bbb and branch-off 89fdf79637e59c558b3a265d5e458c22e58d49b7 remain unchanged.
+
+Objective: the agent owns the original Git/credential operation from launch through publication or a concrete blocked state, recognizes a stalled/interactive helper before a completed authentication error, and starts scoped diagnosis without a human prompt. Retain existing-auth-first, protected token handling, exact authorized destination/ref/object and per-commit publication. A quiet or slow operation is not automatically hung.
+
+The plan and its execution are authorized together. Stop after verified publication of completed amendment work on revision/075_89fdf79-scripting; no amendment merge/closure, release, external demo repair, real-token test or permanent host credential alteration is selected.
+
+### Design, ownership and bounded composition
+
+- Keep the complete generic operation lifecycle in `sdd-manage/references/git-workflows.md`: operation identity/owner, runner capabilities, observation/deadline selection, progress assessment, diagnostic transition, owned cancellation, uncertain effects and verified completion. Cover the original push, exact ref readback and credential subprocesses, including background/harness sessions. Do not introduce a fixed universal deadline, platform-specific shell dependency or automatic token search.
+- Keep credential-specific classification/selection in `references/credentials.md`: an observed blocked helper can enter recovery without a 403; distinguish missing credentials, helper interaction, network/rate/policy restrictions. Prefer an eligible request-local recovery mechanism over changing persistent configuration merely to unstick a call. Persistent setup remains an intentional scoped alternative, with helper multivalues/context and preservation addressed; it does not require a redundant permission request when already authorized.
+- Update `references/coordination.md`, the coordinator entry's existing publication/reference routes and the adjacent utility guide only as needed to expose the canonical procedure and observed-helper trigger before the dependent action. No second full lifecycle, new reference file, skill, script, journal or task log. Review boundaries by cohesion and completeness, not a line-count target.
+- Keep git-auth-recover.mjs API/runtime and its source tests unchanged unless verification exposes an actual necessary defect. Its existing timeout/reset applies to its own invocation, not an earlier separately launched task; document the caller's remaining ownership. Node stays optional outside the existing utility. No PowerShell or new mandatory tool dependency.
+- Preserve original observations, prior findings/closure and other closed campaign records. Record amendment execution separately in the existing revision report, then refresh HANDOFF/index at the completed checkpoint.
+
+### Ordered actions
+
+| Action | Outcome and owned changes | Dependencies and objective recheck |
+| --- | --- | --- |
+| V-007 | Publish this complete accepted plan and execution grant; retain the actual branch/stop in HANDOFF. | Inspect clean published 96f1997 source and unchanged parent association; commit/push/read back before source edits. |
+| V-008 | Add the canonical bounded Git/background-operation lifecycle to git-workflows.md and align its publication/authentication entry points. | After V-007. Initial existing-auth call has an owner and supported observation/execution bounds; suspected stall automatically enters diagnosis; legitimate progress, owned cancellation and unknown remote effects are handled explicitly; no duplicate push or scope drift. |
+| V-009 | Integrate helper-blockage recovery, transient/persistent selection and truthful evidence in credentials.md; update short coordinator/caller/utility-guide routes. | After V-008. No completed-error prerequisite for a confirmed helper block, no replacement credential for every timeout, no claim that terminal-prompt suppression controls arbitrary helpers, no automatic config/vault mutation. Original operation must be reconciled and publication verified. |
+| V-010 | Proportionate content/interface/cohesion review, representative branch walkthroughs, relevant synthetic regression, full support/publisher checks and exact package/link validation. | After V-009. Assess the contrasts below from entry through return; distinguish source reasoning, protocol/runtime observations and unrun agent/client behavior. Fix only accepted-scope defects, rerunning affected checks. |
+| V-011 | Record R-008 disposition, actual evidence/limits, remaining boundary, cumulative retained result and final amendment HANDOFF/index; publish/read back. | After V-010. All selected actions complete, package/source preservation verified, no false behavioral or live-provider claim; remain open/unmerged. |
+
+Each action checkpoint includes its owned source/evidence and is pushed/read back before further work. Non-task campaign action IDs do not become executable product task IDs.
+
+### Acceptance contrasts and verification
+
+1. A silent/non-returning helper during the first existing-auth attempt reaches automatic diagnosis within an established operation-appropriate bound; the agent does not wait for a user diagnostic instruction or completed 403.
+2. A legitimate quiet/progressing transfer is assessed with elapsed/session/progress evidence; any bound adjustment is justified and finite, not an unlimited reset of the same timer.
+3. A helper requiring unavailable interaction is distinguished from invalid credentials, network outage, rate limit and policy rejection. Recovery preserves actual authority and does not bypass host restrictions.
+4. A timed-out/uncertain push is not overlapped or blindly repeated: the owned operation is resolved where supported, and the exact destination/ref is read back before selecting a retry. A matching ref can finish publication without another push; unknown state blocks advancement.
+5. An eligible protected token and utility recover the same operation with request-local resets; persistent helper/store setup is a deliberate alternative and preserves relevant prior state. Missing runtime/token/protection/cancellation/readback facilities produce a specific retained blocker and only consequential human input.
+6. Synchronous and background runners use available process/session controls; cancellation is limited to the owned process/session/verified descendants. Unavailable controls are disclosed; no arbitrary process-tree kill or claim of cleanup from a parent exit alone.
+7. Evidence identifies the operation, observation/bounds, sanitized diagnostic basis, pending process/remote effects, selected recovery and verified result in existing reports; no mandatory extra journal or secret-bearing trace.
+
+Use source/interface walkthroughs for these instruction decisions. Run the existing 27-test synthetic utility suite and retain the four local protocol observations from V-006 where applicable. Run full support/publisher suites and catalog validation, verify current package and active-document links/fragments, offline manifest and exact/reproducible archive, and compare protected paths/unchanged utility bytes. Use an isolated agent/client trial only if separately available and permitted; otherwise mark autonomous agent behavior Not run, rather than equating fixtures or a walkthrough with a consumer pass. No new tests that merely assert wording, no new presentation assets or product version change.
+
+### Final checkpoint
+
+Append action/finding outcomes to REVISION-REPORT, preserving original closure and A-001 review evidence. Refresh HANDOFF with the accepted scope, verified source, actual test/check limits and open amendment boundary. Publish/read back the final branch checkpoint and stop; the earlier closure request does not automatically reclose this amendment.
+
+### V-010 caller audit clarification
+
+The accepted interface review found three direct publication callers still requiring a completed credential error: implementation startup, task completion and steering persistence. Their existing paragraphs receive short links to the canonical monitoring/helper-blockage procedure, retaining their original publication and stopping gates. This is the planned in-scope caller correction; no lifecycle copy or new workflow boundary is added.
+
+### A-001 execution status
+
+V-007–V-011 are complete. Planning was published before implementation; source a2d985f and verification evidence b64646c were published/read back before final reporting. The [revision report](REVISION-REPORT.md#v-010-completed-source-and-interface-assessment) records the seven source contrasts, actual regression/package checks and unrun consumer/client behavior. Final records carry R-008's source-level disposition and refreshed HANDOFF/index. Publish/read back their containing checkpoint and stop open/unmerged; no amendment closure is selected.
+
+### Subsequent authorized closure
+
+The human's “Close it” after published 27046fa selects completion of A-001 into main. Publish closure preparation, explicitly merge the complete verified campaign tip into refreshed main 115a51d5116da344f63d1475c7f8acbf19f97c25, verify the prospective merged state and reconcile main's HANDOFF, then commit/publish/read back the two-parent integration and stop on main. Retain branch/history and all recorded verification limits; no additional implementation or release is selected.
+
+Closure preparation beb763a is published; its explicit integration is recorded by the containing main merge and [merged-state evidence](REVISION-REPORT.md#a-001-merged-state-closure-verification). HANDOFF/navigation are finalized for the main return. Verified merge publication and actual main state complete the selected boundary; no plan actions or parent tasks follow automatically.
