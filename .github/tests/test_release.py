@@ -81,6 +81,8 @@ class PackageTests(Contract):
                      'assets/SDD-MANAGER.md','assets/AI_DISCLOSURE.md',
                      'assets/AGENTS_TEMPLATE.md','assets/DOCS_TASKS_TEMPLATE.md','assets/HANDOFF_TEMPLATE.md','assets/SKILL_DISCOVERY_PROTOCOL.md',
                      'assets/icon.svg','skills/sample/SKILL.md',
+                     'skills/sdd-manage/scripts/git-auth-recover.mjs',
+                     'skills/sdd-manage/scripts/git-auth-recover.md',
                      'plugin.json','docs/excluded.md','docs/ai-logs/EXPLORE_DRIVE_V1.md','AGENTS.md'):
             p=(self.root if name.startswith('docs/') or name=='AGENTS.md' else self.package)/name; p.parent.mkdir(parents=True,exist_ok=True)
             p.write_bytes(manifest if name.endswith('plugin.json') else (name+'\n').encode())
@@ -146,6 +148,26 @@ class PackageTests(Contract):
                                             self.out / name)
                 path.write_bytes(original)
                 self.git('add', '.'); self.git('commit', '-qm', 'restore preparation asset')
+
+    def test_auth_recovery_resources_are_exact_and_required(self):
+        names = ('skills/sdd-manage/scripts/git-auth-recover.mjs',
+                 'skills/sdd-manage/scripts/git-auth-recover.md')
+        paths = publisher.build_package(self.root, self.data, self.out)
+        with zipfile.ZipFile(paths['sdd-manager.zip']) as archive:
+            for name in names:
+                self.assertEqual(archive.read('sdd-manager/' + name),
+                                 (self.package / name).read_bytes())
+        for name in names:
+            with self.subTest(missing=name):
+                path = self.package / name
+                original = path.read_bytes()
+                path.unlink()
+                self.git('add', '-u'); self.git('commit', '-qm', 'missing recovery resource')
+                source = self.git('rev-parse', 'HEAD')
+                with self.assertRaisesRegex(ValueError, 'Required package path is absent'):
+                    publisher.build_package(self.root, dict(self.data, source=source, notes_source=source), self.out)
+                path.write_bytes(original)
+                self.git('add', '.'); self.git('commit', '-qm', 'restore recovery resource')
 
     def test_rebuild_preserves_commit_metadata_across_archive_times(self):
         executable = self.package / 'skills/sample/run.sh'

@@ -241,3 +241,13 @@ test('configured remote VCS helpers block before any push or ref readback', t =>
   assert.throws(() => auth.recover(f.options, runner.execute), /remote_helper_unsupported/);
   assert.ok(!runner.calls.some(c => c.args.includes('push') || c.args.includes('--refs')));
 });
+test('native Windows ACL export reports only synthetic fixture metadata', t => {
+  if (process.platform !== 'win32') return;
+  const f = fixture(t), saved = path.join(f.root, 'fixture-acl.txt');
+  const exported = spawnSync('icacls.exe', [path.join(f.root, 'gh.tkn'), '/save', saved, '/q'], { encoding: 'utf8' });
+  assert.equal(exported.status, 0);
+  const bytes = fs.readFileSync(saved);
+  t.diagnostic(JSON.stringify({ aclBytes: bytes.length, prefixHex: bytes.subarray(0, 12).toString('hex'),
+    utf16Records: bytes.toString('utf16le').split(/\r?\n/).map(line => line.slice(0, 24)),
+    utf8Records: bytes.toString('utf8').split(/\r?\n/).map(line => line.slice(0, 24)) }));
+});

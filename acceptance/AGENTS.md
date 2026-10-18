@@ -29,6 +29,14 @@ The publisher validates exact committed candidate bytes against the [pinned offl
 
 Record the tested source, interpreter/environment, actual outcomes and evidence limits. Passing support/publisher tests or static/package checks does not establish live agent behavior, installed-client discovery/routing or provider acceptance. Keep unrun and blocked observations explicit.
 
+For changes to the optional coordinator-owned [Git authentication utility](../.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md), require Node.js 22+ and run its source-only synthetic contracts:
+
+```text
+node --test tests/git-auth-recover.test.mjs
+```
+
+Its CI matrix runs native Windows CMD/Linux with Node 22/24. Local Linux results do not establish Windows behavior; inspect the selected source's actual matrix result. Native helper tests and controlled push/readback results do not establish live-provider authentication. The source tests and CI are excluded from the distributed plugin.
+
 ## TextStats acceptance coordination
 
 The [TextStats overview](TEXTSTATS.md) maps qualified evidence and prior test repositories. [TextStats](textstats/README.md) owns the sample product, harness, fixtures, consumer requests, independent assessor contracts and run evidence protocol. Read [its coordinator entry](textstats/AGENTS.md) before touching or executing that scope; follow its ordered setup and role-isolation instructions for an actual acceptance campaign. A support-suite run is distinct from a live acceptance campaign.
