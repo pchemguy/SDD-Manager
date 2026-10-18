@@ -1,13 +1,13 @@
 # SDD Manager handoff
 
-Checkpoint: reopened campaign `075_89fdf79`, amendment A-001, V-006 analysis complete; V-007 accepted revision planning and execution selected. The containing commit identifies this review checkpoint; confirm branch publication before further work.
+Checkpoint: reopened campaign `075_89fdf79`, amendment A-001, V-007–V-011 completed. The containing commit identifies the final amendment checkpoint; verify its remote containment before treating publication as complete. Remain open/unmerged and await the human's next request.
 
 ## Workflow and sources
 
-- Mode/stage: reopened revision amendment, R-008 accepted; V-007 plan then V-008–V-011 execution under sdd-manage.
+- Mode/stage: reopened revision amendment executed under sdd-manage; R-008 corrected at source/interface level, autonomous consumer behavior unverified.
 - Sources: [amendment scope](reviews/075_89fdf79-scripting/EXPLORATION.md#reopened-amendment-a-001--reported-background-push-recovery), [plan](reviews/075_89fdf79-scripting/REVISION-PLAN.md#reopened-amendment-a-001), [review](reviews/075_89fdf79-scripting/REVIEW-REPORT.md), [prior revision evidence](reviews/075_89fdf79-scripting/REVISION-REPORT.md).
 - Governing instructions: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md), `.agents/plugins/sdd-manager/`.
-- Prior result: V-001–V-005 completed and campaign closed by published main merge `115a51d5116da344f63d1475c7f8acbf19f97c25`. This catch-up preserves that history and changes no implementation.
+- Prior result: V-001–V-005 completed and campaign closed by published main merge `115a51d5116da344f63d1475c7f8acbf19f97c25`. A-001 preserves that history and the utility runtime/API; its new delta is bounded initial-operation monitoring, automatic diagnosis and consistent recovery/caller instructions.
 
 ## Scope and authority
 
@@ -23,7 +23,13 @@ Checkpoint: reopened campaign `075_89fdf79`, amendment A-001, V-006 analysis com
 - Qualifying prior merge/reopening source/target: `115a51d5116da344f63d1475c7f8acbf19f97c25`; retained campaign tip before catch-up: `706c1970b52f5df9db2e06bfebecb5d1a82201e5`.
 - Synchronization direction is main into campaign, not campaign completion. Main remains waiting; no suspended task continuation is selected.
 
+## Verified result and evidence limits
+
+- Plan 81434cb was published before source edits. Final workflow source a2d985f04505e396294e4de8d705c7bdb9bab0b2 and verification report b64646ce12b6ad2af2b940d0cef177abe9829868 were pushed/read back before this final checkpoint. Later record updates change no package bytes.
+- Fresh Linux checks at a2d985f: 27/27 utility, 139/139 support, 37/37 publisher tests; 33 static catalog cases. Exact reproducible 141-file archives and offline manifest/package checks pass. All changed authentication file/fragment links resolve; the broad audit retains one unchanged unrelated design anchor defect.
+- Native Windows/Linux Node 22/24 utility CI at 134fcc55 passes all four jobs, applicable to unchanged utility/tests/CI bytes. Structural validation has zero errors and 48 cross-skill advisories. Seven instruction contrasts pass source/interface walkthroughs; autonomous consumer and installed-client trials are Not run. No live-provider utility authentication or persistent helper/vault alteration was performed.
+- R-001–R-007 retain their earlier resolved utility dispositions. R-008 source correction is complete; independent agent behavior remains unverified. See the [completed assessment](reviews/075_89fdf79-scripting/REVISION-REPORT.md#v-010-completed-source-and-interface-assessment) and [final outcome](reviews/075_89fdf79-scripting/REVISION-REPORT.md#v-011-final-amendment-outcome) for provenance and limits.
+
 ## Pending work and next action
 
-- Reopening synchronization c88afb8dbb7c99d444b14d7795f63fddb240ec78 was pushed/read back. V-006 is complete: four synthetic local credential probes and 27 existing utility contracts pass. No new implementation or workflow source changes.
-- Analysis checkpoint 96f1997 was pushed/read back. Publish/read back this plan checkpoint before source edits, then execute V-008–V-011 through the accepted verification/final handoff boundary. Keep the amendment open/unmerged; no automatic merge follows.
+- Publish/read back this final record checkpoint, then stop on revision/075_89fdf79-scripting, open/unmerged. Main remains 115a51d5116da344f63d1475c7f8acbf19f97c25. No task resumption, additional candidate, live trial, merge, reclosure or release is selected.

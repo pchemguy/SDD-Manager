@@ -60,3 +60,7 @@ The human subsequently requested closure after publication of a7e8fec. Complete 
 ### A-001 assessment checkpoint
 
 Human clarification: the credential operation had hung until they explicitly requested diagnostics. [V-006 analysis](REVIEW-REPORT.md#reopened-amendment-a-001--background-credential-operation-stall) identifies R-008, the missing explicit bounded-stall/automatic-diagnosis transition for the initial Git operation. Existing helper reset/timeout behavior is retained and four local synthetic probes support the technical analysis. Corrections remain proposed; publication of this analysis leaves the amendment open/unmerged.
+
+### A-001 executed revision checkpoint
+
+The subsequent human request authorized a full revision plan followed by execution. V-007–V-011 are complete under the [accepted plan](REVISION-PLAN.md#a-001-accepted-revision-plan--automatic-diagnosis-of-pending-git-operations). Final workflow source a2d985f is published and verified; the [execution report](REVISION-REPORT.md#v-011-final-amendment-outcome) records bounded initial-operation monitoring, automatic diagnosis, helper recovery and direct caller alignment. Utility runtime/API and the supplied candidate remain unchanged. Source/interface assessment and regression/package checks pass within their recorded limits; autonomous consumer and installed-client trials are Not run. Publish/read back the final record checkpoint and stop open/unmerged; no amendment closure or external credential repair is selected.

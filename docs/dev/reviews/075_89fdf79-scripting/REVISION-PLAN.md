@@ -127,3 +127,7 @@ Append action/finding outcomes to REVISION-REPORT, preserving original closure a
 ### V-010 caller audit clarification
 
 The accepted interface review found three direct publication callers still requiring a completed credential error: implementation startup, task completion and steering persistence. Their existing paragraphs receive short links to the canonical monitoring/helper-blockage procedure, retaining their original publication and stopping gates. This is the planned in-scope caller correction; no lifecycle copy or new workflow boundary is added.
+
+### A-001 execution status
+
+V-007–V-011 are complete. Planning was published before implementation; source a2d985f and verification evidence b64646c were published/read back before final reporting. The [revision report](REVISION-REPORT.md#v-010-completed-source-and-interface-assessment) records the seven source contrasts, actual regression/package checks and unrun consumer/client behavior. Final records carry R-008's source-level disposition and refreshed HANDOFF/index. Publish/read back their containing checkpoint and stop open/unmerged; no amendment closure is selected.
