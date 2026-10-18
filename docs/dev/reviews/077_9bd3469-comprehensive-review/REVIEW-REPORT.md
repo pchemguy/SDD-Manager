@@ -63,7 +63,7 @@ Reviewed all five release/highlights/package/workflow references in full against
 
 | ID | Priority / type | State | Owner / unit |
 | --- | --- | --- | --- |
-| R-001 | Low / navigation defect | Open | sdd-design / U-001, recheck with U-005 |
+| R-001 | Low / navigation defect | Verified (V-001) | sdd-design / U-001, recheck with U-005 |
 | R-002 | Medium / composition recommendation | Open | Source plugin contract / U-001 |
 | R-003 | Medium / identity defect | Open | Forge completion/projection / U-007 |
 | R-004 | Medium / audience-reporting defect | Open | Forge projection / U-007 |

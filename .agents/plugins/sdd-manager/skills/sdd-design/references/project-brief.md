@@ -10,7 +10,7 @@ PROJECT owns project intent and principal scope. ARCHITECTURE owns structural ar
 
 ## Inputs and decision state
 
-Use the user's seed, actual clarification answers, applicable project instructions, accepted decisions and relevant existing project evidence. Apply [exploration decision state](exploration.md#decision-state): distinguish facts, confirmed choices, proposals/working assumptions, unresolved questions and delegated details. Do not infer approval from silence or agent-authored prose.
+Use the user's seed, actual clarification answers, applicable project instructions, accepted decisions and relevant existing project evidence. Apply [exploration decision state](exploration.md#facilitate-decisions): distinguish facts, confirmed choices, proposals/working assumptions, unresolved questions and delegated details. Do not infer approval from silence or agent-authored prose.
 
 For an existing project, inspect/reuse its suitable brief rather than regenerate it as ceremony. Separate observed implementation from intended project scope. If the existing PROJECT contains operating instructions, preserve their authority and resolve its intended role before replacing content. Accepted feature incorporation into PROJECT belongs to [sdd-integrate-feature](../../sdd-integrate-feature/SKILL.md); a direct brief correction remains design-owner work within its requested scope.
 
