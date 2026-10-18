@@ -1,10 +1,10 @@
 # SDD Manager handoff
 
-Checkpoint: campaign `076_af2703c` revision is implemented, integrated into SDD Manager source/package/workflows and verified. Publish/read back final records, then wait for the human on the open/unmerged campaign branch.
+Checkpoint: campaign `076_af2703c` C-001 is verified. The latest human request adds related C-002 tracking projection analysis/planning/execution and final campaign closure, then a new comprehensive review/revision campaign. This supersedes the earlier open/unmerged stop.
 
 ## Workflow and sources
 
-- Mode/stage: accepted revision V-001–V-006 complete; human review boundary.
+- Mode/stage: C-001 V-001–V-006 complete; C-002 analysis complete at the e55d6ac707d66f5451eb2cf08ac58ad90c6a90f6 amendment checkpoint; complete revision planning/execution next.
 - Objective: revise the supplied GitHub closure prototype into an optional bounded sdd-forge utility with shared protected input, documentation and package/workflow integration.
 - Sources: [scope](reviews/076_af2703c-scripting/EXPLORATION.md), [historical review and current disposition](reviews/076_af2703c-scripting/REVIEW-REPORT.md), [accepted plan](reviews/076_af2703c-scripting/REVISION-PLAN.md), [execution evidence](reviews/076_af2703c-scripting/REVISION-REPORT.md), [unchanged candidate](reviews/076_af2703c-scripting/candidates/forge-close.mjs), [original probes](reviews/076_af2703c-scripting/evidence/review-probes.mjs), [index](reviews/README.md), [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md).
 - Reporting: Standard; Minimal and Explicit remain available.
@@ -19,7 +19,7 @@ Checkpoint: campaign `076_af2703c` revision is implemented, integrated into SDD 
 
 ## Scope and limits
 
-- The human authorized fixes, documentation, placement and integration, then explicitly requested that the campaign remain open. Integration means source/package/workflow integration; campaign merge/closure is not authorized by this checkpoint.
+- The latest human instruction authorizes C-002 fixes, documentation, placement and workflow integration, followed by verified published campaign integration/closure. C-002 belongs to this same open GitHub scripting scope. Then open/run a comprehensive SDD Manager review campaign, plan/execute its accepted corrections and close it. This explicit sequence supersedes the earlier open stop.
 - Real-token utility execution, live comment/issue/milestone changes, independent installed-client/agent trial, external demo repair and release are Not run. Native/synthetic contracts do not establish a user's actual completion evidence or provider permissions.
 - Actual accepted scope, tests/review/exits, report/result publication and cross-machine exclusivity remain caller responsibilities. JSON assertions are not independent proof. Unknown effects require read-only reconciliation; unsupported dispositions use the existing backend.
 
@@ -32,4 +32,4 @@ Checkpoint: campaign `076_af2703c` revision is implemented, integrated into SDD 
 
 ## Next boundary
 
-Publish/read back the final records checkpoint, verify clean matching branch and stop open/unmerged for human review. No campaign merge, live closure or release follows automatically.
+Publish/read back the C-002 analysis, complete its revision plan, implement/verify and integrate the completed campaign to main. After closure, open the separately authorized comprehensive review/revision campaign. No live tracking test, external demo repair or release follows.
