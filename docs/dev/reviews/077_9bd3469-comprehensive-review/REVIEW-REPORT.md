@@ -12,7 +12,7 @@ Initial inventory: 151 package files, 106 Markdown resources and 15 skill entrie
 | --- | --- | --- | --- |
 | U-001 | Assessed | All 15 entries, shared/human entries, seven Markdown assets, manifest/UI/assets and source contract/map; structural and link evidence below | R-001, R-002 |
 | U-002 | Assessed | Coordinator workflows, preparation, human review, QC, bootstrap, examples and orientation | No additional findings |
-| U-003 | Planned | Git/continuity/integration identity | Not yet assessed |
+| U-003 | Assessed | Git/continuity/integration identity | No additional findings |
 | U-004 | Planned | Reviews/tracking/credentials | Not yet assessed |
 | U-005 | Planned | Design/contracts/plans/tasks | Not yet assessed |
 | U-006 | Planned | Execution/incorporation/testing/docs/reports | Not yet assessed |
@@ -34,6 +34,10 @@ Manifest and all 15 UI YAML prompts/icons agree with packaged owners. All 17 SVG
 Reviewed all nine selected coordinator/orientation references in full against the entries and source contract. Workflow purpose, unchanged continuation, bootstrap/reporting scope, readiness, human acceptance and repository authority stay distinguishable. Main preparation correctly projects the nine DOCS tasks before writes when enabled, preserves mixed initialization, tracks first approval separately from later readiness, and completes package QC/integration/closure before implementation. Feature preparation retains its separate stopping rule. Examples agree with controlling procedures; no example establishes a universal product or technical choice.
 
 Orientation remains read-only, suppresses optional Git writes, identifies actual task/decision evidence and passes interrupted ownership without silently repairing it. Existing acceptance is reused without manufacturing retrospective approval; explicit pending review survives interruption. Broad summaries route to canonical references instead of reproducing every credential/process condition. No additional finding; assessment is source consistency, not observed agent compliance or a consumer trial.
+
+## U-003 — Git, identity and continuity
+
+Reviewed all six selected references in full: branch setup and preparation propagation, bounded process monitoring, per-commit publication, explicit integration, continuity reconstruction, nested/reopened revisions and shared identity/frozen-record conventions. Incoming synchronization preserves the receiver; workflow completion returns to the recorded parent. Partial phase scope does not authorize a phase merge, and prerequisite preparation integration does not finish implementation. Reopening requires actual latest first-parent merge/target/authority evidence and preserves original history. No contradictory gate or new finding was identified. This assesses instructions and source coherence; it does not claim interrupted-process or conflict recovery was exercised in a consumer project.
 
 ## Findings
 
