@@ -65,7 +65,7 @@ Reviewed all five release/highlights/package/workflow references in full against
 | --- | --- | --- | --- |
 | R-001 | Low / navigation defect | Verified (V-001) | sdd-design / U-001, recheck with U-005 |
 | R-002 | Medium / composition recommendation | Verified (V-002) | Source plugin contract / U-001 |
-| R-003 | Medium / identity defect | Open | Forge completion/projection / U-007 |
+| R-003 | Medium / identity defect | Revised (V-003; native pending) | Forge completion/projection / U-007 |
 | R-004 | Medium / audience-reporting defect | Open | Forge projection / U-007 |
 
 ### R-001 — Brief-to-exploration decision-state anchor is absent

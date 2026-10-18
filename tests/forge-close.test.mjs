@@ -509,3 +509,51 @@ test('native broad credential protection blocks the completion client', async t 
   assert.equal(result.code, 'token_permissions');
   assert.equal(calls, 0);
 });
+
+test('contradictory or malformed phase labels block task and milestone completion before writes', async () => {
+  const expected = common().phase_label;
+  for (const labels of [
+    [{ name: expected }, { name: 'sdd-phase-2-Other' }],
+    [{ name: expected }, { name: 'SDD-PHASE-2-Other' }],
+    [{ name: expected }, { name: expected }],
+    [{ name: expected }, null],
+    [{ name: expected }, { name: '' }],
+  ]) {
+    const state = fixture(); state.issues[0].labels = labels;
+    const result = await close(state);
+    assert.equal(result.code, 'issue_identity_conflict'); assert.equal(writes(state).length, 0);
+    const value = milestoneRequest(), milestone = milestoneFixture(value);
+    milestone.issues[0].labels = labels;
+    const parent = await reconcileClosure('milestone', value, milestone.client());
+    assert.equal(parent.code, 'issue_identity_conflict'); assert.equal(writes(milestone).length, 0);
+  }
+});
+
+test('unrelated labels and explicit custom phase-label conventions survive completion', async () => {
+  for (const expected of [common().phase_label, 'project-phase-core']) {
+    const state = fixture(), value = request(); value.phase_label = expected;
+    state.issues[0].labels = [{ name: expected }, { name: 'team-context' }];
+    assert.equal((await close(state, value)).ok, true);
+    assert.deepEqual(state.issues[0].labels.map(label => label.name), [expected, 'team-context']);
+  }
+});
+
+test('a phase conflict on fresh issue readback blocks the first completion write', async () => {
+  const state = fixture();
+  state.hook = ({ method, suffix }) => {
+    if (method === 'GET' && suffix === '/issues/10') state.issues[0].labels.push({ name: 'sdd-phase-2-Other' });
+  };
+  const result = await close(state);
+  assert.equal(result.code, 'issue_identity_conflict'); assert.equal(writes(state).length, 0);
+});
+
+test('phase drift after evidence preserves that effect and blocks closure', async () => {
+  const state = fixture();
+  state.hook = ({ method, suffix }) => {
+    if (method === 'GET' && suffix === '/issues/10' && writes(state).length) state.issues[0].labels.push({ name: 'SDD-PHASE-2-Other' });
+  };
+  const result = await close(state);
+  assert.equal(result.code, 'issue_identity_conflict'); assert.equal(result.effects.comment, 'created');
+  assert.equal(state.comments.get(10).length, 1); assert.equal(state.issues[0].state, 'open');
+  assert.equal(state.calls.filter(call => call.method === 'PATCH').length, 0);
+});

@@ -16,6 +16,12 @@ Created source-only PLUGIN-ASSESSMENT.md (22180 bytes) with one cohesive assessm
 
 Current audit covers the new child: zero missing paths/broken fragments, closed paths/index rows preserved. Source-only placement and existing package selectors exclude both contract and assessment companion; final actual ZIP/snapshot recheck remains V-005. No package agent depends on the source-only files. R-002: Verified at source composition/navigation depth; no consumer trial claimed.
 
+### V-003 — Consistent phase association checks
+
+Added one documented pure phaseLabelsMatch predicate to existing shared GitHub validation primitives and used it in completion and projection. Exactly one expected association and no foreign managed phase is accepted; managed names are recognized case-insensitively, malformed/duplicate records conflict, and unrelated/custom supported completion labels survive. Both utility guides describe conflict/readback behavior under their existing workflow owners; no new module, schema or activation authority.
+
+Observed RED before production edits: seven focused tests selected, six failed on the demonstrated conflict paths and the unrelated/custom compatibility case passed. After correction all 69 completion/projection contracts pass (39 completion, 30 projection), zero skips. Regressions cover task/milestone membership, malformed/duplicate/foreign/case labels, docs-main, fresh pre-write conflict and post-evidence/final drift with retained effects. R-003: Revised with local condition evidence; native Windows CMD/Linux Node 22/24 jobs remain required at V-005. Code and tests contain only synthetic provider credentials.
+
 ## Remaining scope
 
-V-003–005 remain pending. No product/client/provider acceptance or integrated completion is claimed.
+V-004–005 remain pending; V-003 native matrix readback is pending. No product/client/provider acceptance or integrated completion is claimed.

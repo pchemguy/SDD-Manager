@@ -15,6 +15,21 @@ export class ForgeError extends Error {
 }
 export const fail = (code, stage, details) => { throw new ForgeError(code, stage, details); };
 export const positive = value => Number.isSafeInteger(value) && value > 0;
+/**
+ * Check one exact phase association while preserving unrelated labels.
+ * @param {object[]} labels Provider label records, each with a nonblank name.
+ * @param {string|null} expected Exact caller label, or null for docs-main.
+ * @returns {boolean} False for malformed, duplicate or foreign phase labels.
+ * Managed namespace detection is case-insensitive; ownership spelling is exact.
+ * Explicit custom completion labels remain supported without another managed phase.
+ */
+export function phaseLabelsMatch(labels, expected) {
+  if (!Array.isArray(labels) || labels.some(label => typeof label?.name !== 'string' || !label.name.trim())) return false;
+  const managed = labels.filter(label => /^sdd-phase-[1-9]\d*-/i.test(label.name));
+  return expected === null ? managed.length === 0
+    : labels.filter(label => label.name === expected).length === 1
+      && managed.length <= 1 && managed.every(label => label.name === expected);
+}
 /** Validate bounded UTF-8 authored text, excluding reserved ownership markers. */
 export function text(value, max = 16000, multiline = false) {
   return typeof value === 'string' && value.trim().length > 0 && Buffer.byteLength(value) <= max

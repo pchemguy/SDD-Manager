@@ -393,3 +393,35 @@ test('native source failure cannot erase an unresolved hosted effect', async t =
   assert.equal(result.ok, false); assert.equal(result.code, 'source_changed');
   assert.equal(result.effects[0].status, 'unknown'); assert.equal(result.remote_state, 'unknown');
 });
+
+test('malformed, duplicate and foreign phase labels block projection before missing-object writes', async () => {
+  for (const extra of [{ name: 'sdd-phase-2-Other' }, { name: 'SDD-PHASE-2-Other' },
+    { name: 'sdd-phase-1-Bounded-outcome' }, null, { name: '' }]) {
+    const state = fixture(); assert.equal((await project(state)).ok, true);
+    state.issues[0].labels.push(extra); state.issues.pop(); state.calls = [];
+    const result = await project(state);
+    assert.equal(result.code, 'issue_content_or_parent_conflict'); assert.equal(writes(state).length, 0);
+  }
+});
+
+test('docs-main permits unrelated labels but rejects case-variant managed phase labels', async () => {
+  const { request, owner } = docsRequest(), state = fixture();
+  const apply = () => reconcileProjection(request, owner, state.client());
+  assert.equal((await apply()).ok, true); state.calls = [];
+  state.issues[0].labels.push({ name: 'team-context' });
+  assert.equal((await apply()).ok, true); assert.equal(writes(state).length, 0);
+  state.issues[0].labels.push({ name: 'SDD-PHASE-2-Other' }); state.calls = [];
+  assert.equal((await apply()).code, 'issue_content_or_parent_conflict'); assert.equal(writes(state).length, 0);
+});
+
+test('final projection readback detects phase drift while retaining earlier created effects', async () => {
+  const state = fixture();
+  state.hook = ({ method, route }) => {
+    if (method === 'GET' && route === '/issues' && writes(state).length === 6)
+      state.issues[0].labels.push({ name: 'SDD-PHASE-2-Other' });
+  };
+  const result = await project(state);
+  assert.equal(result.code, 'issue_content_or_parent_conflict'); assert.equal(result.ok, false);
+  assert.equal(result.effects.filter(item => item.status === 'created').length, 6);
+  assert.equal(writes(state).length, 6);
+});

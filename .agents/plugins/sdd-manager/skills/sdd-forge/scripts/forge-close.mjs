@@ -12,7 +12,7 @@
  * issues/milestones, changes Git/configuration, installs tools, reopens work,
  * retires tasks, deletes comments or blindly retries a mutation.
  */
-import { ForgeError, GitHubTransport, fail, positive, text, keys, repositoryName } from './github-client.mjs';
+import { ForgeError, GitHubTransport, fail, positive, text, keys, repositoryName, phaseLabelsMatch } from './github-client.mjs';
 import { requestFile, acquireLock, failure, containsCredential, createContext, protectedToken, isMain } from './forge-runtime.mjs';
 export { ForgeError };
 
@@ -118,7 +118,7 @@ export class GitHubClient extends GitHubTransport {
 function managedTask(issue, expected, request) {
   if (!issue || !positive(issue.id) || issue.number !== expected.issue || issue.title !== expected.title
       || issue.pull_request || !['open', 'closed'].includes(issue.state)
-      || !Array.isArray(issue.labels) || !issue.labels.some(label => label.name === request.phase_label)
+      || !phaseLabelsMatch(issue.labels, request.phase_label)
       || issue.milestone?.number !== request.milestone.number || typeof issue.body !== 'string') fail('issue_identity_conflict', 'identity');
   const raw = [...issue.body.matchAll(/<!--\s*(\/?)sdd-forge:task-id=([^>]*?)\s*-->/g)];
   const openings = raw.filter(item => !item[1]), closings = raw.filter(item => item[1]);

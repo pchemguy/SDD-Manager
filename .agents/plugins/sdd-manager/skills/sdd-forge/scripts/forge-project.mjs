@@ -7,7 +7,7 @@
  * See forge-project.md and forge-project-input.md for contracts and limits.
  */
 import { createHash } from 'node:crypto';
-import { ForgeError, GitHubTransport, fail, text, positive } from './github-client.mjs';
+import { ForgeError, GitHubTransport, fail, text, positive, phaseLabelsMatch } from './github-client.mjs';
 import { createContext, inspectSource, requestFile, acquireLock, protectedToken, containsCredential, failure, isMain } from './forge-runtime.mjs';
 import { parseOwner, validateProjection, renderProjection } from './projection-input.mjs';
 
@@ -75,13 +75,11 @@ function select(all, type, expected, parents, label) {
     const markers = typeof body === 'string' ? [...body.matchAll(/<!--\s*(\/?)sdd-forge:task-id=([^>]*?)\s*-->/g)] : [];
     const scopes = typeof body === 'string' ? [...body.matchAll(/<!--\s*sdd-forge:docs-scope=/g)] : [];
     const expectedParent = parents.get(expected.milestone_id);
-    const phaseLabels = Array.isArray(item.labels) ? item.labels.filter(value => /^sdd-phase-[1-9]\d*-/.test(value?.name || '')) : [];
     if (item.title !== expected.title || typeof body !== 'string' || !body.startsWith(expected.body)
         || (tail && !tail.startsWith('\n')) || markers.length !== 2
         || markers.some(value => value[2] !== expected.key) || markers[0][1] || markers[1][1] !== '/'
         || scopes.length !== (label ? 0 : 1) || !expectedParent || item.milestone?.number !== expectedParent.number
-        || !Array.isArray(item.labels) || item.labels.some(value => typeof value?.name !== 'string')
-        || (label ? phaseLabels.length !== 1 || phaseLabels[0].name !== label.name : phaseLabels.length !== 0)) fail('issue_content_or_parent_conflict', 'identity');
+        || !phaseLabelsMatch(item.labels, label ? label.name : null)) fail('issue_content_or_parent_conflict', 'identity');
   }
   return item;
 }
