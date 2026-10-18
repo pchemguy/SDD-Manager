@@ -4,7 +4,7 @@ Use this utility only through [credential recovery](../references/credentials.md
 
 ## Runtime and invocation
 
-Require Node.js 22+ and Git on PATH. Native Windows additionally requires whoami.exe and icacls.exe; no PowerShell, libsecret, keyring, npm package or persistent credential manager is required. This runtime is optional for other SDD workflows. If unavailable, report the missing facility and select another supported protected mechanism; do not install software automatically.
+Require Node.js 22+ and Git on PATH. Native Windows additionally requires whoami.exe and icacls.exe under SystemRoot/System32; absolute native paths prevent Git's shell PATH from selecting a GNU substitute. No PowerShell, libsecret, keyring, npm package or persistent credential manager is required. This runtime is optional for other SDD workflows. If unavailable, report the missing facility and select another supported protected mechanism; do not install software automatically.
 
 Illustrative invocation, with every placeholder replaced from the already established operation:
 

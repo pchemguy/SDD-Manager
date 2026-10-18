@@ -191,12 +191,16 @@ export function parseWindowsAclExport(bytes) {
 /** Inspect Windows ACLs without PowerShell or exporting credential material. */
 function windowsPermissions(filename) {
   const env = childEnv();
-  const identity = checked(processResult('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { env }), 'acl');
+  // Git's shell can prepend GNU tools to PATH; require native Windows utilities.
+  const systemRoot = process.env.SystemRoot;
+  if (!systemRoot || !path.isAbsolute(systemRoot)) fail('windows_tools_unavailable', 'acl');
+  const nativeTool = name => path.join(systemRoot, 'System32', name);
+  const identity = checked(processResult(nativeTool('whoami.exe'), ['/user', '/fo', 'csv', '/nh'], { env }), 'acl');
   const { sid, localAccount } = windowsUserContext(identity, os.hostname());
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'sdd-auth-acl-'));
   try {
     const saved = path.join(directory, 'acl.txt');
-    checked(processResult('icacls.exe', [filename, '/save', saved, '/q'], { env }), 'acl');
+    checked(processResult(nativeTool('icacls.exe'), [filename, '/save', saved, '/q'], { env }), 'acl');
     checkWindowsDacl(parseWindowsAclExport(fs.readFileSync(saved)), sid, localAccount);
   } finally { fs.rmSync(directory, { recursive: true, force: true }); }
 }

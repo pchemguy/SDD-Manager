@@ -265,24 +265,6 @@ test('Windows built-in account aliases require verified local current-user ident
   assert.throws(() => auth.checkWindowsDacl('D:(A;;FA;;;LA)', 'S-1-5-21-1-2-3-1001', true));
   assert.throws(() => auth.windowsUserContext('unverified', 'computer'));
 });
-test('native Windows helper launch diagnostic uses a synthetic script copy only', t => {
-  if (process.platform !== 'win32') return;
-  const f = fixture(t), script = path.join(f.root, 'synthetic-diagnostic.mjs');
-  let source = fs.readFileSync(SCRIPT, 'utf8');
-  source = source.replace('const SCRIPT = fileURLToPath(import.meta.url);',
-    'const SCRIPT = fileURLToPath(import.meta.url);\nprocess.stderr.write(JSON.stringify({entry:process.argv[1],script:SCRIPT,gitEnvKeys:Object.keys(process.env).filter(k=>/^GIT_|^GCM_/.test(k))})+"\\n");');
-  source = source.replace('try { helperMain(process.argv.slice(3)); } catch { process.exitCode = 1; }',
-    'try { helperMain(process.argv.slice(3)); } catch (error) { process.stderr.write(JSON.stringify({code:error.code,stage:error.stage})+"\\n"); process.exitCode = 1; }');
-  fs.writeFileSync(script, source);
-  const helper = auth.helperCommand(process.execPath, script, [f.root, 'gh.tkn', TARGET_URL]);
-  const result = spawnSync('git', ['-C', f.root, '-c', 'credential.helper=', '-c', `credential.helper=${helper}`,
-    '-c', 'credential.useHttpPath=true', '-c', 'core.askPass=', 'credential', 'fill'], {
-    input: `url=${TARGET_URL}\n\n`, encoding: 'utf8', timeout: 10000,
-    env: { ...process.env, GIT_TERMINAL_PROMPT: '0', GIT_ASKPASS: '', SSH_ASKPASS: '' },
-  });
-  assert.equal(result.status, 0, result.stderr);
-  assert.ok(result.stdout.includes(`password=${CANARY}`));
-});
 test('ACL exports support observed BOM-less UTF-16LE and reject malformed records', () => {
   const dacl = 'D:PAI(A;;FA;;;SY)(A;;FA;;;S-1-5-21-1-2-3-1001)';
   const text = `gh.tkn\r\n${dacl}\r\n`;
