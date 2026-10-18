@@ -38,6 +38,7 @@ Next eligible action: continue refining the exploration design below with the hu
 - Surface important technology and architecture decisions early when reasonably possible, including language/framework/runtime and browser rendering choices.
 - Keep discussion high-level and proportionate. Feature exploration may need more technical precision when existing contracts or compatibility make it consequential.
 - Use a concise set of common prompts and guidelines rather than an exhaustive universal questionnaire. Help establish enough direction for robust later agent decisions with less micromanagement and interruption.
+- Specific examples are illustrative and non-exhaustive. They must not limit or bias workflow scope, domains, technologies, options or recommendations. Derive relevance and coverage from the actual objective and context, not resemblance to an example.
 
 ## Current-source assessment
 
@@ -85,6 +86,8 @@ Do not turn every possible quality or technology into a compulsory question. Rai
 A recommendation is not an accepted decision. Explicit delegation can authorize later agent choices within stated constraints; silence, document preapproval and broad execution authority do not establish missing requirements. Honor an explicit request to draft with clearly identified unresolved proposals rather than inventing acceptance or creating a compulsory extra approval gate.
 
 ### Appropriate technical depth
+
+Explicitly label concrete examples as illustrative and non-exhaustive wherever they appear in the resulting guidance. Examples demonstrate how to reason; they do not define the supported project types, a required question sequence, preferred technologies or the complete decision space. Select relevant concerns and alternatives from the actual project context, including concerns absent from the examples. Apply the same qualification to assessment examples so they do not become a substitute for general workflow coverage.
 
 Discuss purpose, consequences and reversibility before implementation mechanics. A choice belongs here when it changes principal scope, deployment, interaction model, constraints or the cost of changing direction. Defer package versions, directory trees, class/API shapes and detailed contracts unless the current question depends on them.
 
