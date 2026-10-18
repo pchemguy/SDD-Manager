@@ -1,6 +1,8 @@
 # Transient Git authentication recovery
 
-Use this utility only through [credential recovery](../references/credentials.md) after the coordinator classifies an actual authentication failure and establishes operation authority. [git-auth-recover.mjs](git-auth-recover.mjs) implements credential transport and exact ref readback; it does not decide approvals, retry policy, document readiness or release acceptance.
+Use this utility through [credential recovery](../references/credentials.md) after the coordinator classifies an observed authentication failure or credential-helper blockage and establishes operation authority. [git-auth-recover.mjs](git-auth-recover.mjs) implements credential transport and exact ref readback; it does not decide approvals, retry policy, document readiness or release acceptance.
+
+The publication owner applies [bounded Git-operation monitoring](../references/git-workflows.md#monitor-pending-git-operations) to the original call before selecting recovery. This utility bounds its own invocations; it cannot monitor or cancel an earlier separately launched task. Reconcile that task's disposition and select readback first when its push outcome is uncertain, before another push.
 
 ## Runtime and invocation
 
