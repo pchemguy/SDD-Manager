@@ -218,19 +218,24 @@ test('repository identity tolerates native Windows path spelling differences', t
 test('native Git decodes percent-encoded repository paths for credential requests', t => {
   const f = fixture(t);
   for (const url of ['https://example.invalid/owner/repo%2dname.git',
-    'https://example.invalid/owner/repo%20name.git', 'https://example.invalid/owner/r%C3%A9po.git']) {
-    const helper = auth.helperCommand(process.execPath, SCRIPT, [f.root, 'gh.tkn', url]);
-    const result = spawnSync('git', ['-C', f.root, '-c', 'credential.helper=',
-      '-c', `credential.helper=${helper}`, '-c', 'credential.useHttpPath=true',
-      '-c', 'core.askPass=', 'credential', 'fill'], {
+    'https://example.invalid/owner/repo%20name.git', 'https://example.invalid/owner/r%C3%A9po.git',
+    'https://example.invalid/owner/repo.git/', 'https://example.invalid///owner//repo.git///',
+    'https://example.invalid/%2Fowner/repo.git%2F', 'https://example.invalid/owner/repo%252dname.git']) {
+    f.git(['remote', 'set-url', 'origin', url]);
+    f.git(['config', `credential.${url}.helper`, 'does-not-exist']);
+    const runner = controlled(f);
+    auth.recover({ ...f.options, url }, runner.execute);
+    const args = runner.calls.find(c => c.args.includes('push')).args;
+    const result = spawnSync('git', [...args.slice(0, args.indexOf('push')), 'credential', 'fill'], {
       input: `url=${url}\n\n`, encoding: 'utf8', timeout: 10000,
       env: { ...process.env, GIT_TERMINAL_PROMPT: '0', GIT_ASKPASS: '', SSH_ASKPASS: '' },
     });
-    assert.equal(result.status, 0, result.stderr);
+    assert.equal(result.status, 0, result.stderr + " URL=" + url);
     assert.ok(result.stdout.includes(`password=${CANARY}`));
   }
   for (const url of ['https://example.invalid/owner/repo%09name.git',
-    'https://example.invalid/owner/repo%ff.git', 'https://example.invalid/owner/repo%zz.git']) {
+    'https://example.invalid/owner/repo%ff.git', 'https://example.invalid/owner/repo%zz.git',
+    'https://example.invalid///', 'https://example.invalid/%2f%2F']) {
     assert.throws(() => auth.validateTargetUrl(url), /invalid_url/);
   }
 });
@@ -247,9 +252,18 @@ test('native Windows ACL export is parsed as metadata', t => {
   const exported = spawnSync('icacls.exe', [path.join(f.root, 'gh.tkn'), '/save', saved, '/q'], { encoding: 'utf8' });
   assert.equal(exported.status, 0);
   const dacl = auth.parseWindowsAclExport(fs.readFileSync(saved));
-  const sid = spawnSync('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' }).stdout.match(/S-1-\d+(?:-\d+)+/)[0];
-  try { auth.checkWindowsDacl(dacl, sid); }
-  catch { assert.fail(`Synthetic fixture ACL policy: ${JSON.stringify({ dacl, sid })}`); }
+  const identity = spawnSync('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' }).stdout;
+  const { sid, localAccount } = auth.windowsUserContext(identity, os.hostname());
+  auth.checkWindowsDacl(dacl, sid, localAccount);
+});
+test('Windows built-in account aliases require verified local current-user identity', () => {
+  const sid = 'S-1-5-21-1-2-3-500';
+  assert.deepEqual(auth.windowsUserContext(`"COMPUTER\\Administrator","${sid}"\r\n`, 'computer'), { sid, localAccount: true });
+  assert.deepEqual(auth.windowsUserContext(`"DOMAIN\\Administrator","${sid}"\r\n`, 'computer'), { sid, localAccount: false });
+  assert.doesNotThrow(() => auth.checkWindowsDacl('D:(A;;FA;;;LA)', sid, true));
+  assert.throws(() => auth.checkWindowsDacl('D:(A;;FA;;;LA)', sid, false));
+  assert.throws(() => auth.checkWindowsDacl('D:(A;;FA;;;LA)', 'S-1-5-21-1-2-3-1001', true));
+  assert.throws(() => auth.windowsUserContext('unverified', 'computer'));
 });
 test('ACL exports support observed BOM-less UTF-16LE and reject malformed records', () => {
   const dacl = 'D:PAI(A;;FA;;;SY)(A;;FA;;;S-1-5-21-1-2-3-1001)';

@@ -67,12 +67,17 @@ export function parseCli(args) {
  */
 export function validateTargetUrl(value) {
   let url, credentialPath;
-  try { url = new URL(value); credentialPath = decodeURIComponent(url.pathname.slice(1)); }
+  try { url = new URL(value); credentialPath = gitCredentialPath(url); }
   catch { fail('invalid_url'); }
   if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash ||
-      !url.hostname || url.pathname === '/' || /[\s\x00-\x1f\x7f]/.test(value) ||
+      !url.hostname || !credentialPath || /[\s\x00-\x1f\x7f]/.test(value) ||
       /[\x00-\x1f\x7f]/.test(credentialPath) || url.href !== value) fail('invalid_url');
   return url;
+}
+
+/** Match Git: strip literal leading slashes, decode once, trim trailing slashes. */
+function gitCredentialPath(url) {
+  return decodeURIComponent(url.pathname.replace(/^\/+/, '')).replace(/\/+$/, '');
 }
 
 /**
@@ -105,23 +110,42 @@ export function helperCommand(node, script, args, platform = process.platform) {
  * Conservative Windows DACL policy, not a complete effective-access audit.
  * @param {string} sddl DACL from native icacls metadata export.
  * @param {string} userSid Current user's SID from whoami.
+ * @param {boolean} localAccount Whether native identity matches this computer.
  * @returns {void}
  * @throws {RecoveryError} Unsupported ACL or grant to another principal.
  */
-export function checkWindowsDacl(sddl, userSid) {
+export function checkWindowsDacl(sddl, userSid, localAccount = false) {
   if (!/^S-1-\d+(?:-\d+)+$/.test(userSid) || !sddl.startsWith('D:')) fail('acl_unverified');
   const aces = sddl.match(/\([^()]*\)/g) || [];
   const remainder = sddl.replace(/\([^()]*\)/g, '');
   if (!aces.length || !/^D:[PAIR]*$/.test(remainder)) fail('acl_unverified');
-  const allowed = new Set([userSid, 'SY', 'BA', 'S-1-5-18', 'S-1-5-32-544']);
+  const current = new Set([userSid]);
+  if (localAccount && userSid.endsWith('-500')) current.add('LA');
+  if (localAccount && userSid.endsWith('-501')) current.add('LG');
+  const allowed = new Set([...current, 'SY', 'BA', 'S-1-5-18', 'S-1-5-32-544']);
   let ownGrant = false;
   for (const ace of aces) {
     const parts = ace.slice(1, -1).split(';');
     if (parts.length !== 6 || !['A', 'D'].includes(parts[0]) || parts[3] || parts[4]) fail('acl_unverified');
     if (parts[0] === 'A' && !allowed.has(parts[5])) fail('token_permissions');
-    if (parts[0] === 'A' && parts[5] === userSid && !parts[1].includes('IO')) ownGrant = true;
+    if (parts[0] === 'A' && current.has(parts[5]) && !parts[1].includes('IO')) ownGrant = true;
   }
   if (!ownGrant) fail('acl_unverified');
+}
+
+/**
+ * Read the native current-user CSV identity without treating domain RID 500/501
+ * as this computer's built-in account. Ambiguous identity is not an ACL bypass.
+ * @param {string} stdout whoami /user /fo csv /nh output, never credential data.
+ * @param {string} computerName Native computer name, normally os.hostname().
+ * @returns {{sid: string, localAccount: boolean}} Validated current-user context.
+ * @throws {RecoveryError} Unsupported identity output.
+ */
+export function windowsUserContext(stdout, computerName) {
+  const record = stdout.trim().match(/^"([^"\r\n]+)","(S-1-\d+(?:-\d+)+)"$/);
+  if (!record) fail('acl_unverified');
+  const parts = record[1].split('\\');
+  return { sid: record[2], localAccount: parts.length === 2 && parts[0].toLowerCase() === computerName.toLowerCase() };
 }
 
 /** Child environment excludes other credential/trace channels, never adds token. */
@@ -168,13 +192,12 @@ export function parseWindowsAclExport(bytes) {
 function windowsPermissions(filename) {
   const env = childEnv();
   const identity = checked(processResult('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { env }), 'acl');
-  const sid = identity.match(/S-1-\d+(?:-\d+)+/)?.[0];
-  if (!sid) fail('acl_unverified');
+  const { sid, localAccount } = windowsUserContext(identity, os.hostname());
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'sdd-auth-acl-'));
   try {
     const saved = path.join(directory, 'acl.txt');
     checked(processResult('icacls.exe', [filename, '/save', saved, '/q'], { env }), 'acl');
-    checkWindowsDacl(parseWindowsAclExport(fs.readFileSync(saved)), sid);
+    checkWindowsDacl(parseWindowsAclExport(fs.readFileSync(saved)), sid, localAccount);
   } finally { fs.rmSync(directory, { recursive: true, force: true }); }
 }
 
@@ -265,7 +288,7 @@ export function recover(options, execute = processResult) {
     const source = checked(git(['show-ref', '--verify', '--hash', options.ref]), 'ref').trim();
     if (source !== options.expect) fail('source_mismatch');
   } else checked(git(['cat-file', '-e', options.expect]), 'ref');
-  validateTargetUrl(options.url);
+  const target = validateTargetUrl(options.url);
   const destination = () => {
     // A named remote's foreign-VCS override bypasses the URL's HTTPS transport.
     const vcs = git(['config', '--get-all', `remote.${options.remote}.vcs`]);
@@ -278,7 +301,8 @@ export function recover(options, execute = processResult) {
   destination();
   readToken(repo, options.tokenFile, git);
   const helper = helperCommand(process.execPath, SCRIPT, [repo, options.tokenFile, options.url]);
-  const context = `credential.${options.url}`;
+  const contextUrl = target.origin + '/' + gitCredentialPath(target).split('/').map(encodeURIComponent).join('/');
+  const context = `credential.${contextUrl}`;
   const auth = ['-c', 'credential.helper=', '-c', `${context}.helper=`, '-c', `${context}.helper=${helper}`,
     '-c', 'credential.useHttpPath=true', '-c', `${context}.useHttpPath=true`,
     '-c', `${context}.username=x-access-token`, '-c', 'credential.interactive=false',
@@ -320,7 +344,7 @@ function helperMain(args) {
   const request = credentialRequest(buffer.subarray(0, length).toString('utf8'));
   const target = validateTargetUrl(url);
   // Git URL-decodes the credential path once; validation excludes protocol controls.
-  if (request.protocol !== 'https' || request.host !== target.host || request.path !== decodeURIComponent(target.pathname.slice(1)) ||
+  if (request.protocol !== 'https' || request.host !== target.host || request.path !== gitCredentialPath(target) ||
       (request.username && request.username !== 'x-access-token')) return;
   const git = args => processResult('git', ['-C', repo, ...args], { cwd: repo, env: childEnv() });
   const token = readToken(repo, tokenFile, git);
