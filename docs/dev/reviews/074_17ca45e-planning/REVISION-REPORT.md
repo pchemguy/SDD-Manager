@@ -14,4 +14,6 @@
 | --- | --- | --- |
 | V-001 / R-001, R-002 | Delivery owner and skill entry now require bounded functionality scope for every phase, simplest usable Phase 1, separate version coverage, honest scoped exits and justified prerequisites. | Source assessment covers SC-01–12, 14–20: later backlog buckets and milestone-only compliance are rejected; narrow projects and true prerequisites retain proportionate routes. `git diff --check` passes. Live behavior unrun. |
 
+| V-002 / R-001, R-002 | Hierarchy and coordinator handoff now route bounded phase semantics and version coverage to the delivery owner. Existing-system/feature context stays scoped. | SC-01–02, 09–12, 14–20 source/handoff assessment passes; no Git, tracking or human-checkpoint procedure changed. `git diff --check` passes. |
+
 The commit containing each action row identifies its source/evidence checkpoint. Publish and remotely verify it before the next action. Final Git evidence will list those checkpoints.
