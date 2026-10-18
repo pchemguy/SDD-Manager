@@ -57,7 +57,7 @@ function fixture(t) {
   fs.writeFileSync(path.join(root, '.gitignore'), '*.tkn\n');
   fs.writeFileSync(path.join(root, 'gh.tkn'), CANARY + '\r\n', { mode: 0o600 });
   if (process.platform === 'win32') {
-    const sid = spawnSync('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' }).stdout.match(/S-1-5-21-(?:\d+-){2,}\d+/)[0];
+    const sid = spawnSync('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' }).stdout.match(/S-1-\d+(?:-\d+)+/)[0];
     assert.equal(spawnSync('icacls.exe', [path.join(root, 'gh.tkn'), '/inheritance:r', '/grant:r', `*${sid}:F`], { encoding: 'utf8' }).status, 0);
   }
   git(['add', '.gitignore']); git(['commit', '-qm', 'fixture']);
@@ -246,7 +246,10 @@ test('native Windows ACL export is parsed as metadata', t => {
   const f = fixture(t), saved = path.join(f.root, 'fixture-acl.txt');
   const exported = spawnSync('icacls.exe', [path.join(f.root, 'gh.tkn'), '/save', saved, '/q'], { encoding: 'utf8' });
   assert.equal(exported.status, 0);
-  assert.match(auth.parseWindowsAclExport(fs.readFileSync(saved)), /^D:/);
+  const dacl = auth.parseWindowsAclExport(fs.readFileSync(saved));
+  const sid = spawnSync('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' }).stdout.match(/S-1-\d+(?:-\d+)+/)[0];
+  try { auth.checkWindowsDacl(dacl, sid); }
+  catch { assert.fail(`Synthetic fixture ACL policy: ${JSON.stringify({ dacl, sid })}`); }
 });
 test('ACL exports support observed BOM-less UTF-16LE and reject malformed records', () => {
   const dacl = 'D:PAI(A;;FA;;;SY)(A;;FA;;;S-1-5-21-1-2-3-1001)';
