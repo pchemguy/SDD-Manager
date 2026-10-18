@@ -2,7 +2,7 @@
 
 ## Campaign and entry
 
-- Campaign: `075_89fdf79`; state: open, first candidate assessed; further candidates and integration decisions pending.
+- Campaign: `075_89fdf79`; state: open/unmerged, accepted C-001 revision executed and verified; further candidates unselected.
 - Full starting baseline/branch-off commit: `89fdf79637e59c558b3a265d5e458c22e58d49b7`.
 - Working branch: `revision/075_89fdf79-scripting`.
 - Creation parent/eventual integration target: `main`; no suspended parent campaign.
@@ -32,11 +32,9 @@ Where an abstract illustration improves reasoning, label it illustrative and non
 
 ## Evidence and next boundary
 
-C-001 is assessed as Adapt, not ready to ship unchanged; seven source findings and a cross-platform direction are recorded. Only Node syntax validation was performed, without executing its top-level effects. No implementation or helper strategy is accepted for integration. Potential additional candidates should be supported by current workflow evidence and prioritized against actual benefit and maintenance cost.
+The first assessment recommended Adapt with seven findings and syntax-only evidence; its original candidate remains unchanged and is never used as the shipped executable. The human subsequently authorized the full revision plan and its execution. The [revision report](REVISION-REPORT.md) records the completed transient utility, workflow/code/companion documentation, native Windows/Linux Node 22/24 success, full source/package checks and honest live-provider limits. Previous closed campaign objects remain unchanged.
 
-Opening checks cover branch/baseline identity, owned paths, whitespace and current links; no product/support suite or live acceptance is needed for this metadata-only checkpoint. Preserve previous closed campaign objects unchanged.
-
-Next eligible action: discuss C-001 findings or receive further candidates. A later revision plan follows accepted integration directions; do not execute the retained candidate or implement repairs merely from this review.
+Current stop: publish/read back the executed revision checkpoint on the named campaign branch; leave it open/unmerged. Additional candidates, campaign closure/integration, release and real-token/live-provider tests require their own selected scope. No extra approval is needed for the already completed authorized work.
 
 
 ## Accepted execution scope

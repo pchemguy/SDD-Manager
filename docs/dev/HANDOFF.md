@@ -1,30 +1,36 @@
 # SDD Manager handoff
 
-Checkpoint: opening scripting campaign `075_89fdf79`. The commit containing this snapshot identifies the checkpoint; confirm publication through Git.
+Checkpoint: executed scripting revision `075_89fdf79`, open/unmerged. The containing commit identifies this final source-only checkpoint; confirm its publication through Git before further work.
 
 ## Workflow and sources
 
-- Active workflow/stage: revision, scripting intake/exploration; candidate material pending.
-- Current campaign: [scripting exploration](reviews/075_89fdf79-scripting/EXPLORATION.md).
+- Active workflow/stage: revision, accepted C-001 authentication utility execution complete.
+- Current campaign: [exploration](reviews/075_89fdf79-scripting/EXPLORATION.md), [accepted plan](reviews/075_89fdf79-scripting/REVISION-PLAN.md), [revision report](reviews/075_89fdf79-scripting/REVISION-REPORT.md).
 - Governing sources: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md), and `.agents/plugins/sdd-manager/`.
-- Prior result: campaign 074 completed and integrated on published main at `89fdf79637e59c558b3a265d5e458c22e58d49b7`.
+- Final utility/package source: `58cd578b1aece70ded49070eb99df9f32ec4570b`; subsequent commits change source-only reporting/continuity. Original supplied candidate and previous closed campaign objects remain unchanged.
 
 ## Scope and decisions
 
-- Request: open a scripting revision campaign to evaluate supplied agent-created scripts for SDD Manager integration, with potential additional candidates.
-- Current authorized outputs: opening record, index and this handoff. Candidate files/purposes have not yet been supplied in this campaign.
-- Exact stop: publish/read back the opening checkpoint and await candidate input. No source repairs, candidate effects, integration, release or merge selected.
-- Reporting: Standard after Explicit bootstrap; Minimal and Explicit remain available.
-- Persistence: publish/read back every owned commit. No hosted issue projection selected.
+- Human authorized a complete revision plan followed by execution: transient credential recovery, remaining code review, professional in-code/companion documentation and SDD workflow integration. V-001–V-005 are complete; no additional approval is pending for that work.
+- Shipped owner: `skills/sdd-manage/scripts/git-auth-recover.mjs` and adjacent `.md`, with credentials/Git routing. Optional dependency-free Node 22+ utility; one explicitly scoped HTTPS push/readback, protected existing token, no persistent helper/store changes. Coordinator retains authorization/retry policy and additional workflow gates.
+- Campaign scope follows one coherent objective with necessary support files, not a one-script/file rule. Other scripting candidates remain unselected.
+- Exact stop: publish/read back this executed checkpoint. Campaign closure/merge, release, additional candidate implementation and real-token/live-provider testing are not selected.
+- Reporting: Standard after Explicit bootstrap; Minimal and Explicit remain available. Publish/read back every owned commit; no hosted issue projection selected.
+
+## Verification
+
+- [CI run 39137385828](https://github.com/pchemguy/SDD-Manager/actions/runs/39137385828): 27 tests pass in each native Windows CMD/Linux Node 22/24 job. Actual native Git helper protocol, quoted/Unicode paths, encoded/slash contexts and URL helper resets are tested; transport push/readback outcomes use synthetic controls.
+- Full support 139/139, publisher 37/37, catalog 33 static cases pass. Final 58cd578 archive is reproducible, exact-tree validated with 141 files and offline manifest conformance; all 630 packaged local file links resolve. Detailed source/environment and failed-first-attempt evidence is in the revision report.
+- No real credential passed to the utility; no live provider/authentication, installed-client or release acceptance claim. Native Windows DACL policy is conservative and does not replace trusted ownership/path preconditions.
 
 ## Branches and return
 
 - Working branch: `revision/075_89fdf79-scripting`.
 - Creation parent/eventual integration target: `main`.
 - Full branch-off baseline: `89fdf79637e59c558b3a265d5e458c22e58d49b7`.
-- No suspended parent campaign. Eventual authorized completion restores main's waiting context.
+- No suspended parent campaign. Main remains waiting; no merge was performed.
 
 ## Pending operations and next action
 
-- Publish and confirm the opening commit on the named origin branch. Inspect actual state before retrying.
-- After publication: receive candidate scripts or exact paths and their intended purposes; scope assessment from the actual material. Do not infer candidates from unrelated prior conversations or execute scripts before inspecting their effects.
+- All accepted code/docs/checks are complete. Publish/read back the containing final checkpoint, preserving actual state on failure; no implementation task remains.
+- After publication, await the user's next selected boundary, such as campaign closure/integration or a separately scoped candidate. Do not replay diagnostics, execute the original candidate, infer future scripts or run live credential effects from this checkpoint.

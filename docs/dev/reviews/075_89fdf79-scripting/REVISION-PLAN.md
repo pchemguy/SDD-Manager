@@ -51,3 +51,7 @@ Run full support/publisher suites from acceptance/AGENTS.md, catalog and current
 Campaigns follow coherent objectives rather than file counts. This campaign's accepted execution unit is C-001 authentication recovery and its supporting code/docs/tests. Independently useful unrelated candidates should have separately scoped campaigns when introduced; do not reject necessary support files to enforce one-script-per-campaign.
 
 When source work is complete, refresh HANDOFF with actual evidence and next boundary. Stop after verified publication on the current branch; no campaign merge, release, real credential alteration or live external push test is implied by these tests.
+
+## Execution status
+
+V-001–V-005 are complete under the selected scope. The [revision report](REVISION-REPORT.md) records original failures, native Windows/Linux corrections, finding dispositions, isolated review, package/full-suite evidence and limits. Final utility source is 58cd578; later checkpoint edits affect source-only campaign continuity. Campaign remains open/unmerged after publication; no scope expansion or release is implied.

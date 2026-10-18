@@ -6,7 +6,7 @@
 - Baseline: `89fdf79637e59c558b3a265d5e458c22e58d49b7`; opening: `fc381bd8b0ec46ccbf4f1e5dc78d5095cfd80bbb`.
 - Human authorized plan and execution; plan published as `073980557f3e5f96dab50051aa65cdf5408c3994` before implementation.
 - Working branch: `revision/075_89fdf79-scripting`; parent/eventual target: main.
-- State: executing; no merge, release or real-token/live-provider test selected.
+- State: V-001–V-005 executed and verified; campaign remains open/unmerged. No release or real-token/live-provider test selected.
 
 ## Action evidence
 
@@ -16,18 +16,35 @@
 | V-002 / R-001–07 | Reviewed and strengthened scope validation, stdin framing, Azure-style SID handling and older-object readback. Added Windows/Linux Node 22/24 read-only CI; native Git URL-scoped reset coverage and negative process cases. | 21 tests pass on Linux Node v24.19.0. Windows/native store and hosted CI results are not inferred; CI is a separate observed check when available. No real token/provider effects in tests. |
 | V-003 / R-001–07 | Added professional exported API/effect/error comments and a bounded companion CLI guide. Credentials/Git entry routes the optional utility after actual auth failure, preserving pre-write and publication gates. | Syntax and 21 tests retained; docs distinguish DACL versus ownership checks, exact ref matching versus token permission, readback versus tag peeling, and unavailable facilities. No universal Node dependency or persistent helper mutation. |
 | V-004 / R-001–07 | Required archive/snapshot retention, source contributor test entry, isolated forward review and resulting native-platform/context corrections. | Final utility source 58cd578 passes all four native Windows/Linux Node 22/24 jobs, 27 tests each. Support 139/139, publisher 37/37, catalog 33 static cases, exact 141-file reproducible archive and 630 packaged local links pass; detailed scope below. |
+| V-005 / R-001–07 | Final finding dispositions, plan/exploration status, campaign index and HANDOFF reflect the implemented boundary. | Current links/whitespace, exact package preservation, unchanged candidate/closed records and final branch publication/readback. No unresolved required finding within the selected contract; live-provider/client acceptance remains unselected. |
 
 Each action's containing commit identifies its checkpoint; publish/read back before further action work. Original candidate remains unchanged and outside the shipped package.
 
 ## Verified source and evidence limits
 
-Final utility source: `58cd578b1aece70ded49070eb99df9f32ec4570b`. [Hosted run 39137385828](https://github.com/pchemguy/SDD-Manager/actions/runs/39137385828) passes all four jobs: native Windows CMD/Linux, Node 22/24, 27 tests per job. Local Linux also passes 27/27 with Node v24.19.0 and Git 2.51.1. Native Git actually invokes the helper through quoted/Unicode paths, including encoded/slash contexts and inherited broken helpers; push/readback transport outcomes remain controlled synthetic cases.
+Final utility source: `58cd578b1aece70ded49070eb99df9f32ec4570b`. [Hosted run 39137385828](https://github.com/pchemguy/SDD-Manager/actions/runs/39137385828) passes all four jobs: native Windows CMD/Linux, Node 22/24, 27 tests per job. Observed Windows versions are Node v22.23.3/v24.21.0 and Git 2.56.0.windows.2. Local Linux also passes 27/27 with Node v24.19.0 and Git 2.51.1. Native Git actually invokes the helper through quoted/Unicode paths, including encoded/slash contexts and inherited broken helpers; push/readback transport outcomes remain controlled synthetic cases.
 
 The full source support suite passes 139/139 and publisher suite 37/37 with Python 3.12.14 and pinned jsonschema 4.26.0, including required script/guide membership, exact bytes and source-test exclusion. These full Python suites were rerun at 629b451; subsequent edits affect native utility selection, its source tests/docs and campaign evidence, with no Python owner changes. Catalog validation passes 33 static cases. Final committed 58cd578 is separately built twice: both exact-tree archives match, contain 141 files, pass offline core schema/byte validation and exclude source tests/development evidence. Archive SHA-256: `4f9a65f25056314ef75cc61b3ac9b62fe46d470f506c3dba077cf6b0b712f848`. All 630 packaged local file links resolve within the package; current campaign/contributor links and whitespace checks pass.
 
 The independent reviewer confirmed the original encoded-path and foreign-VCS defects, then rechecked the corrected normalization against six additional native Git contexts at 629b451. No material regression remained within that isolated scope. Original failed attempts are retained below rather than inferred away by later success.
 
-No real credential was supplied to the utility, no live provider push/authentication was tested through it, and no persistent credential store/config was changed by tests. These results establish the tested runtimes and helper/local contracts, not installed-client routing, arbitrary OS configurations, API permission, live-provider acceptance or release readiness. Node remains optional outside this utility; complex/ambiguous protection or missing facilities block. Closed campaign paths and the supplied candidate remain unchanged. V-004 is complete; V-005 final disposition/continuity reporting remains.
+No real credential was supplied to the utility, no live provider push/authentication was tested through it, and no existing repository credential configuration or external credential store was changed. Temporary fixtures set and remove their own configuration. These results establish the tested runtimes and helper/local contracts, not installed-client routing, arbitrary OS configurations, API permission, live-provider acceptance or release readiness. Node remains optional outside this utility; complex/ambiguous protection or missing facilities block. Closed campaign paths and the supplied candidate remain unchanged. Final reporting changes no packaged bytes from 58cd578. V-004/V-005 are complete; the requested stopping boundary is published execution on the current campaign branch.
+
+## Finding dispositions and integration
+
+The coordinator owns the [utility](../../../../.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs) and [companion contract](../../../../.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md). Its entry routes credential recovery; credentials.md selects it after actual failure and eligible preconditions, and git-workflows.md consumes the exact ref readback. Workflow policy remains in those bounded references. In-code JSDoc covers effects, parameters, outcomes/errors and platform boundaries; the companion covers CLI/runtime/recovery details without duplicating the coordinator's policy.
+
+| Finding | Disposition and retained boundary |
+| --- | --- |
+| R-001 | Resolved: one transient native Windows/Linux mechanism replaces hardcoded wincred storage. No keyring dependency or persistent helper setup; optional Node/Git/native tooling requirements are explicit and tested. |
+| R-002 | Resolved: command-local configuration avoids rollback/config loss; bounded process status/error/signal/output checks and exact readback retain uncertain effects without automatic re-push. |
+| R-003 | Resolved: explicit effective HTTPS push URL, one ref/known object, unique destination/rewrite checks, foreign-VCS rejection and exact credential host/path context constrain the operation. Inherited URL helpers and Git path normalization have native regression evidence. |
+| R-004 | Resolved: explicit root identity and contained non-symlink ignored/untracked token, single-line bounded format, POSIX ownership/mode and conservative native Windows DACL/identity checks precede use. Windows ownership/path trust remains a coordinator precondition, not a claim of a full access audit. |
+| R-005 | Resolved: strict push/readback CLI replaces the arbitrary Git tail; no force, deletion, multi-ref/follow-tags/submodule expansion or implicit destination conversion. Existing hooks remain. |
+| R-006 | Resolved: sanitized versioned JSON and documented exits distinguish exact remote match, absent/different and unknown state. No store acknowledgement or matching public ref is treated as proof of credential permission, API access or release acceptance. |
+| R-007 | Resolved: import-safe dependency-free module, professional code/companion docs, direct Git spawning, quoted helper paths and observed four-job native runtime coverage. No PowerShell prerequisite; native Windows tools are selected explicitly. |
+
+This campaign implements one cohesive authentication-recovery objective with its necessary code/docs/tests. It is not a one-file rule. Independently useful future scripting objectives should receive separately scoped campaigns rather than extending this utility. No additional candidate, campaign merge, release or live-credential effect is selected. Every implementation/evidence checkpoint was pushed/read back before progression; the final containing commit supplies the durable execution handoff.
 
 ## Native Windows correction during V-004
 
