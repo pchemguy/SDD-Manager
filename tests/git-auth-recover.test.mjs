@@ -241,13 +241,22 @@ test('configured remote VCS helpers block before any push or ref readback', t =>
   assert.throws(() => auth.recover(f.options, runner.execute), /remote_helper_unsupported/);
   assert.ok(!runner.calls.some(c => c.args.includes('push') || c.args.includes('--refs')));
 });
-test('native Windows ACL export reports only synthetic fixture metadata', t => {
+test('native Windows ACL export is parsed as metadata', t => {
   if (process.platform !== 'win32') return;
   const f = fixture(t), saved = path.join(f.root, 'fixture-acl.txt');
   const exported = spawnSync('icacls.exe', [path.join(f.root, 'gh.tkn'), '/save', saved, '/q'], { encoding: 'utf8' });
   assert.equal(exported.status, 0);
-  const bytes = fs.readFileSync(saved);
-  t.diagnostic(JSON.stringify({ aclBytes: bytes.length, prefixHex: bytes.subarray(0, 12).toString('hex'),
-    utf16Records: bytes.toString('utf16le').split(/\r?\n/).map(line => line.slice(0, 24)),
-    utf8Records: bytes.toString('utf8').split(/\r?\n/).map(line => line.slice(0, 24)) }));
+  assert.match(auth.parseWindowsAclExport(fs.readFileSync(saved)), /^D:/);
+});
+test('ACL exports support observed BOM-less UTF-16LE and reject malformed records', () => {
+  const dacl = 'D:PAI(A;;FA;;;SY)(A;;FA;;;S-1-5-21-1-2-3-1001)';
+  const text = `gh.tkn\r\n${dacl}\r\n`;
+  for (const bytes of [Buffer.from(text, 'utf16le'),
+    Buffer.concat([Buffer.from([0xff, 0xfe]), Buffer.from(text, 'utf16le')]), Buffer.from(text)]) {
+    assert.equal(auth.parseWindowsAclExport(bytes), dacl);
+  }
+  for (const bytes of [Buffer.alloc(0), Buffer.from([0xff, 0xfe, 0x41]),
+    Buffer.from(`gh.tkn\n${dacl}\nextra\n`), Buffer.from('gh.tkn\nnot-a-dacl\n')]) {
+    assert.throws(() => auth.parseWindowsAclExport(bytes), /acl_unverified/);
+  }
 });

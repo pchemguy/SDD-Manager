@@ -147,6 +147,23 @@ function checked(result, stage) {
   return result.stdout || '';
 }
 
+/**
+ * Decode icacls /save metadata, including native BOM-less UTF-16LE exports.
+ * @param {Buffer} bytes ACL metadata only, bounded to 1 MiB; never token data.
+ * @returns {string} One exported DACL, for conservative policy validation.
+ * @throws {RecoveryError} Ambiguous encoding, malformed or unexpected records.
+ */
+export function parseWindowsAclExport(bytes) {
+  if (!Buffer.isBuffer(bytes) || !bytes.length || bytes.length > 1024 * 1024) fail('acl_unverified');
+  const utf16 = (bytes[0] === 0xff && bytes[1] === 0xfe) || bytes.includes(0);
+  let content;
+  try { content = new TextDecoder(utf16 ? 'utf-16le' : 'utf-8', { fatal: true }).decode(bytes); }
+  catch { fail('acl_unverified'); }
+  const records = content.split(/\r?\n/).filter(Boolean);
+  if (content.includes('\0') || records.length !== 2 || !records[1].startsWith('D:')) fail('acl_unverified');
+  return records[1];
+}
+
 /** Inspect Windows ACLs without PowerShell or exporting credential material. */
 function windowsPermissions(filename) {
   const env = childEnv();
@@ -157,11 +174,7 @@ function windowsPermissions(filename) {
   try {
     const saved = path.join(directory, 'acl.txt');
     checked(processResult('icacls.exe', [filename, '/save', saved, '/q'], { env }), 'acl');
-    const bytes = fs.readFileSync(saved);
-    const content = bytes[0] === 0xff && bytes[1] === 0xfe ? bytes.subarray(2).toString('utf16le') : bytes.toString('utf8');
-    const records = content.split(/\r?\n/).filter(Boolean);
-    if (records.length !== 2 || !records[1].startsWith('D:')) fail('acl_unverified');
-    checkWindowsDacl(records[1], sid);
+    checkWindowsDacl(parseWindowsAclExport(fs.readFileSync(saved)), sid);
   } finally { fs.rmSync(directory, { recursive: true, force: true }); }
 }
 
