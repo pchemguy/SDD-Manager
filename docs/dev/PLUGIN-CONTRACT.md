@@ -159,6 +159,21 @@ These illustrative, non-exhaustive contrasts assess entry and handoff to sdd-des
 | E-05 | Explicit delegation / conflicting constraints / unconfirmed proposal | Preserve actual decision provenance and delegation boundaries, recommend usefully and surface necessary human choices without interpreting silence as acceptance. |
 | E-06 | Enough context for PROJECT / unresolved material structural choice / discussion-only request | Separate brief readiness from architecture readiness; retain safe deferrals, actual output authority and human document checkpoints without an extra exploration gate. |
 
+### Bounded phase planning assessment
+
+Use sdd-plan's [delivery procedure](../../.agents/plugins/sdd-manager/skills/sdd-plan/references/delivery-plan.md), [PLAN review](../../.agents/plugins/sdd-manager/skills/sdd-plan/references/review.md) and shared [document QC](../../.agents/plugins/sdd-manager/skills/sdd-conventions/references/development-document-qc.md) as canonical owners. These abstract, illustrative, non-exhaustive contrasts assess guidance and handoffs; they are not a domain template, fixed phase count or evidence of live agent behavior.
+
+| Case | Abstract contrast | Assess |
+| --- | --- | --- |
+| D-01 | Complete initial version includes core capability and independent extensions | Simplest sensible usable Phase 1; bounded later phases preserve full version coverage without extra feature campaigns or implicit release publication. |
+| D-02 | Small early milestone and in-range counts hide an oversized first or later phase | Reject milestone/count-only compliance. Every phase has a coherent functionality outcome; the final phase is not a remaining-backlog bucket. |
+| D-03 | Functional baseline is incomplete / a coherent increment needs only 1–2 milestones | Establish actual usefulness; accept justified small phases without count padding or automatic splitting. |
+| D-04 | True dependency/substantial rework risk / minor convenience or eventual inclusion | Justify selected phase scope by consequence; bound enabling/risk stages and their route to integrated behavior. |
+| D-05 | Version scope and checkpoint preapproval / explicit conflicting phase-shape instruction | Distinguish coverage from an actual override; preserve normal readiness gates and report scoped exits truthfully. |
+| D-06 | Small whole project / existing baseline / multi-phase feature | Keep scope proportionate while bounding every changed functionality increment; avoid greenfield replay and one-phase-per-feature rules. |
+| D-07 | Technical-layer slicing / incremental capability with prior-behavior regressions | Require integrated useful outcomes, preserved baseline and timely regression evidence at every phase boundary. |
+| D-08 | TASKS exposes inadequate PLAN / full SPEC includes later scheduled contracts | Return strategy correction to sdd-plan; preserve phase-specific acceptance and complete intended coverage without silently changing task hierarchy or blocking a complete earlier phase on later work. |
+
 ### Missing-context recovery
 
 Remove the stated active workflow context. Assess the entry's recovery pointer and the coordinator's recovery separately; do not assign the detailed recovery procedure to PLUGIN.md.

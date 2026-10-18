@@ -18,4 +18,6 @@
 
 | V-003 / R-003 | PLAN review now tests every phase's functional cohesion/necessity, first-phase core usefulness and true override provenance. Shared QC applies semantic boundaries before counts; TASKS returns inadequate phase strategy upstream. | SC-01–20 source/interface assessment passes. Count heuristics, required review units and Ready/Blocked correction gates retained; no fixed phase count or extra QC artifact introduced. `git diff --check` passes. |
 
+| V-004 / R-001–03 | Added D-01–08 abstract planning/QC contrasts to the source development contract, with canonical owner links. Existing case IDs preserved. | Contrasts cover SC-01–20 across authoring, review and downstream handoffs. PLUGIN/README capability projections inspected: accurate broad summaries, no duplication or extension needed. `git diff --check` passes. |
+
 The commit containing each action row identifies its source/evidence checkpoint. Publish and remotely verify it before the next action. Final Git evidence will list those checkpoints.
