@@ -68,3 +68,10 @@ The original agent's exact loaded sources and SPEC/architecture were not provide
 ## Revision planning disposition
 
 The human requested revision planning and directed that needed illustrative examples generally remain abstract. R-001–R-003 are selected for the [revision plan](REVISION-PLAN.md), which defines five ordered actions and sixteen abstract assessment contrasts. Concrete supplied test material remains campaign evidence. Source changes, execution and integration have not started.
+
+
+## Human amendment: bounded increments in every phase
+
+The human clarified that bounded functionality slicing applies to all phases, not only Phase 1. The [revision plan](REVISION-PLAN.md) now makes that universal obligation explicit across authoring, hierarchy/handoff, QC and assessment. Phase 1 additionally establishes the simplest sensible baseline. Every later phase must preserve and extend its predecessor with bounded scope, functional cohesion, justified dependencies, scoped exits and integration/regression evidence. A small first phase cannot justify an overloaded later phase or a final catch-all backlog.
+
+The five revision actions are retained with broadened checks; SC-17–SC-20 extend the matrix to twenty abstract contrasts. No new source defect is fabricated from this clarification, and no source changes or execution are authorized by it.
