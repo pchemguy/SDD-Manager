@@ -36,6 +36,12 @@ For “collect key changes since the latest release,” highlights-only preparat
 
 For hosted operations, carry the confirmed request scope, destination/object identity and explicit limits through the [coordination handoff](../sdd-manage/references/coordination.md#coordinate-execution). Keep credentials protected and optional tracking activation separate from access capability.
 
+## Optional local tracking utilities
+
+For canonical-list input authoring and eligible phase/docs-main projection with local Node 22+ and Git, select the [input-authoring workflow](scripts/forge-project-input.md) and [projection utility](scripts/forge-project.md). The local generator extracts structure; the agent supplies dependencies/briefs and reviews outgoing content. The coordinator establishes actual eligibility. Docs-main drafting before its pre-write gate keeps files outside the target repository. Exact conflicts/unsupported scopes retain the existing backend procedures.
+
+For eligible completed implementation task/milestone reconciliation with local Node 22+, Git and an already protected repository token, the backend can select [forge-close.mjs](scripts/forge-close.mjs) under its [CLI and handoff contract](scripts/forge-close.md). Load the backend and selected lifecycle first; the utility performs bounded mechanics, while execution/coordination establishes actual acceptance/publication and exclusive ownership. Consume known/unknown effects and use reconcile-only for uncertain prior writes. Other clients and unsupported scopes retain their existing backend procedures.
+
 ## Supporting modules
 
 Load the [GitHub backend](references/github.md) first for these operations; it supplies identity/access prerequisites and routes the selected module. Load only the relevant support module and its stated dependencies, including for a direct request. Shared local highlights and release-message preparation keep their routes above.

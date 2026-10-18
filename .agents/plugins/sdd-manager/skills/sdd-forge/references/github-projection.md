@@ -35,6 +35,10 @@ Complete the phase label, all native milestones and all task issues/associations
 
 Report created, matched, updated, and conflicted objects with IDs and URLs. Return the task-to-issue associations as the handoff; a separate checked-in mapping artifact is not required for this projection.
 
+## Optional local projection mechanism
+
+For the supported canonical hierarchy, [input authoring](../scripts/forge-project-input.md) can generate a source-bound JSON draft; the agent enriches dependencies, review roles and briefs from actual governing documents. After the manager's gates and outgoing-content review, [forge-project](../scripts/forge-project.md) creates absent/reuses exact objects and performs bounded complete readback. --check previews authored content locally; --reconcile-only resolves interrupted state without writes. Source hashes/positive flags do not prove semantic readiness. Edited metadata/briefs or unsupported layouts return to this backend's authorized reconciliation; do not overwrite user material or alter valid source scope to fit the utility.
+
 ## Document QC prerequisite
 
 Before creating/projecting task issues, phase labels, native milestones or task issues, establish current owning-list and upstream preparation readiness through **sdd-manage**'s **Document QC gates** reference. A direct forge call uses the same gate; report missing/stale or blocked conformance to the coordinator without silently editing governing documents or creating objects first. Read-only mapping assessment may proceed and report blocked projection. This prerequisite does not turn report Ready into task completion or replace lifecycle verification for existing issue/milestone closure.

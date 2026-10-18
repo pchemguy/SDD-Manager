@@ -1,0 +1,140 @@
+# Revision execution — GitHub closure utility
+
+## Authority and checkpoint
+
+Campaign 076_af2703c; baseline af2703c57fb0222c9f36e7cd34b8503f7c659cf2; opening ea77dde34d8d65c6258b401412dcf7ee353c3c84. The original [review body](REVIEW-REPORT.md) at 4cb8b765744687f585c5f7a3081a70ef1119aa7a is preserved; a later disposition supplement records the implemented result. The human authorized [planning and execution](REVISION-PLAN.md), placement/documentation and integration into SDD Manager; the latest instruction keeps the campaign open/unmerged.
+
+V-001 plan 76d7160f96d424e30f6c869aefd0d435bd106faa was published/read back before source changes. Each following checkpoint is likewise published before advancement. No real-token utility test, live hosted comment/closure, external demo repair, release or campaign merge is selected.
+
+## Execution evidence
+
+| Action | Result | Verification and limits |
+| --- | --- | --- |
+| V-001 | Complete accepted plan, caller/utility boundary, ordered fixes, package/workflow integration and open stopping boundary published. | Clean review source and current branch/parent confirmed. No implementation in planning commit. |
+| V-002 | Extracted cohesive protected-token.mjs under sdd-manage/scripts; Git recovery imports shared protection/context and re-exports its existing public helpers/error alias. Forge will consume this module rather than the push utility. | Existing 27/27 Git recovery contracts pass on Linux Node v24.19.0, no failures/skips. Syntax/import and whitespace checks pass. Native Windows CI is pending the published checkpoint; no Windows result is inferred from Linux. |
+
+The extraction retains root/file identity, ignore/untracked status, bounded token parsing, POSIX ownership/mode and native Windows ACL/account/tool protections. No protection policy, Git push/readback behavior, public CLI/result contract or persistent configuration changes are intended. Existing process runners retain their caller roles; the shared module has no import effects or network operations. New closure behavior, package requirements/routing and full integrated checks follow V-003–V-005. Findings remain in progress until those checks complete.
+
+## V-003 core and companion checkpoint
+
+The optional import-safe utility and adjacent complete CLI/request/result guide now live in sdd-forge/scripts/. It validates explicit request/root/remote and protected inputs, binds GitHub metadata, exhausts constrained pagination, requires concordant generated task identity and phase/milestone associations, reconciles deterministic evidence, and closes only eligible completed work. Exact expected milestone membership, review/report association and phase-review predecessors replace the empty-milestone shortcut. Local Git-common-directory locking prevents overlapping local worktree invocations; the caller still owns cross-machine exclusivity and actual completion/publication assertions.
+
+Transport limits cover request/body/overall waits, finite pages/bytes, strict decoding, redirects/destination, provider classification/timing and safe read retries. The transport API itself rejects creation, reopening, unrelated comment content and extra mutation fields. Uncertain POST/PATCH responses are read back without blind replay; unresolved effects and safe prior retry facts are retained. Reconcile-only makes no hosted writes. Shared Windows ACL subprocesses can consume the caller's remaining budget while existing Git recovery defaults/API remain.
+
+Before new closure behavior, four corrected assertions against the original candidate fail for the intended behavior: conflicting identity, unmarked identity, duplicate rerun evidence and empty-milestone eligibility. This is an isolated baseline sensitivity run, not an assertion that the original script had today's CLI/schema. New contract fixtures were written before implementing their paths. Subsequent focused RED runs exposed HTML/fence marker interpretation, excessive transport mutation scope, omitted successful-retry history and accidental credential content; corrections then pass their assertions. The initial fixture mistakenly replaced numeric GitHub milestone IDs with stable SDD IDs, and local process timeouts initially used fractional milliseconds; these setup/implementation failures were corrected without weakening the contract.
+
+An expanded stream-limit test revealed an indefinite cancellation wait on an injected tee stream. The owned synthetic test session was interrupted (exit 130), and bounded reader/fetch waits plus nonblocking owned cancellation replaced the unbounded cleanup wait. The corrected suite completes normally. No stalled test is counted as a pass.
+
+Final local core results: 27/27 new completion contracts and 27/27 existing Git recovery contracts pass on Linux Node v24.19.0, with no failures/skips. New tests include real Git/root/ignored protected input, Unicode/BOM paths, linked-worktree locking, a native local HTTP response-body stall and synthetic provider transitions; no real credentials or provider writes occur. The original candidate and ten historical review probes remain unchanged. The guide's illustrative inputs are abstract and its code/platform limits are explicit.
+
+V-002 native [run 39156298549](https://github.com/pchemguy/SDD-Manager/actions/runs/39156298549) passes all four Windows/Linux Node 22/24 jobs at 7f8cced5cdff82a0bab797ec9acfe70ed371f423. This predates the optional remaining-budget argument and is prior evidence, not final new-utility acceptance. A dedicated completion matrix is added in this checkpoint; final native results, workflow routes, required archive resources and full package/regressions remain pending V-004–V-005.
+
+## V-004 workflow and package integration
+
+The forge entry, GitHub backend, issue lifecycle and milestone lifecycle now route eligible completed implementation closures to the optional utility after their existing gates. They explicitly retain caller acceptance/publication authority, unsupported-scope alternatives and uncertainty/read-only recovery. The packaged README exposes the mechanism without making Node mandatory elsewhere. Git recovery documents its bundled shared module. Source acceptance instructions include both suites and shared-module/native obligations.
+
+Publisher required resources and its exact-byte/missing-resource checks now include the forge script/guide and shared module. Actual dirty-snapshot membership/hash tests cover them and exclude source tests/CI/development records. No new reference module, skill, provider, manifest/version or presentation asset is added; existing capabilities receive a scoped optional mechanism. The complete CLI/schema/recovery guide stays adjacent to its implementation, while lifecycle policy remains in the existing bounded owners.
+
+Interface review added three initially failing behavioral checks: task parent identity changing during closure, a phase-review predecessor reopening during closure, and pacing overshooting the remaining budget before a mutation. Final readbacks/budget checks correct them while preserving known applied effects. A Windows CRLF verification summary initially failed validation; it now normalizes to LF deterministically without accepting a bare carriage return or invalid Unicode. Native root refusal, broad-protection refusal, numeric-repository comment pagination and reused later-page evidence expand coverage.
+
+Current Linux completion suite passes 34/34; prior 27/27 Git contracts remain applicable to unchanged executable behavior after shared-module JSDoc. Full support suite passes 139/139 and publisher suite 37/37 with Python 3.12.14/jsonschema 4.26.0. Those full Python checks preceded only the final CRLF/JSDoc refinement; the five actual package-documentation/snapshot tests were rerun afterward and pass. Guide JSON validates against the implemented schema. Structure has zero errors and 48 retained cross-skill advisories. Exact committed-source archives/current links and final native source checks follow V-005.
+
+At published 55b2482a65d5a15c1a7c83f629a0043c9bde3fdf both native matrices pass: [completion 39157792521](https://github.com/pchemguy/SDD-Manager/actions/runs/39157792521), [Git recovery 39157792444](https://github.com/pchemguy/SDD-Manager/actions/runs/39157792444), four Windows/Linux Node 22/24 jobs each. Completion then had 27 tests; final 34-test source requires its own matrix readback after this checkpoint. These are synthetic/native runtime results, not installed-agent or live-provider completion acceptance.
+
+## V-005 final interface review
+
+The integration checkpoint e7d2d072917ee12a60c532484e0c9c7f8b2b21fe was published/read back before this refinement. Review found that joining decoded query entries with ampersand/equal separators could make an encoded value compare equal to different pagination filters. The focused regression first failed with a missing expected rejection; canonical JSON entry serialization now preserves boundaries and refuses that next link before issuing its request. This repairs the accepted unchanged-filter contract without widening scope.
+
+Both complete native Linux suites pass after the change: completion 35/35 and existing Git recovery 27/27, no failures/skips. Final committed-source archive, preservation, navigation and final native CI evidence follow below. Earlier full support/publisher results remain applicable to unchanged Python tooling.
+
+## Final verification and disposition
+
+Implemented source: 61a7798c10ad6355003a5997b72b446141d5c4db, published/read back on revision/076_af2703c-scripting. Integration source e7d2d072917ee12a60c532484e0c9c7f8b2b21fe already passed both four-job matrices: [completion 39158642772](https://github.com/pchemguy/SDD-Manager/actions/runs/39158642772) and [Git recovery 39158642776](https://github.com/pchemguy/SDD-Manager/actions/runs/39158642776). The final query-boundary refinement changes only forge executable/test behavior; its [completion run 39159007850](https://github.com/pchemguy/SDD-Manager/actions/runs/39159007850) passes all four Windows CMD/Linux Node 22/24 jobs. Git/shared executable bytes are unchanged from the integration matrix.
+
+| Check | Observed evidence |
+| --- | --- |
+| Final local runtime contracts | Completion 35/35; Git recovery 27/27; no failures/skips. |
+| Support and publisher regressions | 139/139 and 37/37 pass; final package-documentation/snapshot subset 5/5 passes. Full Python suites precede only later forge/shared documentation and the CRLF/query runtime refinements; their tooling is unchanged. |
+| Package structure and static catalog | Zero structure errors; 48 retained cross-skill advisories. Catalog validates 33 static cases; this is not live acceptance. |
+| Exact-source offline package | Two independent builds at the implemented source are byte-identical, offline manifest-valid and contain exactly 144 files matching committed bytes. Script, guide and shared protection module are required; source tests/CI/development records are excluded. |
+| Archive SHA-256 | d3756e29ce7a69eaeb8f3d58f9f32e704a0b613a2d0f54f5dfbbe18dce9ee847. No release or asset upload. |
+| Current navigation | 708 bounded current local links resolve; 218 fragment checks identify one unchanged preexisting exception in sdd-design/project-brief.md targeting exploration.md#decision-state. Changed closure/auth routes resolve. No historical campaign contents were scanned. |
+| Preservation | Original candidate hash/probes and original review prefix match the reviewed source. Other campaign packages/index rows, manifest/license/assets are unchanged; main remains at the original baseline. |
+| Documentation/interface review | Complete CLI/schema/effect/recovery guide, professional module docs, caller authority and optional workflow selection agree with code/tests. Abstract examples are explicitly illustrative. |
+
+| Finding | Current disposition and evidence |
+| --- | --- |
+| R-001 | Addressed: explicit native root/remote/repository binding, shared protected credential checks and bounded destination. Native Windows/Linux protection contracts pass. |
+| R-002 | Addressed: complete constrained issue/milestone/comment/member enumeration, duplicate/cycle/response bounds and query-entry identity; later-page and malformed-link contracts pass. |
+| R-003 | Addressed: concordant title/generated marker, exact issue/phase/milestone identity and fresh readbacks. Ambiguous/unsupported layouts stop this mechanism. |
+| R-004 | Addressed at the agreed caller/utility boundary: caller establishes actual acceptance/publication/exits; utility checks explicit eligible handoff, exact members/evidence/review/report/predecessors. Closed counts cannot authorize work. |
+| R-005 | Addressed within documented ownership limits: deterministic evidence reuse, no mutation replay, uncertain-effect readback, read-only reconciliation and local common-directory lock. Distributed atomicity is not claimed. |
+| R-006 | Addressed: completed reason, exact evidence, current parent identity, membership and predecessor state are verified; applied effects survive failed final checks. |
+| R-007 | Addressed: finite process/request/body/overall/page/byte limits, classified sanitized results, safe read retry history and budget-aware provider pacing. Native local stalled-body fixture passes. |
+| R-008 | Addressed: import-safe narrow CLI/API, strict versioned inputs/results, Node/platform contract, in-code/adjacent docs and owning workflow/package integration. |
+
+## V-006 return boundary
+
+V-001–V-006 are complete for this accepted revision. Final records refresh exploration, finding dispositions, index and HANDOFF, with no additional source behavior. Publish/read back the records checkpoint and stop on the campaign branch, open/unmerged for human review. There is no selected next script or parent implementation continuation.
+
+Native/synthetic results do not certify live permissions, installed-agent routing or a user's actual completion evidence. Real-token utility execution, live comment/issue/milestone mutation, independent installed-client/agent trial, external demo repair and release remain **Not run**. Caller assertions, exclusive remote ownership and trusted regular local filesystem inputs retain their documented limits. No unverified required check is silently waived; the preexisting unrelated fragment/advisories remain visible.
+
+## C-002 amendment execution
+
+The latest human request supersedes the earlier open/unmerged stop: analyze the related tracking projection candidate, complete its plan, implement/document/integrate it, then close this campaign and run a new comprehensive review/revision campaign. Original C-001 outcomes and source/evidence remain retained.
+
+V-007 analysis 5cfd067ed751fe47b81da5836ff7b7076a741bfc was published/read back before V-008 planning. Seven synthetic mechanics observations pass as characterizations; three independently corrected behavior expectations fail as intended. Full chat provenance and the explicitly transcribed abstract fixture boundary are documented in the review. R-009–R-015 are accepted; no production changes occur in these analysis/planning checkpoints.
+
+V-008 publishes the complete [C-002 plan](REVISION-PLAN.md#c-002-revision--tracking-projection), covering naming, explicit JSON/template/data flow, deterministic extraction versus agent semantics, native/shared modules, hosted effects/recovery, docs/package/workflow/CI and final closure/next-campaign boundaries. Execution V-009–V-013 follows only after publication/readback.
+
+V-008 plan 9531eb52dd728d1fa8fbfca815fee512f6309413 was published/read back before implementation. The first V-009 checkpoint extracts github-client.mjs and forge-runtime.mjs from the existing completion utility without adding projection capabilities yet; forge-close retains its exported class/error and CLI/results. Required archive resources, exact missing-file checks, actual dirty snapshot bytes and companion dependency documentation now include both support modules.
+
+After extraction: completion 35/35 and Git recovery 27/27 pass; publisher exact/required utility resource test 1/1 and actual package-documentation subset 5/5 pass. These are local Linux results at this checkpoint, not final native projection acceptance. New request/draft/projection behavior follows with its own tests; no new behavior is inferred from the unchanged completion suite.
+
+### V-009–V-010 input and runtime checkpoint
+
+Added the canonical hierarchy/request/template module, credential-free local draft generator and explicit check/apply/reconcile-only projection CLI. Shared transport now enforces separate completion/projection capabilities; the completion wrapper cannot borrow projection permissions. The producer leaves dependency/review/scope/acceptance decisions unresolved and positive eligibility false. Its optional output is exclusive; docs-main output within the repository is refused before the pre-write gate.
+
+The projection core preflights the full selected set, creates absent/reuses exact objects, binds complete generated briefs and parent metadata, preserves user suffixes/unrelated labels/states, rechecks identities before creation and performs fresh final discovery. Applied uncertain creation is observed without replay; absent uncertainty stops, and prior effects/cause survive later failure. Normal results contain associations rather than private briefs. Native execution binds root/remote/current source, enforces shared token/lock protections and rechecks source after hosted effects.
+
+Meaningful RED runs precede the corresponding behavior: projection creation initially fails the completion-only transport guard; supported hierarchy initially returns unsupported_source_format; eligible projection initially returns projection_not_implemented. The implemented paths then pass. Expanded tests subsequently expose two actual defects: native backslash task paths were rejected, and recovered uncertain creation lost its classification. Separator normalization and retained interrupted_by/status/correlation fields fix them; neither failing observation is counted as a pass.
+
+Source-binding refinement: raw SHA-256 still pins actual local bytes, while committed repo ownership compares strict UTF-8 text to HEAD with CRLF-to-LF normalization only. This handles native checkout line endings without executing configured Git clean/textconv filters or accepting substantive unpublished edits. The native CRLF/BOM fixture passes; stale hashes and unpublished semantic changes stop before credentials/API.
+
+Current local Linux results: projection 24/24 and completion 35/35 pass, zero failures/skips. Actual protected Git/root/source/Unicode/path/output/lock tests supplement synthetic provider cases. Required package resources/snapshot checks include the three new code modules; utility exact/missing-resource 1/1 and actual package-documentation 5/5 pass. A dedicated Windows CMD/Linux Node 22/24 projection matrix is added; native results are pending publication. Complete guides, workflow routes and final package/regression review remain V-011–V-012. No real credential is supplied to the utility and no live projection occurs.
+
+### V-011 documentation and workflow integration
+
+Published runtime checkpoint 31dacd973bc7a1735009dba350c646d79bf325cb passes all four native Windows CMD/Linux Node 22/24 jobs in each matrix: [projection 39162324758](https://github.com/pchemguy/SDD-Manager/actions/runs/39162324758), [completion 39162324790](https://github.com/pchemguy/SDD-Manager/actions/runs/39162324790). This is the 24-test projection source, prior to the final title/format/unknown-state refinements below; it is not final source acceptance.
+
+The two adjacent substantive guides now own input-authoring/schema/content-review and remote execution/effects/recovery respectively. Existing forge entry/backend/projection/docs-preparation, manager activation, report draft and packaged README routes select the mechanism without duplicating its contract or weakening their gates. Eligibility meanings distinguish preparation-to-begin from future document acceptance/publication. Dependencies remain agent-authored brief content, not inferred sequence or native provider relationship operations. Required package resources, exact-byte/missing-resource tests and actual snapshots include both guides. No new skill/provider/manifest/version or presentation identity is introduced; the existing capability gains an optional mechanism, so no unrelated artwork is generated.
+
+Code/content review adds three focused regressions. The first exposes silent terminal punctuation removal from source task names; names are now exact and the outcome renderer avoids duplicate punctuation. The next assertion exposes detached multiline list text; template continuations now keep four-space attachment. A further native test exposes a later source error overwriting an unresolved hosted remote_state; the wrapper now retains unknown and its exit-2 boundary. Each RED was observed before correction. The documented abstract task object validates with the actual schema.
+
+Final local integrated suites pass: projection 27/27, completion 35/35 and Git recovery 27/27 (89 total); full support 139/139 and publisher 37/37; no failures/skips. Structure: zero errors with retained cross-skill advisories. The static 33-case catalog validates. Bounded current links all resolve with the previously recorded unrelated sdd-design fragment exception; closed contents are excluded. Final source CI, exact committed-source archives, preservation and campaign integration follow V-012–V-013. Live/installed-client trials remain Not run.
+
+### V-012 native failure and correction
+
+At published b8af3d5726e8132940b80c78bd61c21dfb508170, [completion 39163050417](https://github.com/pchemguy/SDD-Manager/actions/runs/39163050417) passes all four jobs. [Projection 39163050483](https://github.com/pchemguy/SDD-Manager/actions/runs/39163050483) passes both Linux jobs, while Windows Node 22/24 each report 26 passes and one failure. Both job logs locate the documentation JSON-example reader: its LF-only fence regex returns null after native CRLF checkout. This is a test-document parser defect, not a waived product failure.
+
+The same CRLF case was reproduced locally before correction. The example contract now explicitly tests LF and CRLF, uses an appropriate fence matcher and reports a clear absent-example assertion. Local projection is again 27/27, no failures/skips; no production/package behavior changes are needed. Final native verification follows the published correction.
+
+At b8af3d5, two independent offline builds contain 151 exact committed files, matching all required/excluded resources, and are byte-identical: SHA-256 5351617e873fd2905d45071edc314e97b5ff8d7d85aa8b49a4acb6437c2178aa. Current bounded navigation checks 742 local targets/221 fragments with zero missing files and only the unchanged preexisting sdd-design fragment exception. Candidate/probes/original review prefix, other closed packages/index rows, manifest/license/assets and main baseline are preserved. These observations pin that source; later final records/integration have their own Git/source identity.
+
+### Final C-002 verification and V-013 integration boundary
+
+Correction source 3778b7c520064618240b324a1be1f1914eaab0f8 is published/read back. [Projection 39163312852](https://github.com/pchemguy/SDD-Manager/actions/runs/39163312852) passes all four native Windows CMD/Linux Node 22/24 jobs with 27 tests. Completion [39163050417](https://github.com/pchemguy/SDD-Manager/actions/runs/39163050417) passes all four at b8af3d5726e8132940b80c78bd61c21dfb508170; its executable/shared bytes are unchanged by the test-only correction. The existing Git recovery executable/protection remains unchanged from its earlier successful native matrix; its complete local suite passes with the integrated source.
+
+| Final check | Evidence and limits |
+| --- | --- |
+| Runtime | Projection 27/27, completion 35/35, Git recovery 27/27 (89 total), no failures/skips; Linux Node v24.19.0. Native matrix applicability is pinned above. |
+| Source regressions | Full support 139/139 and publisher 37/37 on Python 3.12.14/jsonschema 4.26.0. Later correction affects only the Markdown-example test; production/package/Python source is unchanged. |
+| Structure/catalog/navigation | Zero structure errors, 48 retained cross-skill advisories; 33 static catalog cases; 742 bounded local targets/221 fragments at final source, with one recorded preexisting unrelated fragment exception and no missing files. Later records add only validated navigation. No closed package content is scanned. |
+| Exact committed package | Two independent builds at 3778b7c contain 151 matching files, offline manifest-valid, required scripts/guides/support modules present and source-only state excluded. SHA-256 dcbbe7adecdbf25829d9f7018b748d68b76140f07d57482fe6170742175f9063. Reproducibility is within that pinned source, not a promise of equal ZIP metadata across different commits. |
+| Preservation/composition | Original C-001 candidate/probes/review prefix, retained C-002 mechanics evidence and all unrelated closed packages/index rows are preserved. Manifest/license/assets unchanged. Local/remote campaign match and main remains the original baseline before integration. Module boundaries follow transport/native runtime/input semantics/CLI responsibilities; input-authoring and execution guides are complete distinct workflows. |
+
+R-009–R-015 are Verified under the documented caller/utility boundary; earlier R-001–R-008 remain addressed with full completion regressions after shared extraction. No unresolved accepted repair remains. Retain caller ownership of actual source/QC/human acceptance/publication, cross-list dependency semantics and remote exclusivity; source hashing/positive flags do not prove those facts. Native and synthetic evidence does not establish live provider permissions, independent installed-agent routing or a user's actual completion.
+
+V-007–V-012 are complete. V-013 finalizes active records/navigation/HANDOFF, publishes them, refreshes main and explicitly merges the complete verified campaign tip into its original creation parent. Before committing that merge, verify the prospective current links/preservation and identical package tree, run affected merged checks and reconcile main's checkpoint. Its integration summary records actual parents/source/opening/baseline and checks; target push/readback and return then establish closure. No report edits follow closure. The next authorized operation is a new comprehensive SDD Manager review/revision campaign, not a release or live tracking trial.
+
+V-013 prospective integration: final source/records 9dc010712a606f1e8584bf4339111388bebb348f are published/read back. Refreshed main and origin/main both equal af2703c57fb0222c9f36e7cd34b8503f7c659cf2. Explicit no-fast-forward merge has no conflicts; its package tree f68a0d470f2620c8d7334f780f23a5abc3957f0e equals the verified source. Only finalization records differ from that source. On the merged worktree, runtime 89/89, actual package-documentation 5/5 and required/exact utility-resource 1/1 pass. Current local links/preservation/whitespace pass with the recorded unrelated fragment exception. HANDOFF restores main's resulting completed context and authorized next campaign. Commit this verified two-parent merge, push/read back main and confirm actual branch/containment; those Git facts establish final closure without a post-closure record edit.

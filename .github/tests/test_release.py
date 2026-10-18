@@ -83,6 +83,16 @@ class PackageTests(Contract):
                      'assets/icon.svg','skills/sample/SKILL.md',
                      'skills/sdd-manage/scripts/git-auth-recover.mjs',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
+                     'skills/sdd-manage/scripts/protected-token.mjs',
+                     'skills/sdd-forge/scripts/forge-close.mjs',
+                     'skills/sdd-forge/scripts/forge-close.md',
+                     'skills/sdd-forge/scripts/github-client.mjs',
+                     'skills/sdd-forge/scripts/forge-runtime.mjs',
+                 'skills/sdd-forge/scripts/projection-input.mjs',
+                 'skills/sdd-forge/scripts/forge-project.mjs',
+                 'skills/sdd-forge/scripts/forge-project-draft.mjs',
+                 'skills/sdd-forge/scripts/forge-project.md',
+                 'skills/sdd-forge/scripts/forge-project-input.md',
                      'plugin.json','docs/excluded.md','docs/ai-logs/EXPLORE_DRIVE_V1.md','AGENTS.md'):
             p=(self.root if name.startswith('docs/') or name=='AGENTS.md' else self.package)/name; p.parent.mkdir(parents=True,exist_ok=True)
             p.write_bytes(manifest if name.endswith('plugin.json') else (name+'\n').encode())
@@ -149,9 +159,19 @@ class PackageTests(Contract):
                 path.write_bytes(original)
                 self.git('add', '.'); self.git('commit', '-qm', 'restore preparation asset')
 
-    def test_auth_recovery_resources_are_exact_and_required(self):
+    def test_utility_resources_are_exact_and_required(self):
         names = ('skills/sdd-manage/scripts/git-auth-recover.mjs',
-                 'skills/sdd-manage/scripts/git-auth-recover.md')
+                 'skills/sdd-manage/scripts/git-auth-recover.md',
+                 'skills/sdd-manage/scripts/protected-token.mjs',
+                 'skills/sdd-forge/scripts/forge-close.mjs',
+                 'skills/sdd-forge/scripts/forge-close.md',
+                 'skills/sdd-forge/scripts/github-client.mjs',
+                 'skills/sdd-forge/scripts/forge-runtime.mjs',
+                 'skills/sdd-forge/scripts/projection-input.mjs',
+                 'skills/sdd-forge/scripts/forge-project.mjs',
+                 'skills/sdd-forge/scripts/forge-project-draft.mjs',
+                 'skills/sdd-forge/scripts/forge-project.md',
+                 'skills/sdd-forge/scripts/forge-project-input.md')
         paths = publisher.build_package(self.root, self.data, self.out)
         with zipfile.ZipFile(paths['sdd-manager.zip']) as archive:
             for name in names:

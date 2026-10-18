@@ -14,12 +14,23 @@ class PackageDocumentation(Sandbox):
         package = source / pin['package_subdirectory']
         for name in ('assets/HANDOFF_TEMPLATE.md', 'skills/sdd-manage/references/continuity.md',
                      'skills/sdd-manage/scripts/git-auth-recover.mjs',
-                     'skills/sdd-manage/scripts/git-auth-recover.md'):
+                     'skills/sdd-manage/scripts/git-auth-recover.md',
+                     'skills/sdd-manage/scripts/protected-token.mjs',
+                     'skills/sdd-forge/scripts/forge-close.mjs',
+                     'skills/sdd-forge/scripts/forge-close.md',
+                     'skills/sdd-forge/scripts/github-client.mjs',
+                     'skills/sdd-forge/scripts/forge-runtime.mjs',
+                 'skills/sdd-forge/scripts/projection-input.mjs',
+                 'skills/sdd-forge/scripts/forge-project.mjs',
+                 'skills/sdd-forge/scripts/forge-project-draft.mjs',
+                 'skills/sdd-forge/scripts/forge-project.md',
+                 'skills/sdd-forge/scripts/forge-project-input.md'):
             self.assertEqual(files[name], (package / name).read_bytes())
             self.assertEqual(pin['package_hashes'][name], hashlib.sha256(files[name]).hexdigest())
         self.assertNotIn('docs/dev/HANDOFF.md', files)
         self.assertNotIn('AGENTS.md', files)
         self.assertNotIn('tests/git-auth-recover.test.mjs', files)
+        self.assertNotIn('tests/forge-close.test.mjs', files)
         self.assertFalse(any(name.startswith(('tests/', 'docs/dev/', '.github/')) for name in files))
 
     def test_nested_package_boundary_and_repository_license_copy(self):

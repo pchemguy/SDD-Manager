@@ -18,6 +18,10 @@ If later steering invalidates completion, do not silently flip hosted state. Rea
 
 No local issue-map file is needed initially. The project-wide stable task ID from the owning list, exact GitHub marker, scoped repository identity, and handoff provide bidirectional lookup. Introduce a checked-in mapping only for a demonstrated offline or cross-host requirement, with ownership and conflict reconciliation specified first; otherwise it would become a second mutable record of GitHub state.
 
+### Optional scripted completion
+
+After the completion/publication gates above, an eligible generated-prefix implementation issue can use the backend's [completion utility](../scripts/forge-close.md), task mode. Carry the exact title/number/phase/milestone and published task/commit/verification/report association into its request. Reuse its managed evidence, validate final identity and completed reason, and retain partial/unknown effects rather than replaying a lost comment. The utility does not decide acceptance, reopen/retire work or replace another valid evidence/client procedure.
+
 ## Retired task disposition
 
 An explicitly accepted scope amendment may retire an unfinished managed task. Resolve its stable ID from the amendment and retained owning-list/Git history; verify its exact issue marker and preserve history. Under authorized hosted reconciliation, record the accepted retirement/commit and close an open retired issue with reason `not_planned`, not `completed`; read back state/reason. A removed checkbox alone does not authorize closure. Already completed historical work remains historical completion unless current acceptance is explicitly invalidated. Unknown retirement writes require the same readback-before-replay protocol.

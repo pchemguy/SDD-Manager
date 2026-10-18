@@ -13,6 +13,8 @@ Use the shared [backend object lifecycle](../../sdd-conventions/references/backe
 
 Task evidence comments follow [issue lifecycle](github-issue-lifecycle.md). A milestone report and its task commit establish evidence; no duplicate milestone journal or artificial evidence issue is required. GitHub phase labels remain after completion and are not closed/deleted.
 
+For eligible completed implementation milestones, the backend may use the [completion utility](../scripts/forge-close.md), milestone mode, after establishing these gates. Supply the complete expected completed task/evidence set, review/report association and phase-review predecessor set. Its exact membership/state checks cannot establish that the caller supplied every owning task or actually verified local exits/publication. Unsupported accepted retirements, other managed layouts or unexpected objects retain this lifecycle's existing procedures; never remove them from the handoff merely to pass the utility.
+
 ## Reopen and recover
 
 When an accepted amendment invalidates current milestone acceptance, reopen the uniquely resolved managed milestone under authorized reconciliation; preserve its earlier reports, closure history and unaffected issue states. Reopen affected task issues only when their current acceptance is invalidated, not merely because the milestone reopened. If a milestone was closed without adequate evidence, report the discrepancy and reconcile only within the authorized maintained scope.

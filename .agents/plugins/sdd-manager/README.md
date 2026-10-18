@@ -36,6 +36,10 @@ Use your actual task/milestone IDs. You can enter a later stage when its inputs 
 
 Hosting is optional for local work. Use existing shell/API authentication; credential failures follow [credential recovery](skills/sdd-manage/references/credentials.md), using ignored protected token storage. Git and API access are separate. The [GitHub backend](skills/sdd-forge/references/github.md) defines the scoped permission profile; Actions access is conditional on requested workflow operations. Supplying credentials does not accept documents or widen the work scope.
 
+For eligible completed GitHub implementation task/milestone reconciliation, the optional [completion utility](skills/sdd-forge/scripts/forge-close.md) provides bounded lookup, evidence reconciliation, closure and readback. It requires Node 22+, Git and protected local input; workflow owners retain actual acceptance/publication gates. Other SDD workflows do not require Node.
+
+For selected GitHub phase/docs-main projection, the optional [projection utility](skills/sdd-forge/scripts/forge-project.md) accepts explicit reviewed JSON. Its [local draft/input workflow](skills/sdd-forge/scripts/forge-project-input.md) extracts task structure while the agent supplies dependency/brief semantics. It previews outgoing content, creates/reuses exact objects and verifies associations; the coordinator retains eligibility decisions. The same optional Node/Git requirements apply.
+
 ## Core development workflows
 
 | Workflow | Purpose and typical path |
