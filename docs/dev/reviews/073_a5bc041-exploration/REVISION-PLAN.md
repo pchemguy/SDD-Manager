@@ -2,7 +2,7 @@
 
 ## Campaign and decisions
 
-- Campaign: `073_a5bc041`; state: planned, execution not authorized by this planning request.
+- Campaign: `073_a5bc041`; original state: planned. Subsequent execution request completed V-001–V-005; see [revision report](REVISION-REPORT.md).
 - Starting baseline and creation point: `a5bc0410f726162397f53e3462e2915d7fa24f07`.
 - Original opening commit: `87641d2706684dc9b059e923a70fcc5f126d1a94`.
 - Planning source: `238222d16a1ce9e866eefcda40b6f89e931404af`.

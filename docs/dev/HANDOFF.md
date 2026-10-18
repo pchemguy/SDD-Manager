@@ -1,33 +1,32 @@
 # SDD Manager handoff
 
-Checkpoint: opening of revision campaign `073_a5bc041` at exploration. The commit containing this snapshot identifies the checkpoint; confirm its publication through Git.
+Checkpoint: final verified revision result for campaign `073_a5bc041`. The commit containing this snapshot identifies the checkpoint; confirm publication through Git. The campaign remains open and unmerged.
 
 ## Workflow and sources
 
-- Active workflow/stage: revision, exploration; coordinated by `sdd-manage`, with `sdd-design` owning exploration.
-- Current campaign: [exploration record](reviews/073_a5bc041-exploration/EXPLORATION.md).
-- Governing instructions: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md), and the repository's `.agents/plugins/sdd-manager/` package.
-- Previous integrated result: campaign 072 is complete on main at `a5bc0410f726162397f53e3462e2915d7fa24f07`; no retained integration remains pending.
+- Active workflow/stage: revision, execution complete and locally verified; awaiting human review or further direction.
+- Current campaign: [exploration](reviews/073_a5bc041-exploration/EXPLORATION.md), [revision plan](reviews/073_a5bc041-exploration/REVISION-PLAN.md), [revision report](reviews/073_a5bc041-exploration/REVISION-REPORT.md).
+- Governing instructions: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md), and `.agents/plugins/sdd-manager/`.
+- Verified source: `c41358397d28092750570a0d91089c9cef71170e`; finalization changes source-only campaign records, index and this handoff, with the same package tree.
+- Outcome: proactive pre-brief exploration, adaptive feature/later-stage reuse, distinct brief/architecture readiness and illustrative/non-exhaustive examples. One cohesive exploration reference; shallow callers and bounded document handoffs.
 
 ## Scope and human decisions
 
-- Request: open a revision campaign at exploration.
-- Authorized outputs: campaign opening record and entry handoff; subsequent exploration remains subject to the user's topic and decisions.
-- Exact stop: publish the opening checkpoint and await exploration input. Keep the campaign open and unmerged.
-- Pending decision: revision subject, intended outcomes and constraints. No repairs, review execution, revision planning, implementation or merge is selected.
-- Reporting: Standard following Explicit bootstrap; Minimal and Explicit remain available.
-- Persistence: publish/read back every owned commit. No hosted issue projection is selected for this campaign.
+- Human accepted the exploratory design, requested a revision plan with meaningful reference boundaries, then instructed execution.
+- V-001–V-005 are complete. Local checks passed: 139 support tests, 36 publisher tests, catalog, exact 139-file package/schema/byte checks, identical rebuild, current file links and closed-record preservation.
+- Exact stop: publish the final revision checkpoint, then await human review or the next request. No release or integration is selected. No live agent/client acceptance was run.
+- Reporting: Standard; Minimal and Explicit remain available.
+- Persistence: publish/read back every owned commit. No hosted issue projection is selected.
 
 ## Branches and return
 
 - Working branch: `revision/073_a5bc041-exploration`.
-- Creation parent and eventual integration target: `main`.
-- Full branch-off baseline: `a5bc0410f726162397f53e3462e2915d7fa24f07`.
-- Suspended parent campaign: none. Main was awaiting a new request.
-- Return boundary: eventual authorized completion returns to main; no integration is currently authorized.
+- Creation parent/eventual integration target: `main`; full branch-off baseline: `a5bc0410f726162397f53e3462e2915d7fa24f07`.
+- Original opening commit: `87641d2706684dc9b059e923a70fcc5f126d1a94`.
+- Suspended parent campaign: none. Eventual authorized integration restores main's context and preserves the human's next boundary.
 
-## Pending work and next action
+## Pending operations and next action
 
-- At this checkpoint: publish and confirm the opening commit on the named origin branch. Confirm actual Git state before retrying.
-- Once publication is confirmed: await the user's exploration input; do not start a review, invent changes or resume older campaigns.
-- No source tests, live acceptance, release or hosted tracking operation is pending.
+- Confirm publication of the commit containing this checkpoint on the named origin branch. Inspect actual remote state before retrying.
+- After publication: await the human's next instruction. Do not merge, release, resume older campaigns or invent further revisions.
+- If integration is requested, refresh main, inspect the complete campaign delta, verify the prospective merge and reconcile HANDOFF to the parent context under the established integration procedure.

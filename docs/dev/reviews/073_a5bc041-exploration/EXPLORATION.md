@@ -6,7 +6,7 @@
 - Starting baseline and full branch-off commit: `a5bc0410f726162397f53e3462e2915d7fa24f07`.
 - Creation parent and eventual integration target: `main`.
 - Working branch: `revision/073_a5bc041-exploration`.
-- State: open; exploration accepted, revision plan prepared.
+- State: open; accepted exploration and revision plan executed; locally verified, open and unmerged.
 - Request: “Open a explore stage revision campaign”.
 - Coordinator: `sdd-manage`; exploration owner: `sdd-design`.
 
@@ -14,7 +14,7 @@
 
 Review and elaborate the exploratory stage as an agent-guided design subworkflow, primarily before PROJECT creation and reusable for features and later design stages. Inspect the current guidance and record requirements, assessment and proposed design. Distinguish user requirements from agent recommendations.
 
-The human accepted the exploration and requested the [revision plan](REVISION-PLAN.md). Publish that planning checkpoint and stop before plugin source edits, implementation, release or integration. Keep the campaign open and unmerged.
+The human accepted the exploration and requested the [revision plan](REVISION-PLAN.md). The subsequent “Execute” request authorized the planned source revisions and verification. Stop at the published revision result before release or integration. Keep the campaign open and unmerged.
 
 ## Decisions and open questions
 
@@ -27,7 +27,7 @@ The human accepted the exploration and requested the [revision plan](REVISION-PL
 
 The opening changes only this record and the branch-local [handoff](../../HANDOFF.md). Prior closed campaign records remain unchanged. Opening checks cover branch identity, baseline, owned diff, Markdown links and whitespace; they do not establish product or live-agent behavior. No source test suite is needed for this metadata-only opening.
 
-Current planning checkpoint: [revision plan](REVISION-PLAN.md) prepared from the accepted exploration. Next eligible action: await execution selection; source revisions have not started.
+Execution checkpoint: [revision report](REVISION-REPORT.md) records completed actions and local verification. Next eligible action: await human review or further direction; campaign remains unmerged.
 
 
 ## User requirements established during exploration
