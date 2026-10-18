@@ -6,7 +6,7 @@
 - Starting baseline and full branch-off commit: `a5bc0410f726162397f53e3462e2915d7fa24f07`.
 - Creation parent and eventual integration target: `main`.
 - Working branch: `revision/073_a5bc041-exploration`.
-- State: open, exploration stage.
+- State: open; exploration accepted, revision plan prepared.
 - Request: “Open a explore stage revision campaign”.
 - Coordinator: `sdd-manage`; exploration owner: `sdd-design`.
 
@@ -14,7 +14,7 @@
 
 Review and elaborate the exploratory stage as an agent-guided design subworkflow, primarily before PROJECT creation and reusable for features and later design stages. Inspect the current guidance and record requirements, assessment and proposed design. Distinguish user requirements from agent recommendations.
 
-Stop at exploration and its published record. No plugin source edits, implementation, formal revision plan, release or integration is selected. Keep the campaign open and unmerged.
+The human accepted the exploration and requested the [revision plan](REVISION-PLAN.md). Publish that planning checkpoint and stop before plugin source edits, implementation, release or integration. Keep the campaign open and unmerged.
 
 ## Decisions and open questions
 
@@ -27,7 +27,7 @@ Stop at exploration and its published record. No plugin source edits, implementa
 
 The opening changes only this record and the branch-local [handoff](../../HANDOFF.md). Prior closed campaign records remain unchanged. Opening checks cover branch identity, baseline, owned diff, Markdown links and whitespace; they do not establish product or live-agent behavior. No source test suite is needed for this metadata-only opening.
 
-Next eligible action: continue refining the exploration design below with the human. Prepare a formal revision plan or modify plugin source only when selected.
+Current planning checkpoint: [revision plan](REVISION-PLAN.md) prepared from the accepted exploration. Next eligible action: await execution selection; source revisions have not started.
 
 
 ## User requirements established during exploration
@@ -122,3 +122,8 @@ These are future verification cases, not executed acceptance results:
 - Proposed default: preserve one adaptable exploration module, with concise pre-brief guidance and later-stage/feature adaptations, rather than separate procedures with copied rules.
 - Proposed default: no mandatory extra exploration artifact or new universal checkpoint; durable decisions use existing owning records and the established document chain.
 - Subsequent revision planning should identify exact coordinator/brief/feature handoffs that need changes and assess their source guidance together. It should not expand into unrelated workflow repairs.
+
+
+## Planning acceptance and reference boundaries
+
+The human accepted this exploration and requested revision planning. References must balance meaningful scope and size: broad guidance stays shallow; detailed guidance stays narrow. Avoid tiny incomplete fragments, vague boundaries and overloaded files with separable workflows. The revision plan applies this to the existing exploration module, shallow caller routing and bounded document-owner handoffs. No new reference file is proposed by default.
