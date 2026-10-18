@@ -2,7 +2,7 @@
 
 ## Authority and checkpoint
 
-Campaign 076_af2703c; baseline af2703c57fb0222c9f36e7cd34b8503f7c659cf2; opening ea77dde34d8d65c6258b401412dcf7ee353c3c84. [Review](REVIEW-REPORT.md) at 4cb8b765744687f585c5f7a3081a70ef1119aa7a is retained unchanged. The human authorized [planning and execution](REVISION-PLAN.md), placement/documentation and integration into SDD Manager; the latest instruction keeps the campaign open/unmerged.
+Campaign 076_af2703c; baseline af2703c57fb0222c9f36e7cd34b8503f7c659cf2; opening ea77dde34d8d65c6258b401412dcf7ee353c3c84. The original [review body](REVIEW-REPORT.md) at 4cb8b765744687f585c5f7a3081a70ef1119aa7a is preserved; a later disposition supplement records the implemented result. The human authorized [planning and execution](REVISION-PLAN.md), placement/documentation and integration into SDD Manager; the latest instruction keeps the campaign open/unmerged.
 
 V-001 plan 76d7160f96d424e30f6c869aefd0d435bd106faa was published/read back before source changes. Each following checkpoint is likewise published before advancement. No real-token utility test, live hosted comment/closure, external demo repair, release or campaign merge is selected.
 
@@ -46,3 +46,35 @@ At published 55b2482a65d5a15c1a7c83f629a0043c9bde3fdf both native matrices pass:
 The integration checkpoint e7d2d072917ee12a60c532484e0c9c7f8b2b21fe was published/read back before this refinement. Review found that joining decoded query entries with ampersand/equal separators could make an encoded value compare equal to different pagination filters. The focused regression first failed with a missing expected rejection; canonical JSON entry serialization now preserves boundaries and refuses that next link before issuing its request. This repairs the accepted unchanged-filter contract without widening scope.
 
 Both complete native Linux suites pass after the change: completion 35/35 and existing Git recovery 27/27, no failures/skips. Final committed-source archive, preservation, navigation and final native CI evidence follow below. Earlier full support/publisher results remain applicable to unchanged Python tooling.
+
+## Final verification and disposition
+
+Implemented source: 61a7798c10ad6355003a5997b72b446141d5c4db, published/read back on revision/076_af2703c-scripting. Integration source e7d2d072917ee12a60c532484e0c9c7f8b2b21fe already passed both four-job matrices: [completion 39158642772](https://github.com/pchemguy/SDD-Manager/actions/runs/39158642772) and [Git recovery 39158642776](https://github.com/pchemguy/SDD-Manager/actions/runs/39158642776). The final query-boundary refinement changes only forge executable/test behavior; its [completion run 39159007850](https://github.com/pchemguy/SDD-Manager/actions/runs/39159007850) passes all four Windows CMD/Linux Node 22/24 jobs. Git/shared executable bytes are unchanged from the integration matrix.
+
+| Check | Observed evidence |
+| --- | --- |
+| Final local runtime contracts | Completion 35/35; Git recovery 27/27; no failures/skips. |
+| Support and publisher regressions | 139/139 and 37/37 pass; final package-documentation/snapshot subset 5/5 passes. Full Python suites precede only later forge/shared documentation and the CRLF/query runtime refinements; their tooling is unchanged. |
+| Package structure and static catalog | Zero structure errors; 48 retained cross-skill advisories. Catalog validates 33 static cases; this is not live acceptance. |
+| Exact-source offline package | Two independent builds at the implemented source are byte-identical, offline manifest-valid and contain exactly 144 files matching committed bytes. Script, guide and shared protection module are required; source tests/CI/development records are excluded. |
+| Archive SHA-256 | d3756e29ce7a69eaeb8f3d58f9f32e704a0b613a2d0f54f5dfbbe18dce9ee847. No release or asset upload. |
+| Current navigation | 708 bounded current local links resolve; 218 fragment checks identify one unchanged preexisting exception in sdd-design/project-brief.md targeting exploration.md#decision-state. Changed closure/auth routes resolve. No historical campaign contents were scanned. |
+| Preservation | Original candidate hash/probes and original review prefix match the reviewed source. Other campaign packages/index rows, manifest/license/assets are unchanged; main remains at the original baseline. |
+| Documentation/interface review | Complete CLI/schema/effect/recovery guide, professional module docs, caller authority and optional workflow selection agree with code/tests. Abstract examples are explicitly illustrative. |
+
+| Finding | Current disposition and evidence |
+| --- | --- |
+| R-001 | Addressed: explicit native root/remote/repository binding, shared protected credential checks and bounded destination. Native Windows/Linux protection contracts pass. |
+| R-002 | Addressed: complete constrained issue/milestone/comment/member enumeration, duplicate/cycle/response bounds and query-entry identity; later-page and malformed-link contracts pass. |
+| R-003 | Addressed: concordant title/generated marker, exact issue/phase/milestone identity and fresh readbacks. Ambiguous/unsupported layouts stop this mechanism. |
+| R-004 | Addressed at the agreed caller/utility boundary: caller establishes actual acceptance/publication/exits; utility checks explicit eligible handoff, exact members/evidence/review/report/predecessors. Closed counts cannot authorize work. |
+| R-005 | Addressed within documented ownership limits: deterministic evidence reuse, no mutation replay, uncertain-effect readback, read-only reconciliation and local common-directory lock. Distributed atomicity is not claimed. |
+| R-006 | Addressed: completed reason, exact evidence, current parent identity, membership and predecessor state are verified; applied effects survive failed final checks. |
+| R-007 | Addressed: finite process/request/body/overall/page/byte limits, classified sanitized results, safe read retry history and budget-aware provider pacing. Native local stalled-body fixture passes. |
+| R-008 | Addressed: import-safe narrow CLI/API, strict versioned inputs/results, Node/platform contract, in-code/adjacent docs and owning workflow/package integration. |
+
+## V-006 return boundary
+
+V-001–V-006 are complete for this accepted revision. Final records refresh exploration, finding dispositions, index and HANDOFF, with no additional source behavior. Publish/read back the records checkpoint and stop on the campaign branch, open/unmerged for human review. There is no selected next script or parent implementation continuation.
+
+Native/synthetic results do not certify live permissions, installed-agent routing or a user's actual completion evidence. Real-token utility execution, live comment/issue/milestone mutation, independent installed-client/agent trial, external demo repair and release remain **Not run**. Caller assertions, exclusive remote ownership and trusted regular local filesystem inputs retain their documented limits. No unverified required check is silently waived; the preexisting unrelated fragment/advisories remain visible.

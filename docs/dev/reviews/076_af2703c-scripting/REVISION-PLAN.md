@@ -80,3 +80,9 @@ Campaign action IDs are not executable product task IDs. Each owned checkpoint i
 8. Existing Git utility, full package/archive/snapshot contracts and native Node 22/24 Windows CMD/Linux behavior remain valid after shared extraction and integration.
 
 Use deterministic synthetic fixtures and actual native local/CI execution without real credentials or live issue/milestone changes. An isolated agent/client or live-provider trial is not selected; record it as Not run. If native CI or a required platform facility blocks, retain the actual incomplete evidence rather than infer Windows success from Linux. Final reporting uses verified implemented source and actual run identities, not a green test count as a substitute for closure eligibility.
+
+## Execution status
+
+V-001–V-006 are complete; [execution evidence and finding dispositions](REVISION-REPORT.md) pin implemented source 61a7798c10ad6355003a5997b72b446141d5c4db, actual native Windows/Linux runs, regressions and exact reproducible package checks. Script placement, shared protection, documentation and integration into existing SDD Manager workflows/package are implemented. The final records checkpoint is to be published/read back before stopping.
+
+The campaign remains open/unmerged as requested. No live hosted closure, real-token utility trial, release, external demo repair or parent implementation continuation is selected.

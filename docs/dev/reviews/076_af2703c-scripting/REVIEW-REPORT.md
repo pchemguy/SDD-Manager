@@ -139,3 +139,11 @@ Checked 2026-10-18; English primary documentation. Provider facts qualify the so
 Recommend retaining the small task/milestone execution purpose and revising the identified boundaries before integration. This review does not itself accept a revision design or authorize implementation. A subsequent plan should resolve the caller/utility evidence contract, target/credential binding and safe uncertain-write/comment strategy before runtime work, then select proportionate deterministic and native-platform checks.
 
 Publish/read back this focused review checkpoint and stop on revision/076_af2703c-scripting, open/unmerged. No production utility, package change, external demo repair, live mutation, release or campaign closure is selected. Full plugin regression/package suites are not rerun for this source-only review input/evidence change; relevant syntax, controlled observations, current links and preservation are checked instead.
+
+## Subsequent accepted revision disposition
+
+The preceding review is preserved as the historical assessment at 4cb8b765744687f585c5f7a3081a70ef1119aa7a. The human subsequently authorized [the revision plan](REVISION-PLAN.md), implementation/documentation, placement and integration into SDD Manager, explicitly keeping the campaign open. Its earlier Open statuses describe that original checkpoint.
+
+R-001–R-008 are now addressed within the accepted caller/utility boundary at implemented source 61a7798c10ad6355003a5997b72b446141d5c4db. The [execution report](REVISION-REPORT.md#final-verification-and-disposition) maps every finding to changes and actual verification, including final 35 completion/27 Git contracts, native Windows/Linux Node 22/24 matrices, support/publisher regressions and exact reproducible package bytes. Caller authority, distributed exclusivity and unsupported-scope limits remain explicit. Installed-agent/live-provider trials are Not run.
+
+The utility/guide and shared protection module are integrated into their owning script directories and existing forge/package workflows. This campaign remains open/unmerged for human review; no live hosted closure, external demo repair, release or campaign merge is selected.
