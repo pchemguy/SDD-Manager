@@ -2,15 +2,15 @@
 
 ## Campaign and decisions
 
-- Campaign: `074_17ca45e`; state: planned, not executed.
+- Campaign: `074_17ca45e`; original state: planned. Subsequent execution completed V-001–V-005; see [revision report](REVISION-REPORT.md).
 - Full starting baseline/branch-off commit: `17ca45ecfe1bcd5cefa2b0830af5918c7e33c963`.
 - Opening commit: `59c4652951bcb27dda4a73e8412a5e7d9ffb99c8`; planning source: `c0d7056b5619737d6f34d5c12014ecb1b06997d8`.
 - Working branch: `revision/074_17ca45e-planning`; creation parent/eventual integration target: `main`.
 - Inputs: [focused review](REVIEW-REPORT.md) and [supplied test extracts](TEST-INPUT.md).
 - Human direction: prepare revisions addressing bounded functionality increments in every phase, minimal sensible first-phase scope and version/phase conflation; generally keep needed illustrative examples abstract.
-- R-001, R-002 and R-003 are selected for this planning scope. No reviewed finding is rejected or deferred; source repairs and execution remain unapproved by this planning-only request.
+- R-001, R-002 and R-003 are selected for this planning scope. No reviewed finding is rejected or deferred; the subsequent execution request authorized their bounded correction; integration remains unselected.
 - Coordinator: sdd-manage; primary authoring owner: sdd-plan; shared criteria: sdd-conventions; downstream consumer: sdd-tasks.
-- Execution evidence will be retained in REVISION-REPORT.md when execution is selected; that file does not yet exist.
+- Actual execution evidence: [REVISION-REPORT.md](REVISION-REPORT.md).
 
 ## Required resulting behavior
 
