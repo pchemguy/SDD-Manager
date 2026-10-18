@@ -61,15 +61,16 @@ export class GitHubTransport {
    * @param {Function} [options.clock] Monotonic millisecond clock.
    * @param {Function} [options.sleep] Awaitable millisecond delay.
    */
-  constructor({ repository, token, timeoutMs = 60000, requestTimeoutMs = 15000, fetchImpl = globalThis.fetch,
+  constructor({ repository, token, capability = 'completion', timeoutMs = 60000, requestTimeoutMs = 15000, fetchImpl = globalThis.fetch,
     clock = () => performance.now(), sleep = ms => new Promise(resolve => setTimeout(resolve, ms)) }) {
-    if (typeof token !== 'string' || !/^[\x21-\x7e]{1,16384}$/.test(token)
+    if (!['completion', 'projection'].includes(capability) || typeof token !== 'string' || !/^[\x21-\x7e]{1,16384}$/.test(token)
         || !Number.isFinite(timeoutMs) || timeoutMs <= 0 || !Number.isFinite(requestTimeoutMs) || requestTimeoutMs <= 0
         || typeof fetchImpl !== 'function' || typeof clock !== 'function' || typeof sleep !== 'function') fail('invalid_client_options');
     this.repository = repositoryName(repository); this.base = API + '/repos/' + this.repository;
     this.token = token; this.fetchImpl = fetchImpl; this.clock = clock; this.sleep = sleep;
     this.deadline = clock() + timeoutMs; this.requestTimeoutMs = requestTimeoutMs; this.lastMutation = null; this.repositoryId = null;
     this.readRetries = 0; this.retryFailures = [];
+    Object.defineProperty(this, 'capability', { value: capability });
   }
   /** @private Remaining elapsed budget, in milliseconds. */
   remaining() { return Math.max(0, this.deadline - this.clock()); }
@@ -87,7 +88,10 @@ export class GitHubTransport {
     const prefix = prefixes.find(item => url.pathname === item || url.pathname.startsWith(item + '/'));
     if (url.origin !== API || url.username || url.password || url.hash || !prefix) fail('api_target_mismatch', 'transport');
     const suffix = url.pathname.slice(prefix.length);
-    if (!/^(?:|\/issues(?:\/\d+(?:\/comments)?)?|\/milestones(?:\/\d+)?)$/.test(suffix)) fail('api_target_mismatch', 'transport');
+    const route = this.capability === 'projection'
+      ? /^(?:|\/labels|\/issues(?:\/\d+)?|\/milestones(?:\/\d+)?)$/
+      : /^(?:|\/issues(?:\/\d+(?:\/comments)?)?|\/milestones(?:\/\d+)?)$/;
+    if (!route.test(suffix)) fail('api_target_mismatch', 'transport');
     return url;
   }
   /** @private One bounded request; cleanup cannot renew its budget. */
@@ -95,7 +99,30 @@ export class GitHubTransport {
     const url = this.target(raw);
     if (!['GET', 'POST', 'PATCH'].includes(method)) fail('invalid_method', 'transport');
     const suffix = url.pathname.replace(/^\/(?:repos\/[^/]+\/[^/]+|repositories\/\d+)/, '');
-    if (method === 'POST') {
+    if (this.capability === 'projection' && method !== 'GET') {
+      if (method !== 'POST') fail('unsupported_mutation', 'transport');
+      if (suffix === '/labels') {
+        keys(body, ['name', 'color', 'description']);
+        if (!text(body.name, 100) || !/^sdd-phase-[1-9]\d*-.+/.test(body.name)
+            || !/^[a-f0-9]{6}$/.test(body.color) || !text(body.description, 100)) fail('unsupported_mutation', 'transport');
+      } else if (suffix === '/milestones') {
+        keys(body, ['title', 'state', 'description']);
+        const description = body.title === 'docs-main' && typeof body.description === 'string'
+          ? body.description.replace(/^<!-- sdd-forge:docs-milestone=docs-main -->\n/, '') : body.description;
+        if (body.state !== 'open' || !text(body.title, 255)
+            || !/^(?:sdd-[1-9]\d*(?:\.[1-9]\d*)+-.+|docs-main)$/.test(body.title)
+            || !text(description, 16000, true)) fail('unsupported_mutation', 'transport');
+      } else if (suffix === '/issues') {
+        keys(body, ['title', 'body', 'labels', 'milestone']);
+        const opening = typeof body.body === 'string' && body.body.match(/^(?:<!-- sdd-forge:docs-scope=main -->\n)?## Task brief <!-- sdd-forge:task-id=(T-\d{3,}|DOCS-\d{3}) -->\n/);
+        if (!opening || !text(body.title, 255) || !body.title.startsWith('[' + opening[1] + '] ')
+            || Buffer.byteLength(body.body) > 32768 || Buffer.from(body.body).toString('utf8') !== body.body
+            || /[\x00-\x08\x0b-\x1f\x7f]/.test(body.body)
+            || !Array.isArray(body.labels) || body.labels.length > 1
+            || body.labels.some(value => !text(value, 100) || !/^sdd-phase-[1-9]\d*-.+/.test(value))
+            || !positive(body.milestone)) fail('unsupported_mutation', 'transport');
+      } else fail('unsupported_mutation', 'transport');
+    } else if (method === 'POST') {
       keys(body, ['body']);
       const comment = body.body;
       if (!/^\/issues\/\d+\/comments$/.test(suffix) || typeof comment !== 'string' || Buffer.byteLength(comment) > 32768
@@ -110,6 +137,7 @@ export class GitHubTransport {
         if (body.state !== 'closed') fail('unsupported_mutation', 'transport');
       } else fail('unsupported_mutation', 'transport');
     } else if (body !== undefined) fail('unsupported_request_body', 'transport');
+    if (body !== undefined && JSON.stringify(body).includes(this.token)) fail('credential_in_request', 'preflight');
     if (this.remaining() <= 0) fail('deadline_exceeded', 'transport');
     if (method !== 'GET' && this.lastMutation !== null) await this.wait(Math.max(0, 1000 - (this.clock() - this.lastMutation)));
     if (this.remaining() <= 0) fail('deadline_exceeded', 'transport');
@@ -242,13 +270,14 @@ export class GitHubTransport {
   }
   /**
    * Bind full name/numeric identity before allowing ID-based pagination.
-   * @returns {Promise<void>} Stores only the verified numeric repository ID.
+   * @returns {Promise<object>} Verified repository metadata; stores numeric identity.
    * @throws {ForgeError} Access failure, redirect or mismatched repository.
    */
   async identify() {
     const { data } = await this.request('GET', '');
     if (!data || !positive(data.id) || typeof data.full_name !== 'string' || data.full_name.toLowerCase() !== this.repository) fail('repository_mismatch', 'lookup');
     this.repositoryId = data.id;
+    return data;
   }
 }
 

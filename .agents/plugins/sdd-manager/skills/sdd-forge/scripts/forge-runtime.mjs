@@ -6,7 +6,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { randomUUID } from 'node:crypto';
+import { randomUUID, createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { fail, ForgeError, repositoryName } from './github-client.mjs';
@@ -72,9 +72,9 @@ export function containsCredential(value, token) {
 export function createContext(options, repository, started = performance.now()) {
   const repo = fs.realpathSync(options.repo), env = childEnv();
   const remainingMs = () => options.timeoutMs - (performance.now() - started);
-  const git = args => {
+  const git = (args, { encoding = 'utf8' } = {}) => {
     if (remainingMs() <= 0) return { error: { code: 'ETIMEDOUT' }, status: null };
-    return spawnSync('git', ['-C', repo, ...args], { encoding: 'utf8', env, windowsHide: true, shell: false,
+    return spawnSync('git', ['-C', repo, ...args], { encoding, env, windowsHide: true, shell: false,
       timeout: Math.max(1, Math.floor(Math.min(10000, remainingMs()))), maxBuffer: 1024 * 1024 });
   };
   const checked = args => {
@@ -84,9 +84,48 @@ export function createContext(options, repository, started = performance.now()) 
   };
   if (!sameDirectory(checked(['rev-parse', '--show-toplevel']), repo)) fail('repo_must_be_root');
   const urls = checked(['remote', 'get-url', '--push', '--all', options.remote]).split(/\r?\n/);
-  if (urls.length !== 1 || remoteRepository(urls[0]) !== repository) fail('destination_mismatch');
+  if (urls.length !== 1) fail('destination_mismatch');
+  const destination = remoteRepository(urls[0]);
+  if (repository !== undefined && destination !== repository) fail('destination_mismatch');
   const common = fs.realpathSync(path.resolve(repo, checked(['rev-parse', '--git-common-dir'])));
-  return { repo, git, checked, remainingMs, common };
+  return { repo, git, checked, remainingMs, common, repository: destination };
+}
+
+/**
+ * Read a contained regular Markdown owner and bind its actual raw-byte hash.
+ * For execution, repo sources must equal HEAD text, allowing only native CRLF
+ * checkout conversion. No configured clean/textconv filter is executed.
+ */
+export function inspectSource(context, source, { committed = false } = {}) {
+  if (!source || !['repo', 'plugin'].includes(source.root) || typeof source.path !== 'string'
+      || source.path.includes('\\') || source.path.includes(':') || source.path.startsWith('/')
+      || source.path.split('/').some(part => !part || part === '.' || part === '..') || !/\.md$/i.test(source.path)
+      || (source.root === 'plugin' && source.path !== 'assets/DOCS_TASKS_TEMPLATE.md')) fail('invalid_source');
+  const root = source.root === 'repo' ? context.repo : fileURLToPath(new URL('../../../', import.meta.url));
+  const filename = fs.realpathSync(path.resolve(root, source.path)), relative = path.relative(fs.realpathSync(root), filename);
+  if (relative === '..' || relative.startsWith('..' + path.sep) || path.isAbsolute(relative)) fail('source_outside_root');
+  const fd = fs.openSync(filename, 'r'); let raw;
+  try {
+    const stat = fs.fstatSync(fd);
+    if (!stat.isFile() || stat.size > MAX_JSON) fail('invalid_source');
+    const bytes = Buffer.alloc(MAX_JSON + 1), size = fs.readSync(fd, bytes, 0, bytes.length, 0);
+    if (size > MAX_JSON) fail('invalid_source');
+    raw = bytes.subarray(0, size);
+  } finally { fs.closeSync(fd); }
+  let content;
+  try { content = new TextDecoder('utf-8', { fatal: true }).decode(raw); } catch { fail('invalid_source_encoding'); }
+  const sha256 = createHash('sha256').update(raw).digest('hex');
+  if (source.sha256 !== undefined && source.sha256 !== sha256) fail('source_changed');
+  if (committed && source.root === 'repo') {
+    const head = context.git(['show', 'HEAD:' + source.path], { encoding: null });
+    let committedText;
+    try {
+      if (head.error || head.status !== 0) fail('source_not_committed');
+      committedText = new TextDecoder('utf-8', { fatal: true }).decode(head.stdout);
+    } catch { fail('source_not_committed'); }
+    if (content.replace(/\r\n/g, '\n') !== committedText.replace(/\r\n/g, '\n')) fail('source_not_committed');
+  }
+  return { source: { root: source.root, path: source.path, sha256 }, content };
 }
 
 /** Read only an already eligible protected token, consuming remaining budget. */

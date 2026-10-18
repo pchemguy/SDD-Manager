@@ -111,7 +111,9 @@ export function evidenceComment(task) {
 }
 
 /** Completion-only transport; its public API remains available here. */
-export class GitHubClient extends GitHubTransport {}
+export class GitHubClient extends GitHubTransport {
+  constructor(options) { super({ ...options, capability: 'completion' }); }
+}
 
 function managedTask(issue, expected, request) {
   if (!issue || !positive(issue.id) || issue.number !== expected.issue || issue.title !== expected.title

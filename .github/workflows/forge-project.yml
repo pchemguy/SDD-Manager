@@ -1,0 +1,41 @@
+name: GitHub projection contracts
+on:
+  push:
+    paths:
+      - '.agents/plugins/sdd-manager/skills/sdd-forge/scripts/**'
+      - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs'
+      - 'tests/forge-project.test.mjs'
+      - '.github/workflows/forge-project.yml'
+  pull_request:
+    paths:
+      - '.agents/plugins/sdd-manager/skills/sdd-forge/scripts/**'
+      - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs'
+      - 'tests/forge-project.test.mjs'
+      - '.github/workflows/forge-project.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contracts:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: ['22', '24']
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+      - name: Run Linux contracts
+        if: runner.os != 'Windows'
+        run: node --test tests/forge-project.test.mjs
+      - name: Run Windows contracts with CMD
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: node --test tests/forge-project.test.mjs
