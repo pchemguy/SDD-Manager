@@ -205,3 +205,39 @@ test('malformed token never escapes public CLI failure output', t => {
   assert.equal(result.status, 1); assert.equal(JSON.parse(result.stdout).code, 'invalid_token');
   assert.ok(!result.stdout.includes(CANARY)); assert.equal(result.stderr, '');
 });
+
+
+test('repository identity tolerates native Windows path spelling differences', t => {
+  const f = fixture(t);
+  const actual = fs.realpathSync(f.root);
+  const alternate = process.platform === 'win32' ? actual.toUpperCase() : actual;
+  const runner = controlled(f);
+  assert.equal(auth.recover({ ...f.options, repo: alternate, operation: 'readback' }, runner.execute).ok, true);
+});
+
+test('native Git decodes percent-encoded repository paths for credential requests', t => {
+  const f = fixture(t);
+  for (const url of ['https://example.invalid/owner/repo%2dname.git',
+    'https://example.invalid/owner/repo%20name.git', 'https://example.invalid/owner/r%C3%A9po.git']) {
+    const helper = auth.helperCommand(process.execPath, SCRIPT, [f.root, 'gh.tkn', url]);
+    const result = spawnSync('git', ['-C', f.root, '-c', 'credential.helper=',
+      '-c', `credential.helper=${helper}`, '-c', 'credential.useHttpPath=true',
+      '-c', 'core.askPass=', 'credential', 'fill'], {
+      input: `url=${url}\n\n`, encoding: 'utf8', timeout: 10000,
+      env: { ...process.env, GIT_TERMINAL_PROMPT: '0', GIT_ASKPASS: '', SSH_ASKPASS: '' },
+    });
+    assert.equal(result.status, 0, result.stderr);
+    assert.ok(result.stdout.includes(`password=${CANARY}`));
+  }
+  for (const url of ['https://example.invalid/owner/repo%09name.git',
+    'https://example.invalid/owner/repo%ff.git', 'https://example.invalid/owner/repo%zz.git']) {
+    assert.throws(() => auth.validateTargetUrl(url), /invalid_url/);
+  }
+});
+test('configured remote VCS helpers block before any push or ref readback', t => {
+  const f = fixture(t);
+  f.git(['config', 'remote.origin.vcs', 'sdd-probe']);
+  const runner = controlled(f);
+  assert.throws(() => auth.recover(f.options, runner.execute), /remote_helper_unsupported/);
+  assert.ok(!runner.calls.some(c => c.args.includes('push') || c.args.includes('--refs')));
+});

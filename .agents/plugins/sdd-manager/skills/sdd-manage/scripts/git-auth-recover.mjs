@@ -20,6 +20,12 @@ import { spawnSync } from 'node:child_process';
 const SCRIPT = fileURLToPath(import.meta.url);
 const OID = /^(?:[a-f0-9]{40}|[a-f0-9]{64})$/;
 const MAX_TOKEN = 16384;
+/** Directory identity is stable across Windows case/short-path spellings. */
+function sameDirectory(a, b) {
+  const left = fs.statSync(a), right = fs.statSync(b);
+  return left.isDirectory() && right.isDirectory() && left.dev === right.dev && left.ino === right.ino;
+}
+
 const USAGE = 'push|readback --repo PATH --remote NAME --url HTTPS_URL --ref FULL_REF --expect FULL_OBJECT_ID [--token-file gh.tkn] [--timeout-ms 30000]';
 
 /** A public error code/stage, deliberately excluding raw subprocess output. */
@@ -60,11 +66,12 @@ export function parseCli(args) {
  * @throws {RecoveryError} Unsafe, noncanonical or unsupported URL.
  */
 export function validateTargetUrl(value) {
-  let url;
-  try { url = new URL(value); } catch { fail('invalid_url'); }
+  let url, credentialPath;
+  try { url = new URL(value); credentialPath = decodeURIComponent(url.pathname.slice(1)); }
+  catch { fail('invalid_url'); }
   if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash ||
       !url.hostname || url.pathname === '/' || /[\s\x00-\x1f\x7f]/.test(value) ||
-      /%(?:00|0a|0d)/i.test(value) || url.href !== value) fail('invalid_url');
+      /[\x00-\x1f\x7f]/.test(credentialPath) || url.href !== value) fail('invalid_url');
   return url;
 }
 
@@ -181,7 +188,7 @@ export function readToken(repo, tokenFile, git, platform = process.platform) {
   const info = fs.lstatSync(filename);
   if (!info.isFile() || info.nlink !== 1 || info.size > MAX_TOKEN) fail('invalid_token_file');
   const parentRoot = checked(git(['-C', path.dirname(filename), 'rev-parse', '--show-toplevel']), 'token');
-  if (fs.realpathSync(parentRoot.trim()) !== repo) fail('token_outside_repository');
+  if (!sameDirectory(parentRoot.trim(), repo)) fail('token_outside_repository');
   if (git(['check-ignore', '--no-index', '--', relative]).status !== 0) fail('token_not_ignored');
   const tracked = git(['ls-files', '--error-unmatch', '--', `:(literal)${relative}`]);
   if (tracked.status !== 1 || tracked.error || tracked.signal) fail('token_tracked_or_unknown');
@@ -239,7 +246,7 @@ export function recover(options, execute = processResult) {
   const repo = fs.realpathSync(options.repo);
   const git = (args, auth = []) => execute('git', ['-C', repo, ...auth, ...args], { cwd: repo, env, timeoutMs: options.timeoutMs });
   const root = checked(git(['rev-parse', '--show-toplevel']), 'repository').trim();
-  if (fs.realpathSync(root) !== repo) fail('repo_must_be_root');
+  if (!sameDirectory(root, repo)) fail('repo_must_be_root');
   checked(git(['check-ref-format', options.ref]), 'ref');
   if (options.operation === 'push') {
     const source = checked(git(['show-ref', '--verify', '--hash', options.ref]), 'ref').trim();
@@ -247,6 +254,9 @@ export function recover(options, execute = processResult) {
   } else checked(git(['cat-file', '-e', options.expect]), 'ref');
   validateTargetUrl(options.url);
   const destination = () => {
+    // A named remote's foreign-VCS override bypasses the URL's HTTPS transport.
+    const vcs = git(['config', '--get-all', `remote.${options.remote}.vcs`]);
+    if (vcs.error || vcs.signal || vcs.status !== 1) fail('remote_helper_unsupported');
     const urls = checked(git(['remote', 'get-url', '--push', '--all', options.remote]), 'destination').trim().split(/\r?\n/);
     if (urls.length !== 1 || urls[0] !== options.url) fail('destination_mismatch');
     const readUrl = checked(git(['ls-remote', '--get-url', options.url]), 'destination').trim();
@@ -296,7 +306,8 @@ function helperMain(args) {
   if (length > 65536) fail('invalid_credential_request');
   const request = credentialRequest(buffer.subarray(0, length).toString('utf8'));
   const target = validateTargetUrl(url);
-  if (request.protocol !== 'https' || request.host !== target.host || request.path !== target.pathname.slice(1) ||
+  // Git URL-decodes the credential path once; validation excludes protocol controls.
+  if (request.protocol !== 'https' || request.host !== target.host || request.path !== decodeURIComponent(target.pathname.slice(1)) ||
       (request.username && request.username !== 'x-access-token')) return;
   const git = args => processResult('git', ['-C', repo, ...args], { cwd: repo, env: childEnv() });
   const token = readToken(repo, tokenFile, git);

@@ -17,3 +17,10 @@
 | V-003 / R-001–07 | Added professional exported API/effect/error comments and a bounded companion CLI guide. Credentials/Git entry routes the optional utility after actual auth failure, preserving pre-write and publication gates. | Syntax and 21 tests retained; docs distinguish DACL versus ownership checks, exact ref matching versus token permission, readback versus tag peeling, and unavailable facilities. No universal Node dependency or persistent helper mutation. |
 
 Each action's containing commit identifies its checkpoint; publish/read back before further action work. Original candidate remains unchanged and outside the shipped package.
+
+
+## Native Windows correction during V-004
+
+Hosted run 39135370475 passed Linux Node 22/24 but failed both Windows jobs, including repository-root validation before credential use. The root cause is comparing canonical path strings for identity: Windows accepts equivalent case/short-path spellings that need not stringify identically. Root and token-parent validation now compares actual directory device/inode identity. A native Windows alternate-case regression accompanies the unchanged cross-platform tests. V-004 remains in progress until actual native readback verifies the correction; no Windows pass is inferred from Linux.
+
+An isolated forward review loaded the coordinator, credential guide, utility and tests without campaign answers. It reconstructed the intended recovery/readback workflow, passed the original 21 tests, and reproduced two additional defects using disposable synthetic fixtures: Git decodes percent-encoded paths before helper matching, and `remote.NAME.vcs` can replace HTTPS transport with an external helper. Both new regression tests failed before correction. Matching now decodes validated UTF-8 paths once, rejects decoded controls/malformed encoding, and preflight rejects any configured foreign-VCS override before push/readback effects. No real token or provider operation was used by the reviewer.

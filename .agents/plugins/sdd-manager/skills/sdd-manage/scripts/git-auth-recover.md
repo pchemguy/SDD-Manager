@@ -25,7 +25,7 @@ The same argument form works from Windows CMD or a Linux shell. Node launches Gi
 | `--token-file` | Optional root-relative protected ignored file, default `gh.tkn`; no external/nested-repository/symlink path |
 | `--timeout-ms` | Per-child limit, 100–120000 ms, default 30000; captured output bounded at 1 MiB. This is not a total multi-step deadline or a guarantee about hostile descendant processes. |
 
-No force/deletion/multi-ref push, follow-tags expansion or submodule pushes are performed. Existing hooks still apply. A readback uses the actual push URL rather than assuming the fetch URL matches. Ambiguous URLs, unexpected rewrites or changed local source block the operation.
+No force/deletion/multi-ref push, follow-tags expansion or submodule pushes are performed. Existing hooks still apply. A readback uses the actual push URL rather than assuming the fetch URL matches. Ambiguous URLs, unexpected rewrites, configured foreign-VCS remote helpers or changed local source block the operation. Percent-encoded repository paths must decode as valid UTF-8 without control characters; helper matching uses Git's decoded path.
 
 ## Token protection and effects
 
