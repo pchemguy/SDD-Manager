@@ -1,6 +1,6 @@
 # SDD Manager handoff
 
-Checkpoint: executed scripting revision `075_89fdf79`, open/unmerged. The containing commit identifies this final source-only checkpoint; confirm its publication through Git before further work.
+Checkpoint: completed scripting revision `075_89fdf79`, finalized for human-requested closure into main. The containing commit identifies this final source-only checkpoint; confirm its publication through Git before further work.
 
 ## Workflow and sources
 
@@ -14,7 +14,7 @@ Checkpoint: executed scripting revision `075_89fdf79`, open/unmerged. The contai
 - Human authorized a complete revision plan followed by execution: transient credential recovery, remaining code review, professional in-code/companion documentation and SDD workflow integration. V-001–V-005 are complete; no additional approval is pending for that work.
 - Shipped owner: `skills/sdd-manage/scripts/git-auth-recover.mjs` and adjacent `.md`, with credentials/Git routing. Optional dependency-free Node 22+ utility; one explicitly scoped HTTPS push/readback, protected existing token, no persistent helper/store changes. Coordinator retains authorization/retry policy and additional workflow gates.
 - Campaign scope follows one coherent objective with necessary support files, not a one-script/file rule. Other scripting candidates remain unselected.
-- Exact stop: publish/read back this executed checkpoint. Campaign closure/merge, release, additional candidate implementation and real-token/live-provider testing are not selected.
+- The human subsequently requested “Close it”: publish/read back this closure checkpoint, explicitly merge the verified complete campaign into its recorded parent main, verify/publish/read back and return to main. Release, additional candidate implementation and real-token/live-provider testing remain unselected.
 - Reporting: Standard after Explicit bootstrap; Minimal and Explicit remain available. Publish/read back every owned commit; no hosted issue projection selected.
 
 ## Verification
@@ -32,5 +32,5 @@ Checkpoint: executed scripting revision `075_89fdf79`, open/unmerged. The contai
 
 ## Pending operations and next action
 
-- All accepted code/docs/checks are complete. Publish/read back the containing final checkpoint, preserving actual state on failure; no implementation task remains.
-- After publication, await the user's next selected boundary, such as campaign closure/integration or a separately scoped candidate. Do not replay diagnostics, execute the original candidate, infer future scripts or run live credential effects from this checkpoint.
+- Publish/read back the containing closure checkpoint, then integrate into refreshed main through an explicit two-parent merge. Record actual merged checks and parent reconciliation in that merge before verified publication. Preserve actual state on failure.
+- After verified integration and return to main, await a new human request. Do not replay diagnostics, execute the original candidate, infer future scripts or run live credential effects.

@@ -55,3 +55,8 @@ When source work is complete, refresh HANDOFF with actual evidence and next boun
 ## Execution status
 
 V-001–V-005 are complete under the selected scope. The [revision report](REVISION-REPORT.md) records original failures, native Windows/Linux corrections, finding dispositions, isolated review, package/full-suite evidence and limits. Final utility source is 58cd578; later checkpoint edits affect source-only campaign continuity. Campaign remains open/unmerged after publication; no scope expansion or release is implied.
+
+
+## Subsequent closure instruction
+
+After completed execution was published as a7e8fec, the human requested campaign closure. The [revision report](REVISION-REPORT.md#authorized-closure) records that extension of the stopping boundary to explicit verified integration into main. The accepted implementation scope and original execution evidence remain unchanged; release/live-provider testing and additional candidates remain unselected.

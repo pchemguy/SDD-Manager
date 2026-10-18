@@ -6,7 +6,7 @@
 - Baseline: `89fdf79637e59c558b3a265d5e458c22e58d49b7`; opening: `fc381bd8b0ec46ccbf4f1e5dc78d5095cfd80bbb`.
 - Human authorized plan and execution; plan published as `073980557f3e5f96dab50051aa65cdf5408c3994` before implementation.
 - Working branch: `revision/075_89fdf79-scripting`; parent/eventual target: main.
-- State: V-001–V-005 executed and verified; campaign remains open/unmerged. No release or real-token/live-provider test selected.
+- State: V-001–V-005 executed and verified; the human subsequently requested closure. Final target integration/publication is the remaining boundary; no release or real-token/live-provider test selected.
 
 ## Action evidence
 
@@ -65,3 +65,10 @@ Run 39136619577 established the remaining Windows representation issue: the curr
 Run 39136978316 passes Linux Node 22/24 and 24/27 tests in each native Windows job. Native ACL, repository/protection, CLI and controlled operation checks now pass; only three Git-launched credential helper cases fail. A disposable synthetic script copy adds entry-path/environment-key and sanitized code/stage diagnostics in tests to isolate the native launch boundary. It reads no real token and adds no product diagnostic mode. The isolated reviewer rechecked 629b451 and independently confirmed all six outer-slash cases and preserved foreign-VCS rejection with no material regression in that scope.
 
 Run 39137202056's synthetic diagnostic confirms the helper entry executes with equal script paths, then its native ACL subprocess fails under Git's shell environment. The shell prepends its own tools to PATH, allowing a GNU whoami.exe to shadow the Windows command. The utility now selects whoami/icacls explicitly from SystemRoot/System32, without a PATH fallback, and reports unavailable native context as a blocker. The disposable diagnostic test was removed after localization; existing native Git helper cases retain the actual regression coverage.
+
+
+## Authorized closure
+
+The human requested “Close it” after the published execution checkpoint `a7e8feca4043df61a8078394e2207db519ae1fc6`. This selects ordinary campaign completion into the recorded parent `main`, without adding implementation, release or live-credential scope. Refreshed receiving target: `89fdf79637e59c558b3a265d5e458c22e58d49b7`; original opening: `fc381bd8b0ec46ccbf4f1e5dc78d5095cfd80bbb`. The complete accepted delta is eligible; original candidate and all other closed campaign paths remain unchanged.
+
+This closure-preparation checkpoint finalizes the campaign records. The explicit two-parent integration commit will retain its source/target parents, actual merged-state checks and restored main waiting context. Closure requires that integration's verified publication to origin/main and return to main; confirm those effects through Git rather than interpreting this pre-merge record as proof. No subsequent source task or release is authorized.

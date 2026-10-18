@@ -2,7 +2,7 @@
 
 ## Campaign and entry
 
-- Campaign: `075_89fdf79`; state: open/unmerged, accepted C-001 revision executed and verified; further candidates unselected.
+- Campaign: `075_89fdf79`; state: accepted C-001 revision executed and verified, finalized for human-requested closure into main; further candidates unselected.
 - Full starting baseline/branch-off commit: `89fdf79637e59c558b3a265d5e458c22e58d49b7`.
 - Working branch: `revision/075_89fdf79-scripting`.
 - Creation parent/eventual integration target: `main`; no suspended parent campaign.
@@ -40,3 +40,8 @@ Current stop: publish/read back the executed revision checkpoint on the named ca
 ## Accepted execution scope
 
 The human requested a full revision plan followed by execution for C-001, adding the transient recovery workflow, professional code/companion documentation and SDD routing. The [revision plan](REVISION-PLAN.md) defines the bounded script/supporting-file unit. Campaign scope follows a coherent change rather than one file per campaign; unrelated future candidates remain separately scoped. Integration/release is not selected.
+
+
+## Closure boundary
+
+The human subsequently requested closure after publication of a7e8fec. Complete the verified two-parent integration into recorded parent main, publish/read back and return to main's waiting context. The [closure record](REVISION-REPORT.md#authorized-closure) retains provenance and remaining confirmation. No additional scripting objective or release is selected.
