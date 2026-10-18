@@ -13,7 +13,7 @@ Initial inventory: 151 package files, 106 Markdown resources and 15 skill entrie
 | U-001 | Assessed | All 15 entries, shared/human entries, seven Markdown assets, manifest/UI/assets and source contract/map; structural and link evidence below | R-001, R-002 |
 | U-002 | Assessed | Coordinator workflows, preparation, human review, QC, bootstrap, examples and orientation | No additional findings |
 | U-003 | Assessed | Git/continuity/integration identity | No additional findings |
-| U-004 | Planned | Reviews/tracking/credentials | Not yet assessed |
+| U-004 | Assessed | Reviews/tracking/credentials | No additional findings |
 | U-005 | Planned | Design/contracts/plans/tasks | Not yet assessed |
 | U-006 | Planned | Execution/incorporation/testing/docs/reports | Not yet assessed |
 | U-007 | Planned | Hosted tracking and executable helpers | Not yet assessed |
@@ -38,6 +38,10 @@ Orientation remains read-only, suppresses optional Git writes, identifies actual
 ## U-003 — Git, identity and continuity
 
 Reviewed all six selected references in full: branch setup and preparation propagation, bounded process monitoring, per-commit publication, explicit integration, continuity reconstruction, nested/reopened revisions and shared identity/frozen-record conventions. Incoming synchronization preserves the receiver; workflow completion returns to the recorded parent. Partial phase scope does not authorize a phase merge, and prerequisite preparation integration does not finish implementation. Reopening requires actual latest first-parent merge/target/authority evidence and preserves original history. No contradictory gate or new finding was identified. This assesses instructions and source coherence; it does not claim interrupted-process or conflict recovery was exercised in a consumer project.
+
+## U-004 — Review, tracking and credential gates
+
+Reviewed all seven selected references in full and compared coordinator gates with backend lifecycle and token conventions. Review-only versus accepted repair authority, optional prerelease reminder, per-unit publication, preparation versus implementation projection, late/omitted tracking recovery and predecessor exits agree. Credential recovery now explicitly covers a waiting helper without requiring an exit error, retains bounded process/effect reconciliation, and separates transient pre-write access from deferred repository storage. No additional source-consistency finding. The existing credential utility tests and native CI are evidence for their pinned code, not a claim that every provider/helper behavior was exercised.
 
 ## Findings
 
