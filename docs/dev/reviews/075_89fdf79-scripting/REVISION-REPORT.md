@@ -13,7 +13,7 @@
 | Action / findings | Delivered scope | Checks and limits |
 | --- | --- | --- |
 | V-001 / R-001–07 | Import-safe Node transient helper/CLI, explicit repository/destination/ref contract, token/ACL validation, no persistent configuration, exact readback and sanitized public results. | Test-first missing-module failure recorded, then 14 tests pass on Linux Node v24.19.0. Native Git helper protocol passes with synthetic token and quoted/Unicode paths; controlled push/readback covers uncertainty and one-push bound. An initial native test exposed Git check-ignore rejecting global literal-pathspec mode; localized literal matching fixes it. No Windows/live provider result yet. |
-
 | V-002 / R-001–07 | Reviewed and strengthened scope validation, stdin framing, Azure-style SID handling and older-object readback. Added Windows/Linux Node 22/24 read-only CI; native Git URL-scoped reset coverage and negative process cases. | 21 tests pass on Linux Node v24.19.0. Windows/native store and hosted CI results are not inferred; CI is a separate observed check when available. No real token/provider effects in tests. |
+| V-003 / R-001–07 | Added professional exported API/effect/error comments and a bounded companion CLI guide. Credentials/Git entry routes the optional utility after actual auth failure, preserving pre-write and publication gates. | Syntax and 21 tests retained; docs distinguish DACL versus ownership checks, exact ref matching versus token permission, readback versus tag peeling, and unavailable facilities. No universal Node dependency or persistent helper mutation. |
 
 Each action's containing commit identifies its checkpoint; publish/read back before further action work. Original candidate remains unchanged and outside the shipped package.

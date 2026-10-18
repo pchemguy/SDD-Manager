@@ -28,7 +28,12 @@ export class RecoveryError extends Error {
 }
 const fail = (code, stage) => { throw new RecoveryError(code, stage); };
 
-/** Parse the narrow CLI. No positional Git arguments or implicit destination. */
+/**
+ * Parse and validate the narrow CLI without I/O.
+ * @param {string[]} args Operation and explicit options, excluding node/script.
+ * @returns {object} Validated scope, defaults and bounded timeout.
+ * @throws {RecoveryError} Invalid or incomplete scope; never embeds input values.
+ */
 export function parseCli(args) {
   if (!['push', 'readback'].includes(args[0])) fail('invalid_operation');
   const options = { operation: args[0], tokenFile: 'gh.tkn', timeoutMs: 30000 };
@@ -49,7 +54,11 @@ export function parseCli(args) {
   return options;
 }
 
-/** Canonical HTTPS URL with no credential, query, fragment or control payload. */
+/**
+ * @param {string} value Exact canonical HTTPS destination from the coordinator.
+ * @returns {URL} Parsed credential-free URL; no network or rewrite is performed.
+ * @throws {RecoveryError} Unsafe, noncanonical or unsupported URL.
+ */
 export function validateTargetUrl(value) {
   let url;
   try { url = new URL(value); } catch { fail('invalid_url'); }
@@ -59,21 +68,39 @@ export function validateTargetUrl(value) {
   return url;
 }
 
-/** Accept one normal file line ending; never trim malformed credential values. */
+/**
+ * Accept one normal line ending; never trim malformed credential values.
+ * @param {string} raw Bounded file contents; never pass via argv/logging.
+ * @returns {string} Secret, for private helper protocol only.
+ * @throws {RecoveryError} Empty, oversized or non-single-line ASCII token.
+ */
 export function validateToken(raw) {
   const token = raw.replace(/\r?\n$/, '');
   if (!token || Buffer.byteLength(raw) > MAX_TOKEN || /[^\x21-\x7e]/.test(token)) fail('invalid_token');
   return token;
 }
 
-/** Quote an argument for Git's documented shell-helper interface (not CMD). */
+/**
+ * Build Git's documented shell-helper command; credentials are never arguments.
+ * @param {string} node Actual Node executable path.
+ * @param {string} script Installed script path.
+ * @param {string[]} args Repository, token-file path and selected URL only.
+ * @param {string} platform Platform used to normalize native executable paths.
+ * @returns {string} Command-local helper setting with shell-quoted arguments.
+ */
 export function helperCommand(node, script, args, platform = process.platform) {
   const quote = value => "'" + String(value).replaceAll("'", "'\\''") + "'";
   const executable = value => platform === 'win32' ? value.replaceAll('\\', '/') : value;
   return '!' + [executable(node), executable(script), '--credential-helper', ...args].map(quote).join(' ');
 }
 
-/** Conservative SDDL DACL check. Complex/unknown ACE forms fail closed. */
+/**
+ * Conservative Windows DACL policy, not a complete effective-access audit.
+ * @param {string} sddl DACL from native icacls metadata export.
+ * @param {string} userSid Current user's SID from whoami.
+ * @returns {void}
+ * @throws {RecoveryError} Unsupported ACL or grant to another principal.
+ */
 export function checkWindowsDacl(sddl, userSid) {
   if (!/^S-1-\d+(?:-\d+)+$/.test(userSid) || !sddl.startsWith('D:')) fail('acl_unverified');
   const aces = sddl.match(/\([^()]*\)/g) || [];
@@ -135,6 +162,12 @@ function windowsPermissions(filename) {
  * Validate a selected root-relative token before bounded reading. The trusted
  * repository/user owns the path; this is not a hostile same-user race sandbox.
  * POSIX owner-only mode and Windows conservative DACL checks do not modify ACLs.
+ * @param {string} repo Resolved eligible worktree root.
+ * @param {string} tokenFile Root-relative selected token-file path.
+ * @param {Function} git Bounded Git runner returning spawnSync-style results.
+ * @param {string} platform Native platform; tests may assess pure ACL separately.
+ * @returns {string} Secret for private credential use, never diagnostic output.
+ * @throws {RecoveryError|Error} Invalid protection/context, format or local I/O.
  */
 export function readToken(repo, tokenFile, git, platform = process.platform) {
   if (path.isAbsolute(tokenFile)) fail('token_outside_repository');
@@ -195,6 +228,10 @@ export function remoteOid(stdout, ref) {
  * Validate local context and perform at most one explicit non-forced push plus
  * readback, or readback alone. `execute` injection is for controlled tests;
  * production uses native Git. No subprocess text is returned in public results.
+ * @param {object} options Explicit operation, repo, remote, URL, ref and expect.
+ * @param {Function} execute Bounded process adapter; production default is native.
+ * @returns {object} Versioned JSON-safe remote outcome, never credential contents.
+ * @throws {RecoveryError|Error} Preflight failure; CLI maps errors to safe JSON.
  */
 export function recover(options, execute = processResult) {
   options = parseCli([options.operation, ...['repo', 'remote', 'url', 'ref', 'expect'].flatMap(key => ['--' + key, String(options[key] ?? '')]), '--token-file', options.tokenFile ?? 'gh.tkn', '--timeout-ms', String(options.timeoutMs ?? 30000)]);
