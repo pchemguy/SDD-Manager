@@ -1,32 +1,32 @@
 # SDD Manager handoff
 
-Checkpoint: integration of completed campaign `073_a5bc041` into main. The merge commit containing this snapshot identifies the checkpoint; confirm its publication through Git before treating integration as complete.
+Checkpoint: opening revision campaign `074_17ca45e` at planning. The commit containing this snapshot identifies the checkpoint; confirm publication through Git.
 
 ## Workflow and sources
 
-- Active workflow/stage: main, completed revision returning control; await a new human request after integration publication.
-- Current campaign: [exploration](reviews/073_a5bc041-exploration/EXPLORATION.md), [revision plan](reviews/073_a5bc041-exploration/REVISION-PLAN.md), [revision report](reviews/073_a5bc041-exploration/REVISION-REPORT.md).
-- Governing instructions: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md), and `.agents/plugins/sdd-manager/`.
-- Verified source: `c41358397d28092750570a0d91089c9cef71170e`; finalization changes source-only campaign records, index and this handoff, with the same package tree.
-- Outcome: proactive pre-brief exploration, adaptive feature/later-stage reuse, distinct brief/architecture readiness and illustrative/non-exhaustive examples. One cohesive exploration reference; shallow callers and bounded document handoffs.
+- Active workflow/stage: revision, planning; substantive scope pending.
+- Current record: [revision planning](reviews/074_17ca45e-planning/REVISION-PLAN.md).
+- Governing sources: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md), and `.agents/plugins/sdd-manager/`.
+- Previous result: campaign 073 is complete and integrated on published main at `17ca45ecfe1bcd5cefa2b0830af5918c7e33c963`.
 
-## Scope and human decisions
+## Scope and decisions
 
-- Human accepted the exploratory design, requested a revision plan with meaningful reference boundaries, then instructed execution.
-- Human subsequently requested finalization, authorizing integration into recorded parent main. V-001–V-005 are complete. Local checks passed: 139 support tests, 36 publisher tests, catalog, exact 139-file package/schema/byte checks, identical rebuild, current file links and closed-record preservation.
-- Exact stop: publish the verified integration, then await the next request. No release or further development is selected. No live agent/client acceptance was run.
-- Reporting: Standard; Minimal and Explicit remain available.
+- Request: open a new planning revision campaign.
+- Authorized outputs: campaign opening record, index entry and this handoff.
+- Exact stop: publish/read back the opening checkpoint, then await substantive revision direction. Keep the campaign open and unmerged.
+- Pending: revision objective, target surfaces, intended outcomes and constraints. No substantive review, source repair, execution, merge or release is selected.
+- Reporting: Standard after Explicit bootstrap; Minimal and Explicit remain available.
 - Persistence: publish/read back every owned commit. No hosted issue projection is selected.
 
 ## Branches and return
 
-- Working/receiving branch: `main`; completed source branch: `revision/073_a5bc041-exploration`, tip `82269531a7e8fbcfaeed7734b1889a27f144b284`.
-- Creation parent/eventual integration target: `main`; full branch-off baseline: `a5bc0410f726162397f53e3462e2915d7fa24f07`.
-- Original opening commit: `87641d2706684dc9b059e923a70fcc5f126d1a94`.
-- Suspended parent campaign: none. Eventual authorized integration restores main's context and preserves the human's next boundary.
+- Working branch: `revision/074_17ca45e-planning`.
+- Creation parent/eventual integration target: `main`.
+- Full branch-off baseline: `17ca45ecfe1bcd5cefa2b0830af5918c7e33c963`.
+- No suspended parent campaign. Main was awaiting a new request.
+- Eventual authorized completion returns to main; no integration is currently selected.
 
 ## Pending operations and next action
 
-- Confirm publication of the merge commit containing this checkpoint on origin/main. Inspect actual remote state before retrying.
-- After confirmed publication: campaign 073 is complete; await the human's next instruction. Do not release, resume older campaigns or invent further revisions.
-- This integration restores main's waiting context; it does not authorize parent implementation or another campaign.
+- Publish and confirm the opening commit on the named origin branch. Inspect actual state before retrying.
+- After publication: await the human's revision scope, then prepare the substantive plan. Do not invent scope, start source repairs or resume older campaigns.
