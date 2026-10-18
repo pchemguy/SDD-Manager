@@ -63,3 +63,8 @@ Canonical authoring detail belongs in the existing sdd-plan delivery procedure. 
 A later revision plan should cover the owner procedure, version/phase interpretation, QC and downstream handoffs, plus assessment contrasts for complete V1, a small valid phase, true prerequisites, existing systems, explicit overrides and unrelated domains. Source changes and execution remain pending. No support/publisher suite is needed for this report-only checkpoint; whitespace, current local links and owned-path checks apply.
 
 The original agent's exact loaded sources and SPEC/architecture were not provided. The supplied transcript establishes the reported outcome; current source establishes the permissive gap. It does not establish which internal inference caused that agent's choice or that every detail of its generated plan violates its historical installed instructions.
+
+
+## Revision planning disposition
+
+The human requested revision planning and directed that needed illustrative examples generally remain abstract. R-001–R-003 are selected for the [revision plan](REVISION-PLAN.md), which defines five ordered actions and sixteen abstract assessment contrasts. Concrete supplied test material remains campaign evidence. Source changes, execution and integration have not started.
