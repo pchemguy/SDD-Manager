@@ -8,6 +8,8 @@ The publication owner applies [bounded Git-operation monitoring](../references/g
 
 Require Node.js 22+ and Git on PATH. Native Windows additionally requires whoami.exe and icacls.exe under SystemRoot/System32; absolute native paths prevent Git's shell PATH from selecting a GNU substitute. No PowerShell, libsecret, keyring, npm package or persistent credential manager is required. This runtime is optional for other SDD workflows. If unavailable, report the missing facility and select another supported protected mechanism; do not install software automatically.
 
+Keep the bundled [protected-token.mjs](protected-token.mjs) beside this module. It owns shared root/file/protection validation and is also used by the forge completion utility; copying only this entry script is insufficient. Git recovery retains its push/readback CLI and result contract.
+
 Illustrative invocation, with every placeholder replaced from the already established operation:
 
 ```text

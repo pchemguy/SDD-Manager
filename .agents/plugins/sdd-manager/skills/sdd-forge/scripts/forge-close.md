@@ -53,7 +53,7 @@ Task mode adds exactly one task object:
 | id, issue, title | Stable T-ID with at least three digits, positive GitHub issue number and exact full title beginning [T-ID] followed by a space. |
 | commit | Full lowercase 40- or 64-hexadecimal object ID for the verified published result. |
 | branch | Its actual valid Git branch; the CLI checks native Git branch-name syntax. |
-| verification | Nonblank bounded UTF-8 summary, at most 16000 bytes. Newlines are allowed; exclude secrets and reserved managed-marker text. |
+| verification | Nonblank bounded UTF-8 summary, at most 16000 bytes after CRLF-to-LF normalization. LF and CRLF newlines are accepted; exclude secrets and reserved managed-marker text. |
 | report | Root-relative POSIX-style report path, or explicit null for a task without a report. No absolute/traversing path. The utility displays this association; the caller verifies the published report. |
 
 This complete abstract example illustrates the shape only. Its identifiers, commit, target and positive eligibility claims are synthetic and must not be used as operational inputs:

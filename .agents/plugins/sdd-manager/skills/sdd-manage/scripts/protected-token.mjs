@@ -19,7 +19,13 @@ export class ProtectedInputError extends Error {
 }
 const fail = (code, stage) => { throw new ProtectedInputError(code, stage); };
 
-/** Directory identity is stable across Windows case/short-path spellings. */
+/**
+ * Compare actual directory identity across native case/short-path spellings.
+ * @param {string} a Existing directory path.
+ * @param {string} b Existing directory path.
+ * @returns {boolean} Whether both identify the same directory.
+ * @throws {Error} Native metadata cannot be read.
+ */
 export function sameDirectory(a, b) {
   const left = fs.statSync(a), right = fs.statSync(b);
   return left.isDirectory() && right.isDirectory() && left.dev === right.dev && left.ino === right.ino;
@@ -79,7 +85,12 @@ export function windowsUserContext(stdout, computerName) {
   return { sid: record[2], localAccount: parts.length === 2 && parts[0].toLowerCase() === computerName.toLowerCase() };
 }
 
-/** Child environment excludes other credential/trace channels, never adds token. */
+/**
+ * Preserve the process context while excluding credential/trace channels.
+ * @param {object} [base] Process environment; values are never logged.
+ * @returns {object} Noninteractive environment without injected trace/auth flags.
+ * @throws {ProtectedInputError} Git relocation/config environment is present.
+ */
 export function childEnv(base = process.env) {
   const env = {};
   for (const [key, value] of Object.entries(base)) {

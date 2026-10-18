@@ -98,6 +98,15 @@ test('strict schema, eligibility, IDs, evidence and milestone gates validate bef
   assert.equal(evidenceComment(task()), expectedEvidence());
 });
 
+test('Windows CRLF verification summaries normalize to deterministic LF evidence', async () => {
+  const value = request(); value.task.verification = 'First check passed.\r\nSecond check passed.';
+  const normalized = validateRequest(value, 'task');
+  assert.equal(normalized.task.verification, 'First check passed.\nSecond check passed.');
+  const state = fixture();
+  assert.equal((await close(state, value)).ok, true);
+  assert.ok(!state.comments.get(10)[0].body.includes('\r'));
+});
+
 test('a credential accidentally included in request content is blocked before network', async () => {
   const state = fixture(); const value = request();
   value.task.verification = 'Accidental synthetic-fixture inclusion';
@@ -118,6 +127,22 @@ test('task closure verifies exact comment/reason; matching rerun performs no wri
   assert.equal(result.ok, true);
   assert.equal(result.code, 'already_verified');
   assert.equal(writes(state).length, count);
+});
+
+test('changed parent milestone prevents a successful final task claim', async () => {
+  const state = fixture();
+  state.hook = ({ method }) => { if (method === 'PATCH') state.milestones[0].title = 'sdd-1.1-Changed'; };
+  assert.equal((await close(state)).ok, false);
+  assert.equal(state.issues[0].state, 'closed');
+});
+
+test('mutation pacing cannot start a write after the overall budget expires', async () => {
+  const state = fixture();
+  const client = state.client({ timeoutMs: 1500, sleep: async () => { state.time += 2000; } });
+  const result = await reconcileClosure('task', request(), client);
+  assert.equal(result.ok, false);
+  assert.equal(state.calls.filter(call => call.method === 'PATCH').length, 0);
+  assert.equal(state.comments.get(10).length, 1);
 });
 
 test('conflicting, missing, quoted/fenced/duplicate task markers never close an issue', async () => {
@@ -199,6 +224,19 @@ test('duplicate/conflicting evidence blocks; ordinary unrelated comments are pre
   const state = fixture(); state.comments.set(10, [{ id: 1, body: 'Human discussion.' }]);
   assert.equal((await close(state)).ok, true);
   assert.equal(state.comments.get(10)[0].body, 'Human discussion.');
+});
+
+test('later-page evidence is reused and confirmed numeric-repository pagination is accepted', async () => {
+  const state = fixture();
+  state.hook = ({ suffix, url }) => {
+    if (suffix === '/issues/10/comments') {
+      if (url.searchParams.get('page') === '2') return Response.json([{ id: 99, body: expectedEvidence() }]);
+      return Response.json([], { headers: { Link: '<https://api.github.com/repositories/123/issues/10/comments?per_page=100&page=2>; rel="next"' } });
+    }
+    if (url.pathname === '/repositories/123/issues/10/comments') return Response.json([{ id: 99, body: expectedEvidence() }]);
+  };
+  assert.equal((await close(state)).ok, true);
+  assert.equal(state.calls.filter(call => call.method === 'POST').length, 0);
 });
 
 test('applied-but-disconnected comment is read back and not duplicated', async () => {
@@ -283,6 +321,16 @@ test('phase review requires one review task and closed expected predecessor mile
     state.milestones.push({ ...value.predecessors[0], id: 800, state: priorState, open_issues: 0 });
     assert.equal((await reconcileClosure('milestone', value, state.client())).ok, priorState === 'closed');
   }
+});
+
+test('phase-review readback detects a predecessor reopened during closure', async () => {
+  const base = milestoneRequest();
+  const value = { ...base, kind: 'phase-review', tasks: [base.tasks[1]], predecessors: [{ id: '1.2', number: 8, title: 'sdd-1.2-Prior', description: null }] };
+  const state = milestoneFixture(value);
+  state.milestones.push({ ...value.predecessors[0], id: 800, state: 'closed', open_issues: 0 });
+  state.hook = ({ method }) => { if (method === 'PATCH') state.milestones[1].state = 'open'; };
+  assert.equal((await reconcileClosure('milestone', value, state.client())).ok, false);
+  assert.equal(state.milestones[0].state, 'closed');
 });
 
 test('rate limits defer safely; errors omit provider body and credential data', async () => {
@@ -431,4 +479,22 @@ test('linked Git worktrees share the same exclusive operation lock', async t => 
   const lock = path.join(local.root, '.git', 'sdd-forge-close.lock'); fs.mkdirSync(lock);
   await assert.rejects(run({ ...local.options, repo: linked }), error => error.code === 'operation_busy');
   assert.ok(fs.existsSync(lock));
+});
+
+test('non-root input is refused before credential or network work', async t => {
+  const local = localRepo(t); const child = path.join(local.root, 'child'); fs.mkdirSync(child);
+  await assert.rejects(run({ ...local.options, repo: child }), error => error.code === 'repo_must_be_root');
+});
+
+test('native broad credential protection blocks the completion client', async t => {
+  const local = localRepo(t);
+  if (process.platform === 'win32') {
+    const acl = spawnSync(path.join(process.env.SystemRoot, 'System32', 'icacls.exe'), [local.token, '/grant', '*S-1-1-0:R'], { encoding: 'utf8' });
+    assert.equal(acl.status, 0, acl.stderr);
+  } else fs.chmodSync(local.token, 0o644);
+  let calls = 0;
+  const result = await run(local.options, { fetchImpl: async () => { calls++; throw new Error('No request expected'); } });
+  assert.equal(result.ok, false);
+  assert.equal(result.code, 'token_permissions');
+  assert.equal(calls, 0);
 });

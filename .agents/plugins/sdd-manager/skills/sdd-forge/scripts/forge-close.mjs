@@ -62,12 +62,13 @@ function milestoneInput(value) {
       || !value.title.startsWith('sdd-' + value.id + '-') || value.title === 'sdd-' + value.id + '-'
       || !(value.description === null || text(value.description))) fail('invalid_milestone');
 }
+const normalizedSummary = value => typeof value === 'string' ? value.replace(/\r\n/g, '\n') : value;
 function taskInput(value) {
   keys(value, ['id', 'issue', 'title', 'commit', 'branch', 'verification', 'report']);
   if (!TASK_ID.test(value.id) || !positive(value.issue) || !text(value.title, 255)
       || !value.title.startsWith('[' + value.id + '] ') || value.title === '[' + value.id + '] '
       || !OID.test(value.commit) || !text(value.branch, 255) || /[\s~^:?*\\[\]]/.test(value.branch)
-      || !text(value.verification, 16000, true)) fail('invalid_task');
+      || !text(normalizedSummary(value.verification), 16000, true)) fail('invalid_task');
   if (value.report !== null) reportPath(value.report);
 }
 
@@ -113,7 +114,9 @@ export function validateRequest(input, operation) {
     if ((input.kind === 'delivery' && input.predecessors.length)
         || (input.kind === 'phase-review' && (input.tasks.length !== 1 || !input.predecessors.length))) fail('invalid_review_dependencies');
   }
-  return { ...structuredClone(input), repository };
+  const result = { ...structuredClone(input), repository };
+  for (const task of operation === 'task' ? [result.task] : result.tasks) task.verification = normalizedSummary(task.verification);
+  return result;
 }
 
 /** Parse the narrow CLI with no file/credential access. Help is side-effect free. */
@@ -145,7 +148,7 @@ export function parseCli(args) {
 export function evidenceComment(task) {
   taskInput(task);
   return '<!-- sdd-forge:completion task=' + task.id + ' commit=' + task.commit + ' -->\nTask: ' + task.id
-    + '\nCommit: ' + task.commit + '\nBranch: ' + task.branch + '\nVerification:\n' + task.verification + '\nReport: ' + (task.report || 'None');
+    + '\nCommit: ' + task.commit + '\nBranch: ' + task.branch + '\nVerification:\n' + normalizedSummary(task.verification) + '\nReport: ' + (task.report || 'None');
 }
 
 /**
@@ -155,6 +158,16 @@ export function evidenceComment(task) {
  * No mutation is retried here; safe reads have at most three retries.
  */
 export class GitHubClient {
+  /**
+   * @param {object} options Explicit scope and protected in-memory credential.
+   * @param {string} options.repository GitHub owner/repository, never a URL.
+   * @param {string} options.token Eligible credential; never print this client.
+   * @param {number} [options.timeoutMs=60000] Overall monotonic elapsed budget.
+   * @param {number} [options.requestTimeoutMs=15000] Per-request/body budget.
+   * @param {Function} [options.fetchImpl] Native-compatible HTTP dependency.
+   * @param {Function} [options.clock] Monotonic millisecond clock.
+   * @param {Function} [options.sleep] Awaitable millisecond delay.
+   */
   constructor({ repository, token, timeoutMs = 60000, requestTimeoutMs = 15000, fetchImpl = globalThis.fetch,
     clock = () => performance.now(), sleep = ms => new Promise(resolve => setTimeout(resolve, ms)) }) {
     if (typeof token !== 'string' || !/^[\x21-\x7e]{1,16384}$/.test(token)
@@ -165,12 +178,14 @@ export class GitHubClient {
     this.deadline = clock() + timeoutMs; this.requestTimeoutMs = requestTimeoutMs; this.lastMutation = null; this.repositoryId = null;
     this.readRetries = 0; this.retryFailures = [];
   }
+  /** @private Remaining elapsed budget, in milliseconds. */
   remaining() { return Math.max(0, this.deadline - this.clock()); }
+  /** @private Wait only within the current budget; never reset it. */
   async wait(ms, code = 'deadline_exceeded', retryAt) {
     if (ms >= this.remaining()) fail(code, 'transport', retryAt ? { retry_at: retryAt } : {});
     await this.sleep(ms);
   }
-  // Accept only this repository, including GitHub's identity-based page links.
+  /** @private Resolve only this repository's canonical/identity-based routes. */
   target(raw) {
     let url;
     try { url = new URL(raw.startsWith('https://') ? raw : this.base + raw); }
@@ -182,6 +197,7 @@ export class GitHubClient {
     if (!/^(?:|\/issues(?:\/\d+(?:\/comments)?)?|\/milestones(?:\/\d+)?)$/.test(suffix)) fail('api_target_mismatch', 'transport');
     return url;
   }
+  /** @private One bounded request; cleanup cannot renew its budget. */
   async once(method, raw, body) {
     const url = this.target(raw);
     if (!['GET', 'POST', 'PATCH'].includes(method)) fail('invalid_method', 'transport');
@@ -203,6 +219,7 @@ export class GitHubClient {
     } else if (body !== undefined) fail('unsupported_request_body', 'transport');
     if (this.remaining() <= 0) fail('deadline_exceeded', 'transport');
     if (method !== 'GET' && this.lastMutation !== null) await this.wait(Math.max(0, 1000 - (this.clock() - this.lastMutation)));
+    if (this.remaining() <= 0) fail('deadline_exceeded', 'transport');
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), Math.min(this.requestTimeoutMs, this.remaining()));
     let sent = false;
@@ -268,7 +285,14 @@ export class GitHubClient {
         { uncertain: method !== 'GET' && sent, retryable: true });
     } finally { clearTimeout(timer); }
   }
-  /** Issue one exact request, with bounded retries only for safe reads. */
+  /**
+   * Issue an allowed exact request; only safe reads have bounded retries.
+   * @param {'GET'|'POST'|'PATCH'} method Read or supported completion mutation.
+   * @param {string} raw Repository-relative route or validated pagination URL.
+   * @param {object} [body] Exact permitted mutation shape; omitted for GET.
+   * @returns {Promise<{data: object|Array, link: string|null}>} Decoded response.
+   * @throws {ForgeError} Safe classified failure, including uncertain effects.
+   */
   async request(method, raw, body) {
     for (let attempt = 0; ; attempt++) {
       try { return await this.once(method, raw, body); }
@@ -283,7 +307,13 @@ export class GitHubClient {
       }
     }
   }
-  /** Exhaust a bounded collection; incomplete pages never imply absence. */
+  /**
+   * Exhaust a bounded collection; incomplete pages never imply absence.
+   * @param {string} suffix Repository-relative collection route.
+   * @param {object} [params] Fixed collection filters, preserved across pages.
+   * @returns {Promise<object[]>} Complete observed unique object collection.
+   * @throws {ForgeError} Incomplete, contradictory or failed enumeration.
+   */
   async list(suffix, params = {}) {
     const first = this.target(suffix); first.search = new URLSearchParams({ ...params, per_page: '100' }).toString();
     let url = first, page = 1; const seen = new Set(), ids = new Set(), result = [];
@@ -317,7 +347,11 @@ export class GitHubClient {
       url = candidate;
     }
   }
-  /** Bind repository identity before following identity-based page links. */
+  /**
+   * Bind full name/numeric identity before allowing ID-based pagination.
+   * @returns {Promise<void>} Stores only the verified numeric repository ID.
+   * @throws {ForgeError} Access failure, redirect or mismatched repository.
+   */
   async identify() {
     const { data } = await this.request('GET', '');
     if (!data || !positive(data.id) || typeof data.full_name !== 'string' || data.full_name.toLowerCase() !== this.repository) fail('repository_mismatch', 'lookup');
@@ -460,6 +494,7 @@ export async function reconcileClosure(operation, input, client, { reconcileOnly
       }
       if (!await evidence(client, request.task)) fail('evidence_missing', 'readback');
       if (effects.closure === 'unknown') effects.closure = recovered ? 'observed_after_error' : 'changed';
+      await freshMilestone(client, request.milestone, selected.id);
     } else {
       const issues = await client.list('/issues', { milestone: String(request.milestone.number), state: 'all' });
       if (issues.length !== request.tasks.length || issues.some(item => item.pull_request)) fail('milestone_membership_conflict', 'eligibility');
@@ -492,14 +527,19 @@ export async function reconcileClosure(operation, input, client, { reconcileOnly
       if (current.state !== 'closed' || current.open_issues !== 0) {
         effects.closure = 'unknown'; fail('closure_outcome_unknown', 'readback');
       }
+      if (effects.closure === 'unknown') effects.closure = recovered ? 'observed_after_error' : 'changed';
       const after = await client.list('/issues', { milestone: String(request.milestone.number), state: 'all' });
       if (after.length !== issues.length || after.some(item => !issues.some(before => before.id === item.id))) fail('milestone_membership_changed', 'readback');
       for (const task of request.tasks) {
         const item = uniqueIssue(after, task, request);
         if (item.state !== 'closed' || !await evidence(client, task)) fail('task_completion_changed', 'readback');
       }
+      for (const predecessor of request.predecessors) {
+        const item = uniqueMilestone(milestones, predecessor);
+        const after = await freshMilestone(client, predecessor, item.id);
+        if (after.state !== 'closed' || after.open_issues !== 0) fail('predecessor_not_closed', 'readback');
+      }
       effects.comment = 'not_needed';
-      if (effects.closure === 'unknown') effects.closure = recovered ? 'observed_after_error' : 'changed';
     }
     return audited(outcome(true, recovered ? 'verified_after_error' : effects.closure === 'existing' && ['existing', 'not_needed'].includes(effects.comment) ? 'already_verified' : 'closed_verified', request, operation, effects));
   } catch (error) {
@@ -554,11 +594,12 @@ function acquireLock(common) {
  */
 export async function run(options, { fetchImpl } = {}) {
   if (Number(process.versions.node.split('.')[0]) < 22) fail('node_22_required');
+  const started = performance.now();
   const parsed = parseCli([options.operation, '--repo', options.repo, '--remote', options.remote, '--request', options.requestFile,
     '--token-file', options.tokenFile || 'gh.tkn', '--timeout-ms', String(options.timeoutMs ?? 60000),
     '--request-timeout-ms', String(options.requestTimeoutMs ?? 15000), ...(options.reconcileOnly ? ['--reconcile-only'] : [])]);
   const request = validateRequest(requestFile(parsed.requestFile), parsed.operation);
-  const repo = fs.realpathSync(parsed.repo), started = performance.now(), env = childEnv();
+  const repo = fs.realpathSync(parsed.repo), env = childEnv();
   const remainingMs = () => parsed.timeoutMs - (performance.now() - started);
   const git = args => {
     if (remainingMs() <= 0) return { error: { code: 'ETIMEDOUT' }, status: null };

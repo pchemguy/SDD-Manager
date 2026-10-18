@@ -37,6 +37,14 @@ node --test tests/git-auth-recover.test.mjs
 
 Its CI matrix runs native Windows CMD/Linux with Node 22/24. Local Linux results do not establish Windows behavior; inspect the selected source's actual matrix result. Native helper tests and controlled push/readback results do not establish live-provider authentication. The source tests and CI are excluded from the distributed plugin.
 
+For the optional forge-owned [completion utility](../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md), run:
+
+```text
+node --test tests/forge-close.test.mjs
+```
+
+Its separate CI matrix uses native Windows CMD/Linux Node 22/24 and synthetic provider data, including native local Git/filesystem/protection/locking and bounded-response checks. Changes to shared protected-token.mjs require both utility suites and affected native jobs. Keep caller eligibility/source review, synthetic/local runtime, live-provider and installed-client evidence distinct; no real-token hosted mutation is needed for these contracts.
+
 ## TextStats acceptance coordination
 
 The [TextStats overview](TEXTSTATS.md) maps qualified evidence and prior test repositories. [TextStats](textstats/README.md) owns the sample product, harness, fixtures, consumer requests, independent assessor contracts and run evidence protocol. Read [its coordinator entry](textstats/AGENTS.md) before touching or executing that scope; follow its ordered setup and role-isolation instructions for an actual acceptance campaign. A support-suite run is distinct from a live acceptance campaign.
