@@ -81,3 +81,15 @@ Prospective ordinary integration: receiving main `89fdf79637e59c558b3a265d5e458c
 Fresh merged-state checks on Linux (Node v24.19.0, Git 2.51.1, Python 3.12.14) pass: 27/27 utility contracts, 139/139 support tests and 37/37 publisher tests; no failed or skipped utility test. Catalog validation passes 33 static cases. The merged package matches all 141 pinned incoming files exactly, passes offline manifest/ZIP inspection and two byte-identical builds; source-706c197 archive SHA-256 is `8c1a87f838e3ff5ecdf611454206cb052058963f2478f2fe3abf736f53e105b3`. All 630 packaged and 649 selected current package/campaign/handoff local file links resolve. Whitespace, protected closed-record path preservation and unchanged original candidate checks pass.
 
 The packaged implementation, CI/test and acceptance-tooling bytes remain identical to the verified 58cd578 source, so its observed four-job Windows/Linux Node 22/24 matrix remains applicable prior evidence; native Windows was not rerun locally. No real-token/live-provider or installed-client acceptance is inferred. The containing merge records the two parents and this verification; its subsequent confirmed origin/main publication and return to main complete closure. Retain the source branch and freeze campaign artifacts after that boundary. Await the next human request.
+
+
+## Reopened A-001 execution — Automatic Git stall diagnosis
+
+- Human authorized the full revision plan then execution after V-006 analysis. Accepted planning source: `96f1997f43745e90e52d2ea2e976fabdf69257bc`; plan published/read back as `81434cb96bed6888b9f9f0002adfeebdaf542389` before source edits.
+- Original campaign baseline/opening and prior published closure `115a51d5116da344f63d1475c7f8acbf19f97c25` remain unchanged. This is new amendment work, not a claim that original tests assessed the new instructions.
+- Scope: R-008 and related recovery-selection/evidence clarifications; existing references/callers/guide, no utility runtime/API change, new reference/script/journal, external demo repair or live-credential test. Stop after completed execution published on the reopened branch, open/unmerged.
+
+| Action | Result | Checks and limits |
+| --- | --- | --- |
+| V-007 | Complete accepted plan, seven acceptance contrasts and execution scope published before source changes. | Clean published source and existing branch/parent association confirmed; no source implementation in the plan checkpoint. |
+| V-008 | Added canonical monitored Git-operation lifecycle covering original existing-auth call, background ownership, finite observation/deadline, progress assessment, automatic diagnosis, safe scoped cancellation, uncertain remote state and publication completion. Publication/authentication entries route it. | Focused source walkthrough confirms no completed-403 prerequisite for a stall, no token-search ceremony, no universal short timeout, no blind overlapping retry and no mandatory journal. Link to credential-specific blockage handling is completed by dependent V-009; overall R-008 remains in progress. This is instruction/source evidence, not an agent-consumer behavior pass. |
