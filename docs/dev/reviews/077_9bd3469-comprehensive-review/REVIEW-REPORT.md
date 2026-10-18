@@ -15,7 +15,7 @@ Initial inventory: 151 package files, 106 Markdown resources and 15 skill entrie
 | U-003 | Assessed | Git/continuity/integration identity | No additional findings |
 | U-004 | Assessed | Reviews/tracking/credentials | No additional findings |
 | U-005 | Assessed | Design/contracts/plans/tasks | No additional findings |
-| U-006 | Planned | Execution/incorporation/testing/docs/reports | Not yet assessed |
+| U-006 | Assessed | Execution/incorporation/testing/docs/reports | No additional findings |
 | U-007 | Planned | Hosted tracking and executable helpers | Not yet assessed |
 | U-008 | Planned | Release/package/source support and consolidation | Not yet assessed |
 
@@ -46,6 +46,10 @@ Reviewed all seven selected references in full and compared coordinator gates wi
 ## U-005 — Design, contracts and bounded delivery
 
 Reviewed all 18 selected references in full, including exploration, brief, architecture/decomposition, SPEC and QC, PLAN/layout, task derivation/progress/conformance and shared modularity/count/hierarchy/Markdown policy. Complete intended product scope remains in PROJECT/design/SPEC; every delivery phase has an integrated bounded outcome, with additional simplest-usable-core guidance for greenfield Phase 1. Small early milestones, version scope and in-range counts cannot excuse oversized phases or a final backlog bucket. TASKS returns strategic defects upstream rather than disguising them with smaller tasks. Exploration labels examples illustrative and distinguishes facts, decisions, proposals and delegation without a mandatory interview/artifact. R-001 is reconfirmed; no additional finding. These are source-level boundary checks, not a replay of the supplied game conversation.
+
+## U-006 — Execution, incorporation and evidence ownership
+
+Reviewed all 28 selected references in full across implementation, steering, feature incorporation, TDD, verification, documentation and reporting. Both sides preserve single executable ownership, changed-acceptance reassessment, task result/status atomicity, phase and feature integration boundaries, scoped production repairs and explicit steering return. Test strategy derives independent expectations and distinguishes characterization from past RED; verification separates inspection, execution, native capability and provider evidence. Documentation cannot silently redefine governing contracts. Reports retain original observations, actual source and limits, with meaningful module/API coverage and bounded links. No additional finding; reading examples and source contracts is not a live agent/client trial.
 
 ## Findings
 
