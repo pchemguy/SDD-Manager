@@ -123,3 +123,7 @@ Use source/interface walkthroughs for these instruction decisions. Run the exist
 ### Final checkpoint
 
 Append action/finding outcomes to REVISION-REPORT, preserving original closure and A-001 review evidence. Refresh HANDOFF with the accepted scope, verified source, actual test/check limits and open amendment boundary. Publish/read back the final branch checkpoint and stop; the earlier closure request does not automatically reclose this amendment.
+
+### V-010 caller audit clarification
+
+The accepted interface review found three direct publication callers still requiring a completed credential error: implementation startup, task completion and steering persistence. Their existing paragraphs receive short links to the canonical monitoring/helper-blockage procedure, retaining their original publication and stopping gates. This is the planned in-scope caller correction; no lifecycle copy or new workflow boundary is added.
