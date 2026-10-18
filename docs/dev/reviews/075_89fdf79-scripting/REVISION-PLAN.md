@@ -71,3 +71,8 @@ Reopening source and qualifying prior closure: `115a51d5116da344f63d1475c7f8acbf
 | V-006 | Analyze the supplied background-push diagnosis/recovery against current Git semantics, coordinator instructions and utility. Preserve the excerpt and distinguish reported environment observations, verified general behavior, current source gaps and proposed corrections. | Primary English sources and bounded synthetic local experiments; no real token, external demo/config/store writes or source implementation. Publish the appended review and amendment checkpoint, then remain open/unmerged. |
 
 Potential corrections are recommendations until selected. This amendment does not silently authorize implementation or reuse earlier execution authority for new findings.
+
+
+### V-006 result and human clarification
+
+The human clarified that the credential operation had remained hung until they instructed the agent to diagnose it. The [A-001 analysis](REVIEW-REPORT.md#reopened-amendment-a-001--background-credential-operation-stall) therefore centers automatic stall detection and the outer Git-operation lifecycle. V-006 is complete: four synthetic protocol probes and 27 existing utility tests pass; R-008 identifies the current workflow gap. Its bounded correction and additional persistent-recovery/reporting recommendations remain proposed, without source execution authority. Stop after published analysis, open/unmerged.

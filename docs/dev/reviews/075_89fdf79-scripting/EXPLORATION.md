@@ -55,3 +55,8 @@ The human subsequently requested closure after publication of a7e8fec. Complete 
 - Scope: assess the reported cause and applied recovery, actual Git helper/configuration semantics, current utility/workflow coverage and evidence limits. Use primary documentation and disposable synthetic local fixtures where useful. Supplied Windows paths are evidence text, not files accessible here.
 - Authorized outputs: reopening/catch-up checkpoint, analysis appended to the existing review report, current amendment handoff/navigation and per-commit publication. Source repairs, credential/configuration changes in the reported demo, live-provider tests, release and reclosure are unselected.
 - Return context: main is waiting for the next human request; no unfinished parent task is resumed. Stop after publishing the analysis on the reopened campaign branch.
+
+
+### A-001 assessment checkpoint
+
+Human clarification: the credential operation had hung until they explicitly requested diagnostics. [V-006 analysis](REVIEW-REPORT.md#reopened-amendment-a-001--background-credential-operation-stall) identifies R-008, the missing explicit bounded-stall/automatic-diagnosis transition for the initial Git operation. Existing helper reset/timeout behavior is retained and four local synthetic probes support the technical analysis. Corrections remain proposed; publication of this analysis leaves the amendment open/unmerged.
