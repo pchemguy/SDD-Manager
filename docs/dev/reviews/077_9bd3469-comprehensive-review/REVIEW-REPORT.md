@@ -11,7 +11,7 @@ Initial inventory: 151 package files, 106 Markdown resources and 15 skill entrie
 | Unit | State | Source/evidence | Findings |
 | --- | --- | --- | --- |
 | U-001 | Assessed | All 15 entries, shared/human entries, seven Markdown assets, manifest/UI/assets and source contract/map; structural and link evidence below | R-001, R-002 |
-| U-002 | Planned | Coordinator/preparation/orientation | Not yet assessed |
+| U-002 | Assessed | Coordinator workflows, preparation, human review, QC, bootstrap, examples and orientation | No additional findings |
 | U-003 | Planned | Git/continuity/integration identity | Not yet assessed |
 | U-004 | Planned | Reviews/tracking/credentials | Not yet assessed |
 | U-005 | Planned | Design/contracts/plans/tasks | Not yet assessed |
@@ -28,6 +28,12 @@ All 15 skill entries cover their actual reference inventories (78 modules) with 
 Reviewed human/shared entries, all seven Markdown assets and source-only contributor/plugin contract/capability map for scope, templates, first-approval preparation, exact task ownership and source/package separation. The feature architecture/decomposition underscore basenames agree across README, design and incorporation owners; differing SPEC/PLAN/TASKS hyphen forms are established names, not a discrepancy. Disclosure/usage and retained MIT attribution are present.
 
 Manifest and all 15 UI YAML prompts/icons agree with packaged owners. All 17 SVG sources parse and are self-contained; PNG paths exist. No MCP/server is advertised. Structure has zero errors/48 cross-skill advisories, not missing resources. Presentation was checked as source/paths, not rendered or installed. Bound source checks cover 114 current Markdown files, 821 local links and 239 fragments: no missing targets, one actual fragment defect R-001. Closed contents are excluded and their paths/index rows preserved. Source implementation remains unchanged.
+
+## U-002 — Coordination, preparation and orientation
+
+Reviewed all nine selected coordinator/orientation references in full against the entries and source contract. Workflow purpose, unchanged continuation, bootstrap/reporting scope, readiness, human acceptance and repository authority stay distinguishable. Main preparation correctly projects the nine DOCS tasks before writes when enabled, preserves mixed initialization, tracks first approval separately from later readiness, and completes package QC/integration/closure before implementation. Feature preparation retains its separate stopping rule. Examples agree with controlling procedures; no example establishes a universal product or technical choice.
+
+Orientation remains read-only, suppresses optional Git writes, identifies actual task/decision evidence and passes interrupted ownership without silently repairing it. Existing acceptance is reused without manufacturing retrospective approval; explicit pending review survives interruption. Broad summaries route to canonical references instead of reproducing every credential/process condition. No additional finding; assessment is source consistency, not observed agent compliance or a consumer trial.
 
 ## Findings
 
