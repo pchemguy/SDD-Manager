@@ -37,3 +37,8 @@ C-001 is assessed as Adapt, not ready to ship unchanged; seven source findings a
 Opening checks cover branch/baseline identity, owned paths, whitespace and current links; no product/support suite or live acceptance is needed for this metadata-only checkpoint. Preserve previous closed campaign objects unchanged.
 
 Next eligible action: discuss C-001 findings or receive further candidates. A later revision plan follows accepted integration directions; do not execute the retained candidate or implement repairs merely from this review.
+
+
+## Accepted execution scope
+
+The human requested a full revision plan followed by execution for C-001, adding the transient recovery workflow, professional code/companion documentation and SDD routing. The [revision plan](REVISION-PLAN.md) defines the bounded script/supporting-file unit. Campaign scope follows a coherent change rather than one file per campaign; unrelated future candidates remain separately scoped. Integration/release is not selected.
