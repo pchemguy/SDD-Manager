@@ -44,6 +44,22 @@ export function parseCli(args) {
 
 const lf = value => typeof value === 'string' ? value.replace(/\r\n/g, '\n') : value;
 
+/**
+ * Resolve observed audience without collapsing explicit internal visibility.
+ * @param {{private:boolean,visibility?:string}} metadata Repository response.
+ * @param {string} [stage='lookup'] Error stage for initial/final metadata.
+ * @returns {'public'|'private'|'internal'} Explicit audience or absence fallback.
+ * @throws {ForgeError} Malformed or contradictory public/private metadata.
+ */
+function repositoryVisibility(metadata, stage = 'lookup') {
+  if (typeof metadata.private !== 'boolean') fail('invalid_response', stage);
+  if (!Object.hasOwn(metadata, 'visibility')) return metadata.private ? 'private' : 'public';
+  if (!['public', 'private', 'internal'].includes(metadata.visibility)
+      || (metadata.visibility === 'public' && metadata.private)
+      || (metadata.visibility === 'private' && !metadata.private)) fail('invalid_response', stage);
+  return metadata.visibility;
+}
+
 async function collection(client, type) {
   const all = await client.list('/' + type, type === 'labels' ? {} : { state: 'all' });
   for (const item of all) {
@@ -126,8 +142,7 @@ export async function reconcileProjection(input, inventory, client, { reconcileO
     if (request.repository !== client.repository || client.capability !== 'projection') fail('repository_or_capability_mismatch');
     if (containsCredential(request, client.token)) fail('credential_in_request');
     const metadata = await client.identify();
-    if (typeof metadata.private !== 'boolean') fail('invalid_response', 'lookup');
-    visibility = metadata.private ? 'private' : 'public';
+    visibility = repositoryVisibility(metadata);
     const rendered = renderProjection(request), initial = inspectAll(await snapshot(client, rendered), rendered);
     const parents = initial.parents;
     const objects = [
@@ -177,7 +192,8 @@ export async function reconcileProjection(input, inventory, client, { reconcileO
       }
     }
     const after = await client.identify();
-    if (after.id !== metadata.id || after.private !== metadata.private) fail('repository_identity_or_visibility_changed', 'readback');
+    if (after.id !== metadata.id || after.private !== metadata.private || repositoryVisibility(after, 'readback') !== visibility)
+      fail('repository_identity_or_visibility_changed', 'readback');
     return audited({ schema_version: 1, ok: true, code: 'projection_verified', stage: 'readback', remote_state: 'verified' });
   } catch (error) {
     const result = failure(error);

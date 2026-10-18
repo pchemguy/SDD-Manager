@@ -38,7 +38,7 @@ The caller establishes actual authorization, tracking confirmation, current sour
 
 Native preflight binds root/remote/source identity before credentials. --apply/reconcile-only use the already eligible ignored/untracked contained token under the existing Windows/POSIX policy. No token discovery/store/configuration change occurs. The source is rechecked after hosted effects; drift blocks success while retaining known effects.
 
-The GitHub-only transport binds repository metadata/numeric identity and reports observed public/private visibility. It rejects redirects, arbitrary origins/headers and routes outside the selected capability. Completion clients cannot acquire projection permissions through a caller option; projection clients cannot close, reopen, PATCH, DELETE or post comments.
+The GitHub-only transport binds repository metadata/numeric identity and reports explicit public/private/internal visibility when supplied. A Boolean-only response falls back to public/private only when visibility is absent; malformed explicit values and contradictory public/private metadata block execution. Recheck resolved visibility and repository identity at final readback, including private/internal changes with an unchanged Boolean. This observation does not prevent concurrent external changes or establish authorization to disclose content. It rejects redirects, arbitrary origins/headers and routes outside the selected capability. Completion clients cannot acquire projection permissions through a caller option; projection clients cannot close, reopen, PATCH, DELETE or post comments.
 
 Projection may create one phase label, selected native milestones and selected task issues, or docs-main plus its nine issues. It reuses exact existing objects and preserves states, unrelated labels/comments/assignees and user material after an exact generated issue section. It does not repair/rename existing fields or rewrite edited generated briefs. Differences, contradictory/unmarked identity, duplicate stable candidates and unsupported ownership return a conflict to the backend's existing authorized reconciliation.
 
@@ -62,7 +62,7 @@ Errors classify authentication, access/policy, ambiguous missing/private resourc
 
 ## Results and module API
 
-Normal results contain schema_version, ok, code, stage and remote_state. Hosted results include repository, visibility, effects, associations, read_retries and retry_failures. Native run adds request_sha256, a fingerprint of normalized validated JSON. Optional safe fields include http_status, request_id, attempts, retry_at and a retained-lock indicator.
+Normal results contain schema_version, ok, code, stage and remote_state. Hosted results include repository, visibility, effects, associations, read_retries and retry_failures. visibility identifies the initial validated metadata observation (or not_checked before it); final drift returns repository_identity_or_visibility_changed rather than successful projection. The manager/caller still reviews outgoing content for the actual audience. Native run adds request_sha256, a fingerprint of normalized validated JSON. Optional safe fields include http_status, request_id, attempts, retry_at and a retained-lock indicator.
 
 | Result / exit | Meaning |
 | --- | --- |

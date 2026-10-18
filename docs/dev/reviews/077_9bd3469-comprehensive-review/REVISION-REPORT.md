@@ -22,6 +22,12 @@ Added one documented pure phaseLabelsMatch predicate to existing shared GitHub v
 
 Observed RED before production edits: seven focused tests selected, six failed on the demonstrated conflict paths and the unrelated/custom compatibility case passed. After correction all 69 completion/projection contracts pass (39 completion, 30 projection), zero skips. Regressions cover task/milestone membership, malformed/duplicate/foreign/case labels, docs-main, fresh pre-write conflict and post-evidence/final drift with retained effects. R-003: Revised with local condition evidence; native Windows CMD/Linux Node 22/24 jobs remain required at V-005. Code and tests contain only synthetic provider credentials.
 
+### V-004 — Explicit repository visibility
+
+Projection now resolves valid explicit public/private/internal metadata, uses the existing Boolean fallback only when visibility is absent, rejects malformed explicit values/contradictory public/private metadata and compares resolved audience on final metadata readback. Documented initial-observation semantics, fallback, drift outcome and caller-owned outgoing-content review; this is readback evidence, not prevention of external edits.
+
+Observed RED before production fix: all three new visibility regression tests fail for the intended reporting/validation/drift conditions. After correction the combined runtime suite passes 99 contracts (39 completion, 33 projection, 27 Git recovery), zero skips. A subsequent focused three-test pass also covers explicit internal with either Boolean value, preserving independent audience information. Boolean-only compatibility, malformed/contradictory metadata with zero writes, and same-Boolean private/internal drift with retained effects are checked. R-004: Revised with local condition evidence; native matrices and final integration checks remain V-005. No live provider audience/access claim.
+
 ## Remaining scope
 
-V-004–005 remain pending; V-003 native matrix readback is pending. No product/client/provider acceptance or integrated completion is claimed.
+V-005 remains pending, including native matrix readback for V-003/V-004. No product/client/provider acceptance or integrated completion is claimed.
