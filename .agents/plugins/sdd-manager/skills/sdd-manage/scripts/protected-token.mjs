@@ -120,18 +120,23 @@ export function parseWindowsAclExport(bytes) {
 }
 
 /** Inspect Windows ACLs without PowerShell or exporting credential material. */
-function windowsPermissions(filename) {
+function windowsPermissions(filename, remainingMs) {
   const env = childEnv();
   // Git's shell can prepend GNU tools to PATH; require native Windows utilities.
   const systemRoot = process.env.SystemRoot;
   if (!systemRoot || !path.isAbsolute(systemRoot)) fail('windows_tools_unavailable', 'acl');
   const nativeTool = name => path.join(systemRoot, 'System32', name);
-  const identity = checked(processResult(nativeTool('whoami.exe'), ['/user', '/fo', 'csv', '/nh'], { env }), 'acl');
+  const bounded = (name, args) => {
+    const remaining = remainingMs();
+    if (remaining <= 0) fail('process_timeout', 'acl');
+    return checked(processResult(nativeTool(name), args, { env, timeoutMs: Math.max(1, Math.floor(Math.min(30000, remaining))) }), 'acl');
+  };
+  const identity = bounded('whoami.exe', ['/user', '/fo', 'csv', '/nh']);
   const { sid, localAccount } = windowsUserContext(identity, os.hostname());
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'sdd-auth-acl-'));
   try {
     const saved = path.join(directory, 'acl.txt');
-    checked(processResult(nativeTool('icacls.exe'), [filename, '/save', saved, '/q'], { env }), 'acl');
+    bounded('icacls.exe', [filename, '/save', saved, '/q']);
     checkWindowsDacl(parseWindowsAclExport(fs.readFileSync(saved)), sid, localAccount);
   } finally { fs.rmSync(directory, { recursive: true, force: true }); }
 }
@@ -144,10 +149,11 @@ function windowsPermissions(filename) {
  * @param {string} tokenFile Root-relative selected token-file path.
  * @param {Function} git Bounded Git runner returning spawnSync-style results.
  * @param {string} platform Native platform; tests may assess pure ACL separately.
+ * @param {{remainingMs?: Function}} controls Optional caller's remaining process budget.
  * @returns {string} Secret for private credential use, never diagnostic output.
  * @throws {ProtectedInputError|Error} Invalid protection/context, format or local I/O.
  */
-export function readToken(repo, tokenFile, git, platform = process.platform) {
+export function readToken(repo, tokenFile, git, platform = process.platform, { remainingMs = () => 30000 } = {}) {
   if (path.isAbsolute(tokenFile)) fail('token_outside_repository');
   const filename = path.resolve(repo, tokenFile), relative = path.relative(repo, filename);
   if (!relative || relative.startsWith('..' + path.sep) || relative === '..') fail('token_outside_repository');
@@ -163,7 +169,7 @@ export function readToken(repo, tokenFile, git, platform = process.platform) {
   if (git(['check-ignore', '--no-index', '--', relative]).status !== 0) fail('token_not_ignored');
   const tracked = git(['ls-files', '--error-unmatch', '--', `:(literal)${relative}`]);
   if (tracked.status !== 1 || tracked.error || tracked.signal) fail('token_tracked_or_unknown');
-  if (platform === 'win32') windowsPermissions(filename);
+  if (platform === 'win32') windowsPermissions(filename, remainingMs);
   else if (info.uid !== process.getuid() || (info.mode & 0o077)) fail('token_permissions');
   const descriptor = fs.openSync(filename, fs.constants.O_RDONLY | (fs.constants.O_NOFOLLOW || 0));
   try {
