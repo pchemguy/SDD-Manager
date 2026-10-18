@@ -1,10 +1,10 @@
 # SDD Manager handoff
 
-Checkpoint: scripting revision campaign `076_af2703c`, focused C-001 forge-close.mjs assessment complete. The containing review commit identifies this checkpoint; confirm its publication before dependent work. Campaign remains open/unmerged.
+Checkpoint: campaign `076_af2703c`, complete revision plan accepted for execution after published review 4cb8b765744687f585c5f7a3081a70ef1119aa7a. Publish/read back this planning checkpoint before implementation; keep the campaign open/unmerged after completed source/workflow integration.
 
 ## Workflow and sources
 
-- Mode/stage: revision campaign, focused review complete; revision planning/implementation unselected.
+- Mode/stage: accepted revision planning followed by V-002–V-006 execution under the [revision plan](reviews/076_af2703c-scripting/REVISION-PLAN.md).
 - Objective: assess the supplied task/milestone GitHub closure script for potential SDD Manager integration.
 - Sources: [scope](reviews/076_af2703c-scripting/EXPLORATION.md), [focused report](reviews/076_af2703c-scripting/REVIEW-REPORT.md), [unchanged candidate](reviews/076_af2703c-scripting/candidates/forge-close.mjs), [controlled probes](reviews/076_af2703c-scripting/evidence/review-probes.mjs), [campaign index](reviews/README.md), [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md).
 - Reporting: Standard; Minimal and Explicit remain available.
@@ -19,7 +19,7 @@ Checkpoint: scripting revision campaign `076_af2703c`, focused C-001 forge-close
 ## Scope and authority
 
 - The human opened this campaign, then supplied forge-close.mjs for assessment in its established scripting-review context. Persist the candidate, review/evidence and current navigation/handoff; publish/read back.
-- No implementation plan is accepted. No production utility/package source repair, live comment/closure, credential/configuration alteration, external demo repair, release or merge is selected.
+- The human requested fixes, documentation, final script placement and integration into SDD Manager; the latest instruction explicitly keeps the campaign open. Implement the accepted eight findings and planned package/workflow/test integration. No live comment/closure, credential/configuration alteration, external demo repair, release or campaign merge is selected.
 - Preserve all other closed campaign packages. Current findings belong only to this active campaign.
 
 ## Branch and return
@@ -31,4 +31,4 @@ Checkpoint: scripting revision campaign `076_af2703c`, focused C-001 forge-close
 
 ## Next boundary
 
-Publish/read back this focused review checkpoint, then stop open/unmerged. Await selection of revision planning or further analysis; implementation and live hosted operations do not follow automatically.
+Publish/read back this complete plan, then execute its ordered actions and required checks, preserving per-commit publication. Stop with verified source/workflow integration published on the campaign branch, open/unmerged. Actual live hosted operations are not part of utility testing.
