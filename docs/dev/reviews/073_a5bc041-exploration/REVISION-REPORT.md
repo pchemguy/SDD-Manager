@@ -13,7 +13,8 @@
 | Action | Changes and assessment | Verification / limits |
 | --- | --- | --- |
 | V-001 | Reworked existing exploration reference into a complete pre-brief facilitation procedure with feature/later-stage adaptations. SC-01–12 inspected against its seed assessment, relevance scan, loop, depth and handoff sections. | Source assessment and `git diff --check` pass. One cohesive reference; no new fragments. No model-behavior claim. |
-
 | V-002 | Design entry routes pre-brief, feature and later uncertainty to exploration; PROJECT distinguishes brief readiness from deferred structural choices; architecture/decomposition return to their selected owner. | Source handoff assessment passes SC-01, 03, 06–11; existing document acceptance and write prerequisites retained. `git diff --check` passes. |
+
+| V-003 | Main entry now selects proactive exploration before PROJECT; feature entry routes consequential delta uncertainty and later design questions to the same owner. | Inspected main-preparation/bootstrap interfaces: read-only discussion, write/tracking and document gates remain unchanged. PLUGIN.md and packaged README already project coordinator/design capabilities correctly; no expansion needed. `git diff --check` passes. |
 
 The commit containing each action row identifies its source/evidence checkpoint. Each checkpoint must be pushed and remotely verified before the next action; final Git evidence will list those commits.
