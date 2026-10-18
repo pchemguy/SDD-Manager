@@ -4,7 +4,7 @@
 
 `docs/dev/PROJECT.md` is the concise project brief: a reviewable statement of the project's purpose, intended users, desired outcomes, principal scope, non-goals and consequential constraints, formed from the initial description and clarified decisions. Identify material assumptions and open questions where needed.
 
-The brief provides shared context for architecture and later specification. Keep it proportionate to the project and clear enough for the human to confirm its direction. No fixed heading schema, word count or exhaustive feature catalogue is required. A short seed is an input, not necessarily a sufficient brief; expand it using actual clarification rather than inventing accepted decisions.
+The brief provides shared context for architecture and later specification. Keep it proportionate to the project and clear enough for the human to confirm its direction. No fixed heading schema, word count or exhaustive feature catalogue is required. A short seed is an input, not necessarily a sufficient brief. Use [guided exploration](exploration.md) to proactively uncover consequential gaps and alternatives; reuse established context rather than administer a fixed interview. Expand the brief using actual clarification rather than inventing accepted decisions.
 
 PROJECT owns project intent and principal scope. ARCHITECTURE owns structural arrangements and rationale; DECOMPOSITION owns logical components; SPEC owns precise observable behavior/acceptance; PLAN owns delivery order; layout owns physical paths; TASKS owns executable work. Do not turn the brief into any of those documents. Consequential accepted technical choices or distinctive requirements may appear as constraints/principal scope without copying their full downstream contracts.
 
@@ -14,7 +14,7 @@ Use the user's seed, actual clarification answers, applicable project instructio
 
 For an existing project, inspect/reuse its suitable brief rather than regenerate it as ceremony. Separate observed implementation from intended project scope. If the existing PROJECT contains operating instructions, preserve their authority and resolve its intended role before replacing content. Accepted feature incorporation into PROJECT belongs to [sdd-integrate-feature](../../sdd-integrate-feature/SKILL.md); a direct brief correction remains design-owner work within its requested scope.
 
-Resolve missing decisions that would otherwise force a material project/architecture choice to be invented. Non-blocking details may remain explicitly delegated to later stages. Reasonable proposed defaults can be presented for human confirmation; do not label them accepted requirements. State missing clarification provenance rather than claiming the seed supplied later choices.
+Resolve missing decisions that would force the brief's intent, principal scope or consequential constraints to be invented. Structural choices needed before architecture may remain explicitly deferred with their dependency and resolution path; the brief need not contain a completed architecture. Non-blocking details may remain explicitly delegated to later stages. Reasonable proposed defaults can be presented for human confirmation; do not label them accepted requirements. State missing clarification provenance rather than claiming the seed supplied later choices.
 
 ## Adaptable content structure
 

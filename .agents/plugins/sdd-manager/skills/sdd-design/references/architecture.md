@@ -2,6 +2,8 @@
 
 Define the system's high-level arrangement and why it fits the project's purpose. Read the accepted PROJECT brief, exploration decisions and relevant existing project evidence. Apply the shared **sdd-conventions** modularity checks to major boundaries. Use [decomposition](decomposition.md) when responsibility analysis reaches detailed components.
 
+Use [exploration](exploration.md) for consequential unresolved structural choices before relying on them. Reuse accepted brief decisions and delegated boundaries; resolve the selected uncertainty and return here without replaying pre-brief discovery. Do not invent a material choice from a deferred question.
+
 ## Document ownership
 
 - `docs/dev/PROJECT.md` provides the accepted project context under the canonical [project brief contract](project-brief.md). Preserve its intent/constraints without repeating the brief as architecture.

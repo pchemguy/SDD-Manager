@@ -2,6 +2,8 @@
 
 Refine accepted architecture into understandable component responsibilities and collaboration. ARCHITECTURE owns the major arrangement and consequential rationale; DECOMPOSITION owns logical units within it. Use the [document boundaries](../SKILL.md#document-boundaries) comparison when routing overlapping structural concerns. Read only the relevant ARCHITECTURE root and children, existing code or contracts where applicable, and the shared **sdd-conventions** modularity reference. Revisit architecture when decomposition reveals a weak block boundary rather than hiding the conflict in detail.
 
+When a consequential uncertainty needs human-guided comparison, use [exploration](exploration.md) at the affected component/interface depth, then return here. Preserve settled project direction and route an actual architectural change to its owner.
+
 ## Document ownership
 
 `docs/dev/DECOMPOSITION.md` is the compact entry point for the logical component model. Identify principal components within each architectural block, their responsibility and non-responsibility, provided and required interfaces at the level needed to assess the design, dependency direction, data or state ownership, lifecycle and failure boundaries when architectural, and relevant verification seams. Give each child document a precise scope and link to it from the root.

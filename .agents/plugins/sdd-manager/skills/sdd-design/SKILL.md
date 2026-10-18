@@ -18,7 +18,7 @@ Choose the work requested and load only its reference. A request for a later sta
 | Work | Load |
 | --- | --- |
 | Create, revise or review PROJECT.md as a concise project brief | [project brief](references/project-brief.md) |
-| Clarify the problem, compare alternatives, resolve decisions, or identify open questions | [exploration](references/exploration.md) |
+| Proactively refine an initial idea before PROJECT, explore a feature delta, or resolve consequential uncertainty during later design | [exploration](references/exploration.md) |
 | Define or revise major system blocks, dependency direction, and architectural decisions | [architecture](references/architecture.md) |
 | Define or revise component responsibilities, collaboration, and provisional interfaces | [decomposition](references/decomposition.md) |
 
