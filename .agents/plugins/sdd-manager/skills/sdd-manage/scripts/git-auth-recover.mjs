@@ -75,7 +75,7 @@ export function helperCommand(node, script, args, platform = process.platform) {
 
 /** Conservative SDDL DACL check. Complex/unknown ACE forms fail closed. */
 export function checkWindowsDacl(sddl, userSid) {
-  if (!/^S-1-5-21-(?:\d+-){2,}\d+$/.test(userSid) || !sddl.startsWith('D:')) fail('acl_unverified');
+  if (!/^S-1-\d+(?:-\d+)+$/.test(userSid) || !sddl.startsWith('D:')) fail('acl_unverified');
   const aces = sddl.match(/\([^()]*\)/g) || [];
   const remainder = sddl.replace(/\([^()]*\)/g, '');
   if (!aces.length || !/^D:[PAIR]*$/.test(remainder)) fail('acl_unverified');
@@ -117,7 +117,7 @@ function checked(result, stage) {
 function windowsPermissions(filename) {
   const env = childEnv();
   const identity = checked(processResult('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { env }), 'acl');
-  const sid = identity.match(/S-1-5-21-(?:\d+-){2,}\d+/)?.[0];
+  const sid = identity.match(/S-1-\d+(?:-\d+)+/)?.[0];
   if (!sid) fail('acl_unverified');
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'sdd-auth-acl-'));
   try {
@@ -197,15 +197,18 @@ export function remoteOid(stdout, ref) {
  * production uses native Git. No subprocess text is returned in public results.
  */
 export function recover(options, execute = processResult) {
+  options = parseCli([options.operation, ...['repo', 'remote', 'url', 'ref', 'expect'].flatMap(key => ['--' + key, String(options[key] ?? '')]), '--token-file', options.tokenFile ?? 'gh.tkn', '--timeout-ms', String(options.timeoutMs ?? 30000)]);
   const env = childEnv();
   const repo = fs.realpathSync(options.repo);
   const git = (args, auth = []) => execute('git', ['-C', repo, ...auth, ...args], { cwd: repo, env, timeoutMs: options.timeoutMs });
   const root = checked(git(['rev-parse', '--show-toplevel']), 'repository').trim();
   if (fs.realpathSync(root) !== repo) fail('repo_must_be_root');
   checked(git(['check-ref-format', options.ref]), 'ref');
-  const source = checked(git(['show-ref', '--verify', '--hash', options.ref]), 'ref').trim();
-  if (source !== options.expect) fail('source_mismatch');
-  const target = validateTargetUrl(options.url);
+  if (options.operation === 'push') {
+    const source = checked(git(['show-ref', '--verify', '--hash', options.ref]), 'ref').trim();
+    if (source !== options.expect) fail('source_mismatch');
+  } else checked(git(['cat-file', '-e', options.expect]), 'ref');
+  validateTargetUrl(options.url);
   const destination = () => {
     const urls = checked(git(['remote', 'get-url', '--push', '--all', options.remote]), 'destination').trim().split(/\r?\n/);
     if (urls.length !== 1 || urls[0] !== options.url) fail('destination_mismatch');
@@ -219,7 +222,7 @@ export function recover(options, execute = processResult) {
   const auth = ['-c', 'credential.helper=', '-c', `${context}.helper=`, '-c', `${context}.helper=${helper}`,
     '-c', 'credential.useHttpPath=true', '-c', `${context}.useHttpPath=true`,
     '-c', `${context}.username=x-access-token`, '-c', 'credential.interactive=false',
-    '-c', 'core.askPass=', '-c', 'http.followRedirects=false', '-c', 'http.extraHeader=',
+    '-c', 'core.askPass=', '-c', 'http.followRedirects=false', '-c', `http.${options.url}.followRedirects=false`, '-c', 'http.extraHeader=',
     '-c', `http.${options.url}.extraHeader=`];
   // Re-resolve after file validation; no persistent remote/helper writes occur.
   destination();
@@ -245,7 +248,14 @@ function helperMain(args) {
   const [repo, tokenFile, url, action, ...extra] = args;
   if (extra.length || !repo || !tokenFile || !url || !['get', 'store', 'erase'].includes(action)) fail('invalid_helper_arguments');
   if (action !== 'get') return;
-  const buffer = Buffer.alloc(65537), length = fs.readSync(0, buffer, 0, buffer.length, null);
+  const buffer = Buffer.alloc(65537);
+  let length = 0;
+  while (length < buffer.length) {
+    const read = fs.readSync(0, buffer, length, buffer.length - length, null);
+    if (!read) break;
+    length += read;
+    if (buffer.subarray(0, length).includes(Buffer.from('\n\n')) || buffer.subarray(0, length).includes(Buffer.from('\r\n\r\n'))) break;
+  }
   if (length > 65536) fail('invalid_credential_request');
   const request = credentialRequest(buffer.subarray(0, length).toString('utf8'));
   const target = validateTargetUrl(url);

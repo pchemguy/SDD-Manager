@@ -152,3 +152,56 @@ test('import and public failure paths cannot read a token or print subprocess se
   const result = spawnSync(process.execPath, [SCRIPT, 'config', '--global', 'danger'], { cwd: directory, encoding: 'utf8' });
   assert.equal(result.status, 1); assert.equal(JSON.parse(result.stdout).code, 'invalid_operation'); assert.equal(result.stderr, '');
 });
+
+test('API scope validation cannot be bypassed by avoiding CLI parser', t => {
+  const f = fixture(t), runner = controlled(f);
+  assert.throws(() => auth.recover({ ...f.options, operation: 'config' }, runner.execute), /invalid_operation/);
+  assert.throws(() => auth.recover({ ...f.options, timeoutMs: 0 }, runner.execute), /invalid_timeout/);
+});
+test('readback can reconcile an older known object after local branch advances', t => {
+  const f = fixture(t); f.git(['commit', '--allow-empty', '-qm', 'later local checkpoint']);
+  const runner = controlled(f);
+  assert.equal(auth.recover({ ...f.options, operation: 'readback' }, runner.execute).ok, true);
+  assert.throws(() => auth.recover(f.options, runner.execute), /source_mismatch/);
+});
+test('effective push URL divergence and multiplicity are enforced', t => {
+  const f = fixture(t); f.git(['remote', 'set-url', '--push', 'origin', 'https://publish.invalid/owner/repo.git']);
+  const runner = controlled(f);
+  assert.throws(() => auth.recover(f.options, runner.execute), /destination_mismatch/);
+  assert.equal(auth.recover({ ...f.options, url: 'https://publish.invalid/owner/repo.git' }, runner.execute).ok, true);
+  f.git(['remote', 'set-url', '--add', '--push', 'origin', TARGET_URL]);
+  assert.throws(() => auth.recover(f.options, runner.execute), /destination_mismatch/);
+});
+test('URL-scoped helper resets supersede inherited broken helpers without editing them', t => {
+  const f = fixture(t); f.git(['config', `credential.${TARGET_URL}.helper`, 'does-not-exist']);
+  const runner = controlled(f); auth.recover(f.options, runner.execute);
+  const prefix = runner.calls.find(c => c.args.includes('push')).args;
+  const configBefore = f.git(['config', '--local', '--list']);
+  const result = spawnSync('git', [...prefix.slice(0, prefix.indexOf('push')), 'credential', 'fill'], {
+    input: `url=${TARGET_URL}\n\n`, encoding: 'utf8', env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }, timeout: 10000,
+  });
+  assert.equal(result.status, 0, result.stderr); assert.ok(result.stdout.includes(CANARY));
+  assert.equal(f.git(['config', '--local', '--list']), configBefore);
+});
+test('Git spawn error, signal and oversized output stop before network effects', t => {
+  const f = fixture(t);
+  for (const outcome of [{ error: { code: 'ENOENT' }, status: null }, { status: null, signal: 'SIGKILL' },
+    { error: { code: 'ENOBUFS' }, status: null }]) {
+    let calls = 0;
+    assert.throws(() => auth.recover(f.options, () => { calls++; return { ...outcome, stderr: CANARY }; }));
+    assert.equal(calls, 1);
+  }
+});
+test('credential parsing and Windows ACLs reject ambiguity, accept Azure-style user SID', () => {
+  assert.throws(() => auth.credentialRequest('protocol=https\nprotocol=http\n\n'));
+  assert.throws(() => auth.credentialRequest('x'.repeat(66000)));
+  const sid = 'S-1-12-1-1-2-3-4';
+  assert.doesNotThrow(() => auth.checkWindowsDacl(`D:P(A;;FA;;;${sid})`, sid));
+  assert.throws(() => auth.checkWindowsDacl('D:(A;;FA;;;SY)', sid));
+});
+test('malformed token never escapes public CLI failure output', t => {
+  const f = fixture(t); fs.writeFileSync(path.join(f.root, 'gh.tkn'), CANARY + '\nprotocol=bad');
+  const result = spawnSync(process.execPath, [SCRIPT, 'readback', '--repo', f.root, '--remote', 'origin', '--url', TARGET_URL, '--ref', f.ref, '--expect', f.oid], { encoding: 'utf8' });
+  assert.equal(result.status, 1); assert.equal(JSON.parse(result.stdout).code, 'invalid_token');
+  assert.ok(!result.stdout.includes(CANARY)); assert.equal(result.stderr, '');
+});
