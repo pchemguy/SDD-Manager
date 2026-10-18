@@ -14,7 +14,7 @@ Initial inventory: 151 package files, 106 Markdown resources and 15 skill entrie
 | U-002 | Assessed | Coordinator workflows, preparation, human review, QC, bootstrap, examples and orientation | No additional findings |
 | U-003 | Assessed | Git/continuity/integration identity | No additional findings |
 | U-004 | Assessed | Reviews/tracking/credentials | No additional findings |
-| U-005 | Planned | Design/contracts/plans/tasks | Not yet assessed |
+| U-005 | Assessed | Design/contracts/plans/tasks | No additional findings |
 | U-006 | Planned | Execution/incorporation/testing/docs/reports | Not yet assessed |
 | U-007 | Planned | Hosted tracking and executable helpers | Not yet assessed |
 | U-008 | Planned | Release/package/source support and consolidation | Not yet assessed |
@@ -42,6 +42,10 @@ Reviewed all six selected references in full: branch setup and preparation propa
 ## U-004 — Review, tracking and credential gates
 
 Reviewed all seven selected references in full and compared coordinator gates with backend lifecycle and token conventions. Review-only versus accepted repair authority, optional prerelease reminder, per-unit publication, preparation versus implementation projection, late/omitted tracking recovery and predecessor exits agree. Credential recovery now explicitly covers a waiting helper without requiring an exit error, retains bounded process/effect reconciliation, and separates transient pre-write access from deferred repository storage. No additional source-consistency finding. The existing credential utility tests and native CI are evidence for their pinned code, not a claim that every provider/helper behavior was exercised.
+
+## U-005 — Design, contracts and bounded delivery
+
+Reviewed all 18 selected references in full, including exploration, brief, architecture/decomposition, SPEC and QC, PLAN/layout, task derivation/progress/conformance and shared modularity/count/hierarchy/Markdown policy. Complete intended product scope remains in PROJECT/design/SPEC; every delivery phase has an integrated bounded outcome, with additional simplest-usable-core guidance for greenfield Phase 1. Small early milestones, version scope and in-range counts cannot excuse oversized phases or a final backlog bucket. TASKS returns strategic defects upstream rather than disguising them with smaller tasks. Exploration labels examples illustrative and distinguishes facts, decisions, proposals and delegation without a mandatory interview/artifact. R-001 is reconfirmed; no additional finding. These are source-level boundary checks, not a replay of the supplied game conversation.
 
 ## Findings
 
