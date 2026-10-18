@@ -1,23 +1,17 @@
 # SDD Manager handoff
 
-Campaign 077_9bd3469 is open for comprehensive SDD Manager content/interface review, followed by its full revision plan, execution and closure. The human explicitly authorized this sequence after campaign 076; no new approval pause is required for the same scope.
+Campaign 077_9bd3469 has completed all eight review units and verified four accepted revisions. Final explicit main integration/publication is pending. The human authorized the complete review → plan → execute → close sequence; no additional source work or product release follows automatically.
 
-## Scope and sources
+## Scope and evidence
 
-- Mode/stage: comprehensive revision workflow, review plan/opening checkpoint; U-001–U-008 next. Source stays unchanged during review.
-- Reviewed baseline/full branch-off: 9bd3469351e75883fa510ff38708fc4f2982be3a, the published two-parent main integration closing campaign 076. Its records and all other closed packages are frozen.
-- Current package: 151 files/106 Markdown resources/15 skills. Include full package content/routing/contracts and selected source publisher/CI/acceptance-support interfaces. Source review, structural/static checks, synthetic/native behavior and installed-client execution retain distinct limits.
-- Owners: sdd-manage coordinates; focused SDD owners and Agent Package Author supply review criteria. [Review plan](reviews/077_9bd3469-comprehensive-review/REVIEW-PLAN.md), [current report](reviews/077_9bd3469-comprehensive-review/REVIEW-REPORT.md), [index](reviews/README.md), [contributor entry](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md).
-- Reporting: Standard; Minimal and Explicit remain available.
+- Full branch-off/reviewed baseline: 9bd3469351e75883fa510ff38708fc4f2982be3a; original opening: 40042e78af25f63cb5ca5292d42ec9b6e4084bca.
+- [Review findings](reviews/077_9bd3469-comprehensive-review/REVIEW-REPORT.md), [revision plan](reviews/077_9bd3469-comprehensive-review/REVISION-PLAN.md), [execution/checks](reviews/077_9bd3469-comprehensive-review/REVISION-REPORT.md), [index](reviews/README.md).
+- Result: corrected exploration link, bounded source assessment companion preserving all 49 cases, strict shared phase-label association checks and accurate explicit internal visibility/final drift detection. Source contract remains substantive; no package/client dependency on source-only assessment.
+- Evidence: 99 local runtime contracts, 139 Python support and 37 publisher tests; both changed forge matrices pass all four native Windows CMD/Linux Node 22/24 jobs on 8ee9c4ad48672cc38a706d47b2850a5fb36aa0a5. Current source links/resources, 33 static catalog cases and exact 151-file reproducible package/snapshot pass. Reports retain RED/GREEN, source/hashes and limits.
+- Source/consumer/client/provider evidence remain distinct. No installed-client/independent agent trial, live tracking mutation, release/tag/version change or external demo work occurred. All other closed records remain frozen and unchanged.
 
-## Authority and limits
+## Authority and return
 
-The latest human request authorizes comprehensive review, then complete revision planning/execution, verification/docs and explicit integration/publication/closure. Publish/read back every owned checkpoint before the next unit/action. Preserve genuine pending human decisions in assessed workflows; this campaign does not execute a product task list.
+Working branch revision/077_9bd3469-comprehensive-review, published on origin; recorded creation parent/integration/return target main at the full baseline above. Reporting remains Standard. This repository has taskless campaign actions, not a product TASKS owner.
 
-No live provider mutation, real-token utility trial, independent installed-client/agent trial, TextStats product acceptance run, external demo repair or release is selected. Synthetic/local/native evidence cannot certify those unperformed behaviors. Do not load or edit closed report/feature/steering contents as a routine review queue.
-
-## Branch and next boundary
-
-- Working/publication branch: revision/077_9bd3469-comprehensive-review on origin.
-- Creation parent/integration/return target: main at the full starting baseline above. Stable directory: docs/dev/reviews/077_9bd3469-comprehensive-review/.
-- Publish the opening plan/report, assess and publish each ordered unit, consolidate findings, publish the full revision plan and execute only its accepted corrections. Finalize active records, verify/publish an explicit two-parent main merge and return. No release/further work follows automatically.
+Publish/read back finalization, pin its source and refreshed main parent, inspect the whole difference, merge with --no-ff --no-commit, reconcile this snapshot to the main return and verify the prospective result. Commit the two-parent summary with opening/base/parent/source and actual checks, publish/read back main and confirm clean return. Only then is campaign 077 closed and frozen. Retain its branch; stop awaiting a new request.

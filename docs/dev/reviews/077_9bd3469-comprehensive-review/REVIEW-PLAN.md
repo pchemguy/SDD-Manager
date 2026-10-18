@@ -5,7 +5,7 @@
 - Campaign: 077_9bd3469; full starting baseline/branch-off: 9bd3469351e75883fa510ff38708fc4f2982be3a.
 - Working branch: revision/077_9bd3469-comprehensive-review; creation parent/integration/return target: main; publication: origin, matching branch.
 - The human explicitly requested this campaign after the preceding scripting revision: comprehensive review, full revision plan, execution and closure. Campaign 076 is closed by the published two-parent baseline merge; its package and all other closed records are frozen.
-- State: Planned. [Report](REVIEW-REPORT.md) retains coverage, findings and actual evidence. Review first; revise only after publishing the complete findings/plan.
+- Current review state: all eight units assessed; original planned procedure retained below. [Report](REVIEW-REPORT.md) retains coverage, findings and actual evidence. Review first; revise only after publishing the complete findings/plan.
 
 Review the current whole plugin: all 151 packaged files, including 106 Markdown resources, 15 skill entries, manifest/shared entry/human docs, templates, client presentation and optional executable helpers. Inspect source-only contributor/development contracts, package/publisher/CI and selected acceptance-support interfaces needed to assess those claims. Account for every package resource at content/interface or structural/asset depth; source-only retained historical records are not review inputs.
 

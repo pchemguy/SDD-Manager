@@ -65,8 +65,8 @@ Reviewed all five release/highlights/package/workflow references in full against
 | --- | --- | --- | --- |
 | R-001 | Low / navigation defect | Verified (V-001) | sdd-design / U-001, recheck with U-005 |
 | R-002 | Medium / composition recommendation | Verified (V-002) | Source plugin contract / U-001 |
-| R-003 | Medium / identity defect | Revised (V-003; native pending) | Forge completion/projection / U-007 |
-| R-004 | Medium / audience-reporting defect | Revised (V-004; native pending) | Forge projection / U-007 |
+| R-003 | Medium / identity defect | Verified (V-003/V-005) | Forge completion/projection / U-007 |
+| R-004 | Medium / audience-reporting defect | Verified (V-004/V-005) | Forge projection / U-007 |
 
 ### R-001 — Brief-to-exploration decision-state anchor is absent
 
@@ -103,3 +103,7 @@ Four findings remain Open on unchanged reviewed source: one Low navigation defec
 Fresh baseline checks: 89 Node runtime contracts, 139 Python support tests, 37 publisher tests and all 33 static catalog cases pass. Manifest/entry/resource/asset checks pass; one known broken fragment remains. Existing support tests are insufficient for the two demonstrated edge cases. Structural/current-source coherence does not certify actual agent judgment, consumer execution, installed-client discovery, live GitHub permission or arbitrary Windows environments. Previously observed native matrices apply only to unchanged code until the revisions receive their own checks.
 
 Source and all closed campaign packages remain unchanged at the end of review. Revision planning/execution and final integration/closure remain pending under the existing request. A complete revision plan is the next output; this report does not itself claim repairs.
+
+## Revision disposition
+
+All four findings are now Verified within their stated source/runtime scope; no accepted item is deferred. [Revision plan](REVISION-PLAN.md) and [execution evidence](REVISION-REPORT.md) retain the corrections, observed RED/GREEN, native matrices, package checks and limits. Original baseline findings/probes above remain unchanged as historical review evidence. Final explicit main integration/publication is the remaining campaign operation, not a further source repair or product release.
