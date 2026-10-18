@@ -17,7 +17,9 @@ class PackageDocumentation(Sandbox):
                      'skills/sdd-manage/scripts/git-auth-recover.md',
                      'skills/sdd-manage/scripts/protected-token.mjs',
                      'skills/sdd-forge/scripts/forge-close.mjs',
-                     'skills/sdd-forge/scripts/forge-close.md'):
+                     'skills/sdd-forge/scripts/forge-close.md',
+                     'skills/sdd-forge/scripts/github-client.mjs',
+                     'skills/sdd-forge/scripts/forge-runtime.mjs'):
             self.assertEqual(files[name], (package / name).read_bytes())
             self.assertEqual(pin['package_hashes'][name], hashlib.sha256(files[name]).hexdigest())
         self.assertNotIn('docs/dev/HANDOFF.md', files)

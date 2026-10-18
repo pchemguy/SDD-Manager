@@ -86,6 +86,8 @@ class PackageTests(Contract):
                      'skills/sdd-manage/scripts/protected-token.mjs',
                      'skills/sdd-forge/scripts/forge-close.mjs',
                      'skills/sdd-forge/scripts/forge-close.md',
+                     'skills/sdd-forge/scripts/github-client.mjs',
+                     'skills/sdd-forge/scripts/forge-runtime.mjs',
                      'plugin.json','docs/excluded.md','docs/ai-logs/EXPLORE_DRIVE_V1.md','AGENTS.md'):
             p=(self.root if name.startswith('docs/') or name=='AGENTS.md' else self.package)/name; p.parent.mkdir(parents=True,exist_ok=True)
             p.write_bytes(manifest if name.endswith('plugin.json') else (name+'\n').encode())
@@ -157,7 +159,9 @@ class PackageTests(Contract):
                  'skills/sdd-manage/scripts/git-auth-recover.md',
                  'skills/sdd-manage/scripts/protected-token.mjs',
                  'skills/sdd-forge/scripts/forge-close.mjs',
-                 'skills/sdd-forge/scripts/forge-close.md')
+                 'skills/sdd-forge/scripts/forge-close.md',
+                 'skills/sdd-forge/scripts/github-client.mjs',
+                 'skills/sdd-forge/scripts/forge-runtime.mjs')
         paths = publisher.build_package(self.root, self.data, self.out)
         with zipfile.ZipFile(paths['sdd-manager.zip']) as archive:
             for name in names:

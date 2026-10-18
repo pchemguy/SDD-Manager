@@ -4,7 +4,7 @@ Use `forge-close.mjs` through **sdd-forge** after its [GitHub backend](../refere
 
 ## Runtime and effects
 
-Requires Node.js 22+, native Git and the bundled [protected-token.mjs](../../sdd-manage/scripts/protected-token.mjs). Windows uses native SystemRoot/System32 whoami/icacls; Linux uses POSIX ownership/mode checks. No PowerShell, keyring, npm package, configuration repair or installation is involved. Missing facilities block this mechanism.
+Requires Node.js 22+, native Git and the bundled [protected-token.mjs](../../sdd-manage/scripts/protected-token.mjs), [github-client.mjs](github-client.mjs) and [forge-runtime.mjs](forge-runtime.mjs). Keep these support modules with the executable. Windows uses native SystemRoot/System32 whoami/icacls; Linux uses POSIX ownership/mode checks. No PowerShell, keyring, npm package, configuration repair or installation is involved. Missing facilities block this mechanism.
 
 The CLI reads an explicit request and an already protected ignored/untracked root-relative token, sends authenticated HTTPS requests only to api.github.com for the selected repository and can add one managed evidence comment and close one issue or milestone. It neither creates issues/milestones nor changes titles, associations, other comments, Git refs/configuration or credential stores. Imports/help read no credential and invoke no Git/network operation.
 

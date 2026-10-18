@@ -45,7 +45,9 @@ PACKAGE_PATHS = ('assets', 'skills', 'LICENSE', 'plugin.json', 'README.md',
                  'skills/sdd-manage/scripts/git-auth-recover.md',
                  'skills/sdd-manage/scripts/protected-token.mjs',
                  'skills/sdd-forge/scripts/forge-close.mjs',
-                 'skills/sdd-forge/scripts/forge-close.md')
+                 'skills/sdd-forge/scripts/forge-close.md',
+                 'skills/sdd-forge/scripts/github-client.mjs',
+                 'skills/sdd-forge/scripts/forge-runtime.mjs')
 
 
 def git(root, *args):
