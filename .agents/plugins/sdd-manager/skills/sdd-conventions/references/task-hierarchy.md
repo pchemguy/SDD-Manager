@@ -6,7 +6,7 @@ Keep IDs stable across both lists and feature reconciliation. A host projection 
 
 ## Delivery and decision boundaries
 
-Phases express major delivery or risk outcomes; milestones expose meaningful integrated capabilities and suitable exit evidence; tasks supply bounded executable work within them. PLAN defines the early meaningful end-to-end MVP, subsequent small capability increments, and appropriate functional/usability decision gates. Module-sized tasks alone do not establish incremental functionality, and a task need not independently produce user-visible value.
+Every delivery phase expresses a bounded, coherent functionality increment on the preceding usable baseline; greenfield Phase 1 establishes the simplest sensible usable product. A necessary enabling/risk stage needs bounded evidence and a route to integrated behavior. Milestones expose meaningful integrated capabilities and exit evidence; tasks supply bounded executable work within them. PLAN owns these boundaries under the [delivery procedure](../../sdd-plan/references/delivery-plan.md), including version coverage across phases. Small milestones/tasks do not justify an oversized phase, including a later phase; a task need not independently produce user-visible value.
 
 At consequential milestones, identify the demonstration or feedback that informs a human decision to continue, amend, simplify, or stop. Keep these decisions with the human; the hierarchy does not authorize automatic steering, stopping, or task-list continuation. Stable identities, parentage, and completion evidence remain governed by the owning lists and execution workflow.
 

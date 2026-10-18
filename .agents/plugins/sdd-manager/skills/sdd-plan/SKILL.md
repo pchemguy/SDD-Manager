@@ -13,7 +13,7 @@ For fresh/resumed **main preparation**, load [main preparation](../sdd-manage/re
 
 For preimplementation project authoring, have **sdd-manage** establish the dedicated design-docs branch under its [preparation integration gate](../sdd-manage/references/branch-management.md#preparation-integration-gate). Commit project documents and required QC reports there, then push and verify remote containment before handing off or advancing, under [per-commit publication](../sdd-manage/references/git-workflows.md#publish-each-commit). Before a dependent implementation branch is created, the manager explicitly merges accepted preparation into the actual default branch, verifies and publishes that baseline. Campaign plans/reports remain on revision branches; active implementation and steering amendments preserve their working-branch ownership. Read-only work creates no branch.
 
-Default to an early meaningful end-to-end MVP followed by small, testable capability increments; preserve the complete intended design and SPEC. Use the delivery reference for scope, prerequisite exceptions, and exit evidence.
+Default every phase to a bounded, coherent functionality increment; greenfield Phase 1 establishes the simplest sensible usable product. Version scope may span phases; small milestones do not justify an oversized phase. Preserve complete design/SPEC scope and use the delivery reference for boundaries, prerequisites and scoped exits.
 
 Choose the requested work and load only its references. A request for complete delivery planning develops both PLAN and layout when physical ownership needs to be established; a focused request to review or revise one document does not automatically authorize rewriting the other.
 

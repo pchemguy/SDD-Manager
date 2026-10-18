@@ -1,32 +1,31 @@
 # SDD Manager handoff
 
-Checkpoint: integration of completed campaign `073_a5bc041` into main. The merge commit containing this snapshot identifies the checkpoint; confirm its publication through Git before treating integration as complete.
+Checkpoint: integration of completed campaign `074_17ca45e` into main. The two-parent merge containing this snapshot identifies the checkpoint; confirm publication through Git before treating closure as complete.
 
 ## Workflow and sources
 
 - Active workflow/stage: main, completed revision returning control; await a new human request after integration publication.
-- Current campaign: [exploration](reviews/073_a5bc041-exploration/EXPLORATION.md), [revision plan](reviews/073_a5bc041-exploration/REVISION-PLAN.md), [revision report](reviews/073_a5bc041-exploration/REVISION-REPORT.md).
-- Governing instructions: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md), and `.agents/plugins/sdd-manager/`.
-- Verified source: `c41358397d28092750570a0d91089c9cef71170e`; finalization changes source-only campaign records, index and this handoff, with the same package tree.
-- Outcome: proactive pre-brief exploration, adaptive feature/later-stage reuse, distinct brief/architecture readiness and illustrative/non-exhaustive examples. One cohesive exploration reference; shallow callers and bounded document handoffs.
+- Current campaign: [review](reviews/074_17ca45e-planning/REVIEW-REPORT.md), [plan](reviews/074_17ca45e-planning/REVISION-PLAN.md), [revision evidence](reviews/074_17ca45e-planning/REVISION-REPORT.md), [supplied test extracts](reviews/074_17ca45e-planning/TEST-INPUT.md).
+- Governing sources: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md), and `.agents/plugins/sdd-manager/`.
+- Verified source: `e46616ff06cd660c4d4ea10112fdf6d83a130356`; final evidence/status checkpoint changes no package/tooling bytes.
+- Outcome: bounded coherent functionality increments for every phase, simplest usable greenfield Phase 1, distinct version coverage, semantic QC before counts and upstream correction of unsuitable task strategy. Illustrations remain abstract/non-exhaustive.
 
-## Scope and human decisions
+## Scope and decisions
 
-- Human accepted the exploratory design, requested a revision plan with meaningful reference boundaries, then instructed execution.
-- Human subsequently requested finalization, authorizing integration into recorded parent main. V-001–V-005 are complete. Local checks passed: 139 support tests, 36 publisher tests, catalog, exact 139-file package/schema/byte checks, identical rebuild, current file links and closed-record preservation.
-- Exact stop: publish the verified integration, then await the next request. No release or further development is selected. No live agent/client acceptance was run.
+- Human supplied a planning failure, requested revisions, clarified all-phase slicing, instructed execution and subsequently requested closure.
+- V-001–V-005 complete; R-001–R-003 verified in source/interfaces. Local evidence: 139 support/36 publisher tests, 139-file package/schema/byte-identical rebuild, catalog, current file/heading links and closed-record preservation passed.
+- Exact stop: publish/read back the verified integration, then await the next request. No live trial, release or parent continuation selected.
 - Reporting: Standard; Minimal and Explicit remain available.
-- Persistence: publish/read back every owned commit. No hosted issue projection is selected.
+- Persistence: publish/read back every owned commit. No hosted issue projection selected.
 
 ## Branches and return
 
-- Working/receiving branch: `main`; completed source branch: `revision/073_a5bc041-exploration`, tip `82269531a7e8fbcfaeed7734b1889a27f144b284`.
-- Creation parent/eventual integration target: `main`; full branch-off baseline: `a5bc0410f726162397f53e3462e2915d7fa24f07`.
-- Original opening commit: `87641d2706684dc9b059e923a70fcc5f126d1a94`.
-- Suspended parent campaign: none. Eventual authorized integration restores main's context and preserves the human's next boundary.
+- Working/receiving branch: `main`; completed source branch: `revision/074_17ca45e-planning`, tip `c9120ee9afd4a5b3462c14dbdf4a328b6bfa4e94`.
+- Creation parent/eventual integration target: `main`; full branch-off baseline: `17ca45ecfe1bcd5cefa2b0830af5918c7e33c963`.
+- Original opening commit: `59c4652951bcb27dda4a73e8412a5e7d9ffb99c8`.
+- No suspended parent campaign. This authorized integration restores main's waiting context and preserves the next human boundary.
 
 ## Pending operations and next action
 
-- Confirm publication of the merge commit containing this checkpoint on origin/main. Inspect actual remote state before retrying.
-- After confirmed publication: campaign 073 is complete; await the human's next instruction. Do not release, resume older campaigns or invent further revisions.
-- This integration restores main's waiting context; it does not authorize parent implementation or another campaign.
+- Confirm publication of the merge containing this checkpoint on origin/main. Inspect actual state before replay.
+- After confirmed publication, campaign 074 is complete. Await the human's next request; do not invent revisions, release or resume older campaigns.
