@@ -2,7 +2,7 @@
 
 ## Identity and entry
 
-- Campaign: `076_af2703c`; state: C-001 verified; related C-002 projection analysis complete, accepted planning/execution next. Latest human instruction authorizes closure after verified integration.
+- Campaign: `076_af2703c`; state: both candidates implemented, integrated into source/workflows/package and verified; final record publication and explicit main integration/closure selected.
 - Starting baseline and branch-off: af2703c57fb0222c9f36e7cd34b8503f7c659cf2.
 - Working branch: revision/076_af2703c-scripting.
 - Creation parent and eventual integration/return target: main.
@@ -22,4 +22,4 @@ The [focused report](REVIEW-REPORT.md) preserves eight original findings, streng
 
 Main is the completed/waiting parent at the recorded baseline. Other closed campaign packages remain frozen. The entry [HANDOFF](../../HANDOFF.md) tracks this campaign; the [campaign index](../README.md) links its current record.
 
-V-001–V-006 completed C-001 under the earlier open stopping instruction. The latest human request adds C-002, analysis/planning/execution/docs/workflow integration and closure, then a new comprehensive review/revision campaign. C-002 fits this open GitHub scripting campaign; retain identity and extend actions. Publish each checkpoint, integrate the completed verified scope to main and close before opening that new campaign. No live projection/closure, real-token utility test, external demo repair or release is selected.
+V-001–V-006 completed C-001 under the earlier open stopping instruction. The latest human request added related C-002 and authorized closure after its plan/execution/docs/workflow integration, then a new comprehensive review/revision campaign. C-002 is verified at 3778b7c520064618240b324a1be1f1914eaab0f8; see the retained review/plan/execution records. Publish final records, integrate/verify/publish the complete campaign to main and return, then open that new campaign. No live projection/closure, real-token utility test, external demo repair or release is selected.

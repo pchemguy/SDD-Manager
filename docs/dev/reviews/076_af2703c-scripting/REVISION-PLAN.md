@@ -1,4 +1,4 @@
-# Revision plan — GitHub closure utility
+# Revision plan — GitHub tracking utilities
 
 Current scope: the completed C-001 plan/evidence below is retained. The human subsequently accepted related C-002 tracking projection work and authorized final campaign integration/closure, superseding the earlier open/unmerged stop. The complete amendment plan follows [C-002 revision](#c-002-revision--tracking-projection).
 
@@ -164,3 +164,7 @@ Use one coherent verified commit per action or bounded tested checkpoint where n
 Test contrasting outcomes: harmless/draft versus complete apply input; native eligible root/token/hash versus wrong/stale/unsafe inputs; phase versus docs-main; later-page/ID-based links versus ambiguous/malformed pagination; exact reuse versus human-modified/foreign objects; initial apply versus idempotent reuse; applied/disconnected POST versus absent/unknown outcomes; preflight conflict versus partial later failure; linked-worktree lock contention; UTF-8/BOM/CRLF and spaced/Unicode Windows paths; finite header/body waits, response limits and provider retry timing; review/dependency roles versus missing/self/cyclic/unknown prerequisites. The ordinary utility may not broaden its capability just to make a fixture pass.
 
 The subsequent comprehensive campaign begins only after verified 076 closure on main. Allocate its new identity from actual local/ref state, pin the integrated baseline, publish a review plan and assess the whole current SDD Manager plugin, selected source tooling/tests/CI and consequential interfaces, including this scripting addition. Track each bounded review unit with report/commit/publication; prepare its full revision plan, execute/verify corrections, explicitly integrate/publish and close. Do not retroactively maintain the then-closed 076 records or unrelated history. No product release or live hosted trial is implied.
+
+### Amendment execution status
+
+V-007–V-012 are complete at published 3778b7c520064618240b324a1be1f1914eaab0f8; [actual final evidence](REVISION-REPORT.md#final-c-002-verification-and-v-013-integration-boundary) includes 27 projection/35 completion/27 Git runtime contracts, full support/publisher suites, native matrices and 151-file reproducible exact-source package. R-009–R-015 are verified; original C-001 findings/results are retained. V-013 performs the authorized final record publication, explicit verified main integration/target publication and return. The then-closed package is frozen before the next comprehensive campaign.
