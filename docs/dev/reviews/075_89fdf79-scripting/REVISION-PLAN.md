@@ -60,3 +60,14 @@ V-001–V-005 are complete under the selected scope. The [revision report](REVIS
 ## Subsequent closure instruction
 
 After completed execution was published as a7e8fec, the human requested campaign closure. The [revision report](REVISION-REPORT.md#authorized-closure) records that extension of the stopping boundary to explicit verified integration into main. The accepted implementation scope and original execution evidence remain unchanged; release/live-provider testing and additional candidates remain unselected.
+
+
+## Reopened amendment A-001
+
+Reopening source and qualifying prior closure: `115a51d5116da344f63d1475c7f8acbf19f97c25`; original opening and baseline remain unchanged. The human requested analysis only; prior V-001–V-005 execution and closure remain historical facts.
+
+| Action | Accepted scope | Recheck and stop |
+| --- | --- | --- |
+| V-006 | Analyze the supplied background-push diagnosis/recovery against current Git semantics, coordinator instructions and utility. Preserve the excerpt and distinguish reported environment observations, verified general behavior, current source gaps and proposed corrections. | Primary English sources and bounded synthetic local experiments; no real token, external demo/config/store writes or source implementation. Publish the appended review and amendment checkpoint, then remain open/unmerged. |
+
+Potential corrections are recommendations until selected. This amendment does not silently authorize implementation or reuse earlier execution authority for new findings.

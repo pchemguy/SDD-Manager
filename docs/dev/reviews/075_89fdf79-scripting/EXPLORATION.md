@@ -45,3 +45,13 @@ The human requested a full revision plan followed by execution for C-001, adding
 ## Closure boundary
 
 The human subsequently requested closure after publication of a7e8fec. Complete the verified two-parent integration into recorded parent main, publish/read back and return to main's waiting context. The [closure record](REVISION-REPORT.md#authorized-closure) retains provenance and remaining confirmation. No additional scripting objective or release is selected.
+
+
+## Reopened amendment A-001 — Reported background push recovery
+
+- Human explicitly requested reopening and analysis of a supplied Push Diagnosis and Recovery excerpt.
+- Qualifying prior published closure/latest first-parent merge on main: `115a51d5116da344f63d1475c7f8acbf19f97c25`, parents `89fdf79637e59c558b3a265d5e458c22e58d49b7` and `706c1970b52f5df9db2e06bfebecb5d1a82201e5`.
+- Reopening/target checkpoint: `115a51d5116da344f63d1475c7f8acbf19f97c25`. Original campaign ID, opening fc381bd8b0ec46ccbf4f1e5dc78d5095cfd80bbb, baseline 89fdf79637e59c558b3a265d5e458c22e58d49b7, directory, branch and parent remain unchanged.
+- Scope: assess the reported cause and applied recovery, actual Git helper/configuration semantics, current utility/workflow coverage and evidence limits. Use primary documentation and disposable synthetic local fixtures where useful. Supplied Windows paths are evidence text, not files accessible here.
+- Authorized outputs: reopening/catch-up checkpoint, analysis appended to the existing review report, current amendment handoff/navigation and per-commit publication. Source repairs, credential/configuration changes in the reported demo, live-provider tests, release and reclosure are unselected.
+- Return context: main is waiting for the next human request; no unfinished parent task is resumed. Stop after publishing the analysis on the reopened campaign branch.

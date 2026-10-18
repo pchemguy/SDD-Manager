@@ -1,36 +1,29 @@
 # SDD Manager handoff
 
-Checkpoint: completed scripting revision `075_89fdf79`, finalized for human-requested closure into main. The containing commit identifies this final source-only checkpoint; confirm its publication through Git before further work.
+Checkpoint: reopened campaign `075_89fdf79`, amendment A-001, incoming synchronization from published main. The containing commit identifies the reopening checkpoint; confirm its branch publication before analysis progression.
 
 ## Workflow and sources
 
-- Active workflow/stage: revision, accepted C-001 authentication utility execution complete.
-- Current campaign: [exploration](reviews/075_89fdf79-scripting/EXPLORATION.md), [accepted plan](reviews/075_89fdf79-scripting/REVISION-PLAN.md), [revision report](reviews/075_89fdf79-scripting/REVISION-REPORT.md).
-- Governing sources: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md), and `.agents/plugins/sdd-manager/`.
-- Final utility/package source: `58cd578b1aece70ded49070eb99df9f32ec4570b`; subsequent commits change source-only reporting/continuity. Original supplied candidate and previous closed campaign objects remain unchanged.
+- Mode/stage: reopened revision amendment, focused analysis V-006 under sdd-manage.
+- Sources: [amendment scope](reviews/075_89fdf79-scripting/EXPLORATION.md#reopened-amendment-a-001--reported-background-push-recovery), [plan](reviews/075_89fdf79-scripting/REVISION-PLAN.md#reopened-amendment-a-001), [review](reviews/075_89fdf79-scripting/REVIEW-REPORT.md), [prior revision evidence](reviews/075_89fdf79-scripting/REVISION-REPORT.md).
+- Governing instructions: [AGENTS.md](../../AGENTS.md), [acceptance entry](../../acceptance/AGENTS.md), `.agents/plugins/sdd-manager/`.
+- Prior result: V-001–V-005 completed and campaign closed by published main merge `115a51d5116da344f63d1475c7f8acbf19f97c25`. This catch-up preserves that history and changes no implementation.
 
-## Scope and decisions
+## Scope and authority
 
-- Human authorized a complete revision plan followed by execution: transient credential recovery, remaining code review, professional in-code/companion documentation and SDD workflow integration. V-001–V-005 are complete; no additional approval is pending for that work.
-- Shipped owner: `skills/sdd-manage/scripts/git-auth-recover.mjs` and adjacent `.md`, with credentials/Git routing. Optional dependency-free Node 22+ utility; one explicitly scoped HTTPS push/readback, protected existing token, no persistent helper/store changes. Coordinator retains authorization/retry policy and additional workflow gates.
-- Campaign scope follows one coherent objective with necessary support files, not a one-script/file rule. Other scripting candidates remain unselected.
-- The human subsequently requested “Close it”: publish/read back this closure checkpoint, explicitly merge the verified complete campaign into its recorded parent main, verify/publish/read back and return to main. Release, additional candidate implementation and real-token/live-provider testing remain unselected.
-- Reporting: Standard after Explicit bootstrap; Minimal and Explicit remain available. Publish/read back every owned commit; no hosted issue projection selected.
+- Human requested reopening and analysis of a Push Diagnosis and Recovery excerpt involving helper-selector, local wincred configuration, protected stdin and GIT_TERMINAL_PROMPT.
+- Authorized: focused source/documentation review, disposable synthetic local checks, retained analysis and per-commit publication on the campaign branch.
+- Stop: published analysis, campaign open/unmerged. No new utility/workflow implementation, external demo/config/store writes, live-token/provider test, release or reclosure selected.
+- Reporting: Standard; Minimal and Explicit remain available. Preserve protected inputs and all other closed campaign packages.
 
-## Verification
+## Branch and return
 
-- [CI run 39137385828](https://github.com/pchemguy/SDD-Manager/actions/runs/39137385828): 27 tests pass in each native Windows CMD/Linux Node 22/24 job. Actual native Git helper protocol, quoted/Unicode paths, encoded/slash contexts and URL helper resets are tested; transport push/readback outcomes use synthetic controls.
-- Full support 139/139, publisher 37/37, catalog 33 static cases pass. Final 58cd578 archive is reproducible, exact-tree validated with 141 files and offline manifest conformance; all 630 packaged local file links resolve. Detailed source/environment and failed-first-attempt evidence is in the revision report.
-- No real credential passed to the utility; no live provider/authentication, installed-client or release acceptance claim. Native Windows DACL policy is conservative and does not replace trusted ownership/path preconditions.
+- Working branch: `revision/075_89fdf79-scripting`; original creation parent/eventual return: `main`.
+- Original baseline: `89fdf79637e59c558b3a265d5e458c22e58d49b7`; original opening: `fc381bd8b0ec46ccbf4f1e5dc78d5095cfd80bbb`.
+- Qualifying prior merge/reopening source/target: `115a51d5116da344f63d1475c7f8acbf19f97c25`; retained campaign tip before catch-up: `706c1970b52f5df9db2e06bfebecb5d1a82201e5`.
+- Synchronization direction is main into campaign, not campaign completion. Main remains waiting; no suspended task continuation is selected.
 
-## Branches and return
+## Pending work and next action
 
-- Working branch: `revision/075_89fdf79-scripting`.
-- Creation parent/eventual integration target: `main`.
-- Full branch-off baseline: `89fdf79637e59c558b3a265d5e458c22e58d49b7`.
-- No suspended parent campaign. Main remains waiting; no merge was performed.
-
-## Pending operations and next action
-
-- Publish/read back the containing closure checkpoint, then integrate into refreshed main through an explicit two-parent merge. Record actual merged checks and parent reconciliation in that merge before verified publication. Preserve actual state on failure.
-- After verified integration and return to main, await a new human request. Do not replay diagnostics, execute the original candidate, infer future scripts or run live credential effects.
+- Publish/read back the containing incoming-synchronization/reopening commit before further work.
+- Execute V-006, append evidence and recommendations to the existing review, refresh this amendment checkpoint, publish/read back and return the analysis. No automatic repair or merge follows.
