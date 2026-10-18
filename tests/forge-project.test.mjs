@@ -374,10 +374,14 @@ test('source titles retain meaningful terminal punctuation and multiline list te
 
 test('documented illustrative task object fits the actual request contract', () => {
   const guide = fs.readFileSync(new URL('../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-input.md', import.meta.url), 'utf8');
-  const example = JSON.parse(guide.match(/~~~json\n([\s\S]*?)\n~~~/)[1]);
-  assert.equal(example.id, 'T-101');
-  const request = projectionRequest(); request.tasks[0] = example;
-  assert.doesNotThrow(() => validateProjection(request, inventory(), true));
+  for (const content of [guide.replace(/\r\n/g, '\n'), guide.replace(/\r\n/g, '\n').replace(/\n/g, '\r\n')]) {
+    const match = content.match(/~~~json\r?\n([\s\S]*?)\r?\n~~~/);
+    assert.ok(match, 'Documented JSON example must be readable with LF and CRLF.');
+    const example = JSON.parse(match[1]);
+    assert.equal(example.id, 'T-101');
+    const request = projectionRequest(); request.tasks[0] = example;
+    assert.doesNotThrow(() => validateProjection(request, inventory(), true));
+  }
 });
 
 test('native source failure cannot erase an unresolved hosted effect', async t => {
