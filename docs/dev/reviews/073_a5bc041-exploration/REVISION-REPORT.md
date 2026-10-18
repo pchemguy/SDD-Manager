@@ -17,4 +17,6 @@
 
 | V-003 | Main entry now selects proactive exploration before PROJECT; feature entry routes consequential delta uncertainty and later design questions to the same owner. | Inspected main-preparation/bootstrap interfaces: read-only discussion, write/tracking and document gates remain unchanged. PLUGIN.md and packaged README already project coordinator/design capabilities correctly; no expansion needed. `git diff --check` passes. |
 
+| V-004 | Added E-01–06 source assessment contrasts in PLUGIN-CONTRACT, linked to the canonical owner. Existing C/K identities retained. | Source assessment covers seed/context, example independence, delta/later-stage reuse, delegation and readiness. Cases explicitly illustrative/non-exhaustive; no live results asserted. `git diff --check` passes. |
+
 The commit containing each action row identifies its source/evidence checkpoint. Each checkpoint must be pushed and remotely verified before the next action; final Git evidence will list those commits.

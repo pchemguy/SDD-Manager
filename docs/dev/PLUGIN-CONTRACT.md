@@ -146,6 +146,19 @@ Start with the coordinator and relevant skill instructions/context already estab
 | C-14: Main preparation context established; PROJECT published; human acceptance pending; no override | “Continue preparing the project with SDD Manager.” | Known coordinator/design context enforces the pending checkpoint; no new plugin entry. | Present/resolve the pending acceptance; do not treat continuation as approval or author dependent documents. |
 | C-15: Implementation owner identified by the active workflow; accepted task range; required implementation skill unavailable | “Use SDD Manager to implement the first task.” | Identify the required unavailable owner and report the blocked capability. | Do not claim it ran or silently substitute instructions from an unrelated skill. |
 
+### Guided exploration assessment
+
+These illustrative, non-exhaustive contrasts assess entry and handoff to sdd-design's [exploration procedure](../../.agents/plugins/sdd-manager/skills/sdd-design/references/exploration.md); they do not define supported domains, preferred technologies or a fixed interview. Derive additional concerns from the actual objective. Assess source guidance separately from any observed consumer trial.
+
+| Case | Starting context | Assess |
+| --- | --- | --- |
+| E-01 | Terse open-ended seed / well-constrained brief input | Proactive critical assessment of consequential gaps and alternatives before PROJECT; reuse supplied context and keep discussion proportionate. |
+| E-02 | Browser game with open choices / explicit stack and rendering constraints | Explain relevant language, UI, runtime and rendering decisions by consequence; no mandatory stack catalogue or reopening of settled choices. |
+| E-03 | Unillustrated domain or unusual technology preference | Context drives concerns and credible options; examples neither bound scope nor predetermine recommendations. |
+| E-04 | Feature delta / uncertainty during architecture or decomposition | Explore the affected decision at useful depth and return to its owner, preserving accepted project direction and existing compatibility constraints. |
+| E-05 | Explicit delegation / conflicting constraints / unconfirmed proposal | Preserve actual decision provenance and delegation boundaries, recommend usefully and surface necessary human choices without interpreting silence as acceptance. |
+| E-06 | Enough context for PROJECT / unresolved material structural choice / discussion-only request | Separate brief readiness from architecture readiness; retain safe deferrals, actual output authority and human document checkpoints without an extra exploration gate. |
+
 ### Missing-context recovery
 
 Remove the stated active workflow context. Assess the entry's recovery pointer and the coordinator's recovery separately; do not assign the detailed recovery procedure to PLUGIN.md.
