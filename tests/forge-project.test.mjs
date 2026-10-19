@@ -551,3 +551,30 @@ test('final metadata detects private/internal audience drift despite an unchange
   assert.equal(result.ok, false); assert.equal(result.code, 'repository_identity_or_visibility_changed');
   assert.equal(result.visibility, 'private'); assert.equal(result.effects.filter(item => item.status === 'created').length, 6);
 });
+
+
+test('native docs-main pre-write projection creates only its temporary owned coordination lock', async t => {
+  const local = localRepo(t), { request } = docsRequest();
+  const filename = path.join(local.base, 'external docs request.json');
+  fs.writeFileSync(filename, JSON.stringify(request));
+  const before = { config: fs.readFileSync(path.join(local.root, '.git/config')), refs: git(local.root, 'show-ref'),
+    status: git(local.root, 'status', '--porcelain'), gitFiles: fs.readdirSync(path.join(local.root, '.git')).sort() };
+  let calls = 0;
+  const result = await runProject({ ...local.options, kind: 'docs-main', requestFile: filename }, { fetchImpl: async (_, options) => {
+    calls++;
+    assert.equal(options.method || 'GET', 'GET');
+    const lock = path.join(local.root, '.git/sdd-forge-close.lock');
+    assert.deepEqual(fs.readdirSync(lock), ['owner.json']);
+    const owner = JSON.parse(fs.readFileSync(path.join(lock, 'owner.json'), 'utf8'));
+    assert.equal(owner.pid, process.pid); assert.equal(typeof owner.nonce, 'string');
+    assert.deepEqual(fs.readdirSync(path.join(local.root, '.git')).filter(name => name !== 'sdd-forge-close.lock').sort(), before.gitFiles);
+    assert.deepEqual(fs.readFileSync(path.join(local.root, '.git/config')), before.config);
+    assert.equal(git(local.root, 'show-ref'), before.refs);
+    assert.equal(git(local.root, 'status', '--porcelain'), before.status);
+    return Response.json({ message: 'Synthetic denial' }, { status: 403 });
+  } });
+  assert.equal(calls, 1); assert.equal(result.code, 'access_or_policy_denied');
+  assert.deepEqual(fs.readdirSync(path.join(local.root, '.git')).sort(), before.gitFiles);
+  assert.deepEqual(fs.readFileSync(path.join(local.root, '.git/config')), before.config);
+  assert.equal(git(local.root, 'show-ref'), before.refs); assert.equal(git(local.root, 'status', '--porcelain'), before.status);
+});

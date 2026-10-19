@@ -56,7 +56,7 @@ After a timeout/disconnect/uncertain create, perform lookup only. A unique exact
 
 If source drift prevents that invocation, use the backend's exact readback with retained object identities/input evidence. Do not falsify a hash or drop expected objects to make recovery pass. A later local source error retains any unknown hosted effect and its exit-2 recovery boundary.
 
-The shared Git-common-directory lock serializes local completion/projection operations, including linked worktrees. Cleanup removes only the owned nonce. Do not steal a stale lock; establish actual process/operation disposition before scoped removal. The caller prevents competing writers on other machines/clients; no distributed exactly-once guarantee is made.
+The shared Git-common-directory lock serializes local completion/projection operations, including linked worktrees. Main preparation explicitly permits this [transient coordination effect](../../sdd-manage/references/main-preparation.md#transient-projection-lock) before projection readback; all other target-repository writes remain gated. Cleanup removes only the owned nonce. Do not steal a stale lock; establish actual process/operation disposition before scoped removal. The caller prevents competing writers on other machines/clients; no distributed exactly-once guarantee is made.
 
 Errors classify authentication, access/policy, ambiguous missing/private resource, rate, validation, service and transport outcomes without raw provider bodies or credentials. Inspect safe status/correlation/retry timing and effects. A replacement token cannot resolve every failure. A failed final readback or source check does not roll back already applied objects.
 
