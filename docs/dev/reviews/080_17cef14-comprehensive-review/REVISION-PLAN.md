@@ -7,7 +7,7 @@
 - Original opening: c97ea71020f3ce494bad49f3a47e882889c5d955; parent/integration/return: main at the reviewed baseline.
 - Human instruction: prepare and execute the revision plan, close this campaign, then open a prerelease campaign, prepare the next release and bump its patch version.
 - [Review](REVIEW-REPORT.md) supplies R-001–R-005; all five are selected within this instruction. [Execution report](REVISION-REPORT.md) records actual results.
-- State: Planned; publish/read back before execution. No executable task owner governs this repository; V-IDs are campaign actions, not invented product tasks.
+- State: V-001–V-006 complete and verified; finalized for explicit main integration. Closure requires verified target publication/readback and return. No executable task owner governs this repository; V-IDs are campaign actions, not invented product tasks.
 
 ## Bounded design decisions
 
