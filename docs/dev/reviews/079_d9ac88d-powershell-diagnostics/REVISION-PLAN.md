@@ -15,7 +15,7 @@
 
 At initial workflow entry or a materially changed execution host/tool, identify the actual shell execution OS from available environment/tool evidence. Do not infer it from the user's desktop, target deployment platform or path spelling. Reuse sufficient evidence for an unchanged host/tool. On Windows, perform a bounded harmless CMD probe before dependent shell/Git operations. Require expected output and exit status, including actual environment expansion where used; a successful echo of a literal percent-variable is insufficient. The user's examples are illustrative, not required disclosure of the complete PATH or a fixed drive name.
 
-When the probe reports missing PowerShell or another PowerShell launcher/execution error, the coordinator performs the scoped shim recovery. Orientation remains read-only. Use the running package's supplied `PowerShell.cmd`, whose executable body remains:
+When the probe reports missing PowerShell or another PowerShell launcher/execution error, the coordinator performs the scoped shim recovery. Orientation remains read-only. Use the running package's `PowerShell.cmd`. The original human-supplied body is retained here as its starting point:
 
 ```bat
 @echo off
@@ -27,6 +27,8 @@ set "CLI=%CLI:'="%"
 ```
 
 The adapter targets the observed `-Command` plus one command-string form, dispatches CMD-compatible commands and replaces every apostrophe with a double quote. It does not emulate PowerShell syntax or parse arbitrary PowerShell flags. Confirm effective launcher resolution; a PATH batch file cannot repair an absolute powershell.exe launch or a client that does not resolve/execute batch wrappers. Those failures retain the requested report-and-stop result.
+
+Native verification refinement: the original conversion assignment consumes quoted redirection before the actual command runs. Preserve the requested conversion semantics while isolating that substitution with local delayed expansion, then disable delayed expansion for dispatch. Add native regression coverage for redirection, command separators executing once and literal exclamation marks. This is a bounded runtime correction, not a broader PowerShell parser or a change to the activation notice.
 
 Use an available independent file facility if the shell launcher is broken. Select an existing writable user directory in the launcher's effective PATH and check destination ownership; preserve an occupied unrelated shim. A project-root fallback also requires actual discoverability and the existing repository mutation/preparation gates. Add an anchored `/PowerShell.cmd` ignore entry without replacing other rules, and verify the local shim is not staged/tracked. This recovery creates no global PATH, registry, system executable or client configuration changes and does not bypass a host denial.
 

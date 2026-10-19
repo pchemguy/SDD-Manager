@@ -17,7 +17,7 @@ The bundled [PowerShell.cmd](../../../assets/PowerShell.cmd) targets this observ
 PowerShell -Command "<USER COMMAND>"
 ```
 
-Here `%~2` is the single command-string argument. The script replaces every single quote with a double quote, then dispatches that command through CMD. Generate CMD-compatible commands after activation. Literal apostrophes also change; this transformation is part of the adapter contract.
+Here `%~2` is the single command-string argument. The script replaces every single quote with a double quote, then dispatches that command through CMD. Conversion uses local delayed expansion so inserted quotes do not process redirection during assignment; delayed expansion is disabled for command dispatch to preserve literal exclamation marks. Generate CMD-compatible commands after activation. Literal apostrophes also change; this transformation is part of the adapter contract.
 
 Startup detection is client-neutral, including local Codex and other Windows clients. Establish the actual launcher/argument behavior from available current evidence rather than assume compatibility from branding. The Antigravity call shape is confirmed human evidence; similar historical local Codex failures do not establish its current invocation. Additional flags, encoded commands, file-mode execution and PowerShell-specific command syntax are outside this adapter's contract.
 

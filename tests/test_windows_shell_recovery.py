@@ -57,7 +57,7 @@ class WindowsShellRecovery(unittest.TestCase):
                 result = self.invoke('cmd /d /c echo SDD_CMD_PROBE_%SystemDrive%', ['where PowerShell'])
                 self.assertEqual(result.returncode, 0, result.stderr)
                 lines = result.stdout.strip().splitlines()
-                self.assertEqual(Path(lines[0]), self.bin / 'PowerShell.cmd')
+                self.assertTrue(Path(lines[0]).samefile(self.bin / 'PowerShell.cmd'), lines[0])
                 self.assertIn('SDD_CMD_PROBE_' + os.environ['SystemDrive'], lines)
                 self.assertNotIn('%SystemDrive%', result.stdout)
 
@@ -84,6 +84,21 @@ class WindowsShellRecovery(unittest.TestCase):
                 self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
                 self.assertEqual(result.stdout.strip(), '')
                 self.assertEqual(result.stderr.strip(), 'SDD_STDERR')
+
+    def test_command_separators_execute_once(self):
+        for ending in self.install_variants():
+            with self.subTest(ending=ending):
+                result = self.invoke('echo SDD_FIRST & echo SDD_SECOND')
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertEqual([line.strip() for line in result.stdout.splitlines()], ['SDD_FIRST', 'SDD_SECOND'])
+
+    def test_literal_exclamation_marks_are_preserved(self):
+        self.environment['SDD_BANG'] = 'UNINTENDED_EXPANSION'
+        for ending in self.install_variants():
+            with self.subTest(ending=ending):
+                result = self.invoke('echo SDD!SDD_BANG!')
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertEqual(result.stdout.strip(), 'SDD!SDD_BANG!')
 
 
 if __name__ == '__main__':
