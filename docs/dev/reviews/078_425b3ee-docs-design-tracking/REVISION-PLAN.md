@@ -7,7 +7,7 @@
 - Creation parent and eventual integration/return target: `main` at the starting baseline. No parent task execution is suspended.
 - Owner: sdd-manage, with sdd-forge for hosted mechanics and sdd-report/conventions for retained evidence. [Revision report](REVISION-REPORT.md).
 - Human direction: use the demo symptom to improve SDD Manager, rather than change the demo; fix the milestone title to `sdd-docs-main`, remove the milestone's HTML comment, predefine all documentation issue content and provide JSON consumed by the existing projection workflow. The current instruction authorizes finalizing this plan and executing it.
-- State: Finalized for execution. This is a directly accepted amendment; no separate review campaign or invented findings are required.
+- State: Finalized and executed through V-001–V-003; results and verification are in the revision report. Campaign 078 remains open. This is a directly accepted amendment; no separate review campaign or invented findings are required.
 
 ## Resulting contract
 

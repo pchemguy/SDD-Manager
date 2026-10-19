@@ -71,3 +71,22 @@ Observed checks on the changed current documentation:
 - Current definitions carry no repository-specific game choices or target links to nonexistent documents. All earlier closed campaign packages remain outside the edit/check scope. No live preparation objects were changed.
 
 V-002 is ready for its action commit/publication. V-003 retains integrated package/regression/native checks and the final open-campaign checkpoint.
+
+### V-003 — Integrated verification and open-campaign checkpoint
+
+V-002 commit and tested source: 03dbab90c5ae7b8a616d65d1029a6199e986d300. Its push and exact remote-ref readback were verified before this action. All accepted actions are implemented and verified; campaign 078 remains **open**, with explicit closure/integration as the next human boundary. Main remains at the recorded starting baseline. No merge, release, installation or demo tracking mutation occurred.
+
+| Check | Observed result at the integrated candidate |
+| --- | --- |
+| Local projection/completion runtime | `node --test tests/forge-project.test.mjs tests/forge-close.test.mjs`: 77 passed; zero failures, cancellations or skips, Linux Node v24.19.0. |
+| Support suite | `python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats`: 139 passed, Python 3.12.14. |
+| Publisher suite | `python -m unittest discover -s .github/tests`: 37 passed; declared jsonschema 4.26.0 installed. |
+| [Projection matrix 39220479512](https://github.com/pchemguy/SDD-Manager/actions/runs/39220479512) | Job-level API readback: Linux Node 22/24 and Windows CMD Node 22/24 all completed/success. |
+| [Completion matrix 39220479489](https://github.com/pchemguy/SDD-Manager/actions/runs/39220479489) | Job-level API readback: Linux Node 22/24 and Windows CMD Node 22/24 all completed/success. |
+| Exact committed package | Pinned offline manifest schema passed. Built and inspected all 152 package files, including the definition JSON, 15 skill entries and 78 references; development/acceptance/test files remain excluded. Every archive member equals its committed Git blob. |
+| Reproducible package | Two independent archives of the candidate are byte-identical; SHA-256 `bc41f5de78802772efa5fd5600ecbc668158baf300b0033897e5d31224613ec0`. Temporary verification artifacts were not published as a release. |
+| Scope and composition | Full baseline-to-candidate diff contains 35 paths, with no earlier closed campaign or feature package changes. Current links/anchors, package containment, heading/list/code-block composition and whitespace checks pass. Existing lifecycle and input-authoring references retain separate cohesive responsibilities; no new reference fragment. |
+
+Source review of both coordinator/backend handoffs confirms the K-04/K-15 distinctions: tracking selection precedes enabled projection, verified projection precedes target writes, and a decline/resumed policy is preserved. Fixed content/false flags do not accept future documents or override pending human decisions. DOCS first approvals remain separate from current validity, and final issue completion precedes the published documentation merge and milestone closure. Conflicting source/object identities block rather than cause duplicate creation or source overwrite. These are inspected-source conclusions, not live consumer observations.
+
+Final action changes only this active campaign's status/evidence, index and HANDOFF. The verified package/runtime bytes are unchanged from the candidate above; Git recovers the final evidence commit and subsequent push/readback. Earlier access and failed-CI observations remain retained with their actual corrections and rechecks. No accepted action remains unresolved. Live provider tracking mutation and installed-agent behavior were not exercised; synthetic/native contracts and source/package verification establish only their stated scope.
