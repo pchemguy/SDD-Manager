@@ -4,7 +4,7 @@
 
 Campaign 087_745467a starts from 745467a3929b23c6539d6319af451fbe9a6726e6 on revision/087_745467a-git-auth-supervision. Creation parent, integration target and return branch: revision/081_5b2442e-prerelease. Parent 081 stays open/suspended. [Focused assessment](REVIEW-REPORT.md) records R-001–R-003, the screenshot limits and the native offline probe.
 
-Replace agent-dependent detection/recovery of a stuck Git credential operation with one deterministic, bounded program path. This opening prepares the proposed solution and execution plan; it does not yet execute packaged repairs or close/integrate the child. No new T-task IDs, credential store, permission/ACL procedure, general shell service or workflow journal is needed.
+Replace agent-dependent detection/recovery of a stuck Git credential operation with one deterministic, bounded program path. The human selected execution after published opening f191ba282ae2855b4c1d8f6a6ef4d8ba0258994e. Execute the bounded revision and its verification/integration lifecycle, returning with parent 081 suspended. No new T-task IDs, credential store, permission/ACL procedure, general shell service or workflow journal is needed.
 
 ## Recommended operation contract
 
@@ -58,6 +58,14 @@ Tests must exercise real spawned processes and the public CLI, not only injected
 
 ## Evidence, persistence and limits
 
-The opening includes source assessment and a two-second local synthetic helper stall, not the production repair. No Windows host, Antigravity session, real GitHub permission test, browser login, remote process manipulation or hosted CI wait is selected here. Use the existing native CI contracts during later authorized execution and distinguish actual results from prepared jobs; do not claim a Windows fix from Linux checks.
+The opening includes source assessment and a two-second local synthetic helper stall, not the production repair. Execution now selects native regression/CI checks for the changed source; distinguish actual results from prepared jobs and do not claim Windows runtime verification from Linux checks. No remote manipulation of the user's existing Antigravity process, browser login, token replacement or permissions repair is selected.
+
+## V-001 execution decisions
+
+The canonical entry is git-publish.mjs. Keep the existing validated recovery core and old CLI compatibility, with a single shared implementation of credential/destination/ref checks. Execute push and readback as separately supervised attempts so the first process tree is settled before readback. The outer controller stays responsive even when a synchronous worker blocks. A present eligible token is used immediately; an explicitly selected credential-root worktree must share the actual Git common directory. Tokenless existing-helper execution is supervised and requests noninteractive behavior; helper-specific flags alone are not a guarantee about arbitrary helper UI.
+
+Use a bundled Python 3.11+ standard-library supervisor, with Node.js 22+ and native Git. Windows starts the worker suspended, assigns it to a kill-on-close Job Object, then resumes it; descendants remain owned even after their parent exits. Linux uses an isolated process group and a process-local child subreaper to dispose/reap adopted descendants. This replaces the proposed PID-only taskkill backend, whose ownership can be lost when parents exit. No PowerShell, GNU timeout or third-party package is required. Missing runtime/OS ownership facilities produce a structured blocker before transport rather than an unbounded fallback. The Linux subreaper facility was verified locally; Windows runtime evidence remains required.
+
+Default total deadline: 60000 ms, configurable from 1000 through 600000 ms. Reserve at most 3000 ms per attempt for cleanup and one quarter of the total (capped at 15000 ms) for readback, including its cleanup. The controller's monotonic deadline governs startup, local preflight, network work, stream collection and cleanup; new workers do not renew it. Optional progress is sanitized stage data on stderr, with one final JSON result on stdout. Stop after at most one push; retry authority and remote-state reconciliation remain explicit. Public timeout/cancellation/uncertain-cleanup results cannot claim successful completion from a matching ref alone.
 
 Every action checkpoint must be verified, committed, pushed and exactly read back before advancing. Preserve all closed campaigns, runtime scope, unrelated work and real credentials. On later selected completion, explicitly merge the verified child into revision/081_5b2442e-prerelease, restore the parent's suspended HANDOFF, run merged-state checks, publish/read back and return. Child completion does not resume parent 081 or refresh its release inputs. No main merge, release/tag/dispatch, version bump or plugin installation follows this opening.
