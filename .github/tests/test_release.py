@@ -81,7 +81,8 @@ class PackageTests(Contract):
                      'assets/SDD-MANAGER.md','assets/AI_DISCLOSURE.md',
                      'assets/AGENTS_TEMPLATE.md','assets/DOCS_TASKS_TEMPLATE.md','assets/HANDOFF_TEMPLATE.md','assets/SKILL_DISCOVERY_PROTOCOL.md',
                      'assets/icon.svg','skills/sample/SKILL.md',
-                     'skills/sdd-manage/scripts/git-auth-recover.mjs',
+                     'skills/sdd-manage/scripts/PowerShell.cmd',
+                 'skills/sdd-manage/scripts/git-auth-recover.mjs',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
                      'skills/sdd-manage/scripts/protected-token.mjs',
                      'skills/sdd-forge/scripts/forge-close.mjs',
@@ -160,7 +161,8 @@ class PackageTests(Contract):
                 self.git('add', '.'); self.git('commit', '-qm', 'restore preparation asset')
 
     def test_utility_resources_are_exact_and_required(self):
-        names = ('skills/sdd-manage/scripts/git-auth-recover.mjs',
+        names = ('skills/sdd-manage/scripts/PowerShell.cmd',
+                 'skills/sdd-manage/scripts/git-auth-recover.mjs',
                  'skills/sdd-manage/scripts/git-auth-recover.md',
                  'skills/sdd-manage/scripts/protected-token.mjs',
                  'skills/sdd-forge/scripts/forge-close.mjs',

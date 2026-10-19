@@ -17,7 +17,7 @@
       "milestone_id": "docs-main",
       "role": "documentation",
       "depends_on": [],
-      "prerequisites": "Main preparation and its tracking scope are selected. Verify this milestone, all nine issues and their associations before any target-repository write. Establish eligible Git ownership and preserve controlling instructions.",
+      "prerequisites": "Main preparation and its tracking scope are selected. Verify this milestone, all nine issues and their associations before target-repository writes; only the coordinator-defined transient projection lock exception applies. Establish eligible Git ownership and preserve controlling instructions.",
       "scope": "Inspect all four root destinations: AI_DISCLOSURE.md, SDD-MANAGER.md, AGENTS.md and SKILL_DISCOVERY_PROTOCOL.md. Preserve existing files byte for byte and copy only missing files from the running package. Create or reuse docs/dev/DOCS_TASKS.md and establish or reconcile docs/dev/HANDOFF.md as checkpoint metadata outside the four-file presence test.",
       "acceptance": "Record original retained/copied filenames and verify preservation and copied bytes. Publish and verify the initialization result, checked DOCS-001 and HANDOFF in one commit before closing this issue. If some but not all four files existed initially, report the retained/copied files and stop before document work unless explicit applicable preapproval covers continuation. Empty/full initial sets need no additional approval pause.",
       "sources": ["Running SDD Manager package: assets/DOCS_TASKS_TEMPLATE.md", "Running SDD Manager package: skills/sdd-manage/references/main-preparation.md"]

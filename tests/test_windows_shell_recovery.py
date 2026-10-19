@@ -11,7 +11,7 @@ import tempfile
 import unittest
 
 
-ASSET = Path(__file__).resolve().parents[1] / '.agents/plugins/sdd-manager/assets/PowerShell.cmd'
+ADAPTER = Path(__file__).resolve().parents[1] / '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/PowerShell.cmd'
 
 
 @unittest.skipUnless(os.name == 'nt', 'Requires native Windows CMD; Linux is not runtime evidence')
@@ -30,7 +30,7 @@ class WindowsShellRecovery(unittest.TestCase):
 
     def install_variants(self):
         """Exercise the distributed text under both native checkout endings."""
-        canonical = ASSET.read_bytes().replace(b'\r\n', b'\n')
+        canonical = ADAPTER.read_bytes().replace(b'\r\n', b'\n')
         for ending in (b'\n', b'\r\n'):
             (self.bin / 'PowerShell.cmd').write_bytes(canonical.replace(b'\n', ending))
             yield ending

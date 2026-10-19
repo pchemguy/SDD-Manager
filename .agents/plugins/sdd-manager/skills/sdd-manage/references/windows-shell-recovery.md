@@ -11,7 +11,7 @@ Use at workflow startup on Windows, or when a changed shell tool/host produces a
 
 ## Establish the adapter contract
 
-The bundled [PowerShell.cmd](../../../assets/PowerShell.cmd) targets this observed invocation, supplied from Antigravity run_command tests:
+The bundled [PowerShell.cmd](../scripts/PowerShell.cmd) targets this observed invocation, supplied from Antigravity run_command tests:
 
 ```text
 PowerShell -Command "<USER COMMAND>"

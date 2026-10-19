@@ -1,19 +1,18 @@
 # SDD Manager handoff
 
-Campaign 079_d9ac88d is finalized at this main integration checkpoint. The dedicated Windows shell procedure owns execution-OS detection, the Windows CMD probe, compatible shim placement, retry, mandatory single-to-double-quote notice and failed-retry turn stop. PowerShell.cmd retains the human-supplied two assignment lines; delayed expansion was explicitly reverted.
+Campaign 080_17cef14 is integrated by this explicit two-parent main merge; verified publication/readback of this commit and return on main establish closure. All five findings are corrected. The human has already authorized the next prerelease campaign and patch 0.15.1 preparation.
 
-## Context and authority
+## Verified result and sources
 
-- Owner/stage: sdd-manage; completed campaign V-001–V-004 and human-authorized closure. Reporting: Standard.
-- The human's “Close it” instruction selects explicit integration into the recorded main parent, merged-state verification and publication, followed by a stop on clean main. No further campaign, product task, release or client installation is selected.
-- [Revision plan](reviews/079_d9ac88d-powershell-diagnostics/REVISION-PLAN.md), [revision report](reviews/079_d9ac88d-powershell-diagnostics/REVISION-REPORT.md) and [index](reviews/README.md) retain the campaign scope, decisions and evidence. Core procedure: [Windows shell recovery](../../.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell-recovery.md).
-- Original opening: d494766a732f219e0e28f5d4307d58313c6522a5. Full original branch-off and receiving main parent: d9ac88d6b08eb805cace6c8e873d4be9c9e0b407.
-- Incoming published finalization: 4abd5933883a13c41e34e75fda42154f668145cf from revision/079_d9ac88d-powershell-diagnostics. This explicit two-parent merge returns to main; no parent task workflow is suspended or authorized to resume.
+- Owner/stage: sdd-manage; main integration/return, then prerelease preparation. Reporting: Standard.
+- [Revision plan](reviews/080_17cef14-comprehensive-review/REVISION-PLAN.md), [execution evidence](reviews/080_17cef14-comprehensive-review/REVISION-REPORT.md), [review](reviews/080_17cef14-comprehensive-review/REVIEW-REPORT.md), [index](reviews/README.md).
+- Campaign source: c7b2ce56f87fc8e2319e167175aa0fac7340dc39 on revision/080_17cef14-comprehensive-review. Ordered target parent: main at 17cef14c69dd7a84dc035ac8e864f446ee3668c5. Original opening c97ea71020f3ce494bad49f3a47e882889c5d955. No suspended parent task workflow; keep the campaign branch.
+- Corrected generic AGENTS policy/routing, explicit narrow projection-lock exception, non-regular-input handling, exact CMD adapter skill placement/package enforcement and source helper API documentation. No deferred finding; original CMD assignments/quote notice preserved.
+- 282 unique Linux tests passed; fresh matching Windows/Linux Node matrices and Windows adapter CI succeeded. Exact package/schema/link/structural checks passed. Prospective merged source/test bytes equal the verified published campaign tip; merged focused checks are recorded in the containing merge message. Prior closed records unchanged.
+- No live consumer/client activation or hosted product mutation trial ran. The actual Windows CI evidence does not certify Antigravity/local Codex activation.
 
-## Evidence and continuation
+## Authorized next action and limits
 
-The complete incoming difference is within the accepted Windows recovery, adapter, documentation and verification scope. Earlier closed campaign/feature records remain unchanged. Restored runtime/package/test source 4afe50c6c85c7ee7f7eb42f7c3701c1848b4bebc passed all six native Windows CMD fixtures in workflow 39230983156 (Python 3.11.9, LF/CRLF); the incoming/prospective merged source retains those exact bytes. The original assignment's quoted-redirection limitation is recorded rather than claiming general stderr preservation. No live Antigravity/local Codex activation was performed.
+Publish/read back this merge and verify clean main before opening the next available campaign. The containing commit supplies its own SHA through Git; no future self-SHA is embedded here. If publication fails, finish the retained merge before further work.
 
-The revision report and integration commit retain actual merged-state regression, link/package and preservation results. Git identifies this merge and its parents; its publication/readback follows the commit and must be confirmed on continuation if interrupted. Do not fabricate the snapshot's own future SHA or repeat the integration without checking actual ancestry and remote state.
-
-After verified main publication, stop on clean main with campaign 079 closed. Retain its branch and frozen records. There are no unresolved accepted actions or selected follow-up tasks; any new campaign, installation or release needs its own instruction. Do not reintroduce the explicitly reverted delayed-expansion refinement as pending repair.
+Then allocate/open a prerelease campaign from published main, bump the canonical manifest patch to 0.15.1, assess the complete current candidate and prepare fresh complete release notes and exact-source packages. This sequence is explicitly authorized; no repeated approval is needed. Leave the new campaign open at a published prepared-candidate checkpoint. Do not create a product release/tag, dispatch publication or install the plugin by implication. Keep credentials protected and all campaign 080/earlier reports frozen after closure.

@@ -32,6 +32,8 @@ node "<PLUGIN_ROOT>/skills/sdd-forge/scripts/forge-project.mjs" docs-main --repo
 
 Exactly one execution flag is required. Reject unknown/duplicate/missing arguments. Help/imports have no credential/Git/network effects. The normal CLI emits one JSON object to stdout; it writes no required projection map or session file. The caller may retain an exact result with existing evidence. Local regular inputs/filesystem are trusted; elapsed budgets bound supported process/network waits rather than promising hard real-time behavior for arbitrary OS filesystem failure.
 
+Request/source readers reject known non-regular files before opening and recheck the descriptor. POSIX opens use nonblocking mode to avoid waiting on a changed FIFO; Windows uses ordinary read-only opens. These checks do not remove the trusted-filesystem requirement or guarantee arbitrary device/network filesystem behavior.
+
 ## Preconditions and effects
 
 The caller establishes actual authorization, tracking confirmation, current source/QC/acceptance, required baseline publication, selected phase/preparation eligibility, cross-list identity/dependencies, exclusive remote execution and reviewed outgoing content. Scope-specific meanings are in the input guide. Positive JSON flags are assertions, not independent evidence.
@@ -56,7 +58,7 @@ After a timeout/disconnect/uncertain create, perform lookup only. A unique exact
 
 If source drift prevents that invocation, use the backend's exact readback with retained object identities/input evidence. Do not falsify a hash or drop expected objects to make recovery pass. A later local source error retains any unknown hosted effect and its exit-2 recovery boundary.
 
-The shared Git-common-directory lock serializes local completion/projection operations, including linked worktrees. Cleanup removes only the owned nonce. Do not steal a stale lock; establish actual process/operation disposition before scoped removal. The caller prevents competing writers on other machines/clients; no distributed exactly-once guarantee is made.
+The shared Git-common-directory lock serializes local completion/projection operations, including linked worktrees. Main preparation explicitly permits this [transient coordination effect](../../sdd-manage/references/main-preparation.md#transient-projection-lock) before projection readback; all other target-repository writes remain gated. Cleanup removes only the owned nonce. Do not steal a stale lock; establish actual process/operation disposition before scoped removal. The caller prevents competing writers on other machines/clients; no distributed exactly-once guarantee is made.
 
 Errors classify authentication, access/policy, ambiguous missing/private resource, rate, validation, service and transport outcomes without raw provider bodies or credentials. Inspect safe status/correlation/retry timing and effects. A replacement token cannot resolve every failure. A failed final readback or source check does not roll back already applied objects.
 

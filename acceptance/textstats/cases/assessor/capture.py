@@ -41,6 +41,20 @@ print(json.dumps(dict(rows=rows,immutable=immutable,origin=str(pathlib.Path(text
 
 
 def channels(entry,stdout,stderr):
+    """Add screened raw/decoded channels to a caller-owned command record.
+
+    Args:
+        entry: Mutable provenance entry to extend, not a product artifact.
+        stdout: Bytes, text or None, including partial timeout output.
+        stderr: Bytes, text or None, screened before either channel is added.
+
+    Returns:
+        None; entry receives base64 bytes and replacement-decoded UTF-8 text.
+
+    Raises:
+        core.Stop: Recognizable sensitive content; entry records withholding
+            without adding either output channel. Existing unrelated fields stay.
+    """
     # Validate both channels before retaining either, including partial timeout bytes.
     stdout=stdout or b''; stderr=stderr or b''
     if isinstance(stdout,str): stdout=stdout.encode('utf-8')
@@ -54,6 +68,27 @@ def channels(entry,stdout,stderr):
 
 
 def invoke(command, cwd, env, data, journal, runner=subprocess.run):
+    """Run one explicit observation command and retain its actual provenance.
+
+    Args:
+        command: Non-secret argv for the selected interpreter/product command.
+        cwd: Disposable fixture working directory.
+        env: Explicit process environment; only selected public keys are logged.
+        data: Input bytes forwarded to the process.
+        journal: Caller-owned list; the command entry is appended before launch.
+        runner: subprocess.run-compatible injection point for support tests.
+
+    Returns:
+        The runner's completed process result, including nonzero product exits.
+
+    Raises:
+        subprocess.TimeoutExpired: The 30-second command bound was reached.
+        OSError: Launch failed; safe failure metadata remains in journal.
+        core.Stop: Recognizable sensitive command/output metadata was rejected.
+
+    Partial safe channels and known status survive failure. This executes the
+    requested product observation, never a workflow or independent case grade.
+    """
     entry={'command':command,'cwd':str(cwd),'environment':{'PYTHONPATH':env.get('PYTHONPATH'),'PYTHONUTF8':env.get('PYTHONUTF8'),'LC_ALL':env.get('LC_ALL')},'status':'Not completed','returncode':None}
     core.no_secret(entry)
     journal.append(entry)
@@ -121,6 +156,31 @@ def _capture(root,suite,python,runner,journal):
 
 
 def capture(root,suite,python=sys.executable,runner=subprocess.run,provenance=None):
+    """Capture a literal suite from the actual product in a separate interpreter.
+
+    Args:
+        root: Existing product import root, including an extracted distribution
+            root when assessing distribution. Actual import origin is checked.
+        suite: Selected key in the bundled input-vector suites.
+        python: Interpreter executable used for product API/CLI observations.
+        runner: subprocess.run-compatible process facility or controlled fixture.
+        provenance: Optional mutable dictionary initialized for this new attempt;
+            its prior command list/status are replaced, not resumed.
+
+    Returns:
+        (evidence, provenance): Versioned literal observations and command facts.
+        Captured means output was obtained, not that acceptance passed.
+
+    Raises:
+        ValueError, OSError, KeyError: Input, import or fixture setup is unavailable.
+        core.Stop: Recognizable sensitive content cannot be retained.
+        subprocess.TimeoutExpired: A selected command did not finish in time.
+
+    Temporary fixtures are owned and cleaned. On failure the supplied provenance
+    retains Failed, safe partial command facts and a classified cause before the
+    exception propagates. This function writes no final evidence file; the CLI
+    owns exclusive output/provenance persistence under COMMON.md.
+    """
     provenance={} if provenance is None else provenance
     provenance.update(schema_version=1,suite=suite,product_import_root=str(Path(root).resolve()),commands=[],status='Running',kind='actual output capture; not agent lifecycle assessment')
     core.no_secret(provenance)
