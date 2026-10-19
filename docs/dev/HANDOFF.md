@@ -1,6 +1,6 @@
 # SDD Manager handoff
 
-Campaign 080_17cef14 has completed its comprehensive current-source and documentation review. Five canonical findings are retained; no source fix or revision plan was executed. The campaign remains open on its published review branch.
+Campaign 080_17cef14 has completed review and now has an authorized revision plan. Execute all five findings, verify and close through published main integration, then open the separately authorized prerelease campaign and prepare patch 0.15.1.
 
 ## Context and authority
 
@@ -22,4 +22,4 @@ No new live consumer, installed-client, Antigravity/local Codex activation, host
 
 Every completed unit was committed, pushed and exactly read back before the next. The last pre-final checkpoint is f5757dce94c2d3def42dfade85af983d81b68a9a. This containing final commit records consolidated coverage/index/HANDOFF; recover its SHA and subsequent publication from Git rather than embedding a self-SHA. Verify its exact established remote ref before claiming final publication or performing further project work. No source delta or integration is pending in this review.
 
-Stop with campaign 080 open. The next human decision selects revision planning/corrections or another scoped follow-up; do not create a revision plan, implement findings, close the campaign or merge solely from this handoff. Preserve all finding IDs, the R-001 removal requirement, the R-002 decision boundary and the original CMD body.
+The later human instruction authorizes the [revision plan](reviews/080_17cef14-comprehensive-review/REVISION-PLAN.md), its execution and campaign closure, followed by a new prerelease campaign and patch bump. The plan selects all five findings and a narrow transient-lock exception for R-002. Earlier review-only limits describe that prior checkpoint, not the new authorization. Publish/read back this plan before V-001; retain the original CMD body. Prerelease preparation does not create a release/tag or publishing dispatch.
