@@ -27,7 +27,7 @@ The predefined `DOCS-*` IDs are separate from product implementation `T-*` IDs. 
 | DOCS-004 | DECOMPOSITION: first approval | sdd-design |
 | DOCS-005 | SPEC: required QC and first approval | sdd-specify |
 | DOCS-006 | PLAN: strategy QC and first approval | sdd-plan |
-| DOCS-007 | layout: combined PLAN/layout QC and separate first approval | sdd-plan |
+| DOCS-007 | layout: combined PLAN/layout QC and first approval | sdd-plan |
 | DOCS-008 | TASKS: required QC and first approval | sdd-tasks |
 | DOCS-009 | Whole documentation package QC and report | sdd-verify; sdd-manage coordinates repairs/persistence |
 

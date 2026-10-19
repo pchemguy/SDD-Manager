@@ -55,3 +55,17 @@ Child [082](../082_d0d7438-auth-helper/REVISION-REPORT.md) completed its accepte
 The original prepared source ddb86fc926ddc2cfbd15946946c75a9c3672645d, notes/handoff association and archive hashes above remain historical evidence. The child changes shipped helper/documentation bytes, so they no longer represent the current package. The known helper defect is resolved by the child's observed checks; parent release readiness still requires reviewing intervening history, refreshing complete notes coverage and source/body/handoff association, rebuilding the exact selected final source and applying the existing release gates when continuation is selected. Root notes and retained preparation snapshots were not rewritten by the child.
 
 Campaign 081 stays open and suspended after the child's verified return. No automatic preparation continuation, main merge, release marker/tag, publisher dispatch, hosted release or installation is authorized by child completion.
+
+## Nested PLAN and layout checkpoint revision
+
+Authentication child 082 was explicitly integrated, published and exactly read back at df52d0bba5c0872a06d3277951624091dcab6b5c, with the worktree clean on this parent. The human subsequently requested a new nested revision: “PLAN and layout have distinct checkpoints.” Child [083_df52d0b](../083_df52d0b-plan-layout-checkpoints/REVISION-REPORT.md) opens from that published checkpoint on revision/083_df52d0b-plan-layout-checkpoints. Its creation parent, integration target and return branch are revision/081_5b2442e-prerelease.
+
+Campaign 081 remains open and its preparation execution stays suspended. The new child records the desired separate checkpoints and current explicit source rules; no source repair, release-input refresh or parent continuation is selected by this opening. After a later authorized child integration, retain the original parent preparation boundary and reassess affected candidate/message/package association when continuation is selected. Campaign 082 and earlier closed packages remain frozen.
+
+The human subsequently clarified and authorized the focused 083 repair: retain the ordinary per-document checkpoint definitions, remove redundant commentary and normalize affected tracking wording. No approvals are combined or removed. Current execution/evidence stays with child 083; this changes neither parent suspension nor release authority.
+
+## Checkpoint wording child completion boundary
+
+Child [083](../083_df52d0b-plan-layout-checkpoints/REVISION-REPORT.md) completed its focused wording repair at published source 345aba7b34d003db1dac0faa27df51a140cfd1e4. Ordinary checkpoint definitions are retained, redundant commentary removed and DOCS task wording normalized; the projection contract now checks complete task-content transfer. Evidence includes 216 local test passes, all four native projection jobs and an exact reproducible 154-file 0.15.1 verification package. The human selected child closure; actual integration/publication and return are established by the containing explicit parent merge and Git state.
+
+Keep 081 open and suspended. Both child amendments change shipped bytes relative to the earlier prepared candidate; its original history coverage, notes/handoff association and package hashes remain historical and require refresh on a separately selected continuation. The child verification builds do not replace release preparation or authorize publication/installation.

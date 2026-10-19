@@ -252,7 +252,7 @@ test('docs definitions provide complete briefs and lifecycle ordering without ag
   for (let i = 1; i < 8; i++) assert.deepEqual(draft.tasks[i].depends_on, [draft.tasks[i - 1].id]);
   assert.deepEqual(draft.tasks[8].depends_on, draft.tasks.slice(0, 8).map(item => item.id));
   assert.match(draft.tasks[0].acceptance, /some but not all four/);
-  assert.match(draft.tasks[6].acceptance, /layout's separate human first approval/);
+  assert.deepEqual(draft.tasks, definitions.tasks);
   assert.match(draft.tasks[8].acceptance, /not prerequisites for completing DOCS-009/);
   const payload = JSON.stringify(renderProjection(draft));
   assert.ok(!payload.includes(request.source.sha256)); assert.ok(!payload.includes('eligibility'));
