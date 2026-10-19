@@ -2,14 +2,15 @@
 
 ## Context
 
-Campaign 081_5b2442e; starting source 5b2442e3315da91bcbc8ccd0efc14c0c59106b27, verified published main after campaign 080 closure. [Preparation plan](REVISION-PLAN.md), [review plan](REVIEW-PLAN.md), [review report](REVIEW-REPORT.md). Working/publication branch revision/081_5b2442e-prerelease; main is recorded parent/return. Human authorizes preparation and patch bump, not product release publication. State: P-001 metadata change verified; publish/read back before review. Opening b3878d4a442a6a53328b1afe46b2d58ba148ae89 was published and exactly read back.
+Campaign 081_5b2442e; starting source 5b2442e3315da91bcbc8ccd0efc14c0c59106b27, verified published main after campaign 080 closure. [Preparation plan](REVISION-PLAN.md), [review plan](REVIEW-PLAN.md), [review report](REVIEW-REPORT.md). Working/publication branch revision/081_5b2442e-prerelease; main is recorded parent/return. Human authorizes preparation and patch bump, not product release publication. State: P-001 published; U-001 source/documentation assessment complete. Opening b3878d4a442a6a53328b1afe46b2d58ba148ae89 was published and exactly read back.
 
 ## Actions
 
 | Action | Current result | Verification / persistence |
 | --- | --- | --- |
 | P-001 | Canonical version 0.15.0 → 0.15.1; all other manifest bytes/fields retained. | Pinned offline core schema passed and manifest diff inspected. The containing published commit supplies the initial exact candidate SHA. |
-| P-002–P-004 | Pending | No candidate package/message readiness yet |
+| P-002 / U-001 | Complete current inventory and exact-byte reuse assessment; one phrase polished without policy change. | 154 files / 15 entries / 79 refs; 15 presentations, schema, 1,042 links / 269 fragments and structural validation passed (48 existing warnings). The containing published U-001 commit updates the candidate pin. |
+| P-002 / U-002–U-003; P-003–P-004 | Pending | Runtime/package and release-message readiness pending |
 
 ## Stop
 
