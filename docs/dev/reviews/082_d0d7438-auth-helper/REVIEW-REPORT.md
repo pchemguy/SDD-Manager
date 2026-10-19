@@ -19,6 +19,8 @@ Inspected both sides of the public recovery → Git transport → private helper
 | R-003 | Diagnostic improvement / Medium | Open | Helper failure exits silently; neither protocol output nor actionable safe code returned |
 | R-004 | Coverage gap / Medium | Open | All 27 existing contracts pass while the actual transport path fails |
 
+Subsequent human decision: R-001–R-004 are Accepted for execution under [REVISION-PLAN.md](REVISION-PLAN.md). The index above retains the review checkpoint's original disposition; current rechecks/results are recorded in the execution report.
+
 No repair plan is accepted by this review. R-002 and R-003 identify distinct diagnostic boundaries, not two functional causes. The retry issue below is an imported execution deviation, not a fifth product defect.
 
 ## R-001 — Git-generated helper context is rejected as caller relocation
