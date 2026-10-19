@@ -1,19 +1,19 @@
 # SDD Manager handoff
 
-Campaign 079_d9ac88d is finalized at this main integration checkpoint. The dedicated Windows shell procedure owns execution-OS detection, the Windows CMD probe, compatible shim placement, retry, mandatory single-to-double-quote notice and failed-retry turn stop. PowerShell.cmd retains the human-supplied two assignment lines; delayed expansion was explicitly reverted.
+Campaign 080_17cef14 opens a comprehensive review of the current SDD Manager package and maintained documentation. Campaign 079 is integrated/published; its original CMD assignment decision remains controlling. The new campaign permits review records and scoped verification, with no source repairs.
 
 ## Context and authority
 
-- Owner/stage: sdd-manage; completed campaign V-001–V-004 and human-authorized closure. Reporting: Standard.
-- The human's “Close it” instruction selects explicit integration into the recorded main parent, merged-state verification and publication, followed by a stop on clean main. No further campaign, product task, release or client installation is selected.
-- [Revision plan](reviews/079_d9ac88d-powershell-diagnostics/REVISION-PLAN.md), [revision report](reviews/079_d9ac88d-powershell-diagnostics/REVISION-REPORT.md) and [index](reviews/README.md) retain the campaign scope, decisions and evidence. Core procedure: [Windows shell recovery](../../.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell-recovery.md).
-- Original opening: d494766a732f219e0e28f5d4307d58313c6522a5. Full original branch-off and receiving main parent: d9ac88d6b08eb805cace6c8e873d4be9c9e0b407.
-- Incoming published finalization: 4abd5933883a13c41e34e75fda42154f668145cf from revision/079_d9ac88d-powershell-diagnostics. This explicit two-parent merge returns to main; no parent task workflow is suspended or authorized to resume.
+- Owner/stage: sdd-manage; review plan/opening, U-001–U-007 pending. Reporting: Standard.
+- Human request: “Open and run comprehesnive review”, explicitly extended by “and docs!”. [Review plan](reviews/080_17cef14-comprehensive-review/REVIEW-PLAN.md), [review report](reviews/080_17cef14-comprehensive-review/REVIEW-REPORT.md) and [index](reviews/README.md) own scope, coverage and findings.
+- Full starting/reviewed/branch-off commit: 17cef14c69dd7a84dc035ac8e864f446ee3668c5, the verified/published main integration closing campaign 079.
+- Working/publication branch: revision/080_17cef14-comprehensive-review on origin, pchemguy/SDD-Manager. Creation parent, eventual integration and return target: main at that baseline. No parent task workflow is suspended.
+- Authorized outputs: review plan/report, current navigation and this checkpoint; supported local checks and read-only relevant external evidence. Stop after published consolidated review with campaign 080 open. No revision execution, source repair, merge/closure, client installation, live acceptance campaign, product mutation or release is selected.
 
 ## Evidence and continuation
 
-The complete incoming difference is within the accepted Windows recovery, adapter, documentation and verification scope. Earlier closed campaign/feature records remain unchanged. Restored runtime/package/test source 4afe50c6c85c7ee7f7eb42f7c3701c1848b4bebc passed all six native Windows CMD fixtures in workflow 39230983156 (Python 3.11.9, LF/CRLF); the incoming/prospective merged source retains those exact bytes. The original assignment's quoted-redirection limitation is recorded rather than claiming general stderr preservation. No live Antigravity/local Codex activation was performed.
+Clean main and exact remote-main readback match the full baseline. Repository-wide paths/local refs plus complete enumeration of 85 remote branches found sequence 080 available after 079. Initial package inventory: 154 files, 15 skill entries and 79 references. Earlier closed campaign/feature/steering records remain frozen and excluded from routine content/compatibility checks.
 
-The revision report and integration commit retain actual merged-state regression, link/package and preservation results. Git identifies this merge and its parents; its publication/readback follows the commit and must be confirmed on continuation if interrupted. Do not fabricate the snapshot's own future SHA or repeat the integration without checking actual ancestry and remote state.
+Publish/read back the opening, then execute U-001–U-007 sequentially, persisting and publishing each unit before the next. Recover the actual opening/action commits and later publication from Git; this snapshot cannot contain its own future SHA. The report distinguishes content, structural, controlled runtime, native CI and live-client evidence and records both findings and no-finding coverage. Preserve the exact human-restored CMD assignment rather than reopening its superseded delayed-expansion change.
 
-After verified main publication, stop on clean main with campaign 079 closed. Retain its branch and frozen records. There are no unresolved accepted actions or selected follow-up tasks; any new campaign, installation or release needs its own instruction. Do not reintroduce the explicitly reverted delayed-expansion refinement as pending repair.
+At the final review checkpoint refresh this HANDOFF with actual coverage, findings, checks/limits and next human decision. Stop on the clean published review branch without implementing findings or closing the campaign.

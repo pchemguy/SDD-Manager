@@ -83,3 +83,4 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `079_d9ac88d` | Closed; Windows shell startup/recovery with the human-restored assignment and required quote-conversion notice. | [Plan](079_d9ac88d-powershell-diagnostics/REVISION-PLAN.md), [report](079_d9ac88d-powershell-diagnostics/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
+| `080_17cef14` | Open; comprehensive current-source and documentation review planned. | [Plan](080_17cef14-comprehensive-review/REVIEW-PLAN.md), [report](080_17cef14-comprehensive-review/REVIEW-REPORT.md) |
