@@ -18,3 +18,7 @@ This is a wording/organization correction to an existing policy, with no executa
 ## Persistence and stop
 
 Publish/read back this plan before source edits. Commit the coherent revised source with its observed checks/report and push/read back before further work. Preserve campaign 082 and earlier packages byte for byte; assess only current source and active records. Finish with the fix available on the child branch and 081 suspended. A later explicit integration request uses the recorded parent and two-parent merge protocol.
+
+## Closure selected
+
+The subsequent human instruction “Yes, close 083” authorizes V-003: finish the campaign evidence, publish/read back the final child checkpoint, explicitly merge into revision/081_5b2442e-prerelease, verify the merged state and target publication, and confirm return to the parent. This supersedes the earlier review-only stop and the intervening pause. Keep 081 open and suspended; release preparation, main integration and installation remain unselected.
