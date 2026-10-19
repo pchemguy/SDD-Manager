@@ -35,7 +35,7 @@ For changes to the optional coordinator-owned [Git authentication utility](../.a
 node --test tests/git-auth-recover.test.mjs
 ```
 
-Its CI matrix runs native Windows CMD/Linux with Node 22/24. Local Linux results do not establish Windows behavior; inspect the selected source's actual matrix result. Native helper tests and controlled push/readback results do not establish live-provider authentication. The source tests and CI are excluded from the distributed plugin.
+Its CI matrix runs native Windows CMD/Linux with Node 22/24. Native transport contracts require Git's git-http-backend and use a local HTTPS server with the explicitly public test-only localhost certificate/key under tests; no live provider or real token is needed. They exercise the public CLI's authenticated push/readback and helper failure after preflight, alongside direct context/linked-worktree checks and Windows token/DACL inspection. Local Linux results do not establish Windows behavior; inspect the selected source's actual matrix result. Controlled process outcomes and native HTTPS transport do not establish live-provider authentication. The source tests, TLS fixture and CI are excluded from the distributed plugin.
 
 For the optional forge-owned [completion utility](../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md), run:
 

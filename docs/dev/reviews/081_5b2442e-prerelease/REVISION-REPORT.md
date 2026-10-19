@@ -39,3 +39,19 @@ The candidate's 139 support and 37 publisher tests passed freshly. Recent unchan
 ## Stop
 
 Publish/read back this final checkpoint and stop on revision/081_5b2442e-prerelease. Campaign 080 remains closed on main; 081 remains open, with preparation complete. No integration/closure of 081, release marker/tag, publishing dispatch, hosted release or installation follows from this request. Recover the containing checkpoint's actual SHA and remote containment from Git rather than embedding a self-referential future identity.
+
+## Nested authentication revision
+
+The preparation checkpoint was published and exactly read back at d0d7438bf1e6ec850870cfc43be32573c784dc0c. The subsequent human request opens child [082_d0d7438](../082_d0d7438-auth-helper/REVISION-REPORT.md) from that checkpoint to revise the authentication helper. Campaign 081 remains open; its execution is suspended while the child owns the focused scope. The child's creation parent, integration target and return branch are revision/081_5b2442e-prerelease, not main.
+
+Retain the candidate and previous preparation results for their recorded source. No helper change is made at child opening. After a later authorized child integration, reassess affected prerelease inputs/evidence, refresh source/body/package association as needed, and return control at this preparation boundary. Child completion supplies no automatic parent continuation or release authority.
+
+The child's [focused review](../082_d0d7438-auth-helper/REVIEW-REPORT.md) subsequently reproduced the Git-generated GIT_DIR rejection through actual local HTTPS Git transport and identified three related diagnostic/coverage findings. Those helper bytes also occur in this candidate. Earlier successful tests/builds remain evidence for their stated checks; current authentication-workflow readiness now requires resolving/reassessing the known defect and missing transport coverage. No repair, child integration or parent resumption has occurred.
+
+## Authentication child result and retained parent boundary
+
+Child [082](../082_d0d7438-auth-helper/REVISION-REPORT.md) completed its accepted plan: verified Git-generated helper context with Windows ACL propagation, safe helper diagnostics, independent push/readback summaries, real native HTTPS regressions and aligned script/coordinator documentation. All four focused findings are Verified. Evidence includes 37 authentication / 39 completion / 40 projection local contracts, all four native Windows/Linux Node 22/24 jobs per affected utility, 139 support / 37 publisher passes, and a reproducible exact 154-file 0.15.1 verification package at child source 94e972684d59aac16b30bdc03847f9b861c0bd0a. Actual child integration/publication and return are established by the containing explicit parent merge and Git state.
+
+The original prepared source ddb86fc926ddc2cfbd15946946c75a9c3672645d, notes/handoff association and archive hashes above remain historical evidence. The child changes shipped helper/documentation bytes, so they no longer represent the current package. The known helper defect is resolved by the child's observed checks; parent release readiness still requires reviewing intervening history, refreshing complete notes coverage and source/body/handoff association, rebuilding the exact selected final source and applying the existing release gates when continuation is selected. Root notes and retained preparation snapshots were not rewritten by the child.
+
+Campaign 081 stays open and suspended after the child's verified return. No automatic preparation continuation, main merge, release marker/tag, publisher dispatch, hosted release or installation is authorized by child completion.

@@ -39,11 +39,13 @@ Windows exports only DACL metadata to a temporary directory and removes it in fi
 
 Authentication is scoped with command-local Git configuration. Existing persistent helper configuration is untouched. The internal helper supplies x-access-token/token only to the matching HTTPS host and repository path, ignores store/erase, and rereads the validated file. Redirects and conflicting credential/trace channels are disabled for this invocation; normal proxy/TLS configuration is retained. Tokens never enter the utility's argv, child environment or public JSON. Do not invoke internal `--credential-helper` mode in a terminal: its stdout is a secret-bearing protocol channel consumed by Git.
 
+Public calls reject ambient Git relocation and command-configuration variables, including GIT_DIR and GIT_CONFIG_PARAMETERS, rather than operate in a caller-selected alternate context. The private helper has a separate boundary because Git itself supplies GIT_DIR and command configuration when launching helpers. It removes inherited command-configuration channels, verifies the explicit worktree root and accepts GIT_DIR only when its directory identity matches that worktree's actual Git administration directory. Linked worktrees use their own administration directory. Other relocation variables remain rejected. This prepared environment also reaches native Windows ACL inspection; it does not bypass token checks or change the parent process environment.
+
 The token file remains the intentional durable input. No extra credential database or vault entry is created. The transient path is not an automatic fallback to plaintext `credential-store`; persistent helper setup remains a separately selected alternative in credentials.md.
 
 ## Results, exits and recovery
 
-Normal CLI calls emit one JSON object with `schema_version: 1`. `--help` prints usage. Public failures contain sanitized code/stage and no raw Git/helper output; helper mode emits only its private credential protocol.
+Normal CLI calls emit one JSON object with `schema_version: 1`. `--help` prints usage. Public failures contain sanitized code/stage and no raw Git/helper output. Private helper stdout contains only credential protocol; on failure, stderr may carry the safe diagnostic described below.
 
 | Exit / result | Meaning |
 | --- | --- |
@@ -53,7 +55,23 @@ Normal CLI calls emit one JSON object with `schema_version: 1`. `--help` prints 
 | `2`, readback failure with `remote_state: unknown` | The effect remains unverified. Inspect/reconcile before another push; no automatic retry loop. |
 | `1`, preflight/local error | Scope/input/tooling/protection check failed. Inspect `code`/`stage`; correct only within existing authority. No helper configuration is persisted. |
 
-Successful results additionally identify expected/observed ref object and whether a push was attempted. Common preflight codes include invalid arguments/URL/ref, source mismatch, destination mismatch, token permissions/ignore/tracking issues, and missing/process timeout/signal failures. Unexpected local I/O returns a generic sanitized local_io_failed result. JSON must never be presented as proof of API-client authentication or an explicit human grant.
+Completed readback results additionally identify expected/observed ref object and whether a push was attempted. Common preflight codes include invalid arguments/URL/ref, source mismatch, destination mismatch, token permissions/ignore/tracking issues, and missing/process timeout/signal failures. Unexpected local I/O returns a generic sanitized local_io_failed result. JSON must never be presented as proof of API-client authentication or an explicit human grant.
+
+After preflight, results also include independent `push_result` and `readback_result` objects. These additive fields retain schema_version 1 and the existing top-level outcomes/exits. Each summary has `code`, `exit_status` (safe integer or null) and `signal` (recognized signal name or null):
+
+| Process code | Meaning |
+| --- | --- |
+| `not_attempted` | Readback-only invocation; no push ran |
+| `succeeded` | Child exited zero; readback content still needs validation |
+| `git_failed` | Child exited nonzero |
+| `process_timeout`, `process_unavailable`, `process_output_limit` | Bounded child timed out, executable was unavailable, or capture limit was exceeded |
+| `process_signal`, `process_error` | Child was signaled, or another process failure occurred |
+
+A readback summary can additionally contain `validation_error: invalid_readback` or `ambiguous_readback` when the process succeeded but its content was invalid. A summary may include `helper_error` with allowlisted `code` and `stage`; no captured output, exception message, path or argument is included. Preflight failures stop before these process summaries exist.
+
+Private helper failures write `SDD_GIT_AUTH_HELPER ` followed by fixed-shape code/stage JSON to stderr. Unknown exceptions become `helper_failed` at stage `helper`. Public extraction is bounded and discards malformed, unknown, extra-field or conflicting reports. This is an advisory diagnostic channel: Git/provider stderr can imitate it, so a helper_error is not authenticated provider evidence or a permission decision. Raw stderr is never forwarded by the public CLI.
+
+Assess process and remote state separately. For example, remote_absent with push_result.code git_failed and helper_error.code token_not_ignored means the ref remains absent and the captured hint points to local token eligibility. It does not establish provider denial. Reproduce a deterministic helper/configuration failure locally before another evidence-based push retry; preserve protected stdout and inspect only safe status/categories. Follow the coordinator's existing retry bound, without counting readback as a successful push or treating a matching ref as proof that this attempt wrote it.
 
 The publication owner may use this exact readback as remote verification for the selected ref, then verify any additional workflow contract. Tag-to-release-source peeling, multiple publication targets and further API/issue operations remain separate. A matching public ref does not by itself prove token permissions; an already matching ref may exist independently of this attempted push.
 
@@ -65,6 +83,8 @@ Run source-only tests from the SDD Manager Git root:
 node --test tests/git-auth-recover.test.mjs
 ```
 
-Tests use isolated repositories and synthetic tokens; package consumers do not need the source test tree. The repository CI matrix selects native Windows CMD/Linux and Node 22/24. Pure quoting/SDDL tests, controlled transport results and native Git helper protocol each establish different coverage; none proves live-provider authentication. Consult current campaign/CI evidence before claiming native Windows support was observed.
+Tests use isolated repositories and synthetic tokens; package consumers do not need the source test tree. The native transport fixture uses a local HTTPS server, Git's git-http-backend and an explicitly public test-only localhost certificate/key under tests. It uses explicit local trust without relaxing production TLS policy; the fixture and key are excluded from the plugin. Native cases cover an authenticated public-CLI push/readback and eligibility loss after preflight, alongside direct helper, linked-worktree and context-rejection contracts.
+
+The repository CI matrix selects native Windows CMD/Linux and Node 22/24, including Windows token/DACL inspection through the helper environment. Pure quoting/SDDL tests, controlled process outcomes and actual HTTPS Git transport establish different coverage; none proves live-provider authentication. Consult current campaign/CI evidence before claiming native Windows support was observed.
 
 Imports are effect-free. Exported helpers have JSDoc contracts; `recover` returns structured outcomes and throws sanitized RecoveryError on preflight errors. File I/O errors can also throw internally; the CLI sanitizes them. Preserve the helper's no-store/context checks and one-push bound when extending the script. Keep unrelated scripting candidates outside this utility's responsibility.

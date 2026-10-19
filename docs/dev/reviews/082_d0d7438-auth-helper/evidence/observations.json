@@ -1,0 +1,180 @@
+{
+  "source": "107afd226345fa3e6d6d45a01251b451e25cacdf",
+  "environment": {
+    "os": "Linux",
+    "node": "v24.19.0",
+    "git": "git version 2.51.1"
+  },
+  "direct_helper": [
+    {
+      "case": "clean",
+      "exit": 0,
+      "credential_returned": true,
+      "stdout_empty": false,
+      "stderr_empty": true
+    },
+    {
+      "case": "GIT_DIR",
+      "exit": 1,
+      "credential_returned": false,
+      "stdout_empty": true,
+      "stderr_empty": true
+    },
+    {
+      "case": "GIT_WORK_TREE",
+      "exit": 1,
+      "credential_returned": false,
+      "stdout_empty": true,
+      "stderr_empty": true
+    },
+    {
+      "case": "GIT_PREFIX",
+      "exit": 0,
+      "credential_returned": true,
+      "stdout_empty": false,
+      "stderr_empty": true
+    },
+    {
+      "case": "GIT_CONFIG_PARAMETERS",
+      "exit": 0,
+      "credential_returned": true,
+      "stdout_empty": false,
+      "stderr_empty": true
+    }
+  ],
+  "direct_guard": {
+    "code": "relocated_git_environment",
+    "stage": "preflight"
+  },
+  "controlled_push_outcomes": [
+    {
+      "case": "exit128",
+      "pushes": 1,
+      "result": {
+        "schema_version": 1,
+        "ok": false,
+        "code": "remote_absent",
+        "stage": "readback",
+        "remote_state": "absent",
+        "push_attempted": true,
+        "expected": "0e599c41fc69584d7dfa7ad31f0b53690c6cda00",
+        "observed": null,
+        "ref": "refs/heads/master"
+      }
+    },
+    {
+      "case": "timeout",
+      "pushes": 1,
+      "result": {
+        "schema_version": 1,
+        "ok": false,
+        "code": "remote_absent",
+        "stage": "readback",
+        "remote_state": "absent",
+        "push_attempted": true,
+        "expected": "0e599c41fc69584d7dfa7ad31f0b53690c6cda00",
+        "observed": null,
+        "ref": "refs/heads/master"
+      }
+    },
+    {
+      "case": "signal",
+      "pushes": 1,
+      "result": {
+        "schema_version": 1,
+        "ok": false,
+        "code": "remote_absent",
+        "stage": "readback",
+        "remote_state": "absent",
+        "push_attempted": true,
+        "expected": "0e599c41fc69584d7dfa7ad31f0b53690c6cda00",
+        "observed": null,
+        "ref": "refs/heads/master"
+      }
+    }
+  ],
+  "native_recover": {
+    "exit": 2,
+    "result": {
+      "schema_version": 1,
+      "ok": false,
+      "code": "remote_absent",
+      "stage": "readback",
+      "remote_state": "absent",
+      "push_attempted": true,
+      "expected": "0e599c41fc69584d7dfa7ad31f0b53690c6cda00",
+      "observed": null,
+      "ref": "refs/heads/master"
+    },
+    "credential_reached_write_endpoint": false
+  },
+  "native_wrapper_pushes": [
+    {
+      "mode": "preserve",
+      "exit": 128
+    },
+    {
+      "mode": "clear_git_dir",
+      "exit": 0
+    }
+  ],
+  "native_helper_calls": [
+    {
+      "mode": "preserve",
+      "action": "get",
+      "git_environment_names": [
+        "GIT_ASKPASS",
+        "GIT_CONFIG_GLOBAL",
+        "GIT_CONFIG_NOSYSTEM",
+        "GIT_CONFIG_PARAMETERS",
+        "GIT_DIR",
+        "GIT_EXEC_PATH",
+        "GIT_PREFIX",
+        "GIT_SSL_CAINFO",
+        "GIT_TERMINAL_PROMPT"
+      ],
+      "exit": 1,
+      "credential_returned": false,
+      "stderr_empty": true
+    },
+    {
+      "mode": "clear_git_dir",
+      "action": "get",
+      "git_environment_names": [
+        "GIT_ASKPASS",
+        "GIT_CONFIG_GLOBAL",
+        "GIT_CONFIG_NOSYSTEM",
+        "GIT_CONFIG_PARAMETERS",
+        "GIT_DIR",
+        "GIT_EXEC_PATH",
+        "GIT_PREFIX",
+        "GIT_SSL_CAINFO",
+        "GIT_TERMINAL_PROMPT"
+      ],
+      "exit": 0,
+      "credential_returned": true,
+      "stderr_empty": true
+    },
+    {
+      "mode": "clear_git_dir",
+      "action": "store",
+      "git_environment_names": [
+        "GIT_ASKPASS",
+        "GIT_CONFIG_GLOBAL",
+        "GIT_CONFIG_NOSYSTEM",
+        "GIT_CONFIG_PARAMETERS",
+        "GIT_DIR",
+        "GIT_EXEC_PATH",
+        "GIT_PREFIX",
+        "GIT_SSL_CAINFO",
+        "GIT_TERMINAL_PROMPT"
+      ],
+      "exit": 0,
+      "credential_returned": false,
+      "stderr_empty": true
+    }
+  ],
+  "native_readback_matches": true,
+  "persistent_helper_config_unchanged": true,
+  "external_provider_operations": false
+}

@@ -13,6 +13,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { ProtectedInputError as RecoveryError, sameDirectory, childEnv, readToken } from './protected-token.mjs';
@@ -24,6 +25,64 @@ const OID = /^(?:[a-f0-9]{40}|[a-f0-9]{64})$/;
 const USAGE = 'push|readback --repo PATH --remote NAME --url HTTPS_URL --ref FULL_REF --expect FULL_OBJECT_ID [--token-file gh.tkn] [--timeout-ms 30000]';
 
 const fail = (code, stage) => { throw new RecoveryError(code, stage); };
+const HELPER_MARKER = 'SDD_GIT_AUTH_HELPER ';
+const HELPER_CODES = new Set(['helper_failed', 'helper_context_mismatch', 'repo_must_be_root',
+  'invalid_helper_arguments', 'invalid_credential_request', 'invalid_url', 'relocated_git_environment',
+  'token_outside_repository', 'token_symlink', 'invalid_token_file', 'token_not_ignored',
+  'token_tracked_or_unknown', 'token_permissions', 'token_changed', 'invalid_token',
+  'acl_unverified', 'windows_tools_unavailable', 'process_timeout', 'process_unavailable', 'process_signal', 'git_failed']);
+const HELPER_STAGES = new Set(['preflight', 'helper', 'repository', 'token', 'acl']);
+const SIGNALS = new Set(Object.keys(os.constants.signals));
+const PROCESS_ERRORS = new Map([['ETIMEDOUT', 'process_timeout'], ['ENOENT', 'process_unavailable'], ['ENOBUFS', 'process_output_limit']]);
+
+/** Accept only the fixed private diagnostic shape; never retain unknown text. */
+function validHelperDiagnostic(value) {
+  return value && typeof value === 'object' && !Array.isArray(value) &&
+    Object.keys(value).length === 2 && Object.hasOwn(value, 'code') && Object.hasOwn(value, 'stage') &&
+    HELPER_CODES.has(value.code) && HELPER_STAGES.has(value.stage);
+}
+
+/** Error messages/stacks may carry paths or secrets; only known codes survive. */
+function helperFailure(error) {
+  const value = error instanceof RecoveryError ? { code: error.code, stage: error.stage } : null;
+  return validHelperDiagnostic(value) ? value : { code: 'helper_failed', stage: 'helper' };
+}
+
+/**
+ * Parse a bounded advisory diagnostic from captured Git stderr. Git/provider text
+ * can spoof stderr, so this is not authentication or authority evidence. Unknown,
+ * malformed, extra-field or conflicting reports are discarded without echoing.
+ */
+function helperDiagnostic(stderr) {
+  if (typeof stderr !== 'string' || Buffer.byteLength(stderr) > 1024 * 1024) return;
+  let selected;
+  for (const line of stderr.split(/\r?\n/)) {
+    if (!line.startsWith(HELPER_MARKER)) continue;
+    if (line.length > 240) return;
+    let value;
+    try { value = JSON.parse(line.slice(HELPER_MARKER.length)); } catch { return; }
+    if (!validHelperDiagnostic(value)) return;
+    if (selected && (selected.code !== value.code || selected.stage !== value.stage)) return;
+    selected = { code: value.code, stage: value.stage };
+  }
+  return selected;
+}
+
+/** Summarize process mechanics independently of remote state; no output/argv. */
+function processSummary(result, attempted = true) {
+  let code = attempted ? 'process_error' : 'not_attempted';
+  if (attempted && result) {
+    if (result.error) code = PROCESS_ERRORS.get(result.error.code) || 'process_error';
+    else if (result.signal) code = 'process_signal';
+    else if (result.status === 0) code = 'succeeded';
+    else if (Number.isInteger(result.status) && result.status > 0) code = 'git_failed';
+  }
+  const summary = { code, exit_status: Number.isInteger(result?.status) && result.status >= 0 && result.status <= 0xffffffff ? result.status : null,
+    signal: SIGNALS.has(result?.signal) ? result.signal : null };
+  const diagnostic = helperDiagnostic(result?.stderr);
+  if (diagnostic) summary.helper_error = diagnostic;
+  return summary;
+}
 
 /**
  * Parse and validate the narrow CLI without I/O.
@@ -126,7 +185,9 @@ export function remoteOid(stdout, ref) {
 /**
  * Validate local context and perform at most one explicit non-forced push plus
  * readback, or readback alone. `execute` injection is for controlled tests;
- * production uses native Git. No subprocess text is returned in public results.
+ * production uses native Git. Independent push_result/readback_result summaries
+ * preserve process failure even when remote readback succeeds. No subprocess
+ * text is returned; any helper_error is an allowlisted advisory stderr report.
  * @param {object} options Explicit operation, repo, remote, URL, ref and expect.
  * @param {Function} execute Bounded process adapter; production default is native.
  * @returns {object} Versioned JSON-safe remote outcome, never credential contents.
@@ -171,16 +232,56 @@ export function recover(options, execute = processResult) {
     pushed = git(['push', '--porcelain', '--no-follow-tags', '--recurse-submodules=no',
       options.remote, `${options.expect}:${options.ref}`], [...auth, '-c', `remote.${options.remote}.mirror=false`]);
   }
-  let observed;
-  try { observed = remoteOid(checked(git(['ls-remote', '--refs', options.url, options.ref], auth), 'readback'), options.ref); }
+  const push_result = processSummary(pushed, options.operation === 'push');
+  let observed, readback;
+  try {
+    readback = git(['ls-remote', '--refs', options.url, options.ref], auth);
+    observed = remoteOid(checked(readback, 'readback'), options.ref);
+  }
   catch (error) {
+    const readback_result = processSummary(readback);
+    if (error instanceof RecoveryError && ['ambiguous_readback', 'invalid_readback'].includes(error.code)) readback_result.validation_error = error.code;
     return { schema_version: 1, ok: false, code: error instanceof RecoveryError ? error.code : 'readback_failed',
-      stage: 'readback', remote_state: 'unknown', push_attempted: !!pushed };
+      stage: 'readback', remote_state: 'unknown', push_attempted: !!pushed, push_result, readback_result };
   }
   const match = observed === options.expect;
   return { schema_version: 1, ok: match, code: match ? (pushed && (pushed.error || pushed.signal || pushed.status !== 0) ? 'verified_after_push_error' : 'remote_verified') : (observed ? 'remote_mismatch' : 'remote_absent'),
     stage: 'readback', remote_state: match ? 'matching' : observed ? 'different' : 'absent',
-    push_attempted: !!pushed, expected: options.expect, observed, ref: options.ref };
+    push_attempted: !!pushed, expected: options.expect, observed, ref: options.ref,
+    push_result, readback_result: processSummary(readback) };
+}
+
+/**
+ * Build private-helper context without admitting relocation into public callers.
+ * Git's transport supplies GIT_DIR and inherited command configuration. Resolve
+ * the explicit worktree using a clean environment, then require GIT_DIR (when
+ * present) to identify that worktree's actual administration directory. Other
+ * relocation variables retain childEnv's rejection. No process.env mutation or
+ * credential/configuration persistence occurs.
+ * @param {string} selectedRepo Explicit repository passed by the parent utility.
+ * @returns {{repo: string, env: object, git: Function}} Bound clean subprocesses.
+ * @throws {RecoveryError|Error} Invalid worktree or mismatching helper context.
+ */
+function privateHelperContext(selectedRepo) {
+  const base = Object.create(null);
+  let directory;
+  for (const [key, value] of Object.entries(process.env)) {
+    if (/^GIT_DIR$/i.test(key)) {
+      if (directory !== undefined) fail('helper_context_mismatch', 'helper');
+      directory = value;
+    } else if (!/^GIT_CONFIG_(?:PARAMETERS|COUNT|KEY_\d+|VALUE_\d+)$/i.test(key)) base[key] = value;
+  }
+  const env = childEnv(base), repo = fs.realpathSync(selectedRepo);
+  const git = args => processResult('git', ['-C', repo, ...args], { cwd: repo, env });
+  const root = checked(git(['rev-parse', '--show-toplevel']), 'helper').trim();
+  if (!sameDirectory(root, repo)) fail('repo_must_be_root', 'helper');
+  if (directory !== undefined) {
+    const expected = checked(git(['rev-parse', '--absolute-git-dir']), 'helper').trim();
+    let matches = false;
+    try { matches = !!directory && sameDirectory(path.resolve(process.cwd(), directory), expected); } catch {}
+    if (!matches) fail('helper_context_mismatch', 'helper');
+  }
+  return { repo, env, git };
 }
 
 /** Internal Git protocol entry. Credential stdout is consumed only by Git. */
@@ -202,14 +303,15 @@ function helperMain(args) {
   // Git URL-decodes the credential path once; validation excludes protocol controls.
   if (request.protocol !== 'https' || request.host !== target.host || request.path !== gitCredentialPath(target) ||
       (request.username && request.username !== 'x-access-token')) return;
-  const git = args => processResult('git', ['-C', repo, ...args], { cwd: repo, env: childEnv() });
-  const token = readToken(repo, tokenFile, git);
+  const context = privateHelperContext(repo);
+  const token = readToken(context.repo, tokenFile, context.git, process.platform, { environment: context.env });
   process.stdout.write(`username=x-access-token\npassword=${token}\n\n`);
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === SCRIPT) {
   if (process.argv[2] === '--credential-helper') {
-    try { helperMain(process.argv.slice(3)); } catch { process.exitCode = 1; }
+    try { helperMain(process.argv.slice(3)); }
+    catch (error) { process.stderr.write(HELPER_MARKER + JSON.stringify(helperFailure(error)) + '\n'); process.exitCode = 1; }
   } else {
     try {
       if (Number(process.versions.node.split('.')[0]) < 22) fail('node_22_required');

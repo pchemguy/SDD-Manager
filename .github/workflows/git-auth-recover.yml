@@ -4,11 +4,15 @@ on:
     paths:
       - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/**'
       - 'tests/git-auth-recover.test.mjs'
+      - 'tests/helpers/git-auth-https.mjs'
+      - 'tests/fixtures/git-auth/**'
       - '.github/workflows/git-auth-recover.yml'
   pull_request:
     paths:
       - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/**'
       - 'tests/git-auth-recover.test.mjs'
+      - 'tests/helpers/git-auth-https.mjs'
+      - 'tests/fixtures/git-auth/**'
       - '.github/workflows/git-auth-recover.yml'
   workflow_dispatch:
 permissions:
