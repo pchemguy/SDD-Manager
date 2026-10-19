@@ -6,7 +6,7 @@
 - Branch: revision/080_17cef14-comprehensive-review; recorded creation parent/integration/return main at that baseline.
 - Human scope: comprehensive review, explicitly including documentation. [Review plan](REVIEW-PLAN.md).
 - Owner/stage: sdd-manage; opening and plan. Reporting: Standard.
-- State: Open; U-001–U-002 complete, U-003–U-007 pending. Source repairs and campaign closure are not authorized by this review request.
+- State: Open; U-001–U-003 complete, U-004–U-007 pending. Source repairs and campaign closure are not authorized by this review request.
 
 ## Setup and evidence boundary
 
@@ -22,7 +22,7 @@ Evidence classes remain separate: source and editorial assessment, structural/pa
 | --- | --- | --- | --- |
 | U-001 | Assessed; no confirmed finding | None | Entry/metadata checkpoint |
 | U-002 | Operational gates assessed; human documentation finding added | R-001 | Coordination checkpoint and subsequent human direction |
-| U-003 | Planned | None assessed | Opening |
+| U-003 | Assessed; no additional confirmed finding | None | Design/planning checkpoint |
 | U-004 | Planned | None assessed | Opening |
 | U-005 | Planned | None assessed | Opening |
 | U-006 | Planned; explicit human finding retained | R-001 | Human direction during review |
@@ -95,3 +95,20 @@ These are inspected-source scenarios, not new autonomous agent/client executions
 | State | Human-requested removal retained; not implemented. U-006 will complete the broader template/documentation assessment. |
 
 Publication note: U-002 commit 9b7db3161228ec0123d0f6352d7117d3894434d2 was pushed. A bounded Git readback timed out without credential/policy evidence; no Git process remained, ordinary GitHub/API reachability succeeded and protected API readback of the exact established repository/ref matched that SHA. Publication is verified; no duplicate push or credential/configuration change was needed.
+
+## U-003 — Exploration, design, specification and delivery
+
+Assessed every focused reference in sdd-design (4), sdd-specify (3), sdd-plan (3), sdd-tasks (3) and sdd-integrate-feature (1), plus shared modularity, design heuristics, hierarchy and development-document QC. Checked both directions of handoffs: exploration/brief/design to behavioral contracts; full SPEC coverage to phase-specific delivery; strategy/layout to executable work; selected feature incorporation to current owner/QC/source disposition.
+
+| Source contrast | Assessment |
+| --- | --- |
+| Terse idea versus constrained seed | Exploration proactively identifies consequential gaps, credible user-aligned options, risks and delegation boundaries; it does not prescribe a technology interview or infer decisions from silence. |
+| Initial versus feature/later-stage uncertainty | One dedicated exploration procedure is reused at the affected depth; safe brief deferrals are distinct from architecture blockers, without compulsory extra records or replay. |
+| Illustrative technology/domain choices versus general workflow | Examples explicitly do not bound domains or bias recommendations. Language, UI/runtime and rendering are distinguished by consequence; no default framework/backend is silently mandatory. |
+| Complete version scope versus Phase 1 and later increments | Delivery, review, hierarchy and shared QC explicitly bound every phase, require the simplest sensible greenfield core and reject a final backlog bucket. A small early milestone or in-range counts cannot justify an oversized phase. |
+| Necessary enabling work versus speculative infrastructure | Retained dependencies need consequential rationale and a bounded route to integrated capability; earlier exits apply to included contracts and preserved behavior, not all future version contracts. |
+| 1–2 or 10+ units versus justified scope | Counts trigger questions and rationale, not quotas/padding. Semantic behavior, dependency/integration and verification scope remain controlling. |
+| PLAN weakness exposed by TASKS | Return strategy to its owner; tasks cannot redefine phases to make the list look compliant. Mandatory review tasks remain executable despite exclusion from delivery-count diagnostics. |
+| SPEC-only incorporation versus task transfer/archive | Scope limits, both-list transfer authority, one executable owner, pending reassessment and still-active source retention are explicit. Feature reports keep their provenance; archived Ready is not current main readiness. |
+
+The PROJECT/ARCHITECTURE/DECOMPOSITION/SPEC/PLAN/layout boundaries are substantive and consistently distinguished. Focused child guidance balances meaningful complete scope against duplication and arbitrary size splitting. Main end-state descriptions and active feature deltas have separate editorial roles. No additional confirmed defect or required correction found in these inspected-source scenarios; R-001 remains the separate human-required template removal. No product artifact or demonstration project was authored, and no new live agent trial is claimed.
