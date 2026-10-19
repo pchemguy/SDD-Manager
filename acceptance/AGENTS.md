@@ -61,7 +61,7 @@ For the coordinator's [Windows shell recovery](../.agents/plugins/sdd-manager/sk
 python -m unittest discover -s tests -p test_windows_shell_recovery.py -v
 ```
 
-These six runtime contracts require native Windows CMD and exercise LF/CRLF assets through the documented two-argument launcher form, isolated PATH selection/spaced paths, variable expansion, quote conversion, literal exclamation marks, command separators and output/status propagation. Linux skips are not runtime passes. Inspect the selected source's actual Windows workflow result. Source scenario assessment remains separate from actual Antigravity/local Codex activation; the test does not establish arbitrary launcher compatibility or deploy a shim to a user's host.
+These six runtime contracts require native Windows CMD and exercise LF/CRLF assets through the documented two-argument launcher form, isolated PATH selection/spaced paths, variable expansion, quote conversion, literal exclamation marks, command separators, basic output/status propagation and the original assignment's observed quoted-redirection limitation. That fixture records the marker reaching stdout rather than stderr; it does not assert general redirection preservation. Linux skips are not runtime passes. Inspect the selected source's actual Windows workflow result. Source scenario assessment remains separate from actual Antigravity/local Codex activation; the test does not establish arbitrary launcher compatibility or deploy a shim to a user's host.
 
 ## TextStats acceptance coordination
 

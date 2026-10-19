@@ -75,7 +75,7 @@ Changed the path assertion to native same-file identity. In the adapter, isolate
 
 Before that correction, the exact 311dfb1 package passed pinned schema and archive-byte/reproducibility checks: 154 files, 15 skills, 79 references, with source tests excluded. Its two archives matched SHA-256 `9d35601c2344155bc54d08995f7031db54f57284fbc5e3cf6161b8ca96bc2f05`. The corrected candidate will be checked independently; this hash is not its verification.
 
-## Final verified result
+## Verified result before V-004
 
 Corrected/tested source fcde1e69cb6f60c8a055c2cc9309e69d6ddba7e5 is pushed and verified by exact remote-ref readback. All accepted V-001–V-003 actions are complete. Campaign 079 remains **open** on its revision branch, with no main integration or closure selected.
 
@@ -99,3 +99,9 @@ Final persistence changes only active campaign status/evidence, navigation and H
 The human explicitly requests replacing the delayed-expansion block with the original `set "CLI=%~2"` and `set "CLI=%CLI:'="%"` lines, including associated documentation and instructions. Source 39b265c995702d26a3022ce4674a513cdd120b8e is published and exact remote-ref readback matches. This instruction supersedes the earlier runtime refinement; its native test results above remain historical evidence for fcde1e6, not verification of the restored script.
 
 The amended plan selects exact restoration, removal of the current delayed-expansion prescription, alignment of the native fixture with the retained observed redirection limitation, and relevant verification. No broader shell implementation or renewed shim correction is selected. Publish/read back this amendment before source changes; retain campaign 079 open.
+
+Amendment plan 3d7b5ca997462cfee0a3826142cefca03080b291 is published and exact branch readback matches. Restored the asset's executable body exactly to the human-supplied `@echo off`, two assignment lines and `%CLI%`, preserving its existing descriptive comments. Removed the delayed-expansion prescription from the dedicated reference and current plan. The required single-to-double-quote activation notice, OS/probe/retry/stop workflow and dedicated reference remain in place.
+
+The quoted-redirection fixture is retained with the same command but now explicitly records the original assignment's observed stdout result rather than promising stderr preservation. Acceptance instructions describe that limitation; the other five controlled fixtures remain unchanged. Earlier native success above applies to the superseded delayed-expansion source only.
+
+Local Linux/Python 3.12.14 checks: exact original executable-body comparison passed; current recovery reference contains no delayed-expansion guidance; all five package-documentation/snapshot tests passed in 4.854 seconds and all 37 publisher tests passed in 7.529 seconds. The six native Windows tests load but skip here, which is not runtime verification. Whitespace and bounded source-diff review passed. Publish this candidate for its native Windows workflow; record actual outcome before the final evidence checkpoint. No earlier closed record, installed client, demo or host configuration changed.
