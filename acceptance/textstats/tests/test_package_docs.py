@@ -13,7 +13,7 @@ class PackageDocumentation(Sandbox):
         pin, files = core.package(source, {'plugin_revision': 'HEAD', 'source_mode': 'dirty'})
         package = source / pin['package_subdirectory']
         for name in ('assets/HANDOFF_TEMPLATE.md', 'assets/DOCS_TRACKING_TEMPLATE.json',
-                     'assets/PowerShell.cmd', 'skills/sdd-manage/references/windows-shell-recovery.md',
+                     'skills/sdd-manage/scripts/PowerShell.cmd', 'skills/sdd-manage/references/windows-shell-recovery.md',
                      'skills/sdd-manage/references/continuity.md',
                      'skills/sdd-manage/scripts/git-auth-recover.mjs',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
