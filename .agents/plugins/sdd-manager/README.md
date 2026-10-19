@@ -109,7 +109,7 @@ PROJECT.md turns the seed and clarified decisions into shared project context, w
 
 ### Human review
 
-Greenfield preparation walks you through PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS. Each necessary newly created document gets substantive analysis and its own human acceptance checkpoint before dependent work; PLAN and layout remain separate. Clarification answers, agent QC and standing Git authorization do not accept documents.
+Greenfield preparation walks you through PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS. Each necessary newly created document gets substantive analysis and its own human acceptance checkpoint before dependent work. Clarification answers, agent QC and standing Git authorization do not accept documents.
 
 Existing or interrupted preparation assesses actual progress and continues using acceptable inputs. Requested interactive reviews come first; important startup issues can prompt concerns. Feature preparation reviews only necessary deltas and reuses sufficient main inputs. See [human document review](skills/sdd-manage/references/human-document-review.md).
 
@@ -143,7 +143,7 @@ These diagrams explain the human-visible paths. [PLUGIN.md](PLUGIN.md#composite-
 
 ### Project preparation
 
-Each authoring node below creates/checks and publishes one necessary proposal before human review (or follows explicit preapproval). First approval is then recorded with the completed DOCS task in its published acceptance commit, followed by issue closure when enabled. Design repeats this checkpoint for PROJECT, ARCHITECTURE and DECOMPOSITION; PLAN and layout have separate checkpoints. Dependent implementation starts only after accepted preparation is integrated, verified and published to the actual default branch.
+Each authoring node below creates/checks and publishes one necessary proposal before human review (or follows explicit preapproval). First approval is then recorded with the completed DOCS task in its published acceptance commit, followed by issue closure when enabled. Design repeats this checkpoint for PROJECT, ARCHITECTURE and DECOMPOSITION. Dependent implementation starts only after accepted preparation is integrated, verified and published to the actual default branch.
 
 ```mermaid
 flowchart TB

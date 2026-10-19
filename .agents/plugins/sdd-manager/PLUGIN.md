@@ -39,7 +39,7 @@ Preserve narrow direct/standalone requests, pending decisions and unfinished wor
 
 **Push every workflow-owned commit and verify remote containment before further work or another commit.** This includes completed documents, tasks, review reports, revision actions and merges. A failed push blocks progression. A retained implementation task completion with known failure or uncertain eligibility first follows [publication preflight](skills/sdd-implement/references/startup-and-continuation.md#push-before-task-work); only bounded authorized recovery/corrective persistence may precede its safe publication. Follow [per-commit publication](skills/sdd-manage/references/git-workflows.md#publish-each-commit); preserve explicit human-directed local-only or deferred-publication exceptions.
 
-**For each necessary new document, publish the reviewable state, present substantive results and pause for human acceptance before dependent work unless explicit applicable preapproval covers that checkpoint.** The same checkpoints apply to necessary feature documents/proposals. PLAN and layout require separate decisions; reuse sufficient existing inputs rather than creating optional documents to fill the sequence.
+**For each necessary new document, publish the reviewable state, present substantive results and pause for human acceptance before dependent work unless explicit applicable preapproval covers that checkpoint.** The same checkpoints apply to necessary feature documents/proposals. Reuse sufficient existing inputs rather than creating optional documents to fill the sequence.
 
 | Human checkpoint | Hold before |
 | --- | --- |
