@@ -9,6 +9,12 @@ Use this reference for read-only orientation. Collect enough evidence for the co
 - Identify contradictory or unreadable instructions and the exact affected action. Record rules for language, build, test, documentation, generated files, source ownership, and commit practices when relevant.
 - Inspect `docs/dev/PROJECT.md` as the project brief. Determine the role of its actual contents. If it contains operating instructions, report them as applicable instructions and identify their scope and any conflict; document revision is a separate workflow.
 
+## Execution OS and shell readiness
+
+Establish the OS of the host executing shell commands from available tool/environment evidence, separately from the user's desktop or product target. Reuse sufficient current evidence for the same host/tool. On Windows, make the bounded harmless CMD readiness probe under the coordinator's [Windows shell procedure](../../sdd-manage/references/windows-shell-recovery.md) before shell-dependent Git inspection. Check expected output/variable expansion and exit status; literal percent-variable text is not proof of working CMD execution.
+
+Observe the actual launcher/error and any existing active adapter. Return a PowerShell-related failure and unresolved Git checks to sdd-manage without creating PowerShell.cmd, changing PATH/.gitignore or inferring readiness. The coordinator owns compatible shim placement, retry and the mandatory quote-conversion notice. Other execution hosts do not acquire Windows-specific probes or writes. A startup probe is read-only evidence, not product verification or authority to repair the environment.
+
 ## Git evidence
 
 Use Git's inspection commands with optional writes suppressed. Plain `git status` can refresh index metadata even when file contents are unchanged. Apply `git --no-optional-locks` to each inspection command, or scope `GIT_OPTIONAL_LOCKS=0` to the inspection process; do not change repository or global configuration. For example, from the candidate project path:
@@ -88,7 +94,7 @@ Instructions: applicable sources, scope, and conflicts
 Documents: main roots and relevant children; active feature/change documents
 Continuity: HANDOFF checkpoint/commit; later task/decision evidence; candidate branches and recorded parents; parent containment, remote uncertainty and recovered scope/stop
 Execution evidence: owning TASKS or FEATURE-TASKS; last committed task and commit; current task and status; pending changes; existing verification evidence; remaining work or ambiguity
-Tooling: relevant declared commands and environment limitations
+Tooling: actual execution OS/tool; Windows probe/launcher and active shim/quote-conversion state where applicable; relevant declared commands and environment limitations
 Readiness: read-only possible; repository mutation eligible or blocked; reasons
 Handoff: scoped facts for the next skill; unknowns and checks to repeat
 ```

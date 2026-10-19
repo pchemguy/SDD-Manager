@@ -37,3 +37,24 @@ Technical assessment preserves two consequential distinctions: a probe must veri
 Execute the bounded revision after publishing the plan checkpoint. The supplied script body remains the known adapter; unsupported invocation formats are reported rather than silently reinterpreted. Required success notice: the adapter is active, commands run through CMD, and **all single quotes (`'`) are replaced with double quotes (`"`)**, including literal apostrophes. Continue only after the repeated probe succeeds; otherwise report and stop the turn.
 
 The human additionally reports similar historical local Codex failures, while explicitly noting that current local behavior has not been tested recently. Startup detection/recovery therefore remains client-neutral. Antigravity supplies the confirmed call shape; local Codex is a relevant possible host, with actual launcher/profile and recovery success to be established from current evidence. No current Codex defect or universal adapter compatibility is claimed.
+
+## Revision execution
+
+### V-001 — Startup evidence and coordinator recovery
+
+Plan checkpoint a6b0e31a64f9a262f7f74d4fb6c84c6d84be7ad8 was pushed and verified by exact branch readback before source work. Added the reusable package asset `assets/PowerShell.cmd`, retaining the supplied executable body with explanatory comments. The coordinator's new cohesive `windows-shell-recovery.md` owns OS/probe, compatible invocation, destination/ignore handling, retry, required notice and failure stop. The coordinator entry/routing, orientation entry/inspection, generic/implementation environment routes, package entry and README now hand off to that owner.
+
+Inspected-source scenarios:
+
+| Scenario | Observed instruction/result |
+| --- | --- |
+| Non-Windows or unchanged sufficient host/tool evidence | Identify the actual execution host; skip Windows-specific repair and avoid repeated unchanged probes. |
+| Healthy Windows probe | Require expected output/expansion and status; continue without installing a shim. |
+| PowerShell-related probe failure | Read-only orientation reports evidence/unavailable Git checks; coordinator owns scoped recovery. |
+| Antigravity versus possible local Codex | The adapter targets the observed two-argument command-string form; startup detection is client-neutral and current launcher behavior is established separately. |
+| Destination/root conflict | Preserve unrelated files; require effective search resolution, writable ownership and existing repository/preparation gates. Root copies get an anchored ignore entry and are not tracked/staged. |
+| Successful retry | Inform the user of location, CMD semantics and all single-to-double-quote conversion before continuing the authorized workflow. |
+| Failed retry or incompatible launcher | Report concrete failure and stop the turn; no repeated installation or claim from file presence. |
+| Host denial | Preserve the denial; this workflow does not change system/global settings or bypass authorization. |
+
+Checked 192 current local links/anchors, package containment and heading/whitespace composition: passed. The 40-line recovery module contains one complete startup/recovery procedure with a visible loading trigger; routing remains shallow in callers. No previous closed records or local host configuration changed. This action establishes source guidance; native batch behavior remains pending V-002 and is not inferred from Linux inspection.
