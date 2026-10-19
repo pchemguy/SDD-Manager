@@ -20,7 +20,7 @@ Persistent helper/store setup remains an intentional alternative when justified 
 
 ## Authentication before main preparation writes
 
-While enabled [main-preparation projection](main-preparation.md#establish-preparation-before-repository-writes) remains unverified, defer the storage procedure below. Use existing authenticated access first. Reuse a repository token only if read-only checks already establish its required exclusion, untracked status and readability; do not modify ignore rules to make it reusable before projection.
+While enabled [main-preparation projection](main-preparation.md#establish-preparation-before-repository-writes) remains unverified, defer the storage procedure below. Use available authenticated API access; HTTPS Git follows the supervised selection above. Reuse a repository token only if read-only checks already establish its required exclusion, untracked status and readability; do not modify ignore rules to make it reusable before projection.
 
 For an actual authentication failure or an observed blocked helper eligible for transient recovery, use a suitable supplied token or request one with the active backend's permission profile. Consume it through a supported protected transient client channel, with any helper outside the target repository. Keep values out of helper source, arguments, URLs, logs and evidence. Do not write a token, ignore rule or repository authentication configuration before the projection gate clears. An unavailable protected transfer mechanism is a concrete blocker, not permission to write early or claim access.
 

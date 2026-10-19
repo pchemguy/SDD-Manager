@@ -14,17 +14,30 @@ import { fileURLToPath } from 'node:url';
 export function capture(executable, args, { timeout = 30000, ...options } = {}) {
   return new Promise(resolve => {
     const child = spawn(executable, args, { windowsHide: true, ...options });
-    let stdout = '', stderr = '', error;
-    const timer = setTimeout(() => { error = { code: 'ETIMEDOUT' }; child.kill('SIGKILL'); }, timeout);
+    let stdout = '', stderr = '', error, done = false;
+    const finish = (status, signal) => {
+      if (done) return;
+      done = true; clearTimeout(timer);
+      child.stdin.destroy(); child.stdout.destroy(); child.stderr.destroy(); child.unref();
+      resolve({ status, signal, stdout, stderr, error });
+    };
+    const stop = code => {
+      error = { code }; child.kill('SIGKILL');
+      // A failed product must fail the fixture finitely too; inherited pipes
+      // must not prevent CI from exposing the offending contract.
+      finish(null, null);
+    };
+    const timer = setTimeout(() => stop('ETIMEDOUT'), timeout);
     const collect = key => chunk => {
       if (key === 'stdout') stdout += chunk; else stderr += chunk;
       if (Buffer.byteLength(stdout) + Buffer.byteLength(stderr) > 1024 * 1024) {
-        error = { code: 'ENOBUFS' }; child.kill('SIGKILL');
+        stop('ENOBUFS');
       }
     };
     child.stdout.on('data', collect('stdout')); child.stderr.on('data', collect('stderr'));
+    child.stdin.on('error', () => {});
     child.on('error', value => { error = { code: value.code }; });
-    child.on('close', (status, signal) => { clearTimeout(timer); resolve({ status, signal, stdout, stderr, error }); });
+    child.on('close', finish);
     child.stdin.end();
   });
 }

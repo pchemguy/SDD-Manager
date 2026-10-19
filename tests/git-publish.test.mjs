@@ -45,18 +45,19 @@ function resultOf(result) {
 function helper(f, behavior) {
   const filename = path.join(f.root, 'fixture-helper.mjs');
   const marker = path.join(f.root, 'helper-started.json');
-  const prefix = "import fs from 'node:fs'; import { spawn } from 'node:child_process';\n";
+  const prefix = "import fs from 'node:fs'; import { spawn } from 'node:child_process';\n" +
+    'function record(value){const target=' + JSON.stringify(marker) +
+    ';fs.writeFileSync(target+".tmp",JSON.stringify(value));fs.renameSync(target+".tmp",target);}\n';
   const start = 'const action=process.argv.at(-1); if(action==="get") {\n';
-  const record = 'fs.writeFileSync(' + JSON.stringify(marker) + ',JSON.stringify({pid:process.pid}));\n';
   let body = behavior === 'credential'
-    ? 'process.stdout.write(' + JSON.stringify('username=x-access-token\npassword=' + TOKEN + '\n\n') + ');\n'
+    ? 'record({pid:process.pid});process.stdout.write(' + JSON.stringify('username=x-access-token\npassword=' + TOKEN + '\n\n') + ');\n'
     : 'const child=spawn(process.execPath,["-e","setInterval(()=>{},1000)"],{stdio:"inherit"});' +
-      'fs.writeFileSync(' + JSON.stringify(marker) + ',JSON.stringify({pid:process.pid,child:child.pid}));setInterval(()=>{},1000);\n';
+      'record({pid:process.pid,child:child.pid});setInterval(()=>{},1000);\n';
   if (behavior === 'orphan') body = body.replace('{stdio:"inherit"}', '{stdio:"inherit",detached:true}')
     .replace('setInterval(()=>{},1000);\n', 'process.exit(0);\n');
   if (behavior === 'flood') body = body.replace('setInterval(()=>{},1000);\n',
     'process.stdout.write("x".repeat(2*1024*1024));setInterval(()=>{},1000);\n');
-  fs.writeFileSync(filename, prefix + start + record + body + '}\n');
+  fs.writeFileSync(filename, prefix + start + body + '}\n');
   f.git(['config', 'credential.helper', helperCommand(process.execPath, filename, [])]);
   return marker;
 }
@@ -98,6 +99,7 @@ test('tokenless hanging helper and grandchild are reaped within one budget; unre
   const started = performance.now();
   const result = await capture(process.execPath, [SCRIPT, ...args(f, server.url), '--timeout-ms', '6000'], { env: server.env, timeout: 10000 });
   const data = resultOf(result), owned = JSON.parse(fs.readFileSync(marker, 'utf8'));
+  assert.ok(Number.isInteger(owned.child));
   assert.ok(performance.now() - started < 7000, 'whole budget renewed or streams remained open');
   assert.equal(result.status, 2); assert.equal(data.push_result.code, 'process_timeout');
   assert.equal(data.remote_state, 'absent'); assert.equal(data.cleanup_state, 'confirmed');
@@ -152,6 +154,17 @@ test('cancellation cleans a live helper tree and never starts a second attempt',
   f.git(['remote', 'set-url', 'origin', server.url]); fs.unlinkSync(path.join(f.root, 'gh.tkn'));
   const marker = helper(f, 'wait');
   const child = spawn(process.execPath, [SCRIPT, ...args(f, server.url), '--timeout-ms', '8000'], { env: server.env });
+  child.stdin.on('error', () => {});
+  const completed = new Promise((resolve, reject) => {
+    const timer = setTimeout(() => {
+      child.kill('SIGKILL'); child.stdout.destroy(); child.stderr.destroy(); child.unref();
+      reject(new Error('controller cancellation did not finish'));
+    }, 10000);
+    child.once('close', status => { clearTimeout(timer); resolve(status); });
+    child.once('error', error => { clearTimeout(timer); reject(error); });
+  });
+  completed.catch(() => {}); // assertions before await must not orphan rejection
+  t.after(() => child.kill('SIGKILL'));
   let stdout = '', stderr = '';
   child.stdout.on('data', chunk => stdout += chunk); child.stderr.on('data', chunk => stderr += chunk);
   const deadline = Date.now() + 6000;
@@ -159,15 +172,14 @@ test('cancellation cleans a live helper tree and never starts a second attempt',
   assert.equal(fs.existsSync(marker), true);
   // Windows Node's kill(SIGTERM) forcibly terminates the controller; EOF to the
   // supervisor still owns cleanup, but no final JSON can be emitted there.
-  if (process.platform === 'win32') child.stdin?.end();
-  console.error('cancellation fixture: terminating only the public controller');
   child.kill('SIGTERM');
-  const status = await new Promise(resolve => child.on('close', resolve));
+  const status = await completed;
   if (process.platform !== 'win32') {
     const data = resultOf({ stdout, stderr, status });
     assert.equal(status, 3); assert.equal(data.code, 'cancelled'); assert.equal(data.cleanup_state, 'confirmed');
   }
   const owned = JSON.parse(fs.readFileSync(marker, 'utf8'));
+  assert.ok(Number.isInteger(owned.child));
   const end = Date.now() + 3500;
   while ((alive(owned.pid) || alive(owned.child)) && Date.now() < end) await new Promise(resolve => setTimeout(resolve, 20));
   assert.equal(alive(owned.pid), false); assert.equal(alive(owned.child), false);
@@ -179,6 +191,7 @@ for (const behavior of ['orphan', 'flood']) test(`public CLI cleans ${behavior} 
   const marker = helper(f, behavior);
   const result = await capture(process.execPath, [SCRIPT, ...args(f, server.url), '--timeout-ms', '6000'], { env: server.env, timeout: 10000 });
   const data = resultOf(result), owned = JSON.parse(fs.readFileSync(marker, 'utf8'));
+  assert.ok(Number.isInteger(owned.child));
   assert.equal(data.cleanup_state, 'confirmed');
   assert.ok(['process_timeout', 'process_output_limit'].includes(data.push_result.code));
   assert.equal(alive(owned.pid), false); assert.equal(alive(owned.child), false);
