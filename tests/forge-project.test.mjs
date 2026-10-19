@@ -278,7 +278,7 @@ test('docs content and source disagreements fail rather than inventing or droppi
   const template = fs.readFileSync(new URL('../.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md', import.meta.url), 'utf8');
   assert.throws(() => parseOwner(template.replace('Prepare and accept PROJECT.', 'Custom brief.'), 'docs-main'),
     error => error.code === 'docs_template_source_conflict');
-  const resumed = template.replaceAll('- [ ] DOCS-', '- [x] DOCS-').replaceAll('\n', '\r\n');
+  const resumed = template.replaceAll('- [ ] DOCS-', '- [x] DOCS-').replace(/\r?\n/g, '\r\n');
   assert.deepEqual(draftProjection(request.repository, request.source, parseOwner(resumed, 'docs-main')).tasks, request.tasks);
 });
 
@@ -365,7 +365,7 @@ test('native docs draft binds fixed definitions for fresh and resumed sources an
   assert.equal(result.code, 'input_verified');
   const template = fs.readFileSync(new URL('../.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md', import.meta.url), 'utf8');
   const filename = path.join(local.root, 'docs/dev/DOCS_TASKS.md');
-  fs.writeFileSync(filename, template.replace('- [ ] DOCS-001', '- [x] DOCS-001').replaceAll('\n', '\r\n'));
+  fs.writeFileSync(filename, template.replace('- [ ] DOCS-001', '- [x] DOCS-001').replace(/\r?\n/g, '\r\n'));
   const resumed = runDraft({ kind: 'docs-main', repo: local.root, remote: 'origin', tasks: 'docs\\dev\\DOCS_TASKS.md' });
   assert.equal(resumed.source.root, 'repo'); assert.equal(resumed.source.path, 'docs/dev/DOCS_TASKS.md');
   assert.deepEqual(resumed.tasks, draft.tasks);

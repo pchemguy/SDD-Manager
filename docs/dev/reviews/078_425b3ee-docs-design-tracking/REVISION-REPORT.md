@@ -49,3 +49,9 @@ Observed on Linux, Node v24.19.0 and Python 3.12.14:
 - `git diff --check`: passed. Source/fixture tests used synthetic provider data; no live tracking mutation or installed-client test occurred. Native Windows/Node 22 matrix evidence remains pending until this action is published.
 
 V-001 is locally verified; this action commit and its publication are recovered from Git before V-002 begins. Plan checkpoint 0b70980a3045b276a814e203982d0600f0772b1e was pushed and verified by exact branch-ref readback.
+
+#### Native CI recheck and fixture correction
+
+V-001 commit 9be2b8632a762102d7b1ed6674bca904275acaa3 was pushed/read back before documentation integration. [Completion run 39219422135](https://github.com/pchemguy/SDD-Manager/actions/runs/39219422135) passed. [Projection run 39219422136](https://github.com/pchemguy/SDD-Manager/actions/runs/39219422136) passed both Linux jobs but failed both Windows jobs in two new CRLF fixtures. Windows job 117950962345 reports `unsupported_source_format` at the resumed-source fixtures: they converted already-CRLF checkout text a second time, producing CR-CR-LF. A local reproduction confirms canonical CRLF parses all nine tasks and double conversion fails. Production parsing is unchanged.
+
+Corrected both fixture conversions to normalize either LF or CRLF into one CRLF. `node --test --test-name-pattern='docs content|native docs draft' tests/forge-project.test.mjs` passes both affected tests locally. This is a V-001 verification correction before V-002 is committed; owned documentation changes remain separate and uncommitted. Native matrix success remains pending until the correction is published and observed.
