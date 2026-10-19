@@ -37,6 +37,21 @@ def asset(root, name, prefix):
 
 
 def validate_contract(value, case_id):
+    """Validate one assessor DSL and its case identity without grading a case.
+
+    Args:
+        value: Parsed contract dictionary; not mutated.
+        case_id: Expected stable catalog case ID.
+
+    Returns:
+        None when check IDs, supported fields and independent criteria conform.
+
+    Raises:
+        ValueError: Invalid identity, structure, literal or runtime-ref syntax.
+
+    Uses the bundled checkpoint-field vocabulary and ownership-path syntax.
+    It reads no product files/remote refs and executes no product checks.
+    """
     require(isinstance(value, dict) and set(value) <= {'schema_version','case_id','checks','required_agent_checks','variant_agent_checks'}, 'unknown contract field')
     require(type(value.get('schema_version')) is int and value['schema_version'] == 1 and value.get('case_id') == case_id, 'invalid contract identity')
     checks = value.get('checks')
@@ -70,6 +85,23 @@ def validate_contract(value, case_id):
 
 
 def validate_catalog(root=BUNDLE, value=None):
+    """Validate the complete reusable case graph and its referenced assets.
+
+    Args:
+        root: Bundle root containing catalog, request, contract and guide files.
+        value: Optional parsed catalog; otherwise read root/cases/catalog.json.
+
+    Returns:
+        Mapping of all supported case IDs to their validated catalog entries.
+        Entries are not independent assessments or successful prerequisites.
+
+    Raises:
+        ValueError: Asset, identity, graph, isolation or contract inconsistency.
+        OSError, core.Stop: An asset cannot be read or safely loaded.
+
+    Reads bundle assets only. It creates no fixtures, contacts no provider and
+    does not mutate the supplied catalog. COMMON.md owns the machine formats.
+    """
     root = Path(root).resolve()
     value = core.load(root/'cases/catalog.json') if value is None else value
     require(isinstance(value,dict) and set(value) == {'schema_version','cases'} and type(value['schema_version']) is int and value['schema_version'] == 1, 'invalid catalog version')
@@ -131,6 +163,28 @@ def validate_catalog(root=BUNDLE, value=None):
 
 
 def render(case_id, bindings, root=BUNDLE, bindings_root=None, variant=None):
+    """Render an isolated consumer request from verified prerequisite bindings.
+
+    Args:
+        case_id: Supported catalog case selected for this consumer.
+        bindings: Checkpoints and current state in COMMON.md's resolved format.
+        root: Bundle root supplying catalog and consumer request templates.
+        bindings_root: Directory resolving independent assessment_path values.
+        variant: Optional declared variant, including its predecessor override.
+
+    Returns:
+        Request text plus the supplied sanitized ordinary product-state summary.
+        Assessor contracts, setup answers and bindings JSON are not appended.
+
+    Raises:
+        ValueError: Missing, ambiguous, unpassed, unpublished or leaking input.
+        OSError, core.Stop: Required asset, Git or screened JSON read failed.
+
+    When a predecessor is required, reads native Git objects and actual remote
+    refs for both product and assessment publication. Callers independently
+    establish authority and assessment authenticity; readback is not a new case
+    grade. Creates no files/branches and executes no product actions or agents.
+    """
     cases = validate_catalog(root)
     require(case_id in cases, 'unknown selected case')
     core.no_secret(bindings)
