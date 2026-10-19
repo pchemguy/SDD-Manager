@@ -95,3 +95,16 @@ Four findings remain Open; none is repaired or Verified. Prioritize R-001 with t
 Final scoped checks passed: six active/navigation Markdown files, 273 local links and the selected heading fragment; frozen targets were existence-checked without loading. Exact diff scope, retained probe syntax/observations, unchanged product/tests/workflows, unchanged parent refs and preservation of closed records were verified before publication.
 
 The parent candidate contains the same affected helper bytes, so its earlier passing tests/package remain valid observations but no longer establish authentication-workflow readiness. Parent 081 needs the known defect and affected evidence resolved/reassessed on continuation. Publish/read back this review and stop on the child branch before revision planning/execution, integration, parent resumption or release operations.
+
+## Final revision dispositions
+
+The historical Open index and reproduction table describe the original review, not the repaired source. The human accepted all four findings under [REVISION-PLAN.md](REVISION-PLAN.md); [execution and final review](REVISION-REPORT.md#v-004--final-review-and-integration-readiness) retain RED/GREEN, native matrix and exact-package evidence.
+
+| Finding | Current disposition | Objective recheck |
+| --- | --- | --- |
+| R-001 | Verified | Actual authenticated public-CLI HTTPS push/readback succeeds; bound GIT_DIR/linked worktree accepted, wrong/unadmitted context rejected, public guard retained; prepared environment reaches native Windows ACL inspection. Windows/Linux Node 22/24 jobs pass. |
+| R-002 | Verified | Independent push_result/readback_result retain exit/timeout/signal/unavailable/output-limit/other failure across absent/different/matching/unknown remote states; one push, preserved exits and secret-canary checks pass. |
+| R-003 | Verified | Private credential stdout remains protected; safe allowlisted stderr code/stage and generic unexpected-error fallback pass; public extraction rejects malformed/unknown/extra-field/conflicting reports, including native post-preflight token-eligibility failure. |
+| R-004 | Verified | Native transport contract observed RED before the context repair, then GREEN without a wrapper; both native HTTPS scenarios run in the four-job Windows/Linux Node 22/24 authentication matrix. Shared completion/projection matrices also pass. |
+
+No accepted finding is deferred. This focused review does not certify live provider permissions, installed-client behavior or the suspended parent's refreshed release readiness. Final child closure additionally requires the actual verified parent merge publication and worktree return described in the execution report.

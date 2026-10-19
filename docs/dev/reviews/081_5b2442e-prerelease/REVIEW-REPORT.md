@@ -84,3 +84,7 @@ Readiness is bounded to the selected source/package and complete prepared messag
 ## Subsequent nested authentication review
 
 After the published preparation checkpoint, the human selected nested campaign 082 and supplied new diagnostics. Its [focused review](../082_d0d7438-auth-helper/REVIEW-REPORT.md) independently reproduces a functional helper failure and records diagnostic/coverage findings against unchanged helper bytes present in the pinned candidate. The readiness conclusion above describes the earlier completed assessment, not disposition of these later findings. Parent 081 remains open and suspended; authentication-workflow readiness and affected source/package/message evidence require reassessment after the child result. Earlier executed test/build observations remain intact. No automatic release or parent continuation follows.
+
+## Subsequent child verification and return boundary
+
+The accepted [082 revision](../082_d0d7438-auth-helper/REVISION-REPORT.md) now records four Verified findings, actual authenticated native HTTPS/helper behavior on Windows/Linux Node 22/24, shared utility checks and an exact reproducible verification package. This resolves the known helper defect and adds its missing regression/diagnostic coverage; it does not refresh this parent's earlier release candidate, history coverage, notes, handoff or package hashes. Those source-bound observations above remain intact. After the explicit child merge is verified/published and the worktree returns, 081 remains open and suspended pending a human-selected continuation.
