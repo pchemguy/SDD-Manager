@@ -1,11 +1,11 @@
-# Browser guidelines campaign opening
+# Browser environment guidelines revision report
 
-## Identity and scope
+## Identity and opening scope
 
 - Campaign: 086_65c7d37. Full branch-off: 65c7d37f10c9eba2082c31c956a41acf9f1dbdf4, the verified published 085 parent merge.
 - Working/publication branch: revision/086_65c7d37-browser-guidelines on origin, pchemguy/SDD-Manager. Creation parent, eventual integration target and return: revision/081_5b2442e-prerelease. Directory: docs/dev/reviews/086_65c7d37-browser-guidelines.
 - Human request: open a nested campaign to define browser guidelines for targets requiring a browser. [Proposed definition/plan](REVISION-PLAN.md), [parent evidence](../081_5b2442e-prerelease/REVISION-REPORT.md), [handoff](../../HANDOFF.md), [index](../README.md).
-- Current boundary: opening, focused current-source assessment and proposed guidelines/plan. No packaged instruction repair or closure is selected at this checkpoint. Parent 081 remains open/suspended; 085 and earlier packages remain frozen.
+- Opening boundary: focused current-source assessment and proposed guidelines/plan, before packaged instruction repair or closure was selected. Parent 081 remains open/suspended; 085 and earlier packages remain frozen. Later accepted execution and its completion boundary follow below.
 
 ## Current-source assessment
 
@@ -44,3 +44,47 @@ The implementation entry now routes directly to the cohesive browser procedure f
 V-001 source commit 5815deb96a3361e30ce86f304935e55f8c12e4a5 was pushed and exactly read back with zero exit before this action. Its scoped whitespace/link assessment passed. Official npm npx documentation confirmed the examples' `--no` option; the deprecated `--no-install` spelling was removed before that commit. Current source assessment follows normal setup from the implementation entry/startup, standalone verification from check selection, test strategy without provisioning, and observed failure through generic recovery back to the policy owner. Final consolidated scenario/package evidence follows in V-003; no autonomous consumer run is claimed.
 
 Boundary review added one necessary V-002 handoff: direct coordinator/browser-tool use outside task implementation must reach the policy before facility selection. The accepted plan now names that shallow route explicitly. The coordinator entry links the existing procedure without copying it, and the source-only plugin development contract records this readiness interface. The PLUGIN entry already loads the coordinator; no additional runtime entry/template policy is needed. Source assessment includes direct coordinator entry without PLUGIN.md and browser-independent work. Prior routing checkpoint 8b875f88651b58fa9831311126d8379fe4ceabb2 was pushed and exactly read back before this follow-up; earlier statements describe their original checkpoint.
+
+## V-003 — Consolidated assessment and verification
+
+Tested package source: published 976b2e7ce1d2f527bbffbaee981dafacdd96f9b0 on Linux, Python 3.12.14 and Node.js 24.19.0. The declared jsonschema 4.26.0 requirement was already satisfied. The source changes are seven packaged Markdown files plus the development contract; remaining paths are active campaign/navigation/HANDOFF records. No runtime script, test, CI, manifest, release input or closed campaign record changed. No new instruction-presence tests were added.
+
+### Source scenario assessment
+
+These abstract contrasts were assessed against the resulting entries/references and their handoffs. They are source assessment, not executed browser scenarios or independent agent-consumer trials.
+
+| Case | Situation | Assessed result and source boundary |
+| --- | --- | --- |
+| B-01 | Browser work needs one engine and lacks setup | Implementation entry/startup reaches normal project setup; dedicated Chromium is the default. CMD/POSIX examples set a contained path for install/run and explicitly select the configured project. |
+| B-02 | Accepted coverage requires Firefox as well | Same standard Playwright package/path provisions the compatible patched Firefox build; explicit installation/configuration preserves both required projects. |
+| B-03 | Compatible browsers already exist inside the environment | Reuse contained binaries and isolated state; no mandatory redownload for each task. |
+| B-04 | A user/system installation or personal session is available | Browser policy prohibits discovery/use as a substitute; isolated profiles alone do not make a system executable eligible. |
+| B-05 | An interactive agent tool is available | Establish its permitted engine, dedicated installation and isolated state; its session does not certify the project harness. |
+| B-06 | A container or remote facility is considered | The same allowlist, dedicated installation and state requirements apply before use; no availability-based exemption. |
+| B-07 | Existing acceptance requires a prohibited browser | Coordinator receives the retained policy conflict for authorized amendment; no prohibited execution or silent contract substitution. |
+| B-08 | Normal provisioning or runtime setup fails | Generic recovery and the browser recovery section diagnose the observed failure with supported remedies preserving the policy. |
+| B-09 | Only part of the required permitted matrix works | Retain the required coverage gap and report the affected check blocked; do not narrow acceptance to available evidence. |
+| B-10 | Work is planning/document-only or browser-independent logic | Plan relevant requirements without unnecessary installation; unrelated work loads no browser prerequisites. |
+| B-11 | Another automation framework is already declared | Reuse its supported toolchain under the same browser policy; Playwright details are conditional. |
+| B-12 | Coordinator is entered without PLUGIN.md or outside task implementation | Its shared readiness gate reaches the canonical procedure before facility selection; the development contract preserves this interface. |
+| B-13 | Launch/DOM/modeled-handler checks pass | Capability guidance retains repeated-session, font/Canvas and native-delivery evidence boundaries; a smoke or modeled event does not establish unexercised acceptance. |
+
+### Observed checks
+
+| Check | Actual outcome |
+| --- | --- |
+| `python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` | 139 passed, zero failures/skips; source support evidence. |
+| `python -m unittest discover -s .github/tests -v` | 37 passed, zero failures/skips; publisher evidence. |
+| APA plugin structural validator | Exit zero, no errors; 49 warnings identify intentional contained sibling-skill references and explicitly do not establish client handoff behavior. |
+| Exact committed archive via the source publisher and pinned offline manifest schema | 154 files, version 0.15.1, exact source membership, source-only evidence/tests excluded and four extracted CLI help smokes passed. |
+| Independent repeat archive | Byte-identical, 452911 bytes, SHA-256 06db2ffbce6c09fc54d84622e84e237beb9a2d9e296b4af163beaa8f85af9be3. This is a verification build, not refreshed release preparation. |
+| Scope and preservation | Exact 13-path campaign delta, including seven packaged files; closed records, version/release inputs and runtime/CI/tests unchanged. Generated test bytecode directories removed as owned transient output. |
+| Focused Markdown/link checks before finalization | 13 current files, 412 local links, 87 package-contained links and 43 current fragments checked; no unresolved candidates. 243 frozen link targets existence-checked without reading their contents. |
+
+Composition review retains one substantive browser procedure, direct loading conditions and shallow caller reminders. Its setup, conditional Playwright details, evidence table and observed-failure recovery form one cohesive environment workflow; no new reference/skill/template or duplicate full procedure is needed. Existing plugin presentation remains applicable to the unchanged capability identities; no presentation redesign was selected.
+
+### Completion and return boundary
+
+V-001 and V-002 are implemented and source-assessed; V-003's working-source checks pass. Finalize active navigation/HANDOFF and publish/read back this checkpoint before integration. Integrate the full verified child tip into its creation parent revision/081_5b2442e-prerelease using an explicit two-parent merge, restore the parent's suspended context, run merged-state checks, publish/read back and verify clean return. The containing merge records its actual parent/source tips and checks. Campaign closure is established only by that verified target publication and return, not by this prepublication record.
+
+No browser installation/execution, native Windows result, live provider/client trial or autonomous agent-consumer behavior is claimed. No hosted tests were dispatched, polled or awaited. There are no unresolved source findings within the accepted revision. Parent 081 stays open/suspended; its earlier release source/body/package association remains historical and requires separately selected refresh. Main integration, release/tag/dispatch, version bump and plugin installation remain outside this child.
