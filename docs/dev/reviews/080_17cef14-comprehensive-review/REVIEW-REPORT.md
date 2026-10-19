@@ -21,11 +21,11 @@ Evidence classes remain separate: source and editorial assessment, structural/pa
 | Unit | Current state | Findings | Evidence checkpoint |
 | --- | --- | --- | --- |
 | U-001 | Assessed; no confirmed finding | None | Entry/metadata checkpoint |
-| U-002 | Assessed; no confirmed finding | None | Coordination/lifecycle checkpoint |
+| U-002 | Operational gates assessed; human documentation finding added | R-001 | Coordination checkpoint and subsequent human direction |
 | U-003 | Planned | None assessed | Opening |
 | U-004 | Planned | None assessed | Opening |
 | U-005 | Planned | None assessed | Opening |
-| U-006 | Planned | None assessed | Opening |
+| U-006 | Planned; explicit human finding retained | R-001 | Human direction during review |
 | U-007 | Planned | None assessed | Opening |
 
 No canonical finding is established in U-001. This is not whole-package readiness; operational references, executable semantics and the comprehensive editorial pass remain assigned to later units.
@@ -78,3 +78,20 @@ Assessed all 18 coordinator references, the orientation inspection/handoff refer
 No confirmed gate bypass, contradictory operational owner or missing return path found in these source traces. The dedicated Windows procedure is a substantive narrow subworkflow; entry reminders remain shallow. Workflow/example catalogs are broader routing/contrast material and are assessed as such rather than split by size. Detailed editorial consistency is revisited in U-006.
 
 These are inspected-source scenarios, not new autonomous agent/client executions. No credentials were exposed or changed, no target repository initialized and no tracking/product objects mutated. The human-selected original CMD limitation is retained, not reopened as a finding. No source changed.
+
+## Canonical findings
+
+### R-001 — Remove the preparation procedure from the AGENTS template
+
+| Field | Evidence and required disposition |
+| --- | --- |
+| Location / baseline | `.agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md`, “GitHub tracking” → “Documentation preparation”, at reviewed source 17cef14c69dd7a84dc035ac8e864f446ee3668c5. |
+| Type / priority / confidence | Documentation architecture defect; P2; high confidence. Explicitly identified by the human during this review. |
+| Observation | The generic target-project orientation template contains a two-paragraph operational procedure: all nine preparation issues, pre-write readback, approval/closure order, integration, exact JSON title/description/brief/dependency rendering and local/hosted ownership. These details are already owned by main-preparation.md and github-docs-preparation.md. |
+| Consequence | Every generated project's AGENTS embeds detailed plugin internals and a second workflow copy, increasing reading/maintenance burden and potential drift instead of routing to the loaded owner. Correctness of the underlying gate does not justify reproducing this procedure in the generic template. |
+| Human decision | The human quotes this entire subsection and directs that it must be gone from AGENTS_TEMPLATE.md. This is a required correction in the revision handoff, not an optional editorial suggestion. The current request remains review-only. |
+| Bounded correction / owner | Remove the entire quoted “Documentation preparation” subsection, including its JSON/interface paragraph, from the bundled AGENTS template. Keep concise project policy and owner routing; preserve the actual preparation/tracking requirements in their canonical sdd-manage/sdd-forge owners. Inspect neighboring template material for the same procedural duplication without deleting justified project-level policy. |
+| Objective recheck | The quoted subsection and DOCS_TRACKING_TEMPLATE rendering details are absent from AGENTS_TEMPLATE.md; canonical owners retain the complete pre-write/approval/merge/closure procedure. Template orientation still identifies the coordinator and selected tracking policy. Relevant current docs/template checks pass. |
+| State | Human-requested removal retained; not implemented. U-006 will complete the broader template/documentation assessment. |
+
+Publication note: U-002 commit 9b7db3161228ec0123d0f6352d7117d3894434d2 was pushed. A bounded Git readback timed out without credential/policy evidence; no Git process remained, ordinary GitHub/API reachability succeeded and protected API readback of the exact established repository/ref matched that SHA. Publication is verified; no duplicate push or credential/configuration change was needed.
