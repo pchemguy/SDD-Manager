@@ -1,18 +1,18 @@
 # SDD Manager handoff
 
-Campaign 080_17cef14 is integrated by this explicit two-parent main merge; verified publication/readback of this commit and return on main establish closure. All five findings are corrected. The human has already authorized the next prerelease campaign and patch 0.15.1 preparation.
+Campaign 080 is closed through verified published main merge 5b2442e3315da91bcbc8ccd0efc14c0c59106b27. Campaign 081_5b2442e now owns the explicitly authorized prerelease preparation and patch 0.15.1.
 
-## Verified result and sources
+## Workflow and sources
 
-- Owner/stage: sdd-manage; main integration/return, then prerelease preparation. Reporting: Standard.
-- [Revision plan](reviews/080_17cef14-comprehensive-review/REVISION-PLAN.md), [execution evidence](reviews/080_17cef14-comprehensive-review/REVISION-REPORT.md), [review](reviews/080_17cef14-comprehensive-review/REVIEW-REPORT.md), [index](reviews/README.md).
-- Campaign source: c7b2ce56f87fc8e2319e167175aa0fac7340dc39 on revision/080_17cef14-comprehensive-review. Ordered target parent: main at 17cef14c69dd7a84dc035ac8e864f446ee3668c5. Original opening c97ea71020f3ce494bad49f3a47e882889c5d955. No suspended parent task workflow; keep the campaign branch.
-- Corrected generic AGENTS policy/routing, explicit narrow projection-lock exception, non-regular-input handling, exact CMD adapter skill placement/package enforcement and source helper API documentation. No deferred finding; original CMD assignments/quote notice preserved.
-- 282 unique Linux tests passed; fresh matching Windows/Linux Node matrices and Windows adapter CI succeeded. Exact package/schema/link/structural checks passed. Prospective merged source/test bytes equal the verified published campaign tip; merged focused checks are recorded in the containing merge message. Prior closed records unchanged.
-- No live consumer/client activation or hosted product mutation trial ran. The actual Windows CI evidence does not certify Antigravity/local Codex activation.
+- Owner/stage: sdd-manage; prerelease opening and preparation plan. Reporting: Standard.
+- [Preparation plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [review plan](reviews/081_5b2442e-prerelease/REVIEW-PLAN.md), [review](reviews/081_5b2442e-prerelease/REVIEW-REPORT.md), [index](reviews/README.md).
+- Starting/branch-off source: 5b2442e3315da91bcbc8ccd0efc14c0c59106b27. Working/publication: revision/081_5b2442e-prerelease on origin, pchemguy/SDD-Manager. Creation parent/integration/return: main; no suspended parent task workflow.
+- Human authorizes this preparation, patch bump and necessary verification. No release tag, hosted release, publishing dispatch, client installation or this campaign's closure selected. Original CMD body/quote notice remains controlling.
 
-## Authorized next action and limits
+## Evidence and next action
 
-Publish/read back this merge and verify clean main before opening the next available campaign. The containing commit supplies its own SHA through Git; no future self-SHA is embedded here. If publication fails, finish the retained merge before further work.
+Clean published main and complete 96-row remote head/tag enumeration established baseline and free sequence 081 after 080. Current package remains 0.15.0 until P-001. Nearest baseline selection must validate full first-parent ancestry; v0.15.0 tag object agrees locally/remotely and peels to 2be233c7ec02be131917ceb16d6a16dc7d407d57. v0.15.1 is absent and history is not shallow.
 
-Then allocate/open a prerelease campaign from published main, bump the canonical manifest patch to 0.15.1, assess the complete current candidate and prepare fresh complete release notes and exact-source packages. This sequence is explicitly authorized; no repeated approval is needed. Leave the new campaign open at a published prepared-candidate checkpoint. Do not create a product release/tag, dispatch publication or install the plugin by implication. Keep credentials protected and all campaign 080/earlier reports frozen after closure.
+Publish/read back this opening, then bump canonical plugin.json to 0.15.1 and pin that published candidate. Execute the review's three bounded units with per-unit publication; refresh complete notes and exact source/package/handoff evidence. Reuse unchanged-source verification only with provenance and byte matching. Keep campaign 080 and earlier records frozen.
+
+Finish with a published prepared-candidate checkpoint and leave 081 open. This snapshot cannot embed its own future commit SHA; recover its actual publication and later decisions from Git/current campaign records. No repeated permission request is needed for the authorized sequence.
