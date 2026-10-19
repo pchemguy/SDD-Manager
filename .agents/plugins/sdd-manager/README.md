@@ -38,7 +38,7 @@ Hosting is optional for local work. Use existing shell/API authentication; crede
 
 For eligible completed GitHub implementation task/milestone reconciliation, the optional [completion utility](skills/sdd-forge/scripts/forge-close.md) provides bounded lookup, evidence reconciliation, closure and readback. It requires Node 22+, Git and protected local input; workflow owners retain actual acceptance/publication gates. Other SDD workflows do not require Node.
 
-For selected GitHub phase/docs-main projection, the optional [projection utility](skills/sdd-forge/scripts/forge-project.md) accepts explicit reviewed JSON. Its [local draft/input workflow](skills/sdd-forge/scripts/forge-project-input.md) extracts task structure while the agent supplies dependency/brief semantics. It previews outgoing content, creates/reuses exact objects and verifies associations; the coordinator retains eligibility decisions. The same optional Node/Git requirements apply.
+For selected GitHub phase or main-preparation projection, the optional [projection utility](skills/sdd-forge/scripts/forge-project.md) accepts explicit reviewed JSON. Its [local draft/input workflow](skills/sdd-forge/scripts/forge-project-input.md) extracts phase task structure for agent-authored dependencies/briefs, or binds complete predefined documentation content. It previews outgoing content, creates/reuses exact objects and verifies associations; the coordinator retains eligibility decisions. The same optional Node/Git requirements apply.
 
 ## Core development workflows
 
@@ -117,7 +117,7 @@ You may **preapprove future human checkpoints at any time**, individually or as 
 
 The generated AGENTS.md enables GitHub tracking for documentation preparation and implementation by default. When initialization will install this template, the coordinator resolves its default before the first repository write. Explicit choices and existing project policy take precedence; copying the file does not reset them. You can change this project-level policy by instructing the agent or editing AGENTS.md, including choosing local-only work.
 
-When enabled, tracking creates/verifies the native `docs-main` milestone and all nine preparation issues **before repository modifications**. Initialization preserves existing root AGENTS/disclosure/usage/discovery files and copies missing ones. If only some existed, the agent reports both groups and pauses after publishing initialization; none/all present adds no approval stop. Existing preparation resumes without replacing files or replaying first approvals.
+When enabled, tracking creates/verifies the native `sdd-docs-main` milestone and all nine preparation issues **before repository modifications**. The [bundled JSON](assets/DOCS_TRACKING_TEMPLATE.json) fixes the milestone title/plain-text description and complete issue briefs/dependencies. Initialization preserves existing root AGENTS/disclosure/usage/discovery files and copies missing ones. If only some existed, the agent reports both groups and pauses after publishing initialization; none/all present adds no approval stop. Existing preparation resumes without replacing files or replaying first approvals.
 
 `docs/dev/DOCS_TASKS.md` comes from the bundled template. Each document task completes at first approval: its approved state and checked task share one commit, followed by push/readback and issue closure. Later document revisions keep that task complete and issue closed. The last task/issue checks the whole package; then the docs branch merges, the verified merge is published, the milestone closes and the agent confirms the final checkpoint before implementation. See [main preparation](skills/sdd-manage/references/main-preparation.md).
 
@@ -145,7 +145,7 @@ Each authoring node below creates/checks and publishes one necessary proposal be
 
 ```mermaid
 flowchart TB
-    M["Scope and repository state"] --> H["Enabled docs-main projection before writes"]
+    M["Scope and repository state"] --> H["Enabled sdd-docs-main projection before writes"]
     H --> I["DOCS-001: initialize; publish and close issue"]
     I --> IQ{"Partial initial files and no preapproval?"}
     IQ -->|"yes"| STOP["Report retained/copied files; pause"]
@@ -167,7 +167,7 @@ flowchart TB
     TQ -->|"revise"| T
     TQ -->|"accepted"| Q["DOCS-009: package QC; publish and close final issue"]
     Q --> G["Explicit docs merge; verify and publish default branch"]
-    G --> MC["Close docs-main milestone when enabled"]
+    G --> MC["Close sdd-docs-main milestone when enabled"]
     MC --> A{"Final checkpoint cleared and implementation range authorized?"}
     A -->|"no"| R["Report preparation result; stop"]
     A -->|"yes"| B["Activate eligible phase and branch from published checkpoint"]
@@ -264,7 +264,7 @@ See [packaging](skills/sdd-forge/references/github-packaging.md), [release workf
 
 ## Plugin package
 
-The Agent Plugins 1.0 package includes package-root plugin.json, README.md, PLUGIN.md and LICENSE, plus skills/ and assets/. Assets include disclosure/usage notices, [AGENTS_TEMPLATE.md](assets/AGENTS_TEMPLATE.md), [DOCS_TASKS_TEMPLATE.md](assets/DOCS_TASKS_TEMPLATE.md), [SKILL_DISCOVERY_PROTOCOL.md](assets/SKILL_DISCOVERY_PROTOCOL.md) and the [Greenfield Project Prompt Template](<assets/Greenfield Project Prompt Template.md>). Root plugin.json is the sole manifest; OpenAI presentation metadata is under extensions.com.openai.interface. PLUGIN.md is SDD Manager's explicit composition entry, not a claim of standardized automatic discovery.
+The Agent Plugins 1.0 package includes package-root plugin.json, README.md, PLUGIN.md and LICENSE, plus skills/ and assets/. Assets include disclosure/usage notices, [AGENTS_TEMPLATE.md](assets/AGENTS_TEMPLATE.md), [DOCS_TASKS_TEMPLATE.md](assets/DOCS_TASKS_TEMPLATE.md), [DOCS_TRACKING_TEMPLATE.json](assets/DOCS_TRACKING_TEMPLATE.json), [SKILL_DISCOVERY_PROTOCOL.md](assets/SKILL_DISCOVERY_PROTOCOL.md) and the [Greenfield Project Prompt Template](<assets/Greenfield Project Prompt Template.md>). Root plugin.json is the sole manifest; OpenAI presentation metadata is under extensions.com.openai.interface. PLUGIN.md is SDD Manager's explicit composition entry, not a claim of standardized automatic discovery.
 
 All 15 skills are distributed together. Their relative references stay within the plugin root; named handoffs and client loading/routing are separate concerns. See [bundled-skill guidance](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md#bundled-skill-references). Artwork includes assets/icon.svg, icon.png, logo.svg and logo.png; manifest icons use icon.svg and logo.svg, including dark variants.
 

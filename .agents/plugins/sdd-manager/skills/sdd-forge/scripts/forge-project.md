@@ -2,11 +2,11 @@
 
 [forge-project.mjs](forge-project.mjs) is the optional local execution mechanism for [implementation projection](../references/github-projection.md) and [docs-main preparation](../references/github-docs-preparation.md), after the [GitHub backend](../references/github.md) prerequisites. Project is a verb here: the utility projects tracking objects. sdd-manage retains phase/preparation eligibility and execution authority.
 
-Use the separate [input-authoring workflow](forge-project-input.md) and [draft generator](forge-project-draft.mjs) for explicit JSON/templates, agent dependency/brief enrichment, source binding and outgoing-content review. Missing facilities or unsupported layouts use the existing backend without weakening its gates.
+Use the separate [input-authoring workflow](forge-project-input.md) and [draft generator](forge-project-draft.mjs) for explicit JSON, source binding and outgoing-content review. Phase briefs/dependencies require agent enrichment; main preparation consumes complete [bundled definitions](../../../assets/DOCS_TRACKING_TEMPLATE.json). Missing facilities or unsupported layouts use the existing backend without weakening its gates.
 
 ## Runtime and invocation
 
-Requires Node 22+, native Git, bundled [projection-input.mjs](projection-input.mjs), [github-client.mjs](github-client.mjs), [forge-runtime.mjs](forge-runtime.mjs) and [protected-token.mjs](../../sdd-manage/scripts/protected-token.mjs). Windows uses native SystemRoot/System32 whoami/icacls and CMD-compatible invocation; Linux uses POSIX ownership/mode checks. No PowerShell, npm dependency, keyring, installation or credential/configuration repair is involved.
+Requires Node 22+, native Git, bundled [projection-input.mjs](projection-input.mjs), [github-client.mjs](github-client.mjs), [forge-runtime.mjs](forge-runtime.mjs), [protected-token.mjs](../../sdd-manage/scripts/protected-token.mjs) and the same package's definition JSON. Windows uses native SystemRoot/System32 whoami/icacls and CMD-compatible invocation; Linux uses POSIX ownership/mode checks. No PowerShell, npm dependency, keyring, installation or credential/configuration repair is involved.
 
 The following commands are abstract templates, not selected project identities:
 
@@ -18,7 +18,7 @@ node "<PLUGIN_ROOT>/skills/sdd-forge/scripts/forge-project.mjs" docs-main --repo
 
 | Argument | Contract |
 | --- | --- |
-| phase or docs-main | Exactly one scope, matching the input kind. phase selects only its source-defined phase; docs-main selects the nine documentation tasks. |
+| phase or docs-main | Exactly one scope, matching the input kind. phase selects only its source-defined phase; docs-main selects the nine documentation tasks and fixed native `sdd-docs-main` milestone. |
 | --repo PATH | Exact eligible native worktree root, not an implicit launch-directory assumption. |
 | --remote NAME | Explicit configured remote with one effective GitHub push destination matching input repository. Existing HTTPS/SSH forms are normalized without changing transport/configuration. |
 | --request FILE | Explicit bounded UTF-8 JSON, optional UTF-8 BOM. Relative paths resolve from launch directory. |
@@ -40,7 +40,7 @@ Native preflight binds root/remote/source identity before credentials. --apply/r
 
 The GitHub-only transport binds repository metadata/numeric identity and reports explicit public/private/internal visibility when supplied. A Boolean-only response falls back to public/private only when visibility is absent; malformed explicit values and contradictory public/private metadata block execution. Recheck resolved visibility and repository identity at final readback, including private/internal changes with an unchanged Boolean. This observation does not prevent concurrent external changes or establish authorization to disclose content. It rejects redirects, arbitrary origins/headers and routes outside the selected capability. Completion clients cannot acquire projection permissions through a caller option; projection clients cannot close, reopen, PATCH, DELETE or post comments.
 
-Projection may create one phase label, selected native milestones and selected task issues, or docs-main plus its nine issues. It reuses exact existing objects and preserves states, unrelated labels/comments/assignees and user material after an exact generated issue section. It does not repair/rename existing fields or rewrite edited generated briefs. Differences, contradictory/unmarked identity, duplicate stable candidates and unsupported ownership return a conflict to the backend's existing authorized reconciliation.
+Projection may create one phase label, selected native milestones and selected task issues, or `sdd-docs-main` plus its nine predefined issues. The preparation milestone uses its exact JSON title and plain-text description without an HTML marker; the request/CLI key remains `docs-main`. Standard docs requests must retain all predefined fields. It reuses exact existing objects and preserves states, unrelated labels/comments/assignees and user material after an exact generated issue section. It does not repair/rename existing fields or rewrite edited generated briefs. Differences, contradictory/unmarked identity, duplicate stable candidates and unsupported ownership return a conflict to the backend's existing authorized reconciliation. Same-scope unprefixed titles or description markers block duplicate creation.
 
 Complete preflight discovers all selected objects before the first mutation. Recheck each absent identity before creating it; confirm complete lookup after POST and fresh complete final readback. Validate exact label metadata, milestone title/description, generated issue title/body and parent associations, plus pinned numeric identities. Issue labels must be well-formed, with exactly one expected phase association (none for docs-main). Detect managed phase-label names case-insensitively while requiring exact expected spelling; duplicate or foreign managed phase labels conflict. Preserve unrelated labels. PRs never become task candidates. Pre-existing unrelated objects remain untouched; selected projection does not certify another list's work or whole-parent completion.
 

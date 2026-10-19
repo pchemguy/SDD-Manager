@@ -55,3 +55,19 @@ V-001 is locally verified; this action commit and its publication are recovered 
 V-001 commit 9be2b8632a762102d7b1ed6674bca904275acaa3 was pushed/read back before documentation integration. [Completion run 39219422135](https://github.com/pchemguy/SDD-Manager/actions/runs/39219422135) passed. [Projection run 39219422136](https://github.com/pchemguy/SDD-Manager/actions/runs/39219422136) passed both Linux jobs but failed both Windows jobs in two new CRLF fixtures. Windows job 117950962345 reports `unsupported_source_format` at the resumed-source fixtures: they converted already-CRLF checkout text a second time, producing CR-CR-LF. A local reproduction confirms canonical CRLF parses all nine tasks and double conversion fails. Production parsing is unchanged.
 
 Corrected both fixture conversions to normalize either LF or CRLF into one CRLF. `node --test --test-name-pattern='docs content|native docs draft' tests/forge-project.test.mjs` passes both affected tests locally. This is a V-001 verification correction before V-002 is committed; owned documentation changes remain separate and uncommitted. Native matrix success remains pending until the correction is published and observed.
+
+Correction commit bac4b95154fd479bb7c202b9fd16fe0054360016 is pushed and verified by exact branch-ref readback. Its [projection workflow 39220066956](https://github.com/pchemguy/SDD-Manager/actions/runs/39220066956) now reports completed/success; final verification will inspect job-level results and the integrated documentation candidate.
+
+### V-002 — Workflow and documentation integration
+
+Updated the canonical main-preparation and GitHub lifecycle owners to consume the same definition JSON before target writes, retaining actual eligibility, source review, first approvals and merge-before-milestone closure. The input-authoring guide owns definition/envelope fields, fixed-content validation, source conflict/resume behavior and the distinction between predefined documentation dependencies and agent-authored implementation dependencies. The existing CLI guide covers title, runtime assets and conflict/readback behavior. No extra reference fragment was created.
+
+Aligned the package entry, manager/forge entries, backend route, shared lifecycle/identity summaries, project guidance and DOCS task templates, README/projection diagrams, completion-report guidance, source plugin contract and assessor expectations. Native-title mentions use `sdd-docs-main`; logical CLI/request kind and internal parent ID remain `docs-main`. Issue metadata remains distinct from the plain-text milestone description. Other authenticated clients consume the same predefined fields. Current skill capability metadata remains appropriate; no client presentation or installation change is selected.
+
+Observed checks on the changed current documentation:
+
+- Seven selected documentation/illustrative projection contracts passed with `node --test --test-name-pattern='docs|documented illustrative' tests/forge-project.test.mjs`.
+- Checked 358 local links across 22 changed Markdown documents: paths/anchors exist and packaged links remain inside the package. Heading separation, changed JSON parsing and `git diff --check` passed. Inspected the changed lists/examples and owning handoffs for coherent scope and gates.
+- Current definitions carry no repository-specific game choices or target links to nonexistent documents. All earlier closed campaign packages remain outside the edit/check scope. No live preparation objects were changed.
+
+V-002 is ready for its action commit/publication. V-003 retains integrated package/regression/native checks and the final open-campaign checkpoint.

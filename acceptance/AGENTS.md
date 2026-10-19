@@ -51,7 +51,7 @@ For the optional forge-owned [projection and input workflow](../.agents/plugins/
 node --test tests/forge-project.test.mjs
 ~~~
 
-Its Windows CMD/Linux Node 22/24 matrix covers synthetic hosted projection plus actual local draft/source/root/protection/output/locking behavior. Shared github-client.mjs or forge-runtime.mjs changes require completion and projection suites/matrices; shared protected-token.mjs also requires Git recovery. The draft generator must not infer dependencies or certify readiness. Input/route/content source review remains distinct from native runtime, live-provider and installed-agent behavior.
+Its Windows CMD/Linux Node 22/24 matrix covers synthetic hosted projection plus actual local draft/source/root/protection/output/locking behavior. Shared github-client.mjs or forge-runtime.mjs changes require completion and projection suites/matrices; shared protected-token.mjs also requires Git recovery. The draft generator must not infer dependencies or certify readiness: phase semantics remain agent-authored, while docs-main copies the complete bundled DOCS_TRACKING_TEMPLATE.json definitions. Check asset/task-template alignment, fixed sdd-docs-main title and plain-text description, exact briefs, conflict/no-duplicate behavior, false eligibility and external pre-write drafts. Input/route/content source review remains distinct from native runtime, live-provider and installed-agent behavior.
 
 ## TextStats acceptance coordination
 

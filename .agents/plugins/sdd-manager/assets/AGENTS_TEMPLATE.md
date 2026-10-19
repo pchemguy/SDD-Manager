@@ -38,7 +38,9 @@ On interruption or backend failure, reconcile actual state and report pending op
 
 ### Documentation preparation
 
-Use `sdd-manage`’s main preparation workflow to create or reconcile the native `docs-main` milestone and all nine DOCS task issues, verifying their associations by readback **before repository modifications**. Each document issue tracks development through first approval and closes only after its approved-document/checked-task commit is published and verified. Later revisions leave it closed. After final package QC and issue closure, merge, verify and publish the docs branch; then close and verify the `docs-main` milestone.
+Use `sdd-manage`’s main preparation workflow to create or reconcile the native `sdd-docs-main` milestone and all nine DOCS task issues, verifying their associations by readback **before repository modifications**. Each document issue tracks development through first approval and closes only after its approved-document/checked-task commit is published and verified. Later revisions leave it closed. After final package QC and issue closure, merge, verify and publish the docs branch; then close and verify the `sdd-docs-main` milestone.
+
+Use the running package's `assets/DOCS_TRACKING_TEMPLATE.json` for the exact milestone title/plain-text description and all issue briefs/dependencies. Do not invent project-specific replacements. `DOCS_TASKS.md` owns local completion; the JSON supplies hosted content, with runtime readiness and actual completion verified by the workflow.
 
 ### Implementation
 
