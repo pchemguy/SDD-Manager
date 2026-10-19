@@ -7,7 +7,7 @@
 - Creation parent and eventual integration/return target: `main` at the starting baseline. No parent task execution is suspended.
 - Owner: sdd-manage, with sdd-forge for hosted mechanics and sdd-report/conventions for retained evidence. [Revision report](REVISION-REPORT.md).
 - Human direction: use the demo symptom to improve SDD Manager, rather than change the demo; fix the milestone title to `sdd-docs-main`, remove the milestone's HTML comment, predefine all documentation issue content and provide JSON consumed by the existing projection workflow. The current instruction authorizes finalizing this plan and executing it.
-- State: Finalized and executed through V-001–V-003; results and verification are in the revision report. Campaign 078 remains open. This is a directly accepted amendment; no separate review campaign or invented findings are required.
+- State: Finalized and executed through V-001–V-003; results and verification are in the revision report. The human's subsequent “Close it” authorizes finalization and explicit integration into main, followed by verification/publication. This is a directly accepted amendment; no separate review campaign or invented findings are required.
 
 ## Resulting contract
 
@@ -29,4 +29,4 @@ The existing JSON request envelope, `--check`, protected credential, pagination,
 
 Publish/read back this plan checkpoint before execution. For each coherent action, retain actual changes, checks, limits and disposition in the existing report, then commit/push/read back before advancing. Do not create a root TASKS owner or task IDs from action IDs. Preserve the opening's historical access observations; later Git readback now establishes its successful publication.
 
-Only SDD Manager source, tests/CI, current supporting documentation, this active campaign and current HANDOFF/index are within scope. Existing closed packages remain byte-for-byte unchanged. No live hosted mutation, demo repair, release or installation is selected. Finish with verified changes published on this revision branch and keep campaign 078 open; its explicit closure/integration remains the next human boundary.
+Only SDD Manager source, tests/CI, current supporting documentation, this active campaign and current HANDOFF/index are within scope. Existing closed packages remain byte-for-byte unchanged. No live tracking mutation, demo repair, release or installation is selected. Execution stopped on the verified published revision branch as requested. The human now authorizes closing this campaign: finalize its records, publish/read back the final branch checkpoint, explicitly merge into its recorded main parent, verify/publish/read back that target and return on main. Stop after campaign closure without starting another workflow.
