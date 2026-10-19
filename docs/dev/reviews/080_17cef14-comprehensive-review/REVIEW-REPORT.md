@@ -6,7 +6,7 @@
 - Branch: revision/080_17cef14-comprehensive-review; recorded creation parent/integration/return main at that baseline.
 - Human scope: comprehensive review, explicitly including documentation. [Review plan](REVIEW-PLAN.md).
 - Owner/stage: sdd-manage; opening and plan. Reporting: Standard.
-- State: Open; U-001–U-004 complete, U-005–U-007 pending. Source repairs and campaign closure are not authorized by this review request.
+- State: Open; U-001–U-005 complete, U-006–U-007 pending. Source repairs and campaign closure are not authorized by this review request.
 
 ## Setup and evidence boundary
 
@@ -24,7 +24,7 @@ Evidence classes remain separate: source and editorial assessment, structural/pa
 | U-002 | Operational gates assessed; human documentation finding added | R-001 | Coordination checkpoint and subsequent human direction |
 | U-003 | Assessed; no additional confirmed finding | None | Design/planning checkpoint |
 | U-004 | Assessed; no additional confirmed finding | None | Execution/evidence checkpoint |
-| U-005 | Planned | None assessed | Opening |
+| U-005 | Assessed; one contract mismatch and one robustness recommendation | R-002, R-003 | Utility checkpoint |
 | U-006 | Planned; explicit human finding retained | R-001 | Human direction during review |
 | U-007 | Planned | None assessed | Opening |
 
@@ -129,3 +129,41 @@ Assessed all six implementation references, all three steering references, the f
 | Changed governing inputs, documentation conflict or unsafe staging | Affected QC/acceptance is reassessed; documentation refers governing decisions to the human. Unrelated staged content is excluded without destructive cleanup, and temporary-index reconciliation is explicitly bounded. |
 
 No additional confirmed lifecycle or evidence defect found in these source scenarios. Task completion, current acceptance, Git publication, hosted closure and integrated workflow completion are consistently separate. Module boundaries have substantive procedure scope; repeated short gates protect pre-action handoffs rather than supply competing complete procedures. Broader documentation duplication remains R-001/U-006. This unit inspected instructions; it did not execute product tasks, emulate a consumer, rewrite history or claim new acceptance results. No source changed.
+
+## U-005 — Runtime utilities and interfaces
+
+Read all eight bundled JavaScript implementations, four utility/interface guides, five relevant backend projection/closure references, the exact CMD adapter and applicable runtime CI workflows. Inspected synthetic fixture architecture, test cases and consequential assertions for destination/protection/deadline/conflict/recovery boundaries. No target provider objects were created or closed. Eligibility flags are caller assertions, not proof of accepted documents or authority; the guides state this limit.
+
+| Executed Linux check | Observed result |
+| --- | --- |
+| Git authentication synthetic suite | 27 passed, zero failed/skipped; 12.299 s |
+| Completion synthetic suite | 39 passed, zero failed/skipped; 3.791 s |
+| Projection/input synthetic suite | 38 passed, zero failed/skipped; 17.127 s |
+
+These 104 tests ran under Node v24.19.0 on Linux against unchanged baseline runtime/test bytes. They cover synthetic provider data and actual local Git/filesystem/protection/locking; they do not establish real-provider authentication/mutation or Windows behavior by themselves. Source scenarios cover strict explicit destination/input, pagination and duplicate identities, bounded provider bodies, post-response uncertainty/reconciliation, evidence idempotency, protected token handling, draft-versus-agent semantic ownership and non-clobbering outputs.
+
+Read-only GitHub CI inspection found successful completed runs whose relevant implementation/test/workflow bytes equal the reviewed baseline. Authentication: [39163787456](https://github.com/pchemguy/SDD-Manager/actions/runs/39163787456), source 9bd3469351e75883fa510ff38708fc4f2982be3a, 4 matched paths. Completion: [39224070078](https://github.com/pchemguy/SDD-Manager/actions/runs/39224070078), source d9ac88d6b08eb805cace6c8e873d4be9c9e0b407, 6 matched paths. Projection: [39224070039](https://github.com/pchemguy/SDD-Manager/actions/runs/39224070039), same source, 10 matched paths. Each has four successful native Windows/Linux Node 22/24 jobs. Windows adapter: [39231973648](https://github.com/pchemguy/SDD-Manager/actions/runs/39231973648), reviewed baseline itself, 3 matched paths, successful native-cmd job. This is inspected CI evidence, not a locally executed Windows/client trial.
+
+Two isolated supplementary probes exposed R-002 and R-003 below. They used temporary repositories/files, synthetic credentials and an injected failing provider, with no real hosted mutation. No additional credential disclosure, duplicate replay, unsafe destination selection or unsupported eligibility-certification claim was established. Source remains unchanged.
+
+### R-002 — Reconcile the pre-write gate with the projection lock
+
+| Field | Evidence and proposed disposition |
+| --- | --- |
+| Location / baseline | sdd-manage/references/main-preparation.md, “Establish preparation before repository writes”, step 3; sdd-forge/scripts/forge-project.mjs run; forge-runtime.mjs acquireLock; github-docs-preparation.md and forge-project.md. All at the pinned baseline. |
+| Type / priority / confidence | Workflow/script contract mismatch; P2; high confidence. |
+| Observation | The canonical procedure forbids any target-repository modification until all nine docs issues and milestone associations are read back. The advertised docs-main utility path calls acquireLock(context.common) before the first API request, creating sdd-forge-close.lock/owner.json inside the target Git common directory. External drafts alone do not satisfy the literal gate. |
+| Reproduction / consequence | In a temporary Git repository with the real docs template, an external request and a synthetic protected token, an injected first-request callback observed the lock file already present. A synthetic 403 ended the operation and cleanup removed the lock. The supported automated route therefore modifies the repository before the stated gate clears; the transient effect is not currently an explicit exception. |
+| Bounded correction / owner | The coordinator and forge owners must choose one consistent boundary: explicitly permit a narrowly defined transient coordination lock while retaining the durable/config/document/ref pre-write prohibition, or locate the early lock outside the target repository with stable shared-worktree identity. Do not silently relax the gate. No correction selected or implemented by this review. |
+| Objective recheck | A native docs-main pre-write trial observes only explicitly permitted local effects before complete association readback; lock serialization/cleanup and all credential/document/ref protections still hold. |
+
+### R-003 — Reject non-regular inputs without blocking on open
+
+| Field | Evidence and recommendation |
+| --- | --- |
+| Location / baseline | sdd-forge/scripts/forge-runtime.mjs requestFile and inspectSource at the pinned baseline. |
+| Type / priority / confidence | Robustness recommendation outside supported regular-input use; P3; high confidence in reproduced behavior. No accepted deadline-contract violation established. |
+| Observation | Both helpers call openSync before fstat/isFile. An isolated POSIX FIFO supplied as the request filename blocks in open before the intended regular-file rejection. A controlled no-writer probe was stopped after two seconds by terminating its own Node child. |
+| Consequence / qualification | An accidental unsupported special-file path can hang before a structured input error. The guides explicitly require trusted regular local inputs and exclude arbitrary OS filesystem failure from hard real-time guarantees; this is a defensive improvement, not a claim that supported regular input or Windows failed. |
+| Bounded recommendation / owner | Forge runtime: reject known non-regular path types before a potentially blocking open and retain descriptor-level validation; consider appropriate nonblocking handling for the supported platforms. Preserve the documented trusted-filesystem boundary rather than claiming race-free or general hard-real-time protection. |
+| Objective recheck | A focused POSIX special-file probe exits with a safe classified failure without a writer; valid regular/BOM/size/containment behavior and affected native suites still pass. |
