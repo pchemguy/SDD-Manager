@@ -160,6 +160,7 @@ test('cancellation cleans a live helper tree and never starts a second attempt',
   // Windows Node's kill(SIGTERM) forcibly terminates the controller; EOF to the
   // supervisor still owns cleanup, but no final JSON can be emitted there.
   if (process.platform === 'win32') child.stdin?.end();
+  console.error('cancellation fixture: terminating only the public controller');
   child.kill('SIGTERM');
   const status = await new Promise(resolve => child.on('close', resolve));
   if (process.platform !== 'win32') {

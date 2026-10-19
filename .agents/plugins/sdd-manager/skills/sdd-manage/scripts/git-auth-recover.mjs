@@ -22,7 +22,7 @@ export { ProtectedInputError as RecoveryError, validateToken, readToken } from '
 
 const SCRIPT = fileURLToPath(import.meta.url);
 const OID = /^(?:[a-f0-9]{40}|[a-f0-9]{64})$/;
-const USAGE = 'push|readback --repo PATH --remote NAME --url HTTPS_URL --ref FULL_REF --expect FULL_OBJECT_ID [--auth auto|token|existing] [--credential-repo PATH] [--token-file gh.tkn] [--timeout-ms 60000]';
+const USAGE = 'push|readback --repo PATH --remote NAME --url HTTPS_URL --ref FULL_REF --expect FULL_OBJECT_ID [--auth auto|token|existing] [--credential-repo PATH] [--token-file gh.tkn] [--timeout-ms 60000] [--python EXECUTABLE] [--progress]';
 
 const fail = (code, stage) => { throw new RecoveryError(code, stage); };
 const HELPER_MARKER = 'SDD_GIT_AUTH_HELPER ';
@@ -184,16 +184,12 @@ export function remoteOid(stdout, ref) {
   return oid;
 }
 
-/**
- * Validate local context and perform at most one explicit non-forced push plus
- * readback, or readback alone. `execute` injection is for controlled tests;
- * production uses native Git. Independent push_result/readback_result summaries
- * preserve process failure even when remote readback succeeds. No subprocess
- * text is returned; any helper_error is an allowlisted advisory stderr report.
- * @param {object} options Explicit operation, repo, remote, URL, ref and expect.
- * @param {Function} execute Bounded process adapter; production default is native.
- * @returns {object} Versioned JSON-safe remote outcome, never credential contents.
- * @throws {RecoveryError|Error} Preflight failure; CLI maps errors to safe JSON.
+/** Bind a credential source to the same actual Git common directory.
+ * @param {string} repo Destination worktree's canonical root.
+ * @param {string|undefined} selected Explicit source root; defaults to repo.
+ * @param {Function} gitAt Root-bound, bounded local Git adapter factory.
+ * @returns {{repo: string, git: Function}} Source root and its local adapter.
+ * @throws {RecoveryError|Error} Invalid root or unrelated repository identity.
  */
 function credentialContext(repo, selected, gitAt) {
   const source = selected ? fs.realpathSync(selected) : repo;

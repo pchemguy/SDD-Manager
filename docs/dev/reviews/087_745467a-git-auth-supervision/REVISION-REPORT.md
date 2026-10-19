@@ -27,3 +27,9 @@ The existing cohesive CLI guide now defines the canonical/compatibility interfac
 Runtime verification and package/platform disposition are recorded at V-005 below. Local Linux success is not native Windows, installed-agent or Antigravity evidence.
 
 V-002–V-004 checkpoint: Node 24.19.0/Git 2.51.1/Python 3.12.14 on Linux ran 46 native/synthetic contracts, all passing with zero skips (34 retained core plus 12 public supervision cases). Changed Markdown audit: 15 files, 496 local links, 68 fragments, no unresolved/style candidates; 246 frozen targets were existence-only. Whitespace checks passed. Native Windows evidence remains pending the published source matrix.
+
+## V-005 — Candidate checks and native diagnosis
+
+Implementation checkpoint 28340048bf6fb7f66b8f38368be8e11dfe605b13 was published/read back by the new canonical entry using the original same-repository credential worktree: push/readback succeeded, cleanup confirmed, total 17251 ms. No token copy or persistent helper change occurred. Contributor support: 139 passing; publisher: 37 passing. Exact candidate package: 156 files, identical rebuilds, pinned schema valid, five extracted CLI help smokes; SHA-256 4fc8d0538638db92f1c8859f1466c8021840d62d7b3b3f72ec61d5dd92929c24. Version/release preparation remains unchanged.
+
+[Native matrix 39311929978](https://github.com/pchemguy/SDD-Manager/actions/runs/39311929978) passed Linux Node 22/24. Windows Node 24 passed all retained contracts and the first seven public cases (including real selector bypass, timed descendant cleanup and linked credential roots), then the test-file process terminated at the external-controller cancellation scenario without a detailed spec-reporter cause. Windows is not accepted as passing. The next diagnostic checkpoint selects TAP reporting and a safe cancellation-stage marker to expose the actual child-process exit disposition before a repair. It does not bypass or skip that scenario.
