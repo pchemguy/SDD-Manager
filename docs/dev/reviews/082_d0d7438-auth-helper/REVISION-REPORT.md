@@ -35,3 +35,9 @@ Stop after publishing this opening, remaining on the child branch with both camp
 ## Subsequent review request
 
 Before opening publication, the human supplied a detailed external diagnostic report and explicitly requested its review. Publish this opening first, then assess the report against current source and bounded local synthetic reproductions; record the focused results in REVIEW-REPORT.md. Review now supersedes the earlier opening-only stop, while source repairs, integration and parent continuation remain unselected. The supplied live push/readback and retry counts are imported observations, not actions independently witnessed by this campaign.
+
+## Focused review checkpoint
+
+Opening 107afd226345fa3e6d6d45a01251b451e25cacdf was published and exactly read back before the review. [REVIEW-REPORT.md](REVIEW-REPORT.md) records independent Linux direct-helper and actual HTTPS Git transport reproductions, 27 passing existing contracts and four Open findings. The native control removed only GIT_DIR and successfully pushed/read back the same synthetic fixture, with persistent helper configuration unchanged. Safe helper diagnostics and push-outcome preservation are separate proposed improvements; the native transport regression gap is explicit. No helper source/test/workflow repair was made, and no live-provider result is claimed from local checks.
+
+The retained source-relative Linux probe was executed successfully; sanitized observations are linked from the review. Publish/read back this report checkpoint, then stop before a revision plan or repair execution. Both campaigns remain open and 081 stays suspended. The existing parent preparation evidence must be reassessed for the known affected helper bytes before any later release continuation.
