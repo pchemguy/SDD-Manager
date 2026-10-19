@@ -1,10 +1,13 @@
 /**
  * Pure canonical-list, JSON handoff and outgoing-template boundary.
- * No filesystem, credential or hosted effects. Drafts intentionally omit
- * semantic decisions; agent enrichment and caller eligibility remain required.
+ * No filesystem, credential or hosted effects. Phase drafts omit semantic
+ * decisions; docs-main copies bundled definitions. Caller eligibility remains
+ * required for both scopes.
  * See forge-project-input.md for grammar, schema and content-review ownership.
  */
 import { fail, keys, repositoryName, text } from './github-client.mjs';
+import { isDeepStrictEqual } from 'node:util';
+import docsTracking from '../../../assets/DOCS_TRACKING_TEMPLATE.json' with { type: 'json' };
 
 const ID = /^(?:T-\d{3,}|DOCS-\d{3})$/;
 const FLAGS = ['tracking', 'ready', 'accepted', 'published', 'eligible', 'exclusive', 'content_reviewed'];
@@ -69,7 +72,8 @@ export function parseOwner(content, kind, phaseId) {
   if (fence) fail('unsupported_source_format');
   if (kind === 'docs-main') {
     if (docs.length !== 9 || docs.some((item, index) => item.id !== 'DOCS-' + String(index + 1).padStart(3, '0') || !nameValid(item.name))) fail('unsupported_source_format');
-    return { kind, phase: null, milestones: [{ id: 'docs-main', name: 'docs-main', tasks: docs }], tasks: docs, all_task_ids: docs.map(item => item.id) };
+    if (docs.some((item, index) => item.name !== docsTracking.tasks[index]?.name)) fail('docs_template_source_conflict');
+    return { kind, phase: null, milestones: [{ id: 'docs-main', name: docsTracking.milestones[0].name, tasks: docs }], tasks: docs, all_task_ids: docs.map(item => item.id) };
   }
   if (!phases.length || !unique(phases.map(item => item.id)) || !unique(all.map(item => item.id))
       || phases.some(item => item.checked === null || !nameValid(item.name) || !item.milestones.length
@@ -81,14 +85,15 @@ export function parseOwner(content, kind, phaseId) {
 }
 
 /**
- * Generate an incomplete template without dependency/role inference or approval.
+ * Bind a request without inferring dependencies/roles or granting approval.
+ * Phase semantics remain incomplete; docs-main copies fixed package content.
  * @param {string} repository Explicit normalized GitHub owner/name.
  * @param {object} source Root/path/raw-byte SHA-256 identity.
  * @param {object} inventory parseOwner structural result.
- * @returns {object} Schema-v1 draft with null semantics and false eligibility.
+ * @returns {object} Schema-v1 draft with false eligibility for either scope.
  */
 export function draftProjection(repository, source, inventory) {
-  return {
+  const draft = {
     schema_version: 1, repository: repositoryName(repository), kind: inventory.kind, source: { ...source },
     phase: inventory.phase ? { ...inventory.phase, description: null, color: '1d76db' } : null,
     milestones: inventory.milestones.map(item => ({ id: item.id, name: item.name,
@@ -98,6 +103,14 @@ export function draftProjection(repository, source, inventory) {
       prerequisites: null, scope: null, acceptance: null, sources: [] })),
     external_task_ids: [], eligibility: Object.fromEntries(FLAGS.map(key => [key, false])),
   };
+  if (inventory.kind === 'docs-main') {
+    keys(docsTracking, ['schema_version', 'kind', 'milestones', 'tasks']);
+    if (docsTracking.schema_version !== 1 || docsTracking.kind !== 'docs-main') fail('invalid_docs_template');
+    draft.milestones = structuredClone(docsTracking.milestones);
+    draft.tasks = structuredClone(docsTracking.tasks);
+    return validateProjection(draft, inventory);
+  }
+  return draft;
 }
 
 function normalize(value) {
@@ -167,6 +180,8 @@ export function validateProjection(input, inventory, requireEligibility = false)
   if (value.kind === 'docs-main') {
     if (value.milestones.length !== 1 || value.milestones[0].kind !== 'docs-main'
         || value.milestones[0].review_task !== null || value.tasks.some(item => item.role !== 'documentation')) fail('invalid_docs_scope');
+    if (value.external_task_ids.length || !isDeepStrictEqual(value.milestones, docsTracking.milestones)
+        || !isDeepStrictEqual(value.tasks, docsTracking.tasks)) fail('docs_definition_conflict');
   } else {
     if (value.milestones.length < 2 || value.milestones.at(-1).kind !== 'phase-review') fail('invalid_review_scope');
     const reviews = [];
@@ -197,14 +212,14 @@ export function renderProjection(value) {
   const continuation = value => value.replace(/\n/g, '\n    ');
   const label = phase ? { name: 'sdd-phase-' + phase.id + '-' + hostName(phase.name), color: phase.color, description: phase.description } : null;
   const milestones = value.milestones.map(item => ({ key: item.id,
-    title: item.kind === 'docs-main' ? 'docs-main' : 'sdd-' + item.id + '-' + hostName(item.name),
-    state: 'open', description: (item.kind === 'docs-main' ? '<!-- sdd-forge:docs-milestone=docs-main -->\n' : '') + item.description }));
+    title: item.kind === 'docs-main' ? item.name : 'sdd-' + item.id + '-' + hostName(item.name),
+    state: 'open', description: item.description }));
   const issues = value.tasks.map(item => {
     const body = [
       ...(phase ? [] : ['<!-- sdd-forge:docs-scope=main -->']),
       '## Task brief <!-- sdd-forge:task-id=' + item.id + ' -->', '',
       '**Outcome:** ' + item.name + (/[.!?]$/.test(item.name) ? '' : '.'), '',
-      '**Context:** ' + (phase ? 'Phase ' + phase.id + ' — ' + phase.name + ', milestone ' + item.milestone_id : 'Main documentation preparation, docs-main') + '.', '',
+      '**Context:** ' + (phase ? 'Phase ' + phase.id + ' — ' + phase.name + ', milestone ' + item.milestone_id : 'Main documentation preparation, sdd-docs-main') + '.', '',
       '**Scope and dependencies:**', '',
       '- **Depends on:** ' + (item.depends_on.length ? item.depends_on.join(', ') : 'None') + '. ' + continuation(item.prerequisites),
       '- **Scope:** ' + continuation(item.scope), '',

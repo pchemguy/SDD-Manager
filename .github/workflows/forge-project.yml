@@ -2,12 +2,16 @@ name: GitHub projection contracts
 on:
   push:
     paths:
+      - '.agents/plugins/sdd-manager/assets/DOCS_TRACKING_TEMPLATE.json'
+      - '.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md'
       - '.agents/plugins/sdd-manager/skills/sdd-forge/scripts/**'
       - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs'
       - 'tests/forge-project.test.mjs'
       - '.github/workflows/forge-project.yml'
   pull_request:
     paths:
+      - '.agents/plugins/sdd-manager/assets/DOCS_TRACKING_TEMPLATE.json'
+      - '.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md'
       - '.agents/plugins/sdd-manager/skills/sdd-forge/scripts/**'
       - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs'
       - 'tests/forge-project.test.mjs'

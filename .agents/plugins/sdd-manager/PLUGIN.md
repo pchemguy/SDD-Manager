@@ -60,7 +60,7 @@ Clarification, agent QC, passing tests and commits/pushes do not constitute huma
 
 ## Requested backend tracking
 
-**For fresh/resumed main preparation, enabled tracking precedes repository modifications:** use [main preparation](skills/sdd-manage/references/main-preparation.md) for the native `docs-main` milestone and all nine template issues before writes. DOCS_TASKS tracks initialization, seven documents through first approval and final package QC. Publish each approved-document/checked-task commit before issue closure; later document revisions leave those tasks/issues complete. Final QC issue closure → verified/published docs merge → milestone closure → final preimplementation checkpoint. This is separate from implementation phase activation.
+**For fresh/resumed main preparation, enabled tracking precedes repository modifications:** use [main preparation](skills/sdd-manage/references/main-preparation.md) for the native `sdd-docs-main` milestone and all nine issues defined in bundled JSON before writes. DOCS_TASKS tracks initialization, seven documents through first approval and final package QC. Publish each approved-document/checked-task commit before issue closure; later document revisions leave those tasks/issues complete. Final QC issue closure → verified/published docs merge → milestone closure → final preimplementation checkpoint. This is separate from implementation phase activation.
 
 ### Implementation tracking
 
@@ -109,7 +109,7 @@ The [canonical catalog](skills/sdd-manage/references/workflows.md) owns definiti
 
 Main preparation routes `sdd-manage`/`sdd-orient` → `sdd-design` (PROJECT, ARCHITECTURE, DECOMPOSITION) → `sdd-specify` (SPEC) → `sdd-plan` (PLAN, layout) → `sdd-tasks` (TASKS), with `sdd-conventions` as needed. Existing work enters at the next eligible stage; requested interactive review comes first. Apply the [human checkpoints](#human-checkpoints-and-git-publication) and [document QC](skills/sdd-manage/references/document-qc-gates.md).
 
-Completed main preparation includes DOCS-009 whole-package QC and published documentation integration, then `docs-main` milestone closure and the final implementation checkpoint. Preparation-only stops there; an authorized implementation handoff requires accepted preparation to be integrated, verified and published to the actual default branch before creating the dependent branch; see [preparation integration](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
+Completed main preparation includes DOCS-009 whole-package QC and published documentation integration, then `sdd-docs-main` milestone closure and the final implementation checkpoint. Preparation-only stops there; an authorized implementation handoff requires accepted preparation to be integrated, verified and published to the actual default branch before creating the dependent branch; see [preparation integration](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
 
 ### Task implementation and continuation
 

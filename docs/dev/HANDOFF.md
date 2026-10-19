@@ -1,17 +1,20 @@
 # SDD Manager handoff
 
-Campaign 077_9bd3469 has completed all eight review units, four accepted revisions and prospective merged-state verification. This checkpoint accompanies its explicit main integration; confirm that merge publication/readback in Git before treating closure as established. The human authorized the complete review → plan → execute → close sequence; no additional source work or product release follows automatically.
+Campaign 078_425b3ee is finalized at its verified main integration checkpoint. The native milestone is fixed as `sdd-docs-main` with a predefined plain-text description. Bundled JSON defines all nine issue briefs/dependencies, and the existing draft/projection helpers and workflows consume it. The merge commit and remote readback following this snapshot establish completed publication/closure.
 
-## Scope and evidence
+## Context and authority
 
-- Full branch-off/reviewed baseline: 9bd3469351e75883fa510ff38708fc4f2982be3a; original opening: 40042e78af25f63cb5ca5292d42ec9b6e4084bca.
-- [Review findings](reviews/077_9bd3469-comprehensive-review/REVIEW-REPORT.md), [revision plan](reviews/077_9bd3469-comprehensive-review/REVISION-PLAN.md), [execution/checks](reviews/077_9bd3469-comprehensive-review/REVISION-REPORT.md), [index](reviews/README.md).
-- Result: corrected exploration link, bounded source assessment companion preserving all 49 cases, strict shared phase-label association checks and accurate explicit internal visibility/final drift detection. Source contract remains substantive; no package/client dependency on source-only assessment.
-- Evidence: 99 local runtime contracts, 139 Python support and 37 publisher tests; both changed forge matrices pass all four native Windows CMD/Linux Node 22/24 jobs on 8ee9c4ad48672cc38a706d47b2850a5fb36aa0a5. Current source links/resources, 33 static catalog cases and exact 151-file reproducible package/snapshot pass. Reports retain RED/GREEN, source/hashes and limits.
-- Source/consumer/client/provider evidence remain distinct. No installed-client/independent agent trial, live tracking mutation, release/tag/version change or external demo work occurred. All other closed records remain frozen and unchanged.
+- Owner/stage: sdd-manage; V-001–V-003 and merged verification complete, main closure commit/publication checkpoint. Reporting: Standard.
+- [Opening record](reviews/078_425b3ee-docs-design-tracking/REVISION-REPORT.md) retains the exact request, topic, evidence, transport fallback and stopping boundary; [index](reviews/README.md) supplies navigation.
+- Full baseline/branch-off: 425b3eef464e74bd940d061b07cf103c5bc17d4c, the completed/published main integration of campaign 077.
+- Current/return branch: main on origin, pchemguy/SDD-Manager. Incoming retained branch: revision/078_425b3ee-docs-design-tracking, published tip dc939259e3956d234ff8b310f92e4f1ccd14b510. Its creation parent and integration target are main at the baseline above. No parent implementation is suspended or authorized to resume.
+- [Revision plan](reviews/078_425b3ee-docs-design-tracking/REVISION-PLAN.md) owns the accepted scope; the revision report records actual changes, the Windows fixture correction and successful rechecks. No root executable TASKS exists.
+- The human's subsequent “Close it” authorizes final campaign persistence, explicit integration into its recorded main parent, merged-state checks, target publication/readback and return on main. Stop at campaign closure; no release, installation, product task range or demo hosted mutation is selected.
 
-## Authority and return
+## Evidence and continuation
 
-Completed working branch revision/077_9bd3469-comprehensive-review, retained on origin at 5414201f92617810d73ea146ab2ae477c7394567; recorded creation parent/integration/return target main at the full baseline above. This checkpoint restores main context and preserves the campaign outcome without selecting new work. Reporting remains Standard. This repository has taskless campaign actions, not a product TASKS owner.
+Opening 6d81a9e3b759c88362f6c861e62a8560d54aab7e and the final branch checkpoint dc939259e3956d234ff8b310f92e4f1ccd14b510 are published/read back. The verified explicit merge has target parent 425b3eef464e74bd940d061b07cf103c5bc17d4c and source parent dc939259e3956d234ff8b310f92e4f1ccd14b510, with no conflicts. Confirm its actual commit/publication/readback from Git before replaying an operation; this snapshot cannot prove its own later persistence.
 
-Finalization was published/read back. The conflict-free two-parent main merge uses target parent 9bd3469351e75883fa510ff38708fc4f2982be3a and incoming tip 5414201f92617810d73ea146ab2ae477c7394567; merged runtime/support/publisher suites pass 99/139/37, current links/whitespace pass and package bytes match the verified incoming source. The commit/remote readback confirms its own SHA and publication after this snapshot. Retain the campaign branch and all frozen records. Main has no active product range or further authorized campaign; stop awaiting a new request.
+Merged-state checks passed: 77 projection/completion runtime tests, 139 support tests and 37 publisher tests. Runtime/package/test/CI/acceptance bytes equal the tested candidate whose eight Linux/Windows CMD Node 22/24 jobs completed/success. Exact 152-file package/manifest and active metadata/closed-record preservation checks passed; candidate deterministic rebuild evidence is retained in the report. No live tracking mutation or installed-client claim is made.
+
+Prior closed campaigns remain frozen and are not a reading queue. After verified merge publication, campaign 078 is also closed/frozen. Remain on main at that completed boundary and await the next request. No further workflow is selected; do not resume product work, change demo objects or infer a release/install request.

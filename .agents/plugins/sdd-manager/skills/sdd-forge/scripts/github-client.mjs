@@ -123,11 +123,9 @@ export class GitHubTransport {
             || !/^[a-f0-9]{6}$/.test(body.color) || !text(body.description, 100)) fail('unsupported_mutation', 'transport');
       } else if (suffix === '/milestones') {
         keys(body, ['title', 'state', 'description']);
-        const description = body.title === 'docs-main' && typeof body.description === 'string'
-          ? body.description.replace(/^<!-- sdd-forge:docs-milestone=docs-main -->\n/, '') : body.description;
         if (body.state !== 'open' || !text(body.title, 255)
-            || !/^(?:sdd-[1-9]\d*(?:\.[1-9]\d*)+-.+|docs-main)$/.test(body.title)
-            || !text(description, 16000, true)) fail('unsupported_mutation', 'transport');
+            || !/^(?:sdd-[1-9]\d*(?:\.[1-9]\d*)+-.+|sdd-docs-main)$/.test(body.title)
+            || !text(body.description, 16000, true)) fail('unsupported_mutation', 'transport');
       } else if (suffix === '/issues') {
         keys(body, ['title', 'body', 'labels', 'milestone']);
         const opening = typeof body.body === 'string' && body.body.match(/^(?:<!-- sdd-forge:docs-scope=main -->\n)?## Task brief <!-- sdd-forge:task-id=(T-\d{3,}|DOCS-\d{3}) -->\n/);

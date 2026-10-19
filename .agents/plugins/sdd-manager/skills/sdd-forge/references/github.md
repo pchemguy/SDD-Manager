@@ -9,12 +9,12 @@ Load only the additional reference needed for the request:
 | Assess a ZIP or develop release package contents/names interactively | [package preparation](github-packaging.md) |
 | Prepare, extend or dispatch/monitor a release workflow | [release workflows](github-release-workflows.md) |
 | Create/finish a release, upload assets or recover/read back publication | [release lifecycle](github-releases.md) |
-| Create/read back main preparation `docs-main` and nine DOCS issues, close preparation issues/milestone | [Main preparation tracking](github-docs-preparation.md) |
+| Create/read back main preparation `sdd-docs-main` and nine DOCS issues, close preparation issues/milestone | [Main preparation tracking](github-docs-preparation.md) |
 | Create or reconcile phase labels, GitHub milestones, or task issues | [TASKS projection](github-projection.md) |
 | Close/reopen a milestone, assess milestone closure backlog or confirm hosted phase gates | [milestone lifecycle](github-milestone-lifecycle.md) |
 | Resolve task IDs to issue numbers for a commit or handoff, check issue status, or close verified issues | [issue lifecycle](github-issue-lifecycle.md) |
 
-For main documentation preparation, [main preparation tracking](github-docs-preparation.md) uses the bundled DOCS task template before repository writes, then target `docs/dev/DOCS_TASKS.md`; do not require product PLAN/TASKS or phase activation for that operation. It has distinct first-approval and merge-before-milestone closure semantics.
+For main documentation preparation, [main preparation tracking](github-docs-preparation.md) consumes bundled JSON milestone/issue definitions alongside the DOCS task template before repository writes, then target `docs/dev/DOCS_TASKS.md`; do not require product PLAN/TASKS or phase activation for that operation. It has distinct first-approval and merge-before-milestone closure semantics.
 
 For implementation task tracking, `docs/dev/TASKS.md` supplies complete-project task IDs and progress; an active `docs/dev/FEATURE-TASKS.md` supplies its feature's scoped IDs and progress until reconciliation. Task IDs remain unique across both lists. PLAN or active FEATURE-PLAN supplies phase and milestone outcomes and exit conditions. SPEC and applicable design or feature documents supply requirements when a task brief needs them. GitHub is a projection, not the authority for task scope or verified completion. Resolve a task in its owning list; a feature task later incorporated into TASKS retains its original issue. Use **sdd-report** to compose issue drafts if available; if unavailable, use the baseline format in the projection reference. Neither dependency is required for a read-only lookup.
 
@@ -84,7 +84,7 @@ Return repository, endpoint, attempted operation, sanitized cause/status, known 
 
 ## Optional local tracking mechanisms
 
-For eligible phase/docs-main creation/readback, [forge-project](../scripts/forge-project.md) consumes the [source-bound JSON contract](../scripts/forge-project-input.md). Its local draft generator extracts structure only; the agent supplies dependencies/briefs, reviews outgoing content and the manager establishes actual readiness. Use credential-free --check before authenticated apply, and read-only reconciliation for uncertain creates. Exact-reuse conflicts or unsupported scopes use existing authorized backend procedures. The utility's result verifies projection, not activation or completion.
+For eligible phase or main-preparation creation/readback, [forge-project](../scripts/forge-project.md) consumes the [source-bound JSON contract](../scripts/forge-project-input.md). Phase drafting extracts structure for agent-authored dependencies/briefs; docs-main drafting copies the complete bundled definitions. The agent reviews outgoing content and the manager establishes actual readiness. Use credential-free --check before authenticated apply, and read-only reconciliation for uncertain creates. Exact-reuse conflicts or unsupported scopes use existing authorized backend procedures. The utility's result verifies projection, not activation or completion.
 
 Use available authenticated clients normally. For completed implementation issue/milestone closure with eligible local protected-token/runtime facilities, [forge-close](../scripts/forge-close.md) implements the bounded lookup/evidence/close/readback sequence. Establish the selected issue/milestone lifecycle gates before preparing its versioned handoff; its positive eligibility fields assert the caller's verified facts rather than proving them. Resolve exact repository/root/remote, expected managed objects, report/commit evidence and exclusive operation ownership without discovering a token as routine preflight.
 
