@@ -6,7 +6,7 @@
 - Creation parent/integration/return: main at that full baseline. Working/publication branch: revision/081_5b2442e-prerelease on origin, pchemguy/SDD-Manager. No suspended parent workflow.
 - Human instruction: open a prerelease campaign, prepare the next release and bump the patch version. Existing canonical version 0.15.0 selects 0.15.1. No new tag/release, publishing dispatch or installation selected.
 - Complete remote enumeration returned 96 head/tag rows; shared campaign/path inventory has highest sequence 080. Sequence 081 is free; main readback matches baseline and v0.15.1 is absent. Git history is not shallow; local/remote v0.15.0 tag object agrees and peels to 2be233c7ec02be131917ceb16d6a16dc7d407d57.
-- State: Planned; publish/read back before version/source changes. [Review plan](REVIEW-PLAN.md), [review report](REVIEW-REPORT.md), [preparation evidence](REVISION-REPORT.md).
+- State: Preparation and U-001–U-003 complete; final publication establishes the prepared-candidate checkpoint. Campaign remains open. [Review plan](REVIEW-PLAN.md), [review report](REVIEW-REPORT.md), [preparation evidence](REVISION-REPORT.md).
 
 ## Ordered preparation
 
@@ -23,6 +23,6 @@ Reuse current source instructions and exact current records. Campaign 080 and ea
 
 The plugin subtree is the distributable. Root contributor/acceptance/CI/review artifacts stay source-only. Bump the sole canonical manifest; do not rewrite historical version strings or install/reload a client package. The original CMD assignment remains controlling. Preserve current reference boundaries and examples' illustrative scope.
 
-Release preparation uses the existing publisher and version-free sdd-manager.zip/checksum filenames. Root RELEASE-NOTES.md and the internal highlights checkpoint are already ignored/untracked; preserve existing note ownership/material and replace atomically. Retain a public-safe notes snapshot and coverage/source facts with campaign evidence so a future environment can reconstruct the handoff. Build outputs remain outside the shipped source inventory. Candidate pin, later evidence-only commits and a future final release commit/tag are distinct; a source advance requires rebind/rebuild and freshness verification before publication.
+Release preparation uses the existing publisher and version-free sdd-manager.zip/checksum filenames. Actual Git index inspection establishes that root RELEASE-NOTES.md is tracked; preserve its tracking and publish its authorized update. The internal highlights checkpoint is ignored/untracked. This corrects the opening plan's mistaken classification of the root notes. Preserve existing note ownership/material and replace atomically. Retain a public-safe notes snapshot and coverage/source facts with campaign evidence so a future environment can reconstruct the handoff. Build outputs remain outside the shipped source inventory. Candidate pin, later source-only notes/evidence commits and a future final release commit/tag are distinct; a source advance requires rebind/rebuild and freshness verification before publication.
 
 Each action/review-unit commit is pushed and exactly read back before further work. No T-task owner is invented. Stop with this campaign open and an accurate prepared-source checkpoint. A release request will apply the existing final message/commit/tag/readback gates.

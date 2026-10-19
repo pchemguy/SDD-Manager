@@ -4,7 +4,7 @@
 
 Campaign 081_5b2442e; baseline 5b2442e3315da91bcbc8ccd0efc14c0c59106b27; branch revision/081_5b2442e-prerelease; creation parent/integration/return main. The human explicitly selected prerelease preparation and patch bump. [Plan](REVIEW-PLAN.md), [preparation](REVISION-PLAN.md), [execution](REVISION-REPORT.md).
 
-State: U-001–U-002 assessed; U-003 pending. P-001 candidate 47360015b3fe727b655b48d013d1361f0a7c9319 was published/read back. One non-substantive wording polish below means published U-001 commit ddb86fc926ddc2cfbd15946946c75a9c3672645d is the exact updated candidate. Campaign 080 is closed by the baseline's verified published merge; its records remain frozen. Current source has its five verified corrections, original CMD body and separate client/provider evidence limits.
+State: U-001–U-003 assessed; no unresolved required defect found in the selected review. P-001 candidate 47360015b3fe727b655b48d013d1361f0a7c9319 was published/read back. One non-substantive wording polish below means published U-001 commit ddb86fc926ddc2cfbd15946946c75a9c3672645d is the exact updated candidate. Campaign 080 is closed by the baseline's verified published merge; its records remain frozen. Current source has its five verified corrections, original CMD body and separate client/provider evidence limits. Campaign 081 remains open at preparation, without release publication.
 
 ## Coverage
 
@@ -12,9 +12,9 @@ State: U-001–U-002 assessed; U-003 pending. P-001 candidate 47360015b3fe727b65
 | --- | --- | --- |
 | U-001 | Assessed; no substantive finding | Current source/metadata/documentation composition checkpoint |
 | U-002 | Assessed; no required defect | Exact 0.15.1 package/runtime/support checkpoint |
-| U-003 | Pending | Release range/message not yet refreshed |
+| U-003 | Assessed; no required defect | Complete release-range accounting, notes and validated build-only handoff |
 
-No canonical finding allocated at opening. Retained older release notes are inputs, not a fresh candidate claim. No tag, hosted release, live acceptance or client installation selected.
+No canonical finding was needed. The refreshed notes identify the assessed candidate and actual evidence. No tag, hosted release, live acceptance or client installation selected.
 
 ## U-001 — Current product, instructions and documentation
 
@@ -50,4 +50,33 @@ Exact candidate: ddb86fc926ddc2cfbd15946946c75a9c3672645d, containing patch 0.15
 
 Initial selection of a repository-local build output was refused before any output write because it was not ignored. Selected a new owned external build directory instead, leaving source ignore policy unchanged. Prepared outputs are retained outside the distributed source; reproducibility is bound to the exact candidate Git commit and publisher. No failure was waived or output falsely claimed.
 
-Separate code/interface assessment reused unchanged runtime/publisher/helper source only after exact byte checks; U-001's sole wording difference has no executable effect. The actual current candidate build independently checks the new version and required inventory. No additional required defect or canonical finding established. Source/local execution/native CI are qualified independently; live agent/provider, installed discovery and actual Windows client activation remain unrun. Release message/range freshness remains U-003.
+Separate code/interface assessment reused unchanged runtime/publisher/helper source only after exact byte checks; U-001's sole wording difference has no executable effect. The actual current candidate build independently checks the new version and required inventory. No additional required defect or canonical finding established. Source/local execution/native CI are qualified independently; live agent/provider, installed discovery and actual Windows client activation remain unrun. Release message/range freshness was reserved for U-003 below.
+
+## U-003 — Release scope, message and readiness
+
+Selected stable baseline v0.15.0 on the candidate's first-parent integration ancestry; local/remote annotated tag object b096e2e6431269dc5a731eaea3287c88d1e53960 agrees and peels to 2be233c7ec02be131917ceb16d6a16dc7d407d57. History is nonshallow, complete head/tag discovery was checked, and pending v0.15.1 was excluded and remains absent. The literal shared collection recipe enumerated all 150 commit identities through ddb86fc926ddc2cfbd15946946c75a9c3672645d, including merged history. No truncated range was accepted.
+
+Read complete latest integration summaries first. Introduced ancestry plus merge identities accounts for 146 distinct selected commits across these ten summaries; four direct identities complete the disjoint 150-commit accounting. Path-level merge-resolution inspection found source-only handoff/campaign bookkeeping and an explicitly summarized PLUGIN-ASSESSMENT EOF normalization; no unaccounted product resolution remained.
+
+| Integration summary | Selected identities | Assessed outcome |
+| --- | --- | --- |
+| 8a534b21f6318f0b76b11a19783f7d40ca94d698 | 16 | Repository continuation and parent/return recovery |
+| a5bc0410f726162397f53e3462e2915d7fa24f07 | 14 | Synchronization/completion distinction, prospective policy, publisher version identifiers |
+| 17ca45ecfe1bcd5cefa2b0830af5918c7e33c963 | 11 | Guided early exploration |
+| 89fdf79637e59c558b3a265d5e458c22e58d49b7 | 10 | Bounded functionality increments in every phase |
+| af2703c57fb0222c9f36e7cd34b8503f7c659cf2 | 27 | Protected Git utility and cumulative first-call stall diagnosis amendment |
+| 9bd3469351e75883fa510ff38708fc4f2982be3a | 16 | Completion, projection and JSON input utilities |
+| 425b3eef464e74bd940d061b07cf103c5bc17d4c | 16 | Association/conflict/visibility checks and assessment boundaries |
+| d9ac88d6b08eb805cace6c8e873d4be9c9e0b407 | 8 | Predefined main documentation preparation tracking |
+| 17cef14c69dd7a84dc035ac8e864f446ee3668c5 | 11 | Windows readiness/recovery with restored original assignment |
+| 5b2442e3315da91bcbc8ccd0efc14c0c59106b27 | 17 | Concise template, narrow lock, FIFO handling, adapter ownership and helper docs |
+
+The latest cumulative scripting summary covers its original integration and amendment with original opening, baseline, prior integration and reopening provenance. Earlier bodies 115a51d5116da344f63d1475c7f8acbf19f97c25 and c88afb8dbb7c99d444b14d7795f63fddb240ec78 remained deferred because no unresolved detail required them. Their introduced ancestry and merge deltas were still accounted for. Closed report contents were not loaded as a routine release queue.
+
+Direct changes were assessed separately: 03b8d6c9e06f22bad62a00f53190e99f90386295 has a misleading prompt-template subject but changes only the historical docs/ai-logs/URL.md path; no supported product claim was derived and that historical content was not loaded. b3878d4a442a6a53328b1afe46b2d58ba148ae89 opens this campaign, 47360015b3fe727b655b48d013d1361f0a7c9319 bumps the manifest, and ddb86fc926ddc2cfbd15946946c75a9c3672645d adds the reviewed phrase polish/evidence. Superseded Windows delayed-expansion/redirection changes were removed from the delivered account: the final package retains the human-restored assignment and its observed quoted-redirection limitation.
+
+The prior root notes matched the v0.15.0 release commit body exactly, with no intervening human-only edits/cuts detected. Current tracked ownership was confirmed in Git, correcting the opening plan's mistaken ignored/untracked classification. Atomically replaced the complete file with 0.15.1 overview, compatibility/requirements, consolidated highlights, other changes, package/loading guidance and evidence limits. Kept public notes free of raw history and internal campaign transcripts. [Retained snapshot](RELEASE-NOTES.md) equals root RELEASE-NOTES.md; [structured handoff](RELEASE-HANDOFF.json) contains those exact UTF-8 bytes and passes the actual publisher validator.
+
+Notes SHA-256: 9620c1768831bc7480624216b8eb74f91ef745d255b3114cee065342c8440c82; 5,165 UTF-8 bytes. Serialized handoff is 5,552 bytes, below the 60,000-byte limit, with source/notes_source equal to the exact candidate, tag v0.15.1, and publish/prerelease/make_latest all false. The ignored local highlights checkpoint records the validated baseline and candidate watermark; it is retained because no release consumed it. Matching notes/handoff are also beside the prepared ZIP.
+
+Readiness is bounded to the selected source/package and complete prepared message, with zero unresolved required defects. The 176 fresh support/publisher passes and 106 reused unchanged Linux utility passes retain their separate provenance, as do source-matched native CI and unrun agent/client/provider trials. Later report and tracked-note commits are outside the shipped package and do not silently replace the candidate pin. A future release must inspect the intervening range, refresh notes coverage, rebind/rebuild against the final release commit, verify its same message body, then create/read back its tag and use the single publisher. Current preparation creates no release marker, tag, dispatch or hosted release.

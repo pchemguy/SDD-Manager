@@ -1,0 +1,38 @@
+SDD Manager 0.15.1 improves repository-based continuation, early project exploration and bounded delivery. It adds optional protected Git/GitHub utilities and a Windows shell-recovery workflow, while keeping project instructions focused on policy and routing.
+
+## Compatibility and requirements
+
+The portable package retains its single root manifest and 15 skills. Existing document approval, task completion, publication and integration gates continue to apply. Repository-local handoffs preserve workflow context; credentials and ignored local files must be established separately in a new environment.
+
+The optional Git authentication and GitHub tracking utilities require Node.js 22+ and Git. Other workflows use the target project's tools and do not acquire a Node requirement.
+
+The Windows recovery adapter supports the documented two-argument launcher form. While active, commands use CMD semantics and every single quote becomes a double quote, including literal apostrophes. Quoted-redirection preservation is not guaranteed. The workflow verifies the actual launcher and reports successful activation before continuing.
+
+Existing hosted objects with conflicting managed content require reconciliation. The utilities stop on those conflicts rather than overwrite them automatically.
+
+## Highlights
+
+- **Repository-based continuation:** handoffs serve as checkpoints, with later decisions recovered from campaign records and Git. Interrupted branches retain their recorded parents, return boundaries and pending human decisions. Synchronization is distinguished from completed integration.
+- **Guided exploration:** a dedicated design sub-workflow critically evaluates terse objectives, surfaces influential product and architectural choices, recommends context-aligned options and records assumptions before the project brief. Detail adapts to project or feature scope; examples remain illustrative.
+- **Bounded delivery:** every phase delivers a useful, testable functionality increment. A complete intended version is distinguished from the simplest reasonable initial slice, and later capabilities receive separate bounded increments.
+- **Protected Git recovery:** an optional utility uses transient credentials without persisting helper changes. Bounded monitoring and automatic diagnosis address an initial non-interactive Git stall, including interactive credential-helper selection.
+- **Reviewed GitHub tracking inputs:** JSON-based drafting, projection and completion utilities provide bounded mechanics with readback. Phase dependencies and substantive briefs remain agent-authored; main documentation preparation uses the predefined milestone and nine issue definitions. Workflow owners retain eligibility and completion decisions.
+- **Clearer startup and project instructions:** Windows readiness and recovery have a dedicated coordinator reference and skill-local CMD adapter. Generated AGENTS.md retains concise policy and routing; the main preparation procedure stays with its owning workflow.
+
+## Other changes
+
+Tracking checks enforce phase associations and distinguish known objects from delayed inventory visibility. Shared file readers reject unsuitable input types promptly, including POSIX FIFOs. Main-preparation projection permits only its narrowly defined transient coordination lock before tracking readback.
+
+Publisher checks preserve complete version identifiers, exact source/body association and deterministic package contents. Optional utilities, focused guides, helper API documentation and source support checks are included in their appropriate package or contributor scopes.
+
+## Installation and package preparation
+
+Prepared assets are `sdd-manager.zip` and `sdd-manager.zip.sha256`. Verify the checksum, extract the package and use your agent client's supported loading mechanism. Load PLUGIN.md or the coordinator explicitly when required; automatic discovery depends on the client. See the [candidate package guide](https://github.com/pchemguy/SDD-Manager/blob/ddb86fc926ddc2cfbd15946946c75a9c3672645d/.agents/plugins/sdd-manager/README.md).
+
+These assets are prepared locally; this message does not identify published downloads. Release publication requires the separate source, tag, workflow and asset-readback steps.
+
+## Validation and limitations
+
+The pinned 0.15.1 candidate passed 139 source support tests and 37 publisher tests on Linux/Python 3.12. Two independent builds produced identical 154-file packages; core schema, archive inspection and four extracted CLI help checks passed. Recent unchanged utility sources retain 106 passing Linux tests and source-matched Windows/Linux Node 22/24 CI evidence; native Windows CMD contracts also passed. Those reused observations are distinct from fresh whole-candidate CI runs.
+
+Structural author validation reported no errors and 48 existing advisory warnings about bundled skill handoffs. These checks do not establish autonomous agent behavior, installed-client discovery, live-provider operations or actual Antigravity/local Codex adapter activation. Those trials were not run for this candidate. SDD Manager remains an experimental, learning-by-doing project.
