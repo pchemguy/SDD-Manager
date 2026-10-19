@@ -33,3 +33,9 @@ This opening changes only this record, current parent suspension evidence, HANDO
 The parent retains canonical version 0.15.1 and its prior preparation evidence. Authentication child 082 is already integrated at the baseline; its verification does not refresh the parent's earlier candidate/source/body/package association. Parent preparation remains suspended and still requires reassessment when separately resumed.
 
 Stop after publishing this opening, remaining on revision/083_df52d0b-plan-layout-checkpoints with both 083 and 081 open. A later selected focused assessment can establish any required revision plan. Do not infer permission to execute repairs or close/merge this child merely from its opening. On later authorized completion, explicitly integrate into revision/081_5b2442e-prerelease, verify/publish and return with the parent's preparation boundary preserved; child completion does not resume or close 081.
+
+## Clarified repair authority
+
+Opening a30cb776a15cb94a10eff7b32e29f6c7aac52b24 was published/read back. The human then explicitly directed a wording repair: define each checkpoint in line with the other document checkpoints, rather than append commentary about the planning pair. The assistant briefly proposed combining approvals in chat; that was incorrect and no repository edit implemented it. PLAN acceptance remains before layout, and layout acceptance remains before TASKS.
+
+[REVISION-PLAN.md](REVISION-PLAN.md) records the accepted focused repair and checks. The canonical per-document table already defines the required stages; remove redundant pair-specific assertions from its callers, normalize task wording and retain the concrete QC/acceptance progression. This request now authorizes source repair, superseding the opening-only stop for that bounded work. Keep 083 open after verified publication; parent 081 remains suspended, with integration/release/installation unselected.
