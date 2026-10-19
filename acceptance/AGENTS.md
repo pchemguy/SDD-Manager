@@ -53,6 +53,16 @@ node --test tests/forge-project.test.mjs
 
 Its Windows CMD/Linux Node 22/24 matrix covers synthetic hosted projection plus actual local draft/source/root/protection/output/locking behavior. Shared github-client.mjs or forge-runtime.mjs changes require completion and projection suites/matrices; shared protected-token.mjs also requires Git recovery. The draft generator must not infer dependencies or certify readiness: phase semantics remain agent-authored, while docs-main copies the complete bundled DOCS_TRACKING_TEMPLATE.json definitions. Check asset/task-template alignment, fixed sdd-docs-main title and plain-text description, exact briefs, conflict/no-duplicate behavior, false eligibility and external pre-write drafts. Input/route/content source review remains distinct from native runtime, live-provider and installed-agent behavior.
 
+## Windows shell recovery contracts
+
+For the coordinator's [Windows shell recovery](../.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell-recovery.md) and bundled PowerShell.cmd adapter, run:
+
+```text
+python -m unittest discover -s tests -p test_windows_shell_recovery.py -v
+```
+
+These four runtime contracts require native Windows CMD and exercise LF/CRLF assets through the documented two-argument launcher form, isolated PATH selection/spaced paths, variable expansion, quote conversion and output/status propagation. Linux skips are not runtime passes. Inspect the selected source's actual Windows workflow result. Source scenario assessment remains separate from actual Antigravity/local Codex activation; the test does not establish arbitrary launcher compatibility or deploy a shim to a user's host.
+
 ## TextStats acceptance coordination
 
 The [TextStats overview](TEXTSTATS.md) maps qualified evidence and prior test repositories. [TextStats](textstats/README.md) owns the sample product, harness, fixtures, consumer requests, independent assessor contracts and run evidence protocol. Read [its coordinator entry](textstats/AGENTS.md) before touching or executing that scope; follow its ordered setup and role-isolation instructions for an actual acceptance campaign. A support-suite run is distinct from a live acceptance campaign.

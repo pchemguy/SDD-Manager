@@ -1,0 +1,31 @@
+name: Windows shell recovery contracts
+on:
+  push:
+    paths:
+      - '.agents/plugins/sdd-manager/assets/PowerShell.cmd'
+      - '.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell-recovery.md'
+      - 'tests/test_windows_shell_recovery.py'
+      - '.github/workflows/windows-shell-recovery.yml'
+  pull_request:
+    paths:
+      - '.agents/plugins/sdd-manager/assets/PowerShell.cmd'
+      - '.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell-recovery.md'
+      - 'tests/test_windows_shell_recovery.py'
+      - '.github/workflows/windows-shell-recovery.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-cmd:
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Exercise the actual batch adapter with CMD
+        shell: cmd
+        run: python -m unittest discover -s tests -p test_windows_shell_recovery.py -v

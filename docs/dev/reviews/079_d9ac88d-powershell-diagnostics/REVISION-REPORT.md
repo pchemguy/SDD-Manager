@@ -58,3 +58,11 @@ Inspected-source scenarios:
 | Host denial | Preserve the denial; this workflow does not change system/global settings or bypass authorization. |
 
 Checked 192 current local links/anchors, package containment and heading/whitespace composition: passed. The 40-line recovery module contains one complete startup/recovery procedure with a visible loading trigger; routing remains shallow in callers. No previous closed records or local host configuration changed. This action establishes source guidance; native batch behavior remains pending V-002 and is not inferred from Linux inspection.
+
+### V-002 — Native contract harness and acceptance integration
+
+V-001 commit a5b4fc43072f834c31c9009423cf28a09ab2a2af was pushed/read back before this action. Added four native Windows CMD contracts in `tests/test_windows_shell_recovery.py`, using temporary spaced paths and process-local PATH resolution. Each exercises LF/CRLF copies of the actual asset and the documented two-argument launcher. Cases check an expanded probe and selected shim path, observable single-quote conversion including a literal apostrophe, nonzero status and stderr forwarding. The dedicated Windows workflow explicitly uses CMD and Python 3.11; no global/client/user-host shim is installed.
+
+Extended actual package snapshot checks for the shim/recovery reference and exclusion of the source-only harness. Updated the source acceptance command/evidence boundary, plugin contract and K-16 coordinator contrast. Refined the activation example's quote notation and same-tool retry wording; the supplied executable shim body is unchanged.
+
+Observed locally on Linux/Python 3.12.14: support suite 139 passed; publisher suite 37 passed. The new test module parses and its four Windows tests are explicitly skipped here, which supplies no Windows runtime pass. Compared the asset's executable lines with the human-supplied body retained in the plan: exact match. Whitespace checks pass. Publish this action to obtain actual native Windows CI results; native execution and live client activation remain unverified at this checkpoint.
