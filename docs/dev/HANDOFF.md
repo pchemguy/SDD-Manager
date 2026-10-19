@@ -1,30 +1,23 @@
 # SDD Manager handoff
 
-Parent prerelease campaign 081_5b2442e owns the next continuation and remains open and suspended. Checkpoint wording child 083 completed its accepted repair; verified publication of the containing explicit parent merge and confirmed branch return establish its closure. Authentication child 082 remains closed.
+Nested campaign 084_e034a38 owns the focused Windows shell probe revision. Parent prerelease campaign 081 remains open and suspended; children 082/083 remain closed.
 
-## Workflow and boundary
+## Workflow and scope
 
-- Owner/stage: sdd-manage; retained 0.15.1 preparation checkpoint, requiring refreshed source-bound preparation after the child amendments. Reporting: Standard; Minimal and Explicit remain available.
-- [Parent preparation](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [parent plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [parent review](reviews/081_5b2442e-prerelease/REVIEW-REPORT.md), [083 execution](reviews/083_df52d0b-plan-layout-checkpoints/REVISION-REPORT.md), [083 plan](reviews/083_df52d0b-plan-layout-checkpoints/REVISION-PLAN.md), [index](reviews/README.md).
-- The latest human instruction “Yes, close 083” selects only child finalization/integration/publication and return. Its checkpoint tables and approval order are preserved; redundant commentary is removed, DOCS task wording normalized and projection content-transfer checks improved.
-- Stop after verified parent publication/return. Do not resume prerelease preparation, integrate 081 into main, create a release marker/tag, dispatch a publisher, publish a hosted release or install a plugin without a subsequent selection.
+- Owner/stage: sdd-manage; directly accepted revision opening and plan. Reporting: Standard; Minimal and Explicit remain available.
+- [Child plan](reviews/084_e034a38-windows-shell-probe/REVISION-PLAN.md), [child evidence](reviews/084_e034a38-windows-shell-probe/REVISION-REPORT.md), [parent preparation](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [parent plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [index](reviews/README.md).
+- Human authorizes removal of ` /d` from the documented CMD probe and the full campaign through closure. Align the existing native test's matching probe; preserve unrelated fixture commands, adapter bytes and the required quote-conversion notice.
 
-## Git identities and return
+## Branches and return
 
-- Working/publication branch: revision/081_5b2442e-prerelease on origin, pchemguy/SDD-Manager. Its recorded creation parent/integration/return target is main; local main and origin/main remain at 5b2442e3315da91bcbc8ccd0efc14c0c59106b27.
-- Child branch retained: revision/083_df52d0b-plan-layout-checkpoints; final published incoming tip c84ac867502fe3f84aae120dcb12b72fac5eb737. Original opening a30cb776a15cb94a10eff7b32e29f6c7aac52b24; original branch-off and refreshed receiving parent before merge df52d0bba5c0872a06d3277951624091dcab6b5c.
-- The containing explicit two-parent merge records both actual tips and merged-state checks. Verify exact target publication and the clean current parent worktree before treating closure as established. Recover its actual SHA and later decisions from Git; this file cannot encode its own future commit identity. Source merged without conflicts; HANDOFF deliberately restores the parent's suspended preparation context.
+- Working/publication branch: revision/084_e034a38-windows-shell-probe on origin, pchemguy/SDD-Manager. Full branch-off: e034a38bcdd6f18fd028af1f831730fe9e558587.
+- Creation parent, integration target and return branch: revision/081_5b2442e-prerelease at that verified published checkpoint. Parent preparation remains suspended. A clean older local checkout was recovered to the actual published parent before child setup; unrelated branches/worktrees were preserved.
+- Publish/read back each owned checkpoint before advancing. Finalize and explicitly merge into the refreshed parent, reconcile HANDOFF to the parent's suspended preparation context, verify/publish and confirm return. No main integration or parent continuation follows.
 
-## Verification and preparation freshness
+## Verification, retained inputs and stop
 
-Repaired source 345aba7b34d003db1dac0faa27df51a140cfd1e4 passed 139 support, 40 projection and 37 publisher local tests. All four actual native projection jobs passed on Windows/Linux Node 22/24. The child report retains the original brittle-assertion failure and successful corrected rerun. Source checks confirm ordinary checkpoint definitions, metadata, JSON identities/order/dependencies and frozen records are preserved. No executable runtime behavior changed; no live-agent or installed-client acceptance is inferred.
+Host is Linux; no Windows shim was activated. Run the focused existing contracts and retain skips as unrun native evidence; inspect actual Windows CI for the updated guide/test. Check the exact two-source-file change, current links/style and preservation of campaign 083 and earlier closed packages. No broad runtime or approval-policy revision is selected.
 
-That exact source produced two identical 154-file 0.15.1 verification archives, SHA-256 9b83b72d2db443e95d5bc574eca0e046e82d67ae3db5c5e50f4752a37edbcb0c. Every archive member and required resource matched Git; the committed acceptance snapshot matched the package boundary and four extracted CLI help checks passed. Finalization changes only current evidence/navigation. The containing merge retains the actual merged-state evidence.
+Parent version remains 0.15.1. Its earlier prepared source ddb86fc926ddc2cfbd15946946c75a9c3672645d and notes/handoff/package snapshots remain historical; child amendments require refreshed association when 081 is separately resumed. Do not rewrite release inputs or create a tag/release/dispatch/install as part of this child.
 
-The parent still retains earlier prepared source ddb86fc926ddc2cfbd15946946c75a9c3672645d, tracked root release notes and campaign notes/handoff snapshots. Their prior checks/hashes describe that source. Authentication child 082 and wording child 083 change shipped bytes, so on a separately selected 081 continuation inspect intervening history and refresh complete notes coverage, selected source/body/handoff association and exact package through existing preparation/release gates. Child verification archives do not replace this work or supply release authority.
-
-## Stop and continuity
-
-Finish only merged-state verification, merge commit/push/exact readback and branch-return checks, then stop with 083 closed and 081 open/suspended. Keep 083 records frozen after closure and preserve 082 and earlier review/feature/steering packages unchanged. No task IDs or new tracking registry were introduced.
-
-Host is Linux; reuse established shell readiness. On later continuation reconcile actual branch/pending state and subsequent decisions using the coordinator's continuity workflow. Protected credentials and ignored local inputs require separate safe availability during transfers; never include secret values or transient helper paths in handoffs.
+Publish the opening/plan, execute and verify the bounded repair, then complete only the authorized child integration/publication/return. Stop with 084 closed and 081 open/suspended. Recover actual opening/merge SHAs and later decisions from Git; checkpoints cannot prove their own future publication. Keep protected credentials and ignored inputs outside reports and arrange their separate safe availability on transfer.
