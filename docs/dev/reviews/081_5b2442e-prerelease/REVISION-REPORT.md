@@ -39,3 +39,9 @@ The candidate's 139 support and 37 publisher tests passed freshly. Recent unchan
 ## Stop
 
 Publish/read back this final checkpoint and stop on revision/081_5b2442e-prerelease. Campaign 080 remains closed on main; 081 remains open, with preparation complete. No integration/closure of 081, release marker/tag, publishing dispatch, hosted release or installation follows from this request. Recover the containing checkpoint's actual SHA and remote containment from Git rather than embedding a self-referential future identity.
+
+## Nested authentication revision
+
+The preparation checkpoint was published and exactly read back at d0d7438bf1e6ec850870cfc43be32573c784dc0c. The subsequent human request opens child [082_d0d7438](../082_d0d7438-auth-helper/REVISION-REPORT.md) from that checkpoint to revise the authentication helper. Campaign 081 remains open; its execution is suspended while the child owns the focused scope. The child's creation parent, integration target and return branch are revision/081_5b2442e-prerelease, not main.
+
+Retain the candidate and previous preparation results for their recorded source. No helper change is made at child opening. After a later authorized child integration, reassess affected prerelease inputs/evidence, refresh source/body/package association as needed, and return control at this preparation boundary. Child completion supplies no automatic parent continuation or release authority.
