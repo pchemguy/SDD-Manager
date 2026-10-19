@@ -1,6 +1,6 @@
 /** Native HTTPS Git fixture, using a public test-only localhost key/certificate.
  * No external provider or credential is contacted. The caller supplies a
- * synthetic token and owns its client repository/protection. Server repositories,
+ * synthetic token and owns its client repository/token files. Server repositories,
  * processes and connections are cleaned by the owning node:test context.
  */
 import fs from 'node:fs';
