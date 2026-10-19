@@ -4,14 +4,18 @@ on:
     paths:
       - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/**'
       - 'tests/git-auth-recover.test.mjs'
+      - 'tests/git-publish.test.mjs'
       - 'tests/helpers/git-auth-https.mjs'
+      - 'tests/helpers/windows-process.py'
       - 'tests/fixtures/git-auth/**'
       - '.github/workflows/git-auth-recover.yml'
   pull_request:
     paths:
       - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/**'
       - 'tests/git-auth-recover.test.mjs'
+      - 'tests/git-publish.test.mjs'
       - 'tests/helpers/git-auth-https.mjs'
+      - 'tests/helpers/windows-process.py'
       - 'tests/fixtures/git-auth/**'
       - '.github/workflows/git-auth-recover.yml'
   workflow_dispatch:
@@ -34,10 +38,24 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           package-manager-cache: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
       - name: Run Linux contracts
         if: runner.os != 'Windows'
-        run: node --test tests/git-auth-recover.test.mjs
+        timeout-minutes: 3
+        run: node --test --test-reporter=tap tests/git-auth-recover.test.mjs tests/git-publish.test.mjs
       - name: Run Windows contracts with CMD
         if: runner.os == 'Windows'
+        timeout-minutes: 3
         shell: cmd
-        run: node --test tests/git-auth-recover.test.mjs
+        run: node --test --test-reporter=tap tests/git-auth-recover.test.mjs tests/git-publish.test.mjs
+      - name: Repeat Windows controller-death contrast
+        if: runner.os == 'Windows'
+        shell: cmd
+        timeout-minutes: 2
+        run: |
+          for /L %%I in (1,1,3) do (
+            node --test --test-reporter=tap --test-name-pattern=cancellation tests/git-publish.test.mjs
+            if errorlevel 1 exit /b 1
+          )

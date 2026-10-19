@@ -1,9 +1,10 @@
 /**
- * Request-scoped HTTPS Git recovery. Node >=22; no third-party packages.
+ * HTTPS credential/validation core and compatibility entry. Node >=22.
+ * Public execution delegates to git-publish.mjs (Python >=3.11 supervisor).
  *
  * Main entry: push|readback --repo PATH --remote NAME --url HTTPS_URL
  *   --ref refs/heads/NAME|refs/tags/NAME --expect FULL_OBJECT_ID
- *   [--token-file gh.tkn] [--timeout-ms 30000]
+ *   [--auth auto|token|existing] [--credential-repo PATH] [--token-file gh.tkn] [--timeout-ms 60000]
  *
  * Policy/authorization belongs to sdd-manage/references/credentials.md. This
  * utility validates one destination/ref, supplies credentials through Git's
@@ -21,14 +22,14 @@ export { ProtectedInputError as RecoveryError, validateToken, readToken } from '
 
 const SCRIPT = fileURLToPath(import.meta.url);
 const OID = /^(?:[a-f0-9]{40}|[a-f0-9]{64})$/;
-const USAGE = 'push|readback --repo PATH --remote NAME --url HTTPS_URL --ref FULL_REF --expect FULL_OBJECT_ID [--token-file gh.tkn] [--timeout-ms 30000]';
+const USAGE = 'push|readback --repo PATH --remote NAME --url HTTPS_URL --ref FULL_REF --expect FULL_OBJECT_ID [--auth auto|token|existing] [--credential-repo PATH] [--token-file gh.tkn] [--timeout-ms 60000] [--python EXECUTABLE] [--progress]';
 
 const fail = (code, stage) => { throw new RecoveryError(code, stage); };
 const HELPER_MARKER = 'SDD_GIT_AUTH_HELPER ';
 const HELPER_CODES = new Set(['helper_failed', 'helper_context_mismatch', 'repo_must_be_root',
   'invalid_helper_arguments', 'invalid_credential_request', 'invalid_url', 'relocated_git_environment',
   'token_outside_repository', 'token_symlink', 'invalid_token_file', 'token_not_ignored',
-  'token_tracked_or_unknown', 'token_changed', 'invalid_token',
+  'token_tracked_or_unknown', 'token_changed', 'invalid_token', 'credential_repository_mismatch',
   'process_timeout', 'process_unavailable', 'process_signal', 'git_failed']);
 const HELPER_STAGES = new Set(['preflight', 'helper', 'repository', 'token']);
 const SIGNALS = new Set(Object.keys(os.constants.signals));
@@ -91,9 +92,10 @@ function processSummary(result, attempted = true) {
  */
 export function parseCli(args) {
   if (!['push', 'readback'].includes(args[0])) fail('invalid_operation');
-  const options = { operation: args[0], tokenFile: 'gh.tkn', timeoutMs: 30000 };
+  const options = { operation: args[0], tokenFile: 'gh.tkn', timeoutMs: 30000, auth: 'token' };
   const names = { '--repo': 'repo', '--remote': 'remote', '--url': 'url', '--ref': 'ref',
-    '--expect': 'expect', '--token-file': 'tokenFile', '--timeout-ms': 'timeoutMs' };
+    '--expect': 'expect', '--token-file': 'tokenFile', '--timeout-ms': 'timeoutMs',
+    '--auth': 'auth', '--credential-repo': 'credentialRepo' };
   const seen = new Set();
   for (let i = 1; i < args.length; i += 2) {
     const key = names[args[i]], value = args[i + 1];
@@ -105,6 +107,7 @@ export function parseCli(args) {
   if (!/^refs\/(heads|tags)\/.+/.test(options.ref) || /[\x00-\x20\x7f]/.test(options.ref)) fail('invalid_ref');
   options.timeoutMs = Number(options.timeoutMs);
   if (!Number.isInteger(options.timeoutMs) || options.timeoutMs < 100 || options.timeoutMs > 120000) fail('invalid_timeout');
+  if (!['auto', 'token', 'existing'].includes(options.auth)) fail('invalid_auth_mode');
   validateTargetUrl(options.url);
   return options;
 }
@@ -181,22 +184,32 @@ export function remoteOid(stdout, ref) {
   return oid;
 }
 
-/**
- * Validate local context and perform at most one explicit non-forced push plus
- * readback, or readback alone. `execute` injection is for controlled tests;
- * production uses native Git. Independent push_result/readback_result summaries
- * preserve process failure even when remote readback succeeds. No subprocess
- * text is returned; any helper_error is an allowlisted advisory stderr report.
- * @param {object} options Explicit operation, repo, remote, URL, ref and expect.
- * @param {Function} execute Bounded process adapter; production default is native.
- * @returns {object} Versioned JSON-safe remote outcome, never credential contents.
- * @throws {RecoveryError|Error} Preflight failure; CLI maps errors to safe JSON.
+/** Bind a credential source to the same actual Git common directory.
+ * @param {string} repo Destination worktree's canonical root.
+ * @param {string|undefined} selected Explicit source root; defaults to repo.
+ * @param {Function} gitAt Root-bound, bounded local Git adapter factory.
+ * @returns {{repo: string, git: Function}} Source root and its local adapter.
+ * @throws {RecoveryError|Error} Invalid root or unrelated repository identity.
  */
-export function recover(options, execute = processResult) {
-  options = parseCli([options.operation, ...['repo', 'remote', 'url', 'ref', 'expect'].flatMap(key => ['--' + key, String(options[key] ?? '')]), '--token-file', options.tokenFile ?? 'gh.tkn', '--timeout-ms', String(options.timeoutMs ?? 30000)]);
-  const env = childEnv();
-  const repo = fs.realpathSync(options.repo);
-  const git = (args, auth = []) => execute('git', ['-C', repo, ...auth, ...args], { cwd: repo, env, timeoutMs: options.timeoutMs });
+function credentialContext(repo, selected, gitAt) {
+  const source = selected ? fs.realpathSync(selected) : repo;
+  const git = gitAt(source);
+  if (!sameDirectory(checked(git(['rev-parse', '--show-toplevel']), 'token').trim(), source))
+    fail('repo_must_be_root', 'token');
+  if (!sameDirectory(repo, source)) {
+    const common = root => path.resolve(root,
+      checked(gitAt(root)(['rev-parse', '--git-common-dir']), 'token').trim());
+    if (!sameDirectory(common(repo), common(source))) fail('credential_repository_mismatch', 'token');
+  }
+  return { repo: source, git };
+}
+
+/** Prepare one bound context; credential bytes never enter the returned object. */
+function prepare(options, execute) {
+  const env = childEnv(), repo = fs.realpathSync(options.repo);
+  const gitAt = root => (args, auth = []) => execute('git', ['-C', root, ...auth, ...args],
+    { cwd: root, env, timeoutMs: options.timeoutMs });
+  const git = gitAt(repo);
   const root = checked(git(['rev-parse', '--show-toplevel']), 'repository').trim();
   if (!sameDirectory(root, repo)) fail('repo_must_be_root');
   checked(git(['check-ref-format', options.ref]), 'ref');
@@ -206,8 +219,7 @@ export function recover(options, execute = processResult) {
   } else checked(git(['cat-file', '-e', options.expect]), 'ref');
   const target = validateTargetUrl(options.url);
   const destination = () => {
-    // A named remote's foreign-VCS override bypasses the URL's HTTPS transport.
-    const vcs = git(['config', '--get-all', `remote.${options.remote}.vcs`]);
+    const vcs = git(['config', '--get-all', 'remote.' + options.remote + '.vcs']);
     if (vcs.error || vcs.signal || vcs.status !== 1) fail('remote_helper_unsupported');
     const urls = checked(git(['remote', 'get-url', '--push', '--all', options.remote]), 'destination').trim().split(/\r?\n/);
     if (urls.length !== 1 || urls[0] !== options.url) fail('destination_mismatch');
@@ -215,39 +227,82 @@ export function recover(options, execute = processResult) {
     if (readUrl !== options.url) fail('readback_url_rewritten');
   };
   destination();
-  readToken(repo, options.tokenFile, git);
-  const helper = helperCommand(process.execPath, SCRIPT, [repo, options.tokenFile, options.url]);
-  const contextUrl = target.origin + '/' + gitCredentialPath(target).split('/').map(encodeURIComponent).join('/');
-  const context = `credential.${contextUrl}`;
-  const auth = ['-c', 'credential.helper=', '-c', `${context}.helper=`, '-c', `${context}.helper=${helper}`,
-    '-c', 'credential.useHttpPath=true', '-c', `${context}.useHttpPath=true`,
-    '-c', `${context}.username=x-access-token`, '-c', 'credential.interactive=false',
-    '-c', 'core.askPass=', '-c', 'http.followRedirects=false', '-c', `http.${options.url}.followRedirects=false`, '-c', 'http.extraHeader=',
-    '-c', `http.${options.url}.extraHeader=`];
-  // Re-resolve after file validation; no persistent remote/helper writes occur.
+  let mode = options.auth;
+  let credential;
+  if (mode !== 'existing') {
+    credential = credentialContext(repo, options.credentialRepo, gitAt);
+    const relative = path.relative(credential.repo, path.resolve(credential.repo, options.tokenFile));
+    if (path.isAbsolute(options.tokenFile) || !relative || relative === '..' || relative.startsWith('..' + path.sep))
+      fail('token_outside_repository');
+    if (mode === 'auto') {
+      try { fs.lstatSync(path.join(credential.repo, options.tokenFile)); mode = 'token'; }
+      catch (error) { if (error.code === 'ENOENT') mode = 'existing'; else throw error; }
+    }
+    if (mode === 'token') readToken(credential.repo, options.tokenFile, credential.git);
+  }
+  const auth = ['-c', 'credential.interactive=false', '-c', 'core.askPass=',
+    '-c', 'http.followRedirects=false', '-c', 'http.' + options.url + '.followRedirects=false'];
+  if (mode === 'token') {
+    const helperArgs = [repo, options.tokenFile, options.url];
+    if (!sameDirectory(repo, credential.repo)) helperArgs.push('--credential-repo', credential.repo);
+    const helper = helperCommand(process.execPath, SCRIPT, helperArgs);
+    const contextUrl = target.origin + '/' + gitCredentialPath(target).split('/').map(encodeURIComponent).join('/');
+    const context = 'credential.' + contextUrl;
+    auth.unshift('-c', 'credential.helper=', '-c', context + '.helper=',
+      '-c', context + '.helper=' + helper, '-c', 'credential.useHttpPath=true',
+      '-c', context + '.useHttpPath=true', '-c', context + '.username=x-access-token',
+      '-c', 'http.extraHeader=', '-c', 'http.' + options.url + '.extraHeader=');
+  }
   destination();
+  return { git, auth, mode };
+}
+
+/**
+ * Shared synchronous operation core. Public CLI execution is supervised by
+ * git-publish.mjs; direct imports retain the per-child API for controlled callers.
+ * Private singleOperation workers perform only one network operation so the
+ * controller can certify cleanup before launching readback.
+ */
+export function recover(options, execute = processResult, controls = {}) {
+  const args = [options.operation, ...['repo', 'remote', 'url', 'ref', 'expect']
+    .flatMap(key => ['--' + key, String(options[key] ?? '')]),
+    '--token-file', options.tokenFile ?? 'gh.tkn', '--timeout-ms', String(options.timeoutMs ?? 30000),
+    '--auth', options.auth ?? 'token'];
+  if (options.credentialRepo) args.push('--credential-repo', options.credentialRepo);
+  options = parseCli(args);
+  const { git, auth, mode } = prepare(options, execute);
   let pushed;
   if (options.operation === 'push') {
+    controls.onStage?.({ stage: 'push', auth_mode: mode });
     pushed = git(['push', '--porcelain', '--no-follow-tags', '--recurse-submodules=no',
-      options.remote, `${options.expect}:${options.ref}`], [...auth, '-c', `remote.${options.remote}.mirror=false`]);
+      options.remote, options.expect + ':' + options.ref],
+      [...auth, '-c', 'remote.' + options.remote + '.mirror=false']);
   }
   const push_result = processSummary(pushed, options.operation === 'push');
+  if (options.operation === 'push' && controls.singleOperation) {
+    return { schema_version: 1, ok: false, code: 'push_finished', stage: 'push',
+      remote_state: 'unknown', push_attempted: true, push_result, auth_mode: mode };
+  }
   let observed, readback;
   try {
+    controls.onStage?.({ stage: 'readback', auth_mode: mode });
     readback = git(['ls-remote', '--refs', options.url, options.ref], auth);
     observed = remoteOid(checked(readback, 'readback'), options.ref);
-  }
-  catch (error) {
+  } catch (error) {
     const readback_result = processSummary(readback);
-    if (error instanceof RecoveryError && ['ambiguous_readback', 'invalid_readback'].includes(error.code)) readback_result.validation_error = error.code;
+    if (error instanceof RecoveryError && ['ambiguous_readback', 'invalid_readback'].includes(error.code))
+      readback_result.validation_error = error.code;
     return { schema_version: 1, ok: false, code: error instanceof RecoveryError ? error.code : 'readback_failed',
-      stage: 'readback', remote_state: 'unknown', push_attempted: !!pushed, push_result, readback_result };
+      stage: 'readback', remote_state: 'unknown', push_attempted: !!pushed, push_result,
+      readback_result, auth_mode: mode };
   }
   const match = observed === options.expect;
-  return { schema_version: 1, ok: match, code: match ? (pushed && (pushed.error || pushed.signal || pushed.status !== 0) ? 'verified_after_push_error' : 'remote_verified') : (observed ? 'remote_mismatch' : 'remote_absent'),
+  return { schema_version: 1, ok: match,
+    code: match ? (pushed && (pushed.error || pushed.signal || pushed.status !== 0)
+      ? 'verified_after_push_error' : 'remote_verified') : (observed ? 'remote_mismatch' : 'remote_absent'),
     stage: 'readback', remote_state: match ? 'matching' : observed ? 'different' : 'absent',
     push_attempted: !!pushed, expected: options.expect, observed, ref: options.ref,
-    push_result, readback_result: processSummary(readback) };
+    push_result, readback_result: processSummary(readback), auth_mode: mode };
 }
 
 /**
@@ -285,8 +340,10 @@ function privateHelperContext(selectedRepo) {
 
 /** Internal Git protocol entry. Credential stdout is consumed only by Git. */
 function helperMain(args) {
-  const [repo, tokenFile, url, action, ...extra] = args;
-  if (extra.length || !repo || !tokenFile || !url || !['get', 'store', 'erase'].includes(action)) fail('invalid_helper_arguments');
+  const [repo, tokenFile, url, ...tail] = args;
+  const action = tail.at(-1);
+  const selected = tail.length === 3 && tail[0] === '--credential-repo' ? tail[1] : undefined;
+  if ((tail.length !== 1 && !selected) || !repo || !tokenFile || !url || !['get', 'store', 'erase'].includes(action)) fail('invalid_helper_arguments');
   if (action !== 'get') return;
   const buffer = Buffer.alloc(65537);
   let length = 0;
@@ -303,7 +360,10 @@ function helperMain(args) {
   if (request.protocol !== 'https' || request.host !== target.host || request.path !== gitCredentialPath(target) ||
       (request.username && request.username !== 'x-access-token')) return;
   const context = privateHelperContext(repo);
-  const token = readToken(context.repo, tokenFile, context.git);
+  const gitAt = root => args => processResult('git', ['-C', root, ...args],
+    { cwd: root, env: context.env });
+  const credential = credentialContext(context.repo, selected, gitAt);
+  const token = readToken(credential.repo, tokenFile, credential.git);
   process.stdout.write(`username=x-access-token\npassword=${token}\n\n`);
 }
 
@@ -315,7 +375,10 @@ if (process.argv[1] && path.resolve(process.argv[1]) === SCRIPT) {
     try {
       if (Number(process.versions.node.split('.')[0]) < 22) fail('node_22_required');
       if (process.argv[2] === '--help') process.stdout.write(USAGE + '\n');
-      else { const result = recover(parseCli(process.argv.slice(2))); process.stdout.write(JSON.stringify(result) + '\n'); process.exitCode = result.ok ? 0 : 2; }
+      else import('./git-publish.mjs')
+        .then(module => module.runCli(process.argv.slice(2), { defaultAuth: 'token' }))
+        .catch(() => { process.stdout.write(JSON.stringify({ schema_version: 1, ok: false,
+          code: 'supervisor_unavailable', stage: 'preflight' }) + '\n'); process.exitCode = 1; });
     } catch (error) {
       process.stdout.write(JSON.stringify({ schema_version: 1, ok: false, code: error instanceof RecoveryError ? error.code : 'local_io_failed', stage: error instanceof RecoveryError ? error.stage : 'preflight' }) + '\n');
       process.exitCode = 1;

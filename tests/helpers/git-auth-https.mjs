@@ -14,23 +14,36 @@ import { fileURLToPath } from 'node:url';
 export function capture(executable, args, { timeout = 30000, ...options } = {}) {
   return new Promise(resolve => {
     const child = spawn(executable, args, { windowsHide: true, ...options });
-    let stdout = '', stderr = '', error;
-    const timer = setTimeout(() => { error = { code: 'ETIMEDOUT' }; child.kill('SIGKILL'); }, timeout);
+    let stdout = '', stderr = '', error, done = false;
+    const finish = (status, signal) => {
+      if (done) return;
+      done = true; clearTimeout(timer);
+      child.stdin.destroy(); child.stdout.destroy(); child.stderr.destroy(); child.unref();
+      resolve({ status, signal, stdout, stderr, error });
+    };
+    const stop = code => {
+      error = { code }; child.kill('SIGKILL');
+      // A failed product must fail the fixture finitely too; inherited pipes
+      // must not prevent CI from exposing the offending contract.
+      finish(null, null);
+    };
+    const timer = setTimeout(() => stop('ETIMEDOUT'), timeout);
     const collect = key => chunk => {
       if (key === 'stdout') stdout += chunk; else stderr += chunk;
       if (Buffer.byteLength(stdout) + Buffer.byteLength(stderr) > 1024 * 1024) {
-        error = { code: 'ENOBUFS' }; child.kill('SIGKILL');
+        stop('ENOBUFS');
       }
     };
     child.stdout.on('data', collect('stdout')); child.stderr.on('data', collect('stderr'));
+    child.stdin.on('error', () => {});
     child.on('error', value => { error = { code: value.code }; });
-    child.on('close', (status, signal) => { clearTimeout(timer); resolve({ status, signal, stdout, stderr, error }); });
+    child.on('close', finish);
     child.stdin.end();
   });
 }
 
 /** Public read discovery, authenticated write discovery/RPC, real Git backend. */
-export async function gitHttpsFixture(t, token, { onChallenge = () => {} } = {}) {
+export async function gitHttpsFixture(t, token, { onChallenge = () => {}, loseWriteResponse = false, stallRead = false } = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'sdd-https-'));
   const config = path.join(root, 'empty-config'); fs.writeFileSync(config, '');
   const cert = fileURLToPath(new URL('../fixtures/git-auth/localhost-cert.pem', import.meta.url));
@@ -52,7 +65,8 @@ export async function gitHttpsFixture(t, token, { onChallenge = () => {} } = {})
     const url = new URL(request.url, 'https://localhost');
     const write = url.searchParams.get('service') === 'git-receive-pack' || url.pathname.endsWith('/git-receive-pack');
     const authorized = request.headers.authorization === expected;
-    events.push({ write, authorized });
+    events.push({ write, authorized, method: request.method, length: request.headers['content-length'] || null });
+    if (!write && stallRead) return;
     if (write && !authorized) {
       onChallenge(); response.writeHead(401, { 'WWW-Authenticate': 'Basic realm="synthetic"', 'Content-Length': '0' }); response.end(); return;
     }
@@ -76,7 +90,13 @@ export async function gitHttpsFixture(t, token, { onChallenge = () => {} } = {})
       const statusLine = headers.find(([name]) => name.toLowerCase() === 'status');
       response.statusCode = statusLine ? Number.parseInt(statusLine[1], 10) : 200;
       for (const [name, value] of headers) if (!['status', 'content-length'].includes(name.toLowerCase())) response.setHeader(name, value);
-      const body = data.subarray(boundary + 4); response.setHeader('Content-Length', body.length); response.end(body);
+      const body = data.subarray(boundary + 4);
+      // Suppress the successful reply after the backend applied the update.
+      // A completed 500 avoids libcurl's own empty-connection POST replay.
+      if (loseWriteResponse && write && request.method === 'POST') {
+        response.statusCode = 500; response.setHeader('Content-Length', '0'); response.end(); return;
+      }
+      response.setHeader('Content-Length', body.length); response.end(body);
     });
   });
   t.after(async () => {

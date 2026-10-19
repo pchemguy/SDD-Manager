@@ -12,7 +12,7 @@ Apply these invariants when storing, locating, or consuming a hosting token for 
 
 ## Authentication and scope
 
-Assume existing shell authentication is usable and attempt the authorized push before looking for a token or requesting one. **sdd-manage** applies its credential recovery protocol after an authentication/access failure; do not make discovery a mandatory pre-push ceremony. Repository token files provide continuity when a shell credential session is lost.
+HTTPS Git publication follows **sdd-manage**'s [deterministic supervised selection](../../sdd-manage/references/credentials.md#deterministic-git-publication) from the first attempt: use an already supplied eligible conventional token before inherited helpers, or supervise existing authentication when absent. A present invalid token blocks rather than silently switching accounts. Do not request credentials before every push or alter persistent helper configuration as a ceremony. Repository token files provide continuity; API authentication remains separate.
 
 Prefer fine-grained repository-scoped tokens when supported. The active backend defines the permission profile and supported authentication mechanism. Git transport and API clients have separate authentication; success in one does not prove access in the other. Token scope does not authorize unrequested operations, a different destination, or bypassing repository protections.
 

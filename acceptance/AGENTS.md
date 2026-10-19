@@ -29,13 +29,13 @@ The publisher validates exact committed candidate bytes against the [pinned offl
 
 Record the tested source, interpreter/environment, actual outcomes and evidence limits. Passing support/publisher tests or static/package checks does not establish live agent behavior, installed-client discovery/routing or provider acceptance. Keep unrun and blocked observations explicit.
 
-For changes to the optional coordinator-owned [Git authentication utility](../.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md), require Node.js 22+ and run its source-only synthetic contracts:
+For changes to the optional coordinator-owned [Git authentication utility](../.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md), require Node.js 22+, Python 3.11+ and run its source-only synthetic/native contracts:
 
 ```text
-node --test tests/git-auth-recover.test.mjs
+node --test tests/git-auth-recover.test.mjs tests/git-publish.test.mjs
 ```
 
-Its CI matrix runs native Windows CMD/Linux with Node 22/24. Native transport contracts require Git's git-http-backend and use a local HTTPS server with the explicitly public test-only localhost certificate/key under tests; no live provider or real token is needed. They exercise the public CLI's authenticated push/readback and helper failure after preflight, alongside direct context/linked-worktree checks and ordinary token-file access. Local Linux results do not establish Windows behavior; inspect the selected source's actual matrix result. Controlled process outcomes and native HTTPS transport do not establish live-provider authentication. The source tests, TLS fixture and CI are excluded from the distributed plugin.
+Its CI matrix runs native Windows CMD/Linux with Node 22/24 and Python 3.11. Public contracts additionally cover deterministic selector bypass, hanging/orphaned helper trees, bounded transport, excess output, cancellation and lost-response reconciliation. Native transport contracts require Git's git-http-backend and use a local HTTPS server with the explicitly public test-only localhost certificate/key under tests; no live provider or real token is needed. They exercise the public CLI's authenticated push/readback and helper failure after preflight, alongside direct context/linked-worktree checks and ordinary token-file access. Local Linux results do not establish Windows behavior; inspect the selected source's actual matrix result. Controlled process outcomes and native HTTPS transport do not establish live-provider authentication. The source tests, TLS fixture and CI are excluded from the distributed plugin.
 
 For the optional forge-owned [completion utility](../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md), run:
 
