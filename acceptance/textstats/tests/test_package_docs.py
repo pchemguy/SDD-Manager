@@ -12,7 +12,8 @@ class PackageDocumentation(Sandbox):
         source = Path(__file__).resolve().parents[3]
         pin, files = core.package(source, {'plugin_revision': 'HEAD', 'source_mode': 'dirty'})
         package = source / pin['package_subdirectory']
-        for name in ('assets/HANDOFF_TEMPLATE.md', 'skills/sdd-manage/references/continuity.md',
+        for name in ('assets/HANDOFF_TEMPLATE.md', 'assets/DOCS_TRACKING_TEMPLATE.json',
+                     'skills/sdd-manage/references/continuity.md',
                      'skills/sdd-manage/scripts/git-auth-recover.mjs',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
                      'skills/sdd-manage/scripts/protected-token.mjs',
@@ -126,7 +127,7 @@ class PackageDocumentation(Sandbox):
         git(source, 'config', 'user.email', 'fixture@example.invalid')
         (source / 'plugin.json').write_text('{"name":"fixture"}\n')
         (source / 'assets').mkdir()
-        names = ('AGENTS_TEMPLATE.md', 'DOCS_TASKS_TEMPLATE.md', 'SKILL_DISCOVERY_PROTOCOL.md')
+        names = ('AGENTS_TEMPLATE.md', 'DOCS_TASKS_TEMPLATE.md', 'DOCS_TRACKING_TEMPLATE.json', 'SKILL_DISCOVERY_PROTOCOL.md')
         original = {name: ('Pinned ' + name + '\n').encode() for name in names}
         for name, data in original.items():
             (source / 'assets' / name).write_bytes(data)

@@ -222,9 +222,6 @@ function docsRequest() {
   const template = fs.readFileSync(new URL('../.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md', import.meta.url), 'utf8');
   const owner = parseOwner(template, 'docs-main'), request = draftProjection('example-owner/example-project',
     { root: 'plugin', path: 'assets/DOCS_TASKS_TEMPLATE.md', sha256: createHash('sha256').update(template).digest('hex') }, owner);
-  request.milestones[0].description = 'Prepare accepted documents, QC and verified published integration.';
-  request.tasks.forEach((item, index) => Object.assign(item, { depends_on: index ? [request.tasks[index - 1].id] : [],
-    prerequisites: 'Agent-established preparation prerequisites.', scope: 'Actual template task scope.', acceptance: 'Required approval, QC and publication.', sources: ['Running package DOCS task template'] }));
   Object.keys(request.eligibility).forEach(key => { request.eligibility[key] = true; });
   return { request, owner };
 }
@@ -232,9 +229,85 @@ test('docs-main consumes all nine predefined tasks with its own scope and no pha
   const { request, owner } = docsRequest(), state = fixture();
   const result = await reconcileProjection(request, owner, state.client());
   assert.equal(result.ok, true, JSON.stringify(result)); assert.equal(state.labels.length, 0);
-  assert.equal(state.milestones.length, 1); assert.equal(state.milestones[0].title, 'docs-main');
+  assert.equal(state.milestones.length, 1); assert.equal(state.milestones[0].title, 'sdd-docs-main');
+  assert.ok(!state.milestones[0].description.includes('<!--'));
   assert.equal(state.issues.length, 9); assert.equal(writes(state).length, 10);
   assert.match(state.issues[0].body, /^<!-- sdd-forge:docs-scope=main -->\n## Task brief <!-- sdd-forge:task-id=DOCS-001 -->/);
+  state.calls = [];
+  const again = await reconcileProjection(request, owner, state.client());
+  assert.equal(again.ok, true, JSON.stringify(again)); assert.equal(writes(state).length, 0);
+  assert.deepEqual(again.associations, result.associations);
+});
+
+test('docs definitions provide complete briefs and lifecycle ordering without agent enrichment', () => {
+  const { request, owner } = docsRequest();
+  const definitions = JSON.parse(fs.readFileSync(new URL('../.agents/plugins/sdd-manager/assets/DOCS_TRACKING_TEMPLATE.json', import.meta.url), 'utf8'));
+  assert.deepEqual(Object.keys(definitions).sort(), ['kind', 'milestones', 'schema_version', 'tasks']);
+  assert.deepEqual(request.milestones, definitions.milestones); assert.deepEqual(request.tasks, definitions.tasks);
+  const draft = draftProjection(request.repository, request.source, owner);
+  assert.ok(Object.values(draft.eligibility).every(value => value === false));
+  assert.doesNotThrow(() => validateProjection(draft, owner));
+  assert.throws(() => validateProjection(draft, owner, true), error => error.code === 'eligibility_not_established');
+  assert.deepEqual(draft.tasks[0].depends_on, []);
+  for (let i = 1; i < 8; i++) assert.deepEqual(draft.tasks[i].depends_on, [draft.tasks[i - 1].id]);
+  assert.deepEqual(draft.tasks[8].depends_on, draft.tasks.slice(0, 8).map(item => item.id));
+  assert.match(draft.tasks[0].acceptance, /some but not all four/);
+  assert.match(draft.tasks[6].acceptance, /layout's separate human first approval/);
+  assert.match(draft.tasks[8].acceptance, /not prerequisites for completing DOCS-009/);
+  const payload = JSON.stringify(renderProjection(draft));
+  assert.ok(!payload.includes(request.source.sha256)); assert.ok(!payload.includes('eligibility'));
+  // Returned requests must not mutate the module's imported definitions.
+  draft.tasks[0].scope = 'Changed';
+  assert.equal(draftProjection(request.repository, request.source, owner).tasks[0].scope, definitions.tasks[0].scope);
+});
+
+test('docs content and source disagreements fail rather than inventing or dropping preparation work', () => {
+  const { request, owner } = docsRequest();
+  for (const change of [
+    r => { r.milestones[0].description = 'Agent-selected replacement'; },
+    r => { r.tasks[0].scope = 'Different initialization'; },
+    r => { r.tasks[1].depends_on = []; },
+    r => { r.tasks[8].acceptance = 'Skip package QC'; },
+    r => { r.tasks[2].sources = ['Invented source']; },
+    r => { r.external_task_ids = ['T-999']; },
+    r => { r.tasks.reverse(); }, r => { r.tasks.pop(); },
+  ]) {
+    const candidate = structuredClone(request); change(candidate);
+    assert.throws(() => validateProjection(candidate, owner));
+  }
+  const template = fs.readFileSync(new URL('../.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md', import.meta.url), 'utf8');
+  assert.throws(() => parseOwner(template.replace('Prepare and accept PROJECT.', 'Custom brief.'), 'docs-main'),
+    error => error.code === 'docs_template_source_conflict');
+  const resumed = template.replaceAll('- [ ] DOCS-', '- [x] DOCS-').replaceAll('\n', '\r\n');
+  assert.deepEqual(draftProjection(request.repository, request.source, parseOwner(resumed, 'docs-main')).tasks, request.tasks);
+});
+
+test('conflicting preparation milestone identities never cause duplicate creation', async () => {
+  const { request, owner } = docsRequest();
+  for (const [title, description] of [
+    ['docs-main', 'Existing preparation'],
+    ['SDD-DOCS-MAIN', request.milestones[0].description],
+    ['Renamed preparation', '<!-- sdd-forge:docs-milestone=docs-main -->\nExisting preparation'],
+    ['sdd-docs-main', 'Different scope'],
+  ]) {
+    const state = fixture(); state.milestones.push({ id: 1, number: 1, title, description, state: 'open' });
+    const result = await reconcileProjection(request, owner, state.client());
+    assert.equal(result.code, 'milestone_content_conflict'); assert.equal(writes(state).length, 0);
+  }
+  const state = fixture();
+  state.milestones.push(...['sdd-docs-main', 'docs-main'].map((title, index) => ({ id: index + 1, number: index + 1,
+    title, description: request.milestones[0].description, state: 'open' })));
+  assert.equal((await reconcileProjection(request, owner, state.client())).code, 'ambiguous_milestones');
+  assert.equal(writes(state).length, 0);
+});
+
+test('projection transport requires the fixed docs milestone title and marker-free description', async () => {
+  const state = fixture(), client = state.client(), { request } = docsRequest();
+  for (const body of [
+    { title: 'docs-main', state: 'open', description: request.milestones[0].description },
+    { title: 'sdd-docs-main', state: 'open', description: '<!-- sdd-forge:docs-milestone=docs-main -->\nDescription' },
+  ]) await assert.rejects(client.request('POST', '/milestones', body), error => error.code === 'unsupported_mutation');
+  assert.equal(state.calls.length, 0);
 });
 
 test('draft/help/invalid modes are harmless and require explicit execution selection', () => {
@@ -281,6 +354,24 @@ test('local draft supports native separators, explicit exclusive output and inco
   assert.throws(() => runDraft({ kind: 'docs-main', repo: local.root, remote: 'origin', output: path.join(local.root, 'before-gate.json') }),
     error => error.code === 'docs_draft_requires_external_output');
   assert.ok(!fs.existsSync(path.join(local.root, 'before-gate.json')));
+});
+
+test('native docs draft binds fixed definitions for fresh and resumed sources and previews without credentials', async t => {
+  const local = localRepo(t), output = path.join(local.base, 'docs request.json');
+  fs.unlinkSync(local.token);
+  const draft = runDraft({ kind: 'docs-main', repo: local.root, remote: 'origin', output });
+  assert.ok(Object.values(draft.eligibility).every(value => value === false));
+  const result = await runProject({ ...local.options, kind: 'docs-main', mode: 'check', requestFile: output });
+  assert.equal(result.code, 'input_verified');
+  const template = fs.readFileSync(new URL('../.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md', import.meta.url), 'utf8');
+  const filename = path.join(local.root, 'docs/dev/DOCS_TASKS.md');
+  fs.writeFileSync(filename, template.replace('- [ ] DOCS-001', '- [x] DOCS-001').replaceAll('\n', '\r\n'));
+  const resumed = runDraft({ kind: 'docs-main', repo: local.root, remote: 'origin', tasks: 'docs\\dev\\DOCS_TASKS.md' });
+  assert.equal(resumed.source.root, 'repo'); assert.equal(resumed.source.path, 'docs/dev/DOCS_TASKS.md');
+  assert.deepEqual(resumed.tasks, draft.tasks);
+  assert.ok(fs.readFileSync(filename, 'utf8').includes('- [x] DOCS-001'));
+  assert.equal(git(local.root, 'status', '--porcelain').trim(), '?? docs/dev/DOCS_TASKS.md');
+  assert.deepEqual(JSON.parse(fs.readFileSync(output, 'utf8')), draft);
 });
 
 test('native credential-free preview requires source binding and does not contact provider', async t => {

@@ -1,7 +1,8 @@
 /**
  * Local canonical-list-to-JSON draft authoring; Node >=22 and native Git.
- * No credential or hosted access. Semantic fields stay null and eligibility
- * false. Stdout is default; explicit output is exclusively created, never
+ * No credential or hosted access. Phase semantic fields stay null; docs-main
+ * copies fixed package content. Eligibility stays false. Stdout is default;
+ * explicit output is exclusively created, never
  * overwritten. Before docs-main's pre-write gate, keep output outside repo.
  * See forge-project-input.md; this is not an activation or dependency engine.
  */
@@ -38,7 +39,7 @@ export function parseCli(args) {
 /**
  * Produce an unapproved template; native root/remote identify the destination.
  * @param {object} options Parsed kind/root/remote/source and optional new output.
- * @returns {object} Draft JSON; semantic fields remain unresolved.
+ * @returns {object} Draft JSON; phase semantics unresolved, docs content fixed.
  * @throws {Error} Native source/output failures; no hosted effects occur.
  */
 export function run(options) {

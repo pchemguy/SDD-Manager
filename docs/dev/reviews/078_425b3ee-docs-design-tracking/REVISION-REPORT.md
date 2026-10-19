@@ -32,3 +32,20 @@ The opening commit is 6d81a9e3b759c88362f6c861e62a8560d54aab7e. GitHub connectiv
 The human's documentation-tracking direction and current “Finalize revision plan and execute” instruction establish the [revision plan](REVISION-PLAN.md): fixed `sdd-docs-main` title and plain-text milestone description, nine predefined issue definitions in bundled JSON, existing-script consumption, workflow documentation and verification. Source inspection at the opening commit confirms `github-docs-preparation.md` and `projection-input.mjs` currently specify/render `docs-main` with a milestone HTML marker, while standard documentation briefs/dependencies are still agent-authored. This is source evidence; no demo object has been modified or independently verified for this campaign.
 
 Execute V-001–V-003 after this plan checkpoint is published. Keep the campaign open on its revision branch at completion; no campaign merge, release or demo tracking operation is selected.
+
+## Revision execution evidence
+
+### V-001 — Predefined content and enforced projection
+
+Implemented the bundled `assets/DOCS_TRACKING_TEMPLATE.json`: one fixed milestone and nine complete ordered briefs, with explicit task dependencies and first-approval/QC/publication conditions. Docs drafting binds the actual repository/source and copies these fields with false eligibility. Validation rejects changed content and source-name/order disagreement. Phase semantics remain agent-authored. The native milestone is exactly `sdd-docs-main`, with no milestone HTML marker. Existing same-identity titles/markers are conflict candidates, preventing duplicate creation; the utility does not rename or overwrite them.
+
+Updated bounded transport validation, actual package-snapshot coverage and native CI path triggers for both definition assets. New contracts exercise complete drafts, preview without a credential, resumed checked/CRLF sources, content/source disagreement, fixed title and clean description, exact reuse and conflicting/duplicate existing identities.
+
+Observed on Linux, Node v24.19.0 and Python 3.12.14:
+
+- `node --test tests/forge-project.test.mjs tests/forge-close.test.mjs`: 77 passed, zero failures/skips; final projection-only rerun after the last code adjustment: 38 passed.
+- `python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats`: 139 passed, including exact definition-asset snapshot bytes and dirty/pinned separation.
+- `python -m unittest discover -s .github/tests`: 37 passed; declared jsonschema 4.26.0 is installed.
+- `git diff --check`: passed. Source/fixture tests used synthetic provider data; no live tracking mutation or installed-client test occurred. Native Windows/Node 22 matrix evidence remains pending until this action is published.
+
+V-001 is locally verified; this action commit and its publication are recovered from Git before V-002 begins. Plan checkpoint 0b70980a3045b276a814e203982d0600f0772b1e was pushed and verified by exact branch-ref readback.

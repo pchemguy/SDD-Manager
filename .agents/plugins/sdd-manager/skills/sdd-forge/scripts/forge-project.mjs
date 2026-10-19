@@ -77,7 +77,8 @@ function select(all, type, expected, parents, label) {
     : type === 'milestones' && expected.key !== 'docs-main' ? 'sdd-' + expected.key + '-' : null;
   const marker = type === 'issues' ? new RegExp('sdd-forge:task-id=' + expected.key + '(?=\\s*-->)') : null;
   const matches = all.filter(item => type === 'labels' ? item.name.toLowerCase().startsWith(prefix.toLowerCase())
-    : type === 'milestones' ? prefix ? item.title.toLowerCase().startsWith(prefix.toLowerCase()) : item.title.toLowerCase() === 'docs-main'
+    : type === 'milestones' ? prefix ? item.title.toLowerCase().startsWith(prefix.toLowerCase())
+      : ['sdd-docs-main', 'docs-main'].includes(item.title.toLowerCase()) || /<!--\s*sdd-forge:docs-milestone=docs-main\s*-->/.test(item.description || '')
       : !item.pull_request && (item.title.startsWith('[' + expected.key + ']') || marker.test(item.body || '')));
   if (matches.length > 1) fail('ambiguous_' + type, 'lookup');
   if (!matches.length) return null;
