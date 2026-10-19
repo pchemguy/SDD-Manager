@@ -2,13 +2,14 @@
 
 ## Context and state
 
-Campaign 080_17cef14 continues from published review checkpoint 68c8574d5b72d9fbc610b29c8bf5e693d245cbfc under the human's plan/execute/close instruction. [Plan](REVISION-PLAN.md), [baseline findings](REVIEW-REPORT.md). Original source 17cef14c69dd7a84dc035ac8e864f446ee3668c5; opening c97ea71020f3ce494bad49f3a47e882889c5d955. Working branch revision/080_17cef14-comprehensive-review; main is creation parent, integration and return target. All five findings selected; none corrected yet. State: plan ready for publication.
+Campaign 080_17cef14 continues from published review checkpoint 68c8574d5b72d9fbc610b29c8bf5e693d245cbfc under the human's plan/execute/close instruction. [Plan](REVISION-PLAN.md), [baseline findings](REVIEW-REPORT.md). Original source 17cef14c69dd7a84dc035ac8e864f446ee3668c5; opening c97ea71020f3ce494bad49f3a47e882889c5d955. Working branch revision/080_17cef14-comprehensive-review; main is creation parent, integration and return target. All five findings selected. State: execution in progress; V-001 complete.
 
 ## Action evidence
 
 | Action | Current result | Checks / limits | Persistence |
 | --- | --- | --- | --- |
-| V-001–V-006 | Planned | No new correction check claimed | Pending |
+| V-001 / R-001 | Removed preparation/JSON and neighboring operational procedure duplication; retained tracking policy, routing, checkpoints, continuity and publication. Fixed two bootstrap indentation lines and both discovery-label typos. | Direct template/owner inspection and assertions passed; canonical complete preparation gates unchanged. Documentation-only; no new behavior test. | This action commit; push/readback required before V-002. |
+| V-002–V-006 | Planned | No correction check claimed | Pending |
 
 ## Scope and stop
 

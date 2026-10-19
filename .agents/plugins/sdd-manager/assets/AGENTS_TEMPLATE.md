@@ -24,29 +24,13 @@ The user may explicitly preapprove future checkpoints at any time. Retain the sc
 
 Keep each task's verified result, required evidence and completion checkbox in the same commit. Push every owned commit and verify remote containment before further work or another commit, unless the user explicitly directs local-only or deferred publication.
 
-Documentation tasks and their issues track development through first approval: mark the task complete in the commit submitting the approved document, then close its issue after verified publication. Later document revisions leave that task complete and its issue closed. Honor applicable checkpoint preapproval.
-
-Use SDD Manager's integration procedure at the authorized complete boundary. For main preparation, pass package QC, publish the documentation merge, close the preparation milestone when tracking is enabled and confirm the final checkpoint before implementation.
+Use SDD Manager's integration procedure at the authorized complete boundary.
 
 ## GitHub tracking
 
-Enable and maintain GitHub tracking for documentation preparation and implementation **by default**. The user may disable tracking, select local-only work or choose another supported backend. Resolve this project default before initialization writes when main preparation will install this template. Copying it does not reset an established choice. Preserve that choice through interruptions; do not silently change it after an access failure.
+Enable and maintain GitHub tracking for documentation preparation and implementation **by default**. The user may disable tracking, select local-only work or choose another supported backend. Preserve an established choice through interruptions and access failures; copying this template does not reset it.
 
-When backend tracking is enabled, establish and verify the required objects before dependent repository work. Keep each task's issue associated with its actual milestone and close it only after verified completion is committed and published.
-
-On interruption or backend failure, reconcile actual state and report pending operations. Preserve completed work without claiming unverified hosted effects or bypassing required gates.
-
-### Documentation preparation
-
-Use `sdd-manage`’s main preparation workflow to create or reconcile the native `sdd-docs-main` milestone and all nine DOCS task issues, verifying their associations by readback **before repository modifications**. Each document issue tracks development through first approval and closes only after its approved-document/checked-task commit is published and verified. Later revisions leave it closed. After final package QC and issue closure, merge, verify and publish the docs branch; then close and verify the `sdd-docs-main` milestone.
-
-Use the running package's `assets/DOCS_TRACKING_TEMPLATE.json` for the exact milestone title/plain-text description and all issue briefs/dependencies. Do not invent project-specific replacements. `DOCS_TASKS.md` owns local completion; the JSON supplies hosted content, with runtime readiness and actual completion verified by the workflow.
-
-### Implementation
-
-Apply `sdd-manage`’s phase activation workflow before implementing each eligible phase: create or reconcile its phase label, all milestones and all task issues, including review tasks, and verify their associations by readback. Maintain task issues and milestones throughout execution, closing them only after the required completion, evidence and publication gates. Activate later phases only when eligible.
-
-If a required tracking prerequisite cannot be satisfied, report the blocker and stop affected preparation or implementation. Reconcile uncertain operations before retrying; preserve verified local results without claiming unverified hosted effects.
+Follow `sdd-manage`'s preparation and phase-activation workflows for required tracking readiness and lifecycle updates. Reconcile uncertain effects before retrying and report unmet prerequisites before dependent work.
 
 ## Project guidance
 
