@@ -30,7 +30,7 @@ export function capture(executable, args, { timeout = 30000, ...options } = {}) 
 }
 
 /** Public read discovery, authenticated write discovery/RPC, real Git backend. */
-export async function gitHttpsFixture(t, token, { onChallenge = () => {} } = {}) {
+export async function gitHttpsFixture(t, token, { onChallenge = () => {}, loseWriteResponse = false, stallRead = false } = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'sdd-https-'));
   const config = path.join(root, 'empty-config'); fs.writeFileSync(config, '');
   const cert = fileURLToPath(new URL('../fixtures/git-auth/localhost-cert.pem', import.meta.url));
@@ -52,7 +52,8 @@ export async function gitHttpsFixture(t, token, { onChallenge = () => {} } = {})
     const url = new URL(request.url, 'https://localhost');
     const write = url.searchParams.get('service') === 'git-receive-pack' || url.pathname.endsWith('/git-receive-pack');
     const authorized = request.headers.authorization === expected;
-    events.push({ write, authorized });
+    events.push({ write, authorized, method: request.method, length: request.headers['content-length'] || null });
+    if (!write && stallRead) return;
     if (write && !authorized) {
       onChallenge(); response.writeHead(401, { 'WWW-Authenticate': 'Basic realm="synthetic"', 'Content-Length': '0' }); response.end(); return;
     }
@@ -76,7 +77,13 @@ export async function gitHttpsFixture(t, token, { onChallenge = () => {} } = {})
       const statusLine = headers.find(([name]) => name.toLowerCase() === 'status');
       response.statusCode = statusLine ? Number.parseInt(statusLine[1], 10) : 200;
       for (const [name, value] of headers) if (!['status', 'content-length'].includes(name.toLowerCase())) response.setHeader(name, value);
-      const body = data.subarray(boundary + 4); response.setHeader('Content-Length', body.length); response.end(body);
+      const body = data.subarray(boundary + 4);
+      // Suppress the successful reply after the backend applied the update.
+      // A completed 500 avoids libcurl's own empty-connection POST replay.
+      if (loseWriteResponse && write && request.method === 'POST') {
+        response.statusCode = 500; response.setHeader('Content-Length', '0'); response.end(); return;
+      }
+      response.setHeader('Content-Length', body.length); response.end(body);
     });
   });
   t.after(async () => {

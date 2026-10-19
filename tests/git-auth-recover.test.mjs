@@ -389,10 +389,14 @@ test('native HTTPS Git transport reports safe helper failure after token eligibi
   const result = await capture(process.execPath, [SCRIPT, 'push', '--repo', f.root, '--remote', 'origin', '--url', server.url,
     '--ref', f.ref, '--expect', f.oid, '--timeout-ms', '10000'], { cwd: f.root, env: server.env });
   assert.equal(result.status, 2); const data = JSON.parse(result.stdout);
-  assert.equal(data.remote_state, 'absent'); assert.equal(data.push_attempted, true);
+  assert.equal(data.remote_state, 'unknown'); assert.equal(data.push_attempted, true);
   assert.ok(data.push_result, 'Missing native push failure summary');
   assert.equal(data.push_result.code, 'git_failed'); assert.equal(data.push_result.exit_status, 128);
   assert.deepEqual(data.push_result.helper_error, { code: 'token_not_ignored', stage: 'preflight' });
-  assert.equal(data.readback_result.code, 'succeeded'); assert.ok(!server.events.some(event => event.write && event.authorized));
+  // Each independently owned attempt revalidates its token. Eligibility loss
+  // blocks readback rather than falling through to anonymous/another account.
+  assert.equal(data.readback_result.code, 'not_attempted');
+  assert.deepEqual(data.local_error, { code: 'token_not_ignored', stage: 'preflight' });
+  assert.ok(!server.events.some(event => event.write && event.authorized));
   assert.equal(result.stderr, ''); assert.ok(!JSON.stringify(data).includes(CANARY));
 });
