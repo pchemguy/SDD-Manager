@@ -6,7 +6,7 @@
 - Branch: revision/080_17cef14-comprehensive-review; recorded creation parent/integration/return main at that baseline.
 - Human scope: comprehensive review, explicitly including documentation. [Review plan](REVIEW-PLAN.md).
 - Owner/stage: sdd-manage; opening and plan. Reporting: Standard.
-- State: Open; U-001 complete, U-002–U-007 pending. Source repairs and campaign closure are not authorized by this review request.
+- State: Open; U-001–U-002 complete, U-003–U-007 pending. Source repairs and campaign closure are not authorized by this review request.
 
 ## Setup and evidence boundary
 
@@ -21,7 +21,7 @@ Evidence classes remain separate: source and editorial assessment, structural/pa
 | Unit | Current state | Findings | Evidence checkpoint |
 | --- | --- | --- | --- |
 | U-001 | Assessed; no confirmed finding | None | Entry/metadata checkpoint |
-| U-002 | Planned | None assessed | Opening |
+| U-002 | Assessed; no confirmed finding | None | Coordination/lifecycle checkpoint |
 | U-003 | Planned | None assessed | Opening |
 | U-004 | Planned | None assessed | Opening |
 | U-005 | Planned | None assessed | Opening |
@@ -57,3 +57,24 @@ Source contrasts assessed: new request versus established contextual follow-up; 
 Executed APA plugin validator: exit 0, 0 errors and 48 warnings for existing plugin-contained sibling links. These warnings describe client handoff uncertainty, already qualified by package guidance; they are not missing resources or portable-containment failures. Independently checked each presentation's matching $skill prompt, both icon paths and parseable SVG XML: 15 passed. Presentation rendering/installed activation was not run. Manifest core/publisher verification and complete documentation links remain scheduled for U-007/U-006.
 
 No confirmed defect or substantive correction recommendation in this unit. Reference completeness means the entry exposes the resources; detailed scope/cohesion and downstream handoffs are assessed in subsequent owner units. No source changed.
+
+## U-002 — Coordination, preparation and recovery
+
+Assessed all 18 coordinator references, the orientation inspection/handoff reference, workflow identity/review-campaign/token conventions, and the consequential main-preparation GitHub owner plus AGENTS/DOCS task templates. Reused unchanged procedures already loaded in this session where their bytes remain those of the pinned baseline. Coverage includes workflow/operation selection and example contrasts; coordination/reporting; bootstrap/orientation; main preparation; human acceptance/QC gate routing; phase/tracking; Git/branch/continuity; ordinary/nested/reopened campaigns; credentials and Windows readiness. Shared document-count/task hierarchy details remain with U-003/U-004.
+
+| Source scenario | Assessment and boundary |
+| --- | --- |
+| Main preparation with enabled prospective AGENTS policy | Tracking selection and all nine predefined docs associations precede branch/ref, credential/ignore and document writes. Authentication has an explicit external/transient pre-write route. No circular requirement for target PLAN/TASKS or DOCS_TASKS creation. |
+| Four-file initialization absent/all present/partial | Preserve existing bytes; copy only absent assets. Partial-state warning/pause follows verified initialization and issue closure, with explicit scoped preapproval honored. HANDOFF is outside the four-file presence test. |
+| Published proposal versus first approval versus later correction | Proposal remains unchecked; approved unchanged blobs may be retained without manufactured edits. Later revisions keep first-approval tasks closed while current QC can block progression. |
+| Package QC, docs integration and implementation | Final issue closure precedes explicit verified/published docs integration; milestone closure follows it. The final human checkpoint and actual implementation range remain distinct. |
+| Tracking requested/declined/pending or an outage after activation | Selection is distinct from credentials and projection. Initial/added-task unknown associations block dependent work; only already-projected independent tasks can use the later-outage allowance. |
+| Preparation default parent versus active phase/revision parent | Accepted preparation first reaches actual default; authorized incoming synchronization preserves the receiving workflow and return parent before dependent work. No premature phase completion. |
+| Nested child, eligible reopening and interrupted merge | Actual parent/source/publication governs; child closure does not resume parent. Reopening requires the latest qualifying first-parent merge and explicit bounded human authority. |
+| Git helper wait, uncertain push and authorization denial | Initial operation has finite monitoring/diagnosis; owned-process disposition and exact-ref readback precede replay. Credential recovery does not reinterpret policy denial or change destination. |
+| Windows healthy/failing/unsupported launcher | Orientation observes read-only; coordinator owns compatible repair. Exact original adapter, expected-output retry, mandatory quote notice and failed-retry turn stop are retained. Absolute/executable-only launcher limits are explicit. |
+| Fresh versus reconstructed context | HANDOFF is a checkpoint, later grants/commits remain authoritative, branch choice is requested only when not established, and frozen history is not a routine work queue. |
+
+No confirmed gate bypass, contradictory operational owner or missing return path found in these source traces. The dedicated Windows procedure is a substantive narrow subworkflow; entry reminders remain shallow. Workflow/example catalogs are broader routing/contrast material and are assessed as such rather than split by size. Detailed editorial consistency is revisited in U-006.
+
+These are inspected-source scenarios, not new autonomous agent/client executions. No credentials were exposed or changed, no target repository initialized and no tracking/product objects mutated. The human-selected original CMD limitation is retained, not reopened as a finding. No source changed.
