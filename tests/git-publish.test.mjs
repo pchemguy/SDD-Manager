@@ -135,6 +135,17 @@ test('missing supervisor runtime fails finitely before any Git network effect', 
   assert.equal(data.push_attempted, false); assert.equal(data.cleanup_state, 'confirmed');
 });
 
+test('unexpected supervisor exit without disposition blocks replay explicitly', async t => {
+  const f = fixture(t), marker = helper(f, 'wait');
+  const result = await capture(process.execPath, [SCRIPT, ...args(f, 'https://example.invalid/owner/repo.git'),
+    '--python', process.execPath]); // executable exists, but cannot run the Python backend
+  const data = resultOf(result);
+  assert.equal(result.status, 3); assert.equal(data.code, 'cleanup_unconfirmed');
+  assert.equal(data.cleanup_state, 'unconfirmed');
+  assert.equal(data.next_action, 'resolve_cleanup_before_retry');
+  assert.equal(data.push_attempted, false); assert.equal(fs.existsSync(marker), false);
+});
+
 test('same-repository linked worktree uses the existing token without copying it', { timeout: 30000 }, async t => {
   const f = fixture(t), server = await gitHttpsFixture(t, TOKEN), linked = path.join(f.root, 'linked worktree');
   f.git(['remote', 'set-url', 'origin', server.url]);
@@ -217,4 +228,18 @@ test('stalled transport consumes a finite whole deadline with confirmed cleanup'
   assert.equal(result.status, 3); assert.equal(data.code, 'process_timeout');
   assert.equal(data.remote_state, 'unknown'); assert.equal(data.cleanup_state, 'confirmed');
   assert.ok(performance.now() - started < 3500); assert.equal(data.push_attempted, false);
+});
+
+test('stalled push and stalled readback share the original deadline', { timeout: 15000 }, async t => {
+  const f = fixture(t), server = await gitHttpsFixture(t, TOKEN, { stallRead: true });
+  f.git(['remote', 'set-url', 'origin', server.url]); fs.unlinkSync(path.join(f.root, 'gh.tkn'));
+  const marker = helper(f, 'wait'), started = performance.now();
+  const result = await capture(process.execPath, [SCRIPT, ...args(f, server.url), '--timeout-ms', '6000'], { env: server.env, timeout: 9000 });
+  const data = resultOf(result), owned = JSON.parse(fs.readFileSync(marker, 'utf8'));
+  assert.equal(result.status, 3); assert.equal(data.push_result.code, 'process_timeout');
+  assert.equal(data.readback_result.code, 'process_timeout');
+  assert.equal(data.stage, 'readback'); assert.equal(data.remote_state, 'unknown');
+  assert.equal(data.cleanup_state, 'confirmed');
+  assert.ok(performance.now() - started < 6500, 'readback renewed the whole operation budget');
+  assert.equal(alive(owned.pid), false); assert.equal(alive(owned.child), false);
 });
