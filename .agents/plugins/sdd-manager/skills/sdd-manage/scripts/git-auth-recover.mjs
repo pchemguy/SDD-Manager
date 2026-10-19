@@ -183,6 +183,39 @@ export function recover(options, execute = processResult) {
     push_attempted: !!pushed, expected: options.expect, observed, ref: options.ref };
 }
 
+/**
+ * Build private-helper context without admitting relocation into public callers.
+ * Git's transport supplies GIT_DIR and inherited command configuration. Resolve
+ * the explicit worktree using a clean environment, then require GIT_DIR (when
+ * present) to identify that worktree's actual administration directory. Other
+ * relocation variables retain childEnv's rejection. No process.env mutation or
+ * credential/configuration persistence occurs.
+ * @param {string} selectedRepo Explicit repository passed by the parent utility.
+ * @returns {{repo: string, env: object, git: Function}} Bound clean subprocesses.
+ * @throws {RecoveryError|Error} Invalid worktree or mismatching helper context.
+ */
+function privateHelperContext(selectedRepo) {
+  const base = Object.create(null);
+  let directory;
+  for (const [key, value] of Object.entries(process.env)) {
+    if (/^GIT_DIR$/i.test(key)) {
+      if (directory !== undefined) fail('helper_context_mismatch', 'helper');
+      directory = value;
+    } else if (!/^GIT_CONFIG_(?:PARAMETERS|COUNT|KEY_\d+|VALUE_\d+)$/i.test(key)) base[key] = value;
+  }
+  const env = childEnv(base), repo = fs.realpathSync(selectedRepo);
+  const git = args => processResult('git', ['-C', repo, ...args], { cwd: repo, env });
+  const root = checked(git(['rev-parse', '--show-toplevel']), 'helper').trim();
+  if (!sameDirectory(root, repo)) fail('repo_must_be_root', 'helper');
+  if (directory !== undefined) {
+    const expected = checked(git(['rev-parse', '--absolute-git-dir']), 'helper').trim();
+    let matches = false;
+    try { matches = !!directory && sameDirectory(path.resolve(process.cwd(), directory), expected); } catch {}
+    if (!matches) fail('helper_context_mismatch', 'helper');
+  }
+  return { repo, env, git };
+}
+
 /** Internal Git protocol entry. Credential stdout is consumed only by Git. */
 function helperMain(args) {
   const [repo, tokenFile, url, action, ...extra] = args;
@@ -202,8 +235,8 @@ function helperMain(args) {
   // Git URL-decodes the credential path once; validation excludes protocol controls.
   if (request.protocol !== 'https' || request.host !== target.host || request.path !== gitCredentialPath(target) ||
       (request.username && request.username !== 'x-access-token')) return;
-  const git = args => processResult('git', ['-C', repo, ...args], { cwd: repo, env: childEnv() });
-  const token = readToken(repo, tokenFile, git);
+  const context = privateHelperContext(repo);
+  const token = readToken(context.repo, tokenFile, context.git, process.platform, { environment: context.env });
   process.stdout.write(`username=x-access-token\npassword=${token}\n\n`);
 }
 

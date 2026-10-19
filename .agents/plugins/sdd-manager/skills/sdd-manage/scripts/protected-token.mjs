@@ -94,7 +94,7 @@ export function windowsUserContext(stdout, computerName) {
 export function childEnv(base = process.env) {
   const env = {};
   for (const [key, value] of Object.entries(base)) {
-    if (/^(GIT_DIR|GIT_WORK_TREE|GIT_COMMON_DIR|GIT_INDEX_FILE|GIT_CONFIG_COUNT|GIT_CONFIG_KEY_\d+|GIT_CONFIG_VALUE_\d+)$/i.test(key)) fail('relocated_git_environment');
+    if (/^(GIT_DIR|GIT_WORK_TREE|GIT_COMMON_DIR|GIT_INDEX_FILE|GIT_CONFIG_PARAMETERS|GIT_CONFIG_COUNT|GIT_CONFIG_KEY_\d+|GIT_CONFIG_VALUE_\d+)$/i.test(key)) fail('relocated_git_environment');
     if (/^(GIT_ASKPASS|SSH_ASKPASS|GIT_TRACE.*|GIT_CURL_VERBOSE|GIT_TRACE_CURL.*|GIT_TERMINAL_PROMPT|GCM_INTERACTIVE)$/i.test(key)) continue;
     env[key] = value;
   }
@@ -131,8 +131,8 @@ export function parseWindowsAclExport(bytes) {
 }
 
 /** Inspect Windows ACLs without PowerShell or exporting credential material. */
-function windowsPermissions(filename, remainingMs) {
-  const env = childEnv();
+function windowsPermissions(filename, remainingMs, environment) {
+  const env = childEnv(environment ?? process.env);
   // Git's shell can prepend GNU tools to PATH; require native Windows utilities.
   const systemRoot = process.env.SystemRoot;
   if (!systemRoot || !path.isAbsolute(systemRoot)) fail('windows_tools_unavailable', 'acl');
@@ -160,11 +160,14 @@ function windowsPermissions(filename, remainingMs) {
  * @param {string} tokenFile Root-relative selected token-file path.
  * @param {Function} git Bounded Git runner returning spawnSync-style results.
  * @param {string} platform Native platform; tests may assess pure ACL separately.
- * @param {{remainingMs?: Function}} controls Optional caller's remaining process budget.
+ * @param {{remainingMs?: Function, environment?: object}} controls Remaining
+ *   process budget and optional prepared subprocess environment. The latter is
+ *   revalidated by childEnv for Windows ACL tools; ordinary callers use the
+ *   strict ambient default. It changes no token/protection policy.
  * @returns {string} Secret for private credential use, never diagnostic output.
  * @throws {ProtectedInputError|Error} Invalid protection/context, format or local I/O.
  */
-export function readToken(repo, tokenFile, git, platform = process.platform, { remainingMs = () => 30000 } = {}) {
+export function readToken(repo, tokenFile, git, platform = process.platform, { remainingMs = () => 30000, environment } = {}) {
   if (path.isAbsolute(tokenFile)) fail('token_outside_repository');
   const filename = path.resolve(repo, tokenFile), relative = path.relative(repo, filename);
   if (!relative || relative.startsWith('..' + path.sep) || relative === '..') fail('token_outside_repository');
@@ -180,7 +183,7 @@ export function readToken(repo, tokenFile, git, platform = process.platform, { r
   if (git(['check-ignore', '--no-index', '--', relative]).status !== 0) fail('token_not_ignored');
   const tracked = git(['ls-files', '--error-unmatch', '--', `:(literal)${relative}`]);
   if (tracked.status !== 1 || tracked.error || tracked.signal) fail('token_tracked_or_unknown');
-  if (platform === 'win32') windowsPermissions(filename, remainingMs);
+  if (platform === 'win32') windowsPermissions(filename, remainingMs, environment);
   else if (info.uid !== process.getuid() || (info.mode & 0o077)) fail('token_permissions');
   const descriptor = fs.openSync(filename, fs.constants.O_RDONLY | (fs.constants.O_NOFOLLOW || 0));
   try {

@@ -43,6 +43,7 @@ import path from 'node:path';
 import os from 'node:os';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { capture, gitHttpsFixture } from './helpers/git-auth-https.mjs';
 const SCRIPT = fileURLToPath(new URL('../.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs', import.meta.url));
 const CANARY = 'synthetic-only-canary-token';
 const TARGET_URL = 'https://example.invalid/owner/repo.git';
@@ -276,4 +277,69 @@ test('ACL exports support observed BOM-less UTF-16LE and reject malformed record
     Buffer.from(`gh.tkn\n${dacl}\nextra\n`), Buffer.from('gh.tkn\nnot-a-dacl\n')]) {
     assert.throws(() => auth.parseWindowsAclExport(bytes), /acl_unverified/);
   }
+});
+
+test('private helper context accepts its Git directory and discards inherited command config', t => {
+  const f = fixture(t), directory = f.git(['rev-parse', '--absolute-git-dir']);
+  const result = spawnSync(process.execPath, [SCRIPT, '--credential-helper', f.root, 'gh.tkn', TARGET_URL, 'get'], {
+    cwd: f.root, encoding: 'utf8', input: `url=${TARGET_URL}\nprotocol=https\nhost=example.invalid\npath=owner/repo.git\n\n`,
+    env: { ...process.env, GIT_DIR: directory, GIT_CONFIG_PARAMETERS: "'core.bare=true'",
+      GIT_CONFIG_COUNT: '1', GIT_CONFIG_KEY_0: 'core.bare', GIT_CONFIG_VALUE_0: 'true' }, timeout: 10000,
+  });
+  assert.equal(result.status, 0, result.stderr); assert.ok(result.stdout.includes(`password=${CANARY}`));
+});
+
+test('private helper context rejects another Git directory and unadmitted relocation', t => {
+  const f = fixture(t), other = fixture(t);
+  for (const extra of [{ GIT_DIR: path.join(other.root, '.git') }, { GIT_WORK_TREE: f.root }, { GIT_INDEX_FILE: path.join(f.root, '.git', 'index') }]) {
+    const result = spawnSync(process.execPath, [SCRIPT, '--credential-helper', f.root, 'gh.tkn', TARGET_URL, 'get'], {
+      cwd: f.root, encoding: 'utf8', input: 'protocol=https\nhost=example.invalid\npath=owner/repo.git\n\n',
+      env: { ...process.env, ...extra }, timeout: 10000,
+    });
+    assert.equal(result.status, 1); assert.equal(result.stdout, ''); assert.ok(!result.stderr.includes(CANARY));
+  }
+});
+
+test('private helper context supports a linked worktree Git administration directory', t => {
+  const f = fixture(t), linked = path.join(f.root, 'linked');
+  f.git(['worktree', 'add', '--detach', linked, f.oid]);
+  fs.writeFileSync(path.join(linked, 'gh.tkn'), CANARY + '\n', { mode: 0o600 });
+  if (process.platform === 'win32') {
+    const sid = spawnSync('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' }).stdout.match(/S-1-\d+(?:-\d+)+/)[0];
+    assert.equal(spawnSync('icacls.exe', [path.join(linked, 'gh.tkn'), '/inheritance:r', '/grant:r', `*${sid}:F`], { encoding: 'utf8' }).status, 0);
+  }
+  const directory = spawnSync('git', ['-C', linked, 'rev-parse', '--absolute-git-dir'], { encoding: 'utf8' }).stdout.trim();
+  const result = spawnSync(process.execPath, [SCRIPT, '--credential-helper', linked, 'gh.tkn', TARGET_URL, 'get'], {
+    cwd: linked, encoding: 'utf8', input: 'protocol=https\nhost=example.invalid\npath=owner/repo.git\n\n',
+    env: { ...process.env, GIT_DIR: directory }, timeout: 10000,
+  });
+  assert.equal(result.status, 0, result.stderr); assert.ok(result.stdout.includes(`password=${CANARY}`));
+});
+
+test('public callers reject ambient relocation and command configuration', t => {
+  const f = fixture(t);
+  // A missing guard must still stop locally rather than contacting any host.
+  f.git(['remote', 'set-url', 'origin', 'https://different.invalid/owner/repo.git']);
+  for (const extra of [{ GIT_DIR: path.join(f.root, '.git') }, { GIT_CONFIG_PARAMETERS: "'core.bare=true'" }]) {
+    const result = spawnSync(process.execPath, [SCRIPT, 'readback', '--repo', f.root, '--remote', 'origin', '--url', TARGET_URL, '--ref', f.ref, '--expect', f.oid], {
+      encoding: 'utf8', env: { ...process.env, ...extra }, timeout: 10000,
+    });
+    assert.equal(result.status, 1); assert.equal(JSON.parse(result.stdout).code, 'relocated_git_environment');
+    assert.ok(!result.stdout.includes(CANARY));
+  }
+});
+
+test('native HTTPS Git transport recovers credentials and verifies the exact ref', { timeout: 45000 }, async t => {
+  const f = fixture(t), server = await gitHttpsFixture(t, CANARY);
+  f.git(['remote', 'set-url', 'origin', server.url]);
+  // Honor the explicit fixture CA on Schannel; no production TLS change.
+  f.git(['config', 'http.schannelUseSSLCAInfo', 'true']); f.git(['config', 'http.schannelCheckRevoke', 'false']);
+  const config = fs.readFileSync(path.join(f.root, '.git', 'config'));
+  const result = await capture(process.execPath, [SCRIPT, 'push', '--repo', f.root, '--remote', 'origin', '--url', server.url,
+    '--ref', f.ref, '--expect', f.oid, '--timeout-ms', '10000'], { cwd: f.root, env: server.env });
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  const data = JSON.parse(result.stdout); assert.equal(data.code, 'remote_verified'); assert.equal(data.observed, f.oid);
+  assert.ok(server.events.some(event => event.write && event.authorized));
+  assert.deepEqual(fs.readFileSync(path.join(f.root, '.git', 'config')), config);
+  assert.ok(!(result.stdout + result.stderr).includes(CANARY));
 });
