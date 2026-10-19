@@ -5,8 +5,8 @@
 - Campaign: 080_17cef14; starting and reviewed source 17cef14c69dd7a84dc035ac8e864f446ee3668c5.
 - Branch: revision/080_17cef14-comprehensive-review; recorded creation parent/integration/return main at that baseline.
 - Human scope: comprehensive review, explicitly including documentation. [Review plan](REVIEW-PLAN.md).
-- Owner/stage: sdd-manage; opening and plan. Reporting: Standard.
-- State: Open; U-001–U-006 complete, U-007 pending. Source repairs and campaign closure are not authorized by this review request.
+- Owner/stage: sdd-manage; comprehensive review consolidated. Reporting: Standard.
+- State: Review complete; campaign remains open. U-001–U-007 assessed and consolidated. No source repairs, revision plan, integration or campaign closure performed.
 
 ## Setup and evidence boundary
 
@@ -26,9 +26,9 @@ Evidence classes remain separate: source and editorial assessment, structural/pa
 | U-004 | Assessed; no additional confirmed finding | None | Execution/evidence checkpoint |
 | U-005 | Assessed; one contract mismatch and one robustness recommendation | R-002, R-003 | Utility checkpoint |
 | U-006 | Documentation/composition assessed | R-001, R-004, R-005 | Documentation checkpoint |
-| U-007 | Planned | None assessed | Opening |
+| U-007 | Assessed; no additional confirmed finding | None additional | Final verification/consolidation checkpoint |
 
-No canonical finding is established in U-001. This is not whole-package readiness; operational references, executable semantics and the comprehensive editorial pass remain assigned to later units.
+U-001 established no canonical finding. The completed domain units and final consolidation below qualify whole-package review coverage and remaining findings; passing checks do not imply that the findings are corrected.
 
 ## U-001 — Product architecture and entries
 
@@ -205,3 +205,52 @@ No source documentation was edited. The explicit AGENTS removal remains required
 | Observation / consequence | Both modules have a useful one-line module purpose and external CLI guidance, but these consequential functions lack docstrings. For example, capture mutates caller-supplied provenance, retains partial failure facts and returns a pair; render reads actual prerequisite/assessment data and performs remote readback. Those side effects, caller obligations and failure behavior require reconstructing implementation details or finding another guide. CLI documentation does not fully describe the callable interfaces used by tests/maintainers. |
 | Bounded recommendation / owner | Add proportionate professional docstrings for these consequential interfaces: inputs, returned evidence, caller-owned mutation, remote/process effects, sanitized failures and evidence limits. Extend module context only where useful and link canonical detailed formats; do not duplicate the whole external guide, document every obvious assertion, alter behavior or impose boilerplate on test methods. |
 | Objective recheck | Maintainers can identify these contracts from the function/module documentation, comments agree with implementation/callers and relevant support checks pass with executable statements/signatures unchanged. |
+
+## U-007 — Release, distribution and acceptance support
+
+Assessed release highlights/message/reporting/check owners, package/workflow/release lifecycle references, the complete publisher implementation and release workflow/handoff/schema boundary. Inspected acceptance helper source at configuration, package pinning, isolated preparation, actual Git/remote observation, recovery export, task ownership, deterministic assessment, capture/renderer, variant/fixture and final evidence integration boundaries; reviewed consequential tests/assertions and ran the complete declared support suite. This is source/contract review with executable support evidence, not an independent security audit or consumer acceptance campaign.
+
+| Concern / source contrast | Assessment and observed evidence |
+| --- | --- |
+| Highlights-only / complete notes / publication | Distinct output/effect boundaries, final-note retention, exact source association and same commit/tag/provider body. Missing context or stale coverage triggers refresh; version agreement alone cannot waive it. The retained root RELEASE-NOTES.md describes an earlier preparation candidate and its qualified results; it is not evidence that the reviewed baseline is release-ready and was not rewritten by this review. |
+| Git collection versus editorial judgment | Executed the literal bundled Python recipe in disposable native Git repositories. Passed eight contrasts: initial null baseline; stable baseline/pending-tag exclusion; complete merged/direct inventory; latest same-campaign body/earlier deferral; increment; no-op; pending-as-baseline rejection; side-history policy refusal. This validates collection/refusal mechanics, not AI semantic consolidation or real release transfer. |
+| Publisher identity / conflicts / interrupted writes | Exact candidate/notes/tag/version, existing acknowledged release ID, complete asset inventories, missing-only upload, conflict preservation, uncertain-effect exit and final readback agree with owner guidance. Source-only publisher suite covers actual Git/ZIP plus controlled provider behavior. No real release was created or dispatched. |
+| CI source/tooling and permissions | Five YAML workflows parsed. Release workflow separates tooling ref from explicit candidate SHA, uses structured handoff data, read-only build and gated single write-enabled publisher, rebuild hash agreement and noncancelling per-tag serialization. Official [concurrency documentation](https://docs.github.com/en/enterprise-cloud%40latest/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency), [checkout releases](https://github.com/actions/checkout/releases) and [setup-python entry](https://github.com/actions/setup-python/blob/main/README.md) were checked on 2026-10-19 for the current queue/action interfaces. Parsing/source inspection is not a new release CI run. |
+| Exact package / distribution boundary | Built the pinned baseline twice in an isolated detached clone with publish=false and no provider access. Both ZIP/checksum pairs were identical. Every archive member matched committed package bytes; 154 files, 448,993 ZIP bytes, SHA-256 80c9e46492498446d186d43945cca54327a1a5a3f5c381af564f3e442ae430d5. Offline pinned core manifest validation passed. PLUGIN/15 skills/assets/license retained; root development instructions, acceptance/tests/CI/dev records excluded. No installed-client claim. |
+| Acceptance integrity | Catalog validation resolved all 33 cases. Support tests cover strict inputs, actual Git/index/objects/remote evidence, literal sensitivity, source pinning, recovery, isolated fixtures, variant accounting and release capture. Separate independent criteria, native/client/provider evidence and required/optional facilities remain explicit. Catalog/support success supplies no new A-case grade. |
+
+### Executed check ledger
+
+Environment: Linux, Python 3.12.14, Node v24.19.0. Declared jsonschema==4.26.0 dependency was already available and the requirements installation check succeeded. Tests ran against the pinned baseline's unchanged implementation/test bytes; the working branch differs only in authorized review/navigation/HANDOFF records.
+
+| Command / boundary | Observed result / limit |
+| --- | --- |
+| node --test tests/git-auth-recover.test.mjs | 27 passed; U-005 |
+| node --test tests/forge-close.test.mjs | 39 passed; U-005 |
+| node --test tests/forge-project.test.mjs | 38 passed; U-005 |
+| python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v | 139 passed, zero failures/skips; 100.393 s |
+| python -m unittest discover -s .github/tests -v | 37 passed, zero failures/skips; 7.707 s |
+| python -m unittest discover -s tests -p test_windows_shell_recovery.py -v | Six expected Linux skips; no local Windows runtime pass. Source-matched successful native Windows CI is recorded in U-005. |
+| python acceptance/textstats/cases/assessor/catalog_tools.py validate | 33 resolved cases; static asset validation, live_acceptance=false |
+| Exact baseline package, two builds / archive inspection | Passed, 154 exact files, identical bytes/checksums; no provider access |
+| Literal Git highlights recipe / eight disposable-Git contrasts | Passed collection/refusal mechanics; no consumer curation claim |
+| Current link/fragment/presentation and APA checks | Results and qualifications in U-001/U-006; no missing actual current destination or package escape established |
+| git diff --check / permitted-path and baseline comparison | Passed. Only four authorized record/navigation paths differ. All reviewed source and frozen records preserved; main remains the pinned baseline. Test-generated caches removed. |
+
+Total newly executed passing tests: 280 (104 Node + 139 support + 37 publisher). Six native-CMD tests were skipped locally and are excluded from that total. CI evidence is explicitly source-matched rather than silently counted as new local execution. No further whole-suite rerun is necessary for record-only consolidation.
+
+## Consolidated findings and revision handoff
+
+| Finding | Type / priority | Disposition and dependency |
+| --- | --- | --- |
+| R-001 | Documentation architecture defect / P2 | Human-required removal retained. Remove the whole quoted AGENTS preparation subsection, including JSON rendering details; preserve canonical gates. Not implemented. |
+| R-002 | Workflow/script contract mismatch / P2 | Confirmed pre-write lock discrepancy. Coordinator/forge must choose an explicit narrow transient-lock exception or external lock placement before correction/recheck. Not implemented. |
+| R-003 | Defensive robustness recommendation / P3 | Unsupported special-file open can block; trusted regular-input contract is qualified. Optional bounded runtime improvement, not a claimed supported deadline failure. |
+| R-004 | Skill ownership/placement recommendation / P3 | Move the sole coordinator-owned adapter to sdd-manage/scripts with link/test/CI/package updates; preserve exact body. No runtime defect asserted. |
+| R-005 | Source maintainer API documentation gap / P3 | Add proportionate contracts to consequential capture/renderer interfaces without behavior changes or duplicated guide content. |
+
+Five canonical findings: two P2 defects/required corrections and three P3 recommendations/documentation improvements; no P0/P1 finding established. No finding has been repaired or verified corrected. R-001 is already human-directed for a future revision; the remaining recommendations are not silently accepted. R-002 requires a bounded policy/location decision. Template and adapter placement changes can proceed independently once selected, with corresponding package/source/native rechecks. Shared-runtime work must retain both completion/projection regression coverage and applicable native jobs; no script-per-campaign rule is needed.
+
+The review is complete across all seven planned units. The source is not yet corrected for R-001/R-002, and this review does not certify a new exact-source release, live consumer reliability, installed-client discovery/presentation, Antigravity/local Codex activation, or unperformed provider mutations. Those are explicit evidence limits, not fabricated passes or automatic source defects. The controlling original CMD assignment and required quote notice remain intact.
+
+The final checkpoint publishes this report, completed review-plan state, corrected current index navigation and HANDOFF on revision/080_17cef14-comprehensive-review. Exact containment of its containing commit must be established from Git/provider readback; a record cannot embed its own future commit SHA. Stop with campaign 080 open, without a revision plan, source fixes, merge or closure. The next human-selected boundary may be revision planning/selection, a focused follow-up or another explicitly scoped operation.

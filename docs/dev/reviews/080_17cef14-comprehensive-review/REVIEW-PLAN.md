@@ -9,7 +9,7 @@
 - Human request: “Open and run comprehesnive review”, explicitly extended by “and docs!”.
 - Owner: sdd-manage; source owners supply domain criteria, sdd-docs owns documentation assessment and sdd-verify owns check interpretation. Reporting: Standard.
 - Output: this plan, [review report](REVIEW-REPORT.md), current index navigation and HANDOFF. Review and scoped local verification only; source fixes, revision execution, merge/closure, live-client installation, release publication and hosted product mutations are not selected.
-- State: Planned; publish/read back this opening before assessment units.
+- State: All seven review units completed and consolidated; campaign remains open at the review-only stop. Per-unit checkpoints were published/read back. The final containing commit requires its own exact remote readback.
 
 ## Inventory and review method
 
