@@ -1,17 +1,17 @@
 # SDD Manager handoff
 
-Campaign 077_9bd3469 has completed all eight review units, four accepted revisions and prospective merged-state verification. This checkpoint accompanies its explicit main integration; confirm that merge publication/readback in Git before treating closure as established. The human authorized the complete review → plan → execute → close sequence; no additional source work or product release follows automatically.
+Campaign 078_425b3ee is open for documentation design/preparation tracking. The current request opens the revision; its concrete concerns and desired changes have not yet been supplied. The opening is retained locally with publication pending; resolve that persistence boundary before repository work advances, then await that scope.
 
-## Scope and evidence
+## Context and authority
 
-- Full branch-off/reviewed baseline: 9bd3469351e75883fa510ff38708fc4f2982be3a; original opening: 40042e78af25f63cb5ca5292d42ec9b6e4084bca.
-- [Review findings](reviews/077_9bd3469-comprehensive-review/REVIEW-REPORT.md), [revision plan](reviews/077_9bd3469-comprehensive-review/REVISION-PLAN.md), [execution/checks](reviews/077_9bd3469-comprehensive-review/REVISION-REPORT.md), [index](reviews/README.md).
-- Result: corrected exploration link, bounded source assessment companion preserving all 49 cases, strict shared phase-label association checks and accurate explicit internal visibility/final drift detection. Source contract remains substantive; no package/client dependency on source-only assessment.
-- Evidence: 99 local runtime contracts, 139 Python support and 37 publisher tests; both changed forge matrices pass all four native Windows CMD/Linux Node 22/24 jobs on 8ee9c4ad48672cc38a706d47b2850a5fb36aa0a5. Current source links/resources, 33 static catalog cases and exact 151-file reproducible package/snapshot pass. Reports retain RED/GREEN, source/hashes and limits.
-- Source/consumer/client/provider evidence remain distinct. No installed-client/independent agent trial, live tracking mutation, release/tag/version change or external demo work occurred. All other closed records remain frozen and unchanged.
+- Owner/stage: sdd-manage; campaign opening/context establishment. Reporting: Standard after setup.
+- [Opening record](reviews/078_425b3ee-docs-design-tracking/REVISION-REPORT.md) retains the exact request, topic, evidence, transport fallback and stopping boundary; [index](reviews/README.md) supplies navigation.
+- Full baseline/branch-off: 425b3eef464e74bd940d061b07cf103c5bc17d4c, the completed/published main integration of campaign 077.
+- Working/publication branch: revision/078_425b3ee-docs-design-tracking on origin, pchemguy/SDD-Manager. Creation parent, eventual integration and return target: main at that baseline. No parent implementation is suspended or authorized to resume.
+- Authorized effects now: the campaign branch/record, index and this entry checkpoint, committed/published together. Plugin source, preparation task states and hosted tracking objects remain unchanged; no revision execution, merge, closure, release or product range is selected.
 
-## Authority and return
+## Evidence and continuation
 
-Completed working branch revision/077_9bd3469-comprehensive-review, retained on origin at 5414201f92617810d73ea146ab2ae477c7394567; recorded creation parent/integration/return target main at the full baseline above. This checkpoint restores main context and preserves the campaign outcome without selecting new work. Reporting remains Standard. This repository has taskless campaign actions, not a product TASKS owner.
+Initial main checkout is clean; repository-wide reservations and connected GitHub branch/ref reads confirm baseline and available identity. Shell HTTPS timed out under a finite bound; connected GitHub reads work, but Git-data tree creation was explicitly denied with HTTP 403, Resource not accessible by integration. No branch was created through that mechanism. Preserve the local opening commit and existing destination; confirm actual publication by remote readback before any further repository work. No credential/configuration repair or secret transfer occurred.
 
-Finalization was published/read back. The conflict-free two-parent main merge uses target parent 9bd3469351e75883fa510ff38708fc4f2982be3a and incoming tip 5414201f92617810d73ea146ab2ae477c7394567; merged runtime/support/publisher suites pass 99/139/37, current links/whitespace pass and package bytes match the verified incoming source. The commit/remote readback confirms its own SHA and publication after this snapshot. Retain the campaign branch and all frozen records. Main has no active product range or further authorized campaign; stop awaiting a new request.
+Prior closed campaigns remain frozen and are not a reading queue. The main branch retains its completed checkpoint while this branch owns the open revision. The next eligible action is to establish the human's specific documentation design-tracking concerns and requested review/plan/repair boundary, then load the affected owners. Do not infer changes or begin repairs merely from opening this campaign.
