@@ -9,7 +9,7 @@
 - Human requirements: identify the execution OS at startup; probe Windows shell commands; on a PowerShell-related probe failure create PowerShell.cmd in an effective PATH location, optionally the project root with .gitignore; retry, report success and continue, or report failure and stop the turn. Activation must remind the user that single quotes become double quotes.
 - Human-supplied compatibility evidence: Antigravity run_command invokes `PowerShell -Command "<USER COMMAND>"`. Preserve the supplied shim for that two-argument form. Broader launch formats are not established by that evidence.
 - Client scope is general: the human also reports similar past local Codex problems, with current behavior unverified. Apply startup detection to local Codex and other clients as well; establish actual launcher compatibility instead of gating by client branding or asserting that current Codex uses Antigravity's invocation.
-- State: Finalized for bounded execution under the supplied workflow direction. Keep this campaign open on its revision branch; closure/integration is not selected.
+- State: V-001–V-003 executed and verified, including the bounded quote-assignment correction identified by native tests. Keep this campaign open on its revision branch; closure/integration is not selected.
 
 ## Resulting workflow
 

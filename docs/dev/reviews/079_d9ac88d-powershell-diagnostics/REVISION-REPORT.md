@@ -74,3 +74,22 @@ V-002 commit 311dfb1dddb611c9c08d140345abef2284546451 is pushed/read back. Its [
 Changed the path assertion to native same-file identity. In the adapter, isolated quote substitution through local delayed expansion so inserted quote/metacharacter text is retained until command dispatch, then disabled delayed expansion for dispatch. This retains apostrophe-to-double-quote behavior while preserving literal exclamation marks. Added command-separator and exclamation-mark regression cases; native contracts now total six, each covering both LF/CRLF. This candidate requires a new native recheck; the earlier failed observations remain retained. No live client compatibility is inferred.
 
 Before that correction, the exact 311dfb1 package passed pinned schema and archive-byte/reproducibility checks: 154 files, 15 skills, 79 references, with source tests excluded. Its two archives matched SHA-256 `9d35601c2344155bc54d08995f7031db54f57284fbc5e3cf6161b8ca96bc2f05`. The corrected candidate will be checked independently; this hash is not its verification.
+
+## Final verified result
+
+Corrected/tested source fcde1e69cb6f60c8a055c2cc9309e69d6ddba7e5 is pushed and verified by exact remote-ref readback. All accepted V-001–V-003 actions are complete. Campaign 079 remains **open** on its revision branch, with no main integration or closure selected.
+
+The human's follow-up asks whether the core occupies a dedicated reference. It does: `skills/sdd-manage/references/windows-shell-recovery.md` owns the full OS/probe/compatible-adapter/placement/retry/notice/stop procedure. Entry points, orientation and generic/implementation recovery retain concise readiness cues and routes; the batch template lives in `assets/PowerShell.cmd`. The module has substantive startup/recovery scope and a clear load trigger, with no further reference fragments.
+
+| Verification | Actual outcome and boundary |
+| --- | --- |
+| [Windows workflow 39229097268](https://github.com/pchemguy/SDD-Manager/actions/runs/39229097268) | Completed/success; job 117982450809 is completed/success. Downloaded job log confirms native Windows CMD, Python 3.11.9, all six tests executed and passed in 1.196 seconds, with no skipped tests. Each case exercises both LF/CRLF asset variants. |
+| Native behavior | Isolated effective PATH/spaced paths, expanded drive probe, all single-to-double-quote conversion including literal apostrophes, stderr forwarding, nonzero exit status, once-only command separators and preserved literal exclamation marks passed. |
+| Corrected support suite | 139 passed on Linux/Python 3.12.14 in 143.510 seconds, including actual shim/reference snapshot bytes and source-only test exclusion. |
+| Final publisher suite | 37 passed on Linux/Python 3.12.14 in 29.075 seconds; declared jsonschema 4.26.0 available. |
+| Corrected exact package | Pinned offline schema, every archive member against committed Git blobs and deterministic two-build comparison passed. The package has 154 files, 15 skills and 79 references. Archive SHA-256: `3ef99d9a49f6dc62dd51d6d13cad6cedd4af2624650476f2f07b6fafdac66415`. |
+| Current documentation and preservation | 269 local links/anchors and package containment checked; heading/list/code-block composition and whitespace passed. Full baseline-to-candidate path review excludes all earlier closed campaign/feature packages. |
+
+The quote-conversion notice is mandatory on successful activation before dependent work, and after context recovery when an active substitution must be disclosed. A failed retry is reported and stops the turn. OS detection is client-neutral; launcher compatibility is evidenced separately, with Antigravity's invocation human-reported and local Codex's current behavior still unverified. Controlled native CMD success is not a live Antigravity/Codex trial or universal PowerShell compatibility claim.
+
+Final persistence changes only active campaign status/evidence, navigation and HANDOFF. Runtime/package/test bytes remain those of the verified candidate above; Git supplies the final evidence commit and its later push/readback. No accepted action remains unresolved or deferred. No local host shim, demo mutation, client installation, product task execution, release or main merge occurred. Retain the failed native attempt and bounded correction as actual campaign evidence; await human review or a later closure instruction.
