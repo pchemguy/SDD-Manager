@@ -32,6 +32,8 @@ node "<PLUGIN_ROOT>/skills/sdd-forge/scripts/forge-project.mjs" docs-main --repo
 
 Exactly one execution flag is required. Reject unknown/duplicate/missing arguments. Help/imports have no credential/Git/network effects. The normal CLI emits one JSON object to stdout; it writes no required projection map or session file. The caller may retain an exact result with existing evidence. Local regular inputs/filesystem are trusted; elapsed budgets bound supported process/network waits rather than promising hard real-time behavior for arbitrary OS filesystem failure.
 
+Request/source readers reject known non-regular files before opening and recheck the descriptor. POSIX opens use nonblocking mode to avoid waiting on a changed FIFO; Windows uses ordinary read-only opens. These checks do not remove the trusted-filesystem requirement or guarantee arbitrary device/network filesystem behavior.
+
 ## Preconditions and effects
 
 The caller establishes actual authorization, tracking confirmation, current source/QC/acceptance, required baseline publication, selected phase/preparation eligibility, cross-list identity/dependencies, exclusive remote execution and reviewed outgoing content. Scope-specific meanings are in the input guide. Positive JSON flags are assertions, not independent evidence.

@@ -578,3 +578,24 @@ test('native docs-main pre-write projection creates only its temporary owned coo
   assert.deepEqual(fs.readFileSync(path.join(local.root, '.git/config')), before.config);
   assert.equal(git(local.root, 'show-ref'), before.refs); assert.equal(git(local.root, 'status', '--porcelain'), before.status);
 });
+
+test('POSIX request and source FIFOs fail promptly before a blocking open', { skip: process.platform === 'win32' }, t => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'sdd-special-input-'));
+  t.after(() => fs.rmSync(root, { recursive: true, force: true }));
+  const runtime = new URL('../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-runtime.mjs', import.meta.url).href;
+  for (const [mode, name, expected] of [['request', 'request.json', 'invalid_request_file'], ['source', 'owner.md', 'invalid_source']]) {
+    const filename = path.join(root, name);
+    const created = spawnSync('mkfifo', [filename], { encoding: 'utf8' });
+    assert.equal(created.status, 0, created.stderr);
+    const child = spawnSync(process.execPath, ['--input-type=module', '-e', `
+      import { requestFile, inspectSource } from ${JSON.stringify(runtime)};
+      try {
+        if (process.argv[1] === 'request') requestFile(process.argv[2]);
+        else inspectSource({ repo: process.argv[3] }, { root: 'repo', path: 'owner.md' });
+        process.exitCode = 2;
+      } catch (error) { process.stdout.write(error.code || 'unclassified'); }
+    `, mode, filename, root], { encoding: 'utf8', timeout: 1500 });
+    assert.equal(child.error, undefined, 'Special-file rejection must not block until the child timeout');
+    assert.equal(child.status, 0, child.stderr); assert.equal(child.stdout, expected);
+  }
+});

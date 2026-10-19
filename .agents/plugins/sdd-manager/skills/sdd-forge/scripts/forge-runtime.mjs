@@ -25,9 +25,21 @@ export function remoteRepository(value) {
   }
   return repositoryName(name.replace(/\.git$/, ''));
 }
+/**
+ * Reject known special/oversized paths before opening. POSIX nonblocking mode
+ * also avoids waiting if a path becomes a FIFO after this check. Callers must
+ * still validate the opened descriptor; this is not a trusted-filesystem waiver.
+ */
+function openRegular(filename, code) {
+  const info = fs.statSync(filename);
+  if (!info.isFile() || info.size > MAX_JSON) fail(code);
+  const flags = fs.constants.O_RDONLY | (process.platform === 'win32' ? 0 : fs.constants.O_NONBLOCK);
+  return fs.openSync(filename, flags);
+}
+
 /** Read one regular bounded UTF-8 JSON input; optional UTF-8 BOM is accepted. */
 export function requestFile(filename) {
-  const descriptor = fs.openSync(filename, 'r');
+  const descriptor = openRegular(filename, 'invalid_request_file');
   try {
     const info = fs.fstatSync(descriptor);
     if (!info.isFile() || info.size > MAX_JSON) fail('invalid_request_file');
@@ -104,7 +116,7 @@ export function inspectSource(context, source, { committed = false } = {}) {
   const root = source.root === 'repo' ? context.repo : fileURLToPath(new URL('../../../', import.meta.url));
   const filename = fs.realpathSync(path.resolve(root, source.path)), relative = path.relative(fs.realpathSync(root), filename);
   if (relative === '..' || relative.startsWith('..' + path.sep) || path.isAbsolute(relative)) fail('source_outside_root');
-  const fd = fs.openSync(filename, 'r'); let raw;
+  const fd = openRegular(filename, 'invalid_source'); let raw;
   try {
     const stat = fs.fstatSync(fd);
     if (!stat.isFile() || stat.size > MAX_JSON) fail('invalid_source');

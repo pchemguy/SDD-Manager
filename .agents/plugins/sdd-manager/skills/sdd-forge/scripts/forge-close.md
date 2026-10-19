@@ -32,6 +32,8 @@ node "<PLUGIN_ROOT>/skills/sdd-forge/scripts/forge-close.mjs" task --repo "<WORK
 
 Unknown, duplicated or missing arguments fail. The normal CLI emits one JSON object to stdout and no raw provider body or credential diagnostic. Help emits usage text. Local filesystem calls operate on trusted explicit regular inputs; the elapsed budget bounds supported process/network waits, not an OS-level hard real-time guarantee for arbitrary filesystem failure.
 
+Request/source readers reject known non-regular files before opening and recheck the descriptor. POSIX opens use nonblocking mode to avoid waiting on a changed FIFO; Windows uses ordinary read-only opens. These checks do not remove the trusted-filesystem requirement or guarantee arbitrary device/network filesystem behavior.
+
 ## Caller authority and request schema
 
 The caller first verifies accepted owning tasks/PLAN, requested tracking, tests/documentation, task result/status or review/report commits and their published containment, relevant exits and exclusive execution ownership. The utility does not independently prove those facts by parsing development documents or by trusting GitHub counters. Schema assertions state what the caller has already established; copying true is not authorization or evidence.
