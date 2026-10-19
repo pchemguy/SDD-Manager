@@ -6,7 +6,7 @@
 - Branch: revision/080_17cef14-comprehensive-review; recorded creation parent/integration/return main at that baseline.
 - Human scope: comprehensive review, explicitly including documentation. [Review plan](REVIEW-PLAN.md).
 - Owner/stage: sdd-manage; opening and plan. Reporting: Standard.
-- State: Open; U-001–U-005 complete, U-006–U-007 pending. Source repairs and campaign closure are not authorized by this review request.
+- State: Open; U-001–U-006 complete, U-007 pending. Source repairs and campaign closure are not authorized by this review request.
 
 ## Setup and evidence boundary
 
@@ -25,7 +25,7 @@ Evidence classes remain separate: source and editorial assessment, structural/pa
 | U-003 | Assessed; no additional confirmed finding | None | Design/planning checkpoint |
 | U-004 | Assessed; no additional confirmed finding | None | Execution/evidence checkpoint |
 | U-005 | Assessed; one contract mismatch and one robustness recommendation | R-002, R-003 | Utility checkpoint |
-| U-006 | Planned; explicit human finding retained | R-001 | Human direction during review |
+| U-006 | Documentation/composition assessed | R-001, R-004, R-005 | Documentation checkpoint |
 | U-007 | Planned | None assessed | Opening |
 
 No canonical finding is established in U-001. This is not whole-package readiness; operational references, executable semantics and the comprehensive editorial pass remain assigned to later units.
@@ -167,3 +167,41 @@ Two isolated supplementary probes exposed R-002 and R-003 below. They used tempo
 | Consequence / qualification | An accidental unsupported special-file path can hang before a structured input error. The guides explicitly require trusted regular local inputs and exclude arbitrary OS filesystem failure from hard real-time guarantees; this is a defensive improvement, not a claim that supported regular input or Windows failed. |
 | Bounded recommendation / owner | Forge runtime: reject known non-regular path types before a potentially blocking open and retain descriptor-level validation; consider appropriate nonblocking handling for the supported platforms. Preserve the documented trusted-filesystem boundary rather than claiming race-free or general hard-real-time protection. |
 | Objective recheck | A focused POSIX special-file probe exits with a safe classified failure without a writer; valid regular/BOM/size/containment behavior and affected native suites still pass. |
+
+## U-006 — Documentation, composition and placement
+
+The documentation inventory contains 217 current Markdown files: the package, maintained source/contributor/acceptance material, demo/Jules guides, current dev roots and active review. Historical campaign/feature/run contents are excluded. Read the human and agent entries, all skill/module owner instructions across the domain units, templates and script guides; assessed root/package audience separation, complete README diagrams, both demo guides/example, Jules requests and maintained acceptance setup/execution/recovery/diagnostic/variant/release/helper guides. All consumer requests and the unique lifecycle criteria of the 33 assessor guides were inspected, with common checkpoint/QC/preparation/tracking/interruption protocols assessed separately. Machine contracts/catalog/fixtures receive execution and coverage checks in U-007. This is a comprehensive maintained-scope inventory and domain/editorial review, not a claim that every test body received line-by-line code review.
+
+| Documentation layer | Composition and agreement assessment |
+| --- | --- |
+| Root README / packaged README / PLUGIN / source contract | Abbreviated source navigation, fuller human explanation/diagrams and agent routing have distinct readers. Current source contract/assessment and capability map consistently distinguish portable packaging, explicit loading and observed client acceptance. |
+| Skill entries and focused references | Entries expose owner/scope and conditional substantive modules. References generally keep one complete concern, with short consequential handoff gates repeated where needed; broad workflow/example maps stay shallow. No size-only splitting or fixed question/domain catalogue is recommended. Detailed release semantic checks finish in U-007. |
+| AGENTS and preparation assets | R-001 is required: remove the entire quoted preparation subsection and JSON rendering instructions. Neighboring first-approval/integration and implementation-activation paragraphs also duplicate operational detail and should be considered for concise owner routing during that bounded template revision; retain actual project policy. DOCS_TASKS/JSON retain distinct local-completion/hosted-content responsibilities and all nine definitions agree. |
+| Windows adapter | The operational owner is sdd-manage. sdd-orient only reports a failure/name; test/CI references are verification consumers. R-004 recommends skill-local script placement, preserving the exact human-selected body and canonical recovery reference. |
+| Demo and Jules guides | Domain-specific exercises are expressly selected trial requirements, not universal workflow constraints. Baseline/enhancement phases, feature-versus-steering scope, different locking rules and the prior example's mismatch are explained. Jules loading is explicitly read-only and carries no artifact acceptance. Commands/prompts inspected; no game or Jules session executed. |
+| Acceptance guides | Coordinator/consumer/assessor separation, real prerequisites, original attempts, one-shot stops, source pinning, required/optional variants and final evidence integration are explicit. Substantial lifecycle guides have useful boundaries rather than tiny fragments. Source/support success is consistently distinguished from consumer/client/provider acceptance. |
+| In-code documentation | All 31 maintained Python modules and all eight bundled JavaScript modules have purpose documentation. Python uses proportionate docstrings, with developed Google-style contracts for consequential interfaces; JavaScript uses JSDoc/comments plus focused CLI guides. No generated/external code requires editing. R-005 identifies remaining consequential assessor helper interfaces with no function-level contract, despite useful standalone CLI guidance. Test modules have precise fixture/evidence-limit descriptions; no new runtime behavior is inferred from documentation presence. |
+
+Local navigation check: 1,028 links across the 217 files, including 717 package links and 266 heading fragments, with zero unresolved actual destinations/fragments and no package escape. Eleven links to frozen history were existence-checked without loading their targets. Two apparent missing links were correctly classified as literal target-README example text, not package links. Heading separation, marker spacing and structural-tab screening found no candidates; a separate indentation inspection found two three-space continuations in repository-bootstrap.md, and discovery's report label has the small “Coordintator” spelling nit. These are minor polish, not a claimed broken workflow or full renderer/lint pass. Markdown code/data and intended output examples were inspected in context. README Mermaid routing was source-assessed against owners; diagrams were not rendered in a client. Placeholder examples and external documentation were not all executed/fetched.
+
+No source documentation was edited. The explicit AGENTS removal remains required and the two new recommendations remain unimplemented. The adapter's original assignment and quote notice are controlling; no delayed-expansion restoration is proposed.
+
+### R-004 — Colocate the coordinator-only CMD adapter
+
+| Field | Evidence and recommendation |
+| --- | --- |
+| Location / baseline | assets/PowerShell.cmd; sdd-manage/references/windows-shell-recovery.md; native test, workflow filter and package-snapshot assertions at the pinned baseline. |
+| Type / priority / confidence | Package organization recommendation; P3; high confidence. Requested for assessment by the human during review. Current placement is valid packaged content, not a runtime or plugin-standard violation. |
+| Observation / consequence | The sole operational reference loading the script is the coordinator's dedicated recovery procedure. Orientation names it only to forbid mutation and return failure to the coordinator. Keeping this executable recovery utility among shared plugin assets hides its skill ownership and differs from the coordinator's other executable helpers. Tests/CI are not additional workflow owners. |
+| Bounded recommendation / owner | Move it to skills/sdd-manage/scripts/PowerShell.cmd, retain the existing dedicated recovery reference and update its link, native test path, CI path filters and package assertions. It still ships with the plugin; do not remove it from distribution or create a second copy. Preserve the script body byte for byte and the required single-to-double-quote notice. |
+| Objective recheck | One canonical script exists at the skill-local path, no active old-path references remain, package bytes are retained and the affected native Windows LF/CRLF tests/workflow and package support checks pass. |
+
+### R-005 — Document consequential assessor helper interfaces in code
+
+| Field | Evidence and recommendation |
+| --- | --- |
+| Location / baseline | acceptance/textstats/cases/assessor/capture.py: capture/invoke/channels; catalog_tools.py: render/validate_catalog/validate_contract at the pinned baseline. |
+| Type / priority / confidence | Source-only API/maintainer documentation gap; P3; high confidence. |
+| Observation / consequence | Both modules have a useful one-line module purpose and external CLI guidance, but these consequential functions lack docstrings. For example, capture mutates caller-supplied provenance, retains partial failure facts and returns a pair; render reads actual prerequisite/assessment data and performs remote readback. Those side effects, caller obligations and failure behavior require reconstructing implementation details or finding another guide. CLI documentation does not fully describe the callable interfaces used by tests/maintainers. |
+| Bounded recommendation / owner | Add proportionate professional docstrings for these consequential interfaces: inputs, returned evidence, caller-owned mutation, remote/process effects, sanitized failures and evidence limits. Extend module context only where useful and link canonical detailed formats; do not duplicate the whole external guide, document every obvious assertion, alter behavior or impose boilerplate on test methods. |
+| Objective recheck | Maintainers can identify these contracts from the function/module documentation, comments agree with implementation/callers and relevant support checks pass with executable statements/signatures unchanged. |
