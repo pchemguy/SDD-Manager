@@ -2,7 +2,7 @@
  * Native local execution boundary shared by forge utilities.
  * Explicit Git root/remote, bounded subprocesses, regular JSON input and
  * common-directory lock ownership; no credential or network import effects.
- * Protected token policy remains owned by sdd-manage/protected-token.mjs.
+ * Token-file validation remains owned by sdd-manage/protected-token.mjs.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -140,9 +140,9 @@ export function inspectSource(context, source, { committed = false } = {}) {
   return { source: { root: source.root, path: source.path, sha256 }, content };
 }
 
-/** Read only an already eligible protected token, consuming remaining budget. */
+/** Read an eligible repository token through the bounded Git context. */
 export function protectedToken(context, tokenFile) {
-  return readToken(context.repo, tokenFile, context.git, process.platform, { remainingMs: context.remainingMs });
+  return readToken(context.repo, tokenFile, context.git);
 }
 
 /** Native file identity handles Windows case/short-path entry spellings. */

@@ -6,9 +6,9 @@ The publication owner applies [bounded Git-operation monitoring](../references/g
 
 ## Runtime and invocation
 
-Require Node.js 22+ and Git on PATH. Native Windows additionally requires whoami.exe and icacls.exe under SystemRoot/System32; absolute native paths prevent Git's shell PATH from selecting a GNU substitute. No PowerShell, libsecret, keyring, npm package or persistent credential manager is required. This runtime is optional for other SDD workflows. If unavailable, report the missing facility and select another supported protected mechanism; do not install software automatically.
+Require Node.js 22+ and Git on PATH on Windows and Linux. No PowerShell, libsecret, keyring, npm package or persistent credential manager is required. This runtime is optional for other SDD workflows. If unavailable, report the missing facility and select another supported protected mechanism; do not install software automatically.
 
-Keep the bundled [protected-token.mjs](protected-token.mjs) beside this module. It owns shared root/file/protection validation and is also used by the forge completion utility; copying only this entry script is insufficient. Git recovery retains its push/readback CLI and result contract.
+Keep the bundled [protected-token.mjs](protected-token.mjs) beside this module. It owns shared root/file/content validation and is also used by the forge completion utility; copying only this entry script is insufficient. Git recovery retains its push/readback CLI and result contract.
 
 Illustrative invocation, with every placeholder replaced from the already established operation:
 
@@ -26,20 +26,20 @@ The same argument form works from Windows CMD or a Linux shell. Node launches Gi
 | `--url` | Exact canonical HTTPS push URL, including actual push-URL divergence; no userinfo, query, fragment, controls or automatic SSH conversion |
 | `--ref` | One full `refs/heads/...` or `refs/tags/...` ref |
 | `--expect` | Full lowercase 40/64-character object ID. Push requires the local ref to equal it; readback requires the object locally but can reconcile an older object after local advancement. Annotated tags compare the tag object's ID, not its peeled commit. |
-| `--token-file` | Optional root-relative protected ignored file, default `gh.tkn`; no external/nested-repository/symlink path |
+| `--token-file` | Optional root-relative ignored file, default `gh.tkn`; no external/nested-repository/symlink path |
 | `--timeout-ms` | Per-child limit, 100–120000 ms, default 30000; captured output bounded at 1 MiB. This is not a total multi-step deadline or a guarantee about hostile descendant processes. |
 
 No force/deletion/multi-ref push, follow-tags expansion or submodule pushes are performed. Existing hooks still apply. A readback uses the actual push URL rather than assuming the fetch URL matches. Ambiguous URLs, unexpected rewrites, configured foreign-VCS remote helpers or changed local source block the operation. Percent-encoded repository paths must decode as valid UTF-8 without control characters. Credential matching follows Git's literal leading-slash removal, single decoding and trailing-slash trimming; internal or encoded leading slashes remain significant. This does not change the pinned network destination.
 
-## Token protection and effects
+## Token input and effects
 
-The caller establishes the token's provider/account suitability and protected ownership under the hosting-token convention. The script checks effective exclusion, untracked status, file containment/type and content before reading. Accept one terminal LF/CRLF; reject embedded controls, whitespace, empty or oversized tokens. POSIX additionally requires current ownership and no group/other permissions.
+The caller establishes the token's provider/account suitability under the hosting-token convention. The script checks effective exclusion, untracked status, file containment/type and content before reading. Accept one terminal LF/CRLF; reject embedded controls, whitespace, empty or oversized tokens.
 
-Windows exports only DACL metadata to a temporary directory and removes it in finally. Conservative SDDL checks allow grants only to the current user, SYSTEM and Administrators, and require an explicit applicable current-user grant. Built-in account aliases LA/LG count as the current user only when native identity matches this computer and the corresponding account SID; a domain account sharing its numeric RID does not qualify. Unknown/complex ACL forms block; do not treat Windows stat mode as a Unix protection check. This is a DACL policy check, not a full Windows ownership/integrity audit: the coordinator must establish trusted ownership/path context. The utility never changes ownership, ignore rules, ACLs or Git config to make a token eligible.
+Files use the caller's ordinary OS read access. The utility does not inspect or modify file ownership or permission settings. File read failures retain their local I/O classification; they do not establish a provider authentication failure.
 
 Authentication is scoped with command-local Git configuration. Existing persistent helper configuration is untouched. The internal helper supplies x-access-token/token only to the matching HTTPS host and repository path, ignores store/erase, and rereads the validated file. Redirects and conflicting credential/trace channels are disabled for this invocation; normal proxy/TLS configuration is retained. Tokens never enter the utility's argv, child environment or public JSON. Do not invoke internal `--credential-helper` mode in a terminal: its stdout is a secret-bearing protocol channel consumed by Git.
 
-Public calls reject ambient Git relocation and command-configuration variables, including GIT_DIR and GIT_CONFIG_PARAMETERS, rather than operate in a caller-selected alternate context. The private helper has a separate boundary because Git itself supplies GIT_DIR and command configuration when launching helpers. It removes inherited command-configuration channels, verifies the explicit worktree root and accepts GIT_DIR only when its directory identity matches that worktree's actual Git administration directory. Linked worktrees use their own administration directory. Other relocation variables remain rejected. This prepared environment also reaches native Windows ACL inspection; it does not bypass token checks or change the parent process environment.
+Public calls reject ambient Git relocation and command-configuration variables, including GIT_DIR and GIT_CONFIG_PARAMETERS, rather than operate in a caller-selected alternate context. The private helper has a separate boundary because Git itself supplies GIT_DIR and command configuration when launching helpers. It removes inherited command-configuration channels, verifies the explicit worktree root and accepts GIT_DIR only when its directory identity matches that worktree's actual Git administration directory. Linked worktrees use their own administration directory. Other relocation variables remain rejected. The prepared environment is used by the helper's Git runner; it does not bypass token checks or change the parent process environment.
 
 The token file remains the intentional durable input. No extra credential database or vault entry is created. The transient path is not an automatic fallback to plaintext `credential-store`; persistent helper setup remains a separately selected alternative in credentials.md.
 
@@ -53,9 +53,9 @@ Normal CLI calls emit one JSON object with `schema_version: 1`. `--help` prints 
 | `0`, `verified_after_push_error` | Push reported an error/timeout/signal but exact readback found the expected ref. Remote state is verified; do not claim which attempt wrote it or that a credential has broader permissions. |
 | `2`, `remote_absent` or `remote_mismatch` | Readback completed and the target is absent/different. Preserve the actual local/remote state; do not force or silently change the expected ref. |
 | `2`, readback failure with `remote_state: unknown` | The effect remains unverified. Inspect/reconcile before another push; no automatic retry loop. |
-| `1`, preflight/local error | Scope/input/tooling/protection check failed. Inspect `code`/`stage`; correct only within existing authority. No helper configuration is persisted. |
+| `1`, preflight/local error | Scope/input/tooling/token-file check failed. Inspect `code`/`stage`; correct only within existing authority. No helper configuration is persisted. |
 
-Completed readback results additionally identify expected/observed ref object and whether a push was attempted. Common preflight codes include invalid arguments/URL/ref, source mismatch, destination mismatch, token permissions/ignore/tracking issues, and missing/process timeout/signal failures. Unexpected local I/O returns a generic sanitized local_io_failed result. JSON must never be presented as proof of API-client authentication or an explicit human grant.
+Completed readback results additionally identify expected/observed ref object and whether a push was attempted. Common preflight codes include invalid arguments/URL/ref, source mismatch, destination mismatch, token-file/ignore/tracking issues, and missing/process timeout/signal failures. Unexpected local I/O returns a generic sanitized local_io_failed result. JSON must never be presented as proof of API-client authentication or an explicit human grant.
 
 After preflight, results also include independent `push_result` and `readback_result` objects. These additive fields retain schema_version 1 and the existing top-level outcomes/exits. Each summary has `code`, `exit_status` (safe integer or null) and `signal` (recognized signal name or null):
 
@@ -85,6 +85,6 @@ node --test tests/git-auth-recover.test.mjs
 
 Tests use isolated repositories and synthetic tokens; package consumers do not need the source test tree. The native transport fixture uses a local HTTPS server, Git's git-http-backend and an explicitly public test-only localhost certificate/key under tests. It uses explicit local trust without relaxing production TLS policy; the fixture and key are excluded from the plugin. Native cases cover an authenticated public-CLI push/readback and eligibility loss after preflight, alongside direct helper, linked-worktree and context-rejection contracts.
 
-The repository CI matrix selects native Windows CMD/Linux and Node 22/24, including Windows token/DACL inspection through the helper environment. Pure quoting/SDDL tests, controlled process outcomes and actual HTTPS Git transport establish different coverage; none proves live-provider authentication. Consult current campaign/CI evidence before claiming native Windows support was observed.
+The repository CI matrix selects native Windows CMD/Linux and Node 22/24, including ordinary token-file access through the helper environment. Quoting tests, controlled process outcomes and actual HTTPS Git transport establish different coverage; none proves live-provider authentication. Consult current campaign/CI evidence before claiming native Windows support was observed.
 
 Imports are effect-free. Exported helpers have JSDoc contracts; `recover` returns structured outcomes and throws sanitized RecoveryError on preflight errors. File I/O errors can also throw internally; the CLI sanitizes them. Preserve the helper's no-store/context checks and one-push bound when extending the script. Keep unrelated scripting candidates outside this utility's responsibility.

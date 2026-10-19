@@ -20,12 +20,6 @@ test('helper command quotes Node and script paths without embedding a token', ()
   assert.match(cmd, /^!'/); assert.ok(cmd.includes('C:/Program Files/nodejs/node.exe'));
   assert.ok(cmd.includes("'\\''")); assert.ok(!cmd.includes('password='));
 });
-test('Windows ACL policy allows only owner/SYSTEM/Administrators grants', () => {
-  const sid = 'S-1-5-21-1-2-3-1001';
-  assert.doesNotThrow(() => auth.checkWindowsDacl(`D:P(A;;FA;;;SY)(A;;FA;;;BA)(A;;FR;;;${sid})`, sid));
-  for (const sddl of ['D:', 'D:(A;;FR;;;WD)', 'D:(A;;FR;;;AU)', 'D:(A;;FR;;;BU)',
-    'D:(XA;;FR;;;SY;condition)', 'not-sddl']) assert.throws(() => auth.checkWindowsDacl(sddl, sid));
-});
 test('CLI rejects arbitrary commands, unknown/duplicate options and incomplete scope', () => {
   assert.throws(() => auth.parseCli(['config', '--global', 'x']));
   assert.throws(() => auth.parseCli(['push']));
@@ -56,11 +50,7 @@ function fixture(t) {
   };
   git(['init', '-q']); git(['config', 'user.name', 'Fixture']); git(['config', 'user.email', 'fixture@example.invalid']);
   fs.writeFileSync(path.join(root, '.gitignore'), '*.tkn\n');
-  fs.writeFileSync(path.join(root, 'gh.tkn'), CANARY + '\r\n', { mode: 0o600 });
-  if (process.platform === 'win32') {
-    const sid = spawnSync('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' }).stdout.match(/S-1-\d+(?:-\d+)+/)[0];
-    assert.equal(spawnSync('icacls.exe', [path.join(root, 'gh.tkn'), '/inheritance:r', '/grant:r', `*${sid}:F`], { encoding: 'utf8' }).status, 0);
-  }
+  fs.writeFileSync(path.join(root, 'gh.tkn'), CANARY + '\r\n');
   git(['add', '.gitignore']); git(['commit', '-qm', 'fixture']);
   const ref = git(['symbolic-ref', 'HEAD']), oid = git(['rev-parse', 'HEAD']);
   git(['remote', 'add', 'origin', TARGET_URL]);
@@ -132,7 +122,14 @@ test('mismatched destination or source blocks all network effects', t => {
   assert.ok(!runner.calls.some(c => c.args.includes('push') || c.args.includes('--refs')));
   assert.throws(() => auth.recover({ ...f.options, expect: 'f'.repeat(40) }, runner.execute), /source_mismatch/);
 });
-test('tracked, unignored, external, symlink and permissive token files block recovery', t => {
+test('ordinary readable token supports recovery without permission setup', t => {
+  const f = fixture(t), runner = controlled(f);
+  if (process.platform !== 'win32') fs.chmodSync(path.join(f.root, 'gh.tkn'), 0o644);
+  const result = auth.recover(f.options, runner.execute);
+  assert.equal(result.ok, true);
+  assert.equal(result.code, 'remote_verified');
+});
+test('tracked, unignored, external and symlink token files block recovery', t => {
   const f = fixture(t), runner = controlled(f);
   assert.throws(() => auth.recover({ ...f.options, tokenFile: '../outside.tkn' }, runner.execute), /token_outside_repository/);
   fs.writeFileSync(path.join(f.root, '.gitignore'), '');
@@ -141,8 +138,6 @@ test('tracked, unignored, external, symlink and permissive token files block rec
   assert.throws(() => auth.recover(f.options, runner.execute));
   f.git(['reset', '--', 'gh.tkn']); fs.writeFileSync(path.join(f.root, '.gitignore'), '*.tkn\n');
   if (process.platform !== 'win32') {
-    fs.chmodSync(path.join(f.root, 'gh.tkn'), 0o644);
-    assert.throws(() => auth.recover(f.options, runner.execute), /token_permissions/);
     fs.unlinkSync(path.join(f.root, 'gh.tkn')); fs.symlinkSync('.gitignore', path.join(f.root, 'gh.tkn'));
     assert.throws(() => auth.recover(f.options, runner.execute), /token_symlink/);
   }
@@ -193,12 +188,9 @@ test('Git spawn error, signal and oversized output stop before network effects',
     assert.equal(calls, 1);
   }
 });
-test('credential parsing and Windows ACLs reject ambiguity, accept Azure-style user SID', () => {
+test('credential parsing rejects ambiguous and oversized requests', () => {
   assert.throws(() => auth.credentialRequest('protocol=https\nprotocol=http\n\n'));
   assert.throws(() => auth.credentialRequest('x'.repeat(66000)));
-  const sid = 'S-1-12-1-1-2-3-4';
-  assert.doesNotThrow(() => auth.checkWindowsDacl(`D:P(A;;FA;;;${sid})`, sid));
-  assert.throws(() => auth.checkWindowsDacl('D:(A;;FA;;;SY)', sid));
 });
 test('malformed token never escapes public CLI failure output', t => {
   const f = fixture(t); fs.writeFileSync(path.join(f.root, 'gh.tkn'), CANARY + '\nprotocol=bad');
@@ -247,37 +239,6 @@ test('configured remote VCS helpers block before any push or ref readback', t =>
   assert.throws(() => auth.recover(f.options, runner.execute), /remote_helper_unsupported/);
   assert.ok(!runner.calls.some(c => c.args.includes('push') || c.args.includes('--refs')));
 });
-test('native Windows ACL export is parsed as metadata', t => {
-  if (process.platform !== 'win32') return;
-  const f = fixture(t), saved = path.join(f.root, 'fixture-acl.txt');
-  const exported = spawnSync('icacls.exe', [path.join(f.root, 'gh.tkn'), '/save', saved, '/q'], { encoding: 'utf8' });
-  assert.equal(exported.status, 0);
-  const dacl = auth.parseWindowsAclExport(fs.readFileSync(saved));
-  const identity = spawnSync('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' }).stdout;
-  const { sid, localAccount } = auth.windowsUserContext(identity, os.hostname());
-  auth.checkWindowsDacl(dacl, sid, localAccount);
-});
-test('Windows built-in account aliases require verified local current-user identity', () => {
-  const sid = 'S-1-5-21-1-2-3-500';
-  assert.deepEqual(auth.windowsUserContext(`"COMPUTER\\Administrator","${sid}"\r\n`, 'computer'), { sid, localAccount: true });
-  assert.deepEqual(auth.windowsUserContext(`"DOMAIN\\Administrator","${sid}"\r\n`, 'computer'), { sid, localAccount: false });
-  assert.doesNotThrow(() => auth.checkWindowsDacl('D:(A;;FA;;;LA)', sid, true));
-  assert.throws(() => auth.checkWindowsDacl('D:(A;;FA;;;LA)', sid, false));
-  assert.throws(() => auth.checkWindowsDacl('D:(A;;FA;;;LA)', 'S-1-5-21-1-2-3-1001', true));
-  assert.throws(() => auth.windowsUserContext('unverified', 'computer'));
-});
-test('ACL exports support observed BOM-less UTF-16LE and reject malformed records', () => {
-  const dacl = 'D:PAI(A;;FA;;;SY)(A;;FA;;;S-1-5-21-1-2-3-1001)';
-  const text = `gh.tkn\r\n${dacl}\r\n`;
-  for (const bytes of [Buffer.from(text, 'utf16le'),
-    Buffer.concat([Buffer.from([0xff, 0xfe]), Buffer.from(text, 'utf16le')]), Buffer.from(text)]) {
-    assert.equal(auth.parseWindowsAclExport(bytes), dacl);
-  }
-  for (const bytes of [Buffer.alloc(0), Buffer.from([0xff, 0xfe, 0x41]),
-    Buffer.from(`gh.tkn\n${dacl}\nextra\n`), Buffer.from('gh.tkn\nnot-a-dacl\n')]) {
-    assert.throws(() => auth.parseWindowsAclExport(bytes), /acl_unverified/);
-  }
-});
 
 test('private helper context accepts its Git directory and discards inherited command config', t => {
   const f = fixture(t), directory = f.git(['rev-parse', '--absolute-git-dir']);
@@ -303,11 +264,7 @@ test('private helper context rejects another Git directory and unadmitted reloca
 test('private helper context supports a linked worktree Git administration directory', t => {
   const f = fixture(t), linked = path.join(f.root, 'linked');
   f.git(['worktree', 'add', '--detach', linked, f.oid]);
-  fs.writeFileSync(path.join(linked, 'gh.tkn'), CANARY + '\n', { mode: 0o600 });
-  if (process.platform === 'win32') {
-    const sid = spawnSync('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' }).stdout.match(/S-1-\d+(?:-\d+)+/)[0];
-    assert.equal(spawnSync('icacls.exe', [path.join(linked, 'gh.tkn'), '/inheritance:r', '/grant:r', `*${sid}:F`], { encoding: 'utf8' }).status, 0);
-  }
+  fs.writeFileSync(path.join(linked, 'gh.tkn'), CANARY + '\n');
   const directory = spawnSync('git', ['-C', linked, 'rev-parse', '--absolute-git-dir'], { encoding: 'utf8' }).stdout.trim();
   const result = spawnSync(process.execPath, [SCRIPT, '--credential-helper', linked, 'gh.tkn', TARGET_URL, 'get'], {
     cwd: linked, encoding: 'utf8', input: 'protocol=https\nhost=example.invalid\npath=owner/repo.git\n\n',
@@ -411,7 +368,7 @@ test('process summaries accept only unambiguous allowlisted helper diagnostics',
     [CANARY + '\n' + line, diagnostic], [line + line, diagnostic],
     ['SDD_GIT_AUTH_HELPER ' + JSON.stringify({ code: CANARY, stage: 'preflight' }) + '\n', undefined],
     ['SDD_GIT_AUTH_HELPER {bad json}\n', undefined],
-    [line + 'SDD_GIT_AUTH_HELPER ' + JSON.stringify({ code: 'token_permissions', stage: 'preflight' }) + '\n', undefined],
+    [line + 'SDD_GIT_AUTH_HELPER ' + JSON.stringify({ code: 'invalid_token', stage: 'preflight' }) + '\n', undefined],
     ['SDD_GIT_AUTH_HELPER ' + JSON.stringify({ ...diagnostic, detail: CANARY }) + '\n', undefined],
   ];
   for (const [stderr, expected] of cases) {

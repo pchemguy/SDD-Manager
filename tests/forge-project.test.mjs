@@ -331,15 +331,7 @@ function localRepo(t) {
   git(root, 'config', 'core.autocrlf', 'false'); git(root, 'remote', 'add', 'origin', 'git@github.com:example-owner/example-project.git');
   fs.mkdirSync(path.join(root, 'docs/dev'), { recursive: true }); fs.writeFileSync(path.join(root, 'docs/dev/TASKS.md'), ownerText);
   fs.writeFileSync(path.join(root, '.gitignore'), '*.tkn\n'); git(root, 'add', '.'); git(root, 'commit', '-qm', 'fixture');
-  const token = path.join(root, 'gh.tkn'); fs.writeFileSync(token, 'synthetic-fixture', { mode: 0o600 });
-  if (process.platform === 'win32') {
-    const native = name => path.join(process.env.SystemRoot, 'System32', name);
-    const who = spawnSync(native('whoami.exe'), ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' });
-    assert.equal(who.status, 0);
-    const sid = who.stdout.match(/S-1-\d+(?:-\d+)+/)[0];
-    const acl = spawnSync(native('icacls.exe'), [token, '/inheritance:r', '/grant:r', '*' + sid + ':F'], { encoding: 'utf8' });
-    assert.equal(acl.status, 0, acl.stderr);
-  }
+  const token = path.join(root, 'gh.tkn'); fs.writeFileSync(token, 'synthetic-fixture');
   const value = projectionRequest(); value.source.sha256 = createHash('sha256').update(ownerText).digest('hex');
   const filename = path.join(base, 'request 空.json'); fs.writeFileSync(filename, '\ufeff' + JSON.stringify(value));
   return { root, base, token, filename, value, options: { kind: 'phase', mode: 'apply', repo: root, remote: 'origin', requestFile: filename, timeoutMs: 30000, requestTimeoutMs: 1000 } };
@@ -383,8 +375,9 @@ test('native credential-free preview requires source binding and does not contac
   await assert.rejects(runProject({ ...local.options, mode: 'check' }), error => error.code === 'source_changed');
 });
 
-test('native protected input and CRLF owner/BOM request project and release the shared lock', async t => {
+test('ordinary readable token and CRLF owner/BOM request project and release the shared lock', async t => {
   const local = localRepo(t), state = fixture(), raw = ownerText.replace(/\n/g, '\r\n');
+  if (process.platform !== 'win32') fs.chmodSync(local.token, 0o644);
   fs.writeFileSync(path.join(local.root, 'docs/dev/TASKS.md'), raw);
   local.value.source.sha256 = createHash('sha256').update(raw).digest('hex'); fs.writeFileSync(local.filename, '\ufeff' + JSON.stringify(local.value));
   const result = await runProject(local.options, { fetchImpl: state.fetch });
@@ -435,16 +428,6 @@ test('native shared lock blocks projection without stealing or contacting provid
   assert.ok(fs.existsSync(directory)); assert.equal(calls, 0);
 });
 
-test('native broad token protection blocks new projection path and releases its owned lock', async t => {
-  const local = localRepo(t); let calls = 0;
-  if (process.platform === 'win32') {
-    const acl = spawnSync(path.join(process.env.SystemRoot, 'System32', 'icacls.exe'), [local.token, '/grant', '*S-1-1-0:R'], { encoding: 'utf8' });
-    assert.equal(acl.status, 0, acl.stderr);
-  } else fs.chmodSync(local.token, 0o644);
-  const result = await runProject(local.options, { fetchImpl: async () => { calls++; throw new Error('No API'); } });
-  assert.equal(result.ok, false); assert.equal(result.code, 'token_permissions'); assert.equal(calls, 0);
-  assert.ok(!fs.existsSync(path.join(local.root, '.git/sdd-forge-close.lock')));
-});
 
 test('source drift after hosted effects retains those effects and blocks final success', async t => {
   const local = localRepo(t), state = fixture();

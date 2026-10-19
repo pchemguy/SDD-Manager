@@ -17,8 +17,7 @@ import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { ProtectedInputError as RecoveryError, sameDirectory, childEnv, readToken } from './protected-token.mjs';
-export { ProtectedInputError as RecoveryError, validateToken, checkWindowsDacl,
-  windowsUserContext, parseWindowsAclExport, readToken } from './protected-token.mjs';
+export { ProtectedInputError as RecoveryError, validateToken, readToken } from './protected-token.mjs';
 
 const SCRIPT = fileURLToPath(import.meta.url);
 const OID = /^(?:[a-f0-9]{40}|[a-f0-9]{64})$/;
@@ -29,9 +28,9 @@ const HELPER_MARKER = 'SDD_GIT_AUTH_HELPER ';
 const HELPER_CODES = new Set(['helper_failed', 'helper_context_mismatch', 'repo_must_be_root',
   'invalid_helper_arguments', 'invalid_credential_request', 'invalid_url', 'relocated_git_environment',
   'token_outside_repository', 'token_symlink', 'invalid_token_file', 'token_not_ignored',
-  'token_tracked_or_unknown', 'token_permissions', 'token_changed', 'invalid_token',
-  'acl_unverified', 'windows_tools_unavailable', 'process_timeout', 'process_unavailable', 'process_signal', 'git_failed']);
-const HELPER_STAGES = new Set(['preflight', 'helper', 'repository', 'token', 'acl']);
+  'token_tracked_or_unknown', 'token_changed', 'invalid_token',
+  'process_timeout', 'process_unavailable', 'process_signal', 'git_failed']);
+const HELPER_STAGES = new Set(['preflight', 'helper', 'repository', 'token']);
 const SIGNALS = new Set(Object.keys(os.constants.signals));
 const PROCESS_ERRORS = new Map([['ETIMEDOUT', 'process_timeout'], ['ENOENT', 'process_unavailable'], ['ENOBUFS', 'process_output_limit']]);
 
@@ -304,7 +303,7 @@ function helperMain(args) {
   if (request.protocol !== 'https' || request.host !== target.host || request.path !== gitCredentialPath(target) ||
       (request.username && request.username !== 'x-access-token')) return;
   const context = privateHelperContext(repo);
-  const token = readToken(context.repo, tokenFile, context.git, process.platform, { environment: context.env });
+  const token = readToken(context.repo, tokenFile, context.git);
   process.stdout.write(`username=x-access-token\npassword=${token}\n\n`);
 }
 

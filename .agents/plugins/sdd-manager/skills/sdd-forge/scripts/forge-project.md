@@ -6,7 +6,7 @@ Use the separate [input-authoring workflow](forge-project-input.md) and [draft g
 
 ## Runtime and invocation
 
-Requires Node 22+, native Git, bundled [projection-input.mjs](projection-input.mjs), [github-client.mjs](github-client.mjs), [forge-runtime.mjs](forge-runtime.mjs), [protected-token.mjs](../../sdd-manage/scripts/protected-token.mjs) and the same package's definition JSON. Windows uses native SystemRoot/System32 whoami/icacls and CMD-compatible invocation; Linux uses POSIX ownership/mode checks. No PowerShell, npm dependency, keyring, installation or credential/configuration repair is involved.
+Requires Node 22+, native Git, bundled [projection-input.mjs](projection-input.mjs), [github-client.mjs](github-client.mjs), [forge-runtime.mjs](forge-runtime.mjs), [protected-token.mjs](../../sdd-manage/scripts/protected-token.mjs) and the same package's definition JSON. Invocation is Windows CMD-compatible, and the token file needs ordinary OS read access on Windows and Linux. No PowerShell, npm dependency, keyring, installation or credential/configuration repair is involved.
 
 The following commands are abstract templates, not selected project identities:
 
@@ -78,4 +78,4 @@ Each effect identifies type/key, observed id/name/number/state where available, 
 
 Exports are ForgeError, parseCli, reconcileProjection and run. The lower-level core requires a parsed source inventory and explicitly authorized projection transport; it does not replace run's real root/source/token/lock checks. Programmatic run accepts parseCli fields and optional controlled fetchImpl; local pre-lock errors may throw. The CLI always converts failures to safe JSON/exit status. Shared dependencies remain bundled.
 
-Source tests use synthetic credentials/provider objects plus real local Git/filesystem/protection/CRLF/path/locking checks. Native Windows CMD/Linux Node 22/24 CI covers these contracts. These results do not establish live provider permissions, installed-agent routing, arbitrary OS configurations or actual project completion.
+Source tests use synthetic credentials/provider objects plus real local Git/filesystem/token/CRLF/path/locking checks. Native Windows CMD/Linux Node 22/24 CI covers these contracts. These results do not establish live provider permissions, installed-agent routing, arbitrary OS configurations or actual project completion.
