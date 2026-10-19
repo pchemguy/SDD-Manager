@@ -6,7 +6,7 @@
 - Branch: revision/080_17cef14-comprehensive-review; recorded creation parent/integration/return main at that baseline.
 - Human scope: comprehensive review, explicitly including documentation. [Review plan](REVIEW-PLAN.md).
 - Owner/stage: sdd-manage; opening and plan. Reporting: Standard.
-- State: Open; U-001–U-003 complete, U-004–U-007 pending. Source repairs and campaign closure are not authorized by this review request.
+- State: Open; U-001–U-004 complete, U-005–U-007 pending. Source repairs and campaign closure are not authorized by this review request.
 
 ## Setup and evidence boundary
 
@@ -23,7 +23,7 @@ Evidence classes remain separate: source and editorial assessment, structural/pa
 | U-001 | Assessed; no confirmed finding | None | Entry/metadata checkpoint |
 | U-002 | Operational gates assessed; human documentation finding added | R-001 | Coordination checkpoint and subsequent human direction |
 | U-003 | Assessed; no additional confirmed finding | None | Design/planning checkpoint |
-| U-004 | Planned | None assessed | Opening |
+| U-004 | Assessed; no additional confirmed finding | None | Execution/evidence checkpoint |
 | U-005 | Planned | None assessed | Opening |
 | U-006 | Planned; explicit human finding retained | R-001 | Human direction during review |
 | U-007 | Planned | None assessed | Opening |
@@ -112,3 +112,20 @@ Assessed every focused reference in sdd-design (4), sdd-specify (3), sdd-plan (3
 | SPEC-only incorporation versus task transfer/archive | Scope limits, both-list transfer authority, one executable owner, pending reassessment and still-active source retention are explicit. Feature reports keep their provenance; archived Ready is not current main readiness. |
 
 The PROJECT/ARCHITECTURE/DECOMPOSITION/SPEC/PLAN/layout boundaries are substantive and consistently distinguished. Focused child guidance balances meaningful complete scope against duplication and arbitrary size splitting. Main end-state descriptions and active feature deltas have separate editorial roles. No additional confirmed defect or required correction found in these inspected-source scenarios; R-001 remains the separate human-required template removal. No product artifact or demonstration project was authored, and no new live agent trial is claimed.
+
+## U-004 — Execution, steering, tests and evidence
+
+Assessed all six implementation references, all three steering references, the four non-release verification references, all four TDD references/provenance, shared backend lifecycle and task persistence, and reporting's object drafts/change kinds/completion/document-QC/campaign formats. Release-only reporting/checks remain U-007. Documentation handoff requirements were traced into the documentation entry and will receive the complete editorial pass in U-006.
+
+| Source scenario | Assessment |
+| --- | --- |
+| Selection-only versus implementation; next-N versus milestone/phase | Selection is read-only, explicit review tasks count, prerequisites cannot silently widen the range, and cross-phase execution is segmented by verified phase exits. |
+| Clean/unpushed versus incomplete or invalid retained work | Publication preflight distinguishes safe publication from bounded correction; it preserves original task identity/history and does not replay valid work or invent RED evidence. |
+| Single-task closing result versus authorized partial/repair/parent follow-up | Actual parent diff, result/evidence and first checkbox transition are required together. Exactly one leading owning ID applies to task subjects; taskless work and merges do not invent task IDs. |
+| Test strategy/development cycle versus independent acceptance | Test expectations require independent contract support; collection failures are not RED. Verification assesses condition coverage and code review separately from passing tests, with explicit failure/skip/environment limits. |
+| Milestone/phase review and hosted closure | Delivery review task/report/HANDOFF precede issue then milestone closure; phase review depends on delivery milestones, not its own closure. Partial ranges do not append unselected review work or merge an unfinished phase. |
+| Failed acceptance versus admissible code TODO | Bugs, contract/exit violations and missing required evidence block completion. Only eligible non-critical code issues can be deferred with rationale/options/provenance; document QC has its stricter separate gate. |
+| Human-commanded steering versus parent continuation | Assessment-only has no branch/source effects. Commanded changes reconcile existing documents/code/tests within scope, explicitly return to the paused target and stop without invoking implementation. |
+| Changed governing inputs, documentation conflict or unsafe staging | Affected QC/acceptance is reassessed; documentation refers governing decisions to the human. Unrelated staged content is excluded without destructive cleanup, and temporary-index reconciliation is explicitly bounded. |
+
+No additional confirmed lifecycle or evidence defect found in these source scenarios. Task completion, current acceptance, Git publication, hosted closure and integrated workflow completion are consistently separate. Module boundaries have substantive procedure scope; repeated short gates protect pre-action handoffs rather than supply competing complete procedures. Broader documentation duplication remains R-001/U-006. This unit inspected instructions; it did not execute product tasks, emulate a consumer, rewrite history or claim new acceptance results. No source changed.
