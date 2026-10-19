@@ -343,3 +343,99 @@ test('native HTTPS Git transport recovers credentials and verifies the exact ref
   assert.deepEqual(fs.readFileSync(path.join(f.root, '.git', 'config')), config);
   assert.ok(!(result.stdout + result.stderr).includes(CANARY));
 });
+
+test('process summaries preserve failed push independently of each readback state', t => {
+  const f = fixture(t);
+  const pushes = [
+    [{ status: 128, stderr: CANARY }, 'git_failed', 128, null],
+    [{ status: null, error: { code: 'ETIMEDOUT' }, signal: 'SIGKILL', stderr: CANARY }, 'process_timeout', null, 'SIGKILL'],
+    [{ status: null, signal: 'SIGTERM', stderr: CANARY }, 'process_signal', null, 'SIGTERM'],
+    [{ status: null, error: { code: 'ENOENT' }, stderr: CANARY }, 'process_unavailable', null, null],
+    [{ status: null, error: { code: 'ENOBUFS' }, stderr: CANARY }, 'process_output_limit', null, null],
+    [{ status: null, error: { code: CANARY }, stderr: CANARY }, 'process_error', null, null],
+  ];
+  const readbacks = [
+    [{ status: 0, stdout: '' }, 'absent', 'succeeded'],
+    [{ status: 0, stdout: `${'b'.repeat(40)}\t${f.ref}\n` }, 'different', 'succeeded'],
+    [{ status: 0, stdout: `${f.oid}\t${f.ref}\n` }, 'matching', 'succeeded'],
+    [{ status: 128, stderr: CANARY }, 'unknown', 'git_failed'],
+  ];
+  for (const [push, code, status, signal] of pushes) for (const [readback, remote, readCode] of readbacks) {
+    const runner = controlled(f, { push, readback }), result = auth.recover(f.options, runner.execute);
+    assert.ok(result.push_result, 'Missing independent push_result');
+    assert.ok(result.readback_result, 'Missing independent readback_result');
+    assert.equal(result.push_result.code, code); assert.equal(result.push_result.exit_status, status); assert.equal(result.push_result.signal, signal);
+    assert.equal(result.readback_result.code, readCode); assert.equal(result.remote_state, remote);
+    assert.equal(result.ok, remote === 'matching'); assert.equal(result.push_attempted, true);
+    if (result.ok) assert.equal(result.code, 'verified_after_push_error');
+    assert.equal(runner.calls.filter(call => call.args.includes('push')).length, 1);
+    assert.ok(!JSON.stringify(result).includes(CANARY));
+  }
+});
+
+test('process summaries distinguish no push and invalid readback content', t => {
+  const f = fixture(t), runner = controlled(f);
+  const onlyRead = auth.recover({ ...f.options, operation: 'readback' }, runner.execute);
+  assert.ok(onlyRead.push_result, 'Missing not-attempted push summary');
+  assert.deepEqual(onlyRead.push_result, { code: 'not_attempted', exit_status: null, signal: null });
+  assert.equal(onlyRead.readback_result.code, 'succeeded');
+  assert.equal(runner.calls.filter(call => call.args.includes('push')).length, 0);
+  const invalid = controlled(f, { readback: { status: 0, stdout: `${f.oid}\t${f.ref}\n${f.oid}\t${f.ref}\n` } });
+  const result = auth.recover(f.options, invalid.execute);
+  assert.equal(result.remote_state, 'unknown'); assert.equal(result.code, 'ambiguous_readback');
+  assert.equal(result.push_result.code, 'succeeded'); assert.equal(result.readback_result.code, 'succeeded');
+  assert.equal(result.readback_result.validation_error, 'ambiguous_readback');
+});
+
+test('private helper diagnostics are allowlisted and never contain credential data', t => {
+  const f = fixture(t), input = 'protocol=https\nhost=example.invalid\npath=owner/repo.git\n\n';
+  const invoke = (body, tokenFile = 'gh.tkn', extra = {}) => spawnSync(process.execPath,
+    [SCRIPT, '--credential-helper', f.root, tokenFile, TARGET_URL, 'get'],
+    { cwd: f.root, env: { ...process.env, ...extra }, input: body, encoding: 'utf8', timeout: 10000 });
+  const cases = [
+    [invoke(input, 'gh.tkn', { GIT_WORK_TREE: f.root }), 'relocated_git_environment', 'preflight'],
+    [invoke('protocol=https\nprotocol=http\n\n'), 'invalid_credential_request', 'helper'],
+    [invoke(input, 'missing-token.tkn'), 'helper_failed', 'helper'],
+  ];
+  for (const [result, code, stage] of cases) {
+    assert.equal(result.status, 1); assert.equal(result.stdout, '');
+    assert.equal(result.stderr, 'SDD_GIT_AUTH_HELPER ' + JSON.stringify({ code, stage }) + '\n');
+    assert.ok(!result.stderr.includes(CANARY)); assert.ok(!result.stderr.includes(f.root));
+  }
+});
+
+test('process summaries accept only unambiguous allowlisted helper diagnostics', t => {
+  const f = fixture(t), diagnostic = { code: 'token_not_ignored', stage: 'preflight' };
+  const line = 'SDD_GIT_AUTH_HELPER ' + JSON.stringify(diagnostic) + '\n';
+  const cases = [
+    [CANARY + '\n' + line, diagnostic], [line + line, diagnostic],
+    ['SDD_GIT_AUTH_HELPER ' + JSON.stringify({ code: CANARY, stage: 'preflight' }) + '\n', undefined],
+    ['SDD_GIT_AUTH_HELPER {bad json}\n', undefined],
+    [line + 'SDD_GIT_AUTH_HELPER ' + JSON.stringify({ code: 'token_permissions', stage: 'preflight' }) + '\n', undefined],
+    ['SDD_GIT_AUTH_HELPER ' + JSON.stringify({ ...diagnostic, detail: CANARY }) + '\n', undefined],
+  ];
+  for (const [stderr, expected] of cases) {
+    const runner = controlled(f, { push: { status: 128, stderr } });
+    const result = auth.recover(f.options, runner.execute);
+    assert.ok(result.push_result, 'Missing sanitized push summary');
+    assert.deepEqual(result.push_result.helper_error, expected);
+    assert.ok(!JSON.stringify(result).includes(CANARY));
+  }
+});
+
+test('native HTTPS Git transport reports safe helper failure after token eligibility changes', { timeout: 45000 }, async t => {
+  const f = fixture(t), server = await gitHttpsFixture(t, CANARY, {
+    onChallenge: () => fs.writeFileSync(path.join(f.root, '.gitignore'), ''),
+  });
+  f.git(['remote', 'set-url', 'origin', server.url]);
+  f.git(['config', 'http.schannelUseSSLCAInfo', 'true']); f.git(['config', 'http.schannelCheckRevoke', 'false']);
+  const result = await capture(process.execPath, [SCRIPT, 'push', '--repo', f.root, '--remote', 'origin', '--url', server.url,
+    '--ref', f.ref, '--expect', f.oid, '--timeout-ms', '10000'], { cwd: f.root, env: server.env });
+  assert.equal(result.status, 2); const data = JSON.parse(result.stdout);
+  assert.equal(data.remote_state, 'absent'); assert.equal(data.push_attempted, true);
+  assert.ok(data.push_result, 'Missing native push failure summary');
+  assert.equal(data.push_result.code, 'git_failed'); assert.equal(data.push_result.exit_status, 128);
+  assert.deepEqual(data.push_result.helper_error, { code: 'token_not_ignored', stage: 'preflight' });
+  assert.equal(data.readback_result.code, 'succeeded'); assert.ok(!server.events.some(event => event.write && event.authorized));
+  assert.equal(result.stderr, ''); assert.ok(!JSON.stringify(data).includes(CANARY));
+});
