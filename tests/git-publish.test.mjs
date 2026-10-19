@@ -15,7 +15,7 @@ const TOKEN = 'synthetic-publication-only-canary';
 
 function fixture(t) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), "sdd publish's-λ-"));
-  t.after(() => fs.rmSync(root, { recursive: true, force: true }));
+  t.after(() => fs.rmSync(root, { recursive: true, force: true, maxRetries: 10, retryDelay: 50 }));
   const git = args => {
     const result = spawnSync('git', ['-C', root, ...args], { encoding: 'utf8', timeout: 10000 });
     assert.equal(result.status, 0, result.stderr); return result.stdout.trim();
@@ -175,7 +175,7 @@ test('cancellation cleans a live helper tree and never starts a second attempt',
     child.once('error', error => { clearTimeout(timer); reject(error); });
   });
   completed.catch(() => {}); // assertions before await must not orphan rejection
-  t.after(() => child.kill('SIGKILL'));
+  t.after(() => { if (child.exitCode === null && child.signalCode === null) child.kill('SIGKILL'); });
   let stdout = '', stderr = '';
   child.stdout.on('data', chunk => stdout += chunk); child.stderr.on('data', chunk => stderr += chunk);
   const deadline = Date.now() + 6000;
@@ -183,7 +183,14 @@ test('cancellation cleans a live helper tree and never starts a second attempt',
   assert.equal(fs.existsSync(marker), true);
   // Windows Node's kill(SIGTERM) forcibly terminates the controller; EOF to the
   // supervisor still owns cleanup, but no final JSON can be emitted there.
-  child.kill('SIGTERM');
+  if (process.platform === 'win32') {
+    // Use an independent native actor, rather than libuv's own kill path in
+    // the process whose survival/cleanup assertions we are measuring.
+    const killed = spawnSync('python', ['-c',
+      'import os,signal,sys;os.kill(int(sys.argv[1]),signal.SIGTERM)', String(child.pid)],
+    { encoding: 'utf8', timeout: 3000, windowsHide: true });
+    assert.equal(killed.status, 0, 'native controller termination failed');
+  } else child.kill('SIGTERM');
   const status = await completed;
   if (process.platform !== 'win32') {
     const data = resultOf({ stdout, stderr, status });
