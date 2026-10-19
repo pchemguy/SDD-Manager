@@ -9,7 +9,7 @@
 - Human requirements: identify the execution OS at startup; probe Windows shell commands; on a PowerShell-related probe failure create PowerShell.cmd in an effective PATH location, optionally the project root with .gitignore; retry, report success and continue, or report failure and stop the turn. Activation must remind the user that single quotes become double quotes.
 - Human-supplied compatibility evidence: Antigravity run_command invokes `PowerShell -Command "<USER COMMAND>"`. Preserve the supplied shim for that two-argument form. Broader launch formats are not established by that evidence.
 - Client scope is general: the human also reports similar past local Codex problems, with current behavior unverified. Apply startup detection to local Codex and other clients as well; establish actual launcher compatibility instead of gating by client branding or asserting that current Codex uses Antigravity's invocation.
-- State: V-001–V-003 executed and verified at their recorded sources; the human-directed V-004 restoration is executed and verified at 4afe50c6c85c7ee7f7eb42f7c3701c1848b4bebc. The original two assignment lines replace the delayed-expansion refinement and associated instructions. Keep this campaign open on its revision branch; closure/integration is not selected.
+- State: V-001–V-004 complete and verified at their recorded sources. The human's subsequent “Close it” instruction authorizes campaign finalization and explicit integration into main. The original two assignment lines replace the delayed-expansion refinement and associated instructions; no source refinement remains pending.
 
 ## Resulting workflow
 
@@ -47,4 +47,4 @@ Retry the same bounded probe through the same tool. On verified success, disclos
 
 Publish/read back this plan before implementation. Update the active revision report with each action's actual changes/checks/limits, then commit/push/read back before advancing. Use no fabricated T-task IDs. All earlier closed packages remain unchanged and outside routine checks. No shim is installed on this Linux editing host or in a demo repository.
 
-The final execution boundary is verified published revision work with campaign 079 still open. Do not merge, close, install a client plugin, start product work or publish a release without the corresponding later instruction. A failed required check retains its real pending state rather than an invented pass.
+The original execution boundary retained campaign 079 open; the later human closure instruction now selects explicit main integration, merged-state verification and target publication. Stop on clean main after verified publication. No client installation, product work or release is selected. A failed required check retains its real pending state rather than an invented pass.
