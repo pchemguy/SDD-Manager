@@ -2,6 +2,8 @@
 
 Load when installation, provisioning or runtime behavior prevents the selected task/checks. Technical investigation stays with the affected execution workflow; **sdd-manage** coordinates decisions and scope under its recovery policy. A host policy denial follows [Git recovery](../../sdd-manage/references/git-workflows.md#platform-authorization-rejection); retain the pending operation rather than treating the denial as an installation obstacle.
 
+For a Windows shell-launch/preflight failure referring to PowerShell, return the evidence to **sdd-manage**'s [Windows shell recovery](../../sdd-manage/references/windows-shell-recovery.md). That procedure owns the compatible shim, retry, activation/quote notice and failed-retry turn stop. Resume this technical runtime investigation only after shell readiness is established; shell repair does not establish task acceptance.
+
 1. Preserve valid partial work and record the exact attempted check, environment, artifact and observed failure. Distinguish missing tool/dependency, malformed download, incompatible executable, runtime configuration and insufficient evidence.
 2. Inspect declared setup/check commands and actual requirements. Validate the artifact's format/content and executable compatibility rather than trusting HTTP success or a package-install exit code. Avoid exposing secrets or modifying unrelated tooling.
 3. Investigate reasonable supported alternatives within the existing scope: another supported distribution/source, declared compatible tool version, configuration or test facility. Match the alternative to the required capability and record why it is suitable. Respect network, filesystem, project and host constraints; no transport/account switching to evade a denial.
