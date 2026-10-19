@@ -6,6 +6,24 @@ Campaign 087_745467a; original branch-off 745467a3929b23c6539d6319af451fbe9a6726
 
 The human selected execution and confirmed that the token is fine. Preserve the supplied credential and implement the scripted direct-token route, finite supervision, cleanup, exact readback and workflow integration. No ACL/permission setup, credential replacement, personal-browser login, release or parent preparation continuation is selected.
 
+## Verified result
+
+All accepted actions V-001–V-005 are implemented and verified. The canonical git-publish.mjs selects an already supplied eligible token before inherited helpers, owns a finite default 60000 ms lifecycle, confirms tree cleanup before exact readback, and emits safe independent process/remote outcomes. Its Node 22+/Python 3.11+/native Git prerequisites are explicit. The compatibility entry and existing token/context protections remain; no credential, ACL or persistent helper configuration was changed.
+
+| Finding | Disposition and evidence |
+| --- | --- |
+| R-001 first-attempt dependency on agent recovery | Verified: deterministic token/existing route, linked credential source, canonical coordinator/implementation/steering/token-convention callers; native selector-bypass and publication checks. |
+| R-002 missing whole-lifecycle ownership | Verified: Windows Job Objects, Linux process-group/subreaper ownership, bounded streams/cleanup, explicit uncertainty blocker and one shared push/readback deadline. Native stalls, orphans, cancellation, sentinel and combined-deadline contrasts pass. |
+| R-003 missing native public regressions | Verified: 48 contracts locally and in all four native jobs, plus three independent owner-death repetitions per Windows job. Creation identity makes Windows liveness checks robust to PID reuse. |
+
+Final verified source: 7b3f5278f0cebbc0c87a09a2882c5861dfcdabe9. [Matrix 39315284917](https://github.com/pchemguy/SDD-Manager/actions/runs/39315284917) passed native Windows CMD/Linux, Node 22/24 and Python 3.11. Local support/publisher checks passed 139/37 tests respectively. Earlier failed diagnostic candidates and their limits are retained below; no skipped case or unsupported native cause was substituted for the final passing checks.
+
+Exact package verification retains 156 files, the pinned manifest schema, identical rebuilds and five extracted CLI help smokes. Package tree 7cf54deae56b30567ca644154ea6feb2e2f5ddf0; archive SHA-256 714983766f715cb65a47af7c4f203f0af6d5e5c591ce503819cd56f2b87ee078. Source-only tests, TLS/Windows fixtures and contributor material are excluded. Active-link/style checks have no unresolved candidates; frozen campaigns remain unchanged by path/object comparison.
+
+The original supplied token successfully published/read back every checkpoint through the new supervised entry with confirmed cleanup; it was neither replaced nor copied. Native local HTTPS and actual scoped repository publication are distinct evidence. The original Antigravity/desktop Windows 10 launcher was not exercised, and an earlier separately launched process cannot be controlled retroactively. Privileged external-broker escape/OS termination denial remain documented limits. Clone/fetch/SSH/API require independent bounded facilities.
+
+The child is ready for its explicit two-parent integration into revision/081_5b2442e-prerelease. Closure takes effect only after merged-state verification, target publication/readback and confirmed clean parent return. Parent 081 remains open/suspended; version 0.15.1 and its historical release-source/body/package association are not refreshed. No main merge, release/tag/dispatch or installation is selected.
+
 ## V-001 — Operation and supervision contract
 
 The plan records the canonical Node publication entry, shared legacy credential core, single-operation workers, total 60000 ms default budget and separate owned cleanup before readback. A Python standard-library supervisor provides Windows Job Objects and Linux process-group/subreaper ownership; Python 3.11+ is an explicit prerequisite rather than an implicit installed package. This avoids treating parent-only termination as process-tree completion. The Linux process-local subreaper facility is available on Python 3.12.14; Microsoft Job Object/structure documentation was reviewed for suspended assignment, descendant membership and kill-on-close behavior. Native Windows behavior is not yet verified.
