@@ -11,6 +11,7 @@ import { capture, gitHttpsFixture } from './helpers/git-auth-https.mjs';
 
 const SCRIPT = fileURLToPath(new URL('../.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-publish.mjs', import.meta.url));
 const LEGACY = fileURLToPath(new URL('../.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs', import.meta.url));
+const WINDOWS_PROCESS = fileURLToPath(new URL('./helpers/windows-process.py', import.meta.url));
 const TOKEN = 'synthetic-publication-only-canary';
 
 function fixture(t) {
@@ -45,8 +46,11 @@ function resultOf(result) {
 function helper(f, behavior) {
   const filename = path.join(f.root, 'fixture-helper.mjs');
   const marker = path.join(f.root, 'helper-started.json');
-  const prefix = "import fs from 'node:fs'; import { spawn } from 'node:child_process';\n" +
+  const prefix = "import fs from 'node:fs'; import { spawn, spawnSync } from 'node:child_process';\n" +
     'function record(value){const target=' + JSON.stringify(marker) +
+    ';if(process.platform==="win32"){const probe=spawnSync("python",[' + JSON.stringify(WINDOWS_PROCESS) +
+    ',"query",...Object.values(value).map(String)],{encoding:"utf8",timeout:3000});' +
+    'if(probe.status!==0)throw Error("identity fixture failed");value.identities=JSON.parse(probe.stdout);}' +
     ';fs.writeFileSync(target+".tmp",JSON.stringify(value));fs.renameSync(target+".tmp",target);}\n';
   const start = 'const action=process.argv.at(-1); if(action==="get") {\n';
   let body = behavior === 'credential'
@@ -88,7 +92,24 @@ test('automatic token path bypasses an inherited hanging selector from the first
   assert.deepEqual(result.stderr.trim().split('\n').map(line => JSON.parse(line).stage), ['push', 'readback']);
 });
 
-function alive(pid) { try { process.kill(pid, 0); return true; } catch { return false; } }
+function windowsProcess(action, ...args) {
+  const probe = spawnSync('python', [WINDOWS_PROCESS, action, ...args.map(String)],
+    { encoding: 'utf8', timeout: 3000, windowsHide: true });
+  assert.equal(probe.status, 0, 'native process identity fixture failed');
+  return JSON.parse(probe.stdout);
+}
+function alive(pid, born) {
+  if (process.platform === 'win32') {
+    const current = windowsProcess('query', pid)[0];
+    return current.active && (!born || current.born === born);
+  }
+  try { process.kill(pid, 0); return true; } catch { return false; }
+}
+function ownedAlive(owned, key) {
+  const identity = owned.identities?.find(value => value.pid === owned[key]);
+  if (process.platform === 'win32') assert.ok(identity?.born, 'missing original process identity');
+  return alive(owned[key], identity?.born);
+}
 
 test('tokenless hanging helper and grandchild are reaped within one budget; unrelated process survives', { timeout: 15000 }, async t => {
   const f = fixture(t), server = await gitHttpsFixture(t, TOKEN);
@@ -103,7 +124,7 @@ test('tokenless hanging helper and grandchild are reaped within one budget; unre
   assert.ok(performance.now() - started < 7000, 'whole budget renewed or streams remained open');
   assert.equal(result.status, 2); assert.equal(data.push_result.code, 'process_timeout');
   assert.equal(data.remote_state, 'absent'); assert.equal(data.cleanup_state, 'confirmed');
-  assert.equal(alive(owned.pid), false); assert.equal(alive(owned.child), false);
+  assert.equal(ownedAlive(owned, 'pid'), false); assert.equal(ownedAlive(owned, 'child'), false);
   assert.equal(alive(sentinel.pid), true);
   assert.ok(!server.events.some(event => event.write && event.authorized));
 });
@@ -186,10 +207,9 @@ test('cancellation cleans a live helper tree and never starts a second attempt',
   if (process.platform === 'win32') {
     // Use an independent native actor, rather than libuv's own kill path in
     // the process whose survival/cleanup assertions we are measuring.
-    const killed = spawnSync('python', ['-c',
-      'import os,signal,sys;os.kill(int(sys.argv[1]),signal.SIGTERM)', String(child.pid)],
-    { encoding: 'utf8', timeout: 3000, windowsHide: true });
-    assert.equal(killed.status, 0, 'native controller termination failed');
+    const identity = windowsProcess('query', child.pid)[0];
+    assert.equal(identity.active, true);
+    windowsProcess('terminate', child.pid, identity.born);
   } else child.kill('SIGTERM');
   const status = await completed;
   if (process.platform !== 'win32') {
@@ -199,8 +219,8 @@ test('cancellation cleans a live helper tree and never starts a second attempt',
   const owned = JSON.parse(fs.readFileSync(marker, 'utf8'));
   assert.ok(Number.isInteger(owned.child));
   const end = Date.now() + 3500;
-  while ((alive(owned.pid) || alive(owned.child)) && Date.now() < end) await new Promise(resolve => setTimeout(resolve, 20));
-  assert.equal(alive(owned.pid), false); assert.equal(alive(owned.child), false);
+  while ((ownedAlive(owned, 'pid') || ownedAlive(owned, 'child')) && Date.now() < end) await new Promise(resolve => setTimeout(resolve, 20));
+  assert.equal(ownedAlive(owned, 'pid'), false); assert.equal(ownedAlive(owned, 'child'), false);
 });
 
 for (const behavior of ['orphan', 'flood']) test(`public CLI cleans ${behavior} helper descendants and inherited streams`, { timeout: 15000 }, async t => {
@@ -212,7 +232,7 @@ for (const behavior of ['orphan', 'flood']) test(`public CLI cleans ${behavior} 
   assert.ok(Number.isInteger(owned.child));
   assert.equal(data.cleanup_state, 'confirmed');
   assert.ok(['process_timeout', 'process_output_limit'].includes(data.push_result.code));
-  assert.equal(alive(owned.pid), false); assert.equal(alive(owned.child), false);
+  assert.equal(ownedAlive(owned, 'pid'), false); assert.equal(ownedAlive(owned, 'child'), false);
   assert.ok(data.elapsed_ms < 6500);
 });
 
@@ -248,5 +268,5 @@ test('stalled push and stalled readback share the original deadline', { timeout:
   assert.equal(data.stage, 'readback'); assert.equal(data.remote_state, 'unknown');
   assert.equal(data.cleanup_state, 'confirmed');
   assert.ok(performance.now() - started < 6500, 'readback renewed the whole operation budget');
-  assert.equal(alive(owned.pid), false); assert.equal(alive(owned.child), false);
+  assert.equal(ownedAlive(owned, 'pid'), false); assert.equal(ownedAlive(owned, 'child'), false);
 });

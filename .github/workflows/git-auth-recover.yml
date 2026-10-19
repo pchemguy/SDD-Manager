@@ -6,6 +6,7 @@ on:
       - 'tests/git-auth-recover.test.mjs'
       - 'tests/git-publish.test.mjs'
       - 'tests/helpers/git-auth-https.mjs'
+      - 'tests/helpers/windows-process.py'
       - 'tests/fixtures/git-auth/**'
       - '.github/workflows/git-auth-recover.yml'
   pull_request:
@@ -14,6 +15,7 @@ on:
       - 'tests/git-auth-recover.test.mjs'
       - 'tests/git-publish.test.mjs'
       - 'tests/helpers/git-auth-https.mjs'
+      - 'tests/helpers/windows-process.py'
       - 'tests/fixtures/git-auth/**'
       - '.github/workflows/git-auth-recover.yml'
   workflow_dispatch:
