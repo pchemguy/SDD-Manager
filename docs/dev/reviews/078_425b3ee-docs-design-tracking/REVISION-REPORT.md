@@ -24,3 +24,11 @@ Shell Git lookup was bounded and timed out; a separate unauthenticated HTTPS rea
 ## Next boundary
 
 Retain this open campaign, finish its pending publication/readback when access permits, and await the human's concrete concerns or requested assessment. Then establish the affected scope and any needed revision plan before dependent repairs. This opening does not authorize implementation, integration, closure, a product task range or a release. Git provides the eventual opening commit identity; this record cannot contain its own future SHA or prove its own later publication.
+
+## Accepted continuation and finalized plan
+
+The opening commit is 6d81a9e3b759c88362f6c861e62a8560d54aab7e. GitHub connectivity recovered; ordinary Git push and exact remote-ref readback verified that commit on the recorded campaign branch. The earlier publication-pending statements above describe the opening checkpoint, not the current transport state.
+
+The human's documentation-tracking direction and current “Finalize revision plan and execute” instruction establish the [revision plan](REVISION-PLAN.md): fixed `sdd-docs-main` title and plain-text milestone description, nine predefined issue definitions in bundled JSON, existing-script consumption, workflow documentation and verification. Source inspection at the opening commit confirms `github-docs-preparation.md` and `projection-input.mjs` currently specify/render `docs-main` with a milestone HTML marker, while standard documentation briefs/dependencies are still agent-authored. This is source evidence; no demo object has been modified or independently verified for this campaign.
+
+Execute V-001–V-003 after this plan checkpoint is published. Keep the campaign open on its revision branch at completion; no campaign merge, release or demo tracking operation is selected.
