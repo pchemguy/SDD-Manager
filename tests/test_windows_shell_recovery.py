@@ -1,11 +1,15 @@
 """Controlled native CMD contracts, distinct from live client activation.
 
-Only Windows executes the supplied batch adapter. Each case tests LF and CRLF
-package bytes, in temporary paths containing spaces, using a process-local PATH.
-No real PowerShell executable, user profile, repository or global setting changes.
+Windows CMD executes the supplied adapter through the reported Antigravity
+harness, including backslash-escaped embedded double quotes. Cases use LF/CRLF
+assets, isolated PATH and spaced paths. Node exercises real executable argv;
+no real PowerShell executable or global setting is used. These fixtures model
+the unavoidable harness, not agent-authored PowerShell commands.
 """
+import json
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import tempfile
 import unittest
@@ -15,7 +19,7 @@ ADAPTER = Path(__file__).resolve().parents[1] / '.agents/plugins/sdd-manager/ski
 
 
 @unittest.skipUnless(os.name == 'nt', 'Requires native Windows CMD; Linux is not runtime evidence')
-class WindowsShellRecovery(unittest.TestCase):
+class WindowsShellAdapter(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory(prefix='sdd shell probe ')
         self.addCleanup(self.temporary.cleanup)
@@ -26,6 +30,8 @@ class WindowsShellRecovery(unittest.TestCase):
         self.work.mkdir()
         self.cmd = Path(os.environ['SystemRoot']) / 'System32/cmd.exe'
         self.assertTrue(self.cmd.is_file())
+        self.node = shutil.which('node')
+        self.assertIsNotNone(self.node, 'Native argv contracts require Node on PATH')
         self.environment = dict(os.environ, PATH=str(self.bin) + os.pathsep + os.environ['PATH'])
 
     def install_variants(self):
@@ -36,14 +42,15 @@ class WindowsShellRecovery(unittest.TestCase):
             yield ending
 
     def invoke(self, command, prefix=()):
-        """Pass one command-string argument through the documented launcher form.
+        """Model the unavoidable harness; the supplied CLI itself is CMD syntax.
 
         Trusted fixture commands are written literally in an isolated CMD driver.
         Explicit outer /s /c quoting handles the driver's spaced absolute path;
         executable selects native CMD without Python's implicit shell selection.
         """
         driver = self.work / 'probe driver.cmd'
-        lines = ['@echo off', *prefix, 'PowerShell -Command "' + command + '"']
+        escaped = command.replace('"', '\\"')
+        lines = ['@echo off', *prefix, 'PowerShell -Command "' + escaped + '"']
         driver.write_bytes(('\r\n'.join(lines) + '\r\n').encode('ascii'))
         return subprocess.run(
             '"' + str(self.cmd) + '" /d /s /c ""' + str(driver) + '""',
@@ -61,37 +68,55 @@ class WindowsShellRecovery(unittest.TestCase):
                 self.assertIn('SDD_CMD_PROBE_' + os.environ['SystemDrive'], lines)
                 self.assertNotIn('%SystemDrive%', result.stdout)
 
-    def test_all_single_quotes_become_double_quotes(self):
+    def test_apostrophes_and_single_quotes_are_preserved(self):
         for ending in self.install_variants():
             with self.subTest(ending=ending):
                 quoted = self.invoke("echo 'SDD QUOTE'")
                 self.assertEqual(quoted.returncode, 0, quoted.stderr)
-                self.assertEqual(quoted.stdout.strip(), '"SDD QUOTE"')
+                self.assertEqual(quoted.stdout.strip(), "'SDD QUOTE'")
                 literal = self.invoke("echo O'Brien")
                 self.assertEqual(literal.returncode, 0, literal.stderr)
-                self.assertEqual(literal.stdout.strip(), 'O"Brien')
+                self.assertEqual(literal.stdout.strip(), "O'Brien")
 
     def test_nonzero_command_status_is_preserved(self):
         for ending in self.install_variants():
             with self.subTest(ending=ending):
-                result = self.invoke('cmd /d /c exit 7')
+                result = self.invoke('cmd /c exit 7')
                 self.assertEqual(result.returncode, 7, result.stdout + result.stderr)
 
-    def test_quote_conversion_changes_quoted_redirection(self):
-        """Retain the observed limitation of the human-selected assignment."""
+    def test_quoted_node_script_and_arguments_survive_harness_escaping(self):
+        script = self.work / 'scripts with spaces' / 'argv probe.mjs'
+        script.parent.mkdir()
+        script.write_text('process.stdout.write(JSON.stringify(process.argv.slice(2)));\n'
+                          'process.stderr.write("SDD_STDERR\\n");\n', encoding='utf-8')
+        output = self.work / 'output with spaces.json'
+        command = f'"{self.node}" "{script}" --repo "{self.work}" --output "{output}" "O\'Brien"'
         for ending in self.install_variants():
             with self.subTest(ending=ending):
-                result = self.invoke("cmd /d /c 'echo SDD_STDERR 1>&2'")
+                result = self.invoke(command)
                 self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-                self.assertEqual(result.stdout.strip(), 'SDD_STDERR')
-                self.assertEqual(result.stderr.strip(), '')
+                self.assertEqual(json.loads(result.stdout),
+                                 ['--repo', str(self.work), '--output', str(output), "O'Brien"])
+                self.assertEqual(result.stderr.strip(), 'SDD_STDERR')
+                self.assertFalse(output.exists())
 
-    def test_command_separators_execute_once(self):
+    def test_complex_sequence_runs_from_one_temporary_cmd_script(self):
+        script = self.work / 'temporary sequence.cmd'
+        script.write_bytes(b'@echo off\r\necho SDD_FIRST\r\necho SDD_SECOND\r\nexit /b 7\r\n')
         for ending in self.install_variants():
             with self.subTest(ending=ending):
-                result = self.invoke('echo SDD_FIRST & echo SDD_SECOND')
-                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                result = self.invoke(f'"{script}"')
+                self.assertEqual(result.returncode, 7, result.stdout + result.stderr)
                 self.assertEqual([line.strip() for line in result.stdout.splitlines()], ['SDD_FIRST', 'SDD_SECOND'])
+
+    def test_actual_forge_helpers_start_with_quoted_paths(self):
+        forge = ADAPTER.parents[2] / 'sdd-forge' / 'scripts'
+        for ending in self.install_variants():
+            for name in ['forge-project.mjs', 'forge-project-draft.mjs']:
+                with self.subTest(ending=ending, script=name):
+                    result = self.invoke(f'"{self.node}" "{forge / name}" --help')
+                    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                    self.assertIn('--repo', result.stdout)
 
     def test_literal_exclamation_marks_are_preserved(self):
         self.environment['SDD_BANG'] = 'UNINTENDED_EXPANSION'

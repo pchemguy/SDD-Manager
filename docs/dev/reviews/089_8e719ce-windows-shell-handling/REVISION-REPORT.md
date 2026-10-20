@@ -18,3 +18,7 @@ The parent worktree was clean and its published ref exactly matched the full sta
 ## Subsequent selected revision
 
 The human has now supplied the Windows shell requirements and exact replacement shim. The opening-only boundary above records the original checkpoint; the subsequent grant selects the [revision plan](REVISION-PLAN.md). State: revision authorized, native regression and implementation pending. The earlier “No proposals yet” direction does not block execution of these now-supplied requirements. Campaign 089 remains open; no parent integration or closure is selected.
+
+## A-001 — Native regression checkpoint
+
+The source-only fixture now models the reported harness escaping, checks unchanged apostrophes, quoted native Node/script/argument paths, actual forge helper startup, output/status and temporary CMD-script sequencing. Inline command-chain tests and the removed conversion expectation were replaced. CI selects native Windows CMD with Node 22/24 and Python 3.11. The old adapter is deliberately retained for the first native regression run; this checkpoint is not a completed repair. Local Linux collection can only skip these Windows contracts and is not runtime evidence.
