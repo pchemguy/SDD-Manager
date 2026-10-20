@@ -42,7 +42,7 @@ For selected GitHub phase or main-preparation projection, the optional [projecti
 
 ## Core development workflows
 
-The [Windows shell policy](skills/sdd-manage/references/windows-shell.md) requires CMD-compatible commands: PowerShell/pwsh are unavailable, and agents issue one command per shell call, using separate calls or a temporary CMD script for sequences. The agent first probes the actual shell tool. A PowerShell-related error triggers recovery with the bundled CMD shim, which restores escaped double quotes. The coordinator verifies retry and reports activation; unresolved failure ends the turn.
+The [Windows shell policy](skills/sdd-manage/references/windows-shell.md) defaults to CMD-compatible commands, unavailable PowerShell/pwsh and one command per shell call, using separate calls or a temporary CMD script for sequences. A project that specifically targets PowerShell or defines explicit project-specific shell policies overrides the corresponding defaults. The agent first probes the actual shell tool. A PowerShell-related error triggers recovery with the bundled CMD shim, which restores escaped double quotes. The coordinator verifies retry and reports activation; unresolved failure ends the turn.
 
 | Workflow | Purpose and typical path |
 | --- | --- |

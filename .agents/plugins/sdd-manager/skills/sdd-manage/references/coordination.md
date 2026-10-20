@@ -82,7 +82,7 @@ Return instruction source, actual user choice/grant, observed state and evidence
 
 ## Coordinate environment recovery
 
-For Windows shell work, apply the [CMD-only policy](windows-shell.md): one command per call, an initial probe through the actual tool, then shim recovery on observed PowerShell-related errors. It owns bounded readiness, adapter placement, activation reporting and failure stop; preserve orientation's read-only role and repository pre-write gates. PowerShell/pwsh are unavailable, not provisioning options.
+For Windows shell work, apply the [general shell policy](windows-shell.md) and its project-specific precedence. Its defaults require CMD, unavailable PowerShell/pwsh, one command per call, an initial probe through the actual tool, then shim recovery on observed PowerShell-related errors. It owns bounded readiness, adapter placement, activation reporting and failure stop; preserve orientation's read-only role and repository pre-write gates.
 
 On a relevant environment/tooling blocker, coordinate investigation of reasonable supported alternatives within authorized scope before declaring the work blocked. Route technical investigation to the affected execution workflow; implementation uses [environment recovery](../../sdd-implement/references/environment-recovery.md). Preserve partial work, require actual attempt/capability evidence, disclose material substitutions and resolve consequential scope/requirement decisions. Bound investigation by real constraints rather than an arbitrary retry quota. For a host denial, retain the pending operation and report the observed reason; do not reframe it as a tooling failure or switch tools to evade it.
 
