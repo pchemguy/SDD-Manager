@@ -1,18 +1,18 @@
 # SDD Manager handoff
 
-Parent prerelease campaign 081_5b2442e remains open/suspended. Campaign 089 is closed again after amendment A-008 through published/read-back parent merge 204d7e91b1d0e40d1fb53c61cb024f21452e417f.
+GitHub CLI backend revision campaign 090_b238a66 is active. Parent prerelease campaign 081 remains open/suspended; campaign 089 is closed/frozen.
 
-## Parent scope and stop
+## Accepted scope and stop
 
-- Owner: sdd-manage; reporting Standard. [Parent plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [child plan](reviews/089_8e719ce-windows-shell-handling/REVISION-PLAN.md), [child evidence](reviews/089_8e719ce-windows-shell-handling/REVISION-REPORT.md), [index](reviews/README.md).
-- A-008: Generated Windows command lines remain CMD-only. CMD is the default and needs no explicit cmd /c wrapper; Git Bash may also be available. Avoid unnecessary wrappers unless instructed. CMD wrappers always use cmd /c; Bash commands always use bash -c because the shim executes through CMD. Retain CMD-only summaries, PowerShell defaults, project precedence, exact shim and probe/recovery procedure.
-- The human authorized reopening, execution and closure again, including the CMD-only and Bash-under-CMD clarifications. Integration and clean return are verified. Publish/read back the reclosure record, then stop on this parent branch. Do not resume prerelease preparation or advance release inputs/version/main/release/installation.
+- Owner: sdd-manage with sdd-forge; reporting Standard. [Revision plan](reviews/090_b238a66-github-cli-backend/REVISION-PLAN.md), [execution](reviews/090_b238a66-github-cli-backend/REVISION-REPORT.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [index](reviews/README.md).
+- Explicitly allow an available gh for supported GitHub operations, using suitable existing authentication or a protected provided/saved token. Keep repository/account identity, scope, provider reconciliation and Git publication requirements. Canonical gh detail belongs in the existing GitHub backend, with short caller links.
+- The human authorized execution and closure. Publish each owned commit; explicitly integrate verified completion into the recorded parent, verify/publish, close and return there. Do not resume prerelease work or advance release inputs/version/main/release/installation.
 
-## Integration and evidence
+## Git identity and evidence
 
-Current branch/return revision/081_5b2442e-prerelease on origin. Published/read-back amendment merge 204d7e91b1d0e40d1fb53c61cb024f21452e417f has verified parents d7fa983f731a38bf5fca41102ee418b6af336358 and d5adfc3cf98d89dd655c21ba7cd4add6c4f93795. Prior integration 735814e0740d7727c2aba0175335bf81d793d6d6, reopening checkpoint and original provenance are retained in the child report. Both branches are retained; campaign 089 records are closed/frozen again.
+Working branch revision/090_b238a66-github-cli-backend; creation parent/return revision/081_5b2442e-prerelease. Full baseline/branch-off b238a66a3e7542af6bd7b3d3a966effd056406d5 is exactly read back from origin and the worktree was clean before setup. The plan/report retain identity, accepted actions and parent suspension. No new GitHub tracking objects are requested for this source campaign.
 
-A-008 passes scoped wording, standalone/exact-shim and Markdown checks. Its exact reproducible 156-file verification package passes pinned schema, inventory and five extracted CLI help checks; the child report retains the source/hash. Runtime scripts, tests, CI and acceptance code are unchanged. Earlier native/support/publisher evidence retains its recorded source; no fresh runtime or live-client result is claimed.
+A-001 assessed current backend/credential guidance and official gh documentation. gh is unavailable locally, so live CLI authentication/hosted execution remains unrun. Publish the opening, implement the scoped documentation revision, verify and integrate through closure; no runtime installation or new script is selected.
 
 ## Retained prerelease boundary
 
