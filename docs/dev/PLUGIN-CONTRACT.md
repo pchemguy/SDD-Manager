@@ -56,6 +56,8 @@ The coordinator establishes the development context and eligible stage, selects 
 
 These gates constrain delegated SDD work and must be visible before the dependent handoff. Repeating a short gate at that handoff is justified when it prevents a consequential coordination error. Exact commit syntax, provider reconciliation, branch algorithms and eligibility/recovery procedures stay with their owners.
 
+The Windows shell reference defines general, self-contained OS policies and procedures. Keep plugin-specific roles, preparation gates, continuity and runtime-recovery routing in its callers; do not add dependencies from that reference back into plugin workflows.
+
 ## SDD coverage and canonical owners
 
 This map identifies the coverage baseline and principal sources. It is not a second skill catalog or an exhaustive procedure index.

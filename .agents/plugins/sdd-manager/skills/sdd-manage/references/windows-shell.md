@@ -1,6 +1,6 @@
 # Windows shell policy
 
-Apply on the host actually executing Windows commands. **sdd-manage** owns shell readiness and shim setup; **sdd-orient** observes read-only. Other execution hosts retain their own shell.
+Apply these policies and procedures on the host actually executing Windows commands. Other execution hosts retain their own shell.
 
 ## Command rules
 
@@ -10,7 +10,7 @@ Apply on the host actually executing Windows commands. **sdd-manage** owns shell
 
 ## Unavoidable tool wrapper
 
-If run_command or a similar tool hardcodes PowerShell, its wrapper is outside the agent's control and requires the bundled [PowerShell.cmd](../scripts/PowerShell.cmd) shim. Do not generate PowerShell commands to accommodate the tool or attempt to make the real shell available.
+If run_command or a similar tool hardcodes PowerShell, its wrapper is outside the agent's control and requires a CMD shim. Do not generate PowerShell commands to accommodate the tool or attempt to make the real shell available.
 
 Antigravity's reported harness uses:
 
@@ -18,13 +18,25 @@ Antigravity's reported harness uses:
 PowerShell -Command "%CLI%"
 ```
 
-The harness backslash-escapes embedded double quotes as `\"`. This describes harness behavior, not an allowed agent-authored invocation. The shim captures all arguments with `%*`, removes the ten-character `-Command "` prefix and final quote with `%CLI:~10,-1%`, restores `\"` to `"`, and executes the recovered CLI through CMD. Its fixed slicing requires this launcher form; do not assume another client's format matches.
+The harness backslash-escapes embedded double quotes as `\"`. This describes harness behavior, not an allowed agent-authored invocation. Create `PowerShell.cmd` with these contents:
+
+```bat
+@echo off
+
+set "CLI=%*"
+set "CLI=%CLI:~10,-1%"
+set "CLI=%CLI:\"="%"
+
+%CLI%
+```
+
+The shim captures all arguments, removes the ten-character `-Command "` prefix and final quote, restores `\"` to `"`, and executes the recovered CLI through CMD. Its fixed slicing requires this launcher form; do not assume another client's format matches.
 
 ## Establish readiness
 
 1. Identify the actual execution OS and tool/launcher from available evidence; reuse sufficient unchanged session evidence. If a Windows tool hardcodes the wrapper above, establish the shim before dependent use. A failed initial CMD probe can also reveal that launcher requirement.
-2. Copy the exact bundled shim into an existing writable directory searched by the tool's effective PATH. Preserve unrelated adapters/executables; change no global PATH, registry or client configuration. A project-root copy is allowed only when that root is searched and repository writes are authorized; ignore `/PowerShell.cmd` and verify it is untracked. Keep preparation's pre-write gates intact and temporary scripts outside the target repository while those gates apply.
-3. Through the same tool, run a bounded harmless CMD probe such as `cmd /c echo SDD_CMD_PROBE_%SystemDrive%`. Require its marker, expanded drive and successful exit. Before dependent work using quoted program/script paths, also verify a harmless quoted-path invocation, such as an available helper's --help. Do not replay a mutating command as a probe.
+2. Place the shim through an available filesystem tool in an existing writable directory searched by the shell tool's effective PATH. Preserve unrelated adapters/executables; change no global PATH, registry or client configuration. A project-root copy is allowed only when that root is searched and file creation is authorized. Keep the shim and temporary scripts out of version control.
+3. Through the same shell tool, run a bounded harmless CMD probe such as `cmd /c echo CMD_PROBE_%SystemDrive%`. Require its marker, expanded drive and successful exit. Before dependent work using quoted program/script paths, also verify a harmless quoted-path invocation, such as an available program's --help. Do not replay a mutating command as a probe.
 4. On success, report the effective shim location and CMD execution, then continue the authorized work. If setup or retry fails, report the concrete blocker and stop the turn. A launcher that cannot resolve a .cmd adapter or uses another argument format needs a supported adapter; PowerShell remains prohibited.
 
-The shim is a narrow launcher adapter, not a shell translator. Native fixture results do not establish live Antigravity/Codex compatibility. Retain useful observations in existing reports/HANDOFF, without a recovery journal. Runtime provisioning follows [environment recovery](coordination.md#coordinate-environment-recovery).
+Verify the adapter through the actual tool. File presence alone does not establish working command execution.
