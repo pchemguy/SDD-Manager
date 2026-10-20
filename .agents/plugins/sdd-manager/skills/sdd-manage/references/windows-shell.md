@@ -7,7 +7,10 @@ These are general policies. If the target project specifically targets PowerShel
 ## Command rules
 
 - **PowerShell and pwsh are unavailable.** Do not probe for, install or invoke them.
-- Write Windows commands for CMD. Do not generate PowerShell/pwsh invocations, cmdlets or PowerShell-specific syntax.
+- **CMD is the default shell.** Write all Windows command lines in CMD syntax; this does not require an explicit `cmd /c` wrapper.
+- Do not generate PowerShell/pwsh invocations, cmdlets or PowerShell-specific syntax.
+- Avoid unnecessary `cmd` or `bash` wrappers unless explicitly instructed. **Always use `cmd /c` for a CMD wrapper.**
+- Git Bash may also be available. **Always invoke Bash commands with `bash -c`**, because the shim executes commands through CMD.
 - **Run one command per shell call.** Do not chain commands with `&&`, `||`, `&` or multiple command lines. Use separate calls; for a necessary sequence, invoke a temporary `.cmd` script with explicit failure handling. Keep complex quoting, pipes and redirection inside that script.
 
 ## Probe and recover
