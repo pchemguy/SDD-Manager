@@ -86,3 +86,9 @@ The local and remote parent checkpoint both match 8e719ce965526dbbae266009ff8c11
 ## Integration verification
 
 Finalization tip 476947767c3a645a11320aac4cdaba4d80c3af84 is published/read back. The prospective explicit merge into refreshed parent 8e719ce965526dbbae266009ff8c1114b7d70a80 has no conflicts. HANDOFF deliberately restores the parent scope and suspended stop. Merged-state checks pass 139 support and 37 publisher tests on Linux/Python 3.12.14; package/runtime/test/CI bytes match final verified source e5853e9. Prior closed records are unchanged. Target merge publication and final closure recording remain pending at this checkpoint.
+
+## Closure
+
+Campaign 089_8e719ce is completed and closed. Explicit merge 735814e0740d7727c2aba0175335bf81d793d6d6 has verified parents 8e719ce965526dbbae266009ff8c1114b7d70a80 and 476947767c3a645a11320aac4cdaba4d80c3af84. The supervised publisher pushed that merge to origin's revision/081_5b2442e-prerelease and independently read back the exact object, with confirmed process cleanup and exit status 0. The worktree is on the parent branch and was clean after publication. Both campaign branches are retained.
+
+Final merged-state scoped checks pass 543 local link targets and 65 maintained fragments, standalone-policy/exact-shim checks and whitespace checks. All actions and selected integration obligations are complete; no unresolved blocker remains within this campaign. Live-client limits remain as documented. Publish/read back this closure record under the ordinary per-commit gate, then stop. Parent 081 stays open/suspended; version/release inputs, main, release/tag/dispatch and plugin installation are not advanced. This campaign package becomes frozen history after closure recording.

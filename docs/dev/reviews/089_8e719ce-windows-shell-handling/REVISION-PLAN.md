@@ -23,3 +23,5 @@ No PowerShell installation, global PATH/client changes, demo modification, token
 ## Accepted completion boundary
 
 The human accepted the full-file result and requested closure. Actions A-001–A-007 are complete; the earlier keep-open instructions are superseded for campaign 089 only. Finalize evidence, publish/read back, explicitly integrate into the recorded parent revision/081_5b2442e-prerelease, verify/publish that target and record closure. Return on the parent branch with campaign 081 still open/suspended; do not resume prerelease work.
+
+Status: Completed and closed. Explicit parent merge 735814e0740d7727c2aba0175335bf81d793d6d6 is published and exactly read back; the worktree has returned cleanly to the parent branch. The execution report retains final verification and closure facts. Parent 081 remains open/suspended.
