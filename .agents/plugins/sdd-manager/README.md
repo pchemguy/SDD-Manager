@@ -42,7 +42,7 @@ For selected GitHub phase or main-preparation projection, the optional [projecti
 
 ## Core development workflows
 
-At workflow startup the agent identifies the actual execution OS and checks shell readiness on Windows. If a tool's PowerShell launcher fails, the [Windows recovery workflow](skills/sdd-manage/references/windows-shell-recovery.md) can deploy the supplied CMD adapter for a compatible invocation, then retry. Successful activation is reported with the reminder that every single quote becomes a double quote; a failed retry is reported and ends the turn. The probe applies across Windows clients, including local Codex; actual launcher compatibility is checked rather than inferred from the client name.
+The [Windows shell policy](skills/sdd-manage/references/windows-shell.md) defaults to CMD-compatible commands, unavailable PowerShell/pwsh and one command per shell call, using separate calls or a temporary CMD script for sequences. A project that specifically targets PowerShell or defines explicit project-specific shell policies overrides the corresponding defaults. The agent first probes the actual shell tool. A PowerShell-related error triggers recovery with the bundled CMD shim, which restores escaped double quotes. The coordinator verifies retry and reports activation; unresolved failure ends the turn.
 
 | Workflow | Purpose and typical path |
 | --- | --- |

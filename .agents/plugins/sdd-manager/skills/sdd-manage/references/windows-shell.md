@@ -1,0 +1,50 @@
+# Windows shell policy
+
+Identify the host executing shell commands. Apply this policy on Windows; other hosts retain their own shell.
+
+These are general policies. If the target project specifically targets PowerShell or defines explicit project-specific shell policies, those requirements override the corresponding general rules below.
+
+## Command rules
+
+- **PowerShell and pwsh are unavailable.** Do not probe for, install or invoke them.
+- Write Windows commands for CMD. Do not generate PowerShell/pwsh invocations, cmdlets or PowerShell-specific syntax.
+- **Run one command per shell call.** Do not chain commands with `&&`, `||`, `&` or multiple command lines. Use separate calls; for a necessary sequence, invoke a temporary `.cmd` script with explicit failure handling. Keep complex quoting, pipes and redirection inside that script.
+
+## Probe and recover
+
+run_command or a similar shell tool may invoke PowerShell internally, outside the agent's control. Probe the tool before deciding whether recovery is needed.
+
+1. Run `echo CMDPROBE%SystemDrive%` through the actual shell tool. Inspect output, error and exit status.
+    - **Success:** require exit status 0 and `CMDPROBE` followed by the expanded system drive. Skip recovery and proceed to step 3.
+    - **PowerShell-related error:** proceed to step 2.
+    - **Other failure**, including literal `%SystemDrive%` output: report the blocker and stop the turn.
+2. Recover only after a PowerShell-related probe error:
+    - Save the exact shim below as `PowerShell.cmd` in the shell tool's **current working directory (CWD)** or an existing writable directory on its effective **PATH**. Use an available filesystem tool.
+    - If placed inside a Git repository, add its repository-relative path to `.gitignore`.
+    - Retry the same probe through the same shell tool. If setup or retry fails, report the blocker and stop the turn.
+    - On success, report the shim location and that commands now execute through CMD.
+3. Before using quoted program/script paths, verify a harmless quoted-path command, such as an available program's --help. Continue after the required checks succeed; repeat them when the host or shell tool setup changes.
+
+Preserve unrelated adapters/executables and leave global PATH, registry and client configuration unchanged. Keep the shim and temporary scripts out of version control. Use only harmless commands as probes.
+
+## Antigravity wrapper and shim
+
+Antigravity's reported harness uses:
+
+```text
+PowerShell -Command "%CLI%"
+```
+
+The harness backslash-escapes embedded double quotes as `\"`. The CMD shim decodes that wrapper:
+
+```bat
+@echo off
+
+set "CLI=%*"
+set "CLI=%CLI:~10,-1%"
+set "CLI=%CLI:\"="%"
+
+%CLI%
+```
+
+The shim removes the wrapper, restores `\"` to `"` and runs the command through CMD. Its fixed slicing requires the illustrated launcher form; do not assume another client's format matches or that its launcher can resolve a .cmd adapter.

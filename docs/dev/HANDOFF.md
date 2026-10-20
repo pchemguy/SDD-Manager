@@ -1,18 +1,18 @@
 # SDD Manager handoff
 
-Parent prerelease campaign 081_5b2442e remains open and suspended. Nested docs projection convenience campaign 088 has completed its selected implementation and verification; its containing explicit parent merge is the current persistence/return boundary.
+Parent prerelease campaign 081_5b2442e remains open and suspended. Nested Windows shell handling campaign 089 has completed its accepted scope; the containing explicit parent merge is its current integration/return boundary.
 
 ## Parent scope and stop
 
-- Owner: sdd-manage; reporting Standard. [Parent plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [child evidence](reviews/088_7d37ca7-docs-projection-convenience/REVISION-REPORT.md), [child plan](reviews/088_7d37ca7-docs-projection-convenience/REVISION-PLAN.md), [index](reviews/README.md).
-- The child adds request-free docs-main projection, origin default, repository DOCS_TASKS default with bootstrap template fallback, explicit apply eligibility and aligned CLI/workflow documentation. It creates no intermediate request or target document; phase projection retains its reviewed JSON.
-- Stop after verified target publication/readback and clean return on this parent branch. Do not resume prerelease preparation, refresh release inputs, merge main, bump version, release/tag/dispatch or install the plugin. A completed child is not parent continuation authority.
+- Owner: sdd-manage; reporting Standard. [Parent plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [child plan](reviews/089_8e719ce-windows-shell-handling/REVISION-PLAN.md), [child evidence](reviews/089_8e719ce-windows-shell-handling/REVISION-REPORT.md), [index](reviews/README.md).
+- The accepted child delivers a concise standalone Windows policy, CMD defaults with explicit project-specific precedence, one command per shell call, probe-first recovery, the exact replacement shim, CWD/PATH placement and repository .gitignore handling. Current callers, tests and CI are aligned; section order and full-file wording are revised.
+- Stop after verified target publication/readback, closure recording and clean return on this parent branch. Do not resume prerelease preparation, refresh release inputs, merge main, bump version, release/tag/dispatch or install the plugin. A completed child is not parent continuation authority.
 
 ## Git integration and evidence
 
-Current target/return: revision/081_5b2442e-prerelease on origin, pchemguy/SDD-Manager. Refreshed target before integration: 7d37ca7606eeab1c17abe2eeb2157d99f2f6391c. Incoming complete child: 7ebeb6f42d9dd2013d7affa37f441a80d980e65b from revision/088_7d37ca7-docs-projection-convenience. The explicit two-parent merge retains both tips; recover its actual commit/publication from Git rather than inferring completion from this snapshot. Retain the child branch. Closure requires actual merged-state verification, target publication/readback and confirmed clean parent state.
+Current target/return: revision/081_5b2442e-prerelease on origin, pchemguy/SDD-Manager. Refreshed target before integration: 8e719ce965526dbbae266009ff8c1114b7d70a80. Incoming complete child: 476947767c3a645a11320aac4cdaba4d80c3af84 from revision/089_8e719ce-windows-shell-handling. The explicit two-parent merge retains both tips; recover actual publication from Git/readback. Retain the child branch. Closure requires merged-state verification, target publication and confirmed clean parent state.
 
-Native-verified source bcecba257d20c2f7b9ef886437eb86e0a9f91a62 passed projection/completion matrices on Windows CMD/Linux with Node 22/24. Local projection/completion checks passed 84 tests; support/publisher checks passed 139/37. Exact committed candidate packaging passed pinned schema, identical 156-file inventory/rebuild, five extracted CLI help checks and one extracted single-call preview. Source has no new runtime dependencies. Actual Antigravity/desktop execution and live hosted tracking mutation remain unrun; the shim is unchanged.
+Final authored source e5853e9b99cf15cafdfc596ac97d273b9db72d1c passed seven native Windows CMD contracts on each of Node 22/24. Its exact reproducible 156-file package passes pinned schema, exact shim and five extracted CLI help checks. The merged state passes 139 support and 37 publisher tests on Linux/Python 3.12.14; package/runtime/test/CI bytes match that verified source. The child report retains exact hashes and evidence limits. Live Antigravity/Codex activation and observed agent policy compliance remain unrun.
 
 ## Retained prerelease boundary
 

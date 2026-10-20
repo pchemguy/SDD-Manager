@@ -53,15 +53,15 @@ node --test tests/forge-project.test.mjs
 
 Its Windows CMD/Linux Node 22/24 matrix covers synthetic hosted projection plus actual local draft/source/root/token/output/locking behavior. Shared github-client.mjs or forge-runtime.mjs changes require completion and projection suites/matrices; shared protected-token.mjs also requires Git recovery. The draft generator must not infer dependencies or certify readiness: phase semantics remain agent-authored, while docs-main copies the complete bundled DOCS_TRACKING_TEMPLATE.json definitions. Check asset/task-template alignment, fixed sdd-docs-main title and plain-text description, exact briefs, conflict/no-duplicate behavior, false eligibility and external pre-write drafts. Projection contracts also cover request-free docs-main preview/apply/reconciliation, origin and actual DOCS_TASKS defaults, bootstrap-only template fallback, explicit overrides and eligibility, unchanged phase/JSON input, and unrelated launch directories. Input/route/content source review remains distinct from native runtime, live-provider and installed-agent behavior.
 
-## Windows shell recovery contracts
+## Windows shell contracts
 
-For the coordinator's [Windows shell recovery](../.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell-recovery.md) and bundled PowerShell.cmd adapter, run:
+For the coordinator's [Windows shell policy](../.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell.md) and bundled PowerShell.cmd adapter, run:
 
 ```text
 python -m unittest discover -s tests -p test_windows_shell_recovery.py -v
 ```
 
-These six runtime contracts require native Windows CMD and exercise LF/CRLF assets through the documented two-argument launcher form, isolated PATH selection/spaced paths, variable expansion, quote conversion, literal exclamation marks, command separators, basic output/status propagation and the original assignment's observed quoted-redirection limitation. That fixture records the marker reaching stdout rather than stderr; it does not assert general redirection preservation. Linux skips are not runtime passes. Inspect the selected source's actual Windows workflow result. Source scenario assessment remains separate from actual Antigravity/local Codex activation; the test does not establish arbitrary launcher compatibility or deploy a shim to a user's host.
+These seven runtime contracts require native Windows CMD, Node 22+ and Python 3.11+. They model Antigravity's reported backslash-escaped wrapper with LF/CRLF assets, isolated shim lookup, spaced paths, variable expansion, unchanged apostrophes, quoted Node executable/script/arguments, actual forge helper startup, literal exclamation marks, output/status and a temporary .cmd sequence. CI runs Node 22/24. Linux skips are not runtime passes. Inspect the selected source's actual Windows workflow result. These controlled harness cases do not establish live Antigravity/Codex activation, arbitrary launcher compatibility or observed agent compliance with command-generation rules; the tests deploy no shim to a user's host.
 
 ## TextStats acceptance coordination
 
