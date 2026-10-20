@@ -15,3 +15,24 @@ Read-only executable lookup found no gh in this Linux sandbox. The revision ther
 ## Pending work and boundary
 
 Opening/plan publication precedes backend edits. Implement A-002, perform scoped A-003 checks and exact package verification, then explicitly integrate and close into the recorded parent. No prerelease continuation follows.
+
+## A-002 — Backend and credential integration
+
+Published opening b4ed2438dfa310c3358e8d91a20cd41727fed5cd precedes source edits. The existing github.md backend now explicitly permits an available gh for supported native/API operations, suitable existing authentication and provided/saved-token authentication. Its cohesive subsection defines operation-scoped protected GH_TOKEN supply, disabled unattended prompting, finite deadlines and preservation of existing identity/pagination/readback/recovery contracts. It keeps Git publication with its supervised owner.
+
+Forge entry, general API credential guidance and packaged README link to that canonical subsection. No separate CLI fragment, runtime script, dependency, token-store change or optional-utility rewrite is introduced. Source-only contributor instructions and closed campaign packages are preserved.
+
+## A-003 — Source contrasts and verification
+
+| Situation | Assessed result |
+| --- | --- |
+| Available CLI with suitable existing authentication | Reuse the selected host/account and verify requested repository/endpoint access; no compulsory login or token request. |
+| Provided token or eligible saved token is needed | Follow existing credential ownership/storage gates and transfer through scoped protected GH_TOKEN; no token-bearing shell text or extra durable login is required. |
+| CLI is absent or lacks a needed native subcommand | Other supported clients remain valid; gh api can serve supported endpoints. No mandatory installation or expanded capability is implied. |
+| Partial/paginated lookup or uncertain write | Existing complete-lookup, identity, owned-field and readback/reconciliation requirements remain; CLI success alone does not establish workflow completion. |
+| Access, rate, transport or policy failure | Existing backend classification/recovery applies without silent identity changes or duplicate writes. |
+| Git publication versus API access | Supervised Git push/readback remains with manage; API authentication is assessed separately. |
+
+These are instruction/source assessments, not executed CLI tests. gh is absent locally; live login, provider mutation and installed-agent compliance remain unrun. Scoped Markdown/runtime-preservation checks and exact package verification follow before integration.
+
+Scoped source checks pass 375 local links and 15 maintained fragments across nine current/active Markdown files, including 95 package-contained links; frozen targets are checked for existence only. No Markdown/whitespace findings remain. Git comparison confirms runtime scripts, tests, CI, acceptance code and manifest are unchanged. Publish the source checkpoint, then verify its exact committed package and the prospective parent merge before closure.

@@ -12,7 +12,7 @@ GitHub CLI backend revision campaign 090_b238a66 is active. Parent prerelease ca
 
 Working branch revision/090_b238a66-github-cli-backend; creation parent/return revision/081_5b2442e-prerelease. Full baseline/branch-off b238a66a3e7542af6bd7b3d3a966effd056406d5 is exactly read back from origin and the worktree was clean before setup. The plan/report retain identity, accepted actions and parent suspension. No new GitHub tracking objects are requested for this source campaign.
 
-A-001 assessed current backend/credential guidance and official gh documentation. gh is unavailable locally, so live CLI authentication/hosted execution remains unrun. Publish the opening, implement the scoped documentation revision, verify and integrate through closure; no runtime installation or new script is selected.
+A-001–A-002 are complete: the canonical backend subsection and short forge/credential/README routes cover existing or protected provided/saved-token authentication. Six source contrasts and scoped link/style checks pass; runtime/manifest/tests/CI are unchanged. Publish the source, verify its exact package and merged state, then integrate/close. gh is unavailable locally, so live CLI authentication/hosted execution remains unrun; no installation or new script is selected.
 
 ## Retained prerelease boundary
 
