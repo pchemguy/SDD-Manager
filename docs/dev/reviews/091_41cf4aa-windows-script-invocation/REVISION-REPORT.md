@@ -76,3 +76,9 @@ Source 69cc45b18909bec370fcefce7def649640144d49 is published and exactly read ba
 The package contains neither the external root policy nor the removed policy/shim assets, and no packaged documentation references or routes to them. The root policy remains byte-identical to the last accepted c3ffa7b wording. No PowerShell.cmd file is retained; native tests create ephemeral copies from its code block. The 176 local support/publisher passes and seven qualified Linux skips above remain the actual runtime evidence. Source documentation/whitespace and preservation checks pass. No fresh native Windows/client behavior, plugin installation or release-input refresh is claimed.
 
 A-005 is complete for the selected externalization. Publish/read back this evidence checkpoint, then stop with campaign 091 open/unmerged and parent 081 suspended. No integration or further parent work is selected.
+
+## Closure selected
+
+The human requests campaign closure. The child is clean at published/read-back 96cc42a0fb4832f6e70c09d4f963285a2651cd79; fresh remote-ref inspection confirms that tip and the unchanged creation parent 41cf4aac038bbc1541e7dac39cd841feb7331e27. Original opening 12ff5a0dfd7a38d6e59997c224afa4ac003e3b9e and branch-off 41cf4aac038bbc1541e7dac39cd841feb7331e27 are retained. The full incoming delta contains only the selected policy revision/externalization, affected source verification and active campaign records/navigation. Earlier closed packages are preserved.
+
+Publish this boundary checkpoint, explicitly merge into revision/081_5b2442e-prerelease, restore the parent's suspended HANDOFF, verify/publish the prospective merged state and record actual closure after target readback. Prior source/package evidence remains tied to 69cc45b; merged-state checks must establish their own boundary. No parent prerelease work resumes.

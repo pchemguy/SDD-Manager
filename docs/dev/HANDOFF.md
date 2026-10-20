@@ -6,7 +6,7 @@ Windows script invocation campaign 091_41cf4aa is active. Parent prerelease camp
 
 - Owner: sdd-manage; reporting Standard. [Revision plan](reviews/091_41cf4aa-windows-script-invocation/REVISION-PLAN.md), [execution](reviews/091_41cf4aa-windows-script-invocation/REVISION-REPORT.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [index](reviews/README.md).
 - Externalize the current Windows policy as root WINDOWS_SHELL_POLICY.md, with concise Windows-only AGENTS guidance and a root README note. Remove all plugin policy routes/defaults and the bundled PowerShell.cmd file; agents create the shim from the policy code when required. Preserve the latest accepted policy wording and embedded shim.
-- The human selected the focused revision. Publish each owned commit and stop with campaign 091 open/unmerged. No closure, parent resumption, release-input refresh, version/main/release change or installation is selected.
+- The human now selects closure of campaign 091. Publish the final child checkpoint, explicitly merge/verify/publish into its recorded prerelease parent and return there with parent 081 still suspended. No parent resumption, release-input refresh, version/main/release change or installation is selected.
 
 ## Git identity and verified checkpoint
 
@@ -14,7 +14,7 @@ Working branch revision/091_41cf4aa-windows-script-invocation; creation parent/r
 
 A-001–A-005 are verified. The latest accepted policy is now root WINDOWS_SHELL_POLICY.md, with concise Windows-only root AGENTS/README navigation. The plugin's policy defaults/routes and bundled shim are removed; no separate PowerShell.cmd file is retained. Agents create it from the policy code when required. The root policy and embedded shim preserve the last accepted wording/bytes.
 
-Source 69cc45b18909bec370fcefce7def649640144d49 is published/read back. All 139 support/37 publisher tests and scoped documentation/preservation checks pass. Its exact 154-file package validates, rebuilds identically, excludes the external policy/shim and passes five extracted CLI help checks; the report owns its source-specific digest. Seven native Windows contracts skip on Linux; no fresh native/client result or plugin installation is claimed. Publish/read back this final evidence update and stop open/unmerged. No closure, parent continuation or release refresh is selected.
+Source 69cc45b18909bec370fcefce7def649640144d49 is published/read back. All 139 support/37 publisher tests and scoped documentation/preservation checks pass. Its exact 154-file package validates, rebuilds identically, excludes the external policy/shim and passes five extracted CLI help checks; the report owns its source-specific digest. Seven native Windows contracts skip on Linux; no fresh native/client result or plugin installation is claimed. Fresh remote inspection confirms child 96cc42a0fb4832f6e70c09d4f963285a2651cd79 and parent 41cf4aac038bbc1541e7dac39cd841feb7331e27. Final boundary publication and authorized child integration/closure are next; parent continuation remains unselected.
 
 ## Retained prerelease boundary
 
