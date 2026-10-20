@@ -32,7 +32,7 @@ For “collect key changes since the latest release,” highlights-only preparat
 
 ## Available backends
 
-- **GitHub:** Read [GitHub backend](references/github.md) when the requested operation targets a GitHub repository. It resolves repository identity and access, then routes tracking, package/workflow preparation and release lifecycle operations. Apply the shared backend object lifecycle for tracking; standalone release requests need no task hierarchy or tracking activation. Package preparation does not implicitly publish a release.
+- **GitHub:** Read [GitHub backend](references/github.md) when the requested operation targets a GitHub repository. It resolves repository identity and access, then routes tracking, package/workflow preparation and release lifecycle operations. An available [GitHub CLI](references/github.md#github-cli) may perform supported operations with suitable existing or provided/saved-token authentication. Apply the shared backend object lifecycle for tracking; standalone release requests need no task hierarchy or tracking activation. Package preparation does not implicitly publish a release.
 
 For hosted operations, carry the confirmed request scope, destination/object identity and explicit limits through the [coordination handoff](../sdd-manage/references/coordination.md#coordinate-execution). Keep credentials protected and optional tracking activation separate from access capability.
 
