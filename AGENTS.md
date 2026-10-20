@@ -10,7 +10,7 @@ On **Windows execution hosts only**, follow [WINDOWS_SHELL_POLICY.md](WINDOWS_SH
 
 ## Browser development
 
-When developing or testing browser-based applications or browser extensions, follow [BROWSER_DEV_POLICY.md](BROWSER_DEV_POLICY.md). Prioritize Chromium and include Firefox by default; project documents may specify other choices. Use dedicated, isolated environments. This policy is external to the plugin.
+When developing or testing browser-based applications or browser extensions, follow [BROWSER_DEV_POLICY.md](BROWSER_DEV_POLICY.md). Prioritize Chromium and include Firefox by default; project documents may specify other choices. Use dedicated, isolated environments.
 
 ## Contributor instructions
 
