@@ -17,3 +17,7 @@ The human selects promotion of browser-capabilities.md to root BROWSER_DEV_POLIC
 ## Boundaries
 
 No browser installation, live browser/agent trial, new framework, runtime feature, version change, release-input refresh, plugin installation, merge or closure is selected. Do not rewrite the accepted browser allowlist, isolation requirements or acceptance limits under the guise of moving the policy. Review recommendations beyond necessary externalization remain pending human selection. Do not add a mandatory policy filename or framework to generic SDD project-policy reminders.
+
+## Verified checkpoint
+
+A-001–A-003 are complete at published/read-back source 5775a4e9045669380a2cf7fd721f71a5b68099e3. The critical content/size review is retained; externalization and generic project-policy handling are implemented. All 139 support/37 publisher tests, scoped document/source-preservation checks and an exact deterministic 153-file package with five extracted CLI help checks pass. The execution report owns its source-specific digest and the initial missing-dependency/recovery evidence. Further policy shortening, example repair and definition changes remain recommendations. Publish/read back final evidence and stop open/unmerged; parent 081 stays suspended.

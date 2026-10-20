@@ -19,3 +19,11 @@ SDD no longer contains or references the policy or its fixed engine/isolation ru
 On Linux/Python 3.12.14, 139 support tests pass. The initial publisher invocation fails because its declared jsonschema dependency is absent (20 errors); this is an environment prerequisite, not a policy/source failure. Installing the declared jsonschema 4.26.0 requirement in a task-owned temporary virtual environment resolves it, and all 37 publisher tests pass. No system toolchain or /pyenv content is changed.
 
 Source checks confirm exactly the selected standalone substitutions, no packaged policy references, preserved runtime/manifest/Windows policy and frozen campaign packages. Scoped Markdown/whitespace checks pass. Publish the source, verify its exact 153-file package, then publish final evidence and stop open/unmerged. No browser execution, live agent behavior, release refresh or installation is claimed.
+
+## Verified source and stopping boundary
+
+Source 5775a4e9045669380a2cf7fd721f71a5b68099e3 is published and exactly read back with confirmed publisher cleanup and exit 0. Its version 0.15.1 package validates against the pinned schema, contains exactly 153 expected files and rebuilds byte-identically. The 456805-byte archive has SHA-256 748499dab4e407b6db7df889c72614c33b385110088656915809e680a6939dc3, tied only to that exact source.
+
+The archive excludes both external root policies and the former browser-policy module, contains no fixed browser-policy references and passes five extracted CLI help smokes. Scoped checks pass 424 local targets and 43 maintained fragments across 15 changed Markdown files, including 77 package-contained links. Runtime, manifest, CI, Windows policy and closed records are unchanged. No browser/framework installation, native/client trial, release-input refresh or plugin installation is claimed.
+
+A-001–A-003 are verified for the selected promotion/review. F-001 is resolved and F-004's title/trigger portion is addressed; F-002/F-003 and the remaining composition/size recommendations are retained rather than applied without selection. Publish/read back this evidence checkpoint and stop on revision/092_ef3dd64-browser-dev-policy with campaign 092 open/unmerged and parent 081 suspended.
