@@ -45,7 +45,7 @@ The coordinator establishes the development context and eligible stage, selects 
 | Gate | Coordinator entry responsibility | Detailed owner |
 | --- | --- | --- |
 | Execution host and tools | Identify the actual execution host and required tools under applicable user/repository instructions. Reuse current evidence, report observed readiness blockers and preserve orientation's read-only role and repository pre-write gates. | sdd-orient and coordinator facilities checks |
-| Browser readiness | Route browser-facility selection and browser-dependent execution to the shared dedicated Chromium/Firefox setup, isolation and evidence procedure before use, including agent browser tools. Unrelated work acquires no browser prerequisites. | [Browser environment readiness](../../.agents/plugins/sdd-manager/skills/sdd-implement/references/browser-capabilities.md), sdd-implement and sdd-verify |
+| Project browser policies | Follow applicable project-defined browser development policies and declared setup before browser-dependent implementation/checks. Derive coverage from accepted contracts, preserve evidence limits and report conflicts rather than silently changing acceptance. Unrelated work acquires no browser prerequisites. | sdd-implement, sdd-tdd and sdd-verify |
 | Human preparation checkpoints | Explicit scoped future-checkpoint preapproval is supported at any point, without waiving technical/publication/tracking gates or expanding implementation scope. Otherwise each necessary newly created PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS proposal has its own human acceptance boundary. Reuse acceptable existing inputs. | [Human document review](../../.agents/plugins/sdd-manager/skills/sdd-manage/references/human-document-review.md) and [document QC](../../.agents/plugins/sdd-manager/skills/sdd-manage/references/document-qc-gates.md) |
 | Per-commit publication | Push/read back every owned commit before further work or another commit, preserving explicit scoped exceptions. Unresolved publication blocks advancement. | [Git publication](../../.agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md#publish-each-commit) |
 | Task closing boundary | The implementation owner closes one executable task with its verified result, evidence and initial checkbox together; require its applicable bounded audit at continuation/integration. | [Task completion and audit](../../.agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract) |
@@ -56,7 +56,7 @@ The coordinator establishes the development context and eligible stage, selects 
 
 These gates constrain delegated SDD work and must be visible before the dependent handoff. Repeating a short gate at that handoff is justified when it prevents a consequential coordination error. Exact commit syntax, provider reconciliation, branch algorithms and eligibility/recovery procedures stay with their owners.
 
-Host-specific shell policies and shell-tool adapters are external to the plugin. Repository contributor guidance may own them; packaged entries must not bundle or route to those policies or adapters.
+Shell and browser development policies are external to the plugin. Repository contributor guidance may own them; packaged entries must not bundle or route to those specific policies or shell-tool adapters. Generic reminders to follow applicable project policies remain appropriate before dependent work.
 
 ## SDD coverage and canonical owners
 

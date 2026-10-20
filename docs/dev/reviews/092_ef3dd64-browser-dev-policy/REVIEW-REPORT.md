@@ -31,3 +31,5 @@ The scope is nevertheless cohesive: permitted browsers, environment isolation, s
 ## Review boundary
 
 Implement the explicitly selected promotion, independence and project-policy routing. Preserve the accepted browser restrictions and report F-002–F-005 as recommendations with the partial F-004 disposition above. A critical-review request does not itself authorize changing all policy content. Keep campaign 092 open for subsequent direction.
+
+A-002 resolves F-001 and the selected F-004 title/trigger portion. The promoted policy has 1,225 words/9,360 bytes after standalone substitutions; no substantive shortening or example rewrite is claimed. F-002, F-003 and the remaining F-004/F-005 recommendations stay open for selection.

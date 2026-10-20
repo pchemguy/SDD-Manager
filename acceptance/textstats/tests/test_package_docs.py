@@ -31,6 +31,8 @@ class PackageDocumentation(Sandbox):
         self.assertNotIn('docs/dev/HANDOFF.md', files)
         self.assertNotIn('AGENTS.md', files)
         self.assertNotIn('WINDOWS_SHELL_POLICY.md', files)
+        self.assertNotIn('BROWSER_DEV_POLICY.md', files)
+        self.assertNotIn('skills/sdd-implement/references/browser-capabilities.md', files)
         self.assertNotIn('skills/sdd-manage/references/windows-shell.md', files)
         self.assertNotIn('skills/sdd-manage/scripts/PowerShell.cmd', files)
         self.assertNotIn('tests/git-auth-recover.test.mjs', files)

@@ -15,7 +15,7 @@ Working branch revision/092_ef3dd64-browser-dev-policy; creation parent/return r
 
 A-001 finds five policy issues and assesses the baseline's 1,226 words/9,411 bytes: one cohesive file is appropriate, but repetition and generic detail warrant compression. Necessary externalization is selected; other recommendations are not automatically authorized by critical review.
 
-Publish the opening/plan/review before source edits. Then perform A-002 and A-003, publish exact source/package/evidence checkpoints and stop open/unmerged. No browser execution or current candidate-specific package result is claimed yet.
+Opening b602fa601d1d59c7be051762b218f87e63869d7f is published/read back. A-002 externalizes the policy with only selected standalone substitutions, adds root AGENTS guidance and removes SDD policy references/defaults while retaining generic project-policy handling. The critical review's broader recommendations remain open. All 139 support/37 publisher tests pass after restoring the publisher's declared dependency in an isolated temporary environment; scoped source/document checks pass. Publish this source, verify its exact committed package and publish final evidence, then stop open/unmerged. No browser execution or release refresh is selected.
 
 ## Retained prerelease boundary
 
