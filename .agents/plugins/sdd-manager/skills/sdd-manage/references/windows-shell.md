@@ -14,7 +14,7 @@ These are general policies. If the target project specifically targets PowerShel
 - **Do not embed script text in a command line supplied to an agent shell tool, including one-liners or quoted source.** This includes interpreter evaluation arguments and shell command strings. Use either form:
     - Write the source to a temporary script file and invoke that file with its interpreter.
     - Treat the entire call as complex: put it, including any embedded script text, in a temporary `.cmd` file and invoke only that file through the shell tool.
-- Avoid unnecessary `cmd` or `bash` wrappers unless explicitly instructed. **Always use `cmd /c` for a CMD wrapper.**
+- Avoid unnecessary `cmd` wrappers unless explicitly instructed. **Always use `cmd /c` for a CMD wrapper.**
 - Git Bash may also be available. **Always invoke Bash commands with `bash -c`**, because the shim executes commands through CMD.
 
 ## Probe and recover
