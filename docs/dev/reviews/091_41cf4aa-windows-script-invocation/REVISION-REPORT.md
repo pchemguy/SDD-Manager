@@ -68,3 +68,11 @@ Source-only native contracts extract the existing exact batch block from the roo
 On Linux/Python 3.12.14, all 139 support and 37 publisher tests pass after these changes. Seven native Windows contracts load the extracted policy block and skip on Linux; this is not a fresh native Windows result. Policy bytes match c3ffa7b exactly, the extracted shim matches its prior asset, and a source scan finds no plugin policy/adapter routes or references. Scoped Markdown checks pass 562 local targets and 66 maintained fragments across 18 files, including 185 package-contained links. Whitespace checks pass; closed campaign packages are preserved.
 
 Publish the selected source, verify its exact 154-file package without the external policy/shim, then publish final evidence and stop with campaign 091 open/unmerged. Parent 081, version 0.15.1 and the retained release-input boundary remain unchanged.
+
+## A-005 verified checkpoint
+
+Source 69cc45b18909bec370fcefce7def649640144d49 is published and exactly read back on the campaign branch; the publisher exits successfully with cleanup confirmed. Its version 0.15.1 package contains exactly 154 expected files, validates against the pinned manifest schema, rebuilds byte-identically and passes five extracted CLI help smokes. The 461017-byte archive's SHA-256 is f82314926beda89712eb642858e7b38f80271916f8fda1e50b722324b5a16e87, associated only with that source.
+
+The package contains neither the external root policy nor the removed policy/shim assets, and no packaged documentation references or routes to them. The root policy remains byte-identical to the last accepted c3ffa7b wording. No PowerShell.cmd file is retained; native tests create ephemeral copies from its code block. The 176 local support/publisher passes and seven qualified Linux skips above remain the actual runtime evidence. Source documentation/whitespace and preservation checks pass. No fresh native Windows/client behavior, plugin installation or release-input refresh is claimed.
+
+A-005 is complete for the selected externalization. Publish/read back this evidence checkpoint, then stop with campaign 091 open/unmerged and parent 081 suspended. No integration or further parent work is selected.
