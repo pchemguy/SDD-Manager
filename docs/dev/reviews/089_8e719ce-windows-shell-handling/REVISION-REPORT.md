@@ -14,3 +14,7 @@
 The subject is Windows shell handling. No proposal, revision plan, assessment result, source repair or test change is defined or executed by this opening. Earlier conversation does not select a solution for this campaign. Parent 081 remains open/suspended. Do not resume prerelease work, alter release inputs/version, merge, close the campaign or install a plugin through this opening.
 
 The parent worktree was clean and its published ref exactly matched the full starting baseline before branch creation. Opening records, navigation and HANDOFF are the only authorized file changes. Publish/read back the opening commit, then stop on the new campaign branch. Subsequent work awaits human direction; retain the ordinary per-commit publication and closed-record boundaries.
+
+## Subsequent selected revision
+
+The human has now supplied the Windows shell requirements and exact replacement shim. The opening-only boundary above records the original checkpoint; the subsequent grant selects the [revision plan](REVISION-PLAN.md). State: revision authorized, native regression and implementation pending. The earlier “No proposals yet” direction does not block execution of these now-supplied requirements. Campaign 089 remains open; no parent integration or closure is selected.

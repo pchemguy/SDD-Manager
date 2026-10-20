@@ -5,8 +5,8 @@ Windows shell handling revision campaign 089_8e719ce is open. Parent prerelease 
 ## Selected scope and stop
 
 - Owner: sdd-manage; Standard reporting. [Opening record](reviews/089_8e719ce-windows-shell-handling/REVISION-REPORT.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [parent plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [index](reviews/README.md).
-- Human authority: open the Windows shell handling campaign; “No proposals yet.” Opening and publication only. Do not prepare proposals, a revision plan, assessments or source/test changes. Earlier discussion does not select a fix for this campaign.
-- Publish/read back the opening, then stop on the child branch awaiting human direction. No campaign closure/integration or prerelease resumption is selected.
+- Human authority: the subsequent numbered requirements now select a concise Windows shell policy, unconditional CMD-only rules, one command per shell call, required shim for an unavoidable PowerShell harness, and the exact supplied replacement adapter. [Revision plan](reviews/089_8e719ce-windows-shell-handling/REVISION-PLAN.md) owns actions and verification. The opening-only/no-proposals checkpoint remains historical in the opening record.
+- Execute and publish the selected revision, then stop on the child branch with campaign 089 open. No campaign closure/integration or prerelease resumption is selected.
 
 ## Git context
 
