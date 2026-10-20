@@ -48,3 +48,11 @@ windows-shell.md has a separate mandatory rule: the entire call goes in a tempor
 | Existing script-file invocation with shell operations added | A script-file argument does not exempt the surrounding call; move the complete call into a temporary CMD file. |
 
 All nine contrasts are instruction/source assessments, not new runtime or live-agent observations. Scoped Markdown checks still pass 435 local targets and 35 maintained fragments across ten files, including 93 package-contained links; standalone/exact-shim and whitespace checks pass. The prior 139 support/37 publisher results remain applicable to unchanged runtime/test/publisher source; they were not rerun for this additional wording-only delta. Exact amended-source packaging and final evidence publication remain pending. Campaign 091 stays open/unmerged and parent 081 stays suspended.
+
+## Verified source and stopping boundary
+
+Amended source 0b66c9979e2518f6c56a27b198f3f9c9dc02e3b1 is published and exactly read back from the campaign branch; the publisher exited successfully with cleanup confirmed. Its version 0.15.1 package validates against the pinned manifest schema, contains exactly 156 expected files and rebuilds byte-identically. The 464978-byte archive has SHA-256 10eb61dfa82cd74e2cfdc479bca4d5539e243fd3153f2a07c0c5d883f122e053. This hash belongs only to that exact committed source.
+
+The archive contains the revised Windows policy and unchanged supplied shim, excludes source tests/development documents and passes five extracted CLI help smokes. Scoped documentation and whitespace rechecks pass. No runtime scripts, test source, CI, acceptance code, manifest or closed campaign package changed. No new native Windows or live-agent observation is claimed; the earlier native shim evidence remains tied to its original tested source. This local packaging check does not refresh the parent's release inputs or install a plugin.
+
+A-001–A-004 are verified for the selected instruction revision. Publish/read back this evidence checkpoint under the per-commit rule, then stop on revision/091_41cf4aa-windows-script-invocation. Campaign 091 remains open/unmerged; parent 081 remains suspended with its prior release boundary unchanged. Closure, integration and parent continuation are not selected.

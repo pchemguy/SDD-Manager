@@ -24,3 +24,5 @@ A-001–A-002 are complete. Six A-003 source contrasts, 139 support/37 publisher
 Source checkpoint 2dac09a3953b10afc060a17118461b7a88d86bc5 is published/read back. The additional human instruction selects A-004 in this same open campaign before final package verification; it does not select closure/integration or change the retained parent boundary.
 
 A-004 wording and caller alignment are implemented. Three additional contrasts and scoped documentation/standalone/exact-shim checks pass. Publish this amended source, verify its exact committed package and publish final evidence before stopping open/unmerged.
+
+Final checkpoint: A-001–A-004 are verified. Amended source 0b66c9979e2518f6c56a27b198f3f9c9dc02e3b1 is published/read back; its exact 156-file package passes schema, deterministic rebuild, unchanged-shim and five extracted CLI help checks. The report records the source-specific digest and evidence limits. Publish/read back the final evidence update and stop with campaign 091 open/unmerged; no further execution or integration is selected.
