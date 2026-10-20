@@ -34,3 +34,17 @@ Command shape/source placement now precede wrapper selection in the command rule
 These are source assessments, not observed agent behavior or a new native Windows trial. Linux/Python 3.12.14 verification passes 139 support and 37 publisher tests without failures/skips. Scoped Markdown checks pass 435 local targets and 35 maintained fragments across ten current/active files, including 93 package-contained links. The general policy has no plugin terms/outgoing dependencies and its embedded shim matches the native-verified runtime exactly. Whitespace checks pass.
 
 Git comparison confirms runtime scripts, tests, CI, acceptance code and manifest are unchanged. Only active parent/child campaign records and navigation differ from the baseline; other closed records are preserved. Publish the source checkpoint, verify its exact committed package, publish final evidence and stop with campaign 091 open/unmerged.
+
+## A-004 — Shell operations require a temporary CMD file
+
+Source 2dac09a3953b10afc060a17118461b7a88d86bc5 is published and exactly read back, with publisher cleanup confirmed. Before final package verification, the human additionally required an explicit prohibition on direct pipes, redirection and other shell operations. The same open campaign now includes that accepted delta.
+
+windows-shell.md has a separate mandatory rule: the entire call goes in a temporary CMD file and only that file invocation reaches the agent shell tool. Grouping, conditionals, loops and variable assignment are explicitly included, with complex quoting kept inside the file. The command-count rule remains separate. Brief manage/README/contract/K-16 projections are aligned; the exact shim and other policies remain unchanged.
+
+| Additional contrast | Assessed behavior |
+| --- | --- |
+| Direct pipes or input/output redirection | Prohibited in the shell-tool command; the complete call belongs in a temporary CMD file. |
+| Grouping, conditional, loop or variable assignment | The same temporary CMD-file requirement applies to these shell operations. |
+| Existing script-file invocation with shell operations added | A script-file argument does not exempt the surrounding call; move the complete call into a temporary CMD file. |
+
+All nine contrasts are instruction/source assessments, not new runtime or live-agent observations. Scoped Markdown checks still pass 435 local targets and 35 maintained fragments across ten files, including 93 package-contained links; standalone/exact-shim and whitespace checks pass. The prior 139 support/37 publisher results remain applicable to unchanged runtime/test/publisher source; they were not rerun for this additional wording-only delta. Exact amended-source packaging and final evidence publication remain pending. Campaign 091 stays open/unmerged and parent 081 stays suspended.
