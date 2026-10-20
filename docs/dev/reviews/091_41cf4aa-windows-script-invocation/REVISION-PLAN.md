@@ -17,3 +17,5 @@ The human selected a new Windows shell revision: prohibit direct script text in 
 ## Boundaries
 
 The general policy stays self-contained and plugin-independent. This revision changes instructions, not the shim or a language interpreter. No live Windows reproduction, new runtime test, script installation, token/hosting mutation, release-input refresh, version change, merge or plugin installation is selected. Existing tests/package checks establish only their actual source/integration properties; live agent compliance remains unrun.
+
+A-001–A-002 are complete. Six A-003 source contrasts, 139 support/37 publisher tests and scoped documentation/standalone/exact-shim checks pass. Exact committed package verification and final evidence publication remain before stopping on the open campaign branch.

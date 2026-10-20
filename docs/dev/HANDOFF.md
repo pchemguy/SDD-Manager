@@ -12,7 +12,7 @@ Windows script invocation campaign 091_41cf4aa is active. Parent prerelease camp
 
 Working branch revision/091_41cf4aa-windows-script-invocation; creation parent/return revision/081_5b2442e-prerelease. Full baseline/branch-off 41cf4aac038bbc1541e7dac39cd841feb7331e27 is exactly read back from origin and the worktree was clean before setup. Repository-wide maximum was 090; 091 is newly allocated without collision.
 
-A-001 identifies the gap between command count and embedded script text. Publish opening/plan, implement the separate rule and short caller updates, then run scoped documentation/package checks and publish the result. Runtime/shim changes and live Windows/agent verification are not selected.
+A-001–A-002 are complete: a separate rule prohibits direct inline script source and defines both temporary-file alternatives, with aligned manage/README/contract/K-16 guidance. Six source contrasts, 139 support/37 publisher tests, scoped Markdown and standalone/exact-shim checks pass. Publish the source, verify its committed package and publish final evidence, then stop open/unmerged. Runtime/manifest/tests/CI are unchanged; live Windows/agent verification remains unrun.
 
 ## Retained prerelease boundary
 
