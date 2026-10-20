@@ -81,7 +81,6 @@ class PackageTests(Contract):
                      'assets/SDD-MANAGER.md','assets/AI_DISCLOSURE.md',
                      'assets/AGENTS_TEMPLATE.md','assets/DOCS_TASKS_TEMPLATE.md','assets/HANDOFF_TEMPLATE.md','assets/SKILL_DISCOVERY_PROTOCOL.md',
                      'assets/icon.svg','skills/sample/SKILL.md',
-                     'skills/sdd-manage/scripts/PowerShell.cmd',
                  'skills/sdd-manage/scripts/git-auth-recover.mjs',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
                      'skills/sdd-manage/scripts/protected-token.mjs',
@@ -94,8 +93,8 @@ class PackageTests(Contract):
                  'skills/sdd-forge/scripts/forge-project-draft.mjs',
                  'skills/sdd-forge/scripts/forge-project.md',
                  'skills/sdd-forge/scripts/forge-project-input.md',
-                     'plugin.json','docs/excluded.md','docs/ai-logs/EXPLORE_DRIVE_V1.md','AGENTS.md'):
-            p=(self.root if name.startswith('docs/') or name=='AGENTS.md' else self.package)/name; p.parent.mkdir(parents=True,exist_ok=True)
+                     'plugin.json','docs/excluded.md','docs/ai-logs/EXPLORE_DRIVE_V1.md','AGENTS.md','WINDOWS_SHELL_POLICY.md'):
+            p=(self.root if name.startswith('docs/') or name in ('AGENTS.md','WINDOWS_SHELL_POLICY.md') else self.package)/name; p.parent.mkdir(parents=True,exist_ok=True)
             p.write_bytes(manifest if name.endswith('plugin.json') else (name+'\n').encode())
         (self.root/'README.md').write_text('Repository introduction must not ship\n')
         (self.root/'AI_DISCLOSURE.md').write_text('Repository disclosure\n')
@@ -132,6 +131,9 @@ class PackageTests(Contract):
             self.assertEqual(z.read('sdd-manager/README.md'),b'README.md\n')
             self.assertEqual(z.read('sdd-manager/PLUGIN.md'),b'PLUGIN.md\n')
             self.assertNotIn('sdd-manager/AGENTS.md',z.namelist())
+            self.assertNotIn('sdd-manager/WINDOWS_SHELL_POLICY.md',z.namelist())
+            self.assertNotIn('sdd-manager/skills/sdd-manage/references/windows-shell.md',z.namelist())
+            self.assertNotIn('sdd-manager/skills/sdd-manage/scripts/PowerShell.cmd',z.namelist())
             self.assertNotIn('sdd-manager/AI_DISCLOSURE.md',z.namelist())
             self.assertNotIn('sdd-manager/SDD-MANAGER.md',z.namelist())
             self.assertIn('sdd-manager/assets/AI_DISCLOSURE.md',z.namelist())
@@ -161,8 +163,7 @@ class PackageTests(Contract):
                 self.git('add', '.'); self.git('commit', '-qm', 'restore preparation asset')
 
     def test_utility_resources_are_exact_and_required(self):
-        names = ('skills/sdd-manage/scripts/PowerShell.cmd',
-                 'skills/sdd-manage/scripts/git-auth-recover.mjs',
+        names = ('skills/sdd-manage/scripts/git-auth-recover.mjs',
                  'skills/sdd-manage/scripts/git-auth-recover.md',
                  'skills/sdd-manage/scripts/protected-token.mjs',
                  'skills/sdd-forge/scripts/forge-close.mjs',

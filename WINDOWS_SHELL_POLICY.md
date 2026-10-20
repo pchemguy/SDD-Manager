@@ -7,11 +7,14 @@ These are general policies. If the target project specifically targets PowerShel
 ## Command rules
 
 - **PowerShell and pwsh are unavailable.** Do not probe for, install or invoke them.
-- **CMD is the default shell.** Write all Windows command lines in CMD syntax; this does not require an explicit `cmd /c` wrapper.
+- **CMD is the default shell:** write Windows command lines in CMD syntax and use a `cmd` wrapper only when necessary or explicitly instructed.
 - Do not generate PowerShell/pwsh invocations, cmdlets or PowerShell-specific syntax.
-- Avoid unnecessary `cmd` or `bash` wrappers unless explicitly instructed. **Always use `cmd /c` for a CMD wrapper.**
+- **Run one command per shell call.** Do not chain commands with `&&`, `||`, `&` or multiple command lines. Use separate calls; for a necessary sequence, invoke a temporary `.cmd` script with explicit failure handling.
+- **Do not pass pipes, redirection or other shell operations directly in a command line supplied to an agent shell tool.** Put the complete call in a temporary `.cmd` file and invoke only that file. This includes grouping, conditionals, loops and variable assignment; keep complex quoting inside that file too.
+- **Do not embed script text in a command line supplied to an agent shell tool, including one-liners or quoted source.** This includes interpreter evaluation arguments and shell command strings. Use either form:
+    - Write the source to a temporary script file and invoke that file with its interpreter.
+    - Treat the entire call as complex: put it, including any embedded script text, in a temporary `.cmd` file and invoke only that file through the shell tool.
 - Git Bash may also be available. **Always invoke Bash commands with `bash -c`**, because the shim executes commands through CMD.
-- **Run one command per shell call.** Do not chain commands with `&&`, `||`, `&` or multiple command lines. Use separate calls; for a necessary sequence, invoke a temporary `.cmd` script with explicit failure handling. Keep complex quoting, pipes and redirection inside that script.
 
 ## Probe and recover
 
