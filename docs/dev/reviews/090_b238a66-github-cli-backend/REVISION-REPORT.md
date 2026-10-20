@@ -44,3 +44,9 @@ Source 3dd79c6b86ac055f2d991870bdc43a88fc4fc678 is published and exactly read ba
 The parent is freshly read back at b238a66a3e7542af6bd7b3d3a966effd056406d5. The prospective explicit merge has no conflicts; HANDOFF restores the parent's suspended scope and package/runtime/test/CI bytes match the verified child. Merged-state checks precede commit/publication; closure remains pending. Prior closed campaign records are unchanged.
 
 Merged-state verification passes 139 support and 37 publisher tests on Linux/Python 3.12.14, with no failures or skips. Scoped checks pass 376 local targets, 15 maintained fragments and 95 package-contained links; whitespace checks pass. These checks validate source/package integration, not live gh authentication or agent compliance. Actions A-001–A-003 are complete except final target publication/closure recording.
+
+## Closure
+
+Campaign 090_b238a66 is completed and closed. Explicit merge 0d125eddf18986b7fc9edb626513114a7576b438 has verified parents b238a66a3e7542af6bd7b3d3a966effd056406d5 and 3dd79c6b86ac055f2d991870bdc43a88fc4fc678. The canonical publisher pushed it to origin's revision/081_5b2442e-prerelease and independently read back the exact object, with confirmed cleanup and exit status 0. The worktree is on the parent branch and was clean after publication; both branches are retained.
+
+All selected actions, checks and integration obligations are complete; the documented live-CLI limit is not an unfulfilled installation or provider-mutation request. Publish/read back this closure record and stop. Parent 081 remains open/suspended, version 0.15.1 and historical release inputs are unchanged, and no main merge, release or plugin installation occurred. This campaign package becomes frozen history after closure recording.

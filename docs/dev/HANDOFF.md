@@ -1,16 +1,16 @@
 # SDD Manager handoff
 
-Parent prerelease campaign 081_5b2442e remains open/suspended. GitHub CLI backend campaign 090 has completed its selected source revision; its explicit integration and closure are the current return boundary.
+Parent prerelease campaign 081_5b2442e remains open/suspended. GitHub CLI backend campaign 090 is closed through published/read-back parent merge 0d125eddf18986b7fc9edb626513114a7576b438.
 
 ## Parent scope and stop
 
 - Owner: sdd-manage with sdd-forge; reporting Standard. [Parent plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [child plan](reviews/090_b238a66-github-cli-backend/REVISION-PLAN.md), [child evidence](reviews/090_b238a66-github-cli-backend/REVISION-REPORT.md), [index](reviews/README.md).
 - Explicitly allow an available gh for supported GitHub operations, using suitable existing authentication or a protected provided/saved token. Keep repository/account identity, scope, provider reconciliation and Git publication requirements. Canonical gh detail belongs in the existing GitHub backend, with short caller links.
-- The human authorized execution and closure. Verify/publish this explicit parent merge, record closure and stop on the parent branch. Do not resume prerelease work or advance release inputs/version/main/release/installation.
+- The human authorized execution and closure. Integration and clean return are verified; publish/read back the closure record, then stop on the parent branch. Do not resume prerelease work or advance release inputs/version/main/release/installation.
 
 ## Integration and evidence
 
-Current target/return revision/081_5b2442e-prerelease on origin. Refreshed parent b238a66a3e7542af6bd7b3d3a966effd056406d5; incoming published child 3dd79c6b86ac055f2d991870bdc43a88fc4fc678 from revision/090_b238a66-github-cli-backend. The prospective explicit merge has no conflicts and package bytes match the verified child. Target publication and closure remain pending; retain both branches.
+Current branch/return revision/081_5b2442e-prerelease on origin. Published/read-back merge 0d125eddf18986b7fc9edb626513114a7576b438 has verified parents b238a66a3e7542af6bd7b3d3a966effd056406d5 and 3dd79c6b86ac055f2d991870bdc43a88fc4fc678. Exact target readback and publisher cleanup are confirmed. Both branches are retained; campaign 090 records are closed/frozen.
 
 A-001–A-003 checks pass: six source contrasts, exact reproducible 156-file child archive/pinned schema/inventory and five extracted CLI help checks, plus merged-state 139 support/37 publisher tests on Linux/Python 3.12.14 and scoped documentation checks. Runtime/manifest/tests/CI are unchanged. gh is unavailable locally, so live CLI authentication/hosted execution remains unrun; no installation or new script is selected. The child report retains detailed source/hash and evidence limits.
 
