@@ -114,7 +114,7 @@ class WindowsShellAdapter(unittest.TestCase):
         for ending in self.install_variants():
             for name in ['forge-project.mjs', 'forge-project-draft.mjs']:
                 with self.subTest(ending=ending, script=name):
-                    result = self.invoke(f'"{self.node}" "{forge / name}" --help')
+                    result = self.invoke(f'node "{forge / name}" --help')
                     self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
                     self.assertIn('--repo', result.stdout)
 

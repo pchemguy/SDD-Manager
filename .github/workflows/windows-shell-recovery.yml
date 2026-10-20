@@ -1,15 +1,15 @@
-name: Windows shell recovery contracts
+name: Windows shell contracts
 on:
   push:
     paths:
       - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/PowerShell.cmd'
-      - '.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell-recovery.md'
+      - '.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell.md'
       - 'tests/test_windows_shell_recovery.py'
       - '.github/workflows/windows-shell-recovery.yml'
   pull_request:
     paths:
       - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/PowerShell.cmd'
-      - '.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell-recovery.md'
+      - '.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell.md'
       - 'tests/test_windows_shell_recovery.py'
       - '.github/workflows/windows-shell-recovery.yml'
   workflow_dispatch:
