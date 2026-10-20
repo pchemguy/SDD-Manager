@@ -55,13 +55,13 @@ Its Windows CMD/Linux Node 22/24 matrix covers synthetic hosted projection plus 
 
 ## Windows shell contracts
 
-For the coordinator's [Windows shell policy](../.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell.md) and bundled PowerShell.cmd adapter, run:
+For the standalone repository [Windows shell policy](../WINDOWS_SHELL_POLICY.md) and its embedded PowerShell.cmd adapter, run:
 
 ```text
 python -m unittest discover -s tests -p test_windows_shell_recovery.py -v
 ```
 
-These seven runtime contracts require native Windows CMD, Node 22+ and Python 3.11+. They model Antigravity's reported backslash-escaped wrapper with LF/CRLF assets, isolated shim lookup, spaced paths, variable expansion, unchanged apostrophes, quoted Node executable/script/arguments, actual forge helper startup, literal exclamation marks, output/status and a temporary .cmd sequence. CI runs Node 22/24. Linux skips are not runtime passes. Inspect the selected source's actual Windows workflow result. These controlled harness cases do not establish live Antigravity/Codex activation, arbitrary launcher compatibility or observed agent compliance with command-generation rules; the tests deploy no shim to a user's host.
+These seven source-only runtime contracts read the exact batch block from the root policy; no adapter is bundled in the plugin. They require native Windows CMD, Node 22+ and Python 3.11+. They model Antigravity's reported backslash-escaped wrapper with LF/CRLF assets, isolated shim lookup, spaced paths, variable expansion, unchanged apostrophes, quoted Node executable/script/arguments, actual forge helper startup, literal exclamation marks, output/status and a temporary .cmd sequence. CI runs Node 22/24. Linux skips are not runtime passes. Inspect the selected source's actual Windows workflow result. These controlled harness cases do not establish live Antigravity/Codex activation, arbitrary launcher compatibility or observed agent compliance with command-generation rules; the tests deploy no shim to a user's host.
 
 ## TextStats acceptance coordination
 

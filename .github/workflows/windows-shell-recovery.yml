@@ -2,14 +2,12 @@ name: Windows shell contracts
 on:
   push:
     paths:
-      - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/PowerShell.cmd'
-      - '.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell.md'
+      - 'WINDOWS_SHELL_POLICY.md'
       - 'tests/test_windows_shell_recovery.py'
       - '.github/workflows/windows-shell-recovery.yml'
   pull_request:
     paths:
-      - '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/PowerShell.cmd'
-      - '.agents/plugins/sdd-manager/skills/sdd-manage/references/windows-shell.md'
+      - 'WINDOWS_SHELL_POLICY.md'
       - 'tests/test_windows_shell_recovery.py'
       - '.github/workflows/windows-shell-recovery.yml'
   workflow_dispatch:
@@ -34,6 +32,6 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           package-manager-cache: false
-      - name: Exercise the actual batch adapter with CMD
+      - name: Exercise the standalone policy's batch adapter with CMD
         shell: cmd
         run: python -m unittest discover -s tests -p test_windows_shell_recovery.py -v

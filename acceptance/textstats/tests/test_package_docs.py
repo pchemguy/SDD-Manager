@@ -13,7 +13,6 @@ class PackageDocumentation(Sandbox):
         pin, files = core.package(source, {'plugin_revision': 'HEAD', 'source_mode': 'dirty'})
         package = source / pin['package_subdirectory']
         for name in ('assets/HANDOFF_TEMPLATE.md', 'assets/DOCS_TRACKING_TEMPLATE.json',
-                     'skills/sdd-manage/scripts/PowerShell.cmd', 'skills/sdd-manage/references/windows-shell.md',
                      'skills/sdd-manage/references/continuity.md',
                      'skills/sdd-manage/scripts/git-auth-recover.mjs',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
@@ -31,6 +30,9 @@ class PackageDocumentation(Sandbox):
             self.assertEqual(pin['package_hashes'][name], hashlib.sha256(files[name]).hexdigest())
         self.assertNotIn('docs/dev/HANDOFF.md', files)
         self.assertNotIn('AGENTS.md', files)
+        self.assertNotIn('WINDOWS_SHELL_POLICY.md', files)
+        self.assertNotIn('skills/sdd-manage/references/windows-shell.md', files)
+        self.assertNotIn('skills/sdd-manage/scripts/PowerShell.cmd', files)
         self.assertNotIn('tests/git-auth-recover.test.mjs', files)
         self.assertNotIn('tests/forge-close.test.mjs', files)
         self.assertNotIn('tests/test_windows_shell_recovery.py', files)

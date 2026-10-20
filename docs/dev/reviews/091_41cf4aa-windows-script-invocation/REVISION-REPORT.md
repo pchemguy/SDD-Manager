@@ -56,3 +56,15 @@ Amended source 0b66c9979e2518f6c56a27b198f3f9c9dc02e3b1 is published and exactly
 The archive contains the revised Windows policy and unchanged supplied shim, excludes source tests/development documents and passes five extracted CLI help smokes. Scoped documentation and whitespace rechecks pass. No runtime scripts, test source, CI, acceptance code, manifest or closed campaign package changed. No new native Windows or live-agent observation is claimed; the earlier native shim evidence remains tied to its original tested source. This local packaging check does not refresh the parent's release inputs or install a plugin.
 
 A-001–A-004 are verified for the selected instruction revision. Publish/read back this evidence checkpoint under the per-commit rule, then stop on revision/091_41cf4aa-windows-script-invocation. Campaign 091 remains open/unmerged; parent 081 remains suspended with its prior release boundary unchanged. Closure, integration and parent continuation are not selected.
+
+## A-005 — External repository policy
+
+After the human's CMD-wrapper simplifications, published source c3ffa7bae0f9caf6132de35da383a914d270c8ef contains the latest accepted wording. The human now explicitly selects moving that policy out of the plugin, root AGENTS/README navigation and removal of all plugin policy references. The subsequent clarification forbids retaining a PowerShell.cmd file: agents create it from the policy code when needed.
+
+The policy is moved byte-for-byte to root [WINDOWS_SHELL_POLICY.md](../../../../WINDOWS_SHELL_POLICY.md). Root AGENTS has a concise dedicated Windows-only section and the abbreviated README has an external-policy note. The plugin no longer contains the policy or shim, advertises Windows-shell recovery, routes to the policy, or repeats its defaults. Generic host/tool observation and applicable-user/repository-instruction handling remain. The source contract and K-16 now assess those generic responsibilities rather than owning a Windows policy.
+
+Source-only native contracts extract the existing exact batch block from the root policy and create only temporary test adapters; CI watches that root file. The publisher no longer requires a bundled shim, and support/publisher package assertions exclude the external policy and removed assets. No separate PowerShell.cmd file is retained in the checkout.
+
+On Linux/Python 3.12.14, all 139 support and 37 publisher tests pass after these changes. Seven native Windows contracts load the extracted policy block and skip on Linux; this is not a fresh native Windows result. Policy bytes match c3ffa7b exactly, the extracted shim matches its prior asset, and a source scan finds no plugin policy/adapter routes or references. Scoped Markdown checks pass 562 local targets and 66 maintained fragments across 18 files, including 185 package-contained links. Whitespace checks pass; closed campaign packages are preserved.
+
+Publish the selected source, verify its exact 154-file package without the external policy/shim, then publish final evidence and stop with campaign 091 open/unmerged. Parent 081, version 0.15.1 and the retained release-input boundary remain unchanged.

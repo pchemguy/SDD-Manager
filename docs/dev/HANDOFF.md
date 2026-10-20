@@ -5,7 +5,7 @@ Windows script invocation campaign 091_41cf4aa is active. Parent prerelease camp
 ## Selected scope and stop
 
 - Owner: sdd-manage; reporting Standard. [Revision plan](reviews/091_41cf4aa-windows-script-invocation/REVISION-PLAN.md), [execution](reviews/091_41cf4aa-windows-script-invocation/REVISION-REPORT.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [index](reviews/README.md).
-- Prohibit direct script source in command lines supplied to agent shell tools, including one-liners. Explicitly permit a temporary language-script file or the complete call in a temporary CMD file. Pipes, redirection and other shell operations require the complete call in a temporary CMD file. Retain existing CMD/default/wrapper and project-precedence rules; preserve the exact shim.
+- Externalize the current Windows policy as root WINDOWS_SHELL_POLICY.md, with concise Windows-only AGENTS guidance and a root README note. Remove all plugin policy routes/defaults and the bundled PowerShell.cmd file; agents create the shim from the policy code when required. Preserve the latest accepted policy wording and embedded shim.
 - The human selected the focused revision. Publish each owned commit and stop with campaign 091 open/unmerged. No closure, parent resumption, release-input refresh, version/main/release change or installation is selected.
 
 ## Git identity and verified checkpoint
@@ -14,7 +14,7 @@ Working branch revision/091_41cf4aa-windows-script-invocation; creation parent/r
 
 A-001–A-004 are verified. Amended source 0b66c9979e2518f6c56a27b198f3f9c9dc02e3b1 is published/read back. Direct script text has both temporary-file alternatives; pipes, redirection and other shell operations require the complete call in a temporary CMD file. Nine source contrasts, scoped Markdown and standalone/exact-shim checks pass; the 139 support/37 publisher test results apply to unchanged runtime/test source. That exact source's 156-file package passes manifest schema, identical rebuild and five extracted CLI help checks; its digest is in the report. Runtime/manifest/tests/CI are unchanged; live Windows/agent verification remains unrun.
 
-Publish/read back this final evidence checkpoint and stop on the open/unmerged campaign branch. No further execution is selected. On later continuation, refresh actual branch/HEAD and publication before dependent work; do not infer closure or parent resumption from the verified source checkpoint.
+The later human instructions simplify CMD-wrapper wording through published c3ffa7bae0f9caf6132de35da383a914d270c8ef, then select A-005 externalization. That move/removal and affected source verification are implemented: root policy bytes and embedded shim are preserved, no separate PowerShell.cmd file is retained, all plugin policy references are removed, and 139 support/37 publisher tests plus scoped documentation checks pass. Seven native Windows contracts skip on Linux. Publish this source, verify its exact committed package and publish final evidence before stopping open/unmerged. No closure, parent continuation or release refresh is selected.
 
 ## Retained prerelease boundary
 

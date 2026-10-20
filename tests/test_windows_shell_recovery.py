@@ -1,6 +1,6 @@
 """Controlled native CMD contracts, distinct from live client activation.
 
-Windows CMD executes the supplied adapter through the reported Antigravity
+Windows CMD executes the root policy's embedded adapter through the reported Antigravity
 harness, including backslash-escaped embedded double quotes. Cases use LF/CRLF
 assets, isolated PATH and spaced paths. Node exercises real executable argv;
 no real PowerShell executable or global setting is used. These fixtures model
@@ -15,7 +15,9 @@ import tempfile
 import unittest
 
 
-ADAPTER = Path(__file__).resolve().parents[1] / '.agents/plugins/sdd-manager/skills/sdd-manage/scripts/PowerShell.cmd'
+ROOT = Path(__file__).resolve().parents[1]
+POLICY = ROOT / 'WINDOWS_SHELL_POLICY.md'
+ADAPTER = POLICY.read_text(encoding='utf-8').split('```bat\n', 1)[1].split('```', 1)[0].encode('ascii')
 
 
 @unittest.skipUnless(os.name == 'nt', 'Requires native Windows CMD; Linux is not runtime evidence')
@@ -35,8 +37,8 @@ class WindowsShellAdapter(unittest.TestCase):
         self.environment = dict(os.environ, PATH=str(self.bin) + os.pathsep + os.environ['PATH'])
 
     def install_variants(self):
-        """Exercise the distributed text under both native checkout endings."""
-        canonical = ADAPTER.read_bytes().replace(b'\r\n', b'\n')
+        """Exercise the standalone policy's batch block under both checkout endings."""
+        canonical = ADAPTER.replace(b'\r\n', b'\n')
         for ending in (b'\n', b'\r\n'):
             (self.bin / 'PowerShell.cmd').write_bytes(canonical.replace(b'\n', ending))
             yield ending
@@ -110,7 +112,7 @@ class WindowsShellAdapter(unittest.TestCase):
                 self.assertEqual([line.strip() for line in result.stdout.splitlines()], ['SDD_FIRST', 'SDD_SECOND'])
 
     def test_actual_forge_helpers_start_with_quoted_paths(self):
-        forge = ADAPTER.parents[2] / 'sdd-forge' / 'scripts'
+        forge = ROOT / '.agents/plugins/sdd-manager/skills/sdd-forge/scripts'
         for ending in self.install_variants():
             for name in ['forge-project.mjs', 'forge-project-draft.mjs']:
                 with self.subTest(ending=ending, script=name):
