@@ -82,3 +82,21 @@ The human accepted the result and instructed closure. Actions A-001–A-007 are 
 The exact committed final-source verification archive passes pinned manifest/schema, complete 156-file inventory, identical rebuild, new-guide/old-guide exclusion, exact shim and five extracted CLI help checks: 463611 bytes, SHA-256 3e6437b4e88b4cc6bb0c0c36f488cddba40ca30ae4a78e1912243119d7365680. This hash identifies source e5853e9 specifically, not later commit-stamped archives. Scoped Markdown checks pass 543 targets/65 maintained fragments; the 432-word policy remains standalone and embeds the unchanged shim. Git path comparison confirms all prior closed campaign records remain unchanged.
 
 The local and remote parent checkpoint both match 8e719ce965526dbbae266009ff8c1114b7d70a80. Finalization publication and explicit two-parent integration into revision/081_5b2442e-prerelease follow next, with merged-state support/publisher/documentation checks. This record does not yet claim completed integration or closure. Version remains 0.15.1; parent release inputs remain historical/stale and no installation or release operation is selected.
+
+## Integration verification
+
+Finalization tip 476947767c3a645a11320aac4cdaba4d80c3af84 is published/read back. The prospective explicit merge into refreshed parent 8e719ce965526dbbae266009ff8c1114b7d70a80 has no conflicts. HANDOFF deliberately restores the parent scope and suspended stop. Merged-state checks pass 139 support and 37 publisher tests on Linux/Python 3.12.14; package/runtime/test/CI bytes match final verified source e5853e9. Prior closed records are unchanged. Target merge publication and final closure recording remain pending at this checkpoint.
+
+## Closure
+
+Campaign 089_8e719ce is completed and closed. Explicit merge 735814e0740d7727c2aba0175335bf81d793d6d6 has verified parents 8e719ce965526dbbae266009ff8c1114b7d70a80 and 476947767c3a645a11320aac4cdaba4d80c3af84. The supervised publisher pushed that merge to origin's revision/081_5b2442e-prerelease and independently read back the exact object, with confirmed process cleanup and exit status 0. The worktree is on the parent branch and was clean after publication. Both campaign branches are retained.
+
+Final merged-state scoped checks pass 543 local link targets and 65 maintained fragments, standalone-policy/exact-shim checks and whitespace checks. All actions and selected integration obligations are complete; no unresolved blocker remains within this campaign. Live-client limits remain as documented. Publish/read back this closure record under the ordinary per-commit gate, then stop. Parent 081 stays open/suspended; version/release inputs, main, release/tag/dispatch and plugin installation are not advanced. This campaign package becomes frozen history after closure recording.
+
+## Reopening — Shell selection and required wrapper flags
+
+The human explicitly reopened this campaign for additional shell notes, authorized execution and requested closure again. The clarification selects no wrapper by default: CMD is the default shell; Git Bash may also be available; unnecessary cmd/bash wrapping is avoided unless instructed; necessary wrappers always use cmd /c or bash -c. Action A-008 owns this amendment, including alignment of existing CMD-only caller wording. No runtime/shim change is selected.
+
+Eligibility is established on the clean parent branch revision/081_5b2442e-prerelease: its latest first-parent merge is this campaign's published explicit merge 735814e0740d7727c2aba0175335bf81d793d6d6, with verified parents and containment of completed child 476947767c3a645a11320aac4cdaba4d80c3af84. The sole later parent commit d7fa983f731a38bf5fca41102ee418b6af336358 records closure and is exactly read back from origin. It is the distinct reopening checkpoint; original opening 17e5aa90c5b2edba9f2b8768ecf36cf62323e89b and branch-off 8e719ce965526dbbae266009ff8c1114b7d70a80 remain unchanged.
+
+The retained child branch synchronizes that published parent baseline through an explicit two-parent merge. HANDOFF preserves the reopened child identity, accepted amendment and suspended parent boundary. This checkpoint changes only active continuity/campaign records; source execution follows its publication. Original results and closure facts above remain historical; other closed records stay frozen.

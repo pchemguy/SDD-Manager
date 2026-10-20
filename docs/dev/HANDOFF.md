@@ -1,19 +1,19 @@
 # SDD Manager handoff
 
-Windows shell handling revision campaign 089_8e719ce has been accepted for closure; final integration is pending. Parent prerelease 081 remains open/suspended.
+Windows shell handling campaign 089_8e719ce is reopened for a focused shell-selection/wrapper amendment. Parent prerelease campaign 081 remains open/suspended.
 
-## Selected scope and stop
+## Accepted amendment and stop
 
-- Owner: sdd-manage; Standard reporting. [Opening record](reviews/089_8e719ce-windows-shell-handling/REVISION-REPORT.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [parent plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [index](reviews/README.md).
-- Human authority: the numbered requirements select concise general Windows shell rules, one command per shell call, probe-first recovery and the exact replacement adapter. The latest clarification gives precedence to a project specifically targeting PowerShell or defining explicit project-specific shell policies. [Revision plan](reviews/089_8e719ce-windows-shell-handling/REVISION-PLAN.md) owns actions and verification. The opening-only/no-proposals checkpoint remains historical in the opening record.
-- Accepted final source: e5853e9b99cf15cafdfc596ac97d273b9db72d1c. Actions A-001–A-007 deliver explicit probe outcomes, one recovery procedure, general CMD policies with project precedence, exact shim, CWD/PATH placement and repository .gitignore handling. Section order and full-file wording are revised; plugin roles/gates/references stay outside the self-contained policy.
-- Both native Windows CMD Node 22/24 jobs passed seven tests at this final source. Its exact reproducible 156-file package, pinned schema, five extracted CLI help checks and scoped documentation checks pass; the campaign report retains hashes and evidence limits. Earlier support/publisher results retain source 76ecc64; merged-state checks follow. Live Antigravity/Codex execution and observed agent error classification remain unrun.
-- Human authority now selects closure. Publish/read back finalization, merge explicitly into parent revision/081_5b2442e-prerelease, verify/publish the target, record closure and return on that branch. Keep 081 open/suspended; no prerelease continuation follows.
+- Owner: sdd-manage; reporting Standard. [Child plan](reviews/089_8e719ce-windows-shell-handling/REVISION-PLAN.md), [child evidence](reviews/089_8e719ce-windows-shell-handling/REVISION-REPORT.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [index](reviews/README.md).
+- A-008: CMD is the default and needs no explicit cmd /c wrapper; Git Bash may also be available. Avoid unnecessary cmd/bash wrappers unless instructed. Required wrappers always use cmd /c or bash -c. Align existing CMD-only summaries while preserving the established PowerShell defaults, project precedence, exact shim and probe/recovery procedure.
+- The human authorized reopening, execution and closure again, and explicitly clarified no wrapper by default. Publish each owned commit; integrate the verified amendment back into the recorded parent, close and return there. Do not resume parent prerelease preparation or advance release inputs/version/main/release/installation.
 
-## Git context
+## Git identity and evidence
 
-Working branch revision/089_8e719ce-windows-shell-handling. Creation parent and eventual return/integration target revision/081_5b2442e-prerelease. Full starting baseline/branch-off 8e719ce965526dbbae266009ff8c1114b7d70a80; exact parent remote readback verified before setup, with a clean worktree. The opening updates only its campaign record, active parent suspension evidence, navigation and this handoff. Preserve per-commit publication and all closed records.
+Working branch revision/089_8e719ce-windows-shell-handling; creation parent/return revision/081_5b2442e-prerelease. Original opening 17e5aa90c5b2edba9f2b8768ecf36cf62323e89b and branch-off 8e719ce965526dbbae266009ff8c1114b7d70a80 are retained. Qualifying prior merge 735814e0740d7727c2aba0175335bf81d793d6d6 is the latest first-parent merge on the active parent. Reopening checkpoint d7fa983f731a38bf5fca41102ee418b6af336358 is exactly read back from origin; its only post-merge change records closure. Synchronize that published baseline into the retained child tip 476947767c3a645a11320aac4cdaba4d80c3af84, preserving this amendment identity and stop.
 
-## Parent continuity
+The incoming synchronization changes continuity/campaign records only. Existing runtime evidence retains its source: e5853e9 native/package checks and prior merged-state support/publisher checks are not fresh amendment results. After synchronization publication, implement and check the scoped policy/caller amendment. No runtime changes or live client trial are selected.
 
-Campaign 088 completed through published explicit parent merge 8e719ce965526dbbae266009ff8c1114b7d70a80. Parent 081 stays suspended; version remains 0.15.1. Prepared source ddb86fc926ddc2cfbd15946946c75a9c3672645d and release-source/body/package associations remain historical/stale after nested amendments. Refresh only on separately selected parent continuation. Do not merge main, release/tag/dispatch or install the plugin.
+## Retained prerelease boundary
+
+Version remains 0.15.1. The parent's prepared source ddb86fc926ddc2cfbd15946946c75a9c3672645d and notes/handoff/package association remain historical after nested amendments. Refresh only on separately selected parent continuation. Earlier closed campaigns remain frozen; routine work uses current source and this active parent. Preserve per-commit publication, credential protection and unrelated work. Keep credential/transient diagnostic paths out of continuity records.
