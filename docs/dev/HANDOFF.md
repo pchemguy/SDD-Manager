@@ -1,6 +1,6 @@
 # SDD Manager handoff
 
-Focused nested revision 088_7d37ca7 is active; parent prerelease 081 stays open/suspended.
+Focused nested revision 088_7d37ca7 is verified and awaiting final integration; parent prerelease 081 stays open/suspended.
 
 ## Scope and authority
 
@@ -10,7 +10,7 @@ Focused nested revision 088_7d37ca7 is active; parent prerelease 081 stays open/
 
 ## Git and next action
 
-Working branch revision/088_7d37ca7-docs-projection-convenience; creation parent and return/integration target revision/081_5b2442e-prerelease. Full branch-off 7d37ca7606eeab1c17abe2eeb2157d99f2f6391c, verified published. Next: A-001 regression and implementation, then docs and verification under the plan. Publish/read back every owned commit before advancing. Earlier closed records are frozen.
+Working branch revision/088_7d37ca7-docs-projection-convenience; creation parent and return/integration target revision/081_5b2442e-prerelease. Full branch-off 7d37ca7606eeab1c17abe2eeb2157d99f2f6391c, verified published. All actions implemented and verified: 84 local projection/completion contracts, 139 support/37 publisher checks, both four-job native Windows CMD/Linux Node 22/24 matrices and exact package/extracted CLI checks passed. Next: publish finalized child, explicitly merge into the refreshed parent, run merged-state checks, publish/read back and confirm clean parent return. Publish/read back every owned commit before advancing. Earlier closed records are frozen.
 
 ## Parent continuity
 
