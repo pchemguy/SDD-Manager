@@ -46,3 +46,9 @@ The root policy now contains 762 words/5,766 bytes versus 1,225 words/9,360 byte
 | Required native/rendering evidence absent | Keep that acceptance claim blocked; preserve useful modeled/optional evidence separately. |
 
 These eight contrasts are source assessments, not live-agent observations. F-002–F-005 are resolved in the critical review. The plugin, tests, publisher, CI and Windows policy are unchanged from the published A-001–A-003 checkpoint; its 176 test passes and exact 153-file package evidence retain their original source and are not claimed as fresh runs. Scoped documentation, policy consistency, preservation and whitespace checks verify this text-only delta. Publish/read back the revision and stop with campaign 092 open/unmerged and parent 081 suspended.
+
+## A-005 — Closure selected
+
+The human now requests closure. Published/read-back A-004 source b1e39e1a6604c8f1e6b2befa890c18b314ee27a0 completes all five focused review findings and the selected browser defaults. Inspection of the complete incoming difference confirms the accepted scope and unchanged earlier closed records. Fresh supervised remote readback confirms receiving parent revision/081_5b2442e-prerelease at ef3dd64d322a5035bb65630a6a65994905136dec with confirmed cleanup; local target agrees and the worktree is clean.
+
+Publish this finalization checkpoint, then integrate the complete pinned child through an explicit two-parent merge. Check the merged support/publisher suites and scoped documentation/preservation; verify an exact committed child package separately. Record actual results and both parent tips in the containing integration evidence. Verified target publication and clean return establish closure. Keep the branch and campaign records; parent 081 remains open/suspended, with historical release inputs and no installation or release action.
