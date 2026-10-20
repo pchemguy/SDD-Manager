@@ -10,7 +10,7 @@ On **Windows execution hosts only**, follow [WINDOWS_SHELL_POLICY.md](WINDOWS_SH
 
 ## Browser development
 
-For browser-dependent work, follow [BROWSER_DEV_POLICY.md](BROWSER_DEV_POLICY.md): environment-contained Chromium by default, Firefox when required, isolated state and task-appropriate evidence. Personal/system browser installations are prohibited. This repository policy is independent of the plugin.
+For browser-dependent work, follow [BROWSER_DEV_POLICY.md](BROWSER_DEV_POLICY.md). Prioritize Chromium and include Firefox by default; project documents may specify other choices. Use dedicated, isolated environments. This policy is external to the plugin.
 
 ## Contributor instructions
 

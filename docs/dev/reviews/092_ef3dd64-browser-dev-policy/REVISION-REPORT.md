@@ -27,3 +27,22 @@ Source 5775a4e9045669380a2cf7fd721f71a5b68099e3 is published and exactly read ba
 The archive excludes both external root policies and the former browser-policy module, contains no fixed browser-policy references and passes five extracted CLI help smokes. Scoped checks pass 424 local targets and 43 maintained fragments across 15 changed Markdown files, including 77 package-contained links. Runtime, manifest, CI, Windows policy and closed records are unchanged. No browser/framework installation, native/client trial, release-input refresh or plugin installation is claimed.
 
 A-001–A-003 are verified for the selected promotion/review. F-001 is resolved and F-004's title/trigger portion is addressed; F-002/F-003 and the remaining composition/size recommendations are retained rather than applied without selection. Publish/read back this evidence checkpoint and stop on revision/092_ef3dd64-browser-dev-policy with campaign 092 open/unmerged and parent 081 suspended.
+
+## A-004 — Selected policy and text revision
+
+After published checkpoint 4ecc58cbca260e4f751eac19557157cb27b53c2b, the human authorizes continued text revision, specifically repetition, environment eligibility, Windows example execution and mandatory/optional separation. The human also changes browser selection: Chromium has priority when unspecified, Firefox is included and project documents may define different browser priorities/requirements during design. The existing plan records that accepted delta before editing.
+
+The root policy now contains 762 words/5,766 bytes versus 1,225 words/9,360 bytes after promotion, about 38% fewer words. Binding selection/isolation rules precede a concise setup sequence, conditional Playwright guidance and task-selected verification/recovery. Redundant advice and command blocks are removed; setup sequences must use temporary shell files with failure handling and cannot continue past failed prerequisites. Eligibility requires an assigned binary location, known compatible origin/version and isolated state; opaque facilities are unavailable until established. Root AGENTS reflects the new defaults. No plugin or other policy is edited.
+
+| Source contrast | Assessed instruction |
+| --- | --- |
+| Browser needed; none specified | Prioritize Chromium and include Firefox in the default environment; individual checks follow actual acceptance/matrix. |
+| Project explicitly selects Firefox | Follow the documented selection rather than forcing Chromium priority. |
+| Project specifies another browser | Its documented priority/requirement governs browser choice; dedicated isolation remains required. |
+| Another browser is merely available | It remains prohibited by default; availability is not a project requirement. |
+| Document planning or unrelated CLI task | No browser installation is required. |
+| Tool/remote environment eligibility unknown | Establish binary identity, assignment and state isolation, or use another facility/report the affected browser work blocked. |
+| Windows or other multi-command setup | Use a temporary shell file under the host policy, with explicit failure handling and no dependent tests after a failed prerequisite. |
+| Required native/rendering evidence absent | Keep that acceptance claim blocked; preserve useful modeled/optional evidence separately. |
+
+These eight contrasts are source assessments, not live-agent observations. F-002–F-005 are resolved in the critical review. The plugin, tests, publisher, CI and Windows policy are unchanged from the published A-001–A-003 checkpoint; its 176 test passes and exact 153-file package evidence retain their original source and are not claimed as fresh runs. Scoped documentation, policy consistency, preservation and whitespace checks verify this text-only delta. Publish/read back the revision and stop with campaign 092 open/unmerged and parent 081 suspended.
