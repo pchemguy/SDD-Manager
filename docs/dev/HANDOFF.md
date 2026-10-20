@@ -1,20 +1,21 @@
 # SDD Manager handoff
 
-Prerelease campaign 081 is open/suspended. Child Windows shell campaign 091 is closed after verified published integration; its records and earlier closed campaigns are frozen.
+Browser policy campaign 092_ef3dd64 is active. Parent prerelease campaign 081 stays open/suspended; campaign 091 and earlier closed records are frozen.
 
 ## Selected scope and stop
 
-- Owner: sdd-manage; reporting Standard. [Parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [child plan](reviews/091_41cf4aa-windows-script-invocation/REVISION-PLAN.md), [child execution](reviews/091_41cf4aa-windows-script-invocation/REVISION-REPORT.md), [index](reviews/README.md).
-- Stop on this prerelease branch with campaign 081 suspended. The authorized child integration, merged-state checks and exact publication are complete; retain the child branch and records.
-- No parent resumption, release-input refresh, version/main/release change or installation is selected.
+- Owner: sdd-manage; reporting Standard. [Parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [plan](reviews/092_ef3dd64-browser-dev-policy/REVISION-PLAN.md), [critical review](reviews/092_ef3dd64-browser-dev-policy/REVIEW-REPORT.md), [execution](reviews/092_ef3dd64-browser-dev-policy/REVISION-REPORT.md), [index](reviews/README.md).
+- Promote browser-capabilities.md to root BROWSER_DEV_POLICY.md, add concise AGENTS guidance, remove SDD policy references and retain targeted generic project-policy reminders in sdd-implement.
+- Critically review policy content and size. Implement selected externalization only; retain other substantive recommendations for subsequent direction. Publish each owned commit and stop with campaign 092 open/unmerged.
+- No closure, parent resumption, release-input refresh, version/main/release change or installation is selected.
 
 ## Git identity and verified checkpoint
 
-Working/return branch revision/081_5b2442e-prerelease. Explicit merge 747c368e45e93795dbbdcfe8882cf6eb519cca0e is published and exactly read back with confirmed cleanup; its parents are refreshed target 41cf4aac038bbc1541e7dac39cd841feb7331e27 and published child c2bcbc415affcec5f902a9fb98c91ff6bd4d4372. There were no conflicts, and clean parent return is verified. Child opening 12ff5a0dfd7a38d6e59997c224afa4ac003e3b9e and original branch-off are preserved.
+Working branch revision/092_ef3dd64-browser-dev-policy; creation parent/return revision/081_5b2442e-prerelease. Full baseline ef3dd64d322a5035bb65630a6a65994905136dec is published/read back, the starting worktree was clean and maximum campaign 091 was verified before collision-free allocation.
 
-A-001–A-005 are verified. The latest accepted policy is now root WINDOWS_SHELL_POLICY.md, with concise Windows-only root AGENTS/README navigation. The plugin's policy defaults/routes and bundled shim are removed; no separate PowerShell.cmd file is retained. Agents create it from the policy code when required. The root policy and embedded shim preserve the last accepted wording/bytes.
+A-001 finds five policy issues and assesses the baseline's 1,226 words/9,411 bytes: one cohesive file is appropriate, but repetition and generic detail warrant compression. Necessary externalization is selected; other recommendations are not automatically authorized by critical review.
 
-Authored source 69cc45b18909bec370fcefce7def649640144d49 is published/read back; its exact 154-file package and five extracted CLI help checks pass. The merged state matches that package/runtime/test/CI source and passes 139 support/37 publisher tests, scoped documentation and policy/preservation checks. The child report owns source-specific package evidence. Seven native Windows contracts skip on Linux; no fresh native/client result or installation is claimed. Publish/read back this closure evidence and stop; parent continuation remains unselected.
+Publish the opening/plan/review before source edits. Then perform A-002 and A-003, publish exact source/package/evidence checkpoints and stop open/unmerged. No browser execution or current candidate-specific package result is claimed yet.
 
 ## Retained prerelease boundary
 
