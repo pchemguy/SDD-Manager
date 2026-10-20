@@ -61,11 +61,11 @@ class WindowsShellAdapter(unittest.TestCase):
     def test_path_resolution_and_expanded_cmd_probe(self):
         for ending in self.install_variants():
             with self.subTest(ending=ending):
-                result = self.invoke('cmd /c echo SDD_CMD_PROBE_%SystemDrive%', ['where PowerShell'])
+                result = self.invoke('echo CMDPROBE%SystemDrive%', ['where PowerShell'])
                 self.assertEqual(result.returncode, 0, result.stderr)
                 lines = result.stdout.strip().splitlines()
                 self.assertTrue(Path(lines[0]).samefile(self.bin / 'PowerShell.cmd'), lines[0])
-                self.assertIn('SDD_CMD_PROBE_' + os.environ['SystemDrive'], lines)
+                self.assertIn('CMDPROBE' + os.environ['SystemDrive'], lines)
                 self.assertNotIn('%SystemDrive%', result.stdout)
 
     def test_apostrophes_and_single_quotes_are_preserved(self):
