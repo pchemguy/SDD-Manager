@@ -6,7 +6,8 @@ Windows shell handling revision campaign 089_8e719ce is open. Parent prerelease 
 
 - Owner: sdd-manage; Standard reporting. [Opening record](reviews/089_8e719ce-windows-shell-handling/REVISION-REPORT.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [parent plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [index](reviews/README.md).
 - Human authority: the subsequent numbered requirements now select a concise Windows shell policy, unconditional CMD-only rules, one command per shell call, required shim for an unavoidable PowerShell harness, and the exact supplied replacement adapter. [Revision plan](reviews/089_8e719ce-windows-shell-handling/REVISION-PLAN.md) owns actions and verification. The opening-only/no-proposals checkpoint remains historical in the opening record.
-- Execute and publish the selected revision, then stop on the child branch with campaign 089 open. No campaign closure/integration or prerelease resumption is selected.
+- The selected revision is implemented and verified at published source 76ecc64b674ac627308203974a85a4cc7d2f3e35: concise windows-shell.md, exact supplied adapter, current routing and native fixtures. Both Windows CMD Node 22/24 jobs passed seven tests with LF/CRLF variants; 139 support/37 publisher checks and the exact reproducible 156-file package passed. Live Antigravity/Codex execution and observed agent compliance are unrun.
+- Publish/read back this evidence checkpoint, then stop on the child branch with campaign 089 open. No campaign closure/integration or prerelease resumption is selected; await further human direction.
 
 ## Git context
 
