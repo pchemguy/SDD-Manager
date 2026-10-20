@@ -8,6 +8,10 @@ Execute the [skill and plugin discovery protocol](SKILL_DISCOVERY_PROTOCOL.md).
 
 On **Windows execution hosts only**, follow [WINDOWS_SHELL_POLICY.md](WINDOWS_SHELL_POLICY.md): CMD syntax, unavailable PowerShell/pwsh, temporary files for script text and shell operations, and the documented tool probe/recovery. This repository policy is independent of the plugin.
 
+## Browser development
+
+When developing or testing browser-based applications or browser extensions, follow [BROWSER_DEV_POLICY.md](BROWSER_DEV_POLICY.md). Prioritize Chromium and include Firefox by default; project documents may specify other choices. Use dedicated, isolated environments. This policy is external to the plugin.
+
 ## Contributor instructions
 
 Before source edits, verification or campaign work, explicitly load [acceptance/AGENTS.md](acceptance/AGENTS.md), including work outside acceptance/. It owns source orientation, verification commands, publisher/package prerequisites, acceptance coordination and the closed-record boundary. Read applicable nested instructions before work on their paths; TextStats has a separate coordinator entry.
