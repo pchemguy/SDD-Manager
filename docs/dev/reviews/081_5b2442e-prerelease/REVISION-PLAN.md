@@ -6,7 +6,7 @@
 - Creation parent/integration/return: main at that full baseline. Working/publication branch: revision/081_5b2442e-prerelease on origin, pchemguy/SDD-Manager. No suspended parent workflow.
 - Human instruction: open a prerelease campaign, prepare the next release and bump the patch version. Existing canonical version 0.15.0 selects 0.15.1. No new tag/release, publishing dispatch or installation selected.
 - Complete remote enumeration returned 96 head/tag rows; shared campaign/path inventory has highest sequence 080. Sequence 081 is free; main readback matches baseline and v0.15.1 is absent. Git history is not shallow; local/remote v0.15.0 tag object agrees and peels to 2be233c7ec02be131917ceb16d6a16dc7d407d57.
-- State: Preparation and U-001–U-003 complete; final publication establishes the prepared-candidate checkpoint. Campaign remains open. [Review plan](REVIEW-PLAN.md), [review report](REVIEW-REPORT.md), [preparation evidence](REVISION-REPORT.md).
+- State: Original preparation and U-001–U-003 complete. The human selected resumption after comprehensive child 093; P-005 refreshes the saved preparation against published candidate 6d0b04a8c5edb36601c36c759e5ee0285ed2f9c4. Campaign remains open at the prepared-only boundary. [Review plan](REVIEW-PLAN.md), [review report](REVIEW-REPORT.md), [preparation evidence](REVISION-REPORT.md).
 
 ## Ordered preparation
 
@@ -16,6 +16,13 @@
 | P-002 | Execute U-001–U-003 prerelease review with complete inventory, justified exact-byte evidence reuse, current candidate validation and no fabricated client/provider acceptance. | Published candidate. Report/publish each bounded review unit before the next. New required defects receive bounded correction/recheck within release preparation; consequential scope decisions return to the human. |
 | P-003 | Prepare complete retained RELEASE-NOTES.md for 0.15.1 and validated Git highlights from the nearest qualifying first-parent release; review package and build-only structured handoff against an exact pinned candidate. | Passing selected review; complete history/tag/range accounting and preserved applicable human material. Packages/notes identify actual tested source and prepared state. No tag/publication implied. |
 | P-004 | Finalize evidence/HANDOFF/index, verify publication and leave campaign open at the prepared-candidate checkpoint. | No unresolved required check; record source/body/archive hashes, remaining release execution steps and evidence limits. No campaign integration/closure selected here. |
+| P-005 | After verified 093 closure, review intervening history and current package guidance; refresh complete notes, highlights, build-only handoff, exact package and continuation records. | Human-selected continuation; published child merge and clean parent return. Reuse qualified original range coverage and the child's current-source checks, account for every later identity, reconcile superseded claims, validate exact source/body/assets and preserve closed records. Publish/read back the refreshed checkpoint, leaving 081 open. |
+
+## Selected resumption
+
+The 2026-10-21 request authorizes comprehensive child review/revision/closure, then resuming this parent to review and update saved package documents. Child 093 closes through published two-parent merge 6d0b04a8c5edb36601c36c759e5ee0285ed2f9c4 with clean return. That exact source is the refreshed product/package candidate; version remains 0.15.1.
+
+P-005 replaces stale saved claims about the bundled Windows adapter, quote conversion, runtime prerequisites and inventory with the current delivered scope and actual evidence. Preserve historical observations for their original sources, retained human curation and root notes tracking. Later notes/evidence commits do not silently change the prepared candidate. No parent closure, main integration, release/tag, publisher dispatch or installation is selected.
 
 ## Source and artifact rules
 

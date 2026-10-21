@@ -1,23 +1,29 @@
 # SDD Manager handoff
 
-Prerelease campaign 081 is the receiving workflow. Comprehensive child 093 reaches its verified integration boundary; target publication and clean return establish closure. The human authorizes the saved-package/release-document refresh immediately afterward. Earlier closed records remain frozen.
+Prerelease campaign 081 is open at the refreshed prepared-only checkpoint. Comprehensive child 093 is closed through published merge 6d0b04a8c5edb36601c36c759e5ee0285ed2f9c4 with clean parent return. Its single confirmed documentation defect is corrected. Earlier closed records remain frozen.
 
 ## Selected scope and stop
 
-- Owner: sdd-manage; reporting Standard. [Parent preparation plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [parent evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [child review](reviews/093_aaee139-comprehensive-review/REVIEW-REPORT.md), [child execution](reviews/093_aaee139-comprehensive-review/REVISION-REPORT.md), [index](reviews/README.md).
-- Finish verified publication of the explicit child merge and confirm clean parent return, then resume 081 to re-pin the candidate and refresh saved notes/package/handoff facts.
-- Stop with prerelease preparation open and current saved documents. No release/tag, publishing dispatch, installation or main integration is selected.
+- Owner: sdd-manage; reporting Standard. [Preparation plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [review](reviews/081_5b2442e-prerelease/REVIEW-REPORT.md), [evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [saved notes](reviews/081_5b2442e-prerelease/RELEASE-NOTES.md), [build-only handoff](reviews/081_5b2442e-prerelease/RELEASE-HANDOFF.json), [index](reviews/README.md).
+- The human selected comprehensive review, revision and closure, then resumption of 081 to review/update saved package documents. These actions are complete; publish/read back the refreshed evidence checkpoint and stop.
+- Keep 081 open. No main integration, release marker/tag, publishing dispatch, hosted release or installation is selected.
 
-## Git identity and verified checkpoint
+## Git and candidate identity
 
-Working/return branch revision/081_5b2442e-prerelease. Refreshed receiving tip aaee1397d5282d50dcb63bb51d59632e49b2dfd1 is the child's original branch-off; published incoming tip f1c9961315aca49f0a51ddf6ed6ce52d36a3fd99 merges without conflicts. Child opening 69bcedad808b7cd781d4af2766f3c4b141ad8bce is preserved. Parent 081 retains creation parent main at 5b2442e3315da91bcbc8ccd0efc14c0c59106b27.
+Working/publication branch: revision/081_5b2442e-prerelease. Original creation parent/integration/return remains main at 5b2442e3315da91bcbc8ccd0efc14c0c59106b27. Child 093's verified completion merge has parents aaee1397d5282d50dcb63bb51d59632e49b2dfd1 and f1c9961315aca49f0a51ddf6ed6ce52d36a3fd99; publication cleanup and exit 0 were confirmed before resumption.
 
-The distributable has 153 files and 15 skills at version 0.15.1. Comprehensive review accounts for current guidance, scripted operations and distribution/source verification at the declared depths. One confirmed documentation defect, R-001, is resolved: README accurately states supervised HTTPS publication prerequisites. No retry wrapper or runtime behavior is added.
+Prepared product/package candidate: 6d0b04a8c5edb36601c36c759e5ee0285ed2f9c4, version 0.15.1, 153 files and 15 skills. Later source-only notes/evidence commits do not change that pin. Recover this checkpoint's actual commit and remote containment from Git rather than inventing its future identity.
 
-The prospective merged state passes 139 support/37 publisher tests on Linux/Python 3.12.14. Runtime bytes match the reviewed 132 passing Node 24.19.0 native/synthetic contracts. Seven Windows tests skip; structural author checks report zero errors/48 bundle advisories. Package bytes match verified source 159f317a3b7c354608752983a92ed968586f4364, whose exact reproducible package and five CLI checks pass. The child report retains source-specific hashes and evidence limits; closed records and root policies are unchanged.
+Complete release-message coverage runs from v0.15.0 at 2be233c7ec02be131917ceb16d6a16dc7d407d57 through the candidate: 244 identities, comprising 150 previously qualified and 94 newly accounted for. Fresh remote tag readback matches the retained annotated object. Superseded Windows adapter and fixed browser-policy claims were removed; public runtime requirements, supervised Git publication and docs-main convenience now match current source.
 
-Verify/publish this two-parent integration and confirm clean return before closure/resumption. Then refresh parent candidate coverage and saved package/release documents under the explicit human instruction. Native Windows/live-provider/client behavior and diagram rendering remain unclaimed.
+## Saved artifacts and evidence
 
-## Retained prerelease boundary
+Root RELEASE-NOTES.md, the campaign snapshot, JSON body and prepared output agree exactly: 5,356 UTF-8 bytes, SHA-256 842921d1d2970c1b282f013871d774ffb27f04db142bca2dd94457ae6b25de11. The 5,754-byte handoff pins source/notes_source to the candidate and keeps publish/prerelease/make_latest false.
 
-Version remains 0.15.1. The parent's prepared source ddb86fc926ddc2cfbd15946946c75a9c3672645d and notes/handoff/package association remain historical until the selected post-child refresh. Parent 081 retains its original creation parent main and prepared-only boundary. Preserve per-commit publication, credential protection and unrelated work; keep credential/transient diagnostic paths out of continuity records.
+The reproducible sdd-manager.zip is 456,896 bytes, SHA-256 8091f042186a817249e13d07d40e6939758d969faa75d45cdcbf790e7dc78444. Matching checksum-file SHA-256 is 4739b853104336ad2bd4951211909cc7a57b9608dff4f77a8a1fce0385d3c0d7. Assets, notes and handoff are together at /workspace/scratch/46b31bb4dff6/081-prepared-0.15.1-6d0b04a; the exact source and publisher can reconstruct the archive. The ignored local highlights checkpoint retains the validated baseline/candidate watermark until actual published-body consumption.
+
+Current verification includes 132 runtime contracts, 139 support and 37 publisher passes: 308 distinct local tests. Seven Windows contracts skip on Linux. Exact package/schema/contents, presentation/SVG paths and five extracted CLI help checks pass; structural author validation reports zero errors/48 bundle advisories. Native Windows, installed-client/autonomous consumer, live-provider, launcher activation and fresh diagram rendering remain unclaimed. Final document/artifact consistency and closed-record preservation checks apply to the notes/evidence refresh.
+
+## Future continuation
+
+Preserve the prepared source/message association, tracked notes and closed records. A later release request must inspect intervening commits, refresh coverage, bind/rebuild the final source/message and verify its tag, publisher outcome and hosted assets. The present prepared-only flags do not select a future release channel or grant publication authority. Continue using supervised per-commit publication and protected credentials; preserve unrelated work.

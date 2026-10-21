@@ -4,7 +4,9 @@
 
 Campaign 081_5b2442e; baseline 5b2442e3315da91bcbc8ccd0efc14c0c59106b27; branch revision/081_5b2442e-prerelease; creation parent/integration/return main. The human explicitly selected prerelease preparation and patch bump. [Plan](REVIEW-PLAN.md), [preparation](REVISION-PLAN.md), [execution](REVISION-REPORT.md).
 
-State: U-001–U-003 assessed; no unresolved required defect found in the selected review. P-001 candidate 47360015b3fe727b655b48d013d1361f0a7c9319 was published/read back. One non-substantive wording polish below means published U-001 commit ddb86fc926ddc2cfbd15946946c75a9c3672645d is the exact updated candidate. Campaign 080 is closed by the baseline's verified published merge; its records remain frozen. Current source has its five verified corrections, original CMD body and separate client/provider evidence limits. Campaign 081 remains open at preparation, without release publication.
+Current state: original U-001–U-003 and the selected P-005 refresh are complete. Comprehensive child 093 is closed through published merge 6d0b04a8c5edb36601c36c759e5ee0285ed2f9c4, the refreshed exact product/package candidate. Its one confirmed prerequisite-documentation defect is corrected; no unresolved required finding remains. The saved notes, handoff and package now describe this source. Campaign 081 stays open at preparation, without release publication.
+
+The original review sections below retain observations for candidate ddb86fc926ddc2cfbd15946946c75a9c3672645d. They are historical evidence, including superseded adapter, token-permission and inventory details. The resumed assessment at the end supplies current applicability; earlier results are not relabelled as new executions.
 
 ## Coverage
 
@@ -88,3 +90,38 @@ After the published preparation checkpoint, the human selected nested campaign 0
 ## Subsequent child verification and return boundary
 
 The accepted [082 revision](../082_d0d7438-auth-helper/REVISION-REPORT.md) now records four Verified findings, actual authenticated native HTTPS/helper behavior on Windows/Linux Node 22/24, shared utility checks and an exact reproducible verification package. This resolves the known helper defect and adds its missing regression/diagnostic coverage; it does not refresh this parent's earlier release candidate, history coverage, notes, handoff or package hashes. Those source-bound observations above remain intact. After the explicit child merge is verified/published and the worktree returns, 081 remains open and suspended pending a human-selected continuation.
+
+## Resumed review — 2026-10-21
+
+The human selected continuation after comprehensive review, revision and closure of child 093. Its explicit merge 6d0b04a8c5edb36601c36c759e5ee0285ed2f9c4 was published and exactly read back, with confirmed cleanup and clean parent return. Current-source assessment covered the complete 350-file supported/support inventory at declared depths, including all 15 skill entries and 77 reference routes, consequential workflow handoffs, scripted operations and distribution. The child records retain the detailed review and verification provenance; they are now frozen.
+
+| Affected concern | Current assessment |
+| --- | --- |
+| Guidance and public requirements | The child's sole confirmed defect was README's incomplete publication prerequisites. Its correction explicitly states Node 22+, Python 3.11+, native Git and supported Windows/Linux process facilities. Root policies and generated guidance retain their intended boundaries. |
+| Runtime and support | 132 Git/authentication/forge contracts passed on Linux/Node 24.19.0; fresh integrated support/publisher runs passed 139/37 on Python 3.12.14. These are 308 distinct passing tests, not consumer or provider acceptance. Seven Windows-only shell contracts skipped on Linux. |
+| Distribution | Two source-bound builds of 6d0b04a are identical: 153 files, 15 skills, version 0.15.1. Exact committed inventory, pinned core schema, exclusions, presentation paths/SVGs and five extracted CLI help checks pass. Structural validation has zero errors and 48 bundle-reference advisories. |
+| Saved preparation | Original notes/root snapshot/handoff agreed with the earlier source, with no intervening human curation to preserve separately. Their adapter, quote-conversion, prerequisite and inventory claims were stale. Complete replacement now matches current delivered behavior and evidence, with unchanged tracked-note ownership. |
+
+Fresh remote readback reconfirms v0.15.0 annotated tag object b096e2e6431269dc5a731eaea3287c88d1e53960 and peeled baseline 2be233c7ec02be131917ceb16d6a16dc7d407d57. Nonshallow history places that baseline on the candidate's first-parent ancestry. Original qualified coverage accounts for 150 identities; the complete increment ddb86fc..6d0b04a contains 94 more, totaling 244. Complete latest integration summaries and their introduced ancestry partition 86 new identities as follows; eight direct source/evidence changes complete the disjoint count.
+
+| Integration | Identities | Delivered scope / supersession |
+| --- | --- | --- |
+| df52d0b | 8 | Native Git helper context, diagnostics and transport regression |
+| e034a38 | 5 | Ordinary document checkpoint definitions |
+| fd8dec8 | 4 | Windows probe correction; policy later externalized |
+| 65c7d37 | 4 | Ordinary token-file access; permission-repair machinery removed |
+| 745467a | 7 | Initial browser guidance; later externalized and refined |
+| 7d37ca7 | 10 | Supervised first-attempt HTTPS publication and process ownership |
+| 8e719ce | 5 | Single-call docs-main convenience and defaults |
+| 735814e | 13 | Windows policy revision; later externalized |
+| 204d7e9 | 3 | Cumulative Windows wrapper amendment |
+| 0d125ed | 3 | Available authenticated GitHub CLI backend |
+| 747c368 | 11 | Standalone root Windows policy; plugin adapter/routes removed |
+| dcf563d | 6 | Standalone browser policy; generic project-policy reminders retained |
+| 6d0b04a | 7 | Comprehensive review and public prerequisite correction |
+
+Direct changes 335aae3 and d0d7438 retain original preparation evidence; d7fa983, b238a66, 41cf4aa, ef3dd64 and 841c801 record completed child transitions; aaee139 removes the irrelevant root AGENTS browser ownership sentence. Path/delta inspection supplies no additional shipped capability. Earlier cumulative/superseded implementation claims are reconciled against current source rather than copied into release highlights. Closed report contents were not routine-loaded for this refresh.
+
+The new message retains continuation, guided exploration and bounded delivery, adds current publication/tracking improvements and accurate requirements, and removes obsolete packaged-policy/adapter claims. Root notes, retained snapshot, JSON body and prepared output agree byte-for-byte; the publisher validates the build-only handoff. Exact hashes and artifact sizes are recorded in [preparation evidence](REVISION-REPORT.md#resumed-preparation-results).
+
+Readiness is limited to this prepared source and message. Native Windows, installed-client/autonomous consumer, live-provider, launcher activation and fresh diagram rendering are not newly established. No known required failure is waived. Later notes/evidence commits remain outside the product pin; a future release must account for the intervening range, rebind/rebuild and verify the final source/body/tag/assets through the existing publisher.
