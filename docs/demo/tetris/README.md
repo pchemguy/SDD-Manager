@@ -150,29 +150,35 @@ Run this campaign after ghost-piece support is implemented and verified: after t
 
 > [!NOTE] Prompt
 >
-> Open a feature campaign to dynamically hide the ghost piece when its projected landing position is in the upper half of the board, above the midline. Show it again when its projected landing position returns to the lower half.
+> Open a campaign to implement "conditional ghost-piece visibility" feature:
+>
+> Dynamically hide the ghost piece when its projected landing position is in the upper half of the board, above the midline. Show it again when its projected landing position returns to the lower half.
 
 Verify visibility changes in both directions as the projected landing position crosses the midline, including the accepted overlap rule. Check that hiding the preview does not change the landing calculation, piece movement or hard-drop behavior.
 
-### Penetrator bonuses
+### Penetrator
 
-The next feature candidate rewards clearing four lines at once with one penetrator bonus. The player can accumulate bonuses up to a proposed maximum of three and activate a bonus for any active piece with a hotkey. The activated piece can pass through occupied cells until it locks, allowing it to reach spaces below blocking cells.
+The penetrator feature lets the active piece pass through occupied cells until it locks, allowing it to reach spaces below blocking cells. The player activates penetrator mode for the current piece with a hotkey.
+
+Clearing four lines at once awards one bonus, granting one activation of penetrator mode. The player can accumulate bonuses up to a proposed maximum of three.
 
 Show the available bonuses in the side panel with one symbol per bonus, for example lightning bolts: `⚡`, `⚡⚡`, or `⚡⚡⚡`. Update the indicator whenever a bonus is earned or spent.
 
 Render the activated piece entirely white and keep white out of the regular piece palette. Hard drop passes through obstructions to the lowest valid landing position, and the ghost previews that same position. A valid final position must keep every cell of the piece within the board and free of overlap with occupied cells; passing through the stack does not remove existing cells.
 
-This campaign follows the playable game and can be applied with either delivery variant. Completing and verifying the bonus mechanic provides a further release boundary.
+This campaign follows the playable game and can be applied with either delivery variant. Completing and verifying the penetrator feature provides a further release boundary.
 
 > [!NOTE] Prompt
 >
-> Open a feature campaign to add penetrator bonuses to the Tetris game. Award one bonus whenever the player clears four lines at once, and allow up to three bonuses to accumulate.
+> Open a campaign to implement "penetrator" feature:
 >
-> Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
+> Allow the player to turn the current falling piece into a penetrator with a hotkey, provided a penetrator bonus is available. A penetrator can pass through occupied cells without destroying them. This ability lasts until the piece locks; its final position must be entirely within the board without overlapping occupied cells.
 >
-> Let the player activate a bonus for any active piece by pressing a hotkey. The activated piece can pass through occupied cells until it locks. Render it entirely white; do not use white for regular pieces.
+> For a penetrator, hard drop must pass through blocking cells to the lowest valid landing position. The ghost piece must preview that same position.
 >
-> For an activated piece, hard drop must pass through blocking cells to the lowest valid landing position, and the ghost piece must show that position. The final locked piece must remain within the board and must not overlap occupied cells. Passing through occupied cells must not destroy them.
+> Clearing four lines at once awards one penetrator bonus, granting one activation of the penetrator ability. Allow up to three bonuses to accumulate.
+>
+> Render penetrator pieces entirely white, and do not use white for regular pieces. Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
 
 The prompt uses three as the proposed cap; confirm or adjust it during preparation. Also clarify the activation key, when activation spends a bonus, repeat-key behavior, interaction with hold, and what happens when locking is attempted while the active piece overlaps occupied cells. Define how normal descent and rotation behave during penetration and how hard drop interacts with the selected locking policy. These details must preserve the non-overlapping final-position requirement.
 
@@ -339,3 +345,94 @@ Record the SDD Manager version, agent/model, execution environment, other active
 Separate workflow findings from game defects and environment failures. Report verification that actually ran, including blocked or incomplete checks.
 
 The result should show both whether the game works and whether SDD Manager maintained a coherent, reviewable development process.
+
+## All-inclusive project prompt
+
+As an alternative to the staged prompts above, copy the complete prompt below and replace the repository and token placeholders. It declares the full target scope upfront, with full-interval locking as the default.
+
+Use a fine-grained personal access token (PAT) restricted to the target repository. A suggested standard set grants **Read and write** permissions for:
+
+- Actions.
+- Commit statuses.
+- Contents.
+- Issues.
+- Pull requests.
+- Workflows.
+
+Individual workflows may require fewer permissions; this set is a convenience rather than a universal minimum.
+
+Optionally request a fully autonomous process by preapproving all human checkpoints, either in the initial prompt or after approving the project brief (`PROJECT.md`). For example: “I preapprove all remaining human checkpoints. Continue fully autonomously while following all other SDD Manager workflow obligations.”
+
+> [!NOTE] Prompt
+>
+> Help me develop the following project using $sdd-manager.
+>
+> ### Project repo and credentials
+>
+> **GitHub repository**: https://github.com/{OWNER}/{REPO}
+>
+> **GitHub token**: {FINE_GRAINED_GH_TOKEN}
+>
+> ### Versioning and releases
+>
+> Manage the project's versioning, choosing an appropriate initial version and increasing it to reflect delivered changes. After each implementation phase is completed, verified and integrated, create and publish a new GitHub release with the corresponding version tag and release notes.
+>
+> ### Project description: Browser-based Tetris game
+>
+> Develop a browser-based Tetris game with a playable classic baseline and the enhancements below.
+>
+> Treat this description as the complete target scope. Deliver the simplest sensible playable baseline first, then add capabilities through bounded phases that each provide a useful functionality increment.
+>
+> #### Gameplay enhancements
+>
+> - Hold piece.
+> - Ghost piece.
+> - 7-bag piece randomization.
+> - Wall kicks.
+> - Hard drop.
+> - Full gravity interval lock delay: by default, lock after one full gravity interval from becoming grounded. Hard drop follows the same locking policy unless immediate hard-drop locking is selected.
+>
+> #### Conditional ghost-piece visibility
+>
+> Provide a ghost visibility mode that dynamically hides the ghost when its projected landing position is in the upper half of the board, above the midline, and shows it again when that position returns to the lower half.
+>
+> #### Penetrator mode
+>
+> Allow the player to turn the current falling piece into a penetrator with a hotkey, provided a penetrator bonus is available. A penetrator can pass through occupied cells without destroying them. This ability lasts until the piece locks; its final position must be entirely within the board without overlapping occupied cells.
+>
+> For a penetrator, hard drop must pass through blocking cells to the lowest valid landing position. The ghost piece must preview that same position whenever it is visible.
+>
+> Clearing four lines at once awards one penetrator bonus, granting one activation of the penetrator ability. Allow up to three bonuses to accumulate.
+>
+> Render penetrator pieces entirely white, and do not use white for regular pieces. Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
+>
+> #### Game configuration
+>
+> Provide a side panel with controls for:
+>
+> 1. Ghost-piece visibility: always hide, hide dynamically above the board’s midline, or always show.
+> 2. Hard drop: on or off.
+> 3. Next-piece preview: on or off.
+> 4. Hard-drop locking policy: follow the selected general locking policy, or lock immediately after hard drop.
+> 5. General locking policy: lock on a failed downward movement attempt, or after one full gravity interval from becoming grounded.
+> 6. Hold piece: on or off.
+>
+> #### Configuration persistence
+>
+> Support cookies and URL query parameters for all settings above. Restore saved settings or apply URL-supplied settings when the page is reloaded or the game is opened again. Use sensible defaults where neither source supplies a value.
+>
+> Resolve each setting independently in this order:
+>
+> 1. A value explicitly supplied by its URL parameter.
+> 2. A saved cookie value.
+> 3. The default value.
+>
+> Whenever the player changes a setting, save its selected value in the corresponding cookie and update its URL query parameter.
+>
+> Save explicit URL parameter values in the corresponding cookies, including values equal to the default. When a parameter is omitted, retain its saved cookie value rather than replacing it with the default.
+>
+> Session-only configuration may be delivered as an intermediate increment before persistence is added.
+>
+> #### Design clarification
+>
+> During preparation, resolve important interactions and boundary cases, including ghost positions that straddle the midline; lock-delay timing and resets; penetrator activation, hold and locking behavior; and invalid configuration values. Surface decisions that materially affect gameplay before implementation.
