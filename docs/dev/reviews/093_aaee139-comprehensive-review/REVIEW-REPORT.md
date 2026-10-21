@@ -36,7 +36,7 @@ Composition assessment finds coherent entry/owner boundaries and useful prerequi
 | Consequence | A user can prepare the advertised Node/Git environment yet be unable to publish, and the blanket no-Node statement conflicts with the normal workflow path. |
 | Correction | Distinguish supervised HTTPS publication requirements from optional GitHub tracking utilities and project-specific tools. State the supported host/runtime boundary once in Getting started and remove the contradictory promise, retaining links to detailed requirements. No runtime or workflow change is needed. |
 | Objective recheck | Compare README claims with the publication guide/entry and forge guides; verify links and that package/runtime requirements remain accurate without implying automatic provisioning or universal host support. |
-| Current disposition | Confirmed; include in the ordered revision plan after all review units. |
+| Current disposition | Verified by V-001; baseline observation retained. Exact revised-package verification follows V-002. |
 
 ## U-002 — Scripted operation assessment
 
