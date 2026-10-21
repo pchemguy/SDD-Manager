@@ -156,23 +156,25 @@ Run this campaign after ghost-piece support is implemented and verified: after t
 
 Verify visibility changes in both directions as the projected landing position crosses the midline, including the accepted overlap rule. Check that hiding the preview does not change the landing calculation, piece movement or hard-drop behavior.
 
-### Penetrator bonuses
+### Penetrator
 
-The next feature candidate rewards clearing four lines at once with one penetrator bonus. The player can accumulate bonuses up to a proposed maximum of three and activate a bonus for any active piece with a hotkey. The activated piece can pass through occupied cells until it locks, allowing it to reach spaces below blocking cells.
+The penetrator feature lets the active piece pass through occupied cells until it locks, allowing it to reach spaces below blocking cells. The player activates penetrator mode for the current piece with a hotkey.
+
+Clearing four lines at once awards one bonus, granting one activation of penetrator mode. The player can accumulate bonuses up to a proposed maximum of three.
 
 Show the available bonuses in the side panel with one symbol per bonus, for example lightning bolts: `⚡`, `⚡⚡`, or `⚡⚡⚡`. Update the indicator whenever a bonus is earned or spent.
 
 Render the activated piece entirely white and keep white out of the regular piece palette. Hard drop passes through obstructions to the lowest valid landing position, and the ghost previews that same position. A valid final position must keep every cell of the piece within the board and free of overlap with occupied cells; passing through the stack does not remove existing cells.
 
-This campaign follows the playable game and can be applied with either delivery variant. Completing and verifying the bonus mechanic provides a further release boundary.
+This campaign follows the playable game and can be applied with either delivery variant. Completing and verifying the penetrator feature provides a further release boundary.
 
 > [!NOTE] Prompt
 >
 > Open a campaign to implement "penetrator" feature:
 >
-> A penetrator bonus lets the current piece pass through occupied cells without destroying them. Once activated, the effect lasts until that piece locks. The piece must lock entirely within the board without overlapping occupied cells.
+> Penetrator mode lets the current piece pass through occupied cells without destroying them. The mode lasts until that piece locks. The piece must lock entirely within the board without overlapping occupied cells.
 >
-> Award one bonus whenever the player clears four lines at once. Allow up to three bonuses to accumulate, and let the player activate a bonus for the current piece using a hotkey.
+> Let the player activate penetrator mode for the current piece with a hotkey. Each bonus grants one activation; award one bonus whenever the player clears four lines at once. Allow up to three bonuses to accumulate.
 >
 > Render the activated piece entirely white, and do not use white for regular pieces. Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
 >

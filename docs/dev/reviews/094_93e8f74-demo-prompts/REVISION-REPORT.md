@@ -7,7 +7,7 @@
 - Creation parent, integration target and return: main.
 - Working/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager.
 - Request: “Pull origin and open demo prompts revision campaign.”
-- State: Open; selected prompt revisions V-001 and V-002 are implemented below. Further revision scope remains pending.
+- State: Open; selected prompt revisions V-001–V-003 are implemented below. Further revision scope remains pending.
 
 ## Starting context
 
@@ -46,3 +46,11 @@ The human requests a substantial compositional revision beginning exactly `Open 
 The revised prompt introduces penetration and valid locking first, then groups earning/storage/activation, visual feedback, and hard-drop/ghost interaction into coherent paragraphs. Preserve the four-line award, one-bonus quantity, three-bonus cap, hotkey activation, duration through lock, white-piece distinction, symbol counter and updates, deepest valid hard drop, matching ghost projection, bounds/non-overlap and preservation of occupied cells. Existing preparation questions continue to own unspecified activation, movement and locking details.
 
 Editorial comparison confirms that the complete content inventory is retained and the required opening is exact. The guide outside this prompt is byte-identical to the preceding source; only the guide and this report change. Paragraph/admonition spacing and git diff --check pass. These are composition/fidelity checks, not game execution tests. Commit/publish/read back the action and leave campaign 094 open; other prompts and closed records remain unchanged.
+
+## V-003 — Distinguish the penetrator feature from earned activations
+
+The human corrects the framing: penetrator is the feature; the bonus is an earned opportunity to activate it. V-002 retained the mechanics but incorrectly made the bonus the introductory subject. Lead with penetrator mode and its behavior, then explain hotkey activation and the earned activation resource. Keep the required campaign-opening sentence.
+
+Revised the prompt's first two paragraphs accordingly. Aligned the section heading, introductory explanation and release-boundary wording with the feature name, preserving the award/cap and gameplay requirements. Each bonus grants one activation; unspecified spending timing and other preparation questions remain for design. No other demo section or prompt is selected.
+
+Terminology and substance checks pass: the feature is penetrator and each bonus grants one activation. No maintained demo/template reference uses the old heading anchor. The guide outside this section is byte-identical; only the guide and this report change, and git diff --check passes. Publish/read back the action and keep campaign 094 open. No game execution is claimed.
