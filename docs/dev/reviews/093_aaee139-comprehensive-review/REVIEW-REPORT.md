@@ -9,7 +9,7 @@ Campaign 093_aaee139 reviews baseline aaee1397d5282d50dcb63bb51d59632e49b2dfd1 u
 | Unit | Status | Evidence and findings |
 | --- | --- | --- |
 | U-001 — Instructions and documentation | Assessed; R-001 | All 15 entries and 86-reference routing inventory; connected preparation/QC/implementation/tracking/revision/release boundaries and public documentation. |
-| U-002 — Scripted operations | Planned | Native/synthetic contracts and runtime/guide review; no live-provider mutation required. |
+| U-002 — Scripted operations | Assessed; no additional confirmed defect | 132 native/synthetic Linux Node contracts pass; runtime/guide and recovery boundaries inspected. |
 | U-003 — Distribution and verification | Planned | Exact committed package, structural/metadata/link checks and existing support/publisher suites. |
 
 ## Findings and limits
@@ -37,3 +37,13 @@ Composition assessment finds coherent entry/owner boundaries and useful prerequi
 | Correction | Distinguish supervised HTTPS publication requirements from optional GitHub tracking utilities and project-specific tools. State the supported host/runtime boundary once in Getting started and remove the contradictory promise, retaining links to detailed requirements. No runtime or workflow change is needed. |
 | Objective recheck | Compare README claims with the publication guide/entry and forge guides; verify links and that package/runtime requirements remain accurate without implying automatic provisioning or universal host support. |
 | Current disposition | Confirmed; include in the ordered revision plan after all review units. |
+
+## U-002 — Scripted operation assessment
+
+U-001 report checkpoint d4e898e3aa7c4f5de138bfa639a53a41e6d5376c is published/read back before this unit. Reviewed the controller/worker/supervisor and protected-token boundaries; forge transport/native context, canonical input authoring, projection and completion transitions; their public guides, source test contracts and callable interfaces. Detailed inspection covers destination and source identity, public versus Git-supplied helper environment, shared credential roots, ordinary file access without ACL repair, bounded descendants/streams, per-operation versus whole-call deadlines, effect preservation and read-only recovery. Fixtures/test helpers supply controlled mechanics, not live provider claims.
+
+On Linux, `node --test --test-reporter=spec tests/git-auth-recover.test.mjs tests/git-publish.test.mjs tests/forge-close.test.mjs tests/forge-project.test.mjs` passes all 132 tests with zero failures/skips in 22.9 seconds. Coverage includes native local HTTPS Git transport, actual credential-helper invocation, selector hangs/orphans/flood/cancellation, uncertain responses, exact identity/pagination, phase-label drift, pre-write projection locking, source drift/FIFOs and request-free docs-main defaults. This test execution matches unchanged baseline runtime/test bytes; no source fix is inferred from success alone.
+
+The proposed apply-loop is not incorporated. Its behavior would violate the existing unknown-write boundary. Current projection discovers an applied disconnected creation without replay and stops an absent uncertain creation; reconcile-only performs no writes. Both contrasts pass. Deadlines and safe-read retry metadata are already owned by the utility/transport. No demonstrated need justifies another retry workflow or automatic mutation replay.
+
+No additional confirmed runtime finding is established. R-001 remains the public prerequisite mismatch. Native Windows execution and real provider authorization remain unperformed in this host; controlled transport/helper tests do not certify those environments or actual Antigravity/client behavior.
