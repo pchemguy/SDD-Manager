@@ -361,6 +361,8 @@ Use a fine-grained personal access token (PAT) restricted to the target reposito
 
 Individual workflows may require fewer permissions; this set is a convenience rather than a universal minimum.
 
+Optionally request a fully autonomous process by preapproving all human checkpoints, either in the initial prompt or after approving the project brief (`PROJECT.md`). For example: “I preapprove all remaining human checkpoints. Continue fully autonomously while following all other SDD Manager workflow obligations.”
+
 > [!NOTE] Prompt
 >
 > Help me develop the following project using $sdd-manager.
@@ -370,6 +372,10 @@ Individual workflows may require fewer permissions; this set is a convenience ra
 > **GitHub repository**: https://github.com/{OWNER}/{REPO}
 >
 > **GitHub token**: {FINE_GRAINED_GH_TOKEN}
+>
+> ### Versioning and releases
+>
+> Manage the project's versioning, choosing an appropriate initial version and increasing it to reflect delivered changes. After each implementation phase is completed, verified and integrated, create and publish a new GitHub release with the corresponding version tag and release notes.
 >
 > ### Project description: Browser-based Tetris game
 >
