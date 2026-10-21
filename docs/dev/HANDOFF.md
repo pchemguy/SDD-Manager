@@ -1,12 +1,12 @@
 # SDD Manager handoff
 
-Prerelease campaign 081 is open at the refreshed prepared-only checkpoint. Comprehensive child 093 is closed through published merge 6d0b04a8c5edb36601c36c759e5ee0285ed2f9c4 with clean parent return. Its single confirmed documentation defect is corrected. Earlier closed records remain frozen.
+Campaign 081 is executing its authorized release/closure boundary. Comprehensive child 093 is closed through published merge 6d0b04a8c5edb36601c36c759e5ee0285ed2f9c4 with clean parent return. Its single confirmed documentation defect is corrected. Earlier closed records remain frozen.
 
 ## Selected scope and stop
 
 - Owner: sdd-manage; reporting Standard. [Preparation plan](reviews/081_5b2442e-prerelease/REVISION-PLAN.md), [review](reviews/081_5b2442e-prerelease/REVIEW-REPORT.md), [evidence](reviews/081_5b2442e-prerelease/REVISION-REPORT.md), [saved notes](reviews/081_5b2442e-prerelease/RELEASE-NOTES.md), [build-only handoff](reviews/081_5b2442e-prerelease/RELEASE-HANDOFF.json), [index](reviews/README.md).
-- The human selected comprehensive review, revision and closure, then resumption of 081 to review/update saved package documents. These actions are complete; publish/read back the refreshed evidence checkpoint and stop.
-- Keep 081 open. No main integration, release marker/tag, publishing dispatch, hosted release or installation is selected.
+- The refreshed preparation was published/read back at 89da56e947e83f51a22d2f50484061a9094e7b11. The human subsequently requested “Create release, close campaign,” selecting P-006 in the preparation plan.
+- Integrate into recorded parent main, create/verify/publish the exact-message release commit and v0.15.1 tag, dispatch the single publisher, verify stable/latest release and asset downloads, record closure and return cleanly to main. Do not install the package or change repository settings.
 
 ## Git and candidate identity
 
