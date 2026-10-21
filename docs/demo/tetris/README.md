@@ -150,7 +150,9 @@ Run this campaign after ghost-piece support is implemented and verified: after t
 
 > [!NOTE] Prompt
 >
-> Open a feature campaign to dynamically hide the ghost piece when its projected landing position is in the upper half of the board, above the midline. Show it again when its projected landing position returns to the lower half.
+> Open a campaign to implement "conditional ghost-piece visibility" feature:
+>
+> Dynamically hide the ghost piece when its projected landing position is in the upper half of the board, above the midline. Show it again when its projected landing position returns to the lower half.
 
 Verify visibility changes in both directions as the projected landing position crosses the midline, including the accepted overlap rule. Check that hiding the preview does not change the landing calculation, piece movement or hard-drop behavior.
 

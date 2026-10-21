@@ -1,4 +1,4 @@
-# Demo prompts revision — campaign opening
+# Demo prompts revision
 
 ## Identity and scope
 
@@ -7,7 +7,7 @@
 - Creation parent, integration target and return: main.
 - Working/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager.
 - Request: “Pull origin and open demo prompts revision campaign.”
-- State: Open; opening checkpoint only. Detailed revision requirements, assessment and accepted actions remain pending.
+- State: Open; the exact prompt replacement V-001 is selected and implemented below. Further revision scope remains pending.
 
 ## Starting context
 
@@ -28,3 +28,11 @@ The exact revision targets and changes will follow the human's selected requirem
 The opening updates this record, current campaign navigation and [HANDOFF](../../HANDOFF.md) on the revision branch. Opening checks pass: three selected files, 269 local links, Markdown spacing/fences, exact-diff preservation and git diff --cached --check; 260 frozen targets were existence-checked without loading. All other source is unchanged from the pulled baseline. Commit, publish and exactly read back the opening before stopping. The containing commit supplies the original campaign-opening identity; recover its actual SHA from Git.
 
 Leave campaign 094 open on its working branch. No source revision, main integration, release or installation follows from this opening request. Next work requires the selected demo-prompt revision scope.
+
+## V-001 — Name the conditional ghost-piece visibility feature
+
+The human supplied an exact replacement for the Tetris guide's conditional ghost-piece visibility prompt. Apply that wording to the prompt admonition, preserving its paragraph break and behavior description. sdd-docs owns the guide edit; sdd-manage owns verification and publication. Recheck the exact replacement and surrounding-content preservation, then leave campaign 094 open.
+
+Replaced the campaign-opening sentence with `Open a campaign to implement "conditional ghost-piece visibility" feature:` and moved the unchanged behavior description into its own paragraph. The change is confined to that prompt; adjacent explanation and acceptance guidance remain unchanged. This is an edit to a demo prompt, not execution of the campaign described by that prompt.
+
+Verification passes: the guide equals its prior bytes with exactly the requested prompt replacement; surrounding content is preserved. The action changes only the guide and this report; Markdown checks and git diff --check pass. No runtime tests are needed for this wording-only change. Commit/publish/read back the action and keep the campaign open; all closed records and other prompts remain unchanged.
