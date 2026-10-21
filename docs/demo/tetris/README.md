@@ -348,11 +348,19 @@ The result should show both whether the game works and whether SDD Manager maint
 
 ## All-inclusive project prompt
 
-As an alternative to the staged prompts above, use this complete description with the greenfield template. It declares the full target scope upfront, with full-interval locking as the default.
+As an alternative to the staged prompts above, copy the complete prompt below and replace the repository and token placeholders. It declares the full target scope upfront, with full-interval locking as the default.
 
 > [!NOTE] Prompt
 >
-> ### Browser-based Tetris game
+> Help me develop the following project using $sdd-manager.
+>
+> ### Project repo and credentials
+>
+> **GitHub repository**: https://github.com/{OWNER}/{REPO}
+>
+> **GitHub token**: {FINE_GRAINED_GH_TOKEN}
+>
+> ### Project description: Browser-based Tetris game
 >
 > Develop a browser-based Tetris game with a playable classic baseline and the enhancements below.
 >

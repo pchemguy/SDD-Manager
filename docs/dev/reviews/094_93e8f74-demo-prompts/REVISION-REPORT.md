@@ -7,7 +7,7 @@
 - Creation parent, integration target and return: main.
 - Working/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager.
 - Request: “Pull origin and open demo prompts revision campaign.”
-- State: Open; selected prompt revisions V-001–V-005 are implemented below. Further revision scope remains pending.
+- State: Open; selected prompt revisions V-001–V-006 are implemented below. Further revision scope remains pending.
 
 ## Starting context
 
@@ -66,3 +66,9 @@ V-003 publication is verified by exact remote-ref readback at c838b03a52411931b9
 The human accepts the revised complete project description and requests a new Tetris guide section with a concise normal-text lead. Append it as an alternative to the staged prompts, preserving the accepted wording inside one `> [!NOTE] Prompt` block. Shift its title from level one to three and its six section headings from level two to four. The lead distinguishes its full target scope and default full-interval locking from the staged exercises above.
 
 V-004 publication was verified at 4f6e63f4b3ab998d546123e1f814586c9c27c686. Editorial comparison confirms accepted-text fidelity. Structural checks pass for heading levels, continuous block quotation, preservation of the preceding guide and the two-file scope; git diff --check also passes. Only the guide and this record are selected; no game execution or runtime testing is required. Commit, publish and read back the addition; keep campaign 094 open.
+
+## V-006 — Make the all-inclusive prompt ready to copy
+
+The human supplies a complete opening for the all-inclusive prompt: invoke `$sdd-manager`, provide repository/token placeholders under a level-three credentials heading, and label the existing description with a level-three project-description heading. Apply that opening inside the existing note block and revise its lead to direct placeholder replacement. Preserve the accepted gameplay and configuration text; add a blank quoted line between the two credential fields for readable Markdown.
+
+V-005 publication was verified at 307c240717974ece569f72373a56973c6c3587a8. Diff inspection confirms the requested opening, complete block quotation and unchanged description body; only the guide and this record change. git diff --check passes. Commit, publish and read back. No game implementation, runtime testing or campaign closure is selected.
