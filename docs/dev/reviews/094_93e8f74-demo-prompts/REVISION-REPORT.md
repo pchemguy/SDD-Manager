@@ -7,7 +7,7 @@
 - Creation parent, integration target and return: main.
 - Working/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager.
 - Request: “Pull origin and open demo prompts revision campaign.”
-- State: Open; selected prompt revisions V-001–V-006 are implemented below. Further revision scope remains pending.
+- State: Open; selected prompt revisions V-001–V-007 are implemented below. Further revision scope remains pending.
 
 ## Starting context
 
@@ -72,3 +72,9 @@ V-004 publication was verified at 4f6e63f4b3ab998d546123e1f814586c9c27c686. Edit
 The human supplies a complete opening for the all-inclusive prompt: invoke `$sdd-manager`, provide repository/token placeholders under a level-three credentials heading, and label the existing description with a level-three project-description heading. Apply that opening inside the existing note block and revise its lead to direct placeholder replacement. Preserve the accepted gameplay and configuration text; add a blank quoted line between the two credential fields for readable Markdown.
 
 V-005 publication was verified at 307c240717974ece569f72373a56973c6c3587a8. Diff inspection confirms the requested opening, complete block quotation and unchanged description body; only the guide and this record change. git diff --check passes. Commit, publish and read back. No game implementation, runtime testing or campaign closure is selected.
+
+## V-007 — Clarify the demo token setup
+
+Add the human's standard fine-grained PAT guidance immediately before the full prompt: restrict repository access to the target repository and grant read/write permissions for Actions, Commit statuses, Contents, Issues, Pull requests and Workflows. Explain that individual workflows may require fewer permissions. This documents the supplied standard set rather than claiming every permission is always required; the copy-paste prompt remains unchanged.
+
+V-006 publication was verified at 44f9eb6abf1afc59a68aa1b8334a477a732630a7. Diff inspection confirms the exact six-item list, repository restriction, qualification, unchanged prompt and two-file scope; git diff --check passes. Commit, publish and read back. Keep the campaign open; no credential value or runtime behavior changes.

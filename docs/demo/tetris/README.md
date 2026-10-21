@@ -350,6 +350,17 @@ The result should show both whether the game works and whether SDD Manager maint
 
 As an alternative to the staged prompts above, copy the complete prompt below and replace the repository and token placeholders. It declares the full target scope upfront, with full-interval locking as the default.
 
+Use a fine-grained personal access token (PAT) restricted to the target repository. A suggested standard set grants **Read and write** permissions for:
+
+- Actions.
+- Commit statuses.
+- Contents.
+- Issues.
+- Pull requests.
+- Workflows.
+
+Individual workflows may require fewer permissions; this set is a convenience rather than a universal minimum.
+
 > [!NOTE] Prompt
 >
 > Help me develop the following project using $sdd-manager.
