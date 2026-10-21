@@ -7,7 +7,7 @@
 - Creation parent, integration target and return: main.
 - Working/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager.
 - Request: “Pull origin and open demo prompts revision campaign.”
-- State: Open; selected prompt revisions V-001–V-009 are implemented below. Further revision scope remains pending.
+- State: Finalized for authorized closure; V-001–V-009 and nested campaign 095 are complete. Closure requires verified publication of the explicit main merge and clean parent return.
 
 ## Starting context
 
@@ -96,3 +96,11 @@ Child 095 completed A-001–A-002 at verified published tip 66966337bf5818cdb9f9
 The human approves the chat draft and authorizes integration. Append a calculator guide section with a concise lead, target-repository PAT guidance and optional checkpoint preapproval, matching the Tetris section's purpose. Preserve the approved full prompt inside one note block, including versioning/phase releases, the three initial phases, all five unary operations, programmer operations, graphing, four modes and design clarification. Existing staged exercises remain unchanged.
 
 Before continuation, exact remote-ref readback verified the child-to-parent merge f6cd58ba7b07a92746744d0898cec4b87a35bc54 with confirmed cleanup. Diff inspection confirms prompt fidelity, heading/quotation structure, preservation of the preceding calculator guide and the two-file scope; git diff --check passes. No runtime tests are needed for this prose-only addition. Commit, publish and read back. No browser-policy, plugin, Tetris-guide, frozen-record, release or campaign-closure changes are selected.
+
+## Finalization and integration
+
+The human requests closure. V-001–V-009 deliver feature-focused Tetris prompts and full copy-paste Tetris/calculator prompts with repository/token placeholders, bounded delivery, optional checkpoint preapproval, version management and releases after each verified integrated phase. The prompts retain their accepted gameplay/calculation requirements. Nested campaign 095 contributes the contained Playwright provisioning and Chromium/Firefox recovery guidance already integrated at f6cd58ba7b07a92746744d0898cec4b87a35bc54; its closed records remain unchanged.
+
+Review scope is focused editorial and integration verification, not a new comprehensive review. Checks pass for both full prompt blocks, 278 local links (including 264 frozen-target existence checks only), applicable current anchors, Markdown whitespace, the eight-path campaign delta, unchanged plugin/test source and preservation of pre-existing closed records and child policy/evidence. Nested browser execution remains inherited evidence; no fresh application, native Windows, installed-agent, browser or release acceptance is claimed by this closure.
+
+Original campaign opening: d435bd6481b0f2813c5b0065d4b3d7d723283e5a. Original branch-off and refreshed main target: 93e8f74bf9bab9e9a75472351e9ae07b3c5e53bf. V-009 is published/read back at 314ebcde32c70d4a573ca632d3de0a407a2b8195. Finalize navigation and HANDOFF, publish/read back this boundary, then explicitly merge its pinned tip into main and repeat the scoped checks on the merged state. The merge records both actual parents and verification; its publication/readback and clean main return establish closure. Preserve the revision branches and stop without release or installation.
