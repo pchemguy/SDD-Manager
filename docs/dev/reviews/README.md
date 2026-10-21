@@ -99,4 +99,4 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
 
-| `095_000d2ec` | Nested in open/suspended 094; Playwright recovery plan published before authorized execution. | [Plan](095_000d2ec-playwright-recovery/REVISION-PLAN.md) |
+| `095_000d2ec` | Nested in open/suspended 094; policy revision and two-browser checks complete, parent integration pending. | [Plan](095_000d2ec-playwright-recovery/REVISION-PLAN.md), [evidence](095_000d2ec-playwright-recovery/REVISION-REPORT.md) |

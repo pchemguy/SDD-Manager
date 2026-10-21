@@ -7,7 +7,7 @@
 - Creation parent, integration target and return: revision/094_93e8f74-demo-prompts.
 - Working branch: revision/095_000d2ec-playwright-recovery; remote: origin, pchemguy/SDD-Manager.
 - Authority: the human requested a revision campaign and detailed but concise instructions, then execution, and explicitly corrected the mode to nested. Parent 094 remains open and suspended; its V-001–V-008 demo changes are preserved.
-- State: Planned; execution authorized. This is a directly requested revision, not a fabricated review campaign.
+- State: A-001–A-002 revised and verified; final integration/publication pending. This is a directly requested revision, not a fabricated review campaign.
 
 ## Objective and boundaries
 

@@ -31,4 +31,25 @@ Earlier probes in this conversation, before campaign opening, used the same runn
 
 Fresh checks establish the documented settings' environment capability on this host, not a target application's acceptance, headed/OS-window focus, security-sandbox coverage, other versions/OSes, native Windows or installed-agent compliance. The runtime override deliberately changes Firefox's internal security isolation. No release or installed-plugin update is selected.
 
-A-001 is locally verified; its containing source/evidence commit must be published/read back before A-002. Final composition/scenario review and parent integration remain pending.
+A-001 is verified and published at bed4354cc88b6698064d25fdfd818ff9496541ba; exact remote readback matched and supervisor cleanup was confirmed.
+
+## A-002 — Final composition and boundary review
+
+The policy contains 1932 words, including its unchanged general sections. Detailed Playwright procedures remain one cohesive section: normal setup and mode selection precede diagnosis, optional image recovery, Firefox recovery and evidence. No separate thin reference, repeated skill policy or generic installer script was introduced. The added detail provides operational decisions and specific API/CLI/settings rather than promising an environment-independent repair.
+
+| Scenario assessed against final source | Outcome |
+| --- | --- |
+| Fresh headless UI/screenshot requirement | Default shell configuration and explicit local CLI; no GUI/full-Chromium requirement inferred. |
+| Existing compatible owned installation | Reuse permitted; repeated downloads unnecessary. |
+| HTTP-200 HTML / 503 / first-browser failure | Bounded body/status evidence, separate browser diagnosis and official alternatives required. |
+| CDN unavailable, registry accessible, no Docker | Version/platform/digest-verified selective extraction procedure; dependencies and layer semantics explicit. |
+| Corrupt archive / active installation lock | Integrity and ownership diagnosis precedes retry/removal. |
+| Full Chromium socket denied | Shell allowed only if accepted requirements permit; required full/headed coverage retained. |
+| Firefox launch succeeds, page hangs | Page-stage logs and whole-process deadline; conditional scoped content-sandbox override. |
+| Untrusted content or internal sandbox required | Override excluded; compatible authorized facility needed. |
+| Smoke test passes | Actual application checks still required; no native focus/security/general-client claim. |
+| Policy denial or repeat unchanged failure | No control bypass or indefinite retry; precise blocked capability and dependent scope retained. |
+
+These are source walkthroughs, not fresh consumer-agent tests. The A-001 runtime evidence supplies the separate two-browser execution checks. Scoped validator passes for six allowed changed paths, 274 local link targets (existence only for historical targets), heading/fence separation, whitespace and byte-identical general-policy sections. Manual review confirms list spacing and continuation structure. Closed campaign records, plugin bytes, manifests, version and demo source are unchanged from the branch-off baseline.
+
+A-002 review/finalization is complete; publish its containing checkpoint before integration. The final explicit merge must have refreshed parent 094 and the verified child tip as its two parents, rerun the scoped checks on the prospective result, restore open/suspended parent context, publish/read back and return through the parent's existing worktree. That merge's message and remote state supply actual integration/closure provenance without editing frozen child evidence afterward. No main merge or release is authorized by this campaign.

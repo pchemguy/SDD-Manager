@@ -1,6 +1,6 @@
 # SDD Manager handoff
 
-Nested campaign 095 is open for Playwright policy recovery. Parent 094 remains open and suspended; its demo changes are preserved. Reporting: Standard.
+Nested campaign 095 has completed its policy revisions and focused checks; final integration/publication remains pending. Parent 094 remains open and suspended; its demo changes are preserved. Reporting: Standard.
 
 ## Scope and authority
 
@@ -12,4 +12,4 @@ Working branch: revision/095_000d2ec-playwright-recovery. Creation parent, integ
 
 ## Next boundary
 
-Publish/read back this plan checkpoint, execute A-001–A-002, then verify and publish explicit integration into 094 and return to its worktree. Keep 094 open without resuming its work. Compatible test binaries currently exist only in temporary diagnostic storage; preserve evidence facts in the campaign report rather than relying on their durability. Credentials remain outside tracked evidence.
+Publish/read back the finalization checkpoint, then verify and publish explicit integration into 094 and return to its worktree. [Report](reviews/095_000d2ec-playwright-recovery/REVISION-REPORT.md) records fresh two-browser checks and their limits. Keep 094 open without resuming its work. Compatible test binaries currently exist only in temporary diagnostic storage; preserve evidence facts in the campaign report rather than relying on their durability. Credentials remain outside tracked evidence.
