@@ -20,12 +20,6 @@ test('helper command quotes Node and script paths without embedding a token', ()
   assert.match(cmd, /^!'/); assert.ok(cmd.includes('C:/Program Files/nodejs/node.exe'));
   assert.ok(cmd.includes("'\\''")); assert.ok(!cmd.includes('password='));
 });
-test('Windows ACL policy allows only owner/SYSTEM/Administrators grants', () => {
-  const sid = 'S-1-5-21-1-2-3-1001';
-  assert.doesNotThrow(() => auth.checkWindowsDacl(`D:P(A;;FA;;;SY)(A;;FA;;;BA)(A;;FR;;;${sid})`, sid));
-  for (const sddl of ['D:', 'D:(A;;FR;;;WD)', 'D:(A;;FR;;;AU)', 'D:(A;;FR;;;BU)',
-    'D:(XA;;FR;;;SY;condition)', 'not-sddl']) assert.throws(() => auth.checkWindowsDacl(sddl, sid));
-});
 test('CLI rejects arbitrary commands, unknown/duplicate options and incomplete scope', () => {
   assert.throws(() => auth.parseCli(['config', '--global', 'x']));
   assert.throws(() => auth.parseCli(['push']));
@@ -43,6 +37,7 @@ import path from 'node:path';
 import os from 'node:os';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { capture, gitHttpsFixture } from './helpers/git-auth-https.mjs';
 const SCRIPT = fileURLToPath(new URL('../.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs', import.meta.url));
 const CANARY = 'synthetic-only-canary-token';
 const TARGET_URL = 'https://example.invalid/owner/repo.git';
@@ -55,11 +50,7 @@ function fixture(t) {
   };
   git(['init', '-q']); git(['config', 'user.name', 'Fixture']); git(['config', 'user.email', 'fixture@example.invalid']);
   fs.writeFileSync(path.join(root, '.gitignore'), '*.tkn\n');
-  fs.writeFileSync(path.join(root, 'gh.tkn'), CANARY + '\r\n', { mode: 0o600 });
-  if (process.platform === 'win32') {
-    const sid = spawnSync('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' }).stdout.match(/S-1-\d+(?:-\d+)+/)[0];
-    assert.equal(spawnSync('icacls.exe', [path.join(root, 'gh.tkn'), '/inheritance:r', '/grant:r', `*${sid}:F`], { encoding: 'utf8' }).status, 0);
-  }
+  fs.writeFileSync(path.join(root, 'gh.tkn'), CANARY + '\r\n');
   git(['add', '.gitignore']); git(['commit', '-qm', 'fixture']);
   const ref = git(['symbolic-ref', 'HEAD']), oid = git(['rev-parse', 'HEAD']);
   git(['remote', 'add', 'origin', TARGET_URL]);
@@ -131,7 +122,14 @@ test('mismatched destination or source blocks all network effects', t => {
   assert.ok(!runner.calls.some(c => c.args.includes('push') || c.args.includes('--refs')));
   assert.throws(() => auth.recover({ ...f.options, expect: 'f'.repeat(40) }, runner.execute), /source_mismatch/);
 });
-test('tracked, unignored, external, symlink and permissive token files block recovery', t => {
+test('ordinary readable token supports recovery without permission setup', t => {
+  const f = fixture(t), runner = controlled(f);
+  if (process.platform !== 'win32') fs.chmodSync(path.join(f.root, 'gh.tkn'), 0o644);
+  const result = auth.recover(f.options, runner.execute);
+  assert.equal(result.ok, true);
+  assert.equal(result.code, 'remote_verified');
+});
+test('tracked, unignored, external and symlink token files block recovery', t => {
   const f = fixture(t), runner = controlled(f);
   assert.throws(() => auth.recover({ ...f.options, tokenFile: '../outside.tkn' }, runner.execute), /token_outside_repository/);
   fs.writeFileSync(path.join(f.root, '.gitignore'), '');
@@ -140,8 +138,6 @@ test('tracked, unignored, external, symlink and permissive token files block rec
   assert.throws(() => auth.recover(f.options, runner.execute));
   f.git(['reset', '--', 'gh.tkn']); fs.writeFileSync(path.join(f.root, '.gitignore'), '*.tkn\n');
   if (process.platform !== 'win32') {
-    fs.chmodSync(path.join(f.root, 'gh.tkn'), 0o644);
-    assert.throws(() => auth.recover(f.options, runner.execute), /token_permissions/);
     fs.unlinkSync(path.join(f.root, 'gh.tkn')); fs.symlinkSync('.gitignore', path.join(f.root, 'gh.tkn'));
     assert.throws(() => auth.recover(f.options, runner.execute), /token_symlink/);
   }
@@ -192,12 +188,9 @@ test('Git spawn error, signal and oversized output stop before network effects',
     assert.equal(calls, 1);
   }
 });
-test('credential parsing and Windows ACLs reject ambiguity, accept Azure-style user SID', () => {
+test('credential parsing rejects ambiguous and oversized requests', () => {
   assert.throws(() => auth.credentialRequest('protocol=https\nprotocol=http\n\n'));
   assert.throws(() => auth.credentialRequest('x'.repeat(66000)));
-  const sid = 'S-1-12-1-1-2-3-4';
-  assert.doesNotThrow(() => auth.checkWindowsDacl(`D:P(A;;FA;;;${sid})`, sid));
-  assert.throws(() => auth.checkWindowsDacl('D:(A;;FA;;;SY)', sid));
 });
 test('malformed token never escapes public CLI failure output', t => {
   const f = fixture(t); fs.writeFileSync(path.join(f.root, 'gh.tkn'), CANARY + '\nprotocol=bad');
@@ -246,34 +239,164 @@ test('configured remote VCS helpers block before any push or ref readback', t =>
   assert.throws(() => auth.recover(f.options, runner.execute), /remote_helper_unsupported/);
   assert.ok(!runner.calls.some(c => c.args.includes('push') || c.args.includes('--refs')));
 });
-test('native Windows ACL export is parsed as metadata', t => {
-  if (process.platform !== 'win32') return;
-  const f = fixture(t), saved = path.join(f.root, 'fixture-acl.txt');
-  const exported = spawnSync('icacls.exe', [path.join(f.root, 'gh.tkn'), '/save', saved, '/q'], { encoding: 'utf8' });
-  assert.equal(exported.status, 0);
-  const dacl = auth.parseWindowsAclExport(fs.readFileSync(saved));
-  const identity = spawnSync('whoami.exe', ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' }).stdout;
-  const { sid, localAccount } = auth.windowsUserContext(identity, os.hostname());
-  auth.checkWindowsDacl(dacl, sid, localAccount);
+
+test('private helper context accepts its Git directory and discards inherited command config', t => {
+  const f = fixture(t), directory = f.git(['rev-parse', '--absolute-git-dir']);
+  const result = spawnSync(process.execPath, [SCRIPT, '--credential-helper', f.root, 'gh.tkn', TARGET_URL, 'get'], {
+    cwd: f.root, encoding: 'utf8', input: `url=${TARGET_URL}\nprotocol=https\nhost=example.invalid\npath=owner/repo.git\n\n`,
+    env: { ...process.env, GIT_DIR: directory, GIT_CONFIG_PARAMETERS: "'core.bare=true'",
+      GIT_CONFIG_COUNT: '1', GIT_CONFIG_KEY_0: 'core.bare', GIT_CONFIG_VALUE_0: 'true' }, timeout: 10000,
+  });
+  assert.equal(result.status, 0, result.stderr); assert.ok(result.stdout.includes(`password=${CANARY}`));
 });
-test('Windows built-in account aliases require verified local current-user identity', () => {
-  const sid = 'S-1-5-21-1-2-3-500';
-  assert.deepEqual(auth.windowsUserContext(`"COMPUTER\\Administrator","${sid}"\r\n`, 'computer'), { sid, localAccount: true });
-  assert.deepEqual(auth.windowsUserContext(`"DOMAIN\\Administrator","${sid}"\r\n`, 'computer'), { sid, localAccount: false });
-  assert.doesNotThrow(() => auth.checkWindowsDacl('D:(A;;FA;;;LA)', sid, true));
-  assert.throws(() => auth.checkWindowsDacl('D:(A;;FA;;;LA)', sid, false));
-  assert.throws(() => auth.checkWindowsDacl('D:(A;;FA;;;LA)', 'S-1-5-21-1-2-3-1001', true));
-  assert.throws(() => auth.windowsUserContext('unverified', 'computer'));
+
+test('private helper context rejects another Git directory and unadmitted relocation', t => {
+  const f = fixture(t), other = fixture(t);
+  for (const extra of [{ GIT_DIR: path.join(other.root, '.git') }, { GIT_WORK_TREE: f.root }, { GIT_INDEX_FILE: path.join(f.root, '.git', 'index') }]) {
+    const result = spawnSync(process.execPath, [SCRIPT, '--credential-helper', f.root, 'gh.tkn', TARGET_URL, 'get'], {
+      cwd: f.root, encoding: 'utf8', input: 'protocol=https\nhost=example.invalid\npath=owner/repo.git\n\n',
+      env: { ...process.env, ...extra }, timeout: 10000,
+    });
+    assert.equal(result.status, 1); assert.equal(result.stdout, ''); assert.ok(!result.stderr.includes(CANARY));
+  }
 });
-test('ACL exports support observed BOM-less UTF-16LE and reject malformed records', () => {
-  const dacl = 'D:PAI(A;;FA;;;SY)(A;;FA;;;S-1-5-21-1-2-3-1001)';
-  const text = `gh.tkn\r\n${dacl}\r\n`;
-  for (const bytes of [Buffer.from(text, 'utf16le'),
-    Buffer.concat([Buffer.from([0xff, 0xfe]), Buffer.from(text, 'utf16le')]), Buffer.from(text)]) {
-    assert.equal(auth.parseWindowsAclExport(bytes), dacl);
+
+test('private helper context supports a linked worktree Git administration directory', t => {
+  const f = fixture(t), linked = path.join(f.root, 'linked');
+  f.git(['worktree', 'add', '--detach', linked, f.oid]);
+  fs.writeFileSync(path.join(linked, 'gh.tkn'), CANARY + '\n');
+  const directory = spawnSync('git', ['-C', linked, 'rev-parse', '--absolute-git-dir'], { encoding: 'utf8' }).stdout.trim();
+  const result = spawnSync(process.execPath, [SCRIPT, '--credential-helper', linked, 'gh.tkn', TARGET_URL, 'get'], {
+    cwd: linked, encoding: 'utf8', input: 'protocol=https\nhost=example.invalid\npath=owner/repo.git\n\n',
+    env: { ...process.env, GIT_DIR: directory }, timeout: 10000,
+  });
+  assert.equal(result.status, 0, result.stderr); assert.ok(result.stdout.includes(`password=${CANARY}`));
+});
+
+test('public callers reject ambient relocation and command configuration', t => {
+  const f = fixture(t);
+  // A missing guard must still stop locally rather than contacting any host.
+  f.git(['remote', 'set-url', 'origin', 'https://different.invalid/owner/repo.git']);
+  for (const extra of [{ GIT_DIR: path.join(f.root, '.git') }, { GIT_CONFIG_PARAMETERS: "'core.bare=true'" }]) {
+    const result = spawnSync(process.execPath, [SCRIPT, 'readback', '--repo', f.root, '--remote', 'origin', '--url', TARGET_URL, '--ref', f.ref, '--expect', f.oid], {
+      encoding: 'utf8', env: { ...process.env, ...extra }, timeout: 10000,
+    });
+    assert.equal(result.status, 1); assert.equal(JSON.parse(result.stdout).code, 'relocated_git_environment');
+    assert.ok(!result.stdout.includes(CANARY));
   }
-  for (const bytes of [Buffer.alloc(0), Buffer.from([0xff, 0xfe, 0x41]),
-    Buffer.from(`gh.tkn\n${dacl}\nextra\n`), Buffer.from('gh.tkn\nnot-a-dacl\n')]) {
-    assert.throws(() => auth.parseWindowsAclExport(bytes), /acl_unverified/);
+});
+
+test('native HTTPS Git transport recovers credentials and verifies the exact ref', { timeout: 45000 }, async t => {
+  const f = fixture(t), server = await gitHttpsFixture(t, CANARY);
+  f.git(['remote', 'set-url', 'origin', server.url]);
+  // Honor the explicit fixture CA on Schannel; no production TLS change.
+  f.git(['config', 'http.schannelUseSSLCAInfo', 'true']); f.git(['config', 'http.schannelCheckRevoke', 'false']);
+  const config = fs.readFileSync(path.join(f.root, '.git', 'config'));
+  const result = await capture(process.execPath, [SCRIPT, 'push', '--repo', f.root, '--remote', 'origin', '--url', server.url,
+    '--ref', f.ref, '--expect', f.oid, '--timeout-ms', '10000'], { cwd: f.root, env: server.env });
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  const data = JSON.parse(result.stdout); assert.equal(data.code, 'remote_verified'); assert.equal(data.observed, f.oid);
+  assert.ok(server.events.some(event => event.write && event.authorized));
+  assert.deepEqual(fs.readFileSync(path.join(f.root, '.git', 'config')), config);
+  assert.ok(!(result.stdout + result.stderr).includes(CANARY));
+});
+
+test('process summaries preserve failed push independently of each readback state', t => {
+  const f = fixture(t);
+  const pushes = [
+    [{ status: 128, stderr: CANARY }, 'git_failed', 128, null],
+    [{ status: null, error: { code: 'ETIMEDOUT' }, signal: 'SIGKILL', stderr: CANARY }, 'process_timeout', null, 'SIGKILL'],
+    [{ status: null, signal: 'SIGTERM', stderr: CANARY }, 'process_signal', null, 'SIGTERM'],
+    [{ status: null, error: { code: 'ENOENT' }, stderr: CANARY }, 'process_unavailable', null, null],
+    [{ status: null, error: { code: 'ENOBUFS' }, stderr: CANARY }, 'process_output_limit', null, null],
+    [{ status: null, error: { code: CANARY }, stderr: CANARY }, 'process_error', null, null],
+  ];
+  const readbacks = [
+    [{ status: 0, stdout: '' }, 'absent', 'succeeded'],
+    [{ status: 0, stdout: `${'b'.repeat(40)}\t${f.ref}\n` }, 'different', 'succeeded'],
+    [{ status: 0, stdout: `${f.oid}\t${f.ref}\n` }, 'matching', 'succeeded'],
+    [{ status: 128, stderr: CANARY }, 'unknown', 'git_failed'],
+  ];
+  for (const [push, code, status, signal] of pushes) for (const [readback, remote, readCode] of readbacks) {
+    const runner = controlled(f, { push, readback }), result = auth.recover(f.options, runner.execute);
+    assert.ok(result.push_result, 'Missing independent push_result');
+    assert.ok(result.readback_result, 'Missing independent readback_result');
+    assert.equal(result.push_result.code, code); assert.equal(result.push_result.exit_status, status); assert.equal(result.push_result.signal, signal);
+    assert.equal(result.readback_result.code, readCode); assert.equal(result.remote_state, remote);
+    assert.equal(result.ok, remote === 'matching'); assert.equal(result.push_attempted, true);
+    if (result.ok) assert.equal(result.code, 'verified_after_push_error');
+    assert.equal(runner.calls.filter(call => call.args.includes('push')).length, 1);
+    assert.ok(!JSON.stringify(result).includes(CANARY));
   }
+});
+
+test('process summaries distinguish no push and invalid readback content', t => {
+  const f = fixture(t), runner = controlled(f);
+  const onlyRead = auth.recover({ ...f.options, operation: 'readback' }, runner.execute);
+  assert.ok(onlyRead.push_result, 'Missing not-attempted push summary');
+  assert.deepEqual(onlyRead.push_result, { code: 'not_attempted', exit_status: null, signal: null });
+  assert.equal(onlyRead.readback_result.code, 'succeeded');
+  assert.equal(runner.calls.filter(call => call.args.includes('push')).length, 0);
+  const invalid = controlled(f, { readback: { status: 0, stdout: `${f.oid}\t${f.ref}\n${f.oid}\t${f.ref}\n` } });
+  const result = auth.recover(f.options, invalid.execute);
+  assert.equal(result.remote_state, 'unknown'); assert.equal(result.code, 'ambiguous_readback');
+  assert.equal(result.push_result.code, 'succeeded'); assert.equal(result.readback_result.code, 'succeeded');
+  assert.equal(result.readback_result.validation_error, 'ambiguous_readback');
+});
+
+test('private helper diagnostics are allowlisted and never contain credential data', t => {
+  const f = fixture(t), input = 'protocol=https\nhost=example.invalid\npath=owner/repo.git\n\n';
+  const invoke = (body, tokenFile = 'gh.tkn', extra = {}) => spawnSync(process.execPath,
+    [SCRIPT, '--credential-helper', f.root, tokenFile, TARGET_URL, 'get'],
+    { cwd: f.root, env: { ...process.env, ...extra }, input: body, encoding: 'utf8', timeout: 10000 });
+  const cases = [
+    [invoke(input, 'gh.tkn', { GIT_WORK_TREE: f.root }), 'relocated_git_environment', 'preflight'],
+    [invoke('protocol=https\nprotocol=http\n\n'), 'invalid_credential_request', 'helper'],
+    [invoke(input, 'missing-token.tkn'), 'helper_failed', 'helper'],
+  ];
+  for (const [result, code, stage] of cases) {
+    assert.equal(result.status, 1); assert.equal(result.stdout, '');
+    assert.equal(result.stderr, 'SDD_GIT_AUTH_HELPER ' + JSON.stringify({ code, stage }) + '\n');
+    assert.ok(!result.stderr.includes(CANARY)); assert.ok(!result.stderr.includes(f.root));
+  }
+});
+
+test('process summaries accept only unambiguous allowlisted helper diagnostics', t => {
+  const f = fixture(t), diagnostic = { code: 'token_not_ignored', stage: 'preflight' };
+  const line = 'SDD_GIT_AUTH_HELPER ' + JSON.stringify(diagnostic) + '\n';
+  const cases = [
+    [CANARY + '\n' + line, diagnostic], [line + line, diagnostic],
+    ['SDD_GIT_AUTH_HELPER ' + JSON.stringify({ code: CANARY, stage: 'preflight' }) + '\n', undefined],
+    ['SDD_GIT_AUTH_HELPER {bad json}\n', undefined],
+    [line + 'SDD_GIT_AUTH_HELPER ' + JSON.stringify({ code: 'invalid_token', stage: 'preflight' }) + '\n', undefined],
+    ['SDD_GIT_AUTH_HELPER ' + JSON.stringify({ ...diagnostic, detail: CANARY }) + '\n', undefined],
+  ];
+  for (const [stderr, expected] of cases) {
+    const runner = controlled(f, { push: { status: 128, stderr } });
+    const result = auth.recover(f.options, runner.execute);
+    assert.ok(result.push_result, 'Missing sanitized push summary');
+    assert.deepEqual(result.push_result.helper_error, expected);
+    assert.ok(!JSON.stringify(result).includes(CANARY));
+  }
+});
+
+test('native HTTPS Git transport reports safe helper failure after token eligibility changes', { timeout: 45000 }, async t => {
+  const f = fixture(t), server = await gitHttpsFixture(t, CANARY, {
+    onChallenge: () => fs.writeFileSync(path.join(f.root, '.gitignore'), ''),
+  });
+  f.git(['remote', 'set-url', 'origin', server.url]);
+  f.git(['config', 'http.schannelUseSSLCAInfo', 'true']); f.git(['config', 'http.schannelCheckRevoke', 'false']);
+  const result = await capture(process.execPath, [SCRIPT, 'push', '--repo', f.root, '--remote', 'origin', '--url', server.url,
+    '--ref', f.ref, '--expect', f.oid, '--timeout-ms', '10000'], { cwd: f.root, env: server.env });
+  assert.equal(result.status, 2); const data = JSON.parse(result.stdout);
+  assert.equal(data.remote_state, 'unknown'); assert.equal(data.push_attempted, true);
+  assert.ok(data.push_result, 'Missing native push failure summary');
+  assert.equal(data.push_result.code, 'git_failed'); assert.equal(data.push_result.exit_status, 128);
+  assert.deepEqual(data.push_result.helper_error, { code: 'token_not_ignored', stage: 'preflight' });
+  // Each independently owned attempt revalidates its token. Eligibility loss
+  // blocks readback rather than falling through to anonymous/another account.
+  assert.equal(data.readback_result.code, 'not_attempted');
+  assert.deepEqual(data.local_error, { code: 'token_not_ignored', stage: 'preflight' });
+  assert.ok(!server.events.some(event => event.write && event.authorized));
+  assert.equal(result.stderr, ''); assert.ok(!JSON.stringify(data).includes(CANARY));
 });

@@ -443,22 +443,15 @@ function localRepo(t) {
   t.after(() => fs.rmSync(root, { recursive: true, force: true }));
   git(root, 'init', '-q'); git(root, 'remote', 'add', 'origin', 'git@github.com:' + repository + '.git');
   fs.writeFileSync(path.join(root, '.gitignore'), '*.tkn\n');
-  const token = path.join(root, 'gh.tkn'); fs.writeFileSync(token, 'synthetic-fixture', { mode: 0o600 });
-  if (process.platform === 'win32') {
-    const native = name => path.join(process.env.SystemRoot, 'System32', name);
-    const identity = spawnSync(native('whoami.exe'), ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' });
-    assert.equal(identity.status, 0);
-    const sid = identity.stdout.match(/S-1-\d+(?:-\d+)+/)[0];
-    const acl = spawnSync(native('icacls.exe'), [token, '/inheritance:r', '/grant:r', '*' + sid + ':F'], { encoding: 'utf8' });
-    assert.equal(acl.status, 0, acl.stderr);
-  }
+  const token = path.join(root, 'gh.tkn'); fs.writeFileSync(token, 'synthetic-fixture');
   const filename = path.join(root, 'request 空.json');
   fs.writeFileSync(filename, '\ufeff' + JSON.stringify(request()));
   return { root, filename, token, options: { operation: 'task', repo: root, remote: 'origin', requestFile: filename, tokenFile: 'gh.tkn', timeoutMs: 10000, requestTimeoutMs: 1000, reconcileOnly: false } };
 }
 
-test('real Git/root/protected input, Unicode/BOM request and local lock cleanup work natively', async t => {
+test('ordinary readable token, real Git/root, Unicode/BOM request and local lock cleanup work natively', async t => {
   const local = localRepo(t); const state = fixture();
+  if (process.platform !== 'win32') fs.chmodSync(local.token, 0o644);
   const result = await run(local.options, { fetchImpl: state.fetch });
   assert.equal(result.ok, true, JSON.stringify(result));
   assert.ok(!fs.existsSync(path.join(local.root, '.git', 'sdd-forge-close.lock')));
@@ -497,18 +490,6 @@ test('non-root input is refused before credential or network work', async t => {
   await assert.rejects(run({ ...local.options, repo: child }), error => error.code === 'repo_must_be_root');
 });
 
-test('native broad credential protection blocks the completion client', async t => {
-  const local = localRepo(t);
-  if (process.platform === 'win32') {
-    const acl = spawnSync(path.join(process.env.SystemRoot, 'System32', 'icacls.exe'), [local.token, '/grant', '*S-1-1-0:R'], { encoding: 'utf8' });
-    assert.equal(acl.status, 0, acl.stderr);
-  } else fs.chmodSync(local.token, 0o644);
-  let calls = 0;
-  const result = await run(local.options, { fetchImpl: async () => { calls++; throw new Error('No request expected'); } });
-  assert.equal(result.ok, false);
-  assert.equal(result.code, 'token_permissions');
-  assert.equal(calls, 0);
-});
 
 test('contradictory or malformed phase labels block task and milestone completion before writes', async () => {
   const expected = common().phase_label;

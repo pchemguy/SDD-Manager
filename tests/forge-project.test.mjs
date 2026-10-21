@@ -252,7 +252,7 @@ test('docs definitions provide complete briefs and lifecycle ordering without ag
   for (let i = 1; i < 8; i++) assert.deepEqual(draft.tasks[i].depends_on, [draft.tasks[i - 1].id]);
   assert.deepEqual(draft.tasks[8].depends_on, draft.tasks.slice(0, 8).map(item => item.id));
   assert.match(draft.tasks[0].acceptance, /some but not all four/);
-  assert.match(draft.tasks[6].acceptance, /layout's separate human first approval/);
+  assert.deepEqual(draft.tasks, definitions.tasks);
   assert.match(draft.tasks[8].acceptance, /not prerequisites for completing DOCS-009/);
   const payload = JSON.stringify(renderProjection(draft));
   assert.ok(!payload.includes(request.source.sha256)); assert.ok(!payload.includes('eligibility'));
@@ -331,15 +331,7 @@ function localRepo(t) {
   git(root, 'config', 'core.autocrlf', 'false'); git(root, 'remote', 'add', 'origin', 'git@github.com:example-owner/example-project.git');
   fs.mkdirSync(path.join(root, 'docs/dev'), { recursive: true }); fs.writeFileSync(path.join(root, 'docs/dev/TASKS.md'), ownerText);
   fs.writeFileSync(path.join(root, '.gitignore'), '*.tkn\n'); git(root, 'add', '.'); git(root, 'commit', '-qm', 'fixture');
-  const token = path.join(root, 'gh.tkn'); fs.writeFileSync(token, 'synthetic-fixture', { mode: 0o600 });
-  if (process.platform === 'win32') {
-    const native = name => path.join(process.env.SystemRoot, 'System32', name);
-    const who = spawnSync(native('whoami.exe'), ['/user', '/fo', 'csv', '/nh'], { encoding: 'utf8' });
-    assert.equal(who.status, 0);
-    const sid = who.stdout.match(/S-1-\d+(?:-\d+)+/)[0];
-    const acl = spawnSync(native('icacls.exe'), [token, '/inheritance:r', '/grant:r', '*' + sid + ':F'], { encoding: 'utf8' });
-    assert.equal(acl.status, 0, acl.stderr);
-  }
+  const token = path.join(root, 'gh.tkn'); fs.writeFileSync(token, 'synthetic-fixture');
   const value = projectionRequest(); value.source.sha256 = createHash('sha256').update(ownerText).digest('hex');
   const filename = path.join(base, 'request 空.json'); fs.writeFileSync(filename, '\ufeff' + JSON.stringify(value));
   return { root, base, token, filename, value, options: { kind: 'phase', mode: 'apply', repo: root, remote: 'origin', requestFile: filename, timeoutMs: 30000, requestTimeoutMs: 1000 } };
@@ -383,8 +375,9 @@ test('native credential-free preview requires source binding and does not contac
   await assert.rejects(runProject({ ...local.options, mode: 'check' }), error => error.code === 'source_changed');
 });
 
-test('native protected input and CRLF owner/BOM request project and release the shared lock', async t => {
+test('ordinary readable token and CRLF owner/BOM request project and release the shared lock', async t => {
   const local = localRepo(t), state = fixture(), raw = ownerText.replace(/\n/g, '\r\n');
+  if (process.platform !== 'win32') fs.chmodSync(local.token, 0o644);
   fs.writeFileSync(path.join(local.root, 'docs/dev/TASKS.md'), raw);
   local.value.source.sha256 = createHash('sha256').update(raw).digest('hex'); fs.writeFileSync(local.filename, '\ufeff' + JSON.stringify(local.value));
   const result = await runProject(local.options, { fetchImpl: state.fetch });
@@ -435,16 +428,6 @@ test('native shared lock blocks projection without stealing or contacting provid
   assert.ok(fs.existsSync(directory)); assert.equal(calls, 0);
 });
 
-test('native broad token protection blocks new projection path and releases its owned lock', async t => {
-  const local = localRepo(t); let calls = 0;
-  if (process.platform === 'win32') {
-    const acl = spawnSync(path.join(process.env.SystemRoot, 'System32', 'icacls.exe'), [local.token, '/grant', '*S-1-1-0:R'], { encoding: 'utf8' });
-    assert.equal(acl.status, 0, acl.stderr);
-  } else fs.chmodSync(local.token, 0o644);
-  const result = await runProject(local.options, { fetchImpl: async () => { calls++; throw new Error('No API'); } });
-  assert.equal(result.ok, false); assert.equal(result.code, 'token_permissions'); assert.equal(calls, 0);
-  assert.ok(!fs.existsSync(path.join(local.root, '.git/sdd-forge-close.lock')));
-});
 
 test('source drift after hosted effects retains those effects and blocks final success', async t => {
   const local = localRepo(t), state = fixture();
@@ -483,6 +466,119 @@ test('native source failure cannot erase an unresolved hosted effect', async t =
   const result = await runProject(local.options, { fetchImpl: state.fetch });
   assert.equal(result.ok, false); assert.equal(result.code, 'source_changed');
   assert.equal(result.effects[0].status, 'unknown'); assert.equal(result.remote_state, 'unknown');
+});
+
+function installDocs(root, filename = 'docs/dev/DOCS_TASKS.md') {
+  const template = fs.readFileSync(new URL('../.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md', import.meta.url), 'utf8');
+  const content = template.replace('- [ ] DOCS-001', '- [x] DOCS-001').replace(/\r?\n/g, '\r\n');
+  fs.writeFileSync(path.join(root, filename), content);
+  git(root, 'add', filename); git(root, 'commit', '-qm', 'docs fixture');
+  return content;
+}
+
+test('convenience parsers default origin and retain explicit remotes and phase requests', () => {
+  assert.equal(parseCli(['docs-main', '--repo', 'root', '--check']).remote, 'origin');
+  assert.equal(parseDraftCli(['docs-main', '--repo', 'root']).remote, 'origin');
+  assert.equal(parseCli(['phase', '--repo', 'root', '--request', 'input.json', '--check']).remote, 'origin');
+  assert.equal(parseDraftCli(['phase', '--repo', 'root', '--tasks', 'tasks.md', '--phase', '1']).remote, 'origin');
+  assert.equal(parseCli(['docs-main', '--repo', 'root', '--remote', 'upstream', '--check']).remote, 'upstream');
+  assert.equal(parseDraftCli(['docs-main', '--repo', 'root', '--remote', 'upstream']).remote, 'upstream');
+  for (const args of [
+    ['docs-main', '--repo', 'root', '--request', 'input.json', '--tasks', 'tasks.md', '--check'],
+    ['docs-main', '--repo', 'root', '--request', 'input.json', '--apply', '--confirm-eligibility'],
+    ['docs-main', '--repo', 'root', '--check', '--confirm-eligibility'],
+    ['docs-main', '--repo', 'root', '--apply'],
+    ['phase', '--repo', 'root', '--check'],
+    ['phase', '--repo', 'root', '--request', 'input.json', '--tasks', 'tasks.md', '--check'],
+    ['docs-main', '--repo', 'root', '--remote', 'origin', '--remote', 'upstream', '--check'],
+    ['docs-main', '--repo', 'root', '--apply', '--confirm-eligibility', '--confirm-eligibility'],
+  ]) assert.throws(() => parseCli(args), JSON.stringify(args));
+});
+
+test('convenience preview and draft prefer the actual DOCS_TASKS without writing or credentials', async t => {
+  const local = localRepo(t), raw = installDocs(local.root); fs.unlinkSync(local.token);
+  const before = git(local.root, 'status', '--porcelain');
+  const draft = runDraft({ kind: 'docs-main', repo: local.root });
+  assert.equal(draft.source.root, 'repo'); assert.equal(draft.source.path, 'docs/dev/DOCS_TASKS.md');
+  assert.equal(draft.source.sha256, createHash('sha256').update(raw).digest('hex'));
+  assert.ok(Object.values(draft.eligibility).every(value => value === false));
+  const result = await runProject({ kind: 'docs-main', repo: local.root, mode: 'check' }, {
+    fetchImpl: async () => assert.fail('Preview must not use the provider'),
+  });
+  assert.equal(result.code, 'input_verified'); assert.equal(result.payloads.issues.length, 9);
+  assert.equal(result.request_sha256, createHash('sha256').update(JSON.stringify(draft)).digest('hex'));
+  assert.equal(fs.readFileSync(path.join(local.root, draft.source.path), 'utf8'), raw);
+  assert.equal(git(local.root, 'status', '--porcelain'), before);
+  assert.ok(!fs.existsSync(path.join(local.root, '.git/sdd-forge-close.lock')));
+});
+
+test('convenience bootstrap uses bundled definitions only when the default document is absent', async t => {
+  const local = localRepo(t), before = git(local.root, 'status', '--porcelain'), state = fixture();
+  const draft = runDraft({ kind: 'docs-main', repo: local.root });
+  assert.equal(draft.source.root, 'plugin');
+  const result = await runProject({ kind: 'docs-main', repo: local.root, mode: 'reconcile-only' }, { fetchImpl: state.fetch });
+  assert.equal(result.code, 'projection_pending'); assert.equal(writes(state).length, 0);
+  assert.equal(result.effects.length, 10);
+  assert.ok(!fs.existsSync(path.join(local.root, 'docs/dev/DOCS_TASKS.md')));
+  assert.equal(git(local.root, 'status', '--porcelain'), before);
+  assert.ok(!fs.existsSync(path.join(local.root, '.git/sdd-forge-close.lock')));
+  fs.writeFileSync(path.join(local.root, 'docs/dev/DOCS_TASKS.md'), 'Invalid source');
+  await assert.rejects(runProject({ kind: 'docs-main', repo: local.root, mode: 'check' }));
+  assert.throws(() => runDraft({ kind: 'docs-main', repo: local.root }));
+});
+
+test('convenience explicit tasks and alternate remote override defaults without silent fallback', async t => {
+  const local = localRepo(t), raw = installDocs(local.root, 'docs/dev/SELECTED.md');
+  fs.writeFileSync(path.join(local.root, 'docs/dev/DOCS_TASKS.md'), 'Invalid default');
+  git(local.root, 'remote', 'rename', 'origin', 'upstream');
+  const options = { kind: 'docs-main', repo: local.root, remote: 'upstream', tasks: 'docs\\dev\\SELECTED.md', mode: 'check' };
+  const draft = runDraft(options);
+  assert.equal(draft.source.path, 'docs/dev/SELECTED.md');
+  assert.equal(draft.source.sha256, createHash('sha256').update(raw).digest('hex'));
+  assert.equal((await runProject(options)).code, 'input_verified');
+  assert.throws(() => runDraft({ ...options, tasks: 'docs/dev/MISSING.md' }));
+  await assert.rejects(runProject({ ...options, tasks: 'docs/dev/MISSING.md' }));
+  await assert.rejects(runProject({ ...options, remote: undefined }), error => error.code === 'git_preflight_failed');
+  const target = path.join(local.root, 'docs/dev/DOCS_TASKS.md'); fs.unlinkSync(target); fs.mkdirSync(target);
+  await assert.rejects(runProject({ kind: 'docs-main', repo: local.root, remote: 'upstream', mode: 'check' }));
+});
+
+test('convenience apply requires explicit eligibility and enforces committed sources before provider access', async t => {
+  const local = localRepo(t); fs.unlinkSync(local.token); installDocs(local.root);
+  const options = { kind: 'docs-main', repo: local.root, mode: 'apply' };
+  const fetchImpl = async () => assert.fail('Preconditions must fail before provider access');
+  await assert.rejects(runProject(options, { fetchImpl }), error => error.code === 'eligibility_not_established');
+  fs.appendFileSync(path.join(local.root, 'docs/dev/DOCS_TASKS.md'), '\nUncommitted context.\n');
+  await assert.rejects(runProject({ ...options, confirmEligibility: true }, { fetchImpl }), error => error.code === 'source_not_committed');
+  await assert.rejects(runProject({ ...options, mode: 'reconcile-only' }, { fetchImpl }), error => error.code === 'source_not_committed');
+});
+
+test('convenience apply creates fixed tracking once and reconciliation verifies the same identities', async t => {
+  const local = localRepo(t), state = fixture(); installDocs(local.root);
+  const options = { kind: 'docs-main', repo: local.root, mode: 'apply', confirmEligibility: true };
+  const result = await runProject(options, { fetchImpl: state.fetch });
+  assert.equal(result.code, 'projection_verified', JSON.stringify(result));
+  assert.equal(state.labels.length, 0); assert.equal(state.milestones.length, 1); assert.equal(state.issues.length, 9);
+  assert.equal(state.milestones[0].title, 'sdd-docs-main'); assert.equal(writes(state).length, 10);
+  const ids = result.associations.map(item => item.issue_number); state.calls = [];
+  const readback = await runProject({ kind: 'docs-main', repo: local.root, mode: 'reconcile-only' }, { fetchImpl: state.fetch });
+  assert.equal(readback.code, 'projection_verified'); assert.equal(writes(state).length, 0);
+  assert.deepEqual(readback.associations.map(item => item.issue_number), ids);
+  assert.ok(!fs.existsSync(path.join(local.root, '.git/sdd-forge-close.lock')));
+});
+
+test('convenience CLI resolves repo-relative defaults from an unrelated launch directory', t => {
+  const local = localRepo(t); installDocs(local.root); fs.unlinkSync(local.token);
+  for (const [name, tail] of [['forge-project.mjs', ['--check']], ['forge-project-draft.mjs', []]]) {
+    const script = fileURLToPath(new URL('../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/' + name, import.meta.url));
+    const result = spawnSync(process.execPath, [script, 'docs-main', '--repo', local.root, ...tail], {
+      cwd: os.tmpdir(), encoding: 'utf8', timeout: 15000,
+    });
+    assert.equal(result.status, 0, result.stdout + result.stderr);
+    const value = JSON.parse(result.stdout);
+    if (tail.length) assert.equal(value.code, 'input_verified');
+    else assert.equal(value.source.path, 'docs/dev/DOCS_TASKS.md');
+  }
 });
 
 test('malformed, duplicate and foreign phase labels block projection before missing-object writes', async () => {

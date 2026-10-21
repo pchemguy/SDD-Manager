@@ -1,36 +1,38 @@
-SDD Manager 0.15.0 strengthens coordinated development from initial project preparation through bounded implementation and release preparation. This release adds tracked documentation tasks, a shared plugin entry, configurable reporting and exact-source release packaging.
+SDD Manager 0.15.1 strengthens repository-based continuation, guided exploration and bounded delivery. It adds deterministic HTTPS Git publication and source-bound GitHub tracking utilities, with clearer document checkpoints and project-policy handling.
 
-## Compatibility and upgrade notes
+## Compatibility and requirements
 
-- The complete source package now lives at `.agents/plugins/sdd-manager/` in the repository. Release archives retain the portable `sdd-manager/` root; use that package directory rather than the repository root for installation.
-- `plugin.json` is the sole package manifest. The legacy `.codex-plugin` manifest is removed, and OpenAI presentation metadata is under `extensions.com.openai.interface`.
-- `PLUGIN.md` is the shared agent entry, with `sdd-manage` as coordinator. Explicit loading may be necessary because `PLUGIN.md` is a project convention. The coordinator and individual skill entries remain usable without it; instruction reload remains user-controlled.
-- The new `AGENTS_TEMPLATE.md` defaults to GitHub tracking for documentation preparation and implementation. Users can change that policy by instruction or by editing the copied AGENTS.md. Existing project instructions are preserved; this template default does not enable tracking for every plugin invocation.
+The package retains its single root manifest and 15 skills. Human document approval, task completion, publication and integration gates continue to apply. Repository handoffs preserve workflow context; credentials and ignored local files must be established separately in a new environment.
+
+Supervised HTTPS Git publication requires Node.js 22+, Python 3.11+ and native Git on Windows 10+ or Linux with the process facilities documented in the package guide. The optional GitHub projection/completion utilities require Node.js 22+ and Git. Project build and test commands use the target project's declared tools.
+
+Token-file input uses an ignored, untracked repository file and ordinary OS read access. Existing authenticated clients remain available where supported. Conflicting managed hosted content requires reconciliation; utilities preserve it rather than overwrite it automatically.
 
 ## Highlights
 
-- **Tracked main documentation preparation.** `DOCS_TASKS.md` covers initialization, seven document approvals and final package QC. When tracking is enabled, create and verify the native `docs-main` milestone and all nine issues before repository modifications. Initialization preserves existing AGENTS, disclosure, usage and discovery files, copies missing files, and pauses for the user when only some files already existed.
-- **Explicit human and publication checkpoints.** Each necessary new development document has its own acceptance boundary, including separate PLAN and layout checkpoints. Scoped future preapproval is supported. First approval completes the documentation task in the accepted-document commit, followed by push/readback and issue closure; later revisions preserve that first-approval status. Final documentation integration is published before milestone closure and the implementation checkpoint.
-- **Clearer workflow selection and reporting.** The coordinator distinguishes whole-project, feature and revision work, recovers existing context and reassesses workflow switches. Minimal, Standard and Explicit reporting profiles control detail. Composite workflow setup and recovery explicitly announce the active profile and subsequent reporting level.
-- **Bounded implementation and recovery.** Task-closing commits carry one task's verified result, evidence and completion checkbox under a leading task ID. Publication and continuation audits preserve human-requested ranges. Known-invalid completion can receive an authorized forward correction without rewriting history or requiring blanket reapproval. Verification findings return to the active authorized owner.
-- **Complete release preparation.** Prepare a retained root `RELEASE-NOTES.md`, or request highlights alone. Incremental Git coverage uses integration summaries with direct-change, nested-campaign and revert checks. Release execution verifies freshness and uses the same complete Markdown in the release commit and GitHub body.
-- **Exact-source GitHub packaging and publication.** The publisher validates committed manifests against the pinned core schema, builds deterministic version-free ZIP/checksum assets and verifies archive bytes. A structured handoff binds notes to the source. Draft/asset reconciliation, rebuild hash checks and published-state readback support interrupted release recovery.
+- **Repository-based continuation:** handoffs act as checkpoints, with later decisions recovered from current records and Git. Interrupted branches retain their recorded parents, return boundaries and pending human decisions. Incoming synchronization remains distinct from completed integration.
+- **Guided exploration:** a dedicated design subworkflow critically evaluates terse objectives, surfaces influential product and architectural choices, recommends context-aligned options and records assumptions before the project brief. Detail adapts to project or feature scope; examples remain illustrative.
+- **Bounded delivery:** every phase delivers a useful, testable functionality increment. Complete intended-version scope stays distinct from the simplest sensible initial slice, and later capabilities receive separate bounded increments.
+- **Deterministic Git publication:** the supervised entry selects an eligible supplied token before inherited helpers and applies one total deadline to push, cleanup and exact readback. Windows Job Objects and Linux subreaping own descendant cleanup. Git-supplied helper context is validated separately from public input; safe diagnostics preserve process failures independently of remote state. Credential-helper configuration is not persisted.
+- **Reviewed GitHub tracking:** source-bound JSON supports phase drafting, projection and completion with complete lookup and verified associations. Dependencies and substantive briefs remain agent-authored. Read-only reconciliation preserves uncertain-write boundaries rather than replaying mutations.
+- **Main preparation convenience:** a single docs-main call uses origin and the repository's DOCS_TASKS by default, with bundled-template fallback only when that default document is absent. The predefined sdd-docs-main milestone and nine issue definitions retain their eligibility, first-approval, package-QC and published-integration gates.
 
 ## Other changes
 
-- PROJECT has an explicit brief contract, with routing to its design guidance. README presents human-facing workflows and diagrams; PLUGIN.md provides agent routing and checkpoint summaries.
-- Nested and reopened revision campaigns preserve original provenance, suspended parent boundaries and frozen completed records.
-- Bundled assets include AGENTS, DOCS_TASKS, discovery-protocol and greenfield-prompt templates. Tetris and Calculator guides illustrate phased development, feature work and checkpoint steering.
-- TextStats coverage now includes 33 catalog cases, with additional release-message, checkpoint, tracking and recovery assessment contracts and support regressions.
+An available GitHub CLI may perform supported operations with existing authentication or a protected provided/saved token. Implementation and verification honor project-defined browser policies and declared setup. Generated AGENTS guidance stays concise; detailed preparation procedures remain with their workflow owners.
 
-## Installation and package
+Tracking validates phase associations, exact identities and complete inventories. Shared readers reject unsuitable input types promptly, including POSIX FIFOs. Publisher checks preserve complete version identifiers, exact source/body association and deterministic package contents.
 
-The prepared assets are `sdd-manager.zip` and `sdd-manager.zip.sha256`. Verify the checksum, extract the archive and load the extracted `sdd-manager/` package using the agent client's supported mechanism. The package includes its full README, PLUGIN.md, all 15 skills, bundled assets and LICENSE. In a source checkout, use `.agents/plugins/sdd-manager/`; separate installation remains optional.
+## Installation and package preparation
 
-See the [package README](https://github.com/pchemguy/SDD-Manager/blob/891a0ad69dce859e3622750c51201d6c26127499/.agents/plugins/sdd-manager/README.md) for usage and workflow examples.
+Prepared assets are `sdd-manager.zip` and `sdd-manager.zip.sha256`. Verify the checksum, extract the package and use your agent client's supported loading mechanism. Load PLUGIN.md or the coordinator explicitly when required; automatic discovery depends on the client. See the [candidate package guide](https://github.com/pchemguy/SDD-Manager/blob/6d0b04a8c5edb36601c36c759e5ee0285ed2f9c4/.agents/plugins/sdd-manager/README.md).
+
+These assets are prepared locally; this message does not identify published downloads. Release publication still requires the final source/message agreement, tag, workflow and asset-readback steps.
 
 ## Validation and limitations
 
-Local validation passed 137 TextStats support tests and 34 publisher tests on Linux/Python 3.12.14. Core manifest validation passes. The author validator reports zero errors and 46 advisories for references between bundled skills; those advisories retain a client-portability consideration.
+The reviewed runtime passed 132 local Git/authentication and forge contracts on Linux/Node 24.19.0. The integrated state passed 139 source support and 37 publisher tests on Python 3.12.14: 308 passing tests across those scopes. Seven Windows-only shell contracts skipped on this host; no fresh native Windows result is claimed.
 
-Current-candidate hosted CI, installed-client discovery/routing and live agent/provider acceptance were not run during this preparation. Local checks do not establish those outcomes. SDD Manager remains experimental.
+Two builds of the pinned candidate produced identical 153-file packages. Core schema, exact archive contents, presentation paths, SVG parsing and five extracted CLI help checks passed. Structural author validation reported no errors and 48 advisory warnings about bundled skill references.
+
+These checks do not establish autonomous agent behavior, installed-client discovery, live-provider permissions, launcher activation or freshly rendered diagrams. Those trials were not performed for this candidate. SDD Manager remains an experimental, learning-by-doing project.

@@ -15,6 +15,8 @@ Establish a strategy for the selected task, component, or project from accepted 
 
 Describe scenarios, expected outcomes, test level, fixtures or dependencies, and commands needed. Prefer the smallest set that protects the actual contracts, with integration checks where isolated tests cannot expose the risk. Avoid a test-per-function quota or a coverage percentage used as a substitute for behavioral evidence.
 
+For browser-dependent strategy, derive the required matrix and capabilities from accepted contracts, applicable project policies and the declared framework. Do not impose a framework, additional engines or browser installation on strategy-only work. Return conflicting requirements to the coordinator; test design cannot silently replace them.
+
 For existing behavior, inspect relevant tests before adding duplicates. For a bug, reproduce the reported failure with a regression test and state whether reproduction succeeded. For a refactor, establish behavior-preservation coverage before production edits; a new failing behavior test is unnecessary if the accepted behavior is unchanged and existing checks protect it.
 
 ## Strategy boundaries
