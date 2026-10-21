@@ -334,7 +334,7 @@ Combine automated checks with browser interaction. Include observable checks for
 | Hard-drop policy amendment | Before/after checks demonstrate the requested policy switch and unchanged ordinary locking. Under full-interval locking, a repeated hard drop does not extend an existing timer. |
 | Configuration panel feature | Controls apply the selected modes and disable the selected actions; all four locking-policy combinations work. Settings are not retained after reload. |
 | Semi-persistent configuration feature | Verify cookies-only and URL-only behavior; when combined, explicit URL values override and update cookies, saved cookies fill omitted parameters, and defaults fill settings absent from both. Explicit defaults still override cookies. |
-| Penetrator bonus feature | Four-line clears award bonuses up to the accepted cap; activated white pieces pass through the stack, hard drop and ghost agree on the lowest valid position, and locking never overlaps occupied cells. |
+| Penetrator feature | Four-line clears award bonuses up to the accepted cap; activated white pieces pass through the stack, hard drop and ghost agree on the lowest valid position, and locking never overlaps occupied cells. |
 
 Exercise controls through the actual browser interface as well as through engine tests.
 

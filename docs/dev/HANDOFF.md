@@ -1,19 +1,15 @@
 # SDD Manager handoff
 
-Campaign 094 is finalized for the human-requested closure and return to main. Its containing explicit main merge, verified publication and clean return establish completion. Reporting: Standard.
+Campaign 096 is finalized for explicit main integration and closure. The next authorized operation is a separate patch-release campaign, including version bump, release creation and closure. Reporting: Standard.
 
-## Delivered scope
+## Result and evidence
 
-[Campaign 094](reviews/094_93e8f74-demo-prompts/REVISION-REPORT.md) delivers focused Tetris prompt revisions and full copy-paste prompts in the [Tetris](../demo/tetris/README.md#all-inclusive-project-prompt) and [calculator](../demo/calculator/README.md#all-inclusive-project-prompt) guides. They include repository/token placeholders, bounded delivery, optional checkpoint preapproval, version management and a GitHub release after each completed, verified and integrated implementation phase.
+[Review](reviews/096_4803b95-comprehensive-review/REVIEW-REPORT.md), [revision plan](reviews/096_4803b95-comprehensive-review/REVISION-PLAN.md) and [execution](reviews/096_4803b95-comprehensive-review/REVISION-REPORT.md) retain the 351-file inventory and declared review depths. Both low-priority documentation findings are corrected: penetrator naming in the Tetris verification table and the root browser-policy link. No executable defect was confirmed.
 
-Nested campaign 095 is integrated at f6cd58ba7b07a92746744d0898cec4b87a35bc54, with publication verified. Its [retained evidence](reviews/095_000d2ec-playwright-recovery/REVISION-REPORT.md) covers the root browser policy's Playwright setup, download diagnostics, official-image recovery, default Chromium headless shell and conditional Firefox content-process recovery. Its records remain frozen.
+Local Linux/Node 24.19.0/Python 3.12.14 checks: 132 utility, 139 support and 37 publisher tests pass; seven native-Windows shell cases are skipped. APA reports zero errors/48 contained cross-skill advisories. All 77 reference routes and 1,097 current baseline-document links resolve. Exact 153-member repeat builds match; five extracted CLI help checks pass. Fresh Windows/client/consumer, rendered diagrams and browser execution remain unrun; do not promote these local results into those claims.
 
-## Git context
+## Git and continuation
 
-Creation parent, integration target and return: main on origin, pchemguy/SDD-Manager. Campaign branch: revision/094_93e8f74-demo-prompts. Original branch-off and refreshed main target: 93e8f74bf9bab9e9a75472351e9ae07b3c5e53bf. Original opening: d435bd6481b0f2813c5b0065d4b3d7d723283e5a. The containing merge records the final verified campaign tip and both parents. Preserve both revision branches.
+Campaign branch: revision/096_4803b95-comprehensive-review. Creation parent/integration/return: main on origin, pchemguy/SDD-Manager. Original baseline: 4803b9518982a31b81ffd4acec863894ebd571a5; opening: 1ad8c126e14f683f417e86ce5b3109795376448a. The containing main merge records final tips/checks. Publish/read back that merge and verify clean main before treating 096 as closed.
 
-## Verification and next boundary
-
-Final checks cover prompt fidelity/formatting, local links, the complete scoped delta and unchanged plugin/test source and prior closed records. Browser smoke results are inherited from child 095: fresh local Linux checks passed for Chromium and Firefox. No new browser execution, application acceptance, native Windows, installed-agent, release or installation is claimed.
-
-Finish the explicit main merge, repeat scoped checks, publish/read back with confirmed cleanup and verify the clean main worktree. Then stop; no further work is selected. If interrupted, recover the actual containing commit/merge and remote state before replaying publication or declaring closure.
+Then allocate the release campaign from the actual main tip. The current manifest is 0.15.1; the requested patch bump targets 0.15.2 unless actual version state changes. Reconstruct highlights since the qualifying release tag, preserve exact notes/commit/tag/source association, build/verify the final candidate, publish and verify GitHub body/assets/downloads/latest, then close. The comprehensive prerelease review has already been selected and completed; do not repeat its advisory reminder. Keep prior records frozen and preserve the credential convention. No installed-plugin update is authorized.
