@@ -1,13 +1,15 @@
 # SDD Manager handoff
 
-Campaign 096 is open for comprehensive review, revision planning and execution. The human then requests a separate patch-release campaign, release publication and closure. Reporting: Standard.
+Campaign 096 is finalized for explicit main integration and closure. The next authorized operation is a separate patch-release campaign, including version bump, release creation and closure. Reporting: Standard.
 
-## Scope and ownership
+## Result and evidence
 
-[Review plan](reviews/096_4803b95-comprehensive-review/REVIEW-PLAN.md), [results](reviews/096_4803b95-comprehensive-review/REVIEW-REPORT.md) and [coverage inventory](reviews/096_4803b95-comprehensive-review/COVERAGE.tsv) own this campaign. Review the complete current product at declared depths, execute applicable contracts, plan/repair confirmed findings, verify and integrate before opening the release campaign. Prior closed records remain frozen.
+[Review](reviews/096_4803b95-comprehensive-review/REVIEW-REPORT.md), [revision plan](reviews/096_4803b95-comprehensive-review/REVISION-PLAN.md) and [execution](reviews/096_4803b95-comprehensive-review/REVISION-REPORT.md) retain the 351-file inventory and declared review depths. Both low-priority documentation findings are corrected: penetrator naming in the Tetris verification table and the root browser-policy link. No executable defect was confirmed.
 
-## Git and next checkpoint
+Local Linux/Node 24.19.0/Python 3.12.14 checks: 132 utility, 139 support and 37 publisher tests pass; seven native-Windows shell cases are skipped. APA reports zero errors/48 contained cross-skill advisories. All 77 reference routes and 1,097 current baseline-document links resolve. Exact 153-member repeat builds match; five extracted CLI help checks pass. Fresh Windows/client/consumer, rendered diagrams and browser execution remain unrun; do not promote these local results into those claims.
 
-Baseline and creation parent: 4803b9518982a31b81ffd4acec863894ebd571a5 on main. Working branch: revision/096_4803b95-comprehensive-review; integration/return: main on origin, pchemguy/SDD-Manager. Campaign 094 is closed by verified published merge 4803b95. The next checkpoint is U-001's review report; publish each unit/action commit before advancing. Final main integration and the requested subsequent release are authorized, subject to actual checks and platform controls.
+## Git and continuation
 
-No new implementation, package, hosted release or client acceptance has been established by this opening. The intended next patch is derived from the actual manifest during release preparation; do not install the plugin or modify /pyenv.
+Campaign branch: revision/096_4803b95-comprehensive-review. Creation parent/integration/return: main on origin, pchemguy/SDD-Manager. Original baseline: 4803b9518982a31b81ffd4acec863894ebd571a5; opening: 1ad8c126e14f683f417e86ce5b3109795376448a. The containing main merge records final tips/checks. Publish/read back that merge and verify clean main before treating 096 as closed.
+
+Then allocate the release campaign from the actual main tip. The current manifest is 0.15.1; the requested patch bump targets 0.15.2 unless actual version state changes. Reconstruct highlights since the qualifying release tag, preserve exact notes/commit/tag/source association, build/verify the final candidate, publish and verify GitHub body/assets/downloads/latest, then close. The comprehensive prerelease review has already been selected and completed; do not repeat its advisory reminder. Keep prior records frozen and preserve the credential convention. No installed-plugin update is authorized.

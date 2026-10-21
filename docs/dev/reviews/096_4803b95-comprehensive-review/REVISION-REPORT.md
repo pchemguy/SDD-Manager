@@ -9,3 +9,7 @@ The completed review reports 308 passing local contracts, seven native-Windows s
 R-001: renamed the gameplay verification row to “Penetrator feature,” preserving its acceptance text and every approved prompt. R-002: added the root README's concise relative browser-policy link for applications/extensions. Neither edit changes plugin source or policy content.
 
 Diff inspection confirms the two intended source changes only, alongside this execution record. The browser-policy link resolves, maintained Tetris text has no old “Penetrator bonus feature” label, and Markdown whitespace checks pass. Existing runtime suites need no rerun for these prose-only changes. Both findings are verified at their bounded rechecks; final campaign preservation/integration checks remain before closure.
+
+## Finalization
+
+All planned review units and A-001 are complete, with both findings verified and no accepted unresolved issue. Original opening: 1ad8c126e14f683f417e86ce5b3109795376448a. Original baseline and receiving main tip: 4803b9518982a31b81ffd4acec863894ebd571a5. The final boundary updates navigation and HANDOFF; prospective merge checks verify the scoped source delta, unchanged plugin/tests/policies/calculator and every prior closed record before explicit main integration. The containing merge records its actual two parents and checks. Verified target publication and clean return establish closure; then proceed to the separately authorized patch-release campaign. No package installation is selected.
