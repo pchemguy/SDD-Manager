@@ -6,6 +6,25 @@ Supply a GitHub token when existing authenticated tools cannot perform all requi
 
 Git access and GitHub API access are separate. A token can address missing authentication or permissions; an unsupported adapter operation still needs another supported execution path, such as a direct API request. SDD Manager should report unsupported operations or missing permissions.
 
+## Minimal Template
+
+``````markdown
+Help me develop the following project using $sdd-manager.
+
+**Project repo and credentials**:
+
+GitHub repository: https://github.com/{OWNER}/{REPO}
+GitHub token: {FINE_GRAINED_GH_TOKEN}
+
+**Project description**:
+
+```
+A browser-based Tetris game.
+```
+``````
+
+## Extended Template
+
 ````text
 Help me develop the following project using $sdd-manager.
 
