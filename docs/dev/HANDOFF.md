@@ -14,7 +14,9 @@ Working branch revision/093_aaee139-comprehensive-review; creation parent/integr
 
 The baseline distributable has 153 files and 15 skills at version 0.15.1. The review plan accounts for current entries/guidance, scripted operations, distribution and source verification, with depth appropriate to each role. Closed records and historical AI logs are excluded from routine reading/checks.
 
-Publish/read back the opening before U-001. Each review unit and revision action retains its own report/source evidence and publication boundary. Do not represent historical tests/package hashes as checks of the eventual new candidate. Actual client/native/live-provider limits remain explicit.
+All three review units are assessed and V-001 resolves the sole finding R-001: packaged README now correctly states supervised-publication runtime/host requirements. Source 159f317a3b7c354608752983a92ed968586f4364 is published/read back; its exact reproducible 153-file package and five extracted CLI checks pass. The report retains its source-specific digest, 308 exact-byte local test passes, seven Windows skips, zero structural errors/48 bundle advisories and current document checks. Runtime/test/CI/policy bytes and closed records are unchanged. [Revision plan](reviews/093_aaee139-comprehensive-review/REVISION-PLAN.md), [execution](reviews/093_aaee139-comprehensive-review/REVISION-REPORT.md).
+
+V-002 is ready for explicit integration into the freshly read-back parent aaee1397d5282d50dcb63bb51d59632e49b2dfd1. Publish this finalization, verify/publish the two-parent merge and confirm clean parent return before closure. Then execute the already selected parent saved-package/release-document refresh. Native Windows/live-provider/client behavior and diagram rendering remain unclaimed.
 
 ## Retained prerelease boundary
 
