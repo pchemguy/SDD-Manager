@@ -8,9 +8,9 @@ Campaign 093_aaee139 reviews baseline aaee1397d5282d50dcb63bb51d59632e49b2dfd1 u
 
 | Unit | Status | Evidence and findings |
 | --- | --- | --- |
-| U-001 — Instructions and documentation | Assessed; R-001 | All 15 entries and 86-reference routing inventory; connected preparation/QC/implementation/tracking/revision/release boundaries and public documentation. |
+| U-001 — Instructions and documentation | Assessed; R-001 | All 15 entries and 77-reference routing inventory; connected preparation/QC/implementation/tracking/revision/release boundaries and public documentation. |
 | U-002 — Scripted operations | Assessed; no additional confirmed defect | 132 native/synthetic Linux Node contracts pass; runtime/guide and recovery boundaries inspected. |
-| U-003 — Distribution and verification | Planned | Exact committed package, structural/metadata/link checks and existing support/publisher suites. |
+| U-003 — Distribution and verification | Assessed; no additional confirmed defect | Exact reproducible 153-file package, five extracted CLI checks, zero structural errors/48 bundle advisories, 139 support/37 publisher passes. |
 
 ## Findings and limits
 
@@ -18,7 +18,7 @@ No findings are established by this opening. Closed records remain frozen. Local
 
 ## U-001 — Instructions and documentation assessment
 
-Opening 69bcedad808b7cd781d4af2766f3c4b141ad8bce is published/read back. Inspected all 15 skill entries and the shared plugin entry; checked every reference is named by its entry. All 86 references have a discoverable route. Detailed connected inspection covers exploration and useful phase boundaries; main preparation/templates, prospective tracking and first-approval progression; distinct document checkpoints/QC; task atomicity, publication preflight and recovery; continuation/nested return; generic project-policy handling and release/preparation authority. Other guidance and current public/demo navigation receive inventory/link/claim checks at their applicable scope rather than a claim of line-by-line audit.
+Opening 69bcedad808b7cd781d4af2766f3c4b141ad8bce is published/read back. Inspected all 15 skill entries and the shared plugin entry; checked every reference is named by its entry. All 77 references have a discoverable route. Detailed connected inspection covers exploration and useful phase boundaries; main preparation/templates, prospective tracking and first-approval progression; distinct document checkpoints/QC; task atomicity, publication preflight and recovery; continuation/nested return; generic project-policy handling and release/preparation authority. Other guidance and current public/demo navigation receive inventory/link/claim checks at their applicable scope rather than a claim of line-by-line audit.
 
 Current-document scanning covers 146 Markdown files, 1275 local targets, 721 package-contained links and 269 maintained fragments, with no detected link/heading/marker-spacing error. Closed targets are checked for existence without loading their contents. This mechanical scope includes active evidence and current source-support guides beyond U-001's routing group. Fenced examples and diagram rendering require separate interpretation; no rendered-diagram or live-agent result is claimed.
 
@@ -47,3 +47,17 @@ On Linux, `node --test --test-reporter=spec tests/git-auth-recover.test.mjs test
 The proposed apply-loop is not incorporated. Its behavior would violate the existing unknown-write boundary. Current projection discovers an applied disconnected creation without replay and stops an absent uncertain creation; reconcile-only performs no writes. Both contrasts pass. Deadlines and safe-read retry metadata are already owned by the utility/transport. No demonstrated need justifies another retry workflow or automatic mutation replay.
 
 No additional confirmed runtime finding is established. R-001 remains the public prerequisite mismatch. Native Windows execution and real provider authorization remain unperformed in this host; controlled transport/helper tests do not certify those environments or actual Antigravity/client behavior.
+
+## U-003 — Distribution and verification assessment
+
+Published U-002 checkpoint de62289196e0f830be1cc30b24de23811e62f3db is the exact package source for this unit; runtime/test/package bytes still equal the reviewed baseline. Reviewed publisher source, committed inventory/schema rules, exact source/body/tag and build-only contracts, release and native-contract workflows, presentation metadata, notices and source-only support/acceptance boundaries. Catalog/fixture/schema coverage is mechanical through the existing support tests, not a new live TextStats consumer/assessor run.
+
+On Linux, Node 24.19.0 and Python 3.12.14, all 139 support and 37 publisher tests pass. Together with U-002, 308 local tests pass. All seven Windows-only shell contracts skip on this host; they are not runtime passes. The prior temporary validator environment was absent, so the first publisher command did not start; a new task-owned temporary virtual environment installed the declared jsonschema 4.26.0 requirement before the successful run. No system toolchain or /pyenv content changes.
+
+Agent Package Author's plugin validator and inspector report zero errors and 48 advisory bundle-reference warnings. Those advisories correctly distinguish contained sibling resources from actual client invocation. All 15 skill prompts/icon paths and SVG XML pass source checks. No automatic loading, client rendering or universal portability is inferred. The inspection helper initially resolved icon paths relative to agents rather than the skill root; correcting that checker assumption resolves its assertion without a product change. The routing total above is corrected to 77 from the actual per-skill inventory sum.
+
+Two exact-source builds produce identical 153-file version 0.15.1 packages: 456805 bytes, SHA-256 5ecdae668293a5564982e28aeca27ceca64ffaaa90317ab1fd14fb1cde88cb9e. The pinned schema, every member's committed bytes, exclusions of root policies/source records/old modules, credential-pattern scan and five extracted CLI help checks pass. This archive digest belongs only to de62289196e0f830be1cc30b24de23811e62f3db and must be rebuilt after packaged README revision. Binary assets receive format/path/package checks; icon legibility and diagrams are not freshly rendered. No workflow dispatch, release/tag, live-provider mutation or installation is performed.
+
+## Consolidated revision handoff
+
+All three inventory units are assessed at the declared depths. One confirmed medium-priority documentation defect, R-001, needs correction; no additional runtime/package defect is demonstrated. There are no deferred confirmed defects or new policy decisions. Fix the public prerequisite claims, recheck their owners/links and rebuild the exact revised package. Existing runtime/test evidence may be reused only after byte comparison. Then verify/publish the complete child integration, close and resume parent 081 for the separately selected saved-package/release-document refresh. This assessment does not declare a hosted release ready or completed.
