@@ -1,23 +1,19 @@
 # SDD Manager handoff
 
-Campaign 094 is open for demo-prompt revisions. Origin was pulled before opening; preserve the incoming template additions. Publish/read back this opening checkpoint and stop on the revision branch. Earlier closed records remain frozen.
+Campaign 094 remains open. Nested campaign 095 has delivered Playwright recovery guidance and is integrated by the commit containing this snapshot; verify that merge's publication before treating child closure as complete. Reporting: Standard.
 
 ## Scope and authority
 
-The human requested “Pull origin and open demo prompts revision campaign.” [Campaign record](reviews/094_93e8f74-demo-prompts/REVISION-REPORT.md), [index](reviews/README.md). Reporting remains Standard. Opening and persistence are selected; detailed requirements, review findings and revision actions remain pending.
+Parent demo-prompt revisions V-001–V-008 remain delivered; further parent scope is pending. The human requested a nested browser-policy revision, its plan and execution. [Parent report](reviews/094_93e8f74-demo-prompts/REVISION-REPORT.md), [child plan](reviews/095_000d2ec-playwright-recovery/REVISION-PLAN.md), [child verification](reviews/095_000d2ec-playwright-recovery/REVISION-REPORT.md). No parent continuation, main integration, release or installed-plugin update is selected.
 
 ## Git context
 
-Working/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager. Creation parent, integration target and eventual return: main. Full branch-off baseline: 93e8f74bf9bab9e9a75472351e9ae07b3c5e53bf. No suspended parent campaign exists.
+Working/return/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager. Parent creation/ultimate integration target: main; original parent baseline: 93e8f74bf9bab9e9a75472351e9ae07b3c5e53bf. Child branch: revision/095_000d2ec-playwright-recovery, created from parent 000d2ec0ed7a3b06aa943300a5d475cf73e0a393. Child opening: 8ebaddc3be5aacecb1fc12c92949e7584196c391; verified published tip: 66966337bf5818cdb9f9ce5d78d37914a1d1080a. Preserve both branches and all closed records.
 
-The clean main worktree fast-forwarded from 9c494b564b0605a2b236f3482612e2af29f22319 to that baseline. The incoming commit adds minimal and extended sections to the greenfield project prompt template. Complete remote discovery confirms main and highest reserved sequence 093; this campaign reserves 094. The original opening commit is the commit containing this snapshot; recover its actual identity/publication from Git.
+## Result and evidence limits
 
-## Opening and pending scope
-
-Initial navigation covers the Tetris and calculator demo guides and the greenfield prompt template; the campaign record links their current locations. The opening changes only its record, navigation and this handoff. Preserve source prompts until the selected revision requirements establish actual changes.
-
-Campaign 081 is closed and release 0.15.1 remains published. No current-source review, client execution, release change or installation is claimed by this opening. Closed packages are preserved by path/object checks rather than routine content loading.
+BROWSER_DEV_POLICY.md now guides normal setup, independent download diagnostics, verified official-image recovery, default Chromium headless shell, conditional process-local Firefox content-sandbox recovery and deadline-bounded session/application checks. Fresh Chromium and Firefox checks each passed two contexts/pages, typing, clicks, Canvas pixels, screenshots and teardown on Linux with Playwright 1.56.1. General policy sections, plugin source and demo source remain unchanged. No application acceptance, native Windows, headed browser or installed-agent result is inferred.
 
 ## Next boundary
 
-Verify and publish the opening, then leave campaign 094 open on its working branch. Detailed demo-prompt direction is the next input; do not start a review, revision plan, source edits or integration from this opening alone. Preserve credentials, unrelated work and all frozen records.
+Publish/read back the explicit child-to-parent merge with cleanup confirmed, verify the clean parent worktree and stop with 094 open. The containing merge and remote readback own final integration/closure facts; no child-report edit is needed afterward. Further demo work requires the selected human direction. Compatible diagnostic binaries are temporary; no credentials or transient archives are tracked.

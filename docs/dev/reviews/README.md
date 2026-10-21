@@ -98,3 +98,5 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `094_93e8f74` | Open: demo-prompts revision campaign from pulled main 93e8f74. Opening only; detailed revision scope remains pending. | [Campaign record](094_93e8f74-demo-prompts/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
+
+| `095_000d2ec` | Nested policy revision and two-browser checks complete; explicit parent 094 merge records integration, with closure on verified publication/return. Parent 094 remains open. | [Plan](095_000d2ec-playwright-recovery/REVISION-PLAN.md), [evidence](095_000d2ec-playwright-recovery/REVISION-REPORT.md) |
