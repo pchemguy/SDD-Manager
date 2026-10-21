@@ -172,13 +172,13 @@ This campaign follows the playable game and can be applied with either delivery 
 >
 > Open a campaign to implement "penetrator" feature:
 >
-> Penetrator mode lets the current piece pass through occupied cells without destroying them. The mode lasts until that piece locks. The piece must lock entirely within the board without overlapping occupied cells.
+> Allow the player to turn the current falling piece into a penetrator with a hotkey, provided a penetrator bonus is available. A penetrator can pass through occupied cells without destroying them. This ability lasts until the piece locks; its final position must be entirely within the board without overlapping occupied cells.
 >
-> Let the player activate penetrator mode for the current piece with a hotkey. Each bonus grants one activation; award one bonus whenever the player clears four lines at once. Allow up to three bonuses to accumulate.
+> For a penetrator, hard drop must pass through blocking cells to the lowest valid landing position. The ghost piece must preview that same position.
 >
-> Render the activated piece entirely white, and do not use white for regular pieces. Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
+> Clearing four lines at once awards one penetrator bonus, granting one activation of the penetrator ability. Allow up to three bonuses to accumulate.
 >
-> For an activated piece, hard drop must pass through blocking cells to the lowest valid landing position. The ghost piece must preview that same position.
+> Render penetrator pieces entirely white, and do not use white for regular pieces. Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
 
 The prompt uses three as the proposed cap; confirm or adjust it during preparation. Also clarify the activation key, when activation spends a bonus, repeat-key behavior, interaction with hold, and what happens when locking is attempted while the active piece overlaps occupied cells. Define how normal descent and rotation behave during penetration and how hard drop interacts with the selected locking policy. These details must preserve the non-overlapping final-position requirement.
 

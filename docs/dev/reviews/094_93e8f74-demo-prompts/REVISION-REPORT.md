@@ -7,7 +7,7 @@
 - Creation parent, integration target and return: main.
 - Working/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager.
 - Request: “Pull origin and open demo prompts revision campaign.”
-- State: Open; selected prompt revisions V-001–V-003 are implemented below. Further revision scope remains pending.
+- State: Open; selected prompt revisions V-001–V-004 are implemented below. Further revision scope remains pending.
 
 ## Starting context
 
@@ -54,3 +54,9 @@ The human corrects the framing: penetrator is the feature; the bonus is an earne
 Revised the prompt's first two paragraphs accordingly. Aligned the section heading, introductory explanation and release-boundary wording with the feature name, preserving the award/cap and gameplay requirements. Each bonus grants one activation; unspecified spending timing and other preparation questions remain for design. No other demo section or prompt is selected.
 
 Terminology and substance checks pass: the feature is penetrator and each bonus grants one activation. No maintained demo/template reference uses the old heading anchor. The guide outside this section is byte-identical; only the guide and this report change, and git diff --check passes. Publish/read back the action and keep campaign 094 open. No game execution is claimed.
+
+## V-004 — Polish the accepted penetrator prompt
+
+The human supplies the complete prompt and authorizes polishing and committing it. Preserve its order: activation and penetration, hard-drop/ghost behavior, earned bonuses, then visual feedback. Replace the parenthetical prerequisite with a direct condition that a penetrator bonus must be available; retain the feature name, every gameplay requirement and the illustrative symbol. No new activation, movement or locking rules are selected.
+
+V-003 publication is verified by exact remote-ref readback at c838b03a52411931b9db10a10de02ca79ff61da9, with confirmed cleanup. V-004 changes only the prompt and this record. Editorial fidelity, surrounding-content preservation and git diff --check pass; no runtime testing is needed for this prose-only edit. Commit, publish and read back the action; keep campaign 094 open.
