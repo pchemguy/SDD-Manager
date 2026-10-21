@@ -168,13 +168,15 @@ This campaign follows the playable game and can be applied with either delivery 
 
 > [!NOTE] Prompt
 >
-> Open a feature campaign to add penetrator bonuses to the Tetris game. Award one bonus whenever the player clears four lines at once, and allow up to three bonuses to accumulate.
+> Open a campaign to implement "penetrator" feature:
 >
-> Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
+> A penetrator bonus lets the current piece pass through occupied cells without destroying them. Once activated, the effect lasts until that piece locks. The piece must lock entirely within the board without overlapping occupied cells.
 >
-> Let the player activate a bonus for any active piece by pressing a hotkey. The activated piece can pass through occupied cells until it locks. Render it entirely white; do not use white for regular pieces.
+> Award one bonus whenever the player clears four lines at once. Allow up to three bonuses to accumulate, and let the player activate a bonus for the current piece using a hotkey.
 >
-> For an activated piece, hard drop must pass through blocking cells to the lowest valid landing position, and the ghost piece must show that position. The final locked piece must remain within the board and must not overlap occupied cells. Passing through occupied cells must not destroy them.
+> Render the activated piece entirely white, and do not use white for regular pieces. Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
+>
+> For an activated piece, hard drop must pass through blocking cells to the lowest valid landing position. The ghost piece must preview that same position.
 
 The prompt uses three as the proposed cap; confirm or adjust it during preparation. Also clarify the activation key, when activation spends a bonus, repeat-key behavior, interaction with hold, and what happens when locking is attempted while the active piece overlaps occupied cells. Define how normal descent and rotation behave during penetration and how hard drop interacts with the selected locking policy. These details must preserve the non-overlapping final-position requirement.
 

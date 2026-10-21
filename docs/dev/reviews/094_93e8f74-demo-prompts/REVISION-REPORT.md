@@ -7,7 +7,7 @@
 - Creation parent, integration target and return: main.
 - Working/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager.
 - Request: “Pull origin and open demo prompts revision campaign.”
-- State: Open; the exact prompt replacement V-001 is selected and implemented below. Further revision scope remains pending.
+- State: Open; selected prompt revisions V-001 and V-002 are implemented below. Further revision scope remains pending.
 
 ## Starting context
 
@@ -36,3 +36,13 @@ The human supplied an exact replacement for the Tetris guide's conditional ghost
 Replaced the campaign-opening sentence with `Open a campaign to implement "conditional ghost-piece visibility" feature:` and moved the unchanged behavior description into its own paragraph. The change is confined to that prompt; adjacent explanation and acceptance guidance remain unchanged. This is an edit to a demo prompt, not execution of the campaign described by that prompt.
 
 Verification passes: the guide equals its prior bytes with exactly the requested prompt replacement; surrounding content is preserved. The action changes only the guide and this report; Markdown checks and git diff --check pass. No runtime tests are needed for this wording-only change. Commit/publish/read back the action and keep the campaign open; all closed records and other prompts remain unchanged.
+
+V-001 is published at 4bb903a716ddcec28b887b5359957a6558f17015. The push succeeded; two Git transport readbacks timed out with cleanup confirmed. Exact GitHub Git-ref API readback verified that same remote commit without another push.
+
+## V-002 — Compose the penetrator prompt around the mechanic
+
+The human requests a substantial compositional revision beginning exactly `Open a campaign to implement "penetrator" feature:` and clarifies that size is not the problem. Use the existing prompt's full substance; improve conceptual order and paragraph cohesion without treating shortening or expansion as the objective. sdd-docs and Technical Writing Assistant guide this focused editorial revision; sdd-manage owns persistence. No separate review campaign or game implementation is selected.
+
+The revised prompt introduces penetration and valid locking first, then groups earning/storage/activation, visual feedback, and hard-drop/ghost interaction into coherent paragraphs. Preserve the four-line award, one-bonus quantity, three-bonus cap, hotkey activation, duration through lock, white-piece distinction, symbol counter and updates, deepest valid hard drop, matching ghost projection, bounds/non-overlap and preservation of occupied cells. Existing preparation questions continue to own unspecified activation, movement and locking details.
+
+Editorial comparison confirms that the complete content inventory is retained and the required opening is exact. The guide outside this prompt is byte-identical to the preceding source; only the guide and this report change. Paragraph/admonition spacing and git diff --check pass. These are composition/fidelity checks, not game execution tests. Commit/publish/read back the action and leave campaign 094 open; other prompts and closed records remain unchanged.
