@@ -1,0 +1,2455 @@
+{
+  "source": "aaee1397d5282d50dcb63bb51d59632e49b2dfd1",
+  "files": [
+    {
+      "path": ".agents/plugins/sdd-manager/LICENSE",
+      "unit": "U-003",
+      "bytes": 1065,
+      "words": 168,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/PLUGIN.md",
+      "unit": "U-001",
+      "bytes": 21552,
+      "words": 2409,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/README.md",
+      "unit": "U-001",
+      "bytes": 30535,
+      "words": 3636,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "unit": "U-001",
+      "bytes": 2717,
+      "words": 352,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/AI_DISCLOSURE.md",
+      "unit": "U-001",
+      "bytes": 1192,
+      "words": 143,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md",
+      "unit": "U-001",
+      "bytes": 6623,
+      "words": 914,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/DOCS_TRACKING_TEMPLATE.json",
+      "unit": "U-003",
+      "bytes": 11510,
+      "words": 1234,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md",
+      "unit": "U-001",
+      "bytes": 1599,
+      "words": 209,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/HANDOFF_TEMPLATE.md",
+      "unit": "U-001",
+      "bytes": 1891,
+      "words": 244,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/SDD-MANAGER.md",
+      "unit": "U-001",
+      "bytes": 683,
+      "words": 85,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/SKILL_DISCOVERY_PROTOCOL.md",
+      "unit": "U-001",
+      "bytes": 2951,
+      "words": 379,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/icon.png",
+      "unit": "U-003",
+      "bytes": 14257,
+      "words": 479,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 581,
+      "words": 64,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/logo.png",
+      "unit": "U-003",
+      "bytes": 14257,
+      "words": 479,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/logo.svg",
+      "unit": "U-003",
+      "bytes": 581,
+      "words": 64,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/plugin.json",
+      "unit": "U-003",
+      "bytes": 2059,
+      "words": 159,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/SKILL.md",
+      "unit": "U-001",
+      "bytes": 3230,
+      "words": 378,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 505,
+      "words": 52,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 570,
+      "words": 49,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/backend-object-lifecycle.md",
+      "unit": "U-001",
+      "bytes": 9977,
+      "words": 1269,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/design-heuristics.md",
+      "unit": "U-001",
+      "bytes": 1597,
+      "words": 220,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/development-document-qc.md",
+      "unit": "U-001",
+      "bytes": 14973,
+      "words": 1952,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/hosting-tokens.md",
+      "unit": "U-001",
+      "bytes": 3218,
+      "words": 410,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/markdown-style.md",
+      "unit": "U-001",
+      "bytes": 5005,
+      "words": 740,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/modularity.md",
+      "unit": "U-001",
+      "bytes": 2201,
+      "words": 315,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/review-campaigns.md",
+      "unit": "U-001",
+      "bytes": 8233,
+      "words": 1030,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/task-hierarchy.md",
+      "unit": "U-001",
+      "bytes": 4344,
+      "words": 615,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/workflow-identity.md",
+      "unit": "U-001",
+      "bytes": 8768,
+      "words": 1054,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/SKILL.md",
+      "unit": "U-001",
+      "bytes": 6172,
+      "words": 759,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 412,
+      "words": 41,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 562,
+      "words": 51,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/architecture.md",
+      "unit": "U-001",
+      "bytes": 4002,
+      "words": 521,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/decomposition.md",
+      "unit": "U-001",
+      "bytes": 3970,
+      "words": 527,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/exploration.md",
+      "unit": "U-001",
+      "bytes": 8845,
+      "words": 1172,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/project-brief.md",
+      "unit": "U-001",
+      "bytes": 6616,
+      "words": 824,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md",
+      "unit": "U-001",
+      "bytes": 3982,
+      "words": 508,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 471,
+      "words": 49,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 587,
+      "words": 48,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/in-code-documentation.md",
+      "unit": "U-001",
+      "bytes": 2857,
+      "words": 383,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/review-and-findings.md",
+      "unit": "U-001",
+      "bytes": 2719,
+      "words": 366,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/standalone-documentation.md",
+      "unit": "U-001",
+      "bytes": 3329,
+      "words": 440,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md",
+      "unit": "U-001",
+      "bytes": 11040,
+      "words": 1305,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 508,
+      "words": 54,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 579,
+      "words": 53,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-docs-preparation.md",
+      "unit": "U-001",
+      "bytes": 8143,
+      "words": 1021,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-issue-lifecycle.md",
+      "unit": "U-001",
+      "bytes": 5664,
+      "words": 758,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-milestone-lifecycle.md",
+      "unit": "U-001",
+      "bytes": 4664,
+      "words": 580,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-packaging.md",
+      "unit": "U-001",
+      "bytes": 5843,
+      "words": 733,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-projection.md",
+      "unit": "U-001",
+      "bytes": 7355,
+      "words": 995,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-release-workflows.md",
+      "unit": "U-001",
+      "bytes": 8751,
+      "words": 1137,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-releases.md",
+      "unit": "U-001",
+      "bytes": 9945,
+      "words": 1213,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github.md",
+      "unit": "U-001",
+      "bytes": 15548,
+      "words": 2015,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/release-highlights.md",
+      "unit": "U-001",
+      "bytes": 19977,
+      "words": 2533,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/release-message.md",
+      "unit": "U-001",
+      "bytes": 8651,
+      "words": 1134,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md",
+      "unit": "U-002",
+      "bytes": 14974,
+      "words": 2017,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs",
+      "unit": "U-002",
+      "bytes": 21116,
+      "words": 2131,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-draft.mjs",
+      "unit": "U-002",
+      "bytes": 4255,
+      "words": 481,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-input.md",
+      "unit": "U-002",
+      "bytes": 15375,
+      "words": 2028,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.md",
+      "unit": "U-002",
+      "bytes": 15383,
+      "words": 1890,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.mjs",
+      "unit": "U-002",
+      "bytes": 18456,
+      "words": 1907,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-runtime.mjs",
+      "unit": "U-002",
+      "bytes": 9854,
+      "words": 1149,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/github-client.mjs",
+      "unit": "U-002",
+      "bytes": 18056,
+      "words": 1920,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/projection-input.mjs",
+      "unit": "U-002",
+      "bytes": 15437,
+      "words": 1613,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/SKILL.md",
+      "unit": "U-001",
+      "bytes": 8901,
+      "words": 1058,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 662,
+      "words": 76,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 588,
+      "words": 53,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md",
+      "unit": "U-001",
+      "bytes": 20559,
+      "words": 2724,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/environment-recovery.md",
+      "unit": "U-001",
+      "bytes": 2310,
+      "words": 281,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/range-selection.md",
+      "unit": "U-001",
+      "bytes": 3971,
+      "words": 560,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/startup-and-continuation.md",
+      "unit": "U-001",
+      "bytes": 13039,
+      "words": 1620,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/task-execution.md",
+      "unit": "U-001",
+      "bytes": 3543,
+      "words": 468,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/SKILL.md",
+      "unit": "U-001",
+      "bytes": 4209,
+      "words": 530,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 459,
+      "words": 45,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 591,
+      "words": 49,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/references/feature-incorporation.md",
+      "unit": "U-001",
+      "bytes": 14742,
+      "words": 1951,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md",
+      "unit": "U-001",
+      "bytes": 14402,
+      "words": 1570,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 524,
+      "words": 53,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 590,
+      "words": 54,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/agent-orientation.md",
+      "unit": "U-001",
+      "bytes": 4994,
+      "words": 613,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/branch-management.md",
+      "unit": "U-001",
+      "bytes": 14744,
+      "words": 1858,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/continuity.md",
+      "unit": "U-001",
+      "bytes": 10626,
+      "words": 1400,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md",
+      "unit": "U-001",
+      "bytes": 18498,
+      "words": 2281,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/credentials.md",
+      "unit": "U-001",
+      "bytes": 12208,
+      "words": 1575,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/document-qc-gates.md",
+      "unit": "U-001",
+      "bytes": 6358,
+      "words": 780,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/examples.md",
+      "unit": "U-001",
+      "bytes": 29166,
+      "words": 4187,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md",
+      "unit": "U-001",
+      "bytes": 22064,
+      "words": 2776,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/human-document-review.md",
+      "unit": "U-001",
+      "bytes": 7511,
+      "words": 973,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/main-preparation.md",
+      "unit": "U-001",
+      "bytes": 12944,
+      "words": 1621,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/phase-activation.md",
+      "unit": "U-001",
+      "bytes": 4825,
+      "words": 591,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/prerelease-review.md",
+      "unit": "U-001",
+      "bytes": 9774,
+      "words": 1192,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/repository-bootstrap.md",
+      "unit": "U-001",
+      "bytes": 9553,
+      "words": 1216,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/review-and-revision.md",
+      "unit": "U-001",
+      "bytes": 11034,
+      "words": 1373,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/revision-modes.md",
+      "unit": "U-001",
+      "bytes": 10559,
+      "words": 1377,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/tracking-decision.md",
+      "unit": "U-001",
+      "bytes": 6986,
+      "words": 922,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/workflows.md",
+      "unit": "U-001",
+      "bytes": 27718,
+      "words": 3443,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md",
+      "unit": "U-002",
+      "bytes": 11924,
+      "words": 1557,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs",
+      "unit": "U-002",
+      "bytes": 21278,
+      "words": 2298,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-process-supervisor.py",
+      "unit": "U-002",
+      "bytes": 15541,
+      "words": 1285,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-publish.mjs",
+      "unit": "U-002",
+      "bytes": 12001,
+      "words": 1342,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs",
+      "unit": "U-002",
+      "bytes": 5237,
+      "words": 590,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-orient/SKILL.md",
+      "unit": "U-001",
+      "bytes": 5785,
+      "words": 699,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-orient/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 491,
+      "words": 50,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-orient/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 571,
+      "words": 49,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-orient/references/inspection-and-handoff.md",
+      "unit": "U-001",
+      "bytes": 12706,
+      "words": 1633,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md",
+      "unit": "U-001",
+      "bytes": 5897,
+      "words": 738,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 371,
+      "words": 37,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 590,
+      "words": 55,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/delivery-plan.md",
+      "unit": "U-001",
+      "bytes": 9120,
+      "words": 1220,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/physical-layout.md",
+      "unit": "U-001",
+      "bytes": 3711,
+      "words": 514,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/review.md",
+      "unit": "U-001",
+      "bytes": 5213,
+      "words": 651,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/SKILL.md",
+      "unit": "U-001",
+      "bytes": 3946,
+      "words": 513,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 454,
+      "words": 46,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 580,
+      "words": 48,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/campaign-artifacts.md",
+      "unit": "U-001",
+      "bytes": 12730,
+      "words": 1733,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/change-kinds.md",
+      "unit": "U-001",
+      "bytes": 4573,
+      "words": 710,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/completion-reports.md",
+      "unit": "U-001",
+      "bytes": 7267,
+      "words": 963,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/document-qc-reports.md",
+      "unit": "U-001",
+      "bytes": 4724,
+      "words": 626,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md",
+      "unit": "U-001",
+      "bytes": 15850,
+      "words": 2129,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/releases.md",
+      "unit": "U-001",
+      "bytes": 7869,
+      "words": 999,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md",
+      "unit": "U-001",
+      "bytes": 5119,
+      "words": 621,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 387,
+      "words": 37,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 591,
+      "words": 49,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/change-specification.md",
+      "unit": "U-001",
+      "bytes": 2220,
+      "words": 292,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/review.md",
+      "unit": "U-001",
+      "bytes": 3962,
+      "words": 499,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/system-specification.md",
+      "unit": "U-001",
+      "bytes": 4546,
+      "words": 614,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/SKILL.md",
+      "unit": "U-001",
+      "bytes": 5603,
+      "words": 709,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 592,
+      "words": 62,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 551,
+      "words": 49,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/amendment-execution.md",
+      "unit": "U-001",
+      "bytes": 3900,
+      "words": 530,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/objective-and-impact.md",
+      "unit": "U-001",
+      "bytes": 3264,
+      "words": 439,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/verification-and-stop.md",
+      "unit": "U-001",
+      "bytes": 7686,
+      "words": 985,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md",
+      "unit": "U-001",
+      "bytes": 5646,
+      "words": 702,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 338,
+      "words": 33,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 599,
+      "words": 53,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/conformance-review.md",
+      "unit": "U-001",
+      "bytes": 3880,
+      "words": 489,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/progress-review.md",
+      "unit": "U-001",
+      "bytes": 2291,
+      "words": 279,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/task-derivation.md",
+      "unit": "U-001",
+      "bytes": 7133,
+      "words": 992,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/LICENSE",
+      "unit": "U-003",
+      "bytes": 1070,
+      "words": 169,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/SKILL.md",
+      "unit": "U-001",
+      "bytes": 3588,
+      "words": 477,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 480,
+      "words": 46,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 574,
+      "words": 49,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/test-first-cycle.md",
+      "unit": "U-001",
+      "bytes": 3693,
+      "words": 520,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/testing-strategy.md",
+      "unit": "U-001",
+      "bytes": 2947,
+      "words": 415,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/upstream-provenance.md",
+      "unit": "U-001",
+      "bytes": 1278,
+      "words": 138,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/writing-good-tests.md",
+      "unit": "U-001",
+      "bytes": 4076,
+      "words": 585,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md",
+      "unit": "U-001",
+      "bytes": 5336,
+      "words": 672,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/agents/openai.yaml",
+      "unit": "U-003",
+      "bytes": 544,
+      "words": 57,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/assets/icon.svg",
+      "unit": "U-003",
+      "bytes": 563,
+      "words": 48,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/boundary-review.md",
+      "unit": "U-001",
+      "bytes": 2497,
+      "words": 308,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/check-selection.md",
+      "unit": "U-001",
+      "bytes": 4712,
+      "words": 621,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/execution-and-evidence.md",
+      "unit": "U-001",
+      "bytes": 4797,
+      "words": 694,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/failure-assessment.md",
+      "unit": "U-001",
+      "bytes": 2950,
+      "words": 423,
+      "packaged": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/release-checks.md",
+      "unit": "U-001",
+      "bytes": 6122,
+      "words": 746,
+      "packaged": true
+    },
+    {
+      "path": ".github/RELEASE-HANDOFF.md",
+      "unit": "U-003",
+      "bytes": 5186,
+      "words": 692,
+      "packaged": false
+    },
+    {
+      "path": ".github/requirements.txt",
+      "unit": "U-003",
+      "bytes": 19,
+      "words": 1,
+      "packaged": false
+    },
+    {
+      "path": ".github/schemas/README.md",
+      "unit": "U-003",
+      "bytes": 1177,
+      "words": 140,
+      "packaged": false
+    },
+    {
+      "path": ".github/schemas/plugin.schema.json",
+      "unit": "U-003",
+      "bytes": 1805,
+      "words": 164,
+      "packaged": false
+    },
+    {
+      "path": ".github/scripts/release.py",
+      "unit": "U-003",
+      "bytes": 21654,
+      "words": 1931,
+      "packaged": false
+    },
+    {
+      "path": ".github/tests/test_release.py",
+      "unit": "U-003",
+      "bytes": 29694,
+      "words": 1350,
+      "packaged": false
+    },
+    {
+      "path": ".github/workflows/forge-close.yml",
+      "unit": "U-003",
+      "bytes": 1292,
+      "words": 94,
+      "packaged": false
+    },
+    {
+      "path": ".github/workflows/forge-project.yml",
+      "unit": "U-003",
+      "bytes": 1586,
+      "words": 102,
+      "packaged": false
+    },
+    {
+      "path": ".github/workflows/git-auth-recover.yml",
+      "unit": "U-003",
+      "bytes": 2061,
+      "words": 156,
+      "packaged": false
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "unit": "U-003",
+      "bytes": 3352,
+      "words": 274,
+      "packaged": false
+    },
+    {
+      "path": ".github/workflows/windows-shell-recovery.yml",
+      "unit": "U-003",
+      "bytes": 1041,
+      "words": 83,
+      "packaged": false
+    },
+    {
+      "path": ".gitignore",
+      "unit": "U-003",
+      "bytes": 31,
+      "words": 4,
+      "packaged": false
+    },
+    {
+      "path": "AGENTS.md",
+      "unit": "U-001",
+      "bytes": 3549,
+      "words": 392,
+      "packaged": false
+    },
+    {
+      "path": "AI_DISCLOSURE.md",
+      "unit": "U-001",
+      "bytes": 1192,
+      "words": 143,
+      "packaged": false
+    },
+    {
+      "path": "BROWSER_DEV_POLICY.md",
+      "unit": "U-001",
+      "bytes": 5766,
+      "words": 762,
+      "packaged": false
+    },
+    {
+      "path": "LICENSE",
+      "unit": "U-003",
+      "bytes": 1065,
+      "words": 168,
+      "packaged": false
+    },
+    {
+      "path": "README.md",
+      "unit": "U-001",
+      "bytes": 1500,
+      "words": 157,
+      "packaged": false
+    },
+    {
+      "path": "RELEASE-NOTES.md",
+      "unit": "U-003",
+      "bytes": 5165,
+      "words": 634,
+      "packaged": false
+    },
+    {
+      "path": "SDD-MANAGER.md",
+      "unit": "U-001",
+      "bytes": 683,
+      "words": 85,
+      "packaged": false
+    },
+    {
+      "path": "SKILL_DISCOVERY_PROTOCOL.md",
+      "unit": "U-001",
+      "bytes": 2951,
+      "words": 379,
+      "packaged": false
+    },
+    {
+      "path": "WINDOWS_SHELL_POLICY.md",
+      "unit": "U-001",
+      "bytes": 3897,
+      "words": 590,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/AGENTS.md",
+      "unit": "U-003",
+      "bytes": 8537,
+      "words": 980,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/TEXTSTATS.md",
+      "unit": "U-003",
+      "bytes": 2267,
+      "words": 221,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/AGENTS.md",
+      "unit": "U-003",
+      "bytes": 4853,
+      "words": 612,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/DIAGNOSTICS.md",
+      "unit": "U-003",
+      "bytes": 9392,
+      "words": 1146,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/EXECUTION.md",
+      "unit": "U-003",
+      "bytes": 15145,
+      "words": 1729,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/OBJECTIVES.md",
+      "unit": "U-003",
+      "bytes": 5221,
+      "words": 669,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/README.md",
+      "unit": "U-003",
+      "bytes": 8338,
+      "words": 1002,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/RECOVERY.md",
+      "unit": "U-003",
+      "bytes": 11180,
+      "words": 1433,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/RELEASE-SCENARIOS.md",
+      "unit": "U-003",
+      "bytes": 9444,
+      "words": 1177,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/SCENARIO.md",
+      "unit": "U-003",
+      "bytes": 8468,
+      "words": 1234,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/SETUP.md",
+      "unit": "U-003",
+      "bytes": 14298,
+      "words": 1735,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/TRIAL-CONTROLS.md",
+      "unit": "U-003",
+      "bytes": 3326,
+      "words": 426,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/VARIANTS.md",
+      "unit": "U-003",
+      "bytes": 3669,
+      "words": 429,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-001.json",
+      "unit": "U-003",
+      "bytes": 3676,
+      "words": 404,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-001.md",
+      "unit": "U-003",
+      "bytes": 4116,
+      "words": 480,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-002.json",
+      "unit": "U-003",
+      "bytes": 1112,
+      "words": 118,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-002.md",
+      "unit": "U-003",
+      "bytes": 1918,
+      "words": 224,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-003.json",
+      "unit": "U-003",
+      "bytes": 1376,
+      "words": 155,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-003.md",
+      "unit": "U-003",
+      "bytes": 2525,
+      "words": 313,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-004.json",
+      "unit": "U-003",
+      "bytes": 2073,
+      "words": 239,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-004.md",
+      "unit": "U-003",
+      "bytes": 2895,
+      "words": 359,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-005.json",
+      "unit": "U-003",
+      "bytes": 6165,
+      "words": 537,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-005.md",
+      "unit": "U-003",
+      "bytes": 3375,
+      "words": 428,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-006.json",
+      "unit": "U-003",
+      "bytes": 7601,
+      "words": 634,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-006.md",
+      "unit": "U-003",
+      "bytes": 2641,
+      "words": 329,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-007.json",
+      "unit": "U-003",
+      "bytes": 4200,
+      "words": 381,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-007.md",
+      "unit": "U-003",
+      "bytes": 2237,
+      "words": 285,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-008.json",
+      "unit": "U-003",
+      "bytes": 2580,
+      "words": 283,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-008.md",
+      "unit": "U-003",
+      "bytes": 3550,
+      "words": 416,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-009.json",
+      "unit": "U-003",
+      "bytes": 1332,
+      "words": 145,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-009.md",
+      "unit": "U-003",
+      "bytes": 2118,
+      "words": 259,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-010.json",
+      "unit": "U-003",
+      "bytes": 14242,
+      "words": 1128,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-010.md",
+      "unit": "U-003",
+      "bytes": 3013,
+      "words": 367,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-011.json",
+      "unit": "U-003",
+      "bytes": 1090,
+      "words": 113,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-011.md",
+      "unit": "U-003",
+      "bytes": 1899,
+      "words": 219,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-012.json",
+      "unit": "U-003",
+      "bytes": 13397,
+      "words": 1038,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-012.md",
+      "unit": "U-003",
+      "bytes": 2930,
+      "words": 334,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-013.json",
+      "unit": "U-003",
+      "bytes": 15700,
+      "words": 1228,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-013.md",
+      "unit": "U-003",
+      "bytes": 3046,
+      "words": 369,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-014.json",
+      "unit": "U-003",
+      "bytes": 1063,
+      "words": 109,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-014.md",
+      "unit": "U-003",
+      "bytes": 2054,
+      "words": 249,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-015.json",
+      "unit": "U-003",
+      "bytes": 1395,
+      "words": 149,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-015.md",
+      "unit": "U-003",
+      "bytes": 1670,
+      "words": 212,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-016.json",
+      "unit": "U-003",
+      "bytes": 2125,
+      "words": 239,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-016.md",
+      "unit": "U-003",
+      "bytes": 2460,
+      "words": 317,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-017.json",
+      "unit": "U-003",
+      "bytes": 1885,
+      "words": 217,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-017.md",
+      "unit": "U-003",
+      "bytes": 4640,
+      "words": 583,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-018.json",
+      "unit": "U-003",
+      "bytes": 1430,
+      "words": 161,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-018.md",
+      "unit": "U-003",
+      "bytes": 2447,
+      "words": 306,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-019.json",
+      "unit": "U-003",
+      "bytes": 2246,
+      "words": 241,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-019.md",
+      "unit": "U-003",
+      "bytes": 3436,
+      "words": 431,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-020.json",
+      "unit": "U-003",
+      "bytes": 1321,
+      "words": 152,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-020.md",
+      "unit": "U-003",
+      "bytes": 2084,
+      "words": 263,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-021.json",
+      "unit": "U-003",
+      "bytes": 932,
+      "words": 98,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-021.md",
+      "unit": "U-003",
+      "bytes": 3042,
+      "words": 397,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-022.json",
+      "unit": "U-003",
+      "bytes": 719,
+      "words": 70,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-022.md",
+      "unit": "U-003",
+      "bytes": 1351,
+      "words": 166,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-023.json",
+      "unit": "U-003",
+      "bytes": 1495,
+      "words": 161,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-023.md",
+      "unit": "U-003",
+      "bytes": 4693,
+      "words": 577,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-024.json",
+      "unit": "U-003",
+      "bytes": 1337,
+      "words": 145,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-024.md",
+      "unit": "U-003",
+      "bytes": 2484,
+      "words": 300,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-025.json",
+      "unit": "U-003",
+      "bytes": 613,
+      "words": 62,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-025.md",
+      "unit": "U-003",
+      "bytes": 1391,
+      "words": 172,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-026.json",
+      "unit": "U-003",
+      "bytes": 1009,
+      "words": 113,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-026.md",
+      "unit": "U-003",
+      "bytes": 3398,
+      "words": 419,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-027.json",
+      "unit": "U-003",
+      "bytes": 1491,
+      "words": 155,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-027.md",
+      "unit": "U-003",
+      "bytes": 2497,
+      "words": 288,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-028.json",
+      "unit": "U-003",
+      "bytes": 1220,
+      "words": 143,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-028.md",
+      "unit": "U-003",
+      "bytes": 1801,
+      "words": 217,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-029.json",
+      "unit": "U-003",
+      "bytes": 1190,
+      "words": 142,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-029.md",
+      "unit": "U-003",
+      "bytes": 1466,
+      "words": 182,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-030.json",
+      "unit": "U-003",
+      "bytes": 1489,
+      "words": 181,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-030.md",
+      "unit": "U-003",
+      "bytes": 1520,
+      "words": 195,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-031.json",
+      "unit": "U-003",
+      "bytes": 1360,
+      "words": 158,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-031.md",
+      "unit": "U-003",
+      "bytes": 1489,
+      "words": 188,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-032.json",
+      "unit": "U-003",
+      "bytes": 1941,
+      "words": 225,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-032.md",
+      "unit": "U-003",
+      "bytes": 1612,
+      "words": 204,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-033.json",
+      "unit": "U-003",
+      "bytes": 1159,
+      "words": 125,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/A-033.md",
+      "unit": "U-003",
+      "bytes": 1390,
+      "words": 164,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/CHECKPOINTS.md",
+      "unit": "U-003",
+      "bytes": 8099,
+      "words": 1072,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/COMMON.md",
+      "unit": "U-003",
+      "bytes": 9266,
+      "words": 1102,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/DOCUMENT-QC.md",
+      "unit": "U-003",
+      "bytes": 3408,
+      "words": 463,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/INTERRUPTIONS.md",
+      "unit": "U-003",
+      "bytes": 11272,
+      "words": 1385,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/MAIN-PREPARATION.md",
+      "unit": "U-003",
+      "bytes": 6648,
+      "words": 878,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/TRACKING-FIDELITY.md",
+      "unit": "U-003",
+      "bytes": 6918,
+      "words": 920,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/capture.py",
+      "unit": "U-003",
+      "bytes": 11672,
+      "words": 742,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/catalog_tools.py",
+      "unit": "U-003",
+      "bytes": 17881,
+      "words": 1405,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/expected.json",
+      "unit": "U-003",
+      "bytes": 12899,
+      "words": 1030,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/inputs.json",
+      "unit": "U-003",
+      "bytes": 15940,
+      "words": 1222,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/assessor/release_capture.py",
+      "unit": "U-003",
+      "bytes": 7851,
+      "words": 614,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/catalog.json",
+      "unit": "U-003",
+      "bytes": 48823,
+      "words": 3726,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-001.md",
+      "unit": "U-003",
+      "bytes": 172,
+      "words": 23,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-002.md",
+      "unit": "U-003",
+      "bytes": 205,
+      "words": 29,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-003.md",
+      "unit": "U-003",
+      "bytes": 277,
+      "words": 39,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-004.md",
+      "unit": "U-003",
+      "bytes": 177,
+      "words": 30,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-005.md",
+      "unit": "U-003",
+      "bytes": 120,
+      "words": 16,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-006.md",
+      "unit": "U-003",
+      "bytes": 161,
+      "words": 24,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-007.md",
+      "unit": "U-003",
+      "bytes": 161,
+      "words": 25,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-008.md",
+      "unit": "U-003",
+      "bytes": 174,
+      "words": 23,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-009.md",
+      "unit": "U-003",
+      "bytes": 214,
+      "words": 29,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-010.md",
+      "unit": "U-003",
+      "bytes": 251,
+      "words": 35,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-011.md",
+      "unit": "U-003",
+      "bytes": 214,
+      "words": 32,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-012.md",
+      "unit": "U-003",
+      "bytes": 282,
+      "words": 42,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-013.md",
+      "unit": "U-003",
+      "bytes": 210,
+      "words": 30,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-014.md",
+      "unit": "U-003",
+      "bytes": 213,
+      "words": 28,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-015.md",
+      "unit": "U-003",
+      "bytes": 183,
+      "words": 26,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-016.md",
+      "unit": "U-003",
+      "bytes": 142,
+      "words": 19,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-017.md",
+      "unit": "U-003",
+      "bytes": 139,
+      "words": 20,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-018.md",
+      "unit": "U-003",
+      "bytes": 126,
+      "words": 18,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-019.md",
+      "unit": "U-003",
+      "bytes": 162,
+      "words": 22,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-020.md",
+      "unit": "U-003",
+      "bytes": 121,
+      "words": 17,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-021.md",
+      "unit": "U-003",
+      "bytes": 245,
+      "words": 33,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-022.md",
+      "unit": "U-003",
+      "bytes": 218,
+      "words": 30,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-023.md",
+      "unit": "U-003",
+      "bytes": 161,
+      "words": 22,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-024.md",
+      "unit": "U-003",
+      "bytes": 145,
+      "words": 17,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-025.md",
+      "unit": "U-003",
+      "bytes": 132,
+      "words": 16,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-026.md",
+      "unit": "U-003",
+      "bytes": 217,
+      "words": 27,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-027.md",
+      "unit": "U-003",
+      "bytes": 165,
+      "words": 23,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-028.md",
+      "unit": "U-003",
+      "bytes": 43,
+      "words": 4,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-029.md",
+      "unit": "U-003",
+      "bytes": 182,
+      "words": 26,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-030.md",
+      "unit": "U-003",
+      "bytes": 193,
+      "words": 26,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-031.md",
+      "unit": "U-003",
+      "bytes": 249,
+      "words": 35,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-032.md",
+      "unit": "U-003",
+      "bytes": 254,
+      "words": 35,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/A-033.md",
+      "unit": "U-003",
+      "bytes": 252,
+      "words": 35,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/continuation.md",
+      "unit": "U-003",
+      "bytes": 319,
+      "words": 42,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/preparation.md",
+      "unit": "U-003",
+      "bytes": 4033,
+      "words": 553,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/repository-continuation.md",
+      "unit": "U-003",
+      "bytes": 65,
+      "words": 10,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/tracking-fidelity.md",
+      "unit": "U-003",
+      "bytes": 261,
+      "words": 32,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/cases/consumer/uncontrolled-continuation.md",
+      "unit": "U-003",
+      "bytes": 194,
+      "words": 26,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/schemas/inputs.schema.json",
+      "unit": "U-003",
+      "bytes": 3671,
+      "words": 321,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/schemas/run-state.schema.json",
+      "unit": "U-003",
+      "bytes": 9443,
+      "words": 686,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+      "unit": "U-003",
+      "bytes": 15458,
+      "words": 1813,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/scripts/assess.py",
+      "unit": "U-003",
+      "bytes": 167,
+      "words": 19,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/scripts/campaign.py",
+      "unit": "U-003",
+      "bytes": 5613,
+      "words": 473,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/scripts/contract_probe.py",
+      "unit": "U-003",
+      "bytes": 5686,
+      "words": 336,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/scripts/core.py",
+      "unit": "U-003",
+      "bytes": 59165,
+      "words": 4786,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/scripts/evidence_merge.py",
+      "unit": "U-003",
+      "bytes": 2567,
+      "words": 250,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/scripts/fault_adapter.py",
+      "unit": "U-003",
+      "bytes": 3456,
+      "words": 225,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/scripts/observe.py",
+      "unit": "U-003",
+      "bytes": 169,
+      "words": 19,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/scripts/preflight.py",
+      "unit": "U-003",
+      "bytes": 173,
+      "words": 19,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/scripts/prepare.py",
+      "unit": "U-003",
+      "bytes": 169,
+      "words": 19,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/scripts/trial_control.py",
+      "unit": "U-003",
+      "bytes": 9857,
+      "words": 652,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/templates/inputs.example.json",
+      "unit": "U-003",
+      "bytes": 239,
+      "words": 16,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/__init__.py",
+      "unit": "U-003",
+      "bytes": 50,
+      "words": 5,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/support.py",
+      "unit": "U-003",
+      "bytes": 2805,
+      "words": 259,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_campaign.py",
+      "unit": "U-003",
+      "bytes": 3458,
+      "words": 94,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_catalog.py",
+      "unit": "U-003",
+      "bytes": 19420,
+      "words": 641,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_checkers.py",
+      "unit": "U-003",
+      "bytes": 11311,
+      "words": 689,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_contract_probe.py",
+      "unit": "U-003",
+      "bytes": 2830,
+      "words": 85,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_evidence_merge.py",
+      "unit": "U-003",
+      "bytes": 2442,
+      "words": 172,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_fault_adapter.py",
+      "unit": "U-003",
+      "bytes": 2369,
+      "words": 66,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_local_assessment.py",
+      "unit": "U-003",
+      "bytes": 3386,
+      "words": 116,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_nested_package.py",
+      "unit": "U-003",
+      "bytes": 8784,
+      "words": 343,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_package_docs.py",
+      "unit": "U-003",
+      "bytes": 10632,
+      "words": 428,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_preflight.py",
+      "unit": "U-003",
+      "bytes": 14257,
+      "words": 533,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_recovery.py",
+      "unit": "U-003",
+      "bytes": 23409,
+      "words": 623,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_release_capture.py",
+      "unit": "U-003",
+      "bytes": 12400,
+      "words": 486,
+      "packaged": false
+    },
+    {
+      "path": "acceptance/textstats/tests/test_trial_control.py",
+      "unit": "U-003",
+      "bytes": 6241,
+      "words": 195,
+      "packaged": false
+    },
+    {
+      "path": "docs/agents/jules/Tetris.md",
+      "unit": "U-001",
+      "bytes": 623,
+      "words": 74,
+      "packaged": false
+    },
+    {
+      "path": "docs/agents/jules/Workflow Loading.md",
+      "unit": "U-001",
+      "bytes": 2496,
+      "words": 345,
+      "packaged": false
+    },
+    {
+      "path": "docs/demo/calculator/README.md",
+      "unit": "U-001",
+      "bytes": 10443,
+      "words": 1469,
+      "packaged": false
+    },
+    {
+      "path": "docs/demo/tetris/README.md",
+      "unit": "U-001",
+      "bytes": 26227,
+      "words": 3942,
+      "packaged": false
+    },
+    {
+      "path": "docs/demo/tetris/examples/PROJECT_phased-project.md",
+      "unit": "U-001",
+      "bytes": 841,
+      "words": 118,
+      "packaged": false
+    },
+    {
+      "path": "docs/dev/CAPABILITY-MAP.md",
+      "unit": "U-001",
+      "bytes": 32034,
+      "words": 3573,
+      "packaged": false
+    },
+    {
+      "path": "docs/dev/HANDOFF.md",
+      "unit": "U-001",
+      "bytes": 3147,
+      "words": 346,
+      "packaged": false
+    },
+    {
+      "path": "docs/dev/PLUGIN-ASSESSMENT.md",
+      "unit": "U-001",
+      "bytes": 22657,
+      "words": 3076,
+      "packaged": false
+    },
+    {
+      "path": "docs/dev/PLUGIN-CONTRACT.md",
+      "unit": "U-001",
+      "bytes": 20818,
+      "words": 2174,
+      "packaged": false
+    },
+    {
+      "path": "tests/fixtures/git-auth/localhost-cert.pem",
+      "unit": "U-002",
+      "bytes": 1212,
+      "words": 22,
+      "packaged": false
+    },
+    {
+      "path": "tests/fixtures/git-auth/localhost-key.pem",
+      "unit": "U-002",
+      "bytes": 1704,
+      "words": 32,
+      "packaged": false
+    },
+    {
+      "path": "tests/forge-close.test.mjs",
+      "unit": "U-002",
+      "bytes": 28125,
+      "words": 3055,
+      "packaged": false
+    },
+    {
+      "path": "tests/forge-project.test.mjs",
+      "unit": "U-002",
+      "bytes": 48082,
+      "words": 4561,
+      "packaged": false
+    },
+    {
+      "path": "tests/git-auth-recover.test.mjs",
+      "unit": "U-002",
+      "bytes": 26248,
+      "words": 2466,
+      "packaged": false
+    },
+    {
+      "path": "tests/git-publish.test.mjs",
+      "unit": "U-002",
+      "bytes": 17095,
+      "words": 1584,
+      "packaged": false
+    },
+    {
+      "path": "tests/helpers/git-auth-https.mjs",
+      "unit": "U-002",
+      "bytes": 6741,
+      "words": 744,
+      "packaged": false
+    },
+    {
+      "path": "tests/helpers/windows-process.py",
+      "unit": "U-002",
+      "bytes": 2899,
+      "words": 286,
+      "packaged": false
+    },
+    {
+      "path": "tests/test_windows_shell_recovery.py",
+      "unit": "U-002",
+      "bytes": 6869,
+      "words": 504,
+      "packaged": false
+    }
+  ]
+}
