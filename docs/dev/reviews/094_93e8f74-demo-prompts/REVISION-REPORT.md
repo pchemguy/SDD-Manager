@@ -84,3 +84,7 @@ V-006 publication was verified at 44f9eb6abf1afc59a68aa1b8334a477a732630a7. Diff
 Add lead guidance for optional preapproval of human checkpoints, either initially or after project-brief approval, with wording that retains other SDD Manager obligations. Add a level-three versioning/release section inside the full prompt: the agent manages versions and publishes a new tagged GitHub release with notes after each completed, verified and integrated implementation phase. Autonomy remains an optional instruction; phase releases are part of the copy-paste prompt.
 
 V-007 publication was verified at 1480ef8bb4341d4f6c456c8c605980b736e15b8f. Diff inspection confirms the optional/required distinction, intact gameplay text, block-quote structure and two-file scope; git diff --check passes. Commit, publish and read back. Keep the campaign open; these are demo instructions, not authorization to run the depicted project or publish an SDD Manager release.
+
+## Nested campaign 095 — Browser policy recovery
+
+The human explicitly selects nested planning and execution of Chromium/Firefox Playwright recovery guidance. Child 095 branches from published 000d2ec0ed7a3b06aa943300a5d475cf73e0a393 and returns to this campaign branch. [Child plan](../095_000d2ec-playwright-recovery/REVISION-PLAN.md) owns its scope. Suspend parent work during the child; V-001–V-008 remain intact and further demo revision scope remains pending. Child completion does not close or resume campaign 094.
