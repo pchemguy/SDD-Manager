@@ -23,11 +23,9 @@ An available GitHub CLI may perform supported operations with existing authentic
 
 Tracking validates phase associations, exact identities and complete inventories. Shared readers reject unsuitable input types promptly, including POSIX FIFOs. Publisher checks preserve complete version identifiers, exact source/body association and deterministic package contents.
 
-## Installation and package preparation
+## Installation
 
-Prepared assets are `sdd-manager.zip` and `sdd-manager.zip.sha256`. Verify the checksum, extract the package and use your agent client's supported loading mechanism. Load PLUGIN.md or the coordinator explicitly when required; automatic discovery depends on the client. See the [candidate package guide](https://github.com/pchemguy/SDD-Manager/blob/6d0b04a8c5edb36601c36c759e5ee0285ed2f9c4/.agents/plugins/sdd-manager/README.md).
-
-These assets are prepared locally; this message does not identify published downloads. Release publication still requires the final source/message agreement, tag, workflow and asset-readback steps.
+Download [`sdd-manager.zip`](https://github.com/pchemguy/SDD-Manager/releases/download/v0.15.1/sdd-manager.zip) and its [`SHA-256 checksum`](https://github.com/pchemguy/SDD-Manager/releases/download/v0.15.1/sdd-manager.zip.sha256). Verify the checksum, extract the package and use your agent client's supported loading mechanism. Load PLUGIN.md or the coordinator explicitly when required; automatic discovery depends on the client. See the [package guide](https://github.com/pchemguy/SDD-Manager/blob/v0.15.1/.agents/plugins/sdd-manager/README.md).
 
 ## Validation and limitations
 
