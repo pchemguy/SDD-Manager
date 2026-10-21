@@ -7,7 +7,7 @@
 - Creation parent, integration target and return: main.
 - Working/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager.
 - Request: “Pull origin and open demo prompts revision campaign.”
-- State: Open; selected prompt revisions V-001–V-004 are implemented below. Further revision scope remains pending.
+- State: Open; selected prompt revisions V-001–V-005 are implemented below. Further revision scope remains pending.
 
 ## Starting context
 
@@ -60,3 +60,9 @@ Terminology and substance checks pass: the feature is penetrator and each bonus 
 The human supplies the complete prompt and authorizes polishing and committing it. Preserve its order: activation and penetration, hard-drop/ghost behavior, earned bonuses, then visual feedback. Replace the parenthetical prerequisite with a direct condition that a penetrator bonus must be available; retain the feature name, every gameplay requirement and the illustrative symbol. No new activation, movement or locking rules are selected.
 
 V-003 publication is verified by exact remote-ref readback at c838b03a52411931b9db10a10de02ca79ff61da9, with confirmed cleanup. V-004 changes only the prompt and this record. Editorial fidelity, surrounding-content preservation and git diff --check pass; no runtime testing is needed for this prose-only edit. Commit, publish and read back the action; keep campaign 094 open.
+
+## V-005 — Add the accepted all-inclusive project prompt
+
+The human accepts the revised complete project description and requests a new Tetris guide section with a concise normal-text lead. Append it as an alternative to the staged prompts, preserving the accepted wording inside one `> [!NOTE] Prompt` block. Shift its title from level one to three and its six section headings from level two to four. The lead distinguishes its full target scope and default full-interval locking from the staged exercises above.
+
+V-004 publication was verified at 4f6e63f4b3ab998d546123e1f814586c9c27c686. Editorial comparison confirms accepted-text fidelity. Structural checks pass for heading levels, continuous block quotation, preservation of the preceding guide and the two-file scope; git diff --check also passes. Only the guide and this record are selected; no game execution or runtime testing is required. Commit, publish and read back the addition; keep campaign 094 open.
