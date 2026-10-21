@@ -132,3 +132,94 @@ For each selected release, check the integrated source, release highlights, vers
 Record the SDD Manager version, agent/model, environment, enabled skills or plugins, repository starting state, selected steering exercises, deviations from the proposed sequence, and material human interventions.
 
 Assess whether governing documents, completed task checkboxes, verification evidence, Git checkpoints, and enabled GitHub tracking agree. Separate calculator defects from workflow findings and environment failures. Report only checks and publication steps that actually ran.
+
+## All-inclusive project prompt
+
+As an alternative to the staged prompts above, copy the complete prompt below and replace the repository and token placeholders. It includes the unary operations from the optional steering exercises in the target scope from the outset.
+
+Use a fine-grained personal access token (PAT) restricted to the target repository, with **Read and write** permissions for Actions, Commit statuses, Contents, Issues, Pull requests and Workflows. Individual workflows may require fewer permissions; this is a suggested standard set.
+
+Optionally request a fully autonomous process by preapproving all human checkpoints, either in the initial prompt or after approving the project brief (`PROJECT.md`). For example: “I preapprove all remaining human checkpoints. Continue fully autonomously while following all other SDD Manager workflow obligations.”
+
+> [!NOTE] Prompt
+>
+> Help me develop the following project using $sdd-manager.
+>
+> ### Project repo and credentials
+>
+> **GitHub repository**: https://github.com/{OWNER}/{REPO}
+>
+> **GitHub token**: {FINE_GRAINED_GH_TOKEN}
+>
+> ### Versioning and releases
+>
+> Manage the project's versioning, choosing an appropriate initial version and increasing it to reflect delivered changes. After each implementation phase is completed, verified and integrated, create and publish a new GitHub release with the corresponding version tag and release notes.
+>
+> ### Project description: Browser-based calculator
+>
+> Develop a browser-based calculator with basic arithmetic, scientific functions, programmer operations and graphing.
+>
+> Treat this description as the complete target scope. Deliver the simplest sensible usable baseline first, then add capabilities through bounded phases that each provide a useful functionality increment.
+>
+> #### Initial calculation capabilities
+>
+> Deliver the initial functionality in three phases:
+>
+> 1. Basic arithmetic: addition, subtraction, multiplication, division, clear and Enter/evaluate.
+> 2. Powers and logarithms: general powers (`pow`), general roots (`root`), the natural exponential function (`exp`), natural logarithms (`ln`), base-10 logarithms (`lg`) and parentheses.
+> 3. Trigonometry: sine, cosine, tangent and their inverse functions (`sin`, `cos`, `tan`, `asin`, `acos`, `atan`).
+>
+> Phase 1 must deliver a usable basic calculator. Each subsequent phase must extend the working application and preserve previously delivered functionality.
+>
+> #### Additional unary operations
+>
+> Include dedicated operations for:
+>
+> - Absolute value (`abs`).
+> - Reciprocal (`inv`, meaning `1/x`).
+> - Sign negation (`neg`).
+> - Square (`sqr`).
+> - Square root (`sqrt`).
+>
+> Dedicated square and square-root operations must remain consistent with the general power and root functions.
+>
+> #### Programmer operations
+>
+> Provide OR, NOT, XOR, AND and NOR.
+>
+> During preparation, clarify whether these operate on Boolean values or integer bit patterns. For bitwise operations, define integer width, signedness, input representation and the behavior of NOT and NOR.
+>
+> #### Graphing
+>
+> Let the user enter an expression in x and plot it over a selected range using the calculator's scientific functions.
+>
+> Handle undefined values and discontinuities without drawing misleading connections across them.
+>
+> #### Calculator modes
+>
+> Provide a selector with four modes:
+>
+> 1. Basic: basic arithmetic and evaluation controls.
+> 2. Scientific: basic arithmetic and scientific functions, including the additional unary operations.
+> 3. Programmer: basic arithmetic and programmer operations, with scientific controls hidden.
+> 4. Graphing: graphing controls and scientific functions, including their basic arithmetic dependencies.
+>
+> Scientific mode must hide programmer controls.
+>
+> A basic/scientific toggle may be delivered as an intermediate increment before the four-mode selector is added.
+>
+> #### Design clarification
+>
+> During preparation, resolve important behavior and boundary cases, including:
+>
+> - Input editing, decimal entry and evaluation behavior.
+> - Operator precedence, associativity and function notation.
+> - How unary operations apply to the current input or expression.
+> - Numerical precision, displayed results, invalid domains and division by zero.
+> - Angle units and trigonometric conventions.
+> - Graph expression entry, axis ranges and discontinuities.
+> - What happens to input, results and graph expressions when switching modes, including expressions using functions unavailable in the selected mode.
+>
+> Choose the front-end technology and supported browsers during preparation. Surface decisions that materially affect calculation or interaction behavior before implementation.
+>
+> Verify numerical behavior and controls through automated checks and interaction with the actual browser interface. Include regression checks for previously delivered capabilities at each delivery boundary.

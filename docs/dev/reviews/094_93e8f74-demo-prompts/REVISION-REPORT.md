@@ -7,7 +7,7 @@
 - Creation parent, integration target and return: main.
 - Working/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager.
 - Request: “Pull origin and open demo prompts revision campaign.”
-- State: Open; selected prompt revisions V-001–V-008 are implemented below. Further revision scope remains pending.
+- State: Open; selected prompt revisions V-001–V-009 are implemented below. Further revision scope remains pending.
 
 ## Starting context
 
@@ -90,3 +90,9 @@ V-007 publication was verified at 1480ef8bb4341d4f6c456c8c605980b736e15b8f. Diff
 The human explicitly selects nested planning and execution of Chromium/Firefox Playwright recovery guidance. Child 095 branches from published 000d2ec0ed7a3b06aa943300a5d475cf73e0a393 and returns to this campaign branch. [Child plan](../095_000d2ec-playwright-recovery/REVISION-PLAN.md) owns its scope. Suspend parent work during the child; V-001–V-008 remain intact and further demo revision scope remains pending. Child completion does not close or resume campaign 094.
 
 Child 095 completed A-001–A-002 at verified published tip 66966337bf5818cdb9f9ce5d78d37914a1d1080a. The containing explicit merge integrates its policy and evidence into this parent and restores parent continuity. Scoped merged-state checks preserve all demo/plugin source and frozen records; both browser configurations passed the child's fresh local smoke checks. Final closure follows successful merge publication/readback and clean parent return. Campaign 094 stays open, with no automatic continuation of demo work.
+
+## V-009 — Add the approved all-inclusive calculator prompt
+
+The human approves the chat draft and authorizes integration. Append a calculator guide section with a concise lead, target-repository PAT guidance and optional checkpoint preapproval, matching the Tetris section's purpose. Preserve the approved full prompt inside one note block, including versioning/phase releases, the three initial phases, all five unary operations, programmer operations, graphing, four modes and design clarification. Existing staged exercises remain unchanged.
+
+Before continuation, exact remote-ref readback verified the child-to-parent merge f6cd58ba7b07a92746744d0898cec4b87a35bc54 with confirmed cleanup. Diff inspection confirms prompt fidelity, heading/quotation structure, preservation of the preceding calculator guide and the two-file scope; git diff --check passes. No runtime tests are needed for this prose-only addition. Commit, publish and read back. No browser-policy, plugin, Tetris-guide, frozen-record, release or campaign-closure changes are selected.
