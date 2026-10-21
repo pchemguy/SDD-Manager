@@ -1,0 +1,30 @@
+# Demo prompts revision — campaign opening
+
+## Identity and scope
+
+- Campaign: 094_93e8f74; opened 2026-10-21.
+- Starting baseline and branch-off: 93e8f74bf9bab9e9a75472351e9ae07b3c5e53bf.
+- Creation parent, integration target and return: main.
+- Working/publication branch: revision/094_93e8f74-demo-prompts on origin, pchemguy/SDD-Manager.
+- Request: “Pull origin and open demo prompts revision campaign.”
+- State: Open; opening checkpoint only. Detailed revision requirements, assessment and accepted actions remain pending.
+
+## Starting context
+
+The worktree was clean on main at published closure checkpoint 9c494b564b0605a2b236f3482612e2af29f22319. A bounded git pull --ff-only origin main advanced it to the starting baseline. The pulled commit adds 19 lines to the greenfield prompt template, introducing minimal and extended template sections. Preserve those incoming changes as the campaign baseline.
+
+Complete remote head/tag discovery returned 111 rows; main matches the full baseline. Repository-wide directory and local/remote ref inspection found highest reserved sequence 093. Sequence 094 and the selected branch/directory are available; branch syntax is valid. Allocation inspected identities and paths without loading closed campaign contents.
+
+Initial source navigation for the demo-prompts scope:
+
+- [Tetris guide](../../../demo/tetris/README.md).
+- [Calculator guide](../../../demo/calculator/README.md).
+- [Greenfield project prompt template](<../../../../.agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md>).
+
+The exact revision targets and changes will follow the human's selected requirements. No review findings or revision plan are invented at opening. Source prompts, published release 0.15.1 and closed campaign records remain unchanged by this checkpoint.
+
+## Persistence and next boundary
+
+The opening updates this record, current campaign navigation and [HANDOFF](../../HANDOFF.md) on the revision branch. Opening checks pass: three selected files, 269 local links, Markdown spacing/fences, exact-diff preservation and git diff --cached --check; 260 frozen targets were existence-checked without loading. All other source is unchanged from the pulled baseline. Commit, publish and exactly read back the opening before stopping. The containing commit supplies the original campaign-opening identity; recover its actual SHA from Git.
+
+Leave campaign 094 open on its working branch. No source revision, main integration, release or installation follows from this opening request. Next work requires the selected demo-prompt revision scope.
