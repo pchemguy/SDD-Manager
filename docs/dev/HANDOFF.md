@@ -1,13 +1,15 @@
 # SDD Manager handoff
 
-Release campaign 097 is open for the authorized 0.15.2 patch release and closure. Comprehensive review 096 is closed through verified main merge 02ee6987dd521832aa41cea6139d9b3255feba85. Reporting: Standard.
+Release campaign 097 has published and verified stable/latest v0.15.2. Its final explicit main merge, verified target publication and clean return establish closure. Reporting: Standard.
 
-## Owners and Git
+## Released result
 
-[Release plan](reviews/097_02ee698-release-0.15.2/REVISION-PLAN.md) and [outcome](reviews/097_02ee698-release-0.15.2/REVISION-REPORT.md) own the current work. Creation parent/baseline: main at 02ee6987dd521832aa41cea6139d9b3255feba85. Working branch: revision/097_02ee698-release-0.15.2; integration/return: main on origin, pchemguy/SDD-Manager. The manifest currently declares 0.15.1. No release identity is inferred from an unverified provider request.
+[Release outcome](reviews/097_02ee698-release-0.15.2/REVISION-REPORT.md) records source 7b96e0a8b26510f2d110bcec3629181ed6f4f919, annotated tag object 026c7378af9f1e4f7d12df4769281ad250b4ed6a and [GitHub release 419663596](https://github.com/pchemguy/SDD-Manager/releases/tag/v0.15.2). Complete notes, tag source, both downloaded assets and actual latest identity are verified. Root RELEASE-NOTES.md remains retained; the owned internal highlights checkpoint was removed after body readback.
 
-## Next checkpoint
+[CI run 39617616763](https://github.com/pchemguy/SDD-Manager/actions/runs/39617616763) passes build and publish, with 139 support/37 publisher checks and matching asset hashes. Local final builds reproduce the 153-file ZIP; five extracted CLI help checks pass. Review 096 supplied 308 local passes and seven Windows skips. Fresh native Windows, independent consumer/client, browser and diagram execution remain unclaimed.
 
-Complete version/notes/highlights and the exact release commit, publish/read back, build the pinned package, verify tag publication, dispatch the existing publisher and check actual release/CI/download/latest results. Then finalize campaign evidence, explicitly integrate and publish main, and stop. Each commit is published before advancing. Existing review evidence has 308 local passes and seven Windows skips; final candidate/package/provider checks remain required. The prerelease review was explicitly selected and completed; no repeated reminder or approval pause is needed.
+## Git and final boundary
 
-Preserve closed records, token conventions and exact notes/commit/tag association. Root policies and demo guides remain outside the distributed ZIP. No plugin installation is selected.
+Working branch: revision/097_02ee698-release-0.15.2; creation parent/integration/return: main on origin, pchemguy/SDD-Manager. Original baseline: 02ee6987dd521832aa41cea6139d9b3255feba85; opening: 96bea9a4c7b0689b008dd562e16c14aa434e1224. The containing main merge supplies final parents/checks. Publish/read back that merge and confirm clean main before declaring closure. Retain branches, published tag and all closed records.
+
+After closure, stop: the requested comprehensive review, two documentation corrections and patch release are complete. No plugin installation or further implementation is selected. If publication is interrupted, recover actual commit/remote state rather than replaying release creation.
