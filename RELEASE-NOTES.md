@@ -1,36 +1,23 @@
-SDD Manager 0.15.1 strengthens repository-based continuation, guided exploration and bounded delivery. It adds deterministic HTTPS Git publication and source-bound GitHub tracking utilities, with clearer document checkpoints and project-policy handling.
+SDD Manager 0.15.2 improves greenfield prompting, complete demo prompts and browser-environment guidance. This documentation and template patch retains the existing workflow runtime and utility interfaces.
 
 ## Compatibility and requirements
 
-The package retains its single root manifest and 15 skills. Human document approval, task completion, publication and integration gates continue to apply. Repository handoffs preserve workflow context; credentials and ignored local files must be established separately in a new environment.
+The package retains its single root manifest and 15 skills. Supervised HTTPS Git publication requires Node.js 22+, Python 3.11+ and native Git on Windows 10+ or Linux with the process facilities documented in the package guide. The optional GitHub projection/completion utilities require Node.js 22+ and Git. Target projects retain their own build and test requirements.
 
-Supervised HTTPS Git publication requires Node.js 22+, Python 3.11+ and native Git on Windows 10+ or Linux with the process facilities documented in the package guide. The optional GitHub projection/completion utilities require Node.js 22+ and Git. Project build and test commands use the target project's declared tools.
-
-Token-file input uses an ignored, untracked repository file and ordinary OS read access. Existing authenticated clients remain available where supported. Conflicting managed hosted content requires reconciliation; utilities preserve it rather than overwrite it automatically.
+The demo guides and standalone browser policy are source-repository documents, not bundled runtime instructions. Project-defined policies still govern browser selection and setup. Human checkpoint preapproval does not waive technical checks, persistence or required tracking.
 
 ## Highlights
 
-- **Repository-based continuation:** handoffs act as checkpoints, with later decisions recovered from current records and Git. Interrupted branches retain their recorded parents, return boundaries and pending human decisions. Incoming synchronization remains distinct from completed integration.
-- **Guided exploration:** a dedicated design subworkflow critically evaluates terse objectives, surfaces influential product and architectural choices, recommends context-aligned options and records assumptions before the project brief. Detail adapts to project or feature scope; examples remain illustrative.
-- **Bounded delivery:** every phase delivers a useful, testable functionality increment. Complete intended-version scope stays distinct from the simplest sensible initial slice, and later capabilities receive separate bounded increments.
-- **Deterministic Git publication:** the supervised entry selects an eligible supplied token before inherited helpers and applies one total deadline to push, cleanup and exact readback. Windows Job Objects and Linux subreaping own descendant cleanup. Git-supplied helper context is validated separately from public input; safe diagnostics preserve process failures independently of remote state. Credential-helper configuration is not persisted.
-- **Reviewed GitHub tracking:** source-bound JSON supports phase drafting, projection and completion with complete lookup and verified associations. Dependencies and substantive briefs remain agent-authored. Read-only reconciliation preserves uncertain-write boundaries rather than replaying mutations.
-- **Main preparation convenience:** a single docs-main call uses origin and the repository's DOCS_TASKS by default, with bundled-template fallback only when that default document is absent. The predefined sdd-docs-main milestone and nine issue definitions retain their eligibility, first-approval, package-QC and published-integration gates.
-
-## Other changes
-
-An available GitHub CLI may perform supported operations with existing authentication or a protected provided/saved token. Implementation and verification honor project-defined browser policies and declared setup. Generated AGENTS guidance stays concise; detailed preparation procedures remain with their workflow owners.
-
-Tracking validates phase associations, exact identities and complete inventories. Shared readers reject unsuitable input types promptly, including POSIX FIFOs. Publisher checks preserve complete version identifiers, exact source/body association and deterministic package contents.
+- **Greenfield prompt choices:** the packaged project prompt template now offers minimal and extended forms for starting a project with repository and credential context.
+- **Complete demo prompts:** the Tetris and calculator guides provide copy-paste prompts with repository/token placeholders, bounded functional increments, optional checkpoint preapproval, agent-managed versioning and releases after each completed, verified and integrated implementation phase. They explain the suggested repository-scoped PAT permissions. Tetris wording distinguishes the penetrator feature from earned activation bonuses and names conditional ghost visibility explicitly.
+- **Proactive browser recovery guidance:** the standalone policy covers version-matched Playwright setup, independent Chromium/Firefox download diagnosis, verified official-image recovery, Chromium headless shell and scoped Firefox content-process recovery. It requires bounded session, interaction, rendering and teardown evidence. Root repository navigation now links directly to that policy.
 
 ## Installation
 
-Download [`sdd-manager.zip`](https://github.com/pchemguy/SDD-Manager/releases/download/v0.15.1/sdd-manager.zip) and its [`SHA-256 checksum`](https://github.com/pchemguy/SDD-Manager/releases/download/v0.15.1/sdd-manager.zip.sha256). Verify the checksum, extract the package and use your agent client's supported loading mechanism. Load PLUGIN.md or the coordinator explicitly when required; automatic discovery depends on the client. See the [package guide](https://github.com/pchemguy/SDD-Manager/blob/v0.15.1/.agents/plugins/sdd-manager/README.md).
+Download [`sdd-manager.zip`](https://github.com/pchemguy/SDD-Manager/releases/download/v0.15.2/sdd-manager.zip) and its [`SHA-256 checksum`](https://github.com/pchemguy/SDD-Manager/releases/download/v0.15.2/sdd-manager.zip.sha256). Verify the checksum, extract the package and use your agent client's supported loading mechanism. Load PLUGIN.md or the coordinator explicitly when required; automatic discovery depends on the client. See the [package guide](https://github.com/pchemguy/SDD-Manager/blob/v0.15.2/.agents/plugins/sdd-manager/README.md).
 
 ## Validation and limitations
 
-The reviewed runtime passed 132 local Git/authentication and forge contracts on Linux/Node 24.19.0. The integrated state passed 139 source support and 37 publisher tests on Python 3.12.14: 308 passing tests across those scopes. Seven Windows-only shell contracts skipped on this host; no fresh native Windows result is claimed.
+The comprehensive prerelease review covered the current product at documented source, interface and execution depths. Local Linux checks passed 132 Git/authentication and forge contracts on Node 24.19.0, plus 139 support and 37 publisher tests on Python 3.12.14. Seven native-Windows shell cases were skipped on this host. Both documentation findings were corrected.
 
-Two builds of the pinned candidate produced identical 153-file packages. Core schema, exact archive contents, presentation paths, SVG parsing and five extracted CLI help checks passed. Structural author validation reported no errors and 48 advisory warnings about bundled skill references.
-
-These checks do not establish autonomous agent behavior, installed-client discovery, live-provider permissions, launcher activation or freshly rendered diagrams. Those trials were not performed for this candidate. SDD Manager remains an experimental, learning-by-doing project.
+Package checks cover the exact 153-file inventory, repeated-build agreement and five extracted CLI help commands. Structural validation reports zero errors and 48 advisories about bundled cross-skill references. These results do not establish installed-client discovery, autonomous agent compliance, fresh native Windows behavior or newly rendered diagrams. SDD Manager remains an experimental, learning-by-doing project.
