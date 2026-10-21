@@ -177,3 +177,9 @@ Child 092 is now closed through explicit merge dcf563d9ab7267704f6e7a8ece0c8c65f
 ## Scoped contributor-summary correction
 
 The human rejects the irrelevant plugin-ownership sentence in root AGENTS browser guidance. Remove that sentence only; preserve the application/extension trigger, policy link, browser defaults and isolation instruction. Exact-delta, link and whitespace checks verify the correction. This directly selected documentation maintenance leaves closed child 092 frozen and does not resume prerelease preparation or change release inputs.
+
+## Nested comprehensive review 093
+
+From freshly published/read-back aaee1397d5282d50dcb63bb51d59632e49b2dfd1, the human selects child 093_aaee139 for comprehensive current-source/package review, revision planning, execution and closure. Its branch is revision/093_aaee139-comprehensive-review, returning to this parent. After verified child closure, the human explicitly authorizes resuming 081 to review/update the saved package and release documents. Preparation remains suspended until that boundary; no release/tag, publishing dispatch, installation or main integration is selected. Earlier closed records stay frozen.
+
+Child 093 completes all three declared review units and corrects its one confirmed public-prerequisite finding. Published incoming f1c9961315aca49f0a51ddf6ed6ce52d36a3fd99 merges into refreshed parent aaee1397d5282d50dcb63bb51d59632e49b2dfd1 without conflicts. Fresh merged-state support/publisher checks pass 139/37; package and tested runtime bytes match verified child source 159f317, with its exact 153-file package/five CLI checks and unchanged runtime's 132 local contracts. Seven Windows contracts skip on Linux; client/live-provider/diagram rendering is unclaimed. Verify/publish the explicit integration and clean return to close the child, then resume this parent for the selected saved-package/release-document refresh.
