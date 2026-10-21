@@ -1,0 +1,352 @@
+path	unit	planned_depth
+.agents/plugins/sdd-manager/LICENSE	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/PLUGIN.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/README.md	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/AI_DISCLOSURE.md	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/DOCS_TRACKING_TEMPLATE.json	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/HANDOFF_TEMPLATE.md	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/SDD-MANAGER.md	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/SKILL_DISCOVERY_PROTOCOL.md	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/icon.png	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/logo.png	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/assets/logo.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/plugin.json	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/backend-object-lifecycle.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/design-heuristics.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/development-document-qc.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/hosting-tokens.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/markdown-style.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/modularity.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/review-campaigns.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/task-hierarchy.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/workflow-identity.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-design/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-design/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-design/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-design/references/architecture.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-design/references/decomposition.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-design/references/exploration.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-design/references/project-brief.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-docs/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-docs/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-docs/references/in-code-documentation.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-docs/references/review-and-findings.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-docs/references/standalone-documentation.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-docs-preparation.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-issue-lifecycle.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-milestone-lifecycle.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-packaging.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-projection.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-release-workflows.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-releases.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/references/release-highlights.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/references/release-message.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-draft.mjs	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-input.md	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.md	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.mjs	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-runtime.mjs	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/github-client.mjs	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/projection-input.mjs	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-implement/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-implement/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-implement/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-implement/references/environment-recovery.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-implement/references/range-selection.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-implement/references/startup-and-continuation.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-implement/references/task-execution.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-integrate-feature/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-integrate-feature/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-integrate-feature/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-integrate-feature/references/feature-incorporation.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/agent-orientation.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/branch-management.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/continuity.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/credentials.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/document-qc-gates.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/examples.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/human-document-review.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/main-preparation.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/phase-activation.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/prerelease-review.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/repository-bootstrap.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/review-and-revision.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/revision-modes.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/tracking-decision.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/references/workflows.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-process-supervisor.py	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-publish.mjs	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs	U-002	interface/source inspection and relevant local contract execution
+.agents/plugins/sdd-manager/skills/sdd-orient/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-orient/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-orient/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-orient/references/inspection-and-handoff.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-plan/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-plan/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-plan/references/delivery-plan.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-plan/references/physical-layout.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-plan/references/review.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-report/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-report/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-report/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-report/references/campaign-artifacts.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-report/references/change-kinds.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-report/references/completion-reports.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-report/references/document-qc-reports.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-report/references/releases.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-specify/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-specify/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-specify/references/change-specification.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-specify/references/review.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-specify/references/system-specification.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-steer/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-steer/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-steer/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-steer/references/amendment-execution.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-steer/references/objective-and-impact.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-steer/references/verification-and-stop.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-tasks/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-tasks/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-tasks/references/conformance-review.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-tasks/references/progress-review.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-tasks/references/task-derivation.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-tdd/LICENSE	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-tdd/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-tdd/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-tdd/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-tdd/references/test-first-cycle.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-tdd/references/testing-strategy.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-tdd/references/upstream-provenance.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-tdd/references/writing-good-tests.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-verify/agents/openai.yaml	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-verify/assets/icon.svg	U-003	documentation, format/resource or distribution inspection
+.agents/plugins/sdd-manager/skills/sdd-verify/references/boundary-review.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-verify/references/check-selection.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-verify/references/execution-and-evidence.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-verify/references/failure-assessment.md	U-001	entry/content or route/targeted-content inspection
+.agents/plugins/sdd-manager/skills/sdd-verify/references/release-checks.md	U-001	entry/content or route/targeted-content inspection
+.github/RELEASE-HANDOFF.md	U-003	documentation, format/resource or distribution inspection
+.github/requirements.txt	U-003	documentation, format/resource or distribution inspection
+.github/schemas/README.md	U-003	documentation, format/resource or distribution inspection
+.github/schemas/plugin.schema.json	U-003	documentation, format/resource or distribution inspection
+.github/scripts/release.py	U-003	documentation, format/resource or distribution inspection
+.github/tests/test_release.py	U-003	documentation, format/resource or distribution inspection
+.github/workflows/forge-close.yml	U-002	interface/source inspection and relevant local contract execution
+.github/workflows/forge-project.yml	U-002	interface/source inspection and relevant local contract execution
+.github/workflows/git-auth-recover.yml	U-002	interface/source inspection and relevant local contract execution
+.github/workflows/release.yml	U-003	documentation, format/resource or distribution inspection
+.github/workflows/windows-shell-recovery.yml	U-002	interface/source inspection and relevant local contract execution
+.gitignore	U-003	documentation, format/resource or distribution inspection
+AGENTS.md	U-003	documentation, format/resource or distribution inspection
+AI_DISCLOSURE.md	U-003	documentation, format/resource or distribution inspection
+BROWSER_DEV_POLICY.md	U-003	documentation, format/resource or distribution inspection
+LICENSE	U-003	documentation, format/resource or distribution inspection
+README.md	U-003	documentation, format/resource or distribution inspection
+RELEASE-NOTES.md	U-003	documentation, format/resource or distribution inspection
+SDD-MANAGER.md	U-003	documentation, format/resource or distribution inspection
+SKILL_DISCOVERY_PROTOCOL.md	U-003	documentation, format/resource or distribution inspection
+WINDOWS_SHELL_POLICY.md	U-003	documentation, format/resource or distribution inspection
+acceptance/AGENTS.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/TEXTSTATS.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/AGENTS.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/DIAGNOSTICS.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/EXECUTION.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/OBJECTIVES.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/README.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/RECOVERY.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/RELEASE-SCENARIOS.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/SCENARIO.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/SETUP.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/TRIAL-CONTROLS.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/VARIANTS.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-001.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-001.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-002.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-002.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-003.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-003.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-004.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-004.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-005.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-005.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-006.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-006.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-007.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-007.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-008.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-008.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-009.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-009.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-010.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-010.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-011.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-011.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-012.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-012.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-013.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-013.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-014.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-014.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-015.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-015.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-016.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-016.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-017.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-017.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-018.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-018.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-019.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-019.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-020.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-020.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-021.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-021.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-022.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-022.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-023.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-023.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-024.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-024.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-025.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-025.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-026.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-026.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-027.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-027.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-028.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-028.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-029.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-029.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-030.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-030.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-031.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-031.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-032.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-032.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-033.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/A-033.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/CHECKPOINTS.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/COMMON.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/DOCUMENT-QC.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/INTERRUPTIONS.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/MAIN-PREPARATION.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/TRACKING-FIDELITY.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/capture.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/catalog_tools.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/expected.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/inputs.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/assessor/release_capture.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/catalog.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-001.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-002.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-003.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-004.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-005.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-006.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-007.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-008.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-009.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-010.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-011.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-012.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-013.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-014.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-015.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-016.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-017.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-018.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-019.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-020.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-021.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-022.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-023.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-024.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-025.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-026.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-027.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-028.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-029.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-030.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-031.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-032.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/A-033.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/continuation.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/preparation.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/repository-continuation.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/tracking-fidelity.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/cases/consumer/uncontrolled-continuation.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/schemas/inputs.schema.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/schemas/run-state.schema.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/scripts/HELPER-INTERFACES.md	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/scripts/assess.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/scripts/campaign.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/scripts/contract_probe.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/scripts/core.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/scripts/evidence_merge.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/scripts/fault_adapter.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/scripts/observe.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/scripts/preflight.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/scripts/prepare.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/scripts/trial_control.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/templates/inputs.example.json	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/__init__.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/support.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_campaign.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_catalog.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_checkers.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_contract_probe.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_evidence_merge.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_fault_adapter.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_local_assessment.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_nested_package.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_package_docs.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_preflight.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_recovery.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_release_capture.py	U-002	interface/source inspection and relevant local contract execution
+acceptance/textstats/tests/test_trial_control.py	U-002	interface/source inspection and relevant local contract execution
+docs/agents/jules/Tetris.md	U-003	documentation, format/resource or distribution inspection
+docs/agents/jules/Workflow Loading.md	U-003	documentation, format/resource or distribution inspection
+docs/demo/calculator/README.md	U-003	documentation, format/resource or distribution inspection
+docs/demo/tetris/README.md	U-003	documentation, format/resource or distribution inspection
+docs/demo/tetris/examples/PROJECT_phased-project.md	U-003	documentation, format/resource or distribution inspection
+docs/dev/CAPABILITY-MAP.md	U-001	entry/content or route/targeted-content inspection
+docs/dev/HANDOFF.md	U-003	documentation, format/resource or distribution inspection
+docs/dev/PLUGIN-ASSESSMENT.md	U-001	entry/content or route/targeted-content inspection
+docs/dev/PLUGIN-CONTRACT.md	U-001	entry/content or route/targeted-content inspection
+docs/dev/reviews/README.md	U-003	documentation, format/resource or distribution inspection
+tests/fixtures/git-auth/localhost-cert.pem	U-002	interface/source inspection and relevant local contract execution
+tests/fixtures/git-auth/localhost-key.pem	U-002	interface/source inspection and relevant local contract execution
+tests/forge-close.test.mjs	U-002	interface/source inspection and relevant local contract execution
+tests/forge-project.test.mjs	U-002	interface/source inspection and relevant local contract execution
+tests/git-auth-recover.test.mjs	U-002	interface/source inspection and relevant local contract execution
+tests/git-publish.test.mjs	U-002	interface/source inspection and relevant local contract execution
+tests/helpers/git-auth-https.mjs	U-002	interface/source inspection and relevant local contract execution
+tests/helpers/windows-process.py	U-002	interface/source inspection and relevant local contract execution
+tests/test_windows_shell_recovery.py	U-002	interface/source inspection and relevant local contract execution
