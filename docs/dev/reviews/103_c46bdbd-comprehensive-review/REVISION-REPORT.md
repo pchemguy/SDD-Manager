@@ -2,13 +2,13 @@
 
 ## Scope and state
 
-Campaign `103_c46bdbd`; baseline `c46bdbdc27a483369fccfccef0091d6842a5a466`, branch `revision/103_c46bdbd-comprehensive-review`, creation parent/integration/return main on origin, pchemguy/SDD-Manager. See [review findings](REVIEW-REPORT.md) and [accepted revision plan](REVISION-PLAN.md). State: A-001/002 verified; additional navigation correction planned, finalization/integration pending. No parent suspended.
+Campaign `103_c46bdbd`; baseline `c46bdbdc27a483369fccfccef0091d6842a5a466`, branch `revision/103_c46bdbd-comprehensive-review`, creation parent/integration/return main on origin, pchemguy/SDD-Manager. See [review findings](REVIEW-REPORT.md) and [accepted revision plan](REVISION-PLAN.md). State: all actions verified; finalized for explicit main integration/publication and clean-return closure. No parent suspended.
 
 | Action | Findings | Status / evidence |
 | --- | --- | --- |
 | A-001 | R-001, R-002 | Verified; preparation ownership and ordinary-read credential guidance corrected. |
 | A-002 | R-003 | Verified; common browser evidence/recovery consolidated without changing selection or provisioning requirements. |
-| A-003 | R-004 | Planned after finalization recheck found the current navigation table break. |
+| A-003 | R-004 | Verified; explanatory paragraph moved below the contiguous table, historical row bytes preserved. |
 
 The human authorizes repairs and closure. No runtime/version/release/installation change, external-project migration or live trial is selected. Publish/read back this plan before source edits. Preserve closed packages; report actual checks, skips and subsequent Git effects separately.
 
@@ -29,3 +29,11 @@ Compared the complete policy diff against the original requirements; no rule was
 ## Plan extension
 
 A-002 checkpoint `08d2967734f157f91380941e6ed8e6ace5715f94` is published/readback verified with confirmed cleanup. Final navigation inspection found R-004. Accept its bounded A-003 repair under the existing fix/closure grant; publish the extended plan before moving the paragraph. Corrected the earlier word-count transcription to the observed 1,900. No source or historical row has yet changed for A-003.
+
+## A-003 and finalization
+
+Plan extension `e14838954ee41b845117e82d1b3529f4f2be74d4` is published/readback verified with confirmed cleanup. Moved the navigation explanation below all table rows and refreshed only campaign 103's row. Checked one contiguous table and identical non-103 row bytes against the baseline. All four findings are Verified, none deferred. HANDOFF now records the completed review/repairs and pending main boundary; no parent work or further product scope is activated.
+
+Final source checkpoint `08d2967734f157f91380941e6ed8e6ace5715f94` build-only package: 155 exact members, 473,563 bytes, SHA-256 `9f842d0ba28d47c16e3c52a4c5a4ff1065187a094dc1f5c241cce2184bfdcd80`; all five extracted CLI helps pass. Later plan/navigation/evidence edits are source-only. Full-delta checks establish identical packaged tree, preserved closed campaign artifacts and allowed changed paths only. Current Markdown and scoped acceptance links/anchors and whitespace pass. Tests remain 322 distinct passes plus seven Linux/native-Windows skips; the affected support suite additionally passed after A-001 (139 passes, not counted twice).
+
+No runtime, template, manifest version, release/tag or installation changes. No independent consumer, live provider mutation, hosted CI observation, browser provisioning, native Windows execution or rendered-diagram result is claimed. Source-only repairs do not establish those outcomes. Publish/read back this finalized tip, refresh main, merge the pinned tip with two parents, verify merged tree/package and exact main publication, then confirm clean main and stop. Actual subsequent Git/tool evidence establishes closure; these pre-commit records cannot prove it in advance and require no post-closure edit.

@@ -6,7 +6,7 @@
 - Working branch: `revision/103_c46bdbd-comprehensive-review`; creation parent, integration and return main on origin, pchemguy/SDD-Manager.
 - Scope/criteria/order: [review plan](REVIEW-PLAN.md).
 - Authority: human-requested review, repair planning/execution and closure; no release/version/installation or external-project writes.
-- State: review complete; bounded repair planning/execution pending. No parent campaign is suspended.
+- State: review and repairs complete; finalization ready for explicit main integration/publication. No parent campaign is suspended.
 
 ## Opening evidence
 
@@ -72,3 +72,7 @@ Review is complete with three confirmed documentation findings (two medium, one 
 ## Finalization recheck addition
 
 **R-004 — Low, confirmed:** current `docs/dev/reviews/README.md` places its “New campaigns use…” paragraph between campaign rows 099 and 100. Rows 100–103 consequently lack a contiguous table header and do not form valid navigation-table rows. This is a current navigation defect, not a finding about the closed records linked there. Extend the revision plan before repair: move only that explanatory paragraph below the complete table, preserving every historical row verbatim; check table continuity and links. Consolidated count becomes four documentation findings (two medium, two low). Earlier unit counts remain their actual observations.
+
+## Final disposition
+
+R-001–004 are all Verified through the [revision report](REVISION-REPORT.md): preparation-record/assessor alignment, credential guidance, browser composition and current navigation continuity. No unresolved finding, deferred repair or new product requirement remains. Preserve the original observations above and their evidence limits. Finalized records do not prove their subsequent integration/publication; closure requires the verified explicit main merge and clean return.

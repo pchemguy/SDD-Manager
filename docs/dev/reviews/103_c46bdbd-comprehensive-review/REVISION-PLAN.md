@@ -2,7 +2,7 @@
 
 ## Authority and baseline
 
-Campaign `103_c46bdbd`, branch `revision/103_c46bdbd-comprehensive-review`, creation parent/integration/return main on origin, pchemguy/SDD-Manager. Full branch-off and reviewed product baseline: `c46bdbdc27a483369fccfccef0091d6842a5a466`. The human's request to review, fix and close authorizes these corrections and verified integration. The [review report](REVIEW-REPORT.md) supplies located evidence; all three findings are accepted, none deferred or rejected. Review consolidation `ae3780a6ca02e0c84e586a043b62ac9e7a43396a` is published/readback verified with confirmed cleanup.
+Campaign `103_c46bdbd`, branch `revision/103_c46bdbd-comprehensive-review`, creation parent/integration/return main on origin, pchemguy/SDD-Manager. Full branch-off and reviewed product baseline: `c46bdbdc27a483369fccfccef0091d6842a5a466`. The human's request to review, fix and close authorizes these corrections and verified integration. The [review report](REVIEW-REPORT.md) supplies located evidence; all four findings, including the finalization addition, are accepted, none deferred or rejected. Review consolidation `ae3780a6ca02e0c84e586a043b62ac9e7a43396a` is published/readback verified with confirmed cleanup.
 
 These are source-only documentation repairs within existing requirements. No product design, executable TASKS, packaged runtime/template, version, release or installation change is needed. No live acceptance campaign, hosted test mutation, browser setup or native Windows execution is selected. Preserve closed campaign records, all unrelated paths and exact consumer requests. Finalization recheck additionally accepts R-004, the current navigation table break; publish this plan extension before its repair.
 
