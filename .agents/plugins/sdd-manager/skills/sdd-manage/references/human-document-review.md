@@ -1,5 +1,13 @@
 # Human review of development documents
 
+## Development-document content boundary
+
+**Development documents describe the project, not the SDD process used to prepare them.** Enforce this when creating, revising or reviewing PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS, including feature counterparts and focused children. It applies in every document-design mode, with or without human checkpoint preapproval.
+
+State the project's intended scope, design, contracts, delivery strategy, physical structure or executable work directly, according to the document's role. Do not insert documentation mode/pass numbers, cursor state, future document-revision sequences, checkpoint approval state or reset mechanics, or make a product requirement contingent on a later documentation pass. Keep that control information in DOCS_TASKS and existing preparation, HANDOFF or campaign evidence. Use it to select the applicable scope without narrating it in the development document. Future scope stays in its workflow record until adopted; do not import it early or turn its current absence into a permanent product exclusion.
+
+PLAN and TASKS retain the project's actual implementation phases, milestones, work, dependencies and exits. Review each selected root and child for preparation-process leakage before publication or dependent use, even when its scope statements are otherwise accurate. Report and correct a violation within the owning scope; a read-only review reports it without editing. Mode selection and preapproval do not waive this content check.
+
 ## Entry and existing progress
 
 At greenfield entry, walk the human through the necessary document chain. At existing or interrupted project/feature entry, sdd-orient observes actual progress, decisions, document identities and unresolved instructions; the selected owners assess missing technical readiness. Orientation remains read-only and does not silently author or repair documents.
@@ -30,7 +38,7 @@ Unless explicitly covered by applicable preapproval, each newly created necessar
 
 Preserve dependency order: PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout, TASKS. Optional feature overlays remain optional; reuse sufficient main design, strategy and layout. Do not create documents merely to fill this table. A feature brief is established in exploration/package evidence; create PROJECT only when genuinely selected. Use existing layout/feature-plan owners for a scoped placement proposal, without inventing a FEATURE-LAYOUT filename.
 
-1. Complete the selected root/proposal and children and perform applicable owner QC. Under existing Git authority, commit, push and verify remote containment before presenting the reviewable result, following [per-commit publication](git-workflows.md#publish-each-commit).
+1. Complete the selected root/proposal and children, check the [development-document content boundary](#development-document-content-boundary) and perform applicable owner QC. Under existing Git authority, commit, push and verify remote containment before presenting the reviewable result, following [per-commit publication](git-workflows.md#publish-each-commit).
 2. Present links and concise analysis of purpose/coverage, consequential choices and rationale, consistency/gaps, assumptions/open questions, QC evidence/limits and a reasoned recommendation. For features, include changed behavior, affected main guarantees, compatibility/integration effects and scope/deferrals. Name the dependent operation being held.
 3. Pause for the human decision unless explicit applicable preapproval covers this checkpoint; record that preapproval as the decision basis rather than claiming a later interactive approval. Agent QC, Ready, commits/pushes and broad authorization to develop or prepare through TASKS do not accept an unreviewed new document. Clarification answers supply requirements or decisions within their stated scope; they do not accept an artifact or authorize downstream stages. Silence or comments without acceptance keep the checkpoint pending.
 4. Record the actual decision with document/proposal scope and exact presented state (commit/blob or content identity) in existing preparation, handoff or active campaign evidence. Keep pending, accepted and revise decisions distinguishable from technical readiness. No new journal, registry or mandatory report per design root is required.

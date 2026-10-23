@@ -1,15 +1,19 @@
 # SDD Manager handoff
 
-Campaign [101 — doc-design revision](reviews/101_39e46b9-doc-design/REVISION-REPORT.md) is open on `revision/101_39e46b9-doc-design`. The human requested a new campaign; specific requirements have not yet been supplied. Use sdd-manage; reporting Standard. No parent campaign is suspended.
+Campaign [101 — doc-design revision](reviews/101_39e46b9-doc-design/REVISION-REPORT.md#a-001--all-document-content-boundary-implemented) remains open after executed A-001. Use sdd-manage with design/specification/planning/task owners and verification/reporting; reporting Standard. No parent campaign is suspended.
 
-## Scope and authority
+## Scope and result
 
-Opening records/continuity/navigation, branch setup and publication are authorized. Receive the human's document-design requirements before selecting review or revision actions. No source change, new mode, target-project reset, hosted DOCS operation, implementation, integration, release/version change or campaign closure is selected. Leave the campaign open after publishing this checkpoint.
+The human reported SDD pass narrative in PROJECT.md, authorized revision and explicitly extended the requirement to ALL doc-design. The shared document-review procedure now owns an explicit content boundary for PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS, including feature counterparts and focused children, in every mode. PLUGIN/coordinator and all four authoring entries expose it; author/reviewer and dependent QC gates check it.
 
-## Git context
+Product documents state their project content directly. DOCS_TASKS and existing workflow records own preparation mode/pass/cursor, future scope sequences and approval/reset evidence. PLAN/TASKS retain actual implementation phases/work. The brief/mode handoff keeps future scope out until adopted without making it a permanent non-goal. No target demo or approved prompt is changed.
 
-Creation parent/integration/return: main on origin, pchemguy/SDD-Manager. Full baseline/branch-off: `39e46b9c159838a87baca6501dc0d75ac4bd1702`. Campaign 100 actually closed at that published main merge, with exact-ref readback, confirmed cleanup and clean main return; its records and earlier campaign contents remain frozen. This is a new identity, not a reopening.
+## Verification and Git
+
+R-001 is source-verified; 139 support and 49 publisher tests pass. Current links/anchors, all 18 coordinator reference routes, whitespace and scoped ownership pass. Check the exact committed package and five extracted CLI help paths before publication. No independent consumer rerun, Windows or live provider behavior is claimed. Runtime/templates/hosting definitions/version/notes, policies, demos and closed packages are preserved.
+
+Branch `revision/101_39e46b9-doc-design`; parent/integration/return main on origin, pchemguy/SDD-Manager. Original full baseline/branch-off `39e46b9c159838a87baca6501dc0d75ac4bd1702`; original opening `dc08e08f3500b4d3d34796203099cc0b03346c88`. Accepted expanded plan `e856dc3454d71fb7cd2167d7e74fcae37d53e9b3` is published/readback verified with confirmed cleanup.
 
 ## Pending boundary
 
-Commit/publish/read back the opening and wait for the human's requirements. No review result or revision plan is claimed. Recover subsequent decisions and Git/publication effects from this campaign record and actual state; no per-commit HANDOFF update is required.
+Verify/publish/read back the executed result, then stop with campaign 101 open on its branch. Recover later publication from Git/owning session; this pre-commit snapshot does not prove later effects. The human has not selected main integration, campaign closure, version bump, release or target-project repair.
