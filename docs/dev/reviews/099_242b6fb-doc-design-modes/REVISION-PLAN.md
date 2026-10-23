@@ -27,3 +27,34 @@ A-002 follows A-001; A-003 follows their canonical procedures; A-004 consolidate
 Commit each action's source and observed evidence together, push/read back before the next action, and retain stable campaign identity. Add one substantial pass-control reference rather than scattered fragments; keep main preparation's task lifecycle and document owners' domain procedures with their existing owners. Check repetition, scope/detail balance and preservation of QC/tracking/publication obligations.
 
 Use current source and active campaign records. Leave prior closed records, their source snapshots and historical checks untouched. Existing DOCS tracking definitions and task IDs remain stable; reset reuses objects rather than replacing issue briefs. Runtime tests validate their actual tooling boundary, while walkthroughs assess policy semantics; neither proves an independently consuming agent follows the new modes. No live target repository or GitHub document issues are mutated to test this revision.
+
+## Reopened amendment — Tetris autoloop example
+
+The human explicitly reopened this campaign to derive a multipass/autoloop variant from the Tetris demo's “All-inclusive project prompt.” Original closure is verified at published main merge `655228e4091a3d057dd0f5515bd61f8e05ca6117`, also the refreshed reopening checkpoint. Original identity, opening, baseline and main return target remain unchanged. Incoming synchronization from that checkpoint preserves the campaign branch; it is not amendment completion.
+
+| Action | Scope and outcome | Verification and stopping boundary |
+| --- | --- | --- |
+| A-005 | Read the existing Tetris prompt and present a complete counterpart in chat. Define ordered current-scope documentation passes, first PROJECT approval, later approval waiver, retained-document resets, delegated decisions and the final DOCS-008 stop. Preserve the complete gameplay/configuration target and later implementation version/release policy. | Compare against the existing prompt and canonical modes. Stop for the human's chat approval; do not edit the demo README yet. |
+| A-006 | After chat approval, append the approved counterpart immediately after the existing all-inclusive section in `docs/demo/tetris/README.md`, with a concise lead and matching prompt admonition. | Check approved-text fidelity, headings, links, complete scope and pass/phase distinction; publish/read back the owned result. Keep the campaign open unless closure is requested. |
+
+Only reopening records/continuity and the in-chat draft are authorized before approval. No plugin policy changes, actual target-project passes or resets, package QC, implementation, version bump or release are selected by this amendment.
+
+### Approved prompt and amendment completion
+
+The human rejected reciting the SDD workflow in a demo prompt. The approved replacement selects `autodoc/autoloop` once and supplies six cumulative project-scope passes: baseline, gameplay enhancements, conditional ghost visibility, penetrator, session-only configuration and persistence. It omits duplicated checkpoint/reset/approval/delegation/stop procedures. This supersedes A-005's proposed procedural prompt content; the canonical plugin workflow remains unchanged.
+
+A-005 is complete through the revised in-chat proposal and the human's “OK.” A-006 appends that approved prompt verbatim inside the existing admonition format, immediately after the original all-inclusive section, with a concise lead. Verify exact dequoted text, unchanged prior README bytes, six ordered pass headings, scoped links/style and preservation of plugin/prior closed records. Publish/read back the owned documentation result and keep the campaign open; no closure authority is inferred from prompt approval.
+
+## A-007 — Expose document-design modes at entry
+
+The human requests prompt exposure in PLUGIN.md and the coordinator. Existing entry guidance links the mode owner, but PLUGIN.md introduces default checkpoints before its mode summary, and the coordinator does not name the choices at selection. The workflow catalog's closing human-preparation summary also needs qualification by selected mode/preapproval.
+
+Expose the choices concisely within PLUGIN.md's project-preparation composite, route to them before the generic checkpoint table, and remove the superseded mode paragraph rather than duplicating it. Make main doc-design mode/pass selection explicit in the coordinator entry and workflow selection; qualify the existing human-preparation summary. Keep the canonical mode reference, defaults, reset/approval mechanics and stop rules unchanged. No target-project prompt, demo content, runtime utility or new reference is in scope.
+
+Verify both PLUGIN and direct coordinator routes for default interactive/onepass, autodoc/onepass, human-controlled multipass and autodoc/autoloop; preserve actual approval/delegation and DOCS-008 boundaries. Check applicable owner links/anchors, reference inventory, Markdown style, exact packaged entries and existing support/publisher checks. Record source assessment separately from consuming-agent behavior. Publish this accepted plan extension before source work, then publish the verified result and keep the campaign open.
+
+A-007 source changes and scoped checks are complete: four-mode table in PLUGIN.md's composite summaries, pre-checkpoint routing, explicit coordinator selection and mode-aware catalog checkpoint wording. The detailed owner and public README remain unchanged. Verification: 139 support and 49 publisher tests pass, 146 entry links/anchors and all 18 coordinator reference routes resolve; approved demo and other closed records are preserved. Check the exact committed package before publication and retain the open campaign boundary.
+
+## Amendment closure
+
+The human selects closure after completed A-005–A-007. Finalize records, publish, explicitly integrate the verified amended tip into refreshed main, verify/publish the target and confirm clean return. Preserve original and reopening provenance. Then freeze this campaign and start the separately authorized comprehensive review/fix campaign. No release is selected.

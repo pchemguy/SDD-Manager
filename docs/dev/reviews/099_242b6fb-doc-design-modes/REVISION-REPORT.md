@@ -1,5 +1,15 @@
 # Doc-design modes revision campaign
 
+## Current reopening — Tetris autoloop example
+
+The original campaign closed through published two-parent main merge `655228e4091a3d057dd0f5515bd61f8e05ca6117`, retaining source tip `eae552fa6e2bc3253009c460b94ed2fbb1305670`. Fresh fetch confirms that merge is main's current tip and most recent first-parent merge, with parents `242b6fbceab48196ae8f75c40a3f739f1129864d` and the finalized source tip. Both named remote branches match the retained commits. The human explicitly requested a related amendment: a Tetris demo prompt exercising the modes delivered here.
+
+Reopen the same identity and branch at target checkpoint `655228e4091a3d057dd0f5515bd61f8e05ca6117`, preserving all original evidence below. Incoming synchronization has no source conflicts or incoming content difference from the finalized campaign tree; its owned changes are this reopening record, plan, index and HANDOFF. Original opening and branch-off remain unchanged. No other closed campaign is reopened.
+
+Added A-005/A-006 in the [plan](REVISION-PLAN.md#reopened-amendment--tetris-autoloop-example). Read the complete existing “All-inclusive project prompt” in `docs/demo/tetris/README.md` and compare against the implemented mode owner. Present a complete draft in chat; append it to the demo only after chat approval. Documentation passes remain distinct from implementation phases, with current-pass scope, first PROJECT approval, announced later waiver, automatic retained-document resets, delegated decisions and final DOCS-008 stop. Preserve gameplay/configuration content and later version/release policy.
+
+Scoped reopening checks: refreshed branch/parent identity, conflict-free prospective synchronization, unchanged Tetris README and plugin source, four-file record-only delta and whitespace. No runtime/product evidence is claimed or needed for these record changes. Publish/read back this synchronization before returning the draft. Current boundary: campaign open, A-005 chat proposal, A-006 waiting for approval; no final integration or closure is selected.
+
 ## Identity and authority
 
 - Campaign: `099_242b6fb`.
@@ -143,3 +153,35 @@ Actual closure requires the verified main merge, target publication/readback and
 Fresh remote inspection confirms main at the full starting baseline, a clean worktree and campaign 098 integrated/published. Identity discovery across current paths and fetched refs found 098 as the highest allocated sequence; 099 is newly reserved. Prior closed records are retained unchanged. Execution host remains Linux/Bash with Node.js 24.19.0 and Python 3.12.14; source development, acceptance and campaign conventions remain applicable.
 
 This opening changes only the active campaign record, handoff and review index. Check their identity, links, whitespace and scope; commit and publish/read back the opening before further work. No product/runtime tests are needed for this record-only checkpoint. Wait for the human's additional mode definitions or explicit planning/execution direction. No version bump, tag, release or closure is selected.
+
+## A-005/A-006 — Approved Tetris prompt integration
+
+Reopening synchronization `0c2798508529bce7947d58f57d4a9bf2098b0746` is published with matching exact-ref readback and confirmed cleanup. In chat, the human rejected the initial draft's workflow recitation. A revised six-pass prompt invokes `autodoc/autoloop` once and contains project requirements and cumulative scope additions; it leaves checkpoints, resets, delegated decisions and stops to SDD. The human approved the generated revision with “OK.”
+
+Append the approved text verbatim as “Multipass autoloop project prompt” after the existing all-inclusive section, using the same `> [!NOTE] Prompt` form and a concise lead. The prior README remains byte-for-byte intact. Retain all gameplay/locking, ghost, penetrator, six configuration controls, cookie/URL precedence and later implementation release requirements. No plugin instruction or workflow is revised.
+
+Verification on this documentation result: extracted prompt equals the approved chat text; six pass headings are ordered 1–6; the original README prefix is unchanged; current local links and Markdown whitespace pass. The five-file delta is limited to the demo README and this campaign's plan/report/index/HANDOFF. Plugin source and other closed records remain unchanged. These are content/structure checks, not an execution of the demo or a fresh runtime/consumer test.
+
+Commit and publish/read back this result before returning. A-005/A-006 are complete subject to that publication boundary. Keep campaign 099 open on its branch; no final main integration, version bump, tag, release or campaign closure is authorized by this prompt approval.
+
+## A-007 — Entry exposure planning
+
+The approved demo result `e7e79ba1e5ae754c639f158c130d64f9d6fccb43` is published with matching exact-ref readback and confirmed cleanup. The human additionally requests clear early exposure of doc-design modes in PLUGIN.md and the coordinator. This extends the existing open amendment; it does not reopen another campaign or authorize closure.
+
+Read the current plugin development contract and relevant entry/contextual assessment cases. Source inspection finds the existing modes paragraph below PLUGIN.md's generic checkpoint table, a mode link without named choices in the coordinator gates, and an unqualified generic checkpoint summary in workflows.md. The packaged README already exposes all four selections and remains accurate; no duplicate public procedure is needed. A-007 in the plan scopes concise entry/selection projections and proportional checks, retaining the canonical detailed owner unchanged. Publish/read back this planning checkpoint before source changes.
+
+### A-007 execution and evidence
+
+Planning checkpoint `bb9d534132f5b601b6fcbcec35143f44a1c2aa76` is published with matching exact-ref readback and confirmed cleanup. PLUGIN.md now routes mode selection before the generic checkpoint table and exposes four choices in a concise table at the start of Composite workflows, replacing the prior dense paragraph. The coordinator's description/gates name document-design modes and require selection/recovery before main preparation. Workflow selection and its generic human-preparation summary preserve the actual selected approvals and stop. No detailed reset procedure or new mode is introduced.
+
+Source walkthroughs cover default interactive/onepass, autodoc/onepass, human-controlled multipass and predefined autodoc/autoloop via both plugin and direct coordinator entry. Entries reach the unchanged mode owner before applying checkpoints; necessary separate PLAN/layout checkpoints, first PROJECT approval, announced later autoloop waiver, delegated material decisions and final DOCS-008 stop remain as defined there. These are source assessments, not independent consuming-agent trials.
+
+Linux checks pass: 139 support tests and 49 publisher tests, 146 entry local links/anchors, all 18 coordinator reference routes and Markdown whitespace. The canonical mode procedure, packaged README and approved demo prompt are unchanged. The delta remains limited to three packaged entry/catalog files and campaign plan/report/index/HANDOFF; other closed records and runtime utilities are unchanged. Existing runtime tests add no claim of observed agent mode compliance or Windows behavior. Build/check the exact committed package before publishing this result; stop with the campaign open after publication/readback. No main merge or release is selected.
+
+## Amendment finalization
+
+The human selects closure, followed by a separate comprehensive review/fix campaign. A-005–A-007 are complete. Final entry source `a06f2e7158f58df3a490b2e853f1bc645622cc4b` is published with matching exact-ref readback and confirmed cleanup. Its exact package contains 154 files, is 467,910 bytes with SHA-256 `5e7eabe199fab0cb2c806503e9bd671b536fe28d5335ef9cb2ebe473d4a3ce87`, and passes five extracted CLI help checks.
+
+Fresh fetch confirms main remains the reopening checkpoint `655228e4091a3d057dd0f5515bd61f8e05ca6117` and the campaign remote matches `a06f2e7`. The full amendment adds only the approved demo section, three entry/catalog projections and active campaign/continuity/navigation records. Other closed packages and canonical mode mechanics are unchanged. Original source verification and later 188-test entry checks retain their stated evidence boundaries.
+
+Finalize and publish these records, explicitly merge the complete amended branch into main, check merged tree/entry routes/package, publish/read back main and confirm clean return. The merge message retains cumulative original mode/reset scope, new A-005–A-007 scope, original opening/baseline and reopening checkpoint. Actual amendment closure depends on that merge/publication, not this pre-merge record. Then freeze this package and open the separately requested comprehensive review. No version bump or release is selected.
