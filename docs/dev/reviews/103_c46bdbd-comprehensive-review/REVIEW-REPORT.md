@@ -6,7 +6,7 @@
 - Working branch: `revision/103_c46bdbd-comprehensive-review`; creation parent, integration and return main on origin, pchemguy/SDD-Manager.
 - Scope/criteria/order: [review plan](REVIEW-PLAN.md).
 - Authority: human-requested review, repair planning/execution and closure; no release/version/installation or external-project writes.
-- State: open; planned units not yet assessed. No parent campaign is suspended.
+- State: open; U-001–003 assessed, distribution/consolidation pending. No parent campaign is suspended.
 
 ## Opening evidence
 
@@ -20,7 +20,7 @@ Opening changes only this plan/report, HANDOFF and navigation. Check identities,
 | --- | --- | --- |
 | U-001 | Assessed | No confirmed finding; source handoff checks below. |
 | U-002 | Assessed | 48 Git and 86 forge tests pass; no confirmed runtime finding. |
-| U-003 | Planned | Documentation, templates and policy composition. |
+| U-003 | Assessed | 139 support tests pass; three documentation findings below. |
 | U-004 | Planned | Distribution, CI and consolidation. |
 
 No findings are allocated before assessment. Record actual source/local checks separately from unperformed live-agent, hosted-provider and native Windows behavior.
@@ -39,8 +39,22 @@ No confirmed workflow defect was identified in this unit. Existing owners preser
 
 U-001 checkpoint `98eaaef0169ead63caaac0b40f6c0a7461e9d75b` is published/readback verified with confirmed cleanup. Product source remains the pinned baseline; review records do not change it.
 
-Inspected all eleven packaged executable/shared implementation modules: protected token input; recovery core/private helper; public publication controller and Python process supervisor; forge transport/runtime; completion; projection and draft; projection grammar/rendering. Traced root/remote/source binding, helper environment sanitization versus top-level rejection, no credential logging/persistence, one push plus exact readback, finite supervision/cleanup, local lock ownership, complete pagination, write capability boundaries, unknown-write reconciliation and source drift. Read release.py's handoff, exact-tree archive/schema, body/tag/default-first-parent provenance and draft/upload/publish/readback paths; package/CI regressions follow in U-004.
+Inspected all ten packaged executable/shared implementation modules: protected token input; recovery core/private helper; public publication controller and Python process supervisor; forge transport/runtime; completion; projection and draft; projection grammar/rendering. Traced root/remote/source binding, helper environment sanitization versus top-level rejection, no credential logging/persistence, one push plus exact readback, finite supervision/cleanup, local lock ownership, complete pagination, write capability boundaries, unknown-write reconciliation and source drift. Read source-only release.py's handoff, exact-tree archive/schema, body/tag/default-first-parent provenance and draft/upload/publish/readback paths; package/CI regressions follow in U-004.
 
 Linux execution: `node --test tests/git-auth-recover.test.mjs tests/git-publish.test.mjs` passes 48 tests; `node --test tests/forge-project.test.mjs tests/forge-close.test.mjs` passes 86. Both have zero failures/cancellations/skips. Coverage includes native local HTTPS/helper/process-tree cases and synthetic provider contracts, not live GitHub mutations. The localhost fixture certificate/key are intentional public test data, not production credentials. Credentials were not printed or used for provider test mutations.
 
 No confirmed runtime defect was identified. Current core/parser/CLI behavior matches its bounded supported interfaces; invalid input, unsupported operations, unknown provider effects and cleanup failures do not become successful completion claims. Windows Job Object behavior is source-inspected only here; Linux success does not establish native Windows. Preserve that limit for consolidation and publish this unit before documentation assessment.
+
+## U-003 — Documentation, templates and policies
+
+U-002 checkpoint `da081f3e01a17edf7746c580352bdeae5f88162a` is published/readback verified with confirmed cleanup. Inspected root and packaged navigation, agent/task/preparation templates, capability/contract projections, script/API guides against U-002 implementations, calculator and Tetris prompt composition, Windows/browser policies and current acceptance setup/assessor guidance. Module headers provide purpose and evidence boundaries; no blanket missing-module-doc finding is warranted. Source-only acceptance instructions remain separate from consumer requests. Prompt variants intentionally repeat complete copyable scope; that repetition is useful rather than a repair target.
+
+Fresh support execution passes 139 tests. Current non-acceptance Markdown scan checks 132 files and 1,191 local targets/anchors with no failures; this bounded scan excludes frozen records and TextStats' separately governed content. Diagram paths and decisions were inspected semantically; no browser/rendered-diagram or live consumer execution is claimed.
+
+| Finding | Severity / confidence | Baseline evidence and consequence | Required repair / recheck |
+| --- | --- | --- | --- |
+| R-001 | Medium / confirmed | `acceptance/textstats/SETUP.md`, Consumer repository disclosure, omits DOCS_PREPARATION_TEMPLATE and excludes only DOCS_TASKS/HANDOFF from coordinator generation. `cases/assessor/MAIN-PREPARATION.md` still describes task-list bootstrap and generic decision recording without the new owner. A coordinator can omit the separate record from preparation assessment or create consumer-owned evidence. | Name the paired records and their consumer ownership; assess task-only content, separate control/evidence, atomic approvals and migration/recovery without changing the four-file presence test or injecting expectations into requests. Check against main-preparation and current templates; run support contracts. |
+| R-002 | Medium / confirmed | `acceptance/textstats/SETUP.md`, Protected authentication, still says to restrict permissions/ACLs. This contradicts current hosting-tokens' ordinary-read-access rule and directs needless host mutations as an auth prerequisite. | Remove that requirement and defer token eligibility/storage to the pinned protocol; retain effective Git exclusion, untracked status and protected transfer. Search current owned guidance for the obsolete requirement. |
+| R-003 | Low / confirmed | `BROWSER_DEV_POLICY.md`, Playwright Execution checks and evidence plus final Verification and recovery, repeat stage classification, installation/launch insufficiency, evidence limits and unchanged-failure handling. Two partial owners make maintenance and reading harder in a 1,932-word policy. | Keep Playwright lifecycle specifics together; consolidate common capability evidence/recovery once in the final section. Preserve selection/isolation, finite cleanup, native-event distinctions, all diagnosed fallback constraints and project overrides. Compare before/after coverage; no new browser requirement or provisioning is selected. |
+
+Findings concern current instructions, not prior frozen campaign validity. Existing support success does not erase these source/documentation mismatches. Publication precedes U-004.
