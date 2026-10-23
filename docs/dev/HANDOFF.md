@@ -1,15 +1,19 @@
 # SDD Manager handoff
 
-Release campaign 097 has published and verified stable/latest v0.15.2. Its final explicit main merge, verified target publication and clean return establish closure. Reporting: Standard.
+Campaign [098 — release workflow](reviews/098_b735940-release-workflow/REVISION-REPORT.md) is finalized for the human-selected closure. All five actions in its [revision plan](reviews/098_b735940-release-workflow/REVISION-PLAN.md) are executed and verified; actual closure requires the explicit main merge, merged-state checks, target publication/readback and clean return. Reporting: Standard.
 
-## Released result
+## Workflow and scope
 
-[Release outcome](reviews/097_02ee698-release-0.15.2/REVISION-REPORT.md) records source 7b96e0a8b26510f2d110bcec3629181ed6f4f919, annotated tag object 026c7378af9f1e4f7d12df4769281ad250b4ed6a and [GitHub release 419663596](https://github.com/pchemguy/SDD-Manager/releases/tag/v0.15.2). Complete notes, tag source, both downloaded assets and actual latest identity are verified. Root RELEASE-NOTES.md remains retained; the owned internal highlights checkpoint was removed after body readback.
+sdd-manage coordinates this revision campaign. Release instructions, reporting, provider/check handoffs and repository publisher now require default-branch release commits, either direct or the designated development merge into default. Release documents can be committed inside the active revision directory and moved during that release commit. The publisher enforces actual default-branch first-parent ancestry without a caller-supplied branch or full CI checkout. Revision preparation can integrate before release-campaign closure; later finalization does not replace the release tag.
 
-[CI run 39617616763](https://github.com/pchemguy/SDD-Manager/actions/runs/39617616763) passes build and publish, with 139 support/37 publisher checks and matching asset hashes. Local final builds reproduce the 153-file ZIP; five extracted CLI help checks pass. Review 096 supplied 308 local passes and seven Windows skips. Fresh native Windows, independent consumer/client, browser and diagram execution remain unclaimed.
+Verification: 49 publisher tests (12 new provenance tests), 139 support tests, exact 153-file package build and scoped current-document checks. See the campaign report for tested sources, hashes, RED/repair evidence and dependency setup. Live CI/provider publication, fresh Windows and consuming-agent behavior remain unclaimed.
 
-## Git and final boundary
+## Git context
 
-Working branch: revision/097_02ee698-release-0.15.2; creation parent/integration/return: main on origin, pchemguy/SDD-Manager. Original baseline: 02ee6987dd521832aa41cea6139d9b3255feba85; opening: 96bea9a4c7b0689b008dd562e16c14aa434e1224. The containing main merge supplies final parents/checks. Publish/read back that merge and confirm clean main before declaring closure. Retain branches, published tag and all closed records.
+Campaign branch: `revision/098_b735940-release-workflow`. Creation parent, integration and return target: `main` on `origin`, pchemguy/SDD-Manager. Full baseline and branch-off commit: `b7359405ae35faac59b8182bca91b347d5e75d94`; original opening: `dc9b2b5d79c1dd99608d5a48d72f8bb75e3b2f0c`. No parent campaign is suspended. The final main merge supplies the exact verified source/target parents and merged-state results.
 
-After closure, stop: the requested comprehensive review, two documentation corrections and patch release are complete. No plugin installation or further implementation is selected. If publication is interrupted, recover actual commit/remote state rather than replaying release creation.
+Main includes the completed v0.15.2 release through merge `0067242f092f19742fdacd21632efef80bd39e25`, followed by the URL.md update at this campaign's baseline. Preserve all closed campaign records, published tags and releases.
+
+## Pending boundary
+
+Opening, plan and all five execution actions are published and verified through `b95ed77df9d660f819565abf66b53d0511172b92`. The human selected closure. Publish/read back finalization, merge the complete campaign into main, verify the merged result, publish/read back main and confirm a clean return. If interrupted, reconcile the retained branch/merge/publication state rather than replaying it. After actual closure, freeze the records and stop; no version bump, tag, release or plugin installation is selected.

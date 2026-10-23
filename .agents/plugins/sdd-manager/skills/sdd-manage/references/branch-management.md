@@ -20,6 +20,8 @@ Use this coordinator procedure for mutating branch setup, reuse, continuation, a
 
 ## Main phase lifecycle
 
+Release placement is separate from implementation/campaign integration: follow the [release commit/tag boundary](git-workflows.md#release-commit-and-tag) to create the release commit on the actual default branch, directly or as the merge from the designated primary development branch. Completing a phase or revision on another branch does not make its tip a release source.
+
 Before the first implementation branch, complete the preparation integration gate below. Later phase branches still require the preceding phase's verified integration/publication. A new accepted preparation delta must pass the same gate before a new dependent implementation branch.
 
 Apply [phase activation](phase-activation.md) before the phase's first task and every authorized next-phase transition. Hosting reads the complete plan but projects only the eligible phase. Require explicit review units and confirmed phase objects when tracking is active.

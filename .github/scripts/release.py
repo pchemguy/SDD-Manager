@@ -230,6 +230,7 @@ def reconcile_release(api, data, files):
     validate_handoff(data)
     if not data['publish']:
         return None
+    api.verify_release_source(data['source'])
     if api.tag_source(data['tag']) != data['source']:
         raise ValueError('Existing tag differs from selected source')
     before_latest = api.latest_id()
@@ -262,6 +263,7 @@ def reconcile_release(api, data, files):
     verify_release(api, release, data, files, complete=True)
     if api.tag_source(data['tag']) != data['source']:
         raise ValueError('Published tag source changed')
+    api.verify_release_source(data['source'])
     expected_latest = release['id'] if data['make_latest'] else before_latest
     if api.latest_id() != expected_latest:
         raise ValueError('Actual latest release differs from requested policy')
@@ -291,7 +293,7 @@ class GitHub:
     def _request(self, method, url, data=None, binary=False, content_type='application/json'):
         import urllib.error
         import urllib.request
-        if not url.startswith((self.base + '/', 'https://uploads.github.com/repos/' + self.repository + '/')):
+        if not (method == 'GET' and url == self.base) and not url.startswith((self.base + '/', 'https://uploads.github.com/repos/' + self.repository + '/')):
             raise ValueError('Provider request escapes selected repository')
         headers = {'Accept': 'application/octet-stream' if binary else 'application/vnd.github+json',
                    'X-GitHub-Api-Version': '2022-11-28', 'User-Agent': 'SDD-Manager-publisher'}
@@ -336,6 +338,56 @@ class GitHub:
             if obj['type'] != 'tag': raise ValueError('Tag does not resolve to commit')
             obj = self.request('GET', self.base + '/git/tags/' + obj['sha'])['object']
         raise ValueError('Annotated tag chain exceeds supported bound')
+
+    def verify_release_source(self, source):
+        """Require source on the provider's actual default first-parent history.
+
+        Resolve metadata and pin its exact branch tip, then follow only first
+        parents through GitHub Git objects. This works with shallow candidate
+        checkouts and accepts a pinned release after default advances. Missing,
+        substituted, cyclic or excessively distant history fails closed. This
+        structural check cannot establish the human-designated development role
+        or replace the coordinator's release-message and merge review.
+
+        Returns:
+            dict: Observed default branch name and pinned commit identity.
+
+        Raises:
+            ValueError: Invalid source or unavailable/ineligible provenance.
+        """
+        from urllib.parse import quote
+        if not isinstance(source, str) or not re.fullmatch(r'[0-9a-f]{40}', source):
+            raise ValueError('Release source must be a full commit SHA')
+        repository = self.request('GET', self.base)
+        branch = repository.get('default_branch') if isinstance(repository, dict) else None
+        if not isinstance(branch, str) or not branch or any(ord(c) < 32 for c in branch):
+            raise ValueError('Missing default branch metadata')
+        item = self.request('GET', self.base + '/git/ref/heads/' + quote(branch, safe=''))
+        obj = item.get('object') if isinstance(item, dict) else None
+        if (not isinstance(obj, dict) or item.get('ref') != 'refs/heads/' + branch
+                or obj.get('type') != 'commit' or not isinstance(obj.get('sha'), str)
+                or not re.fullmatch(r'[0-9a-f]{40}', obj['sha'])):
+            raise ValueError('Missing or invalid default branch ref')
+        tip = current = obj['sha']
+        seen = set()
+        for _ in range(1000):
+            if current == source:
+                return {'default_branch': branch, 'default_head': tip}
+            if current in seen:
+                raise ValueError('Cyclic default first-parent history')
+            seen.add(current)
+            commit = self.request('GET', self.base + '/git/commits/' + current)
+            if not isinstance(commit, dict) or commit.get('sha') != current:
+                raise ValueError('Missing or substituted default history commit')
+            parents = commit.get('parents')
+            if not isinstance(parents, list) or any(
+                    not isinstance(parent, dict) or not isinstance(parent.get('sha'), str)
+                    or not re.fullmatch(r'[0-9a-f]{40}', parent['sha']) for parent in parents):
+                raise ValueError('Invalid default first-parent history')
+            if not parents:
+                raise ValueError('Release source is outside default first-parent history')
+            current = parents[0]['sha']
+        raise ValueError('Default first-parent history exceeds supported bound')
 
     def latest_id(self):
         release = self.request('GET', self.base + '/releases/latest')
