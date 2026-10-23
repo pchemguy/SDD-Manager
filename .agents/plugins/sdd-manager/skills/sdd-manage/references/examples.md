@@ -1,6 +1,6 @@
 # Workflow examples
 
-These examples illustrate routing and boundaries; repository instructions and the actual request determine the concrete work.
+These examples illustrate routing and boundaries; repository instructions and the actual request determine the concrete work. Document-review examples assume interactive/onepass unless a selected mode or scoped preapproval changes the checkpoint. Apply the [mode owner](doc-design-modes.md) and [main-preparation pre-write gate](main-preparation.md#establish-preparation-before-repository-writes) before relying on a shortened example.
 
 ## Workflow selection and continuity
 
@@ -39,7 +39,7 @@ Apply [the selection procedure](workflows.md#workflow-selection-and-continuity).
 
 | Request and context | Coordinated result |
 | --- | --- |
-| “Prepare the project through TASKS.” An eligible Git worktree exists. | Orient; establish design-docs, prepare the necessary project design, SPEC, PLAN, layout, tasks and QC reports; commit/push them there; stop before implementation. |
+| “Prepare the project through TASKS.” An eligible Git worktree exists. | Apply main preparation's tracking/initialization gates, then prepare and publish the necessary documents and per-document QC on design-docs under the selected approvals. Honor the explicit TASKS stop; do not infer DOCS-009, integration or implementation. |
 | “Review this SPEC.” The files are outside Git. | Perform read-only behavioral review and return findings. Do not initialize Git or rewrite files. |
 | “Implement milestone 2.2.” TASKS contains its accepted requirements. | Orient; pass the boundary to **sdd-implement**; it preflights and pushes eligible outstanding commits first, executes/persists tasks on the owning phase branch, and pauses if the phase remains incomplete. A fully verified phase explicitly merges and publishes before stopping. |
 | “Resume milestone 2.2.” The last checked task is ahead of its last task commit. | Pass pending changes and evidence to **sdd-implement**. It verifies and commits the completed result without repeating implementation, then continues only within the selected boundary. |
@@ -78,9 +78,9 @@ Apply [the selection procedure](workflows.md#workflow-selection-and-continuity).
 
 | Context | Result |
 | --- | --- |
-| Authorized push succeeds with the current shell session. | Verify remote containment; no token discovery or credential prompt is needed. |
+| Supervised authorized push succeeds with existing noninteractive authentication and no supplied token. | Verify process cleanup and exact remote state; no token discovery or credential prompt is needed. |
 | Push returns access 403 and gh.tkn is suitable. | sdd-manage verifies ignored/untracked status, refreshes supported shell authentication, retries the established destination, and confirms publication. |
-| Shell lacks credentials and no token file exists. | Preserve/create root .gitignore with `*.tkn`, verify exclusion, request a target-repository fine-grained token with the GitHub profile, save gh.tkn beside .gitignore, authenticate, and retry. |
+| Shell lacks credentials and no token file exists. | Use [credential recovery](credentials.md). Before enabled main-preparation projection, authenticate through an existing or externally protected mechanism and defer repository token/ignore writes. After that gate, ensure exclusion, save the supplied repository token and use supervised publication. |
 | A token creates an issue but cannot close it. | Treat actual endpoint denial as failed access; check Issues write suitability and request a suitable replacement when needed. Creation alone does not prove closure permission. |
 | Several token files have ambiguous provider/repository ownership. | Resolve suitability before selection; preserve unrelated files and do not print values. |
 | A token file is already tracked or an ignore negation exposes it. | Block tracked-secret remediation for an explicit decision; fix effective ignore coverage for an untracked file before reuse/save. Preserve unrelated work. |
@@ -130,13 +130,13 @@ When a commanded amendment is blocked by an unavailable check, report its branch
 | Context | Coordinated result |
 | --- | --- |
 | Explicit “Enable and maintain GitHub tracking” accompanies the broad project request | Carry requested/confirmed tracking without another question; after accepted preparation verify the eligible phase label, all milestones/tasks and associations before task edits/tests. No objects yet means projection pending, not tracking declined. |
-| Token supplied for the established GitHub workflow; no tracking choice | Recommend enable and ask to manage the eligible phase label, milestones/task issues, associations and verified lifecycle closures. Keep confirmation pending; create no objects yet. |
+| Token supplied for the established GitHub workflow; no tracking choice or applicable project policy | Recommend enable and ask to manage the eligible phase label, milestones/task issues, associations and verified lifecycle closures. Keep confirmation pending; create no objects yet. |
 | Prior explicit decline, followed by a token for normal Git pushes | Preserve the decline and perform authorized pushes; do not interpret the credential as activation. |
 | Requested tracking has no verified objects, or initial projection is partial/unknown | Stop affected task edits/tests; finish projection/readback or report the blocker. Do not apply the later-outage allowance or silently choose local-only execution. |
 | Provider outage after full phase activation | Retain verified results and pending closures; continue only independent already-projected tasks with satisfied dependencies. Added unprojected work and dependent phase/review transitions remain blocked. |
 | Original explicit request was omitted during execution | Preserve the request/work/evidence, publish retained verified commits and reconcile the missed gate before further affected implementation. No repeated enable question or fabricated earlier compliance. |
 | Tracking confirmed after several local tasks completed | Discover/reconcile eligible objects and attach verified retained evidence; leave incomplete work open and keep historical inactive-state reports truthful. |
-| Preparation may continue while tracking confirmation is pending | Continue independent authorized documents; resolve the actual activation choice before dependent phase execution. |
+| Implementation tracking confirmation is pending; independent preparation is authorized | Resolve main preparation's effective tracking policy/pre-write gate first. Continue only work eligible under that decision; the implementation confirmation example does not waive an enabled preparation gate. |
 
 ## Release preparation and publication
 
@@ -193,6 +193,9 @@ Use [revision modes](revision-modes.md) for the controlling eligibility, authori
 | Fresh main preparation with requested GitHub tracking | Verify native sdd-docs-main and all nine template issues before target writes; then create/reuse docs branch, copy the task template and perform DOCS-001. No product PLAN/TASKS prerequisite or implementation phase objects. |
 | Two of the four root setup files existed | Preserve them, copy the missing files, publish initialization with DOCS-001 complete, close/read back its issue, warn with both file groups and stop unless that continuation was explicitly preapproved. |
 | SPEC is approved after its proposal was published | Commit the approved SPEC state, approval evidence and checked DOCS-005 together; push/read back, then close its issue before PLAN. No rewrite of unchanged SPEC bytes. |
-| Later SPEC correction or resumed incomplete preparation | Retain first-approval task/issue completion; reassess current readiness and continue the earliest unmet operation without duplicate objects or guessed approvals. |
-| Main preparation through TASKS is complete | Pass whole-package DOCS-009 QC, publish its report/checked task, close final issue, explicitly merge/verify/publish docs, close/read back sdd-docs-main, then confirm final checkpoint. Implementation still needs its authorized range. |
+| Ordinary later SPEC correction or resumed incomplete preparation without a cursor reset | Retain first-approval task/issue completion; reassess current readiness and continue the earliest unmet operation without duplicate objects or guessed approvals. |
+| DOCS-001–008 are complete and the selected range permits package QC | Pass DOCS-009 QC, publish its report/checked task, close final issue, explicitly merge/verify/publish docs, close/read back sdd-docs-main, then confirm final checkpoint. Implementation still needs its authorized range. |
+| Autodoc/onepass completes TASKS, or a human explicitly selected a TASKS stop | Finish required completion/publication/tracking effects and stop before DOCS-009; package completion and integration remain pending. |
+| Autodoc with human-controlled multipass reaches DOCS-008 | Report the current pass and wait for reset or advance direction. |
+| Autodoc/autoloop has another predefined scope after DOCS-008 | Follow the mode owner's retained-document reset and same-issue reopening, then continue that pass. Stop before DOCS-009 after the last predefined pass. |
 | Explicit preapproval covers remaining document and final checkpoints | Retain its actual scope; report/check/persist each result without repeated acceptance pauses. Technical, tracking and publication gates remain required; do not guess an implementation range. |
