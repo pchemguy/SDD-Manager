@@ -7,7 +7,7 @@
 - Working branch: `revision/099_242b6fb-doc-design-modes`.
 - Creation parent, eventual integration and return: `main` on `origin`, `pchemguy/SDD-Manager`.
 - Request: open a doc-design revision, define doc-design modes and retain the following initial rules; additional modes will be supplied in later turns.
-- State: Open; the human authorized execution of the [revision plan](REVISION-PLAN.md). Campaign closure and any product development/release remain unselected.
+- State: Open; A-001 through A-004 of the [revision plan](REVISION-PLAN.md) are executed and verified within the evidence limits below. Campaign closure and any product development/release remain unselected.
 
 ## Accepted mode requirements
 
@@ -87,6 +87,48 @@ Source checks assess the direct-entry route, default versus named-mode boundarie
 ### A-003 follow-up — Current-pass scope and reset preservation
 
 The final source walkthrough found that the generic complete-project brief rule needed an explicit current-pass qualification, so future predefined changes are clarified upfront but applied only in their scheduled pass. Added it in the pass owner and PROJECT contract. Reset preservation now explicitly names the retained PROJECT/design/SPEC/PLAN/layout/TASKS content, avoiding an overly broad byte-preservation statement that could include the intentionally changed DOCS_TASKS/HANDOFF metadata. Scoped source checks pass; no runtime behavior or new mode is added by these clarifications.
+
+### A-004 — Consolidated verification and stopping boundary
+
+Verified source: `c99cb341fa9afb3655fa2f78bd767dfa79d9273b`. Final checks run on Linux, Node.js 24.19.0 and Python 3.12.14, with the declared jsonschema dependency in the existing isolated temporary virtual environment:
+
+| Check | Observed result | Evidence boundary |
+| --- | --- | --- |
+| Publisher suite | 49 tests pass | Real Git/ZIP fixtures and controlled provider contracts |
+| Support suite | 139 tests pass | Source support/harness contracts, not an independent consumer run |
+| Forge projection and completion suites | 84 tests pass; no failures/skips | Existing utility/template contracts; no new reset CLI was introduced |
+| Current documents | 401 local link targets, headings and whitespace pass | Scoped current files/active records including completion evidence; closed records excluded |
+| Mode/reset routes | 19 affected anchor targets and all 18 coordinator references resolve | Route/structure assessment, not runtime agent activation |
+| Exact committed package | 154 files; new mode reference included; every member inspected against source | ZIP 467,314 bytes; SHA-256 `4788e19dd50b06a96e075ae1f7e40f5f6b22263afab93f7c31a0aa6e76c0099a` |
+| Extracted package | Five CLI help commands pass | Startup/resource completeness only |
+| Scope preservation | AGENTS_TEMPLATE, fixed DOCS_TRACKING_TEMPLATE JSON, manifest/version, RELEASE-NOTES and prior closed campaign contents unchanged | Git path/object diff and scoped checks |
+
+The final 84 forge tests include the earlier 46 projection tests; totals are 272 distinct selected tests, without double-counting the earlier run. Source-only changes required no new mirrored-text tests. The README diagram was assessed for source semantics; no Mermaid rendering is claimed.
+
+The following are source walkthroughs of the implemented procedure, not observed consuming-agent runs:
+
+| Scenario | Located outcome |
+| --- | --- |
+| Default interactive/onepass | Mode selection and human review retain necessary checkpoints, including separate PLAN/layout, and the original selected preparation path. |
+| Autodoc onepass | PROJECT approval stays active; downstream document checkpoints are preapproved; complete/publish/close DOCS-008, then stop before DOCS-009. |
+| Human-controlled multipass | Current scope is clarified; each PROJECT approval and end-of-pass reset/advance decision remains active. |
+| Predefined autodoc sequence | Autoloop is the default only for explicitly supplied pass scopes; later PROJECT waiver is announced before first approval. |
+| New material autoloop choice | Agent decides using available context/domain knowledge, explains the decision and continues without acknowledgment. |
+| Future scope revision | Clarify it upfront but retain it in the sequence until its pass; PROJECT contains complete current-pass scope. |
+| Early reset | Record prior/next pass and scope; retain DOCS-001 and document contents, uncheck DOCS-002–009 and keep IDs. |
+| Local reset versus hosted effects | Publish reset commit first; verify all same-identity issues open before resumed document work. |
+| Partial or uncertain reopening | Read exact states and complete only pending effects; no extra reset/pass or replacement issue. |
+| Prior-pass completion | Old approvals/QC/comments do not close the reset task; require current-pass evidence. |
+| Unchanged retained document | Reuse bytes without artificial edits; record applicable current-pass approval/preapproval and QC. |
+| DOCS-008 pass boundary | Normal publication/closure finishes; next predefined scope resets automatically, otherwise autodoc stops with DOCS-009/milestone open. |
+| Mode steering | Retain actual changed scope/order/mode and restore human-controlled subsequent checkpoints without retroactive approval claims. |
+| Explicit advance | Selects existing package-QC stage within scope, not implementation; integration/milestone gates still apply. |
+| Direct document owner | Entries load main preparation/mode authority; verification checks DOCS-009 eligibility before package QC. |
+| Tracking off or initialization pause | Local reset/completion remains required; no hosted writes without tracking; initialization gates are not waived by mode selection. |
+
+One cohesive reference owns mode/pass mechanics; document, tracking and QC owners retain their detailed procedures. The new reference is approximately 1,100 words with selection, decision, pass, reset and recovery boundaries; it is not split into trivial fragments. Entries and public summaries link the owner instead of repeating its procedure. No unresolved correction remains from the bounded source assessment.
+
+Publication checkpoints through source verification: plan `8183c01c718e6442b427c38caec6f147177e4186`, A-001 `cd930076105b1db4fc4ebd8fd6da2fb0deeac034`, A-002 `eea247b12da42b2790ee3f2ea0e820f447c2a37c`, A-003 `da70528acb88693e2e5e451d7be16b0dd42fe53e` and scope clarification `c99cb341fa9afb3655fa2f78bd767dfa79d9273b` have matching exact-ref readback and confirmed cleanup. Publish/read back this completion checkpoint before returning. Keep the campaign open on its revision branch; no main merge, product cursor/issue reset, live-provider operation, version bump, tag or release is selected. Fresh Windows, live agent/provider behavior and a rendered diagram remain unclaimed.
 
 ## Opening evidence and next boundary
 

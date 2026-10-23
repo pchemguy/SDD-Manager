@@ -7,6 +7,7 @@
 - Current execution baseline: `42168092d20cc11ae66861d87985265dd79eb257`.
 - Branch: `revision/099_242b6fb-doc-design-modes`; creation parent, eventual integration and return: main on origin, pchemguy/SDD-Manager.
 - The human's “Execute” authorizes this plan and its bounded source changes. Stop after verified action publication with the campaign open. No real project cursor reset, product implementation, version/tag/release or campaign closure is selected.
+- State: A-001 through A-004 executed and verified within the [report's evidence limits](REVISION-REPORT.md#revision-execution-evidence); campaign remains open.
 
 Retain interactive/onepass as the ordinary default. Implement autodoc checkpoint handling, explicit cursor reset and the human-controlled/autoloop pass controls exactly as accepted. Autoloop is the default for explicitly predefined autodoc scope-revision sequences, with first PROJECT approval active, later PROJECT approval waiver announced, delegated decisions explained while proceeding and a final DOCS-008 stop. Per-document QC, Git publication and hosted effects remain required; DOCS-009 package QC is a separate later stage.
 
