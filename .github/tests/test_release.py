@@ -327,6 +327,10 @@ class Provider:
     """Controlled external boundary, independent of publisher decisions."""
     def __init__(self):
         self.source='a'*40; self.release=None; self.latest=19; self.events=[]; self.bytes={}; self.fail_upload=False
+    def verify_release_source(self, source):
+        self.events.append('default-source')
+        if source != self.source: raise ValueError('Ineligible default-branch source')
+        return {'default_branch': 'trunk', 'default_head': self.source}
     def tag_source(self,tag): self.events.append('tag'); return self.source
     def latest_id(self): self.events.append('latest'); return self.latest
     def find_release(self,tag): self.events.append('read'); return copy.deepcopy(self.release)
