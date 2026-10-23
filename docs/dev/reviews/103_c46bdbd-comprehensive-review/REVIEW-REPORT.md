@@ -6,7 +6,7 @@
 - Working branch: `revision/103_c46bdbd-comprehensive-review`; creation parent, integration and return main on origin, pchemguy/SDD-Manager.
 - Scope/criteria/order: [review plan](REVIEW-PLAN.md).
 - Authority: human-requested review, repair planning/execution and closure; no release/version/installation or external-project writes.
-- State: open; U-001–003 assessed, distribution/consolidation pending. No parent campaign is suspended.
+- State: review complete; bounded repair planning/execution pending. No parent campaign is suspended.
 
 ## Opening evidence
 
@@ -21,7 +21,7 @@ Opening changes only this plan/report, HANDOFF and navigation. Check identities,
 | U-001 | Assessed | No confirmed finding; source handoff checks below. |
 | U-002 | Assessed | 48 Git and 86 forge tests pass; no confirmed runtime finding. |
 | U-003 | Assessed | 139 support tests pass; three documentation findings below. |
-| U-004 | Planned | Distribution, CI and consolidation. |
+| U-004 | Assessed | 49 publisher tests pass, seven native-Windows cases skipped; exact 155-file package and five CLI helps verified. |
 
 No findings are allocated before assessment. Record actual source/local checks separately from unperformed live-agent, hosted-provider and native Windows behavior.
 
@@ -58,3 +58,13 @@ Fresh support execution passes 139 tests. Current non-acceptance Markdown scan c
 | R-003 | Low / confirmed | `BROWSER_DEV_POLICY.md`, Playwright Execution checks and evidence plus final Verification and recovery, repeat stage classification, installation/launch insufficiency, evidence limits and unchanged-failure handling. Two partial owners make maintenance and reading harder in a 1,932-word policy. | Keep Playwright lifecycle specifics together; consolidate common capability evidence/recovery once in the final section. Preserve selection/isolation, finite cleanup, native-event distinctions, all diagnosed fallback constraints and project overrides. Compare before/after coverage; no new browser requirement or provisioning is selected. |
 
 Findings concern current instructions, not prior frozen campaign validity. Existing support success does not erase these source/documentation mismatches. Publication precedes U-004.
+
+## U-004 — Distribution, CI and consolidation
+
+U-003 checkpoint `ed95f01d64cddcedf3b7cfdaf8e58e1339b8b6b0` is published/readback verified with confirmed cleanup. Source-only support module inventory/headers and consequential interfaces were inspected alongside their existing contract tests; this is risk-prioritized assessment rather than a claim of line-by-line review of every fixture. Inspected all five workflow definitions for bounded jobs, source selection, platform/native-shell separation, test commands and publication permissions; no workflow was dispatched or hosted CI result claimed.
+
+Publisher suite passes 49 tests with the declared jsonschema dependency in the prepared Python environment. Seven standalone Windows-shell cases skip on Linux; none is counted as passing runtime evidence. Across the review, 48 Git + 86 forge + 139 support + 49 publisher = **322 distinct passing tests**, plus those seven skips. No test failure or cancellation was observed.
+
+Build-only at committed `ed95f01d64cddcedf3b7cfdaf8e58e1339b8b6b0` emits a 473,563-byte ZIP, SHA-256 `1fdbd9e418324f1a4a92db6da2c7124073ce85180898db080805158c9a1f1162`. All 155 members match committed package bytes, required preparation assets are present, source-only instructions/policies/evidence are excluded, and five extracted CLI help commands succeed. Checked manifest against the pinned offline schema, presentation resource paths, notices and schema provenance. These establish package/source contracts, not installed-client presentation or routing. Version remains 0.15.2; this is no release request.
+
+Review is complete with three confirmed documentation findings (two medium, one low) and no confirmed runtime/package defect. Fix R-001–003 under the human's existing repair authority, using a published revision plan. Reuse unaffected runtime/package evidence because selected repairs change source-only guidance; recheck repaired text, applicable support suite, current links, protected-path delta and final committed package. Native Windows, independent consumer, live provider, diagram rendering and installed-client observations remain unperformed. No such evidence is required to claim the selected text corrections, and none is represented as obtained.
