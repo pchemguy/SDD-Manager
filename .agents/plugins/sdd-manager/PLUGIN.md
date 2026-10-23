@@ -41,6 +41,8 @@ Preserve narrow direct/standalone requests, pending decisions and unfinished wor
 
 **For each necessary new document, publish the reviewable state, present substantive results and pause for human acceptance before dependent work unless explicit applicable preapproval covers that checkpoint.** The same checkpoints apply to necessary feature documents/proposals. Reuse sufficient existing inputs rather than creating optional documents to fill the sequence.
 
+For main document preparation, select or recover the [doc-design mode](#doc-design-modes) before applying the document checkpoints below. The selected mode determines which approvals remain active and where its preparation pass stops.
+
 | Human checkpoint | Hold before |
 | --- | --- |
 | PROJECT | ARCHITECTURE or other dependent use of the brief |
@@ -53,8 +55,6 @@ Preserve narrow direct/standalone requests, pending decisions and unfinished wor
 | Requested implementation range completed | Any task beyond the requested count, milestone, phase or named checkpoint |
 | Steering amendment completed | Resuming implementation |
 | Assessment-only review completed | Repairs or revision execution |
-
-For main preparation, [doc-design modes](skills/sdd-manage/references/doc-design-modes.md) preserve interactive/onepass by default. Autodoc keeps PROJECT approval and preapproves later documents through TASKS, then stops before package QC. Human-controlled multipass retains each PROJECT and pass-end decision; predefined autodoc scope sequences default to autoloop, with later PROJECT approvals explicitly waived and material choices delegated with visible rationale. An explicit cursor reset retains documents and reopens DOCS-002–009 and their existing issues.
 
 **The human defines the implementation range and decides what follows it.** Commit each task’s verified result, evidence and initial completion checkbox together, then push and verify remote containment. At the end of the requested range, report the boundary results and stop. Do not add ready tasks, review tasks or another phase beyond the selected range. The human may request continuation or steering; start neither automatically. Partial main phases push and pause without merging. A complete phase or feature integrates only when its established verification and scope gates are met.
 
@@ -104,6 +104,19 @@ Name the next owner and preserve accepted inputs, actual context and the stoppin
 ## Composite workflows
 
 The [canonical catalog](skills/sdd-manage/references/workflows.md) owns definitions and transitions. These summaries show principal stages, owners, outputs and stops; implementation and release operations can also be selected independently within scope.
+
+### Doc-design modes
+
+Main document preparation supports the following selections. Load [mode and pass control](skills/sdd-manage/references/doc-design-modes.md) before applying a selection or handling a cursor reset; it owns approval/delegation, retained-document revision, reset and recovery rules.
+
+| Selection | Approval and pass boundary |
+| --- | --- |
+| **interactive/onepass** (default) | Each necessary document checkpoint remains active unless explicitly preapproved; follow the selected preparation range. |
+| **autodoc/onepass** | Approve PROJECT; later document checkpoints through TASKS are preapproved. Stop after DOCS-008, before package QC. |
+| **autodoc with human-controlled multipass** | Approve PROJECT each pass; later document checkpoints are preapproved. After TASKS, wait for reset or advance direction. |
+| **autodoc/autoloop** | Use predefined scope passes: first PROJECT approval remains active; announce that later PROJECT approvals are waived. Run the agreed passes, then stop after final DOCS-008, before package QC. |
+
+Predefined autodoc scope sequences default to autoloop unless human-controlled multipass is requested. New material autoloop decisions are delegated to agent judgment with visible rationale while proceeding. A cursor reset retains documents and reopens DOCS-002–009 and their existing issues; mode selection preserves required QC, publication and tracking gates.
 
 ### Project preparation and bounded delivery
 
