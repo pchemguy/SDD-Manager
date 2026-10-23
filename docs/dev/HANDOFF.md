@@ -1,19 +1,17 @@
 # SDD Manager handoff
 
-Campaign [098 — release workflow](reviews/098_b735940-release-workflow/REVISION-REPORT.md) is finalized for the human-selected closure. All five actions in its [revision plan](reviews/098_b735940-release-workflow/REVISION-PLAN.md) are executed and verified; actual closure requires the explicit main merge, merged-state checks, target publication/readback and clean return. Reporting: Standard.
+Campaign [099 — doc-design modes](reviews/099_242b6fb-doc-design-modes/REVISION-REPORT.md) is open. Initial requirements are recorded; the human will define additional modes in later turns. Reporting: Standard.
 
 ## Workflow and scope
 
-sdd-manage coordinates this revision campaign. Release instructions, reporting, provider/check handoffs and repository publisher now require default-branch release commits, either direct or the designated development merge into default. Release documents can be committed inside the active revision directory and moved during that release commit. The publisher enforces actual default-branch first-parent ancestry without a caller-supplied branch or full CI checkout. Revision preparation can integrate before release-campaign closure; later finalization does not replace the release tag.
+sdd-manage coordinates this revision. Current/default mode is `interactive/onepass`. Autodoc retains the PROJECT human checkpoint, preapproves subsequent document checkpoints through TASKS, and requires proactive resolution of important scope interactions/boundary cases and surfacing material decisions before brief approval. Stop after recording/publishing TASKS completion and required tracking effects, before whole-package docs QC (DOCS-009). Per-document technical checks and other workflow obligations remain required.
 
-Verification: 49 publisher tests (12 new provenance tests), 139 support tests, exact 153-file package build and scoped current-document checks. See the campaign report for tested sources, hashes, RED/repair evidence and dependency setup. Live CI/provider publication, fresh Windows and consuming-agent behavior remain unclaimed.
+Only campaign opening and requirements capture are selected. Wait for additional definitions or planning/execution direction; do not invent other modes, change plugin source or continue into docs QC/implementation by implication.
 
 ## Git context
 
-Campaign branch: `revision/098_b735940-release-workflow`. Creation parent, integration and return target: `main` on `origin`, pchemguy/SDD-Manager. Full baseline and branch-off commit: `b7359405ae35faac59b8182bca91b347d5e75d94`; original opening: `dc9b2b5d79c1dd99608d5a48d72f8bb75e3b2f0c`. No parent campaign is suspended. The final main merge supplies the exact verified source/target parents and merged-state results.
-
-Main includes the completed v0.15.2 release through merge `0067242f092f19742fdacd21632efef80bd39e25`, followed by the URL.md update at this campaign's baseline. Preserve all closed campaign records, published tags and releases.
+Working branch: `revision/099_242b6fb-doc-design-modes`. Creation parent, eventual integration and return: `main` on `origin`, pchemguy/SDD-Manager. Full baseline/branch-off: `242b6fbceab48196ae8f75c40a3f739f1129864d`. No parent campaign is suspended. Main contains the completed 098 release-workflow revision; its closed records and all earlier campaign packages remain frozen.
 
 ## Pending boundary
 
-Opening, plan and all five execution actions are published and verified through `b95ed77df9d660f819565abf66b53d0511172b92`. The human selected closure. Publish/read back finalization, merge the complete campaign into main, verify the merged result, publish/read back main and confirm a clean return. If interrupted, reconcile the retained branch/merge/publication state rather than replaying it. After actual closure, freeze the records and stop; no version bump, tag, release or plugin installation is selected.
+Publish/read back the opening commit, whose identity supplies this checkpoint, then wait for the human's next mode definition. No source implementation, version/tag/release, integration or closure is selected. If publication is interrupted, reconcile the retained operation rather than allocating another campaign.
