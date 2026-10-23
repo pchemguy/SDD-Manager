@@ -38,3 +38,9 @@ The human explicitly reopened this campaign to derive a multipass/autoloop varia
 | A-006 | After chat approval, append the approved counterpart immediately after the existing all-inclusive section in `docs/demo/tetris/README.md`, with a concise lead and matching prompt admonition. | Check approved-text fidelity, headings, links, complete scope and pass/phase distinction; publish/read back the owned result. Keep the campaign open unless closure is requested. |
 
 Only reopening records/continuity and the in-chat draft are authorized before approval. No plugin policy changes, actual target-project passes or resets, package QC, implementation, version bump or release are selected by this amendment.
+
+### Approved prompt and amendment completion
+
+The human rejected reciting the SDD workflow in a demo prompt. The approved replacement selects `autodoc/autoloop` once and supplies six cumulative project-scope passes: baseline, gameplay enhancements, conditional ghost visibility, penetrator, session-only configuration and persistence. It omits duplicated checkpoint/reset/approval/delegation/stop procedures. This supersedes A-005's proposed procedural prompt content; the canonical plugin workflow remains unchanged.
+
+A-005 is complete through the revised in-chat proposal and the human's “OK.” A-006 appends that approved prompt verbatim inside the existing admonition format, immediately after the original all-inclusive section, with a concise lead. Verify exact dequoted text, unchanged prior README bytes, six ordered pass headings, scoped links/style and preservation of plugin/prior closed records. Publish/read back the owned documentation result and keep the campaign open; no closure authority is inferred from prompt approval.

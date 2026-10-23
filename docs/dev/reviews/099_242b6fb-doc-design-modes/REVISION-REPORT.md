@@ -153,3 +153,13 @@ Actual closure requires the verified main merge, target publication/readback and
 Fresh remote inspection confirms main at the full starting baseline, a clean worktree and campaign 098 integrated/published. Identity discovery across current paths and fetched refs found 098 as the highest allocated sequence; 099 is newly reserved. Prior closed records are retained unchanged. Execution host remains Linux/Bash with Node.js 24.19.0 and Python 3.12.14; source development, acceptance and campaign conventions remain applicable.
 
 This opening changes only the active campaign record, handoff and review index. Check their identity, links, whitespace and scope; commit and publish/read back the opening before further work. No product/runtime tests are needed for this record-only checkpoint. Wait for the human's additional mode definitions or explicit planning/execution direction. No version bump, tag, release or closure is selected.
+
+## A-005/A-006 — Approved Tetris prompt integration
+
+Reopening synchronization `0c2798508529bce7947d58f57d4a9bf2098b0746` is published with matching exact-ref readback and confirmed cleanup. In chat, the human rejected the initial draft's workflow recitation. A revised six-pass prompt invokes `autodoc/autoloop` once and contains project requirements and cumulative scope additions; it leaves checkpoints, resets, delegated decisions and stops to SDD. The human approved the generated revision with “OK.”
+
+Append the approved text verbatim as “Multipass autoloop project prompt” after the existing all-inclusive section, using the same `> [!NOTE] Prompt` form and a concise lead. The prior README remains byte-for-byte intact. Retain all gameplay/locking, ghost, penetrator, six configuration controls, cookie/URL precedence and later implementation release requirements. No plugin instruction or workflow is revised.
+
+Verification on this documentation result: extracted prompt equals the approved chat text; six pass headings are ordered 1–6; the original README prefix is unchanged; current local links and Markdown whitespace pass. The five-file delta is limited to the demo README and this campaign's plan/report/index/HANDOFF. Plugin source and other closed records remain unchanged. These are content/structure checks, not an execution of the demo or a fresh runtime/consumer test.
+
+Commit and publish/read back this result before returning. A-005/A-006 are complete subject to that publication boundary. Keep campaign 099 open on its branch; no final main integration, version bump, tag, release or campaign closure is authorized by this prompt approval.
