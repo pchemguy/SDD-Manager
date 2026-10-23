@@ -7,7 +7,7 @@
 - Working branch: `revision/099_242b6fb-doc-design-modes`.
 - Creation parent, eventual integration and return: `main` on `origin`, `pchemguy/SDD-Manager`.
 - Request: open a doc-design revision, define doc-design modes and retain the following initial rules; additional modes will be supplied in later turns.
-- State: Open; autodoc, cursor reset, human-controlled multipass and autoloop requirements recorded. No source implementation or campaign closure is selected.
+- State: Open; the human authorized execution of the [revision plan](REVISION-PLAN.md). Campaign closure and any product development/release remain unselected.
 
 ## Accepted mode requirements
 
@@ -59,6 +59,10 @@ sdd-manage owns mode selection, scoped preapproval, cursor reset, pass continuit
 The human accepted the proposed reset/multipass clarifications, including DOCS-002–009 invalidation, retained documents, logical pass versions, reset recovery and the final DOCS-008 stop. The human changed the proposed handling of newly discovered material decisions: autoloop must make those decisions using agent judgment, explain its choices visibly and continue without a mandatory human pause. Later PROJECT approval waiver must be announced and applies by default unless human-controlled multipass is requested.
 
 Opening commit `1a47b5001479507cc820ad2a449062b4b6cce091` is published and exact-ref readback verified with confirmed cleanup. This extension changes only active campaign requirements, continuity and the index. Check local links, formatting and preservation of closed records, then commit/publish/read back. No plugin source implementation, runtime verification or campaign closure is claimed.
+
+## Execution authorization
+
+The human's “Execute” selects bounded implementation of the accepted requirements under the [revision plan](REVISION-PLAN.md). Requirements extension `42168092d20cc11ae66861d87985265dd79eb257` is published with exact-ref readback and confirmed cleanup. Publish/read back this plan before A-001, then execute and report each action. Stop with the campaign open; no target-project cursor or hosted DOCS objects are reset by this plugin revision.
 
 ## Opening evidence and next boundary
 
