@@ -48,3 +48,9 @@ Evidence limit: the excerpt is user-supplied; the target demo's complete PROJECT
 ## Execution authorization and plan
 
 The human's “Execute revision” authorizes R-001's bounded source correction under the [revision plan](REVISION-PLAN.md). The finding checkpoint `fce68ab0866fd45aaae1b5fb572cd5333054e479` is published/readback verified with confirmed cleanup. Add the explicit authoring/review content boundary with the brief owner, qualify the mode handoff and verify/publish the result. No separate review campaign or broader mode redesign is needed. Keep campaign 101 open; no target demo repair, main integration, version bump or release is selected.
+
+## All-doc-design scope decision
+
+The human explicitly extends this requirement to **all doc-design**. A-001 now covers all seven development-document roles, feature counterparts and focused children, in every mode and pass-control selection. The [expanded plan](REVISION-PLAN.md#accepted-scope-expansion--all-document-design) makes the invariant prominent at plugin/coordinator and direct author entry and enforces it during review/QC, with one canonical definition. Legitimate implementation planning/task content remains with PLAN/TASKS; documentation-workflow state stays in its existing records. The original PROJECT excerpt remains the concrete evidence, not a restriction on the correction's scope.
+
+Initial plan `e3a7c00f8ac175522aa19c4ab08d799c1a7d8966` is published with matching exact-ref readback and confirmed cleanup; no source edits have begun. Publish this scope extension before implementing the broader accepted correction. No closure, release or target-project mutation is selected.
