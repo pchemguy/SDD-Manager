@@ -1,19 +1,19 @@
 # SDD Manager handoff
 
-Campaign [101 — doc-design revision](reviews/101_39e46b9-doc-design/REVISION-REPORT.md#finalization-and-closure-boundary) is finalized for the human-requested closure through verified main integration/publication. Use sdd-manage for the remaining Git boundary; reporting Standard. No parent campaign is suspended.
+Campaign [102 — documentation task/preparation separation](reviews/102_4a16f6d-docs-task-boundary/REVISION-REPORT.md#finalization-and-closure-boundary) is finalized for the human-requested closure through main integration/publication. Use sdd-manage for the remaining Git boundary; reporting Standard. No parent campaign is suspended.
 
 ## Scope and result
 
-A-001 is complete and R-001 source-verified. The shared document-review procedure defines the content boundary for PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS, including feature counterparts and focused children, in every mode. PLUGIN/coordinator, four authoring entries and author/reviewer/QC gates enforce it.
+The human's task-only boundary and execution request are implemented. DOCS_TASKS contains the same nine task definitions/checkoffs; the new DOCS_PREPARATION template/record owns mode/pass, scope sequence, decisions/accepted identities, initialization/reset evidence and pending transitions. Main preparation defines lifecycle/adoption; all affected entries, review/QC, continuity, hosting and integration routes agree.
 
-Project documents express the project directly. DOCS_TASKS and existing workflow records, including HANDOFF, retain preparation mode/pass/cursor, future scope sequences and approval/reset evidence. PLAN/TASKS retain actual implementation phases/work. Future scope is neither imported early nor made a permanent non-goal. No target demo or approved prompt changes.
+Approved documents and resets retain atomic task/evidence commits. Legacy adoption preserves human content, task progress and stops. Periodic HANDOFF links the two owners without a running journal; project documents retain project content. Task/hosted identities, mode authority/stops and pre-write/QC/publication gates remain intact. This source repository continues using campaign records rather than a target DOCS_PREPARATION instance.
 
 ## Verification and Git
 
-At published source `09086fbf73f544b0719b661dd3419c92557bed08`, 139 support and 49 publisher tests pass. Current links/anchors, all 18 coordinator routes, scoped ownership and whitespace pass. The exact 154-file package matches Git and five extracted CLI help runs pass. Independent consumer rerun, native Windows and live-provider acceptance remain untested. Runtime/templates/hosting definitions/version/notes, policies, demos and closed packages are preserved.
+At published implementation `a314b0fe4b9d278272f6da5b18c218b391fd4fa1`, 48 projection, 49 publisher and 139 support tests pass (236 distinct). Executed checkpoint `acec175153bff3602ae8801305ee32c84fef2af5` has the same tested source; its exact package verifies all 155 files and five extracted CLI help paths. Current links/anchors, all 18 coordinator routes, stable task/dependency identities, scoped preservation and whitespace pass. No independent consumer run, native Windows execution or live hosted migration is claimed. No auth/transport/parser/CLI, demo/policy, version/release or closed-package change.
 
-Campaign branch `revision/101_39e46b9-doc-design`; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Original full branch-off/baseline and refreshed main: `39e46b9c159838a87baca6501dc0d75ac4bd1702`; opening: `dc08e08f3500b4d3d34796203099cc0b03346c88`. Executed source publication/readback and process cleanup are confirmed.
+Campaign branch `revision/102_4a16f6d-docs-task-boundary`; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Full original baseline/branch-off and refreshed main `4a16f6dc3d3025a87183fdf4acb09601a125f649`; original opening `f52904ceb24e73bb5912e85c2d6d6b784c1bc1d3`; plan `7fcaaf56d3b15d921e939b4f1b8e8e91a7249614`. Executed checkpoint publication/readback, process exit and cleanup are confirmed.
 
 ## Pending boundary
 
-Publish/read back this finalization, explicitly merge its verified tip into main, verify the merged state and publish/read back main, then return cleanly and stop. After actual completion, this is the completed root-work checkpoint awaiting new human direction. Recover finalization/merge/publication facts from Git and owning tool evidence; this snapshot cannot prove its own subsequent effects. No release, version bump, target-project mutation or further workflow is selected.
+Publish/read back this finalization, explicitly merge its verified tip into main, verify the merged state and publish/read back main, then return cleanly and stop. After actual completion, this is the completed root-work checkpoint awaiting new human direction. No in-scope action remains. Recover finalization/merge/publication facts from Git/owning tool evidence; this snapshot cannot prove its own subsequent effects. No target-project migration, package installation, version bump, release or further workflow is selected.

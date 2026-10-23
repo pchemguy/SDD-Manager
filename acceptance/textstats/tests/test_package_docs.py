@@ -12,7 +12,8 @@ class PackageDocumentation(Sandbox):
         source = Path(__file__).resolve().parents[3]
         pin, files = core.package(source, {'plugin_revision': 'HEAD', 'source_mode': 'dirty'})
         package = source / pin['package_subdirectory']
-        for name in ('assets/HANDOFF_TEMPLATE.md', 'assets/DOCS_TRACKING_TEMPLATE.json',
+        for name in ('assets/HANDOFF_TEMPLATE.md', 'assets/DOCS_TASKS_TEMPLATE.md',
+                     'assets/DOCS_PREPARATION_TEMPLATE.md', 'assets/DOCS_TRACKING_TEMPLATE.json',
                      'skills/sdd-manage/references/continuity.md',
                      'skills/sdd-manage/scripts/git-auth-recover.mjs',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
@@ -29,6 +30,7 @@ class PackageDocumentation(Sandbox):
             self.assertEqual(files[name], (package / name).read_bytes())
             self.assertEqual(pin['package_hashes'][name], hashlib.sha256(files[name]).hexdigest())
         self.assertNotIn('docs/dev/HANDOFF.md', files)
+        self.assertNotIn('docs/dev/DOCS_PREPARATION.md', files)
         self.assertNotIn('AGENTS.md', files)
         self.assertNotIn('WINDOWS_SHELL_POLICY.md', files)
         self.assertNotIn('BROWSER_DEV_POLICY.md', files)
@@ -133,7 +135,7 @@ class PackageDocumentation(Sandbox):
         git(source, 'config', 'user.email', 'fixture@example.invalid')
         (source / 'plugin.json').write_text('{"name":"fixture"}\n')
         (source / 'assets').mkdir()
-        names = ('AGENTS_TEMPLATE.md', 'DOCS_TASKS_TEMPLATE.md', 'DOCS_TRACKING_TEMPLATE.json', 'SKILL_DISCOVERY_PROTOCOL.md')
+        names = ('AGENTS_TEMPLATE.md', 'DOCS_TASKS_TEMPLATE.md', 'DOCS_PREPARATION_TEMPLATE.md', 'DOCS_TRACKING_TEMPLATE.json', 'SKILL_DISCOVERY_PROTOCOL.md')
         original = {name: ('Pinned ' + name + '\n').encode() for name in names}
         for name, data in original.items():
             (source / 'assets' / name).write_bytes(data)

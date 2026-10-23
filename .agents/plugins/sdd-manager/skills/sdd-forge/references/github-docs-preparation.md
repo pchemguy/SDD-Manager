@@ -1,12 +1,12 @@
 # GitHub main preparation tracking
 
-Use for `sdd-docs-main` creation/readback, preparation issue lookup/closure, explicit pass-reset reopening and final milestone closure, including direct calls. Load the parent [GitHub backend](github.md) for repository/access, protected authentication and operational-failure rules. The coordinator's [main preparation](../../sdd-manage/references/main-preparation.md) owns readiness, local DOCS_TASKS, pass approval, Git persistence and the final human checkpoint. This module performs hosted operations only.
+Use for `sdd-docs-main` creation/readback, preparation issue lookup/closure, explicit pass-reset reopening and final milestone closure, including direct calls. Load the parent [GitHub backend](github.md) for repository/access, protected authentication and operational-failure rules. The coordinator's [main preparation](../../sdd-manage/references/main-preparation.md) owns readiness, task-only DOCS_TASKS, DOCS_PREPARATION control/decision evidence, Git persistence and the final human checkpoint. This module performs hosted operations only.
 
 ## Identity and pre-write projection
 
 Require the actual repository, selected preparation-tracking scope and its request/project-policy source from **sdd-manage**. Before target files or branches are modified, load the running/pinned package's [tracking definitions](../../../assets/DOCS_TRACKING_TEMPLATE.json) and [local task template](../../../assets/DOCS_TASKS_TEMPLATE.md). The JSON supplies the complete standard milestone/issue content and dependencies; the Markdown owns the local preparation tasks. Target PLAN/TASKS and a local DOCS_TASKS are not prerequisites for projection. Use both assets from the same package source.
 
-On resume also inspect existing `docs/dev/DOCS_TASKS.md`, actual decisions and retained hosted identities. Preserve checked progress and valid documents. Check task IDs/names/order and semantic scope against the definitions; disagreement returns to the coordinator rather than regenerating the list, inventing content or overwriting existing objects.
+On resume inspect existing `docs/dev/DOCS_TASKS.md` for task structure/checkoffs and `docs/dev/DOCS_PREPARATION.md` for decisions/control, together with actual Git/provider evidence. Adopt legacy mixed lists through the coordinator; neither target file is a prerequisite for initial projection. Preserve checked progress and valid documents. Check task IDs/names/order and semantic scope against the definitions; disagreement returns to the coordinator rather than regenerating the list, inventing content or overwriting existing objects.
 
 | Object | Identity and content |
 | --- | --- |
@@ -23,13 +23,17 @@ With Node/Git available, prefer the [single-call projection utility](../scripts/
 
 GitHub is the projection, not authority for local completion. An existing closed milestone or issue does not prove accepted documents, QC or published integration. Report inconsistent prior closure and resolve its scope/evidence rather than certify readiness from provider state.
 
+### Fixed-content updates on adoption
+
+A newer package may change standard brief text without changing task identities. A saved request using older definitions must be regenerated/reviewed against the selected source. The optional projection utility reports exact-content conflicts; it does not silently migrate them. Before an explicit backend reconciliation, verify the unique marked issue/milestone identities, associations and old standard content. Update only the owned standard brief fields to the selected package definitions through a supported authenticated CLI/API operation, preserving numbers, comments, states, associations and unrelated content; read back exact content. Unknown/custom or ambiguous content returns to the coordinator for resolution, not overwrite or duplicate creation. Reconcile uncertain effects before replay; already matching objects need no write. Retain the adoption basis in DOCS_PREPARATION once repository writes are eligible; before the pre-write gate use only permitted external evidence. This content reconciliation is separate from pass-reset reopening and supplies no missing task acceptance.
+
 ## Complete preparation issues
 
 Before closure resolve the unique marked issue, current repository and milestone association. Require the coordinator's actual task completion evidence:
 
-- **DOCS-001:** Original retained/copied outcomes for all four root files, verified preservation/copies, DOCS_TASKS completion and published initialization commit, or verified retained completion. A mixed-presence continuation pause may remain after initialization is complete.
-- **DOCS-002–008:** Approval in the active pass or applicable scoped preapproval, required current-scope QC, and the commit containing the approved document state and corresponding checked DOCS task, pushed with verified containment. After reset, require the completion transition/evidence after that reset, not a previous pass's approval/comment/commit. A prior proposal commit leaves the task/issue incomplete. Resumed recognized approvals retain their actual evidence; do not claim a historical checkbox transition that never occurred.
-- **DOCS-009:** Passing whole-package `docs/dev/DOCS-QC-REPORT.md` and checked final DOCS task in one verified published commit; all earlier preparation issue closures verified.
+- **DOCS-001:** Original retained/copied outcomes for all four root files, verified preservation/copies, DOCS_TASKS completion, DOCS_PREPARATION initialization evidence and published initialization commit, or verified retained completion. A mixed-presence continuation pause may remain after initialization is complete.
+- **DOCS-002–008:** Approval in the active pass or applicable scoped preapproval, required current-scope QC, and the commit containing the approved document state, DOCS_PREPARATION decision/QC references and corresponding checked DOCS task, pushed with verified containment. After reset, require the completion transition/evidence after that reset, not a previous pass's approval/comment/commit. A prior proposal commit leaves the task/issue incomplete. Resumed recognized approvals retain their actual evidence; do not claim a historical checkbox transition that never occurred.
+- **DOCS-009:** Passing whole-package `docs/dev/DOCS-QC-REPORT.md`, DOCS_PREPARATION package evidence, refreshed HANDOFF and checked final DOCS task in one verified published commit; all earlier preparation issue closures verified.
 
 Add a concise evidence comment if absent, close as completed and read back state/reason under the existing issue operational-failure rules. Do not duplicate a matching comment or repeat a verified closure. The coordinator publishes before requesting closure; this backend creates no commits.
 
@@ -37,7 +41,7 @@ Document tasks/issues record development **through first approval in the active 
 
 ## Reset a document-design pass
 
-Require the coordinator's [recorded reset](../../sdd-manage/references/doc-design-modes.md#reset-the-cursor): actual repository/branch, prior and next pass scope, published reset commit, DOCS-001 retained complete, and DOCS-002–009 locally unchecked. A normal document edit or a request to reconcile projection does not authorize reset. Keep the same milestone and issue identities, titles, briefs, associations and unrelated fields; no per-pass projection or replacement issues are needed.
+Require the coordinator's [recorded reset](../../sdd-manage/references/doc-design-modes.md#reset-the-cursor): actual repository/branch, prior and next pass scope/authority recorded in DOCS_PREPARATION, published reset commit, DOCS-001 retained complete, and DOCS-002–009 locally unchecked. A normal document edit or a request to reconcile projection does not authorize reset. Keep the same milestone and issue identities, titles, briefs, associations and unrelated fields; no per-pass projection or replacement issues are needed.
 
 1. Resolve all eight DOCS-002–009 issues by retained handles and stable main-preparation markers, excluding PRs and validating unique identities and milestone association. Preserve DOCS-001 and its issue. Use complete lookup/readback under the backend failure protocol; ambiguous or unknown identity blocks dependent work.
 2. For each issue, add a concise reset-evidence comment with pass/scope and the exact reset commit only if that evidence is absent. Reopen closed issues through the available authenticated GitHub CLI/API issue-state operation, then read back each exact issue as open. Already open issues need identity/evidence verification rather than another state write. Check state before replay after any uncertain response. The optional forge-close/projection utilities do not implement reset reopening; do not invent a CLI flag or treat projection success as reopening evidence.

@@ -8,7 +8,7 @@ Outcome: {brief verified result; summarize older completed phases/campaigns with
 ## Workflow and sources
 
 - Workflow/stage/owner: {main, feature, revision or selected operation; stage and owner}.
-- Governing documents, task list and evidence: {links relative to docs/dev/HANDOFF.md; identify current decision/progress records for later changes}.
+- Governing documents, task list and evidence: {links relative to docs/dev/HANDOFF.md; for main preparation link task-only DOCS_TASKS and the DOCS_PREPARATION control/evidence record; other workflows link their current owners}.
 - Required package/setup/input availability: {relevant source/version and durable setup/input links, or none}.
 
 ## Scope and human decisions

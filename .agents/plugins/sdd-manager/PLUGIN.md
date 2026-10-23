@@ -35,7 +35,7 @@ At composite-workflow entry, material switching or context reconstruction, the c
 
 Preserve narrow direct/standalone requests, pending decisions and unfinished work. Read-only discussion/inspection may proceed without Git; repository mutations require an eligible worktree and do not implicitly initialize Git.
 
-**All doc-design outputs must describe the project, not their preparation workflow.** Apply the [development-document content boundary](skills/sdd-manage/references/human-document-review.md#development-document-content-boundary) to every main/feature root and focused child, in every mode. Keep documentation-pass sequencing, cursor and approval/reset state in DOCS_TASKS and existing workflow records; check this during authoring and review.
+**All doc-design outputs must describe the project, not their preparation workflow.** Apply the [development-document content boundary](skills/sdd-manage/references/human-document-review.md#development-document-content-boundary) to every main/feature root and focused child, in every mode. Keep documentation-pass sequencing, cursor and approval/reset state in DOCS_PREPARATION for main preparation, or the existing feature/revision evidence. DOCS_TASKS holds tasks/checkoffs only. Check these boundaries during authoring and review.
 
 ## Human checkpoints and Git publication
 
@@ -66,7 +66,7 @@ Clarification, agent QC, passing tests and commits/pushes do not constitute huma
 
 ## Requested backend tracking
 
-**For fresh/resumed main preparation, enabled tracking precedes repository modifications:** use [main preparation](skills/sdd-manage/references/main-preparation.md) for the native `sdd-docs-main` milestone and all nine issues defined in bundled JSON before writes. DOCS_TASKS tracks initialization, seven documents through first approval and final package QC. Publish each approved-document/checked-task commit before issue closure; ordinary later edits retain completion, while an explicit cursor reset reopens DOCS-002–009 for a new pass. Final QC issue closure → verified/published docs merge → milestone closure → final preimplementation checkpoint. This is separate from implementation phase activation.
+**For fresh/resumed main preparation, enabled tracking precedes repository modifications:** use [main preparation](skills/sdd-manage/references/main-preparation.md) for the native `sdd-docs-main` milestone and all nine issues defined in bundled JSON before writes. DOCS_TASKS holds the nine task definitions/checkoffs; DOCS_PREPARATION owns mode/pass, decisions and evidence. Publish each accepted-document/preparation-evidence/checked-task commit before issue closure; ordinary later edits retain completion, while an explicit cursor reset reopens DOCS-002–009 for a new pass. Final QC issue closure → verified/published docs merge → milestone closure → final preimplementation checkpoint. This is separate from implementation phase activation.
 
 ### Implementation tracking
 
