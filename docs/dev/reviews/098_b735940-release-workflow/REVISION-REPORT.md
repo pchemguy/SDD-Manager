@@ -7,11 +7,11 @@
 - Working branch: `revision/098_b735940-release-workflow`.
 - Creation parent, eventual integration target and return branch: `main` on `origin`, `pchemguy/SDD-Manager`.
 - Request: “Open release workflow revision campaign.”
-- State: Open; release rules accepted and [revision plan](REVISION-PLAN.md) prepared. Source execution is pending.
+- State: Open; the human authorized execution of the [revision plan](REVISION-PLAN.md). Campaign closure and a product release are not selected.
 
 ## Scope and stopping boundary
 
-The opening established the campaign identity, branch and continuity checkpoint. The subsequent human instruction establishes the release rules below. Record and publish their revision plan, then stop before source execution, a version bump, tagging, release publication or campaign closure.
+The opening established the campaign identity, branch and continuity checkpoint. The subsequent human instructions establish the release rules below and authorize plan execution. Execute its bounded actions and stop with the campaign open, before a version bump, tagging, release publication or campaign closure.
 
 Source owners are sdd-manage for coordination and Git boundaries, sdd-forge for release preparation and provider publication, sdd-report for messages, and sdd-verify for release checks. The plan includes repository publisher/CI enforcement and affected current documentation.
 
@@ -24,6 +24,14 @@ The [plan](REVISION-PLAN.md) translates those rules into A-001 through A-005, co
 Opening commit `dc9b2b5d79c1dd99608d5a48d72f8bb75e3b2f0c` was pushed and exact-ref readback matched, with confirmed process cleanup. Existing authentication failed with the remote ref absent; the previously supplied credential restored eligible publication without persistent helper configuration changes. The token value is excluded from evidence and Git. No source, version, tag or release was changed.
 
 Planning inspected the current release Git boundary, message preparation/reporting, GitHub lifecycle/workflow guidance, release-check criteria and repository publisher/workflow. Checks passed for the four owned paths, nine active-document link targets, heading separation and `git diff --check`; closed campaign records are untouched. These checks apply to this planning checkpoint only; no product/runtime tests, provider mutation or implemented-action verification is claimed. Publish/read back the plan commit before further campaign work.
+
+## Execution evidence
+
+### A-001 — Default-branch Git release boundary
+
+Defined direct default-branch releases and release merges from the designated primary development branch in git-workflows.md, with a shallow branch-management reminder. The merge itself carries the release message. Default-branch publication precedes tag creation, first-parent provenance excludes side-history candidates, and recovery retains a pinned eligible commit after default advances. Source-only requests cannot bypass eligibility; prior tags/releases remain unchanged. Document placement and retained campaign records have distinct ownership.
+
+Source inspection covers direct/default, designated-development merge, side-branch rejection and advanced-default recovery. Checked changed Markdown formatting and patch scope; no runtime or live-release claim follows from this procedural action. Per-action publication is recorded by its containing commit and exact-ref readback.
 
 ## Opening evidence
 
