@@ -29,3 +29,7 @@ Extend rechecks across all seven document roles, feature/child and direct-owner 
 ## Execution result
 
 A-001 is implemented across the accepted all-doc-design scope and verified by the [execution evidence](REVISION-REPORT.md#a-001--all-document-content-boundary-implemented). Both authoring and review/dependent-use routes enforce the shared content boundary. Existing 139 support and 49 publisher tests, current links/routes/style and scoped ownership checks pass. Check the exact committed package before publication, then stop on the campaign branch with the campaign open. No new action or closure is selected.
+
+## Authorized finalization
+
+The human's subsequent “close it” selects campaign closure and explicit main integration. A-001 and R-001 are complete; no action remains deferred. The executed source `09086fbf73f544b0719b661dd3419c92557bed08` is published/readback verified with confirmed cleanup, and its exact package and extracted CLI checks pass. Finalize the existing records, publish/read back the finalized campaign tip, merge it into refreshed main with an explicit two-parent boundary, verify the merged result and publish/read back main. Closure takes effect after that verified publication and clean return; Git records the actual merge and publication state. No release or target-project mutation is selected.
