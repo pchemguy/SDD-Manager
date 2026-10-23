@@ -84,6 +84,10 @@ Aligned direct design/specification/planning/task entries, forge/verify handoffs
 
 Source checks assess the direct-entry route, default versus named-mode boundaries, separate PLAN/layout checkpoints and the diagram's reset/advance branches. No rendered Mermaid or independent consuming-agent behavior is claimed. Current-document links, heading/whitespace and reference routing are checked before publication.
 
+### A-003 follow-up — Current-pass scope and reset preservation
+
+The final source walkthrough found that the generic complete-project brief rule needed an explicit current-pass qualification, so future predefined changes are clarified upfront but applied only in their scheduled pass. Added it in the pass owner and PROJECT contract. Reset preservation now explicitly names the retained PROJECT/design/SPEC/PLAN/layout/TASKS content, avoiding an overly broad byte-preservation statement that could include the intentionally changed DOCS_TASKS/HANDOFF metadata. Scoped source checks pass; no runtime behavior or new mode is added by these clarifications.
+
 ## Opening evidence and next boundary
 
 Fresh remote inspection confirms main at the full starting baseline, a clean worktree and campaign 098 integrated/published. Identity discovery across current paths and fetched refs found 098 as the highest allocated sequence; 099 is newly reserved. Prior closed records are retained unchanged. Execution host remains Linux/Bash with Node.js 24.19.0 and Python 3.12.14; source development, acceptance and campaign conventions remain applicable.

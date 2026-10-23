@@ -29,7 +29,7 @@ Important interactions and boundary cases that materially affect current scope a
 | Constraints | Accepted platform/technology/integration limits and consequential requirements |
 | Assumptions/open questions | Material unresolved choices, proposals and intentionally delegated details |
 
-The main brief describes the complete intended project, not only its first delivery increment. PLAN can select an MVP and subsequent increments. Keep finalized project descriptions focused on the intended state rather than editing history or unsupported maturity claims; use [evidence-backed positioning](exploration.md#evidence-backed-project-positioning) where relevant.
+The main brief describes the complete intended project, not only its first delivery increment. In multipass doc-design, that means the complete current-pass scope; predefined later revisions remain in the pass sequence until reached. PLAN can select an MVP and subsequent delivery increments within that scope. Keep finalized project descriptions focused on the intended state rather than editing history or unsupported maturity claims; use [evidence-backed positioning](exploration.md#evidence-backed-project-positioning) where relevant.
 
 ## Create or revise
 
