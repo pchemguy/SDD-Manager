@@ -78,6 +78,12 @@ Exploration and PROJECT guidance now require proactive resolution of important s
 
 Source assessments cover local-before-hosted reset, DOCS-001 preservation, all eight remaining issues, unknown/partial reopen, stale prior approval and unchanged document reuse. The dependent forge reset anchor from A-001 is now defined. `node --test tests/forge-project.test.mjs` passes 46 contracts with no failures/skips; 117 current-document link targets and heading/whitespace checks pass. These supply controlled runtime/structure evidence, not an independently executed agent reset. A final template wording correction explicitly confines the DOCS-008 stop to autodoc, preserving interactive/onepass behavior.
 
+### A-003 — Entry, documentation and boundary projections
+
+Aligned direct design/specification/planning/task entries, forge/verify handoffs, coordinator catalog/branch gates, PLUGIN.md, packaged README and the source plugin contract. Public guidance distinguishes approval mode from pass control; the preparation diagram now shows the DOCS-008 stop, explicit advance and reset-to-PROJECT route. Default interactive/onepass retains its original selected preparation path. Later-approval waiver and delegated decisions remain visible without duplicating detailed reset mechanics in entries. AGENTS_TEMPLATE and fixed JSON tracking content remain unchanged.
+
+Source checks assess the direct-entry route, default versus named-mode boundaries, separate PLAN/layout checkpoints and the diagram's reset/advance branches. No rendered Mermaid or independent consuming-agent behavior is claimed. Current-document links, heading/whitespace and reference routing are checked before publication.
+
 ## Opening evidence and next boundary
 
 Fresh remote inspection confirms main at the full starting baseline, a clean worktree and campaign 098 integrated/published. Identity discovery across current paths and fetched refs found 098 as the highest allocated sequence; 099 is newly reserved. Prior closed records are retained unchanged. Execution host remains Linux/Bash with Node.js 24.19.0 and Python 3.12.14; source development, acceptance and campaign conventions remain applicable.

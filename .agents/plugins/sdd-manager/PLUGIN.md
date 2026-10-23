@@ -54,6 +54,8 @@ Preserve narrow direct/standalone requests, pending decisions and unfinished wor
 | Steering amendment completed | Resuming implementation |
 | Assessment-only review completed | Repairs or revision execution |
 
+For main preparation, [doc-design modes](skills/sdd-manage/references/doc-design-modes.md) preserve interactive/onepass by default. Autodoc keeps PROJECT approval and preapproves later documents through TASKS, then stops before package QC. Human-controlled multipass retains each PROJECT and pass-end decision; predefined autodoc scope sequences default to autoloop, with later PROJECT approvals explicitly waived and material choices delegated with visible rationale. An explicit cursor reset retains documents and reopens DOCS-002–009 and their existing issues.
+
 **The human defines the implementation range and decides what follows it.** Commit each task’s verified result, evidence and initial completion checkbox together, then push and verify remote containment. At the end of the requested range, report the boundary results and stop. Do not add ready tasks, review tasks or another phase beyond the selected range. The human may request continuation or steering; start neither automatically. Partial main phases push and pause without merging. A complete phase or feature integrates only when its established verification and scope gates are met.
 
 **The human may preapprove future checkpoints at any point, individually or as a scoped set.** Retain that decision through interruptions; report covered results without repeated approval pauses. Preapproval preserves QC, publication/tracking gates and the authorized implementation range. See [future-checkpoint preapproval](skills/sdd-manage/references/human-document-review.md#future-checkpoint-preapproval).
@@ -62,7 +64,7 @@ Clarification, agent QC, passing tests and commits/pushes do not constitute huma
 
 ## Requested backend tracking
 
-**For fresh/resumed main preparation, enabled tracking precedes repository modifications:** use [main preparation](skills/sdd-manage/references/main-preparation.md) for the native `sdd-docs-main` milestone and all nine issues defined in bundled JSON before writes. DOCS_TASKS tracks initialization, seven documents through first approval and final package QC. Publish each approved-document/checked-task commit before issue closure; later document revisions leave those tasks/issues complete. Final QC issue closure → verified/published docs merge → milestone closure → final preimplementation checkpoint. This is separate from implementation phase activation.
+**For fresh/resumed main preparation, enabled tracking precedes repository modifications:** use [main preparation](skills/sdd-manage/references/main-preparation.md) for the native `sdd-docs-main` milestone and all nine issues defined in bundled JSON before writes. DOCS_TASKS tracks initialization, seven documents through first approval and final package QC. Publish each approved-document/checked-task commit before issue closure; ordinary later edits retain completion, while an explicit cursor reset reopens DOCS-002–009 for a new pass. Final QC issue closure → verified/published docs merge → milestone closure → final preimplementation checkpoint. This is separate from implementation phase activation.
 
 ### Implementation tracking
 
@@ -111,7 +113,7 @@ The [canonical catalog](skills/sdd-manage/references/workflows.md) owns definiti
 
 Main preparation routes `sdd-manage`/`sdd-orient` → `sdd-design` (PROJECT, ARCHITECTURE, DECOMPOSITION) → `sdd-specify` (SPEC) → `sdd-plan` (PLAN, layout) → `sdd-tasks` (TASKS), with `sdd-conventions` as needed. Existing work enters at the next eligible stage; requested interactive review comes first. Apply the [human checkpoints](#human-checkpoints-and-git-publication) and [document QC](skills/sdd-manage/references/document-qc-gates.md).
 
-Completed main preparation includes DOCS-009 whole-package QC and published documentation integration, then `sdd-docs-main` milestone closure and the final implementation checkpoint. Preparation-only stops there; an authorized implementation handoff requires accepted preparation to be integrated, verified and published to the actual default branch before creating the dependent branch; see [preparation integration](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
+Completed main preparation includes DOCS-009 whole-package QC and published documentation integration, then `sdd-docs-main` milestone closure and the final implementation checkpoint. Autodoc stops earlier at DOCS-008; advancing to package QC is separate. Otherwise completed preparation-only stops at that final checkpoint; an authorized implementation handoff requires accepted preparation to be integrated, verified and published to the actual default branch before creating the dependent branch; see [preparation integration](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
 
 ### Task implementation and continuation
 

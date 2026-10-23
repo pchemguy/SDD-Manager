@@ -15,7 +15,7 @@ The ordinary default is **interactive/onepass**. Document approval and pass cont
 
 When autodoc includes an explicitly predefined sequence of later scope revisions, use autoloop unless the human requests human-controlled multipass. Do not infer future scopes or select multipass for an ordinary onepass request. At entry, state the actual selection, pass scope and stop. In autoloop, **explicitly announce that later PROJECT approvals are waived** before the first brief approval. Retain explicit human overrides and later steering.
 
-Record mode, current pass/cursor, scope sequence and actual approval/delegation basis in existing DOCS_TASKS/preparation evidence. HANDOFF snapshots link that owner; no second registry is needed. Selection supplies only its scoped checkpoint preapproval. Initialization continuation, technical QC, Git publication, tracking and implementation authority keep their existing gates.
+Record mode, current pass/cursor, scope sequence and actual approval/delegation basis in existing DOCS_TASKS/preparation evidence. Carry them into each document-owner handoff so delegated decisions and preapproval are not replaced by generic interactive defaults. HANDOFF snapshots link that owner; no second registry is needed. Selection supplies only its scoped checkpoint preapproval. Initialization continuation, technical QC, Git publication, tracking and implementation authority keep their existing gates.
 
 ## Prepare scope and decisions
 
