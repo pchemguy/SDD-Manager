@@ -7,7 +7,7 @@
 - Working branch: `revision/098_b735940-release-workflow`.
 - Creation parent, eventual integration target and return branch: `main` on `origin`, `pchemguy/SDD-Manager`.
 - Request: “Open release workflow revision campaign.”
-- State: Open; the human authorized execution of the [revision plan](REVISION-PLAN.md). Campaign closure and a product release are not selected.
+- State: Open; A-001 through A-005 of the [revision plan](REVISION-PLAN.md) are executed and verified within the evidence limits below. Campaign closure and a product release are not selected.
 
 ## Scope and stopping boundary
 
@@ -54,6 +54,16 @@ Test-first evidence: the new mutation-gate regression failed on the original imp
 Verification: `/tmp/sdd098-venv/bin/python -B -m unittest discover -s .github/tests -v` passes all 49 publisher tests, including the 12 new provenance contracts. The first full-suite attempt found missing jsonschema rather than a source defect; installing the declared `.github/requirements.txt` in an isolated temporary virtual environment resolved it. `python -B -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` passes 139 support tests. Scoped current-document checks pass 249 link targets and whitespace checks. A build from committed package source `e12f6e4b00f70393c3eb10c2596faa54b6682553`, using the new local publisher, verifies all 153 members; ZIP SHA-256 is `14e5b4423038764d67df5250f3e6c00fb3b3a405ce0d118dc3fadf4eee3a2a1a` (459,168 bytes). Publisher/test/doc changes in this action are source-only and excluded from that package.
 
 These are Linux local Git/ZIP and controlled-provider results. No release tag, workflow dispatch, live provider mutation or fresh Windows runtime is exercised. Each action's commit is published/read back before the next action.
+
+### A-005 — Integrated source, composition and boundary recheck
+
+Reviewed the full campaign source diff and both sides of the coordinator/forge/report/verify/publisher handoff. Final review identified and clarified the release-campaign sequencing boundary: verified revision preparation can integrate into default (or the designated development branch) before the release campaign closes; after the default-branch release, synchronize back for retained campaign evidence and later closure. The later finalization merge never replaces the pinned release source/tag. This resolves the interaction between default-branch release placement and retaining campaign records on their branch during execution.
+
+Existing references retain cohesive procedures; entry summaries stay shallow, with no new reference fragment. Current default paths, staged paths, tracked/untracked handling, exact-message requirements, first-parent qualification and build-only/provider separation are consistent. Source-only recovery cannot authorize an ineligible side-branch tag. All prior closed package paths and existing tags/releases are unchanged; the generated owned Python cache is removed rather than committed.
+
+Verification remains 49 publisher tests (including 12 new provenance tests), 139 support tests and the 153-file local package build detailed in A-004. Final current-document link/heading/whitespace checks pass. No changed executable followed those passing tests; A-005 adds procedural clarification and completion evidence only. No live CI run, fresh Windows runtime, independent consuming agent, tag, version bump, release dispatch or product publication is claimed. No workflow YAML change was necessary: shallow checkout remains compatible with provider-object ancestry verification.
+
+Action publication checkpoints: A-001 `12de2d3bbbb950a7ec5b20b87966501b9697c5b3`, A-002 `8298663c2f160272f146b3399d0a4f7e3d0e13ac`, A-003 `e12f6e4b00f70393c3eb10c2596faa54b6682553`, and A-004 `e40961a2221d9073eaa8889e85d7df80096a1800` all have successful exact-ref readback and confirmed process cleanup. A-005's containing commit must likewise be published/read back before returning. The worktree remains on `revision/098_b735940-release-workflow`; default main is not merged or changed by this execution request. Stop with the campaign open for the human's next direction.
 
 ## Opening evidence
 

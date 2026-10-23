@@ -44,6 +44,8 @@ The completion/exits requirements below govern outward workflow completion. For 
 
 Project preparation uses the [preparation integration gate](branch-management.md#preparation-integration-gate): commit project documents on design-docs, explicitly merge the accepted boundary into the actual default branch, verify and publish that target, then create the dependent implementation branch. This document-only boundary does not require implementation phase completion. Campaign plans/reports remain on their revision branch; preparation merging does not incorporate feature deltas or complete executable tasks.
 
+An authorized release may also integrate verified release preparation before its revision campaign closes, under the [release boundary](#release-commit-and-tag). That bounded integration does not claim completion of pending release publication or the campaign.
+
 Commit and push completed task or amendment work on the working branch. Do not merge every task commit. A main request stops at its selected task count/milestone/checkpoint, but its phase branch integrates only when the complete phase and exits are verified. Otherwise push completed work and pause without merging. A feature/revision integrates its coherent authorized boundary after applicable incorporation/archive gates; steering integrates its commanded amendment into the paused branch and stops.
 
 Inspect the complete branch difference against the target, including earlier unmerged commits. If it contains unrelated or unfinished work, resolve the branch/scope conflict rather than integrating that work by implication. A narrower continuation on an existing feature branch may require a separate scoped branch; do not cherry-pick a guessed subset silently.
@@ -87,6 +89,8 @@ Use the canonical supervised HTTPS entry from the first authorized push under th
 For an authorized release request, forge first verifies/refreshes the retained complete message through [release-message preparation](../../sdd-forge/references/release-message.md#release-request-freshness-and-commit-gate). Local source/coverage/body context and the established version govern freshness; a matching version alone is insufficient. Manage owns Git persistence and forge owns provider publication.
 
 **Release tags always target release commits on the repository's actual default branch.** Discover that branch from current repository/remote metadata rather than assuming main, master or a cached local alias. Establish whether development uses that branch directly or a designated primary development branch; a branch name alone does not select its role. Refresh the default branch and preserve unrelated work before preparing the release boundary.
+
+When preparation is on a revision branch, integrate its verified accepted source into the selected primary development branch, or into default for direct development, before the release boundary. Treat this as release-preparation integration, not campaign closure; retain pending publication and final reporting. After the default-branch release operation, synchronize its published baseline back into the still-active campaign when needed, preserving its identity and parent, then record results on that campaign branch. Final campaign closure follows the normal verified integration procedure. Do not move the release tag to the later campaign-finalization commit.
 
 Select one path:
 
