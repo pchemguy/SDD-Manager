@@ -1,5 +1,15 @@
 # Doc-design modes revision campaign
 
+## Current reopening — Tetris autoloop example
+
+The original campaign closed through published two-parent main merge `655228e4091a3d057dd0f5515bd61f8e05ca6117`, retaining source tip `eae552fa6e2bc3253009c460b94ed2fbb1305670`. Fresh fetch confirms that merge is main's current tip and most recent first-parent merge, with parents `242b6fbceab48196ae8f75c40a3f739f1129864d` and the finalized source tip. Both named remote branches match the retained commits. The human explicitly requested a related amendment: a Tetris demo prompt exercising the modes delivered here.
+
+Reopen the same identity and branch at target checkpoint `655228e4091a3d057dd0f5515bd61f8e05ca6117`, preserving all original evidence below. Incoming synchronization has no source conflicts or incoming content difference from the finalized campaign tree; its owned changes are this reopening record, plan, index and HANDOFF. Original opening and branch-off remain unchanged. No other closed campaign is reopened.
+
+Added A-005/A-006 in the [plan](REVISION-PLAN.md#reopened-amendment--tetris-autoloop-example). Read the complete existing “All-inclusive project prompt” in `docs/demo/tetris/README.md` and compare against the implemented mode owner. Present a complete draft in chat; append it to the demo only after chat approval. Documentation passes remain distinct from implementation phases, with current-pass scope, first PROJECT approval, announced later waiver, automatic retained-document resets, delegated decisions and final DOCS-008 stop. Preserve gameplay/configuration content and later version/release policy.
+
+Scoped reopening checks: refreshed branch/parent identity, conflict-free prospective synchronization, unchanged Tetris README and plugin source, four-file record-only delta and whitespace. No runtime/product evidence is claimed or needed for these record changes. Publish/read back this synchronization before returning the draft. Current boundary: campaign open, A-005 chat proposal, A-006 waiting for approval; no final integration or closure is selected.
+
 ## Identity and authority
 
 - Campaign: `099_242b6fb`.

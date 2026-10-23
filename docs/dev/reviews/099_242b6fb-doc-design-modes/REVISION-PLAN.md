@@ -27,3 +27,14 @@ A-002 follows A-001; A-003 follows their canonical procedures; A-004 consolidate
 Commit each action's source and observed evidence together, push/read back before the next action, and retain stable campaign identity. Add one substantial pass-control reference rather than scattered fragments; keep main preparation's task lifecycle and document owners' domain procedures with their existing owners. Check repetition, scope/detail balance and preservation of QC/tracking/publication obligations.
 
 Use current source and active campaign records. Leave prior closed records, their source snapshots and historical checks untouched. Existing DOCS tracking definitions and task IDs remain stable; reset reuses objects rather than replacing issue briefs. Runtime tests validate their actual tooling boundary, while walkthroughs assess policy semantics; neither proves an independently consuming agent follows the new modes. No live target repository or GitHub document issues are mutated to test this revision.
+
+## Reopened amendment — Tetris autoloop example
+
+The human explicitly reopened this campaign to derive a multipass/autoloop variant from the Tetris demo's “All-inclusive project prompt.” Original closure is verified at published main merge `655228e4091a3d057dd0f5515bd61f8e05ca6117`, also the refreshed reopening checkpoint. Original identity, opening, baseline and main return target remain unchanged. Incoming synchronization from that checkpoint preserves the campaign branch; it is not amendment completion.
+
+| Action | Scope and outcome | Verification and stopping boundary |
+| --- | --- | --- |
+| A-005 | Read the existing Tetris prompt and present a complete counterpart in chat. Define ordered current-scope documentation passes, first PROJECT approval, later approval waiver, retained-document resets, delegated decisions and the final DOCS-008 stop. Preserve the complete gameplay/configuration target and later implementation version/release policy. | Compare against the existing prompt and canonical modes. Stop for the human's chat approval; do not edit the demo README yet. |
+| A-006 | After chat approval, append the approved counterpart immediately after the existing all-inclusive section in `docs/demo/tetris/README.md`, with a concise lead and matching prompt admonition. | Check approved-text fidelity, headings, links, complete scope and pass/phase distinction; publish/read back the owned result. Keep the campaign open unless closure is requested. |
+
+Only reopening records/continuity and the in-chat draft are authorized before approval. No plugin policy changes, actual target-project passes or resets, package QC, implementation, version bump or release are selected by this amendment.
