@@ -33,6 +33,12 @@ Defined direct default-branch releases and release merges from the designated pr
 
 Source inspection covers direct/default, designated-development merge, side-branch rejection and advanced-default recovery. Checked changed Markdown formatting and patch scope; no runtime or live-release claim follows from this procedural action. Per-action publication is recorded by its containing commit and exact-ref readback.
 
+### A-002 — Release-document staging and exact message
+
+Message preparation now distinguishes preparation and final paths, permits tracked release documents within the active revision directory, and moves only owned documents during the default-branch release commit. Final notes are retained; campaign plans/reports keep their paths. Reporting and commit guidance cover both direct and development-merge commits with identical finalized Markdown. Highlights include the final default-branch result, including changes arriving from its other parent.
+
+Inspected tracked/untracked staging, existing/foreign final files, preparation-only stops, pure moves, exact-body handling and merge coverage. Scoped whitespace/link checks pass; these are instruction/source assessments, not runtime filesystem or consumer execution evidence. Publication follows the containing action commit.
+
 ## Opening evidence
 
 Freshly cloned main is clean at the full baseline above; origin/main matches it. Campaign identity discovery across current tracked paths and fetched refs found the highest reserved sequence to be 097. The published 095, 096 and 097 tips are contained in main. The existing handoff records the completed v0.15.2 release; current main additionally contains the URL.md update at the starting baseline.
