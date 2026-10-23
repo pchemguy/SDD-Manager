@@ -44,3 +44,7 @@ Inspected `sdd-design/references/project-brief.md` and `sdd-manage/references/do
 Objective recheck: a brief prepared for an early or later pass explains its product scope without mentioning documentation passes, future document revisions or mode mechanics; the complete sequence and workflow decisions remain recoverable from the designated records. Current requirements must not be expanded to include future pass scope merely to remove the offending sentence.
 
 Evidence limit: the excerpt is user-supplied; the target demo's complete PROJECT.md and execution trace were not inspected. It establishes the reported content defect, not the exact causal path taken by the consuming agent. No target demo file is edited by this campaign. Opening `dc08e08` is published with matching exact-ref readback and confirmed cleanup. This update records the requirement/finding only; keep the campaign open for further requirements or revision planning/execution direction.
+
+## Execution authorization and plan
+
+The human's “Execute revision” authorizes R-001's bounded source correction under the [revision plan](REVISION-PLAN.md). The finding checkpoint `fce68ab0866fd45aaae1b5fb572cd5333054e479` is published/readback verified with confirmed cleanup. Add the explicit authoring/review content boundary with the brief owner, qualify the mode handoff and verify/publish the result. No separate review campaign or broader mode redesign is needed. Keep campaign 101 open; no target demo repair, main integration, version bump or release is selected.
