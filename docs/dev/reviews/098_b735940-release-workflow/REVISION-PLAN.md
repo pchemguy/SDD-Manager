@@ -6,7 +6,7 @@
 - Current planning source: opening commit `dc9b2b5d79c1dd99608d5a48d72f8bb75e3b2f0c`.
 - Working branch: `revision/098_b735940-release-workflow`; creation parent, eventual integration and return: `main` on `origin`, `pchemguy/SDD-Manager`.
 - Evidence and authority: [campaign record](REVISION-REPORT.md), including the human's subsequent release rules.
-- State: A-001 through A-005 executed and verified within the evidence limits in the campaign report; campaign remains open. Closure and release publication remain outside this request.
+- State: A-001 through A-005 executed and verified within the evidence limits in the campaign report. The human's subsequent “close” selects final explicit main integration, verification/publication and clean return. Product release publication remains outside scope.
 
 Release tags must always identify release commits established on the repository's actual default branch. The release commit is either a commit made directly on that branch or the merge commit that integrates the designated primary development branch into it. A revision-branch commit is not an eligible release source merely because it is reachable through a later merge. The designated development branch need not be literally named `dev`; its primary development role must be established rather than inferred from a name.
 
@@ -34,4 +34,4 @@ Keep procedural detail in the existing cohesive release references, with shallow
 
 For each selected execution action, commit its owned changes and observed evidence together, then push/read back before the next action. Preserve the current campaign identity and branch-off baseline. Final integration, when authorized and verified, uses an explicit two-parent merge into the recorded parent and updates continuity. This campaign's own future merge is distinct from publishing a product release.
 
-Execute A-001 through A-005 and stop after their verified publication with the campaign open. No version bump, tag movement/creation, release dispatch/publication or campaign closure is included. Live provider and fresh Windows runtime checks are unperformed; planned fixtures and source checks must not be reported as execution evidence.
+The initial execution stopped with the campaign open. The subsequent closure instruction now authorizes finalization, explicit two-parent integration into main, merged-state checks, target publication/readback and clean return, then stops. No version bump, tag movement/creation or release dispatch/publication is included. Live provider and fresh Windows runtime checks are unperformed; planned fixtures and source checks must not be reported as execution evidence.

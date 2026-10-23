@@ -7,11 +7,11 @@
 - Working branch: `revision/098_b735940-release-workflow`.
 - Creation parent, eventual integration target and return branch: `main` on `origin`, `pchemguy/SDD-Manager`.
 - Request: “Open release workflow revision campaign.”
-- State: Open; A-001 through A-005 of the [revision plan](REVISION-PLAN.md) are executed and verified within the evidence limits below. Campaign closure and a product release are not selected.
+- State: A-001 through A-005 of the [revision plan](REVISION-PLAN.md) are executed and verified within the evidence limits below. The human selected closure; this record is finalized for explicit main integration, merged-state verification/publication and clean return. A product release is not selected.
 
 ## Scope and stopping boundary
 
-The opening established the campaign identity, branch and continuity checkpoint. The subsequent human instructions establish the release rules below and authorize plan execution. Execute its bounded actions and stop with the campaign open, before a version bump, tagging, release publication or campaign closure.
+The opening established the campaign identity, branch and continuity checkpoint. Subsequent human instructions established the release rules, authorized plan execution and then selected closure. Finish the verified explicit main integration/publication and clean return, then stop before any version bump, tagging or release publication.
 
 Source owners are sdd-manage for coordination and Git boundaries, sdd-forge for release preparation and provider publication, sdd-report for messages, and sdd-verify for release checks. The plan includes repository publisher/CI enforcement and affected current documentation.
 
@@ -64,6 +64,14 @@ Existing references retain cohesive procedures; entry summaries stay shallow, wi
 Verification remains 49 publisher tests (including 12 new provenance tests), 139 support tests and the 153-file local package build detailed in A-004. Final current-document link/heading/whitespace checks pass. No changed executable followed those passing tests; A-005 adds procedural clarification and completion evidence only. No live CI run, fresh Windows runtime, independent consuming agent, tag, version bump, release dispatch or product publication is claimed. No workflow YAML change was necessary: shallow checkout remains compatible with provider-object ancestry verification.
 
 Action publication checkpoints: A-001 `12de2d3bbbb950a7ec5b20b87966501b9697c5b3`, A-002 `8298663c2f160272f146b3399d0a4f7e3d0e13ac`, A-003 `e12f6e4b00f70393c3eb10c2596faa54b6682553`, and A-004 `e40961a2221d9073eaa8889e85d7df80096a1800` all have successful exact-ref readback and confirmed process cleanup. A-005's containing commit must likewise be published/read back before returning. The worktree remains on `revision/098_b735940-release-workflow`; default main is not merged or changed by this execution request. Stop with the campaign open for the human's next direction.
+
+## Finalization and closure boundary
+
+The human's “close” authorizes completion of campaign 098. A fresh bounded fetch confirms origin/main remains `b7359405ae35faac59b8182bca91b347d5e75d94` and the published campaign execution tip is `b95ed77df9d660f819565abf66b53d0511172b92`. Its exact-ref publication and confirmed cleanup are verified. The original opening remains `dc9b2b5d79c1dd99608d5a48d72f8bb75e3b2f0c`; the full starting baseline above is distinct.
+
+All five accepted actions are complete, with no deferred finding or unresolved execution failure. Final scope checks preserve prior closed campaign packages, version and existing release notes. Publish/read back this finalization commit, then explicitly merge its complete tip into refreshed main with two parents. Verify the prospective merged source, scoped links/style, publisher/support suites and package integrity under the contributor instructions. Git and the final merge message retain the exact source/target tips and actual merged-state results; do not append to this record after closure.
+
+The final main merge, target push/readback and clean return establish actual closure; this pre-merge record does not claim those later operations have already succeeded. No tag, GitHub release, version bump, plugin installation or parent continuation is included. Retain campaign branches and freeze the completed records after closure. Local checks do not establish a fresh Windows run, live release workflow/provider acceptance or independent consumer behavior.
 
 ## Opening evidence
 
