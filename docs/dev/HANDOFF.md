@@ -1,6 +1,6 @@
 # SDD Manager handoff
 
-Campaign [099 — doc-design modes](reviews/099_242b6fb-doc-design-modes/REVISION-REPORT.md) is open. All four actions in its [revision plan](reviews/099_242b6fb-doc-design-modes/REVISION-PLAN.md) are implemented and verified within the report's evidence limits; closure is not selected. Reporting: Standard.
+Campaign [099 — doc-design modes](reviews/099_242b6fb-doc-design-modes/REVISION-REPORT.md) is finalized for human-selected closure. All four actions in its [revision plan](reviews/099_242b6fb-doc-design-modes/REVISION-PLAN.md) are implemented and verified; actual closure requires explicit main integration, merged-state checks, target publication/readback and clean return. Reporting: Standard.
 
 ## Workflow and scope
 
@@ -12,8 +12,8 @@ Implementation adds one cohesive mode/pass reference, coordinator/preparation/re
 
 ## Git context
 
-Working branch: `revision/099_242b6fb-doc-design-modes`. Creation parent, eventual integration and return: `main` on `origin`, pchemguy/SDD-Manager. Full baseline/branch-off: `242b6fbceab48196ae8f75c40a3f739f1129864d`. No parent campaign is suspended. Main contains the completed 098 release-workflow revision; its closed records and all earlier campaign packages remain frozen.
+Campaign branch: `revision/099_242b6fb-doc-design-modes`. Creation parent, integration and return: `main` on `origin`, pchemguy/SDD-Manager. Full baseline/branch-off: `242b6fbceab48196ae8f75c40a3f739f1129864d`; original opening: `1a47b5001479507cc820ad2a449062b4b6cce091`. No parent campaign is suspended. The final main merge supplies exact source/target parents and merged-state checks. Main contains completed 098; its closed records and all earlier campaign packages remain frozen.
 
 ## Pending boundary
 
-Opening, requirements, plan and source action commits through `c99cb341fa9afb3655fa2f78bd767dfa79d9273b` are published and verified; the campaign report retains exact identities. Publish/read back this A-004 completion checkpoint, then stop with the campaign open for further direction. No main integration, actual project reset/hosted issues, version/tag/release or closure is selected. If publication is interrupted, reconcile the retained operation rather than allocating another campaign.
+Completion checkpoint `0221c2ccf2d5444d01eccacf22073b2444d5ed17` is published and verified. The human selected closure. Publish/read back finalization, explicitly merge the complete campaign into main, verify the merged source, publish/read back main and confirm clean return. If interrupted, reconcile the retained branch/merge/publication state rather than replaying it. After actual closure freeze the records and stop; no real project reset/hosted DOCS mutation, plugin installation, version bump, tag or release is selected.

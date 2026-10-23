@@ -7,7 +7,7 @@
 - Working branch: `revision/099_242b6fb-doc-design-modes`.
 - Creation parent, eventual integration and return: `main` on `origin`, `pchemguy/SDD-Manager`.
 - Request: open a doc-design revision, define doc-design modes and retain the following initial rules; additional modes will be supplied in later turns.
-- State: Open; A-001 through A-004 of the [revision plan](REVISION-PLAN.md) are executed and verified within the evidence limits below. Campaign closure and any product development/release remain unselected.
+- State: A-001 through A-004 of the [revision plan](REVISION-PLAN.md) are executed and verified within the evidence limits below. The human selected closure; finalized for explicit main integration, merged-state verification/publication and clean return. Product development/release remains unselected.
 
 ## Accepted mode requirements
 
@@ -129,6 +129,14 @@ The following are source walkthroughs of the implemented procedure, not observed
 One cohesive reference owns mode/pass mechanics; document, tracking and QC owners retain their detailed procedures. The new reference is approximately 1,100 words with selection, decision, pass, reset and recovery boundaries; it is not split into trivial fragments. Entries and public summaries link the owner instead of repeating its procedure. No unresolved correction remains from the bounded source assessment.
 
 Publication checkpoints through source verification: plan `8183c01c718e6442b427c38caec6f147177e4186`, A-001 `cd930076105b1db4fc4ebd8fd6da2fb0deeac034`, A-002 `eea247b12da42b2790ee3f2ea0e820f447c2a37c`, A-003 `da70528acb88693e2e5e451d7be16b0dd42fe53e` and scope clarification `c99cb341fa9afb3655fa2f78bd767dfa79d9273b` have matching exact-ref readback and confirmed cleanup. Publish/read back this completion checkpoint before returning. Keep the campaign open on its revision branch; no main merge, product cursor/issue reset, live-provider operation, version bump, tag or release is selected. Fresh Windows, live agent/provider behavior and a rendered diagram remain unclaimed.
+
+## Finalization and closure boundary
+
+The human's “close it” selects closure. Fresh bounded remote inspection confirms origin/main at the original baseline `242b6fbceab48196ae8f75c40a3f739f1129864d` and the published campaign completion tip at `0221c2ccf2d5444d01eccacf22073b2444d5ed17`. Its exact-ref readback and confirmed process cleanup are verified. Original opening remains `1a47b5001479507cc820ad2a449062b4b6cce091`, distinct from the starting baseline.
+
+All accepted actions and the current-pass scope clarification are complete, with no unresolved correction from the bounded source assessment. Finalize navigation and HANDOFF, check scoped links/style and prior closed-path preservation, and publish/read back this finalization commit before integration. Then explicitly merge its complete tip into refreshed main with two parents; verify the prospective merged tree, 49 publisher/139 support/84 forge contracts and package integrity. The final merge and its message retain exact source/target parents and actual merged-state results; do not edit this record after closure.
+
+Actual closure requires the verified main merge, target publication/readback and clean return. This pre-merge record does not claim those later effects have happened. Stop after closure, retaining the campaign branch and frozen records. No actual target-project cursor reset, hosted DOCS mutation, plugin installation, version bump, tag or product release is included. Fresh Windows, live agent/provider and rendered diagram evidence remain unclaimed.
 
 ## Opening evidence and next boundary
 
