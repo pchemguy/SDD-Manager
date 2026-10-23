@@ -10,6 +10,8 @@ If the human explicitly requests interactive review of existing artifacts, begin
 
 ## Future-checkpoint preapproval
 
+For main preparation, apply the selected [doc-design mode](doc-design-modes.md): interactive/onepass is the ordinary default; autodoc selects scoped later-document preapproval and an earlier stop. Autoloop retains the first PROJECT checkpoint, explicitly waives later PROJECT approvals and delegates new material decisions as defined there. Human-controlled multipass retains each pass's PROJECT checkpoint. Record this mode basis rather than claiming individual human approvals that did not occur.
+
 The user may explicitly preapprove any future human checkpoint at any point, individually or as a scoped set, including document acceptance, initialization continuation and the final preimplementation checkpoint. Retain the actual scope, conditions and later revocation in existing workflow evidence, including across interruptions. A covered checkpoint still requires authoring, QC, reporting, persistence and required hosted operations, but no repeated acceptance pause. Preapproval does not clear technical blockers or unresolved consequential decisions, grant missing repository authority or select/expand an implementation range. A generic development request, repository-operation authority, silence or clarification is not preapproval. Persist a changed grant/revocation in its owning evidence before dependent work so [checkpoint recovery](continuity.md#reconstruct-after-the-checkpoint) finds it even when HANDOFF predates that decision; no per-decision handoff refresh is required when the existing records suffice.
 
 ## Created-document checkpoints
@@ -34,7 +36,7 @@ Preserve dependency order: PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, lay
 4. Record the actual decision with document/proposal scope and exact presented state (commit/blob or content identity) in existing preparation, handoff or active campaign evidence. Keep pending, accepted and revise decisions distinguishable from technical readiness. No new journal, registry or mandatory report per design root is required.
 5. While acceptance is pending, answer questions or route requested current-stage revisions to the owner within scope. Recheck affected concerns, present the revised reviewable state and stop at the same checkpoint; do not author dependent artifacts or begin/advance implementation before the required acceptance. Acceptance-and-proceed clears the presented scope and its authorized next step; only an explicit applicable future-checkpoint preapproval covers unseen downstream documents. If the human explicitly changes checkpoint scope, retain that decision; generic authorization is not a waiver.
 
-For main preparation, [main preparation](main-preparation.md#document-tasks-through-first-approval) owns the approval/task commit and subsequent issue closure: DOCS tasks track first approval, while later revisions keep those tasks complete.
+For main preparation, [main preparation](main-preparation.md#document-tasks-through-first-approval) owns the approval/task commit and subsequent issue closure: DOCS tasks track first approval in the active pass. Ordinary later edits keep them complete; an explicit [cursor reset](doc-design-modes.md#reset-the-cursor) invalidates that completion for the next pass and reopens the same tasks/issues.
 
 ## QC, operation authority and continuation
 

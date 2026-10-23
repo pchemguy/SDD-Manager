@@ -2,6 +2,8 @@
 
 Use this procedure for greenfield projects and resumed incomplete main documentation preparation, including direct calls to a document owner. It owns preparation task progression, initialization and final completion; focused skills still own their documents and QC. Feature/revision adoption and active implementation retain their existing procedures. Read-only exploration creates no files or hosted objects.
 
+Select/recover [doc-design mode and pass control](doc-design-modes.md) at entry. Interactive/onepass is the ordinary default; autodoc has a DOCS-008 stop, and explicit reset reopens the existing document tasks/issues for another pass. Initialization and pre-write tracking gates remain required in every mode.
+
 ## Establish preparation before repository writes
 
 1. Use current orientation to identify the eligible target Git repository, instructions, actual default branch, pending ownership, existing documents and decisions, and the requested scope/stop. Reuse the active main preparation and its branch instead of allocating another campaign. Do not initialize Git implicitly.
@@ -62,7 +64,9 @@ Push and verify remote containment before closing/readback of the corresponding 
 
 Intermediate document decisions/progress remain in DOCS_TASKS and existing evidence; do not rewrite HANDOFF at every proposal, approval or document commit. Recover changes since its entry checkpoint under [continuity](continuity.md#reconstruct-after-the-checkpoint).
 
-**These tasks and issues track development through first approval.** Later revisions leave their checkboxes complete and issues closed. This does not freeze documents or establish permanent readiness: assess/review revised content under its owning procedure and reflect blockers in the current work or package QC. Never route DOCS tasks through the implementation owner's `T-*` commit/audit contract.
+**These tasks and issues track development through first approval in the active pass.** Ordinary later edits leave their checkboxes complete and issues closed. Only an authorized [cursor reset](doc-design-modes.md#reset-the-cursor) reopens DOCS-002–009 for another pass while retaining documents and identities. This does not freeze documents or establish permanent readiness: assess revised content under its owning procedure and reflect blockers in current work or package QC. Never route DOCS tasks through the implementation owner's `T-*` commit/audit contract.
+
+After DOCS-008 publication and enabled issue closure, apply the selected mode's [pass boundary](doc-design-modes.md#complete-a-pass) before the next section: autodoc stops before DOCS-009, or resets for the next predefined autoloop scope. Completing TASKS alone does not select package QC or integration in those modes.
 
 ## Final package QC, integration and checkpoint
 
@@ -77,4 +81,4 @@ Coordinate in-scope repairs with document owners, return consequential decisions
 
 ## Recovery
 
-Recover the earliest unmet authorized operation from actual files, original presence evidence, decisions, list, Git and hosted state. Preserve completed work, IDs, pending publication/closure and a mixed-initialization stop; final file presence cannot erase its original partial-presence decision. Read uncertain effects before retrying. Finish the retained commit/push/closure/merge rather than regenerate documents or repeat operations. Preserve completed first-approval tasks through later revisions and assess current package readiness separately. Missing or contradictory ownership/decision evidence requires resolution, not guessed approval.
+Recover the earliest unmet authorized operation from actual files, original presence evidence, decisions, list, Git and hosted state. Preserve completed work, IDs, pending publication/closure and a mixed-initialization stop; final file presence cannot erase its original partial-presence decision. Read uncertain effects before retrying. Finish the retained commit/push/closure/merge rather than regenerate documents or repeat operations. Preserve completed first-approval tasks through ordinary later edits; after a recorded reset, recover current-pass completion and pending reopening under [pass recovery](doc-design-modes.md#resume-or-steer). Assess current package readiness separately. Missing or contradictory ownership/decision evidence requires resolution, not guessed approval; use actual autoloop delegation for eligible material choices.

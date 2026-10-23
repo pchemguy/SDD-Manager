@@ -26,6 +26,7 @@ At authorized workflow entry/adoption, reconcile existing context and create/upd
 | Revision finalization | Refresh its outcome and return boundary with existing campaign finalization evidence; intermediate action detail stays in campaign records. |
 | Completed main/feature preparation or other composite operation | Refresh the preparation/operation checkpoint with its actual pending human/hosted boundary. Intermediate document approvals stay in their owning evidence. |
 | Nested entry, steering return or eligible integration | Preserve parent suspension or restore parent context under the return procedure below. |
+| Doc-design cursor reset or autodoc DOCS-008 stop | Refresh with selected mode, pass/cursor, scope/approval basis and outstanding hosted effects under [pass control](doc-design-modes.md); include the snapshot in the reset or DOCS-008 completion commit. |
 
 Refresh at these boundaries automatically, without waiting for a handoff request. Include it in the owning commit; do not add handoff tasks or routine maintenance commits. Failed/blocked review retains its findings and incomplete boundary; it cannot produce a successful-completion snapshot. A completed milestone inside an incomplete main phase pushes/pauses without merging.
 
