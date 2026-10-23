@@ -1,19 +1,19 @@
 # SDD Manager handoff
 
-Campaign [101 — doc-design revision](reviews/101_39e46b9-doc-design/REVISION-REPORT.md#finalization-and-closure-boundary) is finalized for the human-requested closure through verified main integration/publication. Use sdd-manage for the remaining Git boundary; reporting Standard. No parent campaign is suspended.
+Campaign [102 — documentation task/preparation separation](reviews/102_4a16f6d-docs-task-boundary/REVISION-REPORT.md) is open. Use sdd-manage for scoped revision planning; reporting Standard. No parent campaign is suspended.
 
 ## Scope and result
 
-A-001 is complete and R-001 source-verified. The shared document-review procedure defines the content boundary for PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS, including feature counterparts and focused children, in every mode. PLUGIN/coordinator, four authoring entries and author/reviewer/QC gates enforce it.
+The human requires DOCS_TASKS to hold tasks and a separate document to own non-task preparation content. Record `docs/dev/DOCS_PREPARATION.md` as the intended dedicated owner for mode/pass/cursor, scope sequence, approval/delegation, initialization/reset state and evidence. Define its template/lifecycle and reconcile affected instructions during revision planning; the new artifact is not yet implemented.
 
-Project documents express the project directly. DOCS_TASKS and existing workflow records, including HANDOFF, retain preparation mode/pass/cursor, future scope sequences and approval/reset evidence. PLAN/TASKS retain actual implementation phases/work. Future scope is neither imported early nor made a permanent non-goal. No target demo or approved prompt changes.
+Keep task definitions/checkoffs in DOCS_TASKS, periodic continuity in HANDOFF and project content in its development documents. Preserve existing evidence, stable task/hosted identities, approval/QC/publication gates and reset/recovery behavior. The earlier proposal to retain a compact state section in DOCS_TASKS is superseded by the human's boundary.
 
 ## Verification and Git
 
-At published source `09086fbf73f544b0719b661dd3419c92557bed08`, 139 support and 49 publisher tests pass. Current links/anchors, all 18 coordinator routes, scoped ownership and whitespace pass. The exact 154-file package matches Git and five extracted CLI help runs pass. Independent consumer rerun, native Windows and live-provider acceptance remain untested. Runtime/templates/hosting definitions/version/notes, policies, demos and closed packages are preserved.
+The preceding read-only instruction assessment found explicit mixed ownership in the DOCS task template, main preparation and mode/control references. It did not inspect a consuming project's actual list or establish agent behavior. This opening changes only the active campaign report, navigation and HANDOFF; source/templates/runtime and closed packages remain unchanged. Verify opening links, ownership and whitespace before publication.
 
-Campaign branch `revision/101_39e46b9-doc-design`; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Original full branch-off/baseline and refreshed main: `39e46b9c159838a87baca6501dc0d75ac4bd1702`; opening: `dc08e08f3500b4d3d34796203099cc0b03346c88`. Executed source publication/readback and process cleanup are confirmed.
+Campaign branch `revision/102_4a16f6d-docs-task-boundary`; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Full baseline/branch-off and refreshed main: `4a16f6dc3d3025a87183fdf4acb09601a125f649`, the published verified campaign 101 closure merge. Worktree was clean at entry; all prior closed records remain frozen.
 
 ## Pending boundary
 
-Publish/read back this finalization, explicitly merge its verified tip into main, verify the merged state and publish/read back main, then return cleanly and stop. After actual completion, this is the completed root-work checkpoint awaiting new human direction. Recover finalization/merge/publication facts from Git and owning tool evidence; this snapshot cannot prove its own subsequent effects. No release, version bump, target-project mutation or further workflow is selected.
+Commit and publish/read back this opening, then stop with campaign 102 active for further requirements or revision planning direction. No source execution, target-project migration, main integration, version bump, release or closure is selected. Recover the opening commit/publication from Git and owning tool evidence; this snapshot cannot prove its own subsequent effects.
