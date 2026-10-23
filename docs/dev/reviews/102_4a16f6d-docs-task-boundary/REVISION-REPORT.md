@@ -38,3 +38,15 @@ Fresh bounded fetch confirms clean main/origin at the baseline above. Campaign 1
 Verify this opening's three-path ownership, links and whitespace, then commit and publish/read back the campaign branch. No source or runtime change is made, so runtime tests are not required for this opening. Recover the opening commit and later publication from Git/owning tool evidence rather than claiming future effects in this pre-commit record.
 
 Observed opening checks pass: baseline/branch identity and exact three-path ownership; 130 current Markdown files with 1,180 local link/anchor occurrences and no problems; staged whitespace. Closed packages are excluded from content validation and remain unchanged. No runtime test or independent consumer trial is claimed.
+
+## Revision planning
+
+The human requests the [revision plan](REVISION-PLAN.md). Opening `f52904ceb24e73bb5912e85c2d6d6b784c1bc1d3` is published with matching exact-ref readback and confirmed cleanup. This request selects planning, not source execution or closure.
+
+The plan specifies task-only DOCS_TASKS and the separate DOCS_PREPARATION template/record, lifecycle and bounded evidence structure; migration preserving existing decisions and checkboxes; approval/reset atomicity; all affected owner/caller routes; hosted fixed-content compatibility and package/test/documentation updates. A-001 is the coherent source revision and A-002 its complete verification/result checkpoint. Both remain Planned.
+
+Additional source inspection confirms that `projection-input.mjs` parses the nine task checkbox IDs/names/order and ignores unrelated prose, so the new preparation record needs no CLI/schema input or pre-write projection prerequisite. `DOCS_TRACKING_TEMPLATE.json` supplies exact hosted briefs: changing their source/evidence wording can produce existing-object or saved-request conflicts, which require explicit identity-preserving reconciliation rather than silent overwrite/duplicates. `.github/scripts/release.py` explicitly requires preparation assets, and publisher/support fixtures verify exact package bytes; include the new template in these existing contracts. These are planning observations, not executed rechecks of the proposed implementation.
+
+Before committing the plan, check its active links, scope, ownership and whitespace. Publish/read back the planning checkpoint and stop with the campaign open. Existing HANDOFF links this campaign record and retains the planning boundary; no extra per-plan HANDOFF commit is needed.
+
+Observed plan checks pass: 131 current Markdown files and 1,183 local links/anchors, staged whitespace and exactly the active plan/report/navigation paths. Plugin source/assets, runtime, package tooling/tests and closed packages are unchanged. Runtime and implementation verification remain planned, not run for this record-only checkpoint.
