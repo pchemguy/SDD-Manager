@@ -163,3 +163,9 @@ Append the approved text verbatim as “Multipass autoloop project prompt” aft
 Verification on this documentation result: extracted prompt equals the approved chat text; six pass headings are ordered 1–6; the original README prefix is unchanged; current local links and Markdown whitespace pass. The five-file delta is limited to the demo README and this campaign's plan/report/index/HANDOFF. Plugin source and other closed records remain unchanged. These are content/structure checks, not an execution of the demo or a fresh runtime/consumer test.
 
 Commit and publish/read back this result before returning. A-005/A-006 are complete subject to that publication boundary. Keep campaign 099 open on its branch; no final main integration, version bump, tag, release or campaign closure is authorized by this prompt approval.
+
+## A-007 — Entry exposure planning
+
+The approved demo result `e7e79ba1e5ae754c639f158c130d64f9d6fccb43` is published with matching exact-ref readback and confirmed cleanup. The human additionally requests clear early exposure of doc-design modes in PLUGIN.md and the coordinator. This extends the existing open amendment; it does not reopen another campaign or authorize closure.
+
+Read the current plugin development contract and relevant entry/contextual assessment cases. Source inspection finds the existing modes paragraph below PLUGIN.md's generic checkpoint table, a mode link without named choices in the coordinator gates, and an unqualified generic checkpoint summary in workflows.md. The packaged README already exposes all four selections and remains accurate; no duplicate public procedure is needed. A-007 in the plan scopes concise entry/selection projections and proportional checks, retaining the canonical detailed owner unchanged. Publish/read back this planning checkpoint before source changes.
