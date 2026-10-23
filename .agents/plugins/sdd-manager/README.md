@@ -99,7 +99,8 @@ The main documents describe the complete intended project. Roots may link to foc
 | `PLAN.md` | Meaningful end-to-end MVP, small capability increments, phases/milestones, dependencies, and verification/decision gates. |
 | `layout.md` | Physical ownership of source, tests, documentation, and other artifacts. |
 | `TASKS.md` | Phase → Milestone → Task hierarchy, stable IDs, and progress evidence. |
-| `DOCS_TASKS.md` | Predefined main preparation: initialization, seven document first approvals and final package QC. |
+| `DOCS_TASKS.md` | Nine main-preparation task definitions and completion checkboxes only. |
+| `DOCS_PREPARATION.md` | Main-preparation mode/pass control, scope sequence, decisions, initialization/reset evidence and pending transitions. |
 | `DOCS-QC-REPORT.md` | Whole documentation package readiness, checked sources, findings and evidence limits. |
 | `HANDOFF.md` | Workflow checkpoint, authorized scope/stop, branches/parent return and pending work; later records and Git supply subsequent changes. |
 
@@ -134,7 +135,7 @@ The generated AGENTS.md enables GitHub tracking for documentation preparation an
 
 When enabled, tracking creates/verifies the native `sdd-docs-main` milestone and all nine preparation issues **before repository modifications**. The [bundled JSON](assets/DOCS_TRACKING_TEMPLATE.json) fixes the milestone title/plain-text description and complete issue briefs/dependencies. Initialization preserves existing root AGENTS/disclosure/usage/discovery files and copies missing ones. If only some existed, the agent reports both groups and pauses after publishing initialization; none/all present adds no approval stop. Existing preparation resumes without replacing files or replaying first approvals.
 
-`docs/dev/DOCS_TASKS.md` comes from the bundled template. Each document task completes at first approval: its approved state and checked task share one commit, followed by push/readback and issue closure. Ordinary later edits keep that task complete and issue closed; an explicit cursor reset reopens DOCS-002–009 and the same issues for the next pass, retaining all documents and DOCS-001. The last task/issue checks the whole package; then the docs branch merges, the verified merge is published, the milestone closes and the agent confirms the final checkpoint before implementation. See [main preparation](skills/sdd-manage/references/main-preparation.md).
+`docs/dev/DOCS_TASKS.md` contains tasks/checkoffs only. The separate `docs/dev/DOCS_PREPARATION.md` holds control, decisions and evidence; both use bundled templates. Legacy mixed lists move non-task content to that record without losing decisions or task progress. Each document task completes at first approval: its accepted state, preparation-record evidence and checked task share one commit, followed by push/readback and issue closure. Ordinary later edits keep that task complete and issue closed; an explicit cursor reset reopens DOCS-002–009 and the same issues for the next pass, retaining all documents and DOCS-001. The last task/issue checks the whole package; then the docs branch merges, the verified merge is published, the milestone closes and the agent confirms the final checkpoint before implementation. See [main preparation](skills/sdd-manage/references/main-preparation.md).
 
 ### Agent quality checks
 
@@ -156,7 +157,7 @@ These diagrams explain the human-visible paths. [PLUGIN.md](PLUGIN.md#composite-
 
 ### Project preparation
 
-Each authoring node creates/checks and publishes a necessary document under selected human approval or mode preapproval. Record current-pass acceptance with its completed DOCS task, then close its issue when enabled. Design covers PROJECT, ARCHITECTURE and DECOMPOSITION in order; a reset starts at PROJECT using retained documents. The pass boundary below separates normal completion, autodoc stops and predefined resets. Dependent implementation still requires verified published preparation integration.
+Each authoring node creates/checks and publishes a necessary document under selected human approval or mode preapproval. Record current-pass acceptance in DOCS_PREPARATION in the same commit as the accepted document and completed DOCS task, then close its issue when enabled. Design covers PROJECT, ARCHITECTURE and DECOMPOSITION in order; a reset starts at PROJECT using retained documents. The pass boundary below separates normal completion, autodoc stops and predefined resets. Dependent implementation still requires verified published preparation integration.
 
 ```mermaid
 flowchart TB
@@ -285,7 +286,7 @@ See [packaging](skills/sdd-forge/references/github-packaging.md), [release workf
 
 ## Plugin package
 
-The Agent Plugins 1.0 package includes package-root plugin.json, README.md, PLUGIN.md and LICENSE, plus skills/ and assets/. Assets include disclosure/usage notices, [AGENTS_TEMPLATE.md](assets/AGENTS_TEMPLATE.md), [DOCS_TASKS_TEMPLATE.md](assets/DOCS_TASKS_TEMPLATE.md), [DOCS_TRACKING_TEMPLATE.json](assets/DOCS_TRACKING_TEMPLATE.json), [SKILL_DISCOVERY_PROTOCOL.md](assets/SKILL_DISCOVERY_PROTOCOL.md) and the [Greenfield Project Prompt Template](<assets/Greenfield Project Prompt Template.md>). Root plugin.json is the sole manifest; OpenAI presentation metadata is under extensions.com.openai.interface. PLUGIN.md is SDD Manager's explicit composition entry, not a claim of standardized automatic discovery.
+The Agent Plugins 1.0 package includes package-root plugin.json, README.md, PLUGIN.md and LICENSE, plus skills/ and assets/. Assets include disclosure/usage notices, [AGENTS_TEMPLATE.md](assets/AGENTS_TEMPLATE.md), [DOCS_TASKS_TEMPLATE.md](assets/DOCS_TASKS_TEMPLATE.md), [DOCS_PREPARATION_TEMPLATE.md](assets/DOCS_PREPARATION_TEMPLATE.md), [DOCS_TRACKING_TEMPLATE.json](assets/DOCS_TRACKING_TEMPLATE.json), [SKILL_DISCOVERY_PROTOCOL.md](assets/SKILL_DISCOVERY_PROTOCOL.md) and the [Greenfield Project Prompt Template](<assets/Greenfield Project Prompt Template.md>). Root plugin.json is the sole manifest; OpenAI presentation metadata is under extensions.com.openai.interface. PLUGIN.md is SDD Manager's explicit composition entry, not a claim of standardized automatic discovery.
 
 All 15 skills are distributed together. Their relative references stay within the plugin root; named handoffs and client loading/routing are separate concerns. See [bundled-skill guidance](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md#bundled-skill-references). Artwork includes assets/icon.svg, icon.png, logo.svg and logo.png; manifest icons use icon.svg and logo.svg, including dark variants.
 

@@ -13,7 +13,7 @@ Keep a brief outcome summary and four groups:
 3. Working branch, recorded creation parent, full branch-off commit, integration target, suspended parent stage and return boundary.
 4. Pending work/effects, blockers and next eligible action **as of the checkpoint**. Include necessary package/version/setup/input availability and transfer limits when relevant.
 
-TASKS/DOCS_TASKS, current campaign/phase reports and accepted documents own their details. Preserve later grants, revocations, stops and tracking decisions in those existing records when received, before dependent work; ordinary commits retain their normal result/evidence. Link their locations from the handoff. Retain the selected reporting preference here when needed. Summarize older phase/campaign outcomes with links instead of repeating tasks, logs or a conversation. Require no additional journal, issue registry, incremental handoff files or saved patch series.
+TASKS, current campaign/phase reports and accepted documents own their details. In main preparation, DOCS_TASKS owns task definitions/checkoffs and DOCS_PREPARATION owns control, scope sequence, decisions and evidence; HANDOFF links both rather than duplicating their detail. Preserve later grants, revocations, stops and tracking decisions in those existing records when received, before dependent work; ordinary commits retain their normal result/evidence. Link their locations from the handoff. Retain the selected reporting preference here when needed. Summarize older phase/campaign outcomes with links instead of repeating tasks, logs or a conversation. Require no additional journal, issue registry, incremental handoff files or saved patch series.
 
 ## Establish and refresh
 
@@ -26,7 +26,7 @@ At authorized workflow entry/adoption, reconcile existing context and create/upd
 | Revision finalization | Refresh its outcome and return boundary with existing campaign finalization evidence; intermediate action detail stays in campaign records. |
 | Completed main/feature preparation or other composite operation | Refresh the preparation/operation checkpoint with its actual pending human/hosted boundary. Intermediate document approvals stay in their owning evidence. |
 | Nested entry, steering return or eligible integration | Preserve parent suspension or restore parent context under the return procedure below. |
-| Doc-design cursor reset or autodoc DOCS-008 stop | Refresh with selected mode, pass/cursor, scope/approval basis and outstanding hosted effects under [pass control](doc-design-modes.md); include the snapshot in the reset or DOCS-008 completion commit. |
+| Doc-design cursor reset or autodoc DOCS-008 stop | Refresh with concise mode/pass/next-boundary context and a DOCS_PREPARATION evidence link, retaining outstanding hosted effects under [pass control](doc-design-modes.md); include the snapshot in the reset or DOCS-008 completion commit. |
 
 Refresh at these boundaries automatically, without waiting for a handoff request. Include it in the owning commit; do not add handoff tasks or routine maintenance commits. Failed/blocked review retains its findings and incomplete boundary; it cannot produce a successful-completion snapshot. A completed milestone inside an incomplete main phase pushes/pauses without merging.
 
@@ -47,7 +47,7 @@ After selection, follow [branch management](branch-management.md) for safe check
 ## Reconstruct after the checkpoint
 
 1. Read applicable AGENTS instructions, selected HANDOFF and relevant current owners. Establish actual branch/HEAD, worktree/index ownership and package availability. If the record is absent, reconstruct derivable facts from existing documents/Git and establish it only within authorized write scope; do not invent past grants.
-2. Locate and verify its checkpoint. Inspect relevant commits/diffs since it, current TASKS/DOCS_TASKS or campaign evidence and later decision records. Include non-task and merge changes; an older handoff followed by valid task commits is expected, not a failure.
+2. Locate and verify its checkpoint. Inspect relevant commits/diffs since it, current TASKS or campaign evidence, and main DOCS_TASKS plus DOCS_PREPARATION and later decisions as applicable. Include non-task and merge changes; an older handoff followed by valid task commits is expected, not a failure.
 3. Recover the current objective/range, stop, approvals/revocations, tracking choice, accepted inputs, unfinished operation and parent return. Current controlling instructions and actual later human decisions supersede the older snapshot. Branch names, ready tasks and checkboxes do not supply missing authorization.
 4. Inspect uncertain Git/hosted effects by exact identity before retrying. Preserve an eligible retained commit, in-progress merge, issue operation and their evidence; use the owning recovery procedure. Do not replay completed work or infer external success from saved text.
 5. Hand reconstructed facts to the selected owner and resume the earliest eligible operation within actual authority. Report a concrete missing decision/facility if evidence is contradictory, unresolvable or outside scope. A current clean snapshot is not a prerequisite for safe recovery.

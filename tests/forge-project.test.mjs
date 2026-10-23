@@ -520,11 +520,43 @@ test('convenience bootstrap uses bundled definitions only when the default docum
   assert.equal(result.code, 'projection_pending'); assert.equal(writes(state).length, 0);
   assert.equal(result.effects.length, 10);
   assert.ok(!fs.existsSync(path.join(local.root, 'docs/dev/DOCS_TASKS.md')));
+  assert.ok(!fs.existsSync(path.join(local.root, 'docs/dev/DOCS_PREPARATION.md')));
   assert.equal(git(local.root, 'status', '--porcelain'), before);
   assert.ok(!fs.existsSync(path.join(local.root, '.git/sdd-forge-close.lock')));
   fs.writeFileSync(path.join(local.root, 'docs/dev/DOCS_TASKS.md'), 'Invalid source');
   await assert.rejects(runProject({ kind: 'docs-main', repo: local.root, mode: 'check' }));
   assert.throws(() => runDraft({ kind: 'docs-main', repo: local.root }));
+});
+
+test('docs-main task source stays independent of separate preparation evidence', async t => {
+  const local = localRepo(t), raw = installDocs(local.root), state = fixture();
+  const evidence = path.join(local.root, 'docs/dev/DOCS_PREPARATION.md');
+  fs.writeFileSync(evidence, '# Preparation\n\nPass 2; awaiting acceptance.\n');
+  git(local.root, 'add', 'docs/dev/DOCS_PREPARATION.md');
+  git(local.root, 'commit', '-qm', 'separate preparation fixture');
+  const first = runDraft({ kind: 'docs-main', repo: local.root });
+  fs.appendFileSync(evidence, '\nPending readback.\n');
+  const second = runDraft({ kind: 'docs-main', repo: local.root });
+  assert.deepEqual(second, first);
+  assert.equal(second.source.sha256, createHash('sha256').update(raw).digest('hex'));
+  assert.equal(parseOwner(raw, 'docs-main').tasks.length, 9);
+  assert.equal(parseOwner(raw, 'docs-main').tasks[0].checked, true);
+  assert.equal(parseOwner(raw, 'docs-main').tasks[1].checked, false);
+  const before = git(local.root, 'status', '--porcelain');
+  const result = await runProject({ kind: 'docs-main', repo: local.root, mode: 'reconcile-only' }, { fetchImpl: state.fetch });
+  assert.equal(result.code, 'projection_pending'); assert.equal(writes(state).length, 0);
+  assert.equal(git(local.root, 'status', '--porcelain'), before);
+  assert.equal(fs.readFileSync(path.join(local.root, 'docs/dev/DOCS_TASKS.md'), 'utf8'), raw);
+});
+
+test('older standard docs briefs remain conflicts without writes or duplicate issues', async () => {
+  const { request, owner } = docsRequest(), state = fixture();
+  assert.equal((await reconcileProjection(request, owner, state.client())).ok, true);
+  state.issues[0].body = state.issues[0].body.replace('DOCS_PREPARATION', 'LEGACY_PREPARATION');
+  const before = writes(state).length;
+  const result = await reconcileProjection(request, owner, state.client());
+  assert.equal(result.ok, false); assert.equal(result.code, 'issue_content_or_parent_conflict');
+  assert.equal(state.issues.length, 9); assert.equal(writes(state).length, before);
 });
 
 test('convenience explicit tasks and alternate remote override defaults without silent fallback', async t => {

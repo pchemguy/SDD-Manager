@@ -50,3 +50,30 @@ Additional source inspection confirms that `projection-input.mjs` parses the nin
 Before committing the plan, check its active links, scope, ownership and whitespace. Publish/read back the planning checkpoint and stop with the campaign open. Existing HANDOFF links this campaign record and retains the planning boundary; no extra per-plan HANDOFF commit is needed.
 
 Observed plan checks pass: 131 current Markdown files and 1,183 local links/anchors, staged whitespace and exactly the active plan/report/navigation paths. Plugin source/assets, runtime, package tooling/tests and closed packages are unchanged. Runtime and implementation verification remain planned, not run for this record-only checkpoint.
+
+## Execution authorization and A-001
+
+The human's “Execute” authorizes the published plan's A-001 and A-002. Plan checkpoint `7fcaaf56d3b15d921e939b4f1b8e8e91a7249614` is published/readback verified with confirmed cleanup. Execute the separation and verification, publish the result and leave this campaign open; no main integration, target-project migration, version bump, release or closure is selected.
+
+A-001 implements the paired owners end to end. DOCS_TASKS now contains the same nine task definitions/checkoffs with task-specific dependencies/acceptance only. New `assets/DOCS_PREPARATION_TEMPLATE.md` defines current mode/pass/authority, durable scope sequence, task/pass-qualified decisions and document/QC identities, initialization/reset evidence and pending transitions. Main preparation owns creation, bounded maintenance and legacy adoption. HANDOFF retains periodic checkpoint cadence and links both owners. No target DOCS_PREPARATION is created in this self-development repository.
+
+Canonical mode, human-review, continuity, QC, integration and recovery routes now name the separate evidence owner. Plugin/coordinator and direct design/specification/planning/task/orientation/verification/reporting entries agree. The task and preparation evidence remain in the same approved-document or reset commit. Initialization keeps its four-root-file test; no task/checkpoint is added. Task IDs/names/order/dependencies, mode/delegation/stops, pre-write projection and publication gates are preserved.
+
+The fixed JSON briefs and forge guides use the new owner. Adoption distinguishes stale requests and owned standard brief updates from pass resets; the utility continues reporting exact conflicts without overwrites/duplicates. Reconciliation before a pre-write gate uses permitted external evidence, then transfers the adoption basis when writes are eligible. Packaged README, current capability/development contracts, HANDOFF template, required package inventory and publisher/support resource fixtures are aligned. Authentication, transport, parser/schema/CLI inputs, demos, version/release notes, external policies and all closed packages remain unchanged.
+
+### Rechecks and observed tests
+
+| Scenario | Observed source assessment / evidence |
+| --- | --- |
+| Fresh preparation with enabled/disabled tracking and none/all/mixed root presence | Main procedure creates both local owners only after applicable gates; DOCS-001 includes initialization evidence/checkoff/HANDOFF atomically and preserves the mixed-state stop. |
+| Interactive/preapproved approval, including unchanged accepted roots/children | Human review and main preparation keep proposals unchecked and store exact accepted identities and actual decision/QC basis in DOCS_PREPARATION with completion; no invented self-SHA. |
+| Onepass, human-controlled multipass and autoloop | Mode/sequence/delegation evidence has a durable separate owner; scope future changes stay outside product prose. PROJECT waivers, delegated choices and DOCS-008 stops remain intact. |
+| Reset interrupted before publication or during reopening | Mode and hosted owners require the same reset, local checkbox transition and preparation evidence; Git/provider reconciliation resumes missing effects without another pass/issue allocation. |
+| Legacy mixed list and existing/conflicting preparation evidence | Adoption retains decisions, human edits, original progress and pending stops; standard workflow boilerplate becomes a reference. Unknown approval is not fabricated; partial transfer is reconciled before source removal. |
+| Bootstrap/resumed projection and fixed-content conflict | Parser/runtime interfaces are unchanged; synthetic/local regressions verify nine-task source binding, independence from separate preparation evidence, bootstrap without creating that record, and conflict without hosted mutation/duplicate issues. |
+| Package QC/integration/continuity | QC assesses both owners; branch/Git gates include preparation evidence. HANDOFF links them at existing boundaries and pending operations cannot claim future successes. |
+| Composition and ownership | Task template has no non-task sections. The new template is 489 words and task template 676 words; detailed procedure stays with the existing main-preparation owner (2,212 words). No new trivial reference or running journal is added. |
+
+These are source walkthroughs, not independent consuming-agent executions or live migrations. Linux/Node 24/Python 3.12 source checks: 139 support tests and 49 publisher tests pass with no failures/skips. The initial projection run had 47 passes and one new-test assertion failure: the expected name omitted the existing `_or_parent` portion of the safe conflict code. Corrected the assertion without runtime changes; the following run passes all 48 tests. A final repeat covers the refined DOCS-008 JSON stop/reset wording. Distinct selected coverage is 236 tests, not the sum of repeated runs.
+
+Source scope checks preserve the nine identities/dependency graph/milestone and all 18 coordinator reference routes; full-delta ownership and whitespace pass. Check final current links/anchors and the exact committed package before publication. A-001 is implemented and source-verified; A-002's committed-package/result checkpoint remains pending. No independent consumer, native Windows or live-provider acceptance is claimed.

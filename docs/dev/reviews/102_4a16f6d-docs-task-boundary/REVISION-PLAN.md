@@ -93,3 +93,7 @@ Source walkthroughs and synthetic/local tests do not establish independent consu
 ## Planning persistence and stopping boundary
 
 Publish/read back this plan before source execution. Preserve the campaign's original identity/baseline, the opening publication and all prior closed records. Planning changes only the active plan/report/navigation; the existing entry HANDOFF points to this owner, so no routine planning-time handoff rewrite is required. After verified publication, stop with campaign 102 open awaiting execution direction. Do not execute A-001/A-002 or merge/close the campaign from this planning request.
+
+## Execution checkpoint
+
+The human subsequently authorizes execution. A-001 is implemented with [observed source/test evidence](REVISION-REPORT.md#execution-authorization-and-a-001); package verification and A-002's completed revision checkpoint remain pending. The earlier planning-only stopping statement records its original request boundary. Keep the campaign open after verified execution publication; closure/integration is not selected.
