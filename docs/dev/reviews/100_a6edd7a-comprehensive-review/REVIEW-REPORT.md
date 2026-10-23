@@ -64,8 +64,8 @@ Composition: the approximately 4,200-word examples catalog has a broad scenario 
 
 | Finding | Type / priority | Status | Owning correction |
 | --- | --- | --- | --- |
-| R-001 | Documentation inconsistency / medium | Accepted under human repair authority | Align current source capability map and clarify Git initialization wording. |
-| R-002 | Packaged example inconsistency / medium | Accepted under human repair authority | Qualify examples by selected mode, explicit stop, controlling tracking policy and pre-write gate. |
+| R-001 | Documentation inconsistency / medium | Verified by V-001 | Align current source capability map and clarify Git initialization wording. |
+| R-002 | Packaged example inconsistency / medium | Verified by V-001 | Qualify examples by selected mode, explicit stop, controlling tracking policy and pre-write gate. |
 
 ### R-001 — Capability map describes superseded gates
 
@@ -82,3 +82,7 @@ Consequence: a selectively loaded example can suggest progressing beyond autodoc
 ## Review consolidation and revision handoff
 
 U-001/U-002 have no confirmed defect within their stated coverage. U-003 finds two maintained-documentation inconsistencies, accepted for bounded repair by the existing request. No runtime repair is proposed. Plan the two coherent documentation actions, preserve this baseline evidence, implement and recheck, then close through verified main integration/publication. 320 passing controlled/local tests and seven native-Windows skips retain their evidence limits; no live consumer/provider result is claimed.
+
+## Findings recheck
+
+V-001 corrects R-001/R-002 with source/owner comparisons and the [revision evidence](REVISION-REPORT.md#v-001--current-projections-and-qualified-examples). Baseline observations above are retained. Both findings are Verified within the source/controlled evidence limits; no open or deferred finding remains. Complete V-002 package/integration checks before campaign closure.
