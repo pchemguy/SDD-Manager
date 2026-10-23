@@ -1,19 +1,19 @@
 # SDD Manager handoff
 
-Campaign [102 — documentation task/preparation separation](reviews/102_4a16f6d-docs-task-boundary/REVISION-REPORT.md#finalization-and-closure-boundary) is finalized for the human-requested closure through main integration/publication. Use sdd-manage for the remaining Git boundary; reporting Standard. No parent campaign is suspended.
+Campaign [103 — comprehensive review](reviews/103_c46bdbd-comprehensive-review/REVIEW-REPORT.md) is finalized for explicit main integration/publication and clean-return closure. All four documentation findings are verified through the [revision report](reviews/103_c46bdbd-comprehensive-review/REVISION-REPORT.md). No parent campaign is suspended; reporting Standard.
 
-## Scope and result
+## Scope and authority
 
-The human's task-only boundary and execution request are implemented. DOCS_TASKS contains the same nine task definitions/checkoffs; the new DOCS_PREPARATION template/record owns mode/pass, scope sequence, decisions/accepted identities, initialization/reset evidence and pending transitions. Main preparation defines lifecycle/adoption; all affected entries, review/QC, continuity, hosting and integration routes agree.
+The human requested comprehensive review, fixes and closure. Reviewed current packaged workflows, focused entries/references/assets, Git/forge runtime, source support/package/CI, public/development documentation, demos and repository policies. Corrected acceptance preparation-record ownership/assessment and obsolete ACL guidance, consolidated browser verification/recovery text, and restored current navigation-table continuity. No unresolved finding or deferred repair remains.
 
-Approved documents and resets retain atomic task/evidence commits. Legacy adoption preserves human content, task progress and stops. Periodic HANDOFF links the two owners without a running journal; project documents retain project content. Task/hosted identities, mode authority/stops and pre-write/QC/publication gates remain intact. This source repository continues using campaign records rather than a target DOCS_PREPARATION instance.
+No runtime/template/version change, release/tag, installation or external-project migration is selected. Preserve all prior closed campaign contents; this campaign's records freeze after verified closure. No task IDs were invented.
 
-## Verification and Git
+## Git and verification
 
-At published implementation `a314b0fe4b9d278272f6da5b18c218b391fd4fa1`, 48 projection, 49 publisher and 139 support tests pass (236 distinct). Executed checkpoint `acec175153bff3602ae8801305ee32c84fef2af5` has the same tested source; its exact package verifies all 155 files and five extracted CLI help paths. Current links/anchors, all 18 coordinator routes, stable task/dependency identities, scoped preservation and whitespace pass. No independent consumer run, native Windows execution or live hosted migration is claimed. No auth/transport/parser/CLI, demo/policy, version/release or closed-package change.
+Working branch `revision/103_c46bdbd-comprehensive-review`; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Full baseline/branch-off `c46bdbdc27a483369fccfccef0091d6842a5a466`; original campaign opening `4521c1d32f2fa9ef80d69e2bb46d7f1e5e854a50`. Per-unit/action commits are published/readback verified; recover the finalization tip and subsequent effects from Git/tool evidence.
 
-Campaign branch `revision/102_4a16f6d-docs-task-boundary`; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Full original baseline/branch-off and refreshed main `4a16f6dc3d3025a87183fdf4acb09601a125f649`; original opening `f52904ceb24e73bb5912e85c2d6d6b784c1bc1d3`; plan `7fcaaf56d3b15d921e939b4f1b8e8e91a7249614`. Executed checkpoint publication/readback, process exit and cleanup are confirmed.
+Linux review: 322 distinct passing tests, seven native-Windows cases skipped; affected support suite passed again after correction. Exact committed 155-file package and five extracted CLI helps pass; packaged tree is unchanged. Current links/anchors, whitespace, scope and historical-row/closed-path preservation are checked. Independent consumer, live provider tests, remote CI observation, browser provisioning, native Windows and rendered-diagram execution were not performed.
 
 ## Pending boundary
 
-Publish/read back this finalization, explicitly merge its verified tip into main, verify the merged state and publish/read back main, then return cleanly and stop. After actual completion, this is the completed root-work checkpoint awaiting new human direction. No in-scope action remains. Recover finalization/merge/publication facts from Git/owning tool evidence; this snapshot cannot prove its own subsequent effects. No target-project migration, package installation, version bump, release or further workflow is selected.
+Publish/read back this finalization, refresh main, explicitly merge the complete pinned campaign tip with two parents, verify merged tree/package and publish/read back exact main. Confirm clean main, close and stop for new human direction. If interrupted, reconcile the existing merge/publication before retry; do not repeat the review or open another campaign. This checkpoint does not prove its own future commit, push or integration. After verified closure no parent task resumes and no release is authorized.

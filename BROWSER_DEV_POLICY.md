@@ -99,23 +99,22 @@ Adopt the override only after repeated page/interaction/rendering/teardown check
 
 Use finite launch/action/navigation timeouts **and a whole-process deadline covering page creation and cleanup**; launch timeout alone does not bound later operations. On expiry, stop only the owned process tree and confirm disposition before retrying.
 
-For each required browser/mode, verify launch, context creation, page creation, interaction, required rendering/screenshots, at least two isolated context/page cycles, and teardown. Then execute the relevant target-application tests through its actual runner/server path. A synthetic page verifies environment capability, not application acceptance; headless input does not prove OS-window focus behavior. Capture effective versions/mode, settings, commands, outcomes and limits in existing task evidence.
-
-Classify failures by download, integrity/extraction, revision, host dependency, launch, session/page, rendering or application stage. A successful download or launch cannot close later-stage evidence gaps. Do not repeat unchanged failures, re-download sound binaries for session errors, or retry rejected escalation. Report the precise missing capability and tested alternatives; continue independent work only where accepted task dependencies permit it.
+For each required browser/mode, verify launch, context creation, page creation, interaction, required rendering/screenshots, at least two isolated context/page cycles, and teardown. Apply the common evidence and recovery rules below.
 
 Version-specific sources: [Playwright browsers](https://playwright.dev/docs/browsers), [official image/container guidance](https://playwright.dev/docs/docker), [CI setup](https://playwright.dev/docs/ci) and [Mozilla's documented content-sandbox override](https://firefox-source-docs.mozilla.org/performance/jit_profiling_with_samply.html).
 
 ## Verification and recovery
 
-Select evidence required by the task; a successful installation or launch does not establish full application acceptance.
+Select evidence required by the task and record effective versions/modes, settings, commands, outcomes and limits in existing task evidence.
 
 | Capability | Evidence |
 | --- | --- |
 | Provisioning | Compatible binary, trusted distribution and valid downloaded artifacts; a successful HTTP response alone is insufficient. Exercise fresh owned provisioning when reproducibility is required. |
 | Sessions | The repeated context/page lifecycle and teardown used by the actual suite. |
 | Visible output | Inspect screenshots or suitable pixel/shape/glyph assertions when rendering matters; DOM text does not prove font or Canvas rasterization. |
-| Native events | Exercise actual focus, visibility or input delivery where required. Keep modeled handler checks separate from native evidence. |
+| Native events | Exercise actual focus, visibility or input delivery where required. Keep modeled handler checks separate from native evidence; headless input does not prove OS-window focus behavior. |
+| Application acceptance | Execute the relevant tests through the actual runner/server path. A synthetic page establishes environment capability; installation, launch and interactive agent browsing do not prove application acceptance or its automated harness. |
 
-On failure, retain the attempted command and observed error. Distinguish provisioning, version, host dependency, launch, session and rendering limitations; investigate supported remedies within the documented browser requirements and isolation rules. Record material substitutions and rerun affected checks after changes. Do not reduce required coverage or retry unchanged failures indefinitely.
+On failure, retain the attempted command and observed error. Classify the failing stage: download, integrity/extraction, revision, host dependency, launch, session/page, rendering or application. Investigate supported remedies within the browser requirements and isolation rules; record material substitutions and rerun affected checks. Do not repeat unchanged failures, re-download sound binaries for session errors, retry rejected escalation or reduce required coverage.
 
-Report verified behavior, omissions and environment limits separately. Interactive agent browsing does not prove the project's automated harness. Missing required evidence blocks the affected acceptance claim; unavailable optional checks do not invalidate independently verified behavior.
+Report verified behavior, omissions, precise missing capabilities and tested alternatives separately. Missing required evidence blocks the affected acceptance claim; unavailable optional checks do not invalidate independently verified behavior. Continue independent work only where accepted task dependencies permit it.
