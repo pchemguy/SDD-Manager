@@ -86,3 +86,7 @@ U-001/U-002 have no confirmed defect within their stated coverage. U-003 finds t
 ## Findings recheck
 
 V-001 corrects R-001/R-002 with source/owner comparisons and the [revision evidence](REVISION-REPORT.md#v-001--current-projections-and-qualified-examples). Baseline observations above are retained. Both findings are Verified within the source/controlled evidence limits; no open or deferred finding remains. Complete V-002 package/integration checks before campaign closure.
+
+## Final disposition
+
+All three units are reviewed. Two medium-priority documentation findings were accepted, repaired and rechecked; neither a runtime defect nor another required repair was confirmed in the inspected scope. R-001/R-002 remain Verified; open/deferred/rejected findings: zero. See the revision report for exact current-source/package and integration limits. Original observations and evidence boundaries remain intact.

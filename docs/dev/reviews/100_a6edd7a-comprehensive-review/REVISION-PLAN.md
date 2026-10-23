@@ -16,3 +16,9 @@ V-001 precedes V-002. Keep baseline observations in REVIEW-REPORT and actual rep
 ## Scope limits
 
 No new mode, workflow boundary, script, API, token policy, demo requirement, dependency/version, browser installation, live-provider mutation, installed-client trial, release/tag or package installation is selected. Native Windows/live consumer/provider evidence remains unavailable rather than silently treated as passing. Preserve all closed packages and close only after actual final integration/publication.
+
+## Execution and finalization
+
+V-001 is implemented and published at `47f5215a205fb223aae204c28d4d7d2675f69a03`; exact-ref readback matches and cleanup is confirmed. Both findings are Verified. V-002 confirms the scoped documentation result, 139 affected support tests, current links/anchors and exact 154-member package with five extracted CLI help checks. Baseline runtime/controlled coverage totals 320 passing tests plus seven explicitly skipped Windows-only checks; runtime and input definitions are unchanged, so no repeated identical runtime campaign is required.
+
+All accepted work is complete. Finalize/publish these records, then explicitly merge the complete tip into refreshed main, check merged-state identity/docs/package, publish/read back main and confirm clean return before actual closure. Retain branch and records. No release/version change is selected.
