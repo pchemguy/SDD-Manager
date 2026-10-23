@@ -103,5 +103,4 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `099_242b6fb` | Amendment finalized: approved Tetris autoloop prompt and early entry exposure complete. Human-selected closure requires verified main integration/publication; retain original mode/reset evidence. | [Plan](099_242b6fb-doc-design-modes/REVISION-PLAN.md), [campaign record](099_242b6fb-doc-design-modes/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
-
 | `100_a6edd7a` | Open: comprehensive source/tooling/documentation review, authorized fixes and closure; review planned. | [Plan](100_a6edd7a-comprehensive-review/REVIEW-PLAN.md), [report](100_a6edd7a-comprehensive-review/REVIEW-REPORT.md) |
