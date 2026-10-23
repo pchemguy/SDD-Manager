@@ -97,3 +97,7 @@ Publish/read back this plan before source execution. Preserve the campaign's ori
 ## Execution checkpoint
 
 The human subsequently authorizes execution. A-001 is implemented with [observed source/test evidence](REVISION-REPORT.md#execution-authorization-and-a-001); package verification and A-002's completed revision checkpoint remain pending. The earlier planning-only stopping statement records its original request boundary. Keep the campaign open after verified execution publication; closure/integration is not selected.
+
+## Executed result
+
+A-001 and A-002 are complete with [final verification evidence](REVISION-REPORT.md#a-002--verified-execution-boundary). Source `a314b0fe4b9d278272f6da5b18c218b391fd4fa1` is published/readback verified with confirmed cleanup. All 236 distinct selected tests pass, as do current links/routes, scoped preservation and the exact 155-file package/five extracted CLI help checks. Publish/read back this completed revision checkpoint after exact final-package verification, then leave campaign 102 open. No integration, closure or release is selected.
