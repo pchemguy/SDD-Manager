@@ -1,15 +1,19 @@
 # SDD Manager handoff
 
-Campaign [100 — comprehensive review](reviews/100_a6edd7a-comprehensive-review/REVIEW-REPORT.md) is finalized for human-authorized closure. All three review units and both [revision actions](reviews/100_a6edd7a-comprehensive-review/REVISION-REPORT.md) are complete. R-001/R-002 are fixed and Verified; no open/deferred finding remains.
+Campaign [101 — doc-design revision](reviews/101_39e46b9-doc-design/REVISION-REPORT.md#finalization-and-closure-boundary) is finalized for the human-requested closure through verified main integration/publication. Use sdd-manage for the remaining Git boundary; reporting Standard. No parent campaign is suspended.
 
-## Delivered and verified
+## Scope and result
 
-Reviewed packaged instructions/workflows, runtime/authentication/tracking/release boundaries, maintained docs/demos/policies, composition and package contents. Corrected stale source capability projections and packaged examples for selected-mode/TASKS stops, pre-write tracking/credential gates, supervised publication and release placement. Clarified Git creation versus SDD setup. Runtime and canonical mode mechanics, approved demos, external policies and prior closed records are unchanged.
+A-001 is complete and R-001 source-verified. The shared document-review procedure defines the content boundary for PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS, including feature counterparts and focused children, in every mode. PLUGIN/coordinator, four authoring entries and author/reviewer/QC gates enforce it.
 
-Evidence: 320 distinct local/controlled tests pass; seven native-Windows tests skip. All 139 affected support tests pass after edits. Current links/anchors/style and ownership pass. Source `47f5215a205fb223aae204c28d4d7d2675f69a03` is published/readback verified with confirmed cleanup; its exact package verifies 154 files and five extracted CLI help runs. No fresh Windows, independent consumer, live provider or browser application behavior is claimed.
+Project documents express the project directly. DOCS_TASKS and existing workflow records, including HANDOFF, retain preparation mode/pass/cursor, future scope sequences and approval/reset evidence. PLAN/TASKS retain actual implementation phases/work. Future scope is neither imported early nor made a permanent non-goal. No target demo or approved prompt changes.
 
-## Git and pending boundary
+## Verification and Git
 
-Branch `revision/100_a6edd7a-comprehensive-review`; creation parent/integration/return main on origin. Original full baseline/branch-off `a6edd7a86cc524e5ae0f70fdee7d359e1b5334a7`; original opening `5e259161a14f612a1546fcf6fcbc4eba1c684681`. No parent is suspended. Campaign 099 was closed at the baseline merge and remains frozen.
+At published source `09086fbf73f544b0719b661dd3419c92557bed08`, 139 support and 49 publisher tests pass. Current links/anchors, all 18 coordinator routes, scoped ownership and whitespace pass. The exact 154-file package matches Git and five extracted CLI help runs pass. Independent consumer rerun, native Windows and live-provider acceptance remain untested. Runtime/templates/hosting definitions/version/notes, policies, demos and closed packages are preserved.
 
-Publish/read back finalization, explicitly merge the complete verified tip into refreshed main, check merged tree/current docs/package, publish/read back the target and confirm clean main return. Actual closure requires those later effects; recover them from Git/owning sessions, not this snapshot alone. Then freeze campaign 100 and stop. No release, version bump, tag, installation or further workflow is selected.
+Campaign branch `revision/101_39e46b9-doc-design`; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Original full branch-off/baseline and refreshed main: `39e46b9c159838a87baca6501dc0d75ac4bd1702`; opening: `dc08e08f3500b4d3d34796203099cc0b03346c88`. Executed source publication/readback and process cleanup are confirmed.
+
+## Pending boundary
+
+Publish/read back this finalization, explicitly merge its verified tip into main, verify the merged state and publish/read back main, then return cleanly and stop. After actual completion, this is the completed root-work checkpoint awaiting new human direction. Recover finalization/merge/publication facts from Git and owning tool evidence; this snapshot cannot prove its own subsequent effects. No release, version bump, target-project mutation or further workflow is selected.

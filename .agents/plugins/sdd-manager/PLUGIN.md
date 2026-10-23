@@ -35,6 +35,8 @@ At composite-workflow entry, material switching or context reconstruction, the c
 
 Preserve narrow direct/standalone requests, pending decisions and unfinished work. Read-only discussion/inspection may proceed without Git; repository mutations require an eligible worktree and do not implicitly initialize Git.
 
+**All doc-design outputs must describe the project, not their preparation workflow.** Apply the [development-document content boundary](skills/sdd-manage/references/human-document-review.md#development-document-content-boundary) to every main/feature root and focused child, in every mode. Keep documentation-pass sequencing, cursor and approval/reset state in DOCS_TASKS and existing workflow records; check this during authoring and review.
+
 ## Human checkpoints and Git publication
 
 **Push every workflow-owned commit and verify remote containment before further work or another commit.** This includes completed documents, tasks, review reports, revision actions and merges. A failed push blocks progression. A retained implementation task completion with known failure or uncertain eligibility first follows [publication preflight](skills/sdd-implement/references/startup-and-continuation.md#push-before-task-work); only bounded authorized recovery/corrective persistence may precede its safe publication. Follow [per-commit publication](skills/sdd-manage/references/git-workflows.md#publish-each-commit); preserve explicit human-directed local-only or deferred-publication exceptions.

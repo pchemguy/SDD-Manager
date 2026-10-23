@@ -4,6 +4,8 @@ Load **sdd-conventions**' **Development-document QC** reference (`skills/sdd-con
 
 ## Stage handoff
 
+Before dependent use, apply the [development-document content boundary](human-document-review.md#development-document-content-boundary) to each selected main/feature root and child. Check for SDD preparation mode/pass, future document-revision, approval or reset narrative in the product documents. This check applies with preapproval and in every mode; return violations to the owning author before clearing readiness.
+
 | Completed input | Required owner assessment | Dependent operation |
 | --- | --- | --- |
 | SPEC / FEATURE-SPEC and applicable children | sdd-specify: accepted PROJECT/design conformance | PLAN / dependent feature planning |
