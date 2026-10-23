@@ -39,6 +39,12 @@ Message preparation now distinguishes preparation and final paths, permits track
 
 Inspected tracked/untracked staging, existing/foreign final files, preparation-only stops, pure moves, exact-body handling and merge coverage. Scoped whitespace/link checks pass; these are instruction/source assessments, not runtime filesystem or consumer execution evidence. Publication follows the containing action commit.
 
+### A-003 — Provider and documentation handoffs
+
+Aligned the GitHub release lifecycle and workflow requirements, release-check criteria, forge entry, coordinator routing, packaged PLUGIN.md and README. They now carry default-branch first-parent eligibility, exact tag/package/publisher source agreement, direct-versus-development-merge handling, staged documents and qualified recovery without source-only bypasses. The workflow execution ref remains distinct from the release source. Entry detail remains shallow; no new reference fragment was added.
+
+Source rechecks cover side-history rejection, wrong merge direction, pinned-source recovery after default advances, preparation-only stops and no duplicate release marker. Scoped formatting/link checks are applied to current changed documents; closed records and published releases are unchanged. Live agent/CI/provider behavior is not claimed by this instruction action.
+
 ## Opening evidence
 
 Freshly cloned main is clean at the full baseline above; origin/main matches it. Campaign identity discovery across current tracked paths and fetched refs found the highest reserved sequence to be 097. The published 095, 096 and 097 tips are contained in main. The existing handoff records the completed v0.15.2 release; current main additionally contains the URL.md update at the starting baseline.
