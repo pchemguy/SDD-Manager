@@ -1,10 +1,10 @@
 # SDD Manager handoff
 
-Campaign [098 — release workflow](reviews/098_b735940-release-workflow/REVISION-REPORT.md) is open. Only campaign setup is selected; await the human's revision objectives. Reporting: Standard.
+Campaign [098 — release workflow](reviews/098_b735940-release-workflow/REVISION-REPORT.md) is open. The human's release rules are recorded in its [revision plan](reviews/098_b735940-release-workflow/REVISION-PLAN.md); source execution is pending. Reporting: Standard.
 
 ## Workflow and scope
 
-sdd-manage coordinates this revision campaign. No review, substantive revision plan or source change is selected yet. The release workflow is the subject; no version bump, tag, release publication, merge or closure is selected by the opening request. Stop after publishing and verifying the opening checkpoint.
+sdd-manage coordinates this revision campaign. Release tags must identify release commits on the actual default branch: either a direct commit there or the merge into it from the designated primary development branch. Release documents may be staged within the revision directory and moved during the release commit. The plan covers instruction, publisher and documentation alignment. Stop after publishing/readback of the plan; no source execution, version bump, tag, release publication, merge or closure is currently selected.
 
 ## Git context
 
@@ -14,4 +14,4 @@ Main includes the completed v0.15.2 release through merge `0067242f092f19742fdac
 
 ## Pending boundary
 
-Publish and read back the opening commit; its containing Git commit identifies this checkpoint. Then wait for release-workflow revision objectives before analysis, planning or implementation. No source or hosted release change has been made. Authentication/publication failures retain the opening commit and block further work.
+Opening commit `dc9b2b5d79c1dd99608d5a48d72f8bb75e3b2f0c` is published and verified. Publish/read back this planning checkpoint, then await execution direction or further objectives. No source or hosted release change has been made. Authentication/publication failures retain the pending commit and block further work.

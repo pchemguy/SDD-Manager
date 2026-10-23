@@ -7,13 +7,23 @@
 - Working branch: `revision/098_b735940-release-workflow`.
 - Creation parent, eventual integration target and return branch: `main` on `origin`, `pchemguy/SDD-Manager`.
 - Request: “Open release workflow revision campaign.”
-- State: Open; campaign setup only. Detailed objectives and accepted changes have not been supplied.
+- State: Open; release rules accepted and [revision plan](REVISION-PLAN.md) prepared. Source execution is pending.
 
 ## Scope and stopping boundary
 
-The subject is SDD Manager's release workflow. This opening establishes the campaign identity, branch and continuity checkpoint. It does not select a review plan or authorize specific source changes, a version bump, tagging, release publication or campaign closure. Await the human's objectives before analysis, revision planning or execution.
+The opening established the campaign identity, branch and continuity checkpoint. The subsequent human instruction establishes the release rules below. Record and publish their revision plan, then stop before source execution, a version bump, tagging, release publication or campaign closure.
 
-Likely source owners, to be selected once the objectives are known, are sdd-manage for coordination and Git boundaries, sdd-forge for release preparation and provider publication, sdd-report for messages, and sdd-verify for release checks. Repository publisher and CI files are relevant only if the accepted scope reaches them.
+Source owners are sdd-manage for coordination and Git boundaries, sdd-forge for release preparation and provider publication, sdd-report for messages, and sdd-verify for release checks. The plan includes repository publisher/CI enforcement and affected current documentation.
+
+## Accepted release rules and planning checkpoint
+
+The human specified that release tags are always created on the actual repository default branch. The tagged release commit is either made directly on that branch or is the merge commit bringing the designated primary development branch into it. Release documents may be prepared and committed within the campaign revision directory and moved to their final locations during the release commit when necessary.
+
+The [plan](REVISION-PLAN.md) translates those rules into A-001 through A-005, covering Git placement, staged documents and exact body preservation, provider/verification handoffs, deterministic publisher enforcement and integrated rechecks. This is a directly accepted objective, so no separate review report or invented findings precede the plan. Plans, reports and other retained campaign evidence keep their existing storage convention.
+
+Opening commit `dc9b2b5d79c1dd99608d5a48d72f8bb75e3b2f0c` was pushed and exact-ref readback matched, with confirmed process cleanup. Existing authentication failed with the remote ref absent; the previously supplied credential restored eligible publication without persistent helper configuration changes. The token value is excluded from evidence and Git. No source, version, tag or release was changed.
+
+Planning inspected the current release Git boundary, message preparation/reporting, GitHub lifecycle/workflow guidance, release-check criteria and repository publisher/workflow. Checks passed for the four owned paths, nine active-document link targets, heading separation and `git diff --check`; closed campaign records are untouched. These checks apply to this planning checkpoint only; no product/runtime tests, provider mutation or implemented-action verification is claimed. Publish/read back the plan commit before further campaign work.
 
 ## Opening evidence
 
