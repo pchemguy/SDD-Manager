@@ -64,6 +64,14 @@ Opening commit `1a47b5001479507cc820ad2a449062b4b6cce091` is published and exact
 
 The human's “Execute” selects bounded implementation of the accepted requirements under the [revision plan](REVISION-PLAN.md). Requirements extension `42168092d20cc11ae66861d87985265dd79eb257` is published with exact-ref readback and confirmed cleanup. Publish/read back this plan before A-001, then execute and report each action. Stop with the campaign open; no target-project cursor or hosted DOCS objects are reset by this plugin revision.
 
+## Revision execution evidence
+
+### A-001 — Mode and pass-control owner
+
+Added one cohesive doc-design-modes reference covering selection/defaults, current-pass decisions, DOCS-008 stop, non-destructive reset commit, local-before-hosted reopening and interrupted reset recovery. Main preparation, human review, coordinator entry routing and continuity now load its rules at the required boundaries. Autoloop announces the later PROJECT waiver, makes new material decisions with visible rationale and proceeds without acknowledgment. Actual technical/publication/tracking blockers remain distinct.
+
+Source walkthroughs assess all four declared selections, early reset, unchanged retained documents, partial reopening, first PROJECT approval and final autodoc stop. The reset route to the forge procedure will be established in dependent A-002 before final boundary verification. No consuming-agent or live target-reset evidence is claimed. Commit/publication follows this action's scoped source checks.
+
 ## Opening evidence and next boundary
 
 Fresh remote inspection confirms main at the full starting baseline, a clean worktree and campaign 098 integrated/published. Identity discovery across current paths and fetched refs found 098 as the highest allocated sequence; 099 is newly reserved. Prior closed records are retained unchanged. Execution host remains Linux/Bash with Node.js 24.19.0 and Python 3.12.14; source development, acceptance and campaign conventions remain applicable.
