@@ -101,3 +101,7 @@ The human subsequently authorizes execution. A-001 is implemented with [observed
 ## Executed result
 
 A-001 and A-002 are complete with [final verification evidence](REVISION-REPORT.md#a-002--verified-execution-boundary). Source `a314b0fe4b9d278272f6da5b18c218b391fd4fa1` is published/readback verified with confirmed cleanup. All 236 distinct selected tests pass, as do current links/routes, scoped preservation and the exact 155-file package/five extracted CLI help checks. Publish/read back this completed revision checkpoint after exact final-package verification, then leave campaign 102 open. No integration, closure or release is selected.
+
+## Authorized closure
+
+The human's subsequent “Close” selects finalization and explicit main integration/publication. Both actions are complete with no remaining in-scope findings. Executed checkpoint `acec175153bff3602ae8801305ee32c84fef2af5` and its exact package are verified and published/readback confirmed. Finalize records, publish/read back the campaign tip, explicitly merge into refreshed main, verify the merged state, publish/read back main and return cleanly. Closure takes effect only after that boundary; Git/tool evidence records the actual commit and publication. No version bump, release, plugin installation or external-project migration is selected.

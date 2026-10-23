@@ -1,6 +1,6 @@
 # SDD Manager handoff
 
-Campaign [102 — documentation task/preparation separation](reviews/102_4a16f6d-docs-task-boundary/REVISION-REPORT.md#a-002--verified-execution-boundary) remains open after completed A-001/A-002. Use sdd-manage for continuity and any subsequent authorized boundary; reporting Standard. No parent campaign is suspended.
+Campaign [102 — documentation task/preparation separation](reviews/102_4a16f6d-docs-task-boundary/REVISION-REPORT.md#finalization-and-closure-boundary) is finalized for the human-requested closure through main integration/publication. Use sdd-manage for the remaining Git boundary; reporting Standard. No parent campaign is suspended.
 
 ## Scope and result
 
@@ -10,10 +10,10 @@ Approved documents and resets retain atomic task/evidence commits. Legacy adopti
 
 ## Verification and Git
 
-At published implementation `a314b0fe4b9d278272f6da5b18c218b391fd4fa1`, 48 projection, 49 publisher and 139 support tests pass (236 distinct). Exact package verifies all 155 files and five extracted CLI help paths. Current links/anchors, all 18 coordinator routes, stable task/dependency identities, scoped preservation and whitespace pass. No independent consumer run, native Windows execution or live hosted migration is claimed. No auth/transport/parser/CLI, demo/policy, version/release or closed-package change.
+At published implementation `a314b0fe4b9d278272f6da5b18c218b391fd4fa1`, 48 projection, 49 publisher and 139 support tests pass (236 distinct). Executed checkpoint `acec175153bff3602ae8801305ee32c84fef2af5` has the same tested source; its exact package verifies all 155 files and five extracted CLI help paths. Current links/anchors, all 18 coordinator routes, stable task/dependency identities, scoped preservation and whitespace pass. No independent consumer run, native Windows execution or live hosted migration is claimed. No auth/transport/parser/CLI, demo/policy, version/release or closed-package change.
 
-Campaign branch `revision/102_4a16f6d-docs-task-boundary`; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Full original baseline/branch-off `4a16f6dc3d3025a87183fdf4acb09601a125f649`; original opening `f52904ceb24e73bb5912e85c2d6d6b784c1bc1d3`; plan `7fcaaf56d3b15d921e939b4f1b8e8e91a7249614`. Implementation publication/readback, process exit and cleanup are confirmed.
+Campaign branch `revision/102_4a16f6d-docs-task-boundary`; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Full original baseline/branch-off and refreshed main `4a16f6dc3d3025a87183fdf4acb09601a125f649`; original opening `f52904ceb24e73bb5912e85c2d6d6b784c1bc1d3`; plan `7fcaaf56d3b15d921e939b4f1b8e8e91a7249614`. Executed checkpoint publication/readback, process exit and cleanup are confirmed.
 
 ## Pending boundary
 
-Verify the exact final committed package and publish/read back this completed revision checkpoint, then stop with campaign 102 open. No known in-scope action remains; await further requirements or closure direction. No target-project migration, main integration, package installation, version bump or release is selected. Recover later final publication from Git/owning tool evidence; this pre-commit snapshot cannot prove its own subsequent effects.
+Publish/read back this finalization, explicitly merge its verified tip into main, verify the merged state and publish/read back main, then return cleanly and stop. After actual completion, this is the completed root-work checkpoint awaiting new human direction. No in-scope action remains. Recover finalization/merge/publication facts from Git/owning tool evidence; this snapshot cannot prove its own subsequent effects. No target-project migration, package installation, version bump, release or further workflow is selected.
