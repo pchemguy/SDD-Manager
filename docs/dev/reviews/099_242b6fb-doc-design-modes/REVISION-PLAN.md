@@ -54,3 +54,7 @@ Expose the choices concisely within PLUGIN.md's project-preparation composite, r
 Verify both PLUGIN and direct coordinator routes for default interactive/onepass, autodoc/onepass, human-controlled multipass and autodoc/autoloop; preserve actual approval/delegation and DOCS-008 boundaries. Check applicable owner links/anchors, reference inventory, Markdown style, exact packaged entries and existing support/publisher checks. Record source assessment separately from consuming-agent behavior. Publish this accepted plan extension before source work, then publish the verified result and keep the campaign open.
 
 A-007 source changes and scoped checks are complete: four-mode table in PLUGIN.md's composite summaries, pre-checkpoint routing, explicit coordinator selection and mode-aware catalog checkpoint wording. The detailed owner and public README remain unchanged. Verification: 139 support and 49 publisher tests pass, 146 entry links/anchors and all 18 coordinator reference routes resolve; approved demo and other closed records are preserved. Check the exact committed package before publication and retain the open campaign boundary.
+
+## Amendment closure
+
+The human selects closure after completed A-005–A-007. Finalize records, publish, explicitly integrate the verified amended tip into refreshed main, verify/publish the target and confirm clean return. Preserve original and reopening provenance. Then freeze this campaign and start the separately authorized comprehensive review/fix campaign. No release is selected.
