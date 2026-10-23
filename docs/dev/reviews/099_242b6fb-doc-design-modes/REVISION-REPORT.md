@@ -72,6 +72,12 @@ Added one cohesive doc-design-modes reference covering selection/defaults, curre
 
 Source walkthroughs assess all four declared selections, early reset, unchanged retained documents, partial reopening, first PROJECT approval and final autodoc stop. The reset route to the forge procedure will be established in dependent A-002 before final boundary verification. No consuming-agent or live target-reset evidence is claimed. Commit/publication follows this action's scoped source checks.
 
+### A-002 — Brief decisions and current-pass tracking
+
+Exploration and PROJECT guidance now require proactive resolution of important scope interactions/boundary cases before brief approval and route autoloop choices through actual delegated authority. The forge docs lifecycle adds explicit same-identity reset reopening after the published reset commit, with idempotent evidence comments, exact issue/milestone readback, partial-operation recovery and current-pass closure evidence. Backend conventions and DOCS_TASKS match this exception to ordinary first-approval retention. The fixed JSON issue definitions and IDs are unchanged; no projection or close-script reset flag is advertised.
+
+Source assessments cover local-before-hosted reset, DOCS-001 preservation, all eight remaining issues, unknown/partial reopen, stale prior approval and unchanged document reuse. The dependent forge reset anchor from A-001 is now defined. `node --test tests/forge-project.test.mjs` passes 46 contracts with no failures/skips; 117 current-document link targets and heading/whitespace checks pass. These supply controlled runtime/structure evidence, not an independently executed agent reset. A final template wording correction explicitly confines the DOCS-008 stop to autodoc, preserving interactive/onepass behavior.
+
 ## Opening evidence and next boundary
 
 Fresh remote inspection confirms main at the full starting baseline, a clean worktree and campaign 098 integrated/published. Identity discovery across current paths and fetched refs found 098 as the highest allocated sequence; 099 is newly reserved. Prior closed records are retained unchanged. Execution host remains Linux/Bash with Node.js 24.19.0 and Python 3.12.14; source development, acceptance and campaign conventions remain applicable.

@@ -16,6 +16,8 @@ For an existing project, inspect/reuse its suitable brief rather than regenerate
 
 Resolve missing decisions that would force the brief's intent, principal scope or consequential constraints to be invented. Structural choices needed before architecture may remain explicitly deferred with their dependency and resolution path; the brief need not contain a completed architecture. Non-blocking details may remain explicitly delegated to later stages. Reasonable proposed defaults can be presented for human confirmation; do not label them accepted requirements. State missing clarification provenance rather than claiming the seed supplied later choices.
 
+Important interactions and boundary cases that materially affect current scope are brief-readiness work: identify and resolve them proactively during creation or revision before PROJECT approval. For main doc-design, apply [mode-specific decision authority](../../sdd-manage/references/doc-design-modes.md#prepare-scope-and-decisions). Autoloop retains first PROJECT approval but waives later approvals after announcing that policy; new material choices are delegated agent decisions, explained visibly and recorded with their actual basis. Keep non-material contract precision with downstream owners and preserve the brief's scope/detail boundary.
+
 ## Adaptable content structure
 
 | Concern | Suitable content |
