@@ -26,3 +26,7 @@ The fast-forward pull retained two incoming Tetris prompt files; they and every 
 Publish/read back the plan before source work and each action/result commit before advancing. Record actual outcomes in REVISION-REPORT.md when execution starts; no extra task IDs or control registry. No target-project scaffold/transcript is created in this already initialized source repository. No runtime script, version, release, installation, root policy, demo prompt or entry change is selected.
 
 After verification, finalize records and navigation, refresh/pin main and explicitly merge the complete verified published branch with two parents. Verify the prospective/committed result and package, publish/read back main with confirmed cleanup and return clean. Closure freezes campaign 107; stop there.
+
+## Execution disposition
+
+A-001 is implemented and verified at published source `2f8827961933764d7d0cd7838c4eee30410044e2`. A-002 source/package/scenario checks pass; no current issue remains unresolved. Finalization is selected for the already authorized explicit main integration/publication and clean-return closure. Actual later Git/tool evidence must establish those effects.
