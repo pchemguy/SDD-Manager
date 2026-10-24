@@ -433,7 +433,7 @@ Optionally request a fully autonomous process by preapproving all human checkpoi
 >
 > Session-only configuration may be delivered as an intermediate increment before persistence is added.
 >
-> #### Design clarification
+> ### Design clarification
 >
 > During preparation, resolve important interactions and boundary cases, including ghost positions that straddle the midline; lock-delay timing and resets; penetrator activation, hold and locking behavior; and invalid configuration values. Surface decisions that materially affect gameplay before implementation.
 
