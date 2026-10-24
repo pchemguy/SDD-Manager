@@ -15,7 +15,7 @@ For forge's optional [structured projection handoff](../../sdd-forge/scripts/for
 
 ## Git commit
 
-For a first SDD commit or adoption backfill, load **sdd-manage**'s [repository bootstrap](../../sdd-manage/references/repository-bootstrap.md). For main preparation use [its initialization exception](../../sdd-manage/references/main-preparation.md): DOCS-001 has four preserved/copied root files and the task list; README links follow at PROJECT. Otherwise confirm the commit owner has included or validly retained root disclosure/usage records and README links within scope. Return missing bootstrap evidence to that owner; drafting does not perform bootstrap or establish a committed result.
+For a first SDD commit or adoption backfill, load **sdd-manage**'s [repository bootstrap](../../sdd-manage/references/repository-bootstrap.md). For main preparation use [its initialization exception](../../sdd-manage/references/main-preparation.md): normal DOCS-001 completion has four preserved/copied root files and the task list; an adopted optional provenance scaffold may have a preliminary unchecked checkpoint under that procedure. README links follow at PROJECT. Otherwise confirm the commit owner has included or validly retained root disclosure/usage records and README links within scope. Return missing bootstrap evidence to that owner; drafting does not perform bootstrap or establish a committed result.
 
 Draft a short imperative subject naming the actual change, based on the inspected diff and checks rather than merely the task brief. Use a body when the reason, verification, migration implications or verified issue references need explanation.
 

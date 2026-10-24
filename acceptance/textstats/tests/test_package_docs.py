@@ -14,6 +14,8 @@ class PackageDocumentation(Sandbox):
         package = source / pin['package_subdirectory']
         for name in ('assets/HANDOFF_TEMPLATE.md', 'assets/DOCS_TASKS_TEMPLATE.md',
                      'assets/DOCS_PREPARATION_TEMPLATE.md', 'assets/DOCS_TRACKING_TEMPLATE.json',
+                     'assets/ai-logs/AGENTS_TEMPLATE.md', 'assets/ai-logs/EXPLORE_DRIVE_TEMPLATE.md',
+                     'skills/sdd-manage/references/initialization/ai-logs.md',
                      'skills/sdd-manage/references/continuity.md',
                      'skills/sdd-manage/scripts/git-auth-recover.mjs',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
@@ -135,9 +137,11 @@ class PackageDocumentation(Sandbox):
         git(source, 'config', 'user.email', 'fixture@example.invalid')
         (source / 'plugin.json').write_text('{"name":"fixture"}\n')
         (source / 'assets').mkdir()
-        names = ('AGENTS_TEMPLATE.md', 'DOCS_TASKS_TEMPLATE.md', 'DOCS_PREPARATION_TEMPLATE.md', 'DOCS_TRACKING_TEMPLATE.json', 'SKILL_DISCOVERY_PROTOCOL.md')
+        names = ('AGENTS_TEMPLATE.md', 'DOCS_TASKS_TEMPLATE.md', 'DOCS_PREPARATION_TEMPLATE.md', 'DOCS_TRACKING_TEMPLATE.json', 'SKILL_DISCOVERY_PROTOCOL.md',
+                 'ai-logs/AGENTS_TEMPLATE.md', 'ai-logs/EXPLORE_DRIVE_TEMPLATE.md')
         original = {name: ('Pinned ' + name + '\n').encode() for name in names}
         for name, data in original.items():
+            (source / 'assets' / name).parent.mkdir(parents=True, exist_ok=True)
             (source / 'assets' / name).write_bytes(data)
         git(source, 'add', '.'); git(source, 'commit', '-m', 'preparation asset fixture')
         inputs = {'plugin_revision': git(source, 'rev-parse', 'HEAD').stdout.strip(),

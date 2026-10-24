@@ -80,6 +80,7 @@ class PackageTests(Contract):
         for name in ('LICENSE','README.md','PLUGIN.md','assets/Greenfield Project Prompt Template.md',
                      'assets/SDD-MANAGER.md','assets/AI_DISCLOSURE.md',
                      'assets/AGENTS_TEMPLATE.md','assets/DOCS_TASKS_TEMPLATE.md','assets/DOCS_PREPARATION_TEMPLATE.md','assets/HANDOFF_TEMPLATE.md','assets/SKILL_DISCOVERY_PROTOCOL.md',
+                     'assets/ai-logs/AGENTS_TEMPLATE.md','assets/ai-logs/EXPLORE_DRIVE_TEMPLATE.md',
                      'assets/icon.svg','skills/sample/SKILL.md',
                  'skills/sdd-manage/scripts/git-auth-recover.mjs',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
@@ -102,6 +103,22 @@ class PackageTests(Contract):
         git('add','.'); git('commit','-qm','fixture'); self.sha=git('rev-parse','HEAD')
         self.data=handoff(source=self.sha,notes_source=self.sha)
         self.out=Path(self.tmp.name)/'output'; self.out.mkdir()
+
+    def test_optional_provenance_assets_ship_without_becoming_package_gate(self):
+        names = ['assets/ai-logs/AGENTS_TEMPLATE.md', 'assets/ai-logs/EXPLORE_DRIVE_TEMPLATE.md']
+        files = publisher.build_package(self.root, self.data, self.out)
+        with zipfile.ZipFile(files['sdd-manager.zip']) as archive:
+            for name in names:
+                self.assertEqual(archive.read('sdd-manager/' + name), (name + '\n').encode())
+        self.git('rm', *(publisher.PACKAGE_SUBDIR + '/' + name for name in names))
+        self.git('commit', '-qm', 'fixture without optional convenience')
+        source = self.git('rev-parse', 'HEAD')
+        data = handoff(source=source, notes_source=source)
+        files = publisher.build_package(self.root, data, self.out / 'without-optional')
+        with zipfile.ZipFile(files['sdd-manager.zip']) as archive:
+            for name in names:
+                self.assertNotIn('sdd-manager/' + name, archive.namelist())
+            self.assertIn('sdd-manager/assets/DOCS_TASKS_TEMPLATE.md', archive.namelist())
 
     def test_build_metadata_requires_exact_committed_version(self):
         path = self.package / 'plugin.json'
