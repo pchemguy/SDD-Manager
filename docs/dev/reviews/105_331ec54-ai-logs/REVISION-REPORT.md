@@ -2,7 +2,7 @@
 
 Campaign `105_331ec54`; baseline `331ec541b72945bf2e8ca50f7ea5fe55a35eb75c`; branch `revision/105_331ec54-ai-logs`; creation parent/eventual integration/return main on origin, pchemguy/SDD-Manager. No parent suspended. [Proposed revision plan](REVISION-PLAN.md) records the human's latest request, proposed refinements and affected owners.
 
-State: A-001/002 implemented and verified; final source review/open checkpoint pending. The human accepts all recommendations and requests execution, while explicitly keeping this optional convenience out of PLUGIN.md/coordinator entry. Adopted setup extends DOCS-001; declined/deferred adoption does not affect SDD functionality or readiness. User-selected branch is design-docs/ai-logs from current default tip; actual records remain manual.
+State: A-001–003 implemented and verified; finalized as an open checkpoint awaiting human direction after publication. The human accepts all recommendations and requests execution, while explicitly keeping this optional convenience out of PLUGIN.md/coordinator entry. Adopted setup extends DOCS-001; declined/deferred adoption does not affect SDD functionality or readiness. User-selected branch is design-docs/ai-logs from current default tip; actual records remain manual.
 
 Inspected current main-preparation, repository-bootstrap, branch/workflow identity, DOCS task/hosted definitions and forge completion evidence. Proposed handling preserves the pre-write tracking gate, normal four-root-file presence semantics and one DOCS-001 closing transition while adding an earlier scaffold/merge checkpoint. Plan includes concise directory AGENTS and transcript template proposals, feature-entry reuse, ownership/recovery and package/docs integration. No invented review findings or executable task IDs.
 
@@ -29,3 +29,22 @@ A-001 `b1d29307625f370aee6d018ca7652c3da53bd5f3` is published/readback verified 
 TextStats setup/independent assessment covers genuine adoption versus declined/deferred/unspecified choice, preliminary seed/merge versus normal task closure, interruption/ownership, feature reuse, persistent manual branches and historical-data handling. Consumer prompts and actual records are unchanged; defined scenarios are not claimed as executed live trials. The harness vendors assets but does not choose adoption or create the scaffold for its consumer.
 
 Fresh support recheck passes 139 tests (not added again to the 237 distinct-test count). Current source/link checks pass 118 Markdown files and 1,189 local links/anchors. Task/milestone identities, dependencies/prerequisites and DOCS-002–009 definitions are unchanged; transcript prefix and normal Markdown are verified. Both entries, all runtime scripts, manifest/root guidance and closed records remain unchanged. No diagram rendering, provider mutation or native Windows claim follows. Publish this action before A-003's independent source scenarios and exact committed package inspection.
+
+## A-003 — Final source scenarios, package and checkpoint
+
+A-002 source `43f616f99727ee0938a9cd5a0565a80e9c11b17b` is published/readback verified with confirmed cleanup and process exit 0. A fresh read-only worker, given package sources and four supplied requests/states without campaign conclusions, derived these continuations:
+
+| Case | Observed source assessment |
+| --- | --- |
+| Fresh main, explicit provenance decline, tracking unverified | Skip optional setup without asking again; establish the nine-issue pre-write projection gate before main initialization. Normal document checkpoints/range stops remain. |
+| Adopted fresh main, verified tracking, default trunk, empty root set | Seed the two files on the reserved branch, publish and explicitly merge/verify/publish trunk, then create design-docs/main. Only normal root/task/evidence initialization closes DOCS-001; empty roots add no mixed-state stop. |
+| Initialized project, new feature, scaffold already integrated and later manual logs unmerged | Reuse the convention; exclude the manual branch from unfinished workflow selection. Prepare the feature without merging/reading logs or replaying DOCS-001. |
+| Interrupted adopted main setup, default merge committed but unpushed | Reconcile and publish the retained default merge before dependent mutation. Do not repeat seed/merge or prematurely close the issue; recover actual default/root-presence facts rather than importing another case's assumptions. |
+
+No substantive instruction conflict was found. This is an independent source-guided advisory assessment, not a live consuming-agent trial, actual hosted transition or independent runtime acceptance. The supplied scenarios were not observed repositories. The worker performed no writes/provider calls; these defined paths are not four executed workflow passes.
+
+Build-only exact package at the source above verifies all **158 files**, including the nested reference and two exact optional assets. ZIP: 480,370 bytes, SHA-256 `f3930848069242c7edbf5b42dd79c1af66ff90bdf7899426dc9edf5936f3c5ef`. Five extracted CLI helps pass. Source-only development/acceptance/AGENTS/policies remain excluded. Subsequent active-record/HANDOFF/navigation edits do not change that tested package tree. No release/tag or installation is performed.
+
+Final source checks preserve PLUGIN.md, the coordinator entry, all runtime code, manifest version, root instructions/README, all six diagrams and prior closed records. Maintained Markdown links/anchors, exact transcript prefix, stable task definitions, historical-row equality and whitespace pass. The 800-word initialization supplement holds the complete optional procedure; its small parent links avoid direct entry exposure or a duplicated workflow manual. Distinct test count remains 237 (48 projection, 139 support, 50 publisher), with the relevant A-002 support repeat recorded separately. No current source finding remains unresolved; live/provider/native-Windows and rendering evidence are not claimed.
+
+HANDOFF/navigation now retain the completed execution and open return boundary. Publish/read back this final checkpoint, verify clean campaign state, then stop for human direction. No main integration or closure is selected. This pre-commit report cannot prove its own future publication; recover it through Git/tool evidence.

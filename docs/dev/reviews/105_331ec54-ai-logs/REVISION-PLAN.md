@@ -6,7 +6,7 @@ Campaign `105_331ec54`; full baseline/branch-off `331ec541b72945bf2e8ca50f7ea5fe
 
 The human requests a recommended manual AI provenance convention introduced at main/feature entry, and extends fresh main DOCS-001 with a provenance scaffold branch/merge before ordinary design-docs/main initialization. The latest request selects `design-docs/ai-logs` from the current default tip, superseding the earlier `ai-logs`/initial-commit wording. Actual conversation records remain manual; setup does not authorize automatic export, fetching conversation URLs, agent-written transcripts or logging every turn.
 
-State: recommendations accepted; the human requests final revision planning and execution. The latest direction makes this a completely optional initialization convenience, with no direct PLUGIN.md or coordinator-entry exposure. This execution plan supersedes the earlier proposed mandatory-setup interpretation. Keep the campaign open after verified execution; closure is not selected.
+State: accepted plan executed through A-001–003; final publication of the open checkpoint remains to be confirmed. The human's latest direction makes this a completely optional initialization convenience, with no direct PLUGIN.md or coordinator-entry exposure. This execution plan supersedes the earlier proposed mandatory-setup interpretation. Keep the campaign open after verified execution; closure is not selected.
 
 ## Proposed convention
 
