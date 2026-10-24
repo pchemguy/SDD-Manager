@@ -1,19 +1,19 @@
 # SDD Manager handoff
 
-Campaign [103 — comprehensive review](reviews/103_c46bdbd-comprehensive-review/REVIEW-REPORT.md) is finalized for explicit main integration/publication and clean-return closure. All four documentation findings are verified through the [revision report](reviews/103_c46bdbd-comprehensive-review/REVISION-REPORT.md). No parent campaign is suspended; reporting Standard.
+Campaign [104 — README diagrams](reviews/104_0946fee-readme-diagrams/REVIEW-PLAN.md) is open. Use sdd-manage for campaign coordination and sdd-docs/technical-writing for diagram alignment and composition. No parent campaign is suspended; reporting Standard.
 
 ## Scope and authority
 
-The human requested comprehensive review, fixes and closure. Reviewed current packaged workflows, focused entries/references/assets, Git/forge runtime, source support/package/CI, public/development documentation, demos and repository policies. Corrected acceptance preparation-record ownership/assessment and obsolete ACL guidance, consolidated browser verification/recovery text, and restored current navigation-table continuity. No unresolved finding or deferred repair remains.
+The human requests a new revision campaign reviewing README diagrams against the project, with clear document-design workflow diagrams. Assess the four existing packaged README diagrams and add focused mode/pass illustrations. Keep root README abbreviated; canonical workflow references own semantics. Record findings and a bounded revision plan before scoped edits.
 
-No runtime/template/version change, release/tag, installation or external-project migration is selected. Preserve all prior closed campaign contents; this campaign's records freeze after verified closure. No task IDs were invented.
+No workflow-rule/runtime/template/version change, release/tag, installation or external-project migration is selected. Preserve closed campaign artifacts, including completed 103, by Git path/object comparison without loading their contents. Keep campaign 104 open for human review; no merge or closure is selected this turn.
 
 ## Git and verification
 
-Working branch `revision/103_c46bdbd-comprehensive-review`; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Full baseline/branch-off `c46bdbdc27a483369fccfccef0091d6842a5a466`; original campaign opening `4521c1d32f2fa9ef80d69e2bb46d7f1e5e854a50`. Per-unit/action commits are published/readback verified; recover the finalization tip and subsequent effects from Git/tool evidence.
+Working branch `revision/104_0946fee-readme-diagrams`; creation parent, eventual integration and return main on origin, pchemguy/SDD-Manager. Full baseline/branch-off `0946fee61db90b7f0fc3d3aaf7f04f06f75f154d`. Clean main and refreshed origin agree. Identity discovery across current paths and 124 refs finds highest sequence 103; reserve 104. Existing branches remain intact.
 
-Linux review: 322 distinct passing tests, seven native-Windows cases skipped; affected support suite passed again after correction. Exact committed 155-file package and five extracted CLI helps pass; packaged tree is unchanged. Current links/anchors, whitespace, scope and historical-row/closed-path preservation are checked. Independent consumer, live provider tests, remote CI observation, browser provisioning, native Windows and rendered-diagram execution were not performed.
+Opening checks cover scope, branch/directory identities, links and whitespace. Diagram semantic/rendering and regression checks are pending; do not inherit past test results as current evidence. Host is Linux/Bash. No live consumer/provider, browser provisioning or native Windows execution is selected; use an eligible existing diagram facility if available and report actual limits.
 
 ## Pending boundary
 
-Publish/read back this finalization, refresh main, explicitly merge the complete pinned campaign tip with two parents, verify merged tree/package and publish/read back exact main. Confirm clean main, close and stop for new human direction. If interrupted, reconcile the existing merge/publication before retry; do not repeat the review or open another campaign. This checkpoint does not prove its own future commit, push or integration. After verified closure no parent task resumes and no release is authorized.
+Publish/read back this opening; complete the focused review and bounded revision plan, revise/check diagrams and publish results, then leave campaign 104 open for human review. Recover exact opening, source and subsequent publication from Git and owning reports/tool evidence. This pre-commit checkpoint cannot prove its own later effects. Do not merge, close or start unrelated work.
