@@ -7,7 +7,7 @@
 - Human request: update from origin; open/run a comprehensive review; plan and fix findings; close; then bump the patch version and create a GitHub release.
 - This campaign owns review and accepted repairs. A subsequent release campaign will prepare/publish 0.15.3 after verified closure. No parent suspended; Standard reporting.
 - Entry: fresh origin checkout after workspace maintenance; local main/origin/main match, clean worktree, no unfinished workflow refs, highest allocated identity 110. Manifest 0.15.2; existing stable version tag v0.15.2.
-- State: **Planned**. Review results, revision plan/report and checks will be retained as observed; no findings or executed trials are invented.
+- State: **U-001–003 complete; R-001 verified; finalized for authorized integration/closure.** See [review evidence](REVIEW-REPORT.md) and [revision evidence](REVISION-REPORT.md). Actual target publication/clean return remains a closure gate.
 
 ## Scope and method
 

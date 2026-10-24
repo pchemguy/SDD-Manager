@@ -4,7 +4,7 @@
 
 Campaign **111_8b545a4**, under its [review plan](REVIEW-PLAN.md), starts at `8b545a47f733d7322e2b5c8655cf03dd8e069909`. Working branch: revision/111_8b545a4-comprehensive-review; creation parent, integration and return: main on origin, pchemguy/SDD-Manager. Original opening: `c88051fe52ab888078715d0c29f6736aed8347b1`, published/readback verified with confirmed cleanup/exit 0. No parent suspended; Standard reporting. Review date: 2026-10-25.
 
-The human authorizes comprehensive review, finding repairs and closure, followed by a separately recorded patch release. State: **U-001–003 assessed; one accepted documentation navigation improvement pending.** Source, controlled local runtime, actual hosted CI and live consumer/installed-client evidence remain distinct.
+The human authorizes comprehensive review, finding repairs and closure, followed by a separately recorded patch release. State: **U-001–003 complete; R-001 verified under the [revision plan](REVISION-PLAN.md) and [result](REVISION-REPORT.md); finalized for authorized integration/closure.** Source, controlled local runtime, actual hosted CI and live consumer/installed-client evidence remain distinct.
 
 ## Coverage and findings
 
@@ -28,7 +28,7 @@ Opening publication initially failed with existing shell authentication and exac
 
 ## Next boundary
 
-Publish/read back this consolidated review, prepare/publish the focused R-001 revision plan, implement and recheck it, then finalize/close 111 through verified main integration/publication. Continue to the separately recorded authorized patch release. No release completion is claimed yet.
+Publish/read back finalization and close 111 through verified main integration/publication and clean return. Continue to the separately recorded authorized patch release. No release completion is claimed by this report.
 
 ## U-002 execution and hosted evidence
 
@@ -73,4 +73,4 @@ Exact package at published checkpoint `eac69918eeefdb5fed0c2ebd6ae5313b20d97069`
 | Consequence | Readers following the demo guide cannot directly discover/select the standalone copy-ready preparation variants. |
 | Accepted correction | Add a concise preparation-mode/prompt table to the existing guide. Preserve the prompt files, inline prompt contents and game objectives; do not repeat workflow procedures. The human's request to fix review findings covers this bounded adjustment. |
 | Objective recheck | Each row names the mode actually selected by its linked prompt, all three relative links resolve, and standalone/inline prompt bodies retain baseline bytes. Current-document style/navigation and exact package boundary remain valid. |
-| Disposition | Accepted; revision plan/execution follows review publication. |
+| Disposition | Verified under the [revision result](REVISION-REPORT.md): three correct mode/link mappings, original guide/prompt bodies preserved, current navigation and unchanged package/runtime/CI checked. |
