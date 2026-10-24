@@ -2,7 +2,7 @@
 
 Campaign `104_0946fee`; baseline `0946fee61db90b7f0fc3d3aaf7f04f06f75f154d`; branch `revision/104_0946fee-readme-diagrams`; creation parent/eventual integration/return main on origin, pchemguy/SDD-Manager. No parent suspended. [Accepted plan](REVISION-PLAN.md) and [findings](REVIEW-REPORT.md) define scope.
 
-State: A-001 revised and source-checked; committed-package verification and human review pending. The human authorized focused README diagram correction/addition. Keep campaign open; no integration/closure, workflow-rule change, runtime/template/version change, release or installation selected.
+State: A-001 complete and locally verified; human review pending. The human authorized focused README diagram correction/addition. Keep campaign open; no integration/closure, workflow-rule change, runtime/template/version change, release or installation selected.
 
 ## A-001 — README workflow guide
 
@@ -19,3 +19,9 @@ Six graphs replace four, with node counts 13/8/8/13/7/11; the former combined pr
 Fresh support suite: 139 passes. Initial publisher execution exposed absent jsonschema (20 import errors among 49 discovered tests), a verification-environment prerequisite rather than a product defect. Prepared an isolated environment outside the repository with declared jsonschema 4.26.0 and reran the publisher suite: 49 passes. No test was added merely to mirror prose. Git/forge runtime suites are unaffected and not rerun.
 
 Mermaid/mermaid-cli and a dedicated renderer are unavailable in the established facilities. No Mermaid parse, image rendering, GitHub rendered-layout, live consumer/provider or native Windows result is claimed. No browser/npm installation was performed. Build/check the committed candidate next, then persist the resulting open review checkpoint and publish/read back; do not merge or close.
+
+## Committed package and open checkpoint
+
+README/result commit `41ecea14ceda8fb62ff8a2f12e24722144baad42` is published/readback verified, cleanup confirmed and process exited 0. Build-only using the existing source publisher and declared validator verifies all 155 exact committed members and the revised README bytes. ZIP: 473,960 bytes, SHA-256 `ddd2d9890d20cd0efffc2bda0d60e899e523fbcb133664a29f02cad2de2ca43e`. Required preparation assets are present; source-only AGENTS/policies/evidence remain excluded. Five extracted CLI help commands pass. No provider release/tag call occurs.
+
+Final source/graph/Markdown/scope rechecks pass; only Workflow guide changed in the plugin, all closed records and historical index rows remain unchanged. Later checkpoint/report edits do not change that tested package content. All four findings are source-verified; visual layout remains an explicit review limit. HANDOFF and navigation now point to the open human-review boundary. Publish/read back this checkpoint and stop on the campaign branch; do not merge, close or start another workflow. This pre-commit record cannot prove its own subsequent publication.

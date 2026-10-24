@@ -4,7 +4,7 @@
 
 Campaign `104_0946fee`; full reviewed baseline `0946fee61db90b7f0fc3d3aaf7f04f06f75f154d`. Branch `revision/104_0946fee-readme-diagrams`; creation parent, eventual integration and return main on origin, pchemguy/SDD-Manager. Scope/criteria and open stopping boundary: [review plan](REVIEW-PLAN.md). No parent suspended.
 
-State: focused assessment complete; bounded revision proposed below. Existing four packaged README diagrams and adjacent prose are the targets; current canonical workflow references are the semantic source. Root README is intentionally abbreviated. Closed campaign contents remain excluded from loading and edits.
+State: focused review and bounded README revision complete; campaign remains open for human review. Existing four packaged README diagrams and adjacent prose were the targets; current canonical workflow references are the semantic source. Root README is intentionally abbreviated. Closed campaign contents remain excluded from loading and edits.
 
 Opening evidence: clean main and refreshed origin/main agree at the full baseline. Read-only allocation across current Git paths and 124 refs finds 103 as the highest reserved sequence; reserve 104. Host is Linux/Bash. Publication of this opening precedes the review unit; recover its exact commit and later readback from Git/tool evidence.
 
@@ -35,3 +35,7 @@ Use the existing Mermaid format with top-down, short action labels and nearby pr
 Current scoped Markdown scan passes six files and 349 local links/anchors, excluding closed record contents. An initially unavailable scratch-only scanner was rebuilt; canonical supervised publication succeeded directly, with no plugin source repair required. Mermaid/mermaid-cli are absent from the declared runtime dependency location; no dedicated rendering facility is established. Semantic/source inspection is available, but Mermaid parsing/rendering is not yet claimed. Installed Playwright alone establishes neither a Mermaid renderer nor an eligible browser. No browser or dependency installation is selected merely to edit Markdown.
 
 Proceed with the [revision plan](REVISION-PLAN.md) under the human's requested README correction/addition authority, publishing it before edits. Leave the campaign open for human review; no main integration or closure is selected.
+
+## Current disposition
+
+R-001–004 are source-aligned and rechecked in the [revision report](REVISION-REPORT.md). The revised README now contains three preparation/pass/mode diagrams and three implementation/steering/revision diagrams. 188 support/publisher tests, scoped links/Markdown, graph structure and exact 155-file package/five CLI helps pass. Rendered Mermaid parsing/layout and live behavior remain unverified. Source `41ecea14ceda8fb62ff8a2f12e24722144baad42` is published/readback verified. Keep this campaign open on its revision branch for human inspection; no default-branch merge or closure is claimed.
