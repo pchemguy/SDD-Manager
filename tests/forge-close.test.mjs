@@ -309,6 +309,19 @@ test('milestone closes only with exact complete completed issue/evidence set and
   assert.equal(state.calls.filter(call => call.method === 'POST').length, 0);
 });
 
+test('delivery milestone closure accepts its final implementation task as the report owner', async () => {
+  const final = { ...task(), report: 'docs/dev/reports/phases/1/1.1.md' };
+  const value = { ...common(), kind: 'delivery', tasks: [final], review_task: final.id, report: final.report, predecessors: [] };
+  const state = milestoneFixture(value);
+  const result = await reconcileClosure('milestone', value, state.client());
+  assert.equal(result.ok, true, JSON.stringify(result));
+  assert.equal(state.milestones[0].state, 'closed');
+  assert.equal(state.issues.length, 1);
+  assert.equal(state.calls.filter(call => call.method === 'POST').length, 0);
+  const missing = structuredClone(value); missing.tasks[0].report = null;
+  assert.throws(() => validateRequest(missing, 'milestone'), error => error.code === 'review_report_missing');
+});
+
 test('empty/missing/foreign/PR/open/retired milestone members cannot close', async () => {
   for (const change of [
     state => { state.issues = []; },

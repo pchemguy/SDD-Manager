@@ -95,8 +95,8 @@ Milestone mode omits task and adds exactly these fields:
 | --- | --- |
 | kind | delivery or phase-review. |
 | tasks | Complete nonempty array of task objects with the shape above, at most 1000. IDs/numbers are unique; every issue must already be completed with matching managed evidence. |
-| review_task | ID of the included review/report task. |
-| report | Nonempty report path equal to that review task's report field; its commit/branch/verification identify the report evidence. |
+| review_task | ID of the included report-bearing boundary task: standalone review, or final implementation task when the milestone review task is omitted. |
+| report | Nonempty path equal to that boundary task's report field; its commit/branch/verification identify the review/report evidence. No extra issue is required for a folded milestone boundary. |
 | predecessors | Array of milestone objects with the same shape as milestone, at most 1000 and unique/disjoint from the selected milestone. Empty for delivery; nonempty for phase-review. |
 
 A phase-review request contains exactly one task, the review task, and all required preceding delivery milestones. The caller establishes that the expected set is complete; the utility checks the supplied set against actual hosted objects and states. Retired/not-planned work is not converted into completed work. A scope requiring such disposition uses the existing lifecycle rather than excluding it to make this request pass.

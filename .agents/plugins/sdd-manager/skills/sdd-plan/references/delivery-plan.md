@@ -24,7 +24,7 @@ Define each phase's exits against its actual included contracts, cross-cutting o
 
 ## Review boundaries
 
-Apply the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md). Reserve one final phase review milestone with a single phase review/testing/report outcome. Every preceding delivery milestone includes its own final milestone review/testing/report outcome. Define code review, focused testing/regressions, blocker repair and committed report evidence as exits. The phase review starts after all delivery milestones complete/close; its own milestone closes afterward. PLAN owns these boundaries; TASKS assigns executable task IDs. Include final TODO aggregation when the last phase completes the full task list.
+Apply the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md). Reserve one final phase review milestone with a single phase review/testing/report outcome. Every delivery milestone includes a review/testing/report outcome. TASKS assigns it to a standalone review task only when the milestone has at least four implementation tasks and the phase has at least two implementation milestones; otherwise it belongs to the final implementation task. Exclude the special phase review milestone from that count. Define code review, focused testing/regressions, blocker repair and committed report evidence as exits. The phase review starts after all delivery milestones complete/close; its own milestone closes afterward. PLAN owns these boundaries; TASKS assigns executable task IDs. Include final TODO aggregation when the last phase completes the full task list.
 
 ## Incremental growth
 

@@ -62,7 +62,7 @@ The runtime checks source bytes/hash and exact extracted IDs/names/parentage/ord
 | id, name | Exact selected source identity/name. For docs-main the logical ID is docs-main and name/native title is the predefined sdd-docs-main. Host titles are rendered deterministically. |
 | kind | delivery or phase-review for implementation; docs-main for documentation preparation. |
 | description | Phase outcome/exit conditions are agent-authored; docs-main uses the exact predefined description. Nonblank UTF-8, at most 16000 bytes; no unrelated project defaults. |
-| review_task | Exact final review task ID for implementation; null for docs-main. |
+| review_task | Exact final report-bearing boundary task ID: standalone review or eligible final delivery task; null for docs-main. |
 
 | Task field | Contract |
 | --- | --- |
@@ -73,7 +73,9 @@ The runtime checks source bytes/hash and exact extracted IDs/names/parentage/ord
 | scope, acceptance | Nonblank scope and observable checks/evidence, each at most 16000 UTF-8 bytes. Agent-authored for phases, predefined for docs-main. Resolve contradictions against governing documents. |
 | sources | One to sixteen explicit relevant reference strings, each at most 1024 bytes. Include only useful available sources; do not invent links before files exist. |
 
-Each delivery milestone has delivery tasks followed by one milestone-review task depending on its constituent tasks. The last milestone contains exactly one phase-review task depending on delivery reviews. These structural checks do not establish correct dependency semantics or actual completed prerequisites. Docs-main has its single predefined native milestone and all nine template/list tasks; the agent establishes actual first-approval and merge-after-task evidence.
+New task generation follows the [milestone review threshold](../../sdd-conventions/references/backend-object-lifecycle.md#explicit-review-units): omit the separate review task below four implementation tasks or when the phase has one implementation milestone, excluding the special phase review. In that case all milestone tasks keep role delivery, review_task points to the final one, and that task depends on every other constituent task and owns the milestone review/report/HANDOFF obligations. Otherwise the final task has role milestone-review and depends on the preceding delivery tasks. The special last milestone still contains exactly one phase-review task depending on each delivery milestone's final boundary task.
+
+The validator accepts eligible folded boundaries and retains previously accepted explicit-review layouts without deleting IDs. Generation/QC enforces the new threshold; changing an existing accepted list requires scoped amendment, including multipass preservation. Structural checks do not establish correct dependency semantics, actual review/report work or completed prerequisites. Docs-main has its single predefined native milestone and all nine template/list tasks; the agent establishes actual first-approval and merge-after-task evidence.
 
 For clarity, this abstract example is **one task object**, not a complete operational request or a prescribed work breakdown:
 
