@@ -37,7 +37,7 @@ Material unresolved decisions: {issue, affected scope/next step and actual autho
 - Original root-file presence: {retained and copied filenames; unknown if unsupported}.
 - Preservation/copy verification: {actual result/evidence, or pending}.
 - Initialization continuation: {none/all/mixed presence and actual continuation/preapproval/stop basis}.
-- Optional manual provenance: {adopted/declined/deferred; known preliminary seed/base/merge identities or pending effects if applicable; no transcript required}.
+- Manual provenance setup: {default enabled, or explicit human/project opt-out/deferral with decision source; verified seed/base/merge identities or blocked/pending effects; no transcript required}.
 - Current reset: {none, or prior pass/checkpoint, reason/scope change, next pass and approval basis; outstanding reopening goes below}.
 - Prior-pass evidence: {known Git checkpoint references where needed; not current-pass acceptance}.
 
