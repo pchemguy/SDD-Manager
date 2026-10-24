@@ -100,7 +100,7 @@ The main documents describe the complete intended project. Roots may link to foc
 | `layout.md` | Physical ownership of source, tests, documentation, and other artifacts. |
 | `TASKS.md` | Phase → Milestone → Task hierarchy, stable IDs, and progress evidence. |
 | `DOCS_TASKS.md` | Nine main-preparation task definitions and completion checkboxes only. |
-| `DOCS_PREPARATION.md` | Main-preparation mode/pass control, scope sequence, decisions, initialization/reset evidence and pending transitions. |
+| `DOCS_PREPARATION.md` | Main-preparation mode/pass control, titled scope sequence, retained per-pass/cross-scope decisions, initialization/reset evidence and pending transitions. |
 | `DOCS-QC-REPORT.md` | Whole documentation package readiness, checked sources, findings and evidence limits. |
 | `HANDOFF.md` | Workflow checkpoint, authorized scope/stop, branches/parent return and pending work; later records and Git supply subsequent changes. |
 

@@ -57,7 +57,7 @@ When PROJECT creation, revision or review is requested, load the [project brief]
 
 For architecture, purpose and scope must be understood, principal boundaries arguable, and no unresolved question may force a material structural choice to be invented. If architecture is requested earlier, distinguish blockers from deliberately open design options. Load [architecture](architecture.md) or [decomposition](decomposition.md) when that work is selected.
 
-Hand off confirmed choices, consequential rationale, constraints, unresolved risks and delegated decision boundaries to the selected owner. PROJECT retains intent/principal constraints; ARCHITECTURE retains structural rationale. Use existing owning records for durable decisions and existing continuity rules for checkpoints; do not introduce a mandatory exploration document, task list or per-turn HANDOFF update. Stop at the requested discussion/artifact boundary and preserve pending human decisions.
+Hand off confirmed choices, consequential rationale, constraints, unresolved risks and delegated decision boundaries to the selected owner. PROJECT retains intent/principal constraints; ARCHITECTURE retains structural rationale. For main multipass preparation, persist material exploration outcomes through [per-pass and cross-scope decision retention](../../sdd-manage/references/doc-design-modes.md#retain-pass-and-cross-scope-decisions) before dependent use. Use existing owning records for durable decisions and existing continuity rules for checkpoints; do not introduce a mandatory exploration document, task list or per-turn HANDOFF update. Stop at the requested discussion/artifact boundary and preserve pending human decisions.
 
 ## Evidence-backed project positioning
 
