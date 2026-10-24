@@ -1,19 +1,19 @@
 # SDD Manager handoff
 
-Campaign [105 — manual AI provenance](reviews/105_331ec54-ai-logs/REVISION-REPORT.md) is finalized for human-requested closure under its [plan](reviews/105_331ec54-ai-logs/REVISION-PLAN.md). No parent is suspended; reporting Standard.
+Campaign [106 — comprehensive review](reviews/106_4c0221d-comprehensive-review/REVIEW-REPORT.md) is finalized for authorized closure. Its [revision plan](reviews/106_4c0221d-comprehensive-review/REVISION-PLAN.md) and [result](reviews/106_4c0221d-comprehensive-review/REVISION-REPORT.md) retain fixes and evidence. No parent is suspended; Standard reporting.
 
 ## Outcome and authority
 
-Optional manual AI provenance is integrated through initialization and exact assets; PLUGIN.md/coordinator entry remain unchanged. Adopted fresh setup preserves pre-write tracking, preliminary DOCS-001 seed/default merge and normal single task closure. Declined/deferred adoption adds no SDD prerequisite. Logs remain manual historical data. All A-001–003 are verified; no finding remains open.
+The human requested closure of 105, then comprehensive review, revision planning, fixes and closure. Campaign 105 closed through its published two-parent main merge, which is this campaign's baseline. Three current-source review units are complete. Two documentation defects are verified: task-list audit scope in the packaged README and release-note retention wording in the capability map. No finding remains open/deferred.
 
-The human requests closing 105, then opening/running a separate comprehensive review, fixing issues and closing it. No release, version bump, installation or target-project scaffold is selected. Preserve prior closed records.
+All runtime/tests/CI/canonical workflows/agent entries/version/root policies and six diagram blocks remain unchanged. Optional manual provenance stays within initialization. Closed artifacts are preserved. No release/tag/version bump, installation, browser setup or live target/provider mutation is selected.
 
 ## Git and evidence
 
-Working branch revision/105_331ec54-ai-logs; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Baseline `331ec541b72945bf2e8ca50f7ea5fe55a35eb75c`; opening `a41e27d9e89b012fe4ba00d3e633602203ad572b`; completed published checkpoint `420db5b1a8536b1292f7737a63bacb712916b84e`. Refreshed main is unchanged. Package tree is identical to tested source `43f616f99727ee0938a9cd5a0565a80e9c11b17b`.
+Branch revision/106_4c0221d-comprehensive-review; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Full baseline/branch-off `4c0221d637eb49130594e3b8d7a37c227fe8440b`; original opening `89cf55fd6e02a330ee0094c936e094afb9f5725d`. V-001 source `0e172ae703cd9348fd11d762b76d73b2bb6a2f0a` is published/readback verified with confirmed cleanup/exit 0. Refreshed main is unchanged and worktree ownership is clean before this finalization.
 
-237 distinct Linux tests pass: 48 projection, 139 support, 50 publisher. Exact 158-file package and five extracted CLI helps pass. Four independent read-only source scenarios found no conflict; they were not live workflow executions. No live/provider, native Windows, installed-client or rendered-diagram result is claimed.
+323 distinct Linux tests pass: 134 Node utility contracts, 139 acceptance support, 50 publisher. Seven native-Windows shell tests skipped on Linux. Revised exact 158-file package/schema/member bytes and five extracted CLI helps pass. Maintained links/fences, scope, immutable baseline coverage and frozen-record preservation pass. No live consumer/provider/CI, native Windows, installed-client or rendered-diagram result is claimed.
 
 ## Return boundary
 
-Publish/read back finalization, explicitly merge the complete verified tip into main, verify and publish/read back main with confirmed cleanup and a clean worktree. Actual Git/tool evidence establishes those later effects; this snapshot cannot prove its own publication. Then freeze 105 and open the separately authorized comprehensive review from the resulting main tip.
+Publish/read back finalization, explicitly merge the complete verified tip into main, verify prospective/committed result and exact package, then publish/read back main with confirmed cleanup and return clean. Git/tool evidence establishes these later effects; this snapshot cannot prove its own publication. That completion closes/freezes 106. Stop after closure; no further work is selected.
