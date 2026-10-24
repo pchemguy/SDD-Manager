@@ -86,7 +86,7 @@ A different arrangement is acceptable if each required decision and gate remains
 
 The coordinator's `SKILL.md` must have a clearly identified routing section, preferably a table, individually naming and linking every `references/*.md` file. For each file, state its purpose, scope, boundary and loading conditions, including unconditional use where applicable, so selection is possible from the entry before reading the reference. Compare the file inventory with that section; domain labels alone do not establish complete routing. This does not require every module to be loaded at startup.
 
-Small optional initialization supplements may live under `references/initialization/`, routed conditionally by an already listed initialization owner. The parent reference names their scope and loading condition; they need no direct PLUGIN.md/coordinator-entry listing and must not introduce core readiness requirements. The manual AI-provenance convenience uses this boundary.
+Small initialization supplements may live under `references/initialization/`, routed by an already listed initialization owner. The parent reference names their scope and loading condition; they need no direct PLUGIN.md/coordinator-entry listing or new product acceptance requirements. The manual AI-provenance convenience uses this boundary: setup executes by default within initialization, with an explicit human/project opt-out or deferral; conversation recording remains manual and optional.
 
 The domain map below identifies canonical coverage for development review:
 

@@ -66,7 +66,7 @@ For continuation, read `docs/dev/HANDOFF.md` as a checkpoint under the coordinat
 
 Inspect available local/remote workflow refs, their recorded creation parents and source-tip containment relative to those parents. Include unfinished preparation/phase branches. A child integrated into its unfinished parent is not independently pending solely because main lacks it. Read only relevant current provenance, not unrelated closed campaign contents. Report freshness/unknown remote state, suspended parent/child relationships and pending integration/publication. Do not fetch, choose the continuation branch or switch; the coordinator obtains the human's branch selection unless already established.
 
-Reserved `design-docs/ai-logs` holds optional manual records; later unmerged logs alone do not make it unfinished preparation or a continuation candidate. Observe a known interrupted initial scaffold operation or explicitly selected provenance work separately, without routine transcript loading. See the [initialization supplement](../../sdd-manage/references/initialization/ai-logs.md).
+Reserved `design-docs/ai-logs` holds manual records; later unmerged logs alone do not make it unfinished preparation or a continuation candidate. Observe a known interrupted initial scaffold operation or explicitly selected provenance work separately, without routine transcript loading. See the [initialization supplement](../../sdd-manage/references/initialization/ai-logs.md).
 
 Carry the checkpoint identity, later evidence, exact recovered scope/stop and consequential unknowns in the orientation handoff. Preserve normal task audit/publication prerequisites; a saved next action does not override newer decisions or authorize replaying a hosted effect.
 
