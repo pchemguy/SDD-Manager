@@ -6,7 +6,7 @@
 - Starting baseline and full branch-off: `e96e4536c399fe0c8cd03675b244d147ca4d78d3`.
 - Working branch: revision/109_e96e453-multipass-delivery-modes; creation parent, eventual integration and return target: main on origin, pchemguy/SDD-Manager.
 - Human request: open a revision campaign defining strict multipass by default and flexible multipass only with explicit permission, allowing small changes fitting earlier scope to enter the corresponding phase/task range.
-- State: **Open; planned, not executed.** This checkpoint opens and publishes the campaign plan; source revision and closure remain pending. No parent is suspended. Standard reporting.
+- State: **Executing** under the subsequent human instruction, “Execute and close.” Source actions A-001–003 are implemented; A-004 verification/final integration is in progress. See [revision evidence](REVISION-REPORT.md). No parent is suspended. Standard reporting.
 - Entry evidence: bounded fetch completed; local main and origin/main match the baseline; worktree clean, no unmerged workflow refs, highest allocated identity 108.
 
 This is a directly requested revision, without a fabricated preceding review or finding IDs. The existing [mode owner](../../../../.agents/plugins/sdd-manager/skills/sdd-manage/references/doc-design-modes.md) defines approval and loop control but does not restrict changes to delivery ranges established by earlier passes. [Delivery planning](../../../../.agents/plugins/sdd-manager/skills/sdd-plan/references/delivery-plan.md) requires bounded increments and rejects a universal one-phase-per-feature rule; the new policy must preserve both obligations.

@@ -12,6 +12,8 @@
 
 ## Phase scope and version coverage
 
+For multipass preparation, apply the selected [strict/flexible delivery mode](../../sdd-manage/references/doc-design-modes.md#multipass-delivery-modes) before revising existing ranges. Strict is the default: preserve earlier-pass phases, milestone boundaries and task ranges; append new bounded phases. Only explicitly permitted flexible mode allows small additions fitting an earlier pass's scope within its corresponding range. Compare against retained prior-pass PLAN/TASKS; keep selection and amendment rationale in DOCS_PREPARATION, not a pass narrative in PLAN.
+
 Assess why each capability belongs in its selected phase. Move independent enhancements to subsequent bounded phases when doing so preserves the selected useful outcome. Retain genuine dependencies, required qualities or substantial avoidable rework with a consequential rationale; eventual inclusion in the product or minor implementation convenience is insufficient. A compact scope/dependency rationale suffices; do not justify every minor requirement separately.
 
 A genuinely necessary enabling or risk stage must have bounded scope, evidence and a route to the next integrated capability. Do not present infrastructure readiness as delivered product functionality. Smaller tasks and milestones do not repair an oversized phase. A narrow coherent phase may need few milestones, and a genuinely small complete project may fit one phase; add no padding, artificial phases or one-phase-per-feature rule.

@@ -5,6 +5,7 @@ Current preparation control and evidence. `DOCS_TASKS.md` alone owns task defini
 ## Current control
 
 - Mode and decision source: {effective selection; human instruction or applicable mode basis}.
+- Multipass delivery mode: {strict by default; flexible only with explicit human permission, its scope/source and affected prior-pass phase/task ranges; omit for onepass}.
 - Current pass and scope: {pass identity and scope/sequence reference; onepass when applicable}.
 - Approval/delegation basis: {active grants, conditions and revocations; distinguish human acceptance from preapproval}.
 - Tracking/publication selection: {actual scope/source; pending or explicit local-only exception when applicable}.

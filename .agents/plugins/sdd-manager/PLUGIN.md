@@ -120,6 +120,8 @@ Main document preparation supports the following selections. Load [mode and pass
 
 Predefined autodoc scope sequences default to autoloop unless human-controlled multipass is requested. New material autoloop decisions are delegated to agent judgment with visible rationale while proceeding. A cursor reset retains documents and reopens DOCS-002–009 and their existing issues; mode selection preserves required QC, publication and tracking gates.
 
+Multipass delivery is **strict by default**: later passes preserve earlier phase/task ranges. **Explicitly permitted flexible multipass** may integrate small changes fitting an earlier pass's scope into its corresponding range. This choice is independent of approval/loop control; [mode details](skills/sdd-manage/references/doc-design-modes.md#multipass-delivery-modes) govern selection, retention and planning/task review.
+
 ### Project preparation and bounded delivery
 
 `PROJECT.md` is the concise project brief: purpose, users, outcomes, scope/non-goals and consequential constraints, with material assumptions/questions identified. Use `sdd-design`'s [brief contract](skills/sdd-design/references/project-brief.md); PROJECT supplies context rather than architecture or exact SPEC behavior.

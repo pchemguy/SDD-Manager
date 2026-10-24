@@ -11,6 +11,8 @@ Use after TASKS/FEATURE-TASKS generation or material amendment, and for an expli
 
 ## Corrections, evidence and gate
 
+For multipass, compare the proposed list with its retained prior-pass version under the [delivery mode](../../sdd-manage/references/doc-design-modes.md#multipass-delivery-modes). Check earlier task IDs, scope, parents, order, prerequisites and exit coverage. Strict permits no earlier-range changes; flexible changes need explicit permission, small semantic fit and the recorded affected range/rationale. Reject renumbering, silent cumulative regeneration and retroactive completion edits; return protected-range conflicts to sdd-manage for scoped direction.
+
 Authoring includes bounded initial task-list corrections, recheck and adjacent `TASKS-REVIEW-REPORT.md` or `FEATURE-TASKS-REVIEW-REPORT.md` through **sdd-report**'s **Document QC reports** format. The root report covers applicable children. Preserve original located findings and append Revision N cycles; count rationale is an assessment, not an automatic defect.
 
 A task breakdown that exposes an inadequate PLAN, including any oversized phase or lack of coherent functionality growth, returns the strategy amendment to sdd-plan and rechecks affected inputs. Small tasks or extra milestones cannot cure that phase boundary; do not silently change delivery strategy in TASKS. Necessary SPEC/design decisions return to their owners. Existing feature reconciliation belongs to sdd-integrate-feature; commanded checkpoint amendments belong to sdd-steer. Review-only returns findings without changing the governing list, checkboxes or code. A report is written only within authorized scope.
