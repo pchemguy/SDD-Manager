@@ -1,17 +1,17 @@
 # SDD Manager handoff
 
-Campaign **110 — conditional milestone review tasks** is finalized for authorized closure under its [revision plan](reviews/110_4d8ea36-milestone-review-threshold/REVISION-PLAN.md) and [result](reviews/110_4d8ea36-milestone-review-threshold/REVISION-REPORT.md). No parent suspended; Standard reporting.
+Campaign **111 — comprehensive review** is open under its [review plan](reviews/111_8b545a4-comprehensive-review/REVIEW-PLAN.md). No parent suspended; Standard reporting.
 
 ## Scope and authority
 
-The human authorizes plan, execution and closure: omit a standalone milestone review task when the milestone has fewer than four implementation tasks or the phase has a single implementation milestone. The human explicitly excludes the special phase review milestone from the change. A-001–004 implement the rule, folded report/HANDOFF ownership, planning/task generation and review, projection input validation and completion/tracking handoffs. Existing accepted IDs remain intact absent scoped amendment; phase review stays separate and waits for delivery closures.
+The human authorizes origin update, comprehensive review, planning/execution of findings and campaign closure, followed by a patch bump and GitHub release. Review all current workflow/runtime/distribution/documentation owners, including incoming demo prompts and recent multipass/milestone changes. Persist actual findings and no-finding coverage; preserve frozen history.
 
-279 distinct Linux tests pass (90 affected Node, 139 support, 50 publisher), plus four advisory source-guided cases. Current links/fences/scope and the exact committed 158-file package/five extracted CLI helps pass. No native-Windows, installed-client or live consumer/provider acceptance is inferred. No release, version bump, installation, target-project edit, credential/transport or fixed DOCS change occurred. Closed campaign records remain unchanged; no unrelated dirty work remains before finalization.
+Three ordered review units precede the accepted revision plan and repairs. The later release operation targets 0.15.3 from current 0.15.2 and will be recorded separately after review closure. No target-demo mutation, installation or retrospective closed-record maintenance is selected. Tests/hosted/release checks remain unperformed at this opening.
 
 ## Git and baseline
 
-Working branch: revision/110_4d8ea36-milestone-review-threshold. Creation parent, integration and return: main on origin, pchemguy/SDD-Manager. Full baseline/branch-off: `4d8ea36fe8add4bf4bae7c400d443bc8288ac8e9`; original opening: `7c13ccff62506daa8b1e9ae18fe125ea39b4507b`. Source/result `03230593a36239f0b4ebab7c9aecf41a4eaa2caa` is published/readback verified with confirmed cleanup/exit 0. Refreshed main is unchanged.
+Working branch: revision/111_8b545a4-comprehensive-review. Creation parent, integration and return: main on origin, pchemguy/SDD-Manager. Full baseline/branch-off: `8b545a47f733d7322e2b5c8655cf03dd8e069909`. Origin checkout is current and clean; no unfinished workflow refs. Campaign 110's verified closure merge `5556c1230adcd685eb08c144c812bfc257ade97f` is retained in this baseline; subsequent incoming changes are demo prompts.
 
 ## Pending boundary
 
-Publish/read back finalization, explicitly merge the complete verified published tip into main, confirm both parents/current links/scope and exact package, then publish/read back main with confirmed cleanup and return clean. Git/tool evidence establishes these later effects; this snapshot cannot prove its own subsequent publication. That completion closes/freezes 110. Stop after closure.
+Publish/read back this opening; execute U-001–003, plan/fix findings, verify and close 111 through explicit published integration. Continue to the authorized patch-release campaign, create the default-branch release commit/tag, publish/verify the GitHub release and close. Preserve concrete blockers and actual pending effects; this snapshot cannot prove its own publication.
