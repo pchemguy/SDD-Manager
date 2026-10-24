@@ -12,6 +12,8 @@ Check that strategy belongs in PLAN, physical ownership in layout, behavior in S
 
 Report concrete gaps and affected task-list dependencies. Direct corrections belong to [delivery plan](delivery-plan.md) or [physical layout](physical-layout.md); incorporation of accepted feature documents belongs to **sdd-integrate-feature**. A review does not authorize edits, task execution, or progression into another workflow.
 
+For multipass, compare against prior-pass PLAN/TASKS under the [delivery mode](../../sdd-manage/references/doc-design-modes.md#multipass-delivery-modes). Strict requires unchanged earlier phase/task identities, scope, membership, order, dependencies and exits. Flexible amendments require explicit permission, a small change fitting the earlier scope and retained range/rationale; recheck affected contracts and exits. Checkpoint preapproval or autoloop is not flexible permission. Report conflicts rather than silently restructuring protected ranges.
+
 ## Required PLAN/SPEC QC gate
 
 Apply **sdd-conventions**' **Development-document QC**. Establish current SPEC/design QC evidence for the accepted inputs; a material unresolved specification issue blocks dependent planning. Map every significant accepted contract and end-to-end obligation to a planned delivery route, including honest deferrals, failures, dependencies and objective exits. Identify omissions, duplication, invented features and scope drift. Verify that layout supports the accepted structure and planned integration; a layout-only review reports its affected PLAN implications without authorizing PLAN edits.
