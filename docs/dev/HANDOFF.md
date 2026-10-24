@@ -1,17 +1,13 @@
 # SDD Manager handoff
 
-Campaign **111 — comprehensive review** is finalized for authorized closure under its [review](reviews/111_8b545a4-comprehensive-review/REVIEW-REPORT.md) and [revision result](reviews/111_8b545a4-comprehensive-review/REVISION-REPORT.md). No parent suspended; Standard reporting.
+Campaign **112 — release 0.15.3** is finalized for authorized closure under its [plan](reviews/112_c63cbc3-release-0-15-3/REVISION-PLAN.md) and [verified outcome](reviews/112_c63cbc3-release-0-15-3/REVISION-REPORT.md). No parent is suspended; Standard reporting. Comprehensive review campaign 111 is closed and frozen.
 
-## Scope and authority
+## Completed scope
 
-The human authorizes origin update, comprehensive review, finding repairs and closure, then a patch bump/GitHub release. All three current-product units are assessed. R-001 adds mode-labelled links to standalone Tetris prompts; all prompt bodies and other manual content remain intact. No runtime/workflow defect was confirmed. Closed history remains unchanged.
+Stable/latest [v0.15.3](https://github.com/pchemguy/SDD-Manager/releases/tag/v0.15.3), release 422996698, is published and independently verified. Existing publisher run [40135076330](https://github.com/pchemguy/SDD-Manager/actions/runs/40135076330) passes both jobs, including 139 support/50 publisher contracts. Exact tag/body/default-branch provenance and downloaded ZIP/checksum bytes match; 158 package files/five CLI helps pass. Root RELEASE-NOTES.md remains retained; only consumed internal highlights were removed. Review 111's 327 local passes/14 native CI jobs remain qualified prior evidence, not fresh release reruns. Installed-client/live target-workflow/diagram rendering remain unclaimed.
 
-327 local tests, four advisory source cases, 14 actual Linux/Windows CI jobs, current links/style/artwork checks and the exact 158-file package/five extracted CLI helps pass. Package/runtime/test/CI blobs are unchanged by the navigation repair. No live target workflow, installed-client or fresh Mermaid rendering is inferred. The authorized release follows closure: bump 0.15.2 to 0.15.3 and publish from the actual default branch with exact notes/commit/tag/package agreement. No installation is selected.
+## Git and pending closure
 
-## Git and baseline
+Working branch: revision/112_c63cbc3-release-0-15-3. Creation parent, integration and return: main on origin, pchemguy/SDD-Manager. Baseline/branch-off: `c63cbc3764e39916baba0e9c8c4548afb27c39aa`; original opening: `88ec8bc33f775af774cf5562a9e98eef221409f8`. Direct main release source: `63f145f42303354a81677710c8fc93cdf1f67f48`; annotated v0.15.3 object: `f191c9b1444f4be783f62321cf2158acbcc7411d`. Published/readback-verified incoming synchronization: `ea58b78c4eae06bcfbabe700f7d6aaa0ae12d8e7`.
 
-Working branch: revision/111_8b545a4-comprehensive-review. Creation parent, integration and return: main on origin, pchemguy/SDD-Manager. Full baseline/branch-off: `8b545a47f733d7322e2b5c8655cf03dd8e069909`; original opening: `c88051fe52ab888078715d0c29f6736aed8347b1`. Review unit checkpoints and accepted repair plan are published/readback verified; plan checkpoint `970b5fc68ffd0c22d98e20105b4e984fdae84893`. Final result publication is pending this snapshot; exact source/CI/package provenance stays in the review report.
-
-## Pending boundary
-
-Publish/read back finalization, explicitly merge the complete verified published tip into refreshed main, verify both parents/current links/scope/exact package, then publish/read back main with confirmed cleanup and return clean. Those actual effects close/freeze 111. Continue to the separately recorded authorized 0.15.3 release campaign; do not move its future release tag to a later campaign-finalization commit. This snapshot cannot prove its own subsequent publication.
+Publish/read back this final report, explicitly merge the complete verified published campaign tip into refreshed main, verify both parents/current links/scope/package preservation, then publish/read back main with confirmed cleanup and return clean. Those actual effects close/freeze 112. Keep the release tag pinned to the original release commit; no further work or installation is selected. This snapshot cannot prove its own subsequent publication.
