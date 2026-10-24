@@ -86,6 +86,8 @@ A different arrangement is acceptable if each required decision and gate remains
 
 The coordinator's `SKILL.md` must have a clearly identified routing section, preferably a table, individually naming and linking every `references/*.md` file. For each file, state its purpose, scope, boundary and loading conditions, including unconditional use where applicable, so selection is possible from the entry before reading the reference. Compare the file inventory with that section; domain labels alone do not establish complete routing. This does not require every module to be loaded at startup.
 
+Small optional initialization supplements may live under `references/initialization/`, routed conditionally by an already listed initialization owner. The parent reference names their scope and loading condition; they need no direct PLUGIN.md/coordinator-entry listing and must not introduce core readiness requirements. The manual AI-provenance convenience uses this boundary.
+
 The domain map below identifies canonical coverage for development review:
 
 - **Context/path:** [workflows](../../.agents/plugins/sdd-manager/skills/sdd-manage/references/workflows.md), [coordination](../../.agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md) and [examples](../../.agents/plugins/sdd-manager/skills/sdd-manage/references/examples.md).
