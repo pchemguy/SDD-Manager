@@ -27,6 +27,14 @@ Supply the target repository, the required authorization, and the GitHub trackin
 
 Keep the initial description short when testing clarification. For more controlled comparisons, provide the same additional decisions in each run and record when they were introduced.
 
+Complete alternatives are available as standalone prompts. Replace their repository and token placeholders, and choose the preparation mode for the run:
+
+| Preparation mode | Copy-ready prompt |
+| --- | --- |
+| Interactive/onepass | [All-inclusive project](prompts/AIO.md) |
+| Autodoc/onepass | [All-inclusive project](<prompts/Autodoc AIO.md>) |
+| Autodoc/autoloop | [Cumulative scope passes](<prompts/Multipass Autoloop AIO.md>) |
+
 The agent should clarify material ambiguities before treating them as requirements. Relevant questions include:
 
 - Which mechanics constitute the baseline?
