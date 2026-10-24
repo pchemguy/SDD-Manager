@@ -1,17 +1,11 @@
 # SDD Manager handoff
 
-Campaign **111 — comprehensive review** is finalized for authorized closure under its [review](reviews/111_8b545a4-comprehensive-review/REVIEW-REPORT.md) and [revision result](reviews/111_8b545a4-comprehensive-review/REVISION-REPORT.md). No parent suspended; Standard reporting.
+Campaign **112 — release 0.15.3** is active under its [accepted plan](reviews/112_c63cbc3-release-0-15-3/REVISION-PLAN.md). Campaign 111 closed through published main merge `c63cbc3764e39916baba0e9c8c4548afb27c39aa`; its frozen records and verification remain retained. No parent is suspended; Standard reporting.
 
 ## Scope and authority
 
-The human authorizes origin update, comprehensive review, finding repairs and closure, then a patch bump/GitHub release. All three current-product units are assessed. R-001 adds mode-labelled links to standalone Tetris prompts; all prompt bodies and other manual content remain intact. No runtime/workflow defect was confirmed. Closed history remains unchanged.
+The human authorizes patch bump, exact default-branch release commit/tag, existing publisher execution, GitHub release and final campaign closure. Prepare fresh notes from v0.15.2, preserve relevant compatibility/install guidance, verify exact source/body/assets/latest. No installation or unrelated runtime changes are selected.
 
-327 local tests, four advisory source cases, 14 actual Linux/Windows CI jobs, current links/style/artwork checks and the exact 158-file package/five extracted CLI helps pass. Package/runtime/test/CI blobs are unchanged by the navigation repair. No live target workflow, installed-client or fresh Mermaid rendering is inferred. The authorized release follows closure: bump 0.15.2 to 0.15.3 and publish from the actual default branch with exact notes/commit/tag/package agreement. No installation is selected.
+## Git and pending boundary
 
-## Git and baseline
-
-Working branch: revision/111_8b545a4-comprehensive-review. Creation parent, integration and return: main on origin, pchemguy/SDD-Manager. Full baseline/branch-off: `8b545a47f733d7322e2b5c8655cf03dd8e069909`; original opening: `c88051fe52ab888078715d0c29f6736aed8347b1`. Review unit checkpoints and accepted repair plan are published/readback verified; plan checkpoint `970b5fc68ffd0c22d98e20105b4e984fdae84893`. Final result publication is pending this snapshot; exact source/CI/package provenance stays in the review report.
-
-## Pending boundary
-
-Publish/read back finalization, explicitly merge the complete verified published tip into refreshed main, verify both parents/current links/scope/exact package, then publish/read back main with confirmed cleanup and return clean. Those actual effects close/freeze 111. Continue to the separately recorded authorized 0.15.3 release campaign; do not move its future release tag to a later campaign-finalization commit. This snapshot cannot prove its own subsequent publication.
+Working branch: revision/112_c63cbc3-release-0-15-3. Creation parent, integration and return: main on origin, pchemguy/SDD-Manager. Full baseline/branch-off: `c63cbc3764e39916baba0e9c8c4548afb27c39aa`. Publish/read back this opening before further work. Next: collect complete release coverage, create/publish the direct main release commit and exact tag, then dispatch and verify the sole publisher. Synchronize main back into the active campaign for final evidence; close through verified explicit main integration and clean return. Do not move the release tag to finalization.
