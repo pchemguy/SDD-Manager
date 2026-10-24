@@ -222,7 +222,7 @@ A reset returns to DOCS-002, reopens DOCS-002–009 and the same issues when tra
 
 ### Implementation and continuation
 
-Apply this cycle to each authorized phase segment or coherent feature/revision boundary. Inspect retained work before publication or continuation; a known-invalid completion requires scoped recovery. Each task closes with its verified result, evidence and checkbox together, using its single owning task ID.
+For implementation driven by TASKS or FEATURE-TASKS, apply this cycle to each authorized phase segment or coherent feature/revision boundary. Inspect retained work before publication or continuation; a known-invalid completion requires scoped recovery. Each task closes with its verified result, evidence and checkbox together, using its single owning task ID.
 
 ```mermaid
 flowchart TB
@@ -244,7 +244,7 @@ flowchart TB
     M --> E
 ```
 
-For main development, integration requires a complete verified phase; a smaller range publishes and pauses. A feature/revision requires its coherent authorized boundary, task audit and applicable exits; complete feature implementation includes required document incorporation before final verification. An authorized cross-phase range repeats the cycle only after each preceding phase is integrated and published. No diagram arrow widens the requested range. See [implementation](skills/sdd-implement/SKILL.md) and [completion boundaries](skills/sdd-implement/references/completion-and-checkpoints.md#integrate-the-completed-boundary).
+For main development, integration requires a complete verified phase; a smaller range publishes and pauses. A feature/revision requires its coherent authorized boundary and applicable exits, including a task audit when TASKS or FEATURE-TASKS governs the work; complete feature implementation includes required document incorporation before final verification. An authorized cross-phase range repeats the cycle only after each preceding phase is integrated and published. No diagram arrow widens the requested range. See [implementation](skills/sdd-implement/SKILL.md) and [completion boundaries](skills/sdd-implement/references/completion-and-checkpoints.md#integrate-the-completed-boundary).
 
 ### Checkpoint steering
 

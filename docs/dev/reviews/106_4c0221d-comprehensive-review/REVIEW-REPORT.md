@@ -24,7 +24,7 @@ Every delivery phase has a bounded integrated functionality outcome; greenfield 
 
 ## Findings and limits
 
-Two confirmed documentation defects, both accepted for bounded repair under the existing user grant. No runtime defect or failed required local check found; readiness is subject to their recheck. All review units are complete. Closed records were excluded from loading/current-validity assessment. No live provider/client, native Windows, real target adoption or rendered-diagram behavior has been established.
+Two confirmed documentation defects, both corrected and source-rechecked under the existing user grant; see the revision result. No runtime defect or failed required local check found; committed package/integration checks remain pending. All review units are complete. Closed records were excluded from loading/current-validity assessment. No live provider/client, native Windows, real target adoption or rendered-diagram behavior has been established.
 
 ## U-002 evidence
 
@@ -59,8 +59,8 @@ Exact committed package build-only/schema/ZIP inspection and five extracted CLI 
 
 | Finding | Type | Priority | Confidence | Disposition |
 | --- | --- | --- | --- | --- |
-| R-001 | Documentation defect: overbroad workflow scope | Medium | High | Accepted for revision; not yet corrected |
-| R-002 | Documentation defect: ambiguous cleanup target | Low | High | Accepted for revision; not yet corrected |
+| R-001 | Documentation defect: overbroad workflow scope | Medium | High | Verified by V-001 source recheck |
+| R-002 | Documentation defect: ambiguous cleanup target | Low | High | Verified by V-001 source recheck |
 
 ### R-001 — Limit the implementation diagram to task-list work
 
@@ -81,3 +81,7 @@ Exact committed package build-only/schema/ZIP inspection and five extracted CLI 
 ## Consolidated revision handoff
 
 All three units complete. Two documentation defects are accepted under the user's fix/close grant; none deferred/rejected. Prepare one bounded revision action for both summary corrections, preserve canonical instructions/runtime/tests/version/entries/root policies and frozen records, then recheck meaning, current links, unchanged diagrams and exact committed package. Reuse the 323 passing runtime/support/publisher results where source is byte-identical; repeat only affected checks. Seven Windows-policy tests remain unexecuted runtime checks on this Linux host. No new live consumer/provider/CI, browser rendering or installed-client acceptance is claimed.
+
+## Revision dispositions
+
+V-001 in [REVISION-REPORT.md](REVISION-REPORT.md) corrects both summaries without changing canonical rules. R-001 now scopes the task-closing cycle and audit to TASKS/FEATURE-TASKS; taskless revisions retain their campaign procedure. R-002 removes the redundant broad cleanup clause; the same section retains the explicit final-message/internal-highlights distinction. Both objective source rechecks pass. Baseline observations above remain unchanged; package verification and final integration are separate pending effects.
