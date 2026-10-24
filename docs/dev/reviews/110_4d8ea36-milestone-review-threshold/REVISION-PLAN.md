@@ -7,7 +7,7 @@
 - Working branch: revision/110_4d8ea36-milestone-review-threshold. Creation parent, integration and return: main on origin, pchemguy/SDD-Manager.
 - Human authorizes opening, planning, execution and closure. A subsequent clarification explicitly excludes the special phase review milestone from the change.
 - Entry: bounded fetch completed, main and origin/main match, worktree clean, no unmerged workflow refs; highest allocated campaign 109. No parent suspended; Standard reporting.
-- State: **Source revised and locally verified; committed-package and final integration checks pending.** The opening is published; see [revision evidence](REVISION-REPORT.md). No separate review stage is invented.
+- State: **A-001–004 verified; finalized for authorized integration and closure.** See [revision evidence](REVISION-REPORT.md). Closure still requires actual merged-state checks, target publication and clean return. No separate review stage is invented.
 
 ## Accepted policy and decisions
 
