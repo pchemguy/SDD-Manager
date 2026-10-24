@@ -1,6 +1,6 @@
 # Main documentation preparation record
 
-Current preparation control and evidence. `DOCS_TASKS.md` alone owns task definitions/checkoffs; HANDOFF provides periodic continuity. Keep this record current and concise, linking detailed QC and product decisions. Git retains earlier passes and decisions; do not append transcripts, command logs or successive copies of these sections.
+Current preparation control and evidence. `DOCS_TASKS.md` alone owns task definitions/checkoffs; HANDOFF provides periodic continuity. Keep this record current and concise, linking detailed QC and product decisions. Retain compact multipass decision summaries here; Git retains historical document/QC versions. Do not append transcripts, command logs or successive copies of these sections.
 
 ## Current control
 
@@ -12,7 +12,25 @@ Current preparation control and evidence. `DOCS_TASKS.md` alone owns task defini
 
 ## Scope sequence
 
-{For onepass, state the intended scope source. For predefined passes, retain the ordered scope deltas and current position, with enough substance to execute remaining passes without transient chat. Link durable detailed scope when available. Do not invent later passes or copy the product documents.}
+{For onepass, state the intended scope source. For multipass, use a numbered list: each pass begins with a concise bold descriptive title, followed by its scope delta. Preserve recognizable pass identities/titles across updates and identify the current position. Retain enough substance to execute remaining passes without transient chat; link durable detail where available. Do not invent later passes or copy the product documents.}
+
+## Per-pass decisions
+
+{For multipass, retain material decisions resolved during each pass, including interactive exploration. Use concise named entries or the table below; record originating pass separately from the passes/scopes where a decision applies. Distinguish human-confirmed, delegated-agent and unresolved/proposed choices. Retain completed-pass summaries across resets; mark replacements/supersession with their basis rather than silently overwriting them. Omit unused scaffolding for onepass.}
+
+| Pass / decision | Resolution and brief rationale | Basis / source | Applicability / status |
+| --- | --- | --- | --- |
+| {originating pass; short decision title} | {material choice and why} | {actual human clarification or delegated authority; known source, or unknown} | {current/future scopes; active, proposed or superseded with replacement reference} |
+
+## Cross-scope decisions
+
+{Retain a compact view of decisions governing interactions across multiple or later passes. Reference per-pass decisions where sufficient; do not repeat their full text. Keep applicability and reconsideration conditions explicit, updating this view when an authorized change supersedes a decision. No fixed concern checklist or separate registry is required.}
+
+| Concern | Decision / applicable scopes | Reconsideration condition |
+| --- | --- | --- |
+| {short concern title} | {decision reference or concise resolution; affected passes/scopes} | {material change/condition requiring reassessment, or none known} |
+
+Keep detailed current contracts in their owning product documents and link them when available. Future-scope choices remain here until applicable; summaries do not themselves approve a document. These sections retain decision substance/provenance, not transcripts or duplicate specifications.
 
 ## Decisions and document evidence
 
