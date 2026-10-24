@@ -149,7 +149,7 @@ PLAN begins with a meaningful end-to-end MVP and grows through small testable in
 
 ## Continue with another agent
 
-The agent follows the project's AGENTS.md to `docs/dev/HANDOFF.md`, then recovers later work and decisions from development records and Git. Handoffs are created at workflow entry and refreshed automatically by milestone/phase review tasks, revision finalization and parent return; ordinary task commits need no handoff rewrite.
+The agent follows the project's AGENTS.md to `docs/dev/HANDOFF.md`, then recovers later work and decisions from development records and Git. Handoffs are created at workflow entry and refreshed automatically by assigned milestone boundary tasks, phase review, revision finalization and parent return; ordinary task commits need no handoff rewrite.
 
 Each workflow branch keeps its own copy until integration into its recorded creation parent. Starting on default with unfinished branches, the agent presents candidates and asks which to continue unless you already selected one. Returning from a child restores the parent's scope and pending human checkpoint; it does not start more tasks automatically.
 
@@ -223,6 +223,8 @@ flowchart TB
 A reset returns to DOCS-002, reopens DOCS-002–009 and the same issues when tracked, and preserves DOCS-001 and all documents. You may also request reset at an intermediate checkpoint. Reconcile pending publication/reopening before authoring resumes. Finishing an autodoc pass or the final autoloop pass leaves package QC, documentation integration and implementation pending; advancing selects package QC within its existing gates, not implementation. See [mode and reset control](skills/sdd-manage/references/doc-design-modes.md).
 
 ### Implementation and continuation
+
+A standalone milestone review task is omitted below four implementation tasks or when the phase has a single implementation milestone. Its final implementation task carries milestone review/report obligations instead. The special phase review milestone and its single task remain unchanged. See [boundary rules](skills/sdd-conventions/references/backend-object-lifecycle.md#explicit-review-units).
 
 For implementation driven by TASKS or FEATURE-TASKS, apply this cycle to each authorized phase segment or coherent feature/revision boundary. Inspect retained work before publication or continuation; a known-invalid completion requires scoped recovery. Each task closes with its verified result, evidence and checkbox together, using its single owning task ID.
 

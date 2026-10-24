@@ -10,7 +10,7 @@ Every delivery phase expresses a bounded, coherent functionality increment on th
 
 At consequential milestones, identify the demonstration or feedback that informs a human decision to continue, amend, simplify, or stop. Keep these decisions with the human; the hierarchy does not authorize automatic steering, stopping, or task-list continuation. Stable identities, parentage, and completion evidence remain governed by the owning lists and execution workflow.
 
-Apply [backend object lifecycle](backend-object-lifecycle.md) for mandatory delivery review tasks, the final single-task phase review milestone, completion gates and report placement. PLAN reserves those milestones/exits; TASKS derives their tasks.
+Apply [backend object lifecycle](backend-object-lifecycle.md) for conditional standalone milestone review tasks, the unchanged special single-task phase review milestone, folded boundary evidence, completion gates and report placement. PLAN reserves those milestones/exits; TASKS derives their tasks.
 
 ## Hosted projection
 

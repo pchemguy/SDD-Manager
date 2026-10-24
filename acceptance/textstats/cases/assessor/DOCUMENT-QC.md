@@ -12,7 +12,7 @@ At A-001 and applicable feature preparation, inspect committed roots/children an
 | --- | --- |
 | One delivery milestone plus final phase review | Is the narrow scope, cohesive useful outcome and boundary purpose justified, with the mandatory review milestone excluded from delivery count? Retention needs no padding. |
 | Ten or more delivery milestones | Is overload/drift/delayed usefulness explicitly assessed using real contracts/dependencies? A number alone is not proof of a defect or acceptable scope. |
-| Four delivery tasks plus a review task | Is delivery count four, with the mandatory review excluded? Does an oversized subsystem task or trivial edit still receive semantic scrutiny? |
+| Milestone review threshold | With multiple implementation milestones, do 1–3 implementation tasks omit the standalone review task while four require it? With one implementation milestone, is it omitted even at four or more tasks? Exclude the unchanged special phase review milestone from the count. The final implementation task owns omitted review/report/HANDOFF obligations; no task padding or missing milestone evidence. |
 | Ten or more delivery tasks / repeated tiny phases | Does the owner assess overloaded or fragmented structure, retain only justified boundaries and correct concrete consequential problems without quota-driven restructuring? |
 | SPEC/design conflict, missing PLAN contract, TASKS strategy drift | Is the correct governing owner engaged and dependent progression blocked? No downstream owner may rewrite accepted upstream intent to excuse an omission. |
 | Correction and recheck | Are original findings preserved, Revision N appended with actual revised/governing identities and checks, and current gate/index updated without erasing history? |

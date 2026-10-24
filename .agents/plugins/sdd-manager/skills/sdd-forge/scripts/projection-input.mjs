@@ -184,17 +184,22 @@ export function validateProjection(input, inventory, requireEligibility = false)
         || !isDeepStrictEqual(value.tasks, docsTracking.tasks)) fail('docs_definition_conflict');
   } else {
     if (value.milestones.length < 2 || value.milestones.at(-1).kind !== 'phase-review') fail('invalid_review_scope');
-    const reviews = [];
+    const boundaries = [];
     for (const [index, item] of value.milestones.entries()) {
       const members = value.tasks.filter(task => task.milestone_id === item.id), review = members.at(-1);
       const final = index === value.milestones.length - 1;
+      // Existing accepted explicit-review lists remain valid. New generation
+      // omits that task below four delivery tasks or in a single-delivery phase.
+      const separate = !final && review?.role === 'milestone-review';
+      const folded = !final && review?.role === 'delivery';
       if (item.kind !== (final ? 'phase-review' : 'delivery') || item.review_task !== review?.id
-          || review.role !== (final ? 'phase-review' : 'milestone-review')
-          || (final ? members.length !== 1 : members.length < 2)
+          || (final ? review?.role !== 'phase-review' || members.length !== 1
+            : (!separate && !folded) || members.length < (separate ? 2 : 1)
+              || (folded && value.milestones.length > 2 && members.length >= 4))
           || members.slice(0, -1).some(task => task.role !== 'delivery')
           || members.slice(0, -1).some(task => !review.depends_on.includes(task.id))
-          || (final && reviews.some(id => !review.depends_on.includes(id)))) fail('invalid_review_scope');
-      reviews.push(review.id);
+          || (final && boundaries.some(id => !review.depends_on.includes(id)))) fail('invalid_review_scope');
+      boundaries.push(review.id);
     }
   }
   renderProjection(value); // Check actual rendered field sizes before any effects.

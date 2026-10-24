@@ -21,7 +21,7 @@ At authorized workflow entry/adoption, reconcile existing context and create/upd
 
 | Boundary | Required persistence |
 | --- | --- |
-| Each main/feature milestone's final review/report task | Refresh HANDOFF with the verified outcome, evidence, remaining scope, pending effects and next stop in the same commit as that task's report/result and initial checked completion. |
+| Each main/feature milestone's assigned final boundary task: standalone review when required, otherwise final implementation task | Refresh HANDOFF with the verified outcome, evidence, remaining scope, pending effects and next stop in the same commit as that task's report/result and initial checked completion. |
 | Phase review/report task | Refresh with overall exits and integration readiness in its completion commit. One task closing both a review milestone and the phase produces one combined update. |
 | Revision finalization | Refresh its outcome and return boundary with existing campaign finalization evidence; intermediate action detail stays in campaign records. |
 | Completed main/feature preparation or other composite operation | Refresh the preparation/operation checkpoint with its actual pending human/hosted boundary. Intermediate document approvals stay in their owning evidence. |

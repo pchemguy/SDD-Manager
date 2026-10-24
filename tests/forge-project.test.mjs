@@ -31,6 +31,71 @@ function projectionRequest() {
   return request;
 }
 
+function boundaryProjection(counts, separate = counts.map(() => false)) {
+  const lines = ['## Phase 1 — Bounded outcome', '', '- [ ] Phase 1 — Bounded outcome'];
+  const definitions = new Map(), boundaries = []; let next = 200;
+  const add = (role, depends_on) => {
+    const id = 'T-' + next++, name = role === 'delivery' ? 'Deliver increment ' + id : 'Review boundary ' + id;
+    lines.push('        - [ ] ' + id + ' — ' + name);
+    definitions.set(id, { role, depends_on }); return id;
+  };
+  counts.forEach((count, index) => {
+    lines.push('    - [ ] Milestone 1.' + (index + 1) + ' — Capability ' + (index + 1));
+    const members = [];
+    for (let i = 0; i < count; i++) members.push(add('delivery', [...members]));
+    if (separate[index]) members.push(add('milestone-review', [...members]));
+    boundaries.push(members.at(-1));
+  });
+  lines.push('    - [ ] Milestone 1.' + (counts.length + 1) + ' — Phase review');
+  add('phase-review', boundaries);
+  const owner = parseOwner(lines.join('\n'), 'phase', '1');
+  const request = draftProjection('example-owner/example-project', source, owner);
+  request.phase.description = 'Bounded first capability.';
+  request.milestones.forEach((item, index) => Object.assign(item, {
+    kind: index === counts.length ? 'phase-review' : 'delivery', description: 'Accepted outcome and exits.',
+    review_task: owner.milestones[index].tasks.at(-1).id,
+  }));
+  request.tasks.forEach(item => Object.assign(item, definitions.get(item.id), {
+    prerequisites: 'Caller verifies the boundary.', scope: 'Bounded work and assigned review/report.',
+    acceptance: 'Required checks and evidence.', sources: ['docs/dev/PLAN.md'],
+  }));
+  Object.keys(request.eligibility).forEach(key => { request.eligibility[key] = true; });
+  return { owner, request };
+}
+
+test('folded milestone boundaries honor task and delivery-milestone thresholds without counting phase review', () => {
+  for (const count of [1, 2, 3, 4, 5]) {
+    const { owner, request } = boundaryProjection([count]);
+    assert.doesNotThrow(() => validateProjection(request, owner, true), 'single delivery milestone, ' + count + ' tasks');
+  }
+  for (const count of [1, 2, 3]) {
+    const { owner, request } = boundaryProjection([count, 1]);
+    assert.doesNotThrow(() => validateProjection(request, owner, true), 'multiple delivery milestones, ' + count + ' tasks');
+  }
+  const missing = boundaryProjection([4, 1]);
+  assert.throws(() => validateProjection(missing.request, missing.owner, true), error => error.code === 'invalid_review_scope');
+  const mixed = boundaryProjection([4, 1], [true, false]);
+  assert.doesNotThrow(() => validateProjection(mixed.request, mixed.owner, true));
+  // Existing accepted explicit-review lists remain usable without ID removal.
+  const retained = boundaryProjection([1], [true]);
+  assert.doesNotThrow(() => validateProjection(retained.request, retained.owner, true));
+});
+
+test('folded boundaries retain exact owner, delivery roles, dependencies and special phase review', () => {
+  for (const change of [
+    r => { r.milestones[0].review_task = r.tasks[0].id; },
+    r => { r.tasks[2].depends_on = []; },
+    r => { r.tasks[1].role = 'milestone-review'; },
+    r => { r.tasks[2].role = 'phase-review'; },
+    r => { r.tasks.at(-1).role = 'delivery'; },
+    r => { r.tasks.at(-1).depends_on = []; },
+    r => { r.milestones.at(-1).kind = 'delivery'; },
+  ]) {
+    const { owner, request } = boundaryProjection([3]); change(request);
+    assert.throws(() => validateProjection(request, owner, true));
+  }
+});
+
 test('canonical extraction selects one phase and leaves semantics/dependencies unresolved', () => {
   const value = inventory();
   assert.deepEqual(value.tasks.map(item => item.id), ['T-101', 'T-102', 'T-103']);
@@ -150,6 +215,18 @@ test('eligible projection creates and verifies one bounded scope; rerun preserve
   assert.equal(writes(state).length, 6);
   assert.deepEqual(second.associations.map(item => item.issue_number), ids);
   assert.ok(!JSON.stringify(second).includes('Bounded accepted work.'));
+});
+
+test('folded delivery tasks project and reconcile without an invented review issue', async () => {
+  const { owner, request } = boundaryProjection([3, 1]), state = fixture();
+  const first = await reconcileProjection(request, owner, state.client());
+  assert.equal(first.ok, true, JSON.stringify(first));
+  assert.equal(state.issues.length, 5); // Four delivery tasks and the special phase review.
+  assert.equal(state.milestones.length, 3);
+  assert.deepEqual(first.associations.map(item => item.task_id), request.tasks.map(item => item.id));
+  const count = writes(state).length;
+  assert.equal((await reconcileProjection(request, owner, state.client())).ok, true);
+  assert.equal(writes(state).length, count);
 });
 
 test('all observable existing conflicts block before any new object creation', async () => {
