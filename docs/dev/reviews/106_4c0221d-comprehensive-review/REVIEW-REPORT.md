@@ -85,3 +85,7 @@ All three units complete. Two documentation defects are accepted under the user'
 ## Revision dispositions
 
 V-001 in [REVISION-REPORT.md](REVISION-REPORT.md) corrects both summaries without changing canonical rules. R-001 now scopes the task-closing cycle and audit to TASKS/FEATURE-TASKS; taskless revisions retain their campaign procedure. R-002 removes the redundant broad cleanup clause; the same section retains the explicit final-message/internal-highlights distinction. Both objective source rechecks pass. Baseline observations above remain unchanged; package verification and final integration are separate pending effects.
+
+## Final recheck
+
+V-001 is committed/published as `0e172ae703cd9348fd11d762b76d73b2bb6a2f0a`. The [revision result](REVISION-REPORT.md#final-verification-and-integration-selection) records exact revised-package inspection and five CLI help passes. R-001 and R-002 remain Verified; zero unresolved/deferred findings. All three review units are complete. Finalization and main publication are separate required effects, recoverable through Git/tool evidence.
