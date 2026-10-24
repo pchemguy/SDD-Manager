@@ -1,0 +1,71 @@
+Help me develop the following project using $sdd-manager.
+
+### Project repo and credentials
+
+GitHub repository: https://github.com/{OWNER}/{REPO}
+
+GitHub token: {FINE_GRAINED_GH_TOKEN}
+
+### Versioning and releases
+
+Manage the project's versioning, choosing an appropriate initial version and increasing it to reflect delivered changes. After each implementation phase is completed, verified and integrated, create and publish a new GitHub release with the corresponding version tag and release notes.
+
+### Project description: Browser-based Tetris game
+
+Develop a browser-based Tetris game with a playable classic baseline and the enhancements below.
+
+Treat this description as the complete target scope. Deliver the simplest sensible playable baseline first, then add capabilities through bounded phases that each provide a useful functionality increment.
+
+#### Gameplay enhancements
+
+- Hold piece.
+- Ghost piece.
+- 7-bag piece randomization.
+- Wall kicks.
+- Hard drop.
+- Full gravity interval lock delay: by default, lock after one full gravity interval from becoming grounded. Hard drop follows the same locking policy unless immediate hard-drop locking is selected.
+
+#### Conditional ghost-piece visibility
+
+Provide a ghost visibility mode that dynamically hides the ghost when its projected landing position is in the upper half of the board, above the midline, and shows it again when that position returns to the lower half.
+
+#### Penetrator mode
+
+Allow the player to turn the current falling piece into a penetrator with a hotkey, provided a penetrator bonus is available. A penetrator can pass through occupied cells without destroying them. This ability lasts until the piece locks; its final position must be entirely within the board without overlapping occupied cells.
+
+For a penetrator, hard drop must pass through blocking cells to the lowest valid landing position. The ghost piece must preview that same position whenever it is visible.
+
+Clearing four lines at once awards one penetrator bonus, granting one activation of the penetrator ability. Allow up to three bonuses to accumulate.
+
+Render penetrator pieces entirely white, and do not use white for regular pieces. Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
+
+#### Game configuration
+
+Provide a side panel with controls for:
+
+1. Ghost-piece visibility: always hide, hide dynamically above the board’s midline, or always show.
+2. Hard drop: on or off.
+3. Next-piece preview: on or off.
+4. Hard-drop locking policy: follow the selected general locking policy, or lock immediately after hard drop.
+5. General locking policy: lock on a failed downward movement attempt, or after one full gravity interval from becoming grounded.
+6. Hold piece: on or off.
+
+#### Configuration persistence
+
+Support cookies and URL query parameters for all settings above. Restore saved settings or apply URL-supplied settings when the page is reloaded or the game is opened again. Use sensible defaults where neither source supplies a value.
+
+Resolve each setting independently in this order:
+
+1. A value explicitly supplied by its URL parameter.
+2. A saved cookie value.
+3. The default value.
+
+Whenever the player changes a setting, save its selected value in the corresponding cookie and update its URL query parameter.
+
+Save explicit URL parameter values in the corresponding cookies, including values equal to the default. When a parameter is omitted, retain its saved cookie value rather than replacing it with the default.
+
+Session-only configuration may be delivered as an intermediate increment before persistence is added.
+
+#### Design clarification
+
+During preparation, resolve important interactions and boundary cases, including ghost positions that straddle the midline; lock-delay timing and resets; penetrator activation, hold and locking behavior; and invalid configuration values. Surface decisions that materially affect gameplay before implementation.
