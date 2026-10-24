@@ -4,7 +4,7 @@
 
 Campaign `104_0946fee`; full reviewed baseline `0946fee61db90b7f0fc3d3aaf7f04f06f75f154d`. Branch `revision/104_0946fee-readme-diagrams`; creation parent, eventual integration and return main on origin, pchemguy/SDD-Manager. Scope/criteria and open stopping boundary: [review plan](REVIEW-PLAN.md). No parent suspended.
 
-State: focused review and bounded README revision complete; campaign remains open for human review. Existing four packaged README diagrams and adjacent prose were the targets; current canonical workflow references are the semantic source. Root README is intentionally abbreviated. Closed campaign contents remain excluded from loading and edits.
+State: focused review and bounded README revision complete; finalized for human-selected closure through verified main integration/publication. Existing four packaged README diagrams and adjacent prose were the targets; current canonical workflow references are the semantic source. Root README is intentionally abbreviated. Closed campaign contents remain excluded from loading and edits.
 
 Opening evidence: clean main and refreshed origin/main agree at the full baseline. Read-only allocation across current Git paths and 124 refs finds 103 as the highest reserved sequence; reserve 104. Host is Linux/Bash. Publication of this opening precedes the review unit; recover its exact commit and later readback from Git/tool evidence.
 
@@ -39,3 +39,7 @@ Proceed with the [revision plan](REVISION-PLAN.md) under the human's requested R
 ## Current disposition
 
 R-001–004 are source-aligned and rechecked in the [revision report](REVISION-REPORT.md). The revised README now contains three preparation/pass/mode diagrams and three implementation/steering/revision diagrams. 188 support/publisher tests, scoped links/Markdown, graph structure and exact 155-file package/five CLI helps pass. Rendered Mermaid parsing/layout and live behavior remain unverified. Source `41ecea14ceda8fb62ff8a2f12e24722144baad42` is published/readback verified. Keep this campaign open on its revision branch for human inspection; no default-branch merge or closure is claimed.
+
+## Closure selection
+
+The human subsequently requested closure. Published open checkpoint `3df5c77575434def8493fea08d0e72916a031268` matches its remote ref; refreshed main/origin remain at the full baseline. Fresh graph/scope/Markdown rechecks pass, with eight selected files and 362 local links/anchors. Findings remain source-verified, none deferred; rendered appearance and live behavior remain explicit unperformed observations. Finalize and publish these records, perform the verified explicit main merge/publication and clean return, then freeze the campaign. Subsequent tool/Git evidence owns those actual completion effects.

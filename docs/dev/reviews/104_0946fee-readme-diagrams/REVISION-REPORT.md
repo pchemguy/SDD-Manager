@@ -2,7 +2,7 @@
 
 Campaign `104_0946fee`; baseline `0946fee61db90b7f0fc3d3aaf7f04f06f75f154d`; branch `revision/104_0946fee-readme-diagrams`; creation parent/eventual integration/return main on origin, pchemguy/SDD-Manager. No parent suspended. [Accepted plan](REVISION-PLAN.md) and [findings](REVIEW-REPORT.md) define scope.
 
-State: A-001 complete and locally verified; human review pending. The human authorized focused README diagram correction/addition. Keep campaign open; no integration/closure, workflow-rule change, runtime/template/version change, release or installation selected.
+State: A-001 complete and locally verified; finalized for human-selected closure through verified main integration/publication. The human authorized focused README diagram correction/addition and subsequently instructed “Close”. No workflow-rule, runtime/template/version change, release or installation is selected.
 
 ## A-001 — README workflow guide
 
@@ -25,3 +25,9 @@ Mermaid/mermaid-cli and a dedicated renderer are unavailable in the established 
 README/result commit `41ecea14ceda8fb62ff8a2f12e24722144baad42` is published/readback verified, cleanup confirmed and process exited 0. Build-only using the existing source publisher and declared validator verifies all 155 exact committed members and the revised README bytes. ZIP: 473,960 bytes, SHA-256 `ddd2d9890d20cd0efffc2bda0d60e899e523fbcb133664a29f02cad2de2ca43e`. Required preparation assets are present; source-only AGENTS/policies/evidence remain excluded. Five extracted CLI help commands pass. No provider release/tag call occurs.
 
 Final source/graph/Markdown/scope rechecks pass; only Workflow guide changed in the plugin, all closed records and historical index rows remain unchanged. Later checkpoint/report edits do not change that tested package content. All four findings are source-verified; visual layout remains an explicit review limit. HANDOFF and navigation now point to the open human-review boundary. Publish/read back this checkpoint and stop on the campaign branch; do not merge, close or start another workflow. This pre-commit record cannot prove its own subsequent publication.
+
+## Selected closure and finalization
+
+The human's subsequent “Close” instruction authorizes finalization and explicit main integration/publication, superseding the earlier open/no-merge boundary. Open checkpoint `3df5c77575434def8493fea08d0e72916a031268` is published/readback verified; refreshed main/origin equal baseline `0946fee61db90b7f0fc3d3aaf7f04f06f75f154d`. Fresh scoped source/graph and Markdown checks pass; only active campaign records, current HANDOFF/navigation and the packaged README guide differ from baseline. Closed artifacts remain unchanged. No new source correction or unperformed rendering success is implied by closure.
+
+HANDOFF/navigation now retain the finalized result and pending eligible integration. Publish this checkpoint, merge its complete pinned tip into main with two parents, verify merged state and relevant package/support checks, publish/read back exact main and confirm clean return. The subsequent integration summary records exact parents, checks and limits; tool/Git evidence establishes actual closure. These pre-commit records cannot prove future effects and require no post-closure edit.

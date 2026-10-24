@@ -13,3 +13,7 @@ One focused review unit covers all four existing diagrams and the missing doc-de
 Prefer small diagrams separated by responsibility over a single dense control graph. Do not turn README into an executable protocol or repeat full reference instructions. Preserve scope-qualified approvals, technical QC, publication/tracking and implementation authorization. Root README should remain brief and link the complete guide.
 
 After authorized revisions, inspect semantic path coverage and Markdown/links; parse/render Mermaid using an already eligible contained facility if available, recording unavailable rendering explicitly. Run relevant package/support checks for the changed packaged README; avoid runtime suites unrelated to prose-only changes. Inspect the full path delta for unchanged closed records. Publish every owned checkpoint before further work. Refresh HANDOFF at the resulting review boundary and leave the branch/campaign open, with actual source/checks and next human decision recorded.
+
+## Selected completion
+
+After the published open-review checkpoint, the human instructed “Close”. This supersedes the earlier open/no-merge stop and authorizes finalization, explicit integration into the recorded main parent, merged-state verification, exact target publication/readback and clean return. Preserve the recorded rendering/evidence limits; no new diagram, workflow, release or installation scope is selected. Closure follows actual Git/tool evidence, not this prospective instruction alone.
