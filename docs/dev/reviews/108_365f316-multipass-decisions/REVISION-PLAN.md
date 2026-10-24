@@ -26,3 +26,7 @@ A-002 rechecks the accepted gaps and composition, runs relevant support/publishe
 ## Persistence and closure
 
 Publish/read back this accepted plan before source work. Source and action evidence share a commit; publish each before advancing. Finish the revision result, current HANDOFF and navigation; inspect the full delta excluding closed contents. Refresh/pin main, explicitly merge the complete verified published tip with two parents, verify prospective/committed result/package, publish/read back main with confirmed cleanup and return clean. Stop after campaign closure. No demo/target-project write, release, version bump, installation or browser setup is selected.
+
+## Execution disposition
+
+A-001 is implemented at published source `6900ea400f3a4876630c8d1868ad86d175043270`; G-001–006 are source-rechecked with no unresolved item. A-002 package/scenario/proportion checks pass. Finalize and publish this record, then complete the already authorized explicit main integration/publication and clean-return closure; actual later Git/tool evidence establishes those effects.
