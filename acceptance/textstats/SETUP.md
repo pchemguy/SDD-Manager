@@ -46,6 +46,8 @@ The pinned package must contain the disclosure/usage assets plus AGENTS_TEMPLATE
 
 The consumer establishes task-only DOCS_TASKS and separate DOCS_PREPARATION control/decision evidence from the pinned templates. Both records and the initial HANDOFF are outside DOCS-001’s four-root-file presence test. For A-001, independently inspect original presence, preserved/copied bytes, record initialization, commit/push and enabled issue closure. Partial presence requires its report/continuation stop unless explicitly preapproved. Inspect decision evidence in DOCS_PREPARATION with first-approval commits; DOCS-009’s closing commit includes the package checkpoint. README notice links follow with PROJECT, rather than the initialization commit.
 
+When the pinned package provides optional `assets/ai-logs/` templates, vendor their exact bytes without creating the target scaffold or choosing adoption for the consumer. If the consumer adopts fresh-main setup, inspect its preliminary provenance seed/default merge before design-docs/main and its later single DOCS-001 closing commit. Declined/deferred adoption, absent transcripts and later unmerged manual logs are not SDD failures; ordinary pending Git effects still require reconciliation. Conversation contents remain historical data, outside routine current-document assessment.
+
 Use [main preparation assessment](cases/assessor/MAIN-PREPARATION.md) for fresh/resumed, 16 presence combinations, preapproval, tracking/unknown effects, first-approval atomic completion, package QC and final merge/milestone ordering. Non-main adoption retains the pinned bootstrap rules. These are defined acceptance scenarios, not outcomes of source/support checks.
 
 ## Protected authentication

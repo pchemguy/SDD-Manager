@@ -1,8 +1,10 @@
 # Bootstrap SDD Manager in a target repository
 
-For fresh or resumed **main documentation preparation**, load [main preparation](main-preparation.md) before any target-repository write. Its early tracking gate, separate DOCS-001 four-file initialization, preservation/pause rules and PROJECT-stage README links take precedence over the combined-first-result procedure below. Other adoption paths retain that procedure.
+For fresh or resumed **main documentation preparation**, load [main preparation](main-preparation.md) before any target-repository write. Its early tracking gate, DOCS-001 initialization (including the adopted optional provenance checkpoint), preservation/pause rules and PROJECT-stage README links take precedence over the combined-first-result procedure below. The provenance-only checkpoint's narrow exception is defined by [optional manual AI provenance](initialization/ai-logs.md); it is not a general disclosure or publication waiver. Other adoption paths retain the procedure below.
 
 ## Greenfield startup
+
+During main/feature initialization, briefly recommend the [manual provenance convention](initialization/ai-logs.md#recommend-and-retain) once unless a choice is established. Unspecified/declined/deferred adoption adds no checkpoint or functional prerequisite. Main preparation owns adopted fresh setup; later/feature adoption preserves existing history and uses ordinary scoped persistence.
 
 Load this section at greenfield entry, before the first persistence operation. Treat a preliminary project description as a seed for exploration, not an accepted specification. Use the current **sdd-orient** handoff to establish the eligible Git repository, controlling instructions and actual state; route problem framing, alternatives and consequential choices to **sdd-design**'s [exploration](../../sdd-design/references/exploration.md). Retain established decisions and identify assumptions without imposing an unrequested product, stack or feature set.
 

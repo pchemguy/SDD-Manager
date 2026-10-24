@@ -1,0 +1,56 @@
+# AI provenance revision record
+
+Campaign `105_331ec54`; baseline `331ec541b72945bf2e8ca50f7ea5fe55a35eb75c`; branch `revision/105_331ec54-ai-logs`; creation parent/eventual integration/return main on origin, pchemguy/SDD-Manager. No parent suspended. [Proposed revision plan](REVISION-PLAN.md) records the human's latest request, proposed refinements and affected owners.
+
+State: A-001–003 implemented and verified; finalized as an open checkpoint awaiting human direction after publication. The human accepts all recommendations and requests execution, while explicitly keeping this optional convenience out of PLUGIN.md/coordinator entry. Adopted setup extends DOCS-001; declined/deferred adoption does not affect SDD functionality or readiness. User-selected branch is design-docs/ai-logs from current default tip; actual records remain manual.
+
+Inspected current main-preparation, repository-bootstrap, branch/workflow identity, DOCS task/hosted definitions and forge completion evidence. Proposed handling preserves the pre-write tracking gate, normal four-root-file presence semantics and one DOCS-001 closing transition while adding an earlier scaffold/merge checkpoint. Plan includes concise directory AGENTS and transcript template proposals, feature-entry reuse, ownership/recovery and package/docs integration. No invented review findings or executable task IDs.
+
+Opening evidence: clean main/origin agree at baseline after bounded fetch; path/ref allocation across 126 refs finds highest sequence 104. Only this active campaign, current HANDOFF and navigation are changed. Check scope/Markdown/links and publish/read back before further work. Actual source execution, tests and final integration remain pending; keep campaign open for human review of the proposal.
+
+## Execution selection
+
+Opening/proposal `a41e27d9e89b012fe4ba00d3e633602203ad572b` is published/readback verified. The subsequent execution grant accepts the templates and workflow recommendations, with optionality and indirect initialization-only routing. The final plan groups coupled core/templates/task definitions into A-001, supporting projections into A-002 and final review/open checkpoint into A-003. This source repository already has SDD initialization, so no target scaffold or fake conversation will be created here. Keep the campaign open after execution; no closure/integration/release is selected.
+
+## A-001 — Optional initialization and assets
+
+Accepted plan `f79e506408b69efff3074aadce697c2ab47a4294` is published/readback verified with confirmed cleanup and process exit 0. Added the focused nested initialization/ai-logs reference (800 words), directory-handling AGENTS template and exact historical-callout/optional-URL transcript template. Main and feature initialization references route the recommendation; PLUGIN.md and coordinator SKILL.md are unchanged. Declined/deferred/unspecified adoption adds no pause or readiness condition; no transcript is required.
+
+Adopted fresh setup retains the pre-write tracking gate, first provenance branch/seed, explicit default merge/publication and then normal design-docs/main initialization. The preliminary DOCS-001 checkpoint remains unchecked/open, with a narrow disclosure/bootstrap exception and normal protected publication requirements. Only necessary owned credential-exclusion edits may accompany the scaffold, avoiding a prior standalone SDD commit. Existing files/branches and interrupted effects are preserved/reconciled; later manual changes are not unfinished workflow candidates. Directory records are non-authoritative and excluded from routine loading; genuine scoped handling instructions remain applicable.
+
+Updated local task/JSON definitions, preparation evidence, forge completion and report-drafting guidance consistently without changing nine IDs/dependencies or runtime interfaces. Meaningful fixtures now exercise exact committed/dirty retention of optional templates and archive inclusion; a new publisher test also proves their absence does not become a package gate. No scripts or required API eligibility fields were added.
+
+Linux verification passes **237 tests**: projection 48, support 139, publisher 50, all with zero failures/skips. The declared jsonschema 4.26.0 verification environment is reused. Current package/campaign Markdown scan passes 118 files/1,185 local links and anchors before the final report-drafting cross-link wording recheck; scope and whitespace checks preserve both entries, root guidance, manifest/runtime and every closed record. These are source/synthetic/package-fixture observations, not live consumer/provider or Windows results. Public/docs projections remain A-002; commit/publish this coherent source checkpoint before that work.
+
+## A-002 — Proportionate documentation and assessment
+
+A-001 `b1d29307625f370aee6d018ca7652c3da53bd5f3` is published/readback verified with confirmed cleanup and process exit 0. Added one concise initialization note and optional asset links to the packaged README; all six Mermaid diagrams are byte-identical to baseline. The source capability map reflects optionality and the development contract recognizes bounded initialization supplements routed through their parent, without changing either agent entry.
+
+TextStats setup/independent assessment covers genuine adoption versus declined/deferred/unspecified choice, preliminary seed/merge versus normal task closure, interruption/ownership, feature reuse, persistent manual branches and historical-data handling. Consumer prompts and actual records are unchanged; defined scenarios are not claimed as executed live trials. The harness vendors assets but does not choose adoption or create the scaffold for its consumer.
+
+Fresh support recheck passes 139 tests (not added again to the 237 distinct-test count). Current source/link checks pass 118 Markdown files and 1,189 local links/anchors. Task/milestone identities, dependencies/prerequisites and DOCS-002–009 definitions are unchanged; transcript prefix and normal Markdown are verified. Both entries, all runtime scripts, manifest/root guidance and closed records remain unchanged. No diagram rendering, provider mutation or native Windows claim follows. Publish this action before A-003's independent source scenarios and exact committed package inspection.
+
+## A-003 — Final source scenarios, package and checkpoint
+
+A-002 source `43f616f99727ee0938a9cd5a0565a80e9c11b17b` is published/readback verified with confirmed cleanup and process exit 0. A fresh read-only worker, given package sources and four supplied requests/states without campaign conclusions, derived these continuations:
+
+| Case | Observed source assessment |
+| --- | --- |
+| Fresh main, explicit provenance decline, tracking unverified | Skip optional setup without asking again; establish the nine-issue pre-write projection gate before main initialization. Normal document checkpoints/range stops remain. |
+| Adopted fresh main, verified tracking, default trunk, empty root set | Seed the two files on the reserved branch, publish and explicitly merge/verify/publish trunk, then create design-docs/main. Only normal root/task/evidence initialization closes DOCS-001; empty roots add no mixed-state stop. |
+| Initialized project, new feature, scaffold already integrated and later manual logs unmerged | Reuse the convention; exclude the manual branch from unfinished workflow selection. Prepare the feature without merging/reading logs or replaying DOCS-001. |
+| Interrupted adopted main setup, default merge committed but unpushed | Reconcile and publish the retained default merge before dependent mutation. Do not repeat seed/merge or prematurely close the issue; recover actual default/root-presence facts rather than importing another case's assumptions. |
+
+No substantive instruction conflict was found. This is an independent source-guided advisory assessment, not a live consuming-agent trial, actual hosted transition or independent runtime acceptance. The supplied scenarios were not observed repositories. The worker performed no writes/provider calls; these defined paths are not four executed workflow passes.
+
+Build-only exact package at the source above verifies all **158 files**, including the nested reference and two exact optional assets. ZIP: 480,370 bytes, SHA-256 `f3930848069242c7edbf5b42dd79c1af66ff90bdf7899426dc9edf5936f3c5ef`. Five extracted CLI helps pass. Source-only development/acceptance/AGENTS/policies remain excluded. Subsequent active-record/HANDOFF/navigation edits do not change that tested package tree. No release/tag or installation is performed.
+
+Final source checks preserve PLUGIN.md, the coordinator entry, all runtime code, manifest version, root instructions/README, all six diagrams and prior closed records. Maintained Markdown links/anchors, exact transcript prefix, stable task definitions, historical-row equality and whitespace pass. The 800-word initialization supplement holds the complete optional procedure; its small parent links avoid direct entry exposure or a duplicated workflow manual. Distinct test count remains 237 (48 projection, 139 support, 50 publisher), with the relevant A-002 support repeat recorded separately. No current source finding remains unresolved; live/provider/native-Windows and rendering evidence are not claimed.
+
+HANDOFF/navigation now retain the completed execution and open return boundary. Publish/read back this final checkpoint, verify clean campaign state, then stop for human direction. No main integration or closure is selected. This pre-commit report cannot prove its own future publication; recover it through Git/tool evidence.
+
+## Closure selection and finalization
+
+The human explicitly requests closure, then a new comprehensive review with repairs and closure. The completed open checkpoint `420db5b1a8536b1292f7737a63bacb712916b84e` is published/readback verified with clean ownership. Bounded origin refresh confirms main remains `331ec541b72945bf2e8ca50f7ea5fe55a35eb75c`. Finalization changes only this campaign, HANDOFF and its navigation row; all implemented package bytes remain identical to tested source `43f616f99727ee0938a9cd5a0565a80e9c11b17b`.
+
+Finalize and publish this checkpoint, then explicitly merge the verified tip into main, verify the exact merged package and publish/read back the target with confirmed process cleanup. These effects are prerequisites, not claims made by this pre-commit record. Closure freezes campaign 105. The subsequent requested review receives its own identity and evidence; no release, installation or target-project provenance adoption is implied.

@@ -3,8 +3,9 @@
 Preparation tasks and completion checkboxes only. Control, decisions and evidence belong in `DOCS_PREPARATION.md`; product implementation tasks belong in `TASKS.md`.
 
 - [ ] DOCS-001 — Initialize the repository for SDD Manager.
+    - Briefly recommend optional manual AI provenance. If adopted for fresh setup, publish/read back the preliminary design-docs/ai-logs scaffold and its verified default-branch merge before design-docs/main, using the running package's initialization procedure. Those checkpoints do not complete this task. Unspecified/declined/deferred adoption and missing transcripts do not block SDD initialization.
     - Inspect all four root destinations: `AI_DISCLOSURE.md`, `SDD-MANAGER.md`, `AGENTS.md` and `SKILL_DISCOVERY_PROTOCOL.md`. Preserve existing files and copy only missing files unchanged from the running package.
-    - Establish/reconcile this task list, `DOCS_PREPARATION.md` and `HANDOFF.md` after the applicable pre-write tracking gate. Record original retained/copied filenames, preservation/copy checks and the actual continuation decision in DOCS_PREPARATION; the generated records are outside the four-root-file presence test.
+    - Establish/reconcile this task list, `DOCS_PREPARATION.md` and `HANDOFF.md` after the applicable pre-write tracking gate. Record original retained/copied filenames, preservation/copy checks, actual provenance adoption/setup state and the continuation decision in DOCS_PREPARATION; provenance assets and generated records are outside the four-root-file presence test.
     - Commit initialization files, preparation evidence, HANDOFF and this task checked together; publish/read back before issue closure. Report initialization and stop before document work for mixed initial root-file presence unless explicit applicable preapproval covers continuation. None/all present adds no approval pause.
 - [ ] DOCS-002 — Prepare and accept PROJECT.
     - Depends on DOCS-001 and resolution of any initialization continuation stop.
