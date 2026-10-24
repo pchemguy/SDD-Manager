@@ -1,19 +1,13 @@
 # SDD Manager handoff
 
-Campaign [107 — AI-logs default execution](reviews/107_db249b8-ai-logs-default/REVISION-REPORT.md) is finalized for authorized closure under its [plan](reviews/107_db249b8-ai-logs-default/REVISION-PLAN.md). No parent suspended; Standard reporting.
+Campaign [108 — multipass decisions](reviews/108_365f316-multipass-decisions/REVISION-PLAN.md) is open at accepted revision planning. The human requests focused instructions, execution and closure after read-only comparison/discussion. No parent suspended; Standard reporting.
 
-## Outcome and authority
+## Scope and authority
 
-The human requests default execution of AI-log setup, repair and closure, and explicitly approves pushing. Initialization now executes/reuses scaffolding without an opt-in question; only an explicit human/project opt-out/deferral or controlling restriction permits omission. Enabled setup blockers require recovery/reporting; transcripts/metadata/URL access remain unnecessary and recording stays manual/historical. Fresh DOCS-001 seed/default merge and later normal task closure retain their gates. Existing/feature setup preserves history and completed task state.
+Implement G-001–006 in the existing preparation template/mode/record/exploration owners: bold-titled numbered scope passes, retained material per-pass choices and cross-scope decisions, authority/applicability/status, reset/resume carry-forward. Preserve existing working approval/QC/persistence boundaries and product-document ownership. Limited README/assessor projections accompany the change. No runtime/task/hosted-definition/entry/version/root-policy/diagram/demo change or live target workflow is selected. Closed artifacts remain frozen.
 
-Coupled routes, templates/hosted definitions, completion evidence, README/development/acceptance guidance align. PLUGIN.md/coordinator entry, exact assets, all runtime/tests/CI/version/root policies and six diagrams remain unchanged. Incoming demo prompts and closed records are preserved. No live target-project scaffold/transcript, release/version bump or installation is selected.
+## Git and next boundary
 
-## Git and evidence
+Working branch revision/108_365f316-multipass-decisions; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Full baseline/branch-off `365f31625dd1f2634d1f3230840e868f5d16dcd4`, campaign 107's verified published closure. Bounded origin refresh confirms clean main/origin agreement; path/ref allocation found highest reserved sequence 107. GitHub connector confirms the same public repository, default main and push access.
 
-Branch revision/107_db249b8-ai-logs-default; creation parent/integration/return main on origin, pchemguy/SDD-Manager. Baseline/branch-off `db249b8b8f6bd81e2520e6df851dbb9a74fb5152`; original opening `663fcdbf2b68fc0caf76d21e069288b318fc7588`. Source `2f8827961933764d7d0cd7838c4eee30410044e2` is published/readback verified with confirmed cleanup/exit 0. Refreshed main is unchanged. The revision record retains the resolved automatic-publication-review interruption and actual subsequent approval/verification.
-
-237 distinct Linux tests pass (48 projection, 139 support, 50 publisher), with no failures/skips. Exact committed 158-file package and five extracted CLI helps pass. Four independent source-guided contrasts found no material conflict; they are not observed workflow executions. Current links/fences/scope and closed-record preservation pass. Native Windows, installed-client and live target-workflow acceptance remain unclaimed.
-
-## Return boundary
-
-Publish/read back finalization, explicitly merge the complete verified tip into main, verify prospective/committed result and package, publish/read back main with confirmed cleanup and return clean. Git/tool evidence establishes those later effects; this snapshot cannot prove its own publication. That completion closes/freezes 107. Stop after closure.
+Publish/read back the plan, execute the coupled focused amendment and relevant checks, then finalize and close via explicit verified main integration/publication and clean return. Every owned commit publishes before further work. This snapshot cannot prove its own later publication.
