@@ -6,8 +6,8 @@ Campaign **113_4ef5c56** remains **open** under its [accepted plan](REVISION-PLA
 
 Replaced both complete embedded prompts in the [Tetris README](../../../demo/tetris/README.md) with links to their existing standalone owners:
 
-- All-inclusive project prompt: [prompts/AIO.md](../../../demo/tetris/prompts/AIO.md).
-- Multipass autoloop project prompt: [prompts/Multipass Autoloop AIO.md](<../../../demo/tetris/prompts/Multipass Autoloop AIO.md>).
+- All-inclusive project prompt: [prompts/AIO.md](../../../demo/tetris/prompts/AIO/Interactive.md).
+- Multipass autoloop project prompt: [prompts/Multipass Autoloop AIO.md](<../../../demo/tetris/prompts/AIO/Multipass Autoloop.md>).
 
 Retained both section headings/anchors and concise scope/mode descriptions. The PAT permissions and optional autonomy guidance, earlier preparation-mode index and every preceding guide section remain unchanged. No standalone prompt content was edited. README length changes from 530 to 376 lines, removing 154 lines of duplication.
 
@@ -20,6 +20,16 @@ Source and this action evidence are committed together, then require publication
 After published/readback-verified A-001 commit `431bdf80de3b121bcf5236caf7d5184d0a534e23`, replaced the generic all-checkpoint/full-autonomy paragraph with a link to the existing autodoc prompt. The new text matches the canonical doc-design mode reference: human PROJECT approval, preapproved subsequent document checkpoints through TASKS, then a stop before final package QC. This describes document preparation without granting broader execution authority.
 
 Verification confirms the exact one-paragraph README replacement, valid relative autodoc link, unchanged standalone prompt contents, preserved unrelated source/closed records and clean whitespace. No runtime check is required for this prose-only change. Source and this added evidence commit together and require publication/readback; the campaign remains open.
+
+## A-003 — AIO organization and starting workflow
+
+After published/readback-verified A-002 commit `4c4d6886613608011084abc947140d9990592373`, moved the prompts into prompts/AIO/: AIO.md becomes Interactive.md, Autodoc AIO.md becomes Autodoc.md, and Multipass Autoloop AIO.md becomes Multipass Autoloop.md. All three prompt bodies remain byte-identical. Earlier action links above now resolve to these moved files; their historical labels and observations remain retained.
+
+Starting the exercise now contains Convenience setup, All-inclusive (AIO) prompts and Minimal starting prompt subsections. The setup sequence links the GitHub template, retains the repository-restricted fine-grained PAT and all six suggested read/write permissions, then explains URL/token substitution and copying the complete selected prompt into a new ChatGPT Work or other agentic conversation. The AIO table describes all three document-preparation variants once. Removed the duplicate earlier index and the two obsolete end sections; preserved the minimal exercise and all gameplay/delivery/verification/result sections.
+
+The selected GitHub plugin read-only metadata confirms pchemguy/SDD-Manager-Template is public, active, marked is_template=true and uses main; its root inventory is initialized. No root README exists there, so guidance relies on repository metadata/inventory rather than an invented template guide. This change creates no target repository, PAT or conversation.
+
+Checks verify the exact three prompt bytes across moves, current relative links/anchors, heading/fence/list structure, retained permissions and correct mode stops, full unaffected guide content and campaign-only path scope. Prior closed records, calculator docs, plugin/runtime/version/releases remain unchanged. Broad runtime/browser/package checks are unnecessary for this documentation reorganization. Source and evidence commit together and require publication/readback. Campaign 113 remains open.
 
 ## Pending continuation
 

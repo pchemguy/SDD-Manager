@@ -17,6 +17,33 @@ These are alternative runs. Use separate repositories or clearly recorded starti
 
 ## Starting the exercise
 
+### Convenience setup
+
+1. Create an initialized GitHub repository from [SDD Manager Template](https://github.com/pchemguy/SDD-Manager-Template) using **Use this template**.
+2. Create a fine-grained personal access token (PAT) restricted to the new repository. A suggested standard set grants **Read and write** permissions for:
+    - Actions.
+    - Commit statuses.
+    - Contents.
+    - Issues.
+    - Pull requests.
+    - Workflows.
+
+    Individual workflows may require fewer permissions; this set is a convenience rather than a universal minimum.
+
+3. Choose an [AIO prompt variant](#all-inclusive-aio-prompts) below. Replace `https://github.com/{OWNER}/{REPO}` and `{FINE_GRAINED_GH_TOKEN}` with the new repository URL and its token, then copy the complete prompt into a new ChatGPT Work conversation or another agentic environment.
+
+### All-inclusive (AIO) prompts
+
+As an alternative to the staged prompts below, use one of these standalone prompts. All three target the same complete game scope, with full-gravity-interval locking as the default; they differ in how documentation is prepared.
+
+| Variant | Documentation preparation |
+| --- | --- |
+| [Interactive](prompts/AIO/Interactive.md) | Present the full scope upfront and review each document checkpoint. |
+| [Autodoc](prompts/AIO/Autodoc.md) | Present the full scope upfront. After project-brief approval, the agent proceeds through the preapproved document checkpoints to TASKS, then stops before final documentation-package QC. |
+| [Multipass Autoloop](<prompts/AIO/Multipass Autoloop.md>) | Develop the scope through six cumulative documentation passes. Approve the first project brief; the remaining predefined passes run autonomously, stopping before final documentation-package QC. |
+
+### Minimal starting prompt
+
 Use the repository's [Greenfield Project Prompt Template](<../../../.agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md>) with this preliminary description:
 
 > [!NOTE] Prompt
@@ -26,14 +53,6 @@ Use the repository's [Greenfield Project Prompt Template](<../../../.agents/plug
 Supply the target repository, the required authorization, and the GitHub tracking preference through that template.
 
 Keep the initial description short when testing clarification. For more controlled comparisons, provide the same additional decisions in each run and record when they were introduced.
-
-Complete alternatives are available as standalone prompts. Replace their repository and token placeholders, and choose the preparation mode for the run:
-
-| Preparation mode | Copy-ready prompt |
-| --- | --- |
-| Interactive/onepass | [All-inclusive project](prompts/AIO.md) |
-| Autodoc/onepass | [All-inclusive project](<prompts/Autodoc AIO.md>) |
-| Autodoc/autoloop | [Cumulative scope passes](<prompts/Multipass Autoloop AIO.md>) |
 
 The agent should clarify material ambiguities before treating them as requirements. Relevant questions include:
 
@@ -353,24 +372,3 @@ Record the SDD Manager version, agent/model, execution environment, other active
 Separate workflow findings from game defects and environment failures. Report verification that actually ran, including blocked or incomplete checks.
 
 The result should show both whether the game works and whether SDD Manager maintained a coherent, reviewable development process.
-
-## All-inclusive project prompt
-
-As an alternative to the staged prompts above, use the [all-inclusive project prompt](prompts/AIO.md) and replace the repository and token placeholders. It declares the full target scope upfront, with full-interval locking as the default.
-
-Use a fine-grained personal access token (PAT) restricted to the target repository. A suggested standard set grants **Read and write** permissions for:
-
-- Actions.
-- Commit statuses.
-- Contents.
-- Issues.
-- Pull requests.
-- Workflows.
-
-Individual workflows may require fewer permissions; this set is a convenience rather than a universal minimum.
-
-To automate document preparation, use the [autodoc prompt](<prompts/Autodoc AIO.md>). After you approve the project brief (`PROJECT.md`), the agent proceeds through the preapproved document checkpoints to `TASKS.md`, then stops before final documentation-package QC.
-
-## Multipass autoloop project prompt
-
-Use the [multipass autoloop project prompt](<prompts/Multipass Autoloop AIO.md>) to develop the same target scope through six cumulative documentation passes using autodoc/autoloop mode. Replace the repository and token placeholders; the PAT guidance above also applies.

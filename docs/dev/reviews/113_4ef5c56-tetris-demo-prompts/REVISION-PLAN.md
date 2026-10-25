@@ -21,3 +21,9 @@ After A-001, pause with this campaign open for the requested prompt extensions. 
 ## A-002 — Autodoc guidance
 
 The human identifies the generic full-autonomy advice as document automation. Replace that paragraph with a link to the existing autodoc prompt and concise, accurate mode guidance: PROJECT approval remains active, subsequent document checkpoints through TASKS are preapproved, and execution stops before final documentation-package QC. Verify against the canonical mode reference and preserve every other README paragraph and standalone prompt. Keep the campaign open for further extensions.
+
+## A-003 — AIO organization and starting workflow
+
+The human requests moving the three existing prompts into prompts/AIO/ and naming them Interactive.md, Autodoc.md and Multipass Autoloop.md. Preserve their exact contents. Replace the two end-of-guide prompt sections and the earlier mode index with one integrated AIO subsection under Starting the exercise, describing all three variants. Add a convenience-setup subsection there: create an initialized GitHub repository from SDD-Manager-Template, create its repository-restricted fine-grained PAT with the existing suggested read/write permission set, and substitute the repository/token placeholders in a selected AIO prompt before copying it into a new ChatGPT Work or other agentic conversation. Move shared PAT guidance out of the AIO section.
+
+Verify template metadata read-only through the selected GitHub plugin, exact prompt-byte preservation across moves, all affected current references, coherent subsection/mode boundaries, valid Markdown links/structure and unchanged unrelated guide/product/closed records. Update active evidence/navigation references as needed without altering earlier observations. Keep the campaign open; no new repository, token or conversation is actually created by this documentation change.
