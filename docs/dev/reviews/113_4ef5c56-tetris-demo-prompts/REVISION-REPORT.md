@@ -39,6 +39,14 @@ Added Best 10 results after Configuration persistence in Interactive and Autodoc
 
 Checks confirm identical capability text in all three prompts, correct position before Design clarification, consecutive passes 1–7, and exact preservation of all other prompt bytes. The README changes only its pass count; all remaining changes belong to active campaign evidence/navigation. Whitespace and section separation pass. Runtime/browser/package execution is unnecessary for this prompt-only capability addition. Source and evidence commit together, then require publication/readback. Campaign 113 remains open for further directions.
 
+## A-005 — Leaderboard naming and manual persistence
+
+The human approved the discussed top-10/replacement definition. Renamed the preceding subsection to Leaderboard in all three AIO prompts, retaining its original body. Added Persistent leaderboard with identical concise text in each variant; the cumulative sequence now uses Leaderboard at pass 7 and Persistent leaderboard at pass 8. README mode guidance reports eight passes.
+
+The new scope defines two buttons below the panel, JSON/SQLite file save and replacement restore, stable IDs/scores/UTC completion times, versioned JSON with a provided validating JSON Schema, a single high_scores SQLite table with metadata versioning, complete pre-load validation and unchanged state on failure. Saving/restoring is manual; imports become session results. It adds no merge behavior, extra statistics or selected implementation library.
+
+Checks confirm identical persistence text, correct subsection order and consecutive pass numbering, title-only change to the original leaderboard capability, exact preservation of all remaining prompt content and a README-only pass-count change. Heading/whitespace and active navigation/path-scope checks pass; prior closed records and unrelated source remain unchanged. Runtime/browser/package execution is unnecessary for this prompt definition. Source/evidence commit together and require publication/readback. Campaign 113 stays open.
+
 ## Pending continuation
 
 Await the human's requirements for extending docs/demo/tetris/prompts/. Add accepted actions to the existing plan when supplied. Keep campaign 113 open on its published revision branch; no final integration, campaign closure, version bump or release is selected at this checkpoint.
