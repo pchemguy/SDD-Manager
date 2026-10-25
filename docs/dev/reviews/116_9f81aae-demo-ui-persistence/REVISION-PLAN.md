@@ -6,12 +6,16 @@ Campaign **116_9f81aae**. Starting baseline and branch-off: `9f81aae18c52df99b80
 
 Open a new demo revision campaign to revise the Tetris demo's UI layout and persistence feature definitions. The current owners are the standalone Interactive, Autodoc and Multipass Autoloop prompts under docs/demo/tetris/prompts/, with docs/demo/tetris/README.md as their guide.
 
-The human has selected the subject, but has not yet supplied the requested layout or persistence changes. This opening authorizes campaign setup and publication; it does not select new product requirements. Leave prompts and guide unchanged and keep the campaign open for the next directions.
+The human has now supplied the layout and persistence revision. Update all three AIO prompts together. Arrange the board centrally, game info/controls immediately left, leaderboard farther left, settings immediately right and controls/help farther right. Keep the board and game info/controls visible; put individual toggles for the other panels above Pause and Start/Restart.
+
+Rename Persistent leaderboard to Leaderboard and settings persistence. Both the existing leaderboard buttons and added settings-panel buttons save/restore the same JSON or SQLite bundle containing the top 10 results and current game settings. Hiding settings hides its buttons. Extend schema/database content and whole-file validation to settings, preserving both current results and settings on failure. Successful settings restoration follows the existing cookie/URL synchronization rules.
+
+Keep the prior eight cumulative pass boundaries, expanding pass 8 persistence in place; add UI layout as pass 9 and update the guide's count. No new workflow instructions or application implementation are needed. Keep the campaign open after this revision.
 
 ## Revision sequence
 
-- **A-001 — Establish the revision scope:** capture the human's UI layout and persistence requirements, assess their interactions and identify the affected prompt variants and guide passages. Pending human directions; no proposals or source edits yet.
-- **A-002 — Apply the accepted revisions:** update only the affected demo text, preserving mode selection and cumulative scope consistency. Pending A-001 and authorization for the concrete revision.
-- **A-003 — Verify and report:** check relevant current links, Markdown, agreement across variants, pass placement and the complete scoped diff; preserve closed records. Select further checks only if the actual changes warrant them.
+- **A-001 — Establish the revision scope:** requirements captured above from the current human direction. No prior gameplay rules, six configuration choices, or cookie/URL precedence changes.
+- **A-002 — Apply the accepted revisions:** synchronize persistence and panel-layout text in all three prompts, retain mode selection and cumulative scope, and update the README pass count.
+- **A-003 — Verify and report:** check current links, Markdown, exact agreement of shared sections, sequential nine-pass placement, unchanged prior scope and the complete scoped diff; preserve closed records. Runtime/browser/package tests are unnecessary for prompt-only changes.
 
-Publish/read back every owned commit before further work. Stop after opening for now. Do not close or integrate this unfinished campaign, change plugin/runtime/version/release content, or start another campaign. Later closure requires the authorized completed scope, final evidence/HANDOFF, explicit verified parent integration and target publication/readback.
+Publish/read back every owned commit before further work. Stop after the requested revision with the campaign open. Do not close or integrate it, change plugin/runtime/version/release content, or start another campaign. Later closure requires the authorized completed scope, final evidence/HANDOFF, explicit verified parent integration and target publication/readback.
