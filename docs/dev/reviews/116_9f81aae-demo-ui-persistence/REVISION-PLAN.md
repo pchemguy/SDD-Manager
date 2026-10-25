@@ -23,3 +23,9 @@ Publish/read back every owned commit before further work. Stop after the request
 ## Closure authorization
 
 The human subsequently requested closure. Actions A-001–A-003 are complete in published/readback-verified `7d6225db310f887a13a55ecc653933cf5af2a493`. Finalize the report/navigation/HANDOFF, publish/read back, then explicitly merge the verified source into refreshed main, verify the result and both parents, publish/read back main and return clean. Stop after closure; no new work or release is selected.
+
+## Reopened amendment — Save/Restore placement
+
+The human explicitly reopens campaign 116 to correct the agent's mistaken interpretation of button placement. Qualifying prior published closure/reopening checkpoint: `8ddffff1381b297dab12938de1ceda7a75578c44`, the latest main first-parent merge, with parents `9f81aae18c52df99b8084183619cf9e38cd25e0c` and `652c5a79ca9c1cf219290fe432defaa49107d9c8`. The established campaign branch is brought forward to that checkpoint; original identity, baseline and opening remain unchanged. No parent is suspended.
+
+**A-004 — Correct the controls:** all three prompts must define exactly one Save/Restore pair at the bottom of the settings panel, hidden with that panel. The earlier two-set interpretation was the agent's error and is superseded. Keep combined leaderboard/settings persistence and all other scope unchanged. Verify exact three replacements, cross-variant agreement, links and scope; publish the correction with evidence, then explicitly integrate, verify/publish main and reclose. No release/version change.
