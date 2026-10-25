@@ -37,11 +37,11 @@ For a penetrator, hard drop must pass through blocking cells to the lowest valid
 
 Clearing four lines at once awards one penetrator bonus, granting one activation of the penetrator ability. Allow up to three bonuses to accumulate.
 
-Render penetrator pieces entirely white, and do not use white for regular pieces. Show the available bonuses in the side panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
+Render penetrator pieces entirely white, and do not use white for regular pieces. Show the available bonuses in the game info and controls panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
 
 #### Game configuration
 
-Provide a side panel with controls for:
+Provide a settings panel with controls for:
 
 1. Ghost-piece visibility: always hide, hide dynamically above the board’s midline, or always show.
 2. Hard drop: on or off.
@@ -68,15 +68,32 @@ Session-only configuration may be delivered as an intermediate increment before 
 
 #### Leaderboard
 
-Show a statistics panel with the 10 best completed-game results, ranked by score. Update it after each game and keep the history only for the current session.
+Show a leaderboard panel with the 10 best completed-game results, ranked by score. Update it after each game and keep the history only for the current session.
 
-#### Persistent leaderboard
+#### Leaderboard and settings persistence
 
-Place **Save** and **Restore** buttons below the leaderboard. Save offers JSON or SQLite and downloads the current top 10 results. Restore accepts either format and replaces the current leaderboard.
+Place **Save** and **Restore** buttons below the leaderboard and in the settings panel. Both sets perform the same operations; hiding the settings panel also hides its buttons.
 
-Preserve each result's stable ID, non-negative integer score and UTC game-completion timestamp in both formats. JSON includes a format version and results array; provide a JSON Schema and validate against it before loading, including timestamp validation. SQLite uses one `high_scores(id, score, timestamp)` table, with format versioning in database metadata.
+Save offers JSON or SQLite and downloads one file containing the current top 10 results and all six game configuration settings. Restore accepts either format, replaces the leaderboard and applies the saved settings, updating their cookies and URL parameters.
 
-Validate the entire file before changing session state. On failure, show a clear error and leave current results unchanged. Saving and restoring are manual; restored results become the session leaderboard.
+Preserve each result's stable ID, non-negative integer score and UTC game-completion timestamp in both formats. JSON includes a format version, results array and settings object; provide a JSON Schema and validate the complete content before loading, including timestamps and setting values. SQLite includes `high_scores(id, score, timestamp)` and a settings table, with format versioning in database metadata.
+
+Validate the entire file before changing results, settings, cookies or URL parameters. On failure, show a clear error and leave them unchanged. Saving and restoring are manual; restored results become the session leaderboard.
+
+#### UI layout
+
+Arrange the panels from left to right:
+
+| Panel | Position |
+| --- | --- |
+| Leaderboard | Left of game info and controls |
+| Game info and controls | Immediately left of the board |
+| Board | Center of the screen |
+| Settings | Immediately right of the board |
+| Controls/help | Right of settings |
+
+Keep the board and game info and controls panels visible. In the game info and controls panel, place individual show/hide toggle buttons for the leaderboard, settings and controls/help panels above the **Pause** and **Start/Restart** buttons. Keep the board centered when panels are hidden or shown.
+
 
 ### Design clarification
 
