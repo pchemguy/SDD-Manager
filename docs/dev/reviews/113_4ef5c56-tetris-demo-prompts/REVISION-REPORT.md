@@ -15,6 +15,12 @@ Verification checks the exact unchanged guide prefix and shared guidance, absenc
 
 Source and this action evidence are committed together, then require publication/readback before further work. The containing commit and actual remote result establish that later boundary; this snapshot cannot prove its own publication.
 
+## A-002 — Autodoc guidance
+
+After published/readback-verified A-001 commit `431bdf80de3b121bcf5236caf7d5184d0a534e23`, replaced the generic all-checkpoint/full-autonomy paragraph with a link to the existing autodoc prompt. The new text matches the canonical doc-design mode reference: human PROJECT approval, preapproved subsequent document checkpoints through TASKS, then a stop before final package QC. This describes document preparation without granting broader execution authority.
+
+Verification confirms the exact one-paragraph README replacement, valid relative autodoc link, unchanged standalone prompt contents, preserved unrelated source/closed records and clean whitespace. No runtime check is required for this prose-only change. Source and this added evidence commit together and require publication/readback; the campaign remains open.
+
 ## Pending continuation
 
 Await the human's requirements for extending docs/demo/tetris/prompts/. Add accepted actions to the existing plan when supplied. Keep campaign 113 open on its published revision branch; no final integration, campaign closure, version bump or release is selected at this checkpoint.

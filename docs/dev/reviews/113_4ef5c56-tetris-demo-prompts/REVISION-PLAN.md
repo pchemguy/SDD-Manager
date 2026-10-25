@@ -17,3 +17,7 @@ Product editing scope is docs/demo/tetris/README.md and, when requirements are s
 | A-001 — README references | Retain the All-inclusive project prompt and Multipass autoloop project prompt sections/anchors and their concise leads, with links to prompts/AIO.md and prompts/Multipass Autoloop AIO.md. Preserve PAT permissions/autonomy guidance and the existing mode index. Remove the two embedded full prompt bodies. Check referenced files/links, Markdown structure, exact preservation outside the two replacements and unchanged standalone prompt bytes. Commit source/evidence together, push and read back. |
 
 After A-001, pause with this campaign open for the requested prompt extensions. Add accepted actions when the human defines them. Do not close or merge the incomplete campaign merely because this first action is complete. No broad tests, package build, release or runtime change is needed for removing duplicated documentation.
+
+## A-002 — Autodoc guidance
+
+The human identifies the generic full-autonomy advice as document automation. Replace that paragraph with a link to the existing autodoc prompt and concise, accurate mode guidance: PROJECT approval remains active, subsequent document checkpoints through TASKS are preapproved, and execution stops before final documentation-package QC. Verify against the canonical mode reference and preserve every other README paragraph and standalone prompt. Keep the campaign open for further extensions.

@@ -369,7 +369,7 @@ Use a fine-grained personal access token (PAT) restricted to the target reposito
 
 Individual workflows may require fewer permissions; this set is a convenience rather than a universal minimum.
 
-Optionally request a fully autonomous process by preapproving all human checkpoints, either in the initial prompt or after approving the project brief (`PROJECT.md`). For example: “I preapprove all remaining human checkpoints. Continue fully autonomously while following all other SDD Manager workflow obligations.”
+To automate document preparation, use the [autodoc prompt](<prompts/Autodoc AIO.md>). After you approve the project brief (`PROJECT.md`), the agent proceeds through the preapproved document checkpoints to `TASKS.md`, then stops before final documentation-package QC.
 
 ## Multipass autoloop project prompt
 
