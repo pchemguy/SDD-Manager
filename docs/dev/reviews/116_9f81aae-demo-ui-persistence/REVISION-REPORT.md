@@ -30,3 +30,13 @@ Reopening checkpoint: `8ddffff1381b297dab12938de1ceda7a75578c44`. Original openi
 **A-004:** replace the placement paragraph in Interactive, Autodoc and Multipass Autoloop with a single Save/Restore pair at the bottom of settings, hidden with that panel. Combined results/settings data, validation and all other prompt text remain unchanged. Focused checks verify exact paragraph-only replacements and shared bodies; current-link/scope checks exclude all other closed campaigns. No runtime/browser/package claim is made for this prose correction.
 
 Finalized for reclosure after correction publication/readback, explicit two-parent merge into main, merged-state checks and target publication/readback with clean return. Subsequent Git establishes those effects; this checkpoint does not claim its own future publication.
+
+## Follow-up amendment — A-005
+
+Prior amendment closure completed through published/readback-verified merge `254ba05c7015406897e864aba211ccf3412e03d8` with clean main return. This is the next follow-up's qualifying latest first-parent merge and reopening checkpoint; branch, original opening and original baseline remain unchanged.
+
+All three prompt variants now name `settings(key, value)` beside `high_scores(id, score, timestamp)`, specifying one uniquely keyed row per game setting. One excess blank line before Design clarification is removed in each prompt. Exact pre/post checks pass: only those two substitutions per prompt, no duplicate blank lines, identical shared persistence/layout bodies, Interactive/Autodoc distinction preserved, one Save/Restore pair retained. README and all other product text are unchanged. Current Markdown/link and frozen-record checks remain required before persistence and integration; no runtime/package/browser claim is made for these prose changes.
+
+Finalized for reclosure through publication/readback, explicit verified two-parent main integration, target publication/readback and clean return. The record preserves prior results; subsequent Git establishes the new closure effects.
+
+Current amendment check: 226 Markdown files and 1,448 local links pass without errors; prior closed records are preserved and diff whitespace checks pass. No extra checks or source changes were required.
