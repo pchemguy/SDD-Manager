@@ -31,6 +31,8 @@ The selected GitHub plugin read-only metadata confirms pchemguy/SDD-Manager-Temp
 
 Checks verify the exact three prompt bytes across moves, current relative links/anchors, heading/fence/list structure, retained permissions and correct mode stops, full unaffected guide content and campaign-only path scope. Prior closed records, calculator docs, plugin/runtime/version/releases remain unchanged. Broad runtime/browser/package checks are unnecessary for this documentation reorganization. Source and evidence commit together and require publication/readback. Campaign 113 remains open.
 
+A-003 wording follow-up: removed the redundant “using Use this template” button-label phrase at the human's request. The setup step directly says to create an initialized GitHub repository from the linked template. This single-sentence correction preserves the link, setup sequence and all prompt contents; whitespace and exact-diff inspection pass. The original A-003 checkpoint `ef689647a86574915d4a4c72634a55530fdcb0aa` is published/readback verified. This correction requires its own commit publication/readback; campaign 113 remains open.
+
 ## Pending continuation
 
 Await the human's requirements for extending docs/demo/tetris/prompts/. Add accepted actions to the existing plan when supplied. Keep campaign 113 open on its published revision branch; no final integration, campaign closure, version bump or release is selected at this checkpoint.
