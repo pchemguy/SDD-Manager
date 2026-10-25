@@ -118,4 +118,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `113_4ef5c56` | Finalized: AIO variants/setup guidance, Leaderboard and manual JSON/SQLite persistence complete through eight cumulative passes. Source/link/scope checks pass; closes at verified main integration/publication and clean return. | [Plan](113_4ef5c56-tetris-demo-prompts/REVISION-PLAN.md), [progress](113_4ef5c56-tetris-demo-prompts/REVISION-REPORT.md) |
 
+| `114_0a7eaf7` | Finalized: comprehensive review complete; R-001 guide scope clarification verified. 327 fresh local tests and exact package checks pass; prior native CI remains qualified. Closes at verified main integration/publication and clean return. | [Review](114_0a7eaf7-comprehensive-review/REVIEW-REPORT.md), [plan](114_0a7eaf7-comprehensive-review/REVISION-PLAN.md), [result](114_0a7eaf7-comprehensive-review/REVISION-REPORT.md) |
+
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.

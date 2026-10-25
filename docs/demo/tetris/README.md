@@ -4,9 +4,9 @@
 
 This guide uses a browser-based Tetris project to demonstrate and evaluate SDD Manager's project preparation, phased implementation, feature campaign, and checkpoint steering workflows.
 
-The exercise starts with a deliberately short description. The agent should clarify the intended game, develop the governing documents with human review, and implement the accepted scope with verification and Git checkpoints.
+The staged exercise starts with a deliberately short description. The agent should clarify the intended game, develop the governing documents with human review, and implement the accepted scope with verification and Git checkpoints.
 
-Two variants cover different delivery workflows:
+Two staged variants cover different delivery workflows:
 
 | Variant | Initial project scope | Delivery |
 | --- | --- | --- |
@@ -67,7 +67,7 @@ The agent should clarify material ambiguities before treating them as requiremen
 
 ## Shared gameplay scope
 
-For this demo, the baseline includes a playable keyboard-controlled game with falling tetrominoes, movement, rotation, collision detection, locking, line clearing, and game-over behavior.
+For staged variants A and B, the baseline includes a playable keyboard-controlled game with falling tetrominoes, movement, rotation, collision detection, locking, line clearing, and game-over behavior. For an [AIO run](#all-inclusive-aio-prompts), follow the selected prompt's scope and defaults.
 
 Start with **locking on a failed downward movement attempt** in both delivery variants. Reaching a supported position does not itself lock the piece: a subsequent gravity or soft-drop attempt that cannot move it down locks it. Keep the ordinary gravity schedule; landing does not start a fresh lock timer. Successful horizontal movement or rotation does not reset that schedule.
 
@@ -118,7 +118,7 @@ Use this prompt as an initial project description in the greenfield template or 
 
 See [examples/PROJECT_phased-project.md](examples/PROJECT_phased-project.md) for a good example of an agent-generated project brief from an earlier trial. Interactive clarification established the combined baseline and enhancement scope, which the brief presents through the target audience, goals, and non-goals. Its Canvas and vanilla JavaScript choices illustrate that trial; they are not mandatory for this demo.
 
-The example also includes full-interval lock delay. This guide starts with failed-downward-attempt locking and introduces full-interval locking as a steering amendment. Use the example for its brief structure and scope presentation, and apply this guide's initial locking rule when developing the trial project.
+The example also includes full-interval lock delay. The staged exercise starts with failed-downward-attempt locking and introduces full-interval locking as a steering amendment. Use the example for its brief structure and scope presentation, and apply this guide's initial locking rule when developing the trial project.
 
 Evaluate whether the agent:
 
@@ -367,7 +367,7 @@ Exercise controls through the actual browser interface as well as through engine
 
 ## Recording results
 
-Record the SDD Manager version, agent/model, execution environment, other active plugins or skills, relevant prior context, chosen delivery variant, hard-drop policy, steering exercises and their checkpoints, and material human interventions.
+Record the SDD Manager version, agent/model, execution environment, other active plugins or skills, relevant prior context, chosen staged variant or AIO preparation mode, hard-drop policy, steering exercises and their checkpoints, and material human interventions.
 
 Separate workflow findings from game defects and environment failures. Report verification that actually ran, including blocked or incomplete checks.
 
