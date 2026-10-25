@@ -19,3 +19,7 @@ Keep the prior eight cumulative pass boundaries, expanding pass 8 persistence in
 - **A-003 — Verify and report:** check current links, Markdown, exact agreement of shared sections, sequential nine-pass placement, unchanged prior scope and the complete scoped diff; preserve closed records. Runtime/browser/package tests are unnecessary for prompt-only changes.
 
 Publish/read back every owned commit before further work. Stop after the requested revision with the campaign open. Do not close or integrate it, change plugin/runtime/version/release content, or start another campaign. Later closure requires the authorized completed scope, final evidence/HANDOFF, explicit verified parent integration and target publication/readback.
+
+## Closure authorization
+
+The human subsequently requested closure. Actions A-001–A-003 are complete in published/readback-verified `7d6225db310f887a13a55ecc653933cf5af2a493`. Finalize the report/navigation/HANDOFF, publish/read back, then explicitly merge the verified source into refreshed main, verify the result and both parents, publish/read back main and return clean. Stop after closure; no new work or release is selected.

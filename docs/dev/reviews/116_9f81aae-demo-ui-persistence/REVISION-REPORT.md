@@ -12,3 +12,11 @@ Campaign **116_9f81aae**, baseline `9f81aae18c52df99b8084183619cf9e38cd25e0c`. W
 ## Current boundary
 
 The requested text revision is ready for publication/readback in this action commit. The campaign remains **open** for further human directions; no integration, closure, version bump, release, plugin change or application implementation is selected. This record cannot establish its own subsequent push; recover that from Git/readback.
+
+## Authorized finalization
+
+The human subsequently requested closure. Action commit `7d6225db310f887a13a55ecc653933cf5af2a493` was pushed and read back exactly, with confirmed transient cleanup and process exit 0. All A-001–A-003 changes are complete; no outstanding findings or decisions remain within the requested scope.
+
+Final checks confirm identical shared sections, nine sequential passes, preserved earlier scope/mode/clarifications, exact README count change and bounded paths. Current-source audit: 226 Markdown files and 1,448 local links, zero errors; prior closed records unchanged. This remains documentation-only evidence, with no runtime/browser/package or live-agent claim.
+
+Finalized for explicit two-parent integration into refreshed main. Publish/read back this finalization, verify the prospective merged tree and parent identities, then publish/read back main and return clean before declaring closure. Actual later merge/publication is established by Git; no post-closure record rewrite is needed. No version bump or release is authorized.
