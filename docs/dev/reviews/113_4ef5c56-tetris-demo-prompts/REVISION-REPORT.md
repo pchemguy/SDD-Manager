@@ -1,6 +1,6 @@
 # Tetris demo prompts revision progress
 
-Campaign **113_4ef5c56** remains **open** under its [accepted plan](REVISION-PLAN.md). Full baseline/branch-off: `4ef5c565cbd3e6464c007bdbf96c897191b04413`. Working branch: `revision/113_4ef5c56-tetris-demo-prompts`; creation parent, eventual integration and return: main on origin, pchemguy/SDD-Manager. Original opening `085c83c83fcc322884cee93ecab72d43486509d6` is published/readback verified with confirmed cleanup. No parent is suspended; Standard reporting.
+Campaign **113_4ef5c56** is **finalized for authorized closure** under its [accepted plan](REVISION-PLAN.md). Full baseline/branch-off: `4ef5c565cbd3e6464c007bdbf96c897191b04413`. Working branch: `revision/113_4ef5c56-tetris-demo-prompts`; creation parent, eventual integration and return: main on origin, pchemguy/SDD-Manager. Original opening `085c83c83fcc322884cee93ecab72d43486509d6` is published/readback verified with confirmed cleanup. No parent is suspended; Standard reporting.
 
 ## A-001 — README references
 
@@ -47,6 +47,10 @@ The new scope defines two buttons below the panel, JSON/SQLite file save and rep
 
 Checks confirm identical persistence text, correct subsection order and consecutive pass numbering, title-only change to the original leaderboard capability, exact preservation of all remaining prompt content and a README-only pass-count change. Heading/whitespace and active navigation/path-scope checks pass; prior closed records and unrelated source remain unchanged. Runtime/browser/package execution is unnecessary for this prompt definition. Source/evidence commit together and require publication/readback. Campaign 113 stays open.
 
-## Pending continuation
+## Finalization and closure boundary
 
-Await the human's requirements for extending docs/demo/tetris/prompts/. Add accepted actions to the existing plan when supplied. Keep campaign 113 open on its published revision branch; no final integration, campaign closure, version bump or release is selected at this checkpoint.
+The human now authorizes closure, then a separate comprehensive review/fix campaign. A-001–A-005 and the A-003 wording correction are complete; their action commits are published/readback verified. Latest accepted prompt source: `5ef33eb30b6afb45ed5c88a6633aedab0f4c33fa`. The retained earlier open-state statements describe their action checkpoints; this closure instruction supersedes those stops.
+
+Final current-source checks pass: 226 Markdown files/1,442 local links at the action source, no broken targets/fences or heading-spacing findings, 17 SVGs parse, and the bounded credential-pattern scan has no hits. Focused action checks verify exact unchanged content outside each selected edit, consistent three-variant definitions, consecutive eight-pass scope, top-10 replacement import behavior and all accepted JSON/SQLite fields/validation requirements. Product-package/runtime/test/CI/policy blobs are unchanged from the baseline; broad runtime/build reruns are unnecessary for this documentation campaign. This is source/documentation evidence, not a working game, browser/installed-client trial or rendered-diagram acceptance.
+
+Only the Tetris guide/prompts, this campaign, current navigation and continuity are changed; prior closed records and calculator/plugin/version/release content remain preserved. Publish/read back finalization, explicitly merge the complete published tip into main, verify the merged tree and frozen/package identity, publish/read back main with confirmed cleanup and return clean. Those subsequent effects close/freeze 113; then open the separately authorized comprehensive review. Do not create a release or move v0.15.3.

@@ -35,3 +35,7 @@ Add a concise capability subsection after Configuration persistence in each AIO 
 ## A-005 — Leaderboard naming and manual persistence
 
 The human accepts the discussed definition and asks to rename the preceding feature. Rename Best 10 results to Leaderboard in all three AIO variants, preserving its session-only behavior. Append Persistent leaderboard with Save/Restore below the panel, user-selected JSON/SQLite export of the top 10, replacement restore after complete validation, stable result ID/non-negative integer score/UTC completion timestamp, versioned JSON and a provided JSON Schema with actual timestamp checks, and one SQLite high_scores table with database metadata versioning. Failed loads preserve current state and report an error; restored results become the session leaderboard. Autoloop adds cumulative pass 8; align README and current navigation. Keep wording concise and avoid choosing libraries, extra statistics, merge semantics or a storage implementation. Preserve all other prompt content, verify source/definition/Markdown/path scope, publish/read back and leave the campaign open.
+
+## Authorized closure
+
+The human now requests closure, superseding the earlier open-campaign stop, followed by a separate comprehensive review/fix/closure campaign. Finalize A-001–A-005, verify complete scoped changes and frozen-record preservation, publish evidence, explicitly merge into refreshed main and verify/publish/return clean before closing. No release or version bump is selected.
