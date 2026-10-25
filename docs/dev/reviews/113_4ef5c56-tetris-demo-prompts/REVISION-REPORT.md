@@ -1,0 +1,20 @@
+# Tetris demo prompts revision progress
+
+Campaign **113_4ef5c56** remains **open** under its [accepted plan](REVISION-PLAN.md). Full baseline/branch-off: `4ef5c565cbd3e6464c007bdbf96c897191b04413`. Working branch: `revision/113_4ef5c56-tetris-demo-prompts`; creation parent, eventual integration and return: main on origin, pchemguy/SDD-Manager. Original opening `085c83c83fcc322884cee93ecab72d43486509d6` is published/readback verified with confirmed cleanup. No parent is suspended; Standard reporting.
+
+## A-001 — README references
+
+Replaced both complete embedded prompts in the [Tetris README](../../../demo/tetris/README.md) with links to their existing standalone owners:
+
+- All-inclusive project prompt: [prompts/AIO.md](../../../demo/tetris/prompts/AIO.md).
+- Multipass autoloop project prompt: [prompts/Multipass Autoloop AIO.md](<../../../demo/tetris/prompts/Multipass Autoloop AIO.md>).
+
+Retained both section headings/anchors and concise scope/mode descriptions. The PAT permissions and optional autonomy guidance, earlier preparation-mode index and every preceding guide section remain unchanged. No standalone prompt content was edited. README length changes from 530 to 376 lines, removing 154 lines of duplication.
+
+Verification checks the exact unchanged guide prefix and shared guidance, absence of both full embedded bodies, preserved prompt blobs, referenced file/link targets, heading separation, balanced fences, whitespace and the complete campaign path scope. Prior closed records/navigation rows, incoming manual edits, calculator docs, plugin/version/release files and all other content are preserved. No runtime or package change warrants broad test/build or browser execution for this action; none is claimed.
+
+Source and this action evidence are committed together, then require publication/readback before further work. The containing commit and actual remote result establish that later boundary; this snapshot cannot prove its own publication.
+
+## Pending continuation
+
+Await the human's requirements for extending docs/demo/tetris/prompts/. Add accepted actions to the existing plan when supplied. Keep campaign 113 open on its published revision branch; no final integration, campaign closure, version bump or release is selected at this checkpoint.
