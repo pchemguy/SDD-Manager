@@ -32,3 +32,19 @@ Current Markdown/link/style and frozen-record checks precede the action commit. 
 ## Boundary
 
 Publish/read back the coherent A-002/A-003 source and evidence before package work. Complete A-004 and refresh HANDOFF with its outcome, publish/read back and pause on this campaign branch. No default-branch integration, campaign closure, version bump, release or new campaign is selected.
+
+## A-004 — Published-source package and completion evidence
+
+A-002/A-003 source `ec9cabb5a78fa47dfe03ac1d725f76f5727fa451` was pushed/read back exactly, with confirmed transient cleanup and process exit 0, before package work. The source-only release builder produced a local verification package without tag/release/provider writes:
+
+- 160 exact source members, including both new technology modules byte-for-byte; root policies, contributor guidance, tests and development evidence excluded.
+- ZIP size 495,447 bytes; SHA-256 `7e02577c7c2e9eb51d63522e1a7db6a622c2e3fdd505d3a752e4abb153eef7d6`.
+- Five extracted public CLI help commands exit 0 with output. This verifies packaged startup/help, not live provider behavior.
+
+Current-source audit before source persistence covered 228 Markdown files and 1,458 local links with zero errors; heading checks, 17 SVG XML parses, bounded token-pattern scan and frozen-record preservation pass. One trailing blank line flagged by diff whitespace checking was removed before the source commit and the affected source check repeated successfully.
+
+Additional manual source contrasts confirm normal Playwright setup precedes failure recovery; full/headed requirements survive a shell fallback; Firefox's override requires diagnosed content-process failure and trusted local tests; and optimizer pre-bundling cannot substitute for an HTML worker-entry repair. These are source assessments, supplementing the five observed planning scenarios, not fresh browser trials.
+
+All accepted actions A-001–A-004 are complete. No unresolved implementation finding remains within this instruction revision. Supplied incident results and the internal Vite query's version-sensitive applicability remain qualified; no native Windows/Vite/browser execution or target-client activation is claimed. Version remains 0.15.3, with no release operation. Publish/read back this evidence/HANDOFF checkpoint, then stop with campaign 117 open, without integration or closure.
+
+Final evidence-state audit: 228 current Markdown files and 1,460 local links pass with zero errors; closed records remain preserved. Package source and root policy are byte-unchanged from the tested/published action commit, so the recorded source suites and exact package evidence remain applicable.
