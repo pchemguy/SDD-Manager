@@ -126,6 +126,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `117_a4b21f3` | Finalized: conditional Playwright/Vite guidance integrated; 189 tests, five planning scenarios and exact package checks pass. Closes after verified main integration/publication and clean return. | [Plan](117_a4b21f3-dev-workflow/REVISION-PLAN.md), [result](117_a4b21f3-dev-workflow/REVISION-REPORT.md) |
 
-| `118_644911b` | Active: comprehensive review of current workflows, runtime/package and docs/demos/policies; confirmed repairs and closure authorized. | [Review plan](118_644911b-comprehensive-review/REVIEW-PLAN.md) |
+| `118_644911b` | Finalized: comprehensive review complete, zero confirmed/deferred findings; no repairs required. 327 local tests and exact package checks pass. Closes after verified main integration/publication and clean return. | [Plan](118_644911b-comprehensive-review/REVIEW-PLAN.md), [result](118_644911b-comprehensive-review/REVIEW-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
