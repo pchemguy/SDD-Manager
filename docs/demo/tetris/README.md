@@ -40,7 +40,7 @@ As an alternative to the staged prompts below, use one of these standalone promp
 | --- | --- |
 | [Interactive](prompts/Interactive.md) | Present the full scope upfront and review each document checkpoint. |
 | [Autodoc](prompts/Autodoc.md) | Present the full scope upfront. After project-brief approval, the agent proceeds through the preapproved document checkpoints to TASKS, then stops before final documentation-package QC. |
-| [Multipass Autoloop](<prompts/Multipass Autoloop.md>) | Develop the scope through eight cumulative documentation passes. Approve the first project brief; the remaining predefined passes run autonomously, stopping before final documentation-package QC. |
+| [Multipass Autoloop](<prompts/Multipass Autoloop.md>) | Develop the scope through nine cumulative documentation passes. Approve the first project brief; the remaining predefined passes run autonomously, stopping before final documentation-package QC. |
 
 ### Minimal starting prompt
 
