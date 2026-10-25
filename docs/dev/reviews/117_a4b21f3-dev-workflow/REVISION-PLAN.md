@@ -4,16 +4,16 @@ Campaign **117_a4b21f3**. Full starting baseline/branch-off: `a4b21f36a3e7c67596
 
 ## Objective and boundary
 
-The human selects the already-open campaign 117 for a coherent integration approach to development-environment guidance, including the supplied VITE-WORKER-LOADING.md. No nested or replacement campaign is selected. Assess the attachment and existing browser guidance, propose bounded ownership/routing and verification, and retain the plan. Implementation and closure are not yet selected.
+The human selects the already-open campaign 117 for a coherent integration approach to development-environment guidance, including the supplied VITE-WORKER-LOADING.md. No nested or replacement campaign is selected. The subsequent **Execute** instruction authorizes the planned revision and verification. Closure is not selected; finish publication and pause on the campaign branch.
 
 ## Next steps
 
 - **A-001 — Assess ownership and evidence:** complete; source and attachment assessment below. The opening commit is `4583df6988cf875157dab4f09774651cf4afa17e`, published/readback verified; it is distinct from the original baseline above.
-- **A-002 — Establish conditional environment guidance:** proposed; extend the existing environment-recovery owner with the module routing described below. No new skill or coordinator-level catalog is needed.
-- **A-003 — Integrate focused technical modules:** proposed; adapt the Vite attachment and separate reusable Playwright procedures from project policy, preserving their concrete diagnostic and verification substance.
-- **A-004 — Verify and report the accepted revision:** proposed; scoped source/routing contrasts, current links, supported package checks and explicit evidence limits. Publish each action before further work; no live application workaround or release is selected.
+- **A-002 — Establish conditional environment guidance:** implemented with A-003 as one coherent transfer; existing implementation and verification routes select only the relevant technology module. No new skill or coordinator-level catalog.
+- **A-003 — Integrate focused technical modules:** implemented; Vite attachment adapted and reusable Playwright procedures moved out of the external policy, retaining project choices and detailed recovery evidence. See [revision report](REVISION-REPORT.md).
+- **A-004 — Verify and report the accepted revision:** source checks, five fresh-context planning scenarios and 189 declared suite tests pass. Exact committed-package inspection follows publication of A-002/A-003. No live application workaround or release is selected.
 
-Publish/read back planning, then stop with the campaign open for human directions. Preserve all product source and prior closed records during this planning stage. No integration, closure, version bump, release or additional campaign is selected. Future execution follows per-commit publication; eligible closure requires verified explicit parent integration, target publication/readback and clean return.
+Planning checkpoint `a6dc8ee091e203ddd09bd939ccb82522f2479317` is published/readback verified. Execute A-002/A-003 as one coherent content transfer so routes never point at missing modules and policy detail is removed only with its packaged destination present; commit source and action evidence together. Publish/read back before the committed-package checks and final A-004 evidence. Preserve prior closed records. No integration, closure, version bump, release or additional campaign is selected; later eligible closure requires verified explicit parent integration, target publication/readback and clean return.
 
 ## Assessment
 
