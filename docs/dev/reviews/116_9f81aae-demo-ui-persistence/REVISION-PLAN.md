@@ -35,3 +35,7 @@ The human explicitly reopens campaign 116 to correct the agent's mistaken interp
 **A-005:** the human requests removal of duplicate blank lines in all prompts and an explicit settings-table signature alongside high_scores. Define `settings(key, value)`, one uniquely keyed row per game setting, and remove the excess blank before Design clarification. Preserve the single Save/Restore pair and all other scope.
 
 Qualifying last published first-parent merge/reopening checkpoint: `254ba05c7015406897e864aba211ccf3412e03d8`, parents `8ddffff1381b297dab12938de1ceda7a75578c44` and `c5ef40be1d780a7cbb3f50e462e132ef8711e1c1`. The established campaign branch fast-forwards to this checkpoint. Original identity, baseline, opening and main return remain unchanged; no suspended parent. Verify exact bounded replacements and current links, publish/read back, explicitly merge/verify/publish main and reclose without a new release.
+
+## Follow-up amendment — Natural button wording
+
+**A-006:** replace “Place a single pair of” with “Place” in the Save/Restore sentence in all three prompts. Placement and functionality stay unchanged. Reopening checkpoint/qualifying last published main merge: `41088a457c6eb2d86fe1c28cdf34b988fd52aa04`, parents `254ba05c7015406897e864aba211ccf3412e03d8` and `ca4ba4bb31c37ea97a43542639270b53ee94be5f`. Original identity, branch, opening, baseline and main return remain unchanged. Verify exact substitutions, publish/read back, integrate/verify/publish main and reclose; no other scope.
