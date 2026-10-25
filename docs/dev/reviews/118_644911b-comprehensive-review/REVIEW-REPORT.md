@@ -10,7 +10,7 @@ Current-source inventory at opening: 363 paths, partitioned into 107 workflow/en
 | --- | --- | --- |
 | U-001 | Complete: entry/template inventory and detailed consequential workflow/owner handoffs | None confirmed |
 | U-002 | Complete: runtime/test/CI inventory, risk-focused code/public contracts and exact committed package | None confirmed |
-| U-003 | Pending: current documentation/demos/policies/assets | Not yet assessed |
+| U-003 | Complete: current documentation/demo/policy/asset inventory, claims and semantic diagram review | None confirmed |
 
 ## U-001 — Workflows, entries and templates
 
@@ -22,7 +22,7 @@ The environment transfer check passes: preserved policy/three detailed recovery 
 
 ## Findings and next boundary
 
-No R-IDs allocated yet. U-001 and U-002 are complete; U-003 remains. Publish/read back each unit before advancing. Native browser/Vite execution and installed-client routing are not established by these checks.
+All three units are complete. **Zero confirmed findings, zero deferred findings and zero repairs required.** No R-IDs were allocated. Source and checks support completion at the stated assessment depth; native browser/Vite execution and installed-client routing remain outside this review's observed evidence. Publish/read back U-003 before finalization and authorized closure.
 
 ## U-002 — Runtime, tests, CI and distribution
 
@@ -44,3 +44,19 @@ Total fresh local passes: **327**, with the seven Windows-only skips reported se
 Read-only GitHub metadata/job readback confirms earlier runs 40133488913 (auth), 40133493340 (close), 40133497239 (projection) and 40133501054 (native CMD), all completed/success at `4049fc2e8d114f6b1020013bda9d3b8263fddc83`. Their expected 4+4+4+2 jobs all succeeded on Linux/Windows Node 22/24 as applicable. Runtime modules, native test fixtures, workflows and Windows shell policy are byte-unchanged from that source. This is applicable **prior** matrix evidence re-read now, not new CI on this review's commit, nor native Vite/browser evidence. Workflow permissions, finite jobs, candidate/tooling separation and default-branch release-provenance checks align with their contracts.
 
 Unit U-001 result commit `1be1a64827cdadff9de6498ceca84313640630a8` was pushed/read back with confirmed cleanup and exit 0 before this work. Publish/read back U-002 before reviewing documentation.
+
+## U-003 — Documentation, demos, policies and assets
+
+Assessed current product documentation at `04862de7e4a03705552929fdd2e9df5d6b37d5b9`, with product bytes unchanged from the starting source. Covered the 144 opening documentation/asset paths by inventory and applicable structural checks, with substantive focus on root/full README and capability map, contributor/acceptance orientation, source package boundaries, all three Tetris prompts and their guide, calculator guide/AIO prompt, external shell/browser policies and the new operational guidance. Historical evidence statements retain their qualified source references; closed records were not loaded or repaired.
+
+Six README diagrams were semantically traced against the owning procedures: main preparation, one document pass, modes/reset, implementation, steering and review/revision. Gates, tracked closure order, eligible integration and stops agree with adjacent explanations. No mmdc renderer is installed; no fresh rendered-legibility claim is made. Artwork receives metadata/path and 17 SVG XML checks, not a new visual redesign or client-rendering claim.
+
+Focused demo checks confirm Interactive/Autodoc differ only in mode selection; shared persistence/layout bodies match Multipass Autoloop; nine passes and guide count agree; one Save/Restore placement sentence, explicit settings/high_scores signatures, all six game settings and no duplicate blank lines remain consistent. Staged Tetris defaults are bounded to the staged exercise, while AIO delayed locking and combined manual persistence remain distinct. Calculator scope/phase/mode and release instructions align with the workflow. The browser policy remains standalone; selected procedures are packaged and conditional, without importing project browser choices into the plugin.
+
+Current audit at the unit boundary: **228 Markdown files, 1,459 local links, zero errors**; heading spacing, fences, SVGs, bounded credential-pattern scanning and preservation of other closed records pass. These checks cover current/active owners, not historical validity. No confirmed documentation defect was found. Unit U-002 commit `04862de7e4a03705552929fdd2e9df5d6b37d5b9` was published/readback verified with confirmed cleanup and exit 0 before this work.
+
+## Revision disposition and closure readiness
+
+No confirmed issue requires a source revision, and no new requirement or cosmetic change is invented to produce a repair. Therefore no empty revision plan/report is created. The accepted fix scope is fulfilled by assessing and retaining the no-repair disposition. All product source remains byte-unchanged; fresh test/package evidence stays applicable through evidence-only finalization and integration.
+
+After publishing U-003, finalize navigation/HANDOFF, recheck scope/current links and explicitly merge the verified complete campaign into refreshed main. Verify parents and merged-state result, publish/read back and return clean before declaring closure. No release/version/client installation or native Vite/browser evidence is selected.
