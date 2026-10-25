@@ -1,9 +1,9 @@
 # SDD Manager handoff
 
-Campaign **116 — demo UI layout and persistence** has wording amendment A-006 finalized for reclosure under its [plan](reviews/116_9f81aae-demo-ui-persistence/REVISION-PLAN.md) and [report](reviews/116_9f81aae-demo-ui-persistence/REVISION-REPORT.md). No suspended parent; Standard reporting. Other closed records stay frozen.
+Campaign **117 — development workflow** is open under its [revision plan](reviews/117_a4b21f3-dev-workflow/REVISION-PLAN.md). No suspended parent; Standard reporting. Campaign 116 closed through published/readback-verified main merge `a4b21f36a3e7c675964ed5b572253e5f6f9ea0c4` with clean return. Prior campaign records are frozen.
 
-All three prompts now say “Place **Save** and **Restore** buttons at the bottom of the settings panel.” Only “a single pair of” was removed; prior layout, visibility, combined persistence, explicit settings table and nine-pass scope are retained. Exact prompt-byte checks pass; verify current links/scope before final persistence.
+The human requests a new development-workflow revision campaign. Concrete requirements have not yet been supplied. No product source changes or proposals are selected; await the human's directions.
 
-Working branch: revision/116_9f81aae-demo-ui-persistence; original parent/return main on origin, pchemguy/SDD-Manager. Original baseline `9f81aae18c52df99b8084183619cf9e38cd25e0c`; original opening `988887f38b529fa4cf6ba20b7b7135b907a8c2ee`; qualifying prior published closure/reopening checkpoint `41088a457c6eb2d86fe1c28cdf34b988fd52aa04`.
+Working branch: revision/117_a4b21f3-dev-workflow. Creation parent, eventual integration and return: main on origin, pchemguy/SDD-Manager. Full baseline/branch-off: `a4b21f36a3e7c675964ed5b572253e5f6f9ea0c4`.
 
-Publish/read back correction/evidence, explicitly merge into refreshed main, verify both parents and exact result, publish/read back main and return clean before reclosure. Stop afterward; no new campaign/version/release. This snapshot cannot prove its future publication.
+Publish/read back this opening checkpoint and pause with campaign 117 open. No integration, closure, source revision, version bump or release is selected. This snapshot cannot prove its future publication; establish that from Git/readback.

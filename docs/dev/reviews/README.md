@@ -124,4 +124,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `116_9f81aae` | Amendment finalized: concise Save/Restore wording; settings table, spacing, placement, layout and combined persistence retained. Reclosure follows verified main integration/publication and clean return. | [Plan](116_9f81aae-demo-ui-persistence/REVISION-PLAN.md), [result](116_9f81aae-demo-ui-persistence/REVISION-REPORT.md) |
 
+| `117_a4b21f3` | Open: development-workflow revision; awaiting concrete requirements. Product source unchanged. | [Plan](117_a4b21f3-dev-workflow/REVISION-PLAN.md) |
+
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
