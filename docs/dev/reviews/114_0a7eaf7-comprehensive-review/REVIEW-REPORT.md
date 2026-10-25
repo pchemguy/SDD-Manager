@@ -12,7 +12,7 @@ Current supported product only; closed review/feature/steering artifacts and his
 | --- | --- | --- | --- |
 | U-001 — Workflow/instructions | Assessed; no confirmed defect | Current source contrasts below. | `7a8e073f9459100f3ba9073e0f53f0bf5f9301d3` published/readback verified. |
 | U-002 — Runtime/distribution | Assessed; no confirmed defect | 327 fresh local passes, qualified skips/package/native evidence below. | `0276c071efa9c80640b09c388cdbd9dfacb4b988` published/readback verified. |
-| U-003 — Documentation | Assessed; one documentation scope defect | R-001: staged gameplay guidance has an overly broad apparent scope after AIO entry integration. | Owning report commit then required exact readback. |
+| U-003 — Documentation | Assessed; R-001 subsequently verified | Baseline scope observation retained below; bounded V-001 recheck passes. | `9a2d37d1a2995be2efa6fe03531211a9e1ec87db` published/readback verified; repair publication follows. |
 
 ## U-001 assessment
 
@@ -67,8 +67,8 @@ Primary-source spot checks use [Playwright browser provisioning](https://playwri
 | Consequence | A reader or agent following the whole guide can incorrectly carry staged A/B locking or trial-recording assumptions into an AIO run. The standalone prompts themselves are coherent; do not change their accepted product behavior to resolve this guide boundary. |
 | Bounded correction | Qualify staged-exercise prose, explicitly bind the shared scope to variants A/B, point AIO readers to their selected prompt's scope/defaults and include AIO mode in result recording. Preserve all embedded/standalone prompt text. |
 | Objective recheck | Actual guide distinguishes staged versus AIO use at those locations; both initial locking policies stay unchanged in their proper scopes; exact prompt and unrelated-guide preservation and current links pass. |
-| Decision / disposition | Accepted for bounded repair under the human's explicit fix-issues authority; not yet revised or verified. No new product requirement or separate human choice needed. |
+| Decision / disposition | Accepted under explicit fix-issues authority; subsequently **Verified** by V-001 in the [revision result](REVISION-REPORT.md). Original observation retained; no new product requirement or separate human choice. |
 
 ## Findings and next boundary
 
-All three units are assessed. One confirmed documentation finding (R-001), no confirmed workflow/runtime/distribution defect, and no other open finding. Source/local/native evidence retains the stated limits. Publish/read back this consolidated review unit, then prepare and execute the authorized R-001 repair plan. No release is selected; readiness remains qualified until the scoped recheck and final campaign integration/publication complete.
+All three units are assessed. One confirmed documentation finding (R-001) is subsequently verified under V-001; no confirmed workflow/runtime/distribution defect or unresolved/deferred finding remains. Source/local/native evidence retains the stated limits. The review and repair plan are published/readback verified; final repair/evidence publication and explicit main integration/publication/clean return remain the closure boundary. No release is selected.
