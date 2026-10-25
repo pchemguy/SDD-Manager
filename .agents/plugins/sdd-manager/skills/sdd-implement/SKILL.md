@@ -20,7 +20,7 @@ For browser-dependent work, discover and follow any project-defined browser deve
 | Inspect publication eligibility, push retained commits, resume pending work, and select the range | [startup and continuation](references/startup-and-continuation.md) |
 | Resolve next task, next N tasks, milestone, or phase requests | [range selection](references/range-selection.md) |
 | Establish tracking decision and phase readiness before task execution, including direct calls/resume | **sdd-manage**: [tracking decision](../sdd-manage/references/tracking-decision.md) and [phase activation](../sdd-manage/references/phase-activation.md) |
-| Investigate installation, provisioning or runtime blockers within the selected scope | [environment recovery](references/environment-recovery.md) |
+| Establish selected execution capabilities or investigate installation, provisioning or runtime blockers within scope | [environment recovery](references/environment-recovery.md), including its conditional technology modules |
 | Execute tasks with tests, documentation, and verification | [task execution](references/task-execution.md) |
 | Bootstrap disclosure and usage records before the first SDD commit | **sdd-manage**: `skills/sdd-manage/references/repository-bootstrap.md` (bundled dependency) |
 | Mark completion, commit and push, reconcile issues, and stop | [completion and checkpoints](references/completion-and-checkpoints.md) |

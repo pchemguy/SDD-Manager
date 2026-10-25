@@ -1,6 +1,19 @@
-# Investigate an execution environment blocker
+# Establish execution capabilities and recover blockers
 
-Load when installation, provisioning or runtime behavior prevents the selected task/checks. Technical investigation stays with the affected execution workflow; **sdd-manage** coordinates decisions and scope under its recovery policy. A host policy denial follows [Git recovery](../../sdd-manage/references/git-workflows.md#platform-authorization-rejection); retain the pending operation rather than treating the denial as an installation obstacle.
+Load for the selected technology's execution setup or when installation, provisioning or runtime behavior prevents the selected task/checks. Technical investigation stays with the affected execution workflow; **sdd-manage** coordinates decisions and scope under its recovery policy. A host policy denial follows [Git recovery](../../sdd-manage/references/git-workflows.md#platform-authorization-rejection); retain the pending operation rather than treating the denial as an installation obstacle.
+
+## Select technology guidance
+
+Inspect declared tooling and applicable project policies first. Load only the matching module before dependent setup or diagnosis; its examples do not select a technology, platform or browser matrix. Unrelated CLI/engine work needs neither module.
+
+| Trigger | Module and boundary |
+| --- | --- |
+| Playwright is selected and browser capabilities need establishing, or its provisioning/session runtime fails | [Playwright environment](environment/playwright.md): compatible setup, download/host diagnosis, conditional recovery and capability evidence. |
+| A Vite-served module worker fails to start, particularly from a linked Windows checkout or with an HTML entry response | [Vite worker loading](environment/vite-worker-loading.md): bootstrap diagnosis, conditional development route and regression proof; not all SQLite or worker failures. |
+
+For another environment, use its maintained official guidance and the general procedure below. Do not add a workaround merely because a related module exists. Verification may consult a selected module for checks/evidence; its read-only role does not authorize repairs.
+
+## Investigate and return
 
 1. Preserve valid partial work and record the exact attempted check, environment, artifact and observed failure. Distinguish missing tool/dependency, malformed download, incompatible executable, runtime configuration and insufficient evidence.
 2. Inspect declared setup/check commands and actual requirements. Validate the artifact's format/content and executable compatibility rather than trusting HTTP success or a package-install exit code. Avoid exposing secrets or modifying unrelated tooling.
