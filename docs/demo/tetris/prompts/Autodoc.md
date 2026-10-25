@@ -72,7 +72,7 @@ Show a leaderboard panel with the 10 best completed-game results, ranked by scor
 
 #### Leaderboard and settings persistence
 
-Place a single pair of **Save** and **Restore** buttons at the bottom of the settings panel. Hiding the settings panel also hides these buttons.
+Place **Save** and **Restore** buttons at the bottom of the settings panel. Hiding the settings panel also hides these buttons.
 
 Save offers JSON or SQLite and downloads one file containing the current top 10 results and all six game configuration settings. Restore accepts either format, replaces the leaderboard and applies the saved settings, updating their cookies and URL parameters.
 

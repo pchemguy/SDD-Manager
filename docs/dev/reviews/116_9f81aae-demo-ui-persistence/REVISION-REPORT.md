@@ -40,3 +40,9 @@ All three prompt variants now name `settings(key, value)` beside `high_scores(id
 Finalized for reclosure through publication/readback, explicit verified two-parent main integration, target publication/readback and clean return. The record preserves prior results; subsequent Git establishes the new closure effects.
 
 Current amendment check: 226 Markdown files and 1,448 local links pass without errors; prior closed records are preserved and diff whitespace checks pass. No extra checks or source changes were required.
+
+## Follow-up amendment — A-006
+
+Prior closure `41088a457c6eb2d86fe1c28cdf34b988fd52aa04` was published/readback verified with clean main return and is the qualifying reopening checkpoint. The established campaign branch fast-forwards to it. Original opening and baseline remain unchanged.
+
+The human rejects the awkward “a single pair of” wording. All three prompts now say: “Place **Save** and **Restore** buttons at the bottom of the settings panel.” Exact source checks confirm only this wording replacement in each prompt; placement, visibility, settings table and persistence scope remain unchanged. Finalized for publication/readback and explicit verified main integration/reclosure, with current links and scope checked before completion. No application/runtime/package claim or release.
