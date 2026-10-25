@@ -52,3 +52,7 @@ Use a common, compact module structure: applicability and evidence provenance; m
 Before execution, finish the content-transfer map so operational details have one canonical owner and policy constraints remain intact. Assess selective routing with representative cases: unrelated CLI work; ordinary Playwright setup; each observed browser recovery case; Vite entry returning HTML; WASM-only failure; optimizer reload; absent native Windows reproduction. Check both execution and verification handoffs, including direct owner entry.
 
 Check current Markdown links, module boundaries, absence of plugin references to root policies, frozen-record preservation and exact package inclusion without excluded source dependencies. For coherent plugin-boundary integration, use the declared support and publisher suites and inspect the resulting committed package. No application/browser repro is necessary merely to author guidance; without such a run, retain the attachment's outcomes as supplied evidence and claim only source/package checks. Do not add a synthetic app or framework dependency to this repository solely to make the guidance appear tested.
+
+## Closure direction
+
+The human now requests closure, followed by a separate comprehensive review/fix/closure campaign. All accepted actions are complete. Finalize and publish this campaign, explicitly integrate into refreshed main, verify/publish/read back and return clean before allocating the next campaign. No release is selected.

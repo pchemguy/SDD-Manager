@@ -48,3 +48,7 @@ Additional manual source contrasts confirm normal Playwright setup precedes fail
 All accepted actions A-001–A-004 are complete. No unresolved implementation finding remains within this instruction revision. Supplied incident results and the internal Vite query's version-sensitive applicability remain qualified; no native Windows/Vite/browser execution or target-client activation is claimed. Version remains 0.15.3, with no release operation. Publish/read back this evidence/HANDOFF checkpoint, then stop with campaign 117 open, without integration or closure.
 
 Final evidence-state audit: 228 current Markdown files and 1,460 local links pass with zero errors; closed records remain preserved. Package source and root policy are byte-unchanged from the tested/published action commit, so the recorded source suites and exact package evidence remain applicable.
+
+## Finalization for authorized closure
+
+Evidence checkpoint `83ce6387ca7d37c88bf8995b96e5811cb40ccec3` is published/readback verified, including confirmed cleanup and process exit 0. The human now requests closure. Source remains byte-identical to tested action `ec9cabb5a78fa47dfe03ac1d725f76f5727fa451`; the 189 tests, exact package and bounded scenario evidence remain applicable. No open finding within scope. Finalize/publish, explicitly merge into refreshed main, check both parents/exact result/current links, publish/read back and return clean before closure. Git records those later effects; no post-closure edit is required. A new comprehensive review is separately authorized after this return.
