@@ -33,6 +33,12 @@ Checks verify the exact three prompt bytes across moves, current relative links/
 
 A-003 wording follow-up: removed the redundant “using Use this template” button-label phrase at the human's request. The setup step directly says to create an initialized GitHub repository from the linked template. This single-sentence correction preserves the link, setup sequence and all prompt contents; whitespace and exact-diff inspection pass. The original A-003 checkpoint `ef689647a86574915d4a4c72634a55530fdcb0aa` is published/readback verified. This correction requires its own commit publication/readback; campaign 113 remains open.
 
+## A-004 — Session best-10 results
+
+Added Best 10 results after Configuration persistence in Interactive and Autodoc, with the same concise requirement as cumulative pass 7 in Multipass Autoloop. The panel shows the 10 best completed-game results ranked by score, updates after each game, and retains history only for the current session. No storage mechanism, extra statistics fields or additional lifetime rules were imposed. Updated the README's cumulative-pass count from six to seven.
+
+Checks confirm identical capability text in all three prompts, correct position before Design clarification, consecutive passes 1–7, and exact preservation of all other prompt bytes. The README changes only its pass count; all remaining changes belong to active campaign evidence/navigation. Whitespace and section separation pass. Runtime/browser/package execution is unnecessary for this prompt-only capability addition. Source and evidence commit together, then require publication/readback. Campaign 113 remains open for further directions.
+
 ## Pending continuation
 
 Await the human's requirements for extending docs/demo/tetris/prompts/. Add accepted actions to the existing plan when supplied. Keep campaign 113 open on its published revision branch; no final integration, campaign closure, version bump or release is selected at this checkpoint.

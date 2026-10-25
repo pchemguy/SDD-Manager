@@ -116,6 +116,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `112_c63cbc3` | Stable/latest v0.15.3 published and independently verified; exact main release source, notes/tag, 158-file package and downloads agree. Release CI passes 139 support/50 publisher checks. Closes at verified explicit main integration/publication and clean return. | [Plan](112_c63cbc3-release-0-15-3/REVISION-PLAN.md), [outcome](112_c63cbc3-release-0-15-3/REVISION-REPORT.md) |
 
-| `113_4ef5c56` | Open: AIO prompts organized by variant; Starting the exercise combines setup/PAT guidance and the three-mode comparison. Prompt bodies remain unchanged; await further extensions. | [Plan](113_4ef5c56-tetris-demo-prompts/REVISION-PLAN.md), [progress](113_4ef5c56-tetris-demo-prompts/REVISION-REPORT.md) |
+| `113_4ef5c56` | Open: AIO organization/setup guidance complete; session best-10 results added to all three prompts, including cumulative pass 7. Await further directions. | [Plan](113_4ef5c56-tetris-demo-prompts/REVISION-PLAN.md), [progress](113_4ef5c56-tetris-demo-prompts/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.

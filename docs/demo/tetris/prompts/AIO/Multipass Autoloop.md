@@ -72,6 +72,10 @@ Whenever the player changes a setting, save its selected value in the correspond
 
 Save explicit URL parameter values in the corresponding cookies, including values equal to the default. When a parameter is omitted, retain its saved cookie value rather than replacing it with the default.
 
+#### Pass 7 — Scope extension: Best 10 results
+
+Show a statistics panel with the 10 best completed-game results, ranked by score. Update it after each game and keep the history only for the current session.
+
 ### Design clarification
 
 During initial exploration, address important interactions across the predefined passes, including ghost positions that straddle the midline; lock-delay timing and resets; penetrator activation, hold and locking behavior; configuration changes during gameplay; and invalid configuration values.
