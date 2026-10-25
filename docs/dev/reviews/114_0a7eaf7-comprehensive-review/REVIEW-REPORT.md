@@ -10,8 +10,8 @@ Current supported product only; closed review/feature/steering artifacts and his
 
 | Unit | Outcome | Evidence / limits | Publication |
 | --- | --- | --- | --- |
-| U-001 — Workflow/instructions | Assessed; no confirmed defect | Current entry/metadata, routed owners, core preparation/mode/QC/task/tracking/integration and recovery contrasts below. | Owning report commit then required exact readback. |
-| U-002 — Runtime/distribution | Pending | Fresh suites, interface/source review, exact package and existing native CI provenance. | Not yet performed. |
+| U-001 — Workflow/instructions | Assessed; no confirmed defect | Current source contrasts below. | `7a8e073f9459100f3ba9073e0f53f0bf5f9301d3` published/readback verified. |
+| U-002 — Runtime/distribution | Assessed; no confirmed defect | 327 fresh local passes, seven qualified Windows skips, exact package/CLI checks and readback of prior native CI for unchanged source. | Owning report commit then required exact readback. |
 | U-003 — Documentation | Pending | Current README/demos/policies/diagrams and cross-variant scope. | Not yet performed. |
 
 ## U-001 assessment
@@ -31,6 +31,22 @@ Verified all 15 skill entry names/descriptions and PLUGIN directory links, all 1
 
 These are source walkthroughs, not observed autonomous workflow executions. Package instruction/template/test/CI/policy blobs match `4049fc2e8d114f6b1020013bda9d3b8263fddc83` except the intentional sole-manifest 0.15.3 version bump; the exact Git path comparison reports only plugin.json. This corroborates applicability of earlier qualified evidence without treating a prior run as new. Current 225 Markdown/1,439 local-link, fence/heading/module-doc checks pass; all 17 SVGs parse and a bounded GitHub-token pattern scan has no hits. U-003 still owns semantic public-document assessment.
 
+## U-002 assessment
+
+Exact tested/package source: `7a8e073f9459100f3ba9073e0f53f0bf5f9301d3`; no product edits since the campaign baseline. Linux/Node 24.22.1/Python 3.12.14; publisher dependency jsonschema 4.26.0 is installed in the isolated verification environment, outside /pyenv.
+
+| Fresh check | Observed result |
+| --- | --- |
+| Node --test: git-auth-recover, git-publish, forge-close, forge-project | 138 pass, zero fail/cancel/skip; native local HTTPS Git, synthetic provider and real local filesystem/process contracts. |
+| Python unittest: acceptance/textstats/tests | 139 pass; support/harness contracts, not a live TextStats consuming-agent run. |
+| Python unittest: .github/tests | 50 pass, including default-branch first-parent provenance and exact package/source boundaries. |
+| Python unittest: tests/test_windows_shell_recovery.py | Seven expected skips on Linux; no local Windows runtime pass inferred. |
+| Official build-only publisher and exact-source archive inspection | 158 exact package files; source-only owners excluded; five extracted CLI help runs pass. Archive 486,882 bytes, SHA-256 `bb3bd6152a483bcdeb7c2384f0bc03a4f314bb835c26dbc5e5cfa0e11fd64903`. No tag/release/provider write. |
+
+Fresh local total: **327 distinct passes**, with the seven native-Windows cases reported separately. Relevant source/contract inspection accounts for all ten bundled runtime modules: protected token/root/environment; helper private Git context and sanitized push/readback results; supervised worker/descendant deadlines and cancellation; shared local source/lock/file binding; bounded GitHub transport/capabilities/pagination; projection parser/renderer/draft; projection unknown-effect/readback and completion evidence/closure. Publisher tooling, offline schema/declared dependencies and workflow candidate-versus-tooling/package boundaries also assessed. Risk-focused inspection plus controlled execution found no confirmed runtime/distribution defect; it is not exhaustive provider/client acceptance.
+
+The GitHub plugin read back four existing workflow runs and their job inventories: [Git authentication](https://github.com/pchemguy/SDD-Manager/actions/runs/40133488913), [forge completion](https://github.com/pchemguy/SDD-Manager/actions/runs/40133493340), [forge projection](https://github.com/pchemguy/SDD-Manager/actions/runs/40133497239), and [native CMD](https://github.com/pchemguy/SDD-Manager/actions/runs/40133501054). All 14 jobs completed successfully across their declared Linux/Windows Node 22/24 matrices. Exact run metadata binds these to `4049fc2e8d114f6b1020013bda9d3b8263fddc83`; Git confirms current runtime/tests/workflows/policies match those tested blobs. Platform-inapplicable individual steps skip normally. These are **prior source-qualified CI results, re-read now**, not newly dispatched current-commit jobs or a live Antigravity/Codex trial. No need to repeat unchanged native matrices.
+
 ## Findings and next boundary
 
-No U-001 finding. U-002/U-003 remain unassessed; no whole-product readiness or repair-completion claim yet. Publish/read back this unit checkpoint before starting U-002. Record any later confirmed findings canonically here, then prepare their bounded revision plan under existing human authority.
+No U-001/U-002 finding. U-003 remains unassessed; no whole-product readiness or repair-completion claim yet. Publish/read back this unit checkpoint before starting U-003. Record any later confirmed findings canonically here, then prepare their bounded revision plan under existing human authority.
