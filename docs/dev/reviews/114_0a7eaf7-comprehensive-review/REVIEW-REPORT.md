@@ -11,8 +11,8 @@ Current supported product only; closed review/feature/steering artifacts and his
 | Unit | Outcome | Evidence / limits | Publication |
 | --- | --- | --- | --- |
 | U-001 — Workflow/instructions | Assessed; no confirmed defect | Current source contrasts below. | `7a8e073f9459100f3ba9073e0f53f0bf5f9301d3` published/readback verified. |
-| U-002 — Runtime/distribution | Assessed; no confirmed defect | 327 fresh local passes, seven qualified Windows skips, exact package/CLI checks and readback of prior native CI for unchanged source. | Owning report commit then required exact readback. |
-| U-003 — Documentation | Pending | Current README/demos/policies/diagrams and cross-variant scope. | Not yet performed. |
+| U-002 — Runtime/distribution | Assessed; no confirmed defect | 327 fresh local passes, qualified skips/package/native evidence below. | `0276c071efa9c80640b09c388cdbd9dfacb4b988` published/readback verified. |
+| U-003 — Documentation | Assessed; one documentation scope defect | R-001: staged gameplay guidance has an overly broad apparent scope after AIO entry integration. | Owning report commit then required exact readback. |
 
 ## U-001 assessment
 
@@ -47,6 +47,28 @@ Fresh local total: **327 distinct passes**, with the seven native-Windows cases 
 
 The GitHub plugin read back four existing workflow runs and their job inventories: [Git authentication](https://github.com/pchemguy/SDD-Manager/actions/runs/40133488913), [forge completion](https://github.com/pchemguy/SDD-Manager/actions/runs/40133493340), [forge projection](https://github.com/pchemguy/SDD-Manager/actions/runs/40133497239), and [native CMD](https://github.com/pchemguy/SDD-Manager/actions/runs/40133501054). All 14 jobs completed successfully across their declared Linux/Windows Node 22/24 matrices. Exact run metadata binds these to `4049fc2e8d114f6b1020013bda9d3b8263fddc83`; Git confirms current runtime/tests/workflows/policies match those tested blobs. Platform-inapplicable individual steps skip normally. These are **prior source-qualified CI results, re-read now**, not newly dispatched current-commit jobs or a live Antigravity/Codex trial. No need to repeat unchanged native matrices.
 
+## U-003 assessment
+
+Assessed root/packaged README positioning, supported operations and package/client limits; current contributor/acceptance/assessment guidance; both demo guides and the three complete Tetris prompt variants; root shell/browser policies; templates/notices/artwork and source-versus-package navigation. All six packaged README diagrams were read against their canonical preparation, mode, implementation, steering and revision owners. No other semantic diagram or public-claim defect confirmed. No existing mmdc executable is available; fresh Mermaid rendering remains unperformed, with no browser/renderer installation implied by this documentation review.
+
+The three Tetris prompts have the same final capability scope and matching Leaderboard/Persistent leaderboard text. Interactive/Autodoc differ by entry selection; autoloop deliberately sequences eight cumulative scopes. Manual top-10 export, replacement restore, complete validation before mutation, stable ID/score/UTC completion time, JSON Schema/timestamp checks and SQLite metadata/table requirements match the accepted definition. Imported files do not imply automatic saving or an actual game implementation. Tie/ID/invalid-file details remain project-design concerns rather than invented prompt obligations. Calculator scope and optional generic preapproval remain coherent; no request to clone the Tetris layout into that guide.
+
+Primary-source spot checks use [Playwright browser provisioning](https://playwright.dev/docs/browsers), [official image guidance](https://playwright.dev/docs/docker), [JSON Schema format semantics](https://json-schema.org/understanding-json-schema/reference/type) and [SQLite browser import/export](https://sqlite.org/wasm/doc/trunk/cookbook.md). They support the documented direction; they do not establish provisioning or application acceptance in this host. Native CMD policy remains external, with its actual runtime evidence qualified under U-002. Current link/fence/heading/module-header and 17-SVG XML checks pass; the credential-pattern scan is bounded, not a universal secret audit. Frozen records are not current-validity inputs.
+
+## Canonical finding
+
+### R-001 — Distinguish staged-demo rules from AIO scope
+
+| Field | Evidence |
+| --- | --- |
+| Type / priority / confidence | Documentation scope defect; Low; High. |
+| Baseline locations | docs/demo/tetris/README.md: Purpose, Shared gameplay scope, Variant A example commentary and Recording results. Initial source `0a7eaf72e67cdf6b9532170bdaad64c944ae0b2d`. |
+| Observation | The early AIO subsection declares full-gravity-interval locking by default and offers three document-preparation modes. The broader guide still says the exercise starts with a short seed, frames two variants as the guide's full set, labels failed-downward-attempt locking as shared demo scope, and asks for a chosen delivery variant without naming AIO mode. |
+| Consequence | A reader or agent following the whole guide can incorrectly carry staged A/B locking or trial-recording assumptions into an AIO run. The standalone prompts themselves are coherent; do not change their accepted product behavior to resolve this guide boundary. |
+| Bounded correction | Qualify staged-exercise prose, explicitly bind the shared scope to variants A/B, point AIO readers to their selected prompt's scope/defaults and include AIO mode in result recording. Preserve all embedded/standalone prompt text. |
+| Objective recheck | Actual guide distinguishes staged versus AIO use at those locations; both initial locking policies stay unchanged in their proper scopes; exact prompt and unrelated-guide preservation and current links pass. |
+| Decision / disposition | Accepted for bounded repair under the human's explicit fix-issues authority; not yet revised or verified. No new product requirement or separate human choice needed. |
+
 ## Findings and next boundary
 
-No U-001/U-002 finding. U-003 remains unassessed; no whole-product readiness or repair-completion claim yet. Publish/read back this unit checkpoint before starting U-003. Record any later confirmed findings canonically here, then prepare their bounded revision plan under existing human authority.
+All three units are assessed. One confirmed documentation finding (R-001), no confirmed workflow/runtime/distribution defect, and no other open finding. Source/local/native evidence retains the stated limits. Publish/read back this consolidated review unit, then prepare and execute the authorized R-001 repair plan. No release is selected; readiness remains qualified until the scoped recheck and final campaign integration/publication complete.
