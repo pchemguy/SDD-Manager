@@ -20,3 +20,13 @@ The human subsequently requested closure. Action commit `7d6225db310f887a13a55ec
 Final checks confirm identical shared sections, nine sequential passes, preserved earlier scope/mode/clarifications, exact README count change and bounded paths. Current-source audit: 226 Markdown files and 1,448 local links, zero errors; prior closed records unchanged. This remains documentation-only evidence, with no runtime/browser/package or live-agent claim.
 
 Finalized for explicit two-parent integration into refreshed main. Publish/read back this finalization, verify the prospective merged tree and parent identities, then publish/read back main and return clean before declaring closure. Actual later merge/publication is established by Git; no post-closure record rewrite is needed. No version bump or release is authorized.
+
+## Reopened amendment — A-004
+
+Original campaign closure was completed through published/readback-verified main merge `8ddffff1381b297dab12938de1ceda7a75578c44`, followed by clean main return. The human now reopens that eligible latest campaign to correct button placement. The previous two-set interpretation was introduced by the agent, not requested by the human; the earlier plan/report wording is retained as historical evidence and superseded by this correction.
+
+Reopening checkpoint: `8ddffff1381b297dab12938de1ceda7a75578c44`. Original opening remains `988887f38b529fa4cf6ba20b7b7135b907a8c2ee`, original baseline `9f81aae18c52df99b8084183619cf9e38cd25e0c`, branch and return target unchanged. The campaign branch fast-forwards to the published closure before this amendment.
+
+**A-004:** replace the placement paragraph in Interactive, Autodoc and Multipass Autoloop with a single Save/Restore pair at the bottom of settings, hidden with that panel. Combined results/settings data, validation and all other prompt text remain unchanged. Focused checks verify exact paragraph-only replacements and shared bodies; current-link/scope checks exclude all other closed campaigns. No runtime/browser/package claim is made for this prose correction.
+
+Finalized for reclosure after correction publication/readback, explicit two-parent merge into main, merged-state checks and target publication/readback with clean return. Subsequent Git establishes those effects; this checkpoint does not claim its own future publication.

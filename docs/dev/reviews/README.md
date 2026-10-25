@@ -122,6 +122,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 | `115_fd1c231` | Finalized: three prompts moved directly into prompts/ without content changes; AIO directory removed and guide links updated. Checks pass; closes at verified main integration/publication and clean return. | [Plan](115_fd1c231-demo-prompt-layout/REVISION-PLAN.md), [result](115_fd1c231-demo-prompt-layout/REVISION-REPORT.md) |
 
-| `116_9f81aae` | Finalized: all three AIO prompts synchronized for five-panel layout and combined leaderboard/settings persistence. Checks pass; closes after verified main integration/publication and clean return. | [Plan](116_9f81aae-demo-ui-persistence/REVISION-PLAN.md), [result](116_9f81aae-demo-ui-persistence/REVISION-REPORT.md) |
+| `116_9f81aae` | Amendment finalized: one Save/Restore pair at the bottom of settings in all three prompts; prior layout and combined persistence retained. Reclosure follows verified main integration/publication and clean return. | [Plan](116_9f81aae-demo-ui-persistence/REVISION-PLAN.md), [result](116_9f81aae-demo-ui-persistence/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
