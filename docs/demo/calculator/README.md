@@ -155,7 +155,7 @@ Optionally request a fully autonomous process by preapproving all human checkpoi
 >
 > Manage the project's versioning, choosing an appropriate initial version and increasing it to reflect delivered changes. After each implementation phase is completed, verified and integrated, create and publish a new GitHub release with the corresponding version tag and release notes.
 >
-> ### Project description: Browser-based calculator
+> ### Project: Browser-based calculator
 >
 > Develop a browser-based calculator with basic arithmetic, scientific functions, programmer operations and graphing.
 >

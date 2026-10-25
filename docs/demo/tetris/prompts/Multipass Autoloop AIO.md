@@ -10,7 +10,7 @@ GitHub token: {FINE_GRAINED_GH_TOKEN}
 
 Manage the project's versioning, choosing an appropriate initial version and increasing it to reflect delivered changes. When implementation is subsequently authorized, create and publish a new GitHub release with the corresponding version tag and release notes after each implementation phase is completed, verified and integrated.
 
-### Project description: Browser-based Tetris game
+### Project: Browser-based Tetris game
 
 Develop a browser-based Tetris game. The following cumulative passes define how its target scope evolves during document preparation.
 
