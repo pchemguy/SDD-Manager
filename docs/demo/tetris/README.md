@@ -34,17 +34,20 @@ These are alternative runs. Use separate repositories or clearly recorded starti
 
 ### All-inclusive (AIO) prompts
 
-As an alternative to the staged prompts below, use one of these standalone prompts. All three target the same complete game scope, with full-gravity-interval locking as the default; they differ in how documentation is prepared.
+As an alternative to the staged prompts below, use one of these standalone prompts. Interactive, Autodoc and Multipass Autoloop target the same complete game scope, with full-gravity-interval locking as the default; they differ in how documentation is prepared.
+
+The standard standalone prompts deliver a browser app and a Windows Electron desktop package. The 3in1 variants additionally deliver sidebar extensions for Chromium and Firefox, with verified release assets for platforms delivered in each phase. These platform requirements belong to the selected standalone prompt; the staged exercises below retain their browser-only scope.
 
 | Variant | Documentation preparation |
 | --- | --- |
 | [Interactive](prompts/Interactive.md) | Present the full scope upfront and review each document checkpoint. |
 | [Autodoc](prompts/Autodoc.md) | Present the full scope upfront. After project-brief approval, the agent proceeds through the preapproved document checkpoints to TASKS, then stops before final documentation-package QC. |
+| [Autodoc 3in1](<prompts/Autodoc 3in1.md>) | Follow the Autodoc preparation workflow with all three delivery forms. |
 | [Multipass Autoloop](<prompts/Multipass Autoloop.md>) | Develop the scope through nine cumulative documentation passes. Approve the first project brief; the remaining predefined passes run autonomously, stopping before final documentation-package QC. |
 
 ### Autodoc baseline and feature campaigns
 
-Use [Featured Autodoc](<prompts/Featured Autodoc.md>) for a classic baseline followed by separately submitted feature requests. Submit the sections in order as each capability is ready for development.
+Use [Featured Autodoc](<prompts/Featured Autodoc.md>) for a classic baseline followed by separately submitted feature requests. Submit the sections in order as each capability is ready for development. Use [Featured Autodoc 3in1](<prompts/Featured Autodoc 3in1.md>) for the same sequence with browser, Windows Electron and Chromium/Firefox sidebar delivery.
 
 ### Minimal starting prompt
 
@@ -101,7 +104,7 @@ Multiplayer, backend leaderboards, and mobile touch controls are outside the sel
 
 ## Variant A: Classical baseline + modern extensions
 
-The target is a browser-based Tetris game combining the classical baseline with hold, ghost piece, seven-bag randomization, wall kicks, and hard drop. Both the baseline and extensions belong to the initial project scope. This combination provides a natural multi-phase delivery option: first deliver a playable baseline, then add the modern extensions.
+The target is a browser-based Tetris game combining the classical baseline with hold, next-piece preview, ghost piece, seven-bag randomization, wall kicks, and hard drop. Both the baseline and extensions belong to the initial project scope. This combination provides a natural multi-phase delivery option: first deliver a playable baseline, then add the modern extensions.
 
 The governing documents should describe the complete accepted project. The plan should distinguish baseline delivery from enhancement delivery, with meaningful exit conditions. Two phases are a natural arrangement; additional phases should have a clear delivery purpose.
 
@@ -112,6 +115,7 @@ Use this prompt as an initial project description in the greenfield template or 
 > Create a browser-based Tetris game with a playable classical baseline and these modern enhancements:
 >
 > - Hold piece.
+> - Next-piece preview.
 > - Ghost piece.
 > - 7-bag piece randomization.
 > - Wall kicks.
@@ -135,7 +139,7 @@ Evaluate whether the agent:
 
 ## Variant B: Classical baseline + feature expansion
 
-The initial target is a playable browser-based Tetris game with the classical baseline mechanics. Hold, ghost piece, seven-bag randomization, wall kicks, and hard drop are deferred until the baseline is complete, then added through a feature campaign. This variant demonstrates preparation and delivery of a complete baseline project followed by a separately scoped expansion.
+The initial target is a playable browser-based Tetris game with the classical baseline mechanics. Hold, next-piece preview, ghost piece, seven-bag randomization, wall kicks, and hard drop are deferred until the baseline is complete, then added through a feature campaign. This variant demonstrates preparation and delivery of a complete baseline project followed by a separately scoped expansion.
 
 The initial governing documents and executable scope should cover the baseline. Deferred enhancements may be recorded as future direction without becoming initial implementation obligations.
 
@@ -156,6 +160,7 @@ After completing and verifying the baseline, open the feature campaign with this
 > Open a feature campaign to add these modern enhancements:
 >
 > - Hold piece.
+> - Next-piece preview.
 > - Ghost piece.
 > - 7-bag piece randomization.
 > - Wall kicks.
