@@ -13,3 +13,7 @@ Each verified action includes its evidence in the same commit, then push/readbac
 ## V-004 — Repair final anchor handoff (R-006)
 
 Correct check-selection’s removed environment heading link and matching-module wording to the general recovery section and applicable project instructions. Recheck the actual heading, absence of stale anchors and read-only repair boundary. This final composition finding is within the authorized confirmed-fix scope.
+
+## Final boundary
+
+All actions complete and findings verified. Finalize and publish records; explicitly integrate into refreshed main, run final merged structural/package checks and publish/read back the target. Retain branches and frozen evidence. Stop after closure; no release authorized.
