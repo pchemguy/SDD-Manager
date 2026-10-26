@@ -15,7 +15,7 @@ class PackageDocumentation(Sandbox):
         for name in ('assets/HANDOFF_TEMPLATE.md', 'assets/DOCS_TASKS_TEMPLATE.md',
                      'assets/DOCS_PREPARATION_TEMPLATE.md', 'assets/DOCS_TRACKING_TEMPLATE.json',
                      'assets/ai-logs/AGENTS_TEMPLATE.md', 'assets/ai-logs/EXPLORE_DRIVE_TEMPLATE.md',
-                     'skills/sdd-manage/references/initialization/ai-logs.md',
+                     'skills/sdd-manage/references/ai-logs.md',
                      'skills/sdd-manage/references/continuity.md',
                      'skills/sdd-manage/scripts/git-auth-recover.mjs',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
