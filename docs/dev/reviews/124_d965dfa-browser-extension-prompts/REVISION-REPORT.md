@@ -17,3 +17,9 @@ Verified reversible replacement reproduces the source prompt exactly, original A
 ## V-003 — Platform release assets
 
 Inserted the accepted paragraph verbatim under Versioning and releases in Autodoc_3in1.md. Releases must include applicable browser, Windows Electron and Chromium/Firefox extension artifacts for delivered platforms, installation instructions and clear development/signing/distribution status. Packaged artifacts require verification before delivery claims. Exact reversible insertion and diff whitespace checks pass; other prompts are unchanged. No actual build or release performed. Publish/read back the action commit; campaign remains open.
+
+## V-004 — Featured three-form companion
+
+Renamed Autodoc_3in1.md to Autodoc 3in1.md without content changes. Created Featured Autodoc 3in1.md from the original featured prompt, adding the same platform and release requirements and conditional extension adaptations in Greenfield. Adjusted only the layout reference to point to subsequent feature requests. All feature request sections remain unchanged.
+
+Verified byte-identical rename, exact reversible companion substitutions and unchanged feature sections. No maintained caller used the old filename; earlier action records retain their historical names. Diff whitespace passes; no runtime checks required. Publish/read back this action commit; campaign remains open.

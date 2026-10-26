@@ -23,3 +23,7 @@ Copy Autodoc.md to Autodoc_3in1.md and replace its delivery paragraph with the s
 ## V-003 — Require platform release assets
 
 Add the accepted release-artifact paragraph to Versioning and releases in Autodoc_3in1.md. Require artifacts for platforms delivered in the phase, installation instructions, package-status distinctions and actual packaged-artifact verification. Preserve the remainder; publish without closing.
+
+## V-004 — Companion featured prompt and consistent filenames
+
+Rename Autodoc_3in1.md to Autodoc 3in1.md unchanged. Copy Featured Autodoc.md to Featured Autodoc 3in1.md and integrate the accepted three-form platform/release requirements in Greenfield, including capability-conditional extension adaptations. Preserve all separately submitted feature requests and the source prompt. Verify rename/content and bounded companion differences; publish without closing.
