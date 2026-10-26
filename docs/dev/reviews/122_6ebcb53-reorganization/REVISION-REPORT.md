@@ -49,3 +49,7 @@ Removed Status and evidence from the packaged README. TEXTSTATS.md already retai
 V-006 follow-up: removed Testing and contributing from the packaged README. Its contributor entry, verification/package prerequisites and TextStats coordinator guidance are already retained in acceptance/TEXTSTATS.md and acceptance/AGENTS.md; no duplicate text added. Verified scoped deletion and diff whitespace.
 
 Human-requested README cleanup: removed the Review campaigns reference bullet from the packaged README. Verified exact deletion and diff whitespace.
+
+## V-007 — Package overview and asset catalog
+
+Applied the replacement approved in chat verbatim. The section now gives a brief package overview and a purpose table covering all 15 Markdown/JSON assets, followed by an artwork sentence. Removed the former manifest, client-loading and source-development exposition. Verified the table matches the filesystem asset inventory exactly, the 15-skill count, straight quotes and diff whitespace. Environment guides are described without links or activation instructions. Documentation-only change; no runtime checks required. Publish/read back the action commit; campaign 122 remains open.

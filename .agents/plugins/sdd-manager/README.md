@@ -315,11 +315,29 @@ See [packaging](skills/sdd-forge/references/github-packaging.md), [release workf
 
 ## Plugin package
 
-The Agent Plugins 1.0 package includes package-root plugin.json, README.md, PLUGIN.md and LICENSE, plus skills/ and assets/. Assets include disclosure/usage notices, [AGENTS_TEMPLATE.md](assets/AGENTS_TEMPLATE.md), [DOCS_TASKS_TEMPLATE.md](assets/DOCS_TASKS_TEMPLATE.md), [DOCS_PREPARATION_TEMPLATE.md](assets/DOCS_PREPARATION_TEMPLATE.md), [DOCS_TRACKING_TEMPLATE.json](assets/DOCS_TRACKING_TEMPLATE.json), [SKILL_DISCOVERY_PROTOCOL.md](assets/SKILL_DISCOVERY_PROTOCOL.md), [AI-log directory guidance](assets/ai-logs/AGENTS_TEMPLATE.md) and [transcript template](assets/ai-logs/EXPLORE_DRIVE_TEMPLATE.md), and the [Greenfield Project Prompt Template](<assets/Greenfield Project Prompt Template.md>). Root plugin.json is the sole manifest; OpenAI presentation metadata is under extensions.com.openai.interface. PLUGIN.md is SDD Manager's explicit composition entry, not a claim of standardized automatic discovery.
+The Agent Plugins 1.0 package includes package-root `plugin.json`, `README.md`, `PLUGIN.md` and `LICENSE`, plus `skills/` and `assets/`.
 
-All 15 skills are distributed together. Their relative references stay within the plugin root; named handoffs and client loading/routing are separate concerns. See [bundled-skill guidance](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md#bundled-skill-references). Artwork includes assets/icon.svg, icon.png, logo.svg and logo.png; manifest icons use icon.svg and logo.svg, including dark variants.
+The `skills/` directory contains the plugin's 15 skills and their supporting references and utilities. The `assets/` directory provides project templates, notices and environment guidance:
 
-Source acceptance/development/CI files are excluded from the archive; links to them use repository URLs. The source repository retains a development-only root AGENTS.md outside the package. Projects using the plugin retain their own AGENTS.md instructions.
+| Asset | Purpose |
+| --- | --- |
+| `Greenfield Project Prompt Template.md` | Starting prompt for developing a new project with SDD Manager. |
+| `AGENTS_TEMPLATE.md` | Project-level agent instructions covering SDD workflows, checkpoints, publication, tracking and conditional environment guidance. |
+| `DOCS_TASKS_TEMPLATE.md` | Checklist for preparing, reviewing and accepting the main development documents. |
+| `DOCS_PREPARATION_TEMPLATE.md` | Record of documentation-preparation mode, scope, decisions, approvals and review evidence. |
+| `DOCS_TRACKING_TEMPLATE.json` | GitHub milestone and issue definitions for the documentation-preparation checklist. |
+| `HANDOFF_TEMPLATE.md` | Workflow checkpoint recording context, decisions, completed work and the continuation boundary. |
+| `SKILL_DISCOVERY_PROTOCOL.md` | Read-only discovery and reporting instructions for repository-provided skills and plugins. |
+| `SDD-MANAGER.md` | Project notice acknowledging use of SDD Manager. |
+| `AI_DISCLOSURE.md` | AI-assisted development disclosure and a corresponding README notice. |
+| `ai-logs/AGENTS_TEMPLATE.md` | Instructions for preserving conversation records as historical provenance. |
+| `ai-logs/EXPLORE_DRIVE_TEMPLATE.md` | Template for manually recording an AI conversation. |
+| `WINDOWS_SHELL_POLICY.md` | Windows CMD rules and shell-tool diagnostics and recovery. |
+| `BROWSER_DEV_POLICY.md` | Browser selection, environment isolation and capability-verification policy. |
+| `playwright.md` | Playwright provisioning, download diagnostics, browser recovery and execution checks. |
+| `vite-worker-loading.md` | Diagnosis and regression testing for Vite worker-loading failures, including linked Windows checkouts. |
+
+The assets also include plugin icons and logos in SVG and PNG formats.
 
 ## Skills
 

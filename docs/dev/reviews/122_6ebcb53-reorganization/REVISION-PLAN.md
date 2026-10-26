@@ -37,3 +37,7 @@ Replace the packaged README’s Getting started section with the root README’s
 ## V-006 — Consolidate acceptance evidence
 
 Remove Status and evidence from the packaged README. Compare it with acceptance/TEXTSTATS.md and integrate useful missing evidence limits there without duplicating existing historical coverage or skill inventory. Verify the scoped deletion and retained evidence; publish with campaign open.
+
+## V-007 — Explain package assets
+
+Apply the human-approved Plugin package replacement: retain the brief package inventory, introduce skills/assets, list every Markdown/JSON asset with its purpose and briefly identify artwork. Remove the former manifest, client-loading and contributor detail. Verify complete asset coverage and publish with campaign open.
