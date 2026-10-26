@@ -43,3 +43,7 @@ Linked “Create a fine-grained personal access token (PAT)” to the supplied `
 ## Follow-up result — V-004
 
 The Quick Start introduction now contrasts the three complete-scope prompts with Featured Autodoc’s classic baseline and separately submitted feature campaigns. Source inspection confirms agreement with the table and guide; the prompt table and source prompts remain unchanged. `git diff --check` passes. Publish the containing correction commit with remote readback; campaign 120 remains open.
+
+## Follow-up result — V-005
+
+Removed the requested TextStats clause from root README and capitalized the remaining Campaign navigation sentence. Adjacent source-development links are preserved; `git diff --check` passes. Publish the containing commit with remote readback; campaign 120 remains open.

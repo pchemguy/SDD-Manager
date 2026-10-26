@@ -29,3 +29,7 @@ Add the human-supplied GitHub personal-access-token settings link to “Create a
 ## Follow-up — V-004
 
 Clarify the root Quick Start introduction to explain all four prompt choices, including Featured Autodoc’s baseline followed by separate feature campaigns. Verify consistency with the prompt table and source guide, preserve their text, and publish the correction with evidence.
+
+## Follow-up — V-005
+
+Remove the TextStats acceptance-project clause from root README as requested; retain the adjacent source-development and campaign-navigation links. Check the sentence and diff whitespace, then publish.

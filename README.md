@@ -42,7 +42,7 @@ The plugin source package is in [`.agents/plugins/sdd-manager/`](.agents/plugins
 
 See the **[full README](.agents/plugins/sdd-manager/README.md)** for capabilities, workflow diagrams, human checkpoints, reporting profiles, usage examples and packaging information. The [plugin entry](.agents/plugins/sdd-manager/PLUGIN.md) routes agent workflows.
 
-For source development, start with [AGENTS.md](AGENTS.md) and [acceptance/AGENTS.md](acceptance/AGENTS.md). [Testing with TextStats](acceptance/TEXTSTATS.md) explains the acceptance project; [campaign navigation](docs/dev/reviews/README.md) retains development evidence.
+For source development, start with [AGENTS.md](AGENTS.md) and [acceptance/AGENTS.md](acceptance/AGENTS.md). [Campaign navigation](docs/dev/reviews/README.md) retains development evidence.
 
 The standalone [Windows shell policy](WINDOWS_SHELL_POLICY.md) applies only to Windows execution hosts and is external to the plugin.
 
