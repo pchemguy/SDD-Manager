@@ -15,3 +15,7 @@ Open and publish setup, then await the requested amendment. No prompt changes or
 ## V-001 — Research browser-extension sidebar delivery
 
 Integrate the two supplied sidebar discussions into research/BROWSER_EXTENSION.md, confirm current support online using official sources and record high-level prompt/implementation decisions and verification limits. Research only; no prompt amendment or extension implementation. Verify source attribution, document coverage and whitespace; publish with campaign open.
+
+## V-002 — Add three-form Autodoc variant
+
+Copy Autodoc.md to Autodoc_3in1.md and replace its delivery paragraph with the supplied browser/Windows Electron/Chromium and Firefox sidebar requirements. Keep platform-specific guidance together at that location. Make persistence/file-operation adaptations conditional on capabilities being in scope, preserve session-only increments and leaderboard semantics, and clarify sidebar layout adaptation. Preserve the source prompt and all other copied content. Verify exact bounded copy differences and publish without closing.
