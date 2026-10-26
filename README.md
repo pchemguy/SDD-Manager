@@ -48,8 +48,8 @@ See the **[full README](.agents/plugins/sdd-manager/README.md)** for capabilitie
 
 For source development, start with [AGENTS.md](AGENTS.md) and [acceptance/AGENTS.md](acceptance/AGENTS.md). [Campaign navigation](docs/dev/reviews/README.md) retains development evidence.
 
-The standalone [Windows shell policy](WINDOWS_SHELL_POLICY.md) applies only to Windows execution hosts and is external to the plugin.
+The standalone [Windows shell policy](.agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md) applies only to Windows execution hosts. Both policies are bundled in the plugin assets.
 
-For browser-based applications and browser extensions, see the standalone [browser development policy](BROWSER_DEV_POLICY.md).
+For browser-based applications and browser extensions, see the standalone [browser development policy](.agents/plugins/sdd-manager/assets/BROWSER_DEV_POLICY.md).
 
 Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md) and [MIT license](LICENSE).

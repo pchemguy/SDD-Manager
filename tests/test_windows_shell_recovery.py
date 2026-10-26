@@ -16,7 +16,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-POLICY = ROOT / 'WINDOWS_SHELL_POLICY.md'
+POLICY = ROOT / '.agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md'
 ADAPTER = POLICY.read_text(encoding='utf-8').split('```bat\n', 1)[1].split('```', 1)[0].encode('ascii')
 
 

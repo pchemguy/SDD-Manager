@@ -6,11 +6,11 @@ Execute the [skill and plugin discovery protocol](SKILL_DISCOVERY_PROTOCOL.md).
 
 ## Windows shell
 
-On **Windows execution hosts only**, follow [WINDOWS_SHELL_POLICY.md](WINDOWS_SHELL_POLICY.md): CMD syntax, unavailable PowerShell/pwsh, temporary files for script text and shell operations, and the documented tool probe/recovery. This repository policy is independent of the plugin.
+On **Windows execution hosts only**, follow [WINDOWS_SHELL_POLICY.md](.agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md): CMD syntax, unavailable PowerShell/pwsh, temporary files for script text and shell operations, and the documented tool probe/recovery. This repository policy is independent of the plugin.
 
 ## Browser development
 
-When developing or testing browser-based applications or browser extensions, follow [BROWSER_DEV_POLICY.md](BROWSER_DEV_POLICY.md). Prioritize Chromium and include Firefox by default; project documents may specify other choices. Use dedicated, isolated environments.
+When developing or testing browser-based applications or browser extensions, follow [BROWSER_DEV_POLICY.md](.agents/plugins/sdd-manager/assets/BROWSER_DEV_POLICY.md). Prioritize Chromium and include Firefox by default; project documents may specify other choices. Use dedicated, isolated environments.
 
 ## Contributor instructions
 
@@ -31,3 +31,5 @@ Maintain abbreviated repository README.md, full packaged README.md and packaged 
 ## Source and package roots
 
 The Git repository root owns development documents, acceptance and CI. The complete plugin source is `.agents/plugins/sdd-manager/`; its manifest, entries, skills and assets are relative to that package root.
+
+BROWSER_DEV_POLICY.md and WINDOWS_SHELL_POLICY.md are bundled as assets for project-level instructions. Do not link to or load them from plugin entries, skills or workflow references. AGENTS_TEMPLATE.md retains the explicit project-level policy links.
