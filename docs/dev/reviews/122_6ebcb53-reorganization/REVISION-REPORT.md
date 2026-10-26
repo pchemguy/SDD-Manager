@@ -45,3 +45,5 @@ Replaced the complete Getting started section with the root Quick Start, preserv
 ## V-006 — Acceptance evidence consolidation
 
 Removed Status and evidence from the packaged README. TEXTSTATS.md already retains the 27 historical cases, explicit skill-source loading, current 33-case catalog, no inherited passes, revised-source and installed-client evidence gaps, and incomplete-transcript qualification. Added the missing explicit distinction that structural/local schema and package checks do not establish client compatibility or live acceptance. The skill inventory remains elsewhere in the README. Verified scoped diff and whitespace; no runtime behavior changed. Publish/read back the action commit; campaign 122 remains open.
+
+V-006 follow-up: removed Testing and contributing from the packaged README. Its contributor entry, verification/package prerequisites and TextStats coordinator guidance are already retained in acceptance/TEXTSTATS.md and acceptance/AGENTS.md; no duplicate text added. Verified scoped deletion and diff whitespace.
