@@ -1,11 +1,13 @@
 # SDD Manager handoff
 
-## Campaign 119 — finalization checkpoint
+Campaign **120 — demo prompts** is finalized for closure into main at the human's “Close it” request. Standard reporting; no suspended parent or remaining campaign work. The closure merge and verified main publication establish completion and return to main.
 
-Campaign **119 — demo prompts** is complete locally and authorized for closure through explicit verified main integration, publication and return. [Revision result](reviews/119_68432eb-demo-prompts/REVISION-REPORT.md) owns dispositions, checks and publication evidence; [review](reviews/119_68432eb-demo-prompts/REVIEW-REPORT.md) and [plan](reviews/119_68432eb-demo-prompts/REVISION-PLAN.md) retain the original assessment and accepted scope. Standard reporting; no suspended parent.
+## Scope and result
 
-Delivered the Featured Autodoc baseline/eight-feature sequence, accepted submission/session/wording corrections, and explicit modern-extension next-piece preview across all four prompts and the guide. R-001/R-002/R-004 are resolved; R-003 is rejected. The original input and closed campaigns are preserved. The human withdrew the move request and directed closure; the featured prompt stays in docs/demo/tetris/prompts/. No release or additional development is requested.
+Replayed the last post-closure 119 prompt change onto main, reviewed it, and resolved all three findings. Autodoc and Interactive explicitly require session-only configuration before persistence; Featured Autodoc uses campaign terminology and has no trailing whitespace. Multipass retains its correct pass terminology. No release was requested.
 
-Working branch `revision/119_68432eb-demo-prompts`; creation parent, integration target and return `main` on origin, pchemguy/SDD-Manager. Original opening `369e47171ea8e37885de20a41a546d27203caea1`; branch-off `68432eb07859744bd7e6d6df8589919b34b3903d`. Review and source revision `7840da8a767de512cdee01e48e0251a29d31cfaf` have verified remote publication. Main was remotely verified at the branch-off commit before integration.
+[Review](reviews/120_cccb2bb-demo-prompts/REVIEW-REPORT.md) retains original evidence; [revision report](reviews/120_cccb2bb-demo-prompts/REVISION-REPORT.md) records fixes, verification and closure authority. Complete campaign whitespace, changed-document local links and prompt consistency checks pass. No application runtime or host rendering result is claimed.
 
-Publish/read back finalization, merge the complete campaign tip into main, verify the merged result and publish/read back main, then return on main and stop. That verified boundary establishes closure and freezes campaign 119; this snapshot cannot prove its own later publication. No subsequent workflow is selected.
+## Git context and return
+
+Campaign branch: `revision/120_cccb2bb-demo-prompts`; creation parent and return target: main. Full baseline: `cccb2bbc48e2d2c3984b82d2c0275fba1bc753fa`. Original opening: `ce4d4ac08b74fae1d1d6f77ede9c3183ad925a8e`. Repair: `17386f176a90967d7f576a75d8dcad07dd6f4295`, published with exact remote readback. The finalization commit and closure merge retain the final ancestry and outcome. Preserve prior closed records; no further work is selected.

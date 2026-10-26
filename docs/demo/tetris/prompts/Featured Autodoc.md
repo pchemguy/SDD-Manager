@@ -1,6 +1,6 @@
-# Autodoc baseline and feature campaigns
-
-Submit the sections separately, in order. Start with Greenfield; after completing the baseline, submit each feature request when ready to develop that capability. Replace the repository and token placeholders before submitting Greenfield.
+> [!NOTE] Autodoc baseline and feature campaigns
+>
+> Submit the sections separately, in order. Start with Greenfield; after completing the baseline, submit each feature request when ready to develop that capability. Replace the repository and token placeholders before submitting Greenfield.
 
 ## Greenfield
 
@@ -52,9 +52,9 @@ Clearing four lines at once awards one penetrator bonus, granting one activation
 
 Render penetrator pieces entirely white, and do not use white for regular pieces. Show the available bonuses in the game info and controls panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
 
-## Feature 4 - Game configuration
+## Feature 4 - Session-only game configuration
 
-Open a feature campaign to implement "game configuration" capability:
+Open a feature campaign to implement "session-only game configuration" capability:
 
 Provide a settings panel with controls for:
 
@@ -65,7 +65,8 @@ Provide a settings panel with controls for:
 5. General locking policy: lock on a failed downward movement attempt, or after one full gravity interval from becoming grounded.
 6. Hold piece: on or off.
 
-Keep settings within the current page session; do not persist them across page reloads.
+Use sensible defaults. Keep settings within the current page session; do not persist them across page reloads in this feature campaign.
+
 ## Feature 5 - URL GET and cookie persistence
 
 Open a feature campaign to implement "URL GET and cookie persistence" capability:

@@ -131,3 +131,5 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `119_68432eb` | Finalized: accepted prompt edits verified and published; explicit next preview in modern extensions replaces rejected R-003. Verified main merge publication/return establishes closure. | [Review](119_68432eb-demo-prompts/REVIEW-REPORT.md), [plan](119_68432eb-demo-prompts/REVISION-PLAN.md), [result](119_68432eb-demo-prompts/REVISION-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
+
+| `120_cccb2bb` | Closed through main integration: last-119 prompt change replayed; all three findings repaired and verified. | [Review](120_cccb2bb-demo-prompts/REVIEW-REPORT.md) · [Revision](120_cccb2bb-demo-prompts/REVISION-REPORT.md) |
