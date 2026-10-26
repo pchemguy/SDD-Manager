@@ -39,3 +39,7 @@ Publish the containing action commit with exact remote readback. Campaign 120 re
 ## Follow-up result — V-003
 
 Linked “Create a fine-grained personal access token (PAT)” to the supplied `https://github.com/settings/personal-access-tokens/` in both root README and Tetris guide README. Exact-link inspection and `git diff --check` pass; surrounding instructions are unchanged. This uses the requested destination without claiming authenticated page verification. Campaign remains open; publish the containing commit and verify remote readback.
+
+## Follow-up result — V-004
+
+The Quick Start introduction now contrasts the three complete-scope prompts with Featured Autodoc’s classic baseline and separately submitted feature campaigns. Source inspection confirms agreement with the table and guide; the prompt table and source prompts remain unchanged. `git diff --check` passes. Publish the containing correction commit with remote readback; campaign 120 remains open.

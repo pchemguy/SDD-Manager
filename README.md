@@ -21,7 +21,7 @@ Try SDD Manager with the browser-based Tetris demo, or use the minimal template 
 
 ### Tetris demo prompts
 
-The first three prompts target the same complete game scope but differ in documentation preparation.
+Choose how to develop the Tetris game: Interactive, Autodoc and Multipass Autoloop define the complete target scope upfront and differ in documentation preparation. Featured Autodoc starts with a classic baseline, then adds capabilities through separately submitted feature campaigns.
 
 | Prompt | How to use it |
 | --- | --- |

@@ -25,3 +25,7 @@ V-002 (sdd-docs): add a concise root Quick Start covering template setup, reposi
 ## Follow-up — V-003
 
 Add the human-supplied GitHub personal-access-token settings link to “Create a fine-grained personal access token (PAT)” in the root and Tetris guide READMEs. Preserve the surrounding setup and permissions wording. Verify the exact destination in both files and diff whitespace, then publish the action with evidence.
+
+## Follow-up — V-004
+
+Clarify the root Quick Start introduction to explain all four prompt choices, including Featured Autodoc’s baseline followed by separate feature campaigns. Verify consistency with the prompt table and source guide, preserve their text, and publish the correction with evidence.
