@@ -96,7 +96,7 @@ For detailed entry conditions and stopping rules, see the [workflow catalog](ski
 
 ## Project documents and checkpoints
 
-The main documents describe the complete intended project. Roots may link to focused children; executable work is derived only after the required inputs are ready.
+The main documents describe the project, from its purpose and architecture to detailed requirements and implementation tasks. Larger documents can delegate detail to separate files: for example, `SPEC.md` might summarize storage requirements and link to `STORAGE-SPEC.md` for file formats and validation rules. Implementation tasks are derived after the required design, specification and planning documents are ready.
 
 | Document under `docs/dev/` | Owns |
 | --- | --- |

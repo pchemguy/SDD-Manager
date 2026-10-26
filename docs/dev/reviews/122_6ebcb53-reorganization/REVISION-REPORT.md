@@ -53,3 +53,5 @@ Human-requested README cleanup: removed the Review campaigns reference bullet fr
 ## V-007 — Package overview and asset catalog
 
 Applied the replacement approved in chat verbatim. The section now gives a brief package overview and a purpose table covering all 15 Markdown/JSON assets, followed by an artwork sentence. Removed the former manifest, client-loading and source-development exposition. Verified the table matches the filesystem asset inventory exactly, the 15-skill count, straight quotes and diff whitespace. Environment guides are described without links or activation instructions. Documentation-only change; no runtime checks required. Publish/read back the action commit; campaign 122 remains open.
+
+Human-requested README clarification: replaced “Roots may link to focused children” with an illustrative SPEC.md → STORAGE-SPEC.md example covering storage formats and validation. Retained the requirement that implementation tasks follow ready design/specification/planning inputs. Verified scoped replacement and diff whitespace.
