@@ -42,4 +42,8 @@ Use the [Greenfield Project Prompt Template](<.agents/plugins/sdd-manager/assets
 
 ## Documentation and development
 
-The plugin source package is in [`.agents/plugins/sdd-manager/`](.agents/plugins/sdd-manager/README.md). It is intended to be available for agents to load from this checkout when working on SDD Manager itself. A separate agent installation remains an option; this layout does not configure automatic loading. Instruction reload is controlled by the user. See the **[full README](.agents/plugins/sdd-manager/README.md)** for capabilities, workflow diagrams, human checkpoints, reporting profiles, usage examples and packaging information. Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md) and [MIT license](LICENSE).
+The plugin source package is in [`.agents/plugins/sdd-manager/`](.agents/plugins/sdd-manager/README.md). It is intended to be available for agents to load from this checkout when working on SDD Manager itself. A separate agent installation remains an option; this layout does not configure automatic loading. Instruction reload is controlled by the user.
+
+See the **[full README](.agents/plugins/sdd-manager/README.md)** for capabilities, workflow diagrams, human checkpoints, reporting profiles, usage examples and packaging information.
+
+Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md) and [MIT license](LICENSE).
