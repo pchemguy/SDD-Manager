@@ -42,6 +42,10 @@ As an alternative to the staged prompts below, use one of these standalone promp
 | [Autodoc](prompts/Autodoc.md) | Present the full scope upfront. After project-brief approval, the agent proceeds through the preapproved document checkpoints to TASKS, then stops before final documentation-package QC. |
 | [Multipass Autoloop](<prompts/Multipass Autoloop.md>) | Develop the scope through nine cumulative documentation passes. Approve the first project brief; the remaining predefined passes run autonomously, stopping before final documentation-package QC. |
 
+### Autodoc baseline and feature campaigns
+
+Use [Featured Autodoc](<prompts/Featured Autodoc.md>) for a classic baseline followed by eight separately submitted feature requests. Submit the sections in order as each capability is ready for development.
+
 ### Minimal starting prompt
 
 Use the repository's [Greenfield Project Prompt Template](<../../../.agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md>) with this preliminary description:
@@ -74,6 +78,7 @@ Start with **locking on a failed downward movement attempt** in both delivery va
 The selected enhancements are:
 
 - Hold piece functionality.
+- Next-piece preview.
 - Ghost piece display.
 - Seven-bag randomization.
 - Wall kicks.

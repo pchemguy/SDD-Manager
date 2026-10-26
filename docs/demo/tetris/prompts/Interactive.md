@@ -19,6 +19,7 @@ Treat this description as the complete target scope. Deliver the simplest sensib
 #### Modern rule extensions
 
 - Hold piece.
+- Next-piece preview.
 - Ghost piece.
 - 7-bag piece randomization.
 - Wall kicks.

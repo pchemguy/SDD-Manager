@@ -51,3 +51,7 @@ For cleaner incremental data ownership, consider introducing result ID and compl
 ## Verification and stopping boundary
 
 The retained input matches the attachment exactly. Its eight feature headings and content were inspected against current prompt bodies; modes/implementation sequence and prerequisite references were assessed separately. No code/runtime or application correctness is claimed. Record and publish this review with campaign navigation/HANDOFF, then stop with the campaign open for revision decisions. Do not alter the uploaded original, demo prompts, plugin, version/release or closed records.
+
+## Accepted direction — 2026-10-26
+
+The human accepts R-001, R-002 and R-004. R-003 is rejected: next-piece preview belongs explicitly in modern rule extensions, including existing prompt variants, rather than being introduced conditionally by Game configuration. The optional result-metadata refinement remains deferred; no scope change was requested for it. The original review input remains unchanged. See [revision plan](REVISION-PLAN.md) and [revision report](REVISION-REPORT.md) for the local result and publication blocker.
