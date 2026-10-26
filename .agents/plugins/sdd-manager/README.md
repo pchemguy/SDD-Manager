@@ -329,7 +329,6 @@ The [skill routing table](PLUGIN.md#skill-routing) links all 15 owners. sdd-mana
 
 - [Agent entry and composition](PLUGIN.md): routing, workflow handoffs and work boundaries.
 - [Capability map](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/CAPABILITY-MAP.md): detailed ownership and package/reference guidance.
-- [Review campaigns](https://github.com/pchemguy/SDD-Manager/blob/main/docs/dev/reviews/README.md): retained findings, revisions and exact verification provenance.
 - [Nested revisions and campaign amendments](skills/sdd-manage/references/revision-modes.md): parent suspension, eligible reopening and return boundaries.
 - [TDD provenance](skills/sdd-tdd/references/upstream-provenance.md): adaptation of Superpowers TDD and its retained MIT license.
 
