@@ -25,3 +25,33 @@ Campaign 120 remains open at the repair checkpoint. Main integration, closure an
 The human subsequently requested “Close it”, authorizing integration and closure. Repair commit `17386f176a90967d7f576a75d8dcad07dd6f4295` was published with exact remote readback and confirmed cleanup. A fresh fetch confirms main remains at the recorded baseline and the remote campaign tip matches the repair commit.
 
 All three findings are verified; no accepted work remains. Finalized for explicit integration into main. The closure merge and its verified target publication establish completion; its Git parents identify the final campaign and target tips. No release is selected. Prior closed records are unchanged by the campaign delta. Fetch observed an external reset of the remote 119 branch to its prior finalization commit; this campaign does not modify or restore that branch.
+
+## Reopened amendment result — V-002
+
+Reopening was explicitly requested for the root README Quick Start. Qualifying prior closure and reopening checkpoint: `4bfebd6e0dfdacb57419d83f63a69cf2e9502cdc`; incoming synchronization: `cd5cf2d77d607bfd5150a58ca31034b549fd62f6`, published with exact remote readback and confirmed cleanup. Original opening and baseline remain unchanged.
+
+Adapted the Tetris guide’s “Starting the exercise” into root README Quick Start: template repository setup, scoped PAT convenience permissions, placeholder replacement, four prompt choices and their submission/checkpoint distinctions, plus the generic Greenfield template. Root-relative links replace guide-relative paths. Detailed gameplay remains in the guide; source prompts and package README are unchanged.
+
+V-002 is complete by source inspection: wording preserves the source’s permission qualification, document-preparation stop points and separate feature submissions. Local Markdown links resolve, heading/list spacing and diff whitespace checks pass. The amendment changes root README and active campaign/navigation records only; other closed records remain unchanged. No new project was created, prompt executed or external link availability independently tested.
+
+Publish the containing action commit with exact remote readback. Campaign 120 remains reopened at this review checkpoint; this amendment has not been integrated into main.
+
+## Follow-up result — V-003
+
+Linked “Create a fine-grained personal access token (PAT)” to the supplied `https://github.com/settings/personal-access-tokens/` in both root README and Tetris guide README. Exact-link inspection and `git diff --check` pass; surrounding instructions are unchanged. This uses the requested destination without claiming authenticated page verification. Campaign remains open; publish the containing commit and verify remote readback.
+
+## Follow-up result — V-004
+
+The Quick Start introduction now contrasts the three complete-scope prompts with Featured Autodoc’s classic baseline and separately submitted feature campaigns. Source inspection confirms agreement with the table and guide; the prompt table and source prompts remain unchanged. `git diff --check` passes. Publish the containing correction commit with remote readback; campaign 120 remains open.
+
+## Follow-up result — V-005
+
+Removed the requested TextStats clause from root README and capitalized the remaining Campaign navigation sentence. Adjacent source-development links are preserved; `git diff --check` passes. Publish the containing commit with remote readback; campaign 120 remains open.
+
+## Follow-up result — V-006
+
+Root Quick Start now names both demos and includes a Calculator demo section linking its guide, describing its three initial phases and optional steering/feature progression, and identifying the Greenfield template route. Inspected the guide to verify that description; the local link resolves and `git diff --check` passes. Campaign remains open; publish this action commit with remote readback.
+
+## Amendment closure
+
+The human requested closure followed by a new comprehensive prerelease campaign and patch release. V-002–V-006 are complete and published through `2ccb015577243b46515654a7df34cc973b5104e0`. Rechecked the root README, both demo links and local Markdown targets; diff whitespace passes. No amendment findings remain. The final explicit main merge retains original prompt repairs plus Quick Start, token links, complete workflow introduction, TextStats clause removal and calculator navigation. Publication and merge ancestry establish closure; no release belongs to 120.
