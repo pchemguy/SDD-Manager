@@ -23,3 +23,5 @@ Moved playwright.md and vite-worker-loading.md directly into assets/ (no environ
 Verification: 139 acceptance-support and 50 publisher tests passed on Linux/Python 3.12.14 after the final flat placement. Exact Git-blob comparison confirms unchanged guide content. Project-root template links resolve; package entry/skill scans find no guide references. Diff whitespace passes. This relocation claims no new browser or Windows runtime execution. Publish/read back this action commit; campaign 122 remains open.
 
 V-003 follow-up: removed the unsolicited policy-placement/prohibition paragraph from root AGENTS.md after human feedback. File placement, template activation and absence of plugin workflow references remain as implemented. Verified the exact paragraph removal and clean diff whitespace; no runtime behavior changed.
+
+V-003 follow-up: at the human’s explicit request, removed the Windows shell and Browser development sections from root AGENTS.md. AGENTS_TEMPLATE.md is unchanged. Verified the scoped removal and diff whitespace; no runtime checks required for this instruction deletion.
