@@ -11,3 +11,7 @@ The human requested opening a new Tetris demo-prompts revision campaign. Campaig
 Prepare for bounded revisions to docs/demo/tetris/prompts/ and related demo navigation when explicitly selected. No prompt changes, review findings or executable revision actions are inferred from campaign creation. Record accepted actions and verification here as supplied.
 
 Open and publish campaign setup, then await the requested prompt changes. Preserve closed campaign records and the published release. No implementation, integration, closure, version bump or release is selected.
+
+## V-001 — Label the playable baseline
+
+Add `#### Playable classic baseline` immediately after the project heading in Autodoc.md, preserving the remaining prompt. Verify exact insertion and Markdown spacing; publish without closing.
