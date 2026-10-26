@@ -51,3 +51,7 @@ Removed the requested TextStats clause from root README and capitalized the rema
 ## Follow-up result — V-006
 
 Root Quick Start now names both demos and includes a Calculator demo section linking its guide, describing its three initial phases and optional steering/feature progression, and identifying the Greenfield template route. Inspected the guide to verify that description; the local link resolves and `git diff --check` passes. Campaign remains open; publish this action commit with remote readback.
+
+## Amendment closure
+
+The human requested closure followed by a new comprehensive prerelease campaign and patch release. V-002–V-006 are complete and published through `2ccb015577243b46515654a7df34cc973b5104e0`. Rechecked the root README, both demo links and local Markdown targets; diff whitespace passes. No amendment findings remain. The final explicit main merge retains original prompt repairs plus Quick Start, token links, complete workflow introduction, TextStats clause removal and calculator navigation. Publication and merge ancestry establish closure; no release belongs to 120.
