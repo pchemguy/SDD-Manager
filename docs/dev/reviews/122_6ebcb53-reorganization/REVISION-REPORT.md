@@ -37,3 +37,7 @@ Human-requested README cleanup: removed both standalone environment-policy parag
 Human-requested README cleanup: removed the root README’s source-development navigation paragraph. Verified exact deletion and diff whitespace.
 
 Human-requested README cleanup: removed the discovery-protocol and plugin-entry routing paragraphs from the root README. Verified exact deletions and diff whitespace.
+
+## V-005 — Packaged Quick Start
+
+Replaced the complete Getting started section with the root Quick Start, preserving its text except links: demo links point to hosted repository documents and the project template is package-relative. Removed the former coordinator command examples and utility/setup exposition from this introductory section. Verified equality with the root section after link normalization, all linked demo/template paths against current source, straight quotes and diff whitespace. Documentation-only change; no runtime checks required. Publish/read back the action commit; campaign 122 remains open.

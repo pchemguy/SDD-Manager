@@ -10,35 +10,43 @@ The plugin defines a non-standard [PLUGIN.md](PLUGIN.md) entry, analogous to a s
 
 Development uses [SDD Manager](assets/SDD-MANAGER.md). See the [AI-assisted development disclosure](assets/AI_DISCLOSURE.md).
 
-## Getting started
+## Quick Start
 
-Load the package using your agent client's supported plugin mechanism. Project changes require an existing eligible Git worktree, access to its files and tools, and respect for its controlling instructions. Creating a Git repository is outside the plugin's scope. Checks use the target project's declared tools.
+Try SDD Manager with the browser-based Tetris or calculator demo, or use the minimal template for your own project.
 
-For a new project, copy the [Greenfield Project Prompt Template](<assets/Greenfield Project Prompt Template.md>) and replace its project, repository and token placeholders. The [Tetris demo](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/README.md) illustrates phased delivery and feature expansion; the [Calculator demo](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/calculator/README.md) proposes a simpler phase/feature sequence.
+1. Create an initialized GitHub repository from [SDD Manager Template](https://github.com/pchemguy/SDD-Manager-Template).
+2. [Create a fine-grained personal access token (PAT)](https://github.com/settings/personal-access-tokens/) restricted to the new repository. A suggested standard set grants **Read and write** permissions for:
+    - Actions.
+    - Commit statuses.
+    - Contents.
+    - Issues.
+    - Pull requests.
+    - Workflows.
 
-Give the coordinator an objective and stopping point:
+    Individual workflows may require fewer permissions; this set is a convenience rather than a universal minimum.
 
-```text
-Use sdd-manage to inspect this repository and prepare its development
-specification, plan, layout and task list. Use the attached brief as input.
-Stop before implementation.
-```
+3. Choose a prompt below. Replace `https://github.com/{OWNER}/{REPO}` and `{FINE_GRAINED_GH_TOKEN}` with your repository URL and token, then submit it in a new ChatGPT Work conversation or another agentic environment with SDD Manager available.
 
-Once the required documents are accepted:
+### Tetris demo prompts
 
-```text
-Use sdd-manage to implement milestone 1.1 from TASKS.md.
-Verify, commit and push each completed task. If its phase is incomplete,
-pause without merging. Integrate only an eligible complete boundary.
-```
+Choose how to develop the Tetris game: Interactive, Autodoc and Multipass Autoloop define the complete target scope upfront and differ in documentation preparation. Featured Autodoc starts with a classic baseline, then adds capabilities through separately submitted feature campaigns.
 
-Use your actual task/milestone IDs. You can enter a later stage when its inputs are established. Fresh/resumed main preparation starts with the [tracked documentation procedure](skills/sdd-manage/references/main-preparation.md) below. Other adoption follows [repository bootstrap](skills/sdd-manage/references/repository-bootstrap.md).
+| Prompt | How to use it |
+| --- | --- |
+| [Interactive](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Interactive.md) | Submit the complete prompt and review each document checkpoint. |
+| [Autodoc](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Autodoc.md) | Submit the complete prompt. After project-brief approval, the agent proceeds through the preapproved document checkpoints to TASKS, then stops before final documentation-package QC. |
+| [Multipass Autoloop](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Multipass%20Autoloop.md) | Submit the complete prompt with nine cumulative documentation passes. Approve the first project brief; the remaining predefined passes run autonomously, stopping before final documentation-package QC. |
+| [Featured Autodoc](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Featured%20Autodoc.md) | Submit Greenfield first for a classic baseline, then submit each feature request separately, in order, when ready to develop it. |
 
-Hosting is optional for local work. HTTPS Git publication uses the [supervised entry](skills/sdd-manage/scripts/git-auth-recover.md) from the first attempt, selecting an eligible supplied token before inherited helpers. This publication path requires Node.js 22+, Python 3.11+ and native Git on Windows 10+ or Linux with the process facilities described in that guide. An available [GitHub CLI](skills/sdd-forge/references/github.md#github-cli) may handle supported GitHub operations with suitable existing authentication or a provided/saved token. API clients use their available authentication; credential failures follow [credential recovery](skills/sdd-manage/references/credentials.md), using ignored protected token storage. Git and API access are separate. The [GitHub backend](skills/sdd-forge/references/github.md) defines the scoped permission profile; Actions access is conditional on requested workflow operations. Supplying credentials does not accept documents or widen the work scope.
+See the [Tetris demo guide](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/README.md) for staged exercises and gameplay scope.
 
-For eligible completed GitHub implementation task/milestone reconciliation, the optional [completion utility](skills/sdd-forge/scripts/forge-close.md) provides bounded lookup, evidence reconciliation, closure and readback. It requires Node 22+, Git and protected local input; workflow owners retain actual acceptance/publication gates. Project build/test requirements remain defined by the target project.
+### Calculator demo
 
-For selected GitHub phase or main-preparation projection, the optional [projection utility](skills/sdd-forge/scripts/forge-project.md) supports single-call docs-main operation without an intermediate JSON file, using the existing DOCS_TASKS document and origin by default; initial preparation uses the bundled task template before that document exists. Phase projection retains explicit reviewed JSON. Its [local draft/input workflow](skills/sdd-forge/scripts/forge-project-input.md) extracts phase task structure for agent-authored dependencies/briefs or produces an explicit documentation request when needed. It previews outgoing content, creates/reuses exact objects and verifies associations; the coordinator retains eligibility decisions. The same optional Node/Git requirements apply.
+Follow the [Calculator demo guide](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/calculator/README.md) to build basic arithmetic, powers and logarithms, and trigonometry in three phases, then explore optional steering exercises and feature campaigns. Use its project description with the Greenfield Project Prompt Template linked below.
+
+### Your own project
+
+Use the [Greenfield Project Prompt Template](<assets/Greenfield Project Prompt Template.md>) with a short preliminary project description. Supply the target repository, required authorization and GitHub tracking preference through the template. The agent should clarify material ambiguities before treating them as requirements.
 
 ## Core development workflows
 
