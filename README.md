@@ -7,7 +7,7 @@ SDD Manager composes focused skills into specification-driven development workfl
 Try SDD Manager with the browser-based Tetris demo, or use the minimal template for your own project.
 
 1. Create an initialized GitHub repository from [SDD Manager Template](https://github.com/pchemguy/SDD-Manager-Template).
-2. Create a fine-grained personal access token (PAT) restricted to the new repository. A suggested standard set grants **Read and write** permissions for:
+2. [Create a fine-grained personal access token (PAT)](https://github.com/settings/personal-access-tokens/) restricted to the new repository. A suggested standard set grants **Read and write** permissions for:
     - Actions.
     - Commit statuses.
     - Contents.

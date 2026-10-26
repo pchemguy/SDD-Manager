@@ -21,3 +21,7 @@ The coordinator commits source with the [revision evidence](REVISION-REPORT.md),
 The human explicitly reopened 120 to adapt “Starting the exercise” as Quick Start in the root README. The qualifying latest first-parent merge on main is `4bfebd6e0dfdacb57419d83f63a69cf2e9502cdc`, with parents `cccb2bbc48e2d2c3984b82d2c0275fba1bc753fa` and `72b7e76810c4f06fef30550d060bd323ef0348ef`. Fresh origin/main matches it. This related demo-entry amendment retains the original campaign ID, opening and baseline.
 
 V-002 (sdd-docs): add a concise root Quick Start covering template setup, repository-scoped authorization and prompt selection, adapting guide-relative links for root readers. Preserve the guide and package entry. Verify Markdown, local file/anchor targets and fidelity to the source’s mode/checkpoint distinctions. Publish source with evidence and retain the reopened campaign for review; no new release is selected.
+
+## Follow-up — V-003
+
+Add the human-supplied GitHub personal-access-token settings link to “Create a fine-grained personal access token (PAT)” in the root and Tetris guide READMEs. Preserve the surrounding setup and permissions wording. Verify the exact destination in both files and diff whitespace, then publish the action with evidence.

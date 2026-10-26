@@ -35,3 +35,7 @@ Adapted the Tetris guide’s “Starting the exercise” into root README Quick 
 V-002 is complete by source inspection: wording preserves the source’s permission qualification, document-preparation stop points and separate feature submissions. Local Markdown links resolve, heading/list spacing and diff whitespace checks pass. The amendment changes root README and active campaign/navigation records only; other closed records remain unchanged. No new project was created, prompt executed or external link availability independently tested.
 
 Publish the containing action commit with exact remote readback. Campaign 120 remains reopened at this review checkpoint; this amendment has not been integrated into main.
+
+## Follow-up result — V-003
+
+Linked “Create a fine-grained personal access token (PAT)” to the supplied `https://github.com/settings/personal-access-tokens/` in both root README and Tetris guide README. Exact-link inspection and `git diff --check` pass; surrounding instructions are unchanged. This uses the requested destination without claiming authenticated page verification. Campaign remains open; publish the containing commit and verify remote readback.
