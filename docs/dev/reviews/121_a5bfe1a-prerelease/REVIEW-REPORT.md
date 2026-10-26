@@ -34,3 +34,13 @@ Reviewed runtime boundaries for protected token input, process-supervised Git de
 GitHub metadata readback confirms the repository, main default branch and push access. Successful hosted runs: Git authentication 40135010118; projection 40135010113; completion 40135010138; Windows shell 40135010115, all at `63f145f42303354a81677710c8fc93cdf1f67f48`. Git object comparison confirms those helper/test/workflow/policy paths are unchanged in this candidate. These are retained native CI results for identical components, not a fresh candidate-wide Windows run.
 
 The two bootstrap links flagged by the lightweight scanner are inline example Markdown intended for the target repository README, not package-relative dependencies. Structural and local test success does not certify live agent judgment, client installation, arbitrary downstream projects or the reported Windows/Vite incident.
+
+## U-003 — Distribution and release readiness
+
+Exact committed candidate `e5a48392799c73975ac807873e5f49438b4cccbb` builds a 160-file package with every member compared to its Git blob. ZIP SHA-256 at this preparation checkpoint: `e1c5d43326f6faa4cb55a7097777ad1b656d5df2ed48e2f1ded5536d172baa8c`. All five extracted CLI help commands pass. SVG XML parsing, exact credential-byte exclusion and source-only file exclusions pass. Final release commit changes archive provenance/timestamps, so its package must be rebuilt and its own checksum used.
+
+Current-document scan covers 234 Markdown files and 1,449 local links with zero missing targets; fenced and inline examples are not treated as active links. Closed campaign contents are excluded. Complete campaign diff whitespace passes. The sole manifest is 0.15.4; notes match that version and preserve applicable compatibility/installation limits. All 72 initial range identities plus subsequent review/repair/version/notes changes are accounted for; finalization/release markers require incremental coverage refresh, not duplicate product highlights.
+
+## Final readiness
+
+All three planned review units are complete. R-001 is verified under V-001; no unresolved or deferred findings. V-002 prepares the patch manifest and notes. Fresh local runtime results remain applicable because repairs changed only source documentation and version metadata. Native Windows/browser/installed-client and fresh diagram-render limits remain as recorded; no universal behavioral certification is claimed. Campaign is ready for the authorized main integration and closure. Release completion remains a separate pending operation requiring exact default-branch commit/body/tag, package rebuild, single-publisher success and hosted readback.
