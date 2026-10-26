@@ -50,7 +50,7 @@ Provide a settings panel with controls for:
 5. General locking policy: lock on a failed downward movement attempt, or after one full gravity interval from becoming grounded.
 6. Hold piece: on or off.
 
-#### Configuration persistence
+#### URL GET and cookie persistence
 
 Support cookies and URL query parameters for all settings above. Restore saved settings or apply URL-supplied settings when the page is reloaded or the game is opened again. Use sensible defaults where neither source supplies a value.
 
@@ -70,7 +70,7 @@ Session-only configuration may be delivered as an intermediate increment before 
 
 Show a leaderboard panel with the 10 best completed-game results, ranked by score. Update it after each game and keep the history only for the current session.
 
-#### Persistence
+#### File persistence
 
 Place **Save** and **Restore** buttons at the bottom of the settings panel. Hiding the settings panel also hides these buttons.
 

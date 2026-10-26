@@ -58,7 +58,7 @@ Add next-piece preview if not already available.
 
 Use sensible defaults. Keep settings within the current page session; do not persist them across page reloads in this pass.
 
-#### Pass 6 - Scope extension: Configuration persistence
+#### Pass 6 - Scope extension: URL GET and cookie persistence
 
 Replace session-only configuration with support for cookies and URL query parameters for all settings above. Restore saved settings or apply URL-supplied settings when the page is reloaded or the game is opened again. Use sensible defaults where neither source supplies a value.
 
@@ -76,7 +76,7 @@ Save explicit URL parameter values in the corresponding cookies, including value
 
 Show a leaderboard panel with the 10 best completed-game results, ranked by score. Update it after each game and keep the history only for the current session.
 
-#### Pass 8 - Scope extension: Persistence
+#### Pass 8 - Scope extension: File persistence
 
 Place **Save** and **Restore** buttons at the bottom of the settings panel. Hiding the settings panel also hides these buttons.
 
