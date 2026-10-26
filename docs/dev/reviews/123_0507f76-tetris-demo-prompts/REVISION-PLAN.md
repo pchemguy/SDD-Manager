@@ -15,3 +15,7 @@ Open and publish campaign setup, then await the requested prompt changes. Preser
 ## V-001 — Label the playable baseline
 
 Add `#### Playable classic baseline` immediately after the project heading in Autodoc.md, preserving the remaining prompt. Verify exact insertion and Markdown spacing; publish without closing.
+
+## V-002 — Retain Electron packaging research
+
+Save the human-supplied text unchanged in research/ELECTRON_PACAKGING.md, using the explicitly requested filename. This records research only and authorizes no Electron implementation or prompt amendment. Verify placement and supplied content; publish with campaign open.
