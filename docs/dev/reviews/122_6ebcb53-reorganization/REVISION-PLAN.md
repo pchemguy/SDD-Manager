@@ -27,3 +27,5 @@ Move sdd-implement/references/environment/ directly into assets/ unchanged. Remo
 ## V-004 — Explain the plugin entry
 
 Replace the packaged README’s agent-entry paragraph with the human’s three requested points: PLUGIN.md is a non-standard analogue of SKILL.md, serves the corresponding role for the plugin and its skills, and defines common composite workflows involving multiple skills. Verify wording, local link and diff; publish with campaign open.
+
+V-004 amendment: also identify sdd-manage as the coordinator skill that selects and coordinates composite workflows and routes work to responsible skills.

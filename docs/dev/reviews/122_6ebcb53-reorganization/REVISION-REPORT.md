@@ -29,3 +29,5 @@ V-003 follow-up: at the human’s explicit request, removed the Windows shell an
 ## V-004 — Plugin entry explanation
 
 Replaced the packaged README’s agent-entry paragraph with the three requested points: non-standard PLUGIN.md, its role analogous to SKILL.md at plugin scope, and common composite workflows across skills. Verified all three points, the existing PLUGIN.md link target and diff whitespace. Documentation-only edit; no runtime checks needed. Publish/read back the action commit; campaign 122 remains open.
+
+V-004 amendment: added the requested coordinator point to the same README paragraph, naming sdd-manage and its workflow-selection, coordination and routing role. Verified against the current coordinator entry and checked diff whitespace.

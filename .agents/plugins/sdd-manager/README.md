@@ -6,7 +6,7 @@ SDD Manager is a learning-by-doing experiment in specification-driven developmen
 
 In the source repository, the complete plugin package is at `.agents/plugins/sdd-manager/`, available for agents to load when working on SDD Manager itself. A separate agent installation remains an option. This checkout layout does not configure automatic loading; installed or extracted packages begin at their own plugin root.
 
-The plugin defines a non-standard [PLUGIN.md](PLUGIN.md) entry, analogous to a skill’s SKILL.md. PLUGIN.md provides instructions and navigation for the plugin and its skills, just as SKILL.md does for a skill and its references. It also defines common composite workflows involving multiple skills.
+The plugin defines a non-standard [PLUGIN.md](PLUGIN.md) entry, analogous to a skill’s SKILL.md. PLUGIN.md provides instructions and navigation for the plugin and its skills, just as SKILL.md does for a skill and its references. It also defines common composite workflows involving multiple skills. The **sdd-manage** coordinator skill selects and coordinates these workflows, routing work to the responsible skills.
 
 Development uses [SDD Manager](assets/SDD-MANAGER.md). See the [AI-assisted development disclosure](assets/AI_DISCLOSURE.md).
 
