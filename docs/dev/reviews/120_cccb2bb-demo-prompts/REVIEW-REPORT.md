@@ -24,7 +24,7 @@ The change explicitly names session-only configuration and adds sensible default
 
 ### R-001 — “This pass” has no defined referent
 
-**Priority:** Medium. **Status:** Open. **Confidence:** High.
+**Priority:** Medium. **Status:** Verified (V-001; see [revision evidence](REVISION-REPORT.md)). **Confidence:** High.
 
 Locations: the added sentence under Session-only game configuration in Autodoc.md and Interactive.md, and Feature 4 in Featured Autodoc.md. All three say “do not persist them across page reloads in this pass”. The first two describe one complete target scope delivered in phases; the third describes separately submitted feature campaigns. None defines passes. The sentence is appropriate in Multipass Autoloop.md, where explicit Pass 5 and Pass 6 supply the referent.
 
@@ -34,7 +34,7 @@ Locations: the added sentence under Session-only game configuration in Autodoc.m
 
 ### R-002 — AIO prompts leave session-only delivery both mandatory and optional
 
-**Priority:** Medium. **Status:** Open. **Confidence:** High.
+**Priority:** Medium. **Status:** Verified (V-001; see [revision evidence](REVISION-REPORT.md)). **Confidence:** High.
 
 Locations: Autodoc.md and Interactive.md, Session-only game configuration and the end of URL GET and cookie persistence. The new heading/instruction commands a session-only stage, while the existing sentence still says it “may be delivered as an intermediate increment before persistence is added”. Both files define complete target scope including persistence, so the final application must persist settings; the change leaves the delivery obligation unclear.
 
@@ -44,7 +44,7 @@ Locations: Autodoc.md and Interactive.md, Session-only game configuration and th
 
 ### R-003 — Introduced trailing whitespace
 
-**Priority:** Low. **Status:** Open. **Confidence:** High.
+**Priority:** Low. **Status:** Verified (V-001; see [revision evidence](REVISION-REPORT.md)). **Confidence:** High.
 
 Location: Featured Autodoc.md line 2, the quoted blank line (`> `). `git diff --check ce4d4ac^ ce4d4ac` reports trailing whitespace. Use `>` without the trailing space, preserving the quoted blank line. This is a formatting defect, not a gameplay or scope issue.
 
@@ -58,6 +58,10 @@ Location: Featured Autodoc.md line 2, the quoted blank line (`> `). `git diff --
 - The note's actual host rendering was not tested; no unsupported rendering defect is asserted from its custom title alone.
 - Existing closed campaign records, original 119 branch, main and plugin source are preserved. No runtime or installed-agent result is claimed.
 
-## Next boundary
+## Original review boundary
 
 Publish this review/navigation/HANDOFF checkpoint and stop with 120 open. Three findings remain open; prompt source is unchanged beyond the exact authorized replay. Revision decisions, implementation, main integration and closure require further direction. The containing record commit and Git/remote readback establish publication rather than this text claiming its own future push.
+
+## Authorized revision follow-up
+
+The subsequent human request “Fix all issues in all prompts” accepted all three findings. [V-001](REVISION-PLAN.md) corrects the affected variants; the [revision report](REVISION-REPORT.md) records passing rechecks. Original replay/review observations above remain historical evidence. Campaign 120 stays open at the published repair checkpoint.

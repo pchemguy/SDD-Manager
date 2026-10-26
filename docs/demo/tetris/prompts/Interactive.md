@@ -51,7 +51,7 @@ Provide a settings panel with controls for:
 5. General locking policy: lock on a failed downward movement attempt, or after one full gravity interval from becoming grounded.
 6. Hold piece: on or off.
 
-Use sensible defaults. Keep settings within the current page session; do not persist them across page reloads in this pass.
+Use sensible defaults. Deliver session-only configuration as an intermediate increment before adding persistence. During this increment, keep settings within the current page session; do not persist them across page reloads.
 
 #### URL GET and cookie persistence
 
@@ -66,8 +66,6 @@ Resolve each setting independently in this order:
 Whenever the player changes a setting, save its selected value in the corresponding cookie and update its URL query parameter.
 
 Save explicit URL parameter values in the corresponding cookies, including values equal to the default. When a parameter is omitted, retain its saved cookie value rather than replacing it with the default.
-
-Session-only configuration may be delivered as an intermediate increment before persistence is added.
 
 #### Leaderboard
 
