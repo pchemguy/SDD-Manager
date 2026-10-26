@@ -13,3 +13,7 @@ Verified source coverage and Markdown whitespace. No extension built, installed 
 Created Autodoc_3in1.md from Autodoc.md. Replaced only the existing delivery paragraph with the exact supplied three-form requirement and one adjacent platform-adaptation paragraph. Extension persistence/file-operation guidance applies only when its capability is in the current increment; persistent-score storage is conditional, preserving the session leaderboard. Also addresses pause/reopen, cookie/URL and Save/Restore adaptations and narrow-sidebar layout at the platform definition.
 
 Verified reversible replacement reproduces the source prompt exactly, original Autodoc.md matches its committed bytes, and diff whitespace passes. No implementation or browser runtime checks claimed. Publish/read back this action commit; campaign remains open.
+
+## V-003 — Platform release assets
+
+Inserted the accepted paragraph verbatim under Versioning and releases in Autodoc_3in1.md. Releases must include applicable browser, Windows Electron and Chromium/Firefox extension artifacts for delivered platforms, installation instructions and clear development/signing/distribution status. Packaged artifacts require verification before delivery claims. Exact reversible insertion and diff whitespace checks pass; other prompts are unchanged. No actual build or release performed. Publish/read back the action commit; campaign remains open.

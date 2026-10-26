@@ -10,6 +10,8 @@ GitHub token: {FINE_GRAINED_GH_TOKEN}
 
 Manage the project's versioning, choosing an appropriate initial version and increasing it to reflect delivered changes. After each implementation phase is completed, verified and integrated, create and publish a new GitHub release with the corresponding version tag and release notes.
 
+Each GitHub release must include the installable or deployable artifacts for every platform delivered by that phase: the browser app build, Windows Electron package, and Chromium and Firefox extension packages, as applicable. Include installation instructions and clearly distinguish development packages from signed or store-distributed packages. Do not claim a platform delivered until its packaged artifact has been verified.
+
 ### Project: Browser-based Tetris game
 
 #### Playable classic baseline

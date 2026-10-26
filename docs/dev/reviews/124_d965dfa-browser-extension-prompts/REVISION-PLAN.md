@@ -19,3 +19,7 @@ Integrate the two supplied sidebar discussions into research/BROWSER_EXTENSION.m
 ## V-002 — Add three-form Autodoc variant
 
 Copy Autodoc.md to Autodoc_3in1.md and replace its delivery paragraph with the supplied browser/Windows Electron/Chromium and Firefox sidebar requirements. Keep platform-specific guidance together at that location. Make persistence/file-operation adaptations conditional on capabilities being in scope, preserve session-only increments and leaderboard semantics, and clarify sidebar layout adaptation. Preserve the source prompt and all other copied content. Verify exact bounded copy differences and publish without closing.
+
+## V-003 — Require platform release assets
+
+Add the accepted release-artifact paragraph to Versioning and releases in Autodoc_3in1.md. Require artifacts for platforms delivered in the phase, installation instructions, package-status distinctions and actual packaged-artifact verification. Preserve the remainder; publish without closing.
