@@ -19,3 +19,7 @@ Add `#### Playable classic baseline` immediately after the project heading in Au
 ## V-002 — Retain Electron packaging research
 
 Save the human-supplied text unchanged in research/ELECTRON_PACAKGING.md, using the explicitly requested filename. This records research only and authorizes no Electron implementation or prompt amendment. Verify placement and supplied content; publish with campaign open.
+
+## V-003 — Add Electron delivery to every Tetris prompt
+
+Insert the exact human-supplied browser/Electron delivery paragraph as a standalone paragraph immediately after the baseline definition in all four Tetris prompts. Preserve all remaining content. Verify placement, exact wording and complete prompt coverage; publish without closing.

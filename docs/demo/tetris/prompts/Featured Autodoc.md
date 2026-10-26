@@ -20,6 +20,8 @@ Manage the project's versioning, choosing an appropriate initial version and inc
 
 Develop a browser-based classic Tetris game.
 
+Keep the application usable in a browser. Also deliver an Electron desktop package for Windows, bundling all required runtime assets and requiring no separate Node.js installation or development server. Share application logic and UI between browser and desktop versions.
+
 During preparation, resolve scope ambiguities, important interactions and boundary cases, such as lock-delay timing, behavior, and resets. Surface decisions that materially affect application scope or gameplay before implementation.
 
 ## Feature 1 - Modern rule extensions

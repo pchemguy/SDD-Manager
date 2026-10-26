@@ -16,6 +16,8 @@ Manage the project's versioning, choosing an appropriate initial version and inc
 
 Develop a browser-based Tetris game with a playable classic baseline and the enhancements below.
 
+Keep the application usable in a browser. Also deliver an Electron desktop package for Windows, bundling all required runtime assets and requiring no separate Node.js installation or development server. Share application logic and UI between browser and desktop versions.
+
 Treat this description as the complete target scope. Deliver the simplest sensible playable baseline first, then add capabilities through bounded phases that each provide a useful functionality increment.
 
 #### Modern rule extensions

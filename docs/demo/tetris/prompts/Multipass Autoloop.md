@@ -18,6 +18,8 @@ Develop a browser-based Tetris game. The following cumulative passes define how 
 
 Define a playable classic Tetris baseline with falling tetrominoes, movement, rotation, gravity, line clearing, scoring, game over and restart.
 
+Keep the application usable in a browser. Also deliver an Electron desktop package for Windows, bundling all required runtime assets and requiring no separate Node.js installation or development server. Share application logic and UI between browser and desktop versions.
+
 Keep this initial scope minimal and coherent. The enhancements and configuration capabilities listed in later passes are future additions at this point.
 
 #### Pass 2 - Scope extension: Modern rule extensions
