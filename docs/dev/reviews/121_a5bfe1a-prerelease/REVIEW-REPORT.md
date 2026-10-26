@@ -17,3 +17,20 @@ Root/demo README entry paths and current source-only contributor instructions we
 Priority: Low. Confidence: High. Status: Accepted for repair. Location: `docs/dev/reviews/README.md`, blank lines between later campaign rows and prose preceding rows 120–121. These rows no longer belong to the initial Markdown table, leaving current campaign navigation as pipe-delimited prose. Repair the index layout without changing historical row contents or closed campaign files. Recheck: one table contains every campaign row, original row bytes/order preserved, explanatory prose follows the table.
 
 U-001 otherwise identifies no confirmed blocking source defect. Unrendered diagrams and unexecuted live agent/client workflows remain evidence limits, not passing behavioral tests.
+
+## U-002 — Runtime, tests and CI
+
+Linux, Node 24.22.1, Python 3.12.14. Executed declared suites on the current campaign source (product bytes unchanged from initial candidate):
+
+| Command group | Observed result |
+| --- | --- |
+| `python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v` | 139 passed |
+| `python -m unittest discover -s .github/tests -v` after declared dependency installation | 50 passed |
+| `node --test tests/git-auth-recover.test.mjs tests/git-publish.test.mjs tests/forge-close.test.mjs tests/forge-project.test.mjs` | 138 passed, zero skips |
+| Windows shell unittest discovery | Seven skipped: native Windows CMD required |
+
+Reviewed runtime boundaries for protected token input, process-supervised Git deadlines/cleanup, bounded GitHub transport and scoped mutations, forge projection/closure reconciliation, and exact-candidate publisher inventory/provenance. Tests exercise bad inputs, foreign identities, failed/uncertain mutations, lost responses, timeouts, process descendants, archive/path/content mismatch and release ancestry. No confirmed runtime defect was found. Generated Python caches were removed from owned test paths.
+
+GitHub metadata readback confirms the repository, main default branch and push access. Successful hosted runs: Git authentication 40135010118; projection 40135010113; completion 40135010138; Windows shell 40135010115, all at `63f145f42303354a81677710c8fc93cdf1f67f48`. Git object comparison confirms those helper/test/workflow/policy paths are unchanged in this candidate. These are retained native CI results for identical components, not a fresh candidate-wide Windows run.
+
+The two bootstrap links flagged by the lightweight scanner are inline example Markdown intended for the target repository README, not package-relative dependencies. Structural and local test success does not certify live agent judgment, client installation, arbitrary downstream projects or the reported Windows/Vite incident.
