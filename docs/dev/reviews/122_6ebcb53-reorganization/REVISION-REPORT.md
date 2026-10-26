@@ -35,3 +35,5 @@ V-004 amendment: added the requested coordinator point to the same README paragr
 Human-requested README cleanup: removed both standalone environment-policy paragraphs from the root README. Verified the exact scoped deletion and diff whitespace; template activation remains unchanged.
 
 Human-requested README cleanup: removed the root README’s source-development navigation paragraph. Verified exact deletion and diff whitespace.
+
+Human-requested README cleanup: removed the discovery-protocol and plugin-entry routing paragraphs from the root README. Verified exact deletions and diff whitespace.
