@@ -1,7 +1,5 @@
 # SDD Manager handoff
 
-Campaign **124 — Browser-extension demo prompts** is complete; return target main. Original baseline: `d965dfa86bb31e281c7d56018780429f1df8a16f`; opening: `226bb2d559ce17f30e4384cee7443c80cc597aa9`. No suspended parent. Standard reporting.
+Campaign **125 — Comprehensive review** is open on `revision/125_c75aa19-comprehensive-review`, based on main `c75aa19e3402ee28dde5f1ea3f86cd9ca6cf86c7`. No suspended parent. Standard reporting.
 
-[Revision evidence](reviews/124_d965dfa-browser-extension-prompts/REVISION-REPORT.md) records official-source sidebar research, Autodoc 3in1 and Featured Autodoc 3in1, scoped platform adaptations and release assets, and both README updates. Prompt/README checks and diff whitespace pass; no extension or application runtime evidence is claimed.
-
-The human authorized closure, then a new comprehensive review, fixes and closure. Publish final records, explicitly merge into refreshed main, verify equal trees and publish/read back main before allocating the review campaign. Retain closed records, branches and published releases. No new release is authorized.
+Campaign 124 is closed through the published main merge at that baseline. The human authorized this complete review, confirmed issue repairs and closure. [Review plan](reviews/125_c75aa19-comprehensive-review/REVIEW-PLAN.md) covers skills/workflows, documentation/assets/demos and tooling/distribution. Publish each unit checkpoint before progressing. No release authorized; preserve closed records and published releases.
