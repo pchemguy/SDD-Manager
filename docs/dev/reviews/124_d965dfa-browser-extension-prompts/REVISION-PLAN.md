@@ -31,3 +31,7 @@ Rename Autodoc_3in1.md to Autodoc 3in1.md unchanged. Copy Featured Autodoc.md to
 ## V-005 — Expose both variants in Quick Start
 
 Update root and packaged README Quick Start sections with both 3in1 prompt links and a concise explanation of the delivery forms and phase release assets. Retain the existing workflow distinctions and adapt links to each README location. Verify matched content, target paths and whitespace; publish without closing.
+
+## Finalization
+
+V-001–V-005 are complete. The human authorized closure, followed by a separate comprehensive review/fix/closure campaign. Finalize and publish records, explicitly merge into refreshed main, verify the merged tree and publish/read back main. Retain this branch and research; no release selected.
