@@ -56,7 +56,7 @@ The coordinator establishes the development context and eligible stage, selects 
 
 These gates constrain delegated SDD work and must be visible before the dependent handoff. Repeating a short gate at that handoff is justified when it prevents a consequential coordination error. Exact commit syntax, provider reconciliation, branch algorithms and eligibility/recovery procedures stay with their owners.
 
-Shell and browser development policies are external to the plugin. Repository contributor guidance may own them; packaged entries must not bundle or route to those specific policies or shell-tool adapters. Generic reminders to follow applicable project policies remain appropriate before dependent work.
+Shell/browser policies and technology-specific environment guides are bundled in assets/ for project-level use. AGENTS_TEMPLATE.md supplies their conditional activation. Plugin entries, skills and workflow references must not link to or activate these documents; README may describe their purpose as assets without linking to them. Generic reminders to follow applicable project policies remain appropriate before dependent work. No separate executable shell adapter is bundled.
 
 ## SDD coverage and canonical owners
 
@@ -86,7 +86,7 @@ A different arrangement is acceptable if each required decision and gate remains
 
 The coordinator's `SKILL.md` must have a clearly identified routing section, preferably a table, individually naming and linking every `references/*.md` file. For each file, state its purpose, scope, boundary and loading conditions, including unconditional use where applicable, so selection is possible from the entry before reading the reference. Compare the file inventory with that section; domain labels alone do not establish complete routing. This does not require every module to be loaded at startup.
 
-Small initialization supplements may live under `references/initialization/`, routed by an already listed initialization owner. The parent reference names their scope and loading condition; they need no direct PLUGIN.md/coordinator-entry listing or new product acceptance requirements. The manual AI-provenance convenience uses this boundary: setup executes by default within initialization, with an explicit human/project opt-out or deferral; conversation recording remains manual and optional.
+Manual AI provenance is owned by sdd-manage/references/ai-logs.md and is listed in the coordinator entry routing alongside other reference modules. Setup executes by default within initialization, with an explicit human/project opt-out or deferral; conversation recording remains manual and optional. The entry identifies selection conditions without duplicating the setup procedure or requiring transcript loading.
 
 The domain map below identifies canonical coverage for development review:
 
