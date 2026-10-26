@@ -11,3 +11,7 @@ The human requested a demo-prompts revision campaign focused on browser extensio
 Prepare for browser-extension-related demo prompt revisions and necessary guide/navigation updates. Specific browser targets, extension presentation, capabilities and prompt changes remain to be selected; do not infer them from earlier discussions or replace existing browser/Electron requirements without explicit direction.
 
 Open and publish setup, then await the requested amendment. No prompt changes or app implementation are authorized by opening alone. Preserve closed campaign records and published releases. No integration, closure, version bump or release is selected.
+
+## V-001 — Research browser-extension sidebar delivery
+
+Integrate the two supplied sidebar discussions into research/BROWSER_EXTENSION.md, confirm current support online using official sources and record high-level prompt/implementation decisions and verification limits. Research only; no prompt amendment or extension implementation. Verify source attribution, document coverage and whitespace; publish with campaign open.
