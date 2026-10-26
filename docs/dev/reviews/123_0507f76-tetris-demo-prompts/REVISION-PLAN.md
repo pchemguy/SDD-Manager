@@ -23,3 +23,7 @@ Save the human-supplied text unchanged in research/ELECTRON_PACAKGING.md, using 
 ## V-003 — Add Electron delivery to every Tetris prompt
 
 Insert the exact human-supplied browser/Electron delivery paragraph as a standalone paragraph immediately after the baseline definition in all four Tetris prompts. Preserve all remaining content. Verify placement, exact wording and complete prompt coverage; publish without closing.
+
+## Finalization
+
+The human authorized closure after V-001–V-003. All accepted actions are complete. Finalize records, publish, explicitly merge into refreshed main, verify the merged prompt changes and publish/read back main. Retain the campaign branch and research. No application implementation or release is selected.

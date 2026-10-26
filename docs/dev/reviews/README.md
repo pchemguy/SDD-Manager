@@ -124,6 +124,6 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `120_cccb2bb` | Closed: prompt repairs and Quick Start amendments V-002–V-006 integrated into main. | [Review](120_cccb2bb-demo-prompts/REVIEW-REPORT.md) · [Revision](120_cccb2bb-demo-prompts/REVISION-REPORT.md) |
 | `121_a5bfe1a` | Closed through main integration: comprehensive prerelease review, R-001 repair and 0.15.4 preparation verified; release publication follows. | [Review](121_a5bfe1a-prerelease/REVIEW-REPORT.md) |
 | `122_6ebcb53` | Closed: reference/policy relocation, project-template environment activation and README restructuring; 189 support/publisher tests pass. | [Plan](122_6ebcb53-reorganization/REVISION-PLAN.md) |
-| `123_0507f76` | Open: Tetris demo-prompts campaign setup; awaiting amendment scope. | [Plan](123_0507f76-tetris-demo-prompts/REVISION-PLAN.md) |
+| `123_0507f76` | Finalized: baseline heading, Electron research and browser/Windows desktop delivery in all four prompts; closure follows verified main integration/publication. | [Plan](123_0507f76-tetris-demo-prompts/REVISION-PLAN.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
