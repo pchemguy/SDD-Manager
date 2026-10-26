@@ -20,7 +20,7 @@ Define a playable classic Tetris baseline with falling tetrominoes, movement, ro
 
 Keep this initial scope minimal and coherent. The enhancements and configuration capabilities listed in later passes are future additions at this point.
 
-#### Pass 2 - Scope extension: Gameplay enhancements
+#### Pass 2 - Scope extension: Modern rule extensions
 
 - Hold piece.
 - Ghost piece.

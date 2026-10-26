@@ -16,7 +16,7 @@ Develop a browser-based Tetris game with a playable classic baseline and the enh
 
 Treat this description as the complete target scope. Deliver the simplest sensible playable baseline first, then add capabilities through bounded phases that each provide a useful functionality increment.
 
-#### Gameplay enhancements
+#### Modern rule extensions
 
 - Hold piece.
 - Ghost piece.
