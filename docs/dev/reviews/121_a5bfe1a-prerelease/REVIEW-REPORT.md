@@ -14,7 +14,7 @@ Root/demo README entry paths and current source-only contributor instructions we
 
 ### R-001 — Campaign navigation rows fall outside the table
 
-Priority: Low. Confidence: High. Status: Accepted for repair. Location: `docs/dev/reviews/README.md`, blank lines between later campaign rows and prose preceding rows 120–121. These rows no longer belong to the initial Markdown table, leaving current campaign navigation as pipe-delimited prose. Repair the index layout without changing historical row contents or closed campaign files. Recheck: one table contains every campaign row, original row bytes/order preserved, explanatory prose follows the table.
+Priority: Low. Confidence: High. Status: Verified under V-001. Location: `docs/dev/reviews/README.md`, blank lines between later campaign rows and prose preceding rows 120–121. These rows no longer belong to the initial Markdown table, leaving current campaign navigation as pipe-delimited prose. Repair the index layout without changing historical row contents or closed campaign files. Recheck: one table contains every campaign row, original row bytes/order preserved, explanatory prose follows the table.
 
 U-001 otherwise identifies no confirmed blocking source defect. Unrendered diagrams and unexecuted live agent/client workflows remain evidence limits, not passing behavioral tests.
 

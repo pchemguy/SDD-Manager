@@ -113,25 +113,15 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `109_e96e453` | Finalized: strict-by-default/flexible-by-permission rules, retained control and planning/task handoffs verified. 189 tests, four advisory source cases and exact 158-file package/five CLI helps pass. Closes at verified main integration/publication and clean return. | [Plan](109_e96e453-multipass-delivery-modes/REVISION-PLAN.md), [result](109_e96e453-multipass-delivery-modes/REVISION-REPORT.md) |
 | `110_4d8ea36` | Finalized: conditional standalone milestone reviews and folded report ownership verified; special phase review unchanged. 279 tests, four advisory cases and exact 158-file package/five CLI helps pass. Closes at verified main integration/publication and clean return. | [Plan](110_4d8ea36-milestone-review-threshold/REVISION-PLAN.md), [result](110_4d8ea36-milestone-review-threshold/REVISION-REPORT.md) |
 | `111_8b545a4` | Finalized: comprehensive review complete and R-001 navigation repair verified. 327 local tests, four advisory cases, 14 actual CI jobs and exact package checks pass. Closes at verified main integration/publication and clean return; patch release follows. | [Review plan](111_8b545a4-comprehensive-review/REVIEW-PLAN.md), [review](111_8b545a4-comprehensive-review/REVIEW-REPORT.md), [revision plan](111_8b545a4-comprehensive-review/REVISION-PLAN.md), [result](111_8b545a4-comprehensive-review/REVISION-REPORT.md) |
-
 | `112_c63cbc3` | Stable/latest v0.15.3 published and independently verified; exact main release source, notes/tag, 158-file package and downloads agree. Release CI passes 139 support/50 publisher checks. Closes at verified explicit main integration/publication and clean return. | [Plan](112_c63cbc3-release-0-15-3/REVISION-PLAN.md), [outcome](112_c63cbc3-release-0-15-3/REVISION-REPORT.md) |
-
 | `113_4ef5c56` | Finalized: AIO variants/setup guidance, Leaderboard and manual JSON/SQLite persistence complete through eight cumulative passes. Source/link/scope checks pass; closes at verified main integration/publication and clean return. | [Plan](113_4ef5c56-tetris-demo-prompts/REVISION-PLAN.md), [progress](113_4ef5c56-tetris-demo-prompts/REVISION-REPORT.md) |
-
 | `114_0a7eaf7` | Finalized: comprehensive review complete; R-001 guide scope clarification verified. 327 fresh local tests and exact package checks pass; prior native CI remains qualified. Closes at verified main integration/publication and clean return. | [Review](114_0a7eaf7-comprehensive-review/REVIEW-REPORT.md), [plan](114_0a7eaf7-comprehensive-review/REVISION-PLAN.md), [result](114_0a7eaf7-comprehensive-review/REVISION-REPORT.md) |
-
 | `115_fd1c231` | Finalized: three prompts moved directly into prompts/ without content changes; AIO directory removed and guide links updated. Checks pass; closes at verified main integration/publication and clean return. | [Plan](115_fd1c231-demo-prompt-layout/REVISION-PLAN.md), [result](115_fd1c231-demo-prompt-layout/REVISION-REPORT.md) |
-
 | `116_9f81aae` | Amendment finalized: concise Save/Restore wording; settings table, spacing, placement, layout and combined persistence retained. Reclosure follows verified main integration/publication and clean return. | [Plan](116_9f81aae-demo-ui-persistence/REVISION-PLAN.md), [result](116_9f81aae-demo-ui-persistence/REVISION-REPORT.md) |
-
 | `117_a4b21f3` | Finalized: conditional Playwright/Vite guidance integrated; 189 tests, five planning scenarios and exact package checks pass. Closes after verified main integration/publication and clean return. | [Plan](117_a4b21f3-dev-workflow/REVISION-PLAN.md), [result](117_a4b21f3-dev-workflow/REVISION-REPORT.md) |
-
 | `118_644911b` | Finalized: comprehensive review complete, zero confirmed/deferred findings; no repairs required. 327 local tests and exact package checks pass. Closes after verified main integration/publication and clean return. | [Plan](118_644911b-comprehensive-review/REVIEW-PLAN.md), [result](118_644911b-comprehensive-review/REVIEW-REPORT.md) |
-
 | `119_68432eb` | Finalized: accepted prompt edits verified and published; explicit next preview in modern extensions replaces rejected R-003. Verified main merge publication/return establishes closure. | [Review](119_68432eb-demo-prompts/REVIEW-REPORT.md), [plan](119_68432eb-demo-prompts/REVISION-PLAN.md), [result](119_68432eb-demo-prompts/REVISION-REPORT.md) |
+| `120_cccb2bb` | Closed: prompt repairs and Quick Start amendments V-002–V-006 integrated into main. | [Review](120_cccb2bb-demo-prompts/REVIEW-REPORT.md) · [Revision](120_cccb2bb-demo-prompts/REVISION-REPORT.md) |
+| `121_a5bfe1a` | Open: comprehensive prerelease review and patch release 0.15.4. | [Review](121_a5bfe1a-prerelease/REVIEW-REPORT.md) |
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
-
-| `120_cccb2bb` | Closed: prompt repairs and Quick Start amendments V-002–V-006 integrated into main. | [Review](120_cccb2bb-demo-prompts/REVIEW-REPORT.md) · [Revision](120_cccb2bb-demo-prompts/REVISION-REPORT.md) |
-
-| `121_a5bfe1a` | Open: comprehensive prerelease review and patch release 0.15.4. | [Review](121_a5bfe1a-prerelease/REVIEW-REPORT.md) |
