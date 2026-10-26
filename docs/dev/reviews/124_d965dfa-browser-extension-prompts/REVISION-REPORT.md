@@ -27,3 +27,5 @@ Verified byte-identical rename, exact reversible companion substitutions and unc
 ## V-005 — README navigation
 
 Added Autodoc 3in1 and Featured Autodoc 3in1 adjacent to their original variants in both Quick Start tables. Added a shared explanation of browser, Windows Electron and Chromium/Firefox sidebar delivery and verified phase release assets. Root links are repository-relative; packaged links use hosted repository paths. Verified both target files exist, matching descriptions and straight quotes, and diff whitespace. No runtime checks required. Publish/read back this action commit; campaign remains open.
+
+V-005 follow-up: clarified in both READMEs that standard prompts deliver browser plus Windows Electron, while 3in1 additionally delivers Chromium/Firefox sidebar extensions. Verified the identical clarification and diff whitespace.

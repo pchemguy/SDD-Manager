@@ -31,7 +31,7 @@ Try SDD Manager with the browser-based Tetris or calculator demo, or use the min
 
 Choose how to develop the Tetris game: Interactive, Autodoc and Multipass Autoloop define the complete target scope upfront and differ in documentation preparation. Featured Autodoc starts with a classic baseline, then adds capabilities through separately submitted feature campaigns.
 
-The 3in1 variants add delivery as a browser app, Windows Electron package, and sidebar extensions for Chromium and Firefox, with verified release assets for the platforms delivered in each phase.
+The standard prompts deliver a browser app and a Windows Electron desktop package. The 3in1 variants additionally deliver sidebar extensions for Chromium and Firefox and require verified release assets for the platforms delivered in each phase.
 
 | Prompt | How to use it |
 | --- | --- |
