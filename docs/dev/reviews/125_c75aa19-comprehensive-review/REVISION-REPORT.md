@@ -15,3 +15,7 @@ Aligned PLUGIN-CONTRACT with bundled project-facing policy/environment assets, a
 ## V-003 — Complete Tetris guide scope and navigation
 
 Added both 3in1 variants beside their standard counterparts and explained standalone browser/Windows Electron versus additional Chromium/Firefox sidebar delivery. Explicitly preserved browser-only staged exercises. Added next-piece preview to the two staged modern-extension prompt lists and their adjacent summaries. Verified links to all six prompt files, exactly two new preview bullets, and unchanged locking rules, original prompt files and historical example. Diff whitespace and maintained-link checks pass. R-004 and R-005 Verified. Publish/read back this action commit.
+
+## V-004 — Verification recovery handoff
+
+Repaired the broken Select technology guidance fragment in sdd-verify/check-selection and replaced its matching-module selection with general recovery plus project instructions. Target Establish applicable guidance exists; no stale fragment remains and the no-repair verification boundary is unchanged. R-006 Verified. No runtime code changed; retained Node evidence remains applicable. Publish/read back this action commit.

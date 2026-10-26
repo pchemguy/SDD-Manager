@@ -36,3 +36,7 @@ Built and inspected a 162-file archive from exact committed source 4f1635eeef549
 ## Consolidation
 
 All three planned units assessed with source/local-execution evidence. Five confirmed findings (one medium, four low) are accepted for bounded repair; no other repair or new product requirement inferred. Remaining evidence limits: no fresh independent consumer trial, installed-client activation, native Windows execution, diagram rendering, extension/app build or live release publication. These are unrun observations, not claimed passes. Source-wide reference inventory supports structural coverage; semantic depth prioritizes consequential owners/handoffs and affected public scope.
+
+## Final cross-unit anchor finding
+
+R-006 — Broken environment-recovery section handoff (Low, high confidence; Verified by V-004). The final 341-anchor scan found check-selection.md still linking to environment-recovery.md#select-technology-guidance, a heading removed with asset routing. It also retained matching-module wording. This was a real broken intra-package handoff missed by the earlier file-target scan. Changed it to general recovery’s current Establish applicable guidance heading and applicable project instructions; verification remains read-only. No technology-asset link added. Final finding count is six; all are repaired, with no deferred confirmed findings.
