@@ -1,0 +1,13 @@
+# Browser-extension demo prompts revision campaign
+
+## Context and authority
+
+Campaign **124_d965dfa**; branch `revision/124_d965dfa-browser-extension-prompts`. Creation parent and integration/return target: main at `d965dfa86bb31e281c7d56018780429f1df8a16f`, refreshed through origin pull before opening. No suspended parent. Reporting: Standard.
+
+The human requested a demo-prompts revision campaign focused on browser extensions. Campaign setup and publication are authorized.
+
+## Scope and current boundary
+
+Prepare for browser-extension-related demo prompt revisions and necessary guide/navigation updates. Specific browser targets, extension presentation, capabilities and prompt changes remain to be selected; do not infer them from earlier discussions or replace existing browser/Electron requirements without explicit direction.
+
+Open and publish setup, then await the requested amendment. No prompt changes or app implementation are authorized by opening alone. Preserve closed campaign records and published releases. No integration, closure, version bump or release is selected.

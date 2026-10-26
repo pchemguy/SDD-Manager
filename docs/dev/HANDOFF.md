@@ -1,7 +1,7 @@
 # SDD Manager handoff
 
-Campaign **123 — Tetris demo prompts** is complete; return target is main. Original baseline: `0507f769b35d5139340b2532f85ebbc8bc454901`; opening commit: `b12b37517d0d711c2489cf48951044839b4208af`. No suspended parent. Standard reporting.
+Campaign **124 — Browser-extension demo prompts** is open on `revision/124_d965dfa-browser-extension-prompts`. Main creation/return baseline: `d965dfa86bb31e281c7d56018780429f1df8a16f`. No suspended parent. Standard reporting.
 
-[Revision evidence](reviews/123_0507f76-tetris-demo-prompts/REVISION-REPORT.md) records V-001–V-003: the Autodoc baseline heading, retained Electron packaging research and the exact browser/Windows Electron delivery paragraph in all four prompts. Exact baseline comparisons and diff whitespace pass; prior closed campaign records are unchanged. No application build, Electron runtime verification or comprehensive review is claimed.
+The human requested this campaign. Origin/main was refreshed and already current. [Revision plan](reviews/124_d965dfa-browser-extension-prompts/REVISION-PLAN.md) retains setup scope and stopping boundary. Await specific browser-extension prompt amendments; no prompt or application changes have been selected.
 
-The human authorized closure. Publish/read back final records, explicitly merge the verified campaign tip into refreshed main, verify the merged changes and publish/read back main. Git merge parents and remote readback establish integration. Retain the campaign branch and published v0.15.4. No active campaign, application implementation or new release is selected after closure.
+Campaign 123 is closed and integrated at the baseline above. Preserve closed records, existing browser/Electron prompt requirements and published releases. Publish/read back the opening commit, then return control for the requested amendment. No integration, closure or release is selected.
