@@ -44,7 +44,7 @@ As an alternative to the staged prompts below, use one of these standalone promp
 
 ### Autodoc baseline and feature campaigns
 
-Use [Featured Autodoc](<prompts/Featured Autodoc.md>) for a classic baseline followed by eight separately submitted feature requests. Submit the sections in order as each capability is ready for development.
+Use [Featured Autodoc](<prompts/Featured Autodoc.md>) for a classic baseline followed by separately submitted feature requests. Submit the sections in order as each capability is ready for development.
 
 ### Minimal starting prompt
 

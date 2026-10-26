@@ -40,7 +40,7 @@ Clearing four lines at once awards one penetrator bonus, granting one activation
 
 Render penetrator pieces entirely white, and do not use white for regular pieces. Show the available bonuses in the game info and controls panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
 
-#### Game configuration
+#### Session-only game configuration
 
 Provide a settings panel with controls for:
 
@@ -50,6 +50,8 @@ Provide a settings panel with controls for:
 4. Hard-drop locking policy: follow the selected general locking policy, or lock immediately after hard drop.
 5. General locking policy: lock on a failed downward movement attempt, or after one full gravity interval from becoming grounded.
 6. Hold piece: on or off.
+
+Use sensible defaults. Keep settings within the current page session; do not persist them across page reloads in this pass.
 
 #### URL GET and cookie persistence
 
