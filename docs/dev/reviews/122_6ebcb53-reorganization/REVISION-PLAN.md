@@ -23,3 +23,7 @@ The human additionally prohibits plugin links to these policies. Keep policy lin
 ## V-003 — Move environment guides to project-instruction assets
 
 Move sdd-implement/references/environment/ directly into assets/ unchanged. Remove plugin workflow routing to these guides; activate them conditionally from AGENTS_TEMPLATE.md for selected Playwright execution or observed Vite worker-loading failures. Preserve general environment recovery. Extend the source-only no-plugin-reference boundary and package assertions. Verify content preservation, activation links, absence of workflow references and support/publisher checks; publish with campaign open.
+
+## V-004 — Explain the plugin entry
+
+Replace the packaged README’s agent-entry paragraph with the human’s three requested points: PLUGIN.md is a non-standard analogue of SKILL.md, serves the corresponding role for the plugin and its skills, and defines common composite workflows involving multiple skills. Verify wording, local link and diff; publish with campaign open.

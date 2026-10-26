@@ -25,3 +25,7 @@ Verification: 139 acceptance-support and 50 publisher tests passed on Linux/Pyth
 V-003 follow-up: removed the unsolicited policy-placement/prohibition paragraph from root AGENTS.md after human feedback. File placement, template activation and absence of plugin workflow references remain as implemented. Verified the exact paragraph removal and clean diff whitespace; no runtime behavior changed.
 
 V-003 follow-up: at the human’s explicit request, removed the Windows shell and Browser development sections from root AGENTS.md. AGENTS_TEMPLATE.md is unchanged. Verified the scoped removal and diff whitespace; no runtime checks required for this instruction deletion.
+
+## V-004 — Plugin entry explanation
+
+Replaced the packaged README’s agent-entry paragraph with the three requested points: non-standard PLUGIN.md, its role analogous to SKILL.md at plugin scope, and common composite workflows across skills. Verified all three points, the existing PLUGIN.md link target and diff whitespace. Documentation-only edit; no runtime checks needed. Publish/read back the action commit; campaign 122 remains open.
