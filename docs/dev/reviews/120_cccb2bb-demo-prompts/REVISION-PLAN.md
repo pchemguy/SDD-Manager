@@ -33,3 +33,7 @@ Clarify the root Quick Start introduction to explain all four prompt choices, in
 ## Follow-up — V-005
 
 Remove the TextStats acceptance-project clause from root README as requested; retain the adjacent source-development and campaign-navigation links. Check the sentence and diff whitespace, then publish.
+
+## Follow-up — V-006
+
+Add the missing calculator demo reference to root Quick Start, with a brief description grounded in the calculator guide and a route to its starting template. Verify the link and source fidelity, then publish.

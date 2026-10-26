@@ -4,7 +4,7 @@ SDD Manager composes focused skills into specification-driven development workfl
 
 ## Quick Start
 
-Try SDD Manager with the browser-based Tetris demo, or use the minimal template for your own project.
+Try SDD Manager with the browser-based Tetris or calculator demo, or use the minimal template for your own project.
 
 1. Create an initialized GitHub repository from [SDD Manager Template](https://github.com/pchemguy/SDD-Manager-Template).
 2. [Create a fine-grained personal access token (PAT)](https://github.com/settings/personal-access-tokens/) restricted to the new repository. A suggested standard set grants **Read and write** permissions for:
@@ -31,6 +31,10 @@ Choose how to develop the Tetris game: Interactive, Autodoc and Multipass Autolo
 | [Featured Autodoc](<docs/demo/tetris/prompts/Featured Autodoc.md>) | Submit Greenfield first for a classic baseline, then submit each feature request separately, in order, when ready to develop it. |
 
 See the [Tetris demo guide](docs/demo/tetris/README.md) for staged exercises and gameplay scope.
+
+### Calculator demo
+
+Follow the [Calculator demo guide](docs/demo/calculator/README.md) to build basic arithmetic, powers and logarithms, and trigonometry in three phases, then explore optional steering exercises and feature campaigns. Use its project description with the Greenfield Project Prompt Template linked below.
 
 ### Your own project
 

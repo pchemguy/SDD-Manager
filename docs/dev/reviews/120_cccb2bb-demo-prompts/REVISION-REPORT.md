@@ -47,3 +47,7 @@ The Quick Start introduction now contrasts the three complete-scope prompts with
 ## Follow-up result — V-005
 
 Removed the requested TextStats clause from root README and capitalized the remaining Campaign navigation sentence. Adjacent source-development links are preserved; `git diff --check` passes. Publish the containing commit with remote readback; campaign 120 remains open.
+
+## Follow-up result — V-006
+
+Root Quick Start now names both demos and includes a Calculator demo section linking its guide, describing its three initial phases and optional steering/feature progression, and identifying the Greenfield template route. Inspected the guide to verify that description; the local link resolves and `git diff --check` passes. Campaign remains open; publish this action commit with remote readback.
