@@ -6,9 +6,9 @@ Campaign **122_6ebcb53**; branch `revision/122_6ebcb53-reorganization`. Creation
 
 The human requested a new revision campaign “to do some shuffling”. Campaign setup and publication are authorized. Subsequent human requests define the bounded actions below.
 
-## Current boundary
+## Final boundary
 
-Execute and publish the accepted reorganization actions below; retain the campaign open for further instructions. Preserve unrelated work, published v0.15.4 and all closed campaign records. No integration, closure, version bump or release is selected at this checkpoint.
+The human requested closure after the accepted V-001–V-007 actions and README refinements. All actions are complete; finalize the evidence and integrate this campaign into its recorded parent main. No version bump or release is selected. Preserve published v0.15.4 and all prior closed records.
 
 ## V-001 — Flatten AI-log initialization reference
 

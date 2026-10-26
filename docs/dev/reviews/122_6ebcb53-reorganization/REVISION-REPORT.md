@@ -57,3 +57,11 @@ Applied the replacement approved in chat verbatim. The section now gives a brief
 Human-requested README clarification: replaced “Roots may link to focused children” with an illustrative SPEC.md → STORAGE-SPEC.md example covering storage formats and validation. Retained the requirement that implementation tasks follow ready design/specification/planning inputs. Verified scoped replacement and diff whitespace.
 
 Human-requested README clarification: changed the document-table heading to “Document” and stated the shared docs/dev/ location once in the section introduction. Verified scoped changes and diff whitespace.
+
+## Final verification and closure
+
+V-001–V-007 and the subsequent human-requested README refinements are complete. Final content supersedes intermediate choices: root AGENTS.md has neither environment-policy sections nor the unsolicited packaging paragraph; root README has no removed policy/contributor/discovery routing text. The packaged README explains PLUGIN.md and the coordinator, shares the root Quick Start, catalogs all 15 Markdown/JSON assets, uses straight quotes and concrete document examples, and omits removed evidence/contributor sections. Acceptance evidence limits remain in TEXTSTATS.md. Environment activation belongs to AGENTS_TEMPLATE.md; plugin workflows do not link to the four standalone guides.
+
+Final checks on 655399d: 139 acceptance-support and 50 publisher tests pass on Linux/Python 3.12.14; changed-document local links resolve after excluding illustrative code; all four relocated policies/guides match baseline blobs exactly. Earlier closed campaign/release records are unchanged. Native Windows contracts remain unrun locally (seven Linux skips from the action check); no new browser, installed-client or live-agent acceptance is claimed. Source changes and final records pass diff whitespace.
+
+Origin main was refreshed and remains at 6ebcb5318fc29ff3c369d55dade449f768f4bbce, the recorded creation parent. The human authorized closure. Publish/read back the containing finalization commit, explicitly merge that verified tip into main, verify the prospective merged result and publish/read back main. Git's two-parent merge and remote readback establish completion; no release/version change is part of this campaign.
