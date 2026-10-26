@@ -70,7 +70,7 @@ Session-only configuration may be delivered as an intermediate increment before 
 
 Show a leaderboard panel with the 10 best completed-game results, ranked by score. Update it after each game and keep the history only for the current session.
 
-#### Leaderboard and settings persistence
+#### Persistence
 
 Place **Save** and **Restore** buttons at the bottom of the settings panel. Hiding the settings panel also hides these buttons.
 
