@@ -19,3 +19,9 @@ V-001 is complete. R-001, R-002 and R-003 are verified by source inspection and 
 Commit source and this evidence together; the containing Git commit identifies the exact repaired state. The coordinator must publish it and verify exact remote-tip equality before reporting publication. No application runtime or rendered-host behavior is claimed for this prose-only correction.
 
 Campaign 120 remains open at the repair checkpoint. Main integration, closure and release have not been performed.
+
+## Closure authorization and final checkpoint
+
+The human subsequently requested “Close it”, authorizing integration and closure. Repair commit `17386f176a90967d7f576a75d8dcad07dd6f4295` was published with exact remote readback and confirmed cleanup. A fresh fetch confirms main remains at the recorded baseline and the remote campaign tip matches the repair commit.
+
+All three findings are verified; no accepted work remains. Finalized for explicit integration into main. The closure merge and its verified target publication establish completion; its Git parents identify the final campaign and target tips. No release is selected. Prior closed records are unchanged by the campaign delta. Fetch observed an external reset of the remote 119 branch to its prior finalization commit; this campaign does not modify or restore that branch.

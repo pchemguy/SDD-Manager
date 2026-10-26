@@ -65,3 +65,7 @@ Publish this review/navigation/HANDOFF checkpoint and stop with 120 open. Three 
 ## Authorized revision follow-up
 
 The subsequent human request “Fix all issues in all prompts” accepted all three findings. [V-001](REVISION-PLAN.md) corrects the affected variants; the [revision report](REVISION-REPORT.md) records passing rechecks. Original replay/review observations above remain historical evidence. Campaign 120 stays open at the published repair checkpoint.
+
+## Final disposition
+
+All three findings are verified under V-001. The later “Close it” request supersedes the open-campaign stopping boundary and authorizes main integration. See the [revision report](REVISION-REPORT.md) for final evidence; the closure merge and target publication establish completion.

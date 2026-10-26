@@ -132,4 +132,4 @@ Campaign directories combine a stable repository sequence with the starting comm
 
 New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
 
-| `120_cccb2bb` | Open: last-119 commit replayed onto main tip; all three prompt findings repaired and verified. Integration not selected. | [Review](120_cccb2bb-demo-prompts/REVIEW-REPORT.md) · [Revision](120_cccb2bb-demo-prompts/REVISION-REPORT.md) |
+| `120_cccb2bb` | Closed through main integration: last-119 prompt change replayed; all three findings repaired and verified. | [Review](120_cccb2bb-demo-prompts/REVIEW-REPORT.md) · [Revision](120_cccb2bb-demo-prompts/REVISION-REPORT.md) |
