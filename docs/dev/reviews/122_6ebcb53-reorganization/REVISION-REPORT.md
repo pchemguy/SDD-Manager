@@ -33,3 +33,5 @@ Replaced the packaged README’s agent-entry paragraph with the three requested 
 V-004 amendment: added the requested coordinator point to the same README paragraph, naming sdd-manage and its workflow-selection, coordination and routing role. Verified against the current coordinator entry and checked diff whitespace.
 
 Human-requested README cleanup: removed both standalone environment-policy paragraphs from the root README. Verified the exact scoped deletion and diff whitespace; template activation remains unchanged.
+
+Human-requested README cleanup: removed the root README’s source-development navigation paragraph. Verified exact deletion and diff whitespace.
