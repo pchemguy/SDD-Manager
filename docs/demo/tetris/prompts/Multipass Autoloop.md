@@ -23,6 +23,7 @@ Keep this initial scope minimal and coherent. The enhancements and configuration
 #### Pass 2 - Scope extension: Modern rule extensions
 
 - Hold piece.
+- Next-piece preview.
 - Ghost piece.
 - 7-bag piece randomization.
 - Wall kicks.
@@ -53,8 +54,6 @@ Provide a settings panel with controls for:
 4. Hard-drop locking policy: follow the selected general locking policy, or lock immediately after hard drop.
 5. General locking policy: lock on a failed downward movement attempt, or after one full gravity interval from becoming grounded.
 6. Hold piece: on or off.
-
-Add next-piece preview if not already available.
 
 Use sensible defaults. Keep settings within the current page session; do not persist them across page reloads in this pass.
 
