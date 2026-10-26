@@ -1,5 +1,5 @@
 # SDD Manager handoff
 
-Campaign **120 — demo prompts** is finalized for amendment closure into main. V-001–V-006 are complete; [revision evidence](reviews/120_cccb2bb-demo-prompts/REVISION-REPORT.md) records scope and checks. No unresolved findings remain. The human next authorized a new comprehensive prerelease campaign, repairs, patch bump, release preparation, campaign closure and release publication.
+Campaign **121 — comprehensive prerelease** is active on `revision/121_a5bfe1a-prerelease`; main creation/return baseline: `a5bfe1a2e9c08424ebc3b4dd997f0150e68be11c`. Campaign 120 is closed. No suspended parent. Standard reporting.
 
-Original opening: `ce4d4ac08b74fae1d1d6f77ede9c3183ad925a8e`; original baseline: `cccb2bbc48e2d2c3984b82d2c0275fba1bc753fa`; prior closure/reopening checkpoint: `4bfebd6e0dfdacb57419d83f63a69cf2e9502cdc`. Branch: `revision/120_cccb2bb-demo-prompts`; parent/return: main. Closure requires the final merge’s verified publication. Preserve all closed records in the upcoming campaign.
+The human authorized comprehensive review, fixes, patch bump to 0.15.4, release preparation, campaign closure and GitHub release. [Review plan](reviews/121_a5bfe1a-prerelease/REVIEW-PLAN.md) owns the three review units; [report](reviews/121_a5bfe1a-prerelease/REVIEW-REPORT.md) owns evidence/findings. Publish every checkpoint before further work; preserve closed records. Use the single repository release workflow and verify its final body, source and assets.
