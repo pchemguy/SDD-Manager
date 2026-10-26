@@ -1,0 +1,37 @@
+# Browser-extension demo prompts revision report
+
+Campaign **124_d965dfa**; baseline `d965dfa86bb31e281c7d56018780429f1df8a16f`; branch `revision/124_d965dfa-browser-extension-prompts`; return main. [Plan](REVISION-PLAN.md).
+
+## V-001 — Sidebar extension research
+
+Integrated both supplied discussions in [BROWSER_EXTENSION.md](research/BROWSER_EXTENSION.md). Reconfirmed platform support online on 2026-10-26 using official Chrome, Chromium, Microsoft, Mozilla and Playwright documentation. Recorded API/manifest differences, shared-code adaptation, storage and cookie/URL decisions, panel lifecycle/focus/layout, background differences, packaged workers/WASM/CSP, permissions, actual-extension acceptance and signing/distribution boundaries. Fourteen official source links support the document; recommendations are distinguished from platform facts and accepted prompt scope.
+
+Verified source coverage and Markdown whitespace. No extension built, installed or executed; no browser screenshots/runtime evidence claimed. No prompt changes or store publication. Publish/read back the containing action commit; campaign remains open.
+
+## V-002 — Three-form Autodoc prompt
+
+Created Autodoc_3in1.md from Autodoc.md. Replaced only the existing delivery paragraph with the exact supplied three-form requirement and one adjacent platform-adaptation paragraph. Extension persistence/file-operation guidance applies only when its capability is in the current increment; persistent-score storage is conditional, preserving the session leaderboard. Also addresses pause/reopen, cookie/URL and Save/Restore adaptations and narrow-sidebar layout at the platform definition.
+
+Verified reversible replacement reproduces the source prompt exactly, original Autodoc.md matches its committed bytes, and diff whitespace passes. No implementation or browser runtime checks claimed. Publish/read back this action commit; campaign remains open.
+
+## V-003 — Platform release assets
+
+Inserted the accepted paragraph verbatim under Versioning and releases in Autodoc_3in1.md. Releases must include applicable browser, Windows Electron and Chromium/Firefox extension artifacts for delivered platforms, installation instructions and clear development/signing/distribution status. Packaged artifacts require verification before delivery claims. Exact reversible insertion and diff whitespace checks pass; other prompts are unchanged. No actual build or release performed. Publish/read back the action commit; campaign remains open.
+
+## V-004 — Featured three-form companion
+
+Renamed Autodoc_3in1.md to Autodoc 3in1.md without content changes. Created Featured Autodoc 3in1.md from the original featured prompt, adding the same platform and release requirements and conditional extension adaptations in Greenfield. Adjusted only the layout reference to point to subsequent feature requests. All feature request sections remain unchanged.
+
+Verified byte-identical rename, exact reversible companion substitutions and unchanged feature sections. No maintained caller used the old filename; earlier action records retain their historical names. Diff whitespace passes; no runtime checks required. Publish/read back this action commit; campaign remains open.
+
+## V-005 — README navigation
+
+Added Autodoc 3in1 and Featured Autodoc 3in1 adjacent to their original variants in both Quick Start tables. Added a shared explanation of browser, Windows Electron and Chromium/Firefox sidebar delivery and verified phase release assets. Root links are repository-relative; packaged links use hosted repository paths. Verified both target files exist, matching descriptions and straight quotes, and diff whitespace. No runtime checks required. Publish/read back this action commit; campaign remains open.
+
+V-005 follow-up: clarified in both READMEs that standard prompts deliver browser plus Windows Electron, while 3in1 additionally delivers Chromium/Firefox sidebar extensions. Verified the identical clarification and diff whitespace.
+
+## Final verification and closure
+
+The human authorized closure after V-001–V-005. Verified both three-form prompts contain the platform, release-artifact and capability-scope requirements; both READMEs link both variants and distinguish standard browser/Electron delivery. Original prompts remain unchanged against the campaign baseline. Diff whitespace passes. No application implementation, extension runtime or store publication claimed.
+
+Opening commit: 226bb2d559ce17f30e4384cee7443c80cc597aa9. Publish final records before explicit main integration; the verified two-parent merge, equal merged/campaign trees, target readback and return to main establish closure. A separately allocated comprehensive review campaign follows; no release selected.

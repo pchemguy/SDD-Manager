@@ -1,7 +1,7 @@
 # SDD Manager handoff
 
-Campaign **123 — Tetris demo prompts** is complete; return target is main. Original baseline: `0507f769b35d5139340b2532f85ebbc8bc454901`; opening commit: `b12b37517d0d711c2489cf48951044839b4208af`. No suspended parent. Standard reporting.
+Campaign **124 — Browser-extension demo prompts** is complete; return target main. Original baseline: `d965dfa86bb31e281c7d56018780429f1df8a16f`; opening: `226bb2d559ce17f30e4384cee7443c80cc597aa9`. No suspended parent. Standard reporting.
 
-[Revision evidence](reviews/123_0507f76-tetris-demo-prompts/REVISION-REPORT.md) records V-001–V-003: the Autodoc baseline heading, retained Electron packaging research and the exact browser/Windows Electron delivery paragraph in all four prompts. Exact baseline comparisons and diff whitespace pass; prior closed campaign records are unchanged. No application build, Electron runtime verification or comprehensive review is claimed.
+[Revision evidence](reviews/124_d965dfa-browser-extension-prompts/REVISION-REPORT.md) records official-source sidebar research, Autodoc 3in1 and Featured Autodoc 3in1, scoped platform adaptations and release assets, and both README updates. Prompt/README checks and diff whitespace pass; no extension or application runtime evidence is claimed.
 
-The human authorized closure. Publish/read back final records, explicitly merge the verified campaign tip into refreshed main, verify the merged changes and publish/read back main. Git merge parents and remote readback establish integration. Retain the campaign branch and published v0.15.4. No active campaign, application implementation or new release is selected after closure.
+The human authorized closure, then a new comprehensive review, fixes and closure. Publish final records, explicitly merge into refreshed main, verify equal trees and publish/read back main before allocating the review campaign. Retain closed records, branches and published releases. No new release is authorized.

@@ -23,12 +23,16 @@ Try SDD Manager with the browser-based Tetris or calculator demo, or use the min
 
 Choose how to develop the Tetris game: Interactive, Autodoc and Multipass Autoloop define the complete target scope upfront and differ in documentation preparation. Featured Autodoc starts with a classic baseline, then adds capabilities through separately submitted feature campaigns.
 
+The standard prompts deliver a browser app and a Windows Electron desktop package. The 3in1 variants additionally deliver sidebar extensions for Chromium and Firefox and require verified release assets for the platforms delivered in each phase.
+
 | Prompt | How to use it |
 | --- | --- |
 | [Interactive](docs/demo/tetris/prompts/Interactive.md) | Submit the complete prompt and review each document checkpoint. |
 | [Autodoc](docs/demo/tetris/prompts/Autodoc.md) | Submit the complete prompt. After project-brief approval, the agent proceeds through the preapproved document checkpoints to TASKS, then stops before final documentation-package QC. |
+| [Autodoc 3in1](<docs/demo/tetris/prompts/Autodoc 3in1.md>) | Follow the Autodoc workflow above with all three delivery forms. |
 | [Multipass Autoloop](<docs/demo/tetris/prompts/Multipass Autoloop.md>) | Submit the complete prompt with nine cumulative documentation passes. Approve the first project brief; the remaining predefined passes run autonomously, stopping before final documentation-package QC. |
 | [Featured Autodoc](<docs/demo/tetris/prompts/Featured Autodoc.md>) | Submit Greenfield first for a classic baseline, then submit each feature request separately, in order, when ready to develop it. |
+| [Featured Autodoc 3in1](<docs/demo/tetris/prompts/Featured Autodoc 3in1.md>) | Follow the Featured Autodoc sequence above with all three delivery forms. |
 
 See the [Tetris demo guide](docs/demo/tetris/README.md) for staged exercises and gameplay scope.
 
