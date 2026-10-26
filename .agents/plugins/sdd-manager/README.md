@@ -325,12 +325,6 @@ Source acceptance/development/CI files are excluded from the archive; links to t
 
 The [skill routing table](PLUGIN.md#skill-routing) links all 15 owners. sdd-manage coordinates; sdd-orient and sdd-conventions establish shared context/criteria. Design, specification, planning and tasks have separate owners; implementation, steering and feature incorporation own execution changes. Testing, verification, documentation, reporting and hosting/release skills supply focused supporting work.
 
-## Status and evidence
-
-All 15 skills are included. Structural/local verification and fresh-agent workflows through explicit skill-source loading have been exercised. Historical independent acceptance covered 27 scoped cases; the current TextStats catalog supports 33 cases, including release-message and optional client scenarios. Added coverage does not inherit historical passes. Revised-source live acceptance and installed-client discovery/routing/activation remain separate evidence gaps; retained journals are not complete native transcripts.
-
-See the [TextStats overview and qualified historical evidence](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/TEXTSTATS.md) and source campaign records for exact tested versions and limitations. Static schema/package checks do not establish client compatibility.
-
 ## Testing and contributing
 
 Source contributors explicitly load [acceptance/AGENTS.md](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/AGENTS.md) before work on SDD Manager, including work outside acceptance/. It owns verification commands, publisher dependencies and acceptance routing. [Testing with TextStats](https://github.com/pchemguy/SDD-Manager/blob/main/acceptance/TEXTSTATS.md) introduces the dedicated test project and its coordinator entry.

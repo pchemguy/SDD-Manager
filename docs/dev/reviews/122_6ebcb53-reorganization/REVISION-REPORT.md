@@ -41,3 +41,7 @@ Human-requested README cleanup: removed the discovery-protocol and plugin-entry 
 ## V-005 — Packaged Quick Start
 
 Replaced the complete Getting started section with the root Quick Start, preserving its text except links: demo links point to hosted repository documents and the project template is package-relative. Removed the former coordinator command examples and utility/setup exposition from this introductory section. Verified equality with the root section after link normalization, all linked demo/template paths against current source, straight quotes and diff whitespace. Documentation-only change; no runtime checks required. Publish/read back the action commit; campaign 122 remains open.
+
+## V-006 — Acceptance evidence consolidation
+
+Removed Status and evidence from the packaged README. TEXTSTATS.md already retains the 27 historical cases, explicit skill-source loading, current 33-case catalog, no inherited passes, revised-source and installed-client evidence gaps, and incomplete-transcript qualification. Added the missing explicit distinction that structural/local schema and package checks do not establish client compatibility or live acceptance. The skill inventory remains elsewhere in the README. Verified scoped diff and whitespace; no runtime behavior changed. Publish/read back the action commit; campaign 122 remains open.

@@ -33,3 +33,7 @@ V-004 amendment: also identify sdd-manage as the coordinator skill that selects 
 ## V-005 — Align packaged Quick Start
 
 Replace the packaged README’s Getting started section with the root README’s Quick Start. Preserve its setup steps, PAT guidance, four Tetris prompts, calculator guide and own-project template; adapt links for a standalone plugin package. Verify content alignment, link targets and whitespace; publish without closing.
+
+## V-006 — Consolidate acceptance evidence
+
+Remove Status and evidence from the packaged README. Compare it with acceptance/TEXTSTATS.md and integrate useful missing evidence limits there without duplicating existing historical coverage or skill inventory. Verify the scoped deletion and retained evidence; publish with campaign open.
