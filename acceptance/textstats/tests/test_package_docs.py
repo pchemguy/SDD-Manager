@@ -12,7 +12,8 @@ class PackageDocumentation(Sandbox):
         source = Path(__file__).resolve().parents[3]
         pin, files = core.package(source, {'plugin_revision': 'HEAD', 'source_mode': 'dirty'})
         package = source / pin['package_subdirectory']
-        for name in ('assets/WINDOWS_SHELL_POLICY.md', 'assets/BROWSER_DEV_POLICY.md',
+        for name in ('assets/playwright.md', 'assets/vite-worker-loading.md',
+                     'assets/WINDOWS_SHELL_POLICY.md', 'assets/BROWSER_DEV_POLICY.md',
                      'assets/AGENTS_TEMPLATE.md', 'assets/HANDOFF_TEMPLATE.md', 'assets/DOCS_TASKS_TEMPLATE.md',
                      'assets/DOCS_PREPARATION_TEMPLATE.md', 'assets/DOCS_TRACKING_TEMPLATE.json',
                      'assets/ai-logs/AGENTS_TEMPLATE.md', 'assets/ai-logs/EXPLORE_DRIVE_TEMPLATE.md',

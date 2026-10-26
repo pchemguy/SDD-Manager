@@ -79,6 +79,7 @@ class PackageTests(Contract):
         manifest=json.dumps({"$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json", "name":"sdd-manager", "version":"0.15.0"}).encode()
         for name in ('LICENSE','README.md','PLUGIN.md','assets/Greenfield Project Prompt Template.md',
                      'assets/SDD-MANAGER.md','assets/AI_DISCLOSURE.md',
+                     'assets/playwright.md', 'assets/vite-worker-loading.md',
                      'assets/WINDOWS_SHELL_POLICY.md','assets/BROWSER_DEV_POLICY.md',
                      'assets/AGENTS_TEMPLATE.md','assets/DOCS_TASKS_TEMPLATE.md','assets/DOCS_PREPARATION_TEMPLATE.md','assets/HANDOFF_TEMPLATE.md','assets/SKILL_DISCOVERY_PROTOCOL.md',
                      'assets/ai-logs/AGENTS_TEMPLATE.md','assets/ai-logs/EXPLORE_DRIVE_TEMPLATE.md',
@@ -149,6 +150,8 @@ class PackageTests(Contract):
             self.assertEqual(z.read('sdd-manager/README.md'),b'README.md\n')
             self.assertEqual(z.read('sdd-manager/PLUGIN.md'),b'PLUGIN.md\n')
             self.assertNotIn('sdd-manager/AGENTS.md',z.namelist())
+            self.assertIn('sdd-manager/assets/playwright.md',z.namelist())
+            self.assertIn('sdd-manager/assets/vite-worker-loading.md',z.namelist())
             self.assertIn('sdd-manager/assets/WINDOWS_SHELL_POLICY.md',z.namelist())
             self.assertIn('sdd-manager/assets/BROWSER_DEV_POLICY.md',z.namelist())
             self.assertNotIn('sdd-manager/WINDOWS_SHELL_POLICY.md',z.namelist())

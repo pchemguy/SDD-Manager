@@ -32,4 +32,4 @@ Maintain abbreviated repository README.md, full packaged README.md and packaged 
 
 The Git repository root owns development documents, acceptance and CI. The complete plugin source is `.agents/plugins/sdd-manager/`; its manifest, entries, skills and assets are relative to that package root.
 
-BROWSER_DEV_POLICY.md and WINDOWS_SHELL_POLICY.md are bundled as assets for project-level instructions. Do not link to or load them from plugin entries, skills or workflow references. AGENTS_TEMPLATE.md retains the explicit project-level policy links.
+BROWSER_DEV_POLICY.md, WINDOWS_SHELL_POLICY.md, playwright.md and vite-worker-loading.md are bundled in assets/ for project-level instructions. Do not link to or load them from plugin entries, skills or workflow references. AGENTS_TEMPLATE.md retains the explicit project-level policy links.

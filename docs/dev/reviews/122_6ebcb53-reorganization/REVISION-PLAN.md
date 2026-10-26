@@ -19,3 +19,7 @@ The human requested moving `sdd-manage/references/initialization/ai-logs.md` up 
 Move BROWSER_DEV_POLICY.md and WINDOWS_SHELL_POLICY.md from the repository root into `.agents/plugins/sdd-manager/assets/`, preserving their contents. Add the human-supplied Windows shell and browser development sections to AGENTS_TEMPLATE.md. Update maintained navigation, Windows test/CI paths and package assertions. Verify exact policy preservation, template links in their destination-root context, support/publisher suites and applicable Windows contracts. Publish without closing or releasing.
 
 The human additionally prohibits plugin links to these policies. Keep policy links only in project-facing AGENTS_TEMPLATE.md and source-repository guidance; do not add them to the packaged README, PLUGIN.md, skills or workflow references. Record this boundary in source contributor instructions.
+
+## V-003 — Move environment guides to project-instruction assets
+
+Move sdd-implement/references/environment/ directly into assets/ unchanged. Remove plugin workflow routing to these guides; activate them conditionally from AGENTS_TEMPLATE.md for selected Playwright execution or observed Vite worker-loading failures. Preserve general environment recovery. Extend the source-only no-plugin-reference boundary and package assertions. Verify content preservation, activation links, absence of workflow references and support/publisher checks; publish with campaign open.
