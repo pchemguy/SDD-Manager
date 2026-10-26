@@ -6,7 +6,7 @@ SDD Manager is a learning-by-doing experiment in specification-driven developmen
 
 In the source repository, the complete plugin package is at `.agents/plugins/sdd-manager/`, available for agents to load when working on SDD Manager itself. A separate agent installation remains an option. This checkout layout does not configure automatic loading; installed or extracted packages begin at their own plugin root.
 
-The plugin defines a non-standard [PLUGIN.md](PLUGIN.md) entry, analogous to a skill’s SKILL.md. PLUGIN.md provides instructions and navigation for the plugin and its skills, just as SKILL.md does for a skill and its references. It also defines common composite workflows involving multiple skills. The **sdd-manage** coordinator skill selects and coordinates these workflows, routing work to the responsible skills.
+The plugin defines a non-standard [PLUGIN.md](PLUGIN.md) entry, analogous to a skill's SKILL.md. PLUGIN.md provides instructions and navigation for the plugin and its skills, just as SKILL.md does for a skill and its references. It also defines common composite workflows involving multiple skills. The **sdd-manage** coordinator skill selects and coordinates these workflows, routing work to the responsible skills.
 
 Development uses [SDD Manager](assets/SDD-MANAGER.md). See the [AI-assisted development disclosure](assets/AI_DISCLOSURE.md).
 
@@ -56,21 +56,21 @@ The [canonical workflow model](skills/sdd-manage/references/workflows.md#core-de
 
 | Objective | Example request | Result |
 | --- | --- | --- |
-| Read a workflow before development | “Explain the greenfield workflow and its approval checkpoints; do not start development.” | Sources read, applicable stages/checkpoints, scope and next step in chat; no project changes. |
-| Explore and prepare a project | “Compare approaches, then prepare the project through TASKS.” | Accepted design, behavior, delivery strategy, physical ownership, and executable tasks. |
-| Prepare a feature | “Define ZIP support and its feature task list.” | Scoped requirements and the necessary feature design, plan, and tasks. |
-| Implement a range | “Implement the next three tasks and stop.” | Verified task commits on the phase/feature branch; incomplete phases pause, while eligible complete boundaries explicitly integrate and publish. |
-| Resume interrupted work | “Resume milestone 2.2 without discarding pending work.” | Existing work inspected and continued before new tasks are selected. |
-| Amend at a checkpoint | “Remove encrypted streams from the implemented scope, including tests and documentation.” | Verified amendment explicitly merged into the paused implementation branch, published, then control returned to the human. |
-| Integrate an accepted feature | “Incorporate FEATURE-SPEC into SPEC only.” | Selected main documents reconciled without unrelated task-list changes. |
-| Review and revise a project | “Plan a systematic review,” “Review this protocol,” or “Implement accepted findings.” | Retained campaign plans/reports, stable findings, and authorized verified revisions incorporated into governing documents. |
-| Review or maintain a scope | “Review PLAN,” “Verify this phase,” or “Align README.” | Findings, evidence, or the explicitly requested maintenance. |
-| Review a release candidate | “Run a comprehensive prerelease review of this candidate.” | Complete current-product coverage, candidate-specific findings and readiness; published report, with repairs and release kept within separately authorized scope. |
-| Prepare a release message | “Prepare release message,” “Draft release notes,” or “Update the release notes.” | Complete retained Markdown, with root `RELEASE-NOTES.md` as the default final path and optional staging within an active revision directory; curated changes and applicable overview, compatibility, installation and limitations, without publication. |
-| Collect release highlights | “Summarize key changes since the latest release; update the draft incrementally.” | Provider-independent Git range, curated ignored YAML checkpoint and highlights only; no hosting access or publication required. |
-| Prepare release packaging | “Verify this ZIP and prepare a workflow that builds it.” | Assessed package contents, stable asset names, build/checksum procedure and verified workflow preparation; interactive development when needed. |
-| Create a GitHub release | “Create release v1.2.3 from the verified commit using the configured packages.” | One publisher, complete assets, release state/readback and applicable stable download URLs; actual CI/download verification limits. |
-| Synchronize GitHub tracking | “Create issues and milestones for these tasks.” | Phase labels, milestones, task issues, and verified task associations. |
+| Read a workflow before development | "Explain the greenfield workflow and its approval checkpoints; do not start development." | Sources read, applicable stages/checkpoints, scope and next step in chat; no project changes. |
+| Explore and prepare a project | "Compare approaches, then prepare the project through TASKS." | Accepted design, behavior, delivery strategy, physical ownership, and executable tasks. |
+| Prepare a feature | "Define ZIP support and its feature task list." | Scoped requirements and the necessary feature design, plan, and tasks. |
+| Implement a range | "Implement the next three tasks and stop." | Verified task commits on the phase/feature branch; incomplete phases pause, while eligible complete boundaries explicitly integrate and publish. |
+| Resume interrupted work | "Resume milestone 2.2 without discarding pending work." | Existing work inspected and continued before new tasks are selected. |
+| Amend at a checkpoint | "Remove encrypted streams from the implemented scope, including tests and documentation." | Verified amendment explicitly merged into the paused implementation branch, published, then control returned to the human. |
+| Integrate an accepted feature | "Incorporate FEATURE-SPEC into SPEC only." | Selected main documents reconciled without unrelated task-list changes. |
+| Review and revise a project | "Plan a systematic review," "Review this protocol," or "Implement accepted findings." | Retained campaign plans/reports, stable findings, and authorized verified revisions incorporated into governing documents. |
+| Review or maintain a scope | "Review PLAN," "Verify this phase," or "Align README." | Findings, evidence, or the explicitly requested maintenance. |
+| Review a release candidate | "Run a comprehensive prerelease review of this candidate." | Complete current-product coverage, candidate-specific findings and readiness; published report, with repairs and release kept within separately authorized scope. |
+| Prepare a release message | "Prepare release message," "Draft release notes," or "Update the release notes." | Complete retained Markdown, with root `RELEASE-NOTES.md` as the default final path and optional staging within an active revision directory; curated changes and applicable overview, compatibility, installation and limitations, without publication. |
+| Collect release highlights | "Summarize key changes since the latest release; update the draft incrementally." | Provider-independent Git range, curated ignored YAML checkpoint and highlights only; no hosting access or publication required. |
+| Prepare release packaging | "Verify this ZIP and prepare a workflow that builds it." | Assessed package contents, stable asset names, build/checksum procedure and verified workflow preparation; interactive development when needed. |
+| Create a GitHub release | "Create release v1.2.3 from the verified commit using the configured packages." | One publisher, complete assets, release state/readback and applicable stable download URLs; actual CI/download verification limits. |
+| Synchronize GitHub tracking | "Create issues and milestones for these tasks." | Phase labels, milestones, task issues, and verified task associations. |
 
 Preparation and review stop before implementation unless your request includes it. Steering finishes the amendment and returns control to you; you separately decide when to resume the task list. Transferring feature tasks into the main task list requires both lists in scope so each task retains one executable owner.
 
@@ -82,7 +82,7 @@ Choose a [reporting profile](skills/sdd-manage/references/coordination.md#report
 | **Standard** (default) | Concise scope briefs, useful progress and rationale for consequential decisions |
 | **Explicit** | Clearly identified scope/checkpoints, fuller rationale, relevant sources and verification evidence |
 
-For example: “Use SDD Manager with minimal reporting,” “Switch to explicit reporting,” or “Return to standard reporting.” The selection continues through the current conversation/workflow and handoffs while context is available. “Explain this decision fully, then resume minimal reporting” overrides one response. None of the profiles requires repeating unchanged context every response. At composite-workflow entry, material switching or context recovery, the agent uses Explicit reporting, announces it and briefly explains the three choices. Before dependent work it declares the following level: Standard by default, or your established selection. This introduction does not repeat during routine continuation.
+For example: "Use SDD Manager with minimal reporting," "Switch to explicit reporting," or "Return to standard reporting." The selection continues through the current conversation/workflow and handoffs while context is available. "Explain this decision fully, then resume minimal reporting" overrides one response. None of the profiles requires repeating unchanged context every response. At composite-workflow entry, material switching or context recovery, the agent uses Explicit reporting, announces it and briefly explains the three choices. Before dependent work it declares the following level: Standard by default, or your established selection. This introduction does not repeat during routine continuation.
 
 For detailed entry conditions and stopping rules, see the [workflow catalog](skills/sdd-manage/references/workflows.md).
 
@@ -112,7 +112,7 @@ Greenfield preparation walks you through PROJECT, ARCHITECTURE, DECOMPOSITION, S
 
 Existing or interrupted preparation assesses actual progress and continues using acceptable inputs. Requested interactive reviews come first; important startup issues can prompt concerns. Feature preparation reviews only necessary deltas and reuses sufficient main inputs. See [human document review](skills/sdd-manage/references/human-document-review.md).
 
-You may **preapprove future human checkpoints at any time**, individually or as a scoped set—for example, “Preapprove the remaining document checkpoints; stop before implementation.” The agent still reports each result and performs required QC, commits, pushes and tracking operations. Preapproval does not expand your implementation range.
+You may **preapprove future human checkpoints at any time**, individually or as a scoped set—for example, "Preapprove the remaining document checkpoints; stop before implementation." The agent still reports each result and performs required QC, commits, pushes and tracking operations. Preapproval does not expand your implementation range.
 
 ### Doc-design modes
 
@@ -153,7 +153,7 @@ The agent follows the project's AGENTS.md to `docs/dev/HANDOFF.md`, then recover
 
 Each workflow branch keeps its own copy until integration into its recorded creation parent. Starting on default with unfinished branches, the agent presents candidates and asks which to continue unless you already selected one. Returning from a child restores the parent's scope and pending human checkpoint; it does not start more tasks automatically.
 
-You can request “prepare a handoff” for an additional transfer check, but it is not required for normal continuation. Publish the selected branch and make the required plugin/tools available to the receiving agent; an ordinary clone cannot supply unpublished or ignored files, credentials or unavailable capabilities. See [continuity](skills/sdd-manage/references/continuity.md) for the protocol.
+You can request "prepare a handoff" for an additional transfer check, but it is not required for normal continuation. Publish the selected branch and make the required plugin/tools available to the receiving agent; an ordinary clone cannot supply unpublished or ignored files, credentials or unavailable capabilities. See [continuity](skills/sdd-manage/references/continuity.md) for the protocol.
 
 ## Workflow guide
 
@@ -295,9 +295,9 @@ Failed verification returns to scoped repair; unresolved publication/readback st
 
 ### Highlights and release messages
 
-“Collect release highlights” produces curated Git changes only. “Prepare release message” assembles a complete message, adding applicable overview, compatibility, installation and limitation sections. Its default final path is root RELEASE-NOTES.md; release documents may be prepared and committed inside an active revision directory, then moved during the release commit. Subsequent preparation refreshes coverage and preserves applicable human edits; the file remains until refreshed again. Explicit templates/paths and supplied-text-only editing retain their narrower scope.
+"Collect release highlights" produces curated Git changes only. "Prepare release message" assembles a complete message, adding applicable overview, compatibility, installation and limitation sections. Its default final path is root RELEASE-NOTES.md; release documents may be prepared and committed inside an active revision directory, then moved during the release commit. Subsequent preparation refreshes coverage and preserves applicable human edits; the file remains until refreshed again. Explicit templates/paths and supplied-text-only editing retain their narrower scope.
 
-A release request checks local source coverage and the stated version; a matching version alone does not prove freshness. Release tags always target release commits on the repository’s actual default branch: either a direct commit or the merge from the designated primary development branch. The finalized Markdown body is shared by that commit and the GitHub message; a revision/development tip is not a release source by itself. See [release-message preparation](skills/sdd-forge/references/release-message.md) and the narrower [Git highlights workflow](skills/sdd-forge/references/release-highlights.md).
+A release request checks local source coverage and the stated version; a matching version alone does not prove freshness. Release tags always target release commits on the repository's actual default branch: either a direct commit or the merge from the designated primary development branch. The finalized Markdown body is shared by that commit and the GitHub message; a revision/development tip is not a release source by itself. See [release-message preparation](skills/sdd-forge/references/release-message.md) and the narrower [Git highlights workflow](skills/sdd-forge/references/release-highlights.md).
 
 ### Packaging and publication
 
