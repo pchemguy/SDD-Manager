@@ -14,13 +14,13 @@ Manage the project's versioning, choosing an appropriate initial version and inc
 
 Develop a browser-based Tetris game. The following cumulative passes define how its target scope evolves during document preparation.
 
-#### Pass 1 — Playable classic baseline
+#### Pass 1 - Playable classic baseline
 
 Define a playable classic Tetris baseline with falling tetrominoes, movement, rotation, gravity, line clearing, scoring, game over and restart.
 
 Keep this initial scope minimal and coherent. The enhancements and configuration capabilities listed in later passes are future additions at this point.
 
-#### Pass 2 — Scope extension: Gameplay enhancements
+#### Pass 2 - Scope extension: Gameplay enhancements
 
 - Hold piece.
 - Ghost piece.
@@ -29,11 +29,11 @@ Keep this initial scope minimal and coherent. The enhancements and configuration
 - Hard drop.
 - Full gravity interval lock delay: by default, lock after one full gravity interval from becoming grounded, including after hard drop.
 
-#### Pass 3 — Scope extension: Conditional ghost visibility
+#### Pass 3 - Scope extension: Conditional ghost visibility
 
 Dynamically hide the ghost when its projected landing position is in the upper half of the board, above the midline, and show it again when that position returns to the lower half.
 
-#### Pass 4 — Scope extension: Penetrator mode
+#### Pass 4 - Scope extension: Penetrator mode
 
 Allow the player to turn the current falling piece into a penetrator with a hotkey, provided a penetrator bonus is available. A penetrator can pass through occupied cells without destroying them. This ability lasts until the piece locks; its final position must be entirely within the board without overlapping occupied cells.
 
@@ -43,7 +43,7 @@ Clearing four lines at once awards one penetrator bonus, granting one activation
 
 Render penetrator pieces entirely white, and do not use white for regular pieces. Show the available bonuses in the game info and controls panel using one symbol per bonus, such as a lightning bolt. Update the indicator whenever a bonus is earned or spent.
 
-#### Pass 5 — Scope extension: Session-only game configuration
+#### Pass 5 - Scope extension: Session-only game configuration
 
 Provide a settings panel with controls for:
 
@@ -58,7 +58,7 @@ Add next-piece preview if not already available.
 
 Use sensible defaults. Keep settings within the current page session; do not persist them across page reloads in this pass.
 
-#### Pass 6 — Scope extension: Configuration persistence
+#### Pass 6 - Scope extension: Configuration persistence
 
 Replace session-only configuration with support for cookies and URL query parameters for all settings above. Restore saved settings or apply URL-supplied settings when the page is reloaded or the game is opened again. Use sensible defaults where neither source supplies a value.
 
@@ -72,11 +72,11 @@ Whenever the player changes a setting, save its selected value in the correspond
 
 Save explicit URL parameter values in the corresponding cookies, including values equal to the default. When a parameter is omitted, retain its saved cookie value rather than replacing it with the default.
 
-#### Pass 7 — Scope extension: Leaderboard
+#### Pass 7 - Scope extension: Leaderboard
 
 Show a leaderboard panel with the 10 best completed-game results, ranked by score. Update it after each game and keep the history only for the current session.
 
-#### Pass 8 — Scope extension: Persistence
+#### Pass 8 - Scope extension: Persistence
 
 Place **Save** and **Restore** buttons at the bottom of the settings panel. Hiding the settings panel also hides these buttons.
 
@@ -86,7 +86,7 @@ Preserve each result's stable ID, non-negative integer score and UTC game-comple
 
 Validate the entire file before changing results, settings, cookies or URL parameters. On failure, show a clear error and leave them unchanged. Saving and restoring are manual; restored results become the session leaderboard.
 
-#### Pass 9 — Scope extension: UI layout
+#### Pass 9 - Scope extension: UI layout
 
 Arrange the panels from left to right:
 
