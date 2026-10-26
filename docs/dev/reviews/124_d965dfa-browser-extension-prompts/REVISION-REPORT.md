@@ -23,3 +23,7 @@ Inserted the accepted paragraph verbatim under Versioning and releases in Autodo
 Renamed Autodoc_3in1.md to Autodoc 3in1.md without content changes. Created Featured Autodoc 3in1.md from the original featured prompt, adding the same platform and release requirements and conditional extension adaptations in Greenfield. Adjusted only the layout reference to point to subsequent feature requests. All feature request sections remain unchanged.
 
 Verified byte-identical rename, exact reversible companion substitutions and unchanged feature sections. No maintained caller used the old filename; earlier action records retain their historical names. Diff whitespace passes; no runtime checks required. Publish/read back this action commit; campaign remains open.
+
+## V-005 — README navigation
+
+Added Autodoc 3in1 and Featured Autodoc 3in1 adjacent to their original variants in both Quick Start tables. Added a shared explanation of browser, Windows Electron and Chromium/Firefox sidebar delivery and verified phase release assets. Root links are repository-relative; packaged links use hosted repository paths. Verified both target files exist, matching descriptions and straight quotes, and diff whitespace. No runtime checks required. Publish/read back this action commit; campaign remains open.

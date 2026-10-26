@@ -27,3 +27,7 @@ Add the accepted release-artifact paragraph to Versioning and releases in Autodo
 ## V-004 — Companion featured prompt and consistent filenames
 
 Rename Autodoc_3in1.md to Autodoc 3in1.md unchanged. Copy Featured Autodoc.md to Featured Autodoc 3in1.md and integrate the accepted three-form platform/release requirements in Greenfield, including capability-conditional extension adaptations. Preserve all separately submitted feature requests and the source prompt. Verify rename/content and bounded companion differences; publish without closing.
+
+## V-005 — Expose both variants in Quick Start
+
+Update root and packaged README Quick Start sections with both 3in1 prompt links and a concise explanation of the delivery forms and phase release assets. Retain the existing workflow distinctions and adapt links to each README location. Verify matched content, target paths and whitespace; publish without closing.
