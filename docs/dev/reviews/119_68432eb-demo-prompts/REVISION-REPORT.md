@@ -1,6 +1,6 @@
 # Demo prompt revision result
 
-Campaign **119_68432eb**, action **A-001**: local edits verified; revision publication and integration pending.
+Campaign **119_68432eb**, action **A-001**: complete and verified; closure requires the final main merge, publication and return.
 
 ## Changes and dispositions
 
@@ -16,4 +16,8 @@ Local checks passed: next-piece preview appears exactly once under modern extens
 
 ## Publication and boundary
 
-The review commit `369e47171ea8e37885de20a41a546d27203caea1` was pushed and verified by exact remote readback after the human explicitly directed publication. The earlier platform rejection is resolved by that instruction. This revision's commit/push is the next persistence step; integration, closure and release remain outside this stopping boundary.
+The review commit `369e47171ea8e37885de20a41a546d27203caea1` was pushed and verified by exact remote readback after the human explicitly directed publication. The earlier platform rejection is resolved by that instruction. Revision commit `7840da8a767de512cdee01e48e0251a29d31cfaf` was pushed and verified by exact remote readback. The human subsequently instructed closing the campaign and withdrew the move request; Featured Autodoc remains at its current prompt path. The finalization commit and explicit merge into main must be published/read back before closure is established. No release is requested.
+
+## Finalization — 2026-10-26
+
+A-001 is complete. Accepted findings R-001, R-002 and R-004 are resolved and checked; R-003 is rejected and superseded by explicit next-piece preview in modern extensions. The optional metadata refinement remains deferred. The full campaign diff is limited to Tetris prompt/guide changes and campaign 119 navigation/evidence. Original review input and all closed campaign records remain unchanged. The main target was verified remotely at `68432eb07859744bd7e6d6df8589919b34b3903d`. Final merged-state whitespace, prompt contracts, input preservation and closed-record checks remain required before the merge commit.
