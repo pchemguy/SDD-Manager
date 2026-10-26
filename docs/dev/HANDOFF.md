@@ -1,7 +1,9 @@
 # SDD Manager handoff
 
-**SDD Manager 0.15.4 is published as the latest stable release.** Campaigns 120 and 121 are closed; all requested work is complete. [Release outcome](reports/releases/v0.15.4.md) records source, workflow, asset hashes and evidence limits. [Release notes](../../RELEASE-NOTES.md) remain retained.
+Campaign **122 — reorganization** is complete; return target is main. Original baseline: `6ebcb5318fc29ff3c369d55dade449f768f4bbce`; opening commit: `27f3ba926615d869bd56030adf086ad021444e3d`. No suspended parent. Standard reporting.
 
-Current return branch: main. Campaign 120 closure: `a5bfe1a2e9c08424ebc3b4dd997f0150e68be11c`; campaign 121 closure: `2be95e0aa2d01b7b7b067191442d69d1b3675c19`. Release commit/tag target: `3c0c64560d34397630c493c48cd938115eaed770`; workflow run `40302524761` succeeded. Hosted body, tag/default-branch provenance, stable/latest state and both downloaded assets are verified.
+[Revision evidence](reviews/122_6ebcb53-reorganization/REVISION-REPORT.md) records V-001–V-007 and the human-requested README refinements. AI-log guidance moved up one directory; four environment policies/guides moved directly into plugin assets unchanged. Their activation comes from AGENTS_TEMPLATE.md, with plugin workflow links removed. Both READMEs were simplified; the packaged README now shares Quick Start, explains PLUGIN.md/coordinator and catalogs assets. Evidence qualifications belong in acceptance/TEXTSTATS.md.
 
-No suspended parent, unresolved finding, pending release operation or further selected work. Preserve the published tag and closed campaign records. The containing outcome commit is documentation after the release and does not replace its source.
+Final source verification: 139 support and 50 publisher tests passed on Linux/Python 3.12.14; maintained changed-document links and relocation content checks passed. Seven Windows contracts were skipped locally; no new browser or installed-client acceptance is claimed. Preserve all prior closed records and published v0.15.4, pinned to `3c0c64560d34397630c493c48cd938115eaed770`.
+
+The human authorized closure. Publish/read back final records, explicitly merge the verified campaign tip into refreshed main and verify/publish that result. The merge's parents and remote readback establish integration. After closure, no active campaign or further implementation/release is selected; await the next request. Retain the campaign branch.

@@ -42,7 +42,7 @@ Recover identities and actual file paths from retained records and Git; names al
 
 ## Preparation integration gate
 
-Before initial design-docs/main setup, main initialization performs the [default provenance scaffold](initialization/ai-logs.md#fresh-main-setup) on reserved `design-docs/ai-logs` unless an explicit human/project override disables or defers it. That narrowly scoped seed/merge is preliminary DOCS-001 work, not project-document preparation or completion. Unspecified choice does not skip setup. Apply the procedure below to normal preparation; provenance setup waives no pre-write, publication or ownership gate.
+Before initial design-docs/main setup, main initialization performs the [default provenance scaffold](ai-logs.md#fresh-main-setup) on reserved `design-docs/ai-logs` unless an explicit human/project override disables or defers it. That narrowly scoped seed/merge is preliminary DOCS-001 work, not project-document preparation or completion. Unspecified choice does not skip setup. Apply the procedure below to normal preparation; provenance setup waives no pre-write, publication or ownership gate.
 
 The default branch is the repository's actual configured default, commonly `main` or `master`, but any valid name is supported. Discover it from remote/project evidence and carry that exact branch and remote destination through merge, push and implementation handoff. The conventional preparation name `design-docs/main` denotes initial project preparation; its suffix does not select the default target.
 

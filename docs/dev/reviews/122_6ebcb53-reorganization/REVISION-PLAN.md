@@ -1,0 +1,43 @@
+# Reorganization revision campaign
+
+## Context and authority
+
+Campaign **122_6ebcb53**; branch `revision/122_6ebcb53-reorganization`. Creation parent and integration/return target: main at `6ebcb5318fc29ff3c369d55dade449f768f4bbce`, refreshed from origin before opening. No suspended parent. Reporting: Standard.
+
+The human requested a new revision campaign “to do some shuffling”. Campaign setup and publication are authorized. Subsequent human requests define the bounded actions below.
+
+## Final boundary
+
+The human requested closure after the accepted V-001–V-007 actions and README refinements. All actions are complete; finalize the evidence and integrate this campaign into its recorded parent main. No version bump or release is selected. Preserve published v0.15.4 and all prior closed records.
+
+## V-001 — Flatten AI-log initialization reference
+
+The human requested moving `sdd-manage/references/initialization/ai-logs.md` up one directory. Move it to `sdd-manage/references/ai-logs.md`, adjust its relative links and all maintained callers, including the tracking template and package-snapshot assertion. Preserve procedural text and closed records. Verify moved-file content except path changes, caller/link resolution, support and publisher checks; publish without closing the campaign.
+
+## V-002 — Bundle environment policies and integrate agent template
+
+Move BROWSER_DEV_POLICY.md and WINDOWS_SHELL_POLICY.md from the repository root into `.agents/plugins/sdd-manager/assets/`, preserving their contents. Add the human-supplied Windows shell and browser development sections to AGENTS_TEMPLATE.md. Update maintained navigation, Windows test/CI paths and package assertions. Verify exact policy preservation, template links in their destination-root context, support/publisher suites and applicable Windows contracts. Publish without closing or releasing.
+
+The human additionally prohibits plugin links to these policies. Keep policy links only in project-facing AGENTS_TEMPLATE.md and source-repository guidance; do not add them to the packaged README, PLUGIN.md, skills or workflow references. Record this boundary in source contributor instructions.
+
+## V-003 — Move environment guides to project-instruction assets
+
+Move sdd-implement/references/environment/ directly into assets/ unchanged. Remove plugin workflow routing to these guides; activate them conditionally from AGENTS_TEMPLATE.md for selected Playwright execution or observed Vite worker-loading failures. Preserve general environment recovery. Extend the source-only no-plugin-reference boundary and package assertions. Verify content preservation, activation links, absence of workflow references and support/publisher checks; publish with campaign open.
+
+## V-004 — Explain the plugin entry
+
+Replace the packaged README’s agent-entry paragraph with the human’s three requested points: PLUGIN.md is a non-standard analogue of SKILL.md, serves the corresponding role for the plugin and its skills, and defines common composite workflows involving multiple skills. Verify wording, local link and diff; publish with campaign open.
+
+V-004 amendment: also identify sdd-manage as the coordinator skill that selects and coordinates composite workflows and routes work to responsible skills.
+
+## V-005 — Align packaged Quick Start
+
+Replace the packaged README’s Getting started section with the root README’s Quick Start. Preserve its setup steps, PAT guidance, four Tetris prompts, calculator guide and own-project template; adapt links for a standalone plugin package. Verify content alignment, link targets and whitespace; publish without closing.
+
+## V-006 — Consolidate acceptance evidence
+
+Remove Status and evidence from the packaged README. Compare it with acceptance/TEXTSTATS.md and integrate useful missing evidence limits there without duplicating existing historical coverage or skill inventory. Verify the scoped deletion and retained evidence; publish with campaign open.
+
+## V-007 — Explain package assets
+
+Apply the human-approved Plugin package replacement: retain the brief package inventory, introduce skills/assets, list every Markdown/JSON asset with its purpose and briefly identify artwork. Remove the former manifest, client-loading and contributor detail. Verify complete asset coverage and publish with campaign open.

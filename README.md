@@ -42,14 +42,8 @@ Use the [Greenfield Project Prompt Template](<.agents/plugins/sdd-manager/assets
 
 ## Documentation and development
 
-The plugin source package is in [`.agents/plugins/sdd-manager/`](.agents/plugins/sdd-manager/README.md). It is intended to be available for agents to load from this checkout when working on SDD Manager itself. A separate agent installation remains an option; this layout does not configure automatic loading. Instruction reload is controlled by the user. See the [skill and plugin discovery protocol](SKILL_DISCOVERY_PROTOCOL.md) for repository-provided skills and plugins.
+The plugin source package is in [`.agents/plugins/sdd-manager/`](.agents/plugins/sdd-manager/README.md). It is intended to be available for agents to load from this checkout when working on SDD Manager itself. A separate agent installation remains an option; this layout does not configure automatic loading. Instruction reload is controlled by the user.
 
-See the **[full README](.agents/plugins/sdd-manager/README.md)** for capabilities, workflow diagrams, human checkpoints, reporting profiles, usage examples and packaging information. The [plugin entry](.agents/plugins/sdd-manager/PLUGIN.md) routes agent workflows.
-
-For source development, start with [AGENTS.md](AGENTS.md) and [acceptance/AGENTS.md](acceptance/AGENTS.md). [Campaign navigation](docs/dev/reviews/README.md) retains development evidence.
-
-The standalone [Windows shell policy](WINDOWS_SHELL_POLICY.md) applies only to Windows execution hosts and is external to the plugin.
-
-For browser-based applications and browser extensions, see the standalone [browser development policy](BROWSER_DEV_POLICY.md).
+See the **[full README](.agents/plugins/sdd-manager/README.md)** for capabilities, workflow diagrams, human checkpoints, reporting profiles, usage examples and packaging information.
 
 Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md) and [MIT license](LICENSE).

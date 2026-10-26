@@ -2,12 +2,12 @@ name: Windows shell contracts
 on:
   push:
     paths:
-      - 'WINDOWS_SHELL_POLICY.md'
+      - '.agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md'
       - 'tests/test_windows_shell_recovery.py'
       - '.github/workflows/windows-shell-recovery.yml'
   pull_request:
     paths:
-      - 'WINDOWS_SHELL_POLICY.md'
+      - '.agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md'
       - 'tests/test_windows_shell_recovery.py'
       - '.github/workflows/windows-shell-recovery.yml'
   workflow_dispatch:

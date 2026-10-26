@@ -4,6 +4,8 @@ TextStats exercises SDD Manager through fresh consumer workflows and independent
 
 ## Evidence and limits
 
+Structural and local verification, including static schema and package checks, does not establish client compatibility or live agent acceptance.
+
 The [historical runtime campaign](../docs/dev/reviews/008_98a5562/REVISION-REPORT.md) records 27 independently assessed scoped cases through explicit skill-source loading, live tracking/publication and controlled recovery. Installed-client discovery/routing/activation was untested, and journals were not complete native transcripts. The current catalog has 33 supported cases, including release-message and optional client scenarios; additions require new consumer evidence and inherit no historical passes.
 
 The [20261004 diagnostic](../docs/dev/reviews/021_85f2857/DIAGNOSTIC-REPORT.md) retains 20 Passed / seven Blocked for pinned 0.14.3; evidence was subsequently merged into test main. [Campaign 021](../docs/dev/reviews/021_85f2857/REVISION-REPORT.md) records the resulting harness/documentation amendments. [Campaign 010](../docs/dev/reviews/010_3f56922/REVISION-REPORT.md) retains source/consumer backend verification. These are historical source-qualified observations; revised-source live, release-consumer and installed-client acceptance remain separately pending. Read selected history only for a specific evidence question, not as current instructions.
