@@ -35,3 +35,7 @@ Move the platform phase/release sequence into the Platforms introduction and rem
 ## V-006 — Full Hello World prompt composition revision
 
 Apply the accepted full composition review: shorten the Project introduction, preserve baseline behavior, use sentence-case scope heading, consolidate sequencing/shared-code/cumulative-platform requirements in Platforms and focus its children on platform-specific delivery. Remove absent cookie/URL/import-export examples while preserving conditional persistence/file/lifecycle adaptations and session semantics. Keep release rules platform-neutral, qualify packaged-artifact verification under project environment policies and require explicit unverified-check reporting. Clarify preparation decisions and human review timing. Verify requirement retention, hierarchy, scope, whitespace and unchanged other prompts; publish without closing.
+
+## V-007 — Main-page and sidebar UI arrangement
+
+Add minimum UI layout guidance within Hello World's baseline scope: centered main panel with right-hand settings in browser/Electron; main panel embedded in an ordinary active webpage with settings in the extension sidebar. Revise generic extension guidance for page-side/sidebar cooperation, preserving website behavior and resolving permissions, supported pages, activation, communication and navigation/tab/sidebar lifecycle during preparation. Preserve existing functionality and release/platform sequence; verify exact change boundaries and scope separation, then publish without closing.
