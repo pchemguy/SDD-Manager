@@ -11,3 +11,9 @@ Verification: reversing only the baseline replacement and new delivery section r
 V-001 wording follow-up: shortened the Interactive and Autodoc section heading to Windows Electron at the human’s request. Delivery requirements and sequence are unchanged. Verified exact heading-only prompt changes and diff whitespace.
 
 V-001 consistency follow-up: standardized the Electron heading text as Windows Electron delivery across all four standard prompts, retaining the pass/feature prefixes where applicable. Verified all four headings and diff whitespace.
+
+## V-002 — Sequential three-form delivery
+
+Both 3in1 prompts begin with browser delivery and reusable logic/UI preparation for later Electron and extensions. Added Windows Electron delivery after layout, followed by Browser extension delivery as the final platform subsection; Featured Autodoc uses Feature 9 and Feature 10. Moved existing conditional persistence/file/lifecycle/layout adaptations into the final extension section and corrected its layout reference. Release-artifact requirements remain intact. Both READMEs and the Tetris guide explain the sequence.
+
+Verified browser → layout → Electron → extensions ordering, one copy of each release/adaptation requirement, preserved gameplay and Feature 1–8 content, Feature 1–10 numbering and unchanged 2in1 files. The first strict preservation assertion detected the added Markdown separator before Feature 9; inspection confirmed only that required blank line differs, and the precise boundary comparison now passes. Source commit d515009 was already published before this evidence follow-up; the initial report write did not run after that assertion. Diff whitespace passes. No runtime tests required for prompt-only changes. Publish/read back this evidence checkpoint; campaign remains open.
