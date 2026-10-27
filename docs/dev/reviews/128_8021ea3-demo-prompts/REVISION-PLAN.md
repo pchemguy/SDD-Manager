@@ -15,3 +15,7 @@ Publish/read back setup, then await the requested amendment. Preserve closed rec
 ## V-001 — Browser-first standard prompts with later Electron delivery
 
 Revise only the four standard browser/Electron prompts: baseline delivers the browser app while preparing shared logic/UI for future platform extension. Add Windows Electron delivery immediately after UI layout, as the next subsection in Interactive/Autodoc, Pass 10 in Multipass Autoloop and Feature 9 in Featured Autodoc. Preserve current gameplay and 3in1 prompts. Align both README and Tetris-guide delivery explanations and cumulative-pass counts. Verify exact scope, ordering, future-versus-current delivery, sharing and links; publish without closing.
+
+## V-002 — Sequence three-form platform delivery
+
+Apply the same browser-first/shared-code preparation to both 3in1 prompts. Add Windows Electron after layout and browser-extension delivery as the final subsection or Feature 10. Move conditional extension adaptations to that final section; retain existing gameplay, release-artifact requirements and earlier feature scopes. Align README/guide sequencing. Verify section order, one copy of each requirement and preservation of unrelated prompt content; publish without closing.

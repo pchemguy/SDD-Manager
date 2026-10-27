@@ -18,9 +18,7 @@ Each GitHub release must include the installable or deployable artifacts for eve
 
 Develop a browser-based Tetris game with a playable classic baseline and the enhancements below.
 
-Deliver the application as a browser app, a Windows Electron desktop package, and sidebar extensions for desktop Chromium and Firefox. Share application logic and UI across all versions, adapting layout, persistence, file operations and lifecycle behavior to each platform. Bundle all required runtime assets for the desktop and extension packages; users must not need a separate Node.js installation, local development server or backend. Resolve platform-specific behavior during document preparation.
-
-For extension versions, apply persistence and file-operation adaptations only when the corresponding capability is in scope for the current increment. Use extension-local storage for persistent settings and, if persistent scores are in scope, scores; preserve the specified session-only behavior until persistence is introduced. During document preparation, resolve pause/resume behavior, panel reopening and adaptations of cookie/URL configuration requirements and Save/Restore behavior. The layout below describes the browser and desktop versions; adapt it to a narrow, resizable sidebar while retaining access to the same in-scope capabilities.
+Initially deliver a browser app. Design application logic and UI for reuse across future delivery platforms, including a Windows Electron desktop app and sidebar extensions for desktop Chromium and Firefox, keeping platform-specific code separate so that most of the codebase can be shared.
 
 Treat this description as the complete target scope. Deliver the simplest sensible playable baseline first, then add capabilities through bounded phases that each provide a useful functionality increment.
 
@@ -102,6 +100,16 @@ Arrange the panels from left to right:
 | Controls/help | Right of settings |
 
 Keep the board and game info and controls panels visible. In the game info and controls panel, place individual show/hide toggle buttons for the leaderboard, settings and controls/help panels above the **Pause** and **Start/Restart** buttons. Keep the board centered when panels are hidden or shown.
+
+#### Windows Electron delivery
+
+Add an Electron packaged app for Windows as a second delivery platform after the browser UI layout is implemented and verified. Keep the application usable in a browser, bundle all required desktop runtime assets, and require no separate Node.js installation or development server. Share application logic and UI between browser and desktop versions, adapting platform-specific behavior as needed. Include the Windows package alongside the browser build in applicable GitHub releases.
+
+#### Browser extension delivery
+
+Add sidebar extensions for desktop Chromium and Firefox as the final delivery-platform extension, after Windows Electron delivery. Keep the browser and desktop versions available and share application logic and UI across all versions. Bundle all required extension runtime assets; users must not need a separate Node.js installation, local development server or backend. Include both extension packages in applicable GitHub releases.
+
+For extension versions, apply persistence and file-operation adaptations only when the corresponding capability is in scope for the current increment. Use extension-local storage for persistent settings and, if persistent scores are in scope, scores; preserve the specified session-only behavior until persistence is introduced. During document preparation, resolve pause/resume behavior, panel reopening and adaptations of cookie/URL configuration requirements and Save/Restore behavior. The layout established above describes the browser and desktop versions; adapt it to a narrow, resizable sidebar while retaining access to the same in-scope capabilities.
 
 ### Design clarification
 

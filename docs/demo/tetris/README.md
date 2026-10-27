@@ -36,18 +36,18 @@ These are alternative runs. Use separate repositories or clearly recorded starti
 
 As an alternative to the staged prompts below, use one of these standalone prompts. Interactive, Autodoc and Multipass Autoloop target the same complete game scope, with full-gravity-interval locking as the default; they differ in how documentation is prepared.
 
-The standard standalone prompts start with a browser app and add a Windows Electron desktop package after UI layout. The 3in1 variants additionally deliver sidebar extensions for Chromium and Firefox, with verified release assets for platforms delivered in each phase. These platform requirements belong to the selected standalone prompt; the staged exercises below retain their browser-only scope.
+The standard standalone prompts start with a browser app and add a Windows Electron desktop package after UI layout. The 3in1 variants follow the same order, then add sidebar extensions for Chromium and Firefox as the final platform addition, with verified release assets for platforms delivered in each phase. These platform requirements belong to the selected standalone prompt; the staged exercises below retain their browser-only scope.
 
 | Variant | Documentation preparation |
 | --- | --- |
 | [Interactive](prompts/Interactive.md) | Present the full scope upfront and review each document checkpoint. |
 | [Autodoc](prompts/Autodoc.md) | Present the full scope upfront. After project-brief approval, the agent proceeds through the preapproved document checkpoints to TASKS, then stops before final documentation-package QC. |
-| [Autodoc 3in1](<prompts/Autodoc 3in1.md>) | Follow the Autodoc preparation workflow with all three delivery forms. |
+| [Autodoc 3in1](<prompts/Autodoc 3in1.md>) | Follow the Autodoc preparation workflow with all three delivery forms added in sequence. |
 | [Multipass Autoloop](<prompts/Multipass Autoloop.md>) | Develop the scope through ten cumulative documentation passes. Approve the first project brief; the remaining predefined passes run autonomously, stopping before final documentation-package QC. |
 
 ### Autodoc baseline and feature campaigns
 
-Use [Featured Autodoc](<prompts/Featured Autodoc.md>) for a classic baseline followed by separately submitted feature requests. Submit the sections in order as each capability is ready for development. Use [Featured Autodoc 3in1](<prompts/Featured Autodoc 3in1.md>) for the same sequence with browser, Windows Electron and Chromium/Firefox sidebar delivery.
+Use [Featured Autodoc](<prompts/Featured Autodoc.md>) for a classic baseline followed by separately submitted feature requests. Submit the sections in order as each capability is ready for development. Use [Featured Autodoc 3in1](<prompts/Featured Autodoc 3in1.md>) for the same sequence, followed by Windows Electron delivery and finally Chromium/Firefox sidebar delivery.
 
 ### Minimal starting prompt
 
