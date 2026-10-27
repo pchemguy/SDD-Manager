@@ -31,3 +31,7 @@ Replace the Hello World prompt with the accepted human draft and review correcti
 ## V-005 — Decouple release rules from platform selection
 
 Move the platform phase/release sequence into the Platforms introduction and remove the enumerated platform artifacts from Versioning and releases. Retain generic per-phase release and all-delivered-platform artifact requirements, including paired Chromium/Firefox extension delivery under Platforms. Verify location, platform-neutral release wording and preservation of all other prompt content; publish without closing.
+
+## V-006 — Full Hello World prompt composition revision
+
+Apply the accepted full composition review: shorten the Project introduction, preserve baseline behavior, use sentence-case scope heading, consolidate sequencing/shared-code/cumulative-platform requirements in Platforms and focus its children on platform-specific delivery. Remove absent cookie/URL/import-export examples while preserving conditional persistence/file/lifecycle adaptations and session semantics. Keep release rules platform-neutral, qualify packaged-artifact verification under project environment policies and require explicit unverified-check reporting. Clarify preparation decisions and human review timing. Verify requirement retention, hierarchy, scope, whitespace and unchanged other prompts; publish without closing.

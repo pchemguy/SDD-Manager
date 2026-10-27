@@ -10,34 +10,34 @@ GitHub token: {FINE_GRAINED_GH_TOKEN}
 
 Manage the project's versioning, choosing an appropriate initial version and increasing it to reflect delivered changes. After each implementation phase is completed, verified and integrated, create and publish a new GitHub release with the corresponding version tag and release notes.
 
-Each GitHub release must include the installable or deployable artifacts for every platform delivered by that phase. Include installation instructions and clearly distinguish development packages from signed or store-distributed packages. Do not claim a platform delivered until its packaged artifact has been verified.
+Each GitHub release must include the installable or deployable artifacts for every platform delivered by that phase. Include installation instructions and clearly distinguish development packages from signed or store-distributed packages. Verify packaged artifacts using the applicable checks under the project's environment policies, and explicitly report unavailable checks and unverified behavior. Do not describe unverified behavior as verified.
 
 ### Project
 
-Treat this description as the complete target scope. Deliver the baseline first, then add the delivery platforms below through bounded phases that each deliver a usable application on the added platform.
+Treat this description as the complete target scope. Deliver the baseline functionality across the platforms specified below.
 
-#### Baseline MVP Scope
+#### Baseline MVP scope
 
 Display the message "Hello World" and a group of three vertically stacked radio buttons labeled "red", "blue" and "green". Selecting a radio button immediately changes the message's text color to the selected color, without a separate apply action. Exactly one radio button is selected at a time; initially select "red" and display the message in red.
 
 #### Platforms
 
-Deliver the browser app, Windows Electron app and browser extensions in separate phases, in that order, with a separate release after each delivery platform is added. Treat the Chromium and Firefox extensions as one delivery platform: deliver both in the same phase and release.
+Deliver three platform groups in separate phases, in this order: browser app, Windows Electron app, then sidebar extensions. Deliver the Chromium and Firefox extensions together in the same phase and release. Publish a release after each platform group is added.
+
+Design application logic and UI for reuse from the outset so that most of the codebase can be shared, keeping platform-specific code separate. Preserve previously delivered platforms when adding another. Adapt layout, lifecycle and any in-scope persistence or file operations without introducing additional application capabilities. Preserve session-only behavior where specified.
 
 ##### Browser app - baseline delivery
 
-Initially deliver a browser app. Design application logic and UI for reuse across future delivery platforms, including a Windows Electron desktop app and sidebar extensions for desktop Chromium and Firefox, keeping platform-specific code separate so that most of the codebase can be shared.
+Deliver the baseline as a browser app.
 
 ##### Windows Electron delivery
 
-Add an Electron packaged app for Windows as a second delivery platform after the browser baseline is implemented and verified. Keep the application usable in a browser, bundle all required desktop runtime assets, and require no separate Node.js installation or development server. Share application logic and UI between browser and desktop versions, adapting platform-specific behavior as needed. Include the Windows package alongside the browser build in applicable GitHub releases.
+Deliver an Electron packaged app for Windows. Bundle all required desktop runtime assets; users must not need a separate Node.js installation or development server.
 
 ##### Browser extension delivery
 
-Add sidebar extensions for desktop Chromium and Firefox together as the final delivery platform, after Windows Electron delivery. Keep the browser and desktop versions available and share application logic and UI across all versions. Bundle all required extension runtime assets; users must not need a separate Node.js installation, local development server or backend. Include both extension packages in applicable GitHub releases.
-
-Adapt the layout to a narrow, resizable sidebar while retaining access to the same in-scope capabilities. Apply platform-specific persistence, file-operation and lifecycle adaptations only when the corresponding capability is in scope. Use extension-local storage where persistent data is required; preserve session-only behavior where specified. During document preparation, resolve panel closing and reopening behavior and, where applicable, adaptations of cookie/URL configuration and file import/export requirements. These conditional instructions do not introduce additional application capabilities.
+Deliver sidebar extensions for desktop Chromium and Firefox with all required extension runtime assets bundled. Users must not need a separate Node.js installation, local development server or backend. Adapt the layout to a narrow, resizable sidebar while retaining access to the same in-scope capabilities, and define panel closing and reopening behavior. Use extension-local storage where persistent data is required.
 
 ### Design clarification
 
-During preparation, resolve important interactions and boundary cases across the requested platforms, including initial state, input behavior, layout constraints and application lifecycle. Address persistence and file operations only where required by the application scope. Surface decisions that materially affect behavior before implementation.
+During document preparation, resolve unspecified behavior and platform adaptations within the stated scope. Present decisions that materially affect application behavior or delivery for human review before implementation.
