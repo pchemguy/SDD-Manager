@@ -18,7 +18,7 @@ Develop a browser-based Tetris game. The following cumulative passes define how 
 
 Define a playable classic Tetris baseline with falling tetrominoes, movement, rotation, gravity, line clearing, scoring, game over and restart.
 
-Keep the application usable in a browser. Also deliver an Electron desktop package for Windows, bundling all required runtime assets and requiring no separate Node.js installation or development server. Share application logic and UI between browser and desktop versions.
+Initially deliver a browser app. Design application logic and UI for reuse across future delivery platforms, including a Windows Electron desktop app, keeping platform-specific code separate so that most of the codebase can be shared.
 
 Keep this initial scope minimal and coherent. The enhancements and configuration capabilities listed in later passes are future additions at this point.
 
@@ -100,6 +100,10 @@ Arrange the panels from left to right:
 | Controls/help | Right of settings |
 
 Keep the board and game info and controls panels visible. In the game info and controls panel, place individual show/hide toggle buttons for the leaderboard, settings and controls/help panels above the **Pause** and **Start/Restart** buttons. Keep the board centered when panels are hidden or shown.
+
+#### Pass 10 - Scope extension: Windows Electron delivery
+
+Add an Electron packaged app for Windows as a second delivery platform after the browser UI layout is implemented and verified. Keep the application usable in a browser, bundle all required desktop runtime assets, and require no separate Node.js installation or development server. Share application logic and UI between browser and desktop versions, adapting platform-specific behavior as needed. Include the Windows package alongside the browser build in applicable GitHub releases.
 
 ### Design clarification
 
