@@ -43,3 +43,7 @@ Add minimum UI layout guidance within Hello World's baseline scope: centered mai
 ## V-008 — Neutral page interaction and composition refinements
 
 Apply the human's correction: remove existing-page preservation requirements without prescribing page replacement or adding future form/content features. Keep Hello World page rendering in baseline scope and make generic extension guidance neutral about page UI/layout changes. Apply remaining composition refinements for responsive centering, shared components, page/sidebar state ownership and initialization, existing document-review checkpoints and concise verification reporting. Verify retained baseline behavior and platform/release sequence, scoped changes and Markdown; publish without closing.
+
+## V-009 — Preserve supplied baseline prompt separately
+
+Save the human-supplied version verbatim as docs/demo/hello_world/prompts/Autodoc 3in1 Baseline.md. Preserve the current revised Autodoc 3in1.md. Verify exact saved bytes, current-prompt preservation and whitespace; publish without closing.
