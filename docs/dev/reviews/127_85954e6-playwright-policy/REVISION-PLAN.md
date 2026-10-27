@@ -19,3 +19,7 @@ The human supplied an incident where full Chromium failed a Unix-socket EPERM ev
 Confirm technical distinctions using official Playwright documentation, perform source scenario/link checks and relevant support/package tests. Supplied incident results are user-reported, not reproduced here. No application repository or new runtime experiment is selected. Publish without closing the campaign.
 
 Human clarification: this is generic SDD Manager guidance for unavailable full-browser checks, not a sidebar-specific workaround. Do not add sidebar-specific instructions or examples to this generic recovery policy.
+
+## Finalization
+
+V-001 is complete. The human authorized closure. Publish final records, explicitly integrate into refreshed main, verify equal trees and policy anchors, publish/read back main and return cleanly. Retain the branch; no application changes or release selected.
