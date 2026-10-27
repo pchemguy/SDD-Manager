@@ -99,7 +99,7 @@ Arrange the panels from left to right:
 
 Keep the board and game info and controls panels visible. In the game info and controls panel, place individual show/hide toggle buttons for the leaderboard, settings and controls/help panels above the **Pause** and **Start/Restart** buttons. Keep the board centered when panels are hidden or shown.
 
-#### Second delivery platform - Windows Electron
+#### Windows Electron
 
 Add an Electron packaged app for Windows as a second delivery platform after the browser UI layout is implemented and verified. Keep the application usable in a browser, bundle all required desktop runtime assets, and require no separate Node.js installation or development server. Share application logic and UI between browser and desktop versions, adapting platform-specific behavior as needed. Include the Windows package alongside the browser build in applicable GitHub releases.
 
