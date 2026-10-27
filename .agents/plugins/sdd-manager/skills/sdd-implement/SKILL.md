@@ -11,6 +11,8 @@ Execute the user's requested task-list boundary. **sdd-manage** coordinates auth
 
 Apply the coordinator's [scope checks and reporting detail](../sdd-manage/references/coordination.md#scope-checks-and-reporting-detail), including direct calls: check scope/pending decisions before work and both path/change before writes; requested brevity preserves consequential evidence and checkpoints.
 
+For cross-platform artifacts, apply [native-verification scope](../sdd-verify/references/check-selection.md#cross-platform-artifacts-and-native-verification). Missing target-native execution is excluded by default; it must not stop the remaining authorized task range when feasible required checks pass.
+
 For browser-dependent work, discover and follow any project-defined browser development policies and declared setup/test commands before selecting or using browser facilities.
 
 ## Reference routing

@@ -10,6 +10,8 @@
 4. Identify cross-cutting verification, documentation, packaging, and release work at the level required for the strategy. State risks, assumptions, unresolved decisions, and their gates without treating guesses as accepted requirements.
 5. Check that every intended capability has a plausible delivery path and that the plan can be executed in bounded units later. Do not enumerate file edits, task IDs, commit transactions, or a per-test command sequence; TASKS owns that detail.
 
+For cross-platform deliverables, apply [cross-platform artifact and native-verification scope](../../sdd-verify/references/check-selection.md#cross-platform-artifacts-and-native-verification) before assigning exit gates. Preserve requested target artifacts, but do not schedule unavailable native execution as a blocking task or phase/release prerequisite. State feasible build/package checks and excluded native evidence separately.
+
 ## Phase scope and version coverage
 
 For multipass preparation, apply the selected [strict/flexible delivery mode](../../sdd-manage/references/doc-design-modes.md#multipass-delivery-modes) before revising existing ranges. Strict is the default: preserve earlier-pass phases, milestone boundaries and task ranges; append new bounded phases. Only explicitly permitted flexible mode allows small additions fitting an earlier pass's scope within its corresponding range. Compare against retained prior-pass PLAN/TASKS; keep selection and amendment rationale in DOCS_PREPARATION, not a pass narrative in PLAN.

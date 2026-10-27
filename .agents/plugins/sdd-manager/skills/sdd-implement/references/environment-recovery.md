@@ -6,6 +6,8 @@ Load for the selected technology's execution setup or when installation, provisi
 
 Inspect declared tooling, setup commands and applicable project instructions before dependent setup or diagnosis. Use maintained official guidance for the selected environment. Verification remains read-only unless repairs are separately authorized.
 
+Before classifying missing target-OS execution as a blocker, apply [cross-platform artifact and native-verification scope](../../sdd-verify/references/check-selection.md#cross-platform-artifacts-and-native-verification). Unavailable native verification is excluded by default; continue feasible artifact work and the authorized implementation range without requesting another waiver. Distinguish an actual cross-build failure from an unavailable native runtime check.
+
 ## Investigate and return
 
 1. Preserve valid partial work and record the exact attempted check, environment, artifact and observed failure. Distinguish missing tool/dependency, malformed download, incompatible executable, runtime configuration and insufficient evidence.
