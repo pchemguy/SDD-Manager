@@ -4,6 +4,8 @@ Load before selected Playwright-dependent execution, or when its installation, p
 
 - [Preflight and normal setup](#preflight-and-normal-setup)
 - [Chromium mode](#chromium-mode)
+- [Chromium launch recovery](#chromium-launch-recovery)
+- [Unavailable full-browser checks and continuation](#unavailable-full-browser-checks-and-continuation)
 - [Download diagnostics and recovery](#download-diagnostics-and-recovery)
 - [Official image fallback](#official-image-fallback)
 - [Firefox content-process recovery](#firefox-content-process-recovery)
@@ -31,9 +33,36 @@ When Playwright's **Chromium headless shell** meets the selected application exe
 { name: 'chromium', use: { browserName: 'chromium', headless: true } }
 ```
 
-`channel: 'chromium'` selects full Chromium's headless mode; full Chromium and headed execution are separate choices. Require those modes only when project criteria need them, such as desktop-window behavior or a capability absent from the shell. If full Chromium fails a host-denied socket operation, test the shell when it meets the accepted scope; retain explicitly required full/headed coverage as blocked until a compatible facility is available. Report the effective executable/mode from launch logs, not merely the project label or an executable-path API that may describe another mode.
+`channel: 'chromium'` selects full Chromium's headless mode; full Chromium and headed execution are separate choices. Select them for capabilities absent from the shell. A failed full/headed launch does not establish that shell-based application checks are unavailable. Diagnose the launch and apply the continuation scope below rather than blocking the entire implementation. Report the effective executable/mode from launch logs, not merely the project label or an executable-path API that may describe another mode.
 
 For a documented branded-browser requirement with contained provisioning, do not use `playwright install chrome` or another global browser installer: `PLAYWRIGHT_BROWSERS_PATH` does not relocate branded Chrome/Edge installations. Select a route that satisfies the project's isolation policy.
+
+## Chromium launch recovery
+
+For an `EPERM` launch failure, identify the denied operation and failing executable/mode from actual logs. A namespace/sandbox failure and a denied Unix-domain socket are different observations; `EPERM` alone does not establish the cause. Inspect the effective arguments before proposing a sandbox change. Playwright documents `chromiumSandbox` as false by default, so the failed launch may already include `--no-sandbox`.
+
+For trusted local application checks in a dedicated environment, when permitted by project security policy and not already tried, test a bounded full-Chromium launch with its process-local option:
+
+```javascript
+const browser = await chromium.launch({
+    channel: 'chromium',
+    headless: true,
+    chromiumSandbox: false,
+    timeout: 10_000,
+});
+```
+
+The snippet assumes the project's imported `chromium` runner; the whole-process deadline below still applies. If logs already show the same sandbox-disabled launch, record that fact instead of presenting an identical retry as a new remedy. This option controls Chromium's internal sandbox, reduces browser isolation and cannot grant a host-denied socket operation. Do not weaken host restrictions, stack unrelated flags or repeat rejected escalation.
+
+If full Chromium still aborts, proactively test the managed headless shell with `headless: true`, no channel and no executable override. Run at least two isolated input/rendering/teardown cycles, then the applicable application suite, including Canvas, screenshots and responsive viewports when in scope. Test Firefox independently under its recovery procedure; a full-Chromium failure does not remove working browser coverage. Do not re-download compatible binaries to fix a diagnosed runtime denial.
+
+## Unavailable full-browser checks and continuation
+
+When the execution environment cannot run full Chromium or another required full-browser mode after bounded diagnosis and permitted recovery, checks that require that unavailable mode are **out of scope by default for the current execution**. Do not make those checks a blocking task, milestone, phase, integration or release dependency. Continue the authorized implementation range, packaging and releases using working headless browsers and other feasible checks; no repeated waiver or provision of a GUI, VM or different host is required. Only an explicit human instruction deliberately retaining those checks despite the known limitation overrides this default.
+
+Separate what can be verified from what requires the unavailable mode. Exercise the actual application through working modes: interaction, rendering, screenshots, responsive layouts and relevant regressions. Preserve requested deliverables and perform feasible build, package-content and adapter checks. A real application/build failure remains a blocker for its affected work; unavailable full-browser execution alone does not halt remaining work. Correct agent-generated gates in current owning documents and evidence within the authorized scope, preserving task identities and historical results; exclude unavailable checks rather than marking them passed.
+
+Report the failed operation, effective arguments, tested alternatives, working browser modes, actual results and excluded full-browser checks. Do not claim mode-specific compatibility or native behavior from a substitute. Keep application checks performed in the headless shell distinct from checks requiring full Chromium or native browser behavior. Full Chromium can also run headlessly; a full-browser requirement does not inherently require a visible GUI. Record the actual executable and mode rather than treating all headless execution as equivalent.
 
 ## Download diagnostics and recovery
 
@@ -80,6 +109,6 @@ Adopt the override only after repeated page/interaction/rendering/teardown check
 
 Use finite launch/action/navigation timeouts **and a whole-process deadline covering page creation and cleanup**; launch timeout alone does not bound later operations. On expiry, stop only the owned process tree and confirm disposition before retrying.
 
-For each required browser/mode, verify launch, context creation, page creation, interaction, required rendering/screenshots, at least two isolated context/page cycles, and teardown. Verify the required output through the actual application and runner; synthetic pages establish environment capability only. Keep modeled events separate from native delivery and report effective modes, outcomes and omissions in existing task evidence. Return the working remedy or concrete blocker to the active workflow; do not reduce required coverage.
+For each in-scope available browser/mode, verify launch, context creation, page creation, interaction, required rendering/screenshots, at least two isolated context/page cycles, and teardown. Verify the required output through the actual application and runner; synthetic pages establish environment capability only. Keep modeled events separate from native delivery and report effective modes, outcomes and omissions in existing task evidence. Return the working remedy or concrete blocker to the active workflow. Apply the explicit unavailable-facility scope above; preserve other required coverage and record exclusions without a pass claim.
 
-Version-specific sources: [Playwright browsers](https://playwright.dev/docs/browsers), [official image/container guidance](https://playwright.dev/docs/docker), [CI setup](https://playwright.dev/docs/ci) and [Mozilla's documented content-sandbox override](https://firefox-source-docs.mozilla.org/performance/jit_profiling_with_samply.html).
+Version-specific sources: [Playwright browsers](https://playwright.dev/docs/browsers), [official image/container guidance](https://playwright.dev/docs/docker), [CI setup](https://playwright.dev/docs/ci), [Chromium launch options](https://playwright.dev/docs/api/class-browsertype#browser-type-launch) and [Mozilla's documented content-sandbox override](https://firefox-source-docs.mozilla.org/performance/jit_profiling_with_samply.html).
