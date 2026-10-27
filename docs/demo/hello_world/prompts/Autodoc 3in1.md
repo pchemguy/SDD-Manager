@@ -10,9 +10,7 @@ GitHub token: {FINE_GRAINED_GH_TOKEN}
 
 Manage the project's versioning, choosing an appropriate initial version and increasing it to reflect delivered changes. After each implementation phase is completed, verified and integrated, create and publish a new GitHub release with the corresponding version tag and release notes.
 
-Deliver the browser app, Windows Electron app and browser extensions in separate phases, in that order, with a separate release after each delivery platform is added. Treat the Chromium and Firefox extensions as one delivery platform: deliver both in the same phase and release.
-
-Each GitHub release must include the installable or deployable artifacts for every platform delivered by that phase: the browser app build, Windows Electron package, and Chromium and Firefox extension packages, as applicable. Include installation instructions and clearly distinguish development packages from signed or store-distributed packages. Do not claim a platform delivered until its packaged artifact has been verified.
+Each GitHub release must include the installable or deployable artifacts for every platform delivered by that phase. Include installation instructions and clearly distinguish development packages from signed or store-distributed packages. Do not claim a platform delivered until its packaged artifact has been verified.
 
 ### Project
 
@@ -23,6 +21,8 @@ Treat this description as the complete target scope. Deliver the baseline first,
 Display the message "Hello World" and a group of three vertically stacked radio buttons labeled "red", "blue" and "green". Selecting a radio button immediately changes the message's text color to the selected color, without a separate apply action. Exactly one radio button is selected at a time; initially select "red" and display the message in red.
 
 #### Platforms
+
+Deliver the browser app, Windows Electron app and browser extensions in separate phases, in that order, with a separate release after each delivery platform is added. Treat the Chromium and Firefox extensions as one delivery platform: deliver both in the same phase and release.
 
 ##### Browser app - baseline delivery
 

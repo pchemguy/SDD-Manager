@@ -27,3 +27,7 @@ Add docs/demo/hello_world/prompts/Autodoc 3in1.md from the human's draft. Confin
 ## V-004 — Separate baseline scope from delivery platforms
 
 Replace the Hello World prompt with the accepted human draft and review corrections: Baseline MVP Scope precedes Platforms, whose browser, Electron and extension entries are sibling fifth-level headings. Move reusable-code preparation under browser delivery. Clarify text-color changes and describe platform phases as usable application delivery rather than new functionality. Preserve all other requirements and publish without closing.
+
+## V-005 — Decouple release rules from platform selection
+
+Move the platform phase/release sequence into the Platforms introduction and remove the enumerated platform artifacts from Versioning and releases. Retain generic per-phase release and all-delivered-platform artifact requirements, including paired Chromium/Firefox extension delivery under Platforms. Verify location, platform-neutral release wording and preservation of all other prompt content; publish without closing.

@@ -29,3 +29,9 @@ Verified baseline controls/default/update requirements, absence of Hello World a
 Replaced the Hello World prompt structure with Baseline MVP Scope followed by Platforms. Browser app - baseline delivery, Windows Electron delivery and Browser extension delivery are sibling subsections under Platforms; reusable-code preparation now belongs to browser delivery. Clarified that radio selection changes the message's text color and that platform phases deliver a usable application on the added platform.
 
 Verified the exact heading hierarchy and Markdown heading spacing, one copy of the moved preparation paragraph, unchanged version/release instructions and extension/clarification content, and diff whitespace. The change is confined to this prompt and active campaign evidence; no application runtime checks are claimed. Restored the published campaign branch from a fresh clone after workspace maintenance removed the previous checkout. Publish/read back this action; campaign remains open.
+
+## V-005 — Platform-neutral release instructions
+
+Moved browser → Windows Electron → extensions phase/release sequencing into the Platforms introduction, retaining Chromium and Firefox extensions as one platform delivered together. Removed the specific artifact list from Versioning and releases; that section retains versioning, releases after completed/verified/integrated phases, artifacts for every platform delivered by that phase, installation guidance and verification requirements.
+
+Verified that Versioning and releases names no specific platform, the sequence appears exactly once under Platforms before its delivery subsections, and all other prompt bytes are preserved. Diff whitespace passes. Documentation-only change; no runtime verification claimed. Publish/read back this action; campaign remains open.
