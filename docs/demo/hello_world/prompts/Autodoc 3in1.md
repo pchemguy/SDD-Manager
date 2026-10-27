@@ -16,19 +16,23 @@ Each GitHub release must include the installable or deployable artifacts for eve
 
 ### Project
 
+Treat this description as the complete target scope. Deliver the baseline first, then add the delivery platforms below through bounded phases that each deliver a usable application on the added platform.
+
+#### Baseline MVP Scope
+
+Display the message "Hello World" and a group of three vertically stacked radio buttons labeled "red", "blue" and "green". Selecting a radio button immediately changes the message's text color to the selected color, without a separate apply action. Exactly one radio button is selected at a time; initially select "red" and display the message in red.
+
+#### Platforms
+
+##### Browser app - baseline delivery
+
 Initially deliver a browser app. Design application logic and UI for reuse across future delivery platforms, including a Windows Electron desktop app and sidebar extensions for desktop Chromium and Firefox, keeping platform-specific code separate so that most of the codebase can be shared.
 
-Treat this description as the complete target scope. Deliver the baseline first, then add the delivery platforms below through bounded phases that each provide a useful functionality increment.
-
-#### Baseline MVP
-
-Display the message "Hello World" and a group of three vertically stacked radio buttons labeled "red", "blue" and "green". Selecting a radio button immediately changes the message text to the corresponding color, without a separate apply action. Exactly one radio button is selected at a time; initially select "red" and display the message in red.
-
-#### Windows Electron delivery
+##### Windows Electron delivery
 
 Add an Electron packaged app for Windows as a second delivery platform after the browser baseline is implemented and verified. Keep the application usable in a browser, bundle all required desktop runtime assets, and require no separate Node.js installation or development server. Share application logic and UI between browser and desktop versions, adapting platform-specific behavior as needed. Include the Windows package alongside the browser build in applicable GitHub releases.
 
-#### Browser extension delivery
+##### Browser extension delivery
 
 Add sidebar extensions for desktop Chromium and Firefox together as the final delivery platform, after Windows Electron delivery. Keep the browser and desktop versions available and share application logic and UI across all versions. Bundle all required extension runtime assets; users must not need a separate Node.js installation, local development server or backend. Include both extension packages in applicable GitHub releases.
 

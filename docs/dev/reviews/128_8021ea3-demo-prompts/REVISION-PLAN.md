@@ -23,3 +23,7 @@ Apply the same browser-first/shared-code preparation to both 3in1 prompts. Add W
 ## V-003 — Reusable Hello World three-form prompt
 
 Add docs/demo/hello_world/prompts/Autodoc 3in1.md from the human's draft. Confine application-specific requirements to Baseline MVP: Hello World and stacked red/blue/green radio buttons with immediate text-color updates. Make surrounding preparation, platform and clarification instructions application-neutral, retaining conditional adaptations without adding persistence or file capabilities. Require browser, Electron and extension delivery in successive phases/releases; Chromium and Firefox extensions are one platform delivered together. Verify exact behavior, generic surrounding sections, platform/release order, Markdown and unchanged existing prompts. Publish without closing.
+
+## V-004 — Separate baseline scope from delivery platforms
+
+Replace the Hello World prompt with the accepted human draft and review corrections: Baseline MVP Scope precedes Platforms, whose browser, Electron and extension entries are sibling fifth-level headings. Move reusable-code preparation under browser delivery. Clarify text-color changes and describe platform phases as usable application delivery rather than new functionality. Preserve all other requirements and publish without closing.
