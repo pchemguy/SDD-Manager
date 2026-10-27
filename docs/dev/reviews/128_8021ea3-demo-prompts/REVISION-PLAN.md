@@ -39,3 +39,7 @@ Apply the accepted full composition review: shorten the Project introduction, pr
 ## V-007 — Main-page and sidebar UI arrangement
 
 Add minimum UI layout guidance within Hello World's baseline scope: centered main panel with right-hand settings in browser/Electron; main panel embedded in an ordinary active webpage with settings in the extension sidebar. Revise generic extension guidance for page-side/sidebar cooperation, preserving website behavior and resolving permissions, supported pages, activation, communication and navigation/tab/sidebar lifecycle during preparation. Preserve existing functionality and release/platform sequence; verify exact change boundaries and scope separation, then publish without closing.
+
+## V-008 — Neutral page interaction and composition refinements
+
+Apply the human's correction: remove existing-page preservation requirements without prescribing page replacement or adding future form/content features. Keep Hello World page rendering in baseline scope and make generic extension guidance neutral about page UI/layout changes. Apply remaining composition refinements for responsive centering, shared components, page/sidebar state ownership and initialization, existing document-review checkpoints and concise verification reporting. Verify retained baseline behavior and platform/release sequence, scoped changes and Markdown; publish without closing.

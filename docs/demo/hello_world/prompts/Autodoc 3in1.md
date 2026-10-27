@@ -10,7 +10,7 @@ GitHub token: {FINE_GRAINED_GH_TOKEN}
 
 Manage the project's versioning, choosing an appropriate initial version and increasing it to reflect delivered changes. After each implementation phase is completed, verified and integrated, create and publish a new GitHub release with the corresponding version tag and release notes.
 
-Each GitHub release must include the installable or deployable artifacts for every platform delivered by that phase. Include installation instructions and clearly distinguish development packages from signed or store-distributed packages. Verify packaged artifacts using the applicable checks under the project's environment policies, and explicitly report unavailable checks and unverified behavior. Do not describe unverified behavior as verified.
+Each GitHub release must include the installable or deployable artifacts for every platform delivered by that phase. Include installation instructions and clearly distinguish development packages from signed or store-distributed packages. Verify packaged artifacts using the applicable checks under the project's environment policies. Report the checks performed, unavailable checks and remaining unverified behavior.
 
 ### Project
 
@@ -22,17 +22,17 @@ Display the message "Hello World" and a group of three vertically stacked radio 
 
 ##### Browser and Electron layout
 
-Keep the main panel displaying "Hello World" centered in the application viewport. Place the settings panel containing the three stacked color radio buttons to its right. Keep the main panel centered independently of the settings panel's width. Resolve narrow-window behavior during document preparation so that both panels remain usable.
+Place the settings panel containing the three stacked color radio buttons to the right of the main panel displaying "Hello World". Where space permits, center the main panel in the application viewport independently of the settings panel's width. For narrower windows, retain access to both panels without overlap; resolve the arrangement during document preparation.
 
 ##### Browser extension layout
 
-Display the main panel containing "Hello World" within the active webpage, preserving the page's existing content and functionality. Place the settings panel containing the three stacked color radio buttons in the extension sidebar. Selecting a color in the sidebar must immediately update the message on the associated webpage.
+Display the main panel containing "Hello World" within the active webpage. Place the settings panel containing the three stacked color radio buttons in the extension sidebar. Selecting a color in the sidebar must immediately update the message on the associated webpage.
 
 #### Platforms
 
 Deliver three platform groups in separate phases, in this order: browser app, Windows Electron app, then sidebar extensions. Deliver the Chromium and Firefox extensions together in the same phase and release. Publish a release after each platform group is added.
 
-Design application logic and UI for reuse from the outset so that most of the codebase can be shared, keeping platform-specific code separate. Preserve previously delivered platforms when adding another. Adapt layout, lifecycle and any in-scope persistence or file operations without introducing additional application capabilities. Preserve session-only behavior where specified.
+Design for reuse from the outset: share application logic and reusable UI components, and isolate platform-specific integration code. Preserve previously delivered platforms when adding another. Adapt layout, lifecycle and any in-scope persistence or file operations without introducing additional application capabilities. Preserve session-only behavior where specified.
 
 ##### Browser app - baseline delivery
 
@@ -44,12 +44,12 @@ Deliver an Electron packaged app for Windows. Bundle all required desktop runtim
 
 ##### Browser extension delivery
 
-Deliver extensions for desktop Chromium and Firefox whose sidebars control or interact with the active webpage. Place page-side and sidebar functionality according to the application scope; the extension must work with ordinary webpages rather than require a dedicated application tab. Adapt sidebar controls to a narrow, resizable panel.
+Deliver extensions for desktop Chromium and Firefox whose sidebars control or interact with the active webpage. Define page-side and sidebar responsibilities according to the application scope, without assuming that page interaction requires adding UI or changing the page layout. The extension must work with ordinary webpages rather than require a dedicated application tab. Adapt sidebar controls to a narrow, resizable panel.
 
 Bundle all required extension runtime assets. Users must not need a separate Node.js installation, local development server or backend. Use extension-local storage where persistent data is required.
 
-During document preparation, resolve supported pages, required permissions, page activation and sidebar-to-page communication. Define behavior when switching tabs, navigating, closing or reopening the sidebar, or encountering an unsupported page. Keep sidebar actions associated with the intended page and preserve existing website content and functionality.
+During document preparation, define supported pages, activation, required permissions and sidebar-to-page communication. Define which page each sidebar instance controls and how application state is initialized and synchronized when switching tabs, navigating, or closing and reopening the sidebar. Define behavior when page interaction is unavailable, and keep sidebar actions associated with the intended page.
 
 ### Design clarification
 
-During document preparation, resolve unspecified behavior and platform adaptations within the stated scope. Present decisions that materially affect application behavior or delivery for human review before implementation.
+During document preparation, resolve unspecified behavior and platform adaptations within the stated scope. Surface decisions that materially affect application behavior or delivery at the applicable document-review checkpoints before implementation.
