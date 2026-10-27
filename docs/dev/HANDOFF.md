@@ -1,7 +1,7 @@
 # SDD Manager handoff
 
-Campaign **127 — Playwright policy** is complete; return target main. Original baseline: `85954e6cc9c9de8f2ddd3f03277da8970494bd96`; opening `56dc3e5c92a1bb60faab6344e9642e649cbc5a5e`. No suspended parent. Standard reporting.
+Campaign **128 — Demo prompts** is open on `revision/128_8021ea3-demo-prompts`. Main creation/return baseline: `8021ea34fb28d6b650b918ed6fd6f0d70a3f2da6`. No suspended parent. Standard reporting.
 
-[Revision evidence](reviews/127_85954e6-playwright-policy/REVISION-REPORT.md) records generic Chromium EPERM diagnostics, effective sandbox-argument inspection and bounded headless fallback. Unavailable full-browser checks are excluded by default after diagnosis/permitted recovery, with explicit unverified evidence and continued authorized implementation, packaging, integration and releases. Real feasible-check failures remain blockers. The policy contains no sidebar-specific instructions; project-template activation remains unchanged.
+The human authorized opening this campaign. The earlier checkout was removed by workspace maintenance; a fresh origin clone restored current main. [Revision plan](reviews/128_8021ea3-demo-prompts/REVISION-PLAN.md) records setup scope and stopping boundary. No prompt changes selected.
 
-Verification: 139 support and 50 publisher tests pass, plus five final snapshot checks; policy anchors/generic scope and diff whitespace pass. No new browser/runtime reproduction claimed. The human authorized closure: publish records, merge explicitly into refreshed main, verify equal trees/policy anchors and publish/read back main. Retain branch and closed history. No active work, application mutation or release is selected after closure.
+Campaign 127 is closed and integrated at the baseline above. Publish/read back the opening commit, then await the requested amendment. The connector's ref-write request failed with 403; Git publication must be verified separately. Preserve closed records, branches and releases. No integration, closure or release selected.
