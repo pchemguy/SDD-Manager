@@ -17,3 +17,7 @@ Execute and publish the accepted guidance amendment below. Campaign closure, ver
 The human directs that when requested native artifacts target an OS whose native execution facility is unavailable, native verification is out of scope. Implement a default scope rule, visible before planning and blocker decisions: retain artifacts, run feasible checks, distinguish cross-build/inspection from native runtime evidence, and continue authorized implementation/integration/releases without repeated waiver requests. Preserve explicit controlling native-test requirements and real build/check failures. Correct agent-generated native-only gates in active project records through their owners under actual authority, preserving identities/history. Apply both Windows-on-Linux and Linux-on-Windows symmetrically.
 
 Canonical rule: sdd-verify check selection. Propagate concise references into coordinator/implementation entries, specification acceptance, delivery planning, task derivation, environment recovery and release verification. Verify representative scope/continuation contrasts, links and relevant support/package checks. No existing demo application repository is selected for mutation; no native runtime pass, campaign closure or release claimed.
+
+## Finalization
+
+V-001 is complete. The human authorized closure. Finalize/publish records, explicitly merge into refreshed main, verify the merged tree and scope links, publish/read back main and return with a clean worktree. Retain the campaign branch. No release or demo-application mutation selected.

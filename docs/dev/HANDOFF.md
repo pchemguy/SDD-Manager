@@ -1,7 +1,7 @@
 # SDD Manager handoff
 
-Campaign **126 — Cross-platform development** is open on `revision/126_8deae37-cross-platform-dev`. Main creation/return baseline: `8deae37156b4a372293a2ca4412006e36e744e16`. No suspended parent. Standard reporting.
+Campaign **126 — Cross-platform development** is complete; return target main. Original baseline: `8deae37156b4a372293a2ca4412006e36e744e16`; opening `d73bcfc712f7209d8b710094f889ce41d30d2b3f`. No suspended parent. Standard reporting.
 
-The human authorized opening this campaign. Origin/main was refreshed and already current. [Revision plan](reviews/126_8deae37-cross-platform-dev/REVISION-PLAN.md) records setup scope and stopping boundary. Await specific cross-platform development amendments; no source or policy changes have been selected.
+[Revision evidence](reviews/126_8deae37-cross-platform-dev/REVISION-REPORT.md) records the default exclusion of unavailable target-native verification, preserving requested artifacts and feasible checks while continuing authorized work. Specification, planning, tasks, coordination, implementation/recovery and release checks link to the verification owner. Agent-generated native-only gates do not override this rule; explicit deliberate human overrides retain their scope. Evidence distinguishes cross-built/inspected artifacts from native-tested compatibility.
 
-Campaigns 124 and 125 are closed and integrated. Preserve closed records, existing platform/evidence policies and published releases. Publish/read back the opening commit, then return control for the requested amendment. No integration, closure or release is selected.
+Verification: 139 support and 50 publisher tests pass; seven scope handoffs resolve, frozen records unchanged and diff whitespace passes. No native runtime or demo-application change claimed. The human authorized closure: publish final records, explicitly merge into refreshed main, verify merged tree/links, publish/read back and return cleanly on main. Retain the branch and published releases. No active work or release is selected after closure.
