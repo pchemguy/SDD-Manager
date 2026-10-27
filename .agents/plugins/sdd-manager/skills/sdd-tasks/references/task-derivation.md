@@ -4,6 +4,8 @@ Derive the complete `docs/dev/TASKS.md` from the accepted design, SPEC, PLAN, an
 
 ## Form tasks
 
+Apply [cross-platform artifact and native-verification scope](../../sdd-verify/references/check-selection.md#cross-platform-artifacts-and-native-verification) when deriving platform build/test work. Include feasible artifact production and checks; unavailable native execution is not a mandatory task or dependency by default. Preserve its exclusion and evidence limit without an unchecked native-only task blocking later work.
+
 In multipass preparation, apply the selected [strict/flexible delivery mode](../../sdd-manage/references/doc-design-modes.md#multipass-delivery-modes) to retained TASKS, rather than regenerating the list. Strict preserves earlier-pass tasks and their phase/milestone ranges; append tasks under the new accepted phases. Explicitly permitted flexible mode may amend the corresponding earlier range for small, fitting scope changes; retain stable IDs, reassess affected dependencies/review tasks and add new work with unused IDs. Record permission and rationale in DOCS_PREPARATION. Neither choice retroactively changes completed implementation evidence.
 
 1. Trace each milestone outcome to the relevant component boundaries, behavioral contracts, physical owners, integration points, and exit checks. Identify prerequisites and work that must be coordinated across components.
