@@ -9,3 +9,5 @@ Changed the four standard prompts to deliver the browser app initially while des
 Verification: reversing only the baseline replacement and new delivery section reproduces each prior prompt exactly; gameplay/layout and existing feature/pass content are preserved. Both 3in1 files match committed bytes unchanged. Pass sequence 1–10, feature sequence 1–9, current README claims/local links and diff whitespace pass. Documentation-only amendment; no runtime tests or application implementation claimed. The opening commit was successfully published with the supplied credential before this work. Publish/read back this action commit; campaign remains open.
 
 V-001 wording follow-up: shortened the Interactive and Autodoc section heading to Windows Electron at the human’s request. Delivery requirements and sequence are unchanged. Verified exact heading-only prompt changes and diff whitespace.
+
+V-001 consistency follow-up: standardized the Electron heading text as Windows Electron delivery across all four standard prompts, retaining the pass/feature prefixes where applicable. Verified all four headings and diff whitespace.
