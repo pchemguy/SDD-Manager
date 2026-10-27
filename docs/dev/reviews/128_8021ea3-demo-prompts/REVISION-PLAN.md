@@ -19,3 +19,7 @@ Revise only the four standard browser/Electron prompts: baseline delivers the br
 ## V-002 — Sequence three-form platform delivery
 
 Apply the same browser-first/shared-code preparation to both 3in1 prompts. Add Windows Electron after layout and browser-extension delivery as the final subsection or Feature 10. Move conditional extension adaptations to that final section; retain existing gameplay, release-artifact requirements and earlier feature scopes. Align README/guide sequencing. Verify section order, one copy of each requirement and preservation of unrelated prompt content; publish without closing.
+
+## V-003 — Reusable Hello World three-form prompt
+
+Add docs/demo/hello_world/prompts/Autodoc 3in1.md from the human's draft. Confine application-specific requirements to Baseline MVP: Hello World and stacked red/blue/green radio buttons with immediate text-color updates. Make surrounding preparation, platform and clarification instructions application-neutral, retaining conditional adaptations without adding persistence or file capabilities. Require browser, Electron and extension delivery in successive phases/releases; Chromium and Firefox extensions are one platform delivered together. Verify exact behavior, generic surrounding sections, platform/release order, Markdown and unchanged existing prompts. Publish without closing.
