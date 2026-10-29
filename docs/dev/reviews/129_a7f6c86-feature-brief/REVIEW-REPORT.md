@@ -14,10 +14,10 @@ Campaign 129_a7f6c86; original baseline a7f6c8604f7412d26e8b8dce26688f691fad6acb
 
 | Finding | Type / priority | Disposition |
 | --- | --- | --- |
-| R-001 | Requested parity gap / High | Open: interactive/autodoc feature mode semantics missing. |
-| R-002 | Workflow completeness gap / High | Open: no feature whole-package QC and explicit completion/checkpoint sequence. |
-| R-003 | Requested parity gap / Medium | Open: feature document-stage progression/tracking policy not formalized. |
-| R-004 | Cross-owner protocol ambiguity / Medium | Open: multi-phase feature integration/continuation is less explicit than main phases. |
+| R-001 | Requested parity gap / High | Verified (source): shared feature mode mapping and decision/stop contract under V-003/V-005. |
+| R-002 | Workflow completeness gap / High | Verified (source): FDOCS-009, FEATURE-QC-REPORT and published completion sequence under V-003/V-005. |
+| R-003 | Requested parity gap / Medium | Verified (source): task-only FDOCS stages, reuse assessments and backend lifecycle under V-003/V-005. |
+| R-004 | Cross-owner protocol ambiguity / Medium | Verified (source): feature phase/campaign mapping and incremental incorporation under V-004/V-005. |
 
 ## U-001 findings
 
@@ -129,3 +129,7 @@ Use one shared preparation discipline with main/feature mappings, rather than co
 U-001–U-003 are complete. Main-only preparation semantics are a substantial parity gap despite the now-defined brief pair; execution, tracking, review/persistence and incorporation foundations are largely reusable. Four findings are proposed for revision, not implemented or accepted by this review. The requested goal supports largely parallel preparation/checkpoint semantics while retaining feature-specific changed scope and incorporation, optional unchanged design reuse and no whole-project bootstrap replay.
 
 Verification for this review is source inspection and handoff/scenario analysis, campaign link/scope checks and whitespace. Prior 189 support/publisher passes belong to the earlier brief-pair implementation and are not fresh behavioral evidence for these proposals. Plugin source stays byte-identical to 8bcfec9; the example/demo repository and closed campaigns remain unchanged. Publish/read back this final review checkpoint and return with campaign 129 open; no repair execution, main integration or release selected.
+
+## Accepted revision disposition
+
+The human accepted the review direction and selected implementation after this report's review-only checkpoint. V-003–V-005 in [revision evidence](REVISION-REPORT.md) implement and recheck all four findings at source/controlled-test level. Original observations above remain descriptions of 8bcfec9; the proposed repair sequence is now executed under the subsequent grant. Runtime consumer/client/projection behavior remains untested rather than inheriting static/source passes. Campaign remains open without final main integration or release.

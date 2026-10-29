@@ -1,5 +1,7 @@
 # Completion and status reports
 
+For feature preparation, report mapped FDOCS stage completion using FEATURE_DOCS_TASKS and FEATURE_PREPARATION evidence, separately from current document validity, FEATURE-QC-REPORT readiness, preparation integration, selected campaign preparation milestone closure and the final implementation checkpoint. Use [feature preparation](../../sdd-manage/references/feature-preparation.md); no preparation checkbox proves later publication or whole-feature implementation.
+
 For main preparation, report DOCS_TASKS task completion using DOCS_PREPARATION approval/control evidence, separately from current document validity, DOCS-009 package QC, documentation integration, `sdd-docs-main` milestone closure and the final preimplementation checkpoint under [main preparation](../../sdd-manage/references/main-preparation.md). Ordinary later revisions retain completion; an authorized cursor reset reopens the same active-pass tasks/issues. Keep result/decision narrative in DOCS_PREPARATION, not the task list.
 
 For implementation, use the requested boundary from the owning TASKS or FEATURE-TASKS list. A checked box is a claim to compare with actual artifacts, verification output, and Git commits. Inspect the current implementation and relevant acceptance or exit conditions; distinguish task commits, working-branch acceptance, integration into the established target, target publication, and hosted issue state. The target need not be the default branch.

@@ -65,3 +65,34 @@ Implemented R-004 in a focused coordinator delivery reference with entry routes 
 The next phase reconciles pending hosted/Git/release effects and synchronizes the published receiving baseline into the retained campaign branch when needed. A phase merge is not final feature closure/archive; the final campaign boundary alone permits eligible source/evidence archive and final main-document consistency. Releases remain separately authorized default-branch operations; a merge into an unfinished active parent phase cannot bypass that placement requirement. Exact already-integrated boundaries are inspected/reused rather than duplicated. Scoped partial-integration overrides and existing no-merge stops retain actual authority.
 
 Source scenarios reviewed: single phase reaches final disposition; a completed first phase of two retains future FEATURE sources and returns to the same campaign branch for the next phase; a next-N-task incomplete phase pauses; phase releases reconcile default-target changes before continuation; pending issue/milestone/merge/push effects block the relevant next transition; final archive preserves one product task owner and never copies FDOCS evidence into main product documents. These are instruction assessments, not executed feature trials. Current link/anchor, closed-record scope and whitespace checks pass. Full composition/support/publisher/package checks follow in V-005. Publish/read back this source/evidence checkpoint before final assessment.
+
+## V-005 — Composition assessment, corrections and verification
+
+Completed final source/handoff assessment and corrected residual main-only wording: the shared completion summary now closes the selected workflow's preparation milestone; PLUGIN's mode table maps both briefs/prefixes/stops; exploration/planning/task derivation use the mapped decision record; reporting supports FDOCS identities and evidence ownership without applying the product T-task audit. Clarified that generic feature implementation authority does not itself bypass the named autodoc stop. Extended the existing real package-transfer test to pin the new feature brief/preparation/delivery/backend references and two templates; this checks distribution bytes/hashes rather than duplicating workflow prose as synthetic behavioral tests.
+
+### Source scenario rechecks
+
+| Case | Observed instruction outcome |
+| --- | --- |
+| Interactive feature | First FEATURE checkpoint and subsequent necessary new root approvals remain active, with exact source/decision/QC evidence. |
+| Autodoc feature | First mapped brief approval stays active; later applicable document checkpoints are preapproved; FDOCS-008 stops before package QC/integration. |
+| Explicit QC + implementation range | Selected further stages pass FDOCS-009, verified preparation integration/milestone closure and activation before product tasks; no repeat permission for the already covered transition. |
+| Predefined autoloop | Initial brief approval, announced later-brief waiver, visible delegated material choices, remaining predefined resets and final pre-QC stop follow shared policy. |
+| Human-controlled multipass/mode switch | Current brief and end-of-pass control remain human-owned; changes are prospective and retained with actual approval basis. |
+| Strict/flexible delivery | Strict protects established phase/task ranges; fitting earlier-range changes require explicit flexible scope, without rewriting completed implementation evidence. |
+| Reused design/layout | FDOCS stage completes an explicit reusable-input assessment; no new overlay, fabricated human approval or preparatory README. |
+| Pending acceptance/failed QC | Existing pending decision or technical blocker remains a real dependent-stage hold despite preapproval or Ready/status labels. |
+| Partial reset/hosted effects | Same campaign/issues/checklists, retained documents/decisions and current-pass evidence; reconcile outstanding reopening before dependent preparation. |
+| Preparation tracking | Campaign-qualified nine stages and native milestone/associations verified before writes; supported backend APIs/CLI, not unsupported main-only utility substitution. |
+| Two-phase feature / partial task range | Completed phases incorporate selected delivered scope and integrate/publish the receiving target; incomplete phases pause. Future active source/task ownership persists and the next phase synchronizes/reconciles the retained campaign branch. |
+| Phase release/final archive | Release needs separately authorized default-branch placement; phase integration does not close/archive the campaign. Final eligible sources retain unique task/evidence ownership and archive only at completed disposition. |
+
+All scenario rows are source instruction/handoff assessments, not executed consumer, GitHub projection or installed-client trials. No special prior-format support or preparatory feature README was added.
+
+### Executed checks and limits
+
+On Linux/Python, 139 support tests and 50 publisher tests pass, plus five final package-documentation checks after final prose alignment. Package validator: zero errors and 67 bundled cross-skill-reference warnings (not client activation evidence). Full-delta link/anchor and closed-record checks pass; final pre-evidence pass covered 52 changed/new paths and 967 local links/anchors. Feature task/record/stage-map IDs are exactly FDOCS-001–009 with ordered predecessors; real package byte/hash checks cover the new resources. Main DOCS_TASKS/DOCS_PREPARATION templates and DOCS_TRACKING JSON remain byte-identical to the reviewed main baseline. Diff whitespace passes. Tested package-content fingerprint (SHA-256 of sorted path-to-byte-hash mapping): a07141feb5de5a8e84097ec1dad204e18c6e6c85957065652027edb43a402a9e.
+
+R-001–R-004 are verified at source/controlled-test level under V-003–V-005. No live feature API projection, reset operation, consumer workflow, native browser/app run or installed-client acceptance is claimed. Existing main-only helper implementations remain unchanged; their feature use is explicitly unsupported and routed through backend procedures. The motivating demo repository and all closed campaign records are unchanged.
+
+V-003–V-005 complete the accepted whole-workflow plan. Publish/read back this final source/test/evidence checkpoint; campaign 129 stays open. No main campaign integration, version bump or release selected.

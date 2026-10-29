@@ -14,7 +14,7 @@ For cross-platform deliverables, apply [cross-platform artifact and native-verif
 
 ## Phase scope and version coverage
 
-For multipass preparation, apply the selected [strict/flexible delivery mode](../../sdd-manage/references/doc-design-modes.md#multipass-delivery-modes) before revising existing ranges. Strict is the default: preserve earlier-pass phases, milestone boundaries and task ranges; append new bounded phases. Only explicitly permitted flexible mode allows small additions fitting an earlier pass's scope within its corresponding range. Compare against retained prior-pass PLAN/TASKS; keep selection and amendment rationale in DOCS_PREPARATION, not a pass narrative in PLAN.
+For multipass preparation, apply the selected [strict/flexible delivery mode](../../sdd-manage/references/doc-design-modes.md#multipass-delivery-modes) before revising existing ranges. Strict is the default: preserve earlier-pass phases, milestone boundaries and task ranges; append new bounded phases. Only explicitly permitted flexible mode allows small additions fitting an earlier pass's scope within its corresponding range. Compare against retained prior-pass PLAN/TASKS; keep selection and amendment rationale in the mapped DOCS_PREPARATION or FEATURE_PREPARATION record, not a pass narrative in PLAN.
 
 Assess why each capability belongs in its selected phase. Move independent enhancements to subsequent bounded phases when doing so preserves the selected useful outcome. Retain genuine dependencies, required qualities or substantial avoidable rework with a consequential rationale; eventual inclusion in the product or minor implementation convenience is insufficient. A compact scope/dependency rationale suffices; do not justify every minor requirement separately.
 
