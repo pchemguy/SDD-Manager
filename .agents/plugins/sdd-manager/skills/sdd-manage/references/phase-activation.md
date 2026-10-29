@@ -1,5 +1,7 @@
 # Activate an eligible phase
 
+For FEATURE-TASKS execution, use the [feature phase/campaign mapping](feature-delivery.md): retain its campaign feature branch, verify predecessor phase integration/publication and do not create a main phase branch or close the entire feature merely from a phase exit.
+
 Use the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md), current orientation and accepted PLAN/TASKS. Preparation can describe all phases locally; it does not create all hosted objects or authorize execution.
 
 1. Resolve the owning phase, selected range, prerequisite evidence, actual integration target and established tracking mode. For the first phase, no predecessor is required. For later phases, require completed predecessor delivery/phase reviews and reports, applicable local exits, all hosted milestones closed when tracking is active, and required verified target integration/publication. A phase label is historical association, not a completion state.

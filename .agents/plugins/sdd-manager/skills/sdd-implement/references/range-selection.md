@@ -14,4 +14,6 @@ A selection-only request is read-only and stops after reporting the range. It do
 
 ## Phase branch segments
 
+For FEATURE-TASKS, apply [feature phase delivery](../../sdd-manage/references/feature-delivery.md) on the recorded campaign branch. Segment cross-phase ranges, preserve phase exits/receiving targets, pause unintegrated on incomplete phases and retain future work after a completed phase integration. Do not silently map it to a main phase branch or final campaign closure.
+
 For main TASKS, identify the owning phase of each selected task and its full exit obligations. Execute a partial range on that phase branch and stop after persistence without integrating an unfinished phase. Split an authorized range spanning phases into sequential phase segments; complete/verify/publish each phase before starting the next branch. If the request excludes remaining work or evidence needed for the phase exit, report the blocker or pause rather than expanding the selected IDs. Selection-only identifies these boundaries without branch changes.

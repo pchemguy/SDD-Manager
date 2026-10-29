@@ -8,7 +8,8 @@ Before dependent use, apply the [development-document content boundary](human-do
 
 | Completed input | Required owner assessment | Dependent operation |
 | --- | --- | --- |
-| SPEC / FEATURE-SPEC and applicable children | sdd-specify: accepted PROJECT/design conformance | PLAN / dependent feature planning |
+| FEATURE | sdd-design: seed/delta coverage, compatibility, consequential decision readiness and product/evidence separation; assessment referenced in FEATURE_PREPARATION | Dependent feature design/specification |
+| SPEC / FEATURE-SPEC and applicable children | sdd-specify: accepted PROJECT or FEATURE and applicable design conformance | PLAN / dependent feature planning |
 | PLAN / FEATURE-PLAN with relevant layout | sdd-plan: SPEC conformance and phase/milestone decomposition | TASKS / dependent feature tasks |
 | TASKS / FEATURE-TASKS and applicable children | sdd-tasks: PLAN conformance, scope and task hierarchy | Implementation or creation/projection of hosted task objects |
 
@@ -18,6 +19,8 @@ Before dependent use, apply the [development-document content boundary](human-do
 4. Route missing design/behavior/strategy decisions upstream. Do not revise SPEC to excuse PLAN omissions or PLAN to accommodate accidental TASKS strategy. The owner may resolve routine choices already authorized; ask only for a genuinely missing consequential decision. Preserve read-only limits and unselected owners.
 5. Have the owner produce the adjacent root report with current identities, coverage/count assessments, original findings, appended Revision N rechecks and Ready/Blocked evidence. Corrected artifacts and their report are one coherent preparation checkpoint under [coordination persistence](coordination.md#persist-repository-changes). Do not progress on a draft report, unpersisted required boundary or deferred confirmed issue. Honor explicit local-only publication limits; report any established dependent requirement for unavailable remote evidence separately.
 6. For a blocked input, identify the finding, actual owner, needed correction/review scope and blocked dependent operation. Continue only independent authorized work. Explicit human exceptions name scope/consequences without relabeling Blocked as Ready or bypassing implementation acceptance.
+
+For feature whole-package QC after the document pass, load [FDOCS-009 and the preparation completion sequence](feature-preparation.md#final-package-qc-integration-and-checkpoint). Its FEATURE-QC-REPORT covers the delta and affected accepted main context; individual root QC cannot clear this gate.
 
 ## Amendments, scope and continuation
 

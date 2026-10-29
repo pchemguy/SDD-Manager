@@ -111,6 +111,10 @@ The main development documents live in `docs/dev/` and describe the project, fro
 | `PLAN.md` | Meaningful end-to-end MVP, small capability increments, phases/milestones, dependencies, and verification/decision gates. |
 | `layout.md` | Physical ownership of source, tests, documentation, and other artifacts. |
 | `TASKS.md` | Phase → Milestone → Task hierarchy, stable IDs, and progress evidence. |
+| `FEATURE.md` | Concise feature intent, scope/non-goals, retained behavior, compatibility and material decisions. |
+| `FEATURE_DOCS_TASKS.md` | Nine campaign-scoped feature-preparation task definitions/checkoffs, separate from product T tasks. |
+| `FEATURE_PREPARATION.md` | Feature identity, mode/pass, scope sequence, decision/acceptance/QC evidence and pending transitions. |
+| `FEATURE-QC-REPORT.md` | Whole-feature-package readiness against the delta and affected main context. |
 | `DOCS_TASKS.md` | Nine main-preparation task definitions and completion checkboxes only. |
 | `DOCS_PREPARATION.md` | Main-preparation mode/pass control, titled scope sequence, retained per-pass/cross-scope decisions, initialization/reset evidence and pending transitions. |
 | `DOCS-QC-REPORT.md` | Whole documentation package readiness, checked sources, findings and evidence limits. |
@@ -133,15 +137,19 @@ Choose document approval and pass control through normal instructions:
 | Selection | Approval and pass boundary |
 | --- | --- |
 | interactive/onepass (default) | Review each necessary document, then follow the selected preparation scope. |
-| autodoc/onepass | Approve PROJECT; later document checkpoints through TASKS are preapproved. Stop after TASKS completion, before package QC. |
-| autodoc with human-controlled multipass | Supply scope/revisions and approve PROJECT each pass; after TASKS, choose reset or advance. |
-| autodoc with autoloop | Supply an ordered sequence of scopes/revisions. Clarify their important interactions upfront and approve the first PROJECT; later PROJECT approvals are waived. Run the predefined passes, then stop before package QC. |
+| autodoc/onepass | Approve the brief (PROJECT or FEATURE); later applicable document checkpoints through TASKS/FEATURE-TASKS are preapproved. Stop after TASKS completion, before package QC. |
+| autodoc with human-controlled multipass | Supply scope/revisions and approve the brief each pass; after TASKS, choose reset or advance. |
+| autodoc with autoloop | Supply an ordered sequence of scopes/revisions. Clarify their important interactions upfront and approve the first brief; later brief approvals are waived. Run the predefined passes, then stop before package QC. |
 
-Predefined autodoc scope sequences default to autoloop unless you request human-controlled multipass. The agent announces the later PROJECT approval waiver and explains new material decisions, using its judgment while continuing so you can steer. Per-document quality checks, publication and tracking remain required.
+Predefined autodoc scope sequences default to autoloop unless you request human-controlled multipass. The agent announces the later brief approval waiver and explains new material decisions, using its judgment while continuing so you can steer. Per-document quality checks, publication and tracking remain required.
 
 Multipass delivery is **strict by default**: later passes preserve phases/tasks established by earlier passes and add subsequent bounded increments. You may explicitly permit **flexible multipass**, allowing small changes fitting an earlier pass's scope into its corresponding phase/task range. This choice does not change approval or loop control. See [delivery-mode details](skills/sdd-manage/references/doc-design-modes.md#multipass-delivery-modes).
 
 You may reset the doc-design cursor at an intermediate checkpoint. The agent publishes a reset record and reopens DOCS-002–009 and their existing issues, preserving DOCS-001 and all documents. Each pass revises the preceding document set through TASKS; Git retains its versions. Autodoc stops keep package QC, documentation integration and implementation pending. See [mode and reset details](skills/sdd-manage/references/doc-design-modes.md).
+
+Feature preparation uses the same approval/decision modes with FEATURE as its brief, FEATURE_PREPARATION as its control record and FDOCS-001–009 in FEATURE_DOCS_TASKS. Assess unchanged design/layout for reuse. Autodoc stops at FDOCS-008; explicit advance selects FEATURE-QC-REPORT/package QC and verified preparation integration before the implementation checkpoint. Reset reopens FDOCS-002–009, preserving context and documents. See [feature preparation](skills/sdd-manage/references/feature-preparation.md).
+
+When feature preparation tracking is selected, a separate campaign milestone and nine campaign-qualified FDOCS issues are verified before writes; main-only docs projection helpers are not used for it.
 
 ### Main preparation tracking
 
@@ -152,6 +160,8 @@ When enabled, tracking creates/verifies the native `sdd-docs-main` milestone and
 Initialization executes/reuses [manual conversation-record setup](skills/sdd-manage/references/ai-logs.md) **by default, without an opt-in question**. Fresh setup seeds `docs/ai-logs/` on `design-docs/ai-logs` and verifies its published default-branch merge before design-docs/main. The human or project policy may explicitly disable/defer this convenience; otherwise setup blockers must be resolved/reported, not silently skipped. Recording stays manual, and no transcript or URL access is required.
 
 `docs/dev/DOCS_TASKS.md` contains tasks/checkoffs only. The separate `docs/dev/DOCS_PREPARATION.md` holds control, decisions and evidence; both use bundled templates. Legacy mixed lists move non-task content to that record without losing decisions or task progress. Each document task completes at first approval: its accepted state, preparation-record evidence and checked task share one commit, followed by push/readback and issue closure. Ordinary later edits keep that task complete and issue closed; an explicit cursor reset reopens DOCS-002–009 and the same issues for the next pass, retaining all documents and DOCS-001. The last task/issue checks the whole package; then the docs branch merges, the verified merge is published, the milestone closes and the agent confirms the final checkpoint before implementation. See [main preparation](skills/sdd-manage/references/main-preparation.md).
+
+Feature implementation uses the same task, milestone and phase review discipline. Completed phases incorporate their scoped changes and integrate into the recorded target; later feature work stays active. Final campaign completion incorporates and archives the remaining eligible sources. See [feature phase delivery](skills/sdd-manage/references/feature-delivery.md).
 
 ### Agent quality checks
 
@@ -328,6 +338,8 @@ The `skills/` directory contains the plugin's 15 skills and their supporting ref
 | `Greenfield Project Prompt Template.md` | Starting prompt for developing a new project with SDD Manager. |
 | `AGENTS_TEMPLATE.md` | Project-level agent instructions covering SDD workflows, checkpoints, publication, tracking and conditional environment guidance. |
 | `DOCS_TASKS_TEMPLATE.md` | Checklist for preparing, reviewing and accepting the main development documents. |
+| `FEATURE_DOCS_TASKS_TEMPLATE.md` | Feature preparation stages/checkoffs with reuse assessment and package QC. |
+| `FEATURE_PREPARATION_TEMPLATE.md` | Feature identity, mode/pass, scope, decisions, exact acceptance/QC and pending effects. |
 | `DOCS_PREPARATION_TEMPLATE.md` | Record of documentation-preparation mode, scope, decisions, approvals and review evidence. |
 | `DOCS_TRACKING_TEMPLATE.json` | GitHub milestone and issue definitions for the documentation-preparation checklist. |
 | `HANDOFF_TEMPLATE.md` | Workflow checkpoint recording context, decisions, completed work and the continuation boundary. |

@@ -8,6 +8,8 @@ The brief provides shared context for architecture and later specification. Keep
 
 PROJECT owns project intent and principal scope. ARCHITECTURE owns structural arrangements and rationale; DECOMPOSITION owns logical components; SPEC owns precise observable behavior/acceptance; PLAN owns delivery order; layout owns physical paths; TASKS owns executable work. Do not turn the brief into any of those documents. Consequential accepted technical choices or distinctive requirements may appear as constraints/principal scope without copying their full downstream contracts.
 
+For a bounded capability addition, use the [FEATURE brief](feature-brief.md) and its preparation companion rather than creating another PROJECT.
+
 ## Inputs and decision state
 
 Use the user's seed, actual clarification answers, applicable project instructions, accepted decisions and relevant existing project evidence. Apply [exploration decision state](exploration.md#facilitate-decisions): distinguish facts, confirmed choices, proposals/working assumptions, unresolved questions and delegated details. Do not infer approval from silence or agent-authored prose.

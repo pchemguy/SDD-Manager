@@ -47,6 +47,8 @@ docs/dev/SPEC.md           docs/dev/spec/
 docs/dev/PLAN.md           docs/dev/plan/
 docs/dev/TASKS.md          docs/dev/tasks/
 docs/dev/layout.md         docs/dev/layout/
+docs/dev/FEATURE.md  docs/dev/FEATURE_PREPARATION.md
+docs/dev/FEATURE_DOCS_TASKS.md  docs/dev/FEATURE-QC-REPORT.md
 docs/dev/FEATURE_ARCHITECTURE.md
 docs/dev/FEATURE_DECOMPOSITION.md
 docs/dev/FEATURE-SPEC.md  docs/dev/FEATURE-PLAN.md
@@ -54,7 +56,7 @@ docs/dev/FEATURE-TASKS.md
 docs/dev/verification-map.json
 ```
 
-Inspect the active reviews/features package navigation for branch identity and source disposition. Discover other campaign identities and paths without loading their contents. Archived feature documents and historical task snapshots are not active FEATURE-TASKS; discover current ownership from main TASKS and explicitly active root sources. Read prior records only to answer a specific current historical question, using the smallest relevant scope; do not check their continued validity or links. Observe partially moved paths/links in the active workflow as unfinished incorporation, without repairing them. Inspect its report prefix and relevant Git/publication facts. Distinguish unfinished review, committed report awaiting push, closed milestone awaiting local parent persistence, and completed phase review awaiting integration. Unknown hosted effects remain unknown until provider readback; orientation observes and hands off rather than replaying writes.
+Inspect active FEATURE_PREPARATION for feature branch identity, authoritative source paths, decision/acceptance state and disposition; use active review navigation for revision context. Discover other campaign identities and paths without loading their contents. Archived feature documents and historical task snapshots are not active FEATURE-TASKS; discover current ownership from main TASKS and explicitly active root sources. Read prior records only to answer a specific current historical question, using the smallest relevant scope; do not check their continued validity or links. Observe partially moved paths/links in the active workflow as unfinished incorporation, without repairing them. Inspect its report prefix and relevant Git/publication facts. Distinguish unfinished review, committed report awaiting push, closed milestone awaiting local parent persistence, and completed phase review awaiting integration. Unknown hosted effects remain unknown until provider readback; orientation observes and hands off rather than replaying writes.
 
 Also identify project-specific equivalents and other execution evidence when present. Do not modify or restore such state during orientation. Feature documents describe an intended delta; FEATURE-TASKS holds only scoped feature work and is not the complete task baseline. Inspect it with TASKS when establishing active work and progress.
 

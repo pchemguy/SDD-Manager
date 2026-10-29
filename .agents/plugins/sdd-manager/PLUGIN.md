@@ -35,7 +35,7 @@ At composite-workflow entry, material switching or context reconstruction, the c
 
 Preserve narrow direct/standalone requests, pending decisions and unfinished work. Read-only discussion/inspection may proceed without Git; repository mutations require an eligible worktree and do not implicitly initialize Git.
 
-**All doc-design outputs must describe the project, not their preparation workflow.** Apply the [development-document content boundary](skills/sdd-manage/references/human-document-review.md#development-document-content-boundary) to every main/feature root and focused child, in every mode. Keep documentation-pass sequencing, cursor and approval/reset state in DOCS_PREPARATION for main preparation, or the existing feature/revision evidence. DOCS_TASKS holds tasks/checkoffs only. Check these boundaries during authoring and review.
+**Product development documents must describe the project, not their preparation workflow.** Apply the [development-document content boundary](skills/sdd-manage/references/human-document-review.md#development-document-content-boundary) to every main/feature root and focused child, in every mode. Keep documentation-pass sequencing, cursor and approval/reset state in DOCS_PREPARATION for main preparation, in FEATURE_PREPARATION for new feature preparation, or revision evidence. DOCS_TASKS holds tasks/checkoffs only. Check these boundaries during authoring and review.
 
 ## Human checkpoints and Git publication
 
@@ -43,11 +43,11 @@ Preserve narrow direct/standalone requests, pending decisions and unfinished wor
 
 **For each necessary new document, publish the reviewable state, present substantive results and pause for human acceptance before dependent work unless explicit applicable preapproval covers that checkpoint.** The same checkpoints apply to necessary feature documents/proposals. Reuse sufficient existing inputs rather than creating optional documents to fill the sequence.
 
-For main document preparation, select or recover the [doc-design mode](#doc-design-modes) before applying the document checkpoints below. The selected mode determines which approvals remain active and where its preparation pass stops.
+For main or feature document preparation, select or recover the [doc-design mode](#doc-design-modes) before applying the document checkpoints below. The selected mode determines which approvals remain active and where its preparation pass stops.
 
 | Human checkpoint | Hold before |
 | --- | --- |
-| PROJECT | ARCHITECTURE or other dependent use of the brief |
+| PROJECT / FEATURE | Dependent project/feature design or specification, unless mapped mode/preapproval covers the checkpoint |
 | ARCHITECTURE | DECOMPOSITION or contract work |
 | DECOMPOSITION | SPEC |
 | SPEC | PLAN |
@@ -67,6 +67,8 @@ Clarification, agent QC, passing tests and commits/pushes do not constitute huma
 ## Requested backend tracking
 
 **For fresh/resumed main preparation, enabled tracking precedes repository modifications:** use [main preparation](skills/sdd-manage/references/main-preparation.md) for the native `sdd-docs-main` milestone and all nine issues defined in bundled JSON before writes. DOCS_TASKS holds the nine task definitions/checkoffs; DOCS_PREPARATION owns mode/pass, decisions and evidence. Publish each accepted-document/preparation-evidence/checked-task commit before issue closure; ordinary later edits retain completion, while an explicit cursor reset reopens DOCS-002–009 for a new pass. Final QC issue closure → verified/published docs merge → milestone closure → final preimplementation checkpoint. This is separate from implementation phase activation.
+
+Feature preparation tracking uses a separate campaign milestone and nine FDOCS issues before writes, under [its preparation contract](skills/sdd-manage/references/feature-preparation.md); it does not reuse main DOCS objects or product phase labels.
 
 ### Implementation tracking
 
@@ -109,16 +111,16 @@ The [canonical catalog](skills/sdd-manage/references/workflows.md) owns definiti
 
 ### Doc-design modes
 
-Main document preparation supports the following selections. Load [mode and pass control](skills/sdd-manage/references/doc-design-modes.md) before applying a selection or handling a cursor reset; it owns approval/delegation, retained-document revision, reset and recovery rules.
+Main and feature document preparation support the following mapped selections. Load [mode and pass control](skills/sdd-manage/references/doc-design-modes.md) before applying a selection or handling a cursor reset; it owns approval/delegation, retained-document revision, reset and recovery rules.
 
 | Selection | Approval and pass boundary |
 | --- | --- |
 | **interactive/onepass** (default) | Each necessary document checkpoint remains active unless explicitly preapproved; follow the selected preparation range. |
-| **autodoc/onepass** | Approve PROJECT; later document checkpoints through TASKS are preapproved. Stop after DOCS-008, before package QC. |
-| **autodoc with human-controlled multipass** | Approve PROJECT each pass; later document checkpoints are preapproved. After TASKS, wait for reset or advance direction. |
-| **autodoc/autoloop** | Use predefined scope passes: first PROJECT approval remains active; announce that later PROJECT approvals are waived. Run the agreed passes, then stop after final DOCS-008, before package QC. |
+| **autodoc/onepass** | Approve PROJECT or FEATURE; later applicable document checkpoints through TASKS/FEATURE-TASKS are preapproved. Stop at DOCS-008/FDOCS-008 before package QC. |
+| **autodoc with human-controlled multipass** | Approve the mapped brief each pass; later applicable document checkpoints are preapproved. After the document pass, wait for reset or advance direction. |
+| **autodoc/autoloop** | Use predefined scope passes: first mapped brief approval remains active; announce that later brief approvals are waived. Run the agreed passes, then stop after final DOCS-008/FDOCS-008 before package QC. |
 
-Predefined autodoc scope sequences default to autoloop unless human-controlled multipass is requested. New material autoloop decisions are delegated to agent judgment with visible rationale while proceeding. A cursor reset retains documents and reopens DOCS-002–009 and their existing issues; mode selection preserves required QC, publication and tracking gates.
+Predefined autodoc scope sequences default to autoloop unless human-controlled multipass is requested. New material autoloop decisions are delegated to agent judgment with visible rationale while proceeding. A cursor reset retains documents and reopens mapped DOCS-002–009 or FDOCS-002–009 and their existing issues; mode selection preserves required QC, publication and tracking gates.
 
 Multipass delivery is **strict by default**: later passes preserve earlier phase/task ranges. **Explicitly permitted flexible multipass** may integrate small changes fitting an earlier pass's scope into its corresponding range. This choice is independent of approval/loop control; [mode details](skills/sdd-manage/references/doc-design-modes.md#multipass-delivery-modes) govern selection, retention and planning/task review.
 
@@ -140,9 +142,9 @@ Follow [task completion and recovery](skills/sdd-implement/references/completion
 
 ### Feature preparation, execution and incorporation
 
-`sdd-manage`/`sdd-orient` establish the bounded addition and accepted main inputs. Design/specification/planning/task owners produce only necessary deltas, with human checkpoints and QC. Accepted preparation integrates before the dependent implementation branch; FEATURE-TASKS drives its authorized range through `sdd-implement`.
+`sdd-manage`/`sdd-orient` establish the bounded addition and accepted main inputs. Feature preparation follows the shared interactive/autodoc/multipass policy mapped through [FEATURE, task-only FEATURE_DOCS_TASKS and FEATURE_PREPARATION](skills/sdd-manage/references/feature-preparation.md). First FEATURE approval precedes dependent stages unless preapproved; assess unchanged design/layout for reuse. Autodoc stops after FDOCS-008 before FEATURE-QC-REPORT/package QC. Completed preparation passes FDOCS-009, verified/published preparation integration and selected preparation milestone closure before its implementation checkpoint. Design/specification/planning/task owners produce only necessary deltas, with human checkpoints and QC. Accepted preparation integrates before the dependent implementation branch; FEATURE-TASKS drives its authorized range through `sdd-implement`.
 
-Before final feature verification, `sdd-integrate-feature` incorporates accepted deltas within the selected scope. Task transfer needs both owning lists in scope; document-only incorporation does not authorize execution. A complete coherent feature verifies/integrates/publishes its established target, then stops. Follow [feature incorporation](skills/sdd-integrate-feature/SKILL.md).
+Use [feature phase delivery](skills/sdd-manage/references/feature-delivery.md) for the retained campaign branch, complete-phase integration and continued later scope. Incomplete phases pause; completed phases incorporate only their selected delivered delta and verify/publish the receiving target. Final campaign completion alone permits eligible final archive. Before final feature verification, `sdd-integrate-feature` incorporates accepted deltas within the selected scope. Task transfer needs both owning lists in scope; document-only incorporation does not authorize execution. A complete coherent feature verifies/integrates/publishes its established target, then stops. Follow [feature incorporation](skills/sdd-integrate-feature/SKILL.md).
 
 ### Review and accepted revision
 
@@ -172,7 +174,7 @@ Use the coordinator's [continuity subworkflow](skills/sdd-manage/references/cont
 
 Establish actual working/source/target identities, creation parent and branch-off checkpoint; completed new workflows integrate into that parent and restore its context without automatic task resumption. Preparation uses `design-docs`, main execution uses phase branches, and feature/revision identities follow [branch management](skills/sdd-manage/references/branch-management.md). Prefixes do not establish acceptance or authorize a merge.
 
-For invalid implementation task completions, the manager resolves [forward recovery](skills/sdd-implement/references/completion-and-checkpoints.md#resolve-a-task-recovery) under existing authority; a repaired verification failure alone does not require renewed approval of the original range. Historical composition exceptions remain human decisions. For TASKS/FEATURE-TASKS, follow the [task commit contract and audit](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract): one executable task closes per commit with result/evidence and initial checkbox; exactly one owning task ID leads its subject. DOCS_TASKS persistence belongs to the coordinator's [main preparation](skills/sdd-manage/references/main-preparation.md). Non-task work invents no task ID. Preserve pending/unrelated work; a dirty tree does not authorize reset.
+For invalid implementation task completions, the manager resolves [forward recovery](skills/sdd-implement/references/completion-and-checkpoints.md#resolve-a-task-recovery) under existing authority; a repaired verification failure alone does not require renewed approval of the original range. Historical composition exceptions remain human decisions. For TASKS/FEATURE-TASKS, follow the [task commit contract and audit](skills/sdd-implement/references/completion-and-checkpoints.md#task-commit-contract): one executable task closes per commit with result/evidence and initial checkbox; exactly one owning task ID leads its subject. DOCS/FDOCS preparation persistence belongs to the coordinator's mapped [main](skills/sdd-manage/references/main-preparation.md) or [feature preparation](skills/sdd-manage/references/feature-preparation.md), not the product implementation audit. Non-task work invents no task ID. Preserve pending/unrelated work; a dirty tree does not authorize reset.
 
 Eligible integration uses an explicit two-parent merge, merged verification and target publication. Partial ranges do not imply complete integration. On conflict, denied publication or uncertain effects, preserve work and reconcile state through [Git recovery](skills/sdd-manage/references/git-workflows.md); never reset or force-push unrelated work. Hosted state follows verified local evidence and the [backend lifecycle](skills/sdd-conventions/references/backend-object-lifecycle.md).
 

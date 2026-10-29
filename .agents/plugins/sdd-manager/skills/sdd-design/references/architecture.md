@@ -1,6 +1,6 @@
 # Architecture
 
-Define the system's high-level arrangement and why it fits the project's purpose. Read the accepted PROJECT brief, exploration decisions and relevant existing project evidence. Apply the shared **sdd-conventions** modularity checks to major boundaries. Use [decomposition](decomposition.md) when responsibility analysis reaches detailed components.
+Define the system's high-level arrangement and why it fits the project's purpose. Read the accepted PROJECT brief, exploration decisions and relevant existing project evidence. For a feature delta, use the accepted [FEATURE brief](feature-brief.md) and its recorded decisions alongside the applicable main architecture; do not recreate PROJECT. Apply the shared **sdd-conventions** modularity checks to major boundaries. Use [decomposition](decomposition.md) when responsibility analysis reaches detailed components.
 
 Use [exploration](exploration.md) for consequential unresolved structural choices before relying on them. Reuse accepted brief decisions and delegated boundaries; resolve the selected uncertainty and return here without replaying pre-brief discovery. Do not invent a material choice from a deferred question.
 

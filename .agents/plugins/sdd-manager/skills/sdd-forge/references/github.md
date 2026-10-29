@@ -10,6 +10,7 @@ Load only the additional reference needed for the request:
 | Prepare, extend or dispatch/monitor a release workflow | [release workflows](github-release-workflows.md) |
 | Create/finish a release, upload assets or recover/read back publication | [release lifecycle](github-releases.md) |
 | Create/read back main preparation `sdd-docs-main` and nine DOCS issues, close preparation issues/milestone | [Main preparation tracking](github-docs-preparation.md) |
+| Create/read back campaign-specific feature preparation milestone/nine FDOCS issues, complete/reset preparation | [Feature preparation tracking](github-feature-preparation.md) |
 | Create or reconcile phase labels, GitHub milestones, or task issues | [TASKS projection](github-projection.md) |
 | Close/reopen a milestone, assess milestone closure backlog or confirm hosted phase gates | [milestone lifecycle](github-milestone-lifecycle.md) |
 | Resolve task IDs to issue numbers for a commit or handoff, check issue status, or close verified issues | [issue lifecycle](github-issue-lifecycle.md) |
