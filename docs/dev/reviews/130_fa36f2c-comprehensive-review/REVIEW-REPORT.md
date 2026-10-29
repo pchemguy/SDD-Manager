@@ -39,3 +39,13 @@ Two medium-priority cross-owner instruction defects require scoped repairs under
 - **Recheck:** FDOCS-002 retains source/assessment/acceptance evidence without extra report, while FDOCS-009 still requires the actual whole-package report and cannot inherit a brief-only Ready claim. Confidence: high; Status: Accepted, repair pending.
 
 No further canonical defect was identified in the assessed handoffs. This unit is a comprehensive lifecycle/source assessment with targeted deep reads at changed/high-risk interfaces, not a line-by-line proof of every instructional paragraph or native/client behavior. Frozen campaigns were not opened for current-validity assessment.
+
+## U-003 — Source tooling, utility contracts and CI
+
+Executed the declared suites against unchanged baseline package/tooling on Linux: 139 support tests pass (23.653 s), 50 publisher tests pass (3.663 s), and 138 Node utility tests pass (23.578 s): **327 passing tests**. Seven Windows shell contracts are skipped on Linux, not passes. Node syntax checks pass for all nine bundled modules; the Python process supervisor and source publisher parse. Package documentation/transfer is exercised by the support suite; publisher tests cover source/schema/archive and curated release-handoff behavior.
+
+Targeted source inspection covered protected token containment/exclusion/format and identity checks, bounded no-shell Git supervision and cleanup, GitHub endpoint/capability/response/error and uncertain-write handling, projection/closure input boundaries, publisher pinned-tree/archive/member validation and CI checkout/permission/test separation. Helpers do not claim native feature-preparation projection support. No runtime/tooling defect found in these checks; this is test/targeted trust-boundary coverage, not a new full adversarial security audit.
+
+Inspected five workflow definitions and release permissions/manual dispatch. Public GitHub connector reads confirmed the referenced official actions/checkout@v7, actions/setup-python@v7 and actions/setup-node@v7 action manifests exist at review time (2026-10-29). Those mutable action refs were inspected for availability, not pinned/changed or executed by this review. No release was dispatched and no product/provider object was mutated. Native Windows execution, full CI matrix results for this new review, fresh-agent/client activation and live feature tracking remain unrun.
+
+Review findings remain the two U-002 instruction handoff defects R-001/R-002. No test failure or package/schema defect was observed in U-003. Proceed to their authorized coherent repair and final affected rechecks; do not repeat unchanged utility runtime suites unless a concrete code risk appears.
