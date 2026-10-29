@@ -28,7 +28,7 @@ Two medium-priority cross-owner instruction defects require scoped repairs under
 - **Observation:** The generic issue lifecycle redirects main DOCS issues but does not redirect campaign-scoped FDOCS. Its default requires product task identity markers and TASKS/FEATURE-TASKS implementation evidence. The new feature backend defines campaign-qualified titles/associations but no matching machine scope markers or explicit lookup entry point.
 - **Consequence:** A direct FDOCS issue lookup/closure can require product acceptance evidence or fail/ambiguously match repeated stage IDs across campaigns. Title/milestone alone should not establish mutable issue identity.
 - **Correction:** Add an explicit feature preparation lane to generic lookup/backend routing; define stable task plus feature-campaign scope markers, title/marker/source/milestone validation with complete open/closed pagination and PR exclusion. Preserve the direct supported API/CLI path and unsupported main-helper boundary. Do not add an issue-map registry or legacy-format migration.
-- **Recheck:** Same FDOCS stage in two campaigns resolves only with exact selected campaign/source/scope; missing/conflicting/unmarked candidates block instead of guessing. Closure/reset requires preparation evidence, not product implementation checks. Confidence: high; Status: Accepted, repair pending.
+- **Recheck:** Same FDOCS stage in two campaigns resolves only with exact selected campaign/source/scope; missing/conflicting/unmarked candidates block instead of guessing. Closure/reset requires preparation evidence, not product implementation checks. Confidence: high; Status: Revised under V-001; final package/source recheck pending U-004.
 
 ### R-002 — Generic QC report clause conflicts with brief evidence ownership
 
@@ -36,7 +36,7 @@ Two medium-priority cross-owner instruction defects require scoped repairs under
 - **Observation:** FEATURE's row records assessment in FEATURE_PREPARATION, and its brief owner expressly introduces no separate brief QC report. The following generic step 5 nevertheless unconditionally instructs an adjacent root report. FEATURE-QC-REPORT now has a separate whole-package FDOCS-009 role.
 - **Consequence:** A literal agent can create an unnecessary brief report or confuse early brief assessment with later whole-feature-package readiness.
 - **Correction:** Scope adjacent-root reports to the established SPEC/PLAN/TASKS report contracts and state FEATURE's concise assessment belongs in its preparation record; reserve FEATURE-QC-REPORT for the whole-package stage. Preserve technical assessment and human checkpoint requirements.
-- **Recheck:** FDOCS-002 retains source/assessment/acceptance evidence without extra report, while FDOCS-009 still requires the actual whole-package report and cannot inherit a brief-only Ready claim. Confidence: high; Status: Accepted, repair pending.
+- **Recheck:** FDOCS-002 retains source/assessment/acceptance evidence without extra report, while FDOCS-009 still requires the actual whole-package report and cannot inherit a brief-only Ready claim. Confidence: high; Status: Revised under V-001; final package/source recheck pending U-004.
 
 No further canonical defect was identified in the assessed handoffs. This unit is a comprehensive lifecycle/source assessment with targeted deep reads at changed/high-risk interfaces, not a line-by-line proof of every instructional paragraph or native/client behavior. Frozen campaigns were not opened for current-validity assessment.
 
