@@ -95,3 +95,7 @@ Preserve no preparatory feature README, no special legacy-format support and all
 ## Whole-workflow execution outcome
 
 V-003–V-005 are complete, including final source composition corrections and controlled/package checks. R-001–R-004 are verified at source level with explicit live-client/hosted-trial limits. The shared main/feature preparation policy, feature task/evidence/templates/QC/tracking and phase incorporation/continuation contracts are published through their action checkpoints. Finalize this evidence checkpoint and stop with campaign 129 open; closure/integration/release is not selected.
+
+## Authorized closure — 2026-10-29
+
+The human selected campaign closure, then a new comprehensive review/fix/close campaign. V-001–V-005 and accepted findings R-001–R-004 are complete at the recorded source/controlled-test level. Finalize evidence, publish/read back this campaign, explicitly merge its complete verified tip into refreshed main, verify equal trees/current checks, publish/read back main and return cleanly. Start the new campaign only from that published integration. No version bump or release selected.

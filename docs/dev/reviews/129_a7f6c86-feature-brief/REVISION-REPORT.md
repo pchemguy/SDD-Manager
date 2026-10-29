@@ -96,3 +96,9 @@ On Linux/Python, 139 support tests and 50 publisher tests pass, plus five final 
 R-001–R-004 are verified at source/controlled-test level under V-003–V-005. No live feature API projection, reset operation, consumer workflow, native browser/app run or installed-client acceptance is claimed. Existing main-only helper implementations remain unchanged; their feature use is explicitly unsupported and routed through backend procedures. The motivating demo repository and all closed campaign records are unchanged.
 
 V-003–V-005 complete the accepted whole-workflow plan. Publish/read back this final source/test/evidence checkpoint; campaign 129 stays open. No main campaign integration, version bump or release selected.
+
+## Closure boundary — 2026-10-29
+
+The human authorized closure after published implementation ce000f02002aebb8d3641be8b8178bea5abaee36. Refreshed origin confirms main remains the original a7f6c8604f7412d26e8b8dce26688f691fad6acb parent/target. The complete delta preserves prior closed records; current links/anchors, artifact/template alignment, package bytes/hashes and whitespace pass. Prior action evidence retains 139 support/50 publisher passes, five final snapshot checks, structural zero errors/67 bundle warnings and source-scenario limits. No unrecorded source change or unresolved accepted finding remains; fresh-agent/client/hosted feature trials are not claimed.
+
+Publish/read back final records, explicitly merge the exact source into refreshed main, verify equal trees/scoped checks and publish/read back main before clean return. This establishes closure and freezes the package. Then open the separately authorized comprehensive review/fix/close campaign from the published main merge; do not rewrite these records from that later campaign. Retain the branch; no product release or version bump selected.
