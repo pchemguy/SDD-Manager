@@ -15,3 +15,27 @@ Assessed the complete 168-file package inventory, manifest/interface paths, all 
 The [resource audit](resource-audit.json) resolves 1,049 actual local links/anchors with zero remaining issues and records five target-context template links separately. The first scan treated two inline-code root README examples as live links; excluding literal code corrected those false positives without changing source. Template links describe copied project-level policy locations and are not asserted as portable installed-client execution. Checked package/source boundaries, both READMEs' current demo/mode/asset descriptions, advertised template resources, complete reference availability and project-policy activation: plugin entries/skills contain no links to the four project-only policy/environment assets. No source-only runtime dependency or nonstandard automatic PLUGIN discovery claim was found.
 
 No canonical defect found in U-001. This is complete inventory/structural/routing coverage plus targeted composition assessment of entries and user/source projections, not an exhaustive live semantic trial of every module or verification of external URL availability. User-specific target files, client/plugin loading and actual browser behavior remain outside the executed evidence. U-002 will assess semantic cross-owner lifecycle contracts; U-003 owns source tooling/tests.
+
+## U-002 — Composite workflow and owner handoffs
+
+Reviewed canonical entry/owner transitions for main and feature preparation, mapped modes/approval/QC, task execution/range/tracking/persistence, revision/nesting/reopening, steering, incorporation/archive, release placement and continuity. Fresh/preapproved/delegated, partial-range, two-phase feature, blocked/uncertain operation, resumed checkpoint and assessment-only contrasts preserve actual scope/authority and distinct acceptance/readiness/publication states. The current feature stage/mode/package/phase mapping is coherent in those primary owners; root initialization is not replayed and no preparatory feature README or special old-format support is introduced. No consumer execution is inferred from these source walkthroughs.
+
+Two medium-priority cross-owner instruction defects require scoped repairs under the human's review/fix grant:
+
+### R-001 — FDOCS issue lookup can fall into product-task lifecycle
+
+- **Location:** skills/sdd-forge/references/github-issue-lifecycle.md opening/Resolve for implementation, github-feature-preparation.md Project and read back, and github.md operation routing at baseline fa36f2c.
+- **Observation:** The generic issue lifecycle redirects main DOCS issues but does not redirect campaign-scoped FDOCS. Its default requires product task identity markers and TASKS/FEATURE-TASKS implementation evidence. The new feature backend defines campaign-qualified titles/associations but no matching machine scope markers or explicit lookup entry point.
+- **Consequence:** A direct FDOCS issue lookup/closure can require product acceptance evidence or fail/ambiguously match repeated stage IDs across campaigns. Title/milestone alone should not establish mutable issue identity.
+- **Correction:** Add an explicit feature preparation lane to generic lookup/backend routing; define stable task plus feature-campaign scope markers, title/marker/source/milestone validation with complete open/closed pagination and PR exclusion. Preserve the direct supported API/CLI path and unsupported main-helper boundary. Do not add an issue-map registry or legacy-format migration.
+- **Recheck:** Same FDOCS stage in two campaigns resolves only with exact selected campaign/source/scope; missing/conflicting/unmarked candidates block instead of guessing. Closure/reset requires preparation evidence, not product implementation checks. Confidence: high; Status: Accepted, repair pending.
+
+### R-002 — Generic QC report clause conflicts with brief evidence ownership
+
+- **Location:** skills/sdd-manage/references/document-qc-gates.md Stage handoff table and step 5; sdd-design/references/feature-brief.md Content/readiness and preparation steps.
+- **Observation:** FEATURE's row records assessment in FEATURE_PREPARATION, and its brief owner expressly introduces no separate brief QC report. The following generic step 5 nevertheless unconditionally instructs an adjacent root report. FEATURE-QC-REPORT now has a separate whole-package FDOCS-009 role.
+- **Consequence:** A literal agent can create an unnecessary brief report or confuse early brief assessment with later whole-feature-package readiness.
+- **Correction:** Scope adjacent-root reports to the established SPEC/PLAN/TASKS report contracts and state FEATURE's concise assessment belongs in its preparation record; reserve FEATURE-QC-REPORT for the whole-package stage. Preserve technical assessment and human checkpoint requirements.
+- **Recheck:** FDOCS-002 retains source/assessment/acceptance evidence without extra report, while FDOCS-009 still requires the actual whole-package report and cannot inherit a brief-only Ready claim. Confidence: high; Status: Accepted, repair pending.
+
+No further canonical defect was identified in the assessed handoffs. This unit is a comprehensive lifecycle/source assessment with targeted deep reads at changed/high-risk interfaces, not a line-by-line proof of every instructional paragraph or native/client behavior. Frozen campaigns were not opened for current-validity assessment.
