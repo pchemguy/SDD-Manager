@@ -1,6 +1,6 @@
 # Task issue references and lifecycle
 
-Main documentation preparation uses [its separate lifecycle](github-docs-preparation.md), including pre-write projection without product PLAN/TASKS, first-approval issues and milestone closure after published integration. The implementation lifecycle below does not reopen completed DOCS issues for later document revisions.
+Main documentation preparation uses [its separate lifecycle](github-docs-preparation.md), including pre-write projection without product PLAN/TASKS, first-approval issues and milestone closure after published integration. Feature FDOCS lookup/closure/reset uses [its campaign-scoped preparation lifecycle](github-feature-preparation.md#resolve-feature-preparation-issues), including direct calls: establish the campaign from FEATURE_PREPARATION or the explicit request before resolving a repeated stage ID. DOCS/FDOCS preparation issues do not use the product implementation lifecycle below.
 
 Apply the [backend object lifecycle](../../sdd-conventions/references/backend-object-lifecycle.md); issue completion requires the task result/status commit to be pushed with verified remote containment before closure. Milestone closure is a separate subsequent operation.
 

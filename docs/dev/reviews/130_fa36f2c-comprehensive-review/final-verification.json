@@ -1,0 +1,26 @@
+{
+  "source": "3b6cd6520fc2a532f7a4ccffef5d4cb263b1dbe7",
+  "files": 168,
+  "archive_sha256": "cbc3028d88d0f1c328045d36be1b8b1a7bacb8b561f6cbb166a73215d3a35b81",
+  "manifest_version": "0.15.4",
+  "schema": "pinned offline schema passed",
+  "archive": "all committed member bytes verified",
+  "release_publication": false,
+  "tests": {
+    "support_pass": 139,
+    "publisher_pass": 50,
+    "node_pass": 138,
+    "windows_skipped": 7,
+    "final_snapshot_pass": 5
+  },
+  "validator_errors": 0,
+  "validator_bundle_warnings": 67,
+  "actual_local_links": 1051,
+  "context_template_links": 5,
+  "closed_record_preservation": true,
+  "source_findings": {
+    "R-001": "Verified (source)",
+    "R-002": "Verified (source)"
+  },
+  "live_consumer_client_feature_projection": "Not run"
+}

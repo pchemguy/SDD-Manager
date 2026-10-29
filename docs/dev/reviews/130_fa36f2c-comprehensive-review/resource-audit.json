@@ -1,0 +1,106 @@
+{
+  "source": "fa36f2c96ef1b0916f408e5976b21f8cb1a0aadb",
+  "markdown_owners": 139,
+  "resolved_local_links": 1049,
+  "context_dependent_template_links": [
+    [
+      ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "SKILL_DISCOVERY_PROTOCOL.md"
+    ],
+    [
+      ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      ".agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md"
+    ],
+    [
+      ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      ".agents/plugins/sdd-manager/assets/BROWSER_DEV_POLICY.md"
+    ],
+    [
+      ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      ".agents/plugins/sdd-manager/assets/playwright.md"
+    ],
+    [
+      ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      ".agents/plugins/sdd-manager/assets/vite-worker-loading.md"
+    ]
+  ],
+  "link_issues": [],
+  "routing": [
+    {
+      "skill": "sdd-conventions",
+      "references": 9,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-design",
+      "references": 5,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-docs",
+      "references": 3,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-forge",
+      "references": 11,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-implement",
+      "references": 5,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-integrate-feature",
+      "references": 1,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-manage",
+      "references": 21,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-orient",
+      "references": 1,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-plan",
+      "references": 3,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-report",
+      "references": 6,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-specify",
+      "references": 3,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-steer",
+      "references": 3,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-tasks",
+      "references": 3,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-tdd",
+      "references": 4,
+      "unnamed": []
+    },
+    {
+      "skill": "sdd-verify",
+      "references": 5,
+      "unnamed": []
+    }
+  ],
+  "svg_parse": "17 passed"
+}

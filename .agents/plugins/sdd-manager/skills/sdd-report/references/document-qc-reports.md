@@ -8,6 +8,8 @@ Place `SPEC-REVIEW-REPORT.md`, `PLAN-REVIEW-REPORT.md` or `TASKS-REVIEW-REPORT.m
 
 Identify artifact paths and exact reviewed/governing states: available full Git commit with file/blob identities, or content hashes for pending edits. A report need not contain its own future commit SHA. Use existing IDs/links and a compact grouped coverage table; no separate traceability database or row per SPEC sentence is required.
 
+Brief assessment evidence for PROJECT/FEATURE belongs in its mapped preparation record; this report procedure introduces no separate brief report. DOCS-QC-REPORT and FEATURE-QC-REPORT are whole-package reports under their coordinator completion gates; an individual brief or root assessment does not certify package readiness.
+
 ## Compact report structure
 
 ```markdown
