@@ -68,3 +68,26 @@ The human now requests review of the entire feature lifecycle for close greenfie
 ## Whole-workflow review outcome
 
 U-001–U-003 completed against source 8bcfec9; [review report](REVIEW-REPORT.md) records R-001–R-004 and a proposed revision sequence. Findings cover feature mode parity, final package QC/completion, preparation stage/tracking policy and multi-phase integration mapping. Existing proactive exploration/shared execution/incorporation coverage is retained. These broader repairs remain proposed; the current request authorized review, not their execution.
+
+## Accepted whole-workflow implementation plan — 2026-10-29
+
+The human accepted the review direction and requested an implementation plan and execution. R-001–R-004 are accepted for the scoped revisions below, superseding their review-only state. Publish/read back each coherent action and evidence; leave campaign 129 open without final main integration or a release.
+
+### Resulting contracts
+
+- Share interactive/onepass, autodoc/onepass and explicitly selected/predefined multipass/autoloop approval/decision semantics across main and feature preparation. Map PROJECT to FEATURE, DOCS_PREPARATION to FEATURE_PREPARATION and the applicable task prefixes/stops; preserve main behavior and existing technical/publication gates.
+- Add task-only docs/dev/FEATURE_DOCS_TASKS.md with FDOCS-001–009 and a separate feature preparation template. These preparation IDs are campaign-scoped, distinct from global product T IDs and main DOCS IDs. FEATURE_PREPARATION retains modes/passes, applicability/reuse, decisions, exact acceptance/QC and pending transitions; it is not a second task checklist.
+- FDOCS-001 establishes feature context/records without repeating root initialization; FDOCS-002 owns first FEATURE approval. Architecture/decomposition/layout stages explicitly assess reuse or prepare the necessary proposal, without optional overlays as ceremony. Complete through FEATURE-TASKS at FDOCS-008; autodoc stops before package QC unless an explicit further range is selected.
+- FDOCS-009 requires sdd-verify whole-feature-package QC in docs/dev/FEATURE-QC-REPORT.md against the delta plus affected accepted main context. Repairs/rechecks, coherent result/evidence/checkoff publication, final issue closure, verified preparation merge, preparation milestone closure and the preimplementation checkpoint follow the same discipline as main. Implementation still requires actual range authority.
+- When preparation tracking is selected, use a campaign-specific sdd-docs-<campaign> milestone and nine campaign-qualified FDOCS issues with verified associations before preparation writes. Define direct backend projection/closure/reset; existing local docs-main utilities must not be presented as feature-capable. No new utility code or implicit live hosted mutation is selected.
+- Keep one campaign feature implementation branch. Execute phase segments under shared task/review/tracking gates; each completed authorized phase incorporates the selected delivered delta, merges/verifies/publishes its target and preserves future feature work. Synchronize the campaign branch before later phase execution. Only final campaign completion archives eligible remaining sources; release placement stays on actual default and requires authority.
+
+### Ordered actions and acceptance
+
+| Action | Findings and work | Evidence / stop |
+| --- | --- | --- |
+| V-003 | R-001–R-003: shared mode mapping, feature templates/stage model, first-brief-to-TASKS checkpoints, final package QC and tracking/reset backend contract; reconcile entries/owners and source maps. | Source scenarios for interactive/autodoc/autoloop, reuse, explicit overrides, pending approval, reset and preparation tracking; link/template/package checks. Publish before next action. |
+| V-004 | R-004: explicit feature phase integration/continuation, phase-matched incorporation/task ownership and final archive; reconcile implementation/range/activation/planning/branch handoffs. | Single/two-phase, partial range, phase release, pending integration/closure and final archive source scenarios. Publish before next action. |
+| V-005 | Review complete composition and repair in-scope defects; run support/publisher/package and structural checks; update canonical findings, report and HANDOFF. | Distinguish source/controlled tests from unrun fresh-agent/client trials. Publish final checkpoint; no campaign closure selected. |
+
+Preserve no preparatory feature README, no special legacy-format support and all closed records. No edits to the motivating demo repository. Existing main template/projection definitions and implementation utilities retain their supported contracts; new feature tracking is routed explicitly through the backend procedure.

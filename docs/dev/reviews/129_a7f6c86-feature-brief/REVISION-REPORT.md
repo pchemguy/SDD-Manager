@@ -43,3 +43,7 @@ Assessed published source df747beb6dd23379acaf3832b2207d318e69aa8a and the compl
 Final package validator returns zero errors and 61 bundled cross-skill-reference warnings; these warn that client handoff is not guaranteed. Complete-delta inspection checks 27 changed/new paths and 716 local links/anchors, exact packaged bytes/hashes for both new references, closed-record preservation and absence of added preparatory README/legacy-format support in the contracts. Diff whitespace passes. Prior action evidence records the 139 support/50 publisher passes and five final snapshot checks; no script/runtime implementation changed afterward. Source review, package validation and controlled tests do not establish fresh-agent execution, installed-client routing or universal compliance.
 
 V-001–V-002 are complete. Publish/read back this evidence/checkpoint commit; campaign 129 remains open on its revision branch. No final campaign integration, release or changes to the motivating demo repository were selected.
+
+## Whole-workflow implementation authorized
+
+The human accepted the full-review direction and selected planning/execution. Added V-003–V-005 with explicit shared mode mapping, campaign-scoped feature documentation tasks/evidence, feature whole-package QC, backend preparation tracking, phase/campaign integration and final verification. R-001–R-004 are accepted for revision; previous source observations remain historical. Publish/read back this plan before execution. No final campaign integration or release selected.
