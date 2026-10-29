@@ -32,3 +32,23 @@ Current SDD source establishes a feature brief in exploration/package evidence, 
 ## Next eligible step and stop
 
 Perform a bounded source review and propose the artifact/approval contract and ordered revision plan. Keep proposals distinct from accepted requirements and observed checks. Do not implement plugin changes merely from this campaign opening. Publish/read back this setup and return for the next selected step. No comprehensive review, live acceptance or compatibility pass is claimed.
+
+## Accepted implementation plan — 2026-10-29
+
+The human selected the proposed FEATURE.md brief with a required lightweight FEATURE_PREPARATION.md companion for new feature campaigns and explicitly requested planning and execution. This supersedes the opening-only boundary above. Implement the scoped plugin instructions and source navigation, verify and publish; leave campaign 129 open without a version bump, release or final main integration.
+
+### Contract decisions
+
+- Active brief: docs/dev/FEATURE.md, authored/reviewed by sdd-design; concise intended feature outcome, scope/non-goals, affected existing behavior/compatibility, consequential constraints and material unresolved product choices.
+- Companion: docs/dev/FEATURE_PREPARATION.md, initialized alongside the first brief draft and maintained by sdd-manage; original request/provenance, proposed/confirmed/delegated/open decisions, exact document acceptance/QC references, current preparation stage/pending boundary. It is evidence, not a second task list or product specification.
+- Require the first brief acceptance checkpoint before dependent feature design/specification unless explicitly preapproved. No separate approval checkpoint for the evidence record and no automatic main-only autodoc/preparation-task projection. Reuse acceptable existing work, preserve pending decisions and honor narrow later-stage requests.
+- Keep package README identity/navigation and HANDOFF checkpoint responsibilities. New active files follow feature source ownership, protected-package rules and accepted incorporation/archive lifecycle. Existing/closed campaigns need no retrospective conversion.
+
+### Ordered execution
+
+| Action | Work and owners | Verification |
+| --- | --- | --- |
+| V-001 | Add focused design brief and coordinator preparation-record contracts; route entries; reconcile feature sequence/checkpoints, content boundary, QC inputs, orientation, specification input, incorporation/archive, package navigation and source capability map. | Inspect both sides of each handoff; fresh/preapproved/resumed/narrow-scope/partial-incorporation/archive scenarios; no main-only mode leakage or duplicate evidence ownership. |
+| V-002 | Review the coherent amended source, repair scoped conflicts, run applicable structural/link/package/support/publisher checks and record outcomes/limits. | Validate new references are packaged and reachable; verify closed-record preservation and all new/changed links, run support and publisher suites; do not promote static/source scenarios to live-agent acceptance. |
+
+Plan/evidence and each completed action commit publish/read back before further work. Source amendments and their observed evidence close together; use no invented executable task IDs. No changes to the motivating demo repository or frozen campaign records.
