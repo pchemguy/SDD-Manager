@@ -60,3 +60,7 @@ Feature preparation must not create or depend on a feature README. FEATURE_PREPA
 ## Execution outcome
 
 V-001 and V-002 are complete with the human's preparatory-README/legacy-support correction applied. Source contracts, dependent handoffs, structural/link/package checks and support/publisher evidence are recorded in REVISION-REPORT. Campaign remains open; closure/integration/release require their separately selected boundary.
+
+## Whole-feature workflow review selected
+
+The human now requests review of the entire feature lifecycle for close greenfield parity in docs/checkpoints, interactive/autodoc modes and proactive guidance, retaining feature-specific incorporation. [Review plan](REVIEW-PLAN.md) defines U-001–U-003 against published source 8bcfec9. Earlier V-001–V-002 remain implemented; broader proposed repairs require their subsequent selected revision boundary.
