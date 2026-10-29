@@ -32,6 +32,8 @@ When all phase work, delivery and phase reviews/reports, applicable hosted miles
 
 Only when the request authorizes further work, create the next phase branch from the updated verified/published main checkpoint and re-establish its scope. Split an authorized cross-phase range into sequential phase segments; each phase must meet its exit before the next branch starts. Do not execute extra tasks or perform an unrequested continuation to fill a phase. An explicit instruction to integrate a partial phase is a recorded override with its scope/evidence consequences, not the default.
 
+For feature-owned multi-phase delivery, use [feature phase delivery](feature-delivery.md) for its persistent campaign branch, per-phase incorporation/integration and next-phase synchronization. Main phase branch rules above do not rename feature branches or imply early feature archive.
+
 Feature/revision integration into a phase updates that phase's accepted inputs and evidence; it does not complete the phase. Steering returns control after its amendment merge. Standalone revision/feature boundaries retain their own accepted scope and integration gates.
 
 ## Continuation

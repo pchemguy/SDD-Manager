@@ -14,6 +14,12 @@ Use active selected deltas and current main owners. A [closed feature package](.
 
 When a selected target depends on a still-unaccepted decision in another concern, stop that target and report the specific decision and owner. Continue independent selected targets only where their meaning remains sound. In particular, do not incorporate a task list against an unreconciled conflicting PLAN or SPEC.
 
+## Incremental phase incorporation
+
+For a multi-phase feature, accept the whole intended delta during preparation but incorporate the selected completed phase's product changes required for main-document coherence at that phase's integration. Identify exact accepted clauses/components and phase exits in existing phase/task evidence; do not treat the complete FEATURE-SPEC/PLAN as already implemented. Keep future-only changed contracts and implementation tasks active in their owning feature sources, preserving accepted intent without unsupported delivery claims.
+
+Use the same selected-target and reassessment rules: transfer product tasks only with both lists in scope, retire duplicate executable entries coherently and keep unresolved/deferred work under one active owner. A phase-limited main-doc update is not whole-feature incorporation or authority to change unrelated guarantees. Recheck affected main owners and relevant regressions before the phase review closes. Retain active feature documents, preparation evidence and QC reports for later phases; do not archive the package at the first phase/release. Follow the coordinator's [phase integration/continuation mapping](../../sdd-manage/references/feature-delivery.md) and reserve final archive for the eligible final campaign boundary.
+
 ## Task-list reconciliation
 
 When TASKS or FEATURE-TASKS is selected, reconcile the accepted changes in its owning list; this need not incorporate the feature list into TASKS.

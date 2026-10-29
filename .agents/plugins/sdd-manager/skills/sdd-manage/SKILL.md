@@ -54,6 +54,7 @@ Use each reference's scope and load conditions below to select it before reading
 | Reference | Scope and boundary | Load when |
 | --- | --- | --- |
 | [agent-orientation.md](references/agent-orientation.md) | Root AGENTS.md maintenance preserving governing instructions | Creating/maintaining target-project orientation or updating affected instruction links |
+| [feature-delivery.md](references/feature-delivery.md) | Feature phase/campaign branch mapping, incremental incorporation, phase integration/release and continuation | Selecting feature execution or crossing a feature phase/final integration boundary |
 | [feature-preparation.md](references/feature-preparation.md) | Feature brief/records, FDOCS progression, mapped modes/reset, package QC, tracking and preparation handoff | Opening/resuming feature preparation or recording its decisions/acceptance |
 | [main-preparation.md](references/main-preparation.md) | Main-only pre-write tracking, task/preparation-record ownership and adoption, initialization, approval persistence, package QC and final integration/checkpoint; document owners retain authoring | Entering/resuming main preparation, before its first repository write or a document completion/integration handoff |
 | [repository-bootstrap.md](references/repository-bootstrap.md) | Initial exploration and disclosure/usage records; no implicit Git initialization | Before greenfield exploration or the first target-repository SDD commit |
