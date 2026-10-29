@@ -47,3 +47,7 @@ Apply the human's correction: remove existing-page preservation requirements wit
 ## V-009 — Preserve supplied baseline prompt separately
 
 Save the human-supplied version verbatim as docs/demo/hello_world/prompts/Autodoc 3in1 Baseline.md. Preserve the current revised Autodoc 3in1.md. Verify exact saved bytes, current-prompt preservation and whitespace; publish without closing.
+
+## Finalization — 2026-10-29
+
+The human authorized closure followed by a new feature-workflow revision campaign. V-001–V-009 are complete; later accepted amendments supersede earlier wording/layout proposals as recorded in the report. Finalize this campaign without further source changes, publish the boundary, explicitly merge into refreshed main, verify the result and publish/read back main. Then open the separately authorized campaign from that published main tip. No version bump or product release is selected.
