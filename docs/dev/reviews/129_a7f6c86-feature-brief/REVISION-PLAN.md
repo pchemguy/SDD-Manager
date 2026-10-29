@@ -56,3 +56,7 @@ Plan/evidence and each completed action commit publish/read back before further 
 ### Human correction during execution
 
 Feature preparation must not create or depend on a feature README. FEATURE_PREPARATION directly owns preparation identity/source navigation alongside its request/decision/approval evidence. Archive navigation keeps its later lifecycle role. Do not add explicit compatibility/adoption provisions for previously ill-defined campaign formats. This supersedes the earlier plan's preparatory README and retrospective-conversion recommendations; ordinary continuation still reuses the current pair without replaying completed work.
+
+## Execution outcome
+
+V-001 and V-002 are complete with the human's preparatory-README/legacy-support correction applied. Source contracts, dependent handoffs, structural/link/package checks and support/publisher evidence are recorded in REVISION-REPORT. Campaign remains open; closure/integration/release require their separately selected boundary.
