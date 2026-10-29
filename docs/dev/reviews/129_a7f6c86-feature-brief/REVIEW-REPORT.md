@@ -10,7 +10,7 @@ Campaign 129_a7f6c86; original baseline a7f6c8604f7412d26e8b8dce26688f691fad6acb
 | --- | --- | --- |
 | U-001 | Reviewed | Feature/main preparation, brief/exploration, approval/mode, document progression and QC. R-001–R-003. |
 | U-002 | Reviewed | Shared task execution/tracking/review and scoped incorporation/archive are substantial; R-004 identifies feature multi-phase integration ambiguity. |
-| U-003 | Pending | Proactive guidance/entry composition, source scenarios and consolidated revision direction. |
+| U-003 | Reviewed | Entry/proactive guidance and ten source scenarios assessed; consolidated four findings and proposed repair order. |
 
 | Finding | Type / priority | Disposition |
 | --- | --- | --- |
@@ -78,3 +78,54 @@ The accepted brief pair, first FEATURE acceptance, per-document human/QC separat
 - Release publication is separately authorized and pinned to a verified default-branch release commit. No new native-platform blocker is introduced; missing target-native execution remains excluded by the existing default policy. A phase or feature merge alone neither publishes a release nor proves all target runtimes executed.
 
 No new plugin repairs or live implementation/hosted operations were performed for U-002. Reviewed source remains 8bcfec9; only campaign evidence changes in this review unit.
+
+## U-003 — Proactive guidance and composition
+
+The coordinator entry and coordination.md's Proactive handoff already require relevant capabilities/prerequisites, consequential gaps, next owner, observed state, pending checkpoint and stop at entry/preparation/activation/completion. PLUGIN.md routes ordinary requests and scoped feature preparation to the coordinator/design owners. Exploration assesses the seed critically, compares credible options, recommends, distinguishes human/proposed/delegated choices and avoids irrelevant interviews. Its feature paragraph expressly explores delta/compatibility against the accepted main system. FEATURE first-brief presentation and human-document-review apply substantive scope/compatibility analysis, not a Ready-only announcement.
+
+These are sound existing capabilities, not absent proactive guidance. The unresolved operational problem is that feature modes, stage model and package exit do not supply the same concrete destinations for this guidance as main preparation (R-001–R-003). Main mode-specific exploration resolves current-scope interactions before PROJECT and defines later delegated autoloop decisions; feature guidance has only generic explicit-delegation rules. Consequently the agent can identify a concern but lacks a feature-autodoc decision/stop policy. Correct those owners and entry projections together rather than adding another general exhortation to be proactive.
+
+### Source scenario synthesis
+
+| Scenario | Source assessment at 8bcfec9 | Finding / sound coverage |
+| --- | --- | --- |
+| Ordinary feature request, no mode | Brief first and individual necessary-document checkpoints exist; no new whole-project discovery required. | Sound interactive foundations; stage reporting needs R-003. |
+| Feature explicitly requested in autodoc | Main-only mode reference does not define feature brief/later-approval mapping or final stop. | R-001. |
+| Human approves FEATURE then says continue | With no scoped later preapproval, next necessary document remains interactive. Brief acceptance alone is not broad future approval. | Sound current acceptance rule; feature autodoc mapping missing. |
+| Existing architecture/layout remains sufficient | Reuse and optional overlay rules exist; stage applicability/reuse evidence is not normalized. | Sound scope principle; R-003 for explicit stage record. |
+| Terse capability seed with material interactions | Exploration must assess delta/compatibility and offer context-based choices before relying on invented intent. | Sound proactive rule; no live behavior trial performed. |
+| Delegated choice versus unapproved assumption | Generic provenance/preapproval distinctions exist; feature mode-specific delegation is absent. | Sound basis; R-001. |
+| All individual feature documents accepted | No feature whole-package QC/report and preimplementation completion protocol mirrors main. | R-002. |
+| Requested tracking includes preparation | Implementation phase objects are defined; feature preparation stage/object lifecycle is not. | R-003, distinct from working implementation tracking. |
+| Two-phase feature with a release after each | Generic coherent-boundary gates exist; partial phase incorporation, receiving branch and next-phase continuation need an explicit feature mapping. | R-004. |
+| Partial incorporation, interrupted archive or read-only review | Selected-target rules, source retention, one task owner, evidence-based continuation and frozen history are defined; review does not authorize repairs. | Sound feature-specific layer. |
+
+No source-scenario row claims actual consumer execution, installed-client activation or observed compliance. Four canonical findings remain Open; no extra finding is invented for already covered proactive/implementation rules.
+
+## Proposed target composition
+
+Use one shared preparation discipline with main/feature mappings, rather than copying the entire greenfield procedure into another divergent workflow:
+
+| Shared concern | Main mapping | Feature mapping / deliberate difference |
+| --- | --- | --- |
+| Brief and control record | PROJECT + DOCS_PREPARATION | FEATURE + FEATURE_PREPARATION; compare the requested delta with accepted main context. |
+| Preparation progression | Document stages through TASKS, then package QC | Equivalent applicable stages through FEATURE-TASKS, with explicit reuse/optional-overlay outcomes, then feature package QC. |
+| Interactive | Applicable document acceptance checkpoints | Same checkpoint discipline; do not regenerate unchanged main documents. |
+| Autodoc | First brief acceptance, scoped later preapproval, stop before package QC | Equivalent FEATURE-based policy, explicit delegated-decision boundary and stop before feature package QC. |
+| Multipass/autoloop | Existing scope/reset/strict-versus-flexible policy | Decide explicit support/mapping; protect earlier delivered/accepted ranges and retain decisions without importing main-specific object IDs. |
+| Preparation progress/tracking | Main preparation tasks and enabled hosted objects | Define feature applicability/task/object policy, retaining separation between task checkoffs and evidence; no preparatory README. |
+| Delivery | Shared task/phase tests, reviews, reports, tracking and Git discipline | Same execution discipline against current system, with explicit feature phase/campaign mapping. |
+| Incorporation/archive | No feature delta archive | Scope-matched integration into main product documents and unique task ownership; final feature archive retains evidence only when eligible. |
+
+### Proposed repair sequence (not executed)
+
+1. **R-001/R-003:** Define the shared workflow-specific stage/mode model, FEATURE first approval, exact later preapproval/delegation, applicability/reuse reporting and preparation progress/tracking choice. Keep runtime context and source mapping authoritative in one place. Decide feature multipass/autoloop coverage and whether preparation task checkoffs need a separate task-only owner; do not hide these decisions in an implementation patch.
+2. **R-002:** Define final feature package QC/report, impacted-main regression/consistency assessment, repair/recheck, explicit advance/implementation checkpoint and preparation merge/publication sequence. Match autodoc's stop to that boundary.
+3. **R-004:** Define multi-phase feature integration/continuation and phase-matched main-document incorporation while future feature sources remain active; distinguish phase release from final campaign archive.
+4. Reconcile PLUGIN/coordinator/focused-owner entry guidance, exact record responsibilities, source contract/map and relevant tracking helpers/tests. Verify positive, pending/preapproved, narrow-scope, mode-switch, resume and multi-phase cases. Add live-agent evidence only through an explicitly scoped trial, retaining its limits.
+
+## Review outcome and limits
+
+U-001–U-003 are complete. Main-only preparation semantics are a substantial parity gap despite the now-defined brief pair; execution, tracking, review/persistence and incorporation foundations are largely reusable. Four findings are proposed for revision, not implemented or accepted by this review. The requested goal supports largely parallel preparation/checkpoint semantics while retaining feature-specific changed scope and incorporation, optional unchanged design reuse and no whole-project bootstrap replay.
+
+Verification for this review is source inspection and handoff/scenario analysis, campaign link/scope checks and whitespace. Prior 189 support/publisher passes belong to the earlier brief-pair implementation and are not fresh behavioral evidence for these proposals. Plugin source stays byte-identical to 8bcfec9; the example/demo repository and closed campaigns remain unchanged. Publish/read back this final review checkpoint and return with campaign 129 open; no repair execution, main integration or release selected.

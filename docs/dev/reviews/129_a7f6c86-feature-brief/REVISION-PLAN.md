@@ -64,3 +64,7 @@ V-001 and V-002 are complete with the human's preparatory-README/legacy-support 
 ## Whole-feature workflow review selected
 
 The human now requests review of the entire feature lifecycle for close greenfield parity in docs/checkpoints, interactive/autodoc modes and proactive guidance, retaining feature-specific incorporation. [Review plan](REVIEW-PLAN.md) defines U-001–U-003 against published source 8bcfec9. Earlier V-001–V-002 remain implemented; broader proposed repairs require their subsequent selected revision boundary.
+
+## Whole-workflow review outcome
+
+U-001–U-003 completed against source 8bcfec9; [review report](REVIEW-REPORT.md) records R-001–R-004 and a proposed revision sequence. Findings cover feature mode parity, final package QC/completion, preparation stage/tracking policy and multi-phase integration mapping. Existing proactive exploration/shared execution/incorporation coverage is retained. These broader repairs remain proposed; the current request authorized review, not their execution.
