@@ -2,6 +2,8 @@
 
 Use `docs/dev/FEATURE-SPEC.md` when an additive, corrective, subtractive, or compatibility-sensitive change needs a reviewable behavioral delta before it is integrated into the complete system specification. A small unambiguous correction may instead revise the owning main SPEC node directly when that is the requested scope.
 
+For a feature campaign, use the accepted [FEATURE brief](../../sdd-design/references/feature-brief.md), its recorded decisions and applicable main documents as governing inputs. Keep the brief's scope and compatibility constraints while refining exact contracts; unresolved material intent returns to sdd-design/coordinator before dependent work.
+
 Define:
 
 1. the change objective, affected users and existing SPEC nodes, and whether the work adds, alters, or removes behavior;

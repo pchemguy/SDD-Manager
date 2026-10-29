@@ -1,6 +1,6 @@
 ---
 name: sdd-design
-description: Use when exploring a software project or feature, forming architecture decisions, developing a component decomposition, or creating, reviewing and revising docs/dev/PROJECT.md, ARCHITECTURE.md, DECOMPOSITION.md, and scoped architectural change documents before specification.
+description: Use when exploring a software project or feature, forming architecture decisions, developing a component decomposition, or creating, reviewing and revising docs/dev/PROJECT.md, FEATURE.md, ARCHITECTURE.md, DECOMPOSITION.md, and scoped architectural change documents before specification.
 ---
 
 # Explore and design
@@ -9,7 +9,7 @@ For Markdown output or document work within this skill's scope, apply the shared
 
 **Development documents describe the project; they must not narrate their SDD preparation process.** Apply the [content boundary](../sdd-manage/references/human-document-review.md#development-document-content-boundary) when authoring, revising or reviewing any root, feature counterpart or focused child, in every mode.
 
-Obtain human approval of new PROJECT before ARCHITECTURE, ARCHITECTURE before DECOMPOSITION, and DECOMPOSITION before SPEC, unless that checkpoint is explicitly preapproved. Apply [human document review](../sdd-manage/references/human-document-review.md) to necessary feature proposals and direct calls. Reuse acceptable existing inputs; begin with any requested interactive review.
+Obtain human approval of new FEATURE before dependent feature design/specification, and of new PROJECT before ARCHITECTURE, ARCHITECTURE before DECOMPOSITION, and DECOMPOSITION before SPEC, unless that checkpoint is explicitly preapproved. Apply [human document review](../sdd-manage/references/human-document-review.md) to necessary feature proposals and direct calls. Reuse acceptable existing inputs; begin with any requested interactive review.
 
 For fresh/resumed **main preparation**, load [main preparation](../sdd-manage/references/main-preparation.md) before repository writes, including direct calls. Its pre-write tracking gate, DOCS_TASKS first-approval commit and issue progression, package QC and merge/final-checkpoint rules govern this path. The coordinator persists the accepted document, current-pass decision/QC references in DOCS_PREPARATION and its checked DOCS task together; DOCS_TASKS contains task definitions/checkoffs only. Ordinary later edits retain completion; an explicit cursor reset reopens the same tasks/issues. Apply the [selected mode and pass boundary](../sdd-manage/references/doc-design-modes.md), including autodoc’s stop after DOCS-008 before package QC. The preparation-branch guidance below retains other paths’ scope and does not waive these main gates.
 
@@ -20,6 +20,7 @@ Choose the work requested and load only its reference. A request for a later sta
 | Work | Load |
 | --- | --- |
 | Create, revise or review PROJECT.md as a concise project brief | [project brief](references/project-brief.md) |
+| Create, revise or review FEATURE.md and its required preparation companion with the coordinator | [feature brief](references/feature-brief.md) |
 | Proactively refine an initial idea before PROJECT, explore a feature delta, or resolve consequential uncertainty during later design | [exploration](references/exploration.md) |
 | Define or revise major system blocks, dependency direction, and architectural decisions | [architecture](references/architecture.md) |
 | Define or revise component responsibilities, collaboration, and provisional interfaces | [decomposition](references/decomposition.md) |
@@ -28,13 +29,14 @@ When the request crosses stages, load the next reference as that stage becomes r
 
 Use the **sdd-conventions** modularity reference when defining or reviewing boundaries, and its design heuristics when assessing a chosen approach or comparing options. Keep these checks separate from the document-specific procedures below. Observe project instructions and existing contracts; do not overwrite unowned changes. If required project evidence conflicts, resolve the conflict before mutation.
 
-`PROJECT.md` owns the [concise project brief](references/project-brief.md), `ARCHITECTURE.md` owns high-level design, and `DECOMPOSITION.md` owns detailed logical component boundaries. Both ARCHITECTURE and DECOMPOSITION may have focused children. Scoped feature documents express a proposed architectural delta where necessary. These documents inform SPEC; they neither replace its behavioral contracts nor authorize implementation, planning, layout authoring, or task execution.
+`FEATURE.md` owns the [scoped feature brief](references/feature-brief.md); its companion retains preparation evidence. `PROJECT.md` owns the [concise project brief](references/project-brief.md), `ARCHITECTURE.md` owns high-level design, and `DECOMPOSITION.md` owns detailed logical component boundaries. Both ARCHITECTURE and DECOMPOSITION may have focused children. Scoped feature documents express a proposed architectural delta where necessary. These documents inform SPEC; they neither replace its behavioral contracts nor authorize implementation, planning, layout authoring, or task execution.
 
 ## Document boundaries
 
 | Document | Governing concern |
 | --- | --- |
 | PROJECT | Concise purpose, users, outcomes, principal scope/non-goals and consequential constraints, with material decision gaps identified. |
+| FEATURE | Intended capability delta, retained behavior, compatibility/constraints and material product questions. |
 | ARCHITECTURE | Major blocks, system-wide relationships and dependency direction, and consequential structural rationale. |
 | DECOMPOSITION | Logical components within those blocks: responsibility, collaboration, state ownership, and design-level interface and verification seams. |
 | SPEC | Observable behavior and precise success/failure contracts, required qualities, and acceptance. |

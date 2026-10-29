@@ -52,3 +52,7 @@ The human selected the proposed FEATURE.md brief with a required lightweight FEA
 | V-002 | Review the coherent amended source, repair scoped conflicts, run applicable structural/link/package/support/publisher checks and record outcomes/limits. | Validate new references are packaged and reachable; verify closed-record preservation and all new/changed links, run support and publisher suites; do not promote static/source scenarios to live-agent acceptance. |
 
 Plan/evidence and each completed action commit publish/read back before further work. Source amendments and their observed evidence close together; use no invented executable task IDs. No changes to the motivating demo repository or frozen campaign records.
+
+### Human correction during execution
+
+Feature preparation must not create or depend on a feature README. FEATURE_PREPARATION directly owns preparation identity/source navigation alongside its request/decision/approval evidence. Archive navigation keeps its later lifecycle role. Do not add explicit compatibility/adoption provisions for previously ill-defined campaign formats. This supersedes the earlier plan's preparatory README and retrospective-conversion recommendations; ordinary continuation still reuses the current pair without replaying completed work.

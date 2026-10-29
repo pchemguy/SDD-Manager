@@ -27,7 +27,7 @@ Apply **sdd-conventions**' **Workflow identity** for branch/directory associatio
 
 Use the convention's workflow-specific report prefix: general campaigns under reviews, checkpoint steering under its phase's nested revisions, and feature records/reports under the feature directory. Retain stable identity and stage filenames; no implicit migration of historical records.
 
-For a feature package README, present identity/full baseline, branch/target, scope, active source links, and main owner links. At archive, replace active navigation with actual archived paths and historical status/evidence; identify current task owners. This record is navigation/provenance, not a competing progress checklist. A partial phase report distinguishes pushed task-range completion from uncompleted phase integration.
+For feature preparation, use [FEATURE_PREPARATION](../../sdd-manage/references/feature-preparation.md) for request/decision provenance, campaign/full baseline, branches/targets, active source links, exact acceptance/QC evidence and current preparation boundary; FEATURE owns product intent. Do not create an extra preparation navigation record. At final archive, package navigation identifies actual archived paths, historical status/evidence and current main/task owners without copying preparation history. A partial phase report distinguishes pushed task-range completion from uncompleted phase integration.
 
 ## Review plan
 

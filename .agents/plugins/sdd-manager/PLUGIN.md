@@ -35,7 +35,7 @@ At composite-workflow entry, material switching or context reconstruction, the c
 
 Preserve narrow direct/standalone requests, pending decisions and unfinished work. Read-only discussion/inspection may proceed without Git; repository mutations require an eligible worktree and do not implicitly initialize Git.
 
-**All doc-design outputs must describe the project, not their preparation workflow.** Apply the [development-document content boundary](skills/sdd-manage/references/human-document-review.md#development-document-content-boundary) to every main/feature root and focused child, in every mode. Keep documentation-pass sequencing, cursor and approval/reset state in DOCS_PREPARATION for main preparation, or the existing feature/revision evidence. DOCS_TASKS holds tasks/checkoffs only. Check these boundaries during authoring and review.
+**Product development documents must describe the project, not their preparation workflow.** Apply the [development-document content boundary](skills/sdd-manage/references/human-document-review.md#development-document-content-boundary) to every main/feature root and focused child, in every mode. Keep documentation-pass sequencing, cursor and approval/reset state in DOCS_PREPARATION for main preparation, in FEATURE_PREPARATION for new feature preparation, or revision evidence. DOCS_TASKS holds tasks/checkoffs only. Check these boundaries during authoring and review.
 
 ## Human checkpoints and Git publication
 
@@ -140,7 +140,7 @@ Follow [task completion and recovery](skills/sdd-implement/references/completion
 
 ### Feature preparation, execution and incorporation
 
-`sdd-manage`/`sdd-orient` establish the bounded addition and accepted main inputs. Design/specification/planning/task owners produce only necessary deltas, with human checkpoints and QC. Accepted preparation integrates before the dependent implementation branch; FEATURE-TASKS drives its authorized range through `sdd-implement`.
+`sdd-manage`/`sdd-orient` establish the bounded addition and accepted main inputs. New feature preparation creates a [FEATURE brief and FEATURE_PREPARATION companion](skills/sdd-manage/references/feature-preparation.md), with brief acceptance before dependent design/specification unless explicitly preapproved. Design/specification/planning/task owners produce only necessary deltas, with human checkpoints and QC. Accepted preparation integrates before the dependent implementation branch; FEATURE-TASKS drives its authorized range through `sdd-implement`.
 
 Before final feature verification, `sdd-integrate-feature` incorporates accepted deltas within the selected scope. Task transfer needs both owning lists in scope; document-only incorporation does not authorize execution. A complete coherent feature verifies/integrates/publishes its established target, then stops. Follow [feature incorporation](skills/sdd-integrate-feature/SKILL.md).
 

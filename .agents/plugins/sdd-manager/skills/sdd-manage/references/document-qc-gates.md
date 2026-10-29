@@ -8,7 +8,8 @@ Before dependent use, apply the [development-document content boundary](human-do
 
 | Completed input | Required owner assessment | Dependent operation |
 | --- | --- | --- |
-| SPEC / FEATURE-SPEC and applicable children | sdd-specify: accepted PROJECT/design conformance | PLAN / dependent feature planning |
+| FEATURE | sdd-design: seed/delta coverage, compatibility, consequential decision readiness and product/evidence separation; assessment referenced in FEATURE_PREPARATION | Dependent feature design/specification |
+| SPEC / FEATURE-SPEC and applicable children | sdd-specify: accepted PROJECT or FEATURE and applicable design conformance | PLAN / dependent feature planning |
 | PLAN / FEATURE-PLAN with relevant layout | sdd-plan: SPEC conformance and phase/milestone decomposition | TASKS / dependent feature tasks |
 | TASKS / FEATURE-TASKS and applicable children | sdd-tasks: PLAN conformance, scope and task hierarchy | Implementation or creation/projection of hosted task objects |
 
