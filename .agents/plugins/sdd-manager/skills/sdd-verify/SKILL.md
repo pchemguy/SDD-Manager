@@ -7,6 +7,8 @@ description: Use when selecting and running checks for an SDD task, selected cha
 
 For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists and code blocks, plus four-space structural indentation, including nested lists, with exactly one space after each list marker. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
 
+For whole-feature preparation QC, use the coordinator's [FDOCS-009 contract](../sdd-manage/references/feature-preparation.md#final-package-qc-integration-and-checkpoint): assess the complete delta plus affected accepted main context and retain FEATURE-QC-REPORT. Do not infer package readiness from individual document reports or implement repairs outside the selected scope.
+
 Establish the requested task, change, milestone, phase, or project scope. Load the relevant references:
 
 | Work | Load |

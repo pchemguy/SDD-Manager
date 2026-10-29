@@ -69,6 +69,8 @@ Main preparation supports [doc-design modes](../../.agents/plugins/sdd-manager/s
 | `docs/dev/PROJECT.md` | [Concise project brief](../../.agents/plugins/sdd-manager/skills/sdd-design/references/project-brief.md): purpose, users, outcomes, principal scope/non-goals, consequential constraints and material assumptions/questions. |
 | `docs/dev/FEATURE.md` | [Concise feature brief](../../.agents/plugins/sdd-manager/skills/sdd-design/references/feature-brief.md): intended change, scope/non-goals, retained behavior, compatibility and consequential product decisions. |
 | `docs/dev/FEATURE_PREPARATION.md` | Required [feature preparation record](../../.agents/plugins/sdd-manager/skills/sdd-manage/references/feature-preparation.md): request/decision provenance, identity/source navigation, exact acceptance/QC and current boundary. |
+| `docs/dev/FEATURE_DOCS_TASKS.md` | Nine task-only FDOCS stages; campaign-qualified hosted identities, applicability/reuse and initial completion boundaries. |
+| `docs/dev/FEATURE-QC-REPORT.md` | Whole-feature-package QC against the delta and affected main context before preparation integration and implementation. |
 | `docs/dev/ARCHITECTURE.md` | System blocks, relationships, dependency direction, patterns, and consequential decisions. Focused children are allowed. |
 | `docs/dev/DECOMPOSITION.md` | Component responsibilities, boundaries, collaborations, and provisional interfaces. Focused children are allowed. |
 | `docs/dev/FEATURE_ARCHITECTURE.md`, `docs/dev/FEATURE_DECOMPOSITION.md` | Bounded architectural change definition and affected component breakdown when necessary. |

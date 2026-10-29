@@ -48,6 +48,7 @@ docs/dev/PLAN.md           docs/dev/plan/
 docs/dev/TASKS.md          docs/dev/tasks/
 docs/dev/layout.md         docs/dev/layout/
 docs/dev/FEATURE.md  docs/dev/FEATURE_PREPARATION.md
+docs/dev/FEATURE_DOCS_TASKS.md  docs/dev/FEATURE-QC-REPORT.md
 docs/dev/FEATURE_ARCHITECTURE.md
 docs/dev/FEATURE_DECOMPOSITION.md
 docs/dev/FEATURE-SPEC.md  docs/dev/FEATURE-PLAN.md

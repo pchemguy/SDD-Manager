@@ -24,6 +24,10 @@ On resume, recover the established selection and real projection/initialization 
 
 An explicit request to maintain tracking throughout project development covers main preparation; preserve an explicit implementation-only scope or decline. Before any fresh/resumed main-preparation repository modification, use [main preparation](main-preparation.md) and sdd-forge to verify `sdd-docs-main` and its nine preparation issues from the bundled template, without waiting for product PLAN/TASKS. Pending projection blocks those writes unless explicitly overridden. This is separate from implementation [phase activation](phase-activation.md); the table above’s permission for independent preparation while an implementation tracking choice is pending does not waive an enabled preparation gate.
 
+## Feature documentation preparation
+
+An applicable choice/policy for tracking throughout development includes feature preparation unless explicitly narrowed. Resolve its scope before feature writes, without treating the token as selection. Use [feature preparation](feature-preparation.md#establish-preparation-before-writes) and sdd-forge's [feature projection lifecycle](../../sdd-forge/references/github-feature-preparation.md): campaign-specific milestone, nine campaign-qualified FDOCS issues, associations/readback, current-pass closure/reset and published-integration-before-milestone closure. No product PLAN/TASKS or phase label is required for this separate operation. Main-only templates/utilities and sdd-docs-main are not reused for feature objects. Preserve an explicit decline/local-only choice and pending effects through resume; do not ask again for confirmed scope.
+
 ## Late confirmation
 
 When confirmed after local execution begins, discover existing eligible-phase objects and reconcile missing identities/associations idempotently. Attach retained commit/check evidence and close only verified tasks/milestones; leave incomplete work open. Do not repeat product tasks, create future-phase objects or rewrite historical reports to imply earlier projection. Apply phase activation, document readiness and backend lifecycle rules to the actual continuation state.

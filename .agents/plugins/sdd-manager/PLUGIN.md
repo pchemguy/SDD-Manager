@@ -43,11 +43,11 @@ Preserve narrow direct/standalone requests, pending decisions and unfinished wor
 
 **For each necessary new document, publish the reviewable state, present substantive results and pause for human acceptance before dependent work unless explicit applicable preapproval covers that checkpoint.** The same checkpoints apply to necessary feature documents/proposals. Reuse sufficient existing inputs rather than creating optional documents to fill the sequence.
 
-For main document preparation, select or recover the [doc-design mode](#doc-design-modes) before applying the document checkpoints below. The selected mode determines which approvals remain active and where its preparation pass stops.
+For main or feature document preparation, select or recover the [doc-design mode](#doc-design-modes) before applying the document checkpoints below. The selected mode determines which approvals remain active and where its preparation pass stops.
 
 | Human checkpoint | Hold before |
 | --- | --- |
-| PROJECT | ARCHITECTURE or other dependent use of the brief |
+| PROJECT / FEATURE | Dependent project/feature design or specification, unless mapped mode/preapproval covers the checkpoint |
 | ARCHITECTURE | DECOMPOSITION or contract work |
 | DECOMPOSITION | SPEC |
 | SPEC | PLAN |
@@ -67,6 +67,8 @@ Clarification, agent QC, passing tests and commits/pushes do not constitute huma
 ## Requested backend tracking
 
 **For fresh/resumed main preparation, enabled tracking precedes repository modifications:** use [main preparation](skills/sdd-manage/references/main-preparation.md) for the native `sdd-docs-main` milestone and all nine issues defined in bundled JSON before writes. DOCS_TASKS holds the nine task definitions/checkoffs; DOCS_PREPARATION owns mode/pass, decisions and evidence. Publish each accepted-document/preparation-evidence/checked-task commit before issue closure; ordinary later edits retain completion, while an explicit cursor reset reopens DOCS-002–009 for a new pass. Final QC issue closure → verified/published docs merge → milestone closure → final preimplementation checkpoint. This is separate from implementation phase activation.
+
+Feature preparation tracking uses a separate campaign milestone and nine FDOCS issues before writes, under [its preparation contract](skills/sdd-manage/references/feature-preparation.md); it does not reuse main DOCS objects or product phase labels.
 
 ### Implementation tracking
 
@@ -140,7 +142,7 @@ Follow [task completion and recovery](skills/sdd-implement/references/completion
 
 ### Feature preparation, execution and incorporation
 
-`sdd-manage`/`sdd-orient` establish the bounded addition and accepted main inputs. New feature preparation creates a [FEATURE brief and FEATURE_PREPARATION companion](skills/sdd-manage/references/feature-preparation.md), with brief acceptance before dependent design/specification unless explicitly preapproved. Design/specification/planning/task owners produce only necessary deltas, with human checkpoints and QC. Accepted preparation integrates before the dependent implementation branch; FEATURE-TASKS drives its authorized range through `sdd-implement`.
+`sdd-manage`/`sdd-orient` establish the bounded addition and accepted main inputs. Feature preparation follows the shared interactive/autodoc/multipass policy mapped through [FEATURE, task-only FEATURE_DOCS_TASKS and FEATURE_PREPARATION](skills/sdd-manage/references/feature-preparation.md). First FEATURE approval precedes dependent stages unless preapproved; assess unchanged design/layout for reuse. Autodoc stops after FDOCS-008 before FEATURE-QC-REPORT/package QC. Completed preparation passes FDOCS-009, verified/published preparation integration and selected preparation milestone closure before its implementation checkpoint. Design/specification/planning/task owners produce only necessary deltas, with human checkpoints and QC. Accepted preparation integrates before the dependent implementation branch; FEATURE-TASKS drives its authorized range through `sdd-implement`.
 
 Before final feature verification, `sdd-integrate-feature` incorporates accepted deltas within the selected scope. Task transfer needs both owning lists in scope; document-only incorporation does not authorize execution. A complete coherent feature verifies/integrates/publishes its established target, then stops. Follow [feature incorporation](skills/sdd-integrate-feature/SKILL.md).
 

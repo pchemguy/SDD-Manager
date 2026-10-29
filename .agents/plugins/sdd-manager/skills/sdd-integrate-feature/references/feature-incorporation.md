@@ -35,7 +35,7 @@ Feature implementation reports remain under the actual recorded `docs/dev/featur
 
 ## Scope and cleanup
 
-FEATURE_PREPARATION retains request, decision and approval provenance; it is evidence, not product content to incorporate into PROJECT/design/SPEC. At eligible final archive, retain it beside FEATURE with repaired in-scope links and exact source/acceptance references. Partial or narrow incorporation does not archive the pair while active work still needs either file.
+FEATURE_PREPARATION retains request, decision and approval provenance; it is evidence, not product content to incorporate into PROJECT/design/SPEC. At eligible final archive, retain it with FEATURE, task-only FEATURE_DOCS_TASKS and FEATURE-QC-REPORT, with repaired in-scope links and exact source/acceptance references. FDOCS preparation checkboxes remain historical workflow evidence, never product T-task ownership. Partial or narrow incorporation does not archive the pair while active work still needs either file.
 
 Feature source documents remain active while other levels are integrated or work still depends on them. A selected SPEC-only incorporation does not archive the whole package, remove FEATURE-TASKS, or transfer unselected tasks. Preserve active sources and report deferred link/owner changes outside scope.
 
