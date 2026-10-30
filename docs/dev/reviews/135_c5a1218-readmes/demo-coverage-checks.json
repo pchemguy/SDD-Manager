@@ -1,0 +1,299 @@
+{
+  "shared_quick_start_parity": true,
+  "readmes": [
+    {
+      "owner": "README.md",
+      "standalone_prompt_targets": 10,
+      "embedded_prompts_covered_by_explicit_section_links": 20,
+      "coverage": [
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 21,
+          "section_links": [
+            "initial-project-calculator"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 43,
+          "section_links": [
+            "optional-steering-exercises"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 53,
+          "section_links": [
+            "optional-steering-exercises"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 67,
+          "section_links": [
+            "feature-campaign-sequence"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 77,
+          "section_links": [
+            "feature-campaign-sequence"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 87,
+          "section_links": [
+            "feature-campaign-sequence"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 104,
+          "section_links": [
+            "feature-campaign-sequence"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 144,
+          "section_links": [
+            "all-inclusive-project-prompt"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 57,
+          "section_links": [
+            "minimal-starting-prompt"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 114,
+          "section_links": [
+            "variant-a-classical-baseline--modern-extensions"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 149,
+          "section_links": [
+            "variant-b-classical-baseline--feature-expansion"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 159,
+          "section_links": [
+            "variant-b-classical-baseline--feature-expansion"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 189,
+          "section_links": [
+            "further-feature-campaigns"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 209,
+          "section_links": [
+            "further-feature-campaigns"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 246,
+          "section_links": [
+            "further-feature-campaigns"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 283,
+          "section_links": [
+            "further-feature-campaigns"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 327,
+          "section_links": [
+            "steering-exercises"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 339,
+          "section_links": [
+            "steering-exercises"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 345,
+          "section_links": [
+            "steering-exercises"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 351,
+          "section_links": [
+            "steering-exercises"
+          ]
+        }
+      ]
+    },
+    {
+      "owner": ".agents/plugins/sdd-manager/README.md",
+      "standalone_prompt_targets": 10,
+      "embedded_prompts_covered_by_explicit_section_links": 20,
+      "coverage": [
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 21,
+          "section_links": [
+            "initial-project-calculator"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 43,
+          "section_links": [
+            "optional-steering-exercises"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 53,
+          "section_links": [
+            "optional-steering-exercises"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 67,
+          "section_links": [
+            "feature-campaign-sequence"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 77,
+          "section_links": [
+            "feature-campaign-sequence"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 87,
+          "section_links": [
+            "feature-campaign-sequence"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 104,
+          "section_links": [
+            "feature-campaign-sequence"
+          ]
+        },
+        {
+          "path": "docs/demo/calculator/README.md",
+          "line": 144,
+          "section_links": [
+            "all-inclusive-project-prompt"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 57,
+          "section_links": [
+            "minimal-starting-prompt"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 114,
+          "section_links": [
+            "variant-a-classical-baseline--modern-extensions"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 149,
+          "section_links": [
+            "variant-b-classical-baseline--feature-expansion"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 159,
+          "section_links": [
+            "variant-b-classical-baseline--feature-expansion"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 189,
+          "section_links": [
+            "further-feature-campaigns"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 209,
+          "section_links": [
+            "further-feature-campaigns"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 246,
+          "section_links": [
+            "further-feature-campaigns"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 283,
+          "section_links": [
+            "further-feature-campaigns"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 327,
+          "section_links": [
+            "steering-exercises"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 339,
+          "section_links": [
+            "steering-exercises"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 345,
+          "section_links": [
+            "steering-exercises"
+          ]
+        },
+        {
+          "path": "docs/demo/tetris/README.md",
+          "line": 351,
+          "section_links": [
+            "steering-exercises"
+          ]
+        }
+      ]
+    }
+  ]
+}

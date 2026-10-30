@@ -1,0 +1,12 @@
+[
+  {
+    "owner": "README.md",
+    "existing_local_or_source_repo_targets": 16,
+    "external_targets_not_live_checked": 2
+  },
+  {
+    "owner": ".agents/plugins/sdd-manager/README.md",
+    "existing_local_or_source_repo_targets": 60,
+    "external_targets_not_live_checked": 4
+  }
+]
