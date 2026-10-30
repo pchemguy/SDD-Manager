@@ -31,15 +31,17 @@ Try SDD Manager with the browser-based Tetris or calculator demo, or use the min
 
 Choose how to develop the Tetris game: Interactive, Autodoc and Multipass Autoloop define the complete target scope upfront and differ in documentation preparation. Featured Autodoc starts with a classic baseline, then adds capabilities through separately submitted feature campaigns.
 
-The standard prompts start with a browser app and add a Windows Electron desktop package after UI layout. The 3in1 variants follow the same order, then add sidebar extensions for Chromium and Firefox as the final platform addition. They require verified release assets for the platforms delivered in each phase.
+Except for the single-page variants, the standard prompts start with a browser app and add a Windows Electron desktop package after UI layout. The 3in1 variants follow the same order, then add sidebar extensions for Chromium and Firefox as the final platform addition. They require verified release assets for the platforms delivered in each phase.
 
 | Prompt | How to use it |
 | --- | --- |
 | [Interactive](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Interactive.md) | Submit the complete prompt and review each document checkpoint. |
 | [Autodoc](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Autodoc.md) | Submit the complete prompt. After project-brief approval, the agent proceeds through the preapproved document checkpoints to TASKS, then stops before final documentation-package QC. |
+| [Single Page Autodoc](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Single%20Page%20Autodoc.md) | Use Autodoc preparation to deliver one HTML file with embedded application code and optional widely used CDN JavaScript libraries; no Electron delivery. |
 | [Autodoc 3in1](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Autodoc%203in1.md) | Follow the Autodoc workflow above with all three delivery forms added in sequence. |
 | [Multipass Autoloop](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Multipass%20Autoloop.md) | Submit the complete prompt with ten cumulative documentation passes. Approve the first project brief; the remaining predefined passes run autonomously, stopping before final documentation-package QC. |
 | [Featured Autodoc](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Featured%20Autodoc.md) | Submit Greenfield first for a classic baseline, then submit each feature request separately, in order, when ready to develop it. |
+| [Single Page Featured Autodoc](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Single%20Page%20Featured%20Autodoc.md) | Submit Greenfield, then each feature section separately, delivering one HTML file with embedded application code and optional widely used CDN JavaScript libraries; no Electron delivery. |
 | [Featured Autodoc 3in1](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/prompts/Featured%20Autodoc%203in1.md) | Follow the Featured Autodoc sequence above with all three delivery forms added in sequence. |
 
 See the [Tetris demo guide](https://github.com/pchemguy/SDD-Manager/blob/main/docs/demo/tetris/README.md) for staged exercises and gameplay scope.
