@@ -1,0 +1,1929 @@
+{
+  "source": "6180f39e4365ec93e5cf537d8172e92b2537de63",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1065,
+      "sha256": "230ef093b2d68d0f37130d47064b1aff673c41830a15513801e0cc089e742ed2",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "PLUGIN.md",
+      "bytes": 26127,
+      "sha256": "bcdaedb9a40aba10cd22542a9d1987ba8191a30237df7b05e88cdf6136ed5282",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "SDD Manager",
+        "Establish the request and context",
+        "Human checkpoints and Git publication",
+        "Requested backend tracking",
+        "Implementation tracking",
+        "Skill routing",
+        "Composite workflows",
+        "Doc-design modes",
+        "Project preparation and bounded delivery",
+        "Task implementation and continuation",
+        "Feature preparation, execution and incorporation",
+        "Review and accepted revision",
+        "Checkpoint steering",
+        "Release preparation and publication",
+        "Focused maintenance and optional hosting",
+        "Branches, integration and continuity",
+        "Campaign records and shared conventions"
+      ]
+    },
+    {
+      "path": "README.md",
+      "bytes": 38217,
+      "sha256": "92b2fe260d8c1f8c3cf277305a25f0dd0500db43f65c31b3e7ca2cef026bbed9",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "SDD Manager",
+        "Quick Start",
+        "Tetris demo prompts",
+        "Calculator demo",
+        "Your own project",
+        "Core development workflows",
+        "Operations",
+        "Project documents and checkpoints",
+        "Human review",
+        "Doc-design modes",
+        "Main preparation tracking",
+        "Agent quality checks",
+        "Continue with another agent",
+        "Workflow guide",
+        "Project preparation",
+        "One document-design pass",
+        "Document-design modes and loops",
+        "Implementation and continuation",
+        "Checkpoint steering",
+        "Review and revision",
+        "Release operations",
+        "Highlights and release messages",
+        "Packaging and publication",
+        "Plugin package",
+        "Skills",
+        "References",
+        "License",
+        "Related projects"
+      ]
+    },
+    {
+      "path": "assets/AGENTS_TEMPLATE.md",
+      "bytes": 3980,
+      "sha256": "891cfe084d39b57a9220e10dc838d17283fb23794110a0a048dd5cf1739aa4d9",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Agent instructions",
+        "Specification-driven development",
+        "Initialization",
+        "Windows shell",
+        "Browser development",
+        "Environment diagnostics",
+        "Workflow continuity",
+        "Human checkpoints",
+        "Commits and publication",
+        "GitHub tracking",
+        "Project guidance"
+      ]
+    },
+    {
+      "path": "assets/AI_DISCLOSURE.md",
+      "bytes": 1192,
+      "sha256": "09411dc61f4966efabe8e821f2270c768baf5b96f4fd4587eb5c05233de7ffea",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "AI-Assisted Development Disclosure",
+        "README.md Warning Template"
+      ]
+    },
+    {
+      "path": "assets/BROWSER_DEV_POLICY.md",
+      "bytes": 7802,
+      "sha256": "e4653a4e734bc44fe5d2d4721cbe78f058930190abe1c2e2c50b2544974f5b29",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Browser development policy",
+        "Browser selection",
+        "Environment isolation",
+        "Setup",
+        "Playwright execution",
+        "Verification and recovery"
+      ]
+    },
+    {
+      "path": "assets/DOCS_PREPARATION_TEMPLATE.md",
+      "bytes": 5945,
+      "sha256": "ed1c4c8763117c6ab79fc0e2d561fe0e884278ef927b8d19c42044ed5ab57418",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Main documentation preparation record",
+        "Current control",
+        "Scope sequence",
+        "Per-pass decisions",
+        "Cross-scope decisions",
+        "Decisions and document evidence",
+        "Initialization and current reset",
+        "Pending transitions"
+      ]
+    },
+    {
+      "path": "assets/DOCS_TASKS_TEMPLATE.md",
+      "bytes": 5816,
+      "sha256": "6431bc57aa6c6bf0f13930df593d9fc8b8b51f7ed51e5206e6408086cfcb8f6b",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Main documentation tasks"
+      ]
+    },
+    {
+      "path": "assets/DOCS_TRACKING_TEMPLATE.json",
+      "bytes": 14194,
+      "sha256": "66fbecb1fd272b891b3ef4631beeac665fffaf468e9a2b31caf16a963df261d9",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "assets/FEATURE_DOCS_TASKS_TEMPLATE.md",
+      "bytes": 5208,
+      "sha256": "59bf0cee1d410b30e091d479c9e6b194a627b3d3be63e9958033d5d37575b7b1",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Feature documentation tasks"
+      ]
+    },
+    {
+      "path": "assets/FEATURE_PREPARATION_TEMPLATE.md",
+      "bytes": 2950,
+      "sha256": "2969fb925a19de10c92d058abcb06b19128a211790fb9624b2b3f2f75c0d233f",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Feature preparation record",
+        "Identity and request",
+        "Current control",
+        "Decisions and cross-scope applicability",
+        "Stage evidence",
+        "Current reset and pending transitions"
+      ]
+    },
+    {
+      "path": "assets/Greenfield Project Prompt Template.md",
+      "bytes": 1914,
+      "sha256": "dfa006b036235f236a3ce851084178a0781a9e1be857f2fcf279424bf0a5f34a",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Greenfield Project Prompt Template",
+        "Minimal Template",
+        "Extended Template"
+      ]
+    },
+    {
+      "path": "assets/HANDOFF_TEMPLATE.md",
+      "bytes": 1969,
+      "sha256": "cf717d10c495f06a16a87e6cc709be0373e3dcba178e0bee8e7ab5b6bd697ea1",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Project handoff",
+        "Workflow and sources",
+        "Scope and human decisions",
+        "Branches and return",
+        "Pending work and next action"
+      ]
+    },
+    {
+      "path": "assets/SDD-MANAGER.md",
+      "bytes": 683,
+      "sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "SDD Manager usage"
+      ]
+    },
+    {
+      "path": "assets/SKILL_DISCOVERY_PROTOCOL.md",
+      "bytes": 2951,
+      "sha256": "ae6fd000ed174d13706689148ab9ab20cd26ed5826ead72829679905bd44f5ec",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Skill and plugin discovery protocol",
+        "Strict execution constraints",
+        "Discovery procedure",
+        "Skill Discovery",
+        "Plugin Discovery",
+        "Report template",
+        "Skill and plugin discovery report",
+        "Standalone skills",
+        "{skill name}",
+        "Plugins",
+        "{plugin name}",
+        "Bundled skills",
+        "{skill name}"
+      ]
+    },
+    {
+      "path": "assets/WINDOWS_SHELL_POLICY.md",
+      "bytes": 3897,
+      "sha256": "3ba53d63f47251f705af486c59251fce6286ae0da60e1d3fe0553300eafdae22",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Windows shell policy",
+        "Command rules",
+        "Probe and recover",
+        "Antigravity wrapper and shim"
+      ]
+    },
+    {
+      "path": "assets/ai-logs/AGENTS_TEMPLATE.md",
+      "bytes": 736,
+      "sha256": "a77d156ebc635e22e5dd022737d08b480bcaffde1021108edb1c6b60c16c2870",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "AI conversation records"
+      ]
+    },
+    {
+      "path": "assets/ai-logs/EXPLORE_DRIVE_TEMPLATE.md",
+      "bytes": 279,
+      "sha256": "cfd12bb98b2994261acd7d8b4d5886effa75ef9d6cdbd7d02c3b97da355cc5ca",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "<AI TURN TITLE>"
+      ]
+    },
+    {
+      "path": "assets/icon.png",
+      "bytes": 14257,
+      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "assets/icon.svg",
+      "bytes": 581,
+      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "assets/logo.png",
+      "bytes": 14257,
+      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "assets/logo.svg",
+      "bytes": 581,
+      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "assets/playwright.md",
+      "bytes": 14485,
+      "sha256": "1c258edc3022fafc9891a13be6cb6bbdb15f73094032a6ebd37a38f8c8dbbc6b",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Prepare and recover a Playwright environment",
+        "Preflight and normal setup",
+        "Chromium mode",
+        "Chromium launch recovery",
+        "Unavailable full-browser checks and continuation",
+        "Download diagnostics and recovery",
+        "Official image fallback",
+        "Firefox content-process recovery",
+        "Execution checks and evidence"
+      ]
+    },
+    {
+      "path": "assets/vite-worker-loading.md",
+      "bytes": 6275,
+      "sha256": "255824e11d454d5173aa141de3a5a3bb77d75666008aa6ec5f7634c91b4d1193",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Diagnose Vite development-worker loading failures",
+        "Context and manifestation",
+        "Diagnose before changing code",
+        "Apply a narrow resolution",
+        "Regression proof and return"
+      ]
+    },
+    {
+      "path": "plugin.json",
+      "bytes": 2059,
+      "sha256": "ed1363c3564eaad09f964ed72c2e49d6ed29494cdff8c3cc5190a0742340d1fb",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-conventions/SKILL.md",
+      "bytes": 3230,
+      "sha256": "fbd4b671e75b26630ee9e780e33c78b722171292949b6fa52c6b5ec998eb9bd3",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Shared conventions",
+        "Available conventions"
+      ]
+    },
+    {
+      "path": "skills/sdd-conventions/agents/openai.yaml",
+      "bytes": 505,
+      "sha256": "3afb66258ca9ee5f7e35b0986ac130e34a4a73c4d5c41b1c7de94e19133e4cea",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-conventions/assets/icon.svg",
+      "bytes": 570,
+      "sha256": "5702cda32d79bc28857dedfe0f9811d382d8b2e4c46d1ac571d8114aabd279a4",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-conventions/references/backend-object-lifecycle.md",
+      "bytes": 11780,
+      "sha256": "5f93a3f22bae86a08de4f621637c46fe7bfd41008b480d97d056e06142e20372",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Backend object lifecycle and review boundaries",
+        "Main documentation preparation",
+        "Phase activation",
+        "Explicit review units",
+        "Completion ordering",
+        "Review, repairs and deferral",
+        "Report locations",
+        "Recovery and changed scope"
+      ]
+    },
+    {
+      "path": "skills/sdd-conventions/references/design-heuristics.md",
+      "bytes": 1597,
+      "sha256": "b4ded8adbaa45a74858cff4dbed277936d52d31a91534ab303b6af018262a448",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Design heuristics"
+      ]
+    },
+    {
+      "path": "skills/sdd-conventions/references/development-document-qc.md",
+      "bytes": 15254,
+      "sha256": "55b4b498c0be7dc27911cd77cc59c11c5d5eaa86019fd4d09084713743efc50b",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Development-document quality and conformance",
+        "Preparation gates",
+        "Decomposition and count policy",
+        "Conformance review criteria",
+        "Review reports and correction records",
+        "Ownership and invalidation",
+        "Evidence currency during implementation",
+        "Human review and staged layout"
+      ]
+    },
+    {
+      "path": "skills/sdd-conventions/references/hosting-tokens.md",
+      "bytes": 3218,
+      "sha256": "1c8941f1cb0f82e32debfba00c23b28b515164f554a191cedf9416052b0efe21",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Repository hosting tokens",
+        "Files and identity",
+        "Authentication and scope"
+      ]
+    },
+    {
+      "path": "skills/sdd-conventions/references/markdown-style.md",
+      "bytes": 5005,
+      "sha256": "16eb402dba42bbf95708d717aa839d3684199ac2a8770ed0bca5019f8b735583",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Shared Markdown style",
+        "Document names",
+        "Heading separation",
+        "List separation",
+        "Indentation and lists",
+        "Supported variants",
+        "Code-block separation",
+        "Literal content and templates",
+        "Scoped review"
+      ]
+    },
+    {
+      "path": "skills/sdd-conventions/references/modularity.md",
+      "bytes": 2201,
+      "sha256": "98d41ef9fb16f373ca2fddfe2c048775a40165823dd503d4df58c18654b11283",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Modularity and unit boundaries"
+      ]
+    },
+    {
+      "path": "skills/sdd-conventions/references/review-campaigns.md",
+      "bytes": 8233,
+      "sha256": "46cd6e415c44262a0e092c36eb2ca4e44c303cd01e531325c4d66236f377512f",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Review and revision campaign records",
+        "Campaign identity and storage",
+        "Stable references",
+        "Authority and retention",
+        "Closed campaign records",
+        "Authorized reopening"
+      ]
+    },
+    {
+      "path": "skills/sdd-conventions/references/task-hierarchy.md",
+      "bytes": 4396,
+      "sha256": "ae63a3a33290423b7aa4866882e0a627ebe95fa0322bd8a0e7e78f87d7172543",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Phase, milestone, and task hierarchy",
+        "Delivery and decision boundaries",
+        "Hosted projection"
+      ]
+    },
+    {
+      "path": "skills/sdd-conventions/references/workflow-identity.md",
+      "bytes": 9447,
+      "sha256": "8ae990f893cee1373f088fdc2fb2a5e28ab56d1a202f39309ffdb29fa3da1a7d",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Workflow identity, branches, and artifact locations",
+        "Naming",
+        "Identity and collisions",
+        "Artifact lifecycle",
+        "Discover descriptive and established packages"
+      ]
+    },
+    {
+      "path": "skills/sdd-design/SKILL.md",
+      "bytes": 7648,
+      "sha256": "4732a40f1542bb9ef7806b1ac477844b9b2bddfb40bc931af1d826b246b0dbd6",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Explore and design",
+        "Document boundaries"
+      ]
+    },
+    {
+      "path": "skills/sdd-design/agents/openai.yaml",
+      "bytes": 412,
+      "sha256": "102d11e8960f1f7af69bfcbacbe71defad289b9c368d11a610fb6b19e61dd3b6",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-design/assets/icon.svg",
+      "bytes": 562,
+      "sha256": "98c55eb98b3e3702037698739b96fb550da2223bf733fb576650d0a4c5504864",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-design/references/architecture.md",
+      "bytes": 4170,
+      "sha256": "fc25beab6dba06ad797895fc7c7fd36e03b2a4d1c1f05d6d90be1353655faa98",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Architecture",
+        "Document ownership",
+        "Initial and existing systems",
+        "Review"
+      ]
+    },
+    {
+      "path": "skills/sdd-design/references/decomposition.md",
+      "bytes": 4107,
+      "sha256": "45a5f09fd324a05adfd865bcb68459832b4ccbf1a752bc589b5e5ed03bde6ca6",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Decomposition",
+        "Document ownership",
+        "Existing systems and changes",
+        "Review"
+      ]
+    },
+    {
+      "path": "skills/sdd-design/references/exploration.md",
+      "bytes": 9956,
+      "sha256": "c7ec3ff5c8a74a46a4cfb38562cb8f8484611646ec03a1966e8e0627b758fedb",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Exploration",
+        "Assess the seed",
+        "Scan relevant concerns",
+        "Facilitate decisions",
+        "Choose appropriate depth",
+        "Readiness and handoff",
+        "Evidence-backed project positioning"
+      ]
+    },
+    {
+      "path": "skills/sdd-design/references/feature-brief.md",
+      "bytes": 4826,
+      "sha256": "68df7adf063475206d014e84356d6f6744682b0b6a29f17787a229791524fb8a",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Feature brief",
+        "Purpose and ownership",
+        "Content and readiness",
+        "Prepare, review and hand off"
+      ]
+    },
+    {
+      "path": "skills/sdd-design/references/project-brief.md",
+      "bytes": 8063,
+      "sha256": "ce17cd1c1d25a94f9ad5c300aa2e061d1d9d6082391aafa4fe92450850de3551",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Project brief",
+        "Purpose and ownership",
+        "Inputs and decision state",
+        "Adaptable content structure",
+        "Create or revise",
+        "Read-only review and handoff"
+      ]
+    },
+    {
+      "path": "skills/sdd-docs/SKILL.md",
+      "bytes": 3982,
+      "sha256": "90a407f7e9c48ccdc4eb0f687dcca567f1a2323c692743115230a2299720cdf5",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Maintain project documentation"
+      ]
+    },
+    {
+      "path": "skills/sdd-docs/agents/openai.yaml",
+      "bytes": 471,
+      "sha256": "9715602c3bdcd14d41e6e99e24edb32389499e0ec96b0aad5cdf4b30b187de15",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-docs/assets/icon.svg",
+      "bytes": 587,
+      "sha256": "69e272ee97e9957387f8ca8b51bec3d3d176c33e6bf6b20d2bff5b3536f507e2",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-docs/references/in-code-documentation.md",
+      "bytes": 2857,
+      "sha256": "40c179cf40c73ad36d76f722950eeaf33ab1c37993edd370f6fa16305d2a5465",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "In-code documentation",
+        "Select a style",
+        "Module and API coverage",
+        "Maintain and check"
+      ]
+    },
+    {
+      "path": "skills/sdd-docs/references/review-and-findings.md",
+      "bytes": 2719,
+      "sha256": "61bda144ac45af632307b12bb3cf9652727b83c3b3ffc57558188d0d2a6837b1",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Documentation review and findings",
+        "Establish coverage",
+        "Governing-document amendments",
+        "Review result"
+      ]
+    },
+    {
+      "path": "skills/sdd-docs/references/standalone-documentation.md",
+      "bytes": 3329,
+      "sha256": "b2ced68b8f869efc47206261795e225b42455b513c7a2be4f091cd891c3ef951",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "README and standalone documentation",
+        "Align content",
+        "Examples and checks",
+        "Agent orientation"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/SKILL.md",
+      "bytes": 12136,
+      "sha256": "844f0da883d8c45cec22bc0afdebbb4f649c690a1025fee1c5c5b8ff09d911bb",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Git release preparation and hosted operations",
+        "Shared protocol",
+        "Shared release preparation",
+        "Available backends",
+        "Optional local tracking utilities",
+        "Supporting modules"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/agents/openai.yaml",
+      "bytes": 508,
+      "sha256": "65a79f791a2285753a0e6ca9eb83e203b181c0277ada5706add85f4c86c18783",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-forge/assets/icon.svg",
+      "bytes": 579,
+      "sha256": "ca997d09da83d706126f43dc2ace19c00ee9036ae67dcce225e688a09d398d33",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-forge/references/github-docs-preparation.md",
+      "bytes": 12476,
+      "sha256": "8918f9ee91b75c1fd9748070752c11751a63c01393277ca9d6eb939564e7ee91",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "GitHub main preparation tracking",
+        "Identity and pre-write projection",
+        "Fixed-content updates on adoption",
+        "Complete preparation issues",
+        "Reset a document-design pass",
+        "Close the preparation milestone after integration"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/references/github-feature-preparation.md",
+      "bytes": 5226,
+      "sha256": "0aefc7f991f86355afe8d013de6a389623b8ecc17ceace222208fe3768095c75",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "GitHub feature documentation preparation",
+        "Project and read back",
+        "Resolve feature preparation issues",
+        "Complete, reset and close"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/references/github-issue-lifecycle.md",
+      "bytes": 5931,
+      "sha256": "1331828991b337873b3fd9a713d6c60927a0e935995b0d183341fe1c2278b952",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Task issue references and lifecycle",
+        "Resolve for implementation",
+        "Close or reopen",
+        "Optional scripted completion",
+        "Retired task disposition"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/references/github-milestone-lifecycle.md",
+      "bytes": 4813,
+      "sha256": "a3e92e1b20dd6d78b2c3397c418f261439b0fbc9f35c4b8100b6e4e90e220ac8",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "GitHub milestone lifecycle",
+        "Resolve and close",
+        "Reopen and recover"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/references/github-packaging.md",
+      "bytes": 5843,
+      "sha256": "bf2a71e63b75b117853097199120d628d67d2c419962aa441978c124e4c780ed",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Prepare a GitHub release package",
+        "Establish the package contract",
+        "Assess the actual archive",
+        "Names and URLs",
+        "Prepare and hand off the workflow"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/references/github-projection.md",
+      "bytes": 7355,
+      "sha256": "2af11496dca72b976057e09ad90a3235281dfa378fe0d228404b49b8d551c516",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "GitHub TASKS projection",
+        "Task brief <!-- sdd-forge:task-id=T-012 -->",
+        "Optional local projection mechanism",
+        "Document QC prerequisite",
+        "Confirmed scope and late activation"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/references/github-release-workflows.md",
+      "bytes": 9000,
+      "sha256": "cba696ac55186a0b16ed7da91f932ee9010b126ae93bbd0ed4eb431b41d0c6db",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Prepare and run a release workflow",
+        "Author or extend",
+        "Notes transfer",
+        "Dispatch and monitor"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/references/github-releases.md",
+      "bytes": 10345,
+      "sha256": "f9c5afadf423d4a5e2d3784df0c9b2fea767c44f33330d4c845ffdb1ec0fb550",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Create and reconcile a GitHub release",
+        "Resolve identity and select one publisher",
+        "Draft, upload and publish",
+        "Recover without duplicate writes",
+        "Read back and report"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/references/github.md",
+      "bytes": 15752,
+      "sha256": "20db8dd069c453c47d4c181c1a81e4fb88a5ef9c5d3920619bf902597ed3c7db",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "GitHub backend",
+        "Operations and sources",
+        "Repository and access",
+        "GitHub CLI",
+        "Conventional fine-grained token",
+        "Release and workflow access",
+        "Access failures and tracking object ownership",
+        "Operational failures and uncertain writes",
+        "Optional local tracking mechanisms"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/references/release-highlights.md",
+      "bytes": 20261,
+      "sha256": "782493634d378e2d41f11d0a99be9902eaedb43bd9e7fe783785a8b37e91ed60",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Prepare release highlights from Git",
+        "Pin the release range",
+        "Use integration summaries first",
+        "Local collection recipe",
+        "Own and save the temporary draft",
+        "Continue incrementally",
+        "Consume and retain or clean up"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/references/release-message.md",
+      "bytes": 9711,
+      "sha256": "7771542350fe134a5563ffce8ae58e36fcc647b9935a43f3d658dfb6686a95c9",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Prepare a complete release message",
+        "Entry and routing",
+        "Establish inputs",
+        "Assemble and persist",
+        "Retention and publication handoff",
+        "Release-request freshness and commit gate"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/scripts/forge-close.md",
+      "bytes": 15137,
+      "sha256": "0f308c1b7b391ea13798fd24368a27f24e15275b93ed8c06f07437880f4273ed",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "GitHub completion utility",
+        "Runtime and effects",
+        "Invocation",
+        "Caller authority and request schema",
+        "Identity, evidence and transitions",
+        "Interruption and exclusive ownership",
+        "Bounds, failures and results",
+        "Module API and evidence"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/scripts/forge-close.mjs",
+      "bytes": 21116,
+      "sha256": "a1e74fe3462cd0ad359901ead0cadfde9b836e0feb67769522edef87916a91a4",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-forge/scripts/forge-project-draft.mjs",
+      "bytes": 4255,
+      "sha256": "e64a0cd619a15ff6088182718a0e3f25cf93ccd522bb066b9a1f1405a4c89231",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-forge/scripts/forge-project-input.md",
+      "bytes": 16599,
+      "sha256": "432cafd3cf1a89c39bb01f4aef9f50615f5147162fa0d9c6c759d9e4bbcfb907",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Prepare tracking projection input",
+        "Generate and review",
+        "Supported source grammar",
+        "Predefined main preparation content",
+        "Request contract",
+        "Milestone and task fields",
+        "Eligibility means actual scope-specific facts",
+        "Outgoing template and data boundary"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/scripts/forge-project.md",
+      "bytes": 15728,
+      "sha256": "ae18efc1c1bc3c4d0aa25334d37b4a6f3416ef6274e6ccae3f765ed0a38a9d8e",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Project GitHub tracking",
+        "Runtime and invocation",
+        "Main preparation defaults and explicit inputs",
+        "Preconditions and effects",
+        "Bounds, failures and recovery",
+        "Results and module API"
+      ]
+    },
+    {
+      "path": "skills/sdd-forge/scripts/forge-project.mjs",
+      "bytes": 18456,
+      "sha256": "4088265bc45ad05ee143553d59a0290f263edf11d4d80050b7a97e7d80d3a0fa",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-forge/scripts/forge-runtime.mjs",
+      "bytes": 9854,
+      "sha256": "b37521f539447099d602dc3e1e6016c7eed2c968444599903c0bfd6bf9dda2a3",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-forge/scripts/github-client.mjs",
+      "bytes": 18056,
+      "sha256": "a8011d6169c9f0e91f8f0f867dc3d0617b021b8a9c31b0dbd949c146d8dd6d7d",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-forge/scripts/projection-input.mjs",
+      "bytes": 15831,
+      "sha256": "71868bc157adfe8be116b64927b4a95523dc73cb17d4bcaef6176ffadc868bbf",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-implement/SKILL.md",
+      "bytes": 9495,
+      "sha256": "391ac42abf8213c16b22b5e18284e67dd098122098256e75fb01251a6244007b",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Implement a selected task range",
+        "Reference routing",
+        "Implementation protocol"
+      ]
+    },
+    {
+      "path": "skills/sdd-implement/agents/openai.yaml",
+      "bytes": 662,
+      "sha256": "fbaa03bfe7cc660089090feeac5914b31c667901fa49e4c1fb95f991f99ddb15",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-implement/assets/icon.svg",
+      "bytes": 588,
+      "sha256": "4fd314a8f182561a13fbf6fe062e4aee5fd0e0330dccd9943ec14aa5dab34c48",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-implement/references/completion-and-checkpoints.md",
+      "bytes": 21120,
+      "sha256": "0c338bd91b6bf408e6c94a5c742c3d9c2a296856afbb930fb3463465ee5cd501",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Completion and checkpoints",
+        "Task commit contract",
+        "Task persistence audit and recovery",
+        "Resolve a task recovery",
+        "Complete and commit each task",
+        "Execute review/report tasks",
+        "Parent completion and stopping",
+        "Integrate the completed boundary",
+        "Affected orientation checkpoint"
+      ]
+    },
+    {
+      "path": "skills/sdd-implement/references/environment-recovery.md",
+      "bytes": 3149,
+      "sha256": "98871d70de203d3216059b2d619dcd96af9991376573ac235392c8707858fa93",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Establish execution capabilities and recover blockers",
+        "Establish applicable guidance",
+        "Investigate and return"
+      ]
+    },
+    {
+      "path": "skills/sdd-implement/references/range-selection.md",
+      "bytes": 4345,
+      "sha256": "d03567892e45a1cb54bf01ecb55b8e8add9939dc4f69f94eaffe5583bf8af7d5",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Range selection",
+        "Phase branch segments"
+      ]
+    },
+    {
+      "path": "skills/sdd-implement/references/startup-and-continuation.md",
+      "bytes": 13039,
+      "sha256": "5ac2b0232920beb8aa336eec02cc249151e85eecc8b44737e19d4f8a845b08cc",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Startup and continuation",
+        "Push before task work",
+        "Interpret the startup task state",
+        "Select the authorized range",
+        "Working branch and integration continuation",
+        "Check the claimed task closing boundary",
+        "Current preparation inputs",
+        "Optional tracking decision at handoff",
+        "Scoped authority handoff",
+        "Environment readiness"
+      ]
+    },
+    {
+      "path": "skills/sdd-implement/references/task-execution.md",
+      "bytes": 3543,
+      "sha256": "904f3f51f5fbaa59ba1782d7748b61b79c7e8ca4584c2203c5aca30f46bbcdc8",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Execute one task",
+        "Coordinate the development cycle",
+        "Scope and blockers"
+      ]
+    },
+    {
+      "path": "skills/sdd-integrate-feature/SKILL.md",
+      "bytes": 4209,
+      "sha256": "baf246c581fb81e48099905a8a0e4fc1ec917257e57a73736d99fde772a89d58",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Integrate an accepted feature"
+      ]
+    },
+    {
+      "path": "skills/sdd-integrate-feature/agents/openai.yaml",
+      "bytes": 459,
+      "sha256": "48018ed1de138598f6be61e916b701638234e2d0e570ed42d39760e0f4de8392",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-integrate-feature/assets/icon.svg",
+      "bytes": 591,
+      "sha256": "9b68ea07e6b5916efa646ad8f639cb1872523bb40630043a317cc862440dc006",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-integrate-feature/references/feature-incorporation.md",
+      "bytes": 16598,
+      "sha256": "2e205684f5df8de731dfccbdf4503e80c1279a5550a4c5e7db674f13f968cddc",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Feature incorporation",
+        "Select and incorporate",
+        "Incremental phase incorporation",
+        "Task-list reconciliation",
+        "Scope and cleanup",
+        "Archive eligibility and procedure",
+        "Continue interrupted incorporation",
+        "Conformance after incorporation and archive",
+        "Orientation during incorporation"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/SKILL.md",
+      "bytes": 17175,
+      "sha256": "3f2f9d9c36ec2227a4d4be5c804eed1a864525275f9da10debf1a122213e0a91",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Coordinate specification-driven development",
+        "Role and scope",
+        "Shared gates",
+        "Coordination cycle",
+        "Reference routing",
+        "Context and coordination",
+        "Preparation and adoption",
+        "Execution and continuity",
+        "Review and revision"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/agents/openai.yaml",
+      "bytes": 524,
+      "sha256": "c3d318cf2a1074db8bc3c956109b12b1a3399c3835eded7bbac57f9ee7f5a778",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-manage/assets/icon.svg",
+      "bytes": 590,
+      "sha256": "d263da0cf62afe30dec52294f51c33a0d522b25c44049224a2274037e8ace44d",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-manage/references/agent-orientation.md",
+      "bytes": 4994,
+      "sha256": "eb2b006824da0312323777b61459c1094ccef847075b6250448c2161bc48dc57",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Maintain a concise root AGENTS.md",
+        "Plugin source and target-project entries",
+        "Required orientation content",
+        "Preserve and reconcile"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/ai-logs.md",
+      "bytes": 6941,
+      "sha256": "407b8b32c1b955b029caa6fb6663085854fb6b9d418f514c1a3f7fdbc0157c37",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Manual AI provenance initialization",
+        "Default execution and overrides",
+        "Record format and assets",
+        "Fresh-main setup",
+        "Existing initialization and recovery"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/branch-management.md",
+      "bytes": 16663,
+      "sha256": "63d88cde75f3fe4116f580a343f16533258515382d4f975650338d73db58880a",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Git branch management",
+        "Establish context and identity",
+        "Create or reuse",
+        "Main phase lifecycle",
+        "Continuation",
+        "Preparation integration gate",
+        "Descriptive directory association"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/continuity.md",
+      "bytes": 11921,
+      "sha256": "2dc7358744c7fc5263c144bd5b518d25a14df784f4fed365d8f63e86dd4ea860",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Preserve and recover workflow context",
+        "Checkpoint and owners",
+        "Establish and refresh",
+        "Select the continuation branch",
+        "Reconstruct after the checkpoint",
+        "Integrate and return",
+        "Explicit transfer preparation"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/coordination.md",
+      "bytes": 18498,
+      "sha256": "bcd392b0e0eb75df29996c68a318388ce47cfb8c89c41dca662daef7af589546",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Coordination protocol",
+        "Establish scope and prerequisites",
+        "Scope checks and reporting detail",
+        "Reporting profiles",
+        "Composite-workflow bootstrap reporting",
+        "Coordinate execution",
+        "Persist repository changes",
+        "Return results",
+        "Diagnostic and findings handoff",
+        "Coordinate environment recovery",
+        "Human document handoffs"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/credentials.md",
+      "bytes": 12287,
+      "sha256": "91d9f4a4718957d799af08b12856db5a98db7e06c079ec0010122eec24e0caea",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Hosting credentials and shell recovery",
+        "Deterministic Git publication",
+        "Blocked or interactive credential helper",
+        "Authentication before main preparation writes",
+        "Find, request, and save",
+        "Authenticate and resume",
+        "Non-credential failures",
+        "Scope through recovery"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/doc-design-modes.md",
+      "bytes": 14630,
+      "sha256": "f6cbd704bcfc781405d64c4b610cb2826643a5e6b59fc2ef6a53e9c55cd896be",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Doc-design modes and pass control",
+        "Workflow mapping",
+        "Select and retain the mode",
+        "Multipass delivery modes",
+        "Prepare scope and decisions",
+        "Retain pass and cross-scope decisions",
+        "Complete a pass",
+        "Reset the cursor",
+        "Resume or steer"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/document-qc-gates.md",
+      "bytes": 7804,
+      "sha256": "9fc7fd9923b90e2f47d6019f4c3b1f2eb2e3f2ccba851dbc487470ad043cd234",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Coordinate development-document QC gates",
+        "Stage handoff",
+        "Amendments, scope and continuation",
+        "Human acceptance alongside QC"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/examples.md",
+      "bytes": 30494,
+      "sha256": "a313600f845edf4099bb1779bc674e2d3b6298a208468384374e08f1e54774c7",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Workflow examples",
+        "Workflow selection and continuity",
+        "Workflow loading and reporting",
+        "Operation examples",
+        "Task audit recovery examples",
+        "Branch and artifact examples",
+        "Credential recovery examples",
+        "Blocked steering continuation",
+        "Branch and operational boundaries",
+        "Review and revision campaigns",
+        "Prerelease review and reminder examples",
+        "Proactive tracking choices",
+        "Release preparation and publication",
+        "Authority, diagnostics and retained notes",
+        "Human document review examples",
+        "Revision campaign modes",
+        "Main documentation preparation"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/feature-delivery.md",
+      "bytes": 6940,
+      "sha256": "fd095d5ba7fc2bf8e0e0a40c0c5b16a7d0e378fb45aa48995bc5c10c3386d45d",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Feature phase delivery and campaign completion",
+        "Establish the phase and branch mapping",
+        "Execute and integrate a completed phase",
+        "Final feature boundary and recovery"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/feature-preparation.md",
+      "bytes": 11497,
+      "sha256": "09cae23228629e70ca8cd23316899b32a019edd651347d083f71d1e2b54395ed",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Feature documentation preparation",
+        "Establish preparation before writes",
+        "Artifact ownership and stage model",
+        "Decisions, completion and proactive guidance",
+        "Pass completion, reset and recovery",
+        "Final package QC, integration and checkpoint"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/git-workflows.md",
+      "bytes": 25067,
+      "sha256": "6ae1036226113d88a5aba353736b2ef0ecb89e6b7c7c13ec2d3dd00588b1e58a",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Working branches and explicit integration",
+        "Publish each commit",
+        "Monitor pending Git operations",
+        "Establish the working branch",
+        "Merge purpose",
+        "Work and prepare the boundary",
+        "Merge, verify, and publish",
+        "Continue a blocked workflow",
+        "Platform authorization rejection",
+        "Push authentication recovery",
+        "Release commit and tag"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/human-document-review.md",
+      "bytes": 10591,
+      "sha256": "c147b9fec84ec0d1e97f646c3ab727cd4d0b6f236fa3b042ecc7593eedc59fa8",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Human review of development documents",
+        "Development-document content boundary",
+        "Entry and existing progress",
+        "Future-checkpoint preapproval",
+        "Created-document checkpoints",
+        "QC, operation authority and continuation"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/main-preparation.md",
+      "bytes": 18975,
+      "sha256": "64cfc103034178c535c2d360019caf7b814021865efb3098e8fd65d6d8620a2a",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Main documentation preparation",
+        "Establish preparation before repository writes",
+        "Transient projection lock",
+        "Preparation record and adoption",
+        "Preparation tasks",
+        "DOCS-001: Initialize root guidance",
+        "Document tasks through first approval",
+        "Final package QC, integration and checkpoint",
+        "Recovery"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/phase-activation.md",
+      "bytes": 5095,
+      "sha256": "25bf296fcceec42ed68923b0b00f42b257589a9bf4895d79d3e91460da58904c",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Activate an eligible phase",
+        "Preparation readiness before projection",
+        "Optional tracking decision at handoff"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/prerelease-review.md",
+      "bytes": 9774,
+      "sha256": "0fc0a9e77dcec7d96116cebc641b823dbb0544980190f5c9a608704c991c2338",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Comprehensive prerelease review",
+        "Advisory release reminder",
+        "Establish candidate and plan",
+        "Coverage and owner routing",
+        "Findings, readiness and rechecks",
+        "Complete and stop"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/repository-bootstrap.md",
+      "bytes": 10317,
+      "sha256": "00d9466b25221886b1120467cede3311fd43fa31d3bd703f32cd8bf9d0f8c8b1",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Bootstrap SDD Manager in a target repository",
+        "Greenfield startup",
+        "Ownership and trigger",
+        "Root artifacts and discoverability",
+        "Scope limits, recovery and upgrades",
+        "Human review at startup"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/review-and-revision.md",
+      "bytes": 11034,
+      "sha256": "b8be2c6e04ad5cdd66986250b8d1b95e5035cfabe48e8927d835cb9081cae583",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Coordinate review and revision campaigns",
+        "Review",
+        "Plan accepted revisions",
+        "Revision execution authorization",
+        "Revise, verify, and finish",
+        "Diagnose an omission from evidence",
+        "Retain requested amendment findings"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/revision-modes.md",
+      "bytes": 10559,
+      "sha256": "0cd4961f659eb38ccc0ffd3ee6135fcdf5b66362ac3f59992722a20ec70d0e1f",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Revision campaign modes",
+        "Select the mode",
+        "Nested revision campaign",
+        "Reopened campaign amendment",
+        "Eligibility and authority",
+        "Reopen, execute and close",
+        "Integration summaries and closure",
+        "Return worktree safely"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/tracking-decision.md",
+      "bytes": 7872,
+      "sha256": "bb70eff20252e07537173d5011ee4755ec25c2e17a4dd3e0dc033faebf287a28",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Select optional hosted tracking",
+        "Main documentation preparation",
+        "Feature documentation preparation",
+        "Late confirmation",
+        "Recover an omitted requested gate"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/references/workflows.md",
+      "bytes": 30279,
+      "sha256": "5131cf79d93aca3dfa6e6be830da08b0edb70c14252edc62d84c5d6e74abdb74",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Available workflows",
+        "Workflow selection and continuity",
+        "Core development workflows",
+        "Steering as lightweight revision",
+        "Operation catalog",
+        "Workflow loading",
+        "Release operations",
+        "Delivery strategy handoff",
+        "Feature sequencing",
+        "Cross-cutting operations",
+        "Optional tracking decision at handoff",
+        "Human preparation sequence"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/scripts/git-auth-recover.md",
+      "bytes": 11924,
+      "sha256": "6818385a5f231039cb28be32fda2caa20d3c4f790720614fb50f144258a58d9a",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Supervised HTTPS Git publication",
+        "Runtime and interface",
+        "Credential selection and protection",
+        "Deadline and process ownership",
+        "Results and recovery",
+        "Verification and maintenance"
+      ]
+    },
+    {
+      "path": "skills/sdd-manage/scripts/git-auth-recover.mjs",
+      "bytes": 21278,
+      "sha256": "98c0c9483bb069003369c98a7f9aeb1b7377557998d5584ed4d26ad0b760c406",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-manage/scripts/git-process-supervisor.py",
+      "bytes": 15541,
+      "sha256": "0e775d5f050f11b6e5c55a19fd55ee68a3a4eee082b4df905043501da720b323",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-manage/scripts/git-publish.mjs",
+      "bytes": 12001,
+      "sha256": "40009fee6b92bfd44552cdf3775fd314f5d61368fca402fd3080af602d561cb1",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-manage/scripts/protected-token.mjs",
+      "bytes": 5237,
+      "sha256": "4a49f2d1de36c8e194be621a93df6aa202aa29305fb542c7d76af0fa3884f3e2",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-orient/SKILL.md",
+      "bytes": 6087,
+      "sha256": "ee7ee4b3c7601a545e505d82846d0f8258d0b2cdfae1a8c3239c341a50ebffc7",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Orient in a project"
+      ]
+    },
+    {
+      "path": "skills/sdd-orient/agents/openai.yaml",
+      "bytes": 491,
+      "sha256": "36dbb7990b7f504c1fa4b614651ad26431ab6af5a623be8250b780ce156667c9",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-orient/assets/icon.svg",
+      "bytes": 571,
+      "sha256": "ef235e59b6a56e0d21629b3b6c1b2ca9cc97cd678d02bcb31b0e2f7bc11bf1f2",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-orient/references/inspection-and-handoff.md",
+      "bytes": 13613,
+      "sha256": "424f12fd386abbbce47102fef620f10902ccf360e2b59f9519557613e412f9f8",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Inspection and handoff",
+        "Project and authority",
+        "Execution OS and tool readiness",
+        "Git evidence",
+        "Project evidence",
+        "Continuity checkpoint",
+        "Task state at startup",
+        "Interrupted document operations",
+        "Orientation report",
+        "Document preparation progress"
+      ]
+    },
+    {
+      "path": "skills/sdd-plan/SKILL.md",
+      "bytes": 6911,
+      "sha256": "2e8cbb958a162c2a90a67ab8133bdba786c00ae92a3d744f5b69bf3241530de8",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Plan delivery and physical layout"
+      ]
+    },
+    {
+      "path": "skills/sdd-plan/agents/openai.yaml",
+      "bytes": 371,
+      "sha256": "8672b642e8c5ae2114cd839af1152435c7da485b4a25c3dd62d15c78d124ac98",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-plan/assets/icon.svg",
+      "bytes": 590,
+      "sha256": "44568c513e736771f4dde159c1903c6da19a774474ce65aeb8992dd694706659",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-plan/references/delivery-plan.md",
+      "bytes": 10732,
+      "sha256": "0e1cd0b62ae80a6af42197b07159afb7fde7c9923188adc5e86f483ef7b542b0",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Delivery plan",
+        "Establish the strategy",
+        "Phase scope and version coverage",
+        "Review boundaries",
+        "Incremental growth",
+        "Document organization",
+        "Preparation readiness"
+      ]
+    },
+    {
+      "path": "skills/sdd-plan/references/physical-layout.md",
+      "bytes": 3711,
+      "sha256": "e6abc9b84068ff8def13af02360020bdd80dc4c431667cf416aa4a9953bbfc41",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Physical layout",
+        "Establish ownership",
+        "Layout and preparation QC",
+        "Instruction file ownership"
+      ]
+    },
+    {
+      "path": "skills/sdd-plan/references/review.md",
+      "bytes": 6030,
+      "sha256": "965964623587a4d1ff8d42d5f4ab24bf7cf169b6c70b3866518c78903650570e",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Plan and layout review",
+        "Required PLAN/SPEC QC gate",
+        "Human checkpoints"
+      ]
+    },
+    {
+      "path": "skills/sdd-report/SKILL.md",
+      "bytes": 3946,
+      "sha256": "2a09d48def1f845b9b6988762aaa99b62e4f5c39213033c2276f8bb0aa42e8e2",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Report SDD work"
+      ]
+    },
+    {
+      "path": "skills/sdd-report/agents/openai.yaml",
+      "bytes": 454,
+      "sha256": "bfe1a84a61bf154a5cb846d41b10d73e88a596044d21e6d1f151d1dc78ae221c",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-report/assets/icon.svg",
+      "bytes": 580,
+      "sha256": "aca30e96cbe5d44d759da47cc1db33c87dce1d04bf77142feac8475eecbab074",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-report/references/campaign-artifacts.md",
+      "bytes": 12911,
+      "sha256": "c8c4ade54de2440316f991cc6dfb8d20568da332fc9a02f41494c86d596872f4",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Review and revision artifacts",
+        "Reopened amendment evidence",
+        "Workflow context",
+        "Review plan",
+        "Review plan",
+        "Campaign and scope",
+        "Review order and criteria",
+        "Evidence and persistence",
+        "Consolidation and stopping",
+        "Review report",
+        "Review report",
+        "Campaign and assessment",
+        "Coverage and findings index",
+        "Finding records",
+        "R-001 \u2014 Actionable title",
+        "Scenarios and limits",
+        "Revision handoff",
+        "Revision plan",
+        "Revision plan",
+        "Campaign and decisions",
+        "Authoritative project updates",
+        "Ordered revisions",
+        "Execution and persistence",
+        "Limits and stopping",
+        "Revision report",
+        "Revision report",
+        "Campaign and result",
+        "Revision evidence",
+        "Composition and integration",
+        "Remaining findings and limits",
+        "Imported and conversation-only findings"
+      ]
+    },
+    {
+      "path": "skills/sdd-report/references/change-kinds.md",
+      "bytes": 4573,
+      "sha256": "7cc7d31e5926fab5c4778b385f282d8f536713536c1038cc63409a1734da886b",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Change kinds and evidence",
+        "Examples",
+        "Code health",
+        "Performance"
+      ]
+    },
+    {
+      "path": "skills/sdd-report/references/completion-reports.md",
+      "bytes": 7979,
+      "sha256": "f4b2f21f294e790d8ac5d773ebc5b8b15a963149dfed3b2cf658069ed26816b2",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Completion and status reports",
+        "Task",
+        "Milestone and phase",
+        "Review reports and TODO aggregation",
+        "Interrupted or limited evidence",
+        "Evidence and test-first limits",
+        "Branch boundary",
+        "Optional capability state"
+      ]
+    },
+    {
+      "path": "skills/sdd-report/references/document-qc-reports.md",
+      "bytes": 5052,
+      "sha256": "f22366182bb3003758be8d4c35babdfcd3074bc0cf7a2f0eb42cc28c6dd30106",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Document QC review reports",
+        "Placement and identity",
+        "Compact report structure",
+        "PLAN review report",
+        "Current gate",
+        "Initial review",
+        "Revision 1",
+        "Retained review and revisions",
+        "Human decision evidence"
+      ]
+    },
+    {
+      "path": "skills/sdd-report/references/object-drafts.md",
+      "bytes": 16975,
+      "sha256": "e8ebe39b948545a8fa1540d5b7b2749a7130eb1f51d4617366844fccce298e67",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Issue, commit, and PR drafts",
+        "Task issue",
+        "Git commit",
+        "Task commit subjects",
+        "Merge commit",
+        "Campaign integration summary",
+        "Pull request",
+        "Examples",
+        "Issue title",
+        "Commit message",
+        "Code health PR",
+        "\ud83e\uddf9 Clarify filesystem utility ownership",
+        "Release commit message"
+      ]
+    },
+    {
+      "path": "skills/sdd-report/references/releases.md",
+      "bytes": 8102,
+      "sha256": "0098b5c9bdf32746c9d5a9ad783ecb5f540aca7d3f6b7431f62ee1fbc0fd994c",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Package and release reporting",
+        "Preparation result",
+        "Release notes",
+        "Complete release message",
+        "Release outcome"
+      ]
+    },
+    {
+      "path": "skills/sdd-specify/SKILL.md",
+      "bytes": 6361,
+      "sha256": "70b1803c4d664588cd564f0e3c6481fb295e4faa1389e838fea1a5a58a8e68bb",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Specify required behavior"
+      ]
+    },
+    {
+      "path": "skills/sdd-specify/agents/openai.yaml",
+      "bytes": 387,
+      "sha256": "c61e7eb38f097029d947314b441959b17aae2303440a52022cd386d78171e6b5",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-specify/assets/icon.svg",
+      "bytes": 591,
+      "sha256": "ebeaf7c64a2fb958088765c46c48e8269625f03ddccefec9dc7b76ff7379f2ad",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-specify/references/change-specification.md",
+      "bytes": 2568,
+      "sha256": "50031ecbc268306629bd8be75fe73a003d9be59548d69ad6c70d1515cc1aa195",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Scoped change specification",
+        "Review the scoped delta"
+      ]
+    },
+    {
+      "path": "skills/sdd-specify/references/review.md",
+      "bytes": 3962,
+      "sha256": "60ef1b66449b4f40adf88f475fa4767cfd663d17ba4cd304236e8dfcb79500c9",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Specification review",
+        "End-state language",
+        "Required SPEC/design QC gate"
+      ]
+    },
+    {
+      "path": "skills/sdd-specify/references/system-specification.md",
+      "bytes": 5031,
+      "sha256": "2f1dfbbac51a05d5d74260398f2ef15b1c8217d5e4a69a777539031567bd9843",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Complete system specification",
+        "Root",
+        "Design traceability",
+        "Focused children",
+        "Acceptance and review",
+        "Finish the preparation boundary"
+      ]
+    },
+    {
+      "path": "skills/sdd-steer/SKILL.md",
+      "bytes": 5603,
+      "sha256": "33c91d50a828549508ad6e7955625cb8af1574651d19ce36db70013b2601f4a2",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Apply a human-directed checkpoint amendment",
+        "Commanded amendment implementation"
+      ]
+    },
+    {
+      "path": "skills/sdd-steer/agents/openai.yaml",
+      "bytes": 592,
+      "sha256": "421038f108a077de64e16c95011ed4f6bff87d47e16c53894bbcc0dc581cc4ae",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-steer/assets/icon.svg",
+      "bytes": 551,
+      "sha256": "b9d353ce223194b53f52a4853ed1cc9468718ed0ee57074b5988a309f54d14d1",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-steer/references/amendment-execution.md",
+      "bytes": 3900,
+      "sha256": "c185174fd72625f51a151bb6085140e9599f848e26f461d1131c87f2865d0cac",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Execute the amendment",
+        "Revise existing development documents",
+        "Align code, tests, and user documentation",
+        "Reassess affected preparation gates"
+      ]
+    },
+    {
+      "path": "skills/sdd-steer/references/objective-and-impact.md",
+      "bytes": 3264,
+      "sha256": "7f2bd87c0b689221ffb24b5ae7915ee8d00134a9bce5433f05d5f8472f61f58d",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Objective and impact",
+        "Establish the boundary",
+        "Amendment branch and continuation"
+      ]
+    },
+    {
+      "path": "skills/sdd-steer/references/verification-and-stop.md",
+      "bytes": 7686,
+      "sha256": "7c2c8da97ade97616b6b4354f514d9c76ead7c6bf320be71d3bcb9070a236a80",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Verify, publish the checkpoint, and stop",
+        "Verify the amendment",
+        "Commit and push",
+        "Merge the amendment",
+        "Continue after a blocker",
+        "Return control to the human",
+        "Affected orientation checkpoint"
+      ]
+    },
+    {
+      "path": "skills/sdd-tasks/SKILL.md",
+      "bytes": 6660,
+      "sha256": "e4495c46c1e281892e384678360aa571e3fabc9086f94ed02675127dcf9e5df0",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Create and review task lists"
+      ]
+    },
+    {
+      "path": "skills/sdd-tasks/agents/openai.yaml",
+      "bytes": 338,
+      "sha256": "60b43614f445a40f3d52d21869962189bdfe0252461317a6712a55d176797aa2",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-tasks/assets/icon.svg",
+      "bytes": 599,
+      "sha256": "dad3203c0386ce1a697600ae82fc1e03f530111626192018df24dd7c5ac69eb0",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-tasks/references/conformance-review.md",
+      "bytes": 4545,
+      "sha256": "ab316a590e2ec854bc61354af91840aae1d7bd2bc8b5235978a7b3edb697b112",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Task-list conformance and decomposition review",
+        "Inputs and review",
+        "Corrections, evidence and gate"
+      ]
+    },
+    {
+      "path": "skills/sdd-tasks/references/progress-review.md",
+      "bytes": 2291,
+      "sha256": "32be8fbaa5e67e807d7c7f7be964c56ab7f65bd6398784606090fcdd9e40a912",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Progress review",
+        "Completion evidence",
+        "Route findings",
+        "Distinguish preparation readiness"
+      ]
+    },
+    {
+      "path": "skills/sdd-tasks/references/task-derivation.md",
+      "bytes": 8493,
+      "sha256": "cf8679c71fc605b795281024dcc5cb0e0ac40d85a15cab524f1a5762b0391997",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Task derivation",
+        "Form tasks",
+        "Checklist form",
+        "Phase 1 \u2014 Streaming sources",
+        "Required preparation review"
+      ]
+    },
+    {
+      "path": "skills/sdd-tdd/LICENSE",
+      "bytes": 1070,
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-tdd/SKILL.md",
+      "bytes": 3588,
+      "sha256": "49efacb9ed6ae3b59069e986672dc5350cc0b147c3ad960b3ffc04f105c54cda",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Design tests and guide test-first implementation"
+      ]
+    },
+    {
+      "path": "skills/sdd-tdd/agents/openai.yaml",
+      "bytes": 480,
+      "sha256": "f0049fe541cbffe331d4ccb9e903ed49bb96f1011cefecd1ced49fbd1bd19da4",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-tdd/assets/icon.svg",
+      "bytes": 574,
+      "sha256": "37e86ed29c77f13846f9c315627c5e139d1348d7eed26eef2ff94354c334239f",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-tdd/references/test-first-cycle.md",
+      "bytes": 3693,
+      "sha256": "e8d797ba50e555d53500516e85f8b624f7ed11f5a7534e39220f2a74141e3d96",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Test-first cycle",
+        "RED",
+        "GREEN",
+        "REFACTOR and repeat",
+        "Interrupted or non-test-first work",
+        "Record exceptions and gaps"
+      ]
+    },
+    {
+      "path": "skills/sdd-tdd/references/testing-strategy.md",
+      "bytes": 2947,
+      "sha256": "a861155f218c008ca8f8612574cfaa390ce7095d0d3f9f2c2b9f22f6ea3104e7",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Testing strategy",
+        "Select scenarios and levels",
+        "Strategy boundaries"
+      ]
+    },
+    {
+      "path": "skills/sdd-tdd/references/upstream-provenance.md",
+      "bytes": 1278,
+      "sha256": "668d85251c25027ac1494c9bb89367fa3c1885c23424e3987d02f7fd0b02ca33",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Upstream provenance and adaptation"
+      ]
+    },
+    {
+      "path": "skills/sdd-tdd/references/writing-good-tests.md",
+      "bytes": 4076,
+      "sha256": "c5a555443dc5cf3b78312f9939bfbe53be7b04978f4f14f3350820ed5bc5b0d8",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Writing good tests",
+        "Independent expectations and meaningful failures",
+        "Real behavior and doubles",
+        "Review sensitivity",
+        "Examples",
+        "Expected text is independent of the formatter under test.",
+        "Reusing the tested formatter on both sides cannot expose its defect."
+      ]
+    },
+    {
+      "path": "skills/sdd-verify/SKILL.md",
+      "bytes": 5993,
+      "sha256": "f8c6e8d70347b106a8128da7018bbafc6badf85be9064c94b8ee0f8cb554f7f2",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Verify a selected work boundary"
+      ]
+    },
+    {
+      "path": "skills/sdd-verify/agents/openai.yaml",
+      "bytes": 544,
+      "sha256": "3176532ba151974e4f6186c589a9e8ba59247367629ace97788cf70e1bdfe40a",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-verify/assets/icon.svg",
+      "bytes": 563,
+      "sha256": "60c4fbc478c5c5569c7db40ee7d2b90c061fb8e0b7a2274ec8757cbcadc6c837",
+      "assessment": "inventory and structural coverage; selected semantic review described in report"
+    },
+    {
+      "path": "skills/sdd-verify/references/boundary-review.md",
+      "bytes": 2556,
+      "sha256": "6923a7570bf3daf149a176c448ad351f6074363e84aa0851afcf3efcc17ddcb8",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Review milestone and phase implementation"
+      ]
+    },
+    {
+      "path": "skills/sdd-verify/references/check-selection.md",
+      "bytes": 7685,
+      "sha256": "5a68e3b438e4fd05cdc2816a1d03ccae6f50a1d1e9210d8deb99b64583b44b8c",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Select sufficient checks",
+        "Scope and evidence",
+        "Select checks",
+        "Cross-platform artifacts and native verification",
+        "Representative capability readiness"
+      ]
+    },
+    {
+      "path": "skills/sdd-verify/references/execution-and-evidence.md",
+      "bytes": 4797,
+      "sha256": "35bac91769a15ae00dc2620222f85bbadd9e1f8c478676544b8c682f7cb36672",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Execution and evidence",
+        "Run against an identified state",
+        "Assess coverage",
+        "Preserve and return evidence",
+        "Durable evidence facts",
+        "Environment coverage"
+      ]
+    },
+    {
+      "path": "skills/sdd-verify/references/failure-assessment.md",
+      "bytes": 2950,
+      "sha256": "4522617b15dc791ad3e695022180ed757459c6fa539cfa593592bb858c1cbbdc",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Assess failures and gaps"
+      ]
+    },
+    {
+      "path": "skills/sdd-verify/references/release-checks.md",
+      "bytes": 7303,
+      "sha256": "aea80c9e10e8d47866cc7250e2f730ffbfde32694f040ba6d63ca4db08b65fc5",
+      "assessment": "inventory and structural coverage; selected semantic review described in report",
+      "headings": [
+        "Package, workflow and release checks"
+      ]
+    }
+  ]
+}

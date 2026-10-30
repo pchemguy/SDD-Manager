@@ -1,0 +1,24 @@
+{
+  "owners": 138,
+  "resolved_local_links": 1051,
+  "contextual_template_links": [
+    {
+      "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "target": ".agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md"
+    },
+    {
+      "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "target": ".agents/plugins/sdd-manager/assets/BROWSER_DEV_POLICY.md"
+    },
+    {
+      "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "target": ".agents/plugins/sdd-manager/assets/playwright.md"
+    },
+    {
+      "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "target": ".agents/plugins/sdd-manager/assets/vite-worker-loading.md"
+    }
+  ],
+  "issues": [],
+  "svg_xml_pass": 17
+}

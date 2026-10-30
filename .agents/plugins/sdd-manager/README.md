@@ -181,7 +181,7 @@ You can request "prepare a handoff" for an additional transfer check, but it is 
 
 These diagrams explain the human-visible paths. [PLUGIN.md](PLUGIN.md#composite-workflows) maps skills and handoffs; the linked workflow references own the detailed rules. Enter where current inputs permit. Earlier requested stops and unresolved blockers remain controlling throughout.
 
-### Project preparation
+### Main project preparation
 
 Main preparation separates repository initialization, document-design passes and final package completion. When GitHub tracking is enabled, verify `sdd-docs-main` and all nine issues before repository writes; declined tracking skips hosted operations. Initialization preserves existing root files. Mixed initial presence pauses after published initialization unless continuation is preapproved.
 
@@ -205,7 +205,7 @@ flowchart TB
 
 Each DOCS task is published/read back before its tracked issue closes. The final checkpoint reports the integrated package and pending effects; implementation starts only when that checkpoint is cleared and a range is authorized. See [main preparation](skills/sdd-manage/references/main-preparation.md) and the [preparation integration gate](skills/sdd-manage/references/branch-management.md#preparation-integration-gate).
 
-### One document-design pass
+### One main document-design pass
 
 Explore the current scope and resolve consequential choices before PROJECT acceptance. Each named node below is a document checkpoint: satisfy its required quality checks and human approval or applicable preapproval before following the next arrow. Acceptable existing inputs can be reused; a reset pass revises retained documents rather than recreating them.
 
@@ -222,7 +222,7 @@ flowchart TB
 
 For each completion, the accepted document state, DOCS_PREPARATION decision/QC evidence and checked DOCS task share one commit, followed by publication/readback and tracked issue closure. DOCS_TASKS holds tasks/checkoffs only; DOCS_PREPARATION retains mode, pass scope and decisions. Document contents describe the project. See [human document review](skills/sdd-manage/references/human-document-review.md), [quality gates](skills/sdd-manage/references/document-qc-gates.md) and the [mode table above](#doc-design-modes).
 
-### Document-design modes and loops
+### Main document-design modes and loops
 
 Interactive/onepass reviews each necessary document unless preapproved. Autodoc preapproves checkpoints after PROJECT through TASKS; human-controlled multipass retains PROJECT approval each pass. Autoloop clarifies the predefined scope sequence upfront, requires the first PROJECT approval and waives later PROJECT approvals. New material choices within that delegated scope are explained while work continues.
 
@@ -243,6 +243,26 @@ flowchart TB
 ```
 
 A reset returns to DOCS-002, reopens DOCS-002–009 and the same issues when tracked, and preserves DOCS-001 and all documents. You may also request reset at an intermediate checkpoint. Reconcile pending publication/reopening before authoring resumes. Finishing an autodoc pass or the final autoloop pass leaves package QC, documentation integration and implementation pending; advancing selects package QC within its existing gates, not implementation. See [mode and reset control](skills/sdd-manage/references/doc-design-modes.md).
+
+### Feature preparation
+
+Feature preparation uses the same approval and loop modes with FEATURE as its brief and campaign-scoped FDOCS tasks. Assess unchanged design/layout for reuse; do not repeat main initialization or create unnecessary overlays. When tracking is selected, verify the feature preparation milestone and all nine issues before repository writes.
+
+```mermaid
+flowchart TB
+    S["Feature scope, mode and tracking readiness"] --> C["FDOCS-001: establish feature context"]
+    C --> D["FDOCS-002–008: accept or reuse the document set"]
+    D --> A{"Package QC selected under the mode?"}
+    A -->|"no"| P["Report pass result; preserve pending QC"]
+    P -->|"authorized reset; publish and reconcile reopening"| D
+    P -->|"explicit advance"| Q["FDOCS-009: verify and publish package QC"]
+    A -->|"yes"| Q
+    Q --> M["Merge preparation; verify and publish default"]
+    M --> T["Close tracked preparation milestone"]
+    T --> F["Final implementation checkpoint"]
+```
+
+Autodoc stops after FDOCS-008 before package QC; autoloop resets only for the remaining predefined scopes, then stops there. Each document completion and reset is published/read back before tracked issue reconciliation and dependent work. Final preparation integration publishes active deltas; it does not incorporate them into complete main documents or implement the feature. Implementation requires the final checkpoint to be cleared and a range authorized. See [feature preparation](skills/sdd-manage/references/feature-preparation.md) and [shared modes](skills/sdd-manage/references/doc-design-modes.md).
 
 ### Implementation and continuation
 
@@ -270,7 +290,29 @@ flowchart TB
     M --> E
 ```
 
-For main development, integration requires a complete verified phase; a smaller range publishes and pauses. A feature/revision requires its coherent authorized boundary and applicable exits, including a task audit when TASKS or FEATURE-TASKS governs the work; complete feature implementation includes required document incorporation before final verification. An authorized cross-phase range repeats the cycle only after each preceding phase is integrated and published. No diagram arrow widens the requested range. See [implementation](skills/sdd-implement/SKILL.md) and [completion boundaries](skills/sdd-implement/references/completion-and-checkpoints.md#integrate-the-completed-boundary).
+For main development, integration requires a complete verified phase; a smaller range publishes and pauses. A revision requires its coherent authorized boundary and applicable exits. Each completed feature phase incorporates its delivered delta before phase completion; final archive is reserved for the eligible final feature boundary. TASKS/FEATURE-TASKS work requires the task persistence audit before integration. An authorized cross-phase range repeats the cycle only after each preceding phase is integrated and published. No diagram arrow widens the requested range. See [implementation](skills/sdd-implement/SKILL.md) and [completion boundaries](skills/sdd-implement/references/completion-and-checkpoints.md#integrate-the-completed-boundary).
+
+### Feature phase delivery
+
+A feature may span several phases on one retained campaign branch. Use the shared task cycle above; a partial phase publishes and pauses. Incorporate only the completed phase's delta, keeping future feature sources active. Preparation tracking and product phase tracking remain separate.
+
+```mermaid
+flowchart TB
+    S["Published preparation; cleared checkpoint and range"] --> E["Activate and execute the authorized phase"]
+    E --> I["Incorporate phase delta; review and verify"]
+    I --> F{"Eligible final feature boundary?"}
+    F -->|"yes"| A["Archive eligible sources; recheck final state"]
+    F -->|"no"| M["Merge phase; verify and publish target"]
+    A --> M
+    M --> L{"Feature work remains?"}
+    L -->|"no"| C["Report campaign completion and return"]
+    L -->|"yes"| N{"Next phase authorized?"}
+    N -->|"no"| P["Report phase checkpoint and pause"]
+    N -->|"yes"| R["Reconcile target changes on campaign branch"]
+    R --> E
+```
+
+A phase merge completes that phase, not the whole campaign or an unfinished parent phase. Only eligible final completion archives remaining sources; document-only incorporation does not complete tasks. A selected phase release follows the separate default-branch release protocol after verified integration; no arrow selects a release or widens the range. See [feature phase delivery](skills/sdd-manage/references/feature-delivery.md) and [feature incorporation](skills/sdd-integrate-feature/references/feature-incorporation.md).
 
 ### Checkpoint steering
 

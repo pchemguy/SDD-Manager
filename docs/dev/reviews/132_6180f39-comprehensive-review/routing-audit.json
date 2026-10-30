@@ -1,0 +1,80 @@
+{
+  "source": "6180f39e4365ec93e5cf537d8172e92b2537de63",
+  "skills": [
+    {
+      "skill": "sdd-conventions",
+      "references": 9,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-design",
+      "references": 5,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-docs",
+      "references": 3,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-forge",
+      "references": 11,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-implement",
+      "references": 5,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-integrate-feature",
+      "references": 1,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-manage",
+      "references": 21,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-orient",
+      "references": 1,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-plan",
+      "references": 3,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-report",
+      "references": 6,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-specify",
+      "references": 3,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-steer",
+      "references": 3,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-tasks",
+      "references": 3,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-tdd",
+      "references": 4,
+      "all_individually_named": true
+    },
+    {
+      "skill": "sdd-verify",
+      "references": 5,
+      "all_individually_named": true
+    }
+  ]
+}

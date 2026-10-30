@@ -1,0 +1,82 @@
+{
+  "mermaid": "11.12.2",
+  "browserPackage": "@sparticuz/chromium@153.0.0",
+  "results": [
+    {
+      "diagram": 1,
+      "width": 586,
+      "height": 2084.90625,
+      "nodes": 13,
+      "edges": 14,
+      "svg_sha256": "18f042dd37b95129e49204b65478df596a5ce20c24ecea9bc26f150ed47eb041",
+      "screenshot_sha256": "bd6a56ef4df50b77038aca139e05281ded98b29d68427be5ff5e8bb2c67cfccd"
+    },
+    {
+      "diagram": 2,
+      "width": 276,
+      "height": 1038,
+      "nodes": 8,
+      "edges": 7,
+      "svg_sha256": "69d7cb3c390578323561fc57763c29f8c9226d3daac8883512c000a911ff3de0",
+      "screenshot_sha256": "674f16aeb93d20bf5b61478dd7c389b20a1a2951ffae224b17e415624900f84e"
+    },
+    {
+      "diagram": 3,
+      "width": 1201.984375,
+      "height": 1068.90625,
+      "nodes": 8,
+      "edges": 12,
+      "svg_sha256": "81d959e2360edcb9d600bcd7ff3e4fa2feb061b1cb67f94afccb48be1618895c",
+      "screenshot_sha256": "121e83907ef4fb57a61eb2f93af2f97b365176db0be1604967d9289de8443ea7"
+    },
+    {
+      "diagram": 4,
+      "width": 544.484375,
+      "height": 1412,
+      "nodes": 9,
+      "edges": 10,
+      "svg_sha256": "3c704cce45bcee61e27eba42b2f0eb8bc8f7b9b0f55d6a172fb7f605043813ab",
+      "screenshot_sha256": "cf8948539e6ab6ce88164f5f995f031e97050510332c538c623a30915025d554"
+    },
+    {
+      "diagram": 5,
+      "width": 617.96875,
+      "height": 2783,
+      "nodes": 13,
+      "edges": 16,
+      "svg_sha256": "cea71ef49e079d7d3be5b4f7c2c5869f73405a6f8bdec2c946563f6993e0b377",
+      "screenshot_sha256": "bf1f6d73a83262bcee1f3a81d8136136a47b00d961add664b5f5b0150b85a58b"
+    },
+    {
+      "diagram": 6,
+      "width": 819.890625,
+      "height": 1759.03125,
+      "nodes": 11,
+      "edges": 12,
+      "svg_sha256": "f597d989b49317302cbb007862128c327d768e0749930e5e19681b406e248df0",
+      "screenshot_sha256": "71240ffbba3d7c70055011b2dc8c4ef22fd82be76441131b1d8e0d4450150b72"
+    },
+    {
+      "diagram": 7,
+      "width": 294,
+      "height": 1156,
+      "nodes": 7,
+      "edges": 7,
+      "svg_sha256": "5c9ae2e9a2e490df9c3c900f5a0fc79647845eec9e6742f4335ee258971d7e10",
+      "screenshot_sha256": "b0f46bb3dce164f634fd76875eb3aa8aea47d6b06dc9d22f6fce39ee91d62441"
+    },
+    {
+      "diagram": 8,
+      "width": 537.390625,
+      "height": 1926.125,
+      "nodes": 11,
+      "edges": 14,
+      "svg_sha256": "1fbf19ffd9635d39a896d14a51a262f69603598b7674ab15a30afa362f2bd403",
+      "screenshot_sha256": "a6a6803fb9c4a55a7d9ec1d7bff6aa2ed67eaa534aa25cf5e70c2ac71c71f700"
+    }
+  ],
+  "readme_blob_sha1": "ad4af10f90ad134a4008a631b758f7ef8372b945",
+  "driver": "Playwright 1.62.1",
+  "browser": "Chromium 153.0.8010.0",
+  "scope": "Local Markdown chart parsing/rendering only; not GitHub/client rendering or application browser compatibility."
+}
