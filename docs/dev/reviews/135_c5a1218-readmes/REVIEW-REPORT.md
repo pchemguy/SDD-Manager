@@ -4,7 +4,7 @@ Campaign 135_c5a1218; baseline c5a121886dcef66cdeb17de09322cc9c1baa819a; origina
 
 ## State and method
 
-U-001/U-002 complete; two reader-facing issues and two optional editorial recommendations proposed. Both READMEs remain unchanged. Source-only Technical Writing Assistant software-documentation/composition assessment with selected current prompt/workflow-owner comparisons; no external research, client setup, application execution or new rendered-chart claim. Revisions and closure are not selected.
+U-001/U-002 complete; three reader-facing issues and two optional editorial recommendations proposed. Both READMEs remain unchanged. Source-only Technical Writing Assistant software-documentation/composition assessment with selected current prompt/workflow-owner comparisons; no external research, client setup, application execution or new rendered-chart claim. Revisions and closure are not selected.
 
 ## U-001 — Root README
 
@@ -62,6 +62,16 @@ All 60 local or source-repository link targets in this README exist in the curre
 - Recheck: a reader can reach the relevant section from the entry for each common task; anchors remain valid in both repository and extracted Markdown contexts. Renderer-specific navigation availability is not claimed.
 - Disposition: optional editorial proposal, not a required workflow change.
 
+### R-005 — Both Hello World prompts are omitted from both READMEs
+
+- Type/priority: demo-discovery coverage defect, medium; high confidence.
+- Locations: both Quick Start/demo navigation sections. Missing targets: docs/demo/hello_world/prompts/Autodoc 3in1.md and docs/demo/hello_world/prompts/Autodoc 3in1 Baseline.md.
+- Observation: a file-inventory comparison, prompted by the user's coverage question, finds ten standalone prompt files: all eight Tetris prompts are linked in both READMEs, but neither Hello World prompt is linked or mentioned. The calculator guide is linked; it contains its exercise prompts rather than a separate prompt directory.
+- Reader consequence: the minimal three-platform examples cannot be discovered from either README's demo entry; the current introduction offers Tetris/calculator or the generic project template without exposing these existing examples.
+- Proposed correction: add a concise Hello World demo entry with links to both current variants and an accurate explanation of their different application/layout scope. Reflect those choices in the Quick Start introduction and any redesigned selector; preserve repository-relative root links and repository URLs in the packaged README.
+- Recheck: enumerate every docs/demo/**/prompts/*.md file and compare with the targets in each README, including URL decoding. All ten current prompt targets must be accounted for, alongside the calculator guide. Check descriptions against the actual two Hello World files rather than deriving them from filenames.
+- Disposition: proposed; no source edits. Earlier link checks established target validity, not inventory completeness. The initial focused review missed this coverage check; this finding corrects that omission without retracting the valid link results.
+
 ## Consolidated findings and priorities
 
 | ID | Scope | Kind / priority | Current disposition |
@@ -70,8 +80,9 @@ All 60 local or source-repository link targets in this README exist in the curre
 | R-002 | Both READMEs | Prompt-selector editorial recommendation / low | Optional: separate mode/submission/delivery dimensions. |
 | R-003 | Packaged README | Subsection composition defect / low | Proposed: relocate feature-delivery paragraph out of main preparation tracking. |
 | R-004 | Packaged README | Internal navigation recommendation / low | Optional: add compact task-based entry links. |
+| R-005 | Both READMEs | Missing demo-prompt navigation / medium | Proposed: include both existing Hello World prompts and explain their scope. |
 
-No high-priority workflow contradiction or broken checked target was found. Recommended order is R-001, shared selector treatment R-002, local regrouping R-003, then optional navigation R-004. These are proposals, not an accepted revision plan. Scope/meaning changes are unnecessary: preserve prompt capabilities, human checkpoints, release gates, policy ownership and the root/full audience split.
+No high-priority workflow contradiction or broken checked target was found. Recommended order is missing demo coverage R-005, next-step guidance R-001, shared selector treatment R-002, local regrouping R-003, then optional navigation R-004. These are proposals, not an accepted revision plan. Scope/meaning changes are unnecessary: preserve prompt capabilities, human checkpoints, release gates, policy ownership and the root/full audience split.
 
 ## Verification and stopping boundary
 
