@@ -11,3 +11,11 @@ Created campaign plan/report, index entry and entry HANDOFF. Existing prompts an
 ## Current checkpoint
 
 Campaign open for preparation of a single HTML page app prompt. Application details, delivery constraints, wording and destination remain to be established. No substantive prompt draft, application implementation, release, merge or closure is claimed.
+
+## V-001 — Single Page Autodoc conversion
+
+Copied the Tetris Autodoc prompt to Single Page Autodoc.md, as clarified by the user; the original Autodoc.md is unchanged. Its project description now requests one organized HTML file with embedded application HTML/CSS/JavaScript; external dependencies are limited to widely used JavaScript libraries available from established CDNs. Removed Electron delivery and the future Electron-reuse paragraph. Gameplay, controls, configuration, persistence and layout requirements remain unchanged. No offline or direct file-URL requirement was introduced.
+
+Updated both READMEs and the Tetris guide with an additional Single Page Autodoc entry and an explicit exception to their standard browser/Electron delivery summary. Existing Autodoc and 3in1 entries remain unchanged.
+
+Verification: focused baseline-relative prompt comparison, current maintained link checks and five affected package-documentation snapshot tests; whitespace and prior closed-record preservation checked. These are documentation checks, not execution of a generated Tetris app. Exact commit/publication are retained by Git readback. Campaign remains open.
