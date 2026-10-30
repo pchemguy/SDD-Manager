@@ -19,3 +19,9 @@ Copied the Tetris Autodoc prompt to Single Page Autodoc.md, as clarified by the 
 Updated both READMEs and the Tetris guide with an additional Single Page Autodoc entry and an explicit exception to their standard browser/Electron delivery summary. Existing Autodoc and 3in1 entries remain unchanged.
 
 Verification: focused baseline-relative prompt comparison, current maintained link checks and five affected package-documentation snapshot tests; whitespace and prior closed-record preservation checked. These are documentation checks, not execution of a generated Tetris app. Exact commit/publication are retained by Git readback. Campaign remains open.
+
+## V-002 — Single Page Featured Autodoc
+
+Created Single Page Featured Autodoc.md as a copy of Featured Autodoc.md. The Greenfield scope requests one organized HTML file containing application HTML/CSS/JavaScript, with external dependencies limited to widely used JavaScript libraries from established CDNs. Removed future Electron reuse and Feature 9 Windows Electron delivery. Greenfield and the eight game-feature sections are otherwise preserved. Both original prompts remain unchanged.
+
+Added the companion to both READMEs and the Tetris guide, retaining their original prompt entries and distinguishing single-page delivery from the other variants. Verified the exact copy delta, preserved source prompts, current links, whitespace and five package-documentation snapshot tests. No generated application was implemented or executed. Exact publication is established through Git readback; campaign remains open.

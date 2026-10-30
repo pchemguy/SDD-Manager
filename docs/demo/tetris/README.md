@@ -36,7 +36,7 @@ These are alternative runs. Use separate repositories or clearly recorded starti
 
 As an alternative to the staged prompts below, use one of these standalone prompts. Interactive, Autodoc and Multipass Autoloop target the same complete game scope, with full-gravity-interval locking as the default; they differ in how documentation is prepared.
 
-Except for Single Page Autodoc, the standard standalone prompts start with a browser app and add a Windows Electron desktop package after UI layout. The 3in1 variants follow the same order, then add sidebar extensions for Chromium and Firefox as the final platform addition, with verified release assets for platforms delivered in each phase. These platform requirements belong to the selected standalone prompt; the staged exercises below retain their browser-only scope.
+Except for the single-page variants, the standard standalone prompts start with a browser app and add a Windows Electron desktop package after UI layout. The 3in1 variants follow the same order, then add sidebar extensions for Chromium and Firefox as the final platform addition, with verified release assets for platforms delivered in each phase. These platform requirements belong to the selected standalone prompt; the staged exercises below retain their browser-only scope.
 
 | Variant | Documentation preparation |
 | --- | --- |
@@ -48,7 +48,7 @@ Except for Single Page Autodoc, the standard standalone prompts start with a bro
 
 ### Autodoc baseline and feature campaigns
 
-Use [Featured Autodoc](<prompts/Featured Autodoc.md>) for a classic baseline followed by separately submitted feature requests. Submit the sections in order as each capability is ready for development. Use [Featured Autodoc 3in1](<prompts/Featured Autodoc 3in1.md>) for the same sequence, followed by Windows Electron delivery and finally Chromium/Firefox sidebar delivery.
+Use [Featured Autodoc](<prompts/Featured Autodoc.md>) for a classic baseline followed by separately submitted feature requests. Submit the sections in order as each capability is ready for development. Use [Single Page Featured Autodoc](<prompts/Single Page Featured Autodoc.md>) for the same staged game capabilities in one HTML file with embedded application code and optional widely used CDN JavaScript libraries, without Electron delivery. Use [Featured Autodoc 3in1](<prompts/Featured Autodoc 3in1.md>) for the same sequence, followed by Windows Electron delivery and finally Chromium/Firefox sidebar delivery.
 
 ### Minimal starting prompt
 

@@ -18,3 +18,7 @@ V-001: Copy and revise the new prompt, then update both READMEs and the Tetris g
 ## Verification and persistence
 
 Record accepted revisions and action IDs when defined. Verify requested scope, wording, examples and affected links; distinguish prompt review from execution of an application generated from it. Commit owned source and evidence together, publish/read back each commit before further work, and preserve prior closed records. Final integration follows the authorized closure boundary with merged-state checks and verified target publication.
+
+## V-002 — Single-page featured companion
+
+Copy Featured Autodoc.md to Single Page Featured Autodoc.md, preserving the original. Apply the same embedded application HTML/CSS/JavaScript and widely used CDN-library constraint; remove future Electron reuse and the Electron feature campaign. Preserve Greenfield plus all eight game-feature sections. Add the companion to both READMEs and the Tetris guide and generalize the single-page delivery exception. Verify the exact copy delta, unchanged originals, active links and affected documentation checks; keep campaign open.
