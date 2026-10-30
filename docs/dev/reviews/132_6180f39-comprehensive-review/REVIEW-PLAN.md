@@ -6,11 +6,11 @@ Campaign 132_6180f39; baseline 6180f39e4365ec93e5cf537d8172e92b2537de63; branch 
 
 | Unit | Scope and criteria | Evidence and checkpoint |
 | --- | --- | --- |
-| U-001 | Both READMEs, workflow diagrams, current demo guides/prompts and consistency with decisions in this conversation. Check audience, claims, feature/main parity, scope/checkpoint and platform/control descriptions. | Read source, compare canonical owners and chat requirements; retain located findings and publish report. |
+| U-001 | Both READMEs, workflow diagrams, current demo guides/prompts and chart consistency. Check audience, claims, feature/main parity, scope/checkpoint and platform/control descriptions. | Read source, compare canonical owners and diagram paths; retain located findings and publish report. |
 | U-002 | Inventory complete plugin; inspect entries/routing, composite workflow handoffs, preparation, implementation, tracking, feature incorporation, Git/continuity, release and environment boundaries. Check selected positive/negative/recovery contrasts. | Structural inventory plus targeted semantic source assessment; distinguish unassessed content/behavior and publish report. |
 | U-003 | Runtime utility, support/publisher and package boundaries; run existing regression suites, structural validator, current links/assets and exact committed archive/schema checks. | Record actual command outcomes, native skips and evidence limits; publish report. |
 
-Review current owners and active records, not frozen historical campaigns. Read the supplied conversation as requirements/evidence; do not copy credentials or invent inaccessible chat transcripts. Include README charts/diagrams in the emphasis. No fresh-agent, installed-client or live hosted mutation acceptance is inferred from static checks. Inventory every packaged file; targeted semantics is not a claim of line-by-line verification of every reference.
+Review current owners and active records, not frozen historical campaigns. The user clarified "charts", not "chats": assess README diagrams and their agreement with canonical instructions. No separate conversation/transcript audit is selected. Do not copy credentials. No fresh-agent, installed-client or live hosted mutation acceptance is inferred from static checks. Inventory every packaged file; targeted semantics is not a claim of line-by-line verification of every reference.
 
 ## Repairs and closure
 
