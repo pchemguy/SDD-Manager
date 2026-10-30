@@ -4,6 +4,8 @@
 
 SDD Manager is a learning-by-doing experiment in specification-driven development with coding agents, packaged as an Agent Plugin for Git repositories. It composes focused skills into workflows for exploration, design, specification, planning, implementation, verification and releases. Practical project runs inform its refinement; local source checks and live agent/client acceptance have distinct evidence boundaries.
 
+Navigate: [Quick Start](#quick-start) · [Workflows](#core-development-workflows) · [Modes and checkpoints](#doc-design-modes) · [Continuation](#continue-with-another-agent) · [Workflow diagrams](#workflow-guide) · [Releases](#release-operations) · [Package assets](#plugin-package).
+
 In the source repository, the complete plugin package is at `.agents/plugins/sdd-manager/`, available for agents to load when working on SDD Manager itself. A separate agent installation remains an option. This checkout layout does not configure automatic loading; installed or extracted packages begin at their own plugin root.
 
 The plugin defines a non-standard [PLUGIN.md](PLUGIN.md) entry, analogous to a skill's SKILL.md. PLUGIN.md provides instructions and navigation for the plugin and its skills, just as SKILL.md does for a skill and its references. It also defines common composite workflows involving multiple skills. The **sdd-manage** coordinator skill selects and coordinates these workflows, routing work to the responsible skills.
@@ -187,8 +189,6 @@ Initialization executes/reuses [manual conversation-record setup](skills/sdd-man
 
 `docs/dev/DOCS_TASKS.md` contains tasks/checkoffs only. The separate `docs/dev/DOCS_PREPARATION.md` holds control, decisions and evidence; both use bundled templates. Legacy mixed lists move non-task content to that record without losing decisions or task progress. Each document task completes at first approval: its accepted state, preparation-record evidence and checked task share one commit, followed by push/readback and issue closure. Ordinary later edits keep that task complete and issue closed; an explicit cursor reset reopens DOCS-002–009 and the same issues for the next pass, retaining all documents and DOCS-001. The last task/issue checks the whole package; then the docs branch merges, the verified merge is published, the milestone closes and the agent confirms the final checkpoint before implementation. See [main preparation](skills/sdd-manage/references/main-preparation.md).
 
-Feature implementation uses the same task, milestone and phase review discipline. Completed phases incorporate their scoped changes and integrate into the recorded target; later feature work stays active. Final campaign completion incorporates and archives the remaining eligible sources. See [feature phase delivery](skills/sdd-manage/references/feature-delivery.md).
-
 ### Agent quality checks
 
 SPEC is checked against accepted PROJECT/design; PLAN/layout against SPEC; TASKS against PLAN before execution or hosted projection. Adjacent QC reports retain findings and rechecks; unresolved confirmed blockers stop dependent work. See [document quality gates](skills/sdd-manage/references/document-qc-gates.md) and [shared QC policy](skills/sdd-conventions/references/development-document-qc.md) for reports, decomposition and task-sizing guidance.
@@ -320,7 +320,7 @@ For main development, integration requires a complete verified phase; a smaller 
 
 ### Feature phase delivery
 
-A feature may span several phases on one retained campaign branch. Use the shared task cycle above; a partial phase publishes and pauses. Incorporate only the completed phase's delta, keeping future feature sources active. Preparation tracking and product phase tracking remain separate.
+A feature may span several phases on one retained campaign branch. Feature implementation uses the same task, milestone and phase review discipline. Use the shared task cycle above; a partial phase publishes and pauses. Incorporate only the completed phase's delta, keeping future feature sources active. Preparation tracking and product phase tracking remain separate.
 
 ```mermaid
 flowchart TB
@@ -338,7 +338,7 @@ flowchart TB
     R --> E
 ```
 
-A phase merge completes that phase, not the whole campaign or an unfinished parent phase. Only eligible final completion archives remaining sources; document-only incorporation does not complete tasks. A selected phase release follows the separate default-branch release protocol after verified integration; no arrow selects a release or widens the range. See [feature phase delivery](skills/sdd-manage/references/feature-delivery.md) and [feature incorporation](skills/sdd-integrate-feature/references/feature-incorporation.md).
+A phase merge completes that phase, not the whole campaign or an unfinished parent phase. Only eligible final completion incorporates remaining accepted changes and archives eligible sources; document-only incorporation does not complete tasks. A selected phase release follows the separate default-branch release protocol after verified integration; no arrow selects a release or widens the range. See [feature phase delivery](skills/sdd-manage/references/feature-delivery.md) and [feature incorporation](skills/sdd-integrate-feature/references/feature-incorporation.md).
 
 ### Checkpoint steering
 
