@@ -25,3 +25,11 @@ Verification: focused baseline-relative prompt comparison, current maintained li
 Created Single Page Featured Autodoc.md as a copy of Featured Autodoc.md. The Greenfield scope requests one organized HTML file containing application HTML/CSS/JavaScript, with external dependencies limited to widely used JavaScript libraries from established CDNs. Removed future Electron reuse and Feature 9 Windows Electron delivery. Greenfield and the eight game-feature sections are otherwise preserved. Both original prompts remain unchanged.
 
 Added the companion to both READMEs and the Tetris guide, retaining their original prompt entries and distinguishing single-page delivery from the other variants. Verified the exact copy delta, preserved source prompts, current links, whitespace and five package-documentation snapshot tests. No generated application was implemented or executed. Exact publication is established through Git readback; campaign remains open.
+
+## Final result and closure boundary
+
+The user authorized closure after V-001 (ff58ef4b3a58d09b3d515dcd64f439a1442c0197) and V-002 (46bad88d1b07751db358477518e80fb164d23dba), both published/read back. Original opening f75c6f6950bb3c2c86517c7967d31dba575a36b2; full starting/return baseline 7b43552e5a9e7b66e8dcd60a456486e19680b9d5. No requested revision remains unresolved.
+
+Final checks verify each new copy's exact scoped difference from its original, unchanged originals/other prompts/prior closed records, all eight retained featured game sections, 1,059 current local links across 140 maintained Markdown owners (four contextual template links separately classified), active campaign links, five passing package-documentation snapshot tests and clean whitespace. These are prompt/documentation checks; no generated application/runtime acceptance is claimed. No version or release change.
+
+Main refreshed at the recorded baseline. Publish final evidence, explicitly integrate the exact verified campaign tip, rerun merged-state scoped checks and verify target publication and clean return. Actual integration SHA/parents/publication are retained in Git; these effects establish closure without a post-closure report edit.

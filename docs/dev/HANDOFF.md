@@ -1,7 +1,9 @@
 # SDD Manager handoff
 
-Campaign **133 — Single HTML page app prompt** is open on revision/133_7b43552-single-html-prompt. Starting baseline/creation-parent checkpoint 7b43552e5a9e7b66e8dcd60a456486e19680b9d5; creation parent and return target main. No suspended parent. Standard reporting.
+Campaign **133 — Single HTML page app prompts** is finalized for authorized closure into main. Working branch revision/133_7b43552-single-html-prompt; original opening f75c6f6950bb3c2c86517c7967d31dba575a36b2; creation-parent/return baseline 7b43552e5a9e7b66e8dcd60a456486e19680b9d5. No suspended parent. Standard reporting.
 
-The user requested a new demo prompts campaign to prepare a single HTML page app prompt. [Plan](reviews/133_7b43552-single-html-prompt/REVISION-PLAN.md) and [evidence](reviews/133_7b43552-single-html-prompt/REVISION-REPORT.md) retain the opening scope. Application details, delivery constraints and prompt destination remain to be established; no existing prompt has changed. Do not infer a self-contained single-file or offline constraint from the page wording alone.
+[Plan](reviews/133_7b43552-single-html-prompt/REVISION-PLAN.md) and [evidence](reviews/133_7b43552-single-html-prompt/REVISION-REPORT.md) complete V-001/V-002. New Single Page Autodoc.md and Single Page Featured Autodoc.md require embedded application HTML/CSS/JavaScript with widely used CDN JavaScript libraries, and omit future Electron reuse/delivery. Original prompts are unchanged. Both READMEs and the Tetris guide include the copies and distinguish their delivery scope.
 
-Campaign 132 is integrated and remotely verified at the starting baseline; prior closed records remain frozen. Publish/read back this opening, then retain the campaign for the user's requirements. No application implementation, release, merge, closure or unrelated work is selected.
+Final scoped verification passes: exact copy deltas, unchanged original/other prompts and prior closed records, all eight featured game sections, 1,059 current local links across 140 maintained Markdown owners, active campaign links, five package-documentation tests and whitespace. No generated-app execution, version change or release is claimed.
+
+Publish/read back finalization, explicitly merge the exact verified source into refreshed main, verify equal trees/scoped checks, publish/read back main and return cleanly. Actual effects establish closure; freeze records and retain the branch. No next campaign or additional work is selected.
