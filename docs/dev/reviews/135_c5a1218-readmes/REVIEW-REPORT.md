@@ -4,7 +4,7 @@ Campaign 135_c5a1218; baseline c5a121886dcef66cdeb17de09322cc9c1baa819a; origina
 
 ## State and method
 
-U-001/U-002 complete; three reader-facing issues and two optional editorial recommendations proposed. Both READMEs remain unchanged. Source-only Technical Writing Assistant software-documentation/composition assessment with selected current prompt/workflow-owner comparisons; no external research, client setup, application execution or new rendered-chart claim. Revisions and closure are not selected.
+U-001/U-002 complete; four reader-facing issues and two optional editorial recommendations proposed. Both READMEs remain unchanged. Source-only Technical Writing Assistant software-documentation/composition assessment with selected current prompt/workflow-owner comparisons; no external research, client setup, application execution or new rendered-chart claim. Revisions and closure are not selected.
 
 ## U-001 — Root README
 
@@ -72,6 +72,16 @@ All 60 local or source-repository link targets in this README exist in the curre
 - Recheck: enumerate every docs/demo/**/prompts/*.md file and compare with the targets in each README, including URL decoding. All ten current prompt targets must be accounted for, alongside the calculator guide. Check descriptions against the actual two Hello World files rather than deriving them from filenames.
 - Disposition: proposed; no source edits. Earlier link checks established target validity, not inventory completeness. The initial focused review missed this coverage check; this finding corrects that omission without retracting the valid link results.
 
+### R-006 — Calculator prompt choices are hidden behind the guide link
+
+- Type/priority: demo-navigation usability gap, medium; high confidence.
+- Locations: both Quick Start / Calculator demo paragraphs; actual prompts in docs/demo/calculator/README.md.
+- Observation: the calculator guide contains eight embedded prompt blocks: the initial project, two optional steering exercises, four feature campaigns and an All-inclusive project prompt. Both main READMEs provide only a general calculator-guide link and direct users to combine its project description with the Greenfield template. Neither directly exposes the complete all-inclusive prompt or clearly presents staged versus all-inclusive use.
+- Reader consequence: the existing ready-to-submit calculator prompt is easy to miss, and the README suggests manual prompt assembly is the available calculator route. Calculator prompt coverage cannot be established by counting files in prompts/ directories.
+- Proposed correction: surface calculator choices alongside the Tetris/Hello World entries: a direct all-inclusive prompt link and clearly labeled staged project, steering and feature-sequence links/groups using existing guide anchors. Retain the guide as detailed context; do not create or extract new prompt files unless separately selected.
+- Recheck: inventory standalone files and embedded prompt blocks across docs/demo, then compare each README's advertised choices/collection links with that inventory. Specifically verify the calculator All-inclusive project prompt, Initial project, Optional steering exercises and Feature campaign sequence anchors and accurate scope labels.
+- Disposition: proposed; README source unchanged. The original review verified the guide link but missed discoverability of its embedded all-inclusive/staged prompts. [Expanded prompt inventory](demo-prompt-inventory.json) now records both file and embedded-block locations, including Tetris guide examples.
+
 ## Consolidated findings and priorities
 
 | ID | Scope | Kind / priority | Current disposition |
@@ -81,8 +91,9 @@ All 60 local or source-repository link targets in this README exist in the curre
 | R-003 | Packaged README | Subsection composition defect / low | Proposed: relocate feature-delivery paragraph out of main preparation tracking. |
 | R-004 | Packaged README | Internal navigation recommendation / low | Optional: add compact task-based entry links. |
 | R-005 | Both READMEs | Missing demo-prompt navigation / medium | Proposed: include both existing Hello World prompts and explain their scope. |
+| R-006 | Both READMEs | Calculator prompt discovery / medium | Proposed: expose the existing all-inclusive and staged/steering/feature prompt choices. |
 
-No high-priority workflow contradiction or broken checked target was found. Recommended order is missing demo coverage R-005, next-step guidance R-001, shared selector treatment R-002, local regrouping R-003, then optional navigation R-004. These are proposals, not an accepted revision plan. Scope/meaning changes are unnecessary: preserve prompt capabilities, human checkpoints, release gates, policy ownership and the root/full audience split.
+No high-priority workflow contradiction or broken checked target was found. Recommended order is demo coverage/discovery R-005/R-006, next-step guidance R-001, shared selector treatment R-002, local regrouping R-003, then optional navigation R-004. These are proposals, not an accepted revision plan. Scope/meaning changes are unnecessary: preserve prompt capabilities, human checkpoints, release gates, policy ownership and the root/full audience split.
 
 ## Verification and stopping boundary
 

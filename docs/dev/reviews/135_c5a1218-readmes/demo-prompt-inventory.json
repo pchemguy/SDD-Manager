@@ -1,0 +1,162 @@
+[
+  {
+    "path": "docs/demo/calculator/README.md",
+    "kind": "embedded prompt block",
+    "section": "Initial project: Calculator",
+    "line": 21
+  },
+  {
+    "path": "docs/demo/calculator/README.md",
+    "kind": "embedded prompt block",
+    "section": "Option 1: Absolute value, reciprocal, and negation",
+    "line": 43
+  },
+  {
+    "path": "docs/demo/calculator/README.md",
+    "kind": "embedded prompt block",
+    "section": "Option 2: Square and square root",
+    "line": 53
+  },
+  {
+    "path": "docs/demo/calculator/README.md",
+    "kind": "embedded prompt block",
+    "section": "1. Basic/scientific mode toggle",
+    "line": 67
+  },
+  {
+    "path": "docs/demo/calculator/README.md",
+    "kind": "embedded prompt block",
+    "section": "2. Programmer operations",
+    "line": 77
+  },
+  {
+    "path": "docs/demo/calculator/README.md",
+    "kind": "embedded prompt block",
+    "section": "3. Graphing",
+    "line": 87
+  },
+  {
+    "path": "docs/demo/calculator/README.md",
+    "kind": "embedded prompt block",
+    "section": "4. Four-mode selector",
+    "line": 104
+  },
+  {
+    "path": "docs/demo/calculator/README.md",
+    "kind": "embedded prompt block",
+    "section": "All-inclusive project prompt",
+    "line": 144
+  },
+  {
+    "path": "docs/demo/hello_world/prompts/Autodoc 3in1 Baseline.md",
+    "kind": "standalone prompt file"
+  },
+  {
+    "path": "docs/demo/hello_world/prompts/Autodoc 3in1.md",
+    "kind": "standalone prompt file"
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Minimal starting prompt",
+    "line": 57
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Variant A: Classical baseline + modern extensions",
+    "line": 114
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Variant B: Classical baseline + feature expansion",
+    "line": 149
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Variant B: Classical baseline + feature expansion",
+    "line": 159
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Conditional ghost-piece visibility",
+    "line": 189
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Penetrator",
+    "line": 209
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Non-persistent configuration panel",
+    "line": 246
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Semi-persistent configuration",
+    "line": 283
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Option 1: Switch to full-gravity-interval locking",
+    "line": 327
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Option 2: Switch the hard-drop locking policy",
+    "line": 339
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Option 2: Switch the hard-drop locking policy",
+    "line": 345
+  },
+  {
+    "path": "docs/demo/tetris/README.md",
+    "kind": "embedded prompt block",
+    "section": "Option 2: Switch the hard-drop locking policy",
+    "line": 351
+  },
+  {
+    "path": "docs/demo/tetris/prompts/Autodoc 3in1.md",
+    "kind": "standalone prompt file"
+  },
+  {
+    "path": "docs/demo/tetris/prompts/Autodoc.md",
+    "kind": "standalone prompt file"
+  },
+  {
+    "path": "docs/demo/tetris/prompts/Featured Autodoc 3in1.md",
+    "kind": "standalone prompt file"
+  },
+  {
+    "path": "docs/demo/tetris/prompts/Featured Autodoc.md",
+    "kind": "standalone prompt file"
+  },
+  {
+    "path": "docs/demo/tetris/prompts/Interactive.md",
+    "kind": "standalone prompt file"
+  },
+  {
+    "path": "docs/demo/tetris/prompts/Multipass Autoloop.md",
+    "kind": "standalone prompt file"
+  },
+  {
+    "path": "docs/demo/tetris/prompts/Single Page Autodoc.md",
+    "kind": "standalone prompt file"
+  },
+  {
+    "path": "docs/demo/tetris/prompts/Single Page Featured Autodoc.md",
+    "kind": "standalone prompt file"
+  }
+]
