@@ -6,12 +6,12 @@
 - Starting baseline and creation-parent checkpoint: bac9b371a2cd3205ed800ced93cd72211c8aced2.
 - Working branch: revision/131_bac9b37-demo-prompts; creation parent and return target: main.
 - Request: open a new demo prompts revision campaign. No suspended parent campaign.
-- State: Open; detailed revisions have not been specified.
+- State: Open; focused classic-control revision authorized.
 - Evidence: [Revision report](REVISION-REPORT.md).
 
 ## Revision boundary
 
-Receive the requested demo prompt changes, record accepted actions and affected prompt/guide owners here, then execute only the authorized scope. Keep shared wording consistent across affected variants and update navigation when needed. No prompt edits, substantive review, release or campaign closure are selected by the opening request.
+Revise the classic baseline in all six Tetris prompts to specify exactly two clickable gameplay control buttons, **Start/Restart** and **Pause/Start**, with all other gameplay actions controlled from the keyboard. Retain settings and panel toggles; align the existing layout references with the requested button labels. No release or campaign closure is selected.
 
 ## Verification and persistence
 
@@ -19,4 +19,4 @@ For accepted revisions, check the requested behavior, prompt composition, applic
 
 ## Current checkpoint
 
-Campaign setup only. Await the requested prompt revisions; no implementation actions or findings have been invented.
+V-001: Add the same concise classic-control requirement to all six prompts and align their layout button references. Verify exact coverage, scope and unchanged surrounding content; record and publish the result. Keep the campaign open afterward.

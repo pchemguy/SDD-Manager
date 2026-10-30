@@ -8,6 +8,12 @@ Refreshed origin/main and confirmed the baseline. Local campaign paths and curre
 
 Created the campaign plan/report, navigation entry and entry handoff. This opening changes no demo prompts or plugin source and records no substantive review or executed revision. Checked opening-document links, campaign identity and whitespace. Commit/publication are established by Git and exact remote readback, not by this prospective report.
 
+## V-001 — Classic gameplay controls
+
+Added the same two-sentence requirement to the classic baseline in all six Tetris prompts: only **Start/Restart** and **Pause/Start** are clickable gameplay controls; all other gameplay actions use the keyboard. Updated each later layout reference from **Pause** to **Pause/Start**. Settings, Save/Restore and panel toggles retain their existing requirements.
+
+Verification: inspected all six prompt diffs; checked one exact baseline requirement and matching layout reference per prompt, with all surrounding prompt text unchanged apart from those two edits. Whitespace checks pass. No application or runtime tests are applicable to this wording-only revision. Source and evidence are committed together; exact remote publication is established by Git readback.
+
 ## Remaining scope
 
-Campaign remains open for the user's demo prompt revisions. No release, merge or closure has been requested.
+Requested revision complete; campaign remains open. No release, merge or closure has been requested.
