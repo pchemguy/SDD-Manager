@@ -20,6 +20,10 @@ Expanded the baseline control paragraph in all six prompts to define the Game in
 
 Verification: all six baseline paragraphs have identical wording and explicit panel content, bottom placement and left/right order. Exact reverse comparison against the preceding commit confirms that only the requested paragraph and layout order changed in each prompt. Whitespace checks pass. No application tests were run for this documentation-only clarification. Publication is established by exact commit readback.
 
-## Remaining scope
+## Final disposition and closure boundary
 
-Requested revision complete; campaign remains open. No release, merge or closure has been requested.
+The user authorized closure. V-001 (6a1de01ce51058a9a21aae8b576ad8cd43add67d) and V-002 (030a8330f9b45e1cd03655db74e79a10239f0e00) are complete and remotely verified. Original opening: ad330f598ea192e05608702f0d94f14ebc0d9917. No requested revision remains unresolved.
+
+Final checks confirm the identical final requirement in all six prompts, matching layout order, and exact reversal to the original baseline apart from the requested paragraph and label changes. Active campaign links resolve; whitespace is clean; prior closed records and unrelated source are unchanged. No runtime or client behavior is claimed from these documentation checks.
+
+Finalize and publish this evidence, explicitly merge the exact verified source into refreshed main, rerun the scoped checks and verify target publication and clean return. Actual merge parents, SHA and publication are retained in Git. No release or additional campaign is selected.
