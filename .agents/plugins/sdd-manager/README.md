@@ -369,6 +369,8 @@ A release request checks local source coverage and the stated version; a matchin
 
 Preparing a package/workflow does not publish a release. Publication uses verified local packages or an existing workflow, complete assets and provider readback; it does not require task tracking. Asset names are version-free, such as project.zip, while tags/metadata identify the version. Stable downloads use https://github.com/{OWNER}/{REPO}/releases/latest/download/{ASSET_NAME} and require the complete advertised latest-stable asset set.
 
+A mandatory [artifact-name gate](skills/sdd-forge/references/github-packaging.md#artifact-name-gate-and-repair) checks actual files against the naming requirements, independently of the generated upload list. This includes raw HTML files: use `tetris.html`, not a release-version filename. If names fail, the agent repairs build/release scripts and related code, tests and docs, publishes the corrected source, rebuilds and rechecks before continuing an authorized release. Direct and CI publishers need the project-local check; hosted/latest readback verifies the final names. Explicit narrower requests and existing-tag/immutable-release limits still apply.
+
 See [packaging](skills/sdd-forge/references/github-packaging.md), [release workflows](skills/sdd-forge/references/github-release-workflows.md), [release creation](skills/sdd-forge/references/github-releases.md) and [verification](skills/sdd-verify/references/release-checks.md). An explicitly selected [comprehensive prerelease review](skills/sdd-manage/references/prerelease-review.md) provides candidate findings/readiness; its advisory reminder does not make that review mandatory for a release.
 
 ## Plugin package
