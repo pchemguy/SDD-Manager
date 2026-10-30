@@ -1,0 +1,11 @@
+{
+  "scope": "controlled local gate trial; no live publisher or agent acceptance",
+  "outcomes": {
+    "versioned_actual_with_valid_hash": "release version in actual asset name",
+    "self_approved_bad_expected_set": "release version in declared asset name",
+    "producer_docs_repair_rebuild": "pass; checksum names and bytes agree",
+    "variant_collision": "variant name collision",
+    "stale_checksum_bytes": "checksum bytes differ",
+    "stable_numeric_identity_and_real_variants": "pass; naming/checksum check only"
+  }
+}
