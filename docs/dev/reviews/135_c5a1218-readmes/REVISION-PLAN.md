@@ -10,3 +10,7 @@ Campaign 135_c5a1218; baseline c5a121886dcef66cdeb17de09322cc9c1baa819a; opening
 Preserve the abbreviated root/full user-guide split, client-loading qualifications, human acceptance/implementation gates, version/release policy, all existing prompt capabilities and earlier removals of status/contributor/policy detours. Do not extract/rewrite demo prompts or change plugin workflow instructions. Use the generic project template for staged seeds; standalone prompts remain directly usable as described. Source-only Markdown checks do not prove generated applications or clients work.
 
 Commit source/evidence per action and publish/read back before advancing. Verify inventory completeness as well as link validity, both-README parity, scoped diff, five affected package-documentation tests and exact committed package/schema. Finalize report/HANDOFF, explicitly merge the verified tip into refreshed main, verify merged checks and target publication, return cleanly and freeze records. No version bump or product release.
+
+## Completion
+
+V-001/V-002 and all six findings/recommendations are verified; final evidence is in [final-verification.json](final-verification.json). No unresolved action remains. Authorized closure proceeds through published explicit main integration and clean return.

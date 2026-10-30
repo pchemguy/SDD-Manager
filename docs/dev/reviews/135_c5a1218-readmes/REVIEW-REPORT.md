@@ -4,7 +4,7 @@ Campaign 135_c5a1218; baseline c5a121886dcef66cdeb17de09322cc9c1baa819a; origina
 
 ## State and method
 
-U-001/U-002 complete; four reader-facing issues and two optional editorial recommendations proposed. Both READMEs remain unchanged. Source-only Technical Writing Assistant software-documentation/composition assessment with selected current prompt/workflow-owner comparisons; no external research, client setup, application execution or new rendered-chart claim. Revisions and closure are not selected.
+U-001/U-002 complete; four reader-facing issues and two editorial recommendations accepted and repaired; all six findings verified. Both READMEs are revised under the subsequent user instruction. Source-only Technical Writing Assistant software-documentation/composition assessment with selected current prompt/workflow-owner comparisons; no external research, client setup, application execution or new rendered-chart claim. The subsequent user instruction selected repairs and closure; see [revision evidence](REVISION-REPORT.md).
 
 ## U-001 — Root README
 
@@ -20,7 +20,7 @@ Compared delivery descriptions with the current standard, single-page and 3in1 p
 - Reader consequence: users following the recommended autodoc route reach the intentional stop without a clear next action; a generic implementation request does not itself erase that named stop in the canonical workflow.
 - Proposed correction: add one concise next-step explanation/example after prompt selection, distinguishing final documentation QC from implementation and specifying a chosen range when both are requested. Link the full mode/checkpoint explanation. Preserve human gates and avoid implying the opening prompt already authorizes implementation.
 - Recheck: a new reader can state what to request at the autodoc stop, distinguish QC-only from QC-plus-authorized implementation, and find the detailed rule without reconstructing it from charts/source files.
-- Disposition: proposed; no source edit or repair acceptance inferred.
+- Disposition: accepted by the user and verified in V-001; see [revision evidence](REVISION-REPORT.md).
 
 ### R-002 — Prompt selector mixes independent choice dimensions
 
@@ -30,7 +30,7 @@ Compared delivery descriptions with the current standard, single-page and 3in1 p
 - Reader consequence: readers must combine the paragraph and several rows to choose full-scope versus separately submitted features, preparation mode and HTML/browser-plus-Electron/3in1 delivery. Relative inheritance wording is especially fragile as new variants are inserted.
 - Proposed correction: separate preparation/submission and delivery dimensions in compact columns or grouped rows; state shared approval/stop behavior once with a direct link. Keep all variants and valid source/package URL differences. No gameplay or platform-policy change.
 - Recheck: each variant's mode, submission pattern and delivered forms can be identified directly without assuming an adjacent row's packaging constraints.
-- Disposition: optional editorial proposal, not a behavioral defect or required new workflow.
+- Disposition: optional proposal accepted by the user and verified in V-001; no behavioral/workflow change.
 
 ## U-002 — Packaged full README
 
@@ -50,7 +50,7 @@ All 60 local or source-repository link targets in this README exist in the curre
 - Reader consequence: the heading no longer predicts the content; feature readers find relevant delivery rules in a main-only tracking section, while main-preparation readers encounter an unrelated lifecycle transition.
 - Proposed correction: move/consolidate that paragraph into the existing feature-delivery discussion or replace it with a short deliberate cross-reference outside the main-only subsection. Preserve the phase/final/archive distinction and keep main DOCS mechanics separate from FDOCS/product tasks.
 - Recheck: each subsection has one announced subject; the feature-delivery explanation remains findable without searching under main tracking and is not duplicated as another procedure.
-- Disposition: proposed source correction; not executed or accepted by implication.
+- Disposition: accepted by the user and verified in V-002.
 
 ### R-004 — Offer direct task-based navigation in the full guide
 
@@ -60,7 +60,7 @@ All 60 local or source-repository link targets in this README exist in the curre
 - Reader consequence: related concepts are intentionally discussed at different explanatory depths, increasing lookup effort for a returning reader. The measured size is context for that task, not evidence that the guide is inherently too long.
 - Proposed correction: add a short internal navigation row/list near the opening for starting a project, choosing a workflow, modes/checkpoints, continuation, diagrams, releases and package assets. Prefer existing section anchors; do not create another workflow catalog or restore removed status/contributor sections.
 - Recheck: a reader can reach the relevant section from the entry for each common task; anchors remain valid in both repository and extracted Markdown contexts. Renderer-specific navigation availability is not claimed.
-- Disposition: optional editorial proposal, not a required workflow change.
+- Disposition: optional proposal accepted by the user and verified in V-002; no required workflow change.
 
 ### R-005 — Both Hello World prompts are omitted from both READMEs
 
@@ -70,7 +70,7 @@ All 60 local or source-repository link targets in this README exist in the curre
 - Reader consequence: the minimal three-platform examples cannot be discovered from either README's demo entry; the current introduction offers Tetris/calculator or the generic project template without exposing these existing examples.
 - Proposed correction: add a concise Hello World demo entry with links to both current variants and an accurate explanation of their different application/layout scope. Reflect those choices in the Quick Start introduction and any redesigned selector; preserve repository-relative root links and repository URLs in the packaged README.
 - Recheck: enumerate every docs/demo/**/prompts/*.md file and compare with the targets in each README, including URL decoding. All ten current prompt targets must be accounted for, alongside the calculator guide. Check descriptions against the actual two Hello World files rather than deriving them from filenames.
-- Disposition: proposed; no source edits. Earlier link checks established target validity, not inventory completeness. The initial focused review missed this coverage check; this finding corrects that omission without retracting the valid link results.
+- Disposition: accepted by the user and verified in V-001. Earlier link checks established target validity, not inventory completeness. The initial focused review missed this coverage check; this finding corrects that omission without retracting the valid link results.
 
 ### R-006 — Calculator prompt choices are hidden behind the guide link
 
@@ -80,23 +80,23 @@ All 60 local or source-repository link targets in this README exist in the curre
 - Reader consequence: the existing ready-to-submit calculator prompt is easy to miss, and the README suggests manual prompt assembly is the available calculator route. Calculator prompt coverage cannot be established by counting files in prompts/ directories.
 - Proposed correction: surface calculator choices alongside the Tetris/Hello World entries: a direct all-inclusive prompt link and clearly labeled staged project, steering and feature-sequence links/groups using existing guide anchors. Retain the guide as detailed context; do not create or extract new prompt files unless separately selected.
 - Recheck: inventory standalone files and embedded prompt blocks across docs/demo, then compare each README's advertised choices/collection links with that inventory. Specifically verify the calculator All-inclusive project prompt, Initial project, Optional steering exercises and Feature campaign sequence anchors and accurate scope labels.
-- Disposition: proposed; README source unchanged. The original review verified the guide link but missed discoverability of its embedded all-inclusive/staged prompts. [Expanded prompt inventory](demo-prompt-inventory.json) now records both file and embedded-block locations, including Tetris guide examples.
+- Disposition: accepted by the user and verified in V-001. The original review verified the guide link but missed discoverability of its embedded all-inclusive/staged prompts. [Expanded prompt inventory](demo-prompt-inventory.json) now records both file and embedded-block locations, including Tetris guide examples.
 
 ## Consolidated findings and priorities
 
 | ID | Scope | Kind / priority | Current disposition |
 | --- | --- | --- | --- |
-| R-001 | Both READMEs | Onboarding usability gap / medium | Proposed: give the next QC/implementation request at the intentional autodoc stop. |
-| R-002 | Both READMEs | Prompt-selector editorial recommendation / low | Optional: separate mode/submission/delivery dimensions. |
-| R-003 | Packaged README | Subsection composition defect / low | Proposed: relocate feature-delivery paragraph out of main preparation tracking. |
-| R-004 | Packaged README | Internal navigation recommendation / low | Optional: add compact task-based entry links. |
-| R-005 | Both READMEs | Missing demo-prompt navigation / medium | Proposed: include both existing Hello World prompts and explain their scope. |
-| R-006 | Both READMEs | Calculator prompt discovery / medium | Proposed: expose the existing all-inclusive and staged/steering/feature prompt choices. |
+| R-001 | Both READMEs | Onboarding usability gap / medium | Verified V-001: concrete QC-only and QC-plus-phase requests. |
+| R-002 | Both READMEs | Prompt-selector editorial recommendation / low | Verified V-001: separate mode/submission/delivery columns. |
+| R-003 | Packaged README | Subsection composition defect / low | Verified V-002: feature-delivery content consolidated in its own section. |
+| R-004 | Packaged README | Internal navigation recommendation / low | Verified V-002: seven task-navigation links. |
+| R-005 | Both READMEs | Missing demo-prompt navigation / medium | Verified V-001: both Hello World prompts and layout scopes included. |
+| R-006 | Both READMEs | Calculator prompt discovery / medium | Verified V-001: explicit calculator prompt/collection links. |
 
-No high-priority workflow contradiction or broken checked target was found. Recommended order is demo coverage/discovery R-005/R-006, next-step guidance R-001, shared selector treatment R-002, local regrouping R-003, then optional navigation R-004. These are proposals, not an accepted revision plan. Scope/meaning changes are unnecessary: preserve prompt capabilities, human checkpoints, release gates, policy ownership and the root/full audience split.
+No high-priority workflow contradiction or broken checked target was found. Recommended order is demo coverage/discovery R-005/R-006, next-step guidance R-001, shared selector treatment R-002, local regrouping R-003, then optional navigation R-004. These review proposals were subsequently accepted; [the revision plan](REVISION-PLAN.md) and [verified repairs](REVISION-REPORT.md) record their execution. Scope/meaning changes are unnecessary: preserve prompt capabilities, human checkpoints, release gates, policy ownership and the root/full audience split.
 
-## Verification and stopping boundary
+## Original review boundary and subsequent repair
 
 [Link-check summary](readme-link-checks.json) records the two owner-specific static checks. Measured source size, current prompt/owner comparisons, all eight diagram-source paths, heading/grouping and source-package navigation were inspected. External destinations, rendered host/client behavior, application/runtime execution and revised prose were not tested or produced. Both README blobs remain identical to the campaign baseline; only current campaign/index/HANDOFF evidence changes. Prior closed records remain unchanged.
 
-Review units are complete and retained; Git establishes their commits and exact publication. Leave campaign 135 open for the user's revision decisions. No source repair, merge, closure, version bump or release is selected.
+Review units are retained as baseline observations. The user subsequently authorized repairs and closure. All six findings are verified; [final verification](final-verification.json) records current coverage, link, package and preservation checks. Publish finalization and complete the verified main integration/return boundary. No version bump or product release selected.

@@ -1,0 +1,58 @@
+{
+  "source": "66cd87777d0cc4ddac52c9b03b24fa8f234c68f8",
+  "demo_coverage": {
+    "per_readme_standalone_direct_links": 10,
+    "per_readme_embedded_prompt_section_coverage": 20,
+    "embedded_calculator": 8,
+    "embedded_tetris": 12,
+    "shared_quick_start_parity": true
+  },
+  "local_links": {
+    "owners": 140,
+    "resolved_local_links": 1085,
+    "contextual_template_links": [
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md"
+      },
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/BROWSER_DEV_POLICY.md"
+      },
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/playwright.md"
+      },
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/vite-worker-loading.md"
+      }
+    ],
+    "issues": [],
+    "svg_xml_pass": 17
+  },
+  "package": {
+    "source": "66cd87777d0cc4ddac52c9b03b24fa8f234c68f8",
+    "members": 168,
+    "archive_sha256": "08662a82041bc39302e9c68ff38bc62e5107ed04c0d6ed812005b93b3171a9f4",
+    "version": "0.15.4",
+    "pinned_schema_pass": true,
+    "exact_git_blob_bytes_pass": true,
+    "release_created": false
+  },
+  "documentation_snapshot_tests_pass": 5,
+  "structural_errors": 0,
+  "bundled_reference_warnings": 67,
+  "source_preservation": {
+    "all_demo_sources_unchanged": true,
+    "eight_mermaid_blocks_unchanged": true,
+    "prior_closed_records_unchanged": true,
+    "workflow_policy_and_runtime_unchanged": true
+  },
+  "limits": [
+    "no generated-application execution",
+    "no live client/host rendering claim",
+    "external service destinations not live tested",
+    "no product release/version bump"
+  ]
+}
