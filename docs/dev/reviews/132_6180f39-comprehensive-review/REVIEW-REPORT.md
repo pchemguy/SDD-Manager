@@ -8,7 +8,7 @@ The user clarified **charts**, not chats. This campaign assesses READMEs and wor
 
 ## U-001 — READMEs and charts
 
-Read both READMEs, all six existing Mermaid diagrams and their adjacent explanations. Compared main preparation, mode/reset, implementation, steering and revision paths with their canonical owners; checked current Tetris prompt/guide and minimal three-platform example context. Root/full Quick Start prompt choices, standard browser/Electron versus 3in1 delivery, non-standard PLUGIN entry explanation, project assets and local-versus-live evidence boundaries agree with current source. No permission or external-platform claim was newly validated. Current source inspection is distinct from rendered diagram verification, pending U-003.
+Read both READMEs, all six existing Mermaid diagrams and their adjacent explanations. Compared main preparation, mode/reset, implementation, steering and revision paths with their canonical owners; checked current Tetris prompt/guide and minimal three-platform example context. Root/full Quick Start prompt choices, standard browser/Electron versus 3in1 delivery, non-standard PLUGIN entry explanation, project assets and local-versus-live evidence boundaries agree with current source. No permission or external-platform claim was newly validated. Current source inspection is distinct from the local rendered diagram verification recorded below.
 
 ### R-001 — Main-only preparation diagrams obscure feature workflow
 
@@ -20,9 +20,9 @@ Read both READMEs, all six existing Mermaid diagrams and their adjacent explanat
 - Recheck: chart paths and accompanying qualifications agree with feature-preparation, feature-delivery and shared modes; autodoc cannot bypass FDOCS-008 stop; later phases retain active sources; only final eligible completion archives. Parse/render charts if the available tooling permits; otherwise retain the actual limitation.
 - Disposition: repaired and rechecked in V-001; see [revision evidence](REVISION-REPORT.md).
 
-## Coverage and pending units
+## Coverage and evidence boundary
 
-[Package inventory](package-inventory.json) records all 168 packaged files, including 15 skill entries, 120 Markdown files and 83 reference modules. U-002 lifecycle/routing assessment and U-003 execution/package checks remain pending. This inventory is not line-by-line semantic or live-agent acceptance. No prior closed campaign contents were used as a review queue or changed.
+[Package inventory](package-inventory.json) records all 168 packaged files, including 15 skill entries, 120 Markdown files and 83 reference modules. U-002 lifecycle/routing assessment and U-003 execution/package checks are recorded below. This inventory is not line-by-line semantic or live-agent acceptance. No prior closed campaign contents were used as a review queue or changed.
 
 ## U-002 — Package composition and lifecycle handoffs
 
@@ -32,7 +32,7 @@ Representative contrasts: brief acceptance versus package Ready; reused architec
 
 ## Current finding disposition
 
-One accepted low-priority finding, R-001; no source correction has yet been applied. U-003 execution/package verification remains pending.
+One low-priority finding, R-001; repaired by V-001 and verified. No confirmed finding remains unresolved.
 
 ## U-003 — Executed tooling and structural checks
 
@@ -40,8 +40,14 @@ On Linux with Python 3.12.14 and Node 24.22.1: 139 support tests, 50 publisher t
 
 Structural validator: zero errors and 67 bundled cross-skill reference warnings, which do not establish client handoff behavior. [Current baseline link audit](link-audit-baseline.json): 138 maintained Markdown owners, 1,051 resolved actual local links/anchors, four contextual project-template links separately classified, zero missing paths/anchors. All 17 SVG assets parse; nine packaged Node modules and the actual Python process supervisor/publisher parse. Package inventory and reference routing remain complete. No additional confirmed source defect found.
 
-All six baseline README diagrams parse/render with Mermaid 11.12.2 and Chromium 153.0.8010.0, using Playwright 1.62.1 as the local driver. The initial managed shell install returned a non-ZIP/truncated archive; no policy escalation attempted. Used isolated `@sparticuz/chromium@153.0.0` for trusted documentation rendering only. Its archive extraction initially hit unsupported chown; extracted its existing bytes with no ownership restoration into an isolated temporary directory, then rendered successfully. This is not evidence for project browser provisioning/defaults or installed-client Mermaid behavior. Source-traced paths and rendered layout inspected; no existing Mermaid syntax failure observed. Repaired charts and exact committed package/schema checks remain required before finalization.
+All six baseline README diagrams parse/render with Mermaid 11.12.2 and Chromium 153.0.8010.0, using Playwright 1.62.1 as the local driver. The initial managed shell install returned a non-ZIP/truncated archive; no policy escalation attempted. Used isolated `@sparticuz/chromium@153.0.0` for trusted documentation rendering only. Its archive extraction initially hit unsupported chown; extracted its existing bytes with no ownership restoration into an isolated temporary directory, then rendered successfully. This is not evidence for project browser provisioning/defaults or installed-client Mermaid behavior. Source-traced paths and rendered layout inspected; no existing Mermaid syntax failure observed. Final repaired charts and exact committed package/schema checks pass as recorded below.
 
 ## Repair recheck
 
-R-001 is verified by canonical-owner comparison and eight-block parse/render. Main/feature labels, FDOCS pass/QC/implementation gates and phase/final boundaries are explicit. No confirmed issue remains unresolved. Exact committed package and final campaign boundary verification remain before closure. Earlier U-001/U-002 pending statements describe their checkpoints, not unfinished current units.
+R-001 is verified by canonical-owner comparison and eight-block parse/render. Main/feature labels, FDOCS pass/QC/implementation gates and phase/final boundaries are explicit. No confirmed issue remains unresolved. All eight chart screenshots were visually inspected. Exact committed package/schema and campaign-boundary checks pass; see final evidence below.
+
+## Final result and limits
+
+[Final verification](final-verification.json) pins repaired source 7c43ed08e45a4bc27eddba45d0f67cf5e9ad3d5a. Its 168-member package passes pinned offline manifest schema and exact Git-blob byte comparison; archive SHA256 d74b1604e5c4d7c331bf5f41f4f99aaad074ce7c19dd6be6e5f7b495b3d2965a identifies that source archive, not a future merge archive. Package version remains 0.15.4. Current links and whitespace pass; only the packaged README and current campaign/navigation/HANDOFF differ from baseline. No prior closed records changed.
+
+Coverage comprises full package inventory/structural routing, targeted semantic lifecycle/source assessment, both READMEs and all charts, executed controlled/local regression suites and exact package checks. Fresh-agent, installed-client, live hosted mutation and new native CI acceptance remain unrun. Finalize and publish these records, explicitly integrate the verified campaign tip into refreshed main, verify merged state and publish/read back main; clean return establishes closure. No release or further work is selected.

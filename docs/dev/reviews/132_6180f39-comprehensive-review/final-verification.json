@@ -1,0 +1,68 @@
+{
+  "repaired_source": "7c43ed08e45a4bc27eddba45d0f67cf5e9ad3d5a",
+  "runtime_suite_source": "0e467a2aa6fca849f74b355137048eea3f278685",
+  "runtime_code_unchanged_by_repair": true,
+  "environment": {
+    "os": "Linux",
+    "python": "3.12.14",
+    "node": "24.22.1"
+  },
+  "tests": {
+    "support_pass": 139,
+    "publisher_pass": 50,
+    "node_pass": 138,
+    "total_pass": 327,
+    "windows_skipped": 7,
+    "affected_final_docs_pass": 5
+  },
+  "structural": {
+    "errors": 0,
+    "bundled_reference_warnings": 67
+  },
+  "links": {
+    "owners": 138,
+    "resolved_local_links": 1055,
+    "contextual_template_links": [
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md"
+      },
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/BROWSER_DEV_POLICY.md"
+      },
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/playwright.md"
+      },
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/vite-worker-loading.md"
+      }
+    ],
+    "issues": [],
+    "svg_xml_pass": 17
+  },
+  "charts": {
+    "mermaid_blocks_parsed_and_rendered": 8,
+    "screenshots_visually_inspected": 8,
+    "engine": "Mermaid 11.12.2 / Chromium 153.0.8010.0",
+    "github_or_client_rendering_verified": false
+  },
+  "package": {
+    "source": "7c43ed08e45a4bc27eddba45d0f67cf5e9ad3d5a",
+    "members": 168,
+    "sha256": "d74b1604e5c4d7c331bf5f41f4f99aaad074ce7c19dd6be6e5f7b495b3d2965a",
+    "version": "0.15.4",
+    "schema": "pinned offline core schema",
+    "all_member_bytes_match_git": true,
+    "release_published": false
+  },
+  "scope_preservation": "Only packaged README plus current campaign, index and HANDOFF changed; prior closed records and unrelated code/prompts/versions unchanged.",
+  "unrun": [
+    "fresh-agent/installed-client acceptance",
+    "new native Windows CI matrix",
+    "live hosted feature tracking mutation"
+  ],
+  "release_selected": false
+}
