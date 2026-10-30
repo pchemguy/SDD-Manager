@@ -1,6 +1,6 @@
 # C/WASM/Emscripten development exploration
 
-Campaign: **136_bb478d4**. Status: **Open; awaiting human notes**.
+Campaign: **136_bb478d4**. Status: **Finalized for requested main integration**.
 
 ## Context and authority
 
@@ -20,6 +20,6 @@ Leave the campaign open on its published revision branch. After the human pushes
 
 | ID | Action | Completion criterion | State |
 | --- | --- | --- | --- |
-| V-001 | Establish branch, research location, campaign records and handoff | Scoped opening checked, committed, published and read back | Prepared; publication pending |
-| V-002 | Human records and pushes exploration notes | Actual incoming notes available on the campaign branch | Awaiting human |
-| V-003 | Finalize and close when requested | Incoming changes inspected, relevant checks pass and main integration published/read back | Awaiting closure request |
+| V-001 | Establish branch, research location, campaign records and handoff | Scoped opening checked, committed, published and read back | Complete: opening 0359c9a published and read back |
+| V-002 | Human records and pushes exploration notes | Actual incoming notes available on the campaign branch | Complete: notes received in c2cd677 |
+| V-003 | Finalize and close when requested | Incoming changes inspected, relevant checks pass and main integration published/read back | Finalized; verified integration/publication remains the final closure gate |
