@@ -14,6 +14,12 @@ Added the same two-sentence requirement to the classic baseline in all six Tetri
 
 Verification: inspected all six prompt diffs; checked one exact baseline requirement and matching layout reference per prompt, with all surrounding prompt text unchanged apart from those two edits. Whitespace checks pass. No application or runtime tests are applicable to this wording-only revision. Source and evidence are committed together; exact remote publication is established by Git readback.
 
+## V-002 — Game information panel and button placement
+
+Expanded the baseline control paragraph in all six prompts to define the Game info and controls panel, showing standard game information such as score and level. Its bottom row places Start/Restart on the left and Pause/Start on the right. Aligned the later layout references with that order, retaining panel toggles above the gameplay buttons and keyboard-only control of other gameplay actions.
+
+Verification: all six baseline paragraphs have identical wording and explicit panel content, bottom placement and left/right order. Exact reverse comparison against the preceding commit confirms that only the requested paragraph and layout order changed in each prompt. Whitespace checks pass. No application tests were run for this documentation-only clarification. Publication is established by exact commit readback.
+
 ## Remaining scope
 
 Requested revision complete; campaign remains open. No release, merge or closure has been requested.

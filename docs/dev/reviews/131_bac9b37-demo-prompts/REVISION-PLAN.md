@@ -11,7 +11,7 @@
 
 ## Revision boundary
 
-Revise the classic baseline in all six Tetris prompts to specify exactly two clickable gameplay control buttons, **Start/Restart** and **Pause/Start**, with all other gameplay actions controlled from the keyboard. Retain settings and panel toggles; align the existing layout references with the requested button labels. No release or campaign closure is selected.
+Revise the classic baseline in all six Tetris prompts to specify exactly two clickable gameplay control buttons, **Start/Restart** and **Pause/Start**, with all other gameplay actions controlled from the keyboard. Place the two buttons at the bottom of the Game info and controls panel, which shows standard game information such as score and level: Start/Restart on the left, Pause/Start on the right. Retain settings and panel toggles; align the existing layout references with the requested button labels and order. No release or campaign closure is selected.
 
 ## Verification and persistence
 
@@ -20,3 +20,5 @@ For accepted revisions, check the requested behavior, prompt composition, applic
 ## Current checkpoint
 
 V-001: Add the same concise classic-control requirement to all six prompts and align their layout button references. Verify exact coverage, scope and unchanged surrounding content; record and publish the result. Keep the campaign open afterward.
+
+V-002: Clarify the panel content and bottom button placement/order in all six baseline descriptions; align later layout wording. Verify the focused diff and publish source with evidence.

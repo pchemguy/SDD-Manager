@@ -18,7 +18,7 @@ Develop a browser-based Tetris game. The following cumulative passes define how 
 
 Define a playable classic Tetris baseline with falling tetrominoes, movement, rotation, gravity, line clearing, scoring, game over and restart.
 
-Provide only two clickable gameplay control buttons: **Start/Restart** and **Pause/Start**. All other gameplay actions must use the keyboard.
+Provide a **Game info and controls** panel showing standard game information, such as score and level. At its bottom, place only two clickable gameplay control buttons: **Start/Restart** on the left and **Pause/Start** on the right. All other gameplay actions must use the keyboard.
 
 Initially deliver a browser app. Design application logic and UI for reuse across future delivery platforms, including a Windows Electron desktop app, keeping platform-specific code separate so that most of the codebase can be shared.
 
@@ -101,7 +101,7 @@ Arrange the panels from left to right:
 | Settings | Immediately right of the board |
 | Controls/help | Right of settings |
 
-Keep the board and game info and controls panels visible. In the game info and controls panel, place individual show/hide toggle buttons for the leaderboard, settings and controls/help panels above the **Pause/Start** and **Start/Restart** buttons. Keep the board centered when panels are hidden or shown.
+Keep the board and game info and controls panels visible. In the game info and controls panel, place individual show/hide toggle buttons for the leaderboard, settings and controls/help panels above the **Start/Restart** and **Pause/Start** buttons. Keep the board centered when panels are hidden or shown.
 
 #### Pass 10 - Scope extension: Windows Electron delivery
 
