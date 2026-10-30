@@ -33,3 +33,11 @@ Representative contrasts: brief acceptance versus package Ready; reused architec
 ## Current finding disposition
 
 One accepted low-priority finding, R-001; no source correction has yet been applied. U-003 execution/package verification remains pending.
+
+## U-003 — Executed tooling and structural checks
+
+On Linux with Python 3.12.14 and Node 24.22.1: 139 support tests, 50 publisher tests and 138 Node utility tests pass (327 total); seven Windows-only recovery tests skip, not pass. Initial publisher execution lacked the declared jsonschema dependency and produced 21 environment errors; installed `.github/requirements.txt` into isolated `/tmp/sdd132-pydeps`, reran, and all 50 pass. No source/test changes were needed. Utility suites cover Git recovery/publication, forge completion and projection using their synthetic/local contracts; no live hosted mutation or new native CI matrix run is claimed.
+
+Structural validator: zero errors and 67 bundled cross-skill reference warnings, which do not establish client handoff behavior. [Current baseline link audit](link-audit-baseline.json): 138 maintained Markdown owners, 1,051 resolved actual local links/anchors, four contextual project-template links separately classified, zero missing paths/anchors. All 17 SVG assets parse; nine packaged Node modules and the actual Python process supervisor/publisher parse. Package inventory and reference routing remain complete. No additional confirmed source defect found.
+
+All six baseline README diagrams parse/render with Mermaid 11.12.2 and Chromium 153.0.8010.0, using Playwright 1.62.1 as the local driver. The initial managed shell install returned a non-ZIP/truncated archive; no policy escalation attempted. Used isolated `@sparticuz/chromium@153.0.0` for trusted documentation rendering only. Its archive extraction initially hit unsupported chown; extracted its existing bytes with no ownership restoration into an isolated temporary directory, then rendered successfully. This is not evidence for project browser provisioning/defaults or installed-client Mermaid behavior. Source-traced paths and rendered layout inspected; no existing Mermaid syntax failure observed. Repaired charts and exact committed package/schema checks remain required before finalization.
