@@ -1,0 +1,59 @@
+{
+  "source": "9cdfe0f7e56edee16da3425ee4cecb0d68e5eca0",
+  "environment": {
+    "os": "Linux",
+    "python": "3.12.14"
+  },
+  "tests": {
+    "support_pass": 139,
+    "publisher_pass": 50,
+    "total_pass": 189,
+    "final_docs_snapshot_pass": 5,
+    "controlled_gate_outcomes": 6
+  },
+  "structural": {
+    "errors": 0,
+    "bundled_reference_warnings": 67
+  },
+  "local_link_audit": {
+    "owners": 140,
+    "resolved_local_links": 1066,
+    "contextual_template_links": [
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md"
+      },
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/BROWSER_DEV_POLICY.md"
+      },
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/playwright.md"
+      },
+      {
+        "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+        "target": ".agents/plugins/sdd-manager/assets/vite-worker-loading.md"
+      }
+    ],
+    "issues": [],
+    "svg_xml_pass": 17
+  },
+  "package": {
+    "source": "9cdfe0f7e56edee16da3425ee4cecb0d68e5eca0",
+    "members": 168,
+    "archive_sha256": "dd483fee5135d7752dfd2680366e571f2f4c0fbae70ff2220b55c90ebf92969f",
+    "version": "0.15.4",
+    "pinned_schema_pass": true,
+    "exact_git_blob_bytes_pass": true,
+    "release_created": false
+  },
+  "scope": "Seven existing packaged instruction/documentation files plus current campaign/index/HANDOFF; no runtime helper change or new generic validator. Project-local deterministic checks are now required by the workflow.",
+  "evidence_limits": [
+    "controlled fixture is not fresh-agent compliance",
+    "no live hosted release/asset mutation",
+    "no motivating-demo changes",
+    "no new native/client acceptance or product release"
+  ],
+  "closed_record_preservation": true
+}

@@ -6,7 +6,7 @@
 - Branch: revision/134_32cdec1-release-artifact-names; creation parent and return target main; no suspended parent.
 - Request: improve release artifact naming, require repairs to failing scripts/related code/docs, carry an authorized release through proper publication, execute revision and close campaign.
 - Scope: SDD Manager's reusable release workflow instructions and their projections. The motivating demo is evidence, not a selected mutation target. No SDD Manager version bump or hosted product release is selected by this policy revision.
-- State: Planned; execution and closure authorized. [Evidence](REVISION-REPORT.md).
+- State: Finalized for authorized closure; V-001/V-002 complete. [Evidence](REVISION-REPORT.md).
 
 ## Diagnosis
 
@@ -28,3 +28,7 @@ Do not merely rename one temporary upload, bless an invalid expected set, weaken
 ## Persistence and closure
 
 Commit source and action evidence together and publish/read back each checkpoint before proceeding. Finalize records/HANDOFF, explicitly merge the verified tip into refreshed main, verify merged state and target publication, return cleanly and freeze records. Do not claim controlled checks establish fresh-agent, installed-client or live-provider behavior.
+
+## Completion
+
+Both actions are complete and verified. [Final evidence](final-verification.json) records 189 passing regression tests, five affected final documentation checks, six controlled gate outcomes, structural/link checks and exact committed package/schema. Finalize and publish records, explicitly integrate the verified campaign tip into refreshed main, verify/publish/read back the target and return cleanly. No deferred action or further product release selected.
