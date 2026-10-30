@@ -19,14 +19,16 @@ Build a candidate from the exact source and inspect its actual output using **sd
 
 ## Names and URLs
 
-Keep release asset filenames free of version numbers. Tags and embedded metadata retain version identity. Use one general `<project>.zip` when sufficient; several assets use conventional suffixes only for actual distinguishing dimensions. Examples:
+Keep every newly produced release asset filename free of release-version numbers and stable across releases. This applies to raw files, archives, installers, schemas and checksum files, not only ZIP packages. Tags and embedded metadata retain version identity; versioned local build directories are allowed. Use a simple project basename and the appropriate extension; several variants use conventional suffixes only for actual distinguishing dimensions such as platform, architecture, runtime/browser or package format. Do not add an OS suffix to a platform-independent file. Examples:
 
 | Asset purpose | Example |
 | --- | --- |
+| Single HTML app | `tetris.html` |
 | General package | `project.zip` |
 | Windows x64 build | `project-windows-x64.zip` |
 | Linux ARM64 build | `project-linux-arm64.tar.gz` |
 | macOS ARM64 build | `project-macos-arm64.zip` |
+| Chromium / Firefox extensions | `project-chromium.zip` / `project-firefox.zip` |
 | Separate source package | `project-source.zip` |
 
 Respect established ecosystem vocabulary such as `amd64` where appropriate; examples do not require these variants or extensions. Preserve spelling, case and extension across releases and check uniqueness across the complete variant set. Renaming/removing a public filename is a consequential compatibility decision.
@@ -41,6 +43,16 @@ https://github.com/{OWNER}/{REPO}/releases/latest/download/{ASSET_NAME}
 Define the expected asset set for each stable release. The repository-wide latest pointer cannot fall back to an older release for a missing variant. Verify that the latest release includes each advertised asset; drafts/prereleases cannot be latest stable. A private repository's URLs retain its access requirements. Do not promise a universal latest-prerelease alias.
 
 Explicitly attached packages differ from GitHub's automatic source ZIP/tarball downloads and from temporary Actions artifacts used between jobs. Return tag-specific URLs as well when consumers need pinned versions. Use `<asset>.sha256` for a simple package or a stable `SHA256SUMS` for several assets; hashes must describe the actual uploaded bytes.
+
+## Artifact-name gate and repair
+
+This gate is mandatory for release/package acceptance, including an established publisher. Before creating/pushing a release tag, dispatching a publishing workflow or uploading/publishing assets, have **sdd-verify** compare actual candidate names with this naming contract, independently of the generator and its expected upload list. A complete inventory with valid checksums still fails when its names violate the contract; copying those names into an expected set does not make them acceptable.
+
+1. Establish the stable basename/extension and only necessary variant suffixes from the product/delivery requirements. Check uniqueness, preserved public spellings, version-free names, checksum entries and advertised latest URLs. Cover raw artifacts: `tetris-v0.5.0.html` fails where `tetris.html` is required. Numeric product identities are not automatically release versions; do not use a blanket ban on digits or a universal suffix vocabulary.
+2. Under an authorized release or repair request, route failures to the owning implementation/maintenance workflow. Correct packaging/build/release scripts and related producers/consumers, configuration, tests, checksum generation, installation/release documentation and download links. Repair agent-generated conflicting naming assumptions in current project documents; preserve real human constraints and closed records. Do not merely rename one temporary upload, weaken the gate or report an otherwise routine repair and stop. Read-only or explicit path/effect limits remain controlling; obtain only a genuinely missing decision/authority.
+3. Add or reuse a deterministic project-local naming/inventory check in the project's existing stack. Its expectation must come from the naming contract, not unchecked generator output. Observe the offending example fail and corrected artifacts pass; check real variant collisions and checksum filename/byte agreement as applicable. Run it for local/direct publication and wire it into CI before upload and final publication when CI is the publisher. A successful build, test count or matching generated manifest is insufficient.
+4. Commit/publish/read back the repaired scripts, related code/tests/docs and required source/version changes through **sdd-manage**, completing eligible integration before release. Refresh source-associated notes and the release-commit/tag evidence; rebuild from that exact verified committed source, regenerate checksums and rerun package/naming checks. Never attach rebuilt content from a changed source to an old tag or reuse stale passing evidence. Existing tags/published releases use the [release recovery](github-releases.md#recover-without-duplicate-writes) boundary, including a corrective version/release when required; no tag move, silent asset deletion/clobber or history rewrite.
+5. Pass the source, stable expected names, exact-byte hashes and observed check results to the selected publisher. Recheck the complete draft before publication and the actual hosted/latest filenames, checksum contents and stable URLs afterward. A naming failure blocks the corresponding release transition/completion and returns to repair. Continue an already-authorized release through verified publication/readback after repair; package-only, build-only, draft-only and local-only requests retain their actual stops. Do not manufacture a second publisher or another permission checkpoint.
 
 ## Prepare and hand off the workflow
 
