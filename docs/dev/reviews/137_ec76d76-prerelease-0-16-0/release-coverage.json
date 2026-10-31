@@ -1,0 +1,150 @@
+{
+  "baseline_tag": "v0.15.4",
+  "baseline": "3c0c64560d34397630c493c48cd938115eaed770",
+  "analyzed_through": "f81588304e192f4a35f6c587fb3d90db729ed812",
+  "commit_count": 133,
+  "integrations": [
+    {
+      "merge": "0507f769b35d5139340b2532f85ebbc8bc454901",
+      "subject": "Merge revision 122_6ebcb53 \u2014 Reorganization and README clarity",
+      "introduced_in_range": 21,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "d965dfa86bb31e281c7d56018780429f1df8a16f",
+      "subject": "Merge revision 123_0507f76 \u2014 Tetris prompts and Electron delivery",
+      "introduced_in_range": 5,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "c75aa19e3402ee28dde5f1ea3f86cd9ca6cf86c7",
+      "subject": "Merge revision 124_d965dfa \u2014 Browser-extension demo prompts",
+      "introduced_in_range": 8,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "8deae37156b4a372293a2ca4412006e36e744e16",
+      "subject": "Merge revision 125_c75aa19 \u2014 Comprehensive review and six repairs",
+      "introduced_in_range": 9,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "85954e6cc9c9de8f2ddd3f03277da8970494bd96",
+      "subject": "Merge revision 126_8deae37 \u2014 Cross-platform verification scope",
+      "introduced_in_range": 3,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "8021ea34fb28d6b650b918ed6fd6f0d70a3f2da6",
+      "subject": "Merge revision 127_85954e6 \u2014 Playwright recovery and unavailable full-browser checks",
+      "introduced_in_range": 3,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "a7f6c8604f7412d26e8b8dce26688f691fad6acb",
+      "subject": "Merge revision 128_8021ea3 \u2014 Sequential demo delivery and reusable Hello World prompts",
+      "introduced_in_range": 14,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "fa36f2c96ef1b0916f408e5976b21f8cb1a0aadb",
+      "subject": "Merge revision 129_a7f6c86 \u2014 Feature briefs and greenfield-parallel workflow",
+      "introduced_in_range": 13,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "bac9b371a2cd3205ed800ced93cd72211c8aced2",
+      "subject": "Merge revision 130 \u2014 Comprehensive package and workflow review",
+      "introduced_in_range": 6,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "6180f39e4365ec93e5cf537d8172e92b2537de63",
+      "subject": "Merge revision 131 \u2014 Classic Tetris control wording",
+      "introduced_in_range": 4,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "7b43552e5a9e7b66e8dcd60a456486e19680b9d5",
+      "subject": "Merge revision 132 \u2014 Comprehensive review and README charts",
+      "introduced_in_range": 6,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "32cdec11b06694725cd192ced4a5fd8aaaa47c11",
+      "subject": "Merge revision 133 \u2014 Single-page Tetris demo prompt companions",
+      "introduced_in_range": 4,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "c5a121886dcef66cdeb17de09322cc9c1baa819a",
+      "subject": "Merge revision 134 \u2014 Release artifact naming gate and repair",
+      "introduced_in_range": 4,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "bb478d4b5764f3aecf4dc58240dea0efcc6dc507",
+      "subject": "Merge revision 135 \u2014 Complete demo navigation and clearer README use",
+      "introduced_in_range": 9,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    },
+    {
+      "merge": "ec76d76cd1177e3ff0b02321aa462b7ed731eb08",
+      "subject": "Merge revision 136 \u2014 C/WASM/Emscripten development exploration",
+      "introduced_in_range": 3,
+      "assessment": "integration summary and current net change; consolidate by delivered outcome"
+    }
+  ],
+  "direct_changes": [
+    {
+      "commit": "6ebcb5318fc29ff3c369d55dade449f768f4bbce",
+      "parents": [
+        "3c0c64560d34397630c493c48cd938115eaed770"
+      ],
+      "subject": "Record verified SDD Manager 0.15.4 release outcome",
+      "assessment": "prior-release outcome or current campaign review/repair/bookkeeping, no duplicate product highlight"
+    },
+    {
+      "commit": "bb897f7e2593f97a5dbb349d3555bbd826d45d8e",
+      "parents": [
+        "ec76d76cd1177e3ff0b02321aa462b7ed731eb08"
+      ],
+      "subject": "Open comprehensive prerelease review 137 for 0.16.0",
+      "assessment": "prior-release outcome or current campaign review/repair/bookkeeping, no duplicate product highlight"
+    },
+    {
+      "commit": "7c7dbbff1045388ecf70c4056d05d53778fc094a",
+      "parents": [
+        "bb897f7e2593f97a5dbb349d3555bbd826d45d8e"
+      ],
+      "subject": "Review prerelease package documentation and chart coverage",
+      "assessment": "prior-release outcome or current campaign review/repair/bookkeeping, no duplicate product highlight"
+    },
+    {
+      "commit": "e5e61c2227a3eee6a1c612e1a9785f8e294f3787",
+      "parents": [
+        "7c7dbbff1045388ecf70c4056d05d53778fc094a"
+      ],
+      "subject": "Review prerelease workflow gates and recovery handoffs",
+      "assessment": "prior-release outcome or current campaign review/repair/bookkeeping, no duplicate product highlight"
+    },
+    {
+      "commit": "9d1914f865112ddc600bdf248ecd72408affd7d3",
+      "parents": [
+        "e5e61c2227a3eee6a1c612e1a9785f8e294f3787"
+      ],
+      "subject": "Complete prerelease tooling review and accepted revision plan",
+      "assessment": "prior-release outcome or current campaign review/repair/bookkeeping, no duplicate product highlight"
+    },
+    {
+      "commit": "f81588304e192f4a35f6c587fb3d90db729ed812",
+      "parents": [
+        "9d1914f865112ddc600bdf248ecd72408affd7d3"
+      ],
+      "subject": "Repair campaign navigation table before minor release",
+      "assessment": "prior-release outcome or current campaign review/repair/bookkeeping, no duplicate product highlight"
+    }
+  ],
+  "complete": true,
+  "method": "complete identities/parents/subjects; integration summaries first, targeted uncovered messages and product diff; no frozen report loading"
+}
