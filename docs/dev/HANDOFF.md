@@ -1,9 +1,7 @@
 # SDD Manager handoff
 
-Campaign **136 — C/WASM/Emscripten development exploration** is finalized for requested closure into main. Working branch: `revision/136_bb478d4-c-wasm-emscripten`; creation parent and integration target: `main`; full starting baseline / branch-off commit: `bb478d4b5764f3aecf4dc58240dea0efcc6dc507`. Original opening: `0359c9ac09d7569a46c41523da3a1a4ead063202`. No suspended parent. Standard reporting.
+Campaign **137 — Comprehensive prerelease review and 0.16.0** is active on `revision/137_ec76d76-prerelease-0-16-0`, from main at `ec76d76cd1177e3ff0b02321aa462b7ed731eb08`, returning to main. No suspended parent. Standard reporting.
 
-[Plan](reviews/136_bb478d4-c-wasm-emscripten/REVISION-PLAN.md) and [campaign record](reviews/136_bb478d4-c-wasm-emscripten/REVISION-REPORT.md) retain the scope and actual evidence. Human notes arrived in `c2cd677`; the [research index](reviews/136_bb478d4-c-wasm-emscripten/research/NOTES.md) points to the supplied historical exploration transcript, preserved unchanged.
+[Review plan](reviews/137_ec76d76-prerelease-0-16-0/REVIEW-PLAN.md) and [report](reviews/137_ec76d76-prerelease-0-16-0/REVIEW-REPORT.md) own coverage and findings. Human authority covers review, confirmed repairs, minor bump to 0.16.0, release preparation, campaign closure and then release publication. Respect that sequence and publish/read back every owned commit.
 
-Scope: retained SDL3/raylib/raygui comparison and reported native graphics trial provenance. Scoped document/path/whitespace checks pass; no fresh external-link, toolchain, runtime, graphics or platform verification claimed. Plugin/package/runtime source and prior closed records unchanged. Version remains 0.15.4; no release selected.
-
-Publish/read back finalization, explicitly merge the verified campaign tip into refreshed main, verify merged scope and equal trees, publish/read back main and return cleanly. Actual effects establish closure; then freeze records and retain the branch. No further work selected.
+Next: run the three review units, record each result, repair confirmed issues and verify release preparation. Closed campaign records remain frozen. Native Windows and installed-client/fresh-consumer checks require separate actual facilities/evidence; do not infer them from local suites.

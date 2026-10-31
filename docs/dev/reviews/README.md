@@ -141,3 +141,5 @@ New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT
 | `135_c5a1218` | Finalized: all six README findings repaired; both guides cover ten standalone/twenty embedded prompts, clearer selection/continuation and full-guide navigation; scoped/package checks pass. Closure follows verified main integration/publication. | [Plan](135_c5a1218-readmes/REVIEW-PLAN.md), [review](135_c5a1218-readmes/REVIEW-REPORT.md) |
 
 | `136_bb478d4` | Finalized: human C graphics/Emscripten exploration transcript retained unchanged and indexed; scoped checks pass. Closure follows verified main integration/publication. | [Plan](136_bb478d4-c-wasm-emscripten/REVISION-PLAN.md), [record](136_bb478d4-c-wasm-emscripten/REVISION-REPORT.md), [notes](136_bb478d4-c-wasm-emscripten/research/NOTES.md) |
+
+| `137_ec76d76` | Active: comprehensive prerelease review, authorized repairs and 0.16.0 release preparation; close before release publication. | [Plan](137_ec76d76-prerelease-0-16-0/REVIEW-PLAN.md), [review](137_ec76d76-prerelease-0-16-0/REVIEW-REPORT.md) |
