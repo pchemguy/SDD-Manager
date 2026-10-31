@@ -38,3 +38,15 @@ Assessed published source `7c7dbbff1045388ecf70c4056d05d53778fc094a`; product in
 | Wrong artifact names / draft partial upload / published conflict | packaging, release workflows/releases, release checks, manage workflows | Independent naming gate, script/code/doc repair and exact-source rebuild; no tag move/clobber or silent acceptance |
 
 No additional confirmed defect. Existing explicit-source acceptance and installed-client discovery remain separate evidence gaps; no claim of native Windows or fresh consumer behavior. Environment policies remain project-activated assets, absent as loads/links from plugin entries and skill/workflow references.
+
+## U-003 — Tooling, CI and distribution
+
+Assessed published source `e5e61c2227a3eee6a1c612e1a9785f8e294f3787`. Fresh Linux execution on Python 3.12.14 and Node 24.22.1: 139 support + 50 publisher + 138 Node contracts = **327 passing tests**; seven native Windows-only checks skip locally. Publisher dependency `jsonschema==4.26.0` installed into an isolated temporary target. Contracts cover invalid source/handoff/schema/package inputs, wrong default-branch placement, partial draft assets, uncertain effects, rebuild hash agreement, protected credentials, process deadlines/cleanup, projection identities and task closure.
+
+[Hosted CI evidence](ci-evidence.json): read back four successful workflow runs with all 14 native Windows/Linux Node 22/24 jobs successful. These are prior runs at the explicitly recorded SHAs; their relevant workflow/helper/test/policy inputs are byte-unchanged against this candidate. This supports those unchanged inputs, not a newly executed 0.16.0 matrix or installed-agent compatibility.
+
+[Review package](review-package.json): exact committed 0.15.4 candidate produces 168 package members, all Git-blob-equal, pinned offline schema valid, stable `sdd-manager.zip` and `sdd-manager.zip.sha256`, no credential-shaped literals. Source development/acceptance/CI/demo/transcript records and the credential file are excluded. Runtime helpers and publisher retain narrow ownership, protected inputs, finite operations, read-before-retry and one-publisher recovery. Release workflow is dispatch-only; tag push does not publish. Build-only has no provider writes. No additional confirmed defect.
+
+## Consolidated review disposition
+
+U-001–U-003 complete at their recorded depth; one confirmed low-priority documentation defect (R-001), accepted for repair. No confirmed runtime/package/workflow blocker. Release remains pending naming/content/version checks on the final 0.16.0 source, exact notes/default-branch/tag provenance and hosted publication/readback. Fresh-agent behavior, installed-client discovery and new native/browser-application execution remain unassessed; local structural/contracts evidence does not close those evidence gaps.
