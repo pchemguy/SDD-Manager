@@ -1,0 +1,135 @@
+{
+  "release_id": 429664178,
+  "url": "https://github.com/pchemguy/SDD-Manager/releases/tag/v0.16.0",
+  "tag": "v0.16.0",
+  "source": "c87bc7afa3f6bc8b860fbc6672f8296797ab6e55",
+  "published_stable_latest": true,
+  "notes_sha256": "18360349d1e22f8f4fca904bcfe2893fa4b483d9b0fe085a3320e9ca4e95e94a",
+  "body_exact": true,
+  "assets": [
+    {
+      "name": "sdd-manager.zip",
+      "size": 529553,
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.0/sdd-manager.zip",
+      "sha256": "fe71b99358b0857c59bf9d53f084b6360c4ba81558f98c71516b57477bbfe9c0"
+    },
+    {
+      "name": "sdd-manager.zip.sha256",
+      "size": 82,
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.0/sdd-manager.zip.sha256",
+      "sha256": "d9d1280476fe649889ac49e9a0afd37de0c509c3f69847e984b433f3811cddf6"
+    }
+  ],
+  "downloaded_byte_verification": "canonical publisher compared each uploaded asset byte-for-byte before and after publication",
+  "publication_route": "sole direct existing Python publisher",
+  "campaign_closure_merge": "be23317b1b991cce9b5a1d9f4d325d8f73969181",
+  "annotated_tag_object": "024f5a2b937955b21b8355b81bc7a0fe7d4040e2",
+  "source_ci": [
+    {
+      "name": "Git authentication recovery contracts",
+      "id": 41159031167,
+      "source": "c87bc7afa3f6bc8b860fbc6672f8296797ab6e55",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41159031167",
+      "jobs": [
+        {
+          "name": "contracts (ubuntu-latest, 22)",
+          "conclusion": "success"
+        },
+        {
+          "name": "contracts (windows-latest, 24)",
+          "conclusion": "success"
+        },
+        {
+          "name": "contracts (windows-latest, 22)",
+          "conclusion": "success"
+        },
+        {
+          "name": "contracts (ubuntu-latest, 24)",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "GitHub projection contracts",
+      "id": 41159027521,
+      "source": "c87bc7afa3f6bc8b860fbc6672f8296797ab6e55",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41159027521",
+      "jobs": [
+        {
+          "name": "contracts (ubuntu-latest, 22)",
+          "conclusion": "success"
+        },
+        {
+          "name": "contracts (windows-latest, 22)",
+          "conclusion": "success"
+        },
+        {
+          "name": "contracts (windows-latest, 24)",
+          "conclusion": "success"
+        },
+        {
+          "name": "contracts (ubuntu-latest, 24)",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "Windows shell contracts",
+      "id": 41159027538,
+      "source": "c87bc7afa3f6bc8b860fbc6672f8296797ab6e55",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41159027538",
+      "jobs": [
+        {
+          "name": "native-cmd (24)",
+          "conclusion": "success"
+        },
+        {
+          "name": "native-cmd (22)",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "GitHub completion contracts",
+      "id": 41159027543,
+      "source": "c87bc7afa3f6bc8b860fbc6672f8296797ab6e55",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41159027543",
+      "jobs": [
+        {
+          "name": "contracts (ubuntu-latest, 24)",
+          "conclusion": "success"
+        },
+        {
+          "name": "contracts (windows-latest, 22)",
+          "conclusion": "success"
+        },
+        {
+          "name": "contracts (ubuntu-latest, 22)",
+          "conclusion": "success"
+        },
+        {
+          "name": "contracts (windows-latest, 24)",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "package_members": 168,
+  "local_tests": {
+    "support_pass": 139,
+    "publisher_pass": 50,
+    "node_pass": 138,
+    "windows_skip": 7
+  },
+  "fresh_native_ci_jobs_pass": 14,
+  "highlights_checkpoint": "removed only after exact published-body consumption",
+  "complete_message": "RELEASE-NOTES.md retained"
+}
