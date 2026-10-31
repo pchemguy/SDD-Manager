@@ -1,0 +1,104 @@
+{
+  "source": "bb897f7e2593f97a5dbb349d3555bbd826d45d8e",
+  "markdown_owners": 141,
+  "valid_local_links": 1108,
+  "contextual_template_links": [
+    {
+      "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "destination": ".agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md"
+    },
+    {
+      "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "destination": ".agents/plugins/sdd-manager/assets/BROWSER_DEV_POLICY.md"
+    },
+    {
+      "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "destination": ".agents/plugins/sdd-manager/assets/playwright.md"
+    },
+    {
+      "owner": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "destination": ".agents/plugins/sdd-manager/assets/vite-worker-loading.md"
+    }
+  ],
+  "errors": [],
+  "skill_routes": [
+    {
+      "skill": "sdd-conventions",
+      "references": 9,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-design",
+      "references": 5,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-docs",
+      "references": 3,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-forge",
+      "references": 11,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-implement",
+      "references": 5,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-integrate-feature",
+      "references": 1,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-manage",
+      "references": 21,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-orient",
+      "references": 1,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-plan",
+      "references": 3,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-report",
+      "references": 6,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-specify",
+      "references": 3,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-steer",
+      "references": 3,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-tasks",
+      "references": 3,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-tdd",
+      "references": 4,
+      "unrouted": []
+    },
+    {
+      "skill": "sdd-verify",
+      "references": 5,
+      "unrouted": []
+    }
+  ],
+  "svg_parsed": 17,
+  "standalone_prompts": 10,
+  "shared_quickstart_parity": true
+}
