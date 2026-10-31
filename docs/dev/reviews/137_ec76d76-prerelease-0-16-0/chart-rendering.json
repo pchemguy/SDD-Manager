@@ -1,0 +1,55 @@
+{
+  "runner": "1.62.1",
+  "browser": "153.0.8010.0",
+  "mermaid": "11.12.2",
+  "charts": [
+    {
+      "chart": 1,
+      "width": 1200,
+      "height": 4277.609375,
+      "text": 3916
+    },
+    {
+      "chart": 2,
+      "width": 1200,
+      "height": 4513.03125,
+      "text": 3698
+    },
+    {
+      "chart": 3,
+      "width": 1200,
+      "height": 1091.96875,
+      "text": 3847
+    },
+    {
+      "chart": 4,
+      "width": 1200,
+      "height": 3132.109375,
+      "text": 3883
+    },
+    {
+      "chart": 5,
+      "width": 1200,
+      "height": 5435.328125,
+      "text": 3982
+    },
+    {
+      "chart": 6,
+      "width": 1200,
+      "height": 2578.890625,
+      "text": 3883
+    },
+    {
+      "chart": 7,
+      "width": 1200,
+      "height": 4726.515625,
+      "text": 3751
+    },
+    {
+      "chart": 8,
+      "width": 1200,
+      "height": 4096.09375,
+      "text": 3849
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+path	coverage	evidence_limit
+.agents/plugins/sdd-manager/LICENSE	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/PLUGIN.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/README.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/AI_DISCLOSURE.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/BROWSER_DEV_POLICY.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/DOCS_PREPARATION_TEMPLATE.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/DOCS_TRACKING_TEMPLATE.json	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/FEATURE_DOCS_TASKS_TEMPLATE.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/FEATURE_PREPARATION_TEMPLATE.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/HANDOFF_TEMPLATE.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/SDD-MANAGER.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/SKILL_DISCOVERY_PROTOCOL.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/ai-logs/AGENTS_TEMPLATE.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/ai-logs/EXPLORE_DRIVE_TEMPLATE.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/icon.png	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/logo.png	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/logo.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/playwright.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/assets/vite-worker-loading.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/plugin.json	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/backend-object-lifecycle.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/design-heuristics.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/development-document-qc.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/hosting-tokens.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/markdown-style.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/modularity.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/review-campaigns.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/task-hierarchy.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-conventions/references/workflow-identity.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-design/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-design/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-design/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-design/references/architecture.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-design/references/decomposition.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-design/references/exploration.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-design/references/feature-brief.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-design/references/project-brief.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-docs/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-docs/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-docs/references/in-code-documentation.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-docs/references/review-and-findings.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-docs/references/standalone-documentation.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-docs-preparation.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-feature-preparation.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-issue-lifecycle.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-milestone-lifecycle.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-packaging.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-projection.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-release-workflows.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github-releases.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/references/github.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/references/release-highlights.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/references/release-message.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs	runtime inventory and controlled contract-suite coverage	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-draft.mjs	runtime inventory and controlled contract-suite coverage	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-input.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.mjs	runtime inventory and controlled contract-suite coverage	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-runtime.mjs	runtime inventory and controlled contract-suite coverage	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/github-client.mjs	runtime inventory and controlled contract-suite coverage	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-forge/scripts/projection-input.mjs	runtime inventory and controlled contract-suite coverage	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-implement/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-implement/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-implement/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-implement/references/environment-recovery.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-implement/references/range-selection.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-implement/references/startup-and-continuation.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-implement/references/task-execution.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-integrate-feature/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-integrate-feature/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-integrate-feature/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-integrate-feature/references/feature-incorporation.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/agent-orientation.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/ai-logs.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/branch-management.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/continuity.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/credentials.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/doc-design-modes.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/document-qc-gates.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/examples.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/feature-delivery.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/feature-preparation.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/human-document-review.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/main-preparation.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/phase-activation.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/prerelease-review.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/repository-bootstrap.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/review-and-revision.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/revision-modes.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/tracking-decision.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/references/workflows.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs	runtime inventory and controlled contract-suite coverage	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-process-supervisor.py	runtime inventory and controlled contract-suite coverage	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-publish.mjs	runtime inventory and controlled contract-suite coverage	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs	runtime inventory and controlled contract-suite coverage	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-orient/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-orient/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-orient/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-orient/references/inspection-and-handoff.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-plan/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-plan/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-plan/references/delivery-plan.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-plan/references/physical-layout.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-plan/references/review.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-report/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-report/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-report/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-report/references/campaign-artifacts.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-report/references/change-kinds.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-report/references/completion-reports.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-report/references/document-qc-reports.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-report/references/releases.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-specify/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-specify/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-specify/references/change-specification.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-specify/references/review.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-specify/references/system-specification.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-steer/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-steer/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-steer/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-steer/references/amendment-execution.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-steer/references/objective-and-impact.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-steer/references/verification-and-stop.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tasks/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tasks/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tasks/references/conformance-review.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tasks/references/progress-review.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tasks/references/task-derivation.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tdd/LICENSE	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tdd/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tdd/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tdd/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tdd/references/test-first-cycle.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tdd/references/testing-strategy.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tdd/references/upstream-provenance.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-tdd/references/writing-good-tests.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md	entry metadata, ownership and reference routing	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-verify/agents/openai.yaml	distribution/schema/inventory and source-byte checks	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-verify/assets/icon.svg	asset presence; SVG XML parse where applicable	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-verify/references/boundary-review.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-verify/references/check-selection.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-verify/references/execution-and-evidence.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-verify/references/failure-assessment.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim
+.agents/plugins/sdd-manager/skills/sdd-verify/references/release-checks.md	document inventory/link containment and selected content/handoff assessment	No installed-client/fresh-consumer claim

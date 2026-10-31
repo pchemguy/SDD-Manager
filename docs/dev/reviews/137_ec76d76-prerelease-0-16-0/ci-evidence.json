@@ -1,0 +1,98 @@
+[
+  {
+    "workflow": "git-auth-recover.yml",
+    "source": "3c0c64560d34397630c493c48cd938115eaed770",
+    "id": 40302330222,
+    "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/40302330222",
+    "conclusion": "success",
+    "relevant_source_unchanged": true,
+    "jobs": [
+      {
+        "name": "contracts (windows-latest, 24)",
+        "conclusion": "success"
+      },
+      {
+        "name": "contracts (windows-latest, 22)",
+        "conclusion": "success"
+      },
+      {
+        "name": "contracts (ubuntu-latest, 24)",
+        "conclusion": "success"
+      },
+      {
+        "name": "contracts (ubuntu-latest, 22)",
+        "conclusion": "success"
+      }
+    ]
+  },
+  {
+    "workflow": "forge-close.yml",
+    "source": "3c0c64560d34397630c493c48cd938115eaed770",
+    "id": 40302330206,
+    "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/40302330206",
+    "conclusion": "success",
+    "relevant_source_unchanged": true,
+    "jobs": [
+      {
+        "name": "contracts (windows-latest, 24)",
+        "conclusion": "success"
+      },
+      {
+        "name": "contracts (ubuntu-latest, 24)",
+        "conclusion": "success"
+      },
+      {
+        "name": "contracts (windows-latest, 22)",
+        "conclusion": "success"
+      },
+      {
+        "name": "contracts (ubuntu-latest, 22)",
+        "conclusion": "success"
+      }
+    ]
+  },
+  {
+    "workflow": "forge-project.yml",
+    "source": "0507f769b35d5139340b2532f85ebbc8bc454901",
+    "id": 40377652036,
+    "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/40377652036",
+    "conclusion": "success",
+    "relevant_source_unchanged": true,
+    "jobs": [
+      {
+        "name": "contracts (windows-latest, 22)",
+        "conclusion": "success"
+      },
+      {
+        "name": "contracts (windows-latest, 24)",
+        "conclusion": "success"
+      },
+      {
+        "name": "contracts (ubuntu-latest, 24)",
+        "conclusion": "success"
+      },
+      {
+        "name": "contracts (ubuntu-latest, 22)",
+        "conclusion": "success"
+      }
+    ]
+  },
+  {
+    "workflow": "windows-shell-recovery.yml",
+    "source": "0507f769b35d5139340b2532f85ebbc8bc454901",
+    "id": 40377651855,
+    "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/40377651855",
+    "conclusion": "success",
+    "relevant_source_unchanged": true,
+    "jobs": [
+      {
+        "name": "native-cmd (24)",
+        "conclusion": "success"
+      },
+      {
+        "name": "native-cmd (22)",
+        "conclusion": "success"
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "candidate_source": "6200b3f4ada1c1a7a37510f5ef925f8507e7c324",
+  "version": "0.16.0",
+  "review_units": [
+    "U-001",
+    "U-002",
+    "U-003"
+  ],
+  "confirmed_findings": 1,
+  "verified_findings": [
+    "R-001"
+  ],
+  "local_tests": {
+    "support_pass": 139,
+    "publisher_pass": 50,
+    "node_pass": 138,
+    "windows_skip": 7,
+    "final_documentation_pass": 5
+  },
+  "qualified_prior_ci_jobs": 14,
+  "charts_rendered": 8,
+  "structural_errors": 0,
+  "bundled_reference_warnings": 67,
+  "local_links": 1108,
+  "markdown_owners": 141,
+  "package_members": 168,
+  "exact_source_package": "candidate-package.json",
+  "closed_records_preserved": true,
+  "notes_path": "RELEASE-NOTES.md",
+  "notes_sha256": "18360349d1e22f8f4fca904bcfe2893fa4b483d9b0fe085a3320e9ca4e95e94a",
+  "release_publication": "pending after campaign closure",
+  "limits": [
+    "No installed-client/fresh-consumer trial",
+    "Native Windows skipped locally; qualified prior CI retained",
+    "Final release source rebuild and hosted readback pending"
+  ]
+}

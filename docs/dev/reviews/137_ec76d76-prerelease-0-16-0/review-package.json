@@ -1,0 +1,11 @@
+{
+  "source": "e5e61c2227a3eee6a1c612e1a9785f8e294f3787",
+  "version": "0.15.4",
+  "members": 168,
+  "archive_sha256": "fcfa41f386e5c0144be421b33a6d2d341b8ba1be226d21f84c37d12aecae28c6",
+  "exact_source_bytes": true,
+  "independent_stable_names": true,
+  "token_scan": "no credential-shaped literals",
+  "schema": "pinned offline passes",
+  "publication": false
+}
