@@ -1,22 +1,30 @@
-SDD Manager 0.15.4 adds reusable browser and development-worker diagnostics and makes the demo entry paths easier to follow.
+SDD Manager **0.16.0** strengthens feature-campaign preparation and delivery, adds browser/desktop/extension demo choices, and improves environment recovery and release verification.
 
 ## Highlights
 
-- **Playwright environment recovery:** proactive checks for pinned runner/browser compatibility, isolated browser storage, Chromium headless-shell execution, download integrity and official image fallbacks. Firefox content-process recovery is limited to diagnosed, trusted local test environments and preserves required browser coverage.
-- **Vite worker diagnostics:** distinguish HTML worker-entry responses from import, WASM, protocol and data failures. Guidance includes a conditional development-route workaround and fail/pass/remove-fix regression evidence, with native Windows observations kept separate from modeled failures.
-- **Tetris prompt choices:** standalone Interactive, Autodoc, Multipass Autoloop and Featured Autodoc prompts distinguish complete-scope preparation from separately submitted baseline/feature campaigns. Configuration, next-piece preview, leaderboard, combined JSON/SQLite persistence and panel layout requirements are aligned.
-- **Quick Start:** the repository README now links template setup, token creation, all four Tetris workflows, the calculator demo and the generic project template. Campaign navigation is restored to a single table.
+- **Feature preparation now parallels main development.** FEATURE.md captures the brief; FEATURE_PREPARATION records decisions and approvals; nine FDOCS stages track preparation; FEATURE-QC-REPORT assesses the complete package. Interactive, autodoc and multipass/autoloop modes preserve their checkpoints, reuse assessments and stopping boundaries. Campaign-specific GitHub preparation tracking is separate from main DOCS tracking.
+- **Feature delivery supports bounded phases on one campaign branch.** Incorporate accepted changes for the completed phase, verify and publish integration, and retain future work until final incorporation and archive.
+- **Broader demo choices.** Tetris prompts cover browser-first Windows Electron delivery, Chromium/Firefox sidebar extensions and single-HTML companions. Two Hello World prompts demonstrate shared platform logic and different sidebar layouts. Both Quick Starts expose these choices plus calculator all-inclusive, staged, steering and feature prompts, with concrete requests for proceeding after autodoc.
+- **Proactive environment recovery.** Playwright guidance distinguishes full Chromium from headless shell, diagnoses EPERM and download failures, and checks Firefox independently. After bounded diagnosis, unavailable full-browser or target-native execution is out of scope by default; feasible checks and requested artifacts remain required, with unverified behavior reported explicitly.
+- **Stronger release-artifact verification.** Stable, version-free filenames apply to raw files as well as archives and installers. Independent naming checks must run before release transitions; failures require producer/script, related code, test and documentation repairs followed by an exact-source rebuild and recheck.
+- **Clearer documentation.** Main and feature workflow diagrams, package asset descriptions and continuation guidance are expanded. The source campaign index renders all recent campaigns in one table.
 
-## Compatibility and installation
+## Upgrade notes
 
-The package retains its single manifest and 15 skills. Supervised HTTPS Git publication requires Node.js 22+, Python 3.11+ and native Git on supported Windows or Linux hosts. Optional GitHub projection/completion utilities require Node.js 22+ and Git. Target projects retain their own frameworks, browser matrix and setup requirements; the new recovery modules do not select them automatically.
+Environment policies and technology guides now reside directly in plugin assets and are activated through project-level AGENTS instructions. Existing projects using older policy paths should update those references explicitly. Installing this version does not automatically rewrite project instructions.
 
-Download [`sdd-manager.zip`](https://github.com/pchemguy/SDD-Manager/releases/download/v0.15.4/sdd-manager.zip) and its [`SHA-256 checksum`](https://github.com/pchemguy/SDD-Manager/releases/download/v0.15.4/sdd-manager.zip.sha256). Verify the checksum and extract the package using your agent client's supported loading mechanism. Load PLUGIN.md or the coordinator explicitly when required; automatic discovery depends on the client. See the [package guide](https://github.com/pchemguy/SDD-Manager/blob/v0.15.4/.agents/plugins/sdd-manager/README.md).
+Feature preparation introduces dedicated records and campaign-qualified tracking; the existing local docs-main helpers remain main-only. PLUGIN.md is a non-standard composition entry, and automatic discovery depends on the client.
 
-Demo guides, repository Quick Start and standalone browser/shell policies remain source-repository documents rather than ZIP contents.
+## Package and installation
 
-## Validation and limitations
+The package contains 15 skills. Supervised HTTPS Git publication requires Node.js 22+, Python 3.11+ and Git on supported Windows or Linux hosts; optional GitHub projection/completion utilities require Node.js 22+ and Git. Target projects retain their own toolchain requirements.
 
-The prerelease review passed 327 local tests on Linux with Node.js 24.22.1 and Python 3.12.14: 139 acceptance-support, 50 publisher and 138 Git/forge contracts. Seven Windows-only tests skipped locally. Successful prior Linux/Windows CI runs cover unchanged helper, test, workflow and shell-policy bytes; they are not fresh candidate-wide Windows runs.
+Download [sdd-manager.zip](https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.0/sdd-manager.zip) and its [SHA-256 file](https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.0/sdd-manager.zip.sha256). Verify the checksum, then import the archive through an Agent Plugins-compatible client or extract its sdd-manager directory for explicit source loading. See the bundled README for workflows and client-dependent loading limits.
 
-Package structure, exact committed archive contents and extracted CLI entry points are checked separately from live agent behavior. No installed-client trial, autonomous-agent acceptance, fresh diagram rendering or native reproduction of the reported Windows/Vite incident is claimed. SDD Manager remains an experimental, learning-by-doing project.
+Stable latest links: [package](https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip) and [checksum](https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip.sha256). Demo prompts and contributor evidence are in the source repository, outside the distributable.
+
+## Verification and limits
+
+Prerelease checks pass: 139 support, 50 publisher and 138 Node contracts; exact package/schema checks; current documentation links; eight rendered Mermaid diagrams. Four existing successful hosted workflows cover 14 Windows/Linux jobs whose relevant inputs are unchanged. Seven native Windows tests skip locally on Linux.
+
+These checks do not establish fresh-agent compliance, installed-client discovery or universal client compatibility. No generated demo application, Electron package or browser extension is included in this plugin release.

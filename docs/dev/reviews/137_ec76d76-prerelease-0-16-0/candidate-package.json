@@ -1,0 +1,21 @@
+{
+  "source": "6200b3f4ada1c1a7a37510f5ef925f8507e7c324",
+  "version": "0.16.0",
+  "members": 168,
+  "archive_sha256": "4dbc32b23c6511516532c1a36f4d0b2622d573ceeedae5ba65bac2d3725bd40e",
+  "checksum_agreement": true,
+  "exact_git_blob_members": true,
+  "stable_names": [
+    "sdd-manager.zip",
+    "sdd-manager.zip.sha256"
+  ],
+  "offline_schema": "pass",
+  "extracted_cli_help": [
+    "skills/sdd-manage/scripts/git-auth-recover.mjs",
+    "skills/sdd-manage/scripts/git-publish.mjs",
+    "skills/sdd-forge/scripts/forge-close.mjs",
+    "skills/sdd-forge/scripts/forge-project.mjs",
+    "skills/sdd-forge/scripts/forge-project-draft.mjs"
+  ],
+  "native_client_acceptance": "not run"
+}
