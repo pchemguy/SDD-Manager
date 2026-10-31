@@ -17,7 +17,7 @@ Assessed source: opening `bb897f7e2593f97a5dbb349d3555bbd826d45d8e` (product sou
 - **Observation / consequence:** prose and blank separators terminate the table. Later rows lack a header/delimiter, so Markdown renders navigation as raw pipe text rather than table rows.
 - **Correction owner:** source documentation under this campaign. Move the existing explanatory paragraph before the table and keep all campaign rows contiguous, without changing historical row content or closed packages.
 - **Objective recheck:** exactly one header/delimiter, every campaign row in one contiguous table; links resolve and prior closed package bytes unchanged.
-- **Disposition:** confirmed; accepted for repair under the human's run-and-fix request.
+- **Disposition:** verified by V-001: contiguous table, unchanged rows/order and resolving links; prior closed packages preserved.
 
 No other confirmed U-001 defect. External platform docs and historical acceptance/transcripts are not revalidated; source inspection/structural/rendering evidence remains distinct from live workflow/client acceptance.
 

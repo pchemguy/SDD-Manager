@@ -2,6 +2,8 @@
 
 Campaign directories combine a stable repository sequence with the starting commit. Full baselines and exact reviewed/tested states are recorded inside the artifacts. Existing IDs and historical evidence are preserved; a missing optional stage has no placeholder file.
 
+New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
+
 | Campaign | Scope / state | Records |
 | --- | --- | --- |
 | `001_49143fa` | Historical plugin review with corrections and verification in one report. Reviewed baseline known. | [Review report](001_49143fa/REVIEW-REPORT.md) |
@@ -132,14 +134,10 @@ Campaign directories combine a stable repository sequence with the starting comm
 | `128_8021ea3` | Finalized: sequential Tetris delivery and reusable Hello World/page-sidebar prompts, plus verbatim baseline variant; five snapshot tests and scoped checks pass. Closure follows verified main integration/publication. | [Plan](128_8021ea3-demo-prompts/REVISION-PLAN.md) |
 | `129_a7f6c86` | Finalized: feature brief and shared preparation/delivery parity; four findings source-verified, 189 support/publisher tests plus package checks pass. Closure follows verified main integration/publication. | [Plan](129_a7f6c86-feature-brief/REVISION-PLAN.md), [opening](129_a7f6c86-feature-brief/REVISION-REPORT.md) |
 | `130_fa36f2c` | Finalized: comprehensive review, two handoff fixes, 327 passing tests/seven Windows skips and final archive/package checks. Closure follows verified main integration/publication. | [Plan](130_fa36f2c-comprehensive-review/REVIEW-PLAN.md), [review](130_fa36f2c-comprehensive-review/REVIEW-REPORT.md) |
-
-New campaigns use REVIEW-PLAN, REVIEW-REPORT, REVISION-PLAN, and REVISION-REPORT in their directory as applicable. A focused review may start from a prompt and record its scope/criteria in REVIEW-REPORT. Accepted changes update relevant governing project documents while campaign records remain retained. Additional independent reports can use named subdirectories within the same campaign.
 | `131_bac9b37` | Finalized: six Tetris prompts specify keyboard-only gameplay except two bottom-row buttons in the game information panel; scoped checks pass. Closure follows verified main integration/publication. | [Revision plan](131_bac9b37-demo-prompts/REVISION-PLAN.md), [revision report](131_bac9b37-demo-prompts/REVISION-REPORT.md) |
 | `132_6180f39` | Finalized: comprehensive review; README main/feature chart gap repaired, eight charts rendered, 327 tests pass/seven Windows skips and exact package checks pass. Closure follows verified main integration/publication. | [Plan](132_6180f39-comprehensive-review/REVIEW-PLAN.md), [review](132_6180f39-comprehensive-review/REVIEW-REPORT.md) |
 | `133_7b43552` | Finalized: added single-page Autodoc and Featured Autodoc copies with embedded code/CDN libraries and no Electron delivery; originals preserved and scoped checks pass. Closure follows verified main integration/publication. | [Revision plan](133_7b43552-single-html-prompt/REVISION-PLAN.md), [revision report](133_7b43552-single-html-prompt/REVISION-REPORT.md) |
 | `134_32cdec1` | Finalized: independent artifact-name gate, mandatory script/code/doc repair and release continuation; 189 regression passes, controlled trial and exact package checks pass. Closure follows verified main integration/publication. | [Plan](134_32cdec1-release-artifact-names/REVISION-PLAN.md), [evidence](134_32cdec1-release-artifact-names/REVISION-REPORT.md) |
 | `135_c5a1218` | Finalized: all six README findings repaired; both guides cover ten standalone/twenty embedded prompts, clearer selection/continuation and full-guide navigation; scoped/package checks pass. Closure follows verified main integration/publication. | [Plan](135_c5a1218-readmes/REVIEW-PLAN.md), [review](135_c5a1218-readmes/REVIEW-REPORT.md) |
-
 | `136_bb478d4` | Finalized: human C graphics/Emscripten exploration transcript retained unchanged and indexed; scoped checks pass. Closure follows verified main integration/publication. | [Plan](136_bb478d4-c-wasm-emscripten/REVISION-PLAN.md), [record](136_bb478d4-c-wasm-emscripten/REVISION-REPORT.md), [notes](136_bb478d4-c-wasm-emscripten/research/NOTES.md) |
-
 | `137_ec76d76` | Active: comprehensive prerelease review, authorized repairs and 0.16.0 release preparation; close before release publication. | [Plan](137_ec76d76-prerelease-0-16-0/REVIEW-PLAN.md), [review](137_ec76d76-prerelease-0-16-0/REVIEW-REPORT.md) |
