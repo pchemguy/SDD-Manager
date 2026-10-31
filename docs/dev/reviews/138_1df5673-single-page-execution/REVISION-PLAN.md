@@ -12,5 +12,5 @@ URL parameters can technically work in file URLs; disabling them is the selected
 
 | Action | Outcome | Verification / stop |
 | --- | --- | --- |
-| V-001 | Add baseline dual-mode execution and mode-specific persistence/Restore qualifications in both prompts | Consistent rules, independently submitted feature requests retain necessary context, no premature capabilities, focused exact diff |
-| V-002 | Finalize and close campaign | Current active links/Markdown, scoped preservation and relevant documentation checks; publish each commit, explicit verified main merge/readback and clean return |
+| V-001 (verified) | Add baseline dual-mode execution and mode-specific persistence/Restore qualifications in both prompts | Consistent rules, independently submitted feature requests retain necessary context, no premature capabilities, focused exact diff |
+| V-002 (finalized) | Finalize and close campaign | Current active links/Markdown, scoped preservation and relevant documentation checks; publish each commit, explicit verified main merge/readback and clean return |

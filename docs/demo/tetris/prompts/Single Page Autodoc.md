@@ -16,6 +16,8 @@ Manage the project's versioning, choosing an appropriate initial version and inc
 
 Develop a single-page HTML Tetris game with a playable classic baseline and the enhancements below. Deliver one well-organized HTML file with all application HTML, CSS and JavaScript embedded. External dependencies are limited to widely used JavaScript libraries available from established CDNs.
 
+Support direct local-file (`file:`) and HTTP(S)-served execution, including localhost. Detect the mode automatically using `location.protocol` and verify both execution paths.
+
 Provide a **Game info and controls** panel showing standard game information, such as score and level. At its bottom, place only two clickable gameplay control buttons: **Start/Restart** on the left and **Pause/Start** on the right. All other gameplay actions must use the keyboard.
 
 Treat this description as the complete target scope. Deliver the simplest sensible playable baseline first, then add capabilities through bounded phases that each provide a useful functionality increment.
@@ -59,6 +61,8 @@ Use sensible defaults. Deliver session-only configuration as an intermediate inc
 
 #### URL GET and cookie persistence
 
+Apply cookie and URL-parameter persistence only in HTTP(S) mode.
+
 Support cookies and URL query parameters for all settings above. Restore saved settings or apply URL-supplied settings when the page is reloaded or the game is opened again. Use sensible defaults where neither source supplies a value.
 
 Resolve each setting independently in this order:
@@ -71,6 +75,8 @@ Whenever the player changes a setting, save its selected value in the correspond
 
 Save explicit URL parameter values in the corresponding cookies, including values equal to the default. When a parameter is omitted, retain its saved cookie value rather than replacing it with the default.
 
+In direct local-file (`file:`) mode, initialize settings from defaults and keep changes in memory for the current page session. Do not read or write cookies, or read or modify configuration URL parameters. When manual Save/Restore is introduced, keep it available and apply restored settings only in memory. Verify both execution modes.
+
 #### Leaderboard
 
 Show a leaderboard panel with the 10 best completed-game results, ranked by score. Update it after each game and keep the history only for the current session.
@@ -79,7 +85,7 @@ Show a leaderboard panel with the 10 best completed-game results, ranked by scor
 
 Place **Save** and **Restore** buttons at the bottom of the settings panel. Hiding the settings panel also hides these buttons.
 
-Save offers JSON or SQLite and downloads one file containing the current top 10 results and all six game configuration settings. Restore accepts either format, replaces the leaderboard and applies the saved settings, updating their cookies and URL parameters.
+Save offers JSON or SQLite and downloads one file containing the current top 10 results and all six game configuration settings. Restore accepts either format, replaces the leaderboard and applies the saved settings. In HTTP(S) mode, also update their cookies and URL parameters; in direct local-file mode, apply settings only in memory and leave cookies and the URL untouched.
 
 Preserve each result's stable ID, non-negative integer score and UTC game-completion timestamp in both formats. JSON includes a format version, results array and settings object; provide a JSON Schema and validate the complete content before loading, including timestamps and setting values. SQLite includes `high_scores(id, score, timestamp)` and `settings(key, value)`, with one uniquely keyed row per game setting and format versioning in database metadata.
 
