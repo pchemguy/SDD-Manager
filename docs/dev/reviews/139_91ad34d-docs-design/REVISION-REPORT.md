@@ -54,3 +54,7 @@ Exact committed package verification follows publication of this checkpoint. Sta
 V-006 source commit **7ac7e1f6c5599542d4ee3b0124886ae530f6c6b5** was published and read back before this check. The publisher archived its exact Git objects: all **168 package files** match their committed paths/bytes, the pinned core schema accepts manifest version **0.16.0**, and source AGENTS, development/CI evidence, acceptance and credentials are excluded. [Machine-readable verification](final-verification.json) retains source identity, archive checksum, outcomes and limits. The final evidence checkpoint changes only current campaign records and HANDOFF; package bytes are unchanged.
 
 All V-001–V-006 actions are complete. The campaign remains open on its revision branch, with no integration, closure, version bump or release selected. Publish/read back this evidence checkpoint and stop for the next human instruction.
+
+## Authorized campaign finalization
+
+The human selected closure, followed by a new comprehensive prerelease campaign and patch release. All six actions and exact-source verification are complete; final evidence 95883f6d was published/read back. Finalize this record and integrate the complete campaign into its recorded parent main. Closure requires verified main publication and return; those later effects are established by Git readback, not this prospective record. No additional source change is part of closure.
