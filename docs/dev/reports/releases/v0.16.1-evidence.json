@@ -1,0 +1,194 @@
+{
+  "tag": "v0.16.1",
+  "source": "c43d2964817741c2cd655e0d82a6e45aee20369e",
+  "release_id": 430554122,
+  "url": "https://github.com/pchemguy/SDD-Manager/releases/tag/v0.16.1",
+  "draft": false,
+  "prerelease": false,
+  "latest": true,
+  "body_sha256": "a8bcf4a5510e35042dde222a22f3fa21571f354771b8fca25de5f3a0a39db4b6",
+  "assets": [
+    {
+      "name": "sdd-manager.zip",
+      "size": 532998,
+      "sha256": "c382fa261965a7407893d19b68b7adb2316ada65082db3194fae86693da3ce72",
+      "api_download": "exact local bytes",
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.1/sdd-manager.zip"
+    },
+    {
+      "name": "sdd-manager.zip.sha256",
+      "size": 82,
+      "sha256": "a845ec8a33611ee8ed821921af02514b5b4386703788cdf99dfa24c9aea3e2ee",
+      "api_download": "exact local bytes",
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.1/sdd-manager.zip.sha256"
+    }
+  ],
+  "stable_downloads": [
+    {
+      "name": "sdd-manager.zip",
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip",
+      "sha256_matches": true
+    },
+    {
+      "name": "sdd-manager.zip.sha256",
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip.sha256",
+      "sha256_matches": true
+    }
+  ],
+  "workflow": {
+    "id": 41304358903,
+    "source": "c43d2964817741c2cd655e0d82a6e45aee20369e",
+    "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41304358903",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 124841621618,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Install publisher validation dependencies",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Validate structured handoff",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run candidate support and publisher contracts",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Inspect package without provider writes",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 124841757369,
+        "name": "publish",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Install publisher validation dependencies",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Reconcile and verify the single publisher",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v7",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "commit_notes_body": "byte-identical",
+  "package_members": 168,
+  "campaigns": {
+    "139_closed_main_merge": "3218f4c327f73ea51711fd236d87043a7e4b28b6",
+    "140_closed_main_merge": "00a327730204d705e49beea51ffab600eefaa112"
+  },
+  "local_verification": {
+    "support_pass": 139,
+    "publisher_pass": 50,
+    "node_pass": 138,
+    "windows_only_skipped": 7,
+    "diagrams_rendered_and_visually_inspected": 8,
+    "exact_package_files": 168,
+    "validator_errors": 0,
+    "validator_contained_reference_warnings": 67
+  },
+  "limits": [
+    "risk-weighted current-source review and local/CI contracts",
+    "no fresh-agent or installed-client acceptance",
+    "native Windows shell tests not rerun locally"
+  ]
+}
