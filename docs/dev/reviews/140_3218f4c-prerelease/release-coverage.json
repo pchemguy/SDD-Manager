@@ -1,0 +1,25 @@
+{
+  "baseline_tag": "v0.16.0",
+  "baseline_source": "c87bc7afa3f6bc8b860fbc6672f8296797ab6e55",
+  "analyzed_through": "c03a00f3385625d08f6a599c05e98ea1d780fee7",
+  "complete_history": true,
+  "integrations": [
+    {
+      "sha": "91ad34dc31707032ca9781675400b52ca68abd07",
+      "scope": "single-page file/HTTP(S) modes"
+    },
+    {
+      "sha": "3218f4c327f73ea51711fd236d87043a7e4b28b6",
+      "scope": "explicit APIs and optional artifacts"
+    }
+  ],
+  "direct_repair": "c03a00f3385625d08f6a599c05e98ea1d780fee7",
+  "administrative_commits": "review/finalization/provenance; no separate product highlight",
+  "pending_owned_content": [
+    "manifest 0.16.1",
+    "current complete release notes"
+  ],
+  "notes_sha256": "a8bcf4a5510e35042dde222a22f3fa21571f354771b8fca25de5f3a0a39db4b6",
+  "final_path": "RELEASE-NOTES.md",
+  "publication": "pending exact default-branch release source and one publisher"
+}

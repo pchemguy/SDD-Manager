@@ -21,3 +21,9 @@ Distribution/presentation checks pass for the exact recorded baseline package. F
 ## V-001 — Selected-artifact evidence correction
 
 Repaired R-001 across seven owning source files: specify/plan/tasks inputs, feature preparation acceptance, shared/coordinator QC currency and report composition. Inspection confirms peer-only model/contract changes retain exact identities and affected readiness without new tasks/reports/approvals. Five documentation tests, current-link checks and whitespace pass. Entries' existing presentation remains accurate; no new capability or icon change. Publish/read back before patch/package work.
+
+## V-002 — Patch and complete release message
+
+Canonical manifest is 0.16.1. Root RELEASE-NOTES.md retains its workflow-owned complete-message role, refreshed from latest stable v0.16.0/c87bc7af through the full current range: single-page execution modes, API/model/contract ownership and the selected-peer QC correction. Applicable installation/runtime/limits sections retained; superseded 0.16.0-only highlights are not repeated. [Coverage](release-coverage.json) records provenance and exact body hash; the owned temporary highlights checkpoint is ignored/untracked.
+
+Post-correction/version checks: all 139 support and 50 publisher tests pass; the unchanged runtime retains this campaign's 138 passing Node contracts. Validator zero errors/67 contained sibling-reference warnings, 1,282 current links/anchors and whitespace pass. Runtime/test/CI/tracking definitions and all eight diagrams are unchanged by repair. Publish/read back this checkpoint, then build/inspect its exact Git-object package before finalization.
