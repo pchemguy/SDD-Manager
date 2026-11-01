@@ -51,3 +51,7 @@ All four inventory units are assessed at their recorded depth. Review found **on
 ## Accepted revision queue
 
 [Revision plan](REVISION-PLAN.md) covers the R-001 correction, patch/message/package preparation, finalization and authorized publication. Existing identities, nine-task/checkpoint structure and mode/stop policy stay intact.
+
+## R-001 revision recheck
+
+V-001 includes selected peer artifacts in specification/planning/task inputs, feature accepted-state commits, coordinator state comparisons, QC currency and root report scope/identity fields. A peer-only edit is now explicitly included in the affected-readiness rule and report source identities. Existing root reports/tasks/checkpoints are retained; inline definitions add no files. Five package-documentation tests pass; 1,282 current links/anchors resolve. Finding **R-001: Verified** by source recheck; this does not claim observed consumer behavior.

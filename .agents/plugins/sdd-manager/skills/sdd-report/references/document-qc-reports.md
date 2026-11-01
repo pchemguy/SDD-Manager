@@ -4,9 +4,9 @@ Compose from the artifact owner's actual review/correction evidence under **sdd-
 
 ## Placement and identity
 
-Place `SPEC-REVIEW-REPORT.md`, `PLAN-REVIEW-REPORT.md` or `TASKS-REVIEW-REPORT.md` beside the reviewed root; feature counterparts use `FEATURE-SPEC-REVIEW-REPORT.md`, `FEATURE-PLAN-REVIEW-REPORT.md` and `FEATURE-TASKS-REVIEW-REPORT.md` beside the selected feature roots. One report covers the root and applicable children. PLAN review covers relevant layout. These preparation reports are distinct from phase/milestone implementation reports and general campaign records. At feature archive retain selected QC reports beside archived sources and repair authorized links; historical feature readiness does not certify current main documents.
+Place `SPEC-REVIEW-REPORT.md`, `PLAN-REVIEW-REPORT.md` or `TASKS-REVIEW-REPORT.md` beside the reviewed root; feature counterparts use `FEATURE-SPEC-REVIEW-REPORT.md`, `FEATURE-PLAN-REVIEW-REPORT.md` and `FEATURE-TASKS-REVIEW-REPORT.md` beside the selected feature roots. One report covers the root and its selected children and peer artifacts, including model/API-design/contract definitions. PLAN review covers relevant layout. These preparation reports are distinct from phase/milestone implementation reports and general campaign records. At feature archive retain selected QC reports beside archived sources and repair authorized links; historical feature readiness does not certify current main documents.
 
-Identify artifact paths and exact reviewed/governing states: available full Git commit with file/blob identities, or content hashes for pending edits. A report need not contain its own future commit SHA. Use existing IDs/links and a compact grouped coverage table; no separate traceability database or row per SPEC sentence is required.
+Identify the complete selected artifact set, its paths and exact reviewed/governing states: available full Git commit with file/blob identities, or content hashes for pending edits. A report need not contain its own future commit SHA. Use existing IDs/links and a compact grouped coverage table; no separate traceability database or row per SPEC sentence is required.
 
 Brief assessment evidence for PROJECT/FEATURE belongs in its mapped preparation record; this report procedure introduces no separate brief report. DOCS-QC-REPORT and FEATURE-QC-REPORT are whole-package reports under their coordinator completion gates; an individual brief or root assessment does not certify package readiness.
 
@@ -18,8 +18,8 @@ Brief assessment evidence for PROJECT/FEATURE belongs in its mapped preparation 
 ## Current gate
 
 State: Ready or Blocked, as established by the owner.
-Reviewed scope/state: root, applicable children/layout and exact identities.
-Governing inputs: accepted upstream roots/children and exact identities.
+Reviewed scope/state: root, selected children/peer artifacts, layout and exact identities.
+Governing inputs: accepted upstream roots and selected artifacts with exact identities.
 Checks/evidence: actual review methods and outcomes; limitations/exceptions.
 Remaining blockers and affected downstream stage: explicit findings or none.
 

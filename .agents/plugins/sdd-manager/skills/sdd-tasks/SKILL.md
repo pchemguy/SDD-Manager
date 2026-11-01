@@ -27,7 +27,7 @@ Apply **sdd-conventions**' **Development-document QC** reference (`skills/sdd-co
 | Review generated task structure and PLAN conformance | [conformance review](references/conformance-review.md) |
 | Review status, completion evidence, and dependencies | [progress review](references/progress-review.md) |
 
-Read the relevant accepted PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout, and their focused children or active feature documents as needed for the operation. Inspect TASKS and any active FEATURE-TASKS, Git evidence, and affected code or tests when status or existing work matters. Use **sdd-conventions** to assess task boundaries and Phase → Milestone → Task identity and parentage. Do not invent requirements, delivery strategy, or physical ownership when those inputs are unresolved.
+Read the relevant accepted PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout, and their selected children/peer artifacts or active feature documents as needed for the operation. Inspect TASKS and any active FEATURE-TASKS, Git evidence, and affected code or tests when status or existing work matters. Use **sdd-conventions** to assess task boundaries and Phase → Milestone → Task identity and parentage. Do not invent requirements, delivery strategy, or physical ownership when those inputs are unresolved.
 
 Read-only review can proceed without mutation. Creating or modifying TASKS or FEATURE-TASKS requires **sdd-manage** to coordinate the user's request and a current **sdd-orient** handoff establishing an eligible Git worktree, applicable instructions, target paths, and ownership of dirty changes. This skill does not implement orientation, verification, recovery, or code changes.
 

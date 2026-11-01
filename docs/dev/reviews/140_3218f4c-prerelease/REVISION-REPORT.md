@@ -17,3 +17,7 @@ Public documentation, asset/prompt navigation, current links and eight rendered 
 ## U-004 and review completion
 
 Distribution/presentation checks pass for the exact recorded baseline package. Four units complete; R-001 is the sole accepted finding. The published review/plan checkpoint precedes V-001 repair. No product edit yet; package remains 0.16.0.
+
+## V-001 — Selected-artifact evidence correction
+
+Repaired R-001 across seven owning source files: specify/plan/tasks inputs, feature preparation acceptance, shared/coordinator QC currency and report composition. Inspection confirms peer-only model/contract changes retain exact identities and affected readiness without new tasks/reports/approvals. Five documentation tests, current-link checks and whitespace pass. Entries' existing presentation remains accurate; no new capability or icon change. Publish/read back before patch/package work.
