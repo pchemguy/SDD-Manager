@@ -22,6 +22,8 @@ Control and evidence only; FEATURE_DOCS_TASKS owns checkoffs, FEATURE owns produ
 
 ## Stage evidence
 
+Record selected model/API-design artifact paths, owners and exact states with FDOCS-004; contract artifacts with FDOCS-005. Their governing-root approval/preapproval and QC cover the whole set. Include referenced definitions in package QC; do not add a parallel artifact registry.
+
 | Stage | Source/applicability and decision/QC evidence |
 | --- | --- |
 | FDOCS-001 | {context/tracking/provenance readiness and known source or pending} |

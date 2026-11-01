@@ -17,25 +17,25 @@ Preparation tasks and completion checkboxes only. Control, decisions and evidenc
     - Check consistency, obtain approval or apply scoped preapproval, and commit the accepted state, DOCS_PREPARATION evidence and this checked task together; publish/read back before issue closure or dependent work.
 - [ ] DOCS-004 — Prepare and accept DECOMPOSITION.
     - Depends on DOCS-003.
-    - Define component responsibilities, collaboration, ownership and design-level interface boundaries consistently with ARCHITECTURE.
+    - Define component responsibilities, explicit external/internal API surfaces, types/signatures, collaboration and state ownership consistently with ARCHITECTURE. Include selected model/API-design artifacts in this task's proposal and acceptance.
     - Check consistency, obtain approval or apply scoped preapproval, and commit the accepted state, DOCS_PREPARATION evidence and this checked task together; publish/read back before issue closure or dependent work.
 - [ ] DOCS-005 — Prepare and accept SPEC.
     - Depends on DOCS-004.
-    - Specify observable behavior, interfaces, data/error contracts, required qualities and acceptance conditions from the accepted design, including necessary children.
+    - Specify observable behavior, precise API/data/error contracts, required qualities and acceptance from the accepted design. Include selected contract artifacts and assess their referenced models/API design in this task's QC and acceptance.
     - Pass required SPEC QC and approval/preapproval. Commit the accepted state, QC report, DOCS_PREPARATION evidence and this checked task together; publish/read back before issue closure or dependent work.
 - [ ] DOCS-006 — Prepare and accept PLAN.
     - Depends on DOCS-005 and required SPEC QC.
-    - Define bounded useful delivery phases, milestones, dependencies and exits against SPEC, starting with the simplest reasonable MVP.
+    - Define bounded useful delivery phases, milestones, dependencies and exits against SPEC, starting with the simplest reasonable MVP. Include needed API/model/contract refinement, consumer integration and verification prerequisites.
     - Pass PLAN strategy QC and approval/preapproval. Commit the accepted state, review report, DOCS_PREPARATION evidence and this checked task together; publish/read back before issue closure or layout work.
 - [ ] DOCS-007 — Prepare and accept layout.
     - Depends on DOCS-006 and PLAN strategy QC.
-    - Allocate source, tests, documentation and artifacts to physical paths consistently with design and PLAN; review PLAN/layout together and update the PLAN review report.
+    - Allocate public API headers/exports/entry points, internal source, schemas, tests, documentation and artifacts to physical owners consistently with design and PLAN; review PLAN/layout together and update the PLAN review report.
     - Pass combined QC and approval/preapproval. Commit the accepted state, updated review report, DOCS_PREPARATION evidence and this checked task together; publish/read back before issue closure or dependent work.
 - [ ] DOCS-008 — Prepare and accept TASKS.
     - Depends on DOCS-007 and required SPEC/PLAN/layout QC.
-    - Derive executable tasks, dependencies and milestone/phase review units; check traceability and bounded increments.
+    - Derive executable tasks, dependencies and milestone/phase review units against selected API/model/contract owners, including consumer checks and documentation; check traceability and bounded increments.
     - Pass task-list QC and approval/preapproval. Commit the accepted TASKS state, QC report, DOCS_PREPARATION evidence and this checked task together, including HANDOFF at an autodoc stop; publish/read back before issue closure and the selected stop/reset/advance boundary. Do not start implementation or activate implementation-phase objects.
 - [ ] DOCS-009 — Pass documentation package QC.
     - Depends on DOCS-001–008 completion and verified issue closures when tracking is enabled; the selected mode/range must permit package QC.
-    - Review the complete document set, children and QC reports, DOCS_TASKS, DOCS_PREPARATION and initialization/orientation/acceptance/publication evidence for consistency, traceability, readiness and blockers. Resolve/recheck blockers through their owners.
+    - Review the complete document set, selected model/API-design/contract artifacts and QC reports, DOCS_TASKS, DOCS_PREPARATION and initialization/orientation/acceptance/publication evidence for consistency, traceability, readiness and blockers. Resolve/recheck blockers through their owners.
     - Commit passing `DOCS-QC-REPORT.md`, DOCS_PREPARATION evidence, refreshed HANDOFF and this checked task together; publish/read back before final QC issue closure. Keep later integration/milestone effects pending until verified; task completion alone does not complete preparation.

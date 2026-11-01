@@ -1,6 +1,6 @@
 # Documentation-design revision record
 
-Campaign **139_91ad34d**, open and awaiting the human's revision scope. [Plan](REVISION-PLAN.md).
+Campaign **139_91ad34d**, executing the accepted plan; campaign remains open. [Plan](REVISION-PLAN.md).
 
 Working branch `revision/139_91ad34d-docs-design`, creation parent and eventual target main, starting baseline / branch-off `91ad34dc31707032ca9781675400b52ca68abd07`. No suspended parent.
 
@@ -25,3 +25,11 @@ The human's Execute instruction authorizes V-004–V-006. V-001 opening, V-002 a
 V-004 defines external and cross-component internal API surfaces, consumer/provider operations/types/shapes, ownership and explicit refinement limits in the design entry/decomposition. Model/API-design detail can be inline, a child or a linked peer; illustrative names impose no files. SPEC and its entry/review define canonical detailed API/data contract artifacts, reference model/API owners and keep precise semantics/acceptance distinct from structure. The two affected OpenAI descriptions/prompts reflect their actual scope; existing icons remain suitable.
 
 Checks: five package-documentation tests pass; changed instructions/links and source diff reviewed for API coverage, single ownership, optional extraction and private-helper exclusions. Whitespace passes. These are source checks, not a fresh consumer/client trial. Task/checkpoint/template alignment and downstream handoffs remain V-005/V-006 work; no campaign integration or release performed.
+
+## V-005 — Existing preparation tasks and checkpoint bundles
+
+Main/feature preparation and human-review guidance assign selected model/API-design artifacts to task/checkpoint 004 and detailed contracts to 005, including peer documents. Preparation-record templates retain paths/owners and exact accepted/QC states; each selected set shares its governing root's proposal, approval/preapproval, commit, evidence and issue. Package QC covers the whole selected set without additional reports or stages.
+
+Both DOCS/FDOCS task templates carry API/model/contract responsibilities through 004–009. Main tracking JSON supplies matching scope/acceptance briefs. All nine task IDs, titles, dependency fields, remaining projection metadata and milestone definitions are unchanged; mode/stop/reset policy source is untouched. No product tracking object was created or altered.
+
+Checks pass: five documentation tests; all 51 forge-project tests, including rendered predefined preparation definitions and helper scope contracts; explicit baseline comparison of task headers/dependencies and JSON metadata; changed-document links and whitespace. This establishes source/local contract alignment, not live projection or client behavior. Downstream planning/layout/task/incorporation/QC projection work remains V-006.

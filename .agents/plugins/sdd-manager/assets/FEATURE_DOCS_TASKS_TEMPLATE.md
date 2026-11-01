@@ -15,25 +15,25 @@ Task definitions/checkoffs only. Control, decisions, applicability/reuse and evi
     - Commit the accepted source or assessed reusable inputs, required QC, FEATURE_PREPARATION evidence and initial checked task together; publish/read back before enabled issue closure or dependent work.
 - [ ] FDOCS-004 — Assess and accept feature decomposition.
     - Depends on FDOCS-003 and required publication/issue closure.
-    - Assess affected components and accepted architecture; prepare FEATURE_DECOMPOSITION only where required. Record sufficient reuse or review/acceptance of the necessary new proposal.
+    - Assess affected components, external/internal APIs and models against accepted architecture; prepare FEATURE_DECOMPOSITION and selected model/API-design artifacts where required. Include them in this task's reuse assessment or proposal/acceptance.
     - Commit the accepted source or assessed reusable inputs, required QC, FEATURE_PREPARATION evidence and initial checked task together; publish/read back before enabled issue closure or dependent work.
 - [ ] FDOCS-005 — Prepare and accept FEATURE-SPEC.
     - Depends on FDOCS-004 and required publication/issue closure.
-    - Define precise changed behavior and preserved guarantees against accepted FEATURE/design. Complete scoped SPEC QC/report and applicable human approval/preapproval.
+    - Define precise changed behavior and API/data contracts against accepted FEATURE/design, including selected contract artifacts and referenced model/API owners. Complete scoped SPEC QC/report and this task's human approval/preapproval.
     - Commit the accepted source or assessed reusable inputs, required QC, FEATURE_PREPARATION evidence and initial checked task together; publish/read back before enabled issue closure or dependent work.
 - [ ] FDOCS-006 — Prepare and accept feature delivery strategy.
     - Depends on FDOCS-005 and required publication/issue closure.
-    - Define bounded changed outcomes, phases/milestones/dependencies and exits in FEATURE-PLAN where needed, or assess sufficient existing strategy. Complete strategy QC/report and applicable approval without imposing a new MVP.
+    - Define bounded changed outcomes, phases/milestones/dependencies and exits, including needed API/model/contract refinement and consumer verification, in FEATURE-PLAN where needed, or assess sufficient existing strategy. Complete strategy QC/report and applicable approval without imposing a new MVP.
     - Commit the accepted source or assessed reusable inputs, required QC, FEATURE_PREPARATION evidence and initial checked task together; publish/read back before enabled issue closure or dependent work.
 - [ ] FDOCS-007 — Assess and accept feature layout.
     - Depends on FDOCS-006 and required publication/issue closure.
-    - Define affected physical placement using the established layout/feature-plan owner, or assess sufficient existing allocation. Complete combined PLAN/layout QC and applicable approval; no FEATURE-LAYOUT filename is introduced.
+    - Define affected public API, implementation, schema, test and documentation placement using the established layout/feature-plan owner, or assess sufficient existing allocation. Complete combined PLAN/layout QC and applicable approval; no FEATURE-LAYOUT filename is introduced.
     - Commit the accepted source or assessed reusable inputs, required QC, FEATURE_PREPARATION evidence and initial checked task together; publish/read back before enabled issue closure or dependent work.
 - [ ] FDOCS-008 — Prepare and accept FEATURE-TASKS.
     - Depends on FDOCS-007 and required publication/issue closure.
-    - Derive scoped product T tasks/reviews against accepted inputs, with global IDs and single executable ownership. Complete task QC/report and applicable approval. Include HANDOFF at the mapped pass stop; do not activate implementation solely from this completion.
+    - Derive scoped product T tasks/reviews, including API consumers and contract checks against selected artifact owners, with global IDs and single executable ownership. Complete task QC/report and applicable approval. Include HANDOFF at the mapped pass stop; do not activate implementation solely from this completion.
     - Commit the accepted source or assessed reusable inputs, required QC, FEATURE_PREPARATION evidence and initial checked task together; publish/read back before enabled issue closure or dependent work.
 - [ ] FDOCS-009 — Pass feature documentation package QC.
     - Depends on FDOCS-008 and required publication/issue closure.
-    - Assess the whole feature set and affected accepted main context, preparation/decision/QC evidence and task readiness; resolve/recheck blockers. Persist passing FEATURE-QC-REPORT, preparation evidence, HANDOFF and this checked entry. Keep merge/milestone effects pending until verified.
+    - Assess the whole feature set, selected model/API-design/contract artifacts and affected accepted main context, preparation/decision/QC evidence and task readiness; resolve/recheck blockers. Persist passing FEATURE-QC-REPORT, preparation evidence, HANDOFF and this checked entry. Keep merge/milestone effects pending until verified.
     - Commit the accepted source or assessed reusable inputs, required QC, FEATURE_PREPARATION evidence and initial checked task together; publish/read back before enabled issue closure or dependent work.

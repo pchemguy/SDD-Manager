@@ -35,6 +35,8 @@ Keep detailed current contracts in their owning product documents and link them 
 
 ## Decisions and document evidence
 
+Record selected model/API-design artifact paths, owners and exact states with DOCS-004; contract artifacts with DOCS-005. Their governing-root approval/preapproval and QC cover the whole set. Include referenced definitions in package QC; do not add a parallel artifact registry.
+
 Qualify entries by pass and task. Identify proposed/accepted roots and required children by known commit/blob or content identity, with the actual decision/preapproval basis and QC references. For a completion commit, use a known proposal/content identity rather than its own future SHA. Do not duplicate task checkboxes or treat historical approval as current readiness.
 
 | Task | Current evidence / decision basis |

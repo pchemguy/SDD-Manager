@@ -9,9 +9,11 @@ Before dependent use, apply the [development-document content boundary](human-do
 | Completed input | Required owner assessment | Dependent operation |
 | --- | --- | --- |
 | FEATURE | sdd-design: seed/delta coverage, compatibility, consequential decision readiness and product/evidence separation; assessment referenced in FEATURE_PREPARATION | Dependent feature design/specification |
-| SPEC / FEATURE-SPEC and applicable children | sdd-specify: accepted PROJECT or FEATURE and applicable design conformance | PLAN / dependent feature planning |
+| SPEC / FEATURE-SPEC and selected contract artifacts | sdd-specify: accepted PROJECT or FEATURE and applicable design conformance | PLAN / dependent feature planning |
 | PLAN / FEATURE-PLAN with relevant layout | sdd-plan: SPEC conformance and phase/milestone decomposition | TASKS / dependent feature tasks |
 | TASKS / FEATURE-TASKS and applicable children | sdd-tasks: PLAN conformance, scope and task hierarchy | Implementation or creation/projection of hosted task objects |
+
+Selected model/API-design artifacts are part of the decomposition task/checkpoint; contract artifacts are part of specification. Include their referenced definitions in conformance and whole-package QC. Use the governing root's review report and preparation evidence; do not create a separate report or checkpoint per optional artifact.
 
 1. Establish the selected document/feature scope, accepted governing inputs, authorized effects and stopping point. Authoring includes its scoped QC correction/recheck and report; read-only review returns findings without silently correcting sources. Literal selected-path-only restrictions prevail; missing required report permission is a concrete scope blocker, not permission to widen paths.
 2. At entry and each dependent transition, compare actual root/children/upstream state with current review evidence, finding dispositions, scope/coverage and readiness. Reuse demonstrably current equivalent reviews; explain materiality/equivalence from actual differences. A Ready label, file presence or a historical feature review is insufficient alone. Do not fabricate a review for an older project.
