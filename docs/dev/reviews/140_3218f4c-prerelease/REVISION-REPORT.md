@@ -9,3 +9,7 @@ Original opening c01e8461fdcfb34ed9d8b0c47fda695866c45362 is published/read back
 ## U-002 checkpoint
 
 Runtime/CI/source checks completed with 327 passing local contracts and seven platform skips, plus parsed-source/credential checks and read-only provider observations. No runtime edit or extra finding. Publication of this checkpoint precedes public-document review.
+
+## U-003 checkpoint
+
+Public documentation, asset/prompt navigation, current links and eight rendered diagrams assessed. No new finding; current READMEs/diagrams require no source edit. Rendering provisioning recovered through a separately pinned isolated tool pair, with the failed initial download retained as a facility limit. Publish/read back before U-004.

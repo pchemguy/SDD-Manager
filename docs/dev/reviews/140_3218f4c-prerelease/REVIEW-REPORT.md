@@ -27,3 +27,15 @@ Executed on Linux, Node 24.22.1/Python 3.12.14: **138 Node contracts**, **139 su
 All five workflows were inspected for trigger, selected source, permissions, shell and matrix ownership. YAML parsing is not Actions execution; actionlint is unavailable. [Provider baseline](ci-baseline.json) confirms actual default main, latest v0.16.0 and successful projection run **41303018264** at exact reviewed main 3218f4c3. Other observed native matrix successes belong to their recorded earlier SHAs and are not claimed as fresh runs. The final release's selected CI run still needs direct readback. No live task-tracking mutation or fresh-agent trial was performed.
 
 U-002 complete; U-003/U-004 and R-001 correction remain.
+
+## U-003 — READMEs, diagrams, assets, demos and contributor evidence
+
+Both READMEs were checked for audience, quickstart, complete demo navigation, modes/stops and release instructions. All ten standalone prompts, calculator collections and staged Tetris guides are reachable; full README describes every bundled Markdown/JSON asset. Demo comparisons preserve browser/Electron/extension sequencing, the paired extension platform, keyboard-only gameplay exceptions, session persistence and both file/HTTP(S) single-page modes. Hello World page/sidebar behavior remains explicitly scoped. No new confirmed documentation defect found.
+
+All eight workflow diagrams were parsed/rendered with Mermaid 11.12.0 and visually inspected in isolated Playwright 1.56.1/managed Chromium headless shell 141.0.7390.37 (build 1194). Labels are readable without clipping; gates, loops, partial-phase stops and return boundaries agree with their owners. The bundled runner's build-1234 download failed archive integrity; that binary was not used. The pinned renderer pair is temporary tooling, not a change to project dependencies. No diagram edit needed.
+
+[Documentation checks](documentation-checks.json) record **1,282** resolved current relative/repository links and anchors, no confirmed broken link, complete prompt/asset navigation and diagram evidence. Fifty external links were not individually fetched. Inline README insertion examples and target-project template links are interpreted in their intended destination; closed record contents/manual transcripts remain excluded.
+
+Templates/environment guidance, source AGENTS/discovery/contract/capability documents and acceptance evidence descriptions were assessed for ownership and claim boundaries. Environment guides remain activated only through project AGENTS, and historical TextStats observations are qualified rather than promoted to revised-source acceptance. No fresh consumer/client behavior claim is made.
+
+U-003 complete. R-001 remains accepted for repair; package/readiness consolidation follows.
