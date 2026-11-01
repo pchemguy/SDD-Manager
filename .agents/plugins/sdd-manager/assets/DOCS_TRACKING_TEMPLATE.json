@@ -72,8 +72,8 @@
         "DOCS-003"
       ],
       "prerequisites": "The accepted architecture and DOCS-003 publication/issue closure are established.",
-      "scope": "Define component responsibilities, collaboration, ownership and design-level interface boundaries consistently with ARCHITECTURE. Keep detailed responsibilities cohesive and include necessary focused children.",
-      "acceptance": "Check design consistency, present DECOMPOSITION for human first approval or apply explicit scoped preapproval, and submit the accepted document state with its DOCS_PREPARATION decision/QC evidence and checked DOCS-004 in one commit. Push and verify containment before closing this issue or advancing.",
+      "scope": "Define component responsibilities, collaboration, ownership and design-level interface boundaries consistently with ARCHITECTURE. Keep detailed responsibilities cohesive and include necessary focused children. Include explicit external/internal API surfaces, types/signatures and state ownership, plus selected model/API-design artifacts in the decomposition proposal and acceptance.",
+      "acceptance": "Check design consistency, present DECOMPOSITION for human first approval or apply explicit scoped preapproval, and submit the accepted document state with its DOCS_PREPARATION decision/QC evidence and checked DOCS-004 in one commit. Push and verify containment before closing this issue or advancing. The selected optional artifacts share this task's proposal, acceptance, commit and issue; add no preparation task or checkpoint.",
       "sources": [
         "Running SDD Manager package: assets/DOCS_TASKS_TEMPLATE.md",
         "Running SDD Manager package: assets/DOCS_PREPARATION_TEMPLATE.md",
@@ -90,8 +90,8 @@
         "DOCS-004"
       ],
       "prerequisites": "The accepted design and DOCS-004 publication/issue closure are established.",
-      "scope": "Specify observable behavior, interfaces, data and error contracts, required qualities and acceptance conditions from the accepted design. Include necessary focused specification children and retain required SPEC QC evidence.",
-      "acceptance": "Pass the required SPEC readiness checks and resolve blockers, then obtain human first approval or apply explicit scoped preapproval. Submit the approved SPEC state, QC references/decision in DOCS_PREPARATION and checked DOCS-005 together; push and verify containment before closing this issue or advancing.",
+      "scope": "Specify observable behavior, interfaces, data and error contracts, required qualities and acceptance conditions from the accepted design. Include necessary focused specification children and retain required SPEC QC evidence. Include selected detailed contract artifacts and check referenced model/API-design definitions within SPEC QC and acceptance.",
+      "acceptance": "Pass the required SPEC readiness checks and resolve blockers, then obtain human first approval or apply explicit scoped preapproval. Submit the approved SPEC state, QC references/decision in DOCS_PREPARATION and checked DOCS-005 together; push and verify containment before closing this issue or advancing. The selected optional artifacts share this task's proposal, acceptance, commit and issue; add no preparation task or checkpoint.",
       "sources": [
         "Running SDD Manager package: assets/DOCS_TASKS_TEMPLATE.md",
         "Running SDD Manager package: assets/DOCS_PREPARATION_TEMPLATE.md",
@@ -108,7 +108,7 @@
         "DOCS-005"
       ],
       "prerequisites": "The accepted specification, required SPEC QC and DOCS-005 publication/issue closure are established.",
-      "scope": "Define delivery phases, milestones, dependencies and exit conditions against SPEC. Each phase delivers a bounded useful functionality increment, starting with the simplest reasonable MVP; release or version scope does not make every requested capability part of the first phase. Retain PLAN strategy QC evidence.",
+      "scope": "Define delivery phases, milestones, dependencies and exit conditions against SPEC. Each phase delivers a bounded useful functionality increment, starting with the simplest reasonable MVP; release or version scope does not make every requested capability part of the first phase. Retain PLAN strategy QC evidence. Plan needed API/model/contract refinement, consumer integration and verification with explicit prerequisites.",
       "acceptance": "Pass PLAN strategy QC and obtain human first approval or apply explicit scoped preapproval. Submit the approved PLAN state, review references/decision in DOCS_PREPARATION and checked DOCS-006 together; push and verify containment before closing this issue or advancing to layout.",
       "sources": [
         "Running SDD Manager package: assets/DOCS_TASKS_TEMPLATE.md",
@@ -126,7 +126,7 @@
         "DOCS-006"
       ],
       "prerequisites": "The accepted PLAN, its strategy QC and DOCS-006 publication/issue closure are established.",
-      "scope": "Allocate source, tests, documentation and artifacts to physical paths consistently with the accepted design and PLAN. Review PLAN and layout together and update the PLAN review report.",
+      "scope": "Allocate source, tests, documentation and artifacts to physical paths consistently with the accepted design and PLAN. Review PLAN and layout together and update the PLAN review report. Allocate public headers/exports/entry points, internals, schemas, tests and documentation to physical owners.",
       "acceptance": "Pass combined PLAN/layout QC, then obtain human first approval or apply explicit scoped preapproval. Submit the approved layout state, updated QC references/decision in DOCS_PREPARATION and checked DOCS-007 together; push and verify containment before closing this issue or advancing.",
       "sources": [
         "Running SDD Manager package: assets/DOCS_TASKS_TEMPLATE.md",
@@ -144,7 +144,7 @@
         "DOCS-007"
       ],
       "prerequisites": "Accepted SPEC, PLAN and layout, their required QC and DOCS-007 publication/issue closure are established.",
-      "scope": "Derive executable implementation tasks, dependencies and required milestone/phase review units from accepted SPEC, PLAN and layout. Check the complete task list, traceability, bounded increments and review dependencies. Do not start implementation or activate implementation-phase objects in this task.",
+      "scope": "Derive executable implementation tasks, dependencies and required milestone/phase review units from accepted SPEC, PLAN and layout. Check the complete task list, traceability, bounded increments and review dependencies. Do not start implementation or activate implementation-phase objects in this task. Derive bounded work and consumer/contract checks against the selected model, API-design and contract owners.",
       "acceptance": "Pass task-list QC, obtain human first approval or apply explicit scoped preapproval, and submit the approved TASKS state, QC references/decision in DOCS_PREPARATION and checked DOCS-008 together. Push and verify containment before closing this issue, then apply the selected mode's stop/reset/advance boundary. Completing DOCS-008 alone does not authorize whole-package QC or implementation.",
       "sources": [
         "Running SDD Manager package: assets/DOCS_TASKS_TEMPLATE.md",
@@ -169,7 +169,7 @@
         "DOCS-008"
       ],
       "prerequisites": "All preceding DOCS tasks are complete and their issue closures are verified. The current document set and required per-document QC/acceptance/publication evidence are available.",
-      "scope": "Review the complete document set, necessary children and QC reports for consistency, traceability, delivery readiness and unresolved blockers. Check task-only DOCS_TASKS, DOCS_PREPARATION control/decision evidence, initialization, orientation and actual human acceptance/publication evidence. Resolve blockers through owning documents and recheck affected readiness and acceptance; retain docs/dev/DOCS-QC-REPORT.md.",
+      "scope": "Review the complete document set, necessary children and QC reports for consistency, traceability, delivery readiness and unresolved blockers. Check task-only DOCS_TASKS, DOCS_PREPARATION control/decision evidence, initialization, orientation and actual human acceptance/publication evidence. Resolve blockers through owning documents and recheck affected readiness and acceptance; retain docs/dev/DOCS-QC-REPORT.md. Include every selected model/API-design/contract artifact and its acceptance/QC evidence in whole-package readiness.",
       "acceptance": "Publish a passing package report, DOCS_PREPARATION evidence, checked DOCS-009 and refreshed HANDOFF together; verify containment before closing this issue. HANDOFF records later integration/milestone effects as pending confirmation. After this task and issue close, the coordinator explicitly merges documentation into the actual default branch, verifies and publishes the merge, then closes/verifies sdd-docs-main and reaches the final preimplementation checkpoint. Those later operations are milestone completion gates, not prerequisites for completing DOCS-009.",
       "sources": [
         "Running SDD Manager package: assets/DOCS_TASKS_TEMPLATE.md",

@@ -6,11 +6,23 @@ When a consequential uncertainty needs human-guided comparison, use [exploration
 
 ## Document ownership
 
-`docs/dev/DECOMPOSITION.md` is the compact entry point for the logical component model. Identify principal components within each architectural block, their responsibility and non-responsibility, provided and required interfaces at the level needed to assess the design, dependency direction, data or state ownership, lifecycle and failure boundaries when architectural, and relevant verification seams. Give each child document a precise scope and link to it from the root.
+`docs/dev/DECOMPOSITION.md` owns the logical component model: responsibilities and exclusions, dependencies, state/resource ownership, provided/required APIs and verification seams. Its root maps components and their relationships; linked artifacts own cohesive detail.
 
-Focused children under `docs/dev/decomposition/` may detail a component or coherent area: subcomponents, collaboration, important invariants and design-level interface shape, and how it relates to its parent and peers. A parent defines relationships and shared constraints; a child owns detail. Split only when independent detail justifies it. Avoid duplicating the same normative interface in parent and child.
+## API surfaces
 
-Interfaces here may be provisional enough to test the architecture for coherence. Link the relevant SPEC owners and consumers when established; a cross-component guarantee can span several structural units without being copied into each. Feed incompatible obligations back to the affected design or requirement owner for an accepted decision. Identify contract details that SPEC must settle; do not present undecided errors, formats, or behavior as final requirements. Do not turn component descriptions into a file inventory, implementation order, or task checklist.
+For each library, package or component, identify its external consumers and internal collaborators. External means outside the selected unit, including in-process callers; internal APIs are cross-component collaboration boundaries, not every private helper.
+
+Define the provided/required operations, types and useful signatures or message shapes, visibility/entry points, provider and consumers, dependencies and state/resource ownership. Give enough precision for consumers to design their use without inventing the interface. Select details from actual use; do not catalogue private functions or add speculative abstraction layers.
+
+Link precise behavioral contracts to their SPEC owner when established. Separate settled surface design from semantics SPEC must resolve. A material open choice blocks dependent use; permitted later refinement identifies its owning artifact, decision scope and prerequisite. Return structural conflicts to architecture rather than hiding them in API detail.
+
+## Model and API-design artifacts
+
+Keep detail inline or extract it when shared across components or independently substantial. Focused children under `docs/dev/decomposition/` and peer documents are both allowed; `MODELS.md` and `API-DESIGN.md` are illustrative names, not required files or paths. DECOMPOSITION links each selected artifact and states its scope and ownership.
+
+Model design defines entities/value types, identities, relationships, representations and invariants. API design defines the structural surface and collaboration. Each definition has one canonical owner; reference shared types and declarations instead of copying them into each component or contract. A small cohesive design needs no extra files.
+
+Selected model/API-design artifacts belong to DOCS-004 or FDOCS-004 alongside decomposition: one proposal, approval/preapproval, accepted-state commit and evidence scope. They add no preparation task or checkpoint. SPEC assesses required behavior against these definitions and routes structural corrections to the design owner. Do not turn design artifacts into file inventories, implementation order or task checklists.
 
 ## Existing systems and changes
 
@@ -20,6 +32,6 @@ Main ARCHITECTURE and DECOMPOSITION describe the coherent intended system after 
 
 ## Review
 
-For each unit, answer what it does, how it is used, what it depends on, and how its boundary can be checked without inspecting its internals. Inspect dependency cycles and unclear ownership; prefer a focused contract or a genuine combined unit to artificial layers. Check that a later SPEC could define objective behavior for each affected boundary, and that planned implementation could proceed in localized, verifiable changes. Report unresolved design decisions rather than inventing final contracts.
+For each unit, answer what it does, how it is used, what it depends on, and how its boundary can be checked without inspecting its internals. Inspect dependency cycles and unclear ownership; prefer a focused contract or a genuine combined unit to artificial layers. Check external/internal API coverage, canonical model/type ownership and whether consumers can use each boundary without inventing its surface. Check that SPEC can define objective behavior for each affected boundary, and that planned implementation could proceed in localized, verifiable changes. Report unresolved design decisions rather than inventing final contracts.
 
 Read the main DECOMPOSITION and affected children as the intended component model. Remove narration of prior drafts or implementations after incorporating a feature; describe each settled boundary and responsibility directly. A feature overlay may describe the proposed change while it is active.

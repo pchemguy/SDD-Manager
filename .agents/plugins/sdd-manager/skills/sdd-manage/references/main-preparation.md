@@ -40,14 +40,14 @@ The predefined `DOCS-*` IDs are separate from product implementation `T-*` IDs. 
 | DOCS-001 | Root initialization and recorded file outcomes | sdd-manage |
 | DOCS-002 | PROJECT: first approval of the project brief | sdd-design |
 | DOCS-003 | ARCHITECTURE: first approval | sdd-design |
-| DOCS-004 | DECOMPOSITION: first approval | sdd-design |
-| DOCS-005 | SPEC: required QC and first approval | sdd-specify |
+| DOCS-004 | DECOMPOSITION and selected model/API-design artifacts: first approval | sdd-design |
+| DOCS-005 | SPEC and selected contract artifacts: required QC and first approval | sdd-specify |
 | DOCS-006 | PLAN: strategy QC and first approval | sdd-plan |
 | DOCS-007 | layout: combined PLAN/layout QC and first approval | sdd-plan |
 | DOCS-008 | TASKS: required QC and first approval | sdd-tasks |
 | DOCS-009 | Whole documentation package QC and report | sdd-verify; sdd-manage coordinates repairs/persistence |
 
-Necessary focused children travel with their root; they do not acquire extra preparation issues. Existing valid documents are reusable inputs, not a reason to regenerate them. On resume, assess readiness and real decisions under [human document review](human-document-review.md); preserve pending reviews without demanding retrospective interactive replay solely for missing historical records. If introducing the list into an older incomplete preparation, record in DOCS_PREPARATION the actual evidence supporting recognized first approvals without claiming historical commits had this new atomic format.
+Selected model/API-design artifacts travel with DOCS-004; contract artifacts with DOCS-005. The governing root links their paths and owners; DOCS_PREPARATION records exact accepted states and QC for the whole set. Inline sections, children and peer documents use the same task/checkpoint, without extra issues. Whole-package QC includes every selected artifact. Existing valid documents are reusable inputs, not a reason to regenerate them. On resume, assess readiness and real decisions under [human document review](human-document-review.md); preserve pending reviews without demanding retrospective interactive replay solely for missing historical records. If introducing the list into an older incomplete preparation, record in DOCS_PREPARATION the actual evidence supporting recognized first approvals without claiming historical commits had this new atomic format.
 
 ## DOCS-001: Initialize root guidance
 

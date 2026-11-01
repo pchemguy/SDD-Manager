@@ -1,0 +1,26 @@
+{
+  "source": "7ac7e1f6c5599542d4ee3b0124886ae530f6c6b5",
+  "scope": "exact committed package; no provider publication",
+  "python": "3.12.14",
+  "manifest_version": "0.16.0",
+  "package_files": 168,
+  "package_sha256": "90dd04b660ef296c3a0bb156ac9cc52756061a90878befed6cd192f157f709a5",
+  "archive_members": "all paths and bytes match committed Git blobs",
+  "excluded": "source AGENTS, acceptance, development/CI evidence and token files",
+  "checks": {
+    "support_tests": 139,
+    "publisher_tests": 50,
+    "projection_tests": 51,
+    "validator_errors": 0,
+    "validator_bundled_reference_warnings": 67,
+    "mermaid_blocks_unchanged": 8,
+    "main_tasks": 9,
+    "feature_tasks": 9
+  },
+  "limits": [
+    "instruction-source and local checks only",
+    "fresh-agent workflows and installed-client routing not run",
+    "no live-provider behavioral trial",
+    "campaign remains open; no merge, release or version bump"
+  ]
+}

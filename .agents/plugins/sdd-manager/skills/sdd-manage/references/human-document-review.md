@@ -2,7 +2,7 @@
 
 ## Development-document content boundary
 
-**Development documents describe the project, not the SDD process used to prepare them.** Enforce this when creating, revising or reviewing PROJECT, FEATURE, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS, including feature counterparts and focused children. It applies in every document-design mode, with or without human checkpoint preapproval.
+**Development documents describe the project, not the SDD process used to prepare them.** Enforce this when creating, revising or reviewing PROJECT, FEATURE, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS, including feature counterparts, focused children and selected model/API-design/contract artifacts. It applies in every document-design mode, with or without human checkpoint preapproval.
 
 State the project's intended scope, design, contracts, delivery strategy, physical structure or executable work directly, according to the document's role. Do not insert documentation mode/pass numbers, cursor state, future document-revision sequences, checkpoint approval state or reset mechanics, or make a product requirement contingent on a later documentation pass. For main preparation, keep that control information in DOCS_PREPARATION; DOCS_TASKS holds tasks/checkoffs only and HANDOFF links their owners. Feature preparation uses [FEATURE_PREPARATION](feature-preparation.md); revision evidence stays with its existing workflow owner. These control/evidence records are not product documents and may contain preparation state. Use it to select the applicable scope without narrating it in the development document. Future scope stays in its workflow record until adopted; do not import it early or turn its current absence into a permanent product exclusion.
 
@@ -24,15 +24,15 @@ The user may explicitly preapprove any future human checkpoint at any point, ind
 
 ## Created-document checkpoints
 
-Unless explicitly covered by applicable preapproval, each newly created necessary root/proposal has its own human review checkpoint, including direct owner calls and combined preparation requests. Relevant focused children are presented with their root.
+Unless explicitly covered by applicable preapproval, each newly created necessary root/proposal has its own human review checkpoint, including direct owner calls and combined preparation requests. Relevant focused children are presented with their root. Selected model/API-design artifacts belong to the DECOMPOSITION checkpoint; contract artifacts belong to the SPEC checkpoint, whether stored inline, as children or as peer documents. Review and accept each set together; extraction adds no task, issue or approval round.
 
 | New document/proposal | Owner | Hold before |
 | --- | --- | --- |
 | FEATURE | sdd-design | Dependent feature design/specification; pair draft with FEATURE_PREPARATION, which has no independent approval gate. |
 | PROJECT | sdd-design | Dependent ARCHITECTURE or other use of the brief. |
 | ARCHITECTURE / FEATURE_ARCHITECTURE | sdd-design | Dependent DECOMPOSITION or contract work. |
-| DECOMPOSITION / FEATURE_DECOMPOSITION | sdd-design | Dependent SPEC. |
-| SPEC / FEATURE-SPEC | sdd-specify | Dependent PLAN. |
+| DECOMPOSITION / FEATURE_DECOMPOSITION with selected model/API-design artifacts | sdd-design | Dependent SPEC. |
+| SPEC / FEATURE-SPEC with selected contract artifacts | sdd-specify | Dependent PLAN. |
 | PLAN / FEATURE-PLAN | sdd-plan | Dependent layout or TASKS. |
 | layout / needed feature layout proposal | sdd-plan | Dependent TASKS. |
 | TASKS / FEATURE-TASKS | sdd-tasks | Implementation or hosted task projection. |

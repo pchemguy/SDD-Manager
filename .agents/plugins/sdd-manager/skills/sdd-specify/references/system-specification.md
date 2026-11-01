@@ -21,9 +21,13 @@ SPEC defines the observable guarantees the selected structure must satisfy. Link
 
 Design supplies responsibility, dependency, extension, and verification seams; SPEC settles precise success/failure behavior and acceptance. Feedback is bidirectional: a contract can reveal an inadequate structural boundary, and design analysis can reveal an unresolved behavioral obligation. Surface the conflict to its requirement or design owner and resolve the accepted decision before dependent work. Do not silently redesign in SPEC, invent a requirement to fit the structure, or introduce a separate mapping artifact solely for traceability.
 
-## Focused children
+## Contract artifacts
 
-When distinct contracts have substantial independent detail, place them under `docs/dev/spec/` with stable semantic names. Split by cohesive behavior, component contract, public interface, external protocol, or persistent representation, rather than implementation phase or arbitrary requirement codes. Define each child's scope and relationship in its parent. The child owns detailed requirements; the root retains only the broader system guarantee and route to the child.
+Keep contract detail inline or extract cohesive public/internal API, protocol or data-format definitions. Focused children under `docs/dev/spec/` and linked peer documents are both allowed; `CONTRACTS.md` is an illustrative name, not a required file. SPEC retains system guarantees and acceptance, links every selected artifact and assigns its scope. Each detailed contract has one canonical owner.
+
+Define precise operations/signatures or message contracts, inputs/results, errors, pre/postconditions, side effects and lifecycle guarantees where they affect correct use. Reference the [decomposition model/API owners](../../sdd-design/references/decomposition.md#model-and-api-design-artifacts) for shared types and structural declarations; do not duplicate them. Resolve surface/behavior conflicts with the design owner before dependent planning. A contract artifact specifies behavior, not delivery tasks.
+
+Selected contract artifacts belong to DOCS-005 or FDOCS-005 with SPEC: its proposal, QC, approval/preapproval, accepted-state commit and evidence cover the complete selected set. There is no separate task or approval round. Include referenced models and API design in conformance checks; keep their definitions with their canonical owners.
 
 At the appropriate owner, define required successful behavior, inputs and outputs, invariants, rejection and error semantics, boundary cases, state and lifecycle, resource ownership, data formats, compatibility, and nonfunctional guarantees when those materially affect correct use. Specify externally observable outcomes and constraints, not an internal algorithm unless the algorithm itself is part of the accepted contract.
 

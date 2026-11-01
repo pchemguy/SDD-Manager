@@ -74,9 +74,9 @@ Main preparation supports [doc-design modes](../../.agents/plugins/sdd-manager/s
 | `docs/dev/FEATURE_DOCS_TASKS.md` | Nine task-only FDOCS stages; campaign-qualified hosted identities, applicability/reuse and initial completion boundaries. |
 | `docs/dev/FEATURE-QC-REPORT.md` | Whole-feature-package QC against the delta and affected main context before preparation integration and implementation. |
 | `docs/dev/ARCHITECTURE.md` | System blocks, relationships, dependency direction, patterns, and consequential decisions. Focused children are allowed. |
-| `docs/dev/DECOMPOSITION.md` | Component responsibilities, boundaries, collaborations, and provisional interfaces. Focused children are allowed. |
+| `docs/dev/DECOMPOSITION.md` | Component responsibilities, external/internal API surfaces, collaboration and model design. Selected model/API-design artifacts may be inline, children or linked peers. |
 | `docs/dev/FEATURE_ARCHITECTURE.md`, `docs/dev/FEATURE_DECOMPOSITION.md` | Bounded architectural change definition and affected component breakdown when necessary. |
-| `docs/dev/SPEC.md` | Intended behavior, final contracts, errors, invariants, and acceptance conditions. |
+| `docs/dev/SPEC.md` | Intended behavior and acceptance, referencing canonical detailed API/data contracts inline or in selected contract artifacts. |
 | `docs/dev/FEATURE-SPEC.md` | Scoped change to specified behavior until reconciled into the main SPEC. |
 | `docs/dev/PLAN.md` | Meaningful end-to-end MVP and small capability increments, phases/milestones, dependencies, verification exits, and human decision evidence. |
 | `docs/dev/FEATURE-PLAN.md` | Scoped delivery-strategy delta when a change needs one, until reconciled into the main PLAN. |
