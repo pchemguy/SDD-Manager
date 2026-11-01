@@ -1,6 +1,6 @@
 ---
 name: sdd-design
-description: Use when exploring a software project or feature, forming architecture decisions, developing a component decomposition, or creating, reviewing and revising docs/dev/PROJECT.md, FEATURE.md, ARCHITECTURE.md, DECOMPOSITION.md, and scoped architectural change documents before specification.
+description: Use when exploring a software project or feature, forming architecture decisions, defining component APIs and data models, developing a component decomposition, or creating, reviewing and revising docs/dev/PROJECT.md, FEATURE.md, ARCHITECTURE.md, DECOMPOSITION.md, and scoped architectural change documents before specification.
 ---
 
 # Explore and design
@@ -25,13 +25,13 @@ Choose the work requested and load only its reference. A request for a later sta
 | Create, revise or review FEATURE.md and its required preparation companion with the coordinator | [feature brief](references/feature-brief.md) |
 | Proactively refine an initial idea before PROJECT, explore a feature delta, or resolve consequential uncertainty during later design | [exploration](references/exploration.md) |
 | Define or revise major system blocks, dependency direction, and architectural decisions | [architecture](references/architecture.md) |
-| Define or revise component responsibilities, collaboration, and provisional interfaces | [decomposition](references/decomposition.md) |
+| Define or revise component responsibilities, external/internal APIs, data models and selected design artifacts | [decomposition](references/decomposition.md) |
 
 When the request crosses stages, load the next reference as that stage becomes relevant. Exploration can remain conversational. Do not create project documents solely because discussion has matured. Document creation or revision requires **sdd-manage** to coordinate the user's request and a current **sdd-orient** handoff identifying a usable Git worktree, applicable instructions, target paths, and unresolved dirty state. This skill does not perform orientation or authorize a different workflow.
 
 Use the **sdd-conventions** modularity reference when defining or reviewing boundaries, and its design heuristics when assessing a chosen approach or comparing options. Keep these checks separate from the document-specific procedures below. Observe project instructions and existing contracts; do not overwrite unowned changes. If required project evidence conflicts, resolve the conflict before mutation.
 
-`FEATURE.md` owns the [scoped feature brief](references/feature-brief.md); its companion retains preparation evidence. `PROJECT.md` owns the [concise project brief](references/project-brief.md), `ARCHITECTURE.md` owns high-level design, and `DECOMPOSITION.md` owns detailed logical component boundaries. Both ARCHITECTURE and DECOMPOSITION may have focused children. Scoped feature documents express a proposed architectural delta where necessary. These documents inform SPEC; they neither replace its behavioral contracts nor authorize implementation, planning, layout authoring, or task execution.
+`FEATURE.md` owns the [scoped feature brief](references/feature-brief.md); its companion retains preparation evidence. `PROJECT.md` owns the [concise project brief](references/project-brief.md), `ARCHITECTURE.md` owns high-level design, and `DECOMPOSITION.md` owns detailed logical component boundaries. Both ARCHITECTURE and DECOMPOSITION may have focused children. Model and API-design detail may also use linked peer documents under the [decomposition ownership rules](references/decomposition.md#model-and-api-design-artifacts). Scoped feature documents express a proposed architectural delta where necessary. These documents inform SPEC; they neither replace its behavioral contracts nor authorize implementation, planning, layout authoring, or task execution.
 
 ## Document boundaries
 
@@ -40,7 +40,7 @@ Use the **sdd-conventions** modularity reference when defining or reviewing boun
 | PROJECT | Concise purpose, users, outcomes, principal scope/non-goals and consequential constraints, with material decision gaps identified. |
 | FEATURE | Intended capability delta, retained behavior, compatibility/constraints and material product questions. |
 | ARCHITECTURE | Major blocks, system-wide relationships and dependency direction, and consequential structural rationale. |
-| DECOMPOSITION | Logical components within those blocks: responsibility, collaboration, state ownership, and design-level interface and verification seams. |
+| DECOMPOSITION | Logical components, provided/required external and internal APIs, state ownership, model design and verification seams; owns selected model/API-design artifacts. |
 | SPEC | Observable behavior and precise success/failure contracts, required qualities, and acceptance. |
 | PLAN | Practical delivery order, capability increments, dependencies, and exit/decision evidence. |
 | layout.md | Physical allocation of source, tests, documentation, and artifacts. |

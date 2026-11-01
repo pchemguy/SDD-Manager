@@ -4,6 +4,6 @@ interface:
   icon_small: "./assets/icon.svg"
   icon_large: "./assets/icon.svg"
   brand_color: "#654C98"
-  default_prompt: "Use $sdd-specify to define or review this project's required behavior, contracts, and acceptance conditions."
+  default_prompt: "Use $sdd-specify to define or review this project's required behavior, API/data contracts and acceptance, using linked contract artifacts where useful."
 policy:
   allow_implicit_invocation: true
