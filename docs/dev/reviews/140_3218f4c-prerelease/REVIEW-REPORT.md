@@ -55,3 +55,9 @@ All four inventory units are assessed at their recorded depth. Review found **on
 ## R-001 revision recheck
 
 V-001 includes selected peer artifacts in specification/planning/task inputs, feature accepted-state commits, coordinator state comparisons, QC currency and root report scope/identity fields. A peer-only edit is now explicitly included in the affected-readiness rule and report source identities. Existing root reports/tasks/checkpoints are retained; inline definitions add no files. Five package-documentation tests pass; 1,282 current links/anchors resolve. Finding **R-001: Verified** by source recheck; this does not claim observed consumer behavior.
+
+## Final prerelease readiness
+
+Candidate **3a5fd164e78a94f0f62ec9dd4eb24b224b9e437a**, version **0.16.1**: all four review units assessed, sole finding R-001 verified, and feasible source/local checks pass. [Exact-source package evidence](final-verification.json) verifies all 168 Git-blob members, stable ZIP/checksum names, checksum contents and exclusion/preservation boundaries. No unresolved confirmed source/package blocker remains.
+
+Ready for the authorized main integration and release operation under the stated evidence limits. The release workflow must rebuild the final default-branch release commit and verify its actual provider result; this report does not claim those future effects or fresh-agent/client acceptance. Finalization changes only campaign/navigation/HANDOFF evidence, leaving the verified package tree intact.
