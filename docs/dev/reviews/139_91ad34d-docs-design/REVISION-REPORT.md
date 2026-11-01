@@ -33,3 +33,18 @@ Main/feature preparation and human-review guidance assign selected model/API-des
 Both DOCS/FDOCS task templates carry API/model/contract responsibilities through 004–009. Main tracking JSON supplies matching scope/acceptance briefs. All nine task IDs, titles, dependency fields, remaining projection metadata and milestone definitions are unchanged; mode/stop/reset policy source is untouched. No product tracking object was created or altered.
 
 Checks pass: five documentation tests; all 51 forge-project tests, including rendered predefined preparation definitions and helper scope contracts; explicit baseline comparison of task headers/dependencies and JSON metadata; changed-document links and whitespace. This establishes source/local contract alignment, not live projection or client behavior. Downstream planning/layout/task/incorporation/QC projection work remains V-006.
+
+## V-006 — Downstream handoffs and source recheck
+
+PLAN schedules necessary refinement, consumer integration and verification with canonical owners and prerequisites. Layout allocates public headers/exports/entry points, internals, schemas and selected documentation. TASKS derivation/review traces these definitions into bounded work and consumer checks without creating a competing contract. Scoped feature incorporation resolves actual artifact paths, preserves one owner and retains still-required definitions during archive. Governing QC reports cover selected children and peers without separate reports.
+
+PLUGIN, the full README, project instruction template, source capability map and plugin contract reflect the same ownership and checkpoint bundles. The integration skill's presentation prompt includes linked artifacts; existing presentation icons remain suitable. The [assessment recheck](REVIEW-REPORT.md#revision-recheck) records six focused source contrasts for R-001/R-002, both verified at the instruction-source level.
+
+Local verification on Linux, Python 3.12.14 and Node 24.22.1:
+
+- 139 support tests and 50 publisher tests pass. V-005's 51 projection tests pass; projection runtime source is unchanged by V-006.
+- Package author validator: zero errors, 67 bundled sibling-reference warnings. These warnings do not establish client handoff support.
+- Compared with approved-plan commit a159611b: all nine task IDs/titles/dependencies and non-brief JSON tracking metadata remain unchanged; eight Mermaid blocks are byte-identical. Sixteen added local Markdown links/anchors resolve. Whitespace and scope checks pass.
+- Version/manifest, runtime scripts, demo prompts and closed campaign records are unchanged. Only planned instruction sources, affected source projections and current campaign evidence changed.
+
+Exact committed package verification follows publication of this checkpoint. Static/source/local checks do not establish fresh-agent behavior, installed-client routing or live provider acceptance. No task issue, integration, closure, version bump or release is selected.

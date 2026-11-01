@@ -41,7 +41,7 @@ Preserve narrow direct/standalone requests, pending decisions and unfinished wor
 
 **Push every workflow-owned commit and verify remote containment before further work or another commit.** This includes completed documents, tasks, review reports, revision actions and merges. A failed push blocks progression. A retained implementation task completion with known failure or uncertain eligibility first follows [publication preflight](skills/sdd-implement/references/startup-and-continuation.md#push-before-task-work); only bounded authorized recovery/corrective persistence may precede its safe publication. Follow [per-commit publication](skills/sdd-manage/references/git-workflows.md#publish-each-commit); preserve explicit human-directed local-only or deferred-publication exceptions.
 
-**For each necessary new document, publish the reviewable state, present substantive results and pause for human acceptance before dependent work unless explicit applicable preapproval covers that checkpoint.** The same checkpoints apply to necessary feature documents/proposals. Reuse sufficient existing inputs rather than creating optional documents to fill the sequence.
+**At each necessary document checkpoint, publish the reviewable proposal and its selected artifacts, present substantive results and pause for human acceptance before dependent work unless applicable preapproval covers it.** Model/API-design artifacts share the DECOMPOSITION checkpoint; contract artifacts share SPEC, without extra DOCS/FDOCS tasks or approval rounds. The same checkpoints apply to necessary feature documents/proposals. Reuse sufficient existing inputs rather than creating optional documents to fill the sequence.
 
 For main or feature document preparation, select or recover the [doc-design mode](#doc-design-modes) before applying the document checkpoints below. The selected mode determines which approvals remain active and where its preparation pass stops.
 
@@ -90,7 +90,7 @@ This capability directory identifies owners, including skills normally activated
 | Workflow selection, coordination, branches, credentials and transitions | [sdd-manage](skills/sdd-manage/SKILL.md) |
 | Read-only repository/instruction state and interruption inspection | [sdd-orient](skills/sdd-orient/SKILL.md) |
 | Modularity, design review, task hierarchy and shared conventions | [sdd-conventions](skills/sdd-conventions/SKILL.md) |
-| Project brief, architecture and component decomposition | [sdd-design](skills/sdd-design/SKILL.md) |
+| Project brief, architecture, component APIs and model design | [sdd-design](skills/sdd-design/SKILL.md) |
 | Behavior, interfaces, contracts and acceptance requirements | [sdd-specify](skills/sdd-specify/SKILL.md) |
 | Delivery strategy, milestones, dependencies and physical layout | [sdd-plan](skills/sdd-plan/SKILL.md) |
 | Executable tasks, dependencies and task-list review | [sdd-tasks](skills/sdd-tasks/SKILL.md) |

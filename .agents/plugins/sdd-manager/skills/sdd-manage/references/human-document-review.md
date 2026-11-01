@@ -2,7 +2,7 @@
 
 ## Development-document content boundary
 
-**Development documents describe the project, not the SDD process used to prepare them.** Enforce this when creating, revising or reviewing PROJECT, FEATURE, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS, including feature counterparts and focused children. It applies in every document-design mode, with or without human checkpoint preapproval.
+**Development documents describe the project, not the SDD process used to prepare them.** Enforce this when creating, revising or reviewing PROJECT, FEATURE, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS, including feature counterparts, focused children and selected model/API-design/contract artifacts. It applies in every document-design mode, with or without human checkpoint preapproval.
 
 State the project's intended scope, design, contracts, delivery strategy, physical structure or executable work directly, according to the document's role. Do not insert documentation mode/pass numbers, cursor state, future document-revision sequences, checkpoint approval state or reset mechanics, or make a product requirement contingent on a later documentation pass. For main preparation, keep that control information in DOCS_PREPARATION; DOCS_TASKS holds tasks/checkoffs only and HANDOFF links their owners. Feature preparation uses [FEATURE_PREPARATION](feature-preparation.md); revision evidence stays with its existing workflow owner. These control/evidence records are not product documents and may contain preparation state. Use it to select the applicable scope without narrating it in the development document. Future scope stays in its workflow record until adopted; do not import it early or turn its current absence into a permanent product exclusion.
 

@@ -4,7 +4,7 @@
 
 Campaign **139_91ad34d**. Reviewed source: `7c626c59e695c21f2ac30c1fe3674155f7851f87`; starting baseline: `91ad34dc31707032ca9781675400b52ca68abd07`. The human requests assessment of current library/package/component design instructions and proposes explicit external/internal APIs at decomposition with appropriate downstream refinement.
 
-This is one focused source-review unit, not a repair or implementation request. Assessed canonical owners and consequential handoffs below; no installed-client, consumer trial, generated library or runtime execution. Prior closed packages excluded. Current instructions remain unchanged.
+The initial assessment below records one focused source-review unit before repair authorization. Assessed canonical owners and consequential handoffs below; no installed-client, consumer trial, generated library or runtime execution. Prior closed packages excluded. Baseline observations are retained; the revision recheck below records the subsequently authorized changes.
 
 ## Existing instruction coverage
 
@@ -23,8 +23,8 @@ This is one focused source-review unit, not a repair or implementation request. 
 
 | ID | Type | Priority | Confidence | Disposition |
 | --- | --- | --- | --- | --- |
-| R-001 | Improvement recommendation: explicit API-surface design | Medium | High | Selected for focused revision planning; implementation pending |
-| R-002 | Improvement recommendation: API refinement ownership and readiness | Medium | High | Selected for focused revision planning; implementation pending |
+| R-001 | Improvement recommendation: explicit API-surface design | Medium | High | Verified in V-004–V-006; source recheck below |
+| R-002 | Improvement recommendation: API refinement ownership and readiness | Medium | High | Verified in V-004–V-006; source recheck below |
 
 ### R-001 — Explicit external/internal API definitions are not a distinct decomposition deliverable
 
@@ -63,6 +63,23 @@ This is one focused source-review unit, not a repair or implementation request. 
 
 The human's direction is sound with SPEC explicitly retained in the chain. Later stages should carry design into deliverable work, not independently redefine it. Exact signature and representation detail should match the risk and consumer needs; no mandate to finalize every private implementation choice before coding.
 
-## Outcome and next boundary
+## Initial assessment outcome
 
 Focused assessment complete: two proposed improvements, zero asserted violations of an existing explicit API-inventory mandate. Recommendations are not accepted source changes. No workflow/package/runtime/version edits, API prototype or release. Campaign remains open; a subsequent accepted revision can plan the bounded canonical-owner and QC changes. Checks: located source inspection, current report links, scoped diff/closed-record preservation and whitespace only; runtime suites are unnecessary for report-only work.
+
+## Revision recheck
+
+The human subsequently authorized the focused plan and its execution. R-001 is addressed by explicit external/internal API surfaces in decomposition and linked model/API-design owners; R-002 by canonical SPEC contracts, refinement prerequisites and downstream planning/layout/task checks. Optional artifacts stay within DOCS/FDOCS-004 or 005; 006–009 carry the dependent work and QC.
+
+Source contrasts checked:
+
+| Case | Located source outcome |
+| --- | --- |
+| Library with shared models and a public API | Decomposition names provider/consumers, operations/types/shapes and visibility; optional model/API artifacts own structural detail, and SPEC references canonical behavioral contracts. |
+| Small cohesive design | Inline definitions remain sufficient; extraction, private-helper catalogues and extra layers are not required. |
+| Componentized application | Internal collaboration APIs receive explicit surfaces and contract checks without exposing every private implementation detail. |
+| Feature with one selected artifact | Incorporation resolves actual paths from root ownership/evidence, keeps the bounded selection and prevents duplicate definitions; archive retains needed active definitions and substantial children. |
+| Material API choice unresolved | Design/SPEC owns resolution before dependent use; permitted refinement identifies owner, scope and prerequisites in PLAN/TASKS. |
+| Interactive or autodoc preparation | Selected artifacts share existing 004/005 approval/preapproval, commits and evidence; nine task identities, dependencies and existing mode/stop/reset sources remain intact. |
+
+These are direct instruction-source assessments, not generated-project or fresh-agent trials. Local support/publisher/template checks are recorded in [the revision record](REVISION-REPORT.md); exact committed package verification remains pending. No installed-client or live-provider behavioral claim is made. The campaign remains open.

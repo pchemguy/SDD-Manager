@@ -134,8 +134,9 @@ The main development documents live in `docs/dev/` and describe the project, fro
 | --- | --- |
 | `PROJECT.md` | Concise project brief: purpose, users, outcomes, principal scope/non-goals and consequential constraints. |
 | `ARCHITECTURE.md` | Major blocks, relationships, dependency direction, and design decisions. |
-| `DECOMPOSITION.md` | Component responsibilities, collaborations, and design-level interfaces. |
-| `SPEC.md` | Required behavior, final contracts, errors, invariants, and acceptance. |
+| `DECOMPOSITION.md` | Component responsibilities, explicit external/internal APIs, collaboration and model design. |
+| Optional model/API-design artifacts | Canonical types, identities, relationships, invariants and structural API definitions; inline, children or linked peers. |
+| `SPEC.md` | Required behavior and acceptance, with canonical detailed API/data contracts inline or in selected contract artifacts. |
 | `PLAN.md` | Meaningful end-to-end MVP, small capability increments, phases/milestones, dependencies, and verification/decision gates. |
 | `layout.md` | Physical ownership of source, tests, documentation, and other artifacts. |
 | `TASKS.md` | Phase → Milestone → Task hierarchy, stable IDs, and progress evidence. |
@@ -152,7 +153,7 @@ PROJECT.md turns the seed and clarified decisions into shared project context, w
 
 ### Human review
 
-Greenfield preparation walks you through PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS. In the default interactive/onepass mode, each necessary newly created document gets substantive analysis and its own human acceptance checkpoint before dependent work. Clarification answers, agent QC and standing Git authorization do not accept documents.
+Greenfield preparation walks you through PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS. In the default interactive/onepass mode, each named document checkpoint receives substantive analysis and human acceptance before dependent work. Selected model/API-design artifacts share decomposition task/checkpoint 004; contract artifacts share specification task/checkpoint 005, whether inline, children or peers. Names such as MODELS.md, API-DESIGN.md and CONTRACTS.md are optional. Main and feature preparation each use nine tasks under the selected mode and stopping rules. Clarification answers, agent QC and standing Git authorization do not accept documents.
 
 Existing or interrupted preparation assesses actual progress and continues using acceptable inputs. Requested interactive reviews come first; important startup issues can prompt concerns. Feature preparation reviews only necessary deltas and reuses sufficient main inputs. See [human document review](skills/sdd-manage/references/human-document-review.md).
 

@@ -30,7 +30,7 @@ For continuation, read `docs/dev/HANDOFF.md` and use `sdd-manage`'s continuity s
 
 ## Human checkpoints
 
-Present each necessary new development document with concise substantive analysis and pause for acceptance before dependent work. Honor the user's requested implementation range and stop when it is complete.
+Present each necessary development-document proposal and its selected artifacts with concise substantive analysis and pause for acceptance before dependent work. Model/API-design artifacts share the decomposition checkpoint; contract artifacts share specification, without additional documentation tasks or approval rounds. Honor the user's requested implementation range and stop when it is complete.
 
 The user may explicitly preapprove future checkpoints at any time. Retain the scope and conditions of that decision, including after interruption; do not repeat a covered approval request. Preapproval does not waive QC, resolve blockers or expand the authorized implementation range.
 
