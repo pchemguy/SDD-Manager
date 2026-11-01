@@ -23,8 +23,8 @@ This is one focused source-review unit, not a repair or implementation request. 
 
 | ID | Type | Priority | Confidence | Disposition |
 | --- | --- | --- | --- | --- |
-| R-001 | Improvement recommendation: explicit API-surface design | Medium | High | Open; not accepted or implemented |
-| R-002 | Improvement recommendation: API refinement ownership and readiness | Medium | High | Open; not accepted or implemented |
+| R-001 | Improvement recommendation: explicit API-surface design | Medium | High | Selected for focused revision planning; implementation pending |
+| R-002 | Improvement recommendation: API refinement ownership and readiness | Medium | High | Selected for focused revision planning; implementation pending |
 
 ### R-001 — Explicit external/internal API definitions are not a distinct decomposition deliverable
 

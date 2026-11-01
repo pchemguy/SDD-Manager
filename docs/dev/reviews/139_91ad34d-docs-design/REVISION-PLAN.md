@@ -1,25 +1,46 @@
-# Documentation-design revision campaign
+# API, model and contract design extensions
 
-Campaign **139_91ad34d**. Status: **Open; focused API-design assessment complete; revision decisions pending**.
+Campaign **139_91ad34d**; branch `revision/139_91ad34d-docs-design`, from/returning to main at `91ad34dc31707032ca9781675400b52ca68abd07`. Opening `7c626c59e695c21f2ac30c1fe3674155f7851f87`. [Assessment](REVIEW-REPORT.md): R-001/R-002. **Planning complete; execution not selected.**
 
-- Starting baseline / full branch-off commit: `91ad34dc31707032ca9781675400b52ca68abd07`.
-- Creation parent and integration target: `main`.
-- Working branch: `revision/139_91ad34d-docs-design`.
-- No suspended parent. Standard reporting.
+## Design rules
 
-## Objective and authority
+- DECOMPOSITION explicitly defines external and cross-component internal API surfaces for libraries, packages and components: provider/consumers, operations, types and useful signatures/shapes, visibility, dependencies and state/resource ownership. External means outside the selected unit; private implementation helpers need no advance catalogue.
+- Keep models, API design and contracts inline or extract cohesive documents when shared across components or independently substantial. `MODELS.md`, `API-DESIGN.md` and `CONTRACTS.md` are optional names, not required files; roots or focused children are both permitted.
+- MODELS owns entities/value types, identities, relationships, representations and invariants. API design owns the structural surface. CONTRACTS owns precise call/protocol behavior, inputs/results, errors, pre/postconditions, side effects and lifecycle guarantees. SPEC owns complete system behavior and acceptance, referencing detailed definitions rather than copying them.
+- Each definition has one canonical owner. The governing design/SPEC root links every selected artifact and states its scope. Material API/model/contract decisions are resolved before dependent work; permitted later refinement names its owning artifact, decision scope and prerequisite. PLAN/layout/TASKS do not independently redefine contracts.
 
-The human requests opening a docs-design revision campaign. Reserve this campaign for documentation-design concerns and retain the next supplied objectives here. The later human request selects a focused assessment of library/package/component APIs across decomposition and downstream design documents. It does not yet authorize changes to the reviewed source.
+## Task and checkpoint ownership
 
-## Actions and stopping boundary
+Main and feature preparation retain their nine tasks, IDs, order, dependencies and mode/stop rules. Optional artifacts belong to the appropriate task's proposal, QC, human approval/preapproval, accepted-state commit, evidence and issue closure. They add no task, issue, milestone, checkpoint or approval round.
 
-| ID | Action | State |
+| Main / feature task | Responsibility |
+| --- | --- |
+| DOCS-004 / FDOCS-004 | Component decomposition, explicit provided/required APIs, model design and selected model/API-design artifacts. |
+| DOCS-005 / FDOCS-005 | Precise contracts and selected CONTRACTS artifacts; assess referenced models and API design against required behavior. Route structural corrections to their owner before progression. |
+| DOCS-006 / FDOCS-006 | Plan API/model/contract refinement, implementation, consumer integration and verification with explicit dependencies. |
+| DOCS-007 / FDOCS-007 | Allocate public headers/exports/entry points, internal implementation, schemas, tests and documentation to physical owners. |
+| DOCS-008 / FDOCS-008 | Derive bounded work against the selected definitions, including consumer/contract checks and documentation; retain the existing autodoc stop. |
+| DOCS-009 / FDOCS-009 | Include every selected optional artifact in whole-package consistency, traceability and readiness checks. |
+
+Use the existing preparation record for artifact paths/owners, exact acceptance and QC evidence. Apply the same rules to scoped feature artifacts and affected main definitions; unrelated areas stay outside scope.
+
+## Revision actions
+
+| ID | Change | Owners / verification |
 | --- | --- | --- |
-| V-001 | Establish campaign identity, plan/record, navigation and handoff; publish/read back the opening | Complete: opening 7c626c59 published/read back |
-| V-002 | Assess the supplied API-design concern and record findings | Assessment complete; R-001/R-002 pending decision |
+| V-001 | Open campaign | Complete; published opening. |
+| V-002 | Assess API-design instructions | Complete; published report `864b17d3`. |
+| V-003 | Prepare this focused plan | Complete on publication; source edits remain pending. |
+| V-004 | Define explicit API design and flexible artifact ownership | sdd-design entry/decomposition, sdd-specify entry/specification/review; update shared boundary guidance only where needed. Check operation/type/consumer coverage and single ownership. |
+| V-005 | Bind optional artifacts to the existing preparation tasks and checkpoints | Main/feature preparation, human-review/QC guidance, DOCS/FEATURE_DOCS task templates, DOCS_TRACKING JSON and preparation-record templates. Keep exactly nine tasks and the same IDs, titles, dependencies, issues and stop/reset boundaries; align affected briefs and evidence coverage. |
+| V-006 | Complete downstream handoffs and rechecks | PLAN/layout, task derivation/conformance, selected feature incorporation and package QC include linked artifact owners. Align affected entry/document tables and full README. Check focused library, componentized-app and feature-delta scenarios; run affected documentation/support and projection/template contracts plus link/package checks. |
 
-Stop after the published opening on this revision branch. Do not start a review, edit plugin instructions or project documents, integrate, close or release solely from the opening request. Prior closed campaign packages remain frozen. Package version remains 0.16.0.
+## Completion criteria
 
-## Selected focused assessment
+- A library's public API and internal collaboration APIs are explicit; consumers need not invent missing contracts.
+- Inline and extracted artifact arrangements both have complete, nonduplicated ownership and traceability. Small projects need no extra files or layers.
+- Optional artifacts receive review/acceptance and QC within their mapped DOCS/FDOCS task. All nine task identities and interactive/autodoc/multipass checkpoints remain intact.
+- Deferred refinement cannot bypass a required decision or let a consumer start before its contract is ready.
+- Instructions describe the intended workflow directly. Changes stay within these API/model/contract concerns; no new workflow, registry, package version or release.
 
-The human proposes explicit external/internal APIs in decomposition followed by appropriate downstream API design work. [Assessment](REVIEW-REPORT.md) records current ownership, two improvement recommendations and the proposed design → SPEC → PLAN/layout/TASKS allocation. Source revision, implementation, integration and closure remain unselected. Original opening-only stop is superseded only for this report-producing assessment.
+Stop after publishing this plan. Implementing V-004–V-006, integration and campaign closure require a subsequent instruction.
