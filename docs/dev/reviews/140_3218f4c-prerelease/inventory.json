@@ -136,7 +136,7 @@
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/icon.svg",
-      "unit": "U-003",
+      "unit": "U-004",
       "bytes": 581,
       "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -181,18 +181,18 @@
       "unit": "U-001",
       "bytes": 3230,
       "sha256": "fbd4b671e75b26630ee9e780e33c78b722171292949b6fa52c6b5ec998eb9bd3",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 505,
       "sha256": "3afb66258ca9ee5f7e35b0986ac130e34a4a73c4d5c41b1c7de94e19133e4cea",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 570,
       "sha256": "5702cda32d79bc28857dedfe0f9811d382d8b2e4c46d1ac571d8114aabd279a4",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -202,81 +202,81 @@
       "unit": "U-001",
       "bytes": 11780,
       "sha256": "5f93a3f22bae86a08de4f621637c46fe7bfd41008b480d97d056e06142e20372",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/design-heuristics.md",
       "unit": "U-001",
       "bytes": 1597,
       "sha256": "b4ded8adbaa45a74858cff4dbed277936d52d31a91534ab303b6af018262a448",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/development-document-qc.md",
       "unit": "U-001",
       "bytes": 15492,
       "sha256": "5f5dafa5e673f057f4947c2ab26bdce52ae4945449d81527812155f9442826fd",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/hosting-tokens.md",
       "unit": "U-001",
       "bytes": 3218,
       "sha256": "1c8941f1cb0f82e32debfba00c23b28b515164f554a191cedf9416052b0efe21",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/markdown-style.md",
       "unit": "U-001",
       "bytes": 5005,
       "sha256": "16eb402dba42bbf95708d717aa839d3684199ac2a8770ed0bca5019f8b735583",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/modularity.md",
       "unit": "U-001",
       "bytes": 2201,
       "sha256": "98d41ef9fb16f373ca2fddfe2c048775a40165823dd503d4df58c18654b11283",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/review-campaigns.md",
       "unit": "U-001",
       "bytes": 8233,
       "sha256": "46cd6e415c44262a0e092c36eb2ca4e44c303cd01e531325c4d66236f377512f",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/task-hierarchy.md",
       "unit": "U-001",
       "bytes": 4396,
       "sha256": "ae63a3a33290423b7aa4866882e0a627ebe95fa0322bd8a0e7e78f87d7172543",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/workflow-identity.md",
       "unit": "U-001",
       "bytes": 9447,
       "sha256": "8ae990f893cee1373f088fdc2fb2a5e28ab56d1a202f39309ffdb29fa3da1a7d",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/SKILL.md",
       "unit": "U-001",
       "bytes": 7902,
       "sha256": "861a644bbffffb8bb3725ee252001c5b2c44eb60b4a492f4d5ba17cbaf187e32",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 411,
       "sha256": "410d8c60cac9d953bf179776adcda42761224628615fdfcc71413226602e4ece",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 562,
       "sha256": "98c55eb98b3e3702037698739b96fb550da2223bf733fb576650d0a4c5504864",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -286,53 +286,53 @@
       "unit": "U-001",
       "bytes": 4170,
       "sha256": "fc25beab6dba06ad797895fc7c7fd36e03b2a4d1c1f05d6d90be1353655faa98",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/decomposition.md",
       "unit": "U-001",
       "bytes": 5214,
       "sha256": "55d4e44e6a75525dd6ea19af80daac99c12d7cd99c4a1376aed51290d4a125ee",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/exploration.md",
       "unit": "U-001",
       "bytes": 9956,
       "sha256": "c7ec3ff5c8a74a46a4cfb38562cb8f8484611646ec03a1966e8e0627b758fedb",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/feature-brief.md",
       "unit": "U-001",
       "bytes": 4826,
       "sha256": "68df7adf063475206d014e84356d6f6744682b0b6a29f17787a229791524fb8a",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/project-brief.md",
       "unit": "U-001",
       "bytes": 8063,
       "sha256": "ce17cd1c1d25a94f9ad5c300aa2e061d1d9d6082391aafa4fe92450850de3551",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md",
       "unit": "U-001",
       "bytes": 3982,
       "sha256": "90a407f7e9c48ccdc4eb0f687dcca567f1a2323c692743115230a2299720cdf5",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 471,
       "sha256": "9715602c3bdcd14d41e6e99e24edb32389499e0ec96b0aad5cdf4b30b187de15",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 587,
       "sha256": "69e272ee97e9957387f8ca8b51bec3d3d176c33e6bf6b20d2bff5b3536f507e2",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -342,39 +342,39 @@
       "unit": "U-001",
       "bytes": 2857,
       "sha256": "40c179cf40c73ad36d76f722950eeaf33ab1c37993edd370f6fa16305d2a5465",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/review-and-findings.md",
       "unit": "U-001",
       "bytes": 2719,
       "sha256": "61bda144ac45af632307b12bb3cf9652727b83c3b3ffc57558188d0d2a6837b1",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/standalone-documentation.md",
       "unit": "U-001",
       "bytes": 3329,
       "sha256": "b2ced68b8f869efc47206261795e225b42455b513c7a2be4f091cd891c3ef951",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md",
       "unit": "U-001",
       "bytes": 12663,
       "sha256": "d10410abdfd16cd7cc8d3d30bf687af3f3915dd79451a5616f5c1272b3e2b82f",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 508,
       "sha256": "65a79f791a2285753a0e6ca9eb83e203b181c0277ada5706add85f4c86c18783",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 579,
       "sha256": "ca997d09da83d706126f43dc2ace19c00ee9036ae67dcce225e688a09d398d33",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -384,77 +384,77 @@
       "unit": "U-001",
       "bytes": 12476,
       "sha256": "8918f9ee91b75c1fd9748070752c11751a63c01393277ca9d6eb939564e7ee91",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-feature-preparation.md",
       "unit": "U-001",
       "bytes": 5226,
       "sha256": "0aefc7f991f86355afe8d013de6a389623b8ecc17ceace222208fe3768095c75",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-issue-lifecycle.md",
       "unit": "U-001",
       "bytes": 5931,
       "sha256": "1331828991b337873b3fd9a713d6c60927a0e935995b0d183341fe1c2278b952",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-milestone-lifecycle.md",
       "unit": "U-001",
       "bytes": 4813,
       "sha256": "a3e92e1b20dd6d78b2c3397c418f261439b0fbc9f35c4b8100b6e4e90e220ac8",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-packaging.md",
       "unit": "U-001",
       "bytes": 9740,
       "sha256": "c3ace577908402f3a9268226878625ee819695c647372083316589bfdd53b998",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-projection.md",
       "unit": "U-001",
       "bytes": 7355,
       "sha256": "2af11496dca72b976057e09ad90a3235281dfa378fe0d228404b49b8d551c516",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-release-workflows.md",
       "unit": "U-001",
       "bytes": 9932,
       "sha256": "39038a965e69eda117856b6ce137d67f804c8e80209fa83c7ba077e03099e4f8",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-releases.md",
       "unit": "U-001",
       "bytes": 12136,
       "sha256": "ff0f5c427dfd63a95df5de9e4054efbd5ebc3903d543623e295c7b69e344eef3",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github.md",
       "unit": "U-001",
       "bytes": 15752,
       "sha256": "20db8dd069c453c47d4c181c1a81e4fb88a5ef9c5d3920619bf902597ed3c7db",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/release-highlights.md",
       "unit": "U-001",
       "bytes": 20261,
       "sha256": "782493634d378e2d41f11d0a99be9902eaedb43bd9e7fe783785a8b37e91ed60",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/release-message.md",
       "unit": "U-001",
       "bytes": 9711,
       "sha256": "7771542350fe134a5563ffce8ae58e36fcc647b9935a43f3d658dfb6686a95c9",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md",
@@ -524,18 +524,18 @@
       "unit": "U-001",
       "bytes": 9495,
       "sha256": "391ac42abf8213c16b22b5e18284e67dd098122098256e75fb01251a6244007b",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 662,
       "sha256": "fbaa03bfe7cc660089090feeac5914b31c667901fa49e4c1fb95f991f99ddb15",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 588,
       "sha256": "4fd314a8f182561a13fbf6fe062e4aee5fd0e0330dccd9943ec14aa5dab34c48",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -545,53 +545,53 @@
       "unit": "U-001",
       "bytes": 21120,
       "sha256": "0c338bd91b6bf408e6c94a5c742c3d9c2a296856afbb930fb3463465ee5cd501",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/environment-recovery.md",
       "unit": "U-001",
       "bytes": 3149,
       "sha256": "98871d70de203d3216059b2d619dcd96af9991376573ac235392c8707858fa93",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/range-selection.md",
       "unit": "U-001",
       "bytes": 4345,
       "sha256": "d03567892e45a1cb54bf01ecb55b8e8add9939dc4f69f94eaffe5583bf8af7d5",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/startup-and-continuation.md",
       "unit": "U-001",
       "bytes": 13039,
       "sha256": "5ac2b0232920beb8aa336eec02cc249151e85eecc8b44737e19d4f8a845b08cc",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/task-execution.md",
       "unit": "U-001",
       "bytes": 3543,
       "sha256": "904f3f51f5fbaa59ba1782d7748b61b79c7e8ca4584c2203c5aca30f46bbcdc8",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/SKILL.md",
       "unit": "U-001",
       "bytes": 4520,
       "sha256": "27a87ceae12d69532ba7262673160b061fc833d081051bfc9e3039c2756af0e3",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 507,
       "sha256": "91e1c2d7fc4b5f682c3435057a66f3562886df1e1cf082665f035cb8d71e082d",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 591,
       "sha256": "9b68ea07e6b5916efa646ad8f639cb1872523bb40630043a317cc862440dc006",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -601,25 +601,25 @@
       "unit": "U-001",
       "bytes": 16935,
       "sha256": "708163c4ab8bf700bed2a77caf56b23f219885bc0e71393ba512cada68a90c01",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/SKILL.md",
       "unit": "U-001",
       "bytes": 17175,
       "sha256": "3f2f9d9c36ec2227a4d4be5c804eed1a864525275f9da10debf1a122213e0a91",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 524,
       "sha256": "c3d318cf2a1074db8bc3c956109b12b1a3399c3835eded7bbac57f9ee7f5a778",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 590,
       "sha256": "d263da0cf62afe30dec52294f51c33a0d522b25c44049224a2274037e8ace44d",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -629,147 +629,147 @@
       "unit": "U-001",
       "bytes": 4994,
       "sha256": "eb2b006824da0312323777b61459c1094ccef847075b6250448c2161bc48dc57",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/ai-logs.md",
       "unit": "U-001",
       "bytes": 6941,
       "sha256": "407b8b32c1b955b029caa6fb6663085854fb6b9d418f514c1a3f7fdbc0157c37",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/branch-management.md",
       "unit": "U-001",
       "bytes": 16663,
       "sha256": "63d88cde75f3fe4116f580a343f16533258515382d4f975650338d73db58880a",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/continuity.md",
       "unit": "U-001",
       "bytes": 11921,
       "sha256": "2dc7358744c7fc5263c144bd5b518d25a14df784f4fed365d8f63e86dd4ea860",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/coordination.md",
       "unit": "U-001",
       "bytes": 18498,
       "sha256": "bcd392b0e0eb75df29996c68a318388ce47cfb8c89c41dca662daef7af589546",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/credentials.md",
       "unit": "U-001",
       "bytes": 12287,
       "sha256": "91d9f4a4718957d799af08b12856db5a98db7e06c079ec0010122eec24e0caea",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/doc-design-modes.md",
       "unit": "U-001",
       "bytes": 14630,
       "sha256": "f6cbd704bcfc781405d64c4b610cb2826643a5e6b59fc2ef6a53e9c55cd896be",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/document-qc-gates.md",
       "unit": "U-001",
       "bytes": 8150,
       "sha256": "48db74c644c4034af67534b39e38fd16da2689eea600b4e2932c1258e734db5d",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/examples.md",
       "unit": "U-001",
       "bytes": 30494,
       "sha256": "a313600f845edf4099bb1779bc674e2d3b6298a208468384374e08f1e54774c7",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/feature-delivery.md",
       "unit": "U-001",
       "bytes": 6940,
       "sha256": "fd095d5ba7fc2bf8e0e0a40c0c5b16a7d0e378fb45aa48995bc5c10c3386d45d",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/feature-preparation.md",
       "unit": "U-001",
       "bytes": 11796,
       "sha256": "e4ecc3aecc0919ed4520fec091afb5efa97c285b6eed1b8164eb288d7ca61bbf",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md",
       "unit": "U-001",
       "bytes": 25067,
       "sha256": "6ae1036226113d88a5aba353736b2ef0ecb89e6b7c7c13ec2d3dd00588b1e58a",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/human-document-review.md",
       "unit": "U-001",
       "bytes": 10981,
       "sha256": "907253878afddb3c7f66b63ac7b72491991c72c6e7c97d2214af2a46b1ff79fb",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/main-preparation.md",
       "unit": "U-001",
       "bytes": 19312,
       "sha256": "9f0c8b59e2808cadbe3fee042158b31dc7cfd3f00fb65b01ea8fa7dcb7c0ab96",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/phase-activation.md",
       "unit": "U-001",
       "bytes": 5095,
       "sha256": "25bf296fcceec42ed68923b0b00f42b257589a9bf4895d79d3e91460da58904c",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/prerelease-review.md",
       "unit": "U-001",
       "bytes": 9774,
       "sha256": "0fc0a9e77dcec7d96116cebc641b823dbb0544980190f5c9a608704c991c2338",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/repository-bootstrap.md",
       "unit": "U-001",
       "bytes": 10317,
       "sha256": "00d9466b25221886b1120467cede3311fd43fa31d3bd703f32cd8bf9d0f8c8b1",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/review-and-revision.md",
       "unit": "U-001",
       "bytes": 11034,
       "sha256": "b8be2c6e04ad5cdd66986250b8d1b95e5035cfabe48e8927d835cb9081cae583",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/revision-modes.md",
       "unit": "U-001",
       "bytes": 10559,
       "sha256": "0cd4961f659eb38ccc0ffd3ee6135fcdf5b66362ac3f59992722a20ec70d0e1f",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/tracking-decision.md",
       "unit": "U-001",
       "bytes": 7872,
       "sha256": "bb70eff20252e07537173d5011ee4755ec25c2e17a4dd3e0dc033faebf287a28",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/workflows.md",
       "unit": "U-001",
       "bytes": 30874,
       "sha256": "55ca9be11a5d0c22a95089d5bafd161fc580cebd67a8ee1d9ea988159c788004",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md",
@@ -811,18 +811,18 @@
       "unit": "U-001",
       "bytes": 6087,
       "sha256": "ee7ee4b3c7601a545e505d82846d0f8258d0b2cdfae1a8c3239c341a50ebffc7",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-orient/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 491,
       "sha256": "36dbb7990b7f504c1fa4b614651ad26431ab6af5a623be8250b780ce156667c9",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-orient/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 571,
       "sha256": "ef235e59b6a56e0d21629b3b6c1b2ca9cc97cd678d02bcb31b0e2f7bc11bf1f2",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -832,25 +832,25 @@
       "unit": "U-001",
       "bytes": 13613,
       "sha256": "424f12fd386abbbce47102fef620f10902ccf360e2b59f9519557613e412f9f8",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md",
       "unit": "U-001",
       "bytes": 6911,
       "sha256": "2e8cbb958a162c2a90a67ab8133bdba786c00ae92a3d744f5b69bf3241530de8",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 371,
       "sha256": "8672b642e8c5ae2114cd839af1152435c7da485b4a25c3dd62d15c78d124ac98",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 590,
       "sha256": "44568c513e736771f4dde159c1903c6da19a774474ce65aeb8992dd694706659",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -860,39 +860,39 @@
       "unit": "U-001",
       "bytes": 11128,
       "sha256": "29dffc0ae5d06a759d195cc45f6baf4555aec5e2c06962f5ddd08e7cc698eeeb",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/physical-layout.md",
       "unit": "U-001",
       "bytes": 3828,
       "sha256": "58d2a1afa899236efe1cd5ba3fa083d0ed866efc372d90dcf3c047b8dc9eccea",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/review.md",
       "unit": "U-001",
       "bytes": 6168,
       "sha256": "a3d526883649a3930550920b22e745fcc3fd23f2697f7f3e63b1d6aed960bcf0",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/SKILL.md",
       "unit": "U-001",
       "bytes": 3946,
       "sha256": "2a09d48def1f845b9b6988762aaa99b62e4f5c39213033c2276f8bb0aa42e8e2",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 454,
       "sha256": "bfe1a84a61bf154a5cb846d41b10d73e88a596044d21e6d1f151d1dc78ae221c",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 580,
       "sha256": "aca30e96cbe5d44d759da47cc1db33c87dce1d04bf77142feac8475eecbab074",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -902,60 +902,60 @@
       "unit": "U-001",
       "bytes": 12911,
       "sha256": "c8c4ade54de2440316f991cc6dfb8d20568da332fc9a02f41494c86d596872f4",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/change-kinds.md",
       "unit": "U-001",
       "bytes": 4573,
       "sha256": "7cc7d31e5926fab5c4778b385f282d8f536713536c1038cc63409a1734da886b",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/completion-reports.md",
       "unit": "U-001",
       "bytes": 7979,
       "sha256": "f4b2f21f294e790d8ac5d773ebc5b8b15a963149dfed3b2cf658069ed26816b2",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/document-qc-reports.md",
       "unit": "U-001",
       "bytes": 5052,
       "sha256": "f22366182bb3003758be8d4c35babdfcd3074bc0cf7a2f0eb42cc28c6dd30106",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md",
       "unit": "U-001",
       "bytes": 16975,
       "sha256": "e8ebe39b948545a8fa1540d5b7b2749a7130eb1f51d4617366844fccce298e67",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/releases.md",
       "unit": "U-001",
       "bytes": 8102,
       "sha256": "0098b5c9bdf32746c9d5a9ad783ecb5f540aca7d3f6b7431f62ee1fbc0fd994c",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md",
       "unit": "U-001",
       "bytes": 6561,
       "sha256": "907d1ca34042b3a9a5b89109aacf954b1814a60194370838c2ea7ecd7437712e",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 430,
       "sha256": "dd5c9ecfbca9bd8e2b29b7ce99f3c87005bfde3fff19d9712c9fa7a6f0f386ac",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 591,
       "sha256": "ebeaf7c64a2fb958088765c46c48e8269625f03ddccefec9dc7b76ff7379f2ad",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -965,39 +965,39 @@
       "unit": "U-001",
       "bytes": 2568,
       "sha256": "50031ecbc268306629bd8be75fe73a003d9be59548d69ad6c70d1515cc1aa195",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/review.md",
       "unit": "U-001",
       "bytes": 4121,
       "sha256": "3c3e70369f2b7ceca2d8885e9553562aa8351184a198d85dbc8732d53eabe5d1",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/system-specification.md",
       "unit": "U-001",
       "bytes": 5809,
       "sha256": "ddff8513b669599accb40c5c0e00385e1e959cedc92cd08659439b1639c3202d",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/SKILL.md",
       "unit": "U-001",
       "bytes": 5603,
       "sha256": "33c91d50a828549508ad6e7955625cb8af1574651d19ce36db70013b2601f4a2",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 592,
       "sha256": "421038f108a077de64e16c95011ed4f6bff87d47e16c53894bbcc0dc581cc4ae",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 551,
       "sha256": "b9d353ce223194b53f52a4853ed1cc9468718ed0ee57074b5988a309f54d14d1",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -1007,39 +1007,39 @@
       "unit": "U-001",
       "bytes": 3900,
       "sha256": "c185174fd72625f51a151bb6085140e9599f848e26f461d1131c87f2865d0cac",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/objective-and-impact.md",
       "unit": "U-001",
       "bytes": 3264,
       "sha256": "7f2bd87c0b689221ffb24b5ae7915ee8d00134a9bce5433f05d5f8472f61f58d",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/verification-and-stop.md",
       "unit": "U-001",
       "bytes": 7686,
       "sha256": "7c2c8da97ade97616b6b4354f514d9c76ead7c6bf320be71d3bcb9070a236a80",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md",
       "unit": "U-001",
       "bytes": 6660,
       "sha256": "e4495c46c1e281892e384678360aa571e3fabc9086f94ed02675127dcf9e5df0",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 338,
       "sha256": "60b43614f445a40f3d52d21869962189bdfe0252461317a6712a55d176797aa2",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 599,
       "sha256": "dad3203c0386ce1a697600ae82fc1e03f530111626192018df24dd7c5ac69eb0",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -1049,46 +1049,46 @@
       "unit": "U-001",
       "bytes": 4682,
       "sha256": "eeb104d6924060795b494e61537e2727e6cf4d0d4eab88f3de34d14524bf403b",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/progress-review.md",
       "unit": "U-001",
       "bytes": 2291,
       "sha256": "32be8fbaa5e67e807d7c7f7be964c56ab7f65bd6398784606090fcdd9e40a912",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/task-derivation.md",
       "unit": "U-001",
       "bytes": 8855,
       "sha256": "ba9f879d1f95b5e57975496ee0b838473e4395306a4065cb914f797972d1a0bb",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/LICENSE",
       "unit": "U-001",
       "bytes": 1070,
       "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/SKILL.md",
       "unit": "U-001",
       "bytes": 3588,
       "sha256": "49efacb9ed6ae3b59069e986672dc5350cc0b147c3ad960b3ffc04f105c54cda",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 480,
       "sha256": "f0049fe541cbffe331d4ccb9e903ed49bb96f1011cefecd1ced49fbd1bd19da4",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 574,
       "sha256": "37e86ed29c77f13846f9c315627c5e139d1348d7eed26eef2ff94354c334239f",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -1098,46 +1098,46 @@
       "unit": "U-001",
       "bytes": 3693,
       "sha256": "e8d797ba50e555d53500516e85f8b624f7ed11f5a7534e39220f2a74141e3d96",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/testing-strategy.md",
       "unit": "U-001",
       "bytes": 2947,
       "sha256": "a861155f218c008ca8f8612574cfaa390ce7095d0d3f9f2c2b9f22f6ea3104e7",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/upstream-provenance.md",
       "unit": "U-001",
       "bytes": 1278,
       "sha256": "668d85251c25027ac1494c9bb89367fa3c1885c23424e3987d02f7fd0b02ca33",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/writing-good-tests.md",
       "unit": "U-001",
       "bytes": 4076,
       "sha256": "c5a555443dc5cf3b78312f9939bfbe53be7b04978f4f14f3350820ed5bc5b0d8",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md",
       "unit": "U-001",
       "bytes": 5993,
       "sha256": "f8c6e8d70347b106a8128da7018bbafc6badf85be9064c94b8ee0f8cb554f7f2",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/agents/openai.yaml",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 544,
       "sha256": "3176532ba151974e4f6186c589a9e8ba59247367629ace97788cf70e1bdfe40a",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/assets/icon.svg",
-      "unit": "U-001",
+      "unit": "U-004",
       "bytes": 563,
       "sha256": "60c4fbc478c5c5569c7db40ee7d2b90c061fb8e0b7a2274ec8757cbcadc6c837",
       "depth": "planned; routing/linkage scan plus risk-weighted source review"
@@ -1147,35 +1147,35 @@
       "unit": "U-001",
       "bytes": 2556,
       "sha256": "6923a7570bf3daf149a176c448ad351f6074363e84aa0851afcf3efcc17ddcb8",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/check-selection.md",
       "unit": "U-001",
       "bytes": 7685,
       "sha256": "5a68e3b438e4fd05cdc2816a1d03ccae6f50a1d1e9210d8deb99b64583b44b8c",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/execution-and-evidence.md",
       "unit": "U-001",
       "bytes": 4797,
       "sha256": "35bac91769a15ae00dc2620222f85bbadd9e1f8c478676544b8c682f7cb36672",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/failure-assessment.md",
       "unit": "U-001",
       "bytes": 2950,
       "sha256": "4522617b15dc791ad3e695022180ed757459c6fa539cfa593592bb858c1cbbdc",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/release-checks.md",
       "unit": "U-001",
       "bytes": 8275,
       "sha256": "f4b9faba161315dfd91e1d3d75e4ad761cf56b3c9272c411f35f9b299097c311",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: entry/reference structure, routing, boundaries and cross-owner gates; detailed review of preparation/API/QC/execution/recovery/release handoffs"
     },
     {
       "path": ".github/RELEASE-HANDOFF.md",
