@@ -48,3 +48,9 @@ Local verification on Linux, Python 3.12.14 and Node 24.22.1:
 - Version/manifest, runtime scripts, demo prompts and closed campaign records are unchanged. Only planned instruction sources, affected source projections and current campaign evidence changed.
 
 Exact committed package verification follows publication of this checkpoint. Static/source/local checks do not establish fresh-agent behavior, installed-client routing or live provider acceptance. No task issue, integration, closure, version bump or release is selected.
+
+## Exact-source verification and execution boundary
+
+V-006 source commit **7ac7e1f6c5599542d4ee3b0124886ae530f6c6b5** was published and read back before this check. The publisher archived its exact Git objects: all **168 package files** match their committed paths/bytes, the pinned core schema accepts manifest version **0.16.0**, and source AGENTS, development/CI evidence, acceptance and credentials are excluded. [Machine-readable verification](final-verification.json) retains source identity, archive checksum, outcomes and limits. The final evidence checkpoint changes only current campaign records and HANDOFF; package bytes are unchanged.
+
+All V-001–V-006 actions are complete. The campaign remains open on its revision branch, with no integration, closure, version bump or release selected. Publish/read back this evidence checkpoint and stop for the next human instruction.

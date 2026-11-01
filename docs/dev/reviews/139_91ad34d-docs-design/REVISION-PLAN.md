@@ -33,7 +33,7 @@ Use the existing preparation record for artifact paths/owners, exact acceptance 
 | V-003 | Prepare this focused plan | Complete; published plan `a159611b`. |
 | V-004 (verified) | Define explicit API design and flexible artifact ownership | sdd-design entry/decomposition, sdd-specify entry/specification/review; update shared boundary guidance only where needed. Check operation/type/consumer coverage and single ownership. |
 | V-005 (verified) | Bind optional artifacts to the existing preparation tasks and checkpoints | Main/feature preparation, human-review/QC guidance, DOCS/FEATURE_DOCS task templates, DOCS_TRACKING JSON and preparation-record templates. Keep exactly nine tasks and the same IDs, titles, dependencies, issues and stop/reset boundaries; align affected briefs and evidence coverage. |
-| V-006 (implemented; final package check pending) | Complete downstream handoffs and rechecks | PLAN/layout, task derivation/conformance, selected feature incorporation and package QC include linked artifact owners. Align affected entry/document tables and full README. Check focused library, componentized-app and feature-delta scenarios; run affected documentation/support and projection/template contracts plus link/package checks. |
+| V-006 (verified) | Complete downstream handoffs and rechecks | PLAN/layout, task derivation/conformance, selected feature incorporation and package QC include linked artifact owners. Align affected entry/document tables and full README. Check focused library, componentized-app and feature-delta scenarios; run affected documentation/support and projection/template contracts plus link/package checks. |
 
 ## Completion criteria
 
@@ -43,4 +43,4 @@ Use the existing preparation record for artifact paths/owners, exact acceptance 
 - Deferred refinement cannot bypass a required decision or let a consumer start before its contract is ready.
 - Instructions describe the intended workflow directly. Changes stay within these API/model/contract concerns; no new workflow, registry, package version or release.
 
-Execute and publish V-004–V-006 under the human's Execute instruction. Stop with the campaign open; integration, closure and release are not selected.
+V-001–V-006 are complete. V-004–V-006 were executed under the human's Execute instruction; exact source 7ac7e1f6 passes the retained package check. Publish the final evidence checkpoint, then stop with the campaign open; integration, closure and release are not selected.

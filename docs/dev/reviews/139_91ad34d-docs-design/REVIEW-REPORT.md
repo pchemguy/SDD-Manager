@@ -82,4 +82,4 @@ Source contrasts checked:
 | Material API choice unresolved | Design/SPEC owns resolution before dependent use; permitted refinement identifies owner, scope and prerequisites in PLAN/TASKS. |
 | Interactive or autodoc preparation | Selected artifacts share existing 004/005 approval/preapproval, commits and evidence; nine task identities, dependencies and existing mode/stop/reset sources remain intact. |
 
-These are direct instruction-source assessments, not generated-project or fresh-agent trials. Local support/publisher/template checks are recorded in [the revision record](REVISION-REPORT.md); exact committed package verification remains pending. No installed-client or live-provider behavioral claim is made. The campaign remains open.
+These are direct instruction-source assessments, not generated-project or fresh-agent trials. Local support/publisher/template checks are recorded in [the revision record](REVISION-REPORT.md); [exact committed package verification](final-verification.json) passes for 7ac7e1f6. No installed-client or live-provider behavioral claim is made. The campaign remains open.
