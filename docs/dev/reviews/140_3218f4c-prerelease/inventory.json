@@ -6,14 +6,14 @@
       "unit": "U-004",
       "bytes": 1065,
       "sha256": "230ef093b2d68d0f37130d47064b1aff673c41830a15513801e0cc089e742ed2",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/PLUGIN.md",
       "unit": "U-004",
       "bytes": 26291,
       "sha256": "3e69ddec08f7f022f55913d5c90b476ca3cb01cbe0ef1794fad7f9f785f5e6a5",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/README.md",
@@ -139,7 +139,7 @@
       "unit": "U-004",
       "bytes": 581,
       "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/assets/logo.png",
@@ -174,7 +174,7 @@
       "unit": "U-004",
       "bytes": 2059,
       "sha256": "e40b39aaf8fa8dfec46480d5d83d32f90f3677a74d5b41702dfac1d007e12e49",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/SKILL.md",
@@ -188,14 +188,14 @@
       "unit": "U-004",
       "bytes": 505,
       "sha256": "3afb66258ca9ee5f7e35b0986ac130e34a4a73c4d5c41b1c7de94e19133e4cea",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/assets/icon.svg",
       "unit": "U-004",
       "bytes": 570,
       "sha256": "5702cda32d79bc28857dedfe0f9811d382d8b2e4c46d1ac571d8114aabd279a4",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-conventions/references/backend-object-lifecycle.md",
@@ -272,14 +272,14 @@
       "unit": "U-004",
       "bytes": 411,
       "sha256": "410d8c60cac9d953bf179776adcda42761224628615fdfcc71413226602e4ece",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/assets/icon.svg",
       "unit": "U-004",
       "bytes": 562,
       "sha256": "98c55eb98b3e3702037698739b96fb550da2223bf733fb576650d0a4c5504864",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/architecture.md",
@@ -328,14 +328,14 @@
       "unit": "U-004",
       "bytes": 471,
       "sha256": "9715602c3bdcd14d41e6e99e24edb32389499e0ec96b0aad5cdf4b30b187de15",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/assets/icon.svg",
       "unit": "U-004",
       "bytes": 587,
       "sha256": "69e272ee97e9957387f8ca8b51bec3d3d176c33e6bf6b20d2bff5b3536f507e2",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/in-code-documentation.md",
@@ -370,14 +370,14 @@
       "unit": "U-004",
       "bytes": 508,
       "sha256": "65a79f791a2285753a0e6ca9eb83e203b181c0277ada5706add85f4c86c18783",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/assets/icon.svg",
       "unit": "U-004",
       "bytes": 579,
       "sha256": "ca997d09da83d706126f43dc2ace19c00ee9036ae67dcce225e688a09d398d33",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-docs-preparation.md",
@@ -531,14 +531,14 @@
       "unit": "U-004",
       "bytes": 662,
       "sha256": "fbaa03bfe7cc660089090feeac5914b31c667901fa49e4c1fb95f991f99ddb15",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/assets/icon.svg",
       "unit": "U-004",
       "bytes": 588,
       "sha256": "4fd314a8f182561a13fbf6fe062e4aee5fd0e0330dccd9943ec14aa5dab34c48",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md",
@@ -587,14 +587,14 @@
       "unit": "U-004",
       "bytes": 507,
       "sha256": "91e1c2d7fc4b5f682c3435057a66f3562886df1e1cf082665f035cb8d71e082d",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/assets/icon.svg",
       "unit": "U-004",
       "bytes": 591,
       "sha256": "9b68ea07e6b5916efa646ad8f639cb1872523bb40630043a317cc862440dc006",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/references/feature-incorporation.md",
@@ -615,14 +615,14 @@
       "unit": "U-004",
       "bytes": 524,
       "sha256": "c3d318cf2a1074db8bc3c956109b12b1a3399c3835eded7bbac57f9ee7f5a778",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/assets/icon.svg",
       "unit": "U-004",
       "bytes": 590,
       "sha256": "d263da0cf62afe30dec52294f51c33a0d522b25c44049224a2274037e8ace44d",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/agent-orientation.md",
@@ -818,14 +818,14 @@
       "unit": "U-004",
       "bytes": 491,
       "sha256": "36dbb7990b7f504c1fa4b614651ad26431ab6af5a623be8250b780ce156667c9",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-orient/assets/icon.svg",
       "unit": "U-004",
       "bytes": 571,
       "sha256": "ef235e59b6a56e0d21629b3b6c1b2ca9cc97cd678d02bcb31b0e2f7bc11bf1f2",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-orient/references/inspection-and-handoff.md",
@@ -846,14 +846,14 @@
       "unit": "U-004",
       "bytes": 371,
       "sha256": "8672b642e8c5ae2114cd839af1152435c7da485b4a25c3dd62d15c78d124ac98",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/assets/icon.svg",
       "unit": "U-004",
       "bytes": 590,
       "sha256": "44568c513e736771f4dde159c1903c6da19a774474ce65aeb8992dd694706659",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/delivery-plan.md",
@@ -888,14 +888,14 @@
       "unit": "U-004",
       "bytes": 454,
       "sha256": "bfe1a84a61bf154a5cb846d41b10d73e88a596044d21e6d1f151d1dc78ae221c",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/assets/icon.svg",
       "unit": "U-004",
       "bytes": 580,
       "sha256": "aca30e96cbe5d44d759da47cc1db33c87dce1d04bf77142feac8475eecbab074",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/campaign-artifacts.md",
@@ -951,14 +951,14 @@
       "unit": "U-004",
       "bytes": 430,
       "sha256": "dd5c9ecfbca9bd8e2b29b7ce99f3c87005bfde3fff19d9712c9fa7a6f0f386ac",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/assets/icon.svg",
       "unit": "U-004",
       "bytes": 591,
       "sha256": "ebeaf7c64a2fb958088765c46c48e8269625f03ddccefec9dc7b76ff7379f2ad",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/change-specification.md",
@@ -993,14 +993,14 @@
       "unit": "U-004",
       "bytes": 592,
       "sha256": "421038f108a077de64e16c95011ed4f6bff87d47e16c53894bbcc0dc581cc4ae",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/assets/icon.svg",
       "unit": "U-004",
       "bytes": 551,
       "sha256": "b9d353ce223194b53f52a4853ed1cc9468718ed0ee57074b5988a309f54d14d1",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-steer/references/amendment-execution.md",
@@ -1035,14 +1035,14 @@
       "unit": "U-004",
       "bytes": 338,
       "sha256": "60b43614f445a40f3d52d21869962189bdfe0252461317a6712a55d176797aa2",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/assets/icon.svg",
       "unit": "U-004",
       "bytes": 599,
       "sha256": "dad3203c0386ce1a697600ae82fc1e03f530111626192018df24dd7c5ac69eb0",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/conformance-review.md",
@@ -1084,14 +1084,14 @@
       "unit": "U-004",
       "bytes": 480,
       "sha256": "f0049fe541cbffe331d4ccb9e903ed49bb96f1011cefecd1ced49fbd1bd19da4",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/assets/icon.svg",
       "unit": "U-004",
       "bytes": 574,
       "sha256": "37e86ed29c77f13846f9c315627c5e139d1348d7eed26eef2ff94354c334239f",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/test-first-cycle.md",
@@ -1133,14 +1133,14 @@
       "unit": "U-004",
       "bytes": 544,
       "sha256": "3176532ba151974e4f6186c589a9e8ba59247367629ace97788cf70e1bdfe40a",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/assets/icon.svg",
       "unit": "U-004",
       "bytes": 563,
       "sha256": "60c4fbc478c5c5569c7db40ee7d2b90c061fb8e0b7a2274ec8757cbcadc6c837",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: pinned manifest/schema, exact Git archive inventory, fifteen presentation prompts/icon pairs and SVG/PNG parsing; client runtime not tested"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/boundary-review.md",

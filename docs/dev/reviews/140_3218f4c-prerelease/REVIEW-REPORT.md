@@ -39,3 +39,15 @@ All eight workflow diagrams were parsed/rendered with Mermaid 11.12.0 and visual
 Templates/environment guidance, source AGENTS/discovery/contract/capability documents and acceptance evidence descriptions were assessed for ownership and claim boundaries. Environment guides remain activated only through project AGENTS, and historical TextStats observations are qualified rather than promoted to revised-source acceptance. No fresh consumer/client behavior claim is made.
 
 U-003 complete. R-001 remains accepted for repair; package/readiness consolidation follows.
+
+## U-004 — Distribution and review consolidation
+
+Exact source **9004cb214785003e124c225bc9675ef2021ff4f3** has the same product tree as the reviewed starting main. All **168** shipped members match their Git blobs; pinned manifest schema validates 0.16.0. All fifteen presentation prompts identify their skill, local icon pairs exist and parse, and root SVG/PNG assets validate. Agent Package Author reports **zero errors and 67 contained sibling-reference warnings**; those warnings are retained as client-handoff limits, not claimed passes. No MCP integration is advertised or required.
+
+Package-local links stay within included resources; source-only demos/development/acceptance/CI are linked through repository URLs rather than required in the archive. The package has its own README/LICENSE/PLUGIN, skills and assets. Source credentials and generated browser/tooling state are excluded. Stable release asset names are independently fixed as sdd-manager.zip and sdd-manager.zip.sha256; version appears in manifest/tag, not filenames.
+
+All four inventory units are assessed at their recorded depth. Review found **one confirmed medium instruction-consistency defect**, R-001, accepted for repair. No further confirmed defect, unexplained missing current resource or release naming issue found. Current source is not cleared until R-001 and patch/package preparation complete. Evidence limits: risk-weighted source assessment/local contracts; no fresh-agent, installed-client, native-Windows rerun or arbitrary external-link sweep. Final release CI/provider/download checks remain pending.
+
+## Accepted revision queue
+
+[Revision plan](REVISION-PLAN.md) covers the R-001 correction, patch/message/package preparation, finalization and authorized publication. Existing identities, nine-task/checkpoint structure and mode/stop policy stay intact.

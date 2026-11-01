@@ -13,3 +13,7 @@ Runtime/CI/source checks completed with 327 passing local contracts and seven pl
 ## U-003 checkpoint
 
 Public documentation, asset/prompt navigation, current links and eight rendered diagrams assessed. No new finding; current READMEs/diagrams require no source edit. Rendering provisioning recovered through a separately pinned isolated tool pair, with the failed initial download retained as a facility limit. Publish/read back before U-004.
+
+## U-004 and review completion
+
+Distribution/presentation checks pass for the exact recorded baseline package. Four units complete; R-001 is the sole accepted finding. The published review/plan checkpoint precedes V-001 repair. No product edit yet; package remains 0.16.0.
