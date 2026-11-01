@@ -5,3 +5,7 @@ Campaign **140_3218f4c**, `revision/140_3218f4c-prerelease` from/returning to ma
 ## U-001 checkpoint
 
 Original opening c01e8461fdcfb34ed9d8b0c47fda695866c45362 is published/read back. Workflow source/routing review is complete at the recorded depth; R-001 accepted for bounded correction after review consolidation. No product changes yet. Publish/read back this assessment before U-002.
+
+## U-002 checkpoint
+
+Runtime/CI/source checks completed with 327 passing local contracts and seven platform skips, plus parsed-source/credential checks and read-only provider observations. No runtime edit or extra finding. Publication of this checkpoint precedes public-document review.

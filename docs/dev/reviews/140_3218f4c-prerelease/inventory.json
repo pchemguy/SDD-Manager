@@ -461,63 +461,63 @@
       "unit": "U-002",
       "bytes": 15137,
       "sha256": "0f308c1b7b391ea13798fd24368a27f24e15275b93ed8c06f07437880f4273ed",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs",
       "unit": "U-002",
       "bytes": 21116,
       "sha256": "a1e74fe3462cd0ad359901ead0cadfde9b836e0feb67769522edef87916a91a4",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-draft.mjs",
       "unit": "U-002",
       "bytes": 4255,
       "sha256": "e64a0cd619a15ff6088182718a0e3f25cf93ccd522bb066b9a1f1405a4c89231",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-input.md",
       "unit": "U-002",
       "bytes": 16599,
       "sha256": "432cafd3cf1a89c39bb01f4aef9f50615f5147162fa0d9c6c759d9e4bbcfb907",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.md",
       "unit": "U-002",
       "bytes": 15728,
       "sha256": "ae18efc1c1bc3c4d0aa25334d37b4a6f3416ef6274e6ccae3f765ed0a38a9d8e",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.mjs",
       "unit": "U-002",
       "bytes": 18456,
       "sha256": "4088265bc45ad05ee143553d59a0290f263edf11d4d80050b7a97e7d80d3a0fa",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-runtime.mjs",
       "unit": "U-002",
       "bytes": 9854,
       "sha256": "b37521f539447099d602dc3e1e6016c7eed2c968444599903c0bfd6bf9dda2a3",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/github-client.mjs",
       "unit": "U-002",
       "bytes": 18056,
       "sha256": "a8011d6169c9f0e91f8f0f867dc3d0617b021b8a9c31b0dbd949c146d8dd6d7d",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/projection-input.mjs",
       "unit": "U-002",
       "bytes": 15831,
       "sha256": "71868bc157adfe8be116b64927b4a95523dc73cb17d4bcaef6176ffadc868bbf",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-implement/SKILL.md",
@@ -776,35 +776,35 @@
       "unit": "U-002",
       "bytes": 11924,
       "sha256": "6818385a5f231039cb28be32fda2caa20d3c4f790720614fb50f144258a58d9a",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs",
       "unit": "U-002",
       "bytes": 21278,
       "sha256": "98c0c9483bb069003369c98a7f9aeb1b7377557998d5584ed4d26ad0b760c406",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-process-supervisor.py",
       "unit": "U-002",
       "bytes": 15541,
       "sha256": "0e775d5f050f11b6e5c55a19fd55ee68a3a4eee082b4df905043501da720b323",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-publish.mjs",
       "unit": "U-002",
       "bytes": 12001,
       "sha256": "40009fee6b92bfd44552cdf3775fd314f5d61368fca402fd3080af602d561cb1",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs",
       "unit": "U-002",
       "bytes": 5237,
       "sha256": "4a49f2d1de36c8e194be621a93df6aa202aa29305fb542c7d76af0fa3884f3e2",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".agents/plugins/sdd-manager/skills/sdd-orient/SKILL.md",
@@ -1182,84 +1182,84 @@
       "unit": "U-002",
       "bytes": 6571,
       "sha256": "7a46f76ece00cf9b1b813e4cea48f282c3423ec1127309881d52de65ad4619a0",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".github/requirements.txt",
       "unit": "U-002",
       "bytes": 19,
       "sha256": "756cc9e506ae4ee1a6f6c0507088b5cfc0dc8ba350fb2d2d46f1ffa72033adb6",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".github/schemas/README.md",
       "unit": "U-002",
       "bytes": 1177,
       "sha256": "3def3824b27d744716ccc86f1694c0cf358c8d35a1437cb1a713c7b57881cc7c",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".github/schemas/plugin.schema.json",
       "unit": "U-002",
       "bytes": 1805,
       "sha256": "0a4aad95ce337878ad38802ebf0daa3fde76abe3f65400c86bcbb1ec0b3ab883",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".github/scripts/release.py",
       "unit": "U-002",
       "bytes": 24746,
       "sha256": "6af710eba8f8f97143ee607763f34093951b13a5d85d0b6880bf1001d6759797",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".github/tests/test_release.py",
       "unit": "U-002",
       "bytes": 31666,
       "sha256": "e75d8a245e5999a6ca9250c43f5709095a6cd6ac1e8b92eb4a60b6927ad4ae91",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".github/tests/test_release_provenance.py",
       "unit": "U-002",
       "bytes": 8364,
       "sha256": "0745711d4b4a3cec0f8cea8a44d06928e5be250c4870b5ff9bacedba30d17860",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".github/workflows/forge-close.yml",
       "unit": "U-002",
       "bytes": 1292,
       "sha256": "dce7065e7f805fe760716513197623e6c90ac62a60709a37e3465db227db57c3",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".github/workflows/forge-project.yml",
       "unit": "U-002",
       "bytes": 1586,
       "sha256": "d614ae3a9cb6cf2b308178e0307cebd1e7167c89de08bf212bf6e613cde52bf6",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".github/workflows/git-auth-recover.yml",
       "unit": "U-002",
       "bytes": 2061,
       "sha256": "2b9170cafa178adf9edb0574ed383e9f25854066fa49943d20c3a3e7eb3900e9",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".github/workflows/release.yml",
       "unit": "U-002",
       "bytes": 3352,
       "sha256": "8073f5d9851a2e72fae1f06d96555f852a77e948eaf50c25f1eb5dbeb17b9eb1",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".github/workflows/windows-shell-recovery.yml",
       "unit": "U-002",
       "bytes": 1111,
       "sha256": "96f2e2a415332b9a3624bcef57488fe57acc57cc055a2f0e394e6002f06262ee",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": ".gitignore",
@@ -2561,63 +2561,63 @@
       "unit": "U-002",
       "bytes": 1212,
       "sha256": "a0391cb2ef9d538afc15ce57e68c551059c60aca428cd4da5eaaeffd0c8c3172",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": "tests/fixtures/git-auth/localhost-key.pem",
       "unit": "U-002",
       "bytes": 1704,
       "sha256": "238f0b66034f0d3dae0ed1c4d03a2e6e5fd3dff0efa6df7d073121d8d9362d59",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": "tests/forge-close.test.mjs",
       "unit": "U-002",
       "bytes": 28973,
       "sha256": "2b8c55c240a2c634176a739c1c97a8b063b88aa49f48464728b8795d20f838d2",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": "tests/forge-project.test.mjs",
       "unit": "U-002",
       "bytes": 54507,
       "sha256": "e936e0f17c99a5173ec142595ca8c8122545ac04e6f1d0fb5b1be68899a59539",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": "tests/git-auth-recover.test.mjs",
       "unit": "U-002",
       "bytes": 26248,
       "sha256": "c76fe00d7653fe5071730c7d855e53f5a8cd228d43d3488f93c719e8611086ba",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": "tests/git-publish.test.mjs",
       "unit": "U-002",
       "bytes": 17095,
       "sha256": "6c91ac040fd258561376d93f789423f98281b00f845b64db651f208b299f8ea2",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": "tests/helpers/git-auth-https.mjs",
       "unit": "U-002",
       "bytes": 6741,
       "sha256": "ee74e646c1f641f2d1661b108b721cf15791954e3a162aaf63079411901a8852",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": "tests/helpers/windows-process.py",
       "unit": "U-002",
       "bytes": 2899,
       "sha256": "5cfa54fb39389b0eb2dae6dfa67f54bedb1fb4bdee237cf007c0a8882a2ba416",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     },
     {
       "path": "tests/test_windows_shell_recovery.py",
       "unit": "U-002",
       "bytes": 6904,
       "sha256": "eafb95d0d5c7146270dbc190a2cacc91500d7ca24c2a3f933b8d18ddd8b11b34",
-      "depth": "planned; routing/linkage scan plus risk-weighted source review"
+      "depth": "assessed: public interfaces, high-risk implementation paths, tests/fixtures and workflow semantics; declared local contract suites executed"
     }
   ],
   "excluded_historical_paths": [

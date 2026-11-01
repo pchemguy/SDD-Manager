@@ -17,3 +17,13 @@ Representative source contrasts: direct versus composite request; pending approv
 - Objective recheck: a selected peer-only contract/model edit is visible in the root QC report's reviewed/governing identities and triggers the existing affected-readiness assessment; inline projects require no extra artifacts. Status: Accepted; repair pending.
 
 Readiness: review continues; release not cleared.
+
+## U-002 — Runtime, tests, CI and protected access
+
+Current source interfaces and high-risk paths assessed: root/remote/source eligibility, regular bounded inputs, shared token containment/exclusion, helper process deadlines/cleanup, exact issue/milestone ownership, mutation allowlists and uncertain-write reconciliation. Publisher review covered pinned manifest schema, exact Git-blob ZIP contents, stable names, draft-only partial uploads, byte-level download checks, tag/default-first-parent provenance, one publisher and actual latest readback. No additional confirmed runtime defect found.
+
+Executed on Linux, Node 24.22.1/Python 3.12.14: **138 Node contracts**, **139 support tests**, **50 publisher tests**, all pass. Seven native-Windows shell cases are skipped on Linux, not passed. Syntax/data checks cover 110 current Python/JS/JSON/YAML files; no credential-shaped value found in the reviewed current text set. Explicit public test TLS keys remain deliberate localhost fixtures, not production credentials.
+
+All five workflows were inspected for trigger, selected source, permissions, shell and matrix ownership. YAML parsing is not Actions execution; actionlint is unavailable. [Provider baseline](ci-baseline.json) confirms actual default main, latest v0.16.0 and successful projection run **41303018264** at exact reviewed main 3218f4c3. Other observed native matrix successes belong to their recorded earlier SHAs and are not claimed as fresh runs. The final release's selected CI run still needs direct readback. No live task-tracking mutation or fresh-agent trial was performed.
+
+U-002 complete; U-003/U-004 and R-001 correction remain.

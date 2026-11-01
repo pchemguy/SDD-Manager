@@ -1,0 +1,80 @@
+{
+  "default_branch": "main",
+  "latest_release": {
+    "tag": "v0.16.0",
+    "id": 429664178,
+    "url": "https://github.com/pchemguy/SDD-Manager/releases/tag/v0.16.0"
+  },
+  "runs": [
+    {
+      "id": 41303018264,
+      "name": "GitHub projection contracts",
+      "head_sha": "3218f4c327f73ea51711fd236d87043a7e4b28b6",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 41302170599,
+      "name": "GitHub projection contracts",
+      "head_sha": "b4240abf698b5d0c87bc067d6fb8ac55194df2fa",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 41159031167,
+      "name": "Git authentication recovery contracts",
+      "head_sha": "c87bc7afa3f6bc8b860fbc6672f8296797ab6e55",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 41159027543,
+      "name": "GitHub completion contracts",
+      "head_sha": "c87bc7afa3f6bc8b860fbc6672f8296797ab6e55",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 41159027538,
+      "name": "Windows shell contracts",
+      "head_sha": "c87bc7afa3f6bc8b860fbc6672f8296797ab6e55",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 41159027521,
+      "name": "GitHub projection contracts",
+      "head_sha": "c87bc7afa3f6bc8b860fbc6672f8296797ab6e55",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 40377652036,
+      "name": "GitHub projection contracts",
+      "head_sha": "0507f769b35d5139340b2532f85ebbc8bc454901",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 40377651855,
+      "name": "Windows shell contracts",
+      "head_sha": "0507f769b35d5139340b2532f85ebbc8bc454901",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 40322309340,
+      "name": "Windows shell contracts",
+      "head_sha": "38cd338222c80dda9398ea1ffbea1420ee334353",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 40320093721,
+      "name": "GitHub projection contracts",
+      "head_sha": "68c304deb06e495a071ede5e897ed43c318cf0d0",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ]
+}
