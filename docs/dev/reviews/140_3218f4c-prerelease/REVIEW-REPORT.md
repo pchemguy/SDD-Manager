@@ -1,0 +1,63 @@
+# Prerelease assessment
+
+Campaign **140_3218f4c**; baseline **3218f4c327f73ea51711fd236d87043a7e4b28b6**. [Plan](REVIEW-PLAN.md), [inventory](inventory.json). Review in progress; no findings or readiness conclusion yet. Source/local execution review; no fresh-agent or installed-client acceptance claimed. Prior closed records and manual provenance excluded.
+
+## U-001 — Workflow and instruction composition
+
+Reviewed baseline 3218f4c3. All fifteen entries and their reference inventories have explicit routes; no missing entry-to-reference route was found. Risk-weighted source assessment covered coordinator/direct entry, orientation read-only scope, main/feature modes and nine-task bundles, canonical API/model/contract ownership, tracking gates, per-task atomicity/publication, phase versus partial-range integration, steering return, campaign freezing and exact-source release handoffs. The detailed ownership rules and selected-artifact checkpoint mapping agree; a projection/runtime helper does not supply human approval or technical readiness.
+
+Representative source contrasts: direct versus composite request; pending approval versus scoped preapproval; inline versus selected peer definitions; incomplete phase versus complete phase; publication lost response versus verified readback; child return versus parent continuation. These are source analyses, not observed consumer runs. R-001 identifies an inconsistent input/evidence projection; no other confirmed workflow defect found at this depth. Package/client evidence remains U-004.
+
+### R-001 — Selected peer definitions are omitted from some QC identity/input summaries
+
+- Type/priority/confidence: instruction consistency defect; medium; high.
+- Baseline evidence: sdd-report/references/document-qc-reports.md, Placement and identity and compact report fields name root/children only; sdd-conventions/references/development-document-qc.md, Evidence currency names root/children; sdd-manage/references/document-qc-gates.md step 2 compares root/children state. sdd-specify and sdd-plan entry input lists similarly name focused children. Governing ownership elsewhere correctly includes selected peer model/API/contract artifacts.
+- Consequence: an author following a compact input/report procedure can omit a peer definition's exact reviewed state, allowing apparently current evidence to miss a changed canonical model or contract.
+- Accepted correction: include the complete selected artifact set and its governing identities in those input, evidence and currency clauses. Keep existing root reports and tasks; no new file, stage or approval.
+- Objective recheck: a selected peer-only contract/model edit is visible in the root QC report's reviewed/governing identities and triggers the existing affected-readiness assessment; inline projects require no extra artifacts. Status: Accepted; repair pending.
+
+Readiness: review continues; release not cleared.
+
+## U-002 — Runtime, tests, CI and protected access
+
+Current source interfaces and high-risk paths assessed: root/remote/source eligibility, regular bounded inputs, shared token containment/exclusion, helper process deadlines/cleanup, exact issue/milestone ownership, mutation allowlists and uncertain-write reconciliation. Publisher review covered pinned manifest schema, exact Git-blob ZIP contents, stable names, draft-only partial uploads, byte-level download checks, tag/default-first-parent provenance, one publisher and actual latest readback. No additional confirmed runtime defect found.
+
+Executed on Linux, Node 24.22.1/Python 3.12.14: **138 Node contracts**, **139 support tests**, **50 publisher tests**, all pass. Seven native-Windows shell cases are skipped on Linux, not passed. Syntax/data checks cover 110 current Python/JS/JSON/YAML files; no credential-shaped value found in the reviewed current text set. Explicit public test TLS keys remain deliberate localhost fixtures, not production credentials.
+
+All five workflows were inspected for trigger, selected source, permissions, shell and matrix ownership. YAML parsing is not Actions execution; actionlint is unavailable. [Provider baseline](ci-baseline.json) confirms actual default main, latest v0.16.0 and successful projection run **41303018264** at exact reviewed main 3218f4c3. Other observed native matrix successes belong to their recorded earlier SHAs and are not claimed as fresh runs. The final release's selected CI run still needs direct readback. No live task-tracking mutation or fresh-agent trial was performed.
+
+U-002 complete; U-003/U-004 and R-001 correction remain.
+
+## U-003 — READMEs, diagrams, assets, demos and contributor evidence
+
+Both READMEs were checked for audience, quickstart, complete demo navigation, modes/stops and release instructions. All ten standalone prompts, calculator collections and staged Tetris guides are reachable; full README describes every bundled Markdown/JSON asset. Demo comparisons preserve browser/Electron/extension sequencing, the paired extension platform, keyboard-only gameplay exceptions, session persistence and both file/HTTP(S) single-page modes. Hello World page/sidebar behavior remains explicitly scoped. No new confirmed documentation defect found.
+
+All eight workflow diagrams were parsed/rendered with Mermaid 11.12.0 and visually inspected in isolated Playwright 1.56.1/managed Chromium headless shell 141.0.7390.37 (build 1194). Labels are readable without clipping; gates, loops, partial-phase stops and return boundaries agree with their owners. The bundled runner's build-1234 download failed archive integrity; that binary was not used. The pinned renderer pair is temporary tooling, not a change to project dependencies. No diagram edit needed.
+
+[Documentation checks](documentation-checks.json) record **1,282** resolved current relative/repository links and anchors, no confirmed broken link, complete prompt/asset navigation and diagram evidence. Fifty external links were not individually fetched. Inline README insertion examples and target-project template links are interpreted in their intended destination; closed record contents/manual transcripts remain excluded.
+
+Templates/environment guidance, source AGENTS/discovery/contract/capability documents and acceptance evidence descriptions were assessed for ownership and claim boundaries. Environment guides remain activated only through project AGENTS, and historical TextStats observations are qualified rather than promoted to revised-source acceptance. No fresh consumer/client behavior claim is made.
+
+U-003 complete. R-001 remains accepted for repair; package/readiness consolidation follows.
+
+## U-004 — Distribution and review consolidation
+
+Exact source **9004cb214785003e124c225bc9675ef2021ff4f3** has the same product tree as the reviewed starting main. All **168** shipped members match their Git blobs; pinned manifest schema validates 0.16.0. All fifteen presentation prompts identify their skill, local icon pairs exist and parse, and root SVG/PNG assets validate. Agent Package Author reports **zero errors and 67 contained sibling-reference warnings**; those warnings are retained as client-handoff limits, not claimed passes. No MCP integration is advertised or required.
+
+Package-local links stay within included resources; source-only demos/development/acceptance/CI are linked through repository URLs rather than required in the archive. The package has its own README/LICENSE/PLUGIN, skills and assets. Source credentials and generated browser/tooling state are excluded. Stable release asset names are independently fixed as sdd-manager.zip and sdd-manager.zip.sha256; version appears in manifest/tag, not filenames.
+
+All four inventory units are assessed at their recorded depth. Review found **one confirmed medium instruction-consistency defect**, R-001, accepted for repair. No further confirmed defect, unexplained missing current resource or release naming issue found. Current source is not cleared until R-001 and patch/package preparation complete. Evidence limits: risk-weighted source assessment/local contracts; no fresh-agent, installed-client, native-Windows rerun or arbitrary external-link sweep. Final release CI/provider/download checks remain pending.
+
+## Accepted revision queue
+
+[Revision plan](REVISION-PLAN.md) covers the R-001 correction, patch/message/package preparation, finalization and authorized publication. Existing identities, nine-task/checkpoint structure and mode/stop policy stay intact.
+
+## R-001 revision recheck
+
+V-001 includes selected peer artifacts in specification/planning/task inputs, feature accepted-state commits, coordinator state comparisons, QC currency and root report scope/identity fields. A peer-only edit is now explicitly included in the affected-readiness rule and report source identities. Existing root reports/tasks/checkpoints are retained; inline definitions add no files. Five package-documentation tests pass; 1,282 current links/anchors resolve. Finding **R-001: Verified** by source recheck; this does not claim observed consumer behavior.
+
+## Final prerelease readiness
+
+Candidate **3a5fd164e78a94f0f62ec9dd4eb24b224b9e437a**, version **0.16.1**: all four review units assessed, sole finding R-001 verified, and feasible source/local checks pass. [Exact-source package evidence](final-verification.json) verifies all 168 Git-blob members, stable ZIP/checksum names, checksum contents and exclusion/preservation boundaries. No unresolved confirmed source/package blocker remains.
+
+Ready for the authorized main integration and release operation under the stated evidence limits. The release workflow must rebuild the final default-branch release commit and verify its actual provider result; this report does not claim those future effects or fresh-agent/client acceptance. Finalization changes only campaign/navigation/HANDOFF evidence, leaving the verified package tree intact.

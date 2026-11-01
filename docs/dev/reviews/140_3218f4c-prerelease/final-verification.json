@@ -1,0 +1,29 @@
+{
+  "source": "3a5fd164e78a94f0f62ec9dd4eb24b224b9e437a",
+  "version": "0.16.1",
+  "package_files": 168,
+  "assets": {
+    "sdd-manager.zip": {
+      "sha256": "72839c2365af024a777eecdc1e5467b6beea68840b47f5526f5b7f9dabff47d9",
+      "bytes": 532998
+    },
+    "sdd-manager.zip.sha256": {
+      "sha256": "6e8148608b260f2f2f476ab051762c6302c1a8feaa47a5053b38c4cbe0519179",
+      "bytes": 82
+    }
+  },
+  "stable_name_gate": "pass; expected names defined independently",
+  "closed_record_preservation": "pass; only campaign 140 and index changed",
+  "local_tests": {
+    "support": 139,
+    "publisher": 50,
+    "node_unchanged_runtime": 138,
+    "windows_skipped": 7
+  },
+  "validator": {
+    "errors": 0,
+    "contained_reference_warnings": 67
+  },
+  "review": "R-001 verified; four units complete; eight diagrams rendered",
+  "limits": "source/local review; no fresh-agent or installed-client acceptance; final release-source CI/provider checks pending"
+}

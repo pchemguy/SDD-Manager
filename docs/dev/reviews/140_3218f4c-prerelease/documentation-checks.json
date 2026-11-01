@@ -1,0 +1,52 @@
+{
+  "links": {
+    "checked_current_links": 1282,
+    "external_links_not_fetched": 50,
+    "problems": []
+  },
+  "prompt_navigation": "all ten standalone demo prompts plus calculator/staged guides present in both READMEs",
+  "asset_navigation": "all bundled Markdown/JSON assets described in full README",
+  "diagrams": {
+    "source": "3218f4c327f73ea51711fd236d87043a7e4b28b6",
+    "mermaid": "11.12.0",
+    "runner": "Playwright 1.56.1",
+    "browser": "managed Chromium headless shell 141.0.7390.37, build 1194",
+    "isolation": "temporary dedicated binary/state paths; no project runner/dependency changes",
+    "inspection": "all eight PNG renders visually inspected; readable labels and no clipping; source transitions checked against owners",
+    "initial_facility": "bundled runner browser build 1234 download failed archive integrity; not used",
+    "diagrams": [
+      {
+        "index": 1,
+        "png_sha256": "702cf434838fddf72a45564dddf84d8c9c198a2c68fe986ab66471c43f7a7135"
+      },
+      {
+        "index": 2,
+        "png_sha256": "4ad372b4fb248512cc0ad7b0424a3cfc63b59f573e59d2a6494770a6ce2ecc0d"
+      },
+      {
+        "index": 3,
+        "png_sha256": "e5796d96ebe3fba46e205377d4799581def0fe9138b5f046f99e3587abb2b06e"
+      },
+      {
+        "index": 4,
+        "png_sha256": "5ded4aa7f27681f29955229b4386eea2d5a47cf0e689ae199491503ba2aa3efb"
+      },
+      {
+        "index": 5,
+        "png_sha256": "21119ba131cc4b41e6803c0f7edd3b072501eee0666ff31cc864cc2e8bf6f08a"
+      },
+      {
+        "index": 6,
+        "png_sha256": "15a90da8fe5a556b8a955625f68ad81be93e23b484441d3c3b34287697e4c49d"
+      },
+      {
+        "index": 7,
+        "png_sha256": "9b6e1a9a8671782bbafe4f1d335b2b2206e3c8a778af304b7632de37c239915f"
+      },
+      {
+        "index": 8,
+        "png_sha256": "3f809363fedc22463b3bdbd24bd319ea96096caedb12f0ceebc1ca135a6dc777"
+      }
+    ]
+  }
+}

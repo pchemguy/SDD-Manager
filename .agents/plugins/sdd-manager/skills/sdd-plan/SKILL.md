@@ -30,7 +30,7 @@ Apply **sdd-conventions**' **Development-document QC** reference (`skills/sdd-co
 | Define or revise physical ownership of implementation, tests, and documentation | [physical layout](references/physical-layout.md) |
 | Review PLAN and layout consistency | [review](references/review.md) |
 
-Before authoring, read the relevant PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, their focused children, and any existing PLAN and layout. Inspect relevant code, tests, and packaging for existing projects; distinguish observed placement from intended placement. If inputs conflict or a required behavioral or architectural decision is unresolved, identify its owner instead of silently settling it in PLAN or layout. Start at the requested operation when its inputs are established.
+Before authoring, read the relevant PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC, their selected children/peer model/API-design/contract artifacts, and any existing PLAN and layout. Inspect relevant code, tests, and packaging for existing projects; distinguish observed placement from intended placement. If inputs conflict or a required behavioral or architectural decision is unresolved, identify its owner instead of silently settling it in PLAN or layout. Start at the requested operation when its inputs are established.
 
 Read-only review can proceed without changing files. Creating, revising, or removing project documents requires **sdd-manage** to coordinate the user's request and a current **sdd-orient** handoff establishing an eligible Git worktree, applicable instructions, target paths, and ownership of dirty changes. This skill does not perform orientation or authorize another workflow.
 

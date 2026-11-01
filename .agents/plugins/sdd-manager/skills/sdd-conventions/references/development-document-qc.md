@@ -8,7 +8,7 @@ Apply these invariants through the artifact owner and coordinator. This referenc
 
 | Completed artifact | Required review | Gate before |
 | --- | --- | --- |
-| SPEC root and applicable children | Conformance to accepted PROJECT, ARCHITECTURE and DECOMPOSITION; coherent, complete and assessable contracts. | Dependent PLAN authoring. |
+| SPEC root and selected children/contract artifacts | Conformance to accepted PROJECT, ARCHITECTURE and DECOMPOSITION; coherent, complete and assessable contracts. | Dependent PLAN authoring. |
 | PLAN root and applicable children, with layout where relevant | SPEC coverage/conformance, bounded incremental delivery, phase/milestone decomposition and feasible exits/dependencies. | Dependent TASKS generation. |
 | TASKS or active FEATURE-TASKS | PLAN conformance, complete executable coverage, bounded task decomposition, dependencies, unique identity and review units; trace acceptance back to SPEC. | Dependent implementation or hosted projection. |
 
@@ -90,7 +90,7 @@ Review readiness is tied to actual artifact and governing source state. Material
 
 ## Evidence currency during implementation
 
-Identify reviewed root/children and governing inputs by available commit plus blob identities, or exact content hashes for pending edits. Assess material changes to requirements, design, delivery strategy, task scope, dependencies, hierarchy or physical ownership. Routine task completion checkbox/evidence updates do not invalidate an unchanged decomposition or contract assessment by themselves; establish and report equivalence of the reviewed concern against the actual diff. A changed scope or upstream guarantee requires affected review even when its report says Ready. Do not infer currency from a filename or status label alone.
+Identify each reviewed root, selected child/peer artifact and governing input by available commit plus blob identities, or exact content hashes for pending edits. A material change confined to a linked model/API-design/contract artifact still requires reassessing affected readiness. Assess material changes to requirements, design, delivery strategy, task scope, dependencies, hierarchy or physical ownership. Routine task completion checkbox/evidence updates do not invalidate an unchanged decomposition or contract assessment by themselves; establish and report equivalence of the reviewed concern against the actual diff. A changed scope or upstream guarantee requires affected review even when its report says Ready. Do not infer currency from a filename or status label alone.
 
 A direct dependent-stage invocation follows the same gate as a coordinated request. Obtain the focused missing review within the already authorized scope; read-only assessment can return its result without persisting a report when writes are prohibited, but absent durable required evidence remains a progression blocker. An explicit human exception names its affected scope and consequences; it does not turn a Blocked report into Ready or supply missing implementation acceptance.
 

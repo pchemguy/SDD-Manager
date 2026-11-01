@@ -27,7 +27,7 @@ Apply **sdd-conventions**' **Development-document QC** reference (`skills/sdd-co
 | Define a scoped change to existing specified behavior | [change specification](references/change-specification.md) |
 | Review SPEC quality and identify conflicts | [review](references/review.md) |
 
-Before authoring, identify accepted decisions and the relevant PROJECT, ARCHITECTURE, DECOMPOSITION, existing SPEC, and applicable focused children. For an existing implementation, inspect only relevant code and tests to establish observed behavior; do not promote an observation into a requirement without an accepted decision. If a material architectural boundary is undecided or governing sources conflict, return that decision to design or the user rather than inventing a contract.
+Before authoring, identify accepted decisions and the relevant PROJECT, ARCHITECTURE, DECOMPOSITION, existing SPEC, applicable focused children and selected model/API-design/contract artifacts. For an existing implementation, inspect only relevant code and tests to establish observed behavior; do not promote an observation into a requirement without an accepted decision. If a material architectural boundary is undecided or governing sources conflict, return that decision to design or the user rather than inventing a contract.
 
 Read-only review can proceed without modifying files. Creating, revising, or removing project documents requires **sdd-manage** to coordinate the user's request and a current **sdd-orient** handoff establishing an eligible Git worktree, applicable instructions, affected paths, and ownership of dirty changes. This skill does not implement orientation or authorize another workflow.
 
