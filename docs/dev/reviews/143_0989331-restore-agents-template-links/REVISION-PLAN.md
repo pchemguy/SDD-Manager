@@ -12,6 +12,10 @@ The human requested: "Open a revision campaign and revert it", referring to the 
 
 ## Boundary
 
-The rollback is the only source change. Commit/publish/read back the verified result through the GitHub connector and stop on the revision branch with this campaign open. Campaign closure/main integration and another version/release are not selected by this request.
+The selected source changes are the V-001 rollback and the later V-002 paragraph relocation. Commit/publish/read back the verified result through the GitHub connector and stop on the revision branch with this campaign open. Campaign closure/main integration and another version/release are not selected by this request.
 
 The [revision report](REVISION-REPORT.md) owns actual checks and reached state. No runtime behavior or installed-client portability is established by restoring historical prose.
+
+## V-002 — Release-section paragraph order
+
+The human supplied the existing PLUGIN.md artifact-name paragraph and specified that it should be the second paragraph in its section. Move it verbatim after the highlights/complete-message routing paragraph within Release preparation and publication, before the authorized-release paragraph. Preserve the rest of the document byte for byte and retain one occurrence of the rule and its existing link. This extends the original template-only scope within the same active campaign. Verify section order, exact paragraph bytes, unchanged outside content and link/block inventories, canonical link target/anchor, unchanged V-001 restoration, whitespace and active record links; publish/read back and keep the campaign open.
