@@ -1,0 +1,37 @@
+{
+  "source": "1a8cfe0d84056b4a7912813e48be7287ecfd0052",
+  "version": "0.16.2",
+  "files": 171,
+  "notes_sha256": "475016456f03a50b9b851b3ac8f8f09ff7aee87754efda084714481a679e3417",
+  "reproducible_two_builds": true,
+  "exact_member_bytes": true,
+  "archive_comment_source": true,
+  "naming_gate": {
+    "argv": [
+      "python",
+      "/workspace/scratch/f5adda9293ed/SDD-Manager/.agents/plugins/sdd-manager/skills/sdd-verify/scripts/release_assets.py",
+      "--expected",
+      "/tmp/sdd142-expected-assets.json",
+      "--directory",
+      "/tmp/sdd142-candidate",
+      "--version",
+      "0.16.2"
+    ],
+    "exit": 0,
+    "output": "{\"ok\": true, \"complete\": true, \"checked\": 2}\n"
+  },
+  "extracted_checker": {
+    "exit": 0,
+    "output": "{\"ok\": true, \"contract_vectors_checked\": 38}\n"
+  },
+  "assets": {
+    "sdd-manager.zip": {
+      "sha256": "7e1e5717f45859c7792e68253af08dea4aea9389678197258d91da0086434339",
+      "bytes": 542234
+    },
+    "sdd-manager.zip.sha256": {
+      "sha256": "85daf34878c9bb681b8ffcae6994390f3ca6e8f6d7c946a015d7b954b74ff3a6",
+      "bytes": 82
+    }
+  }
+}

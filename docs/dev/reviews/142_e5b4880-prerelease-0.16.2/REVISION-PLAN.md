@@ -13,3 +13,5 @@ No new product features, documentation tasks, mandatory approval rounds or live-
 ## Execution checkpoint
 
 V-001 repairs and full regression/independent recheck are complete; the [revision report](REVISION-REPORT.md) and [verification](repair-verification.json) retain actual results. Publish/read back that combined action before V-002. V-002 version/notes preparation is ready for publication; exact committed package checks follow that boundary. V-003 remains pending.
+
+V-002 is verified on published source 1a8cfe0d with 171 exact members, reproducible bytes and passing naming gates. V-003 finalization is ready for explicit main integration; subsequent release commit/tag/publisher/readback remain authorized and pending. The campaign closes only after the closing merge publication/readback and return to main.

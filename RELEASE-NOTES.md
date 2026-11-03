@@ -18,6 +18,6 @@ Stable latest links: [package](https://github.com/pchemguy/SDD-Manager/releases/
 
 ## Verification and limits
 
-Comprehensive source review covered 381 current files and resolved eleven findings. Fresh Linux checks pass 140 support tests, 62 publisher tests and 144 Node contracts, including meaningful failure-before-pass regressions. Seven native Windows shell tests are skipped locally on Linux. Independent repair review found no remaining defect in the accepted changes.
+Comprehensive source review covered 381 current files and resolved eleven findings. Fresh Linux checks pass 140 support tests, 62 publisher tests and 144 Node contracts, including meaningful failure-before-pass regressions. Seven native Windows shell tests are skipped locally on Linux. Independent repair review found no remaining defect in the accepted changes. Git publication, projection and completion CI also passes all twelve Windows/Linux jobs with Node 22/24; publication contracts use Python 3.11.
 
 These checks do not establish fresh-agent compliance, installed-client discovery or universal client compatibility. No fresh live TextStats trial or Mermaid render was run for this release; diagram sources are unchanged. No generated demo application, Electron package or browser extension is included.

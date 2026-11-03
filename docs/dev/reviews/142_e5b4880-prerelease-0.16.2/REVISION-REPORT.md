@@ -48,3 +48,13 @@ Publish/read back this version/notes preparation before building the exact commi
  V-003 campaign finalization/integration and release publication/readback remain pending. No release/tag/workflow success is claimed by the repair checks.
 
 No fresh live TextStats or installed-client trial was run. Local results do not establish native Windows behavior or live-provider authentication. Fresh Mermaid rendering is unavailable in this environment; the reviewed diagram sources are unchanged. Native CI and hosted release observations will be recorded separately when actually obtained.
+
+## V-002 result and V-003 finalization
+
+Version/notes preparation is published/read back at **1a8cfe0d84056b4a7912813e48be7287ecfd0052**. Its exact committed package contains 171 files; every ZIP member matches the selected Git blob, its comment identifies that source and its manifest is 0.16.2. Two independent builds are byte-identical. The complete two-file staging inventory passes the executed naming gate; the extracted checker passes all 38 public vectors. [Package verification](package-verification.json) retains preparation-source hashes and commands. Those hashes describe this preparation candidate, not the later release commit.
+
+[Native CI](native-ci.json) verifies the repair commit in all twelve Windows/Linux Node 22/24 matrix jobs: Git publication (including Python 3.11 and Windows controller-death contrasts), forge projection and forge completion. This supplements the 346-test local run; seven separate Windows shell cases remain locally skipped. Root notes now include those observed CI facts and their exact body hash is refreshed in the preparation record.
+
+All eleven findings are verified with no unresolved/deferred repair. The final delta preserves every campaign through 141 and contains no unrelated work. Main remains the recorded e5b4880 parent; explicit two-parent completion integration is the next boundary after this finalization publication/readback. Reconcile main HANDOFF and live navigation in the prospective merge, verify the merged package/runtime identities and publish/read back before treating the campaign as closed.
+
+The human requested preparation, then closure, then release. After the verified closing merge, create the direct default-branch release commit with the exact retained notes body, rebuild and rerun the naming/content gates for that commit, create/read back its annotated v0.16.2 tag and dispatch the existing single publisher. Retain actual hosted/download/latest outcomes in the current release report outside this frozen campaign package. No tag, dispatch, release or latest outcome is claimed by finalization.

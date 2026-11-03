@@ -3,7 +3,7 @@
   "pending_tag": "v0.16.2",
   "baseline_tag": "v0.16.1",
   "baseline_commit": "c43d2964817741c2cd655e0d82a6e45aee20369e",
-  "analyzed_through_commit": "6aa9950fd81dc8f64b50da507431effd7dfda4e4",
+  "analyzed_through_commit": "1a8cfe0d84056b4a7912813e48be7287ecfd0052",
   "history_complete": true,
   "tags_fetched": true,
   "coverage": [
@@ -119,15 +119,24 @@
       ],
       "subject": "Repair eleven prerelease findings and verify the complete regression boundary",
       "coverage": "Direct V-001 implementation, actual diff and full regression/independent review."
+    },
+    {
+      "commit": "1a8cfe0d84056b4a7912813e48be7287ecfd0052",
+      "parents": [
+        "6aa9950fd81dc8f64b50da507431effd7dfda4e4"
+      ],
+      "subject": "Prepare SDD Manager 0.16.2 version and complete release message",
+      "coverage": "Version bump, refreshed release body and source-only preparation evidence; no new implementation highlight."
     }
   ],
   "integration_summary": "e5b4880dfb14a3abc550909acdbf3b916dd3c72e",
   "notes_path": "RELEASE-NOTES.md",
-  "notes_sha256": "475016456f03a50b9b851b3ac8f8f09ff7aee87754efda084714481a679e3417",
+  "notes_sha256": "10dcb64403982438d128c92e4664f90f804f2b748d3b4deec2e18e261cdd55cb",
   "package_contract": [
     "sdd-manager.zip",
     "sdd-manager.zip.sha256"
   ],
   "publisher": ".github/workflows/release.yml",
-  "state": "Version/notes prepared; exact committed candidate build remains pending after publication."
+  "state": "Version/notes published and exact committed preparation candidate verified. Current notes add observed native CI facts; closing integration and final-source release marker/rebuild remain pending.",
+  "preparation_commit": "1a8cfe0d84056b4a7912813e48be7287ecfd0052"
 }

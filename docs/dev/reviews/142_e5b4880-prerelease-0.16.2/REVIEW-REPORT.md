@@ -143,3 +143,5 @@ Source/support evidence does not establish a fresh installed-client or live Text
 ## V-001 recheck disposition
 
 All eleven accepted findings are verified after repair. The [revision report](REVISION-REPORT.md) retains changes, fresh 346-test results, original failure-before-pass observations, independent recheck and limits. The canonical baseline observations above remain unchanged. Exact committed package/release preparation and hosted outcomes retain their separate V-002/V-003 gates.
+
+Final source disposition: all eleven findings remain Verified. Package and native CI evidence are retained by the revision report. No further source finding is open; finalization does not imply the subsequent hosted release already occurred.
