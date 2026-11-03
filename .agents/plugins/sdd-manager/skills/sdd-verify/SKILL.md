@@ -17,6 +17,7 @@ Establish the requested task, change, milestone, phase, or project scope. Load t
 | --- | --- |
 | Review milestone/phase implementation code and findings | [boundary review](references/boundary-review.md) |
 | Derive checks from requirements, changes, and dependencies | [check selection](references/check-selection.md) |
+| Execute a complete-inventory artifact-name check; select the project check or Python helper | [executed naming gate](scripts/release-assets.md) |
 | Assess Git highlights, package contents, release workflows, CI outputs and hosted download evidence | [package and release checks](references/release-checks.md) |
 | Execute checks and assess acceptance evidence | [execution and evidence](references/execution-and-evidence.md) |
 | Classify failures and return unresolved work | [failure assessment](references/failure-assessment.md) |

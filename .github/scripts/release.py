@@ -3,6 +3,15 @@ import hashlib
 import json
 import re
 
+# Use the shipped read-only naming policy for every candidate/provider name.
+import importlib.util
+from pathlib import Path
+_name_path = Path(__file__).resolve().parents[2] / '.agents/plugins/sdd-manager/skills/sdd-verify/scripts/release_assets.py'
+_name_spec = importlib.util.spec_from_file_location('sdd_artifact_names', _name_path)
+_name_policy = importlib.util.module_from_spec(_name_spec)
+_name_spec.loader.exec_module(_name_policy)
+
+
 FIELDS = {'source', 'tag', 'notes_source', 'notes', 'notes_sha256', 'publish',
           'prerelease', 'make_latest', 'request_id'}
 
@@ -202,7 +211,9 @@ def build_package(root, data, output):
     if not archive.stat().st_size: raise ValueError('Package archive is empty')
     checksum = output / 'sdd-manager.zip.sha256'
     checksum.write_text(hashlib.sha256(archive.read_bytes()).hexdigest() + '  sdd-manager.zip\n', encoding='ascii')
-    return {archive.name: archive, checksum.name: checksum}
+    files = {archive.name: archive, checksum.name: checksum}
+    _name_policy.check_names(['sdd-manager.zip', 'sdd-manager.zip.sha256'], list(files), data['tag'])
+    return files
 
 
 def verify_release(api, release, data, files, complete):
@@ -212,6 +223,7 @@ def verify_release(api, release, data, files, complete):
         raise ValueError('Release fields conflict with selected handoff')
     assets = release['assets']
     names = [asset['name'] for asset in assets]
+    _name_policy.check_names(list(files), names, data['tag'], complete=complete)
     if len(names) != len(set(names)) or not set(names) <= set(files):
         raise ValueError('Duplicate or foreign release assets')
     for asset in assets:
@@ -230,6 +242,7 @@ def reconcile_release(api, data, files):
     validate_handoff(data)
     if not data['publish']:
         return None
+    _name_policy.check_names(list(files), list(files), data['tag'])
     api.verify_release_source(data['source'])
     if api.tag_source(data['tag']) != data['source']:
         raise ValueError('Existing tag differs from selected source')

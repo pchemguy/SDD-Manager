@@ -25,5 +25,16 @@ class ReleaseAssetNames(unittest.TestCase):
                                              {name: b'fixture bytes'}, complete=True)
 
 
+class GateBeforeProvider(unittest.TestCase):
+    def test_bad_candidate_stops_before_provider_access(self):
+        import hashlib
+        data = {'source': 'a'*40, 'notes_source': 'a'*40, 'tag': 'v1.2.3',
+                'notes': 'fixture', 'notes_sha256': hashlib.sha256(b'fixture').hexdigest(),
+                'publish': True, 'prerelease': False, 'make_latest': True,
+                'request_id': 'naming-fixture'}
+        with self.assertRaises(ValueError):
+            publisher.reconcile_release(None, data, {'artifact-v1.2.3.unseen': b'x'})
+
+
 if __name__ == '__main__':
     unittest.main()
