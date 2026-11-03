@@ -1,0 +1,97 @@
+{
+  "campaign": "143_0989331",
+  "source": "bdd7c0aa5ab24a9ccca0cf29911ff3147a9a41bd",
+  "baseline_main": "0989331ddc01fd5687043b37a2b294af2836de78",
+  "python": "3.12.14",
+  "checks": {
+    "support": {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "acceptance/textstats/tests",
+        "-t",
+        "acceptance/textstats",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "bdd7c0aa5ab24a9ccca0cf29911ff3147a9a41bd",
+      "pending_sha256": {},
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 51.0,
+      "output_log": "/tmp/sdd143-close-checks/support.log",
+      "passed": 140
+    },
+    "publisher": {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".github/tests",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "bdd7c0aa5ab24a9ccca0cf29911ff3147a9a41bd",
+      "pending_sha256": {},
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 8.79,
+      "output_log": "/tmp/sdd143-close-checks/publisher.log",
+      "passed": 62
+    }
+  },
+  "passed": 202,
+  "static": {
+    "source": "bdd7c0aa5ab24a9ccca0cf29911ff3147a9a41bd",
+    "parent_main": "0989331ddc01fd5687043b37a2b294af2836de78",
+    "template_exact_old_blob": "3dada5ea7f73323b8c70ae0579afd877b5163d8e",
+    "template_link_targets": 5,
+    "release_section_order": "second paragraph, exact original bytes",
+    "outside_section_bytes_unchanged": true,
+    "markdown_block_link_multisets_unchanged": true,
+    "package_changed_paths": [
+      ".agents/plugins/sdd-manager/PLUGIN.md",
+      ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md"
+    ],
+    "runtime_ci_tests_unchanged": true,
+    "closed_record_preservation": true,
+    "validator": {
+      "argv": [
+        "python",
+        "/root/.codex/skills/remote-skills/skill-6ad49f5dd9a481918b90db50d0256cd2/scripts/validate_plugin.py",
+        ".agents/plugins/sdd-manager"
+      ],
+      "exit": 0,
+      "warnings": 69
+    },
+    "source_hashes": {
+      ".agents/plugins/sdd-manager/PLUGIN.md": "69fefc0e01b537270dff02fa9c97e4f090e4ec1608e6dbad9eeba29edea1aaca",
+      ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md": "0e64fa9f05cf5fb3a100dd1ef983f2aeecbe61784eae9586d1c05b3b97c6ad17",
+      "docs/dev/HANDOFF.md": "38796426588d237321b111c733a5ba867d1131565fc37c94635a0ca38496f3e1",
+      "docs/dev/reviews/143_0989331-restore-agents-template-links/REVISION-PLAN.md": "931b13d8acecf53882a89650d850aceba8da152bec54268462433d1e255ae274",
+      "docs/dev/reviews/143_0989331-restore-agents-template-links/REVISION-REPORT.md": "ae24c05b7d175382e49c4e3787c1464db7129ccdf56f0886ac3b3d531829bdb0",
+      "docs/dev/reviews/README.md": "cb24576c0d753045960951895a71b56c568f80f51004df765f7ef252b4294e3a"
+    }
+  },
+  "independent_review": {
+    "result": "Ready; no source findings",
+    "report": "INDEPENDENT-RECHECK.md",
+    "sha256": "c5d5787bf9eeb932e5bfce76a2c1e9b4f2b7ad1a07caf4ec7593e743d2338ee4"
+  },
+  "limits": [
+    "Focused source/layout review, not a comprehensive new product review.",
+    "No fresh installed-client or live TextStats trial.",
+    "Native helpers, code, tests and CI unchanged; native suites not rerun for this prose-only delta."
+  ]
+}
