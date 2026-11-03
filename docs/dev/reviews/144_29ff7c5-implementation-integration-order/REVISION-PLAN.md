@@ -13,3 +13,7 @@ The human requested a new revision campaign and supplied the exact replacement f
 ## Publication and stop
 
 Commit the verified change with its campaign evidence, publish/read back through the GitHub connector and stop on this revision branch with the campaign open. Closure/main integration, version bump and release remain outside this request. The [revision report](REVISION-REPORT.md) owns actual results and limits.
+
+## V-002 — Git release-section opening order
+
+The human supplied the opening of git-workflows.md Release commit and tag with message preparation first and the artifact-name gate second, followed by an omitted remainder. Swap those two existing paragraphs verbatim, preserving the heading, document prefix and entire remaining section. Verify exact supplied order/wording, unchanged outside bytes and complete block/link inventories, both canonical targets/anchors, preserved V-001 source, whitespace, current evidence links and closed-record preservation; publish/read back and retain the open campaign boundary.
