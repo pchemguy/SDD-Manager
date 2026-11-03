@@ -37,3 +37,7 @@ The [focused follow-up guide](TRACKING-FIDELITY.md) supplies separately selected
 ## Human and Git checkpoint assessment
 
 Apply [independent checkpoint assessment](CHECKPOINTS.md) to necessary new main/feature documents and task closing/continuation/integration boundaries. Retain actual human decision/order evidence and native task commit/parent diffs. Support success does not establish these consumer observations.
+
+## Artifact-name enforcement follow-ups
+
+Use the [focused artifact-name trials](ARTIFACT-NAMES.md) for isolated direct/phase release, arbitrary artifact types, persistent producer repair and complete-inventory gate observations. These follow-ups do not inherit default catalog passes or establish live publication.

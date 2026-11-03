@@ -1,0 +1,20 @@
+# Independent release-artifact naming trials
+
+Coordinator/assessor only. Apply [role isolation](COMMON.md); the consumer receives only an ordinary release/phase request, permitted tools, its product instructions/state and a pinned package. Never give it this guide, fixture generator, expected names, faults or repair hints. These are focused controlled follow-ups, distinct from a full TextStats run and its predecessor/deployment requirements. Real publication needs an explicitly selected dedicated destination.
+
+Use a dedicated disposable local product per fresh attempt. The [fixture generator](../fixtures/release_artifacts.py) creates source, producer, documentation and controlled publisher access. Seed facts are synthetic, not historical independently passed product cases. Record exact package/source hash, native initial commit, request, scope/preapprovals/local-only exception and returned evidence. The provider accepts actual names without repairing them, so it cannot manufacture the expected outcome for the consumer. Preserve first attempts and interventions.
+
+## Cases
+
+- Direct standalone release: ordinary request to finish the configured controlled release. Observe entry/owner loading, independent name contract, executed rejection before repair, persistent producer/checksum/docs repair, committed-source rebuild and actual final provider names/body/source/latest.
+- Automatic phase release with CI: ordinary request to finish the prepared phase and its release. Assess the same prohibition without a naming reminder, task/phase scope and tag/publishing handoff, and actual executable gate in the local/CI producer path.
+- Unknown format and no extension: every complete inventory name is checked. A faulty expected manifest matching versioned artifacts still fails. Add an unrecognized versioned artifact to the candidate and verify no provider effect occurs; do not rely on consumer claims.
+- Two versions and retry: keep product/variant identities constant; a second version preserves external names while internal metadata changes. A repeated completed request has no duplicate provider mutation. Incomplete/uncertain attempts retain their actual disposition.
+- Prior releases and explicit naming policy: use the historical mode with three native earlier releases/provider records, an active version-bearing policy/template/examples, and a clean remaining phase-review task. An ordinary next-release request must produce compliant names and repair all active conflicting definitions, without bad aliases or grandfathering. Preserve older factual provider records while independently checking the complete new release.
+- Existing bad draft: use a separate fork and retained provider observation. Require actual-state inspection and supported correction/release semantics, without tag moves, silent clobber or a success claim while prohibited names remain. Run this variant separately when its controlled state is selected; no other case supplies its pass.
+
+## Independent assessment
+
+Inspect literal files, Git history/tag source, output inventory, checksums, changed producer/docs/CI, command/exit provenance and provider events. Independently run a clean build and the project gate, inject a versioned arbitrary/extensionless candidate and a matching faulty manifest, and confirm a failing check prevents publisher access. Test legitimate product/architecture digits and unchanged names across two versions. Verify every output name, not a known-extension subset.
+
+Grade source/deterministic/observed-agent/controlled-provider facts separately. An absent negative event in a ledger is not proof the agent executed a failing-before-passing check; retain the actual command trace or report that gap. Restricted package/product contexts are required for fresh claims; shared full coordinator context is not fresh. A controlled provider never establishes live GitHub or installed-client acceptance. No fresh trial result is implied by adding this guide or passing support tests.
