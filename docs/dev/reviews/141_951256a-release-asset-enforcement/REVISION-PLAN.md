@@ -1,6 +1,6 @@
 # Absolutely prohibit version numbers in release artifact names
 
-Campaign **141_951256a**; branch `revision/141_951256a-release-asset-enforcement`, from/returning to main **951256ad321a477a128c4fc1234665719901225b**. No suspended parent. **Execution authorized by the human. Complete the bounded revision and verification; retain the open campaign branch. Merge, closure, version bump and release are not selected.**
+Campaign **141_951256a**; branch `revision/141_951256a-release-asset-enforcement`, from/returning to main **951256ad321a477a128c4fc1234665719901225b**. No suspended parent. **Execution and campaign closure are authorized by the human. Finalize the verified revision and integrate it into the recorded parent main. Version bump, release publication and consumer-repository repair are outside this campaign.**
 
 ## Required result
 
@@ -46,6 +46,6 @@ The exact newly failing repository/release, asset names, loaded plugin identity 
 
 ## Execution boundary
 
-Execution and scoped verification are recorded in the [revision report](REVISION-REPORT.md#action-disposition-and-boundary), with the complete attempt qualifications and [retained evidence](evidence/README.md). The source revision is implemented; the campaign remains open. Exact attribution of the reported consumer release remains unavailable, and unrun live/client/CI/recovery variants are not claimed as acceptance.
+Execution and scoped verification are recorded in the [revision report](REVISION-REPORT.md#action-disposition-and-boundary), with complete attempt qualifications and [retained evidence](evidence/README.md). The human requested closure after checkpoint 3e170ded and its archive were verified on origin. Finalize this bounded revision and return to main through the verified two-parent integration. Exact attribution of the reported consumer incident remains unavailable; unrun live/client/CI/recovery variants are not acceptance.
 
-The human selected execution. Implement the bounded owner changes and controlled regression/consumer checks. Retain the unestablished reported-case identity as a specific diagnostic limit; do not invent a consumer trace or block independent repairs. Leave the campaign open after execution; no merge, version bump, product release or consumer-repository repair is selected. Closed records remain frozen and product instructions describe the target workflow directly.
+The accepted execution and controlled verification are complete within the recorded limits. Close only this campaign through its recorded main parent; stop after verified target publication and return. Do not invent the unidentified consumer trace or extend closure into a version bump, release or consumer-repository repair. Prior closed records remain frozen.

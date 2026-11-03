@@ -2,7 +2,7 @@
 
 Campaign **141_951256a**, ordinary revision from/returning to main **951256ad321a477a128c4fc1234665719901225b**; working branch `revision/141_951256a-release-asset-enforcement`. No suspended parent. Package remains 0.16.1.
 
-Current state: the bounded source revision is implemented and locally verified at **d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879**. Controlled consumer and independent runtime results are recorded below, with the failed and assisted first attempts retained. The campaign remains open; integration, closure, version bump, real release publication and consumer-repository repair are outside the selected scope.
+Current state: finalized for the human-requested campaign closure, with checkpoint **3e170ded9f7ec23a6dc038823c2ed476363bead0** and its complete evidence archive verified on origin. Fresh closure checks pass. Controlled consumer and independent runtime results below retain the failed, assisted and incomplete first attempts. Integration returns to the recorded main parent; version bump, release and consumer-repository repair are outside scope.
 
 The human reports versioned release attachments recurring and requests a new revision campaign and fix plan. Opening/planning only is selected. [Plan](REVISION-PLAN.md) retains the required result, source observations, six actions, objective acceptance and stopping boundary.
 
@@ -100,3 +100,17 @@ The package archive SHA-256 at this source is **dfc32e889d26c411574ef2cd103c4b21
 The demonstrated scope is explicit-source controlled execution, not installed-client discovery or live GitHub publication. CI source and its local gate paths were checked; hosted CI, hosted asset downloads and a separate existing-bad-draft trial were not run. The unidentified original consumer incident remains undiagnosed. Source revision and bounded verification are ready to retain on the open campaign branch; no merge or release is selected.
 
 Automatic approval review rejected the raw evidence archive upload, citing possible disclosure of internal artifacts and unclear payload/destination authorization, including after the human explicitly confirmed publication to the public pchemguy/SDD-Manager repository. A materially reduced alternative containing only eight plaintext summary/public-source check files was also rejected as unauthorized disclosure of nonpublic campaign details. Neither payload was uploaded. The human subsequently requested local persistence; this final checkpoint and its raw evidence are committed locally and remain unpublished, so they are not remotely recoverable. The archive contains 308 members, is 382132 bytes, and has SHA-256 4f06aad9ff0d78190b5b679c93113e0b533b43b427d0f58dc2e19cd592ea2cf3. The published source branch remains at d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879.
+
+## Publication recovery and requested closure
+
+The human published the preserved local checkpoint. A bounded origin fetch and exact-ref readback verified 3e170ded9f7ec23a6dc038823c2ed476363bead0 on revision/141_951256a-release-asset-enforcement, with zero local/remote divergence and a clean tree. The hosted commit contains the 382132-byte controlled-trials.tar.xz with SHA-256 4f06aad9ff0d78190b5b679c93113e0b533b43b427d0f58dc2e19cd592ea2cf3. The earlier publication rejection is retained historical evidence; it is no longer an unpublished-checkpoint condition.
+
+The human then requested closure. The original opening is 005033affee05dec6e1631ffd18f6d80e440b29b; branch-off and refreshed receiving main are 951256ad321a477a128c4fc1234665719901225b. Main is an ancestor of the campaign, with no competing target changes. No prior closed campaign content changed.
+
+Fresh closure verification on 3e170ded passes 139 support tests and 61 publisher tests using the declared dependency target. The exact-source package passes its manifest, 171-file inventory/content and checksum checks; the extracted helper passes all 38 public contract cases. Package tree 3490afed9d8ae7ef2c57e59aace65766c64892e2 is unchanged by this records-only finalization. The build-only ZIP SHA-256 at 3e170ded is f985ae63449a576292efec0fa824227b410755453c8a3043ed0655c34fde6616.
+
+The finalization reconciles plan, report, evidence navigation, campaign index and HANDOFF with the published checkpoint and closure request. The closing two-parent main merge owns actual integration/publication provenance and parent-context return. Its verification must preserve the tested package/runtime trees, validate the merged records and leave prior closed campaigns untouched. Retained consumer limits remain explicit; closure makes no new live-provider, installed-client, hosted-CI or existing-bad-draft acceptance claim.
+
+## Closure publication disposition
+
+The GitHub connector rejected the five plaintext finalization records after the human requested closure, stating that the request did not explicitly authorize public disclosure of that exact new payload. This is a new finalization-publication rejection, distinct from the earlier raw-archive checkpoint whose publication was subsequently verified. No connector tree/ref write succeeded. The authorized local finalization and closing merge are prepared and verified for a concrete publication boundary; host publication remains pending and must not be bypassed through another transport.
