@@ -36,6 +36,15 @@ The [independent repair recheck](INDEPENDENT-RECHECK.md) concludes Ready with no
 
 ## Remaining boundaries and limits
 
-V-002 patch bump, exact committed package and complete notes remain pending. V-003 campaign finalization/integration and release publication/readback remain pending. No release/tag/workflow success is claimed by the repair checks.
+V-001 is published/read back at 6aa9950fd81dc8f64b50da507431effd7dfda4e4; local HEAD/index/worktree were synchronized by exact tree identity.
+
+## V-002 — Version and complete-message preparation
+
+The canonical manifest is bumped from 0.16.1 to 0.16.2. Root [RELEASE-NOTES.md](../../../../RELEASE-NOTES.md) contains the retained complete body with installation, stable downloads and explicit evidence limits. The [preparation record](release-preparation.json) accounts for every commit since v0.16.1 through 6aa9950f, using the cumulative campaign 141 integration plus direct V-001 source/evidence; no released API-design work is repeated. The ignored internal highlights draft has the pinned previous baseline and source watermark.
+
+Publish/read back this version/notes preparation before building the exact committed 0.16.2 candidate. The two version-free asset names remain independently established by the existing delivery contract. Final package hashes/member checks and final-source coverage remain pending.
+
+## Remaining release boundary
+ V-003 campaign finalization/integration and release publication/readback remain pending. No release/tag/workflow success is claimed by the repair checks.
 
 No fresh live TextStats or installed-client trial was run. Local results do not establish native Windows behavior or live-provider authentication. Fresh Mermaid rendering is unavailable in this environment; the reviewed diagram sources are unchanged. Native CI and hosted release observations will be recorded separately when actually obtained.

@@ -12,4 +12,4 @@ No new product features, documentation tasks, mandatory approval rounds or live-
 
 ## Execution checkpoint
 
-V-001 repairs and full regression/independent recheck are complete; the [revision report](REVISION-REPORT.md) and [verification](repair-verification.json) retain actual results. Publish/read back that combined action before V-002. V-002 and V-003 remain pending.
+V-001 repairs and full regression/independent recheck are complete; the [revision report](REVISION-REPORT.md) and [verification](repair-verification.json) retain actual results. Publish/read back that combined action before V-002. V-002 version/notes preparation is ready for publication; exact committed package checks follow that boundary. V-003 remains pending.

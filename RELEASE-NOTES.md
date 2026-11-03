@@ -1,21 +1,23 @@
-SDD Manager **0.16.1** makes library and component APIs explicit, supports optional model/API/contract documents within existing preparation checkpoints, and clarifies local execution of single-page demos.
+SDD Manager **0.16.2** strengthens release artifact checks, exact-source packaging and Git publication guards, and corrects preparation, initialization and acceptance guidance.
 
 ## Highlights
 
-- **Explicit API design.** Decomposition identifies provided and required external and cross-component internal APIs, their operations/types, providers/consumers, visibility and ownership. Precise behavior stays with SPEC and its canonical contracts.
-- **Flexible design artifacts.** Keep models, API design and contracts inline or in linked child/peer documents. Model/API artifacts share documentation task 004; contract artifacts share 005. Planning, layout, tasks, feature incorporation and QC follow those owners without extra tasks or approval rounds. QC source identities include selected peers, so a peer-only change cannot escape the affected-readiness check.
-- **Single-page execution modes.** Both single-page Tetris prompts distinguish direct local-file execution from HTTP(S). Local mode keeps settings in memory without reading/writing cookies or configuration URL parameters; manual Save/Restore remains available when introduced. HTTP(S) retains the specified persistence behavior.
+- **Stable release filenames.** Every release artifact must have a version-free name, including unfamiliar file types and extensionless files. Executed inventory checks and shared notation cases reject matching faulty manifests; conflicting producers, policies, examples and documentation must be repaired before release transitions.
+- **Exact package source.** Builds ignore local Git replacement refs and independently require the canonical publication entry, process supervisor, tracking definitions and naming resources. Package bytes and inventory remain tied to the selected commit.
+- **Safer publication preflight.** Ambient GIT_CONFIG can no longer hide a foreign-VCS remote from validation. Both public publication entries reject it before transport, including from linked worktrees.
+- **Consistent preparation and initialization.** Feature-preparation milestone closure checks all associated work and exact campaign identities. Hosted FDOCS titles include their campaign. Copied policy guidance resolves from the selected package root, and reusable AI disclosure avoids unsupported provider or completed-stage claims.
+- **Correct acceptance boundaries.** Milestone criteria follow the existing standalone-review threshold and retain folded review/report/HANDOFF ownership. Malformed assessment records return sanitized errors before repository observation. Catalog and onboarding instructions identify the correct source root and conditional runtime requirements.
 
 ## Package and installation
 
-The package contains 15 skills. Supervised HTTPS Git publication requires Node.js 22+, Python 3.11+ and Git on supported Windows or Linux hosts; optional GitHub projection/completion utilities require Node.js 22+ and Git. Target projects retain their own toolchain requirements.
+The package contains 15 skills. Workflows using bundled supervised HTTPS Git publication require native Git, Node.js 22+ and Python 3.11+ on supported Windows or Linux hosts. Optional GitHub projection/completion utilities require Node.js 22+ and Git. Target projects retain their own toolchain requirements.
 
-Download [sdd-manager.zip](https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.1/sdd-manager.zip) and its [SHA-256 file](https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.1/sdd-manager.zip.sha256). Verify the checksum, then import the archive through an Agent Plugins-compatible client or extract its sdd-manager directory for explicit source loading. PLUGIN.md is a non-standard composition entry; automatic discovery depends on the client.
+Download [sdd-manager.zip](https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.2/sdd-manager.zip) and its [SHA-256 file](https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.2/sdd-manager.zip.sha256). Verify the checksum, then import the archive through an Agent Plugins-compatible client or extract its sdd-manager directory for explicit source loading. PLUGIN.md is a non-standard composition entry; automatic discovery depends on the client.
 
-Stable latest links: [package](https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip) and [checksum](https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip.sha256). Demo prompts and contributor evidence are in the source repository, outside the distributable.
+Stable latest links: [package](https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip) and [checksum](https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip.sha256). Demo prompts and contributor evidence remain in the source repository, outside the distributable.
 
 ## Verification and limits
 
-Local verification covers 139 support tests, 50 publisher tests and 138 Node contracts, exact package/schema checks, current documentation links and eight rendered Mermaid diagrams. Seven native Windows shell cases are skipped locally on Linux. Runtime helpers, their tests and workflow code are unchanged by the API/QC instruction revisions.
+Comprehensive source review covered 381 current files and resolved eleven findings. Fresh Linux checks pass 140 support tests, 62 publisher tests and 144 Node contracts, including meaningful failure-before-pass regressions. Seven native Windows shell tests are skipped locally on Linux. Independent repair review found no remaining defect in the accepted changes.
 
-These checks do not establish fresh-agent compliance, installed-client discovery or universal client compatibility. No generated demo application, Electron package or browser extension is included in this plugin release.
+These checks do not establish fresh-agent compliance, installed-client discovery or universal client compatibility. No fresh live TextStats trial or Mermaid render was run for this release; diagram sources are unchanged. No generated demo application, Electron package or browser extension is included.

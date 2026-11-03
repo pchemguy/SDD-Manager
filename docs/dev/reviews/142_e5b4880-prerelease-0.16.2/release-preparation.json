@@ -1,0 +1,133 @@
+{
+  "version": "0.16.2",
+  "pending_tag": "v0.16.2",
+  "baseline_tag": "v0.16.1",
+  "baseline_commit": "c43d2964817741c2cd655e0d82a6e45aee20369e",
+  "analyzed_through_commit": "6aa9950fd81dc8f64b50da507431effd7dfda4e4",
+  "history_complete": true,
+  "tags_fetched": true,
+  "coverage": [
+    {
+      "commit": "951256ad321a477a128c4fc1234665719901225b",
+      "parents": [
+        "c43d2964817741c2cd655e0d82a6e45aee20369e"
+      ],
+      "subject": "Record verified SDD Manager 0.16.1 release outcome",
+      "coverage": "Source-only review/opening/release-outcome bookkeeping; no public product highlight."
+    },
+    {
+      "commit": "005033affee05dec6e1631ffd18f6d80e440b29b",
+      "parents": [
+        "951256ad321a477a128c4fc1234665719901225b"
+      ],
+      "subject": "Open campaign 141 and plan release-asset naming enforcement",
+      "coverage": "Campaign 141 scope covered by cumulative integration e5b4880, parent inventory and targeted current net diff; no duplicate child bullets."
+    },
+    {
+      "commit": "4ac74dfd7dc56ee00684bd5a09f2fb78d128c00c",
+      "parents": [
+        "005033affee05dec6e1631ffd18f6d80e440b29b"
+      ],
+      "subject": "Make the version-number prohibition absolute for every release artifact type",
+      "coverage": "Campaign 141 scope covered by cumulative integration e5b4880, parent inventory and targeted current net diff; no duplicate child bullets."
+    },
+    {
+      "commit": "d5b7b252026c69714a17a512004c868e10305802",
+      "parents": [
+        "4ac74dfd7dc56ee00684bd5a09f2fb78d128c00c"
+      ],
+      "subject": "Record artifact-name regression before enforcing the release gate",
+      "coverage": "Campaign 141 scope covered by cumulative integration e5b4880, parent inventory and targeted current net diff; no duplicate child bullets."
+    },
+    {
+      "commit": "59a8bac2c7c1fb3a74e624d844bf52e50fbeb098",
+      "parents": [
+        "d5b7b252026c69714a17a512004c868e10305802"
+      ],
+      "subject": "Make the absolute artifact-name prohibition explicit at every release boundary",
+      "coverage": "Campaign 141 scope covered by cumulative integration e5b4880, parent inventory and targeted current net diff; no duplicate child bullets."
+    },
+    {
+      "commit": "78fea804e5d46aa5bd23cf181fb4c9f0fb15a9e8",
+      "parents": [
+        "59a8bac2c7c1fb3a74e624d844bf52e50fbeb098"
+      ],
+      "subject": "Add type-independent executable artifact gate and enforce it in the publisher",
+      "coverage": "Campaign 141 scope covered by cumulative integration e5b4880, parent inventory and targeted current net diff; no duplicate child bullets."
+    },
+    {
+      "commit": "c34b7099b4c47cf0046f81b15c07f5553c4e1fad",
+      "parents": [
+        "78fea804e5d46aa5bd23cf181fb4c9f0fb15a9e8"
+      ],
+      "subject": "Require new-release naming repairs despite prior releases and explicit project policies",
+      "coverage": "Campaign 141 scope covered by cumulative integration e5b4880, parent inventory and targeted current net diff; no duplicate child bullets."
+    },
+    {
+      "commit": "d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879",
+      "parents": [
+        "c34b7099b4c47cf0046f81b15c07f5553c4e1fad"
+      ],
+      "subject": "Require generated gates to pass shared version-notation conformance checks",
+      "coverage": "Campaign 141 scope covered by cumulative integration e5b4880, parent inventory and targeted current net diff; no duplicate child bullets."
+    },
+    {
+      "commit": "3e170ded9f7ec23a6dc038823c2ed476363bead0",
+      "parents": [
+        "d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879"
+      ],
+      "subject": "Record campaign 141 verification and controlled trial evidence",
+      "coverage": "Campaign 141 scope covered by cumulative integration e5b4880, parent inventory and targeted current net diff; no duplicate child bullets."
+    },
+    {
+      "commit": "98eaa3fe46c7bcf40178333d6c8f84b143e63669",
+      "parents": [
+        "3e170ded9f7ec23a6dc038823c2ed476363bead0"
+      ],
+      "subject": "Finalize campaign 141 for main integration",
+      "coverage": "Campaign 141 scope covered by cumulative integration e5b4880, parent inventory and targeted current net diff; no duplicate child bullets."
+    },
+    {
+      "commit": "e5b4880dfb14a3abc550909acdbf3b916dd3c72e",
+      "parents": [
+        "951256ad321a477a128c4fc1234665719901225b",
+        "98eaa3fe46c7bcf40178333d6c8f84b143e63669"
+      ],
+      "subject": "Merge revision 141_951256a - Release artifact naming enforcement",
+      "coverage": "Campaign 141 scope covered by cumulative integration e5b4880, parent inventory and targeted current net diff; no duplicate child bullets."
+    },
+    {
+      "commit": "390c4f2c768f4e89a9b63d5c085c6a812383a442",
+      "parents": [
+        "e5b4880dfb14a3abc550909acdbf3b916dd3c72e"
+      ],
+      "subject": "Open campaign 142 for comprehensive prerelease review 0.16.2",
+      "coverage": "Source-only review/opening/release-outcome bookkeeping; no public product highlight."
+    },
+    {
+      "commit": "efdfb9e7a7b8c78ab2caa31c730edf1465a49f40",
+      "parents": [
+        "390c4f2c768f4e89a9b63d5c085c6a812383a442"
+      ],
+      "subject": "Record comprehensive prerelease review and eleven accepted repairs",
+      "coverage": "Source-only review/opening/release-outcome bookkeeping; no public product highlight."
+    },
+    {
+      "commit": "6aa9950fd81dc8f64b50da507431effd7dfda4e4",
+      "parents": [
+        "efdfb9e7a7b8c78ab2caa31c730edf1465a49f40"
+      ],
+      "subject": "Repair eleven prerelease findings and verify the complete regression boundary",
+      "coverage": "Direct V-001 implementation, actual diff and full regression/independent review."
+    }
+  ],
+  "integration_summary": "e5b4880dfb14a3abc550909acdbf3b916dd3c72e",
+  "notes_path": "RELEASE-NOTES.md",
+  "notes_sha256": "475016456f03a50b9b851b3ac8f8f09ff7aee87754efda084714481a679e3417",
+  "package_contract": [
+    "sdd-manager.zip",
+    "sdd-manager.zip.sha256"
+  ],
+  "publisher": ".github/workflows/release.yml",
+  "state": "Version/notes prepared; exact committed candidate build remains pending after publication."
+}
