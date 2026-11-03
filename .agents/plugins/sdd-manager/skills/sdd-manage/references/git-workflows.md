@@ -86,6 +86,8 @@ Use the canonical supervised HTTPS entry from the first authorized push under th
 
 ## Release commit and tag
 
+**Version numbers in the name of any release artifact are absolutely prohibited, regardless of type.** Before creating or pushing the pending tag, obtain sdd-verify's executed [artifact-name gate](../../sdd-forge/references/github-packaging.md#artifact-name-gate-and-repair) for the exact candidate and complete inventory. Missing/failed evidence blocks tagging and publishing triggers; route persistent producer/checksum/docs repair, source publication and rebuild through the owner before retrying. Do not accept a generator's matching expected list as a pass. Neither earlier releases nor explicit project naming rules exempt the new release; correct conflicting policies/templates/examples before retrying.
+
 For an authorized release request, forge first verifies/refreshes the retained complete message through [release-message preparation](../../sdd-forge/references/release-message.md#release-request-freshness-and-commit-gate). Local source/coverage/body context and the established version govern freshness; a matching version alone is insufficient. Manage owns Git persistence and forge owns provider publication.
 
 **Release tags always target release commits on the repository's actual default branch.** Discover that branch from current repository/remote metadata rather than assuming main, master or a cached local alias. Establish whether development uses that branch directly or a designated primary development branch; a branch name alone does not select its role. Refresh the default branch and preserve unrelated work before preparing the release boundary.

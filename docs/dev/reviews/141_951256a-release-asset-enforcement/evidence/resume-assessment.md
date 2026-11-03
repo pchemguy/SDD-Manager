@@ -1,0 +1,15 @@
+# Campaign 141: separately observed continuation
+
+**Disposition: Passed for continuation completion and existing-release reconciliation.** The original retry assessment remains unchanged, including its missing-dispatch limitation.
+
+The exact ordinary continuation dispatch is retained and matches pre-dispatch SHA-256 `6bb1d7ff37900fd9a5fd8cfe256d6d56417cc9c09c767de62ae8bd6801c01120`. Coordinator reports the consumer was launched with `fork_turns=none` and only that message; its recorded commands remain within product, pinned package and supplied controlled interface. This establishes reported separate-context dispatch provenance, not OS-enforced isolation. The journal records product and pinned PLUGIN/manage/orient/forge/verify loading, required release/continuity/Git references and docs/report loading before the handoff correction.
+
+Native main is clean at `fd2a87257ba63e50a6fdb8ed747528a27c440707`, whose sole parent is released source `60afbb03fae8b59e95082de1cbb5e488f6a04a8f`. The exact continuation diff changes only `docs/dev/HANDOFF.md`; it corrects stale pending state to completed publication, records the actual identities/checks and retains appropriate local/provider limitations. Annotated `v1.2.3` remains object `3dab03b05821c2e237b8d8a9d7d5fd9e5258c1f3`, peeling to the original release, without a new release marker.
+
+The continuation journal records six passing tests, 38 passing vectors, the real build and complete gate while HEAD still equaled the exact release source; it then checks raw commit/notes/provider bodies, source/tag, all assets/hashes, latest/published state and the sole event. Independent readback confirms these facts. An assessor-owned archive rebuild and actual complete gate pass, and every rebuilt artifact hash matches provider metadata. The unchanged 171-file package still exactly matches source `d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879`.
+
+All provider state files, supplied client and original consumer journal exactly match the pre-dispatch hashes. There is still one publish event and latest equals the existing release. The recorded commands contain no publication-entry invocation; the only direct provider invocation is `--help`. This supports reconciliation without replay or duplicate effects; unchanged hashes alone do not establish process nonexecution. Final reconciliation and completion/stopping statement are retained.
+
+Original assessment files are byte-preserved. Trial/package bytes, Git state and bytecode are unchanged during this assessor follow-up; no provider or original product/package write was performed. Previous negative/runtime matrix remains separate and was not repeated. Hosted CI, live GitHub, remote publication, installed clients, downloadable hosted bytes and full catalog acceptance remain outside this assessment.
+
+Raw evidence is in `resume-readback/`: exact dispatch, pre-dispatch snapshot, full journal, extracted literal commands/results, native diff/objects, provider snapshots, independent readback, owned-source build/gate output and preservation results. `resume-assessment.json` contains exact refs and detailed comparisons.

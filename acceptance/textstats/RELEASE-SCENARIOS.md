@@ -51,3 +51,7 @@ python acceptance/textstats/cases/assessor/release_capture.py --product-root <ch
 ```
 
 Supplied normalized readback has exactly `body` (public-safe text), `target_commit` (independently resolved full SHA), `evidence_class` (`controlled` or `live-provider`), `state` (`draft` or `published`) and `release_id` (positive integer). Preserve actual controlled/API readback provenance separately; a declared class does not authenticate origin. Capture stores hashes and comparisons without copying provider body text into provenance. It rejects linked/protected/non-UTF-8 or recognizable sensitive inputs and occupied outputs. Missing baseline yields no preservation literal; partial commit/tag/readback arguments fail rather than invent agreement. Failed capture preserves existing evidence; any new partial output after an interrupted write belongs to that attempt and must remain visible.
+
+## Artifact-name enforcement
+
+[Focused controlled follow-ups](cases/assessor/ARTIFACT-NAMES.md) assess actual rejection/repair across every artifact type and release entry, using fresh consumer/assessor contexts and a nonvalidating controlled publisher. They are separately selected, not automatic catalog grades or a live provider run.

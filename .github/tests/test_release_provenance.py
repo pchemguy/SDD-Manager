@@ -16,7 +16,7 @@ class PublicationGateTests(Contract):
             raise ValueError('Source is outside default first-parent history')
         api.verify_release_source = reject
         with self.assertRaisesRegex(ValueError, 'first-parent'):
-            publisher.reconcile_release(api, handoff(publish=True), {})
+            publisher.reconcile_release(api, handoff(publish=True), {'sdd-manager.zip': b'fixture', 'sdd-manager.zip.sha256': b'checksum'})
         self.assertFalse(any(x.startswith(('create', 'upload', 'publish')) for x in api.events))
 
     def test_build_only_needs_no_default_branch_access(self):
@@ -33,7 +33,7 @@ class PublicationGateTests(Contract):
             raise OSError('Controlled metadata outage')
         api.verify_release_source = unavailable
         with self.assertRaises(OSError):
-            publisher.reconcile_release(api, handoff(publish=True), {})
+            publisher.reconcile_release(api, handoff(publish=True), {'sdd-manager.zip': b'fixture', 'sdd-manager.zip.sha256': b'checksum'})
         self.assertTrue(api.release['draft'])
         self.assertEqual(api.events, [])
 
