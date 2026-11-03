@@ -30,6 +30,8 @@ class PackageDocumentation(Sandbox):
                      'assets/FEATURE_PREPARATION_TEMPLATE.md',
                      'skills/sdd-manage/scripts/git-auth-recover.mjs',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
+                     'skills/sdd-manage/scripts/git-publish.mjs',
+                     'skills/sdd-manage/scripts/git-process-supervisor.py',
                      'skills/sdd-manage/scripts/protected-token.mjs',
                      'skills/sdd-forge/scripts/forge-close.mjs',
                      'skills/sdd-forge/scripts/forge-close.md',

@@ -4,6 +4,8 @@ SDD Manager composes focused skills into specification-driven development workfl
 
 ## Quick Start
 
+Before project work, review the [execution prerequisites](.agents/plugins/sdd-manager/README.md#execution-prerequisites).
+
 Choose the minimal Hello World app, the Tetris game, the calculator, or a template for your own project.
 
 1. Create an initialized GitHub repository from [SDD Manager Template](https://github.com/pchemguy/SDD-Manager-Template).

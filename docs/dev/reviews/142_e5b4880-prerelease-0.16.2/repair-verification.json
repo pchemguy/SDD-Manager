@@ -1,0 +1,167 @@
+{
+  "campaign": "142_e5b4880-prerelease-0.16.2",
+  "action": "V-001",
+  "baseline": "efdfb9e7a7b8c78ab2caa31c730edf1465a49f40",
+  "runtime": {
+    "os": "Linux",
+    "python": "3.12.14",
+    "node": "24.22.1",
+    "git": "2.51.1",
+    "jsonschema": "4.26.0"
+  },
+  "source_sha256": {
+    ".agents/plugins/sdd-manager/README.md": "8eb0a70b93c44164a0753b7db5190336ea93e8358b0720f03560e825a74a10ad",
+    ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md": "6cab8a40ee40ecf584e996f5103c62bcf5d891016d53c946e1dc3c04e25c5c51",
+    ".agents/plugins/sdd-manager/assets/AI_DISCLOSURE.md": "d3d72a9473c43bc78762b85ccd36cbcb9d29b71033efd4538d657d77c6869001",
+    ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-feature-preparation.md": "0a8d533c24fa0cc0f3b776b45221d112052588da4285e44f3ff09b865c161612",
+    ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs": "0f9b762dc985a1e5474d8e2490f782d3f14fa9d6209101acaae290568688dae8",
+    ".agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md": "94c7d2b356cfe871cc85831a1c62fda17e81e6911a25707a2fa4905c848c5478",
+    ".github/scripts/release.py": "cd37cfbe14bbcac1a932cf03704b3d974416d5cb2ec888f79b2f4201d5f24077",
+    ".github/tests/test_release.py": "dd021bbd6eec6cd3c07faa127f6925e670e4aeb405d5dfdcba93775995e46283",
+    "README.md": "703fa4b28a9162c9955a8ccfd62206dd08f75287a78b27ca6161718a347be255",
+    "acceptance/textstats/EXECUTION.md": "266521cbe91b547ace1fc6e8604f383facc5c8f42499ba3bb75e44cb9464f650",
+    "acceptance/textstats/OBJECTIVES.md": "e8e98c366437a94f1133a4a1b47ea54610aa14f7a52bed0a65e95c3f32850a39",
+    "acceptance/textstats/SCENARIO.md": "11ca9fc0292bf6659fc57950cd46826dff61ca8be4c6af192b3acbb9a5aaa0de",
+    "acceptance/textstats/cases/assessor/A-001.json": "d0b0c91daf8dfed22f26be61a791cc3673d8c29dee2b81aa618c49e0829340ce",
+    "acceptance/textstats/cases/assessor/A-005.json": "3350614241c52529f8a02b8bcc70f280b49e260a0dd3617fcf0c6b67fa707970",
+    "acceptance/textstats/cases/assessor/A-005.md": "769c480407eba999be4bd3e7770ab832c6222701bd171d015c008628cce8fd2a",
+    "acceptance/textstats/cases/assessor/A-008.json": "a64844d6c3ee8da6b395d88aeb908c6b69e694946502f4aa1e359f9d443c1dc6",
+    "acceptance/textstats/cases/assessor/A-008.md": "c5c73327ae9287e22717be0adaa95cde8515da4f1b7ccde2f60cda65e63c4d74",
+    "acceptance/textstats/cases/assessor/A-009.json": "1eec9536809b8f17c67bb344161108dc8a2b63a93a6ad5e25302f9aa45bd3fe6",
+    "acceptance/textstats/cases/assessor/A-009.md": "a2c65aa79efb45c93e204951208a1bcbfa7792251d0467df58bfd42cf0f647b3",
+    "acceptance/textstats/cases/assessor/A-010.json": "bcfb1ff9fbe9f91a8a83e26cfdb2c14a4d1f02ef1094d03c333644444d2bbd36",
+    "acceptance/textstats/cases/assessor/A-010.md": "c3bcf06034b32ea76dddd8cfd549f4f43ae4a1f92ba459ba99531575883294a0",
+    "acceptance/textstats/cases/assessor/A-021.json": "adf39775b2c1f2870d27535e77f6636e8395778ef6f711390da968a7867d8010",
+    "acceptance/textstats/cases/assessor/A-021.md": "2e4cf569b43ce472b1940009d509fee35767838cc1e530ff6a716771a924425f",
+    "acceptance/textstats/cases/assessor/INTERRUPTIONS.md": "0fb15c7219203ad4ffddca07980854d7110ed95d281dd3d76b25672dadc669fa",
+    "acceptance/textstats/cases/catalog.json": "b5af619d625cc5d9b9249a99dcb57b4a84c217f27f023341d7ab2c85830ae561",
+    "acceptance/textstats/scripts/core.py": "8a512300ae70a9337d7dfc9d68228361059821cc24959c45f9ea593cd44d060a",
+    "acceptance/textstats/tests/test_checkers.py": "8b19f05dc72bafa1c6dce452cff7df8c7c0aeeb7e67fa6428d8d882d3a114832",
+    "acceptance/textstats/tests/test_package_docs.py": "ea7ca536b173f216ed12ef4278f2fdfd8245c5eafbcb57f0643d95a7351e19dd",
+    "tests/git-auth-recover.test.mjs": "6706cddda88afd0292c757c144e6fbb13c82688b0a4b8a1ba7a435a597e891c6"
+  },
+  "checks": {
+    "support": {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "acceptance/textstats/tests",
+        "-t",
+        "acceptance/textstats",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "efdfb9e7a7b8c78ab2caa31c730edf1465a49f40",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 58.27,
+      "output_log": "/tmp/sdd142-full-recheck/support.log",
+      "passed": 140
+    },
+    "windows": {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_windows_shell_recovery.py",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "efdfb9e7a7b8c78ab2caa31c730edf1465a49f40",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 0.67,
+      "output_log": "/tmp/sdd142-full-recheck/windows.log",
+      "skipped": 7
+    },
+    "git": {
+      "argv": [
+        "node",
+        "--test",
+        "tests/git-auth-recover.test.mjs",
+        "tests/git-publish.test.mjs"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "efdfb9e7a7b8c78ab2caa31c730edf1465a49f40",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 30.43,
+      "output_log": "/tmp/sdd142-full-recheck/git.log",
+      "passed": 54
+    },
+    "forge": {
+      "argv": [
+        "node",
+        "--test",
+        "tests/forge-close.test.mjs",
+        "tests/forge-project.test.mjs"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "efdfb9e7a7b8c78ab2caa31c730edf1465a49f40",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 24.54,
+      "output_log": "/tmp/sdd142-full-recheck/forge.log",
+      "passed": 90
+    },
+    "publisher": {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".github/tests",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "efdfb9e7a7b8c78ab2caa31c730edf1465a49f40",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 11.86,
+      "output_log": "/tmp/sdd142-full-recheck/publisher.log",
+      "passed": 62
+    }
+  },
+  "passed": 346,
+  "skipped_windows": 7,
+  "independent_review": {
+    "result": "Ready; no findings",
+    "report": "INDEPENDENT-RECHECK.md",
+    "sha256": "10a87c2fa0b3bdd8e4308709b70300dbfa6555ee9a63b301ff46a793739893ad"
+  },
+  "limits": [
+    "No fresh TextStats consumer or installed-client trial.",
+    "Linux runtime evidence does not establish native Windows behavior.",
+    "No fresh Mermaid render; diagram sources unchanged.",
+    "No tag, workflow or release success inferred."
+  ],
+  "structure": {
+    "exit": 0,
+    "errors": 0,
+    "warnings": 69,
+    "log": "/tmp/sdd142-full-recheck/structure.log"
+  }
+}

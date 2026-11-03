@@ -12,17 +12,17 @@ Baseline checks pass **338 tests**: 139 support, 61 publisher, 48 Git utilities 
 
 | ID | Priority | Finding | Disposition |
 | --- | --- | --- | --- |
-| R-001 | P2 | GIT_CONFIG bypasses the foreign-VCS preflight | Accepted for bounded repair. |
-| R-002 | P2 | Replacement refs invalidate exact-source packaging | Accepted for bounded repair. |
-| R-003 | P2 | Required resource inventory omits canonical runtime dependencies | Accepted for bounded repair. |
-| R-004 | P2 | Acceptance milestone criteria contradict the current threshold | Accepted for bounded repair. |
-| R-005 | P3 | Malformed check records escape sanitized CLI errors | Accepted for bounded repair. |
-| R-006 | P3 | Catalog validation instructions name the wrong directory | Accepted for bounded repair. |
-| R-007 | P2 | Bootstrap disclosure asserts unsupported completed-stage/provider provenance | Accepted for bounded repair. |
-| R-008 | P2 | Copied AGENTS policy links assume unrequired vendoring | Accepted for bounded repair. |
-| R-009 | P2 | Feature preparation milestone closure omits associated-work guards | Accepted for bounded repair. |
-| R-010 | P2 | Issue draft guidance omits campaign-qualified FDOCS identity | Accepted for bounded repair. |
-| R-011 | P2 | Human onboarding omits publication-tool prerequisites | Accepted for bounded repair. |
+| R-001 | P2 | GIT_CONFIG bypasses the foreign-VCS preflight | Verified by V-001; see [revision evidence](REVISION-REPORT.md). |
+| R-002 | P2 | Replacement refs invalidate exact-source packaging | Verified by V-001; see [revision evidence](REVISION-REPORT.md). |
+| R-003 | P2 | Required resource inventory omits canonical runtime dependencies | Verified by V-001; see [revision evidence](REVISION-REPORT.md). |
+| R-004 | P2 | Acceptance milestone criteria contradict the current threshold | Verified by V-001; see [revision evidence](REVISION-REPORT.md). |
+| R-005 | P3 | Malformed check records escape sanitized CLI errors | Verified by V-001; see [revision evidence](REVISION-REPORT.md). |
+| R-006 | P3 | Catalog validation instructions name the wrong directory | Verified by V-001; see [revision evidence](REVISION-REPORT.md). |
+| R-007 | P2 | Bootstrap disclosure asserts unsupported completed-stage/provider provenance | Verified by V-001; see [revision evidence](REVISION-REPORT.md). |
+| R-008 | P2 | Copied AGENTS policy links assume unrequired vendoring | Verified by V-001; see [revision evidence](REVISION-REPORT.md). |
+| R-009 | P2 | Feature preparation milestone closure omits associated-work guards | Verified by V-001; see [revision evidence](REVISION-REPORT.md). |
+| R-010 | P2 | Issue draft guidance omits campaign-qualified FDOCS identity | Verified by V-001; see [revision evidence](REVISION-REPORT.md). |
+| R-011 | P2 | Human onboarding omits publication-tool prerequisites | Verified by V-001; see [revision evidence](REVISION-REPORT.md). |
 
 ### R-001 — GIT_CONFIG bypasses the foreign-VCS preflight
 
@@ -139,3 +139,7 @@ Evidence/recheck: Match Git, Node 22+, Python 3.11+ and Windows/Linux utility sc
 The remaining inspected ownership, optional model/API/contract artifacts, mode/checkpoint/range recovery, branch/task persistence, release notes/tag/source/latest behavior, public CLI supervision, role isolation/provenance and public prompt/diagram paths have no additional confirmed defect at the recorded depth. All ten standalone demo prompts and twenty embedded guide prompts are covered; all fifteen OpenAI presentations and their artwork are accounted for. Low-confidence MVP/example wording and optional handoff-link style observations were not promoted to defects.
 
 Source/support evidence does not establish a fresh installed-client or live TextStats run. The review did not mutate consumer products, use real credentials in experiments, reopen frozen records or claim unrun Windows/browser behavior. Controlled runtime experiments used owned fixtures and preserved original source. U-001 is complete; [accepted revisions](REVISION-PLAN.md) define the next authorized repair boundary.
+
+## V-001 recheck disposition
+
+All eleven accepted findings are verified after repair. The [revision report](REVISION-REPORT.md) retains changes, fresh 346-test results, original failure-before-pass observations, independent recheck and limits. The canonical baseline observations above remain unchanged. Exact committed package/release preparation and hosted outcomes retain their separate V-002/V-003 gates.

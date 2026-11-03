@@ -9,3 +9,7 @@ Campaign **142_e5b4880-prerelease-0.16.2**, baseline e5b4880dfb14a3abc550909acdb
 | V-003 | Finalize and close the campaign through its recorded main parent, then publish the eligible default-branch release commit/tag via the existing single publisher. | Verified two-parent integration, exact release notes body/tag/source, successful workflow/provider readback, downloaded asset bytes/checksums and latest stable identity; retain outcome and stop. |
 
 No new product features, documentation tasks, mandatory approval rounds or live-consumer campaign are introduced. Keep the original failed baseline observations and distinguish repaired source/tests from unrun client/provider behavior.
+
+## Execution checkpoint
+
+V-001 repairs and full regression/independent recheck are complete; the [revision report](REVISION-REPORT.md) and [verification](repair-verification.json) retain actual results. Publish/read back that combined action before V-002. V-002 and V-003 remain pending.
