@@ -12,6 +12,8 @@ _name_policy = importlib.util.module_from_spec(_name_spec)
 _name_spec.loader.exec_module(_name_policy)
 
 
+RELEASE_ASSETS = ['sdd-manager.zip', 'sdd-manager.zip.sha256']
+
 FIELDS = {'source', 'tag', 'notes_source', 'notes', 'notes_sha256', 'publish',
           'prerelease', 'make_latest', 'request_id'}
 
@@ -212,7 +214,7 @@ def build_package(root, data, output):
     checksum = output / 'sdd-manager.zip.sha256'
     checksum.write_text(hashlib.sha256(archive.read_bytes()).hexdigest() + '  sdd-manager.zip\n', encoding='ascii')
     files = {archive.name: archive, checksum.name: checksum}
-    _name_policy.check_names(['sdd-manager.zip', 'sdd-manager.zip.sha256'], list(files), data['tag'])
+    _name_policy.check_names(RELEASE_ASSETS, list(files), data['tag'])
     return files
 
 
@@ -223,7 +225,8 @@ def verify_release(api, release, data, files, complete):
         raise ValueError('Release fields conflict with selected handoff')
     assets = release['assets']
     names = [asset['name'] for asset in assets]
-    _name_policy.check_names(list(files), names, data['tag'], complete=complete)
+    _name_policy.check_names(RELEASE_ASSETS, list(files), data['tag'])
+    _name_policy.check_names(RELEASE_ASSETS, names, data['tag'], complete=complete)
     if len(names) != len(set(names)) or not set(names) <= set(files):
         raise ValueError('Duplicate or foreign release assets')
     for asset in assets:
@@ -242,7 +245,7 @@ def reconcile_release(api, data, files):
     validate_handoff(data)
     if not data['publish']:
         return None
-    _name_policy.check_names(list(files), list(files), data['tag'])
+    _name_policy.check_names(RELEASE_ASSETS, list(files), data['tag'])
     api.verify_release_source(data['source'])
     if api.tag_source(data['tag']) != data['source']:
         raise ValueError('Existing tag differs from selected source')

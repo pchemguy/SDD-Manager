@@ -71,3 +71,16 @@ class ArtifactGate(unittest.TestCase):
                 return
             with self.assertRaises(ValueError):
                 gate.directory_names(root)
+
+    def test_public_vectors_reject_an_incomplete_project_adapter(self):
+        self.assertEqual(gate.verify_checker()['contract_vectors_checked'], 38)
+        def incomplete(expected, observed, version):
+            if any('.' in name and 'v' in name for name in observed):
+                raise ValueError('dotted version')
+        with self.assertRaisesRegex(ValueError, 'sample-v7'):
+            gate.verify_checker(incomplete)
+
+    def test_self_test_cli_runs_the_shipped_contract(self):
+        result = subprocess.run([sys.executable, str(SCRIPT), '--self-test'], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stdout+result.stderr)
+        self.assertEqual(json.loads(result.stdout)['contract_vectors_checked'], 38)

@@ -35,6 +35,15 @@ class GateBeforeProvider(unittest.TestCase):
         with self.assertRaises(ValueError):
             publisher.reconcile_release(None, data, {'artifact-v1.2.3.unseen': b'x'})
 
+    def test_stable_foreign_manifest_cannot_define_the_package_contract(self):
+        import hashlib
+        data = {'source': 'a'*40, 'notes_source': 'a'*40, 'tag': 'v1.2.3',
+                'notes': 'fixture', 'notes_sha256': hashlib.sha256(b'fixture').hexdigest(),
+                'publish': True, 'prerelease': False, 'make_latest': True,
+                'request_id': 'inventory-fixture'}
+        with self.assertRaises(ValueError):
+            publisher.reconcile_release(None, data, {'foreign': b'x'})
+
 
 if __name__ == '__main__':
     unittest.main()

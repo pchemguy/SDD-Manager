@@ -64,15 +64,41 @@ def directory_names(directory):
     return sorted(p.name for p in entries)
 
 
+def verify_checker(checker=check_names):
+    """Exercise the actual checker/adapter against the public contract vectors."""
+    vectors = json.loads(Path(__file__).with_name('release-asset-cases.json').read_text(encoding='utf-8'))
+    version = vectors['release_version']
+    checker(vectors['valid'], vectors['valid'], version)
+    checked = len(vectors['valid'])
+    for marker in vectors['invalid_markers']:
+        for suffix in vectors['suffixes']:
+            name = 'sample-' + marker + suffix
+            try:
+                checker([name], [name], version)
+            except ValueError:
+                checked += 1
+            else:
+                raise ValueError('Checker accepts prohibited version notation: ' + name)
+    return {'ok': True, 'contract_vectors_checked': checked}
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--expected', required=True, help='JSON array of independently reviewed stable names')
-    parser.add_argument('--version', required=True)
-    actual = parser.add_mutually_exclusive_group(required=True)
+    parser.add_argument('--expected', help='JSON array of independently reviewed stable names')
+    parser.add_argument('--version')
+    parser.add_argument('--self-test', action='store_true')
+    actual = parser.add_mutually_exclusive_group()
     actual.add_argument('--directory', help='Dedicated complete artifact staging directory')
     actual.add_argument('--observed', help='Complete provider name inventory as a JSON array')
     args = parser.parse_args(argv)
     try:
+        if args.self_test:
+            if args.expected or args.version or args.directory or args.observed:
+                raise ValueError('Self-test cannot be mixed with artifact inputs')
+            print(json.dumps(verify_checker()))
+            return 0
+        if not args.expected or not args.version or not (args.directory or args.observed):
+            raise ValueError('Expected inventory, version and complete actual inventory are required')
         expected = json.loads(Path(args.expected).read_text(encoding='utf-8'))
         observed = directory_names(args.directory) if args.directory else json.loads(Path(args.observed).read_text(encoding='utf-8'))
         result = check_names(expected, observed, args.version)
