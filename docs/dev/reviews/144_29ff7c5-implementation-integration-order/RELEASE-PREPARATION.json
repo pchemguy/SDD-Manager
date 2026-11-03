@@ -1,0 +1,82 @@
+{
+  "static": {
+    "source": "850b046f595c48ef70af19b0aa6fdd3f0547b384",
+    "parent_main": "29ff7c5e8c8665a60e1978234e3054a466e7d99e",
+    "python": "3.12.14",
+    "package_changed_paths": [
+      ".agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md",
+      ".agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md",
+      ".agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md"
+    ],
+    "all_paragraphs_and_links_preserved": true,
+    "v001_order": [
+      2,
+      3,
+      1,
+      4
+    ],
+    "v002_order": "message preparation first, artifact gate second",
+    "v003_order": "artifact rule immediately before final paragraph",
+    "outside_targeted_bytes_preserved": true,
+    "runtime_ci_tests_unchanged": true,
+    "closed_record_preservation": true,
+    "validator": {
+      "argv": [
+        "python",
+        "/root/.codex/skills/remote-skills/skill-6ad49f5dd9a481918b90db50d0256cd2/scripts/validate_plugin.py",
+        ".agents/plugins/sdd-manager"
+      ],
+      "exit": 0,
+      "warnings": 69
+    },
+    "source_sha256": {
+      ".agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md": "c5afe5bbd640abd255b6af30f713d7e583123dcbf073559c93f372bd510e02a0",
+      ".agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md": "e1790238ac95cce924ec6b6c4007f2d6d77ecdcf57fc87ee0933c7341ef9ef7f",
+      ".agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md": "2a950d422c2f77a1f57609c702e296567ebaf2eb3e908461c5a3c0893c9111ae"
+    }
+  },
+  "support": {
+    "argv": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "acceptance/textstats/tests",
+      "-t",
+      "acceptance/textstats",
+      "-v"
+    ],
+    "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+    "source_head": "850b046f595c48ef70af19b0aa6fdd3f0547b384",
+    "pending_sha256": {},
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONPATH": "/tmp/sdd141-pydeps"
+    },
+    "exit": 0,
+    "seconds": 84.74,
+    "output_log": "/tmp/sdd144-release-checks/support.log"
+  },
+  "publisher": {
+    "argv": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      ".github/tests",
+      "-v"
+    ],
+    "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+    "source_head": "850b046f595c48ef70af19b0aa6fdd3f0547b384",
+    "pending_sha256": {},
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONPATH": "/tmp/sdd141-pydeps"
+    },
+    "exit": 0,
+    "seconds": 16.79,
+    "output_log": "/tmp/sdd144-release-checks/publisher.log"
+  }
+}
