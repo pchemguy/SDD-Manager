@@ -1,0 +1,10 @@
+{
+  "source": "d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879",
+  "archive_sha256": "dfc32e889d26c411574ef2cd103c4b214d595a33f38e6574c2ea33e36dd3182a",
+  "members": 171,
+  "assets": [
+    "sdd-manager.zip",
+    "sdd-manager.zip.sha256"
+  ],
+  "manifest": "0.16.1"
+}

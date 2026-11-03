@@ -46,4 +46,6 @@ The exact newly failing repository/release, asset names, loaded plugin identity 
 
 ## Execution boundary
 
+Execution and scoped verification are recorded in the [revision report](REVISION-REPORT.md#action-disposition-and-boundary), with the complete attempt qualifications and [retained evidence](evidence/README.md). The source revision is implemented; the campaign remains open. Exact attribution of the reported consumer release remains unavailable, and unrun live/client/CI/recovery variants are not claimed as acceptance.
+
 The human selected execution. Implement the bounded owner changes and controlled regression/consumer checks. Retain the unestablished reported-case identity as a specific diagnostic limit; do not invent a consumer trace or block independent repairs. Leave the campaign open after execution; no merge, version bump, product release or consumer-repository repair is selected. Closed records remain frozen and product instructions describe the target workflow directly.

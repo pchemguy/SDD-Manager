@@ -1,0 +1,17 @@
+{
+  "source": "d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879",
+  "changed_files": 32,
+  "closed_record_changes": [],
+  "package_version": "0.16.1",
+  "working_tree": "clean",
+  "python": "Python 3.12.14",
+  "git": "git version 2.51.1",
+  "support_tests": 139,
+  "publisher_tests": 61,
+  "validator_warnings": 69,
+  "validator_errors": 0,
+  "local_package_links_checked": 304,
+  "local_package_link_issues": 0,
+  "declared_dependencies_path": "temporary cached dependency target",
+  "artifact_vectors": 38
+}

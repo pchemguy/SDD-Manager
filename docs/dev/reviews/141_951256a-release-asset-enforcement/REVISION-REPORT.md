@@ -2,6 +2,8 @@
 
 Campaign **141_951256a**, ordinary revision from/returning to main **951256ad321a477a128c4fc1234665719901225b**; working branch `revision/141_951256a-release-asset-enforcement`. No suspended parent. Package remains 0.16.1.
 
+Current state: the bounded source revision is implemented and locally verified at **d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879**. Controlled consumer and independent runtime results are recorded below, with the failed and assisted first attempts retained. The campaign remains open; integration, closure, version bump, real release publication and consumer-repository repair are outside the selected scope.
+
 The human reports versioned release attachments recurring and requests a new revision campaign and fix plan. Opening/planning only is selected. [Plan](REVISION-PLAN.md) retains the required result, source observations, six actions, objective acceptance and stopping boundary.
 
 Source inspection confirms the naming prohibition and repair loop already exist in forge packaging/release and verify. The coordinator's tag procedure lacks an explicit local artifact-name condition, and current A-032 focuses on release commit/tag/body behavior without a dedicated defective-name producer scenario. Exact consumer failure causation remains unestablished without the newly failing release/loaded-source trace. Read-only public probes are retained with their negative/404 limits; no demo/source repair or release mutation performed.
@@ -53,3 +55,48 @@ The correction now supplies public version-notation vectors and an adapter runne
 A separate source-publisher negative also showed that a stable but foreign caller files list could define its own expected inventory. It now uses the independent fixed SDD package asset contract before provider access and in draft/final checks. Its RED was observed before correction. This source-only publisher change leaves the consumer package policy separate and keeps provenance no-mutation tests meaningful with complete valid fixture inventories.
 
 The first phase consumer also reported that no CI workflow existed despite an unchanged tracked .github/workflows/release.yml. Its build path structurally invoked the gate, but its absence claim and deliberate CI-coverage evidence are unsupported. The owner guidance now explicitly requires inspecting tracked hidden workflow/config paths and distinguishing source-only from executed CI evidence. This is a retained first-attempt evidence defect, not a pass inferred from a working local build.
+
+## Controlled consumer results
+
+The [evidence index](evidence/README.md) summarizes the independent assessments. Original journals and full assessments remain locally retained. Each source pin is immutable for its own trial; a later correction does not change an earlier disposition.
+
+| Attempt | Tested plugin source | Observed result |
+| --- | --- | --- |
+| Direct first attempt | 78fea804e5d46aa5bd23cf181fb4c9f0fb15a9e8 | Failed the permanent-gate criterion: a correct first release did not prevent a matching faulty manifest with historical integer versions from reaching the provider in an intercepted experiment. |
+| Phase first attempt | 78fea804e5d46aa5bd23cf181fb4c9f0fb15a9e8 | Naming repair verified; phase completion assisted by a recorded task-sequencing clarification. The false CI-absence claim remains an evidence defect. |
+| Historical-policy phase | c34b7099b4c47cf0046f81b15c07f5553c4e1fad | Passed the selected follow-up: all active conflicting policies, templates, examples and producer/reference definitions repaired despite three prior bad releases; new names comply, prior release records remain intact, repeated entry adds no second event. |
+| Corrected direct retry | d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879 | Independent runtime checks passed: ten actual publisher negatives stop before provider access, legitimate digit controls pass, committed-source build and all asset/source/body/latest checks pass, two builds retain names. Original consumer completion was incomplete and exact initial dispatch was not retained. |
+| Fresh continuation of corrected retry | d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879 | Independently passed continuation completion/reconciliation. Exact ordinary dispatch retained. Consumer inspected and reused the completed release, ran six tests, 38 vectors and the complete rebuild/gate, verified source/body/hash/latest state and corrected only HANDOFF. Release source/tag, provider/client bytes and the original journal remain unchanged; one publication event remains. |
+
+The corrected retry's direct-publisher negatives include historical v9, dotted/current/separated versions, unfamiliar formats and extensionless names, with eight faulty expected manifests matching the prohibited candidate. They exercise the actual project publisher/gate, with interception preventing an accidentally passing negative from touching the original provider. Independent controlled re-entry and two-version build comparisons are deterministic observations, separate from the later fresh consumer continuation. Neither result repairs the original missing dispatch evidence retroactively.
+
+## V-006 — Final source and package verification
+
+Fresh Linux verification uses Python 3.12.14 and Git 2.51.1 against d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879. The initial resumed publisher/package command omitted the declared cached jsonschema dependency path and failed on ModuleNotFoundError; restoring that existing dependency target allowed the complete checks below. The failed run is retained alongside the passing rerun. Generated source-test bytecode was removed; no source repair was needed for this environment issue.
+
+| Check | Actual result |
+| --- | --- |
+| Support suite: python -m unittest discover -s acceptance/textstats/tests -t acceptance/textstats -v | 139 passed. |
+| Publisher suite with the declared dependency target: python -m unittest discover -s .github/tests -v | 61 passed. |
+| Exact committed-source package build, archive inventory/content and offline core manifest schema | 171 files match committed bytes; manifest remains 0.16.1; names are sdd-manager.zip and sdd-manager.zip.sha256; checksum matches. |
+| Extracted naming helper --self-test | 38 public contract cases passed. |
+| Plugin structural validator | No errors; 69 bundled cross-skill resource warnings. |
+| Changed package Markdown links and heading targets | 304 local links checked; no missing target. |
+| Full campaign diff and closed-record preservation | Whitespace check passes; no prior closed campaign content changed. |
+
+The package archive SHA-256 at this source is **dfc32e889d26c411574ef2cd103c4b214d595a33f38e6574c2ea33e36dd3182a**. This is a build-only verification artifact; it was not uploaded as a release. An evidence-only commit has the same package tree and a different Git archive source watermark, so its archive is checked separately after persistence.
+
+## Action disposition and boundary
+
+| Action | Disposition |
+| --- | --- |
+| V-001 | Controlled verifier and routing failures demonstrated; exact newly reported consumer release/loaded-package attribution remains unavailable. |
+| V-002 | Implemented: explicit all-artifact prohibition and executed gate at preparation, phase, tag, dispatch and publication boundaries. |
+| V-003 | Implemented and verified: complete-inventory executable check, public conformance vectors and persistent local/CI publisher wiring. |
+| V-004 | Implemented and demonstrated: prior release count and conflicting active project definitions do not exempt the next release; persistent repair/rebuild is required. |
+| V-005 | Focused controlled trials and independent assessments executed with the failed/assisted/incomplete first-attempt qualifications above. |
+| V-006 | Source, regression, link, manifest and exact-package checks pass; evidence retained for final publication. |
+
+The demonstrated scope is explicit-source controlled execution, not installed-client discovery or live GitHub publication. CI source and its local gate paths were checked; hosted CI, hosted asset downloads and a separate existing-bad-draft trial were not run. The unidentified original consumer incident remains undiagnosed. Source revision and bounded verification are ready to retain on the open campaign branch; no merge or release is selected.
+
+Automatic approval review rejected the raw evidence archive upload, citing possible disclosure of internal artifacts and unclear payload/destination authorization, including after the human explicitly confirmed publication to the public pchemguy/SDD-Manager repository. A materially reduced alternative containing only eight plaintext summary/public-source check files was also rejected as unauthorized disclosure of nonpublic campaign details. Neither payload was uploaded. The human subsequently requested local persistence; this final checkpoint and its raw evidence are committed locally and remain unpublished, so they are not remotely recoverable. The archive contains 308 members, is 382132 bytes, and has SHA-256 4f06aad9ff0d78190b5b679c93113e0b533b43b427d0f58dc2e19cd592ea2cf3. The published source branch remains at d76ffbfc8d8aab91dcfd7d1efc6eb5a2bc13a879.
