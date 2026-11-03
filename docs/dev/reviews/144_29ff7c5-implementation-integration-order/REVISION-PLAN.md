@@ -17,3 +17,7 @@ Commit the verified change with its campaign evidence, publish/read back through
 ## V-002 — Git release-section opening order
 
 The human supplied the opening of git-workflows.md Release commit and tag with message preparation first and the artifact-name gate second, followed by an omitted remainder. Swap those two existing paragraphs verbatim, preserving the heading, document prefix and entire remaining section. Verify exact supplied order/wording, unchanged outside bytes and complete block/link inventories, both canonical targets/anchors, preserved V-001 source, whitespace, current evidence links and closed-record preservation; publish/read back and retain the open campaign boundary.
+
+## V-003 — Verification-entry artifact-name paragraph
+
+The human requests moving the existing Version numbers in the name of any release artifact paragraph in sdd-verify/SKILL.md before the last paragraph. Move it verbatim immediately before the final Return the boundary and implementation state paragraph. Preserve all other bytes, front matter, metadata, links and the earlier two source changes. Verify exact penultimate placement and single occurrence, complete block/link inventories, canonical target/anchor, structural validation, whitespace and active/closed-record scope; publish/read back and keep this campaign open.

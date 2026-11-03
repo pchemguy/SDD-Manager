@@ -17,3 +17,11 @@ The later human instruction adds git-workflows.md Release commit and tag to this
 Checks pass: exact two-paragraph swap and wording; identical complete Markdown block/link multisets; both canonical files/anchors resolve; V-001 implementation reference remains identical to published opening 5a8a98e97cc28bc52474e29b0c01345ac5ec2a1d. This is prose order only; all original Git/release conditions remain. Whitespace, active record links, exact five-path scope and prior closed-record preservation pass. No runtime suite or prose-mirroring test is needed for this literal relocation.
 
 Opening/V-001 is published/read back at 5a8a98e97cc28bc52474e29b0c01345ac5ec2a1d. Publish/read back V-002 on the same branch, then stop with campaign 144 open. Main integration, closure, version bump and release remain unselected.
+
+## V-003 — Artifact-name rule immediately before the final paragraph
+
+Moved the existing artifact-name paragraph in sdd-verify/SKILL.md verbatim from the opening to immediately before the final Return the boundary and implementation state paragraph. The final paragraph itself remains byte-identical.
+
+Checks pass: exact original paragraph bytes and single occurrence; penultimate block position; all other file bytes unchanged after removing that moved block; identical complete Markdown block/link multisets; unchanged front matter and presentation metadata; canonical naming target/anchor resolves; both earlier source changes remain identical to published V-002. The existing plugin validator exits 0 with 69 known bundled sibling-reference warnings. Whitespace, active record links, exact five-path scope and closed-record preservation pass. No runtime suite or prose-mirroring test is needed for this literal relocation, and no installed-client trial is claimed.
+
+Opening/V-001 5a8a98e97cc28bc52474e29b0c01345ac5ec2a1d and V-002 a36e445294098b720692fa4ebb01466f2b4a6d5b are published/read back. Publish/read back V-003 through the connector, then stop on the same revision branch with campaign 144 open.

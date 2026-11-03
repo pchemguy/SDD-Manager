@@ -5,8 +5,6 @@ description: Use when selecting and running checks for an SDD task, selected cha
 
 # Verify a selected work boundary
 
-**Version numbers in the name of any release artifact are absolutely prohibited, regardless of type.** For package/release checks, validate every actual name without type/extension filtering through the [independent naming gate](../sdd-forge/references/github-packaging.md#artifact-name-gate-and-repair). Matching manifests/checksums cannot waive it.
-
 For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists and code blocks, plus four-space structural indentation, including nested lists, with exactly one space after each list marker. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
 
 For whole-feature preparation QC, use the coordinator's [FDOCS-009 contract](../sdd-manage/references/feature-preparation.md#final-package-qc-integration-and-checkpoint): assess the complete delta plus affected accepted main context and retain FEATURE-QC-REPORT. Do not infer package readiness from individual document reports or implement repairs outside the selected scope.
@@ -35,5 +33,7 @@ For an explicit boundary review task, load boundary review and assess implementa
 5. Classify observed failures where evidence permits and return remaining work to its owner. Do not silently omit an unrelated or pre-existing failure from the results.
 
 **sdd-tdd** owns testing strategy and test design or changes; this skill assesses coverage and executes the verification campaign. **sdd-docs** owns documentation maintenance. The active workflow owns repair coordination, completion, persistence and hosted closure: **sdd-manage** for main preparation, **sdd-implement** or **sdd-steer** for implementation. Leave source, tests, governing documents, and task status unchanged during verification; report necessary changes rather than repairing them here. Account for command-generated artifacts and preserve unrelated pending work.
+
+**Version numbers in the name of any release artifact are absolutely prohibited, regardless of type.** For package/release checks, validate every actual name without type/extension filtering through the [independent naming gate](../sdd-forge/references/github-packaging.md#artifact-name-gate-and-repair). Matching manifests/checksums cannot waive it.
 
 Return the boundary and implementation state, conditions assessed, check selection and rationale, commands and environment, observed outcomes and evidence locations, failure classifications, omitted or blocked checks, and remaining gaps. **sdd-report** owns presentation of these facts. Existing task evidence or a project-designated record may hold durable results; no separate verification journal is required. State when the selected conditions are verified without equating that finding with task completion or whole-project correctness.
