@@ -1,0 +1,59 @@
+{
+  "observed_date": "2026-11-03",
+  "method": "read-only GitHub REST latest-release endpoints",
+  "scope": "known prior demo repositories; not identified as the current failing consumer",
+  "results": [
+    {
+      "repository": "SDD-Manager-Demo-Tetris-ChatGPT-SinglePage-Autodoc-V1",
+      "tag": "v1.0.0",
+      "url": "https://github.com/pchemguy/SDD-Manager-Demo-Tetris-ChatGPT-SinglePage-Autodoc-V1/releases/tag/v1.0.0",
+      "published_at": "2026-10-30T13:15:51Z",
+      "assets": [
+        {
+          "name": "session.schema.json",
+          "size": 2184
+        },
+        {
+          "name": "SHA256SUMS",
+          "size": 164
+        },
+        {
+          "name": "tetris.html",
+          "size": 45320
+        }
+      ]
+    },
+    {
+      "repository": "SDD-Manager-Demo-Tetris-ChatGPT-SinglePage-Autodoc-V3",
+      "tag": "v1.0.0",
+      "url": "https://github.com/pchemguy/SDD-Manager-Demo-Tetris-ChatGPT-SinglePage-Autodoc-V3/releases/tag/v1.0.0",
+      "published_at": "2026-11-01T18:47:55Z",
+      "assets": [
+        {
+          "name": "README.md",
+          "size": 9824
+        },
+        {
+          "name": "session.schema.json",
+          "size": 1952
+        },
+        {
+          "name": "SHA256SUMS",
+          "size": 240
+        },
+        {
+          "name": "tetris.html",
+          "size": 82366
+        }
+      ]
+    },
+    {
+      "repository": "SDD-Manager-Demo-Tetris-ChatGPT-SinglePage-Autodoc-V4",
+      "http_status": 404
+    },
+    {
+      "repository": "SDD-Manager-Demo-Tetris-ChatGPT-SinglePage-Autodoc-V5",
+      "http_status": 404
+    }
+  ]
+}
