@@ -1,0 +1,17 @@
+# Restore AGENTS template links
+
+Campaign **143_0989331**, ordinary focused revision opened from main **0989331ddc01fd5687043b37a2b294af2836de78** on revision/143_0989331-restore-agents-template-links. Creation parent and eventual integration target are main; no suspended parent. Campaigns through 142 remain closed/frozen.
+
+## Accepted scope
+
+The human requested: "Open a revision campaign and revert it", referring to the AGENTS_TEMPLATE.md change in 6aa9950fd81dc8f64b50da507431effd7dfda4e4. This directly accepts the bounded rollback. Restore that file byte for byte from the parent of that commit, retaining its four Markdown policy links and removing the added package-root-resolution paragraph. No new link-resolution design or independent review stage is selected.
+
+| Action | Work | Acceptance |
+| --- | --- | --- |
+| V-001 | Restore .agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md to blob 3dada5ea7f73323b8c70ae0579afd877b5163d8e from 6aa9950f^; verify and publish with campaign evidence. | Exact Git blob/byte equality, all five restored Markdown targets resolve in the intended checkout/project-root layout, one package file changed, whitespace and campaign links pass, prior closed records unchanged. |
+
+## Boundary
+
+The rollback is the only source change. Commit/publish/read back the verified result through the GitHub connector and stop on the revision branch with this campaign open. Campaign closure/main integration and another version/release are not selected by this request.
+
+The [revision report](REVISION-REPORT.md) owns actual checks and reached state. No runtime behavior or installed-client portability is established by restoring historical prose.
