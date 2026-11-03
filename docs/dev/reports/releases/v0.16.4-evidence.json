@@ -1,0 +1,301 @@
+{
+  "package": {
+    "source": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+    "version": "0.16.4",
+    "files": 171,
+    "notes_sha256": "e0376cdb4cac4d6a321daab0c48f850945700564763c5de95750755ba6ce6b80",
+    "raw_commit_message_equals_notes": true,
+    "reproducible_two_builds": true,
+    "exact_member_bytes": true,
+    "archive_comment_source": true,
+    "three_relocated_files_inside_package_verified": true,
+    "naming_gate": {
+      "argv": [
+        "python",
+        "/workspace/scratch/f5adda9293ed/SDD-Manager/.agents/plugins/sdd-manager/skills/sdd-verify/scripts/release_assets.py",
+        "--expected",
+        "/tmp/sdd144-expected-assets.json",
+        "--directory",
+        "/tmp/sdd144-release-candidate",
+        "--version",
+        "0.16.4"
+      ],
+      "exit": 0,
+      "output": "{\"ok\": true, \"complete\": true, \"checked\": 2}\n"
+    },
+    "extracted_checker": {
+      "exit": 0,
+      "output": "{\"ok\": true, \"contract_vectors_checked\": 38}\n"
+    },
+    "assets": {
+      "sdd-manager.zip": {
+        "sha256": "4eb5b7a3cc463f8663cecf0cab68b81c46941ca4217078441e74529f73504ad5",
+        "bytes": 542070
+      },
+      "sdd-manager.zip.sha256": {
+        "sha256": "ad0d69ccac605fd4e4312ed62d6e1bf6d1d9bca5065d458146247f770ba62831",
+        "bytes": 82
+      }
+    }
+  },
+  "provider": {
+    "source": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+    "tag": "v0.16.4",
+    "tag_object": "f9cf9da4a9bb1686795f9991ac68fe22e12e4d0e",
+    "release_id": 433252241,
+    "url": "https://github.com/pchemguy/SDD-Manager/releases/tag/v0.16.4",
+    "published_at": "2026-11-03T21:46:25Z",
+    "body_exact": true,
+    "draft": false,
+    "prerelease": false,
+    "latest_id": 433252241,
+    "run": {
+      "id": 41724591910,
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41724591910",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 126225957705,
+          "name": "build",
+          "conclusion": "success"
+        },
+        {
+          "id": 126226391429,
+          "name": "publish",
+          "conclusion": "success"
+        }
+      ]
+    },
+    "build_observation": {
+      "assets": {
+        "sdd-manager.zip": "4eb5b7a3cc463f8663cecf0cab68b81c46941ca4217078441e74529f73504ad5",
+        "sdd-manager.zip.sha256": "ad0d69ccac605fd4e4312ed62d6e1bf6d1d9bca5065d458146247f770ba62831"
+      },
+      "published": false,
+      "release_id": null,
+      "request_id": "sdd144-0164-fbd8baabbf09",
+      "run_id": "41724591910",
+      "source": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+      "workflow_source": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3"
+    },
+    "publish_observation": {
+      "assets": {
+        "sdd-manager.zip": "4eb5b7a3cc463f8663cecf0cab68b81c46941ca4217078441e74529f73504ad5",
+        "sdd-manager.zip.sha256": "ad0d69ccac605fd4e4312ed62d6e1bf6d1d9bca5065d458146247f770ba62831"
+      },
+      "published": true,
+      "release_id": 433252241,
+      "request_id": "sdd144-0164-fbd8baabbf09",
+      "run_id": "41724591910",
+      "source": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+      "workflow_source": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3"
+    },
+    "assets": [
+      {
+        "name": "sdd-manager.zip",
+        "id": 707201175,
+        "size": 542070,
+        "state": "uploaded",
+        "digest": "sha256:4eb5b7a3cc463f8663cecf0cab68b81c46941ca4217078441e74529f73504ad5",
+        "browser_download_url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.4/sdd-manager.zip"
+      },
+      {
+        "name": "sdd-manager.zip.sha256",
+        "id": 707201279,
+        "size": 82,
+        "state": "uploaded",
+        "digest": "sha256:ad0d69ccac605fd4e4312ed62d6e1bf6d1d9bca5065d458146247f770ba62831",
+        "browser_download_url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.4/sdd-manager.zip.sha256"
+      }
+    ],
+    "inventory_complete": true,
+    "ci_tests": {
+      "support": 140,
+      "publisher": 62,
+      "python": "3.11"
+    },
+    "provider_naming_gate": {
+      "argv": [
+        "python",
+        ".agents/plugins/sdd-manager/skills/sdd-verify/scripts/release_assets.py",
+        "--expected",
+        "/tmp/sdd144-expected-assets.json",
+        "--observed",
+        "/tmp/sdd144-observed-assets.json",
+        "--version",
+        "0.16.4"
+      ],
+      "exit": 0,
+      "output": "{\"ok\": true, \"complete\": true, \"checked\": 2}\n"
+    },
+    "local_ci_provider_hashes_equal": true
+  },
+  "downloads": {
+    "source": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+    "downloads": [
+      {
+        "variant": "tag",
+        "name": "sdd-manager.zip",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.4/sdd-manager.zip",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 542070,
+        "sha256": "4eb5b7a3cc463f8663cecf0cab68b81c46941ca4217078441e74529f73504ad5",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "tag",
+        "name": "sdd-manager.zip.sha256",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.4/sdd-manager.zip.sha256",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 82,
+        "sha256": "ad0d69ccac605fd4e4312ed62d6e1bf6d1d9bca5065d458146247f770ba62831",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "latest",
+        "name": "sdd-manager.zip",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 542070,
+        "sha256": "4eb5b7a3cc463f8663cecf0cab68b81c46941ca4217078441e74529f73504ad5",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "latest",
+        "name": "sdd-manager.zip.sha256",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip.sha256",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 82,
+        "sha256": "ad0d69ccac605fd4e4312ed62d6e1bf6d1d9bca5065d458146247f770ba62831",
+        "matches_exact_source": true
+      }
+    ],
+    "ok": true
+  },
+  "source": {
+    "source": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+    "changed_paths": [
+      ".agents/plugins/sdd-manager/plugin.json",
+      ".agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md",
+      ".agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md",
+      ".agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md",
+      "RELEASE-NOTES.md",
+      "docs/dev/HANDOFF.md",
+      "docs/dev/reviews/144_29ff7c5-implementation-integration-order/RELEASE-PREPARATION.json",
+      "docs/dev/reviews/144_29ff7c5-implementation-integration-order/RELEASE-REVIEW.md",
+      "docs/dev/reviews/144_29ff7c5-implementation-integration-order/REVISION-PLAN.md",
+      "docs/dev/reviews/144_29ff7c5-implementation-integration-order/REVISION-REPORT.md",
+      "docs/dev/reviews/README.md"
+    ],
+    "package_delta_exact": true,
+    "runtime_ci_tests_unchanged": true,
+    "closed_records_preserved": true,
+    "raw_message_exact": true,
+    "working_tree_clean": true
+  },
+  "coverage": {
+    "baseline_tag": "v0.16.3",
+    "baseline": "13be7381cf84e76c041bd9446d1384308459be18",
+    "analyzed_through": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+    "commits": [
+      {
+        "commit": "29ff7c5e8c8665a60e1978234e3054a466e7d99e",
+        "parents": [
+          "13be7381cf84e76c041bd9446d1384308459be18"
+        ],
+        "subject": "Record verified SDD Manager 0.16.3 release outcome",
+        "paths": [
+          "docs/dev/HANDOFF.md",
+          "docs/dev/reports/releases/v0.16.3-evidence.json",
+          "docs/dev/reports/releases/v0.16.3.md",
+          "docs/dev/reviews/README.md"
+        ],
+        "assessment": "Prior release outcome bookkeeping only; no new product change."
+      },
+      {
+        "commit": "5a8a98e97cc28bc52474e29b0c01345ac5ec2a1d",
+        "parents": [
+          "29ff7c5e8c8665a60e1978234e3054a466e7d99e"
+        ],
+        "subject": "Open campaign 144 and reorder implementation integration guidance",
+        "paths": [
+          ".agents/plugins/sdd-manager/skills/sdd-implement/references/completion-and-checkpoints.md",
+          "docs/dev/HANDOFF.md",
+          "docs/dev/reviews/144_29ff7c5-implementation-integration-order/REVISION-PLAN.md",
+          "docs/dev/reviews/144_29ff7c5-implementation-integration-order/REVISION-REPORT.md",
+          "docs/dev/reviews/README.md"
+        ],
+        "assessment": "Exact human paragraph relocation covered by cumulative integration summary and net source byte checks."
+      },
+      {
+        "commit": "a36e445294098b720692fa4ebb01466f2b4a6d5b",
+        "parents": [
+          "5a8a98e97cc28bc52474e29b0c01345ac5ec2a1d"
+        ],
+        "subject": "Place release-message preparation before the artifact-name gate",
+        "paths": [
+          ".agents/plugins/sdd-manager/skills/sdd-manage/references/git-workflows.md",
+          "docs/dev/HANDOFF.md",
+          "docs/dev/reviews/144_29ff7c5-implementation-integration-order/REVISION-PLAN.md",
+          "docs/dev/reviews/144_29ff7c5-implementation-integration-order/REVISION-REPORT.md",
+          "docs/dev/reviews/README.md"
+        ],
+        "assessment": "Exact human paragraph relocation covered by cumulative integration summary and net source byte checks."
+      },
+      {
+        "commit": "850b046f595c48ef70af19b0aa6fdd3f0547b384",
+        "parents": [
+          "a36e445294098b720692fa4ebb01466f2b4a6d5b"
+        ],
+        "subject": "Move the verification artifact-name rule before the final paragraph",
+        "paths": [
+          ".agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md",
+          "docs/dev/HANDOFF.md",
+          "docs/dev/reviews/144_29ff7c5-implementation-integration-order/REVISION-PLAN.md",
+          "docs/dev/reviews/144_29ff7c5-implementation-integration-order/REVISION-REPORT.md",
+          "docs/dev/reviews/README.md"
+        ],
+        "assessment": "Exact human paragraph relocation covered by cumulative integration summary and net source byte checks."
+      },
+      {
+        "commit": "830330846ddff5d22acc53d9213b69651c12417f",
+        "parents": [
+          "850b046f595c48ef70af19b0aa6fdd3f0547b384"
+        ],
+        "subject": "Prepare verified campaign 144 source for 0.16.4 release",
+        "paths": [
+          "docs/dev/HANDOFF.md",
+          "docs/dev/reviews/144_29ff7c5-implementation-integration-order/RELEASE-PREPARATION.json",
+          "docs/dev/reviews/144_29ff7c5-implementation-integration-order/RELEASE-REVIEW.md",
+          "docs/dev/reviews/144_29ff7c5-implementation-integration-order/REVISION-PLAN.md",
+          "docs/dev/reviews/144_29ff7c5-implementation-integration-order/REVISION-REPORT.md",
+          "docs/dev/reviews/README.md"
+        ],
+        "assessment": "Release authorization and verification bookkeeping; no product change."
+      },
+      {
+        "commit": "cd995eafafacc5fd37466041f5e0ce951a937db5",
+        "parents": [
+          "29ff7c5e8c8665a60e1978234e3054a466e7d99e",
+          "830330846ddff5d22acc53d9213b69651c12417f"
+        ],
+        "subject": "Integrate campaign 144 source for 0.16.4 release preparation",
+        "paths": [],
+        "assessment": "Cumulative reviewed integration summary covers all three relocations and introduced side-history; only HANDOFF merge reconciliation beyond incoming tree."
+      },
+      {
+        "commit": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+        "parents": [
+          "cd995eafafacc5fd37466041f5e0ce951a937db5"
+        ],
+        "subject": "Release v0.16.4",
+        "assessment": "Direct-main version bump and refreshed notes only; no additional product change. Raw stored message equals exact finalized notes."
+      }
+    ],
+    "coverage_complete": true
+  }
+}
