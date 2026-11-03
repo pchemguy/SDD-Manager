@@ -1,0 +1,293 @@
+{
+  "repository": "pchemguy/SDD-Manager",
+  "version": "0.16.3",
+  "source": "13be7381cf84e76c041bd9446d1384308459be18",
+  "campaign": {
+    "id": "143_0989331",
+    "baseline": "0989331ddc01fd5687043b37a2b294af2836de78",
+    "opening": "9704001e6bb97ec1e6cd1ff04d508ca2157d505e",
+    "source_tip": "bdd7c0aa5ab24a9ccca0cf29911ff3147a9a41bd",
+    "finalization": "0d167172e9fafe56ff7ad2d4b58afab0e9e12666",
+    "closing_merge": "a3f5e3d45032f5237ab655329722b25d17d0d705",
+    "closed_before_version_bump": true
+  },
+  "release": {
+    "id": 433203166,
+    "tag": "v0.16.3",
+    "url": "https://github.com/pchemguy/SDD-Manager/releases/tag/v0.16.3",
+    "draft": false,
+    "prerelease": false,
+    "target_commitish": "13be7381cf84e76c041bd9446d1384308459be18",
+    "published_at": "2026-11-03T20:51:04Z",
+    "notes_sha256": "bcbd5451052a214108e1d88d01eccbe0f650249d95333ba6f328a015891a2123",
+    "body_matches_raw_commit_and_retained_notes": true
+  },
+  "latest": {
+    "id": 433203166,
+    "tag": "v0.16.3",
+    "matches_release": true
+  },
+  "tag": {
+    "object": "855fc095bcc3286509ae79fcedb6b7931ee14ec9",
+    "name": "v0.16.3",
+    "type": "annotated",
+    "peeled_source": "13be7381cf84e76c041bd9446d1384308459be18"
+  },
+  "workflow": {
+    "id": 41716108960,
+    "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41716108960",
+    "path": ".github/workflows/release.yml",
+    "ref": "main",
+    "source": "13be7381cf84e76c041bd9446d1384308459be18",
+    "status": "completed",
+    "conclusion": "success",
+    "request_id": "sdd143_v0163_13be7381cf84",
+    "jobs": [
+      {
+        "id": 126196409953,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 126196931037,
+        "name": "publish",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "build_tests": [
+      "Ran 140 tests in 25.360s",
+      "Ran 62 tests in 3.739s"
+    ],
+    "build_observation": {
+      "assets": {
+        "sdd-manager.zip": "51b8d6856135d0e8cb80c309369a56d24616c55f9984a3fe0a001fae7f8ad4e4",
+        "sdd-manager.zip.sha256": "5f58f5b2f01361e443b5570589cc1f54c1683a12dba868bd15e3b9f829aa6c8b"
+      },
+      "published": false,
+      "release_id": null,
+      "request_id": "sdd143_v0163_13be7381cf84",
+      "run_id": "41716108960",
+      "source": "13be7381cf84e76c041bd9446d1384308459be18",
+      "workflow_source": "13be7381cf84e76c041bd9446d1384308459be18"
+    },
+    "publish_observation": {
+      "assets": {
+        "sdd-manager.zip": "51b8d6856135d0e8cb80c309369a56d24616c55f9984a3fe0a001fae7f8ad4e4",
+        "sdd-manager.zip.sha256": "5f58f5b2f01361e443b5570589cc1f54c1683a12dba868bd15e3b9f829aa6c8b"
+      },
+      "published": true,
+      "release_id": 433203166,
+      "request_id": "sdd143_v0163_13be7381cf84",
+      "run_id": "41716108960",
+      "source": "13be7381cf84e76c041bd9446d1384308459be18",
+      "workflow_source": "13be7381cf84e76c041bd9446d1384308459be18"
+    }
+  },
+  "assets": [
+    {
+      "id": 707050990,
+      "name": "sdd-manager.zip",
+      "size": 542076,
+      "digest": "sha256:51b8d6856135d0e8cb80c309369a56d24616c55f9984a3fe0a001fae7f8ad4e4",
+      "state": "uploaded",
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.3/sdd-manager.zip"
+    },
+    {
+      "id": 707051126,
+      "name": "sdd-manager.zip.sha256",
+      "size": 82,
+      "digest": "sha256:5f58f5b2f01361e443b5570589cc1f54c1683a12dba868bd15e3b9f829aa6c8b",
+      "state": "uploaded",
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.3/sdd-manager.zip.sha256"
+    }
+  ],
+  "package": {
+    "source": "13be7381cf84e76c041bd9446d1384308459be18",
+    "version": "0.16.3",
+    "files": 171,
+    "notes_sha256": "bcbd5451052a214108e1d88d01eccbe0f650249d95333ba6f328a015891a2123",
+    "reproducible_two_builds": true,
+    "exact_member_bytes": true,
+    "archive_comment_source": true,
+    "template_and_section_inside_package_verified": true,
+    "naming_gate": {
+      "argv": [
+        "python",
+        "/workspace/scratch/f5adda9293ed/SDD-Manager/.agents/plugins/sdd-manager/skills/sdd-verify/scripts/release_assets.py",
+        "--expected",
+        "/tmp/sdd143-expected-assets.json",
+        "--directory",
+        "/tmp/sdd143-release-candidate",
+        "--version",
+        "0.16.3"
+      ],
+      "exit": 0,
+      "output": "{\"ok\": true, \"complete\": true, \"checked\": 2}\n"
+    },
+    "extracted_checker": {
+      "exit": 0,
+      "output": "{\"ok\": true, \"contract_vectors_checked\": 38}\n"
+    },
+    "assets": {
+      "sdd-manager.zip": {
+        "sha256": "51b8d6856135d0e8cb80c309369a56d24616c55f9984a3fe0a001fae7f8ad4e4",
+        "bytes": 542076
+      },
+      "sdd-manager.zip.sha256": {
+        "sha256": "5f58f5b2f01361e443b5570589cc1f54c1683a12dba868bd15e3b9f829aa6c8b",
+        "bytes": 82
+      }
+    }
+  },
+  "preparation": {
+    "version": "0.16.3",
+    "previous_tag": "v0.16.2",
+    "baseline_commit": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04",
+    "analyzed_through_commit": "13be7381cf84e76c041bd9446d1384308459be18",
+    "history_and_tag_discovery_complete": true,
+    "closing_merge": "a3f5e3d45032f5237ab655329722b25d17d0d705",
+    "finalized_campaign": "0d167172e9fafe56ff7ad2d4b58afab0e9e12666",
+    "coverage": [
+      {
+        "commit": "0989331ddc01fd5687043b37a2b294af2836de78",
+        "parents": [
+          "dbd84cf45a0b0fe916df5cf784dcef372ef96b04"
+        ],
+        "subject": "Record verified SDD Manager 0.16.2 release outcome",
+        "coverage": "Prior release outcome bookkeeping; omitted from public highlights."
+      },
+      {
+        "commit": "9704001e6bb97ec1e6cd1ff04d508ca2157d505e",
+        "parents": [
+          "0989331ddc01fd5687043b37a2b294af2836de78"
+        ],
+        "subject": "Open campaign 143 and restore AGENTS template Markdown links",
+        "coverage": "Campaign143 scope covered by final integration summary a3f5e3d45032f5237ab655329722b25d17d0d705, actual two-file product delta and focused/independent rechecks."
+      },
+      {
+        "commit": "bdd7c0aa5ab24a9ccca0cf29911ff3147a9a41bd",
+        "parents": [
+          "9704001e6bb97ec1e6cd1ff04d508ca2157d505e"
+        ],
+        "subject": "Place the artifact-name rule second in the release preparation section",
+        "coverage": "Campaign143 scope covered by final integration summary a3f5e3d45032f5237ab655329722b25d17d0d705, actual two-file product delta and focused/independent rechecks."
+      },
+      {
+        "commit": "0d167172e9fafe56ff7ad2d4b58afab0e9e12666",
+        "parents": [
+          "bdd7c0aa5ab24a9ccca0cf29911ff3147a9a41bd"
+        ],
+        "subject": "Finalize campaign 143 for verified main integration",
+        "coverage": "Campaign143 scope covered by final integration summary a3f5e3d45032f5237ab655329722b25d17d0d705, actual two-file product delta and focused/independent rechecks."
+      },
+      {
+        "commit": "a3f5e3d45032f5237ab655329722b25d17d0d705",
+        "parents": [
+          "0989331ddc01fd5687043b37a2b294af2836de78",
+          "0d167172e9fafe56ff7ad2d4b58afab0e9e12666"
+        ],
+        "subject": "Merge revision 143_0989331 \u2014 Restore template links and order release guidance",
+        "coverage": "Campaign143 scope covered by final integration summary a3f5e3d45032f5237ab655329722b25d17d0d705, actual two-file product delta and focused/independent rechecks."
+      },
+      {
+        "commit": "13be7381cf84e76c041bd9446d1384308459be18",
+        "parents": [
+          "a3f5e3d45032f5237ab655329722b25d17d0d705"
+        ],
+        "subject": "Release v0.16.3",
+        "coverage": "Direct main version/notes release boundary; raw stored message equals retained body. No additional product implementation."
+      }
+    ],
+    "notes_sha256": "bcbd5451052a214108e1d88d01eccbe0f650249d95333ba6f328a015891a2123",
+    "notes_path": "RELEASE-NOTES.md",
+    "expected_assets": [
+      "sdd-manager.zip",
+      "sdd-manager.zip.sha256"
+    ],
+    "limits": [
+      "Fresh source/layout and202 local contracts; no fresh installed-client or live consumer trial."
+    ],
+    "release_source": "13be7381cf84e76c041bd9446d1384308459be18"
+  },
+  "raw_message_verification": {
+    "before_main_publication": true,
+    "actual_git_bytes_equal": true,
+    "api_display_omits_terminal_newline": true
+  },
+  "local_verification": {
+    "source": "bdd7c0aa5ab24a9ccca0cf29911ff3147a9a41bd",
+    "passed": 202,
+    "support": 140,
+    "publisher": 62,
+    "record": "docs/dev/reviews/143_0989331-restore-agents-template-links/closure-verification.json",
+    "independent_review": "Ready; no source findings"
+  },
+  "limits": [
+    "Focused documentation revision; no new comprehensive product review.",
+    "No fresh installed-client or live TextStats trial.",
+    "No fresh native-runtime verification is asserted for this documentation release."
+  ],
+  "downloads": {
+    "source": "13be7381cf84e76c041bd9446d1384308459be18",
+    "downloads": [
+      {
+        "variant": "tag",
+        "name": "sdd-manager.zip",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.3/sdd-manager.zip",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 542076,
+        "sha256": "51b8d6856135d0e8cb80c309369a56d24616c55f9984a3fe0a001fae7f8ad4e4",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "tag",
+        "name": "sdd-manager.zip.sha256",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.3/sdd-manager.zip.sha256",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 82,
+        "sha256": "5f58f5b2f01361e443b5570589cc1f54c1683a12dba868bd15e3b9f829aa6c8b",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "latest",
+        "name": "sdd-manager.zip",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 542076,
+        "sha256": "51b8d6856135d0e8cb80c309369a56d24616c55f9984a3fe0a001fae7f8ad4e4",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "latest",
+        "name": "sdd-manager.zip.sha256",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip.sha256",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 82,
+        "sha256": "5f58f5b2f01361e443b5570589cc1f54c1683a12dba868bd15e3b9f829aa6c8b",
+        "matches_exact_source": true
+      }
+    ],
+    "ok": true
+  },
+  "hosted_naming_gate": {
+    "argv": [
+      "python",
+      "/workspace/scratch/f5adda9293ed/SDD-Manager/.agents/plugins/sdd-manager/skills/sdd-verify/scripts/release_assets.py",
+      "--expected",
+      "/tmp/sdd143-expected-assets.json",
+      "--observed",
+      "/tmp/sdd143-hosted-names.json",
+      "--version",
+      "0.16.3"
+    ],
+    "exit": 0,
+    "output": "{\"ok\": true, \"complete\": true, \"checked\": 2}\n"
+  },
+  "highlights_cleanup": "Owned ignored/untracked checkpoint removed after exact published-body consumption; complete RELEASE-NOTES.md retained."
+}
