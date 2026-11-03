@@ -1,6 +1,6 @@
 # Absolutely prohibit version numbers in release artifact names
 
-Campaign **141_951256a**; branch `revision/141_951256a-release-asset-enforcement`, from/returning to main **951256ad321a477a128c4fc1234665719901225b**. No suspended parent. **Authorized now: open campaign, inspect and plan. Stop before implementation, merge, closure or release.**
+Campaign **141_951256a**; branch `revision/141_951256a-release-asset-enforcement`, from/returning to main **951256ad321a477a128c4fc1234665719901225b**. No suspended parent. **Execution authorized by the human. Complete the bounded revision and verification; retain the open campaign branch. Merge, closure, version bump and release are not selected.**
 
 ## Required result
 
@@ -45,4 +45,4 @@ The exact newly failing repository/release, asset names, loaded plugin identity 
 
 ## Execution boundary
 
-This plan does not change plugin instructions, scripts, demo projects or releases. Campaign stays open for plan review. Subsequent execution must resolve the failing-case identity, implement the bounded owner changes and obtain the stated behavioral evidence; it must not edit closed campaigns or add prior-revision narration to product instructions.
+The human selected execution. Implement the bounded owner changes and controlled regression/consumer checks. Retain the unestablished reported-case identity as a specific diagnostic limit; do not invent a consumer trace or block independent repairs. Leave the campaign open after execution; no merge, version bump, product release or consumer-repository repair is selected. Closed records remain frozen and product instructions describe the target workflow directly.
