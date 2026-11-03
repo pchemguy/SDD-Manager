@@ -50,9 +50,11 @@ PACKAGE_SUBDIR = '.agents/plugins/sdd-manager'
 PACKAGE_PATHS = ('assets', 'skills', 'LICENSE', 'plugin.json', 'README.md',
                  'PLUGIN.md', 'assets/Greenfield Project Prompt Template.md',
                  'assets/SDD-MANAGER.md', 'assets/AI_DISCLOSURE.md',
-                 'assets/AGENTS_TEMPLATE.md', 'assets/DOCS_TASKS_TEMPLATE.md', 'assets/DOCS_PREPARATION_TEMPLATE.md', 'assets/HANDOFF_TEMPLATE.md',
+                 'assets/AGENTS_TEMPLATE.md', 'assets/DOCS_TASKS_TEMPLATE.md', 'assets/DOCS_PREPARATION_TEMPLATE.md', 'assets/DOCS_TRACKING_TEMPLATE.json', 'assets/HANDOFF_TEMPLATE.md',
                  'assets/SKILL_DISCOVERY_PROTOCOL.md',
                  'skills/sdd-manage/scripts/git-auth-recover.mjs',
+                 'skills/sdd-manage/scripts/git-publish.mjs',
+                 'skills/sdd-manage/scripts/git-process-supervisor.py',
                  'skills/sdd-manage/scripts/git-auth-recover.md',
                  'skills/sdd-manage/scripts/protected-token.mjs',
                  'skills/sdd-forge/scripts/forge-close.mjs',
@@ -63,15 +65,19 @@ PACKAGE_PATHS = ('assets', 'skills', 'LICENSE', 'plugin.json', 'README.md',
                  'skills/sdd-forge/scripts/forge-project.mjs',
                  'skills/sdd-forge/scripts/forge-project-draft.mjs',
                  'skills/sdd-forge/scripts/forge-project.md',
-                 'skills/sdd-forge/scripts/forge-project-input.md')
+                 'skills/sdd-forge/scripts/forge-project-input.md',
+                 'skills/sdd-verify/scripts/release_assets.py',
+                 'skills/sdd-verify/scripts/release-assets.md',
+                 'skills/sdd-verify/scripts/release-asset-cases.json')
 
 
 def git(root, *args):
     import os
     import subprocess
     # ZIP's DOS timestamps use local time; fix it across build environments.
+    # Read the selected objects themselves, regardless of local replacement refs.
     return subprocess.check_output(['git', '-C', str(root), *args],
-                                   env=dict(os.environ, TZ='UTC'))
+                                   env=dict(os.environ, TZ='UTC', GIT_NO_REPLACE_OBJECTS='1'))
 
 
 def tree_inventory(root, source):

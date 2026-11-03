@@ -39,6 +39,23 @@ class CheckerTests(Sandbox):
         p,_,_=self.assess([])
         self.assertNotEqual(p.returncode,0)
 
+    def test_malformed_check_records_are_rejected_before_repository_observation(self):
+        inputs = dict(self.inputs, local_checkout=str(self.root / 'not-a-checkout'))
+        for record in (1, None, []):
+            for publication_first in (False, True):
+                checks = ([{'id': 'published', 'kind': 'git', 'field': 'publication',
+                            'expected': 'published'}] if publication_first else []) + [record]
+                contract = self.root / 'malformed-contract.json'
+                contract.write_text(json.dumps({'schema_version': 1, 'checks': checks}))
+                with self.subTest(record=record, publication_first=publication_first):
+                    proc, data, output = self.invoke('assess', inputs, state=self.state,
+                                                     extra=['--contract', contract])
+                    self.assertEqual(proc.returncode, 2, proc.stdout + proc.stderr)
+                    self.assertEqual(json.loads(proc.stdout)['cause'], 'invalid_contract')
+                    self.assertEqual(proc.stderr, '')
+                    self.assertIsNone(data)
+                    self.assertFalse(output.exists())
+
     def test_git_evidence_reads_actual_state(self):
         data,_=self.ok(self.assess([{'id':'clean','kind':'git','field':'staged_paths','expected':[]}]))
         (self.repo/'owned.txt').write_text('changed\n')

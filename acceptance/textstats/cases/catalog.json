@@ -162,7 +162,7 @@
       "prerequisites": [
         "Dedicated repository, pinned source and independently observed runtime facilities.",
         "Assessed/published predecessor checkpoint; isolated trials fork its actual retained objects.",
-        "Milestone 1.1 explicit review task/report and actual hosted issue/milestone readback."
+        "Milestone 1.1 assigned boundary task/report/HANDOFF under the pinned review-task threshold and actual hosted issue/milestone readback."
       ],
       "checkpoint_bindings": {
         "start": {

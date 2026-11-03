@@ -33,7 +33,7 @@ The source under test remains immutable throughout a campaign. A proposed plugin
 
 ## Boundary review lifecycle
 
-Assess explicit delivery milestone review tasks and final single-task phase review milestones, separate code review/testing evidence, committed reports at workflow-specific paths, blocker repair and admissible TODO solution-option aggregation. Local support tests validate harness behavior only; new lifecycle claims require consumer execution and live provider readback.
+Assess each delivery milestone's assigned boundary task under the pinned review-task threshold: a standalone review task where required, otherwise the final implementation task with review/report/HANDOFF obligations. Preserve final single-task phase review milestones, separate code review/testing evidence, committed reports at workflow-specific paths, blocker repair and admissible TODO solution-option aggregation. Local support tests validate harness behavior only; new lifecycle claims require consumer execution and live provider readback.
 
 ## Release-message coverage
 

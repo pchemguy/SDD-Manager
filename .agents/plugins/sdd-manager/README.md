@@ -4,7 +4,7 @@
 
 SDD Manager is a learning-by-doing experiment in specification-driven development with coding agents, packaged as an Agent Plugin for Git repositories. It composes focused skills into workflows for exploration, design, specification, planning, implementation, verification and releases. Practical project runs inform its refinement; local source checks and live agent/client acceptance have distinct evidence boundaries.
 
-Navigate: [Quick Start](#quick-start) · [Workflows](#core-development-workflows) · [Modes and checkpoints](#doc-design-modes) · [Continuation](#continue-with-another-agent) · [Workflow diagrams](#workflow-guide) · [Releases](#release-operations) · [Package assets](#plugin-package).
+Navigate: [Prerequisites](#execution-prerequisites) · [Quick Start](#quick-start) · [Workflows](#core-development-workflows) · [Modes and checkpoints](#doc-design-modes) · [Continuation](#continue-with-another-agent) · [Workflow diagrams](#workflow-guide) · [Releases](#release-operations) · [Package assets](#plugin-package).
 
 In the source repository, the complete plugin package is at `.agents/plugins/sdd-manager/`, available for agents to load when working on SDD Manager itself. A separate agent installation remains an option. This checkout layout does not configure automatic loading; installed or extracted packages begin at their own plugin root.
 
@@ -12,7 +12,15 @@ The plugin defines a non-standard [PLUGIN.md](PLUGIN.md) entry, analogous to a s
 
 Development uses [SDD Manager](assets/SDD-MANAGER.md). See the [AI-assisted development disclosure](assets/AI_DISCLOSURE.md).
 
+## Execution prerequisites
+
+When a workflow uses the bundled supervised HTTPS Git publication utility, the execution environment needs native Git on PATH, Node.js 22+ and Python 3.11+. Its supported hosts are Windows 10+ with Job Object process ownership, or Linux with child-subreaper and procfs facilities. See the [publication runtime guide](skills/sdd-manage/scripts/git-auth-recover.md#runtime-and-interface) for the utility's complete requirements.
+
+Target projects and other selected operations retain their own toolchain requirements.
+
 ## Quick Start
+
+Before project work, review the [execution prerequisites](#execution-prerequisites).
 
 Choose the minimal Hello World app, the Tetris game, the calculator, or a template for your own project.
 

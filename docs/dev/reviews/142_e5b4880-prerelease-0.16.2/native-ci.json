@@ -1,0 +1,247 @@
+{
+  "source": "6aa9950fd81dc8f64b50da507431effd7dfda4e4",
+  "runs": [
+    {
+      "id": 41707242220,
+      "name": "GitHub completion contracts",
+      "sha": "6aa9950fd81dc8f64b50da507431effd7dfda4e4",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41707242220",
+      "jobs": [
+        {
+          "id": 126165689628,
+          "name": "contracts (windows-latest, 22)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 126165689769,
+          "name": "contracts (ubuntu-latest, 22)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 126165689934,
+          "name": "contracts (windows-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 126165690004,
+          "name": "contracts (ubuntu-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "skipped"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41707242387,
+      "name": "GitHub projection contracts",
+      "sha": "6aa9950fd81dc8f64b50da507431effd7dfda4e4",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41707242387",
+      "jobs": [
+        {
+          "id": 126165691175,
+          "name": "contracts (ubuntu-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 126165691447,
+          "name": "contracts (ubuntu-latest, 22)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 126165691481,
+          "name": "contracts (windows-latest, 22)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 126165691526,
+          "name": "contracts (windows-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41707242245,
+      "name": "Git authentication recovery contracts",
+      "sha": "6aa9950fd81dc8f64b50da507431effd7dfda4e4",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41707242245",
+      "jobs": [
+        {
+          "id": 126165690507,
+          "name": "contracts (windows-latest, 22)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "success"
+            },
+            {
+              "name": "Repeat Windows controller-death contrast",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 126165691010,
+          "name": "contracts (ubuntu-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Repeat Windows controller-death contrast",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 126165691034,
+          "name": "contracts (ubuntu-latest, 22)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Repeat Windows controller-death contrast",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 126165691218,
+          "name": "contracts (windows-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "executed_contract_steps": [
+            {
+              "name": "Run Linux contracts",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run Windows contracts with CMD",
+              "conclusion": "success"
+            },
+            {
+              "name": "Repeat Windows controller-death contrast",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Native CI uses the repair commit; later candidate changes only version/release records. Final package source is rebuilt separately.",
+    "These are controlled helper contracts, not installed-client or live-provider acceptance."
+  ]
+}

@@ -22,6 +22,6 @@
   "required_agent_checks": [
     "Partial transfer/archive follows a real observed move/edit, not a prebuilt completed owner map.",
     "Fresh continuation retains feature identity/actual paths, consults both lists, establishes sole selected ownership/links, preserves still-needed sources and history; no duplicate archive.",
-    "Feature transfer preserves review task IDs, report provenance and issue identities; scoped feature parent completion cannot close a whole-project milestone with unfinished work in another owner."
+    "Feature transfer preserves assigned boundary task IDs, report/HANDOFF provenance and issue identities, including ownership by the final implementation task where the standalone review is omitted; scoped feature parent completion cannot close a whole-project milestone with unfinished work in another owner."
   ]
 }

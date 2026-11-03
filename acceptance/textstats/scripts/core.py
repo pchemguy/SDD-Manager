@@ -965,11 +965,6 @@ def assessment(inputs,state,contract_path,evidence_path):
     agent_checks=contract.get('required_agent_checks',[])+variant_checks.get(selected_variant,[])
     evidence=load(evidence_path) if evidence_path else None
     if evidence is not None and (type(evidence) is not dict or set(evidence)!={'schema_version','literals'} or not exact(evidence['schema_version'],1) or type(evidence['literals']) is not dict): raise Stop('invalid_evidence')
-    needs_remote=any(c.get('kind')=='git' and c.get('field') in {'publication','remote_containment'} for c in checks)
-    repo=repository(inputs,observe_remote=needs_remote)
-    if not repo['local_checkout']: raise Stop('local_checkout_required')
-    actual_git=None
-    rows=[]
     identifiers=set()
     for check in checks:
         if type(check) is not dict or type(check.get('id')) is not str or not check['id'] or check['id'] in identifiers: raise Stop('invalid_contract')
@@ -978,6 +973,13 @@ def assessment(inputs,state,contract_path,evidence_path):
         allowed={'literal':{'id','kind','key','expected'},'git':{'id','kind','field','expected','expected_ref'},'file':{'id','kind','path','exists','sha256'},'task_ownership':{'id','kind','documents'}}
         if kind not in allowed or set(check)-allowed[kind]: raise Stop('invalid_contract')
         if kind == 'task_ownership' and 'documents' in check: validate_task_documents(check['documents'])
+    needs_remote=any(c.get('kind')=='git' and c.get('field') in {'publication','remote_containment'} for c in checks)
+    repo=repository(inputs,observe_remote=needs_remote)
+    if not repo['local_checkout']: raise Stop('local_checkout_required')
+    actual_git=None
+    rows=[]
+    for check in checks:
+        kind=check.get('kind')
         expected=check.get('expected')
         if kind=='git':
             if ('expected' in check)==('expected_ref' in check): raise Stop('invalid_contract')

@@ -81,10 +81,12 @@ class PackageTests(Contract):
                      'assets/SDD-MANAGER.md','assets/AI_DISCLOSURE.md',
                      'assets/playwright.md', 'assets/vite-worker-loading.md',
                      'assets/WINDOWS_SHELL_POLICY.md','assets/BROWSER_DEV_POLICY.md',
-                     'assets/AGENTS_TEMPLATE.md','assets/DOCS_TASKS_TEMPLATE.md','assets/DOCS_PREPARATION_TEMPLATE.md','assets/HANDOFF_TEMPLATE.md','assets/SKILL_DISCOVERY_PROTOCOL.md',
+                     'assets/AGENTS_TEMPLATE.md','assets/DOCS_TASKS_TEMPLATE.md','assets/DOCS_PREPARATION_TEMPLATE.md','assets/DOCS_TRACKING_TEMPLATE.json','assets/HANDOFF_TEMPLATE.md','assets/SKILL_DISCOVERY_PROTOCOL.md',
                      'assets/ai-logs/AGENTS_TEMPLATE.md','assets/ai-logs/EXPLORE_DRIVE_TEMPLATE.md',
                      'assets/icon.svg','skills/sample/SKILL.md',
                  'skills/sdd-manage/scripts/git-auth-recover.mjs',
+                     'skills/sdd-manage/scripts/git-publish.mjs',
+                     'skills/sdd-manage/scripts/git-process-supervisor.py',
                      'skills/sdd-manage/scripts/git-auth-recover.md',
                      'skills/sdd-manage/scripts/protected-token.mjs',
                      'skills/sdd-forge/scripts/forge-close.mjs',
@@ -96,6 +98,9 @@ class PackageTests(Contract):
                  'skills/sdd-forge/scripts/forge-project-draft.mjs',
                  'skills/sdd-forge/scripts/forge-project.md',
                  'skills/sdd-forge/scripts/forge-project-input.md',
+                     'skills/sdd-verify/scripts/release_assets.py',
+                     'skills/sdd-verify/scripts/release-assets.md',
+                     'skills/sdd-verify/scripts/release-asset-cases.json',
                      'plugin.json','docs/excluded.md','docs/ai-logs/EXPLORE_DRIVE_V1.md','AGENTS.md','WINDOWS_SHELL_POLICY.md','BROWSER_DEV_POLICY.md'):
             p=(self.root if name.startswith('docs/') or name in ('AGENTS.md','WINDOWS_SHELL_POLICY.md','BROWSER_DEV_POLICY.md') else self.package)/name; p.parent.mkdir(parents=True,exist_ok=True)
             p.write_bytes(manifest if name.endswith('plugin.json') else (name+'\n').encode())
@@ -189,6 +194,8 @@ class PackageTests(Contract):
 
     def test_utility_resources_are_exact_and_required(self):
         names = ('skills/sdd-manage/scripts/git-auth-recover.mjs',
+                 'skills/sdd-manage/scripts/git-publish.mjs',
+                 'skills/sdd-manage/scripts/git-process-supervisor.py',
                  'skills/sdd-manage/scripts/git-auth-recover.md',
                  'skills/sdd-manage/scripts/protected-token.mjs',
                  'skills/sdd-forge/scripts/forge-close.mjs',
@@ -199,23 +206,49 @@ class PackageTests(Contract):
                  'skills/sdd-forge/scripts/forge-project.mjs',
                  'skills/sdd-forge/scripts/forge-project-draft.mjs',
                  'skills/sdd-forge/scripts/forge-project.md',
-                 'skills/sdd-forge/scripts/forge-project-input.md')
+                 'skills/sdd-forge/scripts/forge-project-input.md',
+                 'assets/DOCS_TRACKING_TEMPLATE.json',
+                 'skills/sdd-verify/scripts/release_assets.py',
+                 'skills/sdd-verify/scripts/release-assets.md',
+                 'skills/sdd-verify/scripts/release-asset-cases.json')
         paths = publisher.build_package(self.root, self.data, self.out)
         with zipfile.ZipFile(paths['sdd-manager.zip']) as archive:
             for name in names:
                 self.assertEqual(archive.read('sdd-manager/' + name),
                                  (self.package / name).read_bytes())
-        for name in names:
+        for index, name in enumerate(names):
             with self.subTest(missing=name):
                 path = self.package / name
                 original = path.read_bytes()
                 path.unlink()
                 self.git('add', '-u'); self.git('commit', '-qm', 'missing recovery resource')
                 source = self.git('rev-parse', 'HEAD')
-                with self.assertRaisesRegex(ValueError, 'Required package path is absent'):
-                    publisher.build_package(self.root, dict(self.data, source=source, notes_source=source), self.out)
-                path.write_bytes(original)
-                self.git('add', '.'); self.git('commit', '-qm', 'restore recovery resource')
+                output = self.out / ('missing-resource-' + str(index))
+                try:
+                    with self.assertRaisesRegex(ValueError, 'Required package path is absent'):
+                        publisher.build_package(self.root, dict(self.data, source=source, notes_source=source), output)
+                    self.assertFalse(output.exists(), 'Missing resources must fail before package output')
+                finally:
+                    path.write_bytes(original)
+                    self.git('add', '.'); self.git('commit', '-qm', 'restore recovery resource')
+
+    def test_replacement_ref_cannot_change_selected_package_bytes_or_inventory(self):
+        (self.package / 'README.md').write_bytes(b'Substituted candidate bytes\n')
+        extra = self.package / 'skills/sample/replacement-only.md'
+        extra.write_bytes(b'Only present in replacement\n')
+        self.git('add', '.'); self.git('commit', '-qm', 'replacement candidate')
+        replacement = self.git('rev-parse', 'HEAD')
+        self.git('checkout', '-q', '--detach', self.sha)
+        self.git('replace', self.sha, replacement)
+        self.assertEqual(self.git('rev-parse', 'HEAD'), self.sha)
+        self.assertEqual(self.git('show', self.sha + ':' + publisher.PACKAGE_SUBDIR + '/README.md'),
+                         'Substituted candidate bytes')
+        paths = publisher.build_package(self.root, self.data, self.out)
+        with zipfile.ZipFile(paths['sdd-manager.zip']) as archive:
+            self.assertEqual(archive.read('sdd-manager/README.md'), b'README.md\n')
+            self.assertNotIn('sdd-manager/skills/sample/replacement-only.md', archive.namelist())
+            self.assertEqual(archive.comment.decode(), self.sha)
+        self.assertNotIn('skills/sample/replacement-only.md', publisher.tree_inventory(self.root, self.sha))
 
     def test_rebuild_preserves_commit_metadata_across_archive_times(self):
         executable = self.package / 'skills/sample/run.sh'

@@ -39,6 +39,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { capture, gitHttpsFixture } from './helpers/git-auth-https.mjs';
 const SCRIPT = fileURLToPath(new URL('../.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs', import.meta.url));
+const PUBLISH_SCRIPT = fileURLToPath(new URL('../.agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-publish.mjs', import.meta.url));
 const CANARY = 'synthetic-only-canary-token';
 const TARGET_URL = 'https://example.invalid/owner/repo.git';
 function fixture(t) {
@@ -283,6 +284,51 @@ test('public callers reject ambient relocation and command configuration', t => 
     });
     assert.equal(result.status, 1); assert.equal(JSON.parse(result.stdout).code, 'relocated_git_environment');
     assert.ok(!result.stdout.includes(CANARY));
+  }
+});
+
+test('alternate GIT_CONFIG cannot hide a foreign-VCS remote from direct publication preflight', t => {
+  const f = fixture(t), runner = controlled(f), alternate = path.join(f.root, 'empty-config');
+  f.git(['config', 'remote.origin.vcs', 'synthetic-only-helper']);
+  fs.writeFileSync(alternate, '');
+  const hidden = spawnSync('git', ['-C', f.root, 'config', '--get-all', 'remote.origin.vcs'], {
+    encoding: 'utf8', env: { ...process.env, GIT_CONFIG: alternate }, timeout: 10000,
+  });
+  assert.equal(hidden.status, 1, 'The alternate file must hide the real remote.vcs from this query');
+  assert.equal(f.git(['config', '--get-all', 'remote.origin.vcs']), 'synthetic-only-helper');
+  const previous = process.env.GIT_CONFIG;
+  try {
+    process.env.GIT_CONFIG = alternate;
+    assert.throws(() => auth.recover({ ...f.options, auth: 'existing' }, runner.execute),
+      error => error.code === 'relocated_git_environment');
+    assert.equal(runner.calls.length, 0, 'Rejected ambient configuration must precede Git and transport');
+  } finally {
+    if (previous === undefined) delete process.env.GIT_CONFIG;
+    else process.env.GIT_CONFIG = previous;
+  }
+});
+
+test('public publication rejects alternate GIT_CONFIG from normal and linked worktrees before transport', async t => {
+  const f = fixture(t), linked = path.join(f.root, 'linked config worktree'), alternate = path.join(f.root, 'empty-config');
+  f.git(['worktree', 'add', '-qb', 'linked-config', linked]);
+  fs.writeFileSync(alternate, '');
+  // This mismatch makes a missing environment guard fail locally too.
+  f.git(['remote', 'set-url', 'origin', 'https://different.invalid/owner/repo.git']);
+  for (const script of [SCRIPT, PUBLISH_SCRIPT]) {
+    for (const [root, ref] of [[f.root, f.ref], [linked, 'refs/heads/linked-config']]) {
+      await t.test(path.basename(script) + ' ' + ref, () => {
+        const result = spawnSync(process.execPath, [script, 'push', '--repo', root, '--remote', 'origin',
+          '--url', TARGET_URL, '--ref', ref, '--expect', f.oid, '--auth', 'existing'], {
+          encoding: 'utf8', env: { ...process.env, GIT_CONFIG: alternate }, timeout: 10000,
+        });
+        assert.equal(result.status, 1, result.stderr);
+        const data = JSON.parse(result.stdout);
+        assert.equal(data.code, 'relocated_git_environment');
+        assert.equal(data.push_attempted, false);
+        assert.equal(data.cleanup_state, 'confirmed');
+        assert.ok(!result.stdout.includes(CANARY));
+      });
+    }
   }
 });
 
