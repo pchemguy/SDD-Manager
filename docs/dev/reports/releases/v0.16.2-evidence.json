@@ -1,0 +1,252 @@
+{
+  "version": "0.16.2",
+  "source": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04",
+  "closing_merge": "7a84e0cc4fe4ca48ef9c942e008ba25c954e0421",
+  "campaign_finalization": "c73c6911dd28dcbd1916691a177b3c8d9d3475e4",
+  "repository": "pchemguy/SDD-Manager",
+  "default_branch": "main",
+  "release": {
+    "id": 433162270,
+    "tag": "v0.16.2",
+    "url": "https://github.com/pchemguy/SDD-Manager/releases/tag/v0.16.2",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-11-03T20:06:33Z",
+    "target_commitish": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04",
+    "body_matches_stored_commit_and_notes": true,
+    "notes_sha256": "10dcb64403982438d128c92e4664f90f804f2b748d3b4deec2e18e261cdd55cb"
+  },
+  "latest": {
+    "id": 433162270,
+    "tag": "v0.16.2",
+    "matches_release": true
+  },
+  "tag": {
+    "name": "v0.16.2",
+    "object": "3a437cdd2a51e76ed006f95632c153fb515c0390",
+    "type": "annotated",
+    "peeled_source": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04"
+  },
+  "workflow": {
+    "id": 41709236560,
+    "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41709236560",
+    "path": ".github/workflows/release.yml",
+    "ref": "main",
+    "source": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "request_id": "sdd142_v0162_dbd84cf45a0b",
+    "jobs": [
+      {
+        "id": 126172650294,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 126173124063,
+        "name": "publish",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "build_test_summaries": [
+      "Ran 140 tests in 20.261s",
+      "Ran 62 tests in 2.846s"
+    ],
+    "build_observation": {
+      "assets": {
+        "sdd-manager.zip": "cdc00ecc6e93a943755e2f4a0b098b7eb39c946249b2ae4427f344d468f7a011",
+        "sdd-manager.zip.sha256": "5ca778e966adeee282c7b3ce7b31f9a7d1209b179514214155730740bc8019cb"
+      },
+      "published": false,
+      "release_id": null,
+      "request_id": "sdd142_v0162_dbd84cf45a0b",
+      "run_id": "41709236560",
+      "source": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04",
+      "workflow_source": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04"
+    },
+    "publish_observation": {
+      "assets": {
+        "sdd-manager.zip": "cdc00ecc6e93a943755e2f4a0b098b7eb39c946249b2ae4427f344d468f7a011",
+        "sdd-manager.zip.sha256": "5ca778e966adeee282c7b3ce7b31f9a7d1209b179514214155730740bc8019cb"
+      },
+      "published": true,
+      "release_id": 433162270,
+      "request_id": "sdd142_v0162_dbd84cf45a0b",
+      "run_id": "41709236560",
+      "source": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04",
+      "workflow_source": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04"
+    }
+  },
+  "assets": [
+    {
+      "id": 706927167,
+      "name": "sdd-manager.zip",
+      "size": 542234,
+      "digest": "sha256:cdc00ecc6e93a943755e2f4a0b098b7eb39c946249b2ae4427f344d468f7a011",
+      "state": "uploaded",
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.2/sdd-manager.zip"
+    },
+    {
+      "id": 706927225,
+      "name": "sdd-manager.zip.sha256",
+      "size": 82,
+      "digest": "sha256:5ca778e966adeee282c7b3ce7b31f9a7d1209b179514214155730740bc8019cb",
+      "state": "uploaded",
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.2/sdd-manager.zip.sha256"
+    }
+  ],
+  "package": {
+    "source": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04",
+    "version": "0.16.2",
+    "files": 171,
+    "notes_sha256": "10dcb64403982438d128c92e4664f90f804f2b748d3b4deec2e18e261cdd55cb",
+    "reproducible_two_builds": true,
+    "exact_member_bytes": true,
+    "archive_comment_source": true,
+    "naming_gate": {
+      "argv": [
+        "python",
+        "/workspace/scratch/f5adda9293ed/SDD-Manager/.agents/plugins/sdd-manager/skills/sdd-verify/scripts/release_assets.py",
+        "--expected",
+        "/tmp/sdd142-expected-assets.json",
+        "--directory",
+        "/tmp/sdd142-release-candidate",
+        "--version",
+        "0.16.2"
+      ],
+      "exit": 0,
+      "output": "{\"ok\": true, \"complete\": true, \"checked\": 2}\n"
+    },
+    "extracted_checker": {
+      "exit": 0,
+      "output": "{\"ok\": true, \"contract_vectors_checked\": 38}\n"
+    },
+    "assets": {
+      "sdd-manager.zip": {
+        "sha256": "cdc00ecc6e93a943755e2f4a0b098b7eb39c946249b2ae4427f344d468f7a011",
+        "bytes": 542234
+      },
+      "sdd-manager.zip.sha256": {
+        "sha256": "5ca778e966adeee282c7b3ce7b31f9a7d1209b179514214155730740bc8019cb",
+        "bytes": 82
+      }
+    },
+    "source_trees_unchanged_from_verified_integration": true
+  },
+  "native_ci": [
+    {
+      "id": 41707242220,
+      "name": "GitHub completion contracts",
+      "sha": "6aa9950fd81dc8f64b50da507431effd7dfda4e4",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41707242220"
+    },
+    {
+      "id": 41707242387,
+      "name": "GitHub projection contracts",
+      "sha": "6aa9950fd81dc8f64b50da507431effd7dfda4e4",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41707242387"
+    },
+    {
+      "id": 41707242245,
+      "name": "Git authentication recovery contracts",
+      "sha": "6aa9950fd81dc8f64b50da507431effd7dfda4e4",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41707242245"
+    }
+  ],
+  "coverage": {
+    "baseline_tag": "v0.16.1",
+    "baseline_commit": "c43d2964817741c2cd655e0d82a6e45aee20369e",
+    "analyzed_through_commit": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04",
+    "initial_inventory": "docs/dev/reviews/142_e5b4880-prerelease-0.16.2/release-preparation.json",
+    "final_increment": [
+      {
+        "commit": "c73c6911dd28dcbd1916691a177b3c8d9d3475e4",
+        "assessment": "Finalization and observed native CI facts; no new runtime implementation."
+      },
+      {
+        "commit": "7a84e0cc4fe4ca48ef9c942e008ba25c954e0421",
+        "assessment": "Explicit two-parent closing integration, source trees match verified incoming; HANDOFF/index reconciled."
+      },
+      {
+        "commit": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04",
+        "assessment": "Direct default-branch release marker with unchanged tree and exact retained notes body."
+      }
+    ],
+    "complete_message_retained": "RELEASE-NOTES.md",
+    "highlights_checkpoint_cleanup": "Owned ignored/untracked .release-highlights.md removed after verified published-body readback; RELEASE-NOTES.md retained."
+  },
+  "limits": [
+    "No fresh live TextStats or installed-client trial.",
+    "Seven separate Windows shell cases skipped locally on Linux.",
+    "No fresh Mermaid rendering; diagram source unchanged."
+  ],
+  "downloads": {
+    "source": "dbd84cf45a0b0fe916df5cf784dcef372ef96b04",
+    "downloads": [
+      {
+        "variant": "tag",
+        "name": "sdd-manager.zip",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.2/sdd-manager.zip",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 542234,
+        "sha256": "cdc00ecc6e93a943755e2f4a0b098b7eb39c946249b2ae4427f344d468f7a011",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "tag",
+        "name": "sdd-manager.zip.sha256",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.2/sdd-manager.zip.sha256",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 82,
+        "sha256": "5ca778e966adeee282c7b3ce7b31f9a7d1209b179514214155730740bc8019cb",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "latest",
+        "name": "sdd-manager.zip",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 542234,
+        "sha256": "cdc00ecc6e93a943755e2f4a0b098b7eb39c946249b2ae4427f344d468f7a011",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "latest",
+        "name": "sdd-manager.zip.sha256",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip.sha256",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 82,
+        "sha256": "5ca778e966adeee282c7b3ce7b31f9a7d1209b179514214155730740bc8019cb",
+        "matches_exact_source": true
+      }
+    ],
+    "ok": true
+  },
+  "hosted_naming_gate": {
+    "argv": [
+      "python",
+      "/workspace/scratch/f5adda9293ed/SDD-Manager/.agents/plugins/sdd-manager/skills/sdd-verify/scripts/release_assets.py",
+      "--expected",
+      "/tmp/sdd142-expected-assets.json",
+      "--observed",
+      "/tmp/sdd142-hosted-names.json",
+      "--version",
+      "0.16.2"
+    ],
+    "exit": 0,
+    "output": "{\"ok\": true, \"complete\": true, \"checked\": 2}\n"
+  }
+}
