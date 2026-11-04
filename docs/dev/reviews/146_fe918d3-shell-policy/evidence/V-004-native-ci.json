@@ -1,0 +1,78 @@
+{
+  "source": "784ead5ce6de03fa9bdb9e4a291af8ae0122b970",
+  "jobs": [
+    {
+      "run_id": 41788272156,
+      "id": 126435364286,
+      "name": "contracts (windows-latest, 22)",
+      "conclusion": "success",
+      "tests": [
+        42
+      ]
+    },
+    {
+      "run_id": 41788272156,
+      "id": 126435364643,
+      "name": "contracts (ubuntu-latest, 24)",
+      "conclusion": "success",
+      "tests": [
+        42
+      ]
+    },
+    {
+      "run_id": 41788272156,
+      "id": 126435364740,
+      "name": "contracts (ubuntu-latest, 22)",
+      "conclusion": "success",
+      "tests": [
+        42
+      ]
+    },
+    {
+      "run_id": 41788272156,
+      "id": 126435365050,
+      "name": "contracts (windows-latest, 24)",
+      "conclusion": "success",
+      "tests": [
+        42
+      ]
+    },
+    {
+      "run_id": 41788272226,
+      "id": 126435364731,
+      "name": "contracts (windows-latest, 22)",
+      "conclusion": "success",
+      "tests": [
+        52
+      ]
+    },
+    {
+      "run_id": 41788272226,
+      "id": 126435365095,
+      "name": "contracts (windows-latest, 24)",
+      "conclusion": "success",
+      "tests": [
+        52
+      ]
+    },
+    {
+      "run_id": 41788272226,
+      "id": 126435365131,
+      "name": "contracts (ubuntu-latest, 24)",
+      "conclusion": "success",
+      "tests": [
+        52
+      ]
+    },
+    {
+      "run_id": 41788272226,
+      "id": 126435365193,
+      "name": "contracts (ubuntu-latest, 22)",
+      "conclusion": "success",
+      "tests": [
+        52
+      ]
+    }
+  ],
+  "scope": "Exact repaired completion/projection source; native Windows CMD/Linux Node22/24, synthetic provider/local contracts, not live provider or installed-client acceptance."
+}

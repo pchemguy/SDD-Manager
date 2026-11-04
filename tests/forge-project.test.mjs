@@ -8,7 +8,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { GitHubTransport } from '../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/github-client.mjs';
-import { GitHubClient as CompletionClient } from '../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs';
+import { GitHubClient as CompletionClient, validateRequest as validateCompletion } from '../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs';
 import { parseOwner, draftProjection, validateProjection, renderProjection } from '../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/projection-input.mjs';
 import { reconcileProjection, parseCli, run as runProject } from '../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.mjs';
 import { run as runDraft, parseCli as parseDraftCli } from '../.agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-draft.mjs';
@@ -803,4 +803,32 @@ test('POSIX request and source FIFOs fail promptly before a blocking open', { sk
     assert.equal(child.error, undefined, 'Special-file rejection must not block until the child timeout');
     assert.equal(child.status, 0, child.stderr); assert.equal(child.stdout, expected);
   }
+});
+
+
+test('projected multiline milestone descriptions feed completion without rewriting', () => {
+  const value = projectionRequest();
+  const description = 'Outcome: bounded capability.\nExit: verified checks.';
+  value.milestones.forEach(item => { item.description = description; });
+  const rendered = renderProjection(validateProjection(value, inventory(), true));
+  assert.equal(rendered.milestones[0].description, description);
+  const milestone = (item, number) => ({ id: item.key, number, title: item.title, description: item.description });
+  const completed = {
+    id: 'T-101', issue: 10, title: rendered.issues[0].title, commit: 'a'.repeat(40),
+    branch: 'phase/1-core', verification: 'Checks passed.', report: null,
+  };
+  const common = {
+    schema_version: 1, repository: value.repository, phase_label: rendered.label.name,
+    milestone: milestone(rendered.milestones[0], 7),
+    eligibility: { tracking: true, verified: true, published: true, exclusive: true },
+  };
+  assert.equal(validateCompletion({ ...common, task: completed }, 'task').milestone.description, description);
+  const review = { ...completed, id: 'T-103', issue: 11, title: rendered.issues[2].title, report: 'docs/dev/reports/phases/1/phase.md' };
+  const phase = validateCompletion({
+    ...common, milestone: milestone(rendered.milestones[1], 8), kind: 'phase-review',
+    tasks: [review], review_task: review.id, report: review.report,
+    predecessors: [milestone(rendered.milestones[0], 7)],
+  }, 'milestone');
+  assert.equal(phase.milestone.description, description);
+  assert.equal(phase.predecessors[0].description, description);
 });

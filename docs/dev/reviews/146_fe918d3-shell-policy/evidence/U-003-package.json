@@ -1,0 +1,40 @@
+{
+  "source": "3f8ed85b2b6109715f0dcf6c4b52f8504cb22662",
+  "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+  "build_only": true,
+  "publication_attempted": false,
+  "version": "0.16.4",
+  "files": 171,
+  "reproducible_two_builds": true,
+  "exact_member_bytes": true,
+  "archive_comment_source": true,
+  "naming_gate": {
+    "argv": [
+      "python",
+      "/workspace/scratch/f5adda9293ed/SDD-Manager/.agents/plugins/sdd-manager/skills/sdd-verify/scripts/release_assets.py",
+      "--expected",
+      "/tmp/sdd146-review-expected-assets.json",
+      "--directory",
+      "/tmp/sdd146-review-package",
+      "--version",
+      "0.16.4"
+    ],
+    "exit": 0,
+    "output": "{\"ok\": true, \"complete\": true, \"checked\": 2}\n"
+  },
+  "extracted_checker": {
+    "exit": 0,
+    "output": "{\"ok\": true, \"contract_vectors_checked\": 38}\n"
+  },
+  "assets": {
+    "sdd-manager.zip": {
+      "bytes": 542201,
+      "sha256": "f7cabdcf771e38c78cc34e196e7c896ea72c66ea9478b4cea243a76724356421"
+    },
+    "sdd-manager.zip.sha256": {
+      "bytes": 82,
+      "sha256": "7e9dec0fc8cbb38fca7b2415f60daed3b2e8b995151aadba999d1a96984e9b9d"
+    }
+  },
+  "release_limit": "Preliminary source review package; rebuild/recheck exact repaired 0.16.5 source before tag/publisher"
+}

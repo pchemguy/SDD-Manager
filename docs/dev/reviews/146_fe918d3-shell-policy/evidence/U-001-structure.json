@@ -1,0 +1,71 @@
+{
+  "source": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+  "unit": "U-001",
+  "inventory_paths": 178,
+  "all_assigned_bytes_match": true,
+  "yaml": [
+    ".agents/plugins/sdd-manager/skills/sdd-conventions/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-design/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-docs/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-forge/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-implement/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-manage/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-orient/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-plan/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-report/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-specify/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-steer/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-tasks/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-tdd/agents/openai.yaml",
+    ".agents/plugins/sdd-manager/skills/sdd-verify/agents/openai.yaml"
+  ],
+  "svg": [
+    ".agents/plugins/sdd-manager/assets/icon.svg",
+    ".agents/plugins/sdd-manager/assets/logo.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-conventions/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-design/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-docs/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-forge/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-implement/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-integrate-feature/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-manage/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-orient/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-plan/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-report/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-specify/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-steer/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-tasks/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-tdd/assets/icon.svg",
+    ".agents/plugins/sdd-manager/skills/sdd-verify/assets/icon.svg"
+  ],
+  "png": [
+    {
+      "path": ".agents/plugins/sdd-manager/assets/icon.png",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/logo.png",
+      "dimensions": [
+        512,
+        512
+      ]
+    }
+  ],
+  "skills": 15,
+  "plugin_validator": {
+    "exit": 0,
+    "cross_skill_reference_warnings": 69,
+    "meaning": "bundled relative handoffs remain client-dependent, not missing local files"
+  },
+  "project_policy_activation_boundary": "no direct policy links from plugin/skill entries or workflow references",
+  "visual_limit": "PNG/SVG metadata and parse validation; installed-client rendering not exercised",
+  "review_checkpoint": "60b092420b30086482027d1b65a0ccadf5233db3",
+  "closed_record_preservation": {
+    "base": "fe918d39b6380b36b01128da30c70f93b99a9919",
+    "changed_closed_paths": []
+  }
+}

@@ -29,7 +29,7 @@ function milestoneInput(value) {
   keys(value, ['id', 'number', 'title', 'description']);
   if (!text(value.id, 80) || !MILESTONE_ID.test(value.id) || !positive(value.number) || !text(value.title, 255)
       || !value.title.startsWith('sdd-' + value.id + '-') || value.title === 'sdd-' + value.id + '-'
-      || !(value.description === null || text(value.description))) fail('invalid_milestone');
+      || !(value.description === null || text(value.description, 16000, true))) fail('invalid_milestone');
 }
 const normalizedSummary = value => typeof value === 'string' ? value.replace(/\r\n/g, '\n') : value;
 function taskInput(value) {
@@ -37,6 +37,7 @@ function taskInput(value) {
   if (!TASK_ID.test(value.id) || !positive(value.issue) || !text(value.title, 255)
       || !value.title.startsWith('[' + value.id + '] ') || value.title === '[' + value.id + '] '
       || !OID.test(value.commit) || !text(value.branch, 255) || /[\s~^:?*\\[\]]/.test(value.branch)
+      || value.branch.includes('@{')
       || !text(normalizedSummary(value.verification), 16000, true)) fail('invalid_task');
   if (value.report !== null) reportPath(value.report);
 }

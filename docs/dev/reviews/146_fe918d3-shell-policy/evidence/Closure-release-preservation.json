@@ -1,0 +1,31 @@
+[
+  {
+    "kind": "release",
+    "id": 433252241,
+    "tag_name": "v0.16.4",
+    "target_commitish": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+    "draft": false,
+    "prerelease": false,
+    "assets": [
+      {
+        "name": "sdd-manager.zip",
+        "id": 707201175,
+        "size": 542070
+      },
+      {
+        "name": "sdd-manager.zip.sha256",
+        "id": 707201279,
+        "size": 82
+      }
+    ]
+  },
+  {
+    "kind": "tag",
+    "ref": "refs/tags/v0.16.4",
+    "object": {
+      "sha": "f9cf9da4a9bb1686795f9991ac68fe22e12e4d0e",
+      "type": "tag",
+      "url": "https://api.github.com/repos/pchemguy/SDD-Manager/git/tags/f9cf9da4a9bb1686795f9991ac68fe22e12e4d0e"
+    }
+  }
+]

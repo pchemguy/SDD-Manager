@@ -1,0 +1,20 @@
+{
+  "source_head": "4214546ae1092803581e5667a95b029b7fcc92f3",
+  "source_sha256": {
+    ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md": "c495aeff3233fb6a4cf8c7f9a85c6367516c484e0dd2b979de929ed900313024",
+    ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs": "62617ef417b3c5795c276494934f3c6ae3ef97508f7431762b87736d1c862813",
+    "tests/forge-close.test.mjs": "80458234a780187f52d0b7fcdcaa70b70d8957cf4e097a95c791e9a080789471",
+    "tests/forge-project.test.mjs": "9f86594df0d5ee30a7fc3da2e0375b708ccb1b0c7e64bc465acfb6b42f147444"
+  },
+  "argv": [
+    "node",
+    "--test",
+    "--test-name-pattern=projected multiline|native multiline|milestone description validation|checkout shorthand",
+    "tests/forge-close.test.mjs",
+    "tests/forge-project.test.mjs"
+  ],
+  "exit": 0,
+  "seconds": 3.598,
+  "log": "/tmp/sdd146-v4-independent-targeted.log",
+  "hashes_match_coordinator_green": true
+}

@@ -1,0 +1,2702 @@
+{
+  "campaign": "146_fe918d3",
+  "reviewer": "independent Senior Code Reviewer, focused-docs-assets",
+  "review_date": "2026-11-04",
+  "unit": "U-001",
+  "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+  "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+  "branch": "revision/146_fe918d3-shell-policy",
+  "scope_count": 116,
+  "full_text_source_inspections": 114,
+  "PNG_binary_inspections": 2,
+  "confirmed_findings": [],
+  "recommendations": [
+    "REC-DOC-001"
+  ],
+  "coverage": [
+    {
+      "path": ".agents/plugins/sdd-manager/LICENSE",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "a0740f769398d0870cfba32ef7e707c4c4c2f57b",
+      "sha256": "230ef093b2d68d0f37130d47064b1aff673c41830a15513801e0cc089e742ed2",
+      "inventory_sha256": "230ef093b2d68d0f37130d47064b1aff673c41830a15513801e0cc089e742ed2",
+      "inventory_match": true,
+      "scope": "Contributor versus package audience, setup/quickstart/limits, disclosure/license/discovery and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "notice_and_attribution_consistency"
+      ],
+      "limits": [
+        "no independent external license provenance verification"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/README.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "cbe118ec607ab3e4a65867ac2900278565641624",
+      "sha256": "8eb0a70b93c44164a0753b7db5190336ea93e8358b0720f03560e825a74a10ad",
+      "inventory_sha256": "8eb0a70b93c44164a0753b7db5190336ea93e8358b0720f03560e825a74a10ad",
+      "inventory_match": true,
+      "scope": "Contributor versus package audience, setup/quickstart/limits, disclosure/license/discovery and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/AGENTS_TEMPLATE.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "3dada5ea7f73323b8c70ae0579afd877b5163d8e",
+      "sha256": "0e64fa9f05cf5fb3a100dd1ef983f2aeecbe61784eae9586d1c05b3b97c6ad17",
+      "inventory_sha256": "0e64fa9f05cf5fb3a100dd1ef983f2aeecbe61784eae9586d1c05b3b97c6ad17",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/AI_DISCLOSURE.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "5b382ebdc11aef2dac1a26e8c32f7022a6ed1cb5",
+      "sha256": "d3d72a9473c43bc78762b85ccd36cbcb9d29b71033efd4538d657d77c6869001",
+      "inventory_sha256": "d3d72a9473c43bc78762b85ccd36cbcb9d29b71033efd4538d657d77c6869001",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/BROWSER_DEV_POLICY.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "580ccdd37699bc3dd9739846703109e49bc1030b",
+      "sha256": "e4653a4e734bc44fe5d2d4721cbe78f058930190abe1c2e2c50b2544974f5b29",
+      "inventory_sha256": "e4653a4e734bc44fe5d2d4721cbe78f058930190abe1c2e2c50b2544974f5b29",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/DOCS_PREPARATION_TEMPLATE.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "6c45c7822953fd0e45b9552a101187e8b5d5d348",
+      "sha256": "cede51f052c91eb87d948ea509bfc8b4f6bf50ba24a182b27831ed669255e1fc",
+      "inventory_sha256": "cede51f052c91eb87d948ea509bfc8b4f6bf50ba24a182b27831ed669255e1fc",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/DOCS_TASKS_TEMPLATE.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "329fcd98df1125d9a5e0a3ecbd5be23e739d4eb2",
+      "sha256": "69f43446472f65088a360ee0a8b86bfed424cd03b851f91238c33c6046b88572",
+      "inventory_sha256": "69f43446472f65088a360ee0a8b86bfed424cd03b851f91238c33c6046b88572",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/DOCS_TRACKING_TEMPLATE.json",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "968be5841291529cc71e82a7f7844f0dade53150",
+      "sha256": "5b6cec0b78b9c1280a6fbe243149e99ace4d93b7b1fbb164f1e4b302fd4a2522",
+      "inventory_sha256": "5b6cec0b78b9c1280a6fbe243149e99ace4d93b7b1fbb164f1e4b302fd4a2522",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_json_source_inspection",
+        "json_parse",
+        "contract_and_counterpart_alignment"
+      ],
+      "limits": [
+        "runtime or provider consumption not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/FEATURE_DOCS_TASKS_TEMPLATE.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "03e686cc069a37e46b0b5d7db2a008bd7c22e830",
+      "sha256": "1a7bab44709491226a99da903558a68e324adb434dedba77e971811799f65922",
+      "inventory_sha256": "1a7bab44709491226a99da903558a68e324adb434dedba77e971811799f65922",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/FEATURE_PREPARATION_TEMPLATE.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "ceda719f99315940a755c5d81e076a7fa32b8aff",
+      "sha256": "7e0e39cb79cc57bb18e4f23f96d4efdf649d9bb43586f27b9e6e5b7f5bb0c720",
+      "inventory_sha256": "7e0e39cb79cc57bb18e4f23f96d4efdf649d9bb43586f27b9e6e5b7f5bb0c720",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/Greenfield Project Prompt Template.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "e43f1591f2022fa81b4847822d9cd9c8e324bd7c",
+      "sha256": "dfa006b036235f236a3ce851084178a0781a9e1be857f2fcf279424bf0a5f34a",
+      "inventory_sha256": "dfa006b036235f236a3ce851084178a0781a9e1be857f2fcf279424bf0a5f34a",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/HANDOFF_TEMPLATE.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "8e7aa698700893e4e267983ca99b453523e69f6e",
+      "sha256": "cf717d10c495f06a16a87e6cc709be0373e3dcba178e0bee8e7ab5b6bd697ea1",
+      "inventory_sha256": "cf717d10c495f06a16a87e6cc709be0373e3dcba178e0bee8e7ab5b6bd697ea1",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/SDD-MANAGER.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "ac5af223a895521cf4e9e4d5d5f4e14fe5e8aec1",
+      "sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf",
+      "inventory_sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/SKILL_DISCOVERY_PROTOCOL.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "b1affc97a3845e8705a3ed3f64f2840fcab8e9fa",
+      "sha256": "ae6fd000ed174d13706689148ab9ab20cd26ed5826ead72829679905bd44f5ec",
+      "inventory_sha256": "ae6fd000ed174d13706689148ab9ab20cd26ed5826ead72829679905bd44f5ec",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "ba0768e488ab026e8d87e329beae4ca09ac4506b",
+      "sha256": "654a34d20daad0ef539cc17eb906305395bf47d4ee4cddfe4527eeb095619015",
+      "inventory_sha256": "654a34d20daad0ef539cc17eb906305395bf47d4ee4cddfe4527eeb095619015",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/ai-logs/AGENTS_TEMPLATE.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "fb53e737d11df7320ebefc6f9ef0e9a44658fef2",
+      "sha256": "a77d156ebc635e22e5dd022737d08b480bcaffde1021108edb1c6b60c16c2870",
+      "inventory_sha256": "a77d156ebc635e22e5dd022737d08b480bcaffde1021108edb1c6b60c16c2870",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/ai-logs/EXPLORE_DRIVE_TEMPLATE.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "717baee031acafe7406732c92d25546726ce0c88",
+      "sha256": "cfd12bb98b2994261acd7d8b4d5886effa75ef9d6cdbd7d02c3b97da355cc5ca",
+      "inventory_sha256": "cfd12bb98b2994261acd7d8b4d5886effa75ef9d6cdbd7d02c3b97da355cc5ca",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/icon.png",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "61f676b6266e5920b48c64667528c287a97e195e",
+      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45",
+      "inventory_sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "PNG_format_dimensions_decode",
+        "SHA256_byte_identity",
+        "visual_review_of_icon_shared_identical_bytes"
+      ],
+      "limits": [
+        "logo.png byte-identical to visually inspected icon.png; no separate client rendering"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/icon.svg",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "15e980d6ebf4774f9951d19c42df2ccff8955a3e",
+      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f",
+      "inventory_sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_svg_source_inspection",
+        "xml_parse",
+        "metadata_reference_and_color_consistency"
+      ],
+      "limits": [
+        "SVG rasterization attempted but unavailable: ImageMagick requires missing rsvg-convert; no client rendering assessed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/logo.png",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "61f676b6266e5920b48c64667528c287a97e195e",
+      "sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45",
+      "inventory_sha256": "e4a01cfa8c3712ff7e4ab3bd65bd58687c3aaa6d55b6af486cd632edee7a6d45",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "PNG_format_dimensions_decode",
+        "SHA256_byte_identity",
+        "visual_review_of_icon_shared_identical_bytes"
+      ],
+      "limits": [
+        "logo.png byte-identical to visually inspected icon.png; no separate client rendering"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/logo.svg",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "15e980d6ebf4774f9951d19c42df2ccff8955a3e",
+      "sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f",
+      "inventory_sha256": "ef0deb0206ee126e1383a186a730b6c0072222c8d674127bace1d780ad8a3b0f",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_svg_source_inspection",
+        "xml_parse",
+        "metadata_reference_and_color_consistency"
+      ],
+      "limits": [
+        "SVG rasterization attempted but unavailable: ImageMagick requires missing rsvg-convert; no client rendering assessed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/playwright.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "923e4161d5941ca8f61403a5bb942f6092791592",
+      "sha256": "1c258edc3022fafc9891a13be6cb6bbdb15f73094032a6ebd37a38f8c8dbbc6b",
+      "inventory_sha256": "1c258edc3022fafc9891a13be6cb6bbdb15f73094032a6ebd37a38f8c8dbbc6b",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/vite-worker-loading.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "ee2c0432895de43514ecc65cc32fade9fe88b60d",
+      "sha256": "255824e11d454d5173aa141de3a5a3bb77d75666008aa6ec5f7634c91b4d1193",
+      "inventory_sha256": "255824e11d454d5173aa141de3a5a3bb77d75666008aa6ec5f7634c91b4d1193",
+      "inventory_match": true,
+      "scope": "Asset/template semantics, generated target paths, package/project boundary, source/readability, conditional activation and metadata/artwork as applicable",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/plugin.json",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "ef1733c507ae544e6e4ba3ced94056653a13385c",
+      "sha256": "85e553c775ac582fe88d15954e382c642d24a73bf1020de4bce388e29648ad75",
+      "inventory_sha256": "85e553c775ac582fe88d15954e382c642d24a73bf1020de4bce388e29648ad75",
+      "inventory_match": true,
+      "scope": "Contributor versus package audience, setup/quickstart/limits, disclosure/license/discovery and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_json_source_inspection",
+        "json_parse",
+        "contract_and_counterpart_alignment"
+      ],
+      "limits": [
+        "runtime or provider consumption not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/SKILL.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "2904f0ee49eb90f58fc7fd8b8e3b972aacb9309e",
+      "sha256": "861a644bbffffb8bb3725ee252001c5b2c44eb60b4a492f4d5ba17cbaf187e32",
+      "inventory_sha256": "861a644bbffffb8bb3725ee252001c5b2c44eb60b4a492f4d5ba17cbaf187e32",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/agents/openai.yaml",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "9ce6a88303dff200a9db3fe808e160f88840937c",
+      "sha256": "410d8c60cac9d953bf179776adcda42761224628615fdfcc71413226602e4ece",
+      "inventory_sha256": "410d8c60cac9d953bf179776adcda42761224628615fdfcc71413226602e4ece",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_yaml_source_inspection",
+        "yaml_parse",
+        "referenced_icon_existence",
+        "name_description_prompt_owner_alignment"
+      ],
+      "limits": [
+        "client interpretation/implicit activation not exercised"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/assets/icon.svg",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "c6ba99d4568e4f7d75ffbfa0701ad42013bc0547",
+      "sha256": "98c55eb98b3e3702037698739b96fb550da2223bf733fb576650d0a4c5504864",
+      "inventory_sha256": "98c55eb98b3e3702037698739b96fb550da2223bf733fb576650d0a4c5504864",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_svg_source_inspection",
+        "xml_parse",
+        "metadata_reference_and_color_consistency"
+      ],
+      "limits": [
+        "SVG rasterization attempted but unavailable: ImageMagick requires missing rsvg-convert; no client rendering assessed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/architecture.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "77a6770bd674e8e09a7b553ce9117071c6846df0",
+      "sha256": "fc25beab6dba06ad797895fc7c7fd36e03b2a4d1c1f05d6d90be1353655faa98",
+      "inventory_sha256": "fc25beab6dba06ad797895fc7c7fd36e03b2a4d1c1f05d6d90be1353655faa98",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/decomposition.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "d679710ada31f817335744ccbc8e70034266ecf4",
+      "sha256": "55d4e44e6a75525dd6ea19af80daac99c12d7cd99c4a1376aed51290d4a125ee",
+      "inventory_sha256": "55d4e44e6a75525dd6ea19af80daac99c12d7cd99c4a1376aed51290d4a125ee",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/exploration.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "9c458fd67ccbcb3381ddae04a4f7264156b6d61a",
+      "sha256": "c7ec3ff5c8a74a46a4cfb38562cb8f8484611646ec03a1966e8e0627b758fedb",
+      "inventory_sha256": "c7ec3ff5c8a74a46a4cfb38562cb8f8484611646ec03a1966e8e0627b758fedb",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/feature-brief.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "a16006377605e58d17a5ad8839c57ec7e98af3d3",
+      "sha256": "68df7adf063475206d014e84356d6f6744682b0b6a29f17787a229791524fb8a",
+      "inventory_sha256": "68df7adf063475206d014e84356d6f6744682b0b6a29f17787a229791524fb8a",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-design/references/project-brief.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "9f0f6e0b2b65db956ef4c1a89d105e9defbe788c",
+      "sha256": "ce17cd1c1d25a94f9ad5c300aa2e061d1d9d6082391aafa4fe92450850de3551",
+      "inventory_sha256": "ce17cd1c1d25a94f9ad5c300aa2e061d1d9d6082391aafa4fe92450850de3551",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/SKILL.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "d7d56169c57860f4cb5cfad4a210a84012577c17",
+      "sha256": "90a407f7e9c48ccdc4eb0f687dcca567f1a2323c692743115230a2299720cdf5",
+      "inventory_sha256": "90a407f7e9c48ccdc4eb0f687dcca567f1a2323c692743115230a2299720cdf5",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/agents/openai.yaml",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "23cbd5cdf2cf538927601a230c18638bb4f53e34",
+      "sha256": "9715602c3bdcd14d41e6e99e24edb32389499e0ec96b0aad5cdf4b30b187de15",
+      "inventory_sha256": "9715602c3bdcd14d41e6e99e24edb32389499e0ec96b0aad5cdf4b30b187de15",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_yaml_source_inspection",
+        "yaml_parse",
+        "referenced_icon_existence",
+        "name_description_prompt_owner_alignment"
+      ],
+      "limits": [
+        "client interpretation/implicit activation not exercised"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/assets/icon.svg",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "abcfcf450057db9ddd954ff1ec2b4e629ba0f4c0",
+      "sha256": "69e272ee97e9957387f8ca8b51bec3d3d176c33e6bf6b20d2bff5b3536f507e2",
+      "inventory_sha256": "69e272ee97e9957387f8ca8b51bec3d3d176c33e6bf6b20d2bff5b3536f507e2",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_svg_source_inspection",
+        "xml_parse",
+        "metadata_reference_and_color_consistency"
+      ],
+      "limits": [
+        "SVG rasterization attempted but unavailable: ImageMagick requires missing rsvg-convert; no client rendering assessed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/in-code-documentation.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "31c3aa7b2818b0d8b14c266b90a83ac4d4a9fb5a",
+      "sha256": "40c179cf40c73ad36d76f722950eeaf33ab1c37993edd370f6fa16305d2a5465",
+      "inventory_sha256": "40c179cf40c73ad36d76f722950eeaf33ab1c37993edd370f6fa16305d2a5465",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/review-and-findings.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "342b4afe4e3596b9b1a22d5c7469437a90f5f525",
+      "sha256": "61bda144ac45af632307b12bb3cf9652727b83c3b3ffc57558188d0d2a6837b1",
+      "inventory_sha256": "61bda144ac45af632307b12bb3cf9652727b83c3b3ffc57558188d0d2a6837b1",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-docs/references/standalone-documentation.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "9f51adef2d5935b6a423005725a4681d1d1c877a",
+      "sha256": "b2ced68b8f869efc47206261795e225b42455b513c7a2be4f091cd891c3ef951",
+      "inventory_sha256": "b2ced68b8f869efc47206261795e225b42455b513c7a2be4f091cd891c3ef951",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/SKILL.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "4c1a0696de38b2cf5a9098be093add1ec23b593d",
+      "sha256": "89ad91e1e24d5a3d23a381212fb7b874941b9c094fcacec612b6dad7cb37cfba",
+      "inventory_sha256": "89ad91e1e24d5a3d23a381212fb7b874941b9c094fcacec612b6dad7cb37cfba",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/agents/openai.yaml",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "d63cd5e6c4030779f767937aa95e04d773d89c68",
+      "sha256": "65a79f791a2285753a0e6ca9eb83e203b181c0277ada5706add85f4c86c18783",
+      "inventory_sha256": "65a79f791a2285753a0e6ca9eb83e203b181c0277ada5706add85f4c86c18783",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_yaml_source_inspection",
+        "yaml_parse",
+        "referenced_icon_existence",
+        "name_description_prompt_owner_alignment"
+      ],
+      "limits": [
+        "client interpretation/implicit activation not exercised"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/assets/icon.svg",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "fd3590b54b4be1fe8e79e8ab0c8d36250c51ca4e",
+      "sha256": "ca997d09da83d706126f43dc2ace19c00ee9036ae67dcce225e688a09d398d33",
+      "inventory_sha256": "ca997d09da83d706126f43dc2ace19c00ee9036ae67dcce225e688a09d398d33",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_svg_source_inspection",
+        "xml_parse",
+        "metadata_reference_and_color_consistency"
+      ],
+      "limits": [
+        "SVG rasterization attempted but unavailable: ImageMagick requires missing rsvg-convert; no client rendering assessed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-docs-preparation.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "c3b77cdb05a4dc8510d76f40c71e19e56d55f032",
+      "sha256": "8918f9ee91b75c1fd9748070752c11751a63c01393277ca9d6eb939564e7ee91",
+      "inventory_sha256": "8918f9ee91b75c1fd9748070752c11751a63c01393277ca9d6eb939564e7ee91",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-feature-preparation.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "2c852fa7d01798838cf5ad459c5131e440500c82",
+      "sha256": "0a8d533c24fa0cc0f3b776b45221d112052588da4285e44f3ff09b865c161612",
+      "inventory_sha256": "0a8d533c24fa0cc0f3b776b45221d112052588da4285e44f3ff09b865c161612",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-issue-lifecycle.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "2763055fb9f0783b4cfa86ad21d24c46a03cf1ea",
+      "sha256": "1331828991b337873b3fd9a713d6c60927a0e935995b0d183341fe1c2278b952",
+      "inventory_sha256": "1331828991b337873b3fd9a713d6c60927a0e935995b0d183341fe1c2278b952",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-milestone-lifecycle.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "f88916c042e8f4bc8a45533b8a5e6db5c362dbc8",
+      "sha256": "a3e92e1b20dd6d78b2c3397c418f261439b0fbc9f35c4b8100b6e4e90e220ac8",
+      "inventory_sha256": "a3e92e1b20dd6d78b2c3397c418f261439b0fbc9f35c4b8100b6e4e90e220ac8",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-packaging.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "95e3a16bf3a3c9cacdd9a8d93e380eef577c7fb8",
+      "sha256": "be9ef75f72fd3a3f0c79fff8385dc872fb65214c2777637a9acb661dd54f9719",
+      "inventory_sha256": "be9ef75f72fd3a3f0c79fff8385dc872fb65214c2777637a9acb661dd54f9719",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-projection.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "14e7f9101791228a0a2baf30123a69ce6cb4e056",
+      "sha256": "2af11496dca72b976057e09ad90a3235281dfa378fe0d228404b49b8d551c516",
+      "inventory_sha256": "2af11496dca72b976057e09ad90a3235281dfa378fe0d228404b49b8d551c516",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-release-workflows.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "f6f724fa5fbc94172eeae5f47c4601cecce83862",
+      "sha256": "0fa2bc2ac96081caf5d347fe061f44bb826251e4ea32e4a82049084ef89669a1",
+      "inventory_sha256": "0fa2bc2ac96081caf5d347fe061f44bb826251e4ea32e4a82049084ef89669a1",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-releases.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "d144186940565a38559ed59ed2eaf9496ddb6c89",
+      "sha256": "3dc6a7b656e4903d4ed808f623ac4f7c33ad69b2d6b14de7c5e1ae8589374c95",
+      "inventory_sha256": "3dc6a7b656e4903d4ed808f623ac4f7c33ad69b2d6b14de7c5e1ae8589374c95",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "c68f7b1d29b39d9bf315ac4c5552fa82d0366dd3",
+      "sha256": "20db8dd069c453c47d4c181c1a81e4fb88a5ef9c5d3920619bf902597ed3c7db",
+      "inventory_sha256": "20db8dd069c453c47d4c181c1a81e4fb88a5ef9c5d3920619bf902597ed3c7db",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/release-highlights.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "1a86bdc4839cc2f339b9ba112b32edbf2e2b0fa6",
+      "sha256": "782493634d378e2d41f11d0a99be9902eaedb43bd9e7fe783785a8b37e91ed60",
+      "inventory_sha256": "782493634d378e2d41f11d0a99be9902eaedb43bd9e7fe783785a8b37e91ed60",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/release-message.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "12b8ea3db801d033ada39f9e5d462c016a0cc3dc",
+      "sha256": "7771542350fe134a5563ffce8ae58e36fcc647b9935a43f3d658dfb6686a95c9",
+      "inventory_sha256": "7771542350fe134a5563ffce8ae58e36fcc647b9935a43f3d658dfb6686a95c9",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/SKILL.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "06461cdc65bca59c402f5094a9343727d2b71660",
+      "sha256": "53524929a304b329e17f105fba8795a3c021b26ea07760c349659c6f5b5527c8",
+      "inventory_sha256": "53524929a304b329e17f105fba8795a3c021b26ea07760c349659c6f5b5527c8",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/agents/openai.yaml",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "68ea6836b1b490fe9a997dcc7a8cb3fc75af8668",
+      "sha256": "8672b642e8c5ae2114cd839af1152435c7da485b4a25c3dd62d15c78d124ac98",
+      "inventory_sha256": "8672b642e8c5ae2114cd839af1152435c7da485b4a25c3dd62d15c78d124ac98",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_yaml_source_inspection",
+        "yaml_parse",
+        "referenced_icon_existence",
+        "name_description_prompt_owner_alignment"
+      ],
+      "limits": [
+        "client interpretation/implicit activation not exercised"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/assets/icon.svg",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "92a571408af0b8c438081e783280bac1278b4773",
+      "sha256": "44568c513e736771f4dde159c1903c6da19a774474ce65aeb8992dd694706659",
+      "inventory_sha256": "44568c513e736771f4dde159c1903c6da19a774474ce65aeb8992dd694706659",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_svg_source_inspection",
+        "xml_parse",
+        "metadata_reference_and_color_consistency"
+      ],
+      "limits": [
+        "SVG rasterization attempted but unavailable: ImageMagick requires missing rsvg-convert; no client rendering assessed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/delivery-plan.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "341869232eaeae6ae063fda25b299feccff0a699",
+      "sha256": "f0e587c9b21f4703105f77cd49688e13c95a0deb33d9dec9af727ba48cb2cd63",
+      "inventory_sha256": "f0e587c9b21f4703105f77cd49688e13c95a0deb33d9dec9af727ba48cb2cd63",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/physical-layout.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "e4e8556d8abf9898700cf404cba0ff98d0d04f01",
+      "sha256": "58d2a1afa899236efe1cd5ba3fa083d0ed866efc372d90dcf3c047b8dc9eccea",
+      "inventory_sha256": "58d2a1afa899236efe1cd5ba3fa083d0ed866efc372d90dcf3c047b8dc9eccea",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-plan/references/review.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "2ddc4710df849d84eb825417ff33ec2cfcfd1936",
+      "sha256": "a3d526883649a3930550920b22e745fcc3fd23f2697f7f3e63b1d6aed960bcf0",
+      "inventory_sha256": "a3d526883649a3930550920b22e745fcc3fd23f2697f7f3e63b1d6aed960bcf0",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/SKILL.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "81e65a987fccb0cb3b6ba855c654f5dd3231b3e6",
+      "sha256": "2a09d48def1f845b9b6988762aaa99b62e4f5c39213033c2276f8bb0aa42e8e2",
+      "inventory_sha256": "2a09d48def1f845b9b6988762aaa99b62e4f5c39213033c2276f8bb0aa42e8e2",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/agents/openai.yaml",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "37c258a151f148267b16005872902f5c1042550d",
+      "sha256": "bfe1a84a61bf154a5cb846d41b10d73e88a596044d21e6d1f151d1dc78ae221c",
+      "inventory_sha256": "bfe1a84a61bf154a5cb846d41b10d73e88a596044d21e6d1f151d1dc78ae221c",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_yaml_source_inspection",
+        "yaml_parse",
+        "referenced_icon_existence",
+        "name_description_prompt_owner_alignment"
+      ],
+      "limits": [
+        "client interpretation/implicit activation not exercised"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/assets/icon.svg",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "f2a15209df0860b1e5cd7e5bb40c44bc78890c9a",
+      "sha256": "aca30e96cbe5d44d759da47cc1db33c87dce1d04bf77142feac8475eecbab074",
+      "inventory_sha256": "aca30e96cbe5d44d759da47cc1db33c87dce1d04bf77142feac8475eecbab074",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_svg_source_inspection",
+        "xml_parse",
+        "metadata_reference_and_color_consistency"
+      ],
+      "limits": [
+        "SVG rasterization attempted but unavailable: ImageMagick requires missing rsvg-convert; no client rendering assessed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/campaign-artifacts.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "d48b2dba46a7a89893344446f5d99c80534576ca",
+      "sha256": "c8c4ade54de2440316f991cc6dfb8d20568da332fc9a02f41494c86d596872f4",
+      "inventory_sha256": "c8c4ade54de2440316f991cc6dfb8d20568da332fc9a02f41494c86d596872f4",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/change-kinds.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "0dcbbca446683b5466f076f73af8bb34d6d93819",
+      "sha256": "7cc7d31e5926fab5c4778b385f282d8f536713536c1038cc63409a1734da886b",
+      "inventory_sha256": "7cc7d31e5926fab5c4778b385f282d8f536713536c1038cc63409a1734da886b",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/completion-reports.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "7c501339164818243d2530a98126779d154db58d",
+      "sha256": "f4b2f21f294e790d8ac5d773ebc5b8b15a963149dfed3b2cf658069ed26816b2",
+      "inventory_sha256": "f4b2f21f294e790d8ac5d773ebc5b8b15a963149dfed3b2cf658069ed26816b2",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/document-qc-reports.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "0db04f982c3982475598ba0519789a17053f8837",
+      "sha256": "afc44d38e5ed95a3a5905b81765c2d36c5f7a414d0aee58d548b32c066962d67",
+      "inventory_sha256": "afc44d38e5ed95a3a5905b81765c2d36c5f7a414d0aee58d548b32c066962d67",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/object-drafts.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "df4d1905d205699434377116cfaef9125f0b4f32",
+      "sha256": "94c7d2b356cfe871cc85831a1c62fda17e81e6911a25707a2fa4905c848c5478",
+      "inventory_sha256": "94c7d2b356cfe871cc85831a1c62fda17e81e6911a25707a2fa4905c848c5478",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-report/references/releases.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "935abb752418144a76fcaf8cced2fc75851f8956",
+      "sha256": "0098b5c9bdf32746c9d5a9ad783ecb5f540aca7d3f6b7431f62ee1fbc0fd994c",
+      "inventory_sha256": "0098b5c9bdf32746c9d5a9ad783ecb5f540aca7d3f6b7431f62ee1fbc0fd994c",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/SKILL.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "76a7c72d208321f5a6dcea61ba8c105da2fb8835",
+      "sha256": "a1491e92b2238bf86f2027b767c1111778653cb7fcb8b1b72ef1fe33a6a56ef8",
+      "inventory_sha256": "a1491e92b2238bf86f2027b767c1111778653cb7fcb8b1b72ef1fe33a6a56ef8",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/agents/openai.yaml",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "e4e83e0b59472c18894300d684121adcf5c74613",
+      "sha256": "dd5c9ecfbca9bd8e2b29b7ce99f3c87005bfde3fff19d9712c9fa7a6f0f386ac",
+      "inventory_sha256": "dd5c9ecfbca9bd8e2b29b7ce99f3c87005bfde3fff19d9712c9fa7a6f0f386ac",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_yaml_source_inspection",
+        "yaml_parse",
+        "referenced_icon_existence",
+        "name_description_prompt_owner_alignment"
+      ],
+      "limits": [
+        "client interpretation/implicit activation not exercised"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/assets/icon.svg",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "c9cff07dd41a60d33692bb536d18aa6980a4149a",
+      "sha256": "ebeaf7c64a2fb958088765c46c48e8269625f03ddccefec9dc7b76ff7379f2ad",
+      "inventory_sha256": "ebeaf7c64a2fb958088765c46c48e8269625f03ddccefec9dc7b76ff7379f2ad",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_svg_source_inspection",
+        "xml_parse",
+        "metadata_reference_and_color_consistency"
+      ],
+      "limits": [
+        "SVG rasterization attempted but unavailable: ImageMagick requires missing rsvg-convert; no client rendering assessed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/change-specification.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "b54614ba72b2e12095ddd78f07cda30506ec01e2",
+      "sha256": "50031ecbc268306629bd8be75fe73a003d9be59548d69ad6c70d1515cc1aa195",
+      "inventory_sha256": "50031ecbc268306629bd8be75fe73a003d9be59548d69ad6c70d1515cc1aa195",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/review.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "70714caa8f59d5a1116e67508e578f086440aa56",
+      "sha256": "3c3e70369f2b7ceca2d8885e9553562aa8351184a198d85dbc8732d53eabe5d1",
+      "inventory_sha256": "3c3e70369f2b7ceca2d8885e9553562aa8351184a198d85dbc8732d53eabe5d1",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-specify/references/system-specification.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "77c679ade0478b1a971395900c653ee005cbebc5",
+      "sha256": "ddff8513b669599accb40c5c0e00385e1e959cedc92cd08659439b1639c3202d",
+      "inventory_sha256": "ddff8513b669599accb40c5c0e00385e1e959cedc92cd08659439b1639c3202d",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/SKILL.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "3f9c446157c0b9a70400c451a137231a81c7f070",
+      "sha256": "10114e9b4282f861c05345c180673f5ee1e14bf5935d34be03b96fa137656e8c",
+      "inventory_sha256": "10114e9b4282f861c05345c180673f5ee1e14bf5935d34be03b96fa137656e8c",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/agents/openai.yaml",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "e90fa5ecd4bbce3e7799b0d933367ea0144f2dcf",
+      "sha256": "60b43614f445a40f3d52d21869962189bdfe0252461317a6712a55d176797aa2",
+      "inventory_sha256": "60b43614f445a40f3d52d21869962189bdfe0252461317a6712a55d176797aa2",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_yaml_source_inspection",
+        "yaml_parse",
+        "referenced_icon_existence",
+        "name_description_prompt_owner_alignment"
+      ],
+      "limits": [
+        "client interpretation/implicit activation not exercised"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/assets/icon.svg",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "8fe415c8e30e2bf394aea248036c9ec766e1bcb6",
+      "sha256": "dad3203c0386ce1a697600ae82fc1e03f530111626192018df24dd7c5ac69eb0",
+      "inventory_sha256": "dad3203c0386ce1a697600ae82fc1e03f530111626192018df24dd7c5ac69eb0",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_svg_source_inspection",
+        "xml_parse",
+        "metadata_reference_and_color_consistency"
+      ],
+      "limits": [
+        "SVG rasterization attempted but unavailable: ImageMagick requires missing rsvg-convert; no client rendering assessed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/conformance-review.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "b6e81e19989b1ed3b91c5cfabb013f11d0290cf9",
+      "sha256": "eeb104d6924060795b494e61537e2727e6cf4d0d4eab88f3de34d14524bf403b",
+      "inventory_sha256": "eeb104d6924060795b494e61537e2727e6cf4d0d4eab88f3de34d14524bf403b",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/progress-review.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "cea681b5930de76765d8ea32b05bb6d036cdbf9e",
+      "sha256": "32be8fbaa5e67e807d7c7f7be964c56ab7f65bd6398784606090fcdd9e40a912",
+      "inventory_sha256": "32be8fbaa5e67e807d7c7f7be964c56ab7f65bd6398784606090fcdd9e40a912",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tasks/references/task-derivation.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "de2916635b9fe8cb6b8ffeb4b768023e1c7db0f6",
+      "sha256": "12d553a5e90c2c8cb981be16c0e74816604145091c59da9c754625a8e987b083",
+      "inventory_sha256": "12d553a5e90c2c8cb981be16c0e74816604145091c59da9c754625a8e987b083",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/LICENSE",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "abf0390320aa14406af7a520b9b0739fdda9bf08",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "inventory_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "notice_and_attribution_consistency"
+      ],
+      "limits": [
+        "no independent external license provenance verification"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/SKILL.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "9760bd4e1cedb5ab7acf05c38149364654089e4d",
+      "sha256": "49efacb9ed6ae3b59069e986672dc5350cc0b147c3ad960b3ffc04f105c54cda",
+      "inventory_sha256": "49efacb9ed6ae3b59069e986672dc5350cc0b147c3ad960b3ffc04f105c54cda",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/agents/openai.yaml",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "eb937f2c8becb535ca4c455bbbcb93bf4b317aef",
+      "sha256": "f0049fe541cbffe331d4ccb9e903ed49bb96f1011cefecd1ced49fbd1bd19da4",
+      "inventory_sha256": "f0049fe541cbffe331d4ccb9e903ed49bb96f1011cefecd1ced49fbd1bd19da4",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_yaml_source_inspection",
+        "yaml_parse",
+        "referenced_icon_existence",
+        "name_description_prompt_owner_alignment"
+      ],
+      "limits": [
+        "client interpretation/implicit activation not exercised"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/assets/icon.svg",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "99a80528d2c95c83e41598b14f19c5ace9b83e3a",
+      "sha256": "37e86ed29c77f13846f9c315627c5e139d1348d7eed26eef2ff94354c334239f",
+      "inventory_sha256": "37e86ed29c77f13846f9c315627c5e139d1348d7eed26eef2ff94354c334239f",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_svg_source_inspection",
+        "xml_parse",
+        "metadata_reference_and_color_consistency"
+      ],
+      "limits": [
+        "SVG rasterization attempted but unavailable: ImageMagick requires missing rsvg-convert; no client rendering assessed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/test-first-cycle.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "92ce970bebdc920135a1bbe713f35d6a313d9c19",
+      "sha256": "e8d797ba50e555d53500516e85f8b624f7ed11f5a7534e39220f2a74141e3d96",
+      "inventory_sha256": "e8d797ba50e555d53500516e85f8b624f7ed11f5a7534e39220f2a74141e3d96",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/testing-strategy.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "b5a903ce81e7d4dee3620c82038bfa7509fa9170",
+      "sha256": "a861155f218c008ca8f8612574cfaa390ce7095d0d3f9f2c2b9f22f6ea3104e7",
+      "inventory_sha256": "a861155f218c008ca8f8612574cfaa390ce7095d0d3f9f2c2b9f22f6ea3104e7",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/upstream-provenance.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "20772b47c30d2a804401b4f97bb3db9a949da8bf",
+      "sha256": "668d85251c25027ac1494c9bb89367fa3c1885c23424e3987d02f7fd0b02ca33",
+      "inventory_sha256": "668d85251c25027ac1494c9bb89367fa3c1885c23424e3987d02f7fd0b02ca33",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-tdd/references/writing-good-tests.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "e9f9afb71e88da8e2a810c2646e346ab5dc34ab2",
+      "sha256": "c5a555443dc5cf3b78312f9939bfbe53be7b04978f4f14f3350820ed5bc5b0d8",
+      "inventory_sha256": "c5a555443dc5cf3b78312f9939bfbe53be7b04978f4f14f3350820ed5bc5b0d8",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/SKILL.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "f913af8121c7f44748b0899711b6b7c1796a56fd",
+      "sha256": "2a950d422c2f77a1f57609c702e296567ebaf2eb3e908461c5a3c0893c9111ae",
+      "inventory_sha256": "2a950d422c2f77a1f57609c702e296567ebaf2eb3e908461c5a3c0893c9111ae",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/agents/openai.yaml",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "af341267164ded2e20f01c137c1d23aac0e66e5e",
+      "sha256": "3176532ba151974e4f6186c589a9e8ba59247367629ace97788cf70e1bdfe40a",
+      "inventory_sha256": "3176532ba151974e4f6186c589a9e8ba59247367629ace97788cf70e1bdfe40a",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_yaml_source_inspection",
+        "yaml_parse",
+        "referenced_icon_existence",
+        "name_description_prompt_owner_alignment"
+      ],
+      "limits": [
+        "client interpretation/implicit activation not exercised"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/assets/icon.svg",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "b1f8167826407e756ba11cd9f5870b8d494101fa",
+      "sha256": "60c4fbc478c5c5569c7db40ee7d2b90c061fb8e0b7a2274ec8757cbcadc6c837",
+      "inventory_sha256": "60c4fbc478c5c5569c7db40ee7d2b90c061fb8e0b7a2274ec8757cbcadc6c837",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_svg_source_inspection",
+        "xml_parse",
+        "metadata_reference_and_color_consistency"
+      ],
+      "limits": [
+        "SVG rasterization attempted but unavailable: ImageMagick requires missing rsvg-convert; no client rendering assessed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/boundary-review.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "fcae2c77d821d904786828c68b4b5c940dfdf78d",
+      "sha256": "6923a7570bf3daf149a176c448ad351f6074363e84aa0851afcf3efcc17ddcb8",
+      "inventory_sha256": "6923a7570bf3daf149a176c448ad351f6074363e84aa0851afcf3efcc17ddcb8",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/check-selection.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "e71b14a75704254fe793dd5283045bd80ed07154",
+      "sha256": "5a68e3b438e4fd05cdc2816a1d03ccae6f50a1d1e9210d8deb99b64583b44b8c",
+      "inventory_sha256": "5a68e3b438e4fd05cdc2816a1d03ccae6f50a1d1e9210d8deb99b64583b44b8c",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/execution-and-evidence.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "bef5e9a79f911dd23ce0d0ff3523bea779630705",
+      "sha256": "35bac91769a15ae00dc2620222f85bbadd9e1f8c478676544b8c682f7cb36672",
+      "inventory_sha256": "35bac91769a15ae00dc2620222f85bbadd9e1f8c478676544b8c682f7cb36672",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/failure-assessment.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "5897a233304a6889b3fc004b3c0633fa7c92f0e9",
+      "sha256": "4522617b15dc791ad3e695022180ed757459c6fa539cfa593592bb858c1cbbdc",
+      "inventory_sha256": "4522617b15dc791ad3e695022180ed757459c6fa539cfa593592bb858c1cbbdc",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-verify/references/release-checks.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "bcc6cc067f9f74564b6eb4751538429a957163ff",
+      "sha256": "d4f04336831c81fd86ec486c89020eaf467b7eaebf69afa0d26a178b329e59e7",
+      "inventory_sha256": "d4f04336831c81fd86ec486c89020eaf467b7eaebf69afa0d26a178b329e59e7",
+      "inventory_match": true,
+      "scope": "Focused skill activation, responsibility/authority and progressive loading; counterpart handoff contracts and output/evidence boundary",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "AGENTS.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "374ef2825c52549a58b34127e395a70588db4586",
+      "sha256": "114cfd9beba82df4d7f4338b0fff376df0a567fc20820b19b6b16f95bff902d2",
+      "inventory_sha256": "114cfd9beba82df4d7f4338b0fff376df0a567fc20820b19b6b16f95bff902d2",
+      "inventory_match": true,
+      "scope": "Contributor versus package audience, setup/quickstart/limits, disclosure/license/discovery and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "AI_DISCLOSURE.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "7bb22d266be8343e620d007d703facc143173db6",
+      "sha256": "09411dc61f4966efabe8e821f2270c768baf5b96f4fd4587eb5c05233de7ffea",
+      "inventory_sha256": "09411dc61f4966efabe8e821f2270c768baf5b96f4fd4587eb5c05233de7ffea",
+      "inventory_match": true,
+      "scope": "Contributor versus package audience, setup/quickstart/limits, disclosure/license/discovery and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "LICENSE",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "a0740f769398d0870cfba32ef7e707c4c4c2f57b",
+      "sha256": "230ef093b2d68d0f37130d47064b1aff673c41830a15513801e0cc089e742ed2",
+      "inventory_sha256": "230ef093b2d68d0f37130d47064b1aff673c41830a15513801e0cc089e742ed2",
+      "inventory_match": true,
+      "scope": "Contributor versus package audience, setup/quickstart/limits, disclosure/license/discovery and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "notice_and_attribution_consistency"
+      ],
+      "limits": [
+        "no independent external license provenance verification"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "README.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "76f3d12312666fdcbfe3f32cbb747aa4910cd7d7",
+      "sha256": "703fa4b28a9162c9955a8ccfd62206dd08f75287a78b27ca6161718a347be255",
+      "inventory_sha256": "703fa4b28a9162c9955a8ccfd62206dd08f75287a78b27ca6161718a347be255",
+      "inventory_match": true,
+      "scope": "Contributor versus package audience, setup/quickstart/limits, disclosure/license/discovery and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "SDD-MANAGER.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "ac5af223a895521cf4e9e4d5d5f4e14fe5e8aec1",
+      "sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf",
+      "inventory_sha256": "ab12d665c8148cbf4fb8e190f265ccda667c4d47e8aae2304deed0bcf3d5a5bf",
+      "inventory_match": true,
+      "scope": "Contributor versus package audience, setup/quickstart/limits, disclosure/license/discovery and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "SKILL_DISCOVERY_PROTOCOL.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "b1affc97a3845e8705a3ed3f64f2840fcab8e9fa",
+      "sha256": "ae6fd000ed174d13706689148ab9ab20cd26ed5826ead72829679905bd44f5ec",
+      "inventory_sha256": "ae6fd000ed174d13706689148ab9ab20cd26ed5826ead72829679905bd44f5ec",
+      "inventory_match": true,
+      "scope": "Contributor versus package audience, setup/quickstart/limits, disclosure/license/discovery and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/agents/jules/Tetris.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "14781bb64ca4f26aa2c24fb15d6384cd1e804f73",
+      "sha256": "e72b1637d447ec9e848b3a2c02632dcb4c05b0cfbf8ec94603383a8144884c3f",
+      "inventory_sha256": "e72b1637d447ec9e848b3a2c02632dcb4c05b0cfbf8ec94603383a8144884c3f",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/agents/jules/Workflow Loading.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "b9905bbf04879a054a398120f385f6b9c2c1acd3",
+      "sha256": "db13a913f4933bf77a3bdea0481ab0db3863769bd5c927ae49489dbf287f1262",
+      "inventory_sha256": "db13a913f4933bf77a3bdea0481ab0db3863769bd5c927ae49489dbf287f1262",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/calculator/README.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "a31970673b83c26aab7856d2f18ba257c09f50f1",
+      "sha256": "8fd2c4840e7b8a4aa44a70770c7525bbef53517712a9edd215e92511327f8f89",
+      "inventory_sha256": "8fd2c4840e7b8a4aa44a70770c7525bbef53517712a9edd215e92511327f8f89",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/hello_world/prompts/Autodoc 3in1 Baseline.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "65ffcc0d886567f39895dbdaea4c551ba5ea723b",
+      "sha256": "0bdb8c170b8cd6f42e42131c897c9f5e978a52d15d5d0a929ac5dddc533fe026",
+      "inventory_sha256": "0bdb8c170b8cd6f42e42131c897c9f5e978a52d15d5d0a929ac5dddc533fe026",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/hello_world/prompts/Autodoc 3in1.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "ab9cb3ee765704855a978482cb1d7d02a3703b14",
+      "sha256": "62ac06b1014efa4618d4355e670775a0bb895f67d255780259f21f658f7ed6b6",
+      "inventory_sha256": "62ac06b1014efa4618d4355e670775a0bb895f67d255780259f21f658f7ed6b6",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/tetris/README.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "dc91b7348ff85718df1424aa3e9d81d2fd4ec2d5",
+      "sha256": "7fa4ab6e9a6a4954c17da4b14d775fc2eb3495ca96834fce3e08cda3be68960d",
+      "inventory_sha256": "7fa4ab6e9a6a4954c17da4b14d775fc2eb3495ca96834fce3e08cda3be68960d",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/tetris/examples/PROJECT_phased-project.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "c33429c460a97afc73499f27775a541e14c90434",
+      "sha256": "ddaa9d68c88bd3107a13ce783c43ef886e42fe6bb6b210427d9b8d91e1cdd242",
+      "inventory_sha256": "ddaa9d68c88bd3107a13ce783c43ef886e42fe6bb6b210427d9b8d91e1cdd242",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/tetris/prompts/Autodoc 3in1.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "d05a40ab6f0b41ca500ed689cdc34dd2c48ee598",
+      "sha256": "0b3231055ad8e23884ce0d617ca0db45e226335fb151120625ae249801eae6bf",
+      "inventory_sha256": "0b3231055ad8e23884ce0d617ca0db45e226335fb151120625ae249801eae6bf",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/tetris/prompts/Autodoc.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "ee2364a8118b3b173f86ce23f83b16b00b6d16a1",
+      "sha256": "2d3b003d3aff9c045484bd7483b1debb7d4f9d6d360aeb14076ddeac815a6b19",
+      "inventory_sha256": "2d3b003d3aff9c045484bd7483b1debb7d4f9d6d360aeb14076ddeac815a6b19",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/tetris/prompts/Featured Autodoc 3in1.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "ba23a744b354e91cef8eef6420e46589f21aca81",
+      "sha256": "071dadfd0a6ea5be889098e17af98452aa2dc4b2af93725544af6b39247e0f81",
+      "inventory_sha256": "071dadfd0a6ea5be889098e17af98452aa2dc4b2af93725544af6b39247e0f81",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/tetris/prompts/Featured Autodoc.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "fb0e16ce24839fc7683136c74d99189d6460965d",
+      "sha256": "c98ec8db796fe68d1b54d692085587314d563f5cdeea6cf5d5724482f7abdd82",
+      "inventory_sha256": "c98ec8db796fe68d1b54d692085587314d563f5cdeea6cf5d5724482f7abdd82",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/tetris/prompts/Interactive.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "a984b3b0f0190b27b1616604be1b58a04e7d8243",
+      "sha256": "1021ae5fb1718455ae87c371996eb834f0976cde64261e7d2cf7df2645dfa3b1",
+      "inventory_sha256": "1021ae5fb1718455ae87c371996eb834f0976cde64261e7d2cf7df2645dfa3b1",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/tetris/prompts/Multipass Autoloop.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "6d0bc5cf94a0f237374be65a19d544eecea5f932",
+      "sha256": "14273bd1f2cdd3497c1e91949488b774d7bc9106cbe6185c828618d3412ce315",
+      "inventory_sha256": "14273bd1f2cdd3497c1e91949488b774d7bc9106cbe6185c828618d3412ce315",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/tetris/prompts/Single Page Autodoc.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "0cd7d1b62a3f2a1ddefc693ee918913016564af7",
+      "sha256": "1600bcab670f2d0424c15ce1645380bb8afff2305627463b8ba7500cb50464ba",
+      "inventory_sha256": "1600bcab670f2d0424c15ce1645380bb8afff2305627463b8ba7500cb50464ba",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    },
+    {
+      "path": "docs/demo/tetris/prompts/Single Page Featured Autodoc.md",
+      "unit": "U-001",
+      "area": "focused-docs-assets",
+      "source_commit": "60b092420b30086482027d1b65a0ccadf5233db3",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "git_blob": "9238fdc462e3faac9cdae41c6999d1e0396cbc35",
+      "sha256": "453ae64720a163192cc19729d6b11d29fcaea4d1f2dfa9fe21b311964b1c7679",
+      "inventory_sha256": "453ae64720a163192cc19729d6b11d29fcaea4d1f2dfa9fe21b311964b1c7679",
+      "inventory_match": true,
+      "scope": "Prompt/guide semantics, staged versus complete scope, checkpoint/release intent, playable/platform limitations and navigation",
+      "status": "inspected_no_confirmed_finding",
+      "inspection": [
+        "full_text_source_inspection",
+        "contract_semantics_and_navigation_review",
+        "offline_relative_link_scan"
+      ],
+      "limits": [
+        "no Markdown/Mermaid client rendering or live agent behavioral execution",
+        "examples inspected, not executed"
+      ],
+      "finding_ids": []
+    }
+  ],
+  "constraints": [
+    "read-only source review; source, index and Git state unchanged",
+    "no closed campaign/release/manual provenance content loaded",
+    "no credentials inspected",
+    "runtime tests, publisher execution and hosted mutations owned by coordinator/later units"
+  ],
+  "readiness": "No confirmed defect blocks the focused docs/assets subarea at the reviewed source. Whole-product prerelease readiness is not established by this U-001 source review.",
+  "unjudged": [
+    {
+      "behavior": "Windows CMD wrapper/adapter execution",
+      "reason": "Runtime review and test execution belong to U-002/coordinator; parent-reported native 14-case Node22/24 CI not independently re-executed here."
+    },
+    {
+      "behavior": "Live Antigravity/Codex shim discovery, argument layout and agent command compliance",
+      "reason": "No fresh installed-client/launcher trial selected; exact asset explicitly restricts its claim to two illustrated forms."
+    },
+    {
+      "behavior": "Client skill routing, implicit activation and effective instruction precedence",
+      "reason": "Source/metadata inspected only; no independent consumer trial."
+    },
+    {
+      "behavior": "Markdown/Mermaid and SVG client rendering",
+      "reason": "Markdown/Mermaid not rendered; all 11 SVG source/XML inspected but ImageMagick rasterization failed because rsvg-convert is unavailable; no client presentation pass claimed."
+    },
+    {
+      "behavior": "External links and upstream third-party provenance",
+      "reason": "No external URL fetch or independent upstream comparison was performed; local attribution and notices inspected."
+    },
+    {
+      "behavior": "Browser provisioning/recovery recipes and cross-platform demo applications",
+      "reason": "Guide/prompt semantics inspected; no side-effecting setup, demo development, packaging or browser/native execution."
+    },
+    {
+      "behavior": "Runtime helper flags/transport/publisher implementations and actual release/package bytes",
+      "reason": "U-002 and U-003 are not started by this source review; documentation handoff intent only."
+    }
+  ]
+}

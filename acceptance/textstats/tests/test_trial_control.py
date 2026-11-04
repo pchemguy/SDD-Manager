@@ -6,6 +6,32 @@ from .support import Sandbox, git
 
 
 class TrialControls(Sandbox):
+    def test_flag_only_index_drift_rejects_resume_before_next_mutation(self):
+        m=self.module()
+        for flag in ('assume-unchanged', 'skip-worktree', 'intent-to-add'):
+            with self.subTest(flag=flag):
+                if flag == 'intent-to-add':
+                    (self.repo/'pending.txt').write_text('')
+                    git(self.repo, 'add', '-N', 'pending.txt')
+                gate=self.root/(flag+'.json')
+                first=flag+'-one.md';second=flag+'-two.md'
+                actions=[[sys.executable,'-c',f'from pathlib import Path; Path({first!r}).write_text("pending")'],
+                         [sys.executable,'-c',f'from pathlib import Path; Path({second!r}).write_text("next mutation")']]
+                m.execute(self.repo,actions,[first,second],gate,hold_after=1)
+                receipt=gate.read_bytes()
+                stages=git(self.repo,'ls-files','--stage','-z').stdout
+                if flag == 'intent-to-add': git(self.repo,'add','pending.txt')
+                else: git(self.repo,'update-index','--'+flag,'owned.txt')
+                self.assertEqual(git(self.repo,'ls-files','--stage','-z').stdout,stages)
+                with self.assertRaisesRegex(ValueError,'changed continuation state'):
+                    m.execute(self.repo,actions,[first,second],gate,resume=True)
+                self.assertFalse((self.repo/second).exists())
+                self.assertEqual(gate.read_bytes(),receipt)
+                (self.repo/first).unlink()
+                if flag == 'intent-to-add':
+                    git(self.repo,'reset','--','pending.txt');(self.repo/'pending.txt').unlink()
+                else: git(self.repo,'update-index','--no-'+flag,'owned.txt')
+
     def module(self):
         p=Path(__file__).parents[1]/'scripts/trial_control.py'
         spec=importlib.util.spec_from_file_location('trial_control',p)

@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "campaign": "146_fe918d3",
+  "unit": "U-002",
+  "area": "native-tools",
+  "review_mode": "independent read-only source review with isolated targeted reproductions",
+  "repository": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+  "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+  "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+  "original_parent_main": "fe918d39b6380b36b01128da30c70f93b99a9919",
+  "inventory_path": "docs/dev/reviews/146_fe918d3-shell-policy/REVIEW-INVENTORY.json",
+  "inventory_selected_count": 24,
+  "reviewed_count": 24,
+  "all_selected_hashes_match": true,
+  "findings": [
+    {
+      "id": "R-001",
+      "proposed_priority": "P2",
+      "severity": "medium",
+      "confidence": "high",
+      "title": "Completion rejects multiline descriptions emitted by projection",
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs",
+      "line": 32,
+      "related_locations": [
+        ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/projection-input.mjs:161",
+        ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/projection-input.mjs:221",
+        ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/github-client.mjs:128"
+      ],
+      "trigger": "Use an otherwise eligible implementation milestone whose projected description is Outcome: bounded work. followed by LF and Exit: verified checks.",
+      "evidence": "validateProjection(..., true) and renderProjection accept/preserve the two-line description; actual forge-close.mjs task CLI --reconcile-only on an isolated real Git root exits 1 with invalid_milestone/preflight and no stderr.",
+      "consequence": "A legitimate projected implementation milestone blocks both task completion and milestone completion before provider access. The same validator also rejects multiline predecessor descriptions. Rewriting the hosted description to work around this would violate exact identity/content handoff.",
+      "bounded_fix": "Allow the documented bounded multiline milestone-description text in milestoneInput (for example text(value.description, 16000, true)); keep null, control, reserved-marker and length checks and exact hosted comparison. Decide and document CRLF normalization consistently if added, rather than silently changing exact-content semantics.",
+      "objective_recheck": "Add a cross-utility case that renders a valid phase request with an LF milestone description and hands that exact description into native completion run(), asserting a completed task and milestone with matching readback. Add a multiline predecessor case and retain invalid controls/marker/oversize negative cases. Run completion plus dependent projection suites and relevant native matrix."
+    },
+    {
+      "id": "R-002",
+      "proposed_priority": "P3",
+      "severity": "low",
+      "confidence": "high",
+      "title": "Branch validation accepts checkout shorthand while publishing it as literal evidence",
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs",
+      "line": 310,
+      "related_locations": [
+        ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs:39",
+        ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs:113"
+      ],
+      "trigger": "Supply branch @{-1} in an otherwise valid completion handoff for a real repository with a previous checkout.",
+      "evidence": "Native git check-ref-format --branch @{-1} exits 0 and prints initial; native git check-ref-format refs/heads/@{-1} exits 1. The real public/native run() path with an isolated repository, actual ignored synthetic token and actual lock, injecting only HTTP, returns closed_verified/ok=true, posts Branch: @{-1}, and closes the issue as completed.",
+      "consequence": "The promised actual valid branch association is replaced with a context-dependent checkout expression in durable evidence. This does not redirect the API repository/issue or establish a forged commit; it weakens evidence accuracy and portability.",
+      "bounded_fix": "Reject previous-checkout syntax and validate a literal branch identity. For example reject the forbidden @{ sequence in taskInput and/or require the native --branch validation output to equal the supplied branch; preserve the existing leading-dash/invalid-name checks and never evaluate then silently rewrite a caller assertion.",
+      "objective_recheck": "Use a temporary real Git repository with two checkouts and assert public/native run() rejects @{-1} before token/network/lock writes as appropriate, with zero HTTP calls. Exercise another shorthand such as @{-2}, an invalid literal ref, and ordinary slash/Unicode branch names; rerun completion and relevant native matrix."
+    }
+  ],
+  "files": [
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md",
+      "sha256": "0f308c1b7b391ea13798fd24368a27f24e15275b93ed8c06f07437880f4273ed",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "0f308c1b7b391ea13798fd24368a27f24e15275b93ed8c06f07437880f4273ed",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 15137,
+      "lines": 149,
+      "assessment": "Reviewed public completion scope, exact schema/evidence, caller authority, runtime/lock, error and recovery contracts. Multiline-description contract must remain compatible with projection; branch promises an actual valid branch.",
+      "findings": [],
+      "related_findings": [
+        "R-001",
+        "R-002"
+      ]
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs",
+      "sha256": "a1e74fe3462cd0ad359901ead0cadfde9b836e0feb67769522edef87916a91a4",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "a1e74fe3462cd0ad359901ead0cadfde9b836e0feb67769522edef87916a91a4",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 21116,
+      "lines": 335,
+      "assessment": "Full implementation reviewed: schema, native branch gate, exact issue/milestone identity, completion evidence, membership and predecessor checks, no mutation retry, readback, lock cleanup. Two confirmed validation defects R-001/R-002.",
+      "findings": [
+        "R-001",
+        "R-002"
+      ]
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-draft.mjs",
+      "sha256": "e64a0cd619a15ff6088182718a0e3f25cf93ccd522bb066b9a1f1405a4c89231",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "e64a0cd619a15ff6088182718a0e3f25cf93ccd522bb066b9a1f1405a4c89231",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 4255,
+      "lines": 74,
+      "assessment": "Full implementation reviewed: canonical-only extraction, unresolved phase semantics/false flags, defaults, source binding, exclusively created output, real-parent containment and docs external-output gate. No finding.",
+      "findings": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-input.md",
+      "sha256": "432cafd3cf1a89c39bb01f4aef9f50615f5147162fa0d9c6c759d9e4bbcfb907",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "432cafd3cf1a89c39bb01f4aef9f50615f5147162fa0d9c6c759d9e4bbcfb907",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 16599,
+      "lines": 115,
+      "assessment": "Reviewed canonical grammar, fixed docs definitions, phase semantic ownership, eligibility, dependency/review roles, CRLF/hash/source and brief boundaries. Its multiline milestone-description contract is accepted by projection but rejected by completion.",
+      "findings": [],
+      "related_findings": [
+        "R-001"
+      ]
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.md",
+      "sha256": "ae18efc1c1bc3c4d0aa25334d37b4a6f3416ef6274e6ccae3f765ed0a38a9d8e",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "ae18efc1c1bc3c4d0aa25334d37b4a6f3416ef6274e6ccae3f765ed0a38a9d8e",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 15728,
+      "lines": 92,
+      "assessment": "Reviewed public check/apply/reconcile-only effects and prerequisites, no request convenience, source defaults, full lookup/identity, visibility, unknown effect and lock semantics. No independent finding.",
+      "findings": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.mjs",
+      "sha256": "4088265bc45ad05ee143553d59a0290f263edf11d4d80050b7a97e7d80d3a0fa",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "4088265bc45ad05ee143553d59a0290f263edf11d4d80050b7a97e7d80d3a0fa",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 18456,
+      "lines": 274,
+      "assessment": "Full implementation reviewed: mode scope, metadata/visibility, preflight conflicts, absent-object recheck, ordered creation, lost-response lookup, pinned identity, final source and hosted readback. No independent finding.",
+      "findings": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-runtime.mjs",
+      "sha256": "b37521f539447099d602dc3e1e6016c7eed2c968444599903c0bfd6bf9dda2a3",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "b37521f539447099d602dc3e1e6016c7eed2c968444599903c0bfd6bf9dda2a3",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 9854,
+      "lines": 176,
+      "assessment": "Full implementation reviewed: native root/remote/common-dir binding, monotonic local Git timeout, regular bounded reads, source containment/hash/HEAD text, token delegation and nonce lock ownership. No finding within trusted-filesystem scope.",
+      "findings": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/github-client.mjs",
+      "sha256": "a8011d6169c9f0e91f8f0f867dc3d0617b021b8a9c31b0dbd949c146d8dd6d7d",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "a8011d6169c9f0e91f8f0f867dc3d0617b021b8a9c31b0dbd949c146d8dd6d7d",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 18056,
+      "lines": 297,
+      "assessment": "Full implementation reviewed: immutable capability routes, repository/numeric identity, method/body restrictions, exact credential channel, request/body budgets, strict decoding/size, bounded safe-read retries, mutation pacing, pagination route/filter/identity and sanitized uncertainty. No independent finding.",
+      "findings": [
+        "R-001"
+      ]
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/projection-input.mjs",
+      "sha256": "71868bc157adfe8be116b64927b4a95523dc73cb17d4bcaef6176ffadc868bbf",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "71868bc157adfe8be116b64927b4a95523dc73cb17d4bcaef6176ffadc868bbf",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 15831,
+      "lines": 240,
+      "assessment": "Full implementation reviewed: fences/canonical hierarchy, unique IDs, copied docs definitions, exact schema, semantic assertions, dependency cycles/review threshold, marker/content bounds and deterministic payloads. Provides the accepted multiline side of R-001.",
+      "findings": [
+        "R-001"
+      ]
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md",
+      "sha256": "6818385a5f231039cb28be32fda2caa20d3c4f790720614fb50f144258a58d9a",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "6818385a5f231039cb28be32fda2caa20d3c4f790720614fb50f144258a58d9a",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 11924,
+      "lines": 79,
+      "assessment": "Reviewed canonical/compatibility entry distinction, token-first route, exact transport/ref, protected input, finite lifecycle, process/platform assumptions, result/exit and reconciliation contracts. No finding.",
+      "findings": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs",
+      "sha256": "98c0c9483bb069003369c98a7f9aeb1b7377557998d5584ed4d26ad0b760c406",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "98c0c9483bb069003369c98a7f9aeb1b7377557998d5584ed4d26ad0b760c406",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 21278,
+      "lines": 387,
+      "assessment": "Full implementation reviewed: scope/url/ref validation, root and linked credential context, token mode/helper reset, exact private helper request, command quoting, context validation, bounded diagnostics, at most one push and exact readback. No finding.",
+      "findings": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-process-supervisor.py",
+      "sha256": "0e775d5f050f11b6e5c55a19fd55ee68a3a4eee082b4df905043501da720b323",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "0e775d5f050f11b6e5c55a19fd55ee68a3a4eee082b4df905043501da720b323",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 15541,
+      "lines": 352,
+      "assessment": "Full implementation reviewed: Linux new session/subreaper/namespace relation and adopted-child cleanup; Windows suspended process and non-breakaway kill-on-close Job Object; finite request, owner EOF/cancel and cleanup certificates. Native Windows/OS denial behavior was source-reviewed, not rerun. No confirmed finding.",
+      "findings": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-publish.mjs",
+      "sha256": "40009fee6b92bfd44552cdf3775fd314f5d61368fca402fd3080af602d561cb1",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "40009fee6b92bfd44552cdf3775fd314f5d61368fca402fd3080af602d561cb1",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 12001,
+      "lines": 218,
+      "assessment": "Full implementation reviewed: option defaults, one total monotonic deadline, readback reserve, private workers, finite output/watchdogs, cancellation, route pinning, cleanup before readback, independent outcomes and safe exits. No finding.",
+      "findings": []
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs",
+      "sha256": "0f9b762dc985a1e5474d8e2490f782d3f14fa9d6209101acaae290568688dae8",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "0f9b762dc985a1e5474d8e2490f782d3f14fa9d6209101acaae290568688dae8",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 5248,
+      "lines": 102,
+      "assessment": "Full implementation reviewed: ordinary read access, root-relative containment, symlink/hardlink/type/size rules, actual repository identity, effective ignore and untracked checks, descriptor identity, single-line bytes and environment relocation/trace rejection. No finding in documented trusted same-user scope.",
+      "findings": []
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "53828676eefcb9954b51cbfe31c404ee2f520d9d69719401b309d7a071449e24",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "53828676eefcb9954b51cbfe31c404ee2f520d9d69719401b309d7a071449e24",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 4683,
+      "lines": 226,
+      "assessment": "Read complete imported pattern set. Native tools and tests are not excluded; *.tkn is present without a later negation, and actual exclusion/untracked checks remain required at token use. Generic Python/build/editor exclusions and local evidence patterns have source-only purpose. No finding.",
+      "findings": []
+    },
+    {
+      "path": "tests/fixtures/git-auth/localhost-cert.pem",
+      "sha256": "a0391cb2ef9d538afc15ce57e68c551059c60aca428cd4da5eaaeffd0c8c3172",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "a0391cb2ef9d538afc15ce57e68c551059c60aca428cd4da5eaaeffd0c8c3172",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 1212,
+      "lines": 20,
+      "assessment": "Read/hashed and parsed public test-only certificate: self-issued CN localhost synthetic Git fixture, SAN localhost/127.0.0.1, validity 2026-10-19 through 2126-09-25. Public-key match checked against companion key. Fixture-local trust only. No finding.",
+      "findings": []
+    },
+    {
+      "path": "tests/fixtures/git-auth/localhost-key.pem",
+      "sha256": "238f0b66034f0d3dae0ed1c4d03a2e6e5fd3dff0efa6df7d073121d8d9362d59",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "238f0b66034f0d3dae0ed1c4d03a2e6e5fd3dff0efa6df7d073121d8d9362d59",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 1704,
+      "lines": 28,
+      "assessment": "Read/hashed and parsed explicitly public test-only key with openssl pkey -check; valid key and matching certificate public key. Never treated as a real credential or production trust material. No finding.",
+      "findings": []
+    },
+    {
+      "path": "tests/forge-close.test.mjs",
+      "sha256": "2b8c55c240a2c634176a739c1c97a8b063b88aa49f48464728b8795d20f838d2",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "2b8c55c240a2c634176a739c1c97a8b063b88aa49f48464728b8795d20f838d2",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 28973,
+      "lines": 553,
+      "assessment": "Read entire 39-case source. Independent expectedEvidence string; synthetic transport/state and real root/token/lock/native fixtures; identity, pagination, exact reason/evidence, lost response and unknown effects. No multiline milestone-description or @{-1} native regression; both gaps correspond to confirmed defects.",
+      "findings": [],
+      "related_findings": [
+        "R-001",
+        "R-002"
+      ]
+    },
+    {
+      "path": "tests/forge-project.test.mjs",
+      "sha256": "e936e0f17c99a5173ec142595ca8c8122545ac04e6f1d0fb5b1be68899a59539",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "e936e0f17c99a5173ec142595ca8c8122545ac04e6f1d0fb5b1be68899a59539",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 54507,
+      "lines": 806,
+      "assessment": "Read entire 51-case source. Exact task/parent/count/pacing and invalid-input assertions, source/CRLF/BOM/root/token/lock/output native paths, docs convenience/defaults/false flags and conflict preservation; fixed definition-copy checks use the definition asset as source of truth. Missing cross-utility multiline completion regression.",
+      "findings": [],
+      "related_findings": [
+        "R-001"
+      ]
+    },
+    {
+      "path": "tests/git-auth-recover.test.mjs",
+      "sha256": "6706cddda88afd0292c757c144e6fbb13c82688b0a4b8a1ba7a435a597e891c6",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "6706cddda88afd0292c757c144e6fbb13c82688b0a4b8a1ba7a435a597e891c6",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 28896,
+      "lines": 448,
+      "assessment": "Read full native/synthetic contracts: independent process-state tables, exact refs, real helper quoting/path encodings, token eligibility, linked context, command environment and HTTPS write/readback. No finding.",
+      "findings": []
+    },
+    {
+      "path": "tests/git-publish.test.mjs",
+      "sha256": "6c91ac040fd258561376d93f789423f98281b00f845b64db651f208b299f8ea2",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "6c91ac040fd258561376d93f789423f98281b00f845b64db651f208b299f8ea2",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 17095,
+      "lines": 272,
+      "assessment": "Read full public CLI contracts: real local HTTPS, hanging/orphan/flood helper trees, unrelated sentinel, total deadlines, cancellation, account selector bypass, credential-source roots and lost-response no-replay. Native Windows uses independent process creation identity. No finding.",
+      "findings": []
+    },
+    {
+      "path": "tests/helpers/git-auth-https.mjs",
+      "sha256": "ee74e646c1f641f2d1661b108b721cf15791954e3a162aaf63079411901a8852",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "ee74e646c1f641f2d1661b108b721cf15791954e3a162aaf63079411901a8852",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 6741,
+      "lines": 109,
+      "assessment": "Full fixture reviewed: synthetic HTTP Basic expected value, local HTTPS, real git-http-backend, bounded subprocess/output, explicit isolated config/CA, event/write observation and controlled successful-write response loss. Read discovery is deliberately public; this does not prove private-provider readback authentication. No finding.",
+      "findings": []
+    },
+    {
+      "path": "tests/helpers/windows-process.py",
+      "sha256": "5cfa54fb39389b0eb2dae6dfa67f54bedb1fb4bdee237cf007c0a8882a2ba416",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "5cfa54fb39389b0eb2dae6dfa67f54bedb1fb4bdee237cf007c0a8882a2ba416",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 2899,
+      "lines": 68,
+      "assessment": "Full helper reviewed: explicit PID and birth-time identity, opened process handles, narrow query/terminate, safe failures, no name enumeration. Source-only Windows fixture. No finding.",
+      "findings": []
+    },
+    {
+      "path": "tests/test_windows_shell_recovery.py",
+      "sha256": "d0ed0ff2ab9351a0d1775e0c2ecebf3405fb215e5cc6398f95f2ba25db08cceb",
+      "unit": "U-002",
+      "area": "native-tools",
+      "reviewed_head": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "actual_sha256": "d0ed0ff2ab9351a0d1775e0c2ecebf3405fb215e5cc6398f95f2ba25db08cceb",
+      "hash_matches_inventory": true,
+      "source_read": "complete",
+      "bytes": 7303,
+      "lines": 145,
+      "assessment": "Read all fourteen source-only cases, inherited seven scenarios in two wrapper forms, exact embedded adapter extraction, LF/CRLF, isolated PATH/spaced paths, apostrophes/quotes/exclamation, real argv/helper help, output/status and temporary script. Linux cannot execute CMD; no Windows runtime pass claimed by this reviewer. No finding.",
+      "findings": []
+    }
+  ],
+  "consequential_source_reads": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "114cfd9beba82df4d7f4338b0fff376df0a567fc20820b19b6b16f95bff902d2",
+      "source_read": "complete"
+    },
+    {
+      "path": "acceptance/AGENTS.md",
+      "sha256": "e37fb63ccf545ccd1cca327fd40fa5c7c3489b5580aa814b7ff5bbc5fe0a7fb8",
+      "source_read": "complete"
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/REVIEW-PLAN.md",
+      "sha256": "fb3f71d49e67b8bf2a8c2a7077a83bf26e1e07b93b3581b213f4595c10df679b",
+      "source_read": "complete"
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/REVIEW-INVENTORY.json",
+      "sha256": "2e36f129f3d7246bbd0847c8a92aad6047ddb31dad2420f1afa4e61e9f2454ed",
+      "source_read": "complete"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md",
+      "sha256": "654a34d20daad0ef539cc17eb906305395bf47d4ee4cddfe4527eeb095619015",
+      "source_read": "complete"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-manage/references/credentials.md",
+      "sha256": "91d9f4a4718957d799af08b12856db5a98db7e06c079ec0010122eec24e0caea",
+      "source_read": "complete"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-issue-lifecycle.md",
+      "sha256": "1331828991b337873b3fd9a713d6c60927a0e935995b0d183341fe1c2278b952",
+      "source_read": "complete"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-milestone-lifecycle.md",
+      "sha256": "a3e92e1b20dd6d78b2c3397c418f261439b0fbc9f35c4b8100b6e4e90e220ac8",
+      "source_read": "complete"
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/references/github-projection.md",
+      "sha256": "2af11496dca72b976057e09ad90a3235281dfa378fe0d228404b49b8d551c516",
+      "source_read": "complete"
+    }
+  ],
+  "executed_evidence": [
+    {
+      "kind": "isolated integration reproduction",
+      "file": "/tmp/sdd146-u2-native-reproductions.json",
+      "description": "Valid projection multiline-description/render path followed by actual completion CLI rejection; actual native completion run() on real Git root/token/lock accepts @{-1}, posts synthetic evidence and closes a synthetic issue. HTTP only was injected in the branch case. Temporary repositories removed."
+    },
+    {
+      "kind": "native Git branch checks",
+      "description": "git check-ref-format --branch @{-1} -> exit 0/initial; git check-ref-format refs/heads/@{-1} -> exit 1 in isolated checkout history."
+    },
+    {
+      "kind": "TLS fixture inspection",
+      "description": "openssl x509 metadata/SAN, openssl pkey -check, certificate/key public-key equality; no raw private key output."
+    },
+    {
+      "kind": "source identity",
+      "description": "SHA-256 comparison of all 24 selected inventory paths; all match. Git HEAD/status checked read-only and checkout remained clean."
+    }
+  ],
+  "full_suites_executed_by_reviewer": false,
+  "limits_and_considered_but_unjudged": [
+    "No full declared suite was rerun; coordinator owns fresh suite execution and matrix/source-equivalence qualification. Counts and prior results are not independently certified in this report.",
+    "No native Windows execution, Windows Job Object/Schannel/process-birth observations, Node 22 execution or Python 3.11 execution was performed by this reviewer. Those branches were source-reviewed. Local probes used Linux, Node 24.22.1, Python 3.12.14 and Git 2.51.1.",
+    "Supplied shell run 41781528334 and prior native matrix outcomes are coordinator-provided context, not independently retrieved by this reviewer. This report does not upgrade CI configuration or that context into observed runtime evidence.",
+    "No live GitHub/provider mutation, private-provider readback, real credential, fresh consumer, installed-client routing, live Antigravity/Codex activation or live TextStats campaign was exercised.",
+    "Public localhost TLS fixtures were structurally parsed and public-key matched; no upstream provenance claim or production trust assessment is made. The fixture is explicitly test-only and bound to local HTTPS.",
+    "Trusted local-filesystem limits, adversarial same-user races and privileged broker/process escape remain the documented boundary. Arbitrary OS denial, procfs/PID namespace facilities, exotic filesystem aliases, CPU stalls and external service lifetimes were not independently stress-tested.",
+    "Shell source tests cover the two documented launcher/escaping forms under controlled CMD defaults; arbitrary wrappers, delayed-expansion host configuration, percent-literal edge cases and actual agent adherence were not established. These are evidence limits, not confirmed failures of the selected contract.",
+    "The canonical Markdown reader is deliberately not a general Markdown parser or semantic acceptance/dependency engine. Alternate HTML/block layouts and caller truth/ownership across other lists remain backend/caller obligations; no expanded parser requirement is inferred.",
+    "Case-variant completion milestone titles, external concurrency and provider eventual consistency were considered. Completion ownership uses the documented exact generated identity; cross-machine exclusivity remains caller-owned and exact-readback unknown/conflict results prevent unproved success. No independent defect is asserted without a contrary contract or reproduction.",
+    "U-003 publisher/schema/dependencies/package/release composition, closed campaigns through 145, historical release/manual transcripts and real credentials were excluded. Additional code/contract reads were limited to consequential U-002 interfaces."
+  ],
+  "optional_recommendations": [],
+  "readiness": "Source coverage complete for this subarea; not ready for unconditional acceptance until the two confirmed bounded validation defects are resolved or explicitly dispositioned. No critical/high finding. Coordinator-owned full suites, native CI and release acceptance remain separate."
+}
