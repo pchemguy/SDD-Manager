@@ -1,0 +1,518 @@
+{
+  "release": {
+    "id": 433630535,
+    "url": "https://github.com/pchemguy/SDD-Manager/releases/tag/v0.16.5",
+    "tag": "v0.16.5",
+    "source": "18c6023cdd3cce379b7bb6bab12bf1298209a494",
+    "name": "SDD Manager v0.16.5",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-11-04T07:37:13Z"
+  },
+  "tag_object": "d2ac224058902aec1d8804acbc51ebbd7f767ca5",
+  "latest": {
+    "id": 433630535,
+    "tag": "v0.16.5"
+  },
+  "source_first_parent_verified": true,
+  "body": {
+    "sha256": "7fe88ad8bb22112a63186e0af34d49fe29923992756f81ac2e8b932e01ee7fa0",
+    "commit_notes_hosted_exact": true,
+    "retained_file": "RELEASE-NOTES.md"
+  },
+  "source_coverage": {
+    "base_tag": "v0.16.4",
+    "base": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+    "target": "e206836be528b1cfea4a577b0844939dd96dd5e7",
+    "commits": [
+      {
+        "sha": "ccb1a6d5183cfdeda9e1521571e403fb8b3a866a",
+        "parents": [
+          "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3"
+        ],
+        "subject": "Record verified SDD Manager 0.16.4 release outcome",
+        "assessment": "Already published0.16.4 synchronization/outcome/campaign144 closure and empty child145; adequate enclosing cumulative144 summary, no new product delta beyond published base."
+      },
+      {
+        "sha": "b3c74cd2545b3f706b9938173e3e854575202b69",
+        "parents": [
+          "830330846ddff5d22acc53d9213b69651c12417f",
+          "ccb1a6d5183cfdeda9e1521571e403fb8b3a866a"
+        ],
+        "subject": "Synchronize published 0.16.4 main baseline into active campaign 144",
+        "assessment": "Already published0.16.4 synchronization/outcome/campaign144 closure and empty child145; adequate enclosing cumulative144 summary, no new product delta beyond published base."
+      },
+      {
+        "sha": "2f765ff061a7ef6c63a39bac5764f32854b77d22",
+        "parents": [
+          "b3c74cd2545b3f706b9938173e3e854575202b69"
+        ],
+        "subject": "Open nested campaign 145 for shell-policy revision",
+        "assessment": "Already published0.16.4 synchronization/outcome/campaign144 closure and empty child145; adequate enclosing cumulative144 summary, no new product delta beyond published base."
+      },
+      {
+        "sha": "62c2325f291b989d7569e1c9546f7e9f5c866b71",
+        "parents": [
+          "2f765ff061a7ef6c63a39bac5764f32854b77d22"
+        ],
+        "subject": "Finalize campaign 145 without shell-policy changes",
+        "assessment": "Already published0.16.4 synchronization/outcome/campaign144 closure and empty child145; adequate enclosing cumulative144 summary, no new product delta beyond published base."
+      },
+      {
+        "sha": "b8c43ded891e6bedda574c722c37212001c64aa8",
+        "parents": [
+          "b3c74cd2545b3f706b9938173e3e854575202b69",
+          "62c2325f291b989d7569e1c9546f7e9f5c866b71"
+        ],
+        "subject": "Merge campaign 145 \u2014 Close shell-policy campaign without policy changes",
+        "assessment": "Already published0.16.4 synchronization/outcome/campaign144 closure and empty child145; adequate enclosing cumulative144 summary, no new product delta beyond published base."
+      },
+      {
+        "sha": "867b5c83e242038beb8d8ee7e6193acf23b1b296",
+        "parents": [
+          "b8c43ded891e6bedda574c722c37212001c64aa8"
+        ],
+        "subject": "Finalize campaign 144 after verified closure of child 145",
+        "assessment": "Already published0.16.4 synchronization/outcome/campaign144 closure and empty child145; adequate enclosing cumulative144 summary, no new product delta beyond published base."
+      },
+      {
+        "sha": "fe918d39b6380b36b01128da30c70f93b99a9919",
+        "parents": [
+          "b3c74cd2545b3f706b9938173e3e854575202b69",
+          "867b5c83e242038beb8d8ee7e6193acf23b1b296"
+        ],
+        "subject": "Merge campaign 144 \u2014 Complete guidance revisions and retained 0.16.4 release",
+        "assessment": "Already published0.16.4 synchronization/outcome/campaign144 closure and empty child145; adequate enclosing cumulative144 summary, no new product delta beyond published base."
+      },
+      {
+        "sha": "eaf459aeda432b7932b8f6115c059f7b4d0d50a9",
+        "parents": [
+          "fe918d39b6380b36b01128da30c70f93b99a9919"
+        ],
+        "subject": "Open campaign 146 for shell-policy revision",
+        "assessment": "Covered by cumulative campaign146 integration16717d632e2c27bf3a960a95f3dee1a65ced6be3 and matched current15-path source/test/docs delta; no duplicate unit/action highlights. Ignore-template maintenance omitted as contributor bookkeeping."
+      },
+      {
+        "sha": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+        "parents": [
+          "eaf459aeda432b7932b8f6115c059f7b4d0d50a9"
+        ],
+        "subject": "Support optional wrapper quotes in the Windows CMD shim",
+        "assessment": "Covered by cumulative campaign146 integration16717d632e2c27bf3a960a95f3dee1a65ced6be3 and matched current15-path source/test/docs delta; no duplicate unit/action highlights. Ignore-template maintenance omitted as contributor bookkeeping."
+      },
+      {
+        "sha": "60b092420b30086482027d1b65a0ccadf5233db3",
+        "parents": [
+          "e9eff0962321c0240eb32e35b4c1b7b1025e0669"
+        ],
+        "subject": "Plan comprehensive 0.16.5 prerelease review in campaign 146",
+        "assessment": "Covered by cumulative campaign146 integration16717d632e2c27bf3a960a95f3dee1a65ced6be3 and matched current15-path source/test/docs delta; no duplicate unit/action highlights. Ignore-template maintenance omitted as contributor bookkeeping."
+      },
+      {
+        "sha": "ff0251adf848101454d5b53407edd0fee5316ad5",
+        "parents": [
+          "60b092420b30086482027d1b65a0ccadf5233db3"
+        ],
+        "subject": "Review current workflow, documentation and asset boundaries",
+        "assessment": "Covered by cumulative campaign146 integration16717d632e2c27bf3a960a95f3dee1a65ced6be3 and matched current15-path source/test/docs delta; no duplicate unit/action highlights. Ignore-template maintenance omitted as contributor bookkeeping."
+      },
+      {
+        "sha": "3f8ed85b2b6109715f0dcf6c4b52f8504cb22662",
+        "parents": [
+          "ff0251adf848101454d5b53407edd0fee5316ad5"
+        ],
+        "subject": "Review runtime and acceptance boundaries and retain three confirmed defects",
+        "assessment": "Covered by cumulative campaign146 integration16717d632e2c27bf3a960a95f3dee1a65ced6be3 and matched current15-path source/test/docs delta; no duplicate unit/action highlights. Ignore-template maintenance omitted as contributor bookkeeping."
+      },
+      {
+        "sha": "4214546ae1092803581e5667a95b029b7fcc92f3",
+        "parents": [
+          "3f8ed85b2b6109715f0dcf6c4b52f8504cb22662"
+        ],
+        "subject": "Complete publisher/package review and consolidate prerelease findings",
+        "assessment": "Covered by cumulative campaign146 integration16717d632e2c27bf3a960a95f3dee1a65ced6be3 and matched current15-path source/test/docs delta; no duplicate unit/action highlights. Ignore-template maintenance omitted as contributor bookkeeping."
+      },
+      {
+        "sha": "784ead5ce6de03fa9bdb9e4a291af8ae0122b970",
+        "parents": [
+          "4214546ae1092803581e5667a95b029b7fcc92f3"
+        ],
+        "subject": "Fix completion description and literal branch validation",
+        "assessment": "Covered by cumulative campaign146 integration16717d632e2c27bf3a960a95f3dee1a65ced6be3 and matched current15-path source/test/docs delta; no duplicate unit/action highlights. Ignore-template maintenance omitted as contributor bookkeeping."
+      },
+      {
+        "sha": "07f408a0c326e35da09b059b8d6d8b1c8b2cfeb2",
+        "parents": [
+          "784ead5ce6de03fa9bdb9e4a291af8ae0122b970"
+        ],
+        "subject": "Preserve semantic index integrity in recovery controls",
+        "assessment": "Covered by cumulative campaign146 integration16717d632e2c27bf3a960a95f3dee1a65ced6be3 and matched current15-path source/test/docs delta; no duplicate unit/action highlights. Ignore-template maintenance omitted as contributor bookkeeping."
+      },
+      {
+        "sha": "dc74a10c44a9368cccc3e0f38398d1ac38dbeb23",
+        "parents": [
+          "07f408a0c326e35da09b059b8d6d8b1c8b2cfeb2"
+        ],
+        "subject": "Finalize campaign 146 shell policy and comprehensive review",
+        "assessment": "Covered by cumulative campaign146 integration16717d632e2c27bf3a960a95f3dee1a65ced6be3 and matched current15-path source/test/docs delta; no duplicate unit/action highlights. Ignore-template maintenance omitted as contributor bookkeeping."
+      },
+      {
+        "sha": "16717d632e2c27bf3a960a95f3dee1a65ced6be3",
+        "parents": [
+          "fe918d39b6380b36b01128da30c70f93b99a9919",
+          "dc74a10c44a9368cccc3e0f38398d1ac38dbeb23"
+        ],
+        "subject": "Merge revision 146_fe918d3 \u2014 Shell policy and comprehensive review",
+        "assessment": "Covered by cumulative campaign146 integration16717d632e2c27bf3a960a95f3dee1a65ced6be3 and matched current15-path source/test/docs delta; no duplicate unit/action highlights. Ignore-template maintenance omitted as contributor bookkeeping."
+      },
+      {
+        "sha": "11c7b6d2ae168914728cc68cb51430b4866f0fab",
+        "parents": [
+          "16717d632e2c27bf3a960a95f3dee1a65ced6be3"
+        ],
+        "subject": "Create --",
+        "assessment": "Manual-log create/delete; no net product delta, no public highlight; contents not read."
+      },
+      {
+        "sha": "e206836be528b1cfea4a577b0844939dd96dd5e7",
+        "parents": [
+          "11c7b6d2ae168914728cc68cb51430b4866f0fab"
+        ],
+        "subject": "Delete --",
+        "assessment": "Manual-log create/delete; no net product delta, no public highlight; contents not read."
+      }
+    ],
+    "baseline_policy": "Actual previously published stable v0.16.4; ancestor through synchronization side history. Do not repeat its already released guidance.",
+    "notes_sha256": "7fe88ad8bb22112a63186e0af34d49fe29923992756f81ac2e8b932e01ee7fa0",
+    "all_identities_assessed": true,
+    "release_source": "18c6023cdd3cce379b7bb6bab12bf1298209a494",
+    "coverage_through": "18c6023cdd3cce379b7bb6bab12bf1298209a494",
+    "release_commit_assessment": "Version-only patch, finalized notes and current handoff; no additional product highlight.",
+    "raw_commit_notes_exact": true
+  },
+  "package": {
+    "source": "18c6023cdd3cce379b7bb6bab12bf1298209a494",
+    "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+    "build_only": true,
+    "publication_attempted": false,
+    "version": "0.16.5",
+    "files": 171,
+    "reproducible_two_builds": true,
+    "exact_member_bytes": true,
+    "archive_comment_source": true,
+    "naming_gate": {
+      "argv": [
+        "python",
+        "/workspace/scratch/f5adda9293ed/SDD-Manager/.agents/plugins/sdd-manager/skills/sdd-verify/scripts/release_assets.py",
+        "--expected",
+        "/tmp/sdd165-expected-assets.json",
+        "--directory",
+        "/tmp/sdd165-package",
+        "--version",
+        "0.16.5"
+      ],
+      "exit": 0,
+      "output": "{\"ok\": true, \"complete\": true, \"checked\": 2}\n"
+    },
+    "extracted_checker": {
+      "exit": 0,
+      "output": "{\"ok\": true, \"contract_vectors_checked\": 38}\n"
+    },
+    "assets": {
+      "sdd-manager.zip": {
+        "bytes": 542308,
+        "sha256": "81f065040cf785cac4509ff01272dfa40fbc50eebcb07d325395295ebbc6706f"
+      },
+      "sdd-manager.zip.sha256": {
+        "bytes": 82,
+        "sha256": "7c29feac52951a4345ea105421078ae4242baf662f95945641a4328edeaf8d4e"
+      }
+    },
+    "release_limit": "Exact0.16.5 release commit built twice; complete executed naming gate before tag/dispatch. Publication remains pending."
+  },
+  "local_checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "acceptance/textstats/tests",
+        "-t",
+        "acceptance/textstats",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "e206836be528b1cfea4a577b0844939dd96dd5e7",
+      "pending_sha256": {
+        ".agents/plugins/sdd-manager/plugin.json": "fdfb0f279a70a6624c8cbc3af5a7212462e49533bcf9814aa48e74aa9caa29c7",
+        "RELEASE-NOTES.md": "7fe88ad8bb22112a63186e0af34d49fe29923992756f81ac2e8b932e01ee7fa0",
+        "docs/dev/HANDOFF.md": "31c39e12233beb4d5a9855db6a2233876c59298e92ad788560c32855a6965e22"
+      },
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 50.3,
+      "output_log": "/tmp/sdd146-review-checks/release165-support.log",
+      "passed": 142,
+      "raw_log_sha256": "d40abb76a3fb4e283f927f8cb1b29dd05277d50c52a59cfa3a205e391e2e3e50"
+    },
+    {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".github/tests",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "e206836be528b1cfea4a577b0844939dd96dd5e7",
+      "pending_sha256": {
+        ".agents/plugins/sdd-manager/plugin.json": "fdfb0f279a70a6624c8cbc3af5a7212462e49533bcf9814aa48e74aa9caa29c7",
+        "RELEASE-NOTES.md": "7fe88ad8bb22112a63186e0af34d49fe29923992756f81ac2e8b932e01ee7fa0",
+        "docs/dev/HANDOFF.md": "31c39e12233beb4d5a9855db6a2233876c59298e92ad788560c32855a6965e22"
+      },
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 8.17,
+      "output_log": "/tmp/sdd146-review-checks/release165-publisher.log",
+      "passed": 62,
+      "raw_log_sha256": "2b70936f8ee634afadc049498eaf2db849de9786fa2afda0265caa8a559ed619"
+    }
+  ],
+  "ci": [
+    {
+      "id": 41793432017,
+      "path": ".github/workflows/release.yml",
+      "source": "18c6023cdd3cce379b7bb6bab12bf1298209a494",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 126451855813,
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 126452072449,
+          "name": "publish",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 41793368299,
+      "path": ".github/workflows/windows-shell-recovery.yml",
+      "source": "18c6023cdd3cce379b7bb6bab12bf1298209a494",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 126451645162,
+          "name": "native-cmd (22)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 126451645501,
+          "name": "native-cmd (24)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 41793368365,
+      "path": ".github/workflows/forge-close.yml",
+      "source": "18c6023cdd3cce379b7bb6bab12bf1298209a494",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 126451645533,
+          "name": "contracts (windows-latest, 24)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 126451645728,
+          "name": "contracts (ubuntu-latest, 22)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 126451645738,
+          "name": "contracts (windows-latest, 22)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 126451645772,
+          "name": "contracts (ubuntu-latest, 24)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 41793368304,
+      "path": ".github/workflows/forge-project.yml",
+      "source": "18c6023cdd3cce379b7bb6bab12bf1298209a494",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 126451645375,
+          "name": "contracts (ubuntu-latest, 24)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 126451645703,
+          "name": "contracts (windows-latest, 22)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 126451645717,
+          "name": "contracts (ubuntu-latest, 22)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 126451645893,
+          "name": "contracts (windows-latest, 24)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 41793368389,
+      "path": ".github/workflows/git-auth-recover.yml",
+      "source": "18c6023cdd3cce379b7bb6bab12bf1298209a494",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 126451645820,
+          "name": "contracts (ubuntu-latest, 24)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 126451646027,
+          "name": "contracts (windows-latest, 24)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 126451646114,
+          "name": "contracts (windows-latest, 22)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 126451646138,
+          "name": "contracts (ubuntu-latest, 22)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "publisher_build_tests": [
+    142,
+    62
+  ],
+  "assets": [
+    {
+      "id": 708669692,
+      "name": "sdd-manager.zip",
+      "size": 542308,
+      "state": "uploaded",
+      "digest": "sha256:81f065040cf785cac4509ff01272dfa40fbc50eebcb07d325395295ebbc6706f",
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.5/sdd-manager.zip"
+    },
+    {
+      "id": 708669778,
+      "name": "sdd-manager.zip.sha256",
+      "size": 82,
+      "state": "uploaded",
+      "digest": "sha256:7c29feac52951a4345ea105421078ae4242baf662f95945641a4328edeaf8d4e",
+      "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.5/sdd-manager.zip.sha256"
+    }
+  ],
+  "hosted_name_gate": {
+    "complete": true,
+    "assets_read": 2,
+    "per_page": 100,
+    "naming_gate": {
+      "ok": true,
+      "complete": true,
+      "checked": 2
+    }
+  },
+  "public_download_verification": {
+    "source": "18c6023cdd3cce379b7bb6bab12bf1298209a494",
+    "downloads": [
+      {
+        "variant": "tag",
+        "name": "sdd-manager.zip",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.5/sdd-manager.zip",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 542308,
+        "sha256": "81f065040cf785cac4509ff01272dfa40fbc50eebcb07d325395295ebbc6706f",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "tag",
+        "name": "sdd-manager.zip.sha256",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/download/v0.16.5/sdd-manager.zip.sha256",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 82,
+        "sha256": "7c29feac52951a4345ea105421078ae4242baf662f95945641a4328edeaf8d4e",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "latest",
+        "name": "sdd-manager.zip",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 542308,
+        "sha256": "81f065040cf785cac4509ff01272dfa40fbc50eebcb07d325395295ebbc6706f",
+        "matches_exact_source": true
+      },
+      {
+        "variant": "latest",
+        "name": "sdd-manager.zip.sha256",
+        "url": "https://github.com/pchemguy/SDD-Manager/releases/latest/download/sdd-manager.zip.sha256",
+        "http": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "bytes": 82,
+        "sha256": "7c29feac52951a4345ea105421078ae4242baf662f95945641a4328edeaf8d4e",
+        "matches_exact_source": true
+      }
+    ],
+    "ok": true
+  },
+  "highlights_checkpoint": {
+    "owned": true,
+    "ignored_untracked": true,
+    "cleanup": "Removed after exact published body and complete download verification; complete release notes retained."
+  },
+  "scope_limits": [
+    "No fresh installed-client/live TextStats acceptance.",
+    "Standalone Windows adapter remains an optional policy asset; no host shim installation.",
+    "Flagged source recovery is explicitly incomplete and requires original-index retention."
+  ],
+  "frozen_campaigns": "No closed campaign package changed;146 navigation records the subsequent separate release."
+}
