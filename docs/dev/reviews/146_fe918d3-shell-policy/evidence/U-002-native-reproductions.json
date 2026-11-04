@@ -1,0 +1,36 @@
+{
+  "multiline": {
+    "projection_validated": true,
+    "published_description": "Outcome: bounded work.\nExit: verified checks.",
+    "completion_validation": "invalid_milestone",
+    "public_cli": {
+      "exit_status": 1,
+      "result": {
+        "schema_version": 1,
+        "ok": false,
+        "code": "invalid_milestone",
+        "stage": "preflight",
+        "remote_state": "not_verified",
+        "effects": {}
+      },
+      "stderr": ""
+    }
+  },
+  "branch": {
+    "native_branch_expansion": "initial",
+    "result_code": "closed_verified",
+    "ok": true,
+    "closed_state": "closed",
+    "writes": [
+      {
+        "method": "POST",
+        "suffix": "/issues/10/comments"
+      },
+      {
+        "method": "PATCH",
+        "suffix": "/issues/10"
+      }
+    ],
+    "evidence_branch_line": "Branch: @{-1}"
+  }
+}

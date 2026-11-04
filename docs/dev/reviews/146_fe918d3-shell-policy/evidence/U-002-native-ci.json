@@ -1,0 +1,369 @@
+{
+  "runs": [
+    {
+      "workflow": "git-auth-recover.yml",
+      "id": 41724544344,
+      "head_sha": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+      "name": "Git authentication recovery contracts",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41724544344",
+      "jobs": [
+        {
+          "id": 126225775412,
+          "name": "contracts (windows-latest, 22)",
+          "conclusion": "success"
+        },
+        {
+          "id": 126225775870,
+          "name": "contracts (ubuntu-latest, 24)",
+          "conclusion": "success"
+        },
+        {
+          "id": 126225775904,
+          "name": "contracts (ubuntu-latest, 22)",
+          "conclusion": "success"
+        },
+        {
+          "id": 126225775960,
+          "name": "contracts (windows-latest, 24)",
+          "conclusion": "success"
+        }
+      ],
+      "equivalence": {
+        "target_source": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+        "paths": [
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-draft.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-input.md",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.md",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-runtime.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/github-client.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/projection-input.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-process-supervisor.py",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-publish.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs",
+          "tests/fixtures/git-auth/localhost-cert.pem",
+          "tests/fixtures/git-auth/localhost-key.pem",
+          "tests/forge-close.test.mjs",
+          "tests/forge-project.test.mjs",
+          "tests/git-auth-recover.test.mjs",
+          "tests/git-publish.test.mjs",
+          "tests/helpers/git-auth-https.mjs",
+          "tests/helpers/windows-process.py",
+          ".agents/plugins/sdd-manager/assets/DOCS_TRACKING_TEMPLATE.json",
+          ".github/workflows/git-auth-recover.yml"
+        ],
+        "exact_git_objects_equal": true,
+        "scope": "runtime code/tests/helpers/template/workflow; unrelated candidate records and version excluded"
+      }
+    },
+    {
+      "workflow": "forge-close.yml",
+      "id": 41724544263,
+      "head_sha": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+      "name": "GitHub completion contracts",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41724544263",
+      "jobs": [
+        {
+          "id": 126225774669,
+          "name": "contracts (ubuntu-latest, 24)",
+          "conclusion": "success"
+        },
+        {
+          "id": 126225775302,
+          "name": "contracts (windows-latest, 24)",
+          "conclusion": "success"
+        },
+        {
+          "id": 126225775406,
+          "name": "contracts (ubuntu-latest, 22)",
+          "conclusion": "success"
+        },
+        {
+          "id": 126225775419,
+          "name": "contracts (windows-latest, 22)",
+          "conclusion": "success"
+        }
+      ],
+      "equivalence": {
+        "target_source": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+        "paths": [
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-draft.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-input.md",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.md",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-runtime.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/github-client.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/projection-input.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-process-supervisor.py",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-publish.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs",
+          "tests/fixtures/git-auth/localhost-cert.pem",
+          "tests/fixtures/git-auth/localhost-key.pem",
+          "tests/forge-close.test.mjs",
+          "tests/forge-project.test.mjs",
+          "tests/git-auth-recover.test.mjs",
+          "tests/git-publish.test.mjs",
+          "tests/helpers/git-auth-https.mjs",
+          "tests/helpers/windows-process.py",
+          ".agents/plugins/sdd-manager/assets/DOCS_TRACKING_TEMPLATE.json",
+          ".github/workflows/forge-close.yml"
+        ],
+        "exact_git_objects_equal": true,
+        "scope": "runtime code/tests/helpers/template/workflow; unrelated candidate records and version excluded"
+      }
+    },
+    {
+      "workflow": "forge-project.yml",
+      "id": 41724544462,
+      "head_sha": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+      "name": "GitHub projection contracts",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41724544462",
+      "jobs": [
+        {
+          "id": 126225775752,
+          "name": "contracts (ubuntu-latest, 22)",
+          "conclusion": "success"
+        },
+        {
+          "id": 126225775921,
+          "name": "contracts (ubuntu-latest, 24)",
+          "conclusion": "success"
+        },
+        {
+          "id": 126225775929,
+          "name": "contracts (windows-latest, 22)",
+          "conclusion": "success"
+        },
+        {
+          "id": 126225776008,
+          "name": "contracts (windows-latest, 24)",
+          "conclusion": "success"
+        }
+      ],
+      "equivalence": {
+        "target_source": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+        "paths": [
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-draft.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project-input.md",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.md",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-project.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-runtime.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/github-client.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/projection-input.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.md",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-auth-recover.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-process-supervisor.py",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/git-publish.mjs",
+          ".agents/plugins/sdd-manager/skills/sdd-manage/scripts/protected-token.mjs",
+          "tests/fixtures/git-auth/localhost-cert.pem",
+          "tests/fixtures/git-auth/localhost-key.pem",
+          "tests/forge-close.test.mjs",
+          "tests/forge-project.test.mjs",
+          "tests/git-auth-recover.test.mjs",
+          "tests/git-publish.test.mjs",
+          "tests/helpers/git-auth-https.mjs",
+          "tests/helpers/windows-process.py",
+          ".agents/plugins/sdd-manager/assets/DOCS_TRACKING_TEMPLATE.json",
+          ".github/workflows/forge-project.yml"
+        ],
+        "exact_git_objects_equal": true,
+        "scope": "runtime code/tests/helpers/template/workflow; unrelated candidate records and version excluded"
+      }
+    },
+    {
+      "workflow": "windows-shell-recovery.yml",
+      "id": 41781528334,
+      "head_sha": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "name": "Windows shell contracts",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/pchemguy/SDD-Manager/actions/runs/41781528334",
+      "jobs": [
+        {
+          "id": 126413944927,
+          "name": "native-cmd (24)",
+          "conclusion": "success"
+        },
+        {
+          "id": 126413945271,
+          "name": "native-cmd (22)",
+          "conclusion": "success"
+        }
+      ],
+      "equivalence": {
+        "target_source": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+        "paths": [
+          ".agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md",
+          "tests/test_windows_shell_recovery.py",
+          ".github/workflows/windows-shell-recovery.yml"
+        ],
+        "exact_git_objects_equal": true,
+        "scope": "runtime code/tests/helpers/template/workflow; unrelated candidate records and version excluded"
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "id": 126225775412,
+      "name": "contracts (windows-latest, 22)",
+      "conclusion": "success",
+      "run": 41724544344,
+      "test_counts": [
+        54,
+        1,
+        1,
+        1
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126225775870,
+      "name": "contracts (ubuntu-latest, 24)",
+      "conclusion": "success",
+      "run": 41724544344,
+      "test_counts": [
+        54
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126225775904,
+      "name": "contracts (ubuntu-latest, 22)",
+      "conclusion": "success",
+      "run": 41724544344,
+      "test_counts": [
+        54
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126225775960,
+      "name": "contracts (windows-latest, 24)",
+      "conclusion": "success",
+      "run": 41724544344,
+      "test_counts": [
+        54,
+        1,
+        1,
+        1
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126225774669,
+      "name": "contracts (ubuntu-latest, 24)",
+      "conclusion": "success",
+      "run": 41724544263,
+      "test_counts": [
+        39
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126225775302,
+      "name": "contracts (windows-latest, 24)",
+      "conclusion": "success",
+      "run": 41724544263,
+      "test_counts": [
+        39
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126225775406,
+      "name": "contracts (ubuntu-latest, 22)",
+      "conclusion": "success",
+      "run": 41724544263,
+      "test_counts": [
+        39
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126225775419,
+      "name": "contracts (windows-latest, 22)",
+      "conclusion": "success",
+      "run": 41724544263,
+      "test_counts": [
+        39
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126225775752,
+      "name": "contracts (ubuntu-latest, 22)",
+      "conclusion": "success",
+      "run": 41724544462,
+      "test_counts": [
+        51
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126225775921,
+      "name": "contracts (ubuntu-latest, 24)",
+      "conclusion": "success",
+      "run": 41724544462,
+      "test_counts": [
+        51
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126225775929,
+      "name": "contracts (windows-latest, 22)",
+      "conclusion": "success",
+      "run": 41724544462,
+      "test_counts": [
+        51
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126225776008,
+      "name": "contracts (windows-latest, 24)",
+      "conclusion": "success",
+      "run": 41724544462,
+      "test_counts": [
+        51
+      ],
+      "windows_unittest_counts": []
+    },
+    {
+      "id": 126413944927,
+      "name": "native-cmd (24)",
+      "conclusion": "success",
+      "run": 41781528334,
+      "test_counts": [],
+      "windows_unittest_counts": [
+        14
+      ]
+    },
+    {
+      "id": 126413945271,
+      "name": "native-cmd (22)",
+      "conclusion": "success",
+      "run": 41781528334,
+      "test_counts": [],
+      "windows_unittest_counts": [
+        14
+      ]
+    }
+  ]
+}

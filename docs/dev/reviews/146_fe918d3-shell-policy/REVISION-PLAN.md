@@ -23,3 +23,12 @@ The human requests pulling origin, inspecting the changes, updating WINDOWS_SHEL
 ## V-003 — Comprehensive review, fixes, closure and release
 
 The later human instruction authorizes comprehensive current-product review, confirmed fixes, campaign closure, patch bump and release publication. Follow the [review plan](REVIEW-PLAN.md) on this same branch, publishing/readback every unit and repair. Recheck/finalize the complete candidate and explicitly integrate into main before closure. Then prepare 0.16.5 with fresh exact-source notes/body/package/name gates, tag/single publisher and actual hosted/latest/download verification; stop after recording the release outcome. Earlier open-only limits describe previous checkpoints and are superseded for this operation.
+
+## Accepted comprehensive-review repairs
+
+| Action | Findings | Authorized result | Required recheck |
+| --- | --- | --- | --- |
+| V-004 | R-001, R-002 | Correct completion's multiline description handoff and literal branch validation without changing valid content or provider scope. | Failing regressions first, completion and dependent projection suites, relevant native CI, exact source/docs/credential/publication invariants. |
+| V-005 | R-003 | Correct semantic index-flag export/held-state integrity; retain explicit supported restoration or safe incomplete/unsupported classification and current ordinary/conflict behavior. | Actual temporary-Git intent/status/staged/unstaged equivalence, flag-only hold rejection before the next mutation, focused and full support regressions, relevant interface documentation. |
+
+U-003 must be assessed/published before these repairs begin. Preserve original findings/observations, implement each coherent action with its source/tests/docs/evidence, publish/read back and reassess affected units. Further confirmed findings receive unused IDs/actions. Optional REC-DOC-001 remains deferred as an enhancement rather than a required repair.

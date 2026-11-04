@@ -1,0 +1,124 @@
+{
+  "source": "ff0251adf848101454d5b53407edd0fee5316ad5",
+  "product_source": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+  "python": "3.12.14",
+  "node": "24.22.1",
+  "git": "2.51.1",
+  "suites": [
+    {
+      "name": "support",
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "acceptance/textstats/tests",
+        "-t",
+        "acceptance/textstats",
+        "-v"
+      ],
+      "source": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "exit": 0,
+      "seconds": 48.11,
+      "collected": 140,
+      "passed": 140,
+      "skipped": 0,
+      "raw_log_sha256": "9e1e6f88b7ab41b627f2c9487a464580f3fb268dc40e56f34224c0e36294e639",
+      "local_log": "/tmp/sdd146-review-checks/support.log"
+    },
+    {
+      "name": "publisher",
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".github/tests",
+        "-v"
+      ],
+      "source": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "exit": 0,
+      "seconds": 7.85,
+      "collected": 62,
+      "passed": 62,
+      "skipped": 0,
+      "raw_log_sha256": "f97f480888e602cd3e0c6e1cd5ebc393aefa6226d9532921b8a572955f16ea47",
+      "local_log": "/tmp/sdd146-review-checks/publisher.log"
+    },
+    {
+      "name": "auth",
+      "argv": [
+        "node",
+        "--test",
+        "tests/git-auth-recover.test.mjs",
+        "tests/git-publish.test.mjs"
+      ],
+      "source": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "exit": 0,
+      "seconds": 27.11,
+      "collected": 54,
+      "passed": 54,
+      "skipped": 0,
+      "raw_log_sha256": "87254f191904ff0bce74c699fdab305cffbeef32f4a0b039fced6f8b97fdbe45",
+      "local_log": "/tmp/sdd146-review-checks/auth.log"
+    },
+    {
+      "name": "forge-close",
+      "argv": [
+        "node",
+        "--test",
+        "tests/forge-close.test.mjs"
+      ],
+      "source": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "exit": 0,
+      "seconds": 2.17,
+      "collected": 39,
+      "passed": 39,
+      "skipped": 0,
+      "raw_log_sha256": "b85200cd160f786e19d5e936244bd819a9e23b10aeb5e52b2f0543c48fef6b78",
+      "local_log": "/tmp/sdd146-review-checks/forge-close.log"
+    },
+    {
+      "name": "forge-project",
+      "argv": [
+        "node",
+        "--test",
+        "tests/forge-project.test.mjs"
+      ],
+      "source": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "exit": 0,
+      "seconds": 22.47,
+      "collected": 51,
+      "passed": 51,
+      "skipped": 0,
+      "raw_log_sha256": "ff5f9a559c796bc03daeb74d019dff76a8f2e691fb4a7d1df1f5d7ccae82c5f1",
+      "local_log": "/tmp/sdd146-review-checks/forge-project.log"
+    },
+    {
+      "name": "windows-shell",
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_windows_shell_recovery.py",
+        "-v"
+      ],
+      "source": "ff0251adf848101454d5b53407edd0fee5316ad5",
+      "exit": 0,
+      "seconds": 0.12,
+      "collected": 14,
+      "passed": 0,
+      "skipped": 14,
+      "raw_log_sha256": "c44920119848216a7443937469c2f9dab27551542bdf1bbd302fd45bb2d50813",
+      "local_log": "/tmp/sdd146-review-checks/windows-shell.log"
+    }
+  ],
+  "passed": 346,
+  "skipped": 14
+}
