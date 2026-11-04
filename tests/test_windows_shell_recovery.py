@@ -1,8 +1,9 @@
 """Controlled native CMD contracts, distinct from live client activation.
 
 Windows CMD executes the root policy's embedded adapter through the reported Antigravity
-harness, including backslash-escaped embedded double quotes. Cases use LF/CRLF
-assets, isolated PATH and spaced paths. Node exercises real executable argv;
+harness with and without outer command-wrapper quotes, including backslash-escaped
+embedded double quotes. Cases use LF/CRLF assets, isolated PATH and spaced paths.
+Node exercises real executable argv;
 no real PowerShell executable or global setting is used. These fixtures model
 the unavoidable harness, not agent-authored PowerShell commands.
 """
@@ -22,6 +23,10 @@ ADAPTER = POLICY.read_text(encoding='utf-8').split('```bat\n', 1)[1].split('```'
 
 @unittest.skipUnless(os.name == 'nt', 'Requires native Windows CMD; Linux is not runtime evidence')
 class WindowsShellAdapter(unittest.TestCase):
+    """Run every native contract through the quoted command-wrapper form."""
+
+    outer_wrapper_quotes = True
+
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory(prefix='sdd shell probe ')
         self.addCleanup(self.temporary.cleanup)
@@ -52,7 +57,8 @@ class WindowsShellAdapter(unittest.TestCase):
         """
         driver = self.work / 'probe driver.cmd'
         escaped = command.replace('"', '\\"')
-        lines = ['@echo off', *prefix, 'PowerShell -Command "' + escaped + '"']
+        wrapped = '"' + escaped + '"' if self.outer_wrapper_quotes else escaped
+        lines = ['@echo off', *prefix, 'PowerShell -Command ' + wrapped]
         driver.write_bytes(('\r\n'.join(lines) + '\r\n').encode('ascii'))
         return subprocess.run(
             '"' + str(self.cmd) + '" /d /s /c ""' + str(driver) + '""',
@@ -127,6 +133,12 @@ class WindowsShellAdapter(unittest.TestCase):
                 result = self.invoke('echo SDD!SDD_BANG!')
                 self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
                 self.assertEqual(result.stdout.strip(), 'SDD!SDD_BANG!')
+
+
+class UnquotedWindowsShellAdapter(WindowsShellAdapter):
+    """Run the same seven LF/CRLF contracts without outer wrapper quotes."""
+
+    outer_wrapper_quotes = False
 
 
 if __name__ == '__main__':

@@ -35,10 +35,11 @@ Preserve unrelated adapters/executables and leave global PATH, registry and clie
 
 ## Antigravity wrapper and shim
 
-Antigravity's reported harness uses:
+Antigravity's reported harness may use:
 
 ```text
 PowerShell -Command "%CLI%"
+PowerShell -Command %CLI%
 ```
 
 The harness backslash-escapes embedded double quotes as `\"`. The CMD shim decodes that wrapper:
@@ -47,10 +48,19 @@ The harness backslash-escapes embedded double quotes as `\"`. The CMD shim decod
 @echo off
 
 set "CLI=%*"
-set "CLI=%CLI:~10,-1%"
+REM Remove `-Command `
+set "CLI=%CLI:~9%"
+
+REM Remove outer quotes, if present
+set "QUOTED=\%CLI:~0,1%\%CLI:~-1%"
+set "QUOTED={%QUOTED:\"=%}"
+if "%QUOTED%"=="{}" (
+    set "CLI=%CLI:~1,-1%"
+)
+
 set "CLI=%CLI:\"="%"
 
-%CLI%
+call %CLI%
 ```
 
-The shim removes the wrapper, restores `\"` to `"` and runs the command through CMD. Its fixed slicing requires the illustrated launcher form; do not assume another client's format matches or that its launcher can resolve a .cmd adapter.
+The shim removes the fixed `-Command ` prefix, strips an optional pair of outer double quotes, restores `\"` to `"`, and invokes the decoded command through CMD with `call`. It targets the two illustrated launcher forms; do not assume another client uses the same argument layout or escaping, or that its launcher can resolve a `.cmd` adapter.
