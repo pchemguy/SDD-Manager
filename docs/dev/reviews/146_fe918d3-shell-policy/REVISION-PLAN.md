@@ -36,3 +36,7 @@ U-003 must be assessed/published before these repairs begin. Preserve original f
 ## Current stop — Release postponed
 
 The latest human instruction postpones the version bump and release creation and requests only campaign closure. Complete confirmed repairs V-004/V-005, required source/local/native rechecks and independent final acceptance, finalize the campaign and explicitly merge its complete verified tip into recorded parent main. Verify/publish/read back and stop on clean main with campaign 146 closed. Keep manifest version 0.16.4 and retained root RELEASE-NOTES.md unchanged; no new release commit/tag/publisher is selected. Earlier 0.16.5 release steps record the previous authorization and are superseded for this operation. A later explicit release request must freshly prepare source/body/version/package/naming evidence.
+
+## V-006 — Finalize and integrate
+
+V-004/V-005 are accepted, verified and published; R-001/R-002/R-003 are resolved. Final independent whole-branch acceptance and exact repaired-source package/publisher checks pass. Finalize current records/navigation/HANDOFF, explicitly merge the completed campaign into original main parent with two parents, verify the prospective merged state and frozen-record/source preservation, publish/read back and return to clean main. Preserve the finalized campaign artifacts during parent-context reconciliation. Closure and publication are confirmed through actual Git/readback evidence. Stop there; no version or release operation is selected.

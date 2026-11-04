@@ -1,4 +1,4 @@
-# Comprehensive 0.16.5 prerelease review
+# Comprehensive source review
 
 ## Candidate and authority
 
@@ -27,3 +27,7 @@ Linux/Python 3.12.14/Node 24 is available; inspect supported native Windows CI w
 ## Latest human boundary — Closure only
 
 The human postpones version bump and release creation. Finish accepted repairs and their verification, finalize this campaign, explicitly integrate into main, publish/read back and stop there. Keep version 0.16.4, RELEASE-NOTES.md and existing tags/releases unchanged. Earlier release steps retain their original context and are not selected work.
+
+## Final disposition
+
+All 384 paths and three units are reviewed; all three accepted findings are repaired and independently rechecked. Final branch acceptance and retained exact repaired-source package/publisher checks pass. [Canonical report](REVIEW-REPORT.md#final-acceptance--closure-only) owns source-specific verification, limits and deferred enhancements. This record is finalized for campaign closure through explicit verified/published parent integration only; release preparation remains postponed.

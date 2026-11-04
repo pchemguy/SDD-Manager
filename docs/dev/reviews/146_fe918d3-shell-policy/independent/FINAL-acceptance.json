@@ -1,0 +1,959 @@
+{
+  "campaign": "146_fe918d3",
+  "role": "Independent final whole-branch acceptance reviewer",
+  "source": "07f408a0c326e35da09b059b8d6d8b1c8b2cfeb2",
+  "recorded_creation_parent_main": "fe918d39b6380b36b01128da30c70f93b99a9919",
+  "opening": "eaf459aeda432b7932b8f6115c059f7b4d0d50a9",
+  "product_review_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+  "authority": "Close campaign 146 only; version bump and release postponed by the human.",
+  "verdict": "ACCEPTED for coordinator active-record finalization and explicit two-parent main integration; no confirmed source blocker. Not yet merged, closed or published on main.",
+  "confidence": "high within declared source/local/controlled-native boundaries",
+  "new_findings": [],
+  "resolved_findings": [
+    "R-001",
+    "R-002",
+    "R-003"
+  ],
+  "remaining_optional_recommendations": [
+    {
+      "id": "REC-DOC-001",
+      "priority": "low",
+      "disposition": "Previously deferred optional README package navigation; no mandatory contract defect."
+    },
+    {
+      "id": "REC-U003-001",
+      "priority": "low",
+      "disposition": "Previously deferred explicit response byte/elapsed budgets; no added release gate."
+    }
+  ],
+  "planned_finalization": [
+    {
+      "location": "docs/dev/HANDOFF.md:5",
+      "action": "Refresh stale R-003 pending checkpoint to actual V-005 resolution and final acceptance; retain original historical review observations elsewhere.",
+      "classification": "Expected coordinator-owned finalization, not an unimplemented product repair."
+    },
+    {
+      "location": "Active 146 REVIEW-REPORT/REVISION-REPORT and current index",
+      "action": "Append/persist exact-source final acceptance and closure-only evidence; publish/read back before complete-tip two-parent integration. Record integration facts in the merge/evidence without post-closure unintegrated edits.",
+      "classification": "Planned completion transition."
+    }
+  ],
+  "merge_boundary": "Refresh actual main, inspect any new incoming delta, explicitly merge the full finalized campaign tip with main as first parent and campaign as second, verify merged result, publish/read back, return to clean main and stop. Runtime/source changes require affected recheck; active-record-only finalization may retain this source acceptance after diff/link/whitespace checks.",
+  "checks": {
+    "full_parent_to_source_diff_sha256": "8d594bae689a8518d3b8d46b8515d3b334e994136c8e2650cc8e09428e8e50c7",
+    "changed_paths": 46,
+    "scope_groups": {
+      "V-002 authorized imported shell policy/ignore/native characterization": 4,
+      "V-004 R-001/R-002 completion repair, tests and guide": 4,
+      "V-005 R-003 recovery/hold repair, tests and guides": 7,
+      "current handoff/navigation coordination": 2,
+      "active campaign review/repair evidence and coordination": 29
+    },
+    "coverage_records": [
+      {
+        "record": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-001-docs-coverage.json",
+        "sha256": "1ec5aaaf3e086bf5af57d4cc9023a6140471656252d4ab4d29a9d751690ef5a7",
+        "paths": 116,
+        "baseline_hashes_match_inventory": true
+      },
+      {
+        "record": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-001-entry-coverage.json",
+        "sha256": "6a9d59037edfe723bcb3b5db0869b29421841dbd551d9d3644637f333b8b77fa",
+        "paths": 62,
+        "baseline_hashes_match_inventory": true
+      },
+      {
+        "record": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-002-acceptance-coverage.json",
+        "sha256": "8cf6fdf37392e7fd47614c46ed0e448809c77841f504d04f21c6b89660dc80e2",
+        "paths": 160,
+        "baseline_hashes_match_inventory": true
+      },
+      {
+        "record": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-002-native-coverage.json",
+        "sha256": "f2b4e8a6b82d4de89676624187d8b631517fa3f9e1a91b63ebe3d9ba426ab20a",
+        "paths": 24,
+        "baseline_hashes_match_inventory": true
+      },
+      {
+        "record": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-003-release-coverage.json",
+        "sha256": "349ac523aa13595b74a0dfb3171287e2d047d310c472f7545a2faca26f04b21d",
+        "paths": 22,
+        "baseline_hashes_match_inventory": true
+      }
+    ],
+    "coverage_union_unique": 384,
+    "coverage_union_equals_inventory": true,
+    "current_inventory_differences": [
+      {
+        "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md",
+        "baseline_sha256": "0f308c1b7b391ea13798fd24368a27f24e15275b93ed8c06f07437880f4273ed",
+        "current_sha256": "c495aeff3233fb6a4cf8c7f9a85c6367516c484e0dd2b979de929ed900313024",
+        "classification": "accepted repair"
+      },
+      {
+        "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs",
+        "baseline_sha256": "a1e74fe3462cd0ad359901ead0cadfde9b836e0feb67769522edef87916a91a4",
+        "current_sha256": "62617ef417b3c5795c276494934f3c6ae3ef97508f7431762b87736d1c862813",
+        "classification": "accepted repair"
+      },
+      {
+        "path": "acceptance/textstats/RECOVERY.md",
+        "baseline_sha256": "505bb3a09bac05d0f8959719ae574e442afd687fa70a05557237abe7da1ae24c",
+        "current_sha256": "a940ec5b262458d9844b1769ceff8d04290f4820f96aa49311bd3afb91f774cd",
+        "classification": "accepted repair"
+      },
+      {
+        "path": "acceptance/textstats/TRIAL-CONTROLS.md",
+        "baseline_sha256": "b60efe5627d577e946d8a378c6b26a9e335ce2d96fb755a6e846ad70b7f4af4c",
+        "current_sha256": "cd4f3ebde1f76935fb5519ce85e52aea996bdef175cb141957c92c60bee8be27",
+        "classification": "accepted repair"
+      },
+      {
+        "path": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+        "baseline_sha256": "90e9c364d4304eacfcdcca384c23cb48b6c02484bd3c6ecf3a961bc2042ecff9",
+        "current_sha256": "a4aa514b5a7c1b0add16614f3af5febcde4bb8354cbc7edf041ff4e872ec9c07",
+        "classification": "accepted repair"
+      },
+      {
+        "path": "acceptance/textstats/scripts/core.py",
+        "baseline_sha256": "8a512300ae70a9337d7dfc9d68228361059821cc24959c45f9ea593cd44d060a",
+        "current_sha256": "193581bee2947b71cf687eeef048e1aea94f744b12dbc34d744d0cb26a306603",
+        "classification": "accepted repair"
+      },
+      {
+        "path": "acceptance/textstats/scripts/trial_control.py",
+        "baseline_sha256": "46e8b9c0a54d7781c268e43ebe3a4f35d47d0b5e8b52eb0df7e5fbd3acb985ca",
+        "current_sha256": "2277e4ab1ba989d11a92222ce28ec79906ad13ee9eea5a306c6661e3546bd77f",
+        "classification": "accepted repair"
+      },
+      {
+        "path": "acceptance/textstats/tests/test_recovery.py",
+        "baseline_sha256": "84e42ecb9b88a400330853be738cefd0fb16940b5db8226522f913e8fe6b1ec5",
+        "current_sha256": "90b04dec72a48fac25e800ab53eed21ae4de66089152e8d8afbaa5c0df8eac9f",
+        "classification": "accepted repair"
+      },
+      {
+        "path": "acceptance/textstats/tests/test_trial_control.py",
+        "baseline_sha256": "64199a604b29d117c8c591ea0488cb2cdce17394088ea235a01da48b7c93401d",
+        "current_sha256": "751135ea3a05d655cf312c9e8a02350606f1ac0d28c8074d239223ff4494eac7",
+        "classification": "accepted repair"
+      },
+      {
+        "path": "docs/dev/HANDOFF.md",
+        "baseline_sha256": "5c1f604369081ad4d231108c18ad63848d540cac91673c3bbd4946b2fef38526",
+        "current_sha256": "70bb3f527ec7c9bc77d9e55734a2f0312cc33c30255d5f5e901940c7ff3b1c4e",
+        "classification": "active coordination"
+      },
+      {
+        "path": "docs/dev/reviews/146_fe918d3-shell-policy/REVISION-PLAN.md",
+        "baseline_sha256": "aba7eaf4f537fa27cc457553910ec16f030b134dbd7b5e03449bb82922e359d9",
+        "current_sha256": "e39340466d476f68d21a73acd2af39a115c4bb4617df0655756e54254f226f07",
+        "classification": "active coordination"
+      },
+      {
+        "path": "docs/dev/reviews/146_fe918d3-shell-policy/REVISION-REPORT.md",
+        "baseline_sha256": "3b458ae8dec2d9879586714270496042d53e90eb55ef23a882ffa0fcb71fcaf9",
+        "current_sha256": "354eb69983bff2afa8f1b9ff9feb0d9e623db7941cc73e696ad54f905b97db45",
+        "classification": "active coordination"
+      },
+      {
+        "path": "docs/dev/reviews/README.md",
+        "baseline_sha256": "dfe2197cc715de6ea0c59e5c6295726ca18875988bed80844d508a3bb8912abb",
+        "current_sha256": "61938d123ce28864acda449896a335816091f36693307bfef35fe9db5b17e23d",
+        "classification": "active coordination"
+      },
+      {
+        "path": "tests/forge-close.test.mjs",
+        "baseline_sha256": "2b8c55c240a2c634176a739c1c97a8b063b88aa49f48464728b8795d20f838d2",
+        "current_sha256": "80458234a780187f52d0b7fcdcaa70b70d8957cf4e097a95c791e9a080789471",
+        "classification": "accepted repair"
+      },
+      {
+        "path": "tests/forge-project.test.mjs",
+        "baseline_sha256": "e936e0f17c99a5173ec142595ca8c8122545ac04e6f1d0fb5b1be68899a59539",
+        "current_sha256": "9f86594df0d5ee30a7fc3da2e0375b708ccb1b0c7e64bc465acfb6b42f147444",
+        "classification": "accepted repair"
+      }
+    ],
+    "closed_historical_objects_preserved": 841,
+    "closed_content_read": false,
+    "prior_navigation_prefix_unchanged": true,
+    "sole_manifest_version": "0.16.4",
+    "sole_manifest_unchanged_from_main": true,
+    "manifest_sha256": "85e553c775ac582fe88d15954e382c642d24a73bf1020de4bce388e29648ad75",
+    "release_notes_unchanged_from_main": true,
+    "release_notes_sha256": "e0376cdb4cac4d6a321daab0c48f850945700564763c5de95750755ba6ce6b80",
+    "v0.16.4_peel": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+    "current_tag_ref_inventory_sha256": "83a47cfe2ce2d2f14f385d5a703267fb4b1bce25c2d60af84f1fec29c3378574",
+    "tag_effects_performed": false,
+    "repair_source_hashes_match": 11,
+    "coordinator_raw_logs_verified": [
+      {
+        "record": "V004-red",
+        "log_sha256": "d2d6b2044c3ced13d1ec55c79fdb9769795010eef1ced717c8a910db090a514f",
+        "exit": 1,
+        "hash_verified": true
+      },
+      {
+        "record": "V004-green",
+        "log_sha256": "ce7f8a33244809b217408b2ea96d6b75058f90b51be39d8323b62278081693de",
+        "exit": 0,
+        "hash_verified": true
+      },
+      {
+        "record": "V004-green",
+        "log_sha256": "e41534bcf32489a79c0861fe4e51dc10c3a7632ac054b420026f8c0de0bce083",
+        "exit": 0,
+        "hash_verified": true
+      },
+      {
+        "record": "V005-red",
+        "log_sha256": "97aa31214c3f0298cca31496fd7c0684181c556a4437de59c8ef4cf8c276875c",
+        "exit": 1,
+        "hash_verified": true
+      },
+      {
+        "record": "V005-green-support",
+        "log_sha256": "48f75fc3752b3392a60080fccd7073869134413196548f43afe5785b5ffb6c34",
+        "exit": 0,
+        "hash_verified": true
+      },
+      {
+        "record": "V005-green-focused",
+        "log_sha256": "7f0a0906326e92ca654d3c33b27244e27fb5917b9130a77905c4b27008567cdb",
+        "exit": 0,
+        "hash_verified": true
+      }
+    ],
+    "v004_native_jobs_inspected": {
+      "source": "784ead5ce6de03fa9bdb9e4a291af8ae0122b970",
+      "jobs": [
+        {
+          "run_id": 41788272156,
+          "id": 126435364286,
+          "name": "contracts (windows-latest, 22)",
+          "conclusion": "success",
+          "tests": [
+            42
+          ]
+        },
+        {
+          "run_id": 41788272156,
+          "id": 126435364643,
+          "name": "contracts (ubuntu-latest, 24)",
+          "conclusion": "success",
+          "tests": [
+            42
+          ]
+        },
+        {
+          "run_id": 41788272156,
+          "id": 126435364740,
+          "name": "contracts (ubuntu-latest, 22)",
+          "conclusion": "success",
+          "tests": [
+            42
+          ]
+        },
+        {
+          "run_id": 41788272156,
+          "id": 126435365050,
+          "name": "contracts (windows-latest, 24)",
+          "conclusion": "success",
+          "tests": [
+            42
+          ]
+        },
+        {
+          "run_id": 41788272226,
+          "id": 126435364731,
+          "name": "contracts (windows-latest, 22)",
+          "conclusion": "success",
+          "tests": [
+            52
+          ]
+        },
+        {
+          "run_id": 41788272226,
+          "id": 126435365095,
+          "name": "contracts (windows-latest, 24)",
+          "conclusion": "success",
+          "tests": [
+            52
+          ]
+        },
+        {
+          "run_id": 41788272226,
+          "id": 126435365131,
+          "name": "contracts (ubuntu-latest, 24)",
+          "conclusion": "success",
+          "tests": [
+            52
+          ]
+        },
+        {
+          "run_id": 41788272226,
+          "id": 126435365193,
+          "name": "contracts (ubuntu-latest, 22)",
+          "conclusion": "success",
+          "tests": [
+            52
+          ]
+        }
+      ],
+      "scope": "Exact repaired completion/projection source; native Windows CMD/Linux Node22/24, synthetic provider/local contracts, not live provider or installed-client acceptance."
+    },
+    "closure_package": {
+      "source": "07f408a0c326e35da09b059b8d6d8b1c8b2cfeb2",
+      "product_baseline": "e9eff0962321c0240eb32e35b4c1b7b1025e0669",
+      "build_only": true,
+      "publication_attempted": false,
+      "version": "0.16.4",
+      "files": 171,
+      "reproducible_two_builds": true,
+      "exact_member_bytes": true,
+      "archive_comment_source": true,
+      "naming_gate": {
+        "argv": [
+          "python",
+          "/workspace/scratch/f5adda9293ed/SDD-Manager/.agents/plugins/sdd-manager/skills/sdd-verify/scripts/release_assets.py",
+          "--expected",
+          "/tmp/sdd146-closure-expected-assets.json",
+          "--directory",
+          "/tmp/sdd146-closure-package",
+          "--version",
+          "0.16.4"
+        ],
+        "exit": 0,
+        "output": "{\"ok\": true, \"complete\": true, \"checked\": 2}\n"
+      },
+      "extracted_checker": {
+        "exit": 0,
+        "output": "{\"ok\": true, \"contract_vectors_checked\": 38}\n"
+      },
+      "assets": {
+        "sdd-manager.zip": {
+          "bytes": 542308,
+          "sha256": "5402997183219ee2ae57af8902d0ac4f886f079aaa84d1af57f1101ffd685403"
+        },
+        "sdd-manager.zip.sha256": {
+          "bytes": 82,
+          "sha256": "d53e230f1d9a66ba8032af9101f688c5b301961d811418ca92c85e8d0e063e17"
+        }
+      },
+      "release_limit": "Closure-only exact-source build check at retained version0.16.4; not a release candidate or publication. Any later release requires fresh preparation."
+    },
+    "closure_publisher": {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".github/tests",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "07f408a0c326e35da09b059b8d6d8b1c8b2cfeb2",
+      "pending_sha256": {},
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 8.01,
+      "output_log": "/tmp/sdd146-review-checks/closure-publisher.log"
+    },
+    "closure_publisher_tests": 62,
+    "closure_publisher_log_sha256": "29959757520dd802014e5ac11e12ec2b9c0136f079f46d14f518c4c38ed4dc86",
+    "root_static_current_hashes_independently_matched": 384,
+    "whitespace_diff_check_exit": 0,
+    "working_tree": "clean",
+    "current_head": "07f408a0c326e35da09b059b8d6d8b1c8b2cfeb2"
+  },
+  "changed_path_coverage": [
+    {
+      "path": ".agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md",
+      "group": "V-002 authorized imported shell policy/ignore/native characterization",
+      "base_tree_record": "100644 blob e574cc1a7f32c1eee439d24ab4ba7bacb442e819",
+      "source_tree_record": "100644 blob ba0768e488ab026e8d87e329beae4ca09ac4506b",
+      "source_sha256": "654a34d20daad0ef539cc17eb906305395bf47d4ee4cddfe4527eeb095619015",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md",
+      "group": "V-004 R-001/R-002 completion repair, tests and guide",
+      "base_tree_record": "100644 blob d0781c25be70133c0bfcb391a3f60d72f1aa1db2",
+      "source_tree_record": "100644 blob 213137eeaf9cfc83e870cf36f6021327065dd7cf",
+      "source_sha256": "c495aeff3233fb6a4cf8c7f9a85c6367516c484e0dd2b979de929ed900313024",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs",
+      "group": "V-004 R-001/R-002 completion repair, tests and guide",
+      "base_tree_record": "100644 blob 0201d58f2f1dceb0ca1cd0291dbeb5660dc325e3",
+      "source_tree_record": "100644 blob 412fbfb517bba1b7b41e01ce7e94e8a42745c3fe",
+      "source_sha256": "62617ef417b3c5795c276494934f3c6ae3ef97508f7431762b87736d1c862813",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": ".gitignore",
+      "group": "V-002 authorized imported shell policy/ignore/native characterization",
+      "base_tree_record": "100644 blob 58a3a3ee17b41f43cf64b33ff4ab953769601b89",
+      "source_tree_record": "100644 blob f0f10ca71a71e4c1c0c6b99188bc10fe79e35ad5",
+      "source_sha256": "53828676eefcb9954b51cbfe31c404ee2f520d9d69719401b309d7a071449e24",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "acceptance/AGENTS.md",
+      "group": "V-002 authorized imported shell policy/ignore/native characterization",
+      "base_tree_record": "100644 blob 1fff2a15dfc0c93003cc2d10af25cb0a8b02d739",
+      "source_tree_record": "100644 blob f3414350343069f0e4697fb1408e78e6ed7f3dba",
+      "source_sha256": "e37fb63ccf545ccd1cca327fd40fa5c7c3489b5580aa814b7ff5bbc5fe0a7fb8",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "acceptance/textstats/RECOVERY.md",
+      "group": "V-005 R-003 recovery/hold repair, tests and guides",
+      "base_tree_record": "100644 blob b0767763821bbe2b51c0fc0a27c07b586e11283a",
+      "source_tree_record": "100644 blob 3998d2eee3a1e51a7b81d6e8ba5518f332da5564",
+      "source_sha256": "a940ec5b262458d9844b1769ceff8d04290f4820f96aa49311bd3afb91f774cd",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "acceptance/textstats/TRIAL-CONTROLS.md",
+      "group": "V-005 R-003 recovery/hold repair, tests and guides",
+      "base_tree_record": "100644 blob 65d773166d77601af00f325e8d09bb750b28e5cf",
+      "source_tree_record": "100644 blob 3ca530c03df1daf1c09e09c034ef1603edb160aa",
+      "source_sha256": "cd4f3ebde1f76935fb5519ce85e52aea996bdef175cb141957c92c60bee8be27",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+      "group": "V-005 R-003 recovery/hold repair, tests and guides",
+      "base_tree_record": "100644 blob f92f40e0d59b8bc0ec21fb949225a8d24f7a99f2",
+      "source_tree_record": "100644 blob 19f71dda7f2321516667f8e75f7977c86f86a22a",
+      "source_sha256": "a4aa514b5a7c1b0add16614f3af5febcde4bb8354cbc7edf041ff4e872ec9c07",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "acceptance/textstats/scripts/core.py",
+      "group": "V-005 R-003 recovery/hold repair, tests and guides",
+      "base_tree_record": "100644 blob a7a92b09a110e46216d4d4bcf8e2335369413b66",
+      "source_tree_record": "100644 blob f1941af464377bb8ad778b8e9bdcd4943604a981",
+      "source_sha256": "193581bee2947b71cf687eeef048e1aea94f744b12dbc34d744d0cb26a306603",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "acceptance/textstats/scripts/trial_control.py",
+      "group": "V-005 R-003 recovery/hold repair, tests and guides",
+      "base_tree_record": "100644 blob 2fd7aa7641635a521824fe64a56b631ad14d97fb",
+      "source_tree_record": "100644 blob 9f6d9c668417e323d5342b45767b0680d17a701f",
+      "source_sha256": "2277e4ab1ba989d11a92222ce28ec79906ad13ee9eea5a306c6661e3546bd77f",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "acceptance/textstats/tests/test_recovery.py",
+      "group": "V-005 R-003 recovery/hold repair, tests and guides",
+      "base_tree_record": "100644 blob 5d15e45ece80373ddfde2ada2b10672bba4467ba",
+      "source_tree_record": "100644 blob 2914fdc9477df2cd764d268ce344d28c3ced10f7",
+      "source_sha256": "90b04dec72a48fac25e800ab53eed21ae4de66089152e8d8afbaa5c0df8eac9f",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "acceptance/textstats/tests/test_trial_control.py",
+      "group": "V-005 R-003 recovery/hold repair, tests and guides",
+      "base_tree_record": "100644 blob c51aaf8b9ecdff81f0817afe13b1be80cf5838ee",
+      "source_tree_record": "100644 blob 8a3932cf3b473c5cc38f84decf732902c475dd8d",
+      "source_sha256": "751135ea3a05d655cf312c9e8a02350606f1ac0d28c8074d239223ff4494eac7",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/HANDOFF.md",
+      "group": "current handoff/navigation coordination",
+      "base_tree_record": "100644 blob 12eca619158df9bec460542d694879786ed9f264",
+      "source_tree_record": "100644 blob c2215caf4a2f9846a5470abb17c3cc9f74f3796f",
+      "source_sha256": "70bb3f527ec7c9bc77d9e55734a2f0312cc33c30255d5f5e901940c7ff3b1c4e",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/REVIEW-INVENTORY.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 4f06cf9b957fcbbdd01b08522676069a1e7449ae",
+      "source_sha256": "2e36f129f3d7246bbd0847c8a92aad6047ddb31dad2420f1afa4e61e9f2454ed",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/REVIEW-PLAN.md",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 17252e6c1d9a5d44db7fc5a728b0d01497ba82b7",
+      "source_sha256": "58d8dc72b3437062aec5c888697352bee146e70170113247bc1ffd38d70b443a",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/REVIEW-REPORT.md",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 42b8dc6c5ac37099d66d8999c1d91f5f4b8fc608",
+      "source_sha256": "f46c9d4ae0baddcf3b7ed7502a789636b5b675d61cfb323b3293a70f0cba8e03",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/REVISION-PLAN.md",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 3ca374c1ba81a804dc5dab6d60f257c8cde9af1a",
+      "source_sha256": "e39340466d476f68d21a73acd2af39a115c4bb4617df0655756e54254f226f07",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/REVISION-REPORT.md",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob e6088575b12ba65d4060a99a5667032cffb67897",
+      "source_sha256": "354eb69983bff2afa8f1b9ff9feb0d9e623db7941cc73e696ad54f905b97db45",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/evidence/U-001-structure.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob b960ec56216b4bc977ee98365ca8ec27b77e4c23",
+      "source_sha256": "daae281c10d3579f902bc566f91fcf887d44bc594c65824ebfcadae3ec18f71d",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/evidence/U-002-execution.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob b2fba37a76c42a3690214f52cb377fe7c18c3077",
+      "source_sha256": "5b19e02b28dd076c96a27b4993e0848fa697fd578335e88d72f59522a50edb0c",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/evidence/U-002-native-ci.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 0059855822286a6bb0f101fd531e4915d1de3849",
+      "source_sha256": "a769ff0d12c17ed511c985776a3ec1a7735d8aab288ab1baeebd82099882e283",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/evidence/U-002-native-reproductions.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob cb56dfc404ac7f2adcb957f7f5478a9976fd557c",
+      "source_sha256": "8e566addc0165199a2ecbba17e7942a60c688300cc0fa8ca5b1f6f3aa10d8dff",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/evidence/U-003-package.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 73e455a4a43716b8c41f993e26968e4f930a93be",
+      "source_sha256": "56ccac320925bd652d781d0baca91287072535f115bfd09c7055bd177626336e",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/evidence/U-003-release-context.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob c0fb8bfaab9acf2aa3ef5bf29e60590695bbd847",
+      "source_sha256": "d4ff2e62042dd7d7241752446caca2199f26eba59356a577ad3859c49db1aeaf",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/evidence/V-004-checks.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 9bca8f6b3947fd9bb4c79783b453997bbb404e15",
+      "source_sha256": "fc870e9b73a1e1dfec6e8d7ddcf13e16b8c3bdebe4f6897fa2bba4cc0fe2b31f",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/evidence/V-004-independent-targeted.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 2928841776bd1798ce2f9d81634fb53dbeb3f5db",
+      "source_sha256": "50ac116a22d7a750f938225168993364b3d84c9885be57de1ba9186e00f8f766",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/evidence/V-004-native-ci.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 0b6b1f3b834c218f0ee70b8f218877b43519ba96",
+      "source_sha256": "f769e787359965001cfcac78e798588582e3f4518197bfe75973d9fe073e8034",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/evidence/V-005-checks.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob ef48a21712cb1b0f68f7d15ee53f3857ef5f9a49",
+      "source_sha256": "681a1e86f4870a7f5cea20100993d80da5155f5e3f2698fb6cf084ed78a092ec",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-001-docs-coverage.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 5186cd4a170da2cde94baa98d30b816b2670a430",
+      "source_sha256": "1ec5aaaf3e086bf5af57d4cc9023a6140471656252d4ab4d29a9d751690ef5a7",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-001-docs-review.md",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 36bc35aea739821bc425201d5383030e17a239f6",
+      "source_sha256": "055de88ded5b1a7f815b1b8288d45d4d544afcc891d9538fc86ef2969cacd135",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-001-entry-coverage.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob aa4b0bb21f087e9b8e4200866919897bf445b1df",
+      "source_sha256": "6a9d59037edfe723bcb3b5db0869b29421841dbd551d9d3644637f333b8b77fa",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-001-entry-review.md",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob c2cef27d5a715a914c032f8bcb9b003d1746f266",
+      "source_sha256": "5401843744aaf7d114b701b17e4ed7c556bf0a52abc765c8b0f27a24e80be34f",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-002-acceptance-coverage.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 30ad2e29663e643891a4e803229c1f846a6bfd8a",
+      "source_sha256": "8cf6fdf37392e7fd47614c46ed0e448809c77841f504d04f21c6b89660dc80e2",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-002-acceptance-review.md",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 6ae4391cbf81e2aba4c98ee75868990e211870c1",
+      "source_sha256": "8eee90dd885e05a4144ec96e4f87f3ec3238056131f78555fc3296f7fb552c4b",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-002-native-coverage.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 881b1636cf7937d2a86390cf2c1dd6f0416672a5",
+      "source_sha256": "f2b4e8a6b82d4de89676624187d8b631517fa3f9e1a91b63ebe3d9ba426ab20a",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-002-native-review.md",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 7a92ccb83b7ff7d2617ee8c54c17403f09fd465a",
+      "source_sha256": "0aa1c83af528feee947fdf655f8a3167fc232e9d11a678a563b186505f231649",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-003-release-coverage.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 38a53ddcb986bc470423a49271afeaaf2f50cd83",
+      "source_sha256": "349ac523aa13595b74a0dfb3171287e2d047d310c472f7545a2faca26f04b21d",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/U-003-release-review.md",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 319d50b4de1f20e2731828d08de35bdcb207059e",
+      "source_sha256": "58074a012d9b197d2575a3a4e78cd3f467cd7da1cd330b1a6e8775f09173658c",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/V-004-recheck.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 7416051d34a4f9b83462912acc642076e0c44b80",
+      "source_sha256": "b13d7885c64432338e996b78b83e43060a0716a785eb8c692a6967735e85b02b",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/V-004-recheck.md",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 7e9d4377b1ea6f3b84c5c057a65db9892ee4f173",
+      "source_sha256": "e791bdf84842359ddcd679852b16023ce4295afb06c2ea05169422561bbddb58",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/V-005-recheck.json",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob be352d6b46f8cca7ccba17421f6ca727972de284",
+      "source_sha256": "c3375fa0e794fc29d74dca18fbcd086feb9522808e7ee0159a8f9110c07235e3",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/146_fe918d3-shell-policy/independent/V-005-recheck.md",
+      "group": "active campaign review/repair evidence and coordination",
+      "base_tree_record": null,
+      "source_tree_record": "100644 blob 47ae4f84efbddee33baa01558f336f7c1c319d6f",
+      "source_sha256": "d69e171858a9fe8fd9d9205959d6dac05c5c7092d4b6ff0d8e52d358686f55ce",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "docs/dev/reviews/README.md",
+      "group": "current handoff/navigation coordination",
+      "base_tree_record": "100644 blob 2540c8e4f4737a49866876410f24c688cf918c2d",
+      "source_tree_record": "100644 blob 421bce82e8b2208b5a537e68e0e2336eae6a0749",
+      "source_sha256": "61938d123ce28864acda449896a335816091f36693307bfef35fe9db5b17e23d",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "tests/forge-close.test.mjs",
+      "group": "V-004 R-001/R-002 completion repair, tests and guide",
+      "base_tree_record": "100644 blob 7d83c308001317e198c3ac660b9ba68f5dc47146",
+      "source_tree_record": "100644 blob cc576adfb05efd43d398ee6950bd5221126d2ae7",
+      "source_sha256": "80458234a780187f52d0b7fcdcaa70b70d8957cf4e097a95c791e9a080789471",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "tests/forge-project.test.mjs",
+      "group": "V-004 R-001/R-002 completion repair, tests and guide",
+      "base_tree_record": "100644 blob d0b87c77a801af2e3153a6b2ef2a0438b3d95386",
+      "source_tree_record": "100644 blob 796cd96f0649fc705ca92f893cf85584b515d52d",
+      "source_sha256": "9f86594df0d5ee30a7fc3da2e0375b708ccb1b0c7e64bc465acfb6b42f147444",
+      "working_file_equals_pinned_object": true
+    },
+    {
+      "path": "tests/test_windows_shell_recovery.py",
+      "group": "V-002 authorized imported shell policy/ignore/native characterization",
+      "base_tree_record": "100644 blob 55491052834f510a6621d4ccb3d296c18427c79a",
+      "source_tree_record": "100644 blob 5e192b1831b7656c49e962eea729b55f5d32b297",
+      "source_sha256": "d0ed0ff2ab9351a0d1775e0c2ecebf3405fb215e5cc6398f95f2ba25db08cceb",
+      "working_file_equals_pinned_object": true
+    }
+  ],
+  "inherited_declined_to_judge": [
+    {
+      "source_record": "U-001-docs-coverage.json",
+      "original_qualification": [
+        {
+          "behavior": "Windows CMD wrapper/adapter execution",
+          "reason": "Runtime review and test execution belong to U-002/coordinator; parent-reported native 14-case Node22/24 CI not independently re-executed here."
+        },
+        {
+          "behavior": "Live Antigravity/Codex shim discovery, argument layout and agent command compliance",
+          "reason": "No fresh installed-client/launcher trial selected; exact asset explicitly restricts its claim to two illustrated forms."
+        },
+        {
+          "behavior": "Client skill routing, implicit activation and effective instruction precedence",
+          "reason": "Source/metadata inspected only; no independent consumer trial."
+        },
+        {
+          "behavior": "Markdown/Mermaid and SVG client rendering",
+          "reason": "Markdown/Mermaid not rendered; all 11 SVG source/XML inspected but ImageMagick rasterization failed because rsvg-convert is unavailable; no client presentation pass claimed."
+        },
+        {
+          "behavior": "External links and upstream third-party provenance",
+          "reason": "No external URL fetch or independent upstream comparison was performed; local attribution and notices inspected."
+        },
+        {
+          "behavior": "Browser provisioning/recovery recipes and cross-platform demo applications",
+          "reason": "Guide/prompt semantics inspected; no side-effecting setup, demo development, packaging or browser/native execution."
+        },
+        {
+          "behavior": "Runtime helper flags/transport/publisher implementations and actual release/package bytes",
+          "reason": "U-002 and U-003 are not started by this source review; documentation handoff intent only."
+        }
+      ],
+      "disposition": "Retained original unit evidence limit; later source/package/native/recheck evidence resolves only the specifically reported local or controlled qualification, never fresh-client/live-consumer claims."
+    },
+    {
+      "source_record": "U-001-entry-coverage.json",
+      "original_qualification": [
+        {
+          "behavior": "Fresh-agent direct/contextual/recovery routing, human checkpoint compliance, source loading and context consumption",
+          "reason": "This assignment is read-only source review. No independent consumer or installed-client trial was selected."
+        },
+        {
+          "behavior": "Observed task atomicity, publication cadence, stops and parent return",
+          "reason": "Instructions were inspected; no mutating target-project workflow was executed."
+        },
+        {
+          "behavior": "Git/auth/forge process behavior, actual projection/closure/retry, credential eligibility and provider permissions",
+          "reason": "U-002 tooling/runtime and live-provider behavior are outside this subarea. No credential contents or external sessions were accessed."
+        },
+        {
+          "behavior": "Windows/Antigravity/Codex shell activation and arbitrary launcher compatibility",
+          "reason": "No live-client evidence. Coordinator-supplied native Node22/24 case results are distinct controlled evidence and are not promoted to observed client compliance."
+        },
+        {
+          "behavior": "Support/publisher/native-tool/native-shell test outcomes for the current candidate",
+          "reason": "Coordinator owns actual tests and later sequential units; this reviewer ran no suites."
+        },
+        {
+          "behavior": "Exact distributed package, archive reproducibility, publisher/workflow release effects, dependency/schema provenance and installed-client discovery",
+          "reason": "Later-unit and coordinator ownership. Local source-relative destinations do not prove shipped members or client support."
+        },
+        {
+          "behavior": "Rendered document/diagram/metadata/icon presentation and complete external/anchor links",
+          "reason": "Only assigned source and destinations were inspected; no render/browser or full external-link validation was run. Other U-001 reviewers cover current README/assets/diagrams."
+        },
+        {
+          "behavior": "All closed campaign/release/manual transcript content",
+          "reason": "Explicitly excluded frozen history; identity/path discovery does not authorize reading or current-validity assessment."
+        },
+        {
+          "behavior": "Other U-001 areas and U-002/U-003 global readiness",
+          "reason": "This subreview covers the 62 entry-workflow paths only, with selected consequential counterpart sections."
+        }
+      ],
+      "disposition": "Retained original unit evidence limit; later source/package/native/recheck evidence resolves only the specifically reported local or controlled qualification, never fresh-client/live-consumer claims."
+    },
+    {
+      "source_record": "U-002-acceptance-coverage.json",
+      "original_qualification": [
+        {
+          "behavior": "Fresh consumers and independent assessors for A-001\u2013A-033, all selected document/human/Git/hosted lifecycle scenarios and causal attribution",
+          "reason": "No dedicated test repository, live campaign or consumer isolation trial selected; prompts are source/reference only."
+        },
+        {
+          "behavior": "Live GitHub/API authentication, projection/closure/write-loss/retry/provider publication and real credential handling",
+          "reason": "No credential reads or external writes within source review."
+        },
+        {
+          "behavior": "Installed-client discovery/routing/activation or observed Antigravity/Codex compliance",
+          "reason": "No selected actual installation/session; explicit source loading and support checks are distinct."
+        },
+        {
+          "behavior": "Native uncontrolled kill, arbitrary process/race failure, full cross-machine campaign and all16 preparation presence consumer forks",
+          "reason": "Current protocols inspected, facilities not selected/exercised."
+        },
+        {
+          "behavior": "Windows shell/helper runtime, publisher/CI/schema/license/exact release package inventory",
+          "reason": "Other U-002 reviewers/coordinator and later sequential U-003 own those areas; acceptance handoffs only inspected here."
+        },
+        {
+          "behavior": "Historical runtime/release/manual transcript claim revalidation",
+          "reason": "Frozen closed records<=145 excluded; contents not loaded or regraded."
+        },
+        {
+          "behavior": "Split/linked indexes, skip-worktree, other flags/index extensions",
+          "reason": "Not exercised by bounded intent-to-add/assume-unchanged probes; no broad portability pass or failure inferred."
+        }
+      ],
+      "disposition": "Retained original unit evidence limit; later source/package/native/recheck evidence resolves only the specifically reported local or controlled qualification, never fresh-client/live-consumer claims."
+    },
+    {
+      "source_record": "U-002-native-coverage.json",
+      "original_qualification": [
+        "No full declared suite was rerun; coordinator owns fresh suite execution and matrix/source-equivalence qualification. Counts and prior results are not independently certified in this report.",
+        "No native Windows execution, Windows Job Object/Schannel/process-birth observations, Node 22 execution or Python 3.11 execution was performed by this reviewer. Those branches were source-reviewed. Local probes used Linux, Node 24.22.1, Python 3.12.14 and Git 2.51.1.",
+        "Supplied shell run 41781528334 and prior native matrix outcomes are coordinator-provided context, not independently retrieved by this reviewer. This report does not upgrade CI configuration or that context into observed runtime evidence.",
+        "No live GitHub/provider mutation, private-provider readback, real credential, fresh consumer, installed-client routing, live Antigravity/Codex activation or live TextStats campaign was exercised.",
+        "Public localhost TLS fixtures were structurally parsed and public-key matched; no upstream provenance claim or production trust assessment is made. The fixture is explicitly test-only and bound to local HTTPS.",
+        "Trusted local-filesystem limits, adversarial same-user races and privileged broker/process escape remain the documented boundary. Arbitrary OS denial, procfs/PID namespace facilities, exotic filesystem aliases, CPU stalls and external service lifetimes were not independently stress-tested.",
+        "Shell source tests cover the two documented launcher/escaping forms under controlled CMD defaults; arbitrary wrappers, delayed-expansion host configuration, percent-literal edge cases and actual agent adherence were not established. These are evidence limits, not confirmed failures of the selected contract.",
+        "The canonical Markdown reader is deliberately not a general Markdown parser or semantic acceptance/dependency engine. Alternate HTML/block layouts and caller truth/ownership across other lists remain backend/caller obligations; no expanded parser requirement is inferred.",
+        "Case-variant completion milestone titles, external concurrency and provider eventual consistency were considered. Completion ownership uses the documented exact generated identity; cross-machine exclusivity remains caller-owned and exact-readback unknown/conflict results prevent unproved success. No independent defect is asserted without a contrary contract or reproduction.",
+        "U-003 publisher/schema/dependencies/package/release composition, closed campaigns through 145, historical release/manual transcripts and real credentials were excluded. Additional code/contract reads were limited to consequential U-002 interfaces."
+      ],
+      "disposition": "Retained original unit evidence limit; later source/package/native/recheck evidence resolves only the specifically reported local or controlled qualification, never fresh-client/live-consumer claims."
+    },
+    {
+      "source_record": "U-003-release-coverage.json",
+      "original_qualification": "No full publisher/support/native suite duplicated. Coordinator reports 62 publisher contracts passed and owns actual package gates. Source inspection and these synthetic/local checks do not establish fresh consumer, installed-client, live-provider or actual final 0.16.5 release evidence.",
+      "disposition": "Retained original unit evidence limit; later source/package/native/recheck evidence resolves only the specifically reported local or controlled qualification, never fresh-client/live-consumer claims."
+    },
+    {
+      "source_record": "V-004-recheck.json",
+      "original_qualification": [
+        "Linux/Node24 local targeted native Git/filesystem/token/lock with synthetic HTTP only; no current repaired-source native Windows/Node22 result was independently observed.",
+        "No live-provider mutation/readback, real credentials, installed-client/agent routing or live acceptance campaign was used. New tests prove controlled contracts only.",
+        "No full suite rerun, source/index/HEAD/branch change, publication or subagent. Existing broader review limits and caller eligibility/exclusivity obligations remain.",
+        "This accepts only V-004 R-001/R-002 repair source/tests/docs. It does not close R-003, the entire review campaign or release readiness; coordinator retains publication/native-matrix/final verification authority."
+      ],
+      "disposition": "Current bounded repair remains accepted; later V-004 native qualification resolves its pending native job check, while caller/live/portability limits remain."
+    },
+    {
+      "source_record": "V-005-recheck.json",
+      "original_qualification": [
+        {
+          "behavior": "Automatic restoration of flagged index intent",
+          "reason": "The accepted repair intentionally declares unsupported flagged exports incomplete and requires original-index retention; no restoration capability is claimed."
+        },
+        {
+          "behavior": "General split-index/linked-worktree portability or arbitrary index extensions",
+          "reason": "Split-index flag observation/incomplete classification was exercised, not opaque/shared-index reconstruction; linked worktree restoration was not selected and no raw index copy was introduced."
+        },
+        {
+          "behavior": "Other semantic flags, non-UTF-8 path byte sequences, all Git versions/platforms",
+          "reason": "The bounded contract names three flags, valid UTF-8 unusual paths and the observed Linux/Git2.51.1 runtime. Unsupported command failure is fail-closed; no cross-platform/runtime pass inferred."
+        },
+        {
+          "behavior": "Concurrent mutations during multiple Git reads, arbitrary receipt tampering, native uncontrolled termination",
+          "reason": "No new atomic transaction/process-isolation facility is introduced or claimed; outside bounded R-003 reproduction and selected controlled fixtures."
+        },
+        {
+          "behavior": "Fresh consumer/assessor or installed-client/live-provider acceptance",
+          "reason": "No campaign/destination/fresh consumer selected. Local support tests and source inspection remain distinct evidence."
+        },
+        {
+          "behavior": "Entire branch completion, merge/publication, version bump or release",
+          "reason": "Coordinator owns final whole-branch acceptance/closure. Current user instruction postpones release and preserves version0.16.4/retained notes."
+        }
+      ],
+      "disposition": "Current bounded repair remains accepted; later V-004 native qualification resolves its pending native job check, while caller/live/portability limits remain."
+    }
+  ],
+  "current_declined_to_judge": [
+    {
+      "behavior": "Fresh client/agent/consumer and live TextStats acceptance",
+      "reason": "No dedicated fresh consumer or installed-client campaign selected; source/local/native tests cannot certify it."
+    },
+    {
+      "behavior": "Live provider authentication/write/loss/readback and hosted release state",
+      "reason": "No real credential or provider operation performed by this reviewer; release is postponed. Retained native metadata is coordinator-executed evidence, not a fresh provider retrieval."
+    },
+    {
+      "behavior": "Future main merge/publication/closure and any later release",
+      "reason": "Not yet executed; this acceptance supplies readiness only. Coordinator owns finalization, merged-state review, two-parent commit, publication/readback and return."
+    },
+    {
+      "behavior": "General flagged-index restoration/portability, arbitrary flags/extensions and non-UTF-8 path bytes",
+      "reason": "Accepted bounded R-003 correction deliberately returns incomplete for supported observed flagged modes; opaque/shared-index restoration and other byte/platform cases remain outside its claim."
+    },
+    {
+      "behavior": "Adversarial concurrent index/receipt/filesystem/provider mutation, arbitrary OS/process failure and launcher forms",
+      "reason": "Not introduced or claimed by selected fixes; controlled fixtures do not prove arbitrary races, privileged escape or compatibility."
+    },
+    {
+      "behavior": "Rendered client presentation, external link/upstream/legal provenance and full demo/browser implementation",
+      "reason": "Earlier source/XML/pixel and local attribution checks retain their reported limits; no new rendering, browsing, legal or demo execution selected."
+    },
+    {
+      "behavior": "Closed campaign/release/manual transcript historical grading",
+      "reason": "Forbidden frozen content; preservation checked using 841 path/object identities without reading contents."
+    }
+  ],
+  "mutations": {
+    "source": false,
+    "index": false,
+    "HEAD_or_refs": false,
+    "provider": false,
+    "credentials_read": false,
+    "subagents": false,
+    "outputs_only": [
+      "/tmp/sdd146-final-acceptance.md",
+      "/tmp/sdd146-final-acceptance.json"
+    ]
+  }
+}
