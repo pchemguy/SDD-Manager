@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "campaign": "146_fe918d3",
+  "action": "V-004",
+  "mode": "independent read-only repair recheck",
+  "base_head": "4214546ae1092803581e5667a95b029b7fcc92f3",
+  "source_state": "coordinator-owned dirty worktree; four reviewed paths unchanged during recheck",
+  "verdict": "accepted_for_R-001_and_R-002_source_test_closure",
+  "new_findings": [],
+  "findings": [
+    {
+      "id": "R-001",
+      "status": "resolved_in_reviewed_source_and_tests",
+      "location": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs:32",
+      "reason": "Shared milestoneInput now accepts text(description,16000,true) for selected and predecessor milestones. Null and strict UTF-8/control/marker/byte bounds remain. validateRequest clones exact description content; hosted identity compares the exact string. Projection emits normalized LF; completion deliberately requires LF without rewriting. Cross-utility and native task/milestone/predecessor regression cases pass."
+    },
+    {
+      "id": "R-002",
+      "status": "resolved_in_reviewed_source_and_tests",
+      "location": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs:40",
+      "reason": "taskInput rejects the forbidden @{ sequence before createContext, acquireLock or protectedToken. This shared validator covers task and constituent milestone tasks. Existing native --branch syntax validation remains for other invalid literals. Native history tests establish @{-1}/@{-2} expand, then assert invalid_task, zero HTTP and no retained lock. Valid slash/Unicode branch evidence remains exact."
+    }
+  ],
+  "files": [
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md",
+      "sha256": "c495aeff3233fb6a4cf8c7f9a85c6367516c484e0dd2b979de929ed900313024",
+      "matches_coordinator_green": true,
+      "coverage": "Complete pending documentation diff and its milestone/branch schema contract context.",
+      "finding_ids": [
+        "R-001",
+        "R-002"
+      ]
+    },
+    {
+      "path": ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs",
+      "sha256": "62617ef417b3c5795c276494934f3c6ae3ef97508f7431762b87736d1c862813",
+      "matches_coordinator_green": true,
+      "coverage": "Complete pending production diff and schema/run/evidence call-path context; original comprehensive source review retained.",
+      "finding_ids": [
+        "R-001",
+        "R-002"
+      ]
+    },
+    {
+      "path": "tests/forge-close.test.mjs",
+      "sha256": "80458234a780187f52d0b7fcdcaa70b70d8957cf4e097a95c791e9a080789471",
+      "matches_coordinator_green": true,
+      "coverage": "Complete pending test diff plus localRepo/native run, provider fixtures and independent expectedEvidence context. Four added/focused guards and native scenarios assessed.",
+      "finding_ids": [
+        "R-001",
+        "R-002"
+      ]
+    },
+    {
+      "path": "tests/forge-project.test.mjs",
+      "sha256": "9f86594df0d5ee30a7fc3da2e0375b708ccb1b0c7e64bc465acfb6b42f147444",
+      "matches_coordinator_green": true,
+      "coverage": "Complete pending test diff plus projectionRequest/inventory/render/validateCompletion context; exact cross-utility milestone and predecessor handoff assessed.",
+      "finding_ids": [
+        "R-001"
+      ]
+    }
+  ],
+  "reviewer_executed": {
+    "command": [
+      "node",
+      "--test",
+      "--test-name-pattern=projected multiline|native multiline|milestone description validation|checkout shorthand",
+      "tests/forge-close.test.mjs",
+      "tests/forge-project.test.mjs"
+    ],
+    "exit": 0,
+    "tests": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "log": "/tmp/sdd146-v4-independent-targeted.log",
+    "metadata": "/tmp/sdd146-v4-independent-targeted.json"
+  },
+  "coordinator_evidence_inspected": [
+    {
+      "metadata": "/tmp/sdd146-review-checks/v4-red.json",
+      "log": "/tmp/sdd146-review-checks/v4-red.log",
+      "observed": "3 intended failures on prior production: native multiline invalid_milestone, native shorthand missing rejection, projected multiline invalid_milestone. Test digests equal the reviewed source."
+    },
+    {
+      "metadata": "/tmp/sdd146-review-checks/v4-green-close.json",
+      "log": "/tmp/sdd146-review-checks/v4-green-close.log",
+      "observed": "42 pass,0 fail,0 skip; all four pending path digests match the reviewed bytes. Executed by coordinator, not rerun in full by reviewer."
+    },
+    {
+      "metadata": "/tmp/sdd146-review-checks/v4-green-project.json",
+      "log": "/tmp/sdd146-review-checks/v4-green-project.log",
+      "observed": "52 pass,0 fail,0 skip; all four pending path digests match the reviewed bytes. Executed by coordinator, not rerun in full by reviewer."
+    }
+  ],
+  "limits": [
+    "Linux/Node24 local targeted native Git/filesystem/token/lock with synthetic HTTP only; no current repaired-source native Windows/Node22 result was independently observed.",
+    "No live-provider mutation/readback, real credentials, installed-client/agent routing or live acceptance campaign was used. New tests prove controlled contracts only.",
+    "No full suite rerun, source/index/HEAD/branch change, publication or subagent. Existing broader review limits and caller eligibility/exclusivity obligations remain.",
+    "This accepts only V-004 R-001/R-002 repair source/tests/docs. It does not close R-003, the entire review campaign or release readiness; coordinator retains publication/native-matrix/final verification authority."
+  ],
+  "recommendations": []
+}

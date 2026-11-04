@@ -1,6 +1,6 @@
 # Comprehensive prerelease review
 
-Campaign **146_fe918d3**, reviewed product baseline **e9eff0962321c0240eb32e35b4c1b7b1025e0669**, intended release 0.16.5. [Plan](REVIEW-PLAN.md) and [inventory](REVIEW-INVENTORY.json) govern coverage. State: all three source-review units assessed; three confirmed accepted defects await repair and final acceptance. Existing exact-source native Windows run 41781528334 passes fourteen tests on Node 22 and 24, distinct from this comprehensive review.
+Campaign **146_fe918d3**, reviewed product baseline **e9eff0962321c0240eb32e35b4c1b7b1025e0669**, originally intended release 0.16.5; the later human instruction postpones bump/publication and selects campaign closure only. [Plan](REVIEW-PLAN.md) and [inventory](REVIEW-INVENTORY.json) govern coverage. State: all source-review units assessed; R-001/R-002 corrected with independent source/local recheck, repaired-source native CI and R-003/final acceptance remain pending. Existing exact-source native Windows run 41781528334 passes fourteen tests on Node 22 and 24, distinct from this comprehensive review.
 
 | Unit | State | Scope |
 | --- | --- | --- |
@@ -67,3 +67,15 @@ Assessed actual-default first-parent eligibility/cycle/distance bounds, exact st
 All **384/384** current inventory paths are accounted for: U-001178, U-002184, U-00322. Three confirmed defects R-001/P2, R-002/P3 and R-003/P2 are accepted and still pending repair; no critical/high finding. Two optional low-priority enhancements remain explicitly deferred. Existing local346 passes, qualified native matrices and preliminary package checks are not sufficient to accept the unrepaired candidate.
 
 Publish/read back this unit, then execute V-004 and V-005 with failing regressions and objective green rechecks, reassess affected source/hand-offs and obtain independent final branch acceptance. Complete campaign integration/closure, then refresh version/body/Git coverage and exact-source build/name/CI/provider/download gates for 0.16.5. Fresh installed-client, live consumer and arbitrary provider/OS behavior remain unjudged with reasons in the independent reports. No historical record was reopened, repaired or assessed for current compatibility.
+
+## V-004 recheck — R-001 and R-002 corrected
+
+At base **4214546ae1092803581e5667a95b029b7fcc92f3**, added regressions first reproduce both defects: three old-production failures (two invalid_milestone errors and one missing rejection for actual Git checkout shorthand). The correction changes only milestone description text validation to the existing 16000-byte multiline projection contract and rejects the forbidden literal-branch sequence before native context, token, lock or HTTP handling. Exact LF description content/null and all existing control/marker/size/UTF-8 protections remain; no CRLF description normalization or caller assertion rewrite is introduced. The public guide describes these exact boundaries.
+
+[RED/GREEN evidence](evidence/V-004-checks.json) records full completion **42/42** and projection **52/52** passing, zero failure/skip. Cross-utility tests render actual projected descriptions into completion task/phase/predecessor schemas; native public execution covers task/milestone/predecessor closure, real shorthand history @{-1}/@{-2} rejection with no HTTP/lock effect, ordinary slash/Unicode branch evidence and invalid literals. [Independent recheck](independent/V-004-recheck.md) / [source digests](independent/V-004-recheck.json) accepts both corrections and independently passes the four new focused tests without duplicating full suites.
+
+Disposition: **R-001/R-002 resolved in source and selected local tests**, with no new bounded-delta finding. Publish/read back this action, then inspect actual repaired-source completion/projection native matrices before final branch acceptance. Prior native matrices do not establish this repaired code's Windows pass. R-003 remains accepted/pending; package/body/final release checks remain later gates.
+
+## Current authority after V-004 preparation
+
+The human now postpones the patch bump and release creation: finish the confirmed repairs/checks and close campaign 146 only. Comprehensive source findings and required repair acceptance remain in scope. Stop after explicit verified/published main completion integration with version0.16.4 and root RELEASE-NOTES.md unchanged. Earlier preliminary package/release-context evidence remains identified as review-only; it authorizes no tag/publisher and is not a future release candidate.

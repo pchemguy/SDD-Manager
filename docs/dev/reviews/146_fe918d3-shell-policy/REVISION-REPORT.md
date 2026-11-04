@@ -1,4 +1,4 @@
-# Shell policy revision opening
+# Shell policy revision and comprehensive prerelease
 
 Campaign **146_fe918d3** starts from full main baseline **fe918d39b6380b36b01128da30c70f93b99a9919**, working branch revision/146_fe918d3-shell-policy, creation parent and eventual integration/return target **main**. No suspended parent. The [plan](REVISION-PLAN.md) records opening-only authority and the pending change requirements. Campaigns through 145 remain closed/frozen.
 
@@ -23,3 +23,17 @@ The imported standard Python/tooling .gitignore additions retain all five origin
 Local discovery selects fourteen tests, seven per wrapper class; all fourteen skip on this Linux host as explicitly required by the native-Windows guard. Fresh checks pass for exact closing-only policy repair, identical embedded template bytes and existing behavioral assertions, retained ignore patterns, selected ignore behavior, active local links/headings, complete scoped diff and git diff --check. All closed campaign packages through 145, earlier release evidence, production runtime/CI source, manifest and release notes are unchanged; only the explicitly selected native test module and its acceptance instructions accompany the source/doc changes. No full support/publisher suite is selected for this focused amendment.
 
 Amend only the latest source commit with subject **Support optional wrapper quotes in the Windows CMD shim** and a body covering the adapter, closing, Python ignore template, both native test forms and actual validation limits. Preserve its original parent/opening eaf459aeda432b7932b8f6115c059f7b4d0d50a9; publish through the GitHub connector with an exact lease against 0eb3693c3f5d959870ee6660d5b9a40c04aba554 and verify the actual stored message/tree/parent and branch ref. Stop on revision/146_fe918d3-shell-policy with campaign 146 open. No further repair, integration, closure, bump or release is selected.
+
+## V-003 — Comprehensive source review completed
+
+The later human request authorizes whole-current-product review, confirmed fixes, closure and 0.16.5 release. All 384 baseline source paths are assessed in three sequential published units: U-001 ff0251adf848101454d5b53407edd0fee5316ad5, U-002 3f8ed85b2b6109715f0dcf6c4b52f8504cb22662 and U-003 4214546ae1092803581e5667a95b029b7fcc92f3. [Canonical review report](REVIEW-REPORT.md) retains three confirmed accepted defects, actual support/native/package evidence and two optional deferred enhancements. Earlier stopping statements above describe their original checkpoints.
+
+## V-004 — Completion validation corrections
+
+Corrected R-001/R-002 in forge-close.mjs and its guide, with regression changes in completion/projection tests. Description validation now accepts the same bounded exact LF multiline content as projection, including selected/predecessor milestones, while null/invalid-content guards remain. Checkout shorthand is rejected before native context/token/lock/HTTP; valid literal branch text is retained and still checked with native Git.
+
+Test-first RED has three intended failures on old production; GREEN full completion42/projection52 tests pass. Independent source/digest review accepts both issues as resolved and independently passes four new focused regressions; [evidence](evidence/V-004-checks.json) and [independent report](independent/V-004-recheck.md) retain source and limits. Whitespace, active guide links and exact four-path source scope pass. No source outside the coherent completion handoff changes; all earlier closed records remain unchanged. Publish/read back this action before V-005. Repaired-source native CI is a pending qualification until actual runs are inspected, not inherited from earlier source. Campaign 146 remains active.
+
+## Current human boundary — Closure only
+
+Before V-004 publication, the human postpones version bump/release creation and requests only campaign closure. Finish V-004/V-005 and their acceptance evidence, publish each action, finalize/integrate into main and stop closed there. Manifest0.16.4, existing tags/published releases and root RELEASE-NOTES.md remain unchanged. Previous release intent is retained as history and does not select further release work.

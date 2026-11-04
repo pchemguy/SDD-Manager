@@ -45,7 +45,7 @@ All requests have exactly these common fields:
 | schema_version | Integer 1. Unknown versions/fields are rejected. |
 | repository | Explicit GitHub owner/repository, normalized case-insensitively and matched to the selected remote and API metadata. |
 | phase_label | Exact expected phase-label name on every selected task issue. |
-| milestone | Object with stable numeric dotted id, positive GitHub number, exact full title beginning sdd-ID-, and exact description string or null. |
+| milestone | Object with stable numeric dotted id, positive GitHub number, exact full title beginning sdd-ID-, and exact description string or null. Nonblank descriptions use the same bounded multiline UTF-8 rules as projection (at most 16000 bytes, LF line endings, no reserved managed marker); content is not rewritten. |
 | eligibility | Object with tracking, verified, published and exclusive, all true only after actual caller checks. |
 
 Task mode adds exactly one task object:
@@ -54,7 +54,7 @@ Task mode adds exactly one task object:
 | --- | --- |
 | id, issue, title | Stable T-ID with at least three digits, positive GitHub issue number and exact full title beginning [T-ID] followed by a space. |
 | commit | Full lowercase 40- or 64-hexadecimal object ID for the verified published result. |
-| branch | Its actual valid Git branch; the CLI checks native Git branch-name syntax. |
+| branch | Its actual literal Git branch; checkout shorthand such as @{-1} is rejected. The CLI also checks native Git branch-name syntax before credential/network access. |
 | verification | Nonblank bounded UTF-8 summary, at most 16000 bytes after CRLF-to-LF normalization. LF and CRLF newlines are accepted; exclude secrets and reserved managed-marker text. |
 | report | Root-relative POSIX-style report path, or explicit null for a task without a report. No absolute/traversing path. The utility displays this association; the caller verifies the published report. |
 

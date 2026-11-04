@@ -1,0 +1,100 @@
+{
+  "base": "4214546ae1092803581e5667a95b029b7fcc92f3",
+  "findings": [
+    "R-001",
+    "R-002"
+  ],
+  "red": {
+    "record": {
+      "argv": [
+        "node",
+        "--test",
+        "--test-name-pattern=projected multiline|native multiline|checkout shorthand",
+        "tests/forge-close.test.mjs",
+        "tests/forge-project.test.mjs"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "4214546ae1092803581e5667a95b029b7fcc92f3",
+      "pending_sha256": {
+        "tests/forge-close.test.mjs": "80458234a780187f52d0b7fcdcaa70b70d8957cf4e097a95c791e9a080789471",
+        "tests/forge-project.test.mjs": "9f86594df0d5ee30a7fc3da2e0375b708ccb1b0c7e64bc465acfb6b42f147444"
+      },
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 1,
+      "seconds": 2.96,
+      "output_log": "/tmp/sdd146-review-checks/v4-red.log"
+    },
+    "failed": 3,
+    "intentional_failures": [
+      "multiline public/native completion",
+      "projection-to-completion multiline handoff",
+      "native shorthand accepted rather than rejected"
+    ],
+    "raw_log_sha256": "d2d6b2044c3ced13d1ec55c79fdb9769795010eef1ced717c8a910db090a514f"
+  },
+  "green": [
+    {
+      "record": {
+        "argv": [
+          "node",
+          "--test",
+          "tests/forge-close.test.mjs"
+        ],
+        "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+        "source_head": "4214546ae1092803581e5667a95b029b7fcc92f3",
+        "pending_sha256": {
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md": "c495aeff3233fb6a4cf8c7f9a85c6367516c484e0dd2b979de929ed900313024",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs": "62617ef417b3c5795c276494934f3c6ae3ef97508f7431762b87736d1c862813",
+          "tests/forge-close.test.mjs": "80458234a780187f52d0b7fcdcaa70b70d8957cf4e097a95c791e9a080789471",
+          "tests/forge-project.test.mjs": "9f86594df0d5ee30a7fc3da2e0375b708ccb1b0c7e64bc465acfb6b42f147444"
+        },
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONPATH": "/tmp/sdd141-pydeps"
+        },
+        "exit": 0,
+        "seconds": 6.37,
+        "output_log": "/tmp/sdd146-review-checks/v4-green-close.log"
+      },
+      "passed": 42,
+      "raw_log_sha256": "ce7f8a33244809b217408b2ea96d6b75058f90b51be39d8323b62278081693de"
+    },
+    {
+      "record": {
+        "argv": [
+          "node",
+          "--test",
+          "tests/forge-project.test.mjs"
+        ],
+        "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+        "source_head": "4214546ae1092803581e5667a95b029b7fcc92f3",
+        "pending_sha256": {
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md": "c495aeff3233fb6a4cf8c7f9a85c6367516c484e0dd2b979de929ed900313024",
+          ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs": "62617ef417b3c5795c276494934f3c6ae3ef97508f7431762b87736d1c862813",
+          "tests/forge-close.test.mjs": "80458234a780187f52d0b7fcdcaa70b70d8957cf4e097a95c791e9a080789471",
+          "tests/forge-project.test.mjs": "9f86594df0d5ee30a7fc3da2e0375b708ccb1b0c7e64bc465acfb6b42f147444"
+        },
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONPATH": "/tmp/sdd141-pydeps"
+        },
+        "exit": 0,
+        "seconds": 24.24,
+        "output_log": "/tmp/sdd146-review-checks/v4-green-project.log"
+      },
+      "passed": 52,
+      "raw_log_sha256": "e41534bcf32489a79c0861fe4e51dc10c3a7632ac054b420026f8c0de0bce083"
+    }
+  ],
+  "native_ci": "pending publication of repaired source",
+  "source_sha256": {
+    ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.md": "c495aeff3233fb6a4cf8c7f9a85c6367516c484e0dd2b979de929ed900313024",
+    ".agents/plugins/sdd-manager/skills/sdd-forge/scripts/forge-close.mjs": "62617ef417b3c5795c276494934f3c6ae3ef97508f7431762b87736d1c862813",
+    "tests/forge-close.test.mjs": "80458234a780187f52d0b7fcdcaa70b70d8957cf4e097a95c791e9a080789471",
+    "tests/forge-project.test.mjs": "9f86594df0d5ee30a7fc3da2e0375b708ccb1b0c7e64bc465acfb6b42f147444"
+  },
+  "scope_whitespace_links": "pass"
+}

@@ -551,3 +551,66 @@ test('phase drift after evidence preserves that effect and blocks closure', asyn
   assert.equal(state.comments.get(10).length, 1); assert.equal(state.issues[0].state, 'open');
   assert.equal(state.calls.filter(call => call.method === 'PATCH').length, 0);
 });
+
+
+test('native multiline descriptions survive task, milestone and predecessor closure', async t => {
+  const local = localRepo(t);
+  const description = 'Outcome: bounded capability.\nExit: verified checks.';
+  const value = request(); value.milestone.description = description;
+  const taskState = fixture(); taskState.milestones[0].description = description;
+  fs.writeFileSync(local.filename, JSON.stringify(value));
+  assert.equal((await run(local.options, { fetchImpl: taskState.fetch })).ok, true);
+  assert.equal(taskState.issues[0].state_reason, 'completed');
+  assert.equal(taskState.milestones[0].description, description);
+
+  const delivery = milestoneRequest(); delivery.milestone.description = description;
+  const deliveryState = milestoneFixture(delivery); deliveryState.milestones[0].description = description;
+  fs.writeFileSync(local.filename, JSON.stringify(delivery));
+  assert.equal((await run({ ...local.options, operation: 'milestone' }, { fetchImpl: deliveryState.fetch })).ok, true);
+  assert.equal(deliveryState.milestones[0].state, 'closed');
+
+  const phase = { ...delivery, kind: 'phase-review', tasks: [delivery.tasks[1]], predecessors: [
+    { id: '1.2', number: 8, title: 'sdd-1.2-Prior', description },
+  ] };
+  const phaseState = milestoneFixture(phase); phaseState.milestones[0].description = description;
+  phaseState.milestones.push({ ...phase.predecessors[0], id: 800, state: 'closed', open_issues: 0 });
+  fs.writeFileSync(local.filename, JSON.stringify(phase));
+  assert.equal((await run({ ...local.options, operation: 'milestone' }, { fetchImpl: phaseState.fetch })).ok, true);
+  assert.equal(phaseState.milestones[0].state, 'closed');
+  assert.equal(phaseState.milestones[1].description, description);
+});
+
+test('milestone description validation retains null, UTF-8, marker and size guards', () => {
+  const value = request(); value.milestone.description = null;
+  assert.equal(validateRequest(value, 'task').milestone.description, null);
+  for (const description of ['', 'x'.repeat(16001), '\0', '\ud800', 'line one\r\nline two', '<!-- sdd-forge:task-id=T-001 -->']) {
+    assert.throws(() => validateRequest({ ...request(), milestone: { ...common().milestone, description } }, 'task'), error => error.code === 'invalid_milestone');
+  }
+});
+
+test('native completion rejects checkout shorthand and retains literal branch evidence', async t => {
+  const local = localRepo(t);
+  git(local.root, 'config', 'user.name', 'Fixture'); git(local.root, 'config', 'user.email', 'fixture@example.invalid');
+  git(local.root, 'add', '.gitignore'); git(local.root, 'commit', '-qm', 'fixture');
+  git(local.root, 'checkout', '-qb', 'second'); git(local.root, 'checkout', '-qb', 'third');
+  for (const branch of ['@{-1}', '@{-2}']) {
+    assert.notEqual(git(local.root, 'check-ref-format', '--branch', branch), branch);
+    const state = fixture(), value = request(); value.task.branch = branch;
+    fs.writeFileSync(local.filename, JSON.stringify(value));
+    await assert.rejects(run(local.options, { fetchImpl: state.fetch }), error => error.code === 'invalid_task');
+    assert.equal(state.calls.length, 0);
+    assert.ok(!fs.existsSync(path.join(local.root, '.git', 'sdd-forge-close.lock')));
+  }
+  for (const branch of ['phase/1-core', 'phase/\u7a7a-\u683c']) {
+    git(local.root, 'branch', branch);
+    const state = fixture(), value = request(); value.task.branch = branch;
+    fs.writeFileSync(local.filename, JSON.stringify(value));
+    assert.equal((await run(local.options, { fetchImpl: state.fetch })).ok, true);
+    assert.equal(state.comments.get(10)[0].body, expectedEvidence(value.task));
+  }
+  const invalid = request(); invalid.task.branch = 'phase/not..literal';
+  fs.writeFileSync(local.filename, JSON.stringify(invalid));
+  let calls = 0;
+  await assert.rejects(run(local.options, { fetchImpl: async () => { calls++; throw new Error('No provider request'); } }));
+  assert.equal(calls, 0);
+});
