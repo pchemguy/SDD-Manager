@@ -1,9 +1,17 @@
 # SDD Manager handoff
 
-Campaign **144_29ff7c5 — Implementation integration guidance order** remains active on revision/144_29ff7c5-implementation-integration-order. Original creation parent/branch-off and return target: main **29ff7c5e8c8665a60e1978234e3054a466e7d99e**; opening 5a8a98e97cc28bc52474e29b0c01345ac5ec2a1d; no suspended parent; Standard reporting. Campaigns through 143 remain closed/frozen.
+## Active workflow
 
-The three requested verbatim paragraph relocations and authorized patch release are complete: stable/latest **0.16.4**, exact direct-main release source **fbd8baabbf09eb2e50fe6f3c890392939f74d3c3**, release ID 433252241. [Release outcome](reports/releases/v0.16.4.md) records matching raw commit/notes/hosted body, complete package/name gates, successful CI/publisher, matching local/CI/provider digests and all four public tag/latest downloads. Local and CI each pass 140 support/62 publisher tests. No fresh installed-client/live consumer claim. Root RELEASE-NOTES.md remains retained.
+Campaign **145_b3c74cd — Shell policy revision** is open on revision/145_b3c74cd-shell-policy, starting from full baseline **b3c74cd2545b3f706b9938173e3e854575202b69**. The [plan](reviews/145_b3c74cd-shell-policy/REVISION-PLAN.md) and [revision report](reviews/145_b3c74cd-shell-policy/REVISION-REPORT.md) own scope, V-001 opening evidence and pending decisions. Source owner: [Windows shell policy](../../.agents/plugins/sdd-manager/assets/WINDOWS_SHELL_POLICY.md). Standard reporting; full bootstrap context is retained here, with concise progress thereafter.
 
-Published main outcome **ccb1a6d5183cfdeda9e1521571e403fb8b3a866a** is synchronized back into this original active branch with an explicit two-parent incoming merge, first parent revision preparation 830330846ddff5d22acc53d9213b69651c12417f, second parent that main outcome. The [revision report](reviews/144_29ff7c5-implementation-integration-order/REVISION-REPORT.md) and [plan](reviews/144_29ff7c5-implementation-integration-order/REVISION-PLAN.md) retain original identity/parent/opening, current authority, checks and release results. Only active report/HANDOFF/index context differs from incoming main.
+## Authority and stop
 
-Publish/read back this incoming merge, then stop here with campaign 144 **open**. Closure, additional tasks and steering remain unselected. The release tag stays pinned to its release source; this synchronization does not retag or republish.
+The human requested opening a shell-policy revision campaign. Create and publish the opening records, then stop open on this child branch awaiting concrete policy changes. No policy edit, review execution, integration, bump/release or parent continuation is selected. The opening does not select policy requirements from prior history.
+
+## Parent and return
+
+Immediate parent campaign **144_29ff7c5** is suspended/open. Creation parent and eventual integration/return target: revision/144_29ff7c5-implementation-integration-order, published checkpoint **b3c74cd2545b3f706b9938173e3e854575202b69**. Its [report](reviews/144_29ff7c5-implementation-integration-order/REVISION-REPORT.md) retains suspension and the original main branch-off **29ff7c5e8c8665a60e1978234e3054a466e7d99e**, opening 5a8a98e97cc28bc52474e29b0c01345ac5ec2a1d, completed V-001–V-004 and unselected closure. Later authorized child integration must restore this context and return to that parent branch without automatically resuming/closing it. Campaigns through 143 remain frozen.
+
+## Pending effects
+
+Publish/read back the opening checkpoint through the GitHub connector; then wait for the human's shell-policy change and acceptance criteria. Stable/latest **0.16.4** remains published from source fbd8baabbf09eb2e50fe6f3c890392939f74d3c3; its [release outcome](reports/releases/v0.16.4.md) and root RELEASE-NOTES.md are retained unchanged. Package/policy/test/CI files are unchanged by this opening; no fresh native Windows/client execution is claimed.
