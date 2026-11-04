@@ -549,6 +549,34 @@ def ancestor_containment(root, candidate, destination):
         return None
 
 
+def index_state(root):
+    """Read index stages and meaningful flags without copying opaque index bytes.
+
+    Stage records omit intent-to-add, assume-unchanged and skip-worktree. Read
+    the latter two from NUL-delimited ls-files tags and distinguish intent-to-add
+    using Git's explicit cached-diff visibility modes, with renames disabled.
+    Ordinary stat-cache refreshes do not change this semantic snapshot.
+    """
+    entries=[]
+    for row in git(root,'ls-files','--stage','-z',binary=True).stdout.decode().split('\x00'):
+        if not row: continue
+        metadata,path=row.split('\t',1)
+        mode,oid,stage=metadata.split()
+        entries.append({'path':path,'mode':mode,'oid':oid,'stage':int(stage)})
+    visible=set(paths(root,'diff','--cached','--name-only','-z','--no-renames','--ita-visible-in-index'))
+    invisible=set(paths(root,'diff','--cached','--name-only','-z','--no-renames','--ita-invisible-in-index'))
+    flags={}
+    for row in git(root,'ls-files','-v','-z',binary=True).stdout.decode().split('\x00'):
+        if not row: continue
+        tag,name=row[0],row[2:]
+        if tag.islower() or tag.upper()=='S' or name in visible-invisible:
+            flags[name]={'path':name,'assume_unchanged':tag.islower(),
+                         'skip_worktree':tag.upper()=='S','intent_to_add':name in visible-invisible}
+    result={'entries':entries,'flags':[flags[name] for name in sorted(flags)]}
+    no_secret(result)
+    return result
+
+
 def observe_git(repo_info):
     """Capture actual checkout/index/merge state against supplied remote readback.
 
@@ -573,13 +601,8 @@ def observe_git(repo_info):
     merge_path=Path(git(root,'rev-parse','--git-path','MERGE_HEAD').stdout.strip())
     if not merge_path.is_absolute(): merge_path=Path(root)/merge_path
     merges=merge_path.read_text().splitlines() if merge_path.exists() else []
-    index=[]
-    for row in git(root,'ls-files','--stage','-z',binary=True).stdout.decode().split('\x00'):
-        if not row: continue
-        metadata,path=row.split('\t',1)
-        mode,oid,stage=metadata.split()
-        index.append({'path':path,'mode':mode,'oid':oid,'stage':int(stage)})
-    no_secret(index)
+    semantic_index=index_state(root)
+    index=semantic_index['entries']
     remote=repo_info['remote_observation']
     destination=remote['refs'].get('refs/heads/'+branch) if branch else None
     publication='unknown'
@@ -594,7 +617,7 @@ def observe_git(repo_info):
                 publication='published'; containment='ancestor'
             elif proven is None:
                 publication='unknown'; containment='ancestry-unavailable'
-    return {'head':head,'branch':branch,'parents':parents,'merge_heads':merges,'index':index,'staged_paths':paths(root,'diff','--cached','--name-only','-z'),'unstaged_paths':paths(root,'diff','--name-only','-z'),'untracked_paths':paths(root,'ls-files','--others','--exclude-standard','-z'),'conflict_paths':sorted({e['path'] for e in index if e['stage']}),'refs':git(root,'for-each-ref','--format=%(objectname) %(refname)').stdout.splitlines(),'worktrees':git(root,'worktree','list','--porcelain').stdout.splitlines(),'publication':publication,'remote_containment':containment,'remote_heads':remote['refs'],'remote_observation_status':remote['status']}
+    return {'head':head,'branch':branch,'parents':parents,'merge_heads':merges,'index':index,'index_flags':semantic_index['flags'],'staged_paths':paths(root,'diff','--cached','--name-only','-z'),'unstaged_paths':paths(root,'diff','--name-only','-z'),'untracked_paths':paths(root,'ls-files','--others','--exclude-standard','-z'),'conflict_paths':sorted({e['path'] for e in index if e['stage']}),'refs':git(root,'for-each-ref','--format=%(objectname) %(refname)').stdout.splitlines(),'worktrees':git(root,'worktree','list','--porcelain').stdout.splitlines(),'publication':publication,'remote_containment':containment,'remote_heads':remote['refs'],'remote_observation_status':remote['status']}
 
 
 def reconcile(actual, state, repo_info):
@@ -666,6 +689,7 @@ def export_recovery(root, actual, output, state=None):
     if destination.exists() or destination.is_symlink(): raise Stop('recovery_export_occupied')
     # Inspect eligible content before writing an export, excluding protected paths entirely.
     index=[e for e in actual['index'] if not protected(e['path'])]
+    unsupported_flags=[e for e in actual['index_flags'] if not protected(e['path'])]
     omitted=any(protected(e['path']) for e in actual['index'])
     objects={}
     for entry in index:
@@ -731,10 +755,11 @@ def export_recovery(root, actual, output, state=None):
             filename=label+'.patch'
             (destination/filename).write_bytes(content)
             patches[label]=filename
-    manifest={'schema_version':1,'head':actual['head'],'branch':actual['branch'],'parents':actual['parents'],'merge_heads':actual['merge_heads'],'index':index,'tracked_paths':paths(root,'ls-tree','-r','--name-only','-z',actual['head']) if actual['head'] else [],'merge_metadata':merge_metadata,'retained_commit_roots':available_roots,'workfiles':workfiles,'patches':patches,'complete':safe_bundle,'bundle':'objects.bundle' if bundle else None,'omitted_protected_state':omitted,'publication':'local-only'}
+    complete=safe_bundle and not unsupported_flags
+    manifest={'schema_version':1,'head':actual['head'],'branch':actual['branch'],'parents':actual['parents'],'merge_heads':actual['merge_heads'],'index':index,'unsupported_index_flags':unsupported_flags,'restoration_limit':'Retain the original checkout/index and independently preserve flagged intent; stage-record restoration does not reproduce these flags.' if unsupported_flags else None,'tracked_paths':paths(root,'ls-tree','-r','--name-only','-z',actual['head']) if actual['head'] else [],'merge_metadata':merge_metadata,'retained_commit_roots':available_roots,'workfiles':workfiles,'patches':patches,'complete':complete,'bundle':'objects.bundle' if bundle else None,'omitted_protected_state':omitted,'publication':'local-only'}
     manifest['artifact_hashes']={str(p.relative_to(destination)):hashlib.sha256(p.read_bytes()).hexdigest() for p in destination.rglob('*') if p.is_file()}
     write_new(destination/'manifest.json',manifest)
-    return {'path':str(destination),'complete':safe_bundle,'publication':'local-only','manifest_sha256':hashlib.sha256((destination/'manifest.json').read_bytes()).hexdigest()}
+    return {'path':str(destination),'complete':complete,'publication':'local-only','manifest_sha256':hashlib.sha256((destination/'manifest.json').read_bytes()).hexdigest()}
 
 
 def observation(inputs,state,output,exports=True):

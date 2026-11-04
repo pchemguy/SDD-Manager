@@ -1,0 +1,179 @@
+{
+  "base": "784ead5ce6de03fa9bdb9e4a291af8ae0122b970",
+  "findings": [
+    "R-003"
+  ],
+  "red": {
+    "record": {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "acceptance.textstats.tests.test_recovery.RecoveryTests.test_semantic_index_flags_make_recovery_explicitly_incomplete",
+        "acceptance.textstats.tests.test_trial_control.TrialControls.test_flag_only_index_drift_rejects_resume_before_next_mutation",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "784ead5ce6de03fa9bdb9e4a291af8ae0122b970",
+      "pending_sha256": {
+        "acceptance/textstats/tests/test_recovery.py": "90b04dec72a48fac25e800ab53eed21ae4de66089152e8d8afbaa5c0df8eac9f",
+        "acceptance/textstats/tests/test_trial_control.py": "751135ea3a05d655cf312c9e8a02350606f1ac0d28c8074d239223ff4494eac7"
+      },
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 1,
+      "seconds": 13.13,
+      "output_log": "/tmp/sdd146-review-checks/v5-red.log"
+    },
+    "raw_log_sha256": "97aa31214c3f0298cca31496fd7c0684181c556a4437de59c8ef4cf8c276875c"
+  },
+  "red_expected_subcase_failures": 6,
+  "red_errors": 0,
+  "green_support": {
+    "record": {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "acceptance/textstats/tests",
+        "-t",
+        "acceptance/textstats",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "784ead5ce6de03fa9bdb9e4a291af8ae0122b970",
+      "pending_sha256": {
+        "acceptance/textstats/RECOVERY.md": "a940ec5b262458d9844b1769ceff8d04290f4820f96aa49311bd3afb91f774cd",
+        "acceptance/textstats/TRIAL-CONTROLS.md": "cd4f3ebde1f76935fb5519ce85e52aea996bdef175cb141957c92c60bee8be27",
+        "acceptance/textstats/scripts/HELPER-INTERFACES.md": "a4aa514b5a7c1b0add16614f3af5febcde4bb8354cbc7edf041ff4e872ec9c07",
+        "acceptance/textstats/scripts/core.py": "193581bee2947b71cf687eeef048e1aea94f744b12dbc34d744d0cb26a306603",
+        "acceptance/textstats/scripts/trial_control.py": "2277e4ab1ba989d11a92222ce28ec79906ad13ee9eea5a306c6661e3546bd77f",
+        "acceptance/textstats/tests/test_recovery.py": "90b04dec72a48fac25e800ab53eed21ae4de66089152e8d8afbaa5c0df8eac9f",
+        "acceptance/textstats/tests/test_trial_control.py": "751135ea3a05d655cf312c9e8a02350606f1ac0d28c8074d239223ff4494eac7"
+      },
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 50.51,
+      "output_log": "/tmp/sdd146-review-checks/v5-green-support.log"
+    },
+    "raw_log_sha256": "48f75fc3752b3392a60080fccd7073869134413196548f43afe5785b5ffb6c34"
+  },
+  "passed_support": 142,
+  "green_focused": {
+    "record": {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "acceptance.textstats.tests.test_recovery.RecoveryTests.test_semantic_index_flags_make_recovery_explicitly_incomplete",
+        "acceptance.textstats.tests.test_trial_control.TrialControls.test_flag_only_index_drift_rejects_resume_before_next_mutation",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/f5adda9293ed/SDD-Manager",
+      "source_head": "784ead5ce6de03fa9bdb9e4a291af8ae0122b970",
+      "pending_sha256": {
+        "acceptance/textstats/RECOVERY.md": "a940ec5b262458d9844b1769ceff8d04290f4820f96aa49311bd3afb91f774cd",
+        "acceptance/textstats/TRIAL-CONTROLS.md": "cd4f3ebde1f76935fb5519ce85e52aea996bdef175cb141957c92c60bee8be27",
+        "acceptance/textstats/scripts/HELPER-INTERFACES.md": "a4aa514b5a7c1b0add16614f3af5febcde4bb8354cbc7edf041ff4e872ec9c07",
+        "acceptance/textstats/scripts/core.py": "193581bee2947b71cf687eeef048e1aea94f744b12dbc34d744d0cb26a306603",
+        "acceptance/textstats/scripts/trial_control.py": "2277e4ab1ba989d11a92222ce28ec79906ad13ee9eea5a306c6661e3546bd77f",
+        "acceptance/textstats/tests/test_recovery.py": "90b04dec72a48fac25e800ab53eed21ae4de66089152e8d8afbaa5c0df8eac9f",
+        "acceptance/textstats/tests/test_trial_control.py": "751135ea3a05d655cf312c9e8a02350606f1ac0d28c8074d239223ff4494eac7"
+      },
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/tmp/sdd141-pydeps"
+      },
+      "exit": 0,
+      "seconds": 1.98,
+      "output_log": "/tmp/sdd146-review-checks/v5-green-focused.log"
+    },
+    "raw_log_sha256": "7f0a0906326e92ca654d3c33b27244e27fb5917b9130a77905c4b27008567cdb"
+  },
+  "source_structure": {
+    "source_base": "784ead5ce6de03fa9bdb9e4a291af8ae0122b970",
+    "paths_sha256": {
+      "acceptance/textstats/RECOVERY.md": "a940ec5b262458d9844b1769ceff8d04290f4820f96aa49311bd3afb91f774cd",
+      "acceptance/textstats/TRIAL-CONTROLS.md": "cd4f3ebde1f76935fb5519ce85e52aea996bdef175cb141957c92c60bee8be27",
+      "acceptance/textstats/scripts/HELPER-INTERFACES.md": "a4aa514b5a7c1b0add16614f3af5febcde4bb8354cbc7edf041ff4e872ec9c07",
+      "acceptance/textstats/scripts/core.py": "193581bee2947b71cf687eeef048e1aea94f744b12dbc34d744d0cb26a306603",
+      "acceptance/textstats/scripts/trial_control.py": "2277e4ab1ba989d11a92222ce28ec79906ad13ee9eea5a306c6661e3546bd77f",
+      "acceptance/textstats/tests/test_recovery.py": "90b04dec72a48fac25e800ab53eed21ae4de66089152e8d8afbaa5c0df8eac9f",
+      "acceptance/textstats/tests/test_trial_control.py": "751135ea3a05d655cf312c9e8a02350606f1ac0d28c8074d239223ff4494eac7"
+    },
+    "links": [
+      {
+        "source": "acceptance/textstats/RECOVERY.md",
+        "target": "schemas/run-state.schema.json"
+      },
+      {
+        "source": "acceptance/textstats/RECOVERY.md",
+        "target": "SETUP.md#protected-authentication"
+      },
+      {
+        "source": "acceptance/textstats/RECOVERY.md",
+        "target": "cases/assessor/INTERRUPTIONS.md#repository-only-receiver-variants"
+      },
+      {
+        "source": "acceptance/textstats/RECOVERY.md",
+        "target": "EXECUTION.md#final-evidence-integration"
+      },
+      {
+        "source": "acceptance/textstats/RECOVERY.md",
+        "target": "RELEASE-SCENARIOS.md"
+      },
+      {
+        "source": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+        "target": "campaign.py"
+      },
+      {
+        "source": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+        "target": "../VARIANTS.md"
+      },
+      {
+        "source": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+        "target": "trial_control.py"
+      },
+      {
+        "source": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+        "target": "../TRIAL-CONTROLS.md"
+      },
+      {
+        "source": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+        "target": "contract_probe.py"
+      },
+      {
+        "source": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+        "target": "fault_adapter.py"
+      },
+      {
+        "source": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+        "target": "../cases/assessor/A-023.md"
+      },
+      {
+        "source": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+        "target": "../cases/assessor/A-024.md"
+      },
+      {
+        "source": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+        "target": "evidence_merge.py"
+      },
+      {
+        "source": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+        "target": "../EXECUTION.md#final-evidence-integration"
+      }
+    ],
+    "python_ast": "pass",
+    "whitespace": "pass",
+    "closed_record_changes": [],
+    "version_and_release_notes": "unchanged 0.16.4"
+  },
+  "scope": "Native temporary Git/Linux helper contracts, not live consumer, client or cross-machine restoration acceptance."
+}

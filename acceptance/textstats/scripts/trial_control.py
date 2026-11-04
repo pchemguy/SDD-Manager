@@ -58,7 +58,7 @@ def snapshot(root, watched):
         if p.is_symlink():raise ValueError('symlink watch')
         files[name]={'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'mode':p.stat().st_mode & 0o777} if p.is_file() else None
     merge=core.git(root,'rev-parse','--git-path','MERGE_HEAD').stdout.strip();merge=Path(merge) if Path(merge).is_absolute() else root/merge
-    return {'head':core.git(root,'rev-parse','HEAD').stdout.strip(),'branch':core.git(root,'symbolic-ref','--quiet','--short','HEAD',required=False).stdout.strip(),'index_sha256':hashlib.sha256(core.git(root,'ls-files','--stage','-z',binary=True).stdout).hexdigest(),'merge_heads':merge.read_text().splitlines() if merge.exists() else [],'files':files}
+    return {'head':core.git(root,'rev-parse','HEAD').stdout.strip(),'branch':core.git(root,'symbolic-ref','--quiet','--short','HEAD',required=False).stdout.strip(),'index_sha256':digest(core.index_state(root)),'merge_heads':merge.read_text().splitlines() if merge.exists() else [],'files':files}
 
 
 def execute(root, actions, watched, receipt, hold_after=None, resume=False, pending_paths=()):

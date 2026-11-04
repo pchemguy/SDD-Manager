@@ -1,0 +1,358 @@
+{
+  "schema_version": 1,
+  "campaign": "146_fe918d3",
+  "action": "V-005",
+  "finding": "R-003",
+  "role": "Independent read-only repair recheck",
+  "source_head": "784ead5ce6de03fa9bdb9e4a291af8ae0122b970",
+  "source_identity": "Committed HEAD plus the seven explicitly hashed pending acceptance repair files",
+  "environment": {
+    "python": "3.12.14",
+    "git": "git version 2.51.1",
+    "platform": "linux"
+  },
+  "verdict": "Accepted for R-003's bounded source/local contract; no new located defect. Ready for coordinator publication and final whole-branch acceptance.",
+  "confidence": "High: all changed paths inspected, two focused real-Git regressions passed, six independent native edge fixtures passed, and coordinator full-suite records match the same seven pending file hashes.",
+  "reviewer_source_edits": false,
+  "reviewer_source_index_or_head_changes": false,
+  "reviewer_provider_writes": false,
+  "coverage": [
+    {
+      "path": "acceptance/textstats/RECOVERY.md",
+      "sha256": "a940ec5b262458d9844b1769ceff8d04290f4820f96aa49311bd3afb91f774cd",
+      "inspected": true,
+      "assessment": "Flagged exports explicitly incomplete; original checkout/index retention and separate intent preservation required.",
+      "outcome": "Accepted; no new located defect"
+    },
+    {
+      "path": "acceptance/textstats/TRIAL-CONTROLS.md",
+      "sha256": "cd4f3ebde1f76935fb5519ce85e52aea996bdef175cb141957c92c60bee8be27",
+      "inspected": true,
+      "assessment": "Semantic flag digest, stat-cache exclusion and legacy receipt reconciliation match implementation and native observations.",
+      "outcome": "Accepted; no new located defect"
+    },
+    {
+      "path": "acceptance/textstats/scripts/HELPER-INTERFACES.md",
+      "sha256": "a4aa514b5a7c1b0add16614f3af5febcde4bb8354cbc7edf041ff4e872ec9c07",
+      "inspected": true,
+      "assessment": "Separate index_flags and unsupported_index_flags, summary/manifest complete:false, precise retention limit and conservative restoration boundary.",
+      "outcome": "Accepted; no new located defect"
+    },
+    {
+      "path": "acceptance/textstats/scripts/core.py",
+      "sha256": "193581bee2947b71cf687eeef048e1aea94f744b12dbc34d744d0cb26a306603",
+      "inspected": true,
+      "assessment": "NUL-safe stage/tag reads and explicit cached ITA visibility; no-renames avoids rename pairing ambiguity; protected flags filtered; completeness and returned summary agree.",
+      "outcome": "Accepted; no new located defect"
+    },
+    {
+      "path": "acceptance/textstats/scripts/trial_control.py",
+      "sha256": "2277e4ab1ba989d11a92222ce28ec79906ad13ee9eea5a306c6661e3546bd77f",
+      "inspected": true,
+      "assessment": "Semantic digest covers all three named flags; snapshot comparison rejects drift before save(), next argv launch or receipt replacement.",
+      "outcome": "Accepted; no new located defect"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_recovery.py",
+      "sha256": "90b04dec72a48fac25e800ab53eed21ae4de66089152e8d8afbaa5c0df8eac9f",
+      "inspected": true,
+      "assessment": "Actual intent-to-add/assume-unchanged/skip-worktree export assertions, exact flagged path data, incomplete status, guidance and original state preservation; six intended RED failures retained across both tests.",
+      "outcome": "Accepted; no new located defect"
+    },
+    {
+      "path": "acceptance/textstats/tests/test_trial_control.py",
+      "sha256": "751135ea3a05d655cf312c9e8a02350606f1ac0d28c8074d239223ff4494eac7",
+      "inspected": true,
+      "assessment": "Flag-only semantic drift with unchanged stage entries rejects before second mutation and preserves receipt; ITA-to-real-empty-staged counterpart included.",
+      "outcome": "Accepted; no new located defect"
+    }
+  ],
+  "checks": [
+    {
+      "owner": "independent reviewer",
+      "kind": "focused real-Git regressions",
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "tests.test_recovery.RecoveryTests.test_semantic_index_flags_make_recovery_explicitly_incomplete",
+        "tests.test_trial_control.TrialControls.test_flag_only_index_drift_rejects_resume_before_next_mutation",
+        "-v"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "acceptance/textstats"
+      },
+      "exit_code": 0,
+      "tests": 2,
+      "flag_subcases": 6,
+      "test_seconds": 1.546,
+      "outcome": "Passed"
+    },
+    {
+      "owner": "independent reviewer",
+      "kind": "bounded native synthetic edge fixture",
+      "case": "combined-flags",
+      "result": "Passed",
+      "index_flags": [
+        {
+          "path": "pending space\tline\n\u03a9.txt",
+          "assume_unchanged": true,
+          "skip_worktree": true,
+          "intent_to_add": true
+        },
+        {
+          "path": "tracked.txt",
+          "assume_unchanged": true,
+          "skip_worktree": true,
+          "intent_to_add": false
+        }
+      ],
+      "summary_complete": false,
+      "manifest_complete": false,
+      "original_state_unchanged": true,
+      "bundle_present": true
+    },
+    {
+      "owner": "independent reviewer",
+      "kind": "bounded native synthetic edge fixture",
+      "case": "split-index-combined-flags",
+      "result": "Passed",
+      "index_flags": [
+        {
+          "path": "pending space\tline\n\u03a9.txt",
+          "assume_unchanged": true,
+          "skip_worktree": true,
+          "intent_to_add": true
+        },
+        {
+          "path": "tracked.txt",
+          "assume_unchanged": true,
+          "skip_worktree": true,
+          "intent_to_add": false
+        }
+      ],
+      "summary_complete": false,
+      "manifest_complete": false,
+      "original_state_unchanged": true,
+      "bundle_present": true
+    },
+    {
+      "owner": "independent reviewer",
+      "kind": "bounded native synthetic edge fixture",
+      "case": "unborn-intent-to-add",
+      "result": "Passed",
+      "index_flags": [
+        {
+          "path": "pending space\tline\n\u03a9.txt",
+          "assume_unchanged": false,
+          "skip_worktree": false,
+          "intent_to_add": true
+        }
+      ],
+      "summary_complete": false,
+      "manifest_complete": false,
+      "original_state_unchanged": true,
+      "bundle_present": false
+    },
+    {
+      "owner": "independent reviewer",
+      "kind": "bounded native synthetic edge fixture",
+      "case": "combined-flag-held-drift",
+      "result": "Passed",
+      "next_mutation_executed": false,
+      "receipt_unchanged": true
+    },
+    {
+      "owner": "independent reviewer",
+      "kind": "bounded native synthetic edge fixture",
+      "case": "stat-cache-only-refresh",
+      "result": "Passed",
+      "opaque_index_bytes_changed": true,
+      "semantic_snapshot_equal": true,
+      "normal_resume_completed": true
+    },
+    {
+      "owner": "independent reviewer",
+      "kind": "bounded native synthetic edge fixture",
+      "case": "legacy-stage-only-held-receipt",
+      "result": "Passed",
+      "next_mutation_executed": false,
+      "receipt_unchanged": true
+    },
+    {
+      "owner": "coordinator, records independently inspected",
+      "kind": "full support suite",
+      "record": "/tmp/sdd146-review-checks/v5-green-support.json",
+      "log": "/tmp/sdd146-review-checks/v5-green-support.log",
+      "exit_code": 0,
+      "tests": 142,
+      "test_seconds": 50.176,
+      "wrapper_seconds": 50.51,
+      "outcome": "Passed; includes existing ordinary/conflict restoration",
+      "not_rerun_by_reviewer": true
+    },
+    {
+      "owner": "coordinator, records independently inspected",
+      "kind": "RED sensitivity",
+      "record": "/tmp/sdd146-review-checks/v5-red.json",
+      "log": "/tmp/sdd146-review-checks/v5-red.log",
+      "exit_code": 1,
+      "tests": 2,
+      "failures": 6,
+      "errors": 0,
+      "outcome": "Six intended subcase failures before repair; new test file hashes match reviewed pending source"
+    }
+  ],
+  "edge_source_preservation": {
+    "environment": {
+      "python": "3.12.14",
+      "git": "git version 2.51.1",
+      "platform": "linux"
+    },
+    "source_before": {
+      "head": "784ead5ce6de03fa9bdb9e4a291af8ae0122b970",
+      "index_sha256": "7550286835792f71e2ec16a001f10fc61dcd04f8083893eb26aa45b127c038c1",
+      "status": " M acceptance/textstats/RECOVERY.md\n M acceptance/textstats/TRIAL-CONTROLS.md\n M acceptance/textstats/scripts/HELPER-INTERFACES.md\n M acceptance/textstats/scripts/core.py\n M acceptance/textstats/scripts/trial_control.py\n M acceptance/textstats/tests/test_recovery.py\n M acceptance/textstats/tests/test_trial_control.py\n M docs/dev/reviews/146_fe918d3-shell-policy/REVIEW-PLAN.md\n?? docs/dev/reviews/146_fe918d3-shell-policy/evidence/V-004-native-ci.json\n?? docs/dev/reviews/146_fe918d3-shell-policy/evidence/V-005-checks.json\n",
+      "paths": {
+        "acceptance/textstats/RECOVERY.md": "a940ec5b262458d9844b1769ceff8d04290f4820f96aa49311bd3afb91f774cd",
+        "acceptance/textstats/TRIAL-CONTROLS.md": "cd4f3ebde1f76935fb5519ce85e52aea996bdef175cb141957c92c60bee8be27",
+        "acceptance/textstats/scripts/HELPER-INTERFACES.md": "a4aa514b5a7c1b0add16614f3af5febcde4bb8354cbc7edf041ff4e872ec9c07",
+        "acceptance/textstats/scripts/core.py": "193581bee2947b71cf687eeef048e1aea94f744b12dbc34d744d0cb26a306603",
+        "acceptance/textstats/scripts/trial_control.py": "2277e4ab1ba989d11a92222ce28ec79906ad13ee9eea5a306c6661e3546bd77f",
+        "acceptance/textstats/tests/test_recovery.py": "90b04dec72a48fac25e800ab53eed21ae4de66089152e8d8afbaa5c0df8eac9f",
+        "acceptance/textstats/tests/test_trial_control.py": "751135ea3a05d655cf312c9e8a02350606f1ac0d28c8074d239223ff4494eac7",
+        "docs/dev/reviews/146_fe918d3-shell-policy/REVIEW-PLAN.md": "58d8dc72b3437062aec5c888697352bee146e70170113247bc1ffd38d70b443a"
+      }
+    },
+    "source_after": {
+      "head": "784ead5ce6de03fa9bdb9e4a291af8ae0122b970",
+      "index_sha256": "7550286835792f71e2ec16a001f10fc61dcd04f8083893eb26aa45b127c038c1",
+      "status": " M acceptance/textstats/RECOVERY.md\n M acceptance/textstats/TRIAL-CONTROLS.md\n M acceptance/textstats/scripts/HELPER-INTERFACES.md\n M acceptance/textstats/scripts/core.py\n M acceptance/textstats/scripts/trial_control.py\n M acceptance/textstats/tests/test_recovery.py\n M acceptance/textstats/tests/test_trial_control.py\n M docs/dev/reviews/146_fe918d3-shell-policy/REVIEW-PLAN.md\n?? docs/dev/reviews/146_fe918d3-shell-policy/evidence/V-004-native-ci.json\n?? docs/dev/reviews/146_fe918d3-shell-policy/evidence/V-005-checks.json\n",
+      "paths": {
+        "acceptance/textstats/RECOVERY.md": "a940ec5b262458d9844b1769ceff8d04290f4820f96aa49311bd3afb91f774cd",
+        "acceptance/textstats/TRIAL-CONTROLS.md": "cd4f3ebde1f76935fb5519ce85e52aea996bdef175cb141957c92c60bee8be27",
+        "acceptance/textstats/scripts/HELPER-INTERFACES.md": "a4aa514b5a7c1b0add16614f3af5febcde4bb8354cbc7edf041ff4e872ec9c07",
+        "acceptance/textstats/scripts/core.py": "193581bee2947b71cf687eeef048e1aea94f744b12dbc34d744d0cb26a306603",
+        "acceptance/textstats/scripts/trial_control.py": "2277e4ab1ba989d11a92222ce28ec79906ad13ee9eea5a306c6661e3546bd77f",
+        "acceptance/textstats/tests/test_recovery.py": "90b04dec72a48fac25e800ab53eed21ae4de66089152e8d8afbaa5c0df8eac9f",
+        "acceptance/textstats/tests/test_trial_control.py": "751135ea3a05d655cf312c9e8a02350606f1ac0d28c8074d239223ff4494eac7",
+        "docs/dev/reviews/146_fe918d3-shell-policy/REVIEW-PLAN.md": "58d8dc72b3437062aec5c888697352bee146e70170113247bc1ffd38d70b443a"
+      }
+    },
+    "source_unchanged": true,
+    "cases": [
+      {
+        "case": "combined-flags",
+        "result": "Passed",
+        "index_flags": [
+          {
+            "path": "pending space\tline\n\u03a9.txt",
+            "assume_unchanged": true,
+            "skip_worktree": true,
+            "intent_to_add": true
+          },
+          {
+            "path": "tracked.txt",
+            "assume_unchanged": true,
+            "skip_worktree": true,
+            "intent_to_add": false
+          }
+        ],
+        "summary_complete": false,
+        "manifest_complete": false,
+        "original_state_unchanged": true,
+        "bundle_present": true
+      },
+      {
+        "case": "split-index-combined-flags",
+        "result": "Passed",
+        "index_flags": [
+          {
+            "path": "pending space\tline\n\u03a9.txt",
+            "assume_unchanged": true,
+            "skip_worktree": true,
+            "intent_to_add": true
+          },
+          {
+            "path": "tracked.txt",
+            "assume_unchanged": true,
+            "skip_worktree": true,
+            "intent_to_add": false
+          }
+        ],
+        "summary_complete": false,
+        "manifest_complete": false,
+        "original_state_unchanged": true,
+        "bundle_present": true
+      },
+      {
+        "case": "unborn-intent-to-add",
+        "result": "Passed",
+        "index_flags": [
+          {
+            "path": "pending space\tline\n\u03a9.txt",
+            "assume_unchanged": false,
+            "skip_worktree": false,
+            "intent_to_add": true
+          }
+        ],
+        "summary_complete": false,
+        "manifest_complete": false,
+        "original_state_unchanged": true,
+        "bundle_present": false
+      },
+      {
+        "case": "combined-flag-held-drift",
+        "result": "Passed",
+        "next_mutation_executed": false,
+        "receipt_unchanged": true
+      },
+      {
+        "case": "stat-cache-only-refresh",
+        "result": "Passed",
+        "opaque_index_bytes_changed": true,
+        "semantic_snapshot_equal": true,
+        "normal_resume_completed": true
+      },
+      {
+        "case": "legacy-stage-only-held-receipt",
+        "result": "Passed",
+        "next_mutation_executed": false,
+        "receipt_unchanged": true
+      }
+    ]
+  },
+  "declined_to_judge": [
+    {
+      "behavior": "Automatic restoration of flagged index intent",
+      "reason": "The accepted repair intentionally declares unsupported flagged exports incomplete and requires original-index retention; no restoration capability is claimed."
+    },
+    {
+      "behavior": "General split-index/linked-worktree portability or arbitrary index extensions",
+      "reason": "Split-index flag observation/incomplete classification was exercised, not opaque/shared-index reconstruction; linked worktree restoration was not selected and no raw index copy was introduced."
+    },
+    {
+      "behavior": "Other semantic flags, non-UTF-8 path byte sequences, all Git versions/platforms",
+      "reason": "The bounded contract names three flags, valid UTF-8 unusual paths and the observed Linux/Git2.51.1 runtime. Unsupported command failure is fail-closed; no cross-platform/runtime pass inferred."
+    },
+    {
+      "behavior": "Concurrent mutations during multiple Git reads, arbitrary receipt tampering, native uncontrolled termination",
+      "reason": "No new atomic transaction/process-isolation facility is introduced or claimed; outside bounded R-003 reproduction and selected controlled fixtures."
+    },
+    {
+      "behavior": "Fresh consumer/assessor or installed-client/live-provider acceptance",
+      "reason": "No campaign/destination/fresh consumer selected. Local support tests and source inspection remain distinct evidence."
+    },
+    {
+      "behavior": "Entire branch completion, merge/publication, version bump or release",
+      "reason": "Coordinator owns final whole-branch acceptance/closure. Current user instruction postpones release and preserves version0.16.4/retained notes."
+    }
+  ],
+  "readiness": {
+    "R_003": "Ready to mark resolved after coordinator persistence/publication",
+    "V_005": "Bounded repair accepted",
+    "whole_campaign": "Not judged by this subreview",
+    "version_release": "Postponed; no bump/tag/release actions authorized by current stop"
+  }
+}

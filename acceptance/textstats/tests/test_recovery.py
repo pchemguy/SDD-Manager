@@ -14,6 +14,35 @@ except ImportError:
     from support import Sandbox, SCRIPTS, git
 
 class RecoveryTests(Sandbox):
+    def test_semantic_index_flags_make_recovery_explicitly_incomplete(self):
+        # Stage records alone cannot restore these meanings, even with all blobs.
+        for flag in ('intent_to_add', 'assume_unchanged', 'skip_worktree'):
+            with self.subTest(flag=flag):
+                name = 'pending space\nΩ.txt' if flag == 'intent_to_add' else 'owned.txt'
+                if flag == 'intent_to_add':
+                    (self.repo/name).write_text('pending work\n')
+                    git(self.repo, 'add', '-N', '--', name)
+                else:
+                    git(self.repo, 'update-index', '--'+flag.replace('_', '-'), '--', name)
+                before = self._consumer_snapshot()
+                data, _ = self.ok(self.invoke('observe', state=self.state))
+                manifest = json.loads((Path(data['recovery']['path'])/'manifest.json').read_text())
+                self.assertFalse(data['recovery']['complete'])
+                self.assertFalse(manifest['complete'])
+                expected = [{'path': name, 'intent_to_add': flag == 'intent_to_add',
+                             'assume_unchanged': flag == 'assume_unchanged',
+                             'skip_worktree': flag == 'skip_worktree'}]
+                self.assertEqual(data['git']['index_flags'], expected)
+                self.assertEqual(manifest['unsupported_index_flags'], expected)
+                self.assertIn('retain', manifest['restoration_limit'].lower())
+                self.assertEqual(self._consumer_snapshot(), before)
+                if flag == 'intent_to_add':
+                    self.assertEqual(git(self.repo, 'diff', '--cached').stdout, '')
+                    git(self.repo, 'reset', '--', name)
+                    (self.repo/name).unlink()
+                else:
+                    git(self.repo, 'update-index', '--no-'+flag.replace('_', '-'), '--', name)
+
     def _consumer_snapshot(self):
         return (git(self.repo,'rev-parse','HEAD').stdout,
                 git(self.repo,'for-each-ref').stdout,

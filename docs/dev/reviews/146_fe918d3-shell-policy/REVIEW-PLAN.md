@@ -23,3 +23,7 @@ Coordinate accepted in-scope fixes through existing revision records, publishing
 Then bump the sole manifest to **0.16.5** on main, prepare fresh retained complete notes through the exact direct-main release commit and verify raw stored body equality. Execute exact-source reproducible package/checksum/member checks and an independent complete inventory name gate before tag/manual publisher. Use only sdd-manager.zip and sdd-manager.zip.sha256. Verify actual CI, hosted body/assets/latest and four tag/latest downloads, retain the source-only outcome outside closed records and stop.
 
 Linux/Python 3.12.14/Node 24 is available; inspect supported native Windows CI where applicable. Full source/support/native CI checks do not establish fresh-agent, installed-client or live TextStats acceptance. No new consumer campaign, hosted tracking activation or external test repository is selected. Preserve explicit evidence limits without inventing passes or requirements.
+
+## Latest human boundary — Closure only
+
+The human postpones version bump and release creation. Finish accepted repairs and their verification, finalize this campaign, explicitly integrate into main, publish/read back and stop there. Keep version 0.16.4, RELEASE-NOTES.md and existing tags/releases unchanged. Earlier release steps retain their original context and are not selected work.

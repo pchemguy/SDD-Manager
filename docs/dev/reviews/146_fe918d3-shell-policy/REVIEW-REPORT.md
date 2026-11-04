@@ -1,6 +1,6 @@
 # Comprehensive prerelease review
 
-Campaign **146_fe918d3**, reviewed product baseline **e9eff0962321c0240eb32e35b4c1b7b1025e0669**, originally intended release 0.16.5; the later human instruction postpones bump/publication and selects campaign closure only. [Plan](REVIEW-PLAN.md) and [inventory](REVIEW-INVENTORY.json) govern coverage. State: all source-review units assessed; R-001/R-002 corrected with independent source/local recheck, repaired-source native CI and R-003/final acceptance remain pending. Existing exact-source native Windows run 41781528334 passes fourteen tests on Node 22 and 24, distinct from this comprehensive review.
+Campaign **146_fe918d3**, reviewed product baseline **e9eff0962321c0240eb32e35b4c1b7b1025e0669**, originally intended release 0.16.5; the later human instruction postpones bump/publication and selects campaign closure only. [Plan](REVIEW-PLAN.md) and [inventory](REVIEW-INVENTORY.json) govern coverage. State: all source-review units assessed; R-001/R-002 corrected with independent source/local/native recheck, R-003 corrected with independent helper recheck; final branch acceptance/integration remain pending. Existing exact-source native Windows run 41781528334 passes fourteen tests on Node 22 and 24, distinct from this comprehensive review.
 
 | Unit | State | Scope |
 | --- | --- | --- |
@@ -78,4 +78,16 @@ Disposition: **R-001/R-002 resolved in source and selected local tests**, with n
 
 ## Current authority after V-004 preparation
 
-The human now postpones the patch bump and release creation: finish the confirmed repairs/checks and close campaign 146 only. Comprehensive source findings and required repair acceptance remain in scope. Stop after explicit verified/published main completion integration with version0.16.4 and root RELEASE-NOTES.md unchanged. Earlier preliminary package/release-context evidence remains identified as review-only; it authorizes no tag/publisher and is not a future release candidate.
+The human now postpones the patch bump and release creation: finish the confirmed repairs/checks and close campaign 146 only. Comprehensive source findings and required repair acceptance remain in scope. Stop after explicit verified/published main completion integration with version 0.16.4 and root RELEASE-NOTES.md unchanged. Earlier preliminary package/release-context evidence remains identified as review-only; it authorizes no tag/publisher and is not a future release candidate.
+
+## V-004 native qualification
+
+Published correction **784ead5ce6de03fa9bdb9e4a291af8ae0122b970** passes actual completion run [41788272156](https://github.com/pchemguy/SDD-Manager/actions/runs/41788272156) and projection run [41788272226](https://github.com/pchemguy/SDD-Manager/actions/runs/41788272226). All eight Linux/Windows CMD Node 22/24 jobs succeed, with completion 42 and projection 52 tests in every relevant job, confirmed in job logs. [Executed CI evidence](evidence/V-004-native-ci.json) resolves the earlier native pending qualification for R-001/R-002. Synthetic provider/native runtime remains distinct from live provider/client acceptance.
+
+## V-005 recheck — R-003 corrected
+
+At published base **784ead5ce6de03fa9bdb9e4a291af8ae0122b970**, two new real-Git regressions produce six intended RED failures: intent-to-add/assume-unchanged/skip-worktree exports falsely complete, and flag-only drift in each mode incorrectly resumes. The repair reads semantic flags through Git's NUL-delimited interfaces, retains exact eligible unsupported flag metadata and retention guidance, and marks these exports incomplete even when their object bundle verifies. It preserves the original checkout/index; it does not claim opaque-index portability or restore flags through stage-only records. Protected paths remain omitted. Held index identity now includes stages and semantic flags, rejecting drift before a later command or receipt rewrite; stat-cache bytes do not select identity. Existing stage-only held receipts need reconciliation, documented with the interface/recovery/hold contracts.
+
+[RED/GREEN and source evidence](evidence/V-005-checks.json) passes all **142** support tests, including ordinary staged/unstaged, binary, symlink, deletion and conflict restoration; the two focused regressions cover all six flag cases, NUL-safe spaced/newline/Unicode paths and unchanged consumer state. [Independent recheck](independent/V-005-recheck.md) / [digests](independent/V-005-recheck.json) accepts the repair and adds combined flags, split-index, unborn intent-to-add, changed/legacy receipt rejection and stat-cache-only successful resume. Seven repair paths remain unchanged during recheck; all 15 changed-guide links, Python AST, whitespace, unchanged version/notes and frozen prior records pass.
+
+Disposition: **R-001, R-002 and R-003 resolved** under their bounded contracts; no new confirmed defect. Two optional enhancements remain deferred. Publish/read back V-005, then obtain exact committed-source package/composition checks and independent final branch acceptance before finalization/integration. Release creation remains postponed.
