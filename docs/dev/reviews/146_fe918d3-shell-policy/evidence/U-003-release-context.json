@@ -1,0 +1,13 @@
+{
+  "previous_published_tag": "v0.16.4",
+  "previous_release_id": 433252241,
+  "baseline": "fbd8baabbf09eb2e50fe6f3c890392939f74d3c3",
+  "complete_history": true,
+  "tags_refreshed_without_force": true,
+  "ancestor_of_candidate": true,
+  "on_current_main_first_parent": false,
+  "policy": "Explicit previous published stable release baseline after side-history assessment; avoid repeating already released changes and preserve prior tags/history",
+  "default_branch": "main",
+  "repository": "pchemguy/SDD-Manager",
+  "private": false
+}
