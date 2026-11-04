@@ -15,3 +15,7 @@ The human requests opening a shell-policy revision campaign. The initial source 
 ## Boundary
 
 Publish/read back the opening checkpoint and stop on this child branch, open and awaiting the human's shell-policy change. Keep parent 144 suspended with its completed 0.16.4 release and unfinished closure boundary. Policy edits, review execution, tests of policy behavior, merge, version bump, release and parent continuation are not selected by this opening request. When a child completion/integration is later authorized, explicitly merge the verified child into its recorded parent branch, verify/publish, restore the parent's handoff and return there without automatically resuming or closing it.
+
+## V-002 — Human-requested closure
+
+The later human instruction, Close 145, then 144, supersedes the earlier wait for a concrete shell-policy change. Finalize this opening-only campaign without policy edits or a review/implementation claim, publish/read back the final checkpoint, explicitly merge it into its recorded parent branch and verify/publish that target. Restore parent 144's context; the same instruction then authorizes its separate finalization and main integration. No version bump, tag movement or new release is selected.
