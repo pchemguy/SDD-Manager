@@ -1,5 +1,7 @@
 | Title                | URL                                                        |
 | -------------------- | ---------------------------------------------------------- |
+| SDD Manager          | https://chatgpt.com/g/g-p-6aacbf3726408191b9de068cf32604f2 |
+| SDD-Man-Demo-Tetris  | https://chatgpt.com/g/g-p-6adc83bfe8148191a47db1cf42e7959a |
 | Explore Drive        | https://chatgpt.com/c/6aafd74d-9d74-83eb-b046-dd4384744e29 |
 | Explore Drive Cont   | https://chatgpt.com/c/6ac2683b-229c-83e9-81af-d68e9ca74f43 |
 | Explore Drive Cont 2 | https://chatgpt.com/c/6ac79620-fad8-83ea-b9f6-95463e890064 |
