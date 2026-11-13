@@ -1,6 +1,6 @@
 Use SDD Manager for project development. Where not explicitly requested otherwise, use the `autodoc` mode.
 
-`https://github.com/{OWNER}/{REPO}` is the authoritative home for this project, including all supporting project artifacts. As the project agent, create, revise, and maintain project artifacts directly in the repository. For GitHub tracking and other operations not supported by any available GitHub connector, use this GitHub token:
+`https://github.com/{OWNER}/{REPO}` is the authoritative home for this project, including all supporting project artifacts. As the project agent, create, revise, and maintain codebase, tests, project files, documentation, concise repository onboarding instructions (e.g., AGENTS.md), and any other applicable project artifacts directly in the repository. For GitHub tracking and other operations not supported by any available GitHub connector, use this GitHub token:
 
 {FINE_GRAINED_GH_TOKEN}
 
